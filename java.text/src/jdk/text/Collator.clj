@@ -211,7 +211,7 @@
   returns: Returns an integer value. Value is less than zero if source is less than
    target, value is zero if source and target are equal, value is greater than zero
    if source is greater than target. - `int`"
-  (^Integer [^java.text.Collator this ^java.lang.String source ^java.lang.String target]
+  (^Integer [^Collator this ^java.lang.String source ^java.lang.String target]
     (-> this (.compare source target))))
 
 (defn get-decomposition
@@ -229,7 +229,7 @@
    of their meaning.
 
   returns: the decomposition mode - `int`"
-  (^Integer [^java.text.Collator this]
+  (^Integer [^Collator this]
     (-> this (.getDecomposition))))
 
 (defn set-decomposition
@@ -239,7 +239,7 @@
   decomposition-mode - the new decomposition mode. - `int`
 
   throws: java.lang.IllegalArgumentException - If the given value is not a valid decomposition mode."
-  ([^java.text.Collator this ^Integer decomposition-mode]
+  ([^Collator this ^Integer decomposition-mode]
     (-> this (.setDecomposition decomposition-mode))))
 
 (defn get-collation-key
@@ -252,7 +252,7 @@
 
   returns: the CollationKey for the given String based on this Collator's collation
    rules. If the source String is null, a null CollationKey is returned. - `java.text.CollationKey`"
-  (^java.text.CollationKey [^java.text.Collator this ^java.lang.String source]
+  (^java.text.CollationKey [^Collator this ^java.lang.String source]
     (-> this (.getCollationKey source))))
 
 (defn set-strength
@@ -263,21 +263,21 @@
   new-strength - the new strength value. - `int`
 
   throws: java.lang.IllegalArgumentException - If the new strength value is not one of PRIMARY, SECONDARY, TERTIARY or IDENTICAL."
-  ([^java.text.Collator this ^Integer new-strength]
+  ([^Collator this ^Integer new-strength]
     (-> this (.setStrength new-strength))))
 
 (defn clone
   "Overrides Cloneable
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^java.text.Collator this]
+  (^java.lang.Object [^Collator this]
     (-> this (.clone))))
 
 (defn hash-code
   "Generates the hash code for this Collator.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.text.Collator this]
+  (^Integer [^Collator this]
     (-> this (.hashCode))))
 
 (defn get-strength
@@ -286,7 +286,7 @@
    See the Collator class description for an example of use.
 
   returns: this Collator's current strength property. - `int`"
-  (^Integer [^java.text.Collator this]
+  (^Integer [^Collator this]
     (-> this (.getStrength))))
 
 (defn equals
@@ -298,8 +298,8 @@
 
   returns: true if the strings are equal according to the collation
    rules.  false, otherwise. - `boolean`"
-  (^Boolean [^java.text.Collator this ^java.lang.String source ^java.lang.String target]
+  (^Boolean [^Collator this ^java.lang.String source ^java.lang.String target]
     (-> this (.equals source target)))
-  (^Boolean [^java.text.Collator this ^java.lang.Object that]
+  (^Boolean [^Collator this ^java.lang.Object that]
     (-> this (.equals that))))
 

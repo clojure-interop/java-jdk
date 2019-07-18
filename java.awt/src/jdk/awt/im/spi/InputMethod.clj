@@ -32,7 +32,7 @@
    when switching from this input method to a different one using the
        user interface or
        InputContext.selectInputMethod."
-  ([^java.awt.im.spi.InputMethod this]
+  ([^InputMethod this]
     (-> this (.endComposition))))
 
 (defn reconvert
@@ -51,7 +51,7 @@
    InputContext.reconvert.
 
   throws: java.lang.UnsupportedOperationException - if the input method does not support the reconversion operation."
-  ([^java.awt.im.spi.InputMethod this]
+  ([^InputMethod this]
     (-> this (.reconvert))))
 
 (defn activate
@@ -70,7 +70,7 @@
 
    The method is only called when the input method is inactive.
    A newly instantiated input method is assumed to be inactive."
-  ([^java.awt.im.spi.InputMethod this]
+  ([^InputMethod this]
     (-> this (.activate))))
 
 (defn set-input-method-context
@@ -84,7 +84,7 @@
   context - the input method context for this input method - `java.awt.im.spi.InputMethodContext`
 
   throws: java.lang.NullPointerException - if context is null"
-  ([^java.awt.im.spi.InputMethod this ^java.awt.im.spi.InputMethodContext context]
+  ([^InputMethod this ^java.awt.im.spi.InputMethodContext context]
     (-> this (.setInputMethodContext context))))
 
 (defn dispose
@@ -96,7 +96,7 @@
 
    The method is only called when the input method is inactive.
    No method of this interface is called on this instance after dispose."
-  ([^java.awt.im.spi.InputMethod this]
+  ([^InputMethod this]
     (-> this (.dispose))))
 
 (defn get-locale
@@ -109,7 +109,7 @@
        user interface.
 
   returns: the current input locale, or null - `java.util.Locale`"
-  (^java.util.Locale [^java.awt.im.spi.InputMethod this]
+  (^java.util.Locale [^InputMethod this]
     (-> this (.getLocale))))
 
 (defn hide-windows
@@ -123,7 +123,7 @@
    before calling dispose on this input method.
 
    The method is only called when the input method is inactive."
-  ([^java.awt.im.spi.InputMethod this]
+  ([^InputMethod this]
     (-> this (.hideWindows))))
 
 (defn deactivate
@@ -154,7 +154,7 @@
    The method is only called when the input method is active.
 
   is-temporary - whether the focus change is temporary - `boolean`"
-  ([^java.awt.im.spi.InputMethod this ^Boolean is-temporary]
+  ([^InputMethod this ^Boolean is-temporary]
     (-> this (.deactivate is-temporary))))
 
 (defn remove-notify
@@ -165,7 +165,7 @@
    This method is called by InputContext.removeNotify.
 
    The method is only called when the input method is inactive."
-  ([^java.awt.im.spi.InputMethod this]
+  ([^InputMethod this]
     (-> this (.removeNotify))))
 
 (defn composition-enabled?
@@ -185,7 +185,7 @@
    composition; false otherwise. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if this input method does not support checking whether it is enabled for composition"
-  (^Boolean [^java.awt.im.spi.InputMethod this]
+  (^Boolean [^InputMethod this]
     (-> this (.isCompositionEnabled))))
 
 (defn set-locale
@@ -207,7 +207,7 @@
   returns: whether the specified locale is supported - `boolean`
 
   throws: java.lang.NullPointerException - if locale is null"
-  (^Boolean [^java.awt.im.spi.InputMethod this ^java.util.Locale locale]
+  (^Boolean [^InputMethod this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn get-control-object
@@ -223,7 +223,7 @@
    InputContext.getInputMethodControlObject.
 
   returns: a control object from this input method, or null - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.im.spi.InputMethod this]
+  (^java.lang.Object [^InputMethod this]
     (-> this (.getControlObject))))
 
 (defn dispatch-event
@@ -245,7 +245,7 @@
   event - the event being dispatched to the input method - `java.awt.AWTEvent`
 
   throws: java.lang.NullPointerException - if event is null"
-  ([^java.awt.im.spi.InputMethod this ^java.awt.AWTEvent event]
+  ([^InputMethod this ^java.awt.AWTEvent event]
     (-> this (.dispatchEvent event))))
 
 (defn set-character-subsets
@@ -259,8 +259,8 @@
    when switching to this input method from a different one, and
    by InputContext.setCharacterSubsets.
 
-  subsets - the subsets of the Unicode character set from which characters may be input - `java.lang.Character.Subset[]`"
-  ([^java.awt.im.spi.InputMethod this subsets]
+  subsets - the subsets of the Unicode character set from which characters may be input - `java.lang.Character$Subset[]`"
+  ([^InputMethod this subsets]
     (-> this (.setCharacterSubsets subsets))))
 
 (defn set-composition-enabled
@@ -295,7 +295,7 @@
   enable - whether to enable the input method for composition - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if this input method does not support the enabling/disabling operation"
-  ([^java.awt.im.spi.InputMethod this ^Boolean enable]
+  ([^InputMethod this ^Boolean enable]
     (-> this (.setCompositionEnabled enable))))
 
 (defn notify-client-window-change
@@ -328,6 +328,6 @@
    called.
 
   bounds - client window's bounds on the screen; or null if the client window is iconified or invisible - `java.awt.Rectangle`"
-  ([^java.awt.im.spi.InputMethod this ^java.awt.Rectangle bounds]
+  ([^InputMethod this ^java.awt.Rectangle bounds]
     (-> this (.notifyClientWindowChange bounds))))
 

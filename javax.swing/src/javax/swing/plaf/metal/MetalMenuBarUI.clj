@@ -6,7 +6,7 @@
 
 (defn ->metal-menu-bar-ui
   "Constructor."
-  ([]
+  (^MetalMenuBarUI []
     (new MetalMenuBarUI )))
 
 (defn *create-ui
@@ -28,7 +28,7 @@
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`
 
   throws: java.lang.NullPointerException - if c is null."
-  ([^javax.swing.plaf.metal.MetalMenuBarUI this ^javax.swing.JComponent c]
+  ([^MetalMenuBarUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
@@ -38,7 +38,7 @@
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`
 
   throws: java.lang.NullPointerException - if c is null."
-  ([^javax.swing.plaf.metal.MetalMenuBarUI this ^javax.swing.JComponent c]
+  ([^MetalMenuBarUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn update
@@ -49,6 +49,6 @@
   c - JComponent painting on - `javax.swing.JComponent`
 
   throws: java.lang.NullPointerException - if g or c is null"
-  ([^javax.swing.plaf.metal.MetalMenuBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^MetalMenuBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 

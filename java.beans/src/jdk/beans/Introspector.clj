@@ -84,8 +84,8 @@
    previously introspected based on the same arguments then
    the BeanInfo class is retrieved from the BeanInfo cache.
 
-  bean-class - the bean class to be analyzed - `java.lang.Class<?>`
-  stop-class - the parent class at which to stop the analysis - `java.lang.Class<?>`
+  bean-class - the bean class to be analyzed - `java.lang.Class`
+  stop-class - the parent class at which to stop the analysis - `java.lang.Class`
   flags - flags to control the introspection - `int`
 
   returns: a BeanInfo object describing the target bean - `java.beans.BeanInfo`
@@ -160,7 +160,7 @@
    objects (such as subclasses), even though their state may include
    information indirectly obtained from the target Class object.
 
-  clz - Class object to be flushed. - `java.lang.Class<?>`
+  clz - Class object to be flushed. - `java.lang.Class`
 
   throws: java.lang.NullPointerException - If the Class object is null."
   ([^java.lang.Class clz]

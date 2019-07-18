@@ -35,7 +35,7 @@
   returns: the long value of the unit - `long`
 
   throws: java.time.DateTimeException - if a value for the unit cannot be obtained"
-  (^Long [^java.time.temporal.TemporalAmount this ^java.time.temporal.TemporalUnit unit]
+  (^Long [^TemporalAmount this ^java.time.temporal.TemporalUnit unit]
     (-> this (.get unit))))
 
 (defn get-units
@@ -47,7 +47,7 @@
    of the unit.
 
   returns: the List of TemporalUnits; not null - `java.util.List<java.time.temporal.TemporalUnit>`"
-  (^java.util.List [^java.time.temporal.TemporalAmount this]
+  (^java.util.List [^TemporalAmount this]
     (-> this (.getUnits))))
 
 (defn add-to
@@ -72,7 +72,7 @@
   returns: an object of the same observable type with the addition made, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to add"
-  (^java.time.temporal.Temporal [^java.time.temporal.TemporalAmount this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^TemporalAmount this ^java.time.temporal.Temporal temporal]
     (-> this (.addTo temporal))))
 
 (defn subtract-from
@@ -97,6 +97,6 @@
   returns: an object of the same observable type with the subtraction made, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to subtract"
-  (^java.time.temporal.Temporal [^java.time.temporal.TemporalAmount this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^TemporalAmount this ^java.time.temporal.Temporal temporal]
     (-> this (.subtractFrom temporal))))
 

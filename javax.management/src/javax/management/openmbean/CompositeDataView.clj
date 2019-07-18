@@ -88,6 +88,6 @@
   ct - The expected CompositeType of the returned value. If the returned value is cd, then cd.getCompositeType().equals(ct) should be true. Typically this will be because cd is a CompositeDataSupport constructed with ct as its CompositeType. - `javax.management.openmbean.CompositeType`
 
   returns: the CompositeData. - `javax.management.openmbean.CompositeData`"
-  (^javax.management.openmbean.CompositeData [^javax.management.openmbean.CompositeDataView this ^javax.management.openmbean.CompositeType ct]
+  (^javax.management.openmbean.CompositeData [^CompositeDataView this ^javax.management.openmbean.CompositeType ct]
     (-> this (.toCompositeData ct))))
 

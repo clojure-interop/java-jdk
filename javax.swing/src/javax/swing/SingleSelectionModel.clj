@@ -7,7 +7,7 @@
   "Returns the model's selection.
 
   returns: the model's selection, or -1 if there is no selection - `int`"
-  (^Integer [^javax.swing.SingleSelectionModel this]
+  (^Integer [^SingleSelectionModel this]
     (-> this (.getSelectedIndex))))
 
 (defn set-selected-index
@@ -16,32 +16,32 @@
    Notifies any listeners if the model changes
 
   index - an int specifying the model selection - `int`"
-  ([^javax.swing.SingleSelectionModel this ^Integer index]
+  ([^SingleSelectionModel this ^Integer index]
     (-> this (.setSelectedIndex index))))
 
 (defn clear-selection
   "Clears the selection (to -1)."
-  ([^javax.swing.SingleSelectionModel this]
+  ([^SingleSelectionModel this]
     (-> this (.clearSelection))))
 
 (defn selected?
   "Returns true if the selection model currently has a selected value.
 
   returns: true if a value is currently selected - `boolean`"
-  (^Boolean [^javax.swing.SingleSelectionModel this]
+  (^Boolean [^SingleSelectionModel this]
     (-> this (.isSelected))))
 
 (defn add-change-listener
   "Adds listener as a listener to changes in the model.
 
   listener - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.SingleSelectionModel this ^javax.swing.event.ChangeListener listener]
+  ([^SingleSelectionModel this ^javax.swing.event.ChangeListener listener]
     (-> this (.addChangeListener listener))))
 
 (defn remove-change-listener
   "Removes listener as a listener to changes in the model.
 
   listener - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.SingleSelectionModel this ^javax.swing.event.ChangeListener listener]
+  ([^SingleSelectionModel this ^javax.swing.event.ChangeListener listener]
     (-> this (.removeChangeListener listener))))
 

@@ -19,21 +19,21 @@
   multiple-selections-allowed - boolean specifying whether or not multiple selections can be made from the list of choices. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if prompt is null, if prompt has a length of 0, if choices is null, if choices has a length of 0, if any element from choices is null, if any element from choices has a length of 0 or if defaultChoice does not fall within the array boundaries of choices."
-  ([^java.lang.String prompt choices ^Integer default-choice ^Boolean multiple-selections-allowed]
+  (^ChoiceCallback [^java.lang.String prompt choices ^Integer default-choice ^Boolean multiple-selections-allowed]
     (new ChoiceCallback prompt choices default-choice multiple-selections-allowed)))
 
 (defn get-prompt
   "Get the prompt.
 
   returns: the prompt. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.callback.ChoiceCallback this]
+  (^java.lang.String [^ChoiceCallback this]
     (-> this (.getPrompt))))
 
 (defn get-choices
   "Get the list of choices.
 
   returns: the list of choices. - `java.lang.String[]`"
-  ([^javax.security.auth.callback.ChoiceCallback this]
+  ([^ChoiceCallback this]
     (-> this (.getChoices))))
 
 (defn get-default-choice
@@ -41,7 +41,7 @@
 
   returns: the defaultChoice, represented as an index into
             the choices list. - `int`"
-  (^Integer [^javax.security.auth.callback.ChoiceCallback this]
+  (^Integer [^ChoiceCallback this]
     (-> this (.getDefaultChoice))))
 
 (defn allow-multiple-selections
@@ -49,14 +49,14 @@
    the choices list are allowed.
 
   returns: whether multiple selections are allowed. - `boolean`"
-  (^Boolean [^javax.security.auth.callback.ChoiceCallback this]
+  (^Boolean [^ChoiceCallback this]
     (-> this (.allowMultipleSelections))))
 
 (defn set-selected-index
   "Set the selected choice.
 
   selection - the selection represented as an index into the choices list. - `int`"
-  ([^javax.security.auth.callback.ChoiceCallback this ^Integer selection]
+  ([^ChoiceCallback this ^Integer selection]
     (-> this (.setSelectedIndex selection))))
 
 (defn set-selected-indexes
@@ -65,7 +65,7 @@
   selections - the selections represented as indexes into the choices list. - `int[]`
 
   throws: java.lang.UnsupportedOperationException - if multiple selections are not allowed, as determined by allowMultipleSelections."
-  ([^javax.security.auth.callback.ChoiceCallback this selections]
+  ([^ChoiceCallback this selections]
     (-> this (.setSelectedIndexes selections))))
 
 (defn get-selected-indexes
@@ -73,6 +73,6 @@
 
   returns: the selected choices, represented as indexes into the
             choices list. - `int[]`"
-  ([^javax.security.auth.callback.ChoiceCallback this]
+  ([^ChoiceCallback this]
     (-> this (.getSelectedIndexes))))
 

@@ -14,7 +14,7 @@
 
 (defn ->metal-tool-tip-ui
   "Constructor."
-  ([]
+  (^MetalToolTipUI []
     (new MetalToolTipUI )))
 
 (def *-pad-space-between-strings
@@ -34,14 +34,14 @@
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalToolTipUI this ^javax.swing.JComponent c]
+  ([^MetalToolTipUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalToolTipUI this ^javax.swing.JComponent c]
+  ([^MetalToolTipUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn paint
@@ -49,7 +49,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalToolTipUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^MetalToolTipUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-preferred-size
@@ -58,11 +58,11 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalToolTipUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^MetalToolTipUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn get-accelerator-string
   "returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.metal.MetalToolTipUI this]
+  (^java.lang.String [^MetalToolTipUI this]
     (-> this (.getAcceleratorString))))
 

@@ -37,7 +37,7 @@
 
 (defn ->accessible-context
   "Constructor."
-  ([]
+  (^AccessibleContext []
     (new AccessibleContext )))
 
 (def *-accessible-name-property
@@ -316,7 +316,7 @@
    that should only be called by the parent of the accessible child.
 
   a - - Accessible to be set as the parent - `javax.accessibility.Accessible`"
-  ([^javax.accessibility.AccessibleContext this ^javax.accessibility.Accessible a]
+  ([^AccessibleContext this ^javax.accessibility.Accessible a]
     (-> this (.setAccessibleParent a))))
 
 (defn get-accessible-table
@@ -324,7 +324,7 @@
 
   returns: an AccessibleTable if supported by object;
    otherwise return null - `javax.accessibility.AccessibleTable`"
-  (^javax.accessibility.AccessibleTable [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.AccessibleTable [^AccessibleContext this]
     (-> this (.getAccessibleTable))))
 
 (defn get-accessible-child
@@ -336,7 +336,7 @@
   i - zero-based index of child - `int`
 
   returns: the Accessible child of the object - `javax.accessibility.Accessible`"
-  (^javax.accessibility.Accessible [^javax.accessibility.AccessibleContext this ^Integer i]
+  (^javax.accessibility.Accessible [^AccessibleContext this ^Integer i]
     (-> this (.getAccessibleChild i))))
 
 (defn fire-property-change
@@ -349,7 +349,7 @@
   property-name - The programmatic name of the property that was changed. - `java.lang.String`
   old-value - The old value of the property. - `java.lang.Object`
   new-value - The new value of the property. - `java.lang.Object`"
-  ([^javax.accessibility.AccessibleContext this ^java.lang.String property-name ^java.lang.Object old-value ^java.lang.Object new-value]
+  ([^AccessibleContext this ^java.lang.String property-name ^java.lang.Object old-value ^java.lang.Object new-value]
     (-> this (.firePropertyChange property-name old-value new-value))))
 
 (defn get-accessible-value
@@ -357,7 +357,7 @@
    Numerical value.
 
   returns: AccessibleValue if supported by object; else return null - `javax.accessibility.AccessibleValue`"
-  (^javax.accessibility.AccessibleValue [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.AccessibleValue [^AccessibleContext this]
     (-> this (.getAccessibleValue))))
 
 (defn get-accessible-state-set
@@ -368,7 +368,7 @@
 
   returns: an instance of AccessibleStateSet containing the
    current state set of the object - `javax.accessibility.AccessibleStateSet`"
-  (^javax.accessibility.AccessibleStateSet [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.AccessibleStateSet [^AccessibleContext this]
     (-> this (.getAccessibleStateSet))))
 
 (defn get-accessible-role
@@ -387,7 +387,7 @@
    if the set of predefined roles is inadequate.
 
   returns: an instance of AccessibleRole describing the role of the object - `javax.accessibility.AccessibleRole`"
-  (^javax.accessibility.AccessibleRole [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.AccessibleRole [^AccessibleContext this]
     (-> this (.getAccessibleRole))))
 
 (defn get-accessible-relation-set
@@ -395,7 +395,7 @@
 
   returns: an AccessibleRelationSet if supported by object;
    otherwise return null - `javax.accessibility.AccessibleRelationSet`"
-  (^javax.accessibility.AccessibleRelationSet [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.AccessibleRelationSet [^AccessibleContext this]
     (-> this (.getAccessibleRelationSet))))
 
 (defn get-locale
@@ -406,7 +406,7 @@
    a locale, the locale of its parent is returned. - `java.util.Locale`
 
   throws: java.awt.IllegalComponentStateException - If the Component does not have its own locale and has not yet been added to a containment hierarchy such that the locale can be determined from the containing parent."
-  (^java.util.Locale [^javax.accessibility.AccessibleContext this]
+  (^java.util.Locale [^AccessibleContext this]
     (-> this (.getLocale))))
 
 (defn get-accessible-name
@@ -421,7 +421,7 @@
 
   returns: the localized name of the object; null if this
    object does not have a name - `java.lang.String`"
-  (^java.lang.String [^javax.accessibility.AccessibleContext this]
+  (^java.lang.String [^AccessibleContext this]
     (-> this (.getAccessibleName))))
 
 (defn get-accessible-icon
@@ -430,7 +430,7 @@
 
   returns: an array of AccessibleIcon if supported by object;
    otherwise return null - `javax.accessibility.AccessibleIcon[]`"
-  ([^javax.accessibility.AccessibleContext this]
+  ([^AccessibleContext this]
     (-> this (.getAccessibleIcon))))
 
 (defn remove-property-change-listener
@@ -439,14 +439,14 @@
    for all properties.
 
   listener - The PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([^javax.accessibility.AccessibleContext this ^java.beans.PropertyChangeListener listener]
+  ([^AccessibleContext this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn get-accessible-children-count
   "Returns the number of accessible children of the object.
 
   returns: the number of accessible children of the object. - `int`"
-  (^Integer [^javax.accessibility.AccessibleContext this]
+  (^Integer [^AccessibleContext this]
     (-> this (.getAccessibleChildrenCount))))
 
 (defn get-accessible-parent
@@ -454,7 +454,7 @@
 
   returns: the Accessible parent of this object; null if this
    object does not have an Accessible parent - `javax.accessibility.Accessible`"
-  (^javax.accessibility.Accessible [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.Accessible [^AccessibleContext this]
     (-> this (.getAccessibleParent))))
 
 (defn get-accessible-selection
@@ -462,7 +462,7 @@
    Accessible children to be selected.
 
   returns: AccessibleSelection if supported by object; else return null - `javax.accessibility.AccessibleSelection`"
-  (^javax.accessibility.AccessibleSelection [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.AccessibleSelection [^AccessibleContext this]
     (-> this (.getAccessibleSelection))))
 
 (defn get-accessible-component
@@ -470,7 +470,7 @@
    graphical representation.
 
   returns: AccessibleComponent if supported by object; else return null - `javax.accessibility.AccessibleComponent`"
-  (^javax.accessibility.AccessibleComponent [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.AccessibleComponent [^AccessibleContext this]
     (-> this (.getAccessibleComponent))))
 
 (defn get-accessible-editable-text
@@ -478,7 +478,7 @@
    presenting editable text on the display.
 
   returns: AccessibleEditableText if supported by object; else return null - `javax.accessibility.AccessibleEditableText`"
-  (^javax.accessibility.AccessibleEditableText [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.AccessibleEditableText [^AccessibleContext this]
     (-> this (.getAccessibleEditableText))))
 
 (defn get-accessible-text
@@ -486,7 +486,7 @@
    text on the display.
 
   returns: AccessibleText if supported by object; else return null - `javax.accessibility.AccessibleText`"
-  (^javax.accessibility.AccessibleText [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.AccessibleText [^AccessibleContext this]
     (-> this (.getAccessibleText))))
 
 (defn get-accessible-action
@@ -494,7 +494,7 @@
    one or more actions.
 
   returns: AccessibleAction if supported by object; else return null - `javax.accessibility.AccessibleAction`"
-  (^javax.accessibility.AccessibleAction [^javax.accessibility.AccessibleContext this]
+  (^javax.accessibility.AccessibleAction [^AccessibleContext this]
     (-> this (.getAccessibleAction))))
 
 (defn get-accessible-description
@@ -506,7 +506,7 @@
 
   returns: the localized description of the object; null if
    this object does not have a description - `java.lang.String`"
-  (^java.lang.String [^javax.accessibility.AccessibleContext this]
+  (^java.lang.String [^AccessibleContext this]
     (-> this (.getAccessibleDescription))))
 
 (defn set-accessible-name
@@ -515,7 +515,7 @@
    ACCESSIBLE_NAME_PROPERTY property.
 
   s - the new localized name of the object. - `java.lang.String`"
-  ([^javax.accessibility.AccessibleContext this ^java.lang.String s]
+  ([^AccessibleContext this ^java.lang.String s]
     (-> this (.setAccessibleName s))))
 
 (defn add-property-change-listener
@@ -524,7 +524,7 @@
    be called when those properties change.
 
   listener - The PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([^javax.accessibility.AccessibleContext this ^java.beans.PropertyChangeListener listener]
+  ([^AccessibleContext this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn set-accessible-description
@@ -533,7 +533,7 @@
    ACCESSIBLE_DESCRIPTION_PROPERTY property.
 
   s - the new localized description of the object - `java.lang.String`"
-  ([^javax.accessibility.AccessibleContext this ^java.lang.String s]
+  ([^AccessibleContext this ^java.lang.String s]
     (-> this (.setAccessibleDescription s))))
 
 (defn get-accessible-index-in-parent
@@ -541,6 +541,6 @@
 
   returns: the 0-based index of this object in its parent; -1 if this
    object does not have an accessible parent. - `int`"
-  (^Integer [^javax.accessibility.AccessibleContext this]
+  (^Integer [^AccessibleContext this]
     (-> this (.getAccessibleIndexInParent))))
 

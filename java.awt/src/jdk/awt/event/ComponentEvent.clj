@@ -40,7 +40,7 @@
   id - An integer indicating the type of event. For information on allowable values, see the class description for ComponentEvent - `int`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.awt.Component source ^Integer id]
+  (^ComponentEvent [^java.awt.Component source ^Integer id]
     (new ComponentEvent source id)))
 
 (def *-component-first
@@ -64,7 +64,7 @@
 
   This event indicates that the component's position changed.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ComponentEvent/COMPONENT_MOVED)
 
 (def *-component-resized
@@ -72,7 +72,7 @@
 
   This event indicates that the component's size changed.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ComponentEvent/COMPONENT_RESIZED)
 
 (def *-component-shown
@@ -80,7 +80,7 @@
 
   This event indicates that the component was made visible.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ComponentEvent/COMPONENT_SHOWN)
 
 (def *-component-hidden
@@ -88,7 +88,7 @@
 
   This event indicates that the component was rendered invisible.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ComponentEvent/COMPONENT_HIDDEN)
 
 (defn get-component
@@ -97,7 +97,7 @@
   returns: the Component object that originated
    the event, or null if the object is not a
    Component. - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.event.ComponentEvent this]
+  (^java.awt.Component [^ComponentEvent this]
     (-> this (.getComponent))))
 
 (defn param-string
@@ -105,6 +105,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.ComponentEvent this]
+  (^java.lang.String [^ComponentEvent this]
     (-> this (.paramString))))
 

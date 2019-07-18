@@ -10,6 +10,6 @@
 
   returns: the attribute or processing instruction node or the
       parent element of the text node that directly contains the URI - `org.w3c.dom.Node`"
-  (^org.w3c.dom.Node [^javax.xml.crypto.dom.DOMURIReference this]
+  (^org.w3c.dom.Node [^DOMURIReference this]
     (-> this (.getHere))))
 

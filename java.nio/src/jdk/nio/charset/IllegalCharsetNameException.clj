@@ -10,13 +10,13 @@
   Constructs an instance of this class.
 
   charset-name - The illegal charset name - `java.lang.String`"
-  ([^java.lang.String charset-name]
+  (^IllegalCharsetNameException [^java.lang.String charset-name]
     (new IllegalCharsetNameException charset-name)))
 
 (defn get-charset-name
   "Retrieves the illegal charset name.
 
   returns: The illegal charset name - `java.lang.String`"
-  (^java.lang.String [^java.nio.charset.IllegalCharsetNameException this]
+  (^java.lang.String [^IllegalCharsetNameException this]
     (-> this (.getCharsetName))))
 

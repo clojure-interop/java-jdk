@@ -12,15 +12,15 @@
   cause - the IOException - `java.io.IOException`
 
   throws: java.lang.NullPointerException - if the cause is null"
-  ([^java.lang.String message ^java.io.IOException cause]
+  (^UncheckedIOException [^java.lang.String message ^java.io.IOException cause]
     (new UncheckedIOException message cause))
-  ([^java.io.IOException cause]
+  (^UncheckedIOException [^java.io.IOException cause]
     (new UncheckedIOException cause)))
 
 (defn get-cause
   "Returns the cause of this exception.
 
   returns: the IOException which is the cause of this exception. - `java.io.IOException`"
-  (^java.io.IOException [^java.io.UncheckedIOException this]
+  (^java.io.IOException [^UncheckedIOException this]
     (-> this (.getCause))))
 

@@ -5,7 +5,7 @@
 
 (defn ->basic-panel-ui
   "Constructor."
-  ([]
+  (^BasicPanelUI []
     (new BasicPanelUI )))
 
 (defn *create-ui
@@ -19,14 +19,14 @@
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicPanelUI this ^javax.swing.JComponent c]
+  ([^BasicPanelUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicPanelUI this ^javax.swing.JComponent c]
+  ([^BasicPanelUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-baseline
@@ -40,7 +40,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^Integer [^javax.swing.plaf.basic.BasicPanelUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^BasicPanelUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-baseline-resize-behavior
@@ -50,9 +50,9 @@
   c - JComponent to return baseline resize behavior for - `javax.swing.JComponent`
 
   returns: an enum indicating how the baseline changes as the component
-           size changes - `java.awt.Component.BaselineResizeBehavior`
+           size changes - `java.awt.Component$BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.basic.BasicPanelUI this ^javax.swing.JComponent c]
+  (^java.awt.Component$BaselineResizeBehavior [^BasicPanelUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 

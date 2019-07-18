@@ -94,15 +94,15 @@
   dash-phase - the offset to start the dashing pattern - `float`
 
   throws: java.lang.IllegalArgumentException - if dash lengths are all zero."
-  ([^Float width ^Integer cap ^Integer join ^Float miterlimit dash ^Float dash-phase]
+  (^BasicStroke [^Float width ^Integer cap ^Integer join ^Float miterlimit dash ^Float dash-phase]
     (new BasicStroke width cap join miterlimit dash dash-phase))
-  ([^Float width ^Integer cap ^Integer join ^Float miterlimit]
+  (^BasicStroke [^Float width ^Integer cap ^Integer join ^Float miterlimit]
     (new BasicStroke width cap join miterlimit))
-  ([^Float width ^Integer cap ^Integer join]
+  (^BasicStroke [^Float width ^Integer cap ^Integer join]
     (new BasicStroke width cap join))
-  ([^Float width]
+  (^BasicStroke [^Float width]
     (new BasicStroke width))
-  ([]
+  (^BasicStroke []
     (new BasicStroke )))
 
 (def *-join-miter
@@ -111,7 +111,7 @@
   Joins path segments by extending their outside edges until
    they meet.
 
-  type: java.lang.annotation.    int"
+  type: int"
   BasicStroke/JOIN_MITER)
 
 (def *-join-round
@@ -120,7 +120,7 @@
   Joins path segments by rounding off the corner at a radius
    of half the line width.
 
-  type: java.lang.annotation.    int"
+  type: int"
   BasicStroke/JOIN_ROUND)
 
 (def *-join-bevel
@@ -129,7 +129,7 @@
   Joins path segments by connecting the outer corners of their
    wide outlines with a straight segment.
 
-  type: java.lang.annotation.    int"
+  type: int"
   BasicStroke/JOIN_BEVEL)
 
 (def *-cap-butt
@@ -138,7 +138,7 @@
   Ends unclosed subpaths and dash segments with no added
    decoration.
 
-  type: java.lang.annotation.    int"
+  type: int"
   BasicStroke/CAP_BUTT)
 
 (def *-cap-round
@@ -148,7 +148,7 @@
    decoration that has a radius equal to half of the width
    of the pen.
 
-  type: java.lang.annotation.    int"
+  type: int"
   BasicStroke/CAP_ROUND)
 
 (def *-cap-square
@@ -158,7 +158,7 @@
    projection that extends beyond the end of the segment
    to a distance equal to half of the line width.
 
-  type: java.lang.annotation.    int"
+  type: int"
   BasicStroke/CAP_SQUARE)
 
 (defn get-dash-array
@@ -173,7 +173,7 @@
    to an even element of the dash array and transparent otherwise.
 
   returns: the dash array. - `float[]`"
-  ([^java.awt.BasicStroke this]
+  ([^BasicStroke this]
     (-> this (.getDashArray))))
 
 (defn get-end-cap
@@ -182,7 +182,7 @@
   returns: the end cap style of this BasicStroke as one
    of the static int values that define possible end cap
    styles. - `int`"
-  (^Integer [^java.awt.BasicStroke this]
+  (^Integer [^BasicStroke this]
     (-> this (.getEndCap))))
 
 (defn get-dash-phase
@@ -193,7 +193,7 @@
    the beginning of the stroke.
 
   returns: the dash phase as a float value. - `float`"
-  (^Float [^java.awt.BasicStroke this]
+  (^Float [^BasicStroke this]
     (-> this (.getDashPhase))))
 
 (defn get-line-join
@@ -202,7 +202,7 @@
   returns: the line join style of the BasicStroke as one
    of the static int values that define possible line
    join styles. - `int`"
-  (^Integer [^java.awt.BasicStroke this]
+  (^Integer [^BasicStroke this]
     (-> this (.getLineJoin))))
 
 (defn create-stroked-shape
@@ -212,7 +212,7 @@
   s - the Shape boundary be stroked - `java.awt.Shape`
 
   returns: the Shape of the stroked outline. - `java.awt.Shape`"
-  (^java.awt.Shape [^java.awt.BasicStroke this ^java.awt.Shape s]
+  (^java.awt.Shape [^BasicStroke this ^java.awt.Shape s]
     (-> this (.createStrokedShape s))))
 
 (defn get-line-width
@@ -222,14 +222,14 @@
    the user space coordinate system.
 
   returns: the line width of this BasicStroke. - `float`"
-  (^Float [^java.awt.BasicStroke this]
+  (^Float [^BasicStroke this]
     (-> this (.getLineWidth))))
 
 (defn hash-code
   "Returns the hashcode for this stroke.
 
   returns: a hash code for this stroke. - `int`"
-  (^Integer [^java.awt.BasicStroke this]
+  (^Integer [^BasicStroke this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -243,13 +243,13 @@
   returns: true if the width, join, cap, miter limit, dash, and
               dash phase are the same for both objects;
               false otherwise. - `boolean`"
-  (^Boolean [^java.awt.BasicStroke this ^java.lang.Object obj]
+  (^Boolean [^BasicStroke this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-miter-limit
   "Returns the limit of miter joins.
 
   returns: the limit of miter joins of the BasicStroke. - `float`"
-  (^Float [^java.awt.BasicStroke this]
+  (^Float [^BasicStroke this]
     (-> this (.getMiterLimit))))
 

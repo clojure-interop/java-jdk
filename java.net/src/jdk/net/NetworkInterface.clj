@@ -79,7 +79,7 @@
             NetPermission(`getNetworkInformation`) - `byte[]`
 
   throws: java.net.SocketException - if an I/O error occurs."
-  ([^java.net.NetworkInterface this]
+  ([^NetworkInterface this]
     (-> this (.getHardwareAddress))))
 
 (defn virtual?
@@ -93,7 +93,7 @@
    interface.
 
   returns: true if this interface is a virtual interface. - `boolean`"
-  (^Boolean [^java.net.NetworkInterface this]
+  (^Boolean [^NetworkInterface this]
     (-> this (.isVirtual))))
 
 (defn get-index
@@ -104,7 +104,7 @@
 
   returns: the index of this network interface or -1 if the index is
            unknown - `int`"
-  (^Integer [^java.net.NetworkInterface this]
+  (^Integer [^NetworkInterface this]
     (-> this (.getIndex))))
 
 (defn get-mtu
@@ -113,14 +113,14 @@
   returns: the value of the MTU for that interface. - `int`
 
   throws: java.net.SocketException - if an I/O error occurs."
-  (^Integer [^java.net.NetworkInterface this]
+  (^Integer [^NetworkInterface this]
     (-> this (.getMTU))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.net.NetworkInterface this]
+  (^java.lang.String [^NetworkInterface this]
     (-> this (.toString))))
 
 (defn get-display-name
@@ -130,7 +130,7 @@
 
   returns: a non-empty string representing the display name of this network
            interface, or null if no display name is available. - `java.lang.String`"
-  (^java.lang.String [^java.net.NetworkInterface this]
+  (^java.lang.String [^NetworkInterface this]
     (-> this (.getDisplayName))))
 
 (defn get-sub-interfaces
@@ -141,7 +141,7 @@
 
   returns: an Enumeration object with all of the subinterfaces
    of this network interface - `java.util.Enumeration<java.net.NetworkInterface>`"
-  (^java.util.Enumeration [^java.net.NetworkInterface this]
+  (^java.util.Enumeration [^NetworkInterface this]
     (-> this (.getSubInterfaces))))
 
 (defn get-inet-addresses
@@ -157,14 +157,14 @@
 
   returns: an Enumeration object with all or a subset of the InetAddresses
    bound to this network interface - `java.util.Enumeration<java.net.InetAddress>`"
-  (^java.util.Enumeration [^java.net.NetworkInterface this]
+  (^java.util.Enumeration [^NetworkInterface this]
     (-> this (.getInetAddresses))))
 
 (defn get-name
   "Get the name of this network interface.
 
   returns: the name of this network interface - `java.lang.String`"
-  (^java.lang.String [^java.net.NetworkInterface this]
+  (^java.lang.String [^NetworkInterface this]
     (-> this (.getName))))
 
 (defn get-parent
@@ -173,7 +173,7 @@
    (non virtual) interface or has no parent.
 
   returns: The NetworkInterface this interface is attached to. - `java.net.NetworkInterface`"
-  (^java.net.NetworkInterface [^java.net.NetworkInterface this]
+  (^java.net.NetworkInterface [^NetworkInterface this]
     (-> this (.getParent))))
 
 (defn supports-multicast
@@ -182,7 +182,7 @@
   returns: true if the interface supports Multicasting. - `boolean`
 
   throws: java.net.SocketException - if an I/O error occurs."
-  (^Boolean [^java.net.NetworkInterface this]
+  (^Boolean [^NetworkInterface this]
     (-> this (.supportsMulticast))))
 
 (defn get-interface-addresses
@@ -196,7 +196,7 @@
 
   returns: a List object with all or a subset of the
            InterfaceAddresss of this network interface - `java.util.List<java.net.InterfaceAddress>`"
-  (^java.util.List [^java.net.NetworkInterface this]
+  (^java.util.List [^NetworkInterface this]
     (-> this (.getInterfaceAddresses))))
 
 (defn loopback?
@@ -205,7 +205,7 @@
   returns: true if the interface is a loopback interface. - `boolean`
 
   throws: java.net.SocketException - if an I/O error occurs."
-  (^Boolean [^java.net.NetworkInterface this]
+  (^Boolean [^NetworkInterface this]
     (-> this (.isLoopback))))
 
 (defn point-to-point?
@@ -217,7 +217,7 @@
             interface. - `boolean`
 
   throws: java.net.SocketException - if an I/O error occurs."
-  (^Boolean [^java.net.NetworkInterface this]
+  (^Boolean [^NetworkInterface this]
     (-> this (.isPointToPoint))))
 
 (defn up?
@@ -226,14 +226,14 @@
   returns: true if the interface is up and running. - `boolean`
 
   throws: java.net.SocketException - if an I/O error occurs."
-  (^Boolean [^java.net.NetworkInterface this]
+  (^Boolean [^NetworkInterface this]
     (-> this (.isUp))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.net.NetworkInterface this]
+  (^Integer [^NetworkInterface this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -249,6 +249,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  (^Boolean [^java.net.NetworkInterface this ^java.lang.Object obj]
+  (^Boolean [^NetworkInterface this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

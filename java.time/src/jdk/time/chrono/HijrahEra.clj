@@ -57,7 +57,7 @@
    The era AH has the value 1.
 
   returns: the era value, 1 (AH) - `int`"
-  (^Integer [^java.time.chrono.HijrahEra this]
+  (^Integer [^HijrahEra this]
     (-> this (.getValue))))
 
 (defn range
@@ -84,6 +84,6 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  (^java.time.temporal.ValueRange [^java.time.chrono.HijrahEra this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^HijrahEra this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 

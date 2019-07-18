@@ -29,7 +29,7 @@
   value - Integer value. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if value is less than 0."
-  ([^Integer value]
+  (^JobImpressionsCompleted [^Integer value]
     (new JobImpressionsCompleted value)))
 
 (defn equals
@@ -49,7 +49,7 @@
 
   returns: True if object is equivalent to this job
             impressions completed attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.JobImpressionsCompleted this ^java.lang.Object object]
+  (^Boolean [^JobImpressionsCompleted this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -61,7 +61,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.JobImpressionsCompleted this]
+  ([^JobImpressionsCompleted this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -72,6 +72,6 @@
    `job-impressions-completed`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.JobImpressionsCompleted this]
+  (^java.lang.String [^JobImpressionsCompleted this]
     (-> this (.getName))))
 

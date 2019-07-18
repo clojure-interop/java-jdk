@@ -16,8 +16,8 @@
 
   message - the detail message - `java.lang.String`
   cause - the cause (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^AnnotationFormatError [^java.lang.String message ^java.lang.Throwable cause]
     (new AnnotationFormatError message cause))
-  ([^java.lang.String message]
+  (^AnnotationFormatError [^java.lang.String message]
     (new AnnotationFormatError message)))
 

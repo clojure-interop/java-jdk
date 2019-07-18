@@ -10,9 +10,9 @@
 (defn apply-as-long
   "Applies this function to the given argument.
 
-  value - the function argument - `ToLongFunction.T`
+  value - the function argument - `T`
 
   returns: the function result - `long`"
-  (^Long [^java.util.function.ToLongFunction this ^ToLongFunction.T value]
+  (^Long [^ToLongFunction this value]
     (-> this (.applyAsLong value))))
 

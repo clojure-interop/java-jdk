@@ -11,7 +11,7 @@
 
   returns: the URIDereferencer, or null if not
       specified - `javax.xml.crypto.URIDereferencer`"
-  (^javax.xml.crypto.URIDereferencer [^javax.xml.crypto.dom.DOMCryptoContext this]
+  (^javax.xml.crypto.URIDereferencer [^DOMCryptoContext this]
     (-> this (.getURIDereferencer))))
 
 (defn set-id-attribute-ns
@@ -26,14 +26,14 @@
   local-name - the local name of the attribute - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if localName is not an attribute of the specified element or it does not contain a specific value"
-  ([^javax.xml.crypto.dom.DOMCryptoContext this ^org.w3c.dom.Element element ^java.lang.String namespace-uri ^java.lang.String local-name]
+  ([^DOMCryptoContext this ^org.w3c.dom.Element element ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.setIdAttributeNS element namespace-uri local-name))))
 
 (defn set-key-selector
   "Description copied from interface: XMLCryptoContext
 
   ks - the key selector, or null to remove the current setting - `javax.xml.crypto.KeySelector`"
-  ([^javax.xml.crypto.dom.DOMCryptoContext this ^javax.xml.crypto.KeySelector ks]
+  ([^DOMCryptoContext this ^javax.xml.crypto.KeySelector ks]
     (-> this (.setKeySelector ks))))
 
 (defn get-element-by-id
@@ -48,7 +48,7 @@
       or null if none. - `org.w3c.dom.Element`
 
   throws: java.lang.NullPointerException - if idValue is null"
-  (^org.w3c.dom.Element [^javax.xml.crypto.dom.DOMCryptoContext this ^java.lang.String id-value]
+  (^org.w3c.dom.Element [^DOMCryptoContext this ^java.lang.String id-value]
     (-> this (.getElementById id-value))))
 
 (defn put
@@ -62,7 +62,7 @@
       if there was no mapping for the key - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if some aspect of this key or value prevents it from being stored in this context"
-  (^java.lang.Object [^javax.xml.crypto.dom.DOMCryptoContext this ^java.lang.Object key ^java.lang.Object value]
+  (^java.lang.Object [^DOMCryptoContext this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.put key value))))
 
 (defn set-base-uri
@@ -71,7 +71,7 @@
   base-uri - the base URI, or null to remove current value - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if baseURI is not RFC 2396 compliant"
-  ([^javax.xml.crypto.dom.DOMCryptoContext this ^java.lang.String base-uri]
+  ([^DOMCryptoContext this ^java.lang.String base-uri]
     (-> this (.setBaseURI base-uri))))
 
 (defn get-default-namespace-prefix
@@ -79,14 +79,14 @@
 
   returns: the default namespace prefix, or null if none has
       been set. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dom.DOMCryptoContext this]
+  (^java.lang.String [^DOMCryptoContext this]
     (-> this (.getDefaultNamespacePrefix))))
 
 (defn set-default-namespace-prefix
   "Description copied from interface: XMLCryptoContext
 
   default-prefix - the default namespace prefix, or null to remove the current setting. Specify the empty string (``) to bind no prefix. - `java.lang.String`"
-  ([^javax.xml.crypto.dom.DOMCryptoContext this ^java.lang.String default-prefix]
+  ([^DOMCryptoContext this ^java.lang.String default-prefix]
     (-> this (.setDefaultNamespacePrefix default-prefix))))
 
 (defn iterator
@@ -100,28 +100,28 @@
    iteration are undefined.
 
   returns: a read-only iterator over the set of mappings - `java.util.Iterator`"
-  (^java.util.Iterator [^javax.xml.crypto.dom.DOMCryptoContext this]
+  (^java.util.Iterator [^DOMCryptoContext this]
     (-> this (.iterator))))
 
 (defn get-key-selector
   "Description copied from interface: XMLCryptoContext
 
   returns: the key selector, or null if not specified - `javax.xml.crypto.KeySelector`"
-  (^javax.xml.crypto.KeySelector [^javax.xml.crypto.dom.DOMCryptoContext this]
+  (^javax.xml.crypto.KeySelector [^DOMCryptoContext this]
     (-> this (.getKeySelector))))
 
 (defn set-uri-dereferencer
   "Description copied from interface: XMLCryptoContext
 
   dereferencer - the URIDereferencer, or null to remove any current setting - `javax.xml.crypto.URIDereferencer`"
-  ([^javax.xml.crypto.dom.DOMCryptoContext this ^javax.xml.crypto.URIDereferencer dereferencer]
+  ([^DOMCryptoContext this ^javax.xml.crypto.URIDereferencer dereferencer]
     (-> this (.setURIDereferencer dereferencer))))
 
 (defn get-base-uri
   "Description copied from interface: XMLCryptoContext
 
   returns: the base URI, or null if not specified - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dom.DOMCryptoContext this]
+  (^java.lang.String [^DOMCryptoContext this]
     (-> this (.getBaseURI))))
 
 (defn get-property
@@ -134,7 +134,7 @@
       null if it does not have a value - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if name is null"
-  (^java.lang.Object [^javax.xml.crypto.dom.DOMCryptoContext this ^java.lang.String name]
+  (^java.lang.Object [^DOMCryptoContext this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-namespace-prefix
@@ -151,7 +151,7 @@
       (``) is returned. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if namespaceURI is null"
-  (^java.lang.String [^javax.xml.crypto.dom.DOMCryptoContext this ^java.lang.String namespace-uri ^java.lang.String default-prefix]
+  (^java.lang.String [^DOMCryptoContext this ^java.lang.String namespace-uri ^java.lang.String default-prefix]
     (-> this (.getNamespacePrefix namespace-uri default-prefix))))
 
 (defn set-property
@@ -165,7 +165,7 @@
       null if it did not have a value - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if name is null"
-  (^java.lang.Object [^javax.xml.crypto.dom.DOMCryptoContext this ^java.lang.String name ^java.lang.Object value]
+  (^java.lang.Object [^DOMCryptoContext this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setProperty name value))))
 
 (defn get
@@ -176,7 +176,7 @@
 
   returns: the value to which this context maps the specified key, or
       null if there is no mapping for the key - `java.lang.Object`"
-  (^java.lang.Object [^javax.xml.crypto.dom.DOMCryptoContext this ^java.lang.Object key]
+  (^java.lang.Object [^DOMCryptoContext this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn put-namespace-prefix
@@ -190,6 +190,6 @@
       URI, or null if there was none - `java.lang.String`
 
   throws: java.lang.NullPointerException - if namespaceURI is null"
-  (^java.lang.String [^javax.xml.crypto.dom.DOMCryptoContext this ^java.lang.String namespace-uri ^java.lang.String prefix]
+  (^java.lang.String [^DOMCryptoContext this ^java.lang.String namespace-uri ^java.lang.String prefix]
     (-> this (.putNamespacePrefix namespace-uri prefix))))
 

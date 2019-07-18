@@ -17,13 +17,13 @@
   spinner - the spinner whose model this editor will monitor - `javax.swing.JSpinner`
 
   throws: java.lang.IllegalArgumentException - if the spinners model is not an instance of SpinnerListModel"
-  ([^javax.swing.JSpinner spinner]
+  (^JSpinner$ListEditor [^javax.swing.JSpinner spinner]
     (new JSpinner$ListEditor spinner)))
 
 (defn get-model
   "Return our spinner ancestor's SpinnerNumberModel.
 
   returns: getSpinner().getModel() - `javax.swing.SpinnerListModel`"
-  (^javax.swing.SpinnerListModel [^javax.swing.JSpinner$ListEditor this]
+  (^javax.swing.SpinnerListModel [^JSpinner$ListEditor this]
     (-> this (.getModel))))
 

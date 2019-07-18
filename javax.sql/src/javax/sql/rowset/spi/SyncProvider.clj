@@ -181,7 +181,7 @@
   "Constructor.
 
   Creates a default SyncProvider object."
-  ([]
+  (^SyncProvider []
     (new SyncProvider )))
 
 (def *-grade-none
@@ -313,7 +313,7 @@
    underlying data source.
 
   returns: a javax.sql.RowSetWriter object - `javax.sql.RowSetWriter`"
-  (^javax.sql.RowSetWriter [^javax.sql.rowset.spi.SyncProvider this]
+  (^javax.sql.RowSetWriter [^SyncProvider this]
     (-> this (.getRowSetWriter))))
 
 (defn get-row-set-reader
@@ -321,7 +321,7 @@
    populate a RowSet object with data.
 
   returns: a javax.sql.RowSetReader object - `javax.sql.RowSetReader`"
-  (^javax.sql.RowSetReader [^javax.sql.rowset.spi.SyncProvider this]
+  (^javax.sql.RowSetReader [^SyncProvider this]
     (-> this (.getRowSetReader))))
 
 (defn get-provider-id
@@ -329,7 +329,7 @@
 
   returns: a String object with the fully qualified class name of
            this SyncProvider object - `java.lang.String`"
-  (^java.lang.String [^javax.sql.rowset.spi.SyncProvider this]
+  (^java.lang.String [^SyncProvider this]
     (-> this (.getProviderID))))
 
 (defn get-data-source-lock
@@ -347,7 +347,7 @@
              SyncProvider.DATASOURCE_DB_LOCK - `int`
 
   throws: javax.sql.rowset.spi.SyncProviderException - if an error occurs determining the data source locking level."
-  (^Integer [^javax.sql.rowset.spi.SyncProvider this]
+  (^Integer [^SyncProvider this]
     (-> this (.getDataSourceLock))))
 
 (defn get-vendor
@@ -355,7 +355,7 @@
 
   returns: a String detailing the vendor name of this
        SyncProvider implementation - `java.lang.String`"
-  (^java.lang.String [^javax.sql.rowset.spi.SyncProvider this]
+  (^java.lang.String [^SyncProvider this]
     (-> this (.getVendor))))
 
 (defn set-data-source-lock
@@ -368,7 +368,7 @@
   datasource-lock - one of the following constants indicating the severity level of data source lock required: SyncProvider.DATASOURCE_NO_LOCK, SyncProvider.DATASOURCE_ROW_LOCK, SyncProvider.DATASOURCE_TABLE_LOCK, SyncProvider.DATASOURCE_DB_LOCK, - `int`
 
   throws: javax.sql.rowset.spi.SyncProviderException - if an unsupported data source locking level is set."
-  ([^javax.sql.rowset.spi.SyncProvider this ^Integer datasource-lock]
+  ([^SyncProvider this ^Integer datasource-lock]
     (-> this (.setDataSourceLock datasource-lock))))
 
 (defn get-version
@@ -376,7 +376,7 @@
 
   returns: a String detailing the release version of the
        SyncProvider implementation - `java.lang.String`"
-  (^java.lang.String [^javax.sql.rowset.spi.SyncProvider this]
+  (^java.lang.String [^SyncProvider this]
     (-> this (.getVersion))))
 
 (defn get-provider-grade
@@ -390,7 +390,7 @@
              SyncProvider.GRADE_CHECK_ALL_AT_COMMIT,
              SyncProvider.GRADE_LOCK_WHEN_MODIFIED,
              SyncProvider.GRADE_LOCK_WHEN_LOADED - `int`"
-  (^Integer [^javax.sql.rowset.spi.SyncProvider this]
+  (^Integer [^SyncProvider this]
     (-> this (.getProviderGrade))))
 
 (defn supports-updatable-view
@@ -404,6 +404,6 @@
            following:
               SyncProvider.UPDATABLE_VIEW_SYNC,
               SyncProvider.NONUPDATABLE_VIEW_SYNC - `int`"
-  (^Integer [^javax.sql.rowset.spi.SyncProvider this]
+  (^Integer [^SyncProvider this]
     (-> this (.supportsUpdatableView))))
 

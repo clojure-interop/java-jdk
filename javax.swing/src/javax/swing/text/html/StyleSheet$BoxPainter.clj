@@ -21,7 +21,7 @@
   returns: `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid direction"
-  (^Float [^javax.swing.text.html.StyleSheet$BoxPainter this ^Integer side ^javax.swing.text.View v]
+  (^Float [^StyleSheet$BoxPainter this ^Integer side ^javax.swing.text.View v]
     (-> this (.getInset side v))))
 
 (defn paint
@@ -35,6 +35,6 @@
   w - the width of the allocated area to render into. - `float`
   h - the height of the allocated area to render into. - `float`
   v - the view making the request. This is used to get the AttributeSet, and may be used to resolve percentage arguments. - `javax.swing.text.View`"
-  ([^javax.swing.text.html.StyleSheet$BoxPainter this ^java.awt.Graphics g ^Float x ^Float y ^Float w ^Float h ^javax.swing.text.View v]
+  ([^StyleSheet$BoxPainter this ^java.awt.Graphics g ^Float x ^Float y ^Float w ^Float h ^javax.swing.text.View v]
     (-> this (.paint g x y w h v))))
 

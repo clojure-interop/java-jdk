@@ -12,9 +12,9 @@
    specified.
 
   initial-capacity - initial capacity - `int`"
-  ([^Integer initial-capacity]
+  (^RoleUnresolvedList [^Integer initial-capacity]
     (new RoleUnresolvedList initial-capacity))
-  ([]
+  (^RoleUnresolvedList []
     (new RoleUnresolvedList )))
 
 (defn as-list
@@ -34,7 +34,7 @@
    be added. - `java.util.List<javax.management.relation.RoleUnresolved>`
 
   throws: java.lang.IllegalArgumentException - if this RoleUnresolvedList contains an element that is not a RoleUnresolved."
-  (^java.util.List [^javax.management.relation.RoleUnresolvedList this]
+  (^java.util.List [^RoleUnresolvedList this]
     (-> this (.asList))))
 
 (defn add
@@ -47,9 +47,9 @@
   role - - The RoleUnresolved object to be inserted. - `javax.management.relation.RoleUnresolved`
 
   throws: java.lang.IllegalArgumentException - if the unresolved role is null."
-  ([^javax.management.relation.RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolved role]
+  ([^RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolved role]
     (-> this (.add index role)))
-  ([^javax.management.relation.RoleUnresolvedList this ^javax.management.relation.RoleUnresolved role]
+  ([^RoleUnresolvedList this ^javax.management.relation.RoleUnresolved role]
     (-> this (.add role))))
 
 (defn set
@@ -61,7 +61,7 @@
   role - - The value to which the unresolved role element should be set. - `javax.management.relation.RoleUnresolved`
 
   throws: java.lang.IllegalArgumentException - if the unresolved role is null."
-  ([^javax.management.relation.RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolved role]
+  ([^RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolved role]
     (-> this (.set index role))))
 
 (defn add-all
@@ -75,8 +75,8 @@
   returns: true if this list changed as a result of the call. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the role is null."
-  (^Boolean [^javax.management.relation.RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolvedList role-list]
+  (^Boolean [^RoleUnresolvedList this ^Integer index ^javax.management.relation.RoleUnresolvedList role-list]
     (-> this (.addAll index role-list)))
-  (^Boolean [^javax.management.relation.RoleUnresolvedList this ^javax.management.relation.RoleUnresolvedList role-list]
+  (^Boolean [^RoleUnresolvedList this ^javax.management.relation.RoleUnresolvedList role-list]
     (-> this (.addAll role-list))))
 

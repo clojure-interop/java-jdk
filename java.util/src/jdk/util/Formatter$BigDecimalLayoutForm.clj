@@ -7,7 +7,7 @@
 
   Format the BigDecimal in computerized scientific notation.
 
-  type: java.util.Formatter.BigDecimalLayoutForm"
+  type: java.util.Formatter$BigDecimalLayoutForm"
   Formatter$BigDecimalLayoutForm/SCIENTIFIC)
 
 (def DECIMAL_FLOAT
@@ -15,7 +15,7 @@
 
   Format the BigDecimal as a decimal number.
 
-  type: java.util.Formatter.BigDecimalLayoutForm"
+  type: java.util.Formatter$BigDecimalLayoutForm"
   Formatter$BigDecimalLayoutForm/DECIMAL_FLOAT)
 
 (defn *values
@@ -27,7 +27,7 @@
   for (Formatter.BigDecimalLayoutForm c : Formatter.BigDecimalLayoutForm.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.util.Formatter.BigDecimalLayoutForm[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.util.Formatter$BigDecimalLayoutForm[]`"
   ([]
     (Formatter$BigDecimalLayoutForm/values )))
 
@@ -39,9 +39,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.util.Formatter.BigDecimalLayoutForm`
+  returns: the enum constant with the specified name - `java.util.Formatter$BigDecimalLayoutForm`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.util.Formatter.BigDecimalLayoutForm [^java.lang.String name]
+  (^java.util.Formatter$BigDecimalLayoutForm [^java.lang.String name]
     (Formatter$BigDecimalLayoutForm/valueOf name)))
 

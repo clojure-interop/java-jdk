@@ -14,9 +14,9 @@
   len - Number of characters to write - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.Writer this cbuf ^Integer off ^Integer len]
+  ([^Writer this cbuf ^Integer off ^Integer len]
     (-> this (.write cbuf off len)))
-  ([^java.io.Writer this ^Integer c]
+  ([^Writer this ^Integer c]
     (-> this (.write c))))
 
 (defn append
@@ -38,9 +38,9 @@
   returns: This writer - `java.io.Writer`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  (^java.io.Writer [^java.io.Writer this ^java.lang.CharSequence csq ^Integer start ^Integer end]
+  (^java.io.Writer [^Writer this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  (^java.io.Writer [^java.io.Writer this ^java.lang.CharSequence csq]
+  (^java.io.Writer [^Writer this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn flush
@@ -57,7 +57,7 @@
    they are actually written to a physical device such as a disk drive.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.Writer this]
+  ([^Writer this]
     (-> this (.flush))))
 
 (defn close
@@ -66,6 +66,6 @@
    thrown. Closing a previously closed stream has no effect.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.Writer this]
+  ([^Writer this]
     (-> this (.close))))
 

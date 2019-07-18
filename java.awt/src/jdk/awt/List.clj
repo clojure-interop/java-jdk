@@ -81,11 +81,11 @@
   multiple-mode - if true, then multiple selections are allowed; otherwise, only one item can be selected at a time. - `boolean`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([^Integer rows ^Boolean multiple-mode]
+  (^List [^Integer rows ^Boolean multiple-mode]
     (new List rows multiple-mode))
-  ([^Integer rows]
+  (^List [^Integer rows]
     (new List rows))
-  ([]
+  (^List []
     (new List )))
 
 (defn add-item-listener
@@ -97,7 +97,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the item listener - `java.awt.event.ItemListener`"
-  ([^java.awt.List this ^java.awt.event.ItemListener l]
+  ([^List this ^java.awt.event.ItemListener l]
     (-> this (.addItemListener l))))
 
 (defn get-minimum-size
@@ -108,21 +108,20 @@
 
   returns: the minimum dimensions for displaying this scrolling list
                given that the specified number of rows must be visible - `java.awt.Dimension`"
-  (^java.awt.Dimension [^java.awt.List this ^Integer rows]
+  (^java.awt.Dimension [^List this ^Integer rows]
     (-> this (.getMinimumSize rows)))
-  (^java.awt.Dimension [^java.awt.List this]
+  (^java.awt.Dimension [^List this]
     (-> this (.getMinimumSize))))
 
 (defn add-item
-  "Deprecated. replaced by add(String).
+  "Deprecated. replaced by add(String, int).
 
   item - `java.lang.String`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.List this ^java.lang.String item]
-    (-> this (.addItem item)))
-  ([^java.awt.List this ^java.lang.String item ^Integer index]
-    (-> this (.addItem item index))))
+  index - `int`"
+  ([^List this ^java.lang.String item ^Integer index]
+    (-> this (.addItem item index)))
+  ([^List this ^java.lang.String item]
+    (-> this (.addItem item))))
 
 (defn get-item
   "Gets the item associated with the specified index.
@@ -131,34 +130,30 @@
 
   returns: an item that is associated with
                       the specified index - `java.lang.String`"
-  (^java.lang.String [^java.awt.List this ^Integer index]
+  (^java.lang.String [^List this ^Integer index]
     (-> this (.getItem index))))
 
 (defn get-item-count
   "Gets the number of items in the list.
 
   returns: the number of items in the list - `int`"
-  (^Integer [^java.awt.List this]
+  (^Integer [^List this]
     (-> this (.getItemCount))))
 
 (defn set-multiple-selections
   "Deprecated. As of JDK version 1.1,
    replaced by setMultipleMode(boolean).
 
-  b - `boolean`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.List this ^Boolean b]
+  b - `boolean`"
+  ([^List this ^Boolean b]
     (-> this (.setMultipleSelections b))))
 
 (defn del-item
   "Deprecated. replaced by remove(String)
                            and remove(int).
 
-  position - `int`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.List this ^Integer position]
+  position - `int`"
+  ([^List this ^Integer position]
     (-> this (.delItem position))))
 
 (defn remove-item-listener
@@ -169,7 +164,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the item listener - `java.awt.event.ItemListener`"
-  ([^java.awt.List this ^java.awt.event.ItemListener l]
+  ([^List this ^java.awt.event.ItemListener l]
     (-> this (.removeItemListener l))))
 
 (defn add-action-listener
@@ -183,7 +178,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the action listener - `java.awt.event.ActionListener`"
-  ([^java.awt.List this ^java.awt.event.ActionListener l]
+  ([^List this ^java.awt.event.ActionListener l]
     (-> this (.addActionListener l))))
 
 (defn get-selected-index
@@ -192,7 +187,7 @@
   returns: the index of the selected item;
                   if no item is selected, or if multiple items are
                   selected, -1 is returned. - `int`"
-  (^Integer [^java.awt.List this]
+  (^Integer [^List this]
     (-> this (.getSelectedIndex))))
 
 (defn del-items
@@ -202,16 +197,14 @@
    private method.
 
   start - `int`
-  end - `int`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.List this ^Integer start ^Integer end]
+  end - `int`"
+  ([^List this ^Integer start ^Integer end]
     (-> this (.delItems start end))))
 
 (defn add-notify
   "Creates the peer for the list.  The peer allows us to modify the
    list's appearance without changing its functionality."
-  ([^java.awt.List this]
+  ([^List this]
     (-> this (.addNotify))))
 
 (defn get-visible-index
@@ -219,13 +212,13 @@
    the method makeVisible.
 
   returns: the index of the item that was last made visible - `int`"
-  (^Integer [^java.awt.List this]
+  (^Integer [^List this]
     (-> this (.getVisibleIndex))))
 
 (defn remove-notify
   "Removes the peer for this list.  The peer allows us to modify the
    list's appearance without changing its functionality."
-  ([^java.awt.List this]
+  ([^List this]
     (-> this (.removeNotify))))
 
 (defn select
@@ -241,14 +234,14 @@
    ItemEvent is by user interaction.
 
   index - the position of the item to select - `int`"
-  ([^java.awt.List this ^Integer index]
+  ([^List this ^Integer index]
     (-> this (.select index))))
 
 (defn get-items
   "Gets the items in the list.
 
   returns: a string array containing items of the list - `java.lang.String[]`"
-  ([^java.awt.List this]
+  ([^List this]
     (-> this (.getItems))))
 
 (defn remove
@@ -259,7 +252,7 @@
   item - the item to remove from the list - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the item doesn't exist in the list"
-  ([^java.awt.List this ^java.lang.String item]
+  ([^List this ^java.lang.String item]
     (-> this (.remove item))))
 
 (defn index-selected?
@@ -270,14 +263,14 @@
 
   returns: true if the specified item has been
                          selected; false otherwise - `boolean`"
-  (^Boolean [^java.awt.List this ^Integer index]
+  (^Boolean [^List this ^Integer index]
     (-> this (.isIndexSelected index))))
 
 (defn make-visible
   "Makes the item at the specified index visible.
 
   index - the position of the item - `int`"
-  ([^java.awt.List this ^Integer index]
+  ([^List this ^Integer index]
     (-> this (.makeVisible index))))
 
 (defn set-multiple-mode
@@ -290,15 +283,15 @@
    location cursor, all items will be deselected.
 
   b - if true then multiple selections are allowed; otherwise, only one item from the list can be selected at once - `boolean`"
-  ([^java.awt.List this ^Boolean b]
+  ([^List this ^Boolean b]
     (-> this (.setMultipleMode b))))
 
 (defn allows-multiple-selections
   "Deprecated. As of JDK version 1.1,
    replaced by isMultipleMode().
 
-  returns: `java.lang.  boolean`"
-  ([^java.awt.List this]
+  returns: `boolean`"
+  (^Boolean [^List this]
     (-> this (.allowsMultipleSelections))))
 
 (defn get-action-listeners
@@ -308,7 +301,7 @@
   returns: all of this list's ActionListeners
            or an empty array if no action
            listeners are currently registered - `java.awt.event.ActionListener[]`"
-  ([^java.awt.List this]
+  ([^List this]
     (-> this (.getActionListeners))))
 
 (defn preferred-size
@@ -317,10 +310,10 @@
 
   rows - `int`
 
-  returns: `java.lang.  java.awt.Dimension`"
-  ([^java.awt.List this ^Integer rows]
+  returns: `java.awt.Dimension`"
+  (^java.awt.Dimension [^List this ^Integer rows]
     (-> this (.preferredSize rows)))
-  ([^java.awt.List this]
+  (^java.awt.Dimension [^List this]
     (-> this (.preferredSize))))
 
 (defn deselect
@@ -333,7 +326,7 @@
    then the operation is ignored.
 
   index - the position of the item to deselect - `int`"
-  ([^java.awt.List this ^Integer index]
+  ([^List this ^Integer index]
     (-> this (.deselect index))))
 
 (defn get-rows
@@ -342,7 +335,7 @@
    will never change.
 
   returns: the number of visible lines in this scrolling list - `int`"
-  (^Integer [^java.awt.List this]
+  (^Integer [^List this]
     (-> this (.getRows))))
 
 (defn get-accessible-context
@@ -353,7 +346,7 @@
 
   returns: an AccessibleAWTList that serves as the
            AccessibleContext of this List - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^java.awt.List this]
+  (^javax.accessibility.AccessibleContext [^List this]
     (-> this (.getAccessibleContext))))
 
 (defn multiple-mode?
@@ -361,7 +354,7 @@
 
   returns: true if this list allows multiple
                    selections; otherwise, false - `boolean`"
-  (^Boolean [^java.awt.List this]
+  (^Boolean [^List this]
     (-> this (.isMultipleMode))))
 
 (defn get-selected-item
@@ -370,17 +363,17 @@
   returns: the selected item on the list;
                   if no item is selected, or if multiple items are
                   selected, null is returned. - `java.lang.String`"
-  (^java.lang.String [^java.awt.List this]
+  (^java.lang.String [^List this]
     (-> this (.getSelectedItem))))
 
-(defn is-selected
+(defn selected?
   "Deprecated. As of JDK version 1.1,
    replaced by isIndexSelected(int).
 
   index - `int`
 
-  returns: `java.lang.  boolean`"
-  ([^java.awt.List this ^Integer index]
+  returns: `boolean`"
+  (^Boolean [^List this ^Integer index]
     (-> this (.isSelected index))))
 
 (defn get-selected-objects
@@ -389,7 +382,7 @@
   returns: an array of Objects representing the
                   selected items on this scrolling list;
                   if no item is selected, a zero-length array is returned. - `java.lang.Object[]`"
-  ([^java.awt.List this]
+  ([^List this]
     (-> this (.getSelectedObjects))))
 
 (defn remove-action-listener
@@ -401,7 +394,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the action listener - `java.awt.event.ActionListener`"
-  ([^java.awt.List this ^java.awt.event.ActionListener l]
+  ([^List this ^java.awt.event.ActionListener l]
     (-> this (.removeActionListener l))))
 
 (defn add
@@ -414,9 +407,9 @@
 
   item - the item to be added; if this parameter is null then the item is treated as an empty string, `` - `java.lang.String`
   index - the position at which to add the item - `int`"
-  ([^java.awt.List this ^java.lang.String item ^Integer index]
+  ([^List this ^java.lang.String item ^Integer index]
     (-> this (.add item index)))
-  ([^java.awt.List this ^java.lang.String item]
+  ([^List this ^java.lang.String item]
     (-> this (.add item))))
 
 (defn replace-item
@@ -427,7 +420,7 @@
   index - the position of the item to replace - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if index is out of range"
-  ([^java.awt.List this ^java.lang.String new-value ^Integer index]
+  ([^List this ^java.lang.String new-value ^Integer index]
     (-> this (.replaceItem new-value index))))
 
 (defn get-listeners
@@ -451,7 +444,7 @@
 
    If no such listeners exist, this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners on this list,
@@ -459,15 +452,13 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^java.awt.List this ^java.lang.Class listener-type]
+  ([^List this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn clear
   "Deprecated. As of JDK version 1.1,
-   replaced by removeAll().
-
-  returns: `java.lang.  void`"
-  ([^java.awt.List this]
+   replaced by removeAll()."
+  ([^List this]
     (-> this (.clear))))
 
 (defn get-selected-indexes
@@ -475,7 +466,7 @@
 
   returns: an array of the selected indexes on this scrolling list;
                   if no item is selected, a zero-length array is returned. - `int[]`"
-  ([^java.awt.List this]
+  ([^List this]
     (-> this (.getSelectedIndexes))))
 
 (defn minimum-size
@@ -484,23 +475,23 @@
 
   rows - `int`
 
-  returns: `java.lang.  java.awt.Dimension`"
-  ([^java.awt.List this ^Integer rows]
+  returns: `java.awt.Dimension`"
+  (^java.awt.Dimension [^List this ^Integer rows]
     (-> this (.minimumSize rows)))
-  ([^java.awt.List this]
+  (^java.awt.Dimension [^List this]
     (-> this (.minimumSize))))
 
 (defn remove-all
   "Removes all items from this list."
-  ([^java.awt.List this]
+  ([^List this]
     (-> this (.removeAll))))
 
 (defn count-items
   "Deprecated. As of JDK version 1.1,
    replaced by getItemCount().
 
-  returns: `java.lang.  int`"
-  ([^java.awt.List this]
+  returns: `int`"
+  (^Integer [^List this]
     (-> this (.countItems))))
 
 (defn get-preferred-size
@@ -511,9 +502,9 @@
 
   returns: the preferred dimensions for displaying this scrolling list
                given that the specified number of rows must be visible - `java.awt.Dimension`"
-  (^java.awt.Dimension [^java.awt.List this ^Integer rows]
+  (^java.awt.Dimension [^List this ^Integer rows]
     (-> this (.getPreferredSize rows)))
-  (^java.awt.Dimension [^java.awt.List this]
+  (^java.awt.Dimension [^List this]
     (-> this (.getPreferredSize))))
 
 (defn get-selected-items
@@ -521,7 +512,7 @@
 
   returns: an array of the selected items on this scrolling list;
                   if no item is selected, a zero-length array is returned. - `java.lang.String[]`"
-  ([^java.awt.List this]
+  ([^List this]
     (-> this (.getSelectedItems))))
 
 (defn get-item-listeners
@@ -531,6 +522,6 @@
   returns: all of this list's ItemListeners
            or an empty array if no item
            listeners are currently registered - `java.awt.event.ItemListener[]`"
-  ([^java.awt.List this]
+  ([^List this]
     (-> this (.getItemListeners))))
 

@@ -27,11 +27,11 @@
   encoding - The name of a supported character encoding - `java.lang.String`
 
   throws: java.io.UnsupportedEncodingException - If the named encoding is not supported"
-  ([^java.io.OutputStream out ^Boolean auto-flush ^java.lang.String encoding]
+  (^PrintStream [^java.io.OutputStream out ^Boolean auto-flush ^java.lang.String encoding]
     (new PrintStream out auto-flush encoding))
-  ([^java.io.OutputStream out ^Boolean auto-flush]
+  (^PrintStream [^java.io.OutputStream out ^Boolean auto-flush]
     (new PrintStream out auto-flush))
-  ([^java.io.OutputStream out]
+  (^PrintStream [^java.io.OutputStream out]
     (new PrintStream out)))
 
 (defn printf
@@ -52,15 +52,15 @@
   returns: This output stream - `java.io.PrintStream`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  (^java.io.PrintStream [^java.io.PrintStream this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintStream [^PrintStream this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
     (-> this (.printf l format args)))
-  (^java.io.PrintStream [^java.io.PrintStream this ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintStream [^PrintStream this ^java.lang.String format ^java.lang.Object args]
     (-> this (.printf format args))))
 
 (defn flush
   "Flushes the stream.  This is done by writing any buffered output bytes to
    the underlying output stream and then flushing that stream."
-  ([^java.io.PrintStream this]
+  ([^PrintStream this]
     (-> this (.flush))))
 
 (defn println
@@ -69,15 +69,15 @@
    println().
 
   x - The boolean to be printed - `boolean`"
-  ([^java.io.PrintStream this ^Boolean x]
+  ([^PrintStream this ^Boolean x]
     (-> this (.println x)))
-  ([^java.io.PrintStream this]
+  ([^PrintStream this]
     (-> this (.println))))
 
 (defn close
   "Closes the stream.  This is done by flushing the stream and then closing
    the underlying output stream."
-  ([^java.io.PrintStream this]
+  ([^PrintStream this]
     (-> this (.close))))
 
 (defn append
@@ -99,9 +99,9 @@
   returns: This output stream - `java.io.PrintStream`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  (^java.io.PrintStream [^java.io.PrintStream this ^java.lang.CharSequence csq ^Integer start ^Integer end]
+  (^java.io.PrintStream [^PrintStream this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  (^java.io.PrintStream [^java.io.PrintStream this ^java.lang.CharSequence csq]
+  (^java.io.PrintStream [^PrintStream this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn print
@@ -111,7 +111,7 @@
    write(int) method.
 
   b - The boolean to be printed - `boolean`"
-  ([^java.io.PrintStream this ^Boolean b]
+  ([^PrintStream this ^Boolean b]
     (-> this (.print b))))
 
 (defn write
@@ -127,9 +127,9 @@
   buf - A byte array - `byte[]`
   off - Offset from which to start taking bytes - `int`
   len - Number of bytes to write - `int`"
-  ([^java.io.PrintStream this buf ^Integer off ^Integer len]
+  ([^PrintStream this buf ^Integer off ^Integer len]
     (-> this (.write buf off len)))
-  ([^java.io.PrintStream this ^Integer b]
+  ([^PrintStream this ^Integer b]
     (-> this (.write b))))
 
 (defn check-error
@@ -149,7 +149,7 @@
            IOException other than
            InterruptedIOException, or the
            setError method has been invoked - `boolean`"
-  (^Boolean [^java.io.PrintStream this]
+  (^Boolean [^PrintStream this]
     (-> this (.checkError))))
 
 (defn format
@@ -163,8 +163,8 @@
   returns: This output stream - `java.io.PrintStream`
 
   throws: java.util.IllegalFormatException - If a format string contains an illegal syntax, a format specifier that is incompatible with the given arguments, insufficient arguments given the format string, or other illegal conditions. For specification of all possible formatting errors, see the Details section of the formatter class specification."
-  (^java.io.PrintStream [^java.io.PrintStream this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintStream [^PrintStream this ^java.util.Locale l ^java.lang.String format ^java.lang.Object args]
     (-> this (.format l format args)))
-  (^java.io.PrintStream [^java.io.PrintStream this ^java.lang.String format ^java.lang.Object args]
+  (^java.io.PrintStream [^PrintStream this ^java.lang.String format ^java.lang.Object args]
     (-> this (.format format args))))
 

@@ -8,6 +8,6 @@
   "Constructor.
 
   Constructs an instance of this class."
-  ([]
+  (^BufferUnderflowException []
     (new BufferUnderflowException )))
 

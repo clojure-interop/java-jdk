@@ -50,33 +50,33 @@
   "Iterates over the given elements and calls scan(Element, P) on each one.  Returns
    the result of the last call to scan or DEFAULT_VALUE for an empty iterable.
 
-  iterable - the elements to scan - `javax.lang.model.element.Element>`
-  p - additional parameter - `ElementScanner6.P`
+  iterable - the elements to scan - `java.lang.Iterable`
+  p - additional parameter - `P`
 
-  returns: the scan of the last element or DEFAULT_VALUE if no elements - `ElementScanner6.R`"
-  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.Element> iterable ^ElementScanner6.P p]
+  returns: the scan of the last element or DEFAULT_VALUE if no elements - `R`"
+  ([^ElementScanner6 this ^java.lang.Iterable iterable p]
     (-> this (.scan iterable p)))
-  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.Element e]
+  ([^ElementScanner6 this ^javax.lang.model.element.Element e]
     (-> this (.scan e))))
 
 (defn visit-package
   "Visits a package element. This implementation scans the enclosed elements.
 
   e - the element to visit - `javax.lang.model.element.PackageElement`
-  p - a visitor-specified parameter - `ElementScanner6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of scanning - `ElementScanner6.R`"
-  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.PackageElement e ^ElementScanner6.P p]
+  returns: the result of scanning - `R`"
+  ([^ElementScanner6 this ^javax.lang.model.element.PackageElement e p]
     (-> this (.visitPackage e p))))
 
 (defn visit-type
   "Visits a type element. This implementation scans the enclosed elements.
 
   e - the element to visit - `javax.lang.model.element.TypeElement`
-  p - a visitor-specified parameter - `ElementScanner6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of scanning - `ElementScanner6.R`"
-  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.TypeElement e ^ElementScanner6.P p]
+  returns: the result of scanning - `R`"
+  ([^ElementScanner6 this ^javax.lang.model.element.TypeElement e p]
     (-> this (.visitType e p))))
 
 (defn visit-variable
@@ -86,29 +86,29 @@
    element is a RESOURCE_VARIABLE in which case visitUnknown is called.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `ElementScanner6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of scanning - `ElementScanner6.R`"
-  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.VariableElement e ^ElementScanner6.P p]
+  returns: the result of scanning - `R`"
+  ([^ElementScanner6 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariable e p))))
 
 (defn visit-executable
   "Visits an executable element. This implementation scans the parameters.
 
   e - the element to visit - `javax.lang.model.element.ExecutableElement`
-  p - a visitor-specified parameter - `ElementScanner6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of scanning - `ElementScanner6.R`"
-  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.ExecutableElement e ^ElementScanner6.P p]
+  returns: the result of scanning - `R`"
+  ([^ElementScanner6 this ^javax.lang.model.element.ExecutableElement e p]
     (-> this (.visitExecutable e p))))
 
 (defn visit-type-parameter
   "Visits a type parameter element. This implementation scans the enclosed elements.
 
   e - the element to visit - `javax.lang.model.element.TypeParameterElement`
-  p - a visitor-specified parameter - `ElementScanner6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of scanning - `ElementScanner6.R`"
-  (^ElementScanner6.R [^javax.lang.model.util.ElementScanner6 this ^javax.lang.model.element.TypeParameterElement e ^ElementScanner6.P p]
+  returns: the result of scanning - `R`"
+  ([^ElementScanner6 this ^javax.lang.model.element.TypeParameterElement e p]
     (-> this (.visitTypeParameter e p))))
 

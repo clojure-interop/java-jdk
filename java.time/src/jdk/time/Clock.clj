@@ -215,7 +215,7 @@
    to a date or time using a time-zone. This method returns the time-zone used.
 
   returns: the time-zone being used to interpret instants, not null - `java.time.ZoneId`"
-  (^java.time.ZoneId [^java.time.Clock this]
+  (^java.time.ZoneId [^Clock this]
     (-> this (.getZone))))
 
 (defn with-zone
@@ -228,7 +228,7 @@
   zone - the time-zone to change to, not null - `java.time.ZoneId`
 
   returns: a clock based on this clock with the specified time-zone, not null - `java.time.Clock`"
-  (^java.time.Clock [^java.time.Clock this ^java.time.ZoneId zone]
+  (^java.time.Clock [^Clock this ^java.time.ZoneId zone]
     (-> this (.withZone zone))))
 
 (defn millis
@@ -248,7 +248,7 @@
     the Java epoch of 1970-01-01T00:00Z (UTC), not null - `long`
 
   throws: java.time.DateTimeException - if the instant cannot be obtained, not thrown by most implementations"
-  (^Long [^java.time.Clock this]
+  (^Long [^Clock this]
     (-> this (.millis))))
 
 (defn instant
@@ -259,7 +259,7 @@
   returns: the current instant from this clock, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the instant cannot be obtained, not thrown by most implementations"
-  (^java.time.Instant [^java.time.Clock this]
+  (^java.time.Instant [^Clock this]
     (-> this (.instant))))
 
 (defn equals
@@ -272,7 +272,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other clock - `boolean`"
-  (^Boolean [^java.time.Clock this ^java.lang.Object obj]
+  (^Boolean [^Clock this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -283,6 +283,6 @@
    If not overridden, the behavior is defined by Object.hashCode()
 
   returns: a suitable hash code - `int`"
-  (^Integer [^java.time.Clock this]
+  (^Integer [^Clock this]
     (-> this (.hashCode))))
 

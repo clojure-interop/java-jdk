@@ -87,7 +87,7 @@
   "Returns the index of the character hit.
 
   returns: the index of the character hit. - `int`"
-  (^Integer [^java.awt.font.TextHitInfo this]
+  (^Integer [^TextHitInfo this]
     (-> this (.getCharIndex))))
 
 (defn leading-edge?
@@ -96,7 +96,7 @@
 
   returns: true if the leading edge of the character was
    hit; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.TextHitInfo this]
+  (^Boolean [^TextHitInfo this]
     (-> this (.isLeadingEdge))))
 
 (defn get-insertion-index
@@ -105,7 +105,7 @@
    than the character index if the trailing edge was hit.
 
   returns: the insertion index. - `int`"
-  (^Integer [^java.awt.font.TextHitInfo this]
+  (^Integer [^TextHitInfo this]
     (-> this (.getInsertionIndex))))
 
 (defn hash-code
@@ -113,7 +113,7 @@
 
   returns: the hash code of this TextHitInfo, which is
    also the charIndex of this TextHitInfo. - `int`"
-  (^Integer [^java.awt.font.TextHitInfo this]
+  (^Integer [^TextHitInfo this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -124,7 +124,7 @@
 
   returns: true if the specified Object
    equals this TextHitInfo; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.TextHitInfo this ^java.lang.Object obj]
+  (^Boolean [^TextHitInfo this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -133,7 +133,7 @@
 
   returns: a String representing this
    TextHitInfo. - `java.lang.String`"
-  (^java.lang.String [^java.awt.font.TextHitInfo this]
+  (^java.lang.String [^TextHitInfo this]
     (-> this (.toString))))
 
 (defn get-other-hit
@@ -142,7 +142,7 @@
 
   returns: a TextHitInfo on the other side of the
    insertion point. - `java.awt.font.TextHitInfo`"
-  (^java.awt.font.TextHitInfo [^java.awt.font.TextHitInfo this]
+  (^java.awt.font.TextHitInfo [^TextHitInfo this]
     (-> this (.getOtherHit))))
 
 (defn get-offset-hit
@@ -156,6 +156,6 @@
   returns: a TextHitInfo whose charIndex is
    offset by delta from the charIndex of
    this TextHitInfo. - `java.awt.font.TextHitInfo`"
-  (^java.awt.font.TextHitInfo [^java.awt.font.TextHitInfo this ^Integer delta]
+  (^java.awt.font.TextHitInfo [^TextHitInfo this ^Integer delta]
     (-> this (.getOffsetHit delta))))
 

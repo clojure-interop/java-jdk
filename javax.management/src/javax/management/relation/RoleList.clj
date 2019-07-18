@@ -13,9 +13,9 @@
    specified.
 
   initial-capacity - initial capacity - `int`"
-  ([^Integer initial-capacity]
+  (^RoleList [^Integer initial-capacity]
     (new RoleList initial-capacity))
-  ([]
+  (^RoleList []
     (new RoleList )))
 
 (defn as-list
@@ -35,7 +35,7 @@
    be added. - `java.util.List<javax.management.relation.Role>`
 
   throws: java.lang.IllegalArgumentException - if this RoleList contains an element that is not a Role."
-  (^java.util.List [^javax.management.relation.RoleList this]
+  (^java.util.List [^RoleList this]
     (-> this (.asList))))
 
 (defn add
@@ -47,9 +47,9 @@
   role - The Role object to be inserted. - `javax.management.relation.Role`
 
   throws: java.lang.IllegalArgumentException - if the role is null."
-  ([^javax.management.relation.RoleList this ^Integer index ^javax.management.relation.Role role]
+  ([^RoleList this ^Integer index ^javax.management.relation.Role role]
     (-> this (.add index role)))
-  ([^javax.management.relation.RoleList this ^javax.management.relation.Role role]
+  ([^RoleList this ^javax.management.relation.Role role]
     (-> this (.add role))))
 
 (defn set
@@ -61,7 +61,7 @@
   role - The value to which the role element should be set. - `javax.management.relation.Role`
 
   throws: java.lang.IllegalArgumentException - if the role is null."
-  ([^javax.management.relation.RoleList this ^Integer index ^javax.management.relation.Role role]
+  ([^RoleList this ^Integer index ^javax.management.relation.Role role]
     (-> this (.set index role))))
 
 (defn add-all
@@ -75,8 +75,8 @@
   returns: true if this list changed as a result of the call. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the role is null."
-  (^Boolean [^javax.management.relation.RoleList this ^Integer index ^javax.management.relation.RoleList role-list]
+  (^Boolean [^RoleList this ^Integer index ^javax.management.relation.RoleList role-list]
     (-> this (.addAll index role-list)))
-  (^Boolean [^javax.management.relation.RoleList this ^javax.management.relation.RoleList role-list]
+  (^Boolean [^RoleList this ^javax.management.relation.RoleList role-list]
     (-> this (.addAll role-list))))
 

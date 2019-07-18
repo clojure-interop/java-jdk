@@ -45,7 +45,7 @@
 
   lookup - the specified LookupTable - `java.awt.image.LookupTable`
   hints - the specified RenderingHints, or null - `java.awt.RenderingHints`"
-  ([^java.awt.image.LookupTable lookup ^java.awt.RenderingHints hints]
+  (^LookupOp [^java.awt.image.LookupTable lookup ^java.awt.RenderingHints hints]
     (new LookupOp lookup hints)))
 
 (defn get-table
@@ -53,7 +53,7 @@
 
   returns: the LookupTable of this
            LookupOp. - `java.awt.image.LookupTable`"
-  (^java.awt.image.LookupTable [^java.awt.image.LookupOp this]
+  (^java.awt.image.LookupTable [^LookupOp this]
     (-> this (.getTable))))
 
 (defn filter
@@ -74,7 +74,7 @@
   returns: the filtered BufferedImage. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if the number of arrays in the LookupTable does not meet the restrictions described in the class comments, or if the source image has an IndexColorModel."
-  (^java.awt.image.BufferedImage [^java.awt.image.LookupOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dst]
+  (^java.awt.image.BufferedImage [^LookupOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dst]
     (-> this (.filter src dst))))
 
 (defn get-bounds-2-d
@@ -85,7 +85,7 @@
   src - the BufferedImage to be filtered - `java.awt.image.BufferedImage`
 
   returns: the bounds of the filtered definition image. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.image.LookupOp this ^java.awt.image.BufferedImage src]
+  (^java.awt.geom.Rectangle2D [^LookupOp this ^java.awt.image.BufferedImage src]
     (-> this (.getBounds2D src))))
 
 (defn create-compatible-dest-image
@@ -97,7 +97,7 @@
   dest-cm - the destination's ColorModel, which can be null. - `java.awt.image.ColorModel`
 
   returns: a filtered destination BufferedImage. - `java.awt.image.BufferedImage`"
-  (^java.awt.image.BufferedImage [^java.awt.image.LookupOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
+  (^java.awt.image.BufferedImage [^LookupOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
     (-> this (.createCompatibleDestImage src dest-cm))))
 
 (defn create-compatible-dest-raster
@@ -107,7 +107,7 @@
   src - the Raster to be transformed - `java.awt.image.Raster`
 
   returns: the zeroed-destination Raster. - `java.awt.image.WritableRaster`"
-  (^java.awt.image.WritableRaster [^java.awt.image.LookupOp this ^java.awt.image.Raster src]
+  (^java.awt.image.WritableRaster [^LookupOp this ^java.awt.image.Raster src]
     (-> this (.createCompatibleDestRaster src))))
 
 (defn get-point-2-d
@@ -122,7 +122,7 @@
 
   returns: the Point2D in the destination that
            corresponds to the specified point in the source. - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.image.LookupOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
+  (^java.awt.geom.Point2D [^LookupOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
     (-> this (.getPoint2D src-pt dst-pt))))
 
 (defn get-rendering-hints
@@ -130,6 +130,6 @@
 
   returns: the RenderingHints object associated
            with this op. - `java.awt.RenderingHints`"
-  (^java.awt.RenderingHints [^java.awt.image.LookupOp this]
+  (^java.awt.RenderingHints [^LookupOp this]
     (-> this (.getRenderingHints))))
 

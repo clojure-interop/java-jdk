@@ -38,7 +38,7 @@
   "Constructor.
 
   dtd - `javax.swing.text.html.parser.DTD`"
-  ([^javax.swing.text.html.parser.DTD dtd]
+  (^Parser [^javax.swing.text.html.parser.DTD dtd]
     (new Parser dtd)))
 
 (defn parse-dtd-markup
@@ -48,7 +48,7 @@
   returns: `java.lang.String`
 
   throws: java.io.IOException"
-  (^java.lang.String [^javax.swing.text.html.parser.Parser this]
+  (^java.lang.String [^Parser this]
     (-> this (.parseDTDMarkup))))
 
 (defn parse
@@ -57,6 +57,6 @@
   in - `java.io.Reader`
 
   throws: java.io.IOException"
-  ([^javax.swing.text.html.parser.Parser this ^java.io.Reader in]
+  ([^Parser this ^java.io.Reader in]
     (-> this (.parse in))))
 

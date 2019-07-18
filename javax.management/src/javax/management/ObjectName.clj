@@ -188,11 +188,11 @@
   value - The value in the key property of the object name. - `java.lang.String`
 
   throws: javax.management.MalformedObjectNameException - The domain, key, or value contains an illegal character, or value does not follow the rules for quoting."
-  ([^java.lang.String domain ^java.lang.String key ^java.lang.String value]
+  (^ObjectName [^java.lang.String domain ^java.lang.String key ^java.lang.String value]
     (new ObjectName domain key value))
-  ([^java.lang.String domain ^java.util.Hashtable table]
+  (^ObjectName [^java.lang.String domain ^java.util.Hashtable table]
     (new ObjectName domain table))
-  ([^java.lang.String name]
+  (^ObjectName [^java.lang.String name]
     (new ObjectName name)))
 
 (def *-wildcard
@@ -277,7 +277,7 @@
   "Checks whether the object name is a pattern on the domain part.
 
   returns: True if the name is a domain pattern, otherwise false. - `boolean`"
-  (^Boolean [^javax.management.ObjectName this]
+  (^Boolean [^ObjectName this]
     (-> this (.isDomainPattern))))
 
 (defn pattern?
@@ -287,14 +287,14 @@
    wildcard or if the object name is a property pattern.
 
   returns: True if the name is a pattern, otherwise false. - `boolean`"
-  (^Boolean [^javax.management.ObjectName this]
+  (^Boolean [^ObjectName this]
     (-> this (.isPattern))))
 
 (defn set-m-bean-server
   "Description copied from interface: QueryExp
 
   mbs - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`"
-  ([^javax.management.ObjectName this ^javax.management.MBeanServer mbs]
+  ([^ObjectName this ^javax.management.MBeanServer mbs]
     (-> this (.setMBeanServer mbs))))
 
 (defn get-canonical-name
@@ -321,7 +321,7 @@
    list pattern with at least one key.
 
   returns: The canonical form of the name. - `java.lang.String`"
-  (^java.lang.String [^javax.management.ObjectName this]
+  (^java.lang.String [^ObjectName this]
     (-> this (.getCanonicalName))))
 
 (defn to-string
@@ -331,7 +331,7 @@
    are equal.
 
   returns: a string representation of this object name. - `java.lang.String`"
-  (^java.lang.String [^javax.management.ObjectName this]
+  (^java.lang.String [^ObjectName this]
     (-> this (.toString))))
 
 (defn apply
@@ -348,7 +348,7 @@
   returns: True if name matches this ObjectName. - `boolean`
 
   throws: java.lang.NullPointerException - if name is null."
-  (^Boolean [^javax.management.ObjectName this ^javax.management.ObjectName name]
+  (^Boolean [^ObjectName this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 
 (defn property-value-pattern?
@@ -361,9 +361,9 @@
    is a pattern, otherwise false. - `boolean`
 
   throws: java.lang.NullPointerException - If property is null."
-  (^Boolean [^javax.management.ObjectName this ^java.lang.String property]
+  (^Boolean [^ObjectName this ^java.lang.String property]
     (-> this (.isPropertyValuePattern property)))
-  (^Boolean [^javax.management.ObjectName this]
+  (^Boolean [^ObjectName this]
     (-> this (.isPropertyValuePattern))))
 
 (defn property-pattern?
@@ -374,7 +374,7 @@
    property values (e.g. `d:k=*`) or on both (e.g. `d:k=*,*`).
 
   returns: True if the name is a property pattern, otherwise false. - `boolean`"
-  (^Boolean [^javax.management.ObjectName this]
+  (^Boolean [^ObjectName this]
     (-> this (.isPropertyPattern))))
 
 (defn get-key-property-list
@@ -387,7 +387,7 @@
    modifiable, changing it has no effect on this ObjectName.
 
   returns: The table of key properties. - `java.util.Hashtable<java.lang.String,java.lang.String>`"
-  (^java.util.Hashtable [^javax.management.ObjectName this]
+  (^java.util.Hashtable [^ObjectName this]
     (-> this (.getKeyPropertyList))))
 
 (defn get-key-property-list-string
@@ -399,14 +399,14 @@
 
   returns: The key property list string.  This string is
    independent of whether the ObjectName is a pattern. - `java.lang.String`"
-  (^java.lang.String [^javax.management.ObjectName this]
+  (^java.lang.String [^ObjectName this]
     (-> this (.getKeyPropertyListString))))
 
 (defn get-domain
   "Returns the domain part.
 
   returns: The domain. - `java.lang.String`"
-  (^java.lang.String [^javax.management.ObjectName this]
+  (^java.lang.String [^ObjectName this]
     (-> this (.getDomain))))
 
 (defn get-canonical-key-property-list-string
@@ -418,14 +418,14 @@
 
   returns: The canonical key property list string.  This string is
    independent of whether the ObjectName is a pattern. - `java.lang.String`"
-  (^java.lang.String [^javax.management.ObjectName this]
+  (^java.lang.String [^ObjectName this]
     (-> this (.getCanonicalKeyPropertyListString))))
 
 (defn hash-code
   "Returns a hash code for this object name.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.management.ObjectName this]
+  (^Integer [^ObjectName this]
     (-> this (.hashCode))))
 
 (defn property-list-pattern?
@@ -435,7 +435,7 @@
    whereas `d:k=*` is not.
 
   returns: True if the name is a property list pattern, otherwise false. - `boolean`"
-  (^Boolean [^javax.management.ObjectName this]
+  (^Boolean [^ObjectName this]
     (-> this (.isPropertyListPattern))))
 
 (defn compare-to
@@ -477,7 +477,7 @@
   returns: a negative integer, zero, or a positive integer as this
            ObjectName is less than, equal to, or greater than the
            specified ObjectName. - `int`"
-  (^Integer [^javax.management.ObjectName this ^javax.management.ObjectName name]
+  (^Integer [^ObjectName this ^javax.management.ObjectName name]
     (-> this (.compareTo name))))
 
 (defn get-key-property
@@ -489,7 +489,7 @@
    property in this ObjectName. - `java.lang.String`
 
   throws: java.lang.NullPointerException - If property is null."
-  (^java.lang.String [^javax.management.ObjectName this ^java.lang.String property]
+  (^java.lang.String [^ObjectName this ^java.lang.String property]
     (-> this (.getKeyProperty property))))
 
 (defn equals
@@ -502,6 +502,6 @@
 
   returns: True if object is an ObjectName whose
    canonical form is equal to that of this ObjectName. - `boolean`"
-  (^Boolean [^javax.management.ObjectName this ^java.lang.Object object]
+  (^Boolean [^ObjectName this ^java.lang.Object object]
     (-> this (.equals object))))
 

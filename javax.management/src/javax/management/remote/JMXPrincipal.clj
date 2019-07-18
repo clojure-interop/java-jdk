@@ -19,21 +19,21 @@
   name - the JMX Remote API name for this identity. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if the name is null."
-  ([^java.lang.String name]
+  (^JMXPrincipal [^java.lang.String name]
     (new JMXPrincipal name)))
 
 (defn get-name
   "Returns the name of this principal.
 
   returns: the name of this JMXPrincipal. - `java.lang.String`"
-  (^java.lang.String [^javax.management.remote.JMXPrincipal this]
+  (^java.lang.String [^JMXPrincipal this]
     (-> this (.getName))))
 
 (defn to-string
   "Returns a string representation of this JMXPrincipal.
 
   returns: a string representation of this JMXPrincipal. - `java.lang.String`"
-  (^java.lang.String [^javax.management.remote.JMXPrincipal this]
+  (^java.lang.String [^JMXPrincipal this]
     (-> this (.toString))))
 
 (defn equals
@@ -46,13 +46,13 @@
 
   returns: true if the specified Object is equal to this
    JMXPrincipal. - `boolean`"
-  (^Boolean [^javax.management.remote.JMXPrincipal this ^java.lang.Object o]
+  (^Boolean [^JMXPrincipal this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Returns a hash code for this JMXPrincipal.
 
   returns: a hash code for this JMXPrincipal. - `int`"
-  (^Integer [^javax.management.remote.JMXPrincipal this]
+  (^Integer [^JMXPrincipal this]
     (-> this (.hashCode))))
 

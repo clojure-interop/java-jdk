@@ -18,6 +18,6 @@
   h - the height of the list item allocation - `float`
   v - the allocated area to paint into. - `javax.swing.text.View`
   item - which list item is being painted. This is a number greater than or equal to 0. - `int`"
-  ([^javax.swing.text.html.StyleSheet$ListPainter this ^java.awt.Graphics g ^Float x ^Float y ^Float w ^Float h ^javax.swing.text.View v ^Integer item]
+  ([^StyleSheet$ListPainter this ^java.awt.Graphics g ^Float x ^Float y ^Float w ^Float h ^javax.swing.text.View v ^Integer item]
     (-> this (.paint g x y w h v item))))
 

@@ -10,8 +10,8 @@
    specified detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^SocketException [^java.lang.String msg]
     (new SocketException msg))
-  ([]
+  (^SocketException []
     (new SocketException )))
 

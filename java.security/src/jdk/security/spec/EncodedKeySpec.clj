@@ -11,7 +11,7 @@
   encoded-key - the encoded key. The contents of the array are copied to protect against subsequent modification. - `byte[]`
 
   throws: java.lang.NullPointerException - if encodedKey is null."
-  ([encoded-key]
+  (^EncodedKeySpec [encoded-key]
     (new EncodedKeySpec encoded-key)))
 
 (defn get-encoded
@@ -19,7 +19,7 @@
 
   returns: the encoded key. Returns a new array each time
    this method is called. - `byte[]`"
-  ([^java.security.spec.EncodedKeySpec this]
+  ([^EncodedKeySpec this]
     (-> this (.getEncoded))))
 
 (defn get-format
@@ -36,6 +36,6 @@
    of this key specification.
 
   returns: a string representation of the encoding format. - `java.lang.String`"
-  (^java.lang.String [^java.security.spec.EncodedKeySpec this]
+  (^java.lang.String [^EncodedKeySpec this]
     (-> this (.getFormat))))
 

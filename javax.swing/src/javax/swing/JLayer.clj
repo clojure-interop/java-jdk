@@ -101,13 +101,13 @@
   Creates a new JLayer object with the specified view component
    and LayerUI object.
 
-  view - the component to be decorated - `JLayer.V`
-  ui - the LayerUI delegate to be used by this JLayer - `javax.swing.plaf.LayerUI<JLayer.V>`"
-  ([^JLayer.V view ^javax.swing.plaf.LayerUI ui]
+  view - the component to be decorated - `V`
+  ui - the LayerUI delegate to be used by this JLayer - `javax.swing.plaf.LayerUI`"
+  (^JLayer [view ^javax.swing.plaf.LayerUI ui]
     (new JLayer view ui))
-  ([^JLayer.V view]
+  (^JLayer [view]
     (new JLayer view))
-  ([]
+  (^JLayer []
     (new JLayer )))
 
 (defn create-glass-pane
@@ -116,7 +116,7 @@
    and opacity set to false.
 
   returns: the default glassPane - `javax.swing.JPanel`"
-  (^javax.swing.JPanel [^javax.swing.JLayer this]
+  (^javax.swing.JPanel [^JLayer this]
     (-> this (.createGlassPane))))
 
 (defn set-layout
@@ -129,7 +129,7 @@
   mgr - the specified layout manager - `java.awt.LayoutManager`
 
   throws: java.lang.IllegalArgumentException - this method is not supported"
-  ([^javax.swing.JLayer this ^java.awt.LayoutManager mgr]
+  ([^JLayer this ^java.awt.LayoutManager mgr]
     (-> this (.setLayout mgr))))
 
 (defn get-view
@@ -137,8 +137,8 @@
    This is a bound property.
 
   returns: the JLayer's view component
-           or null if none exists - `JLayer.V`"
-  (^JLayer.V [^javax.swing.JLayer this]
+           or null if none exists - `V`"
+  ([^JLayer this]
     (-> this (.getView))))
 
 (defn get-scrollable-block-increment
@@ -154,7 +154,7 @@
   direction - Less than zero to scroll up/left, greater than zero for down/right. - `int`
 
   returns: the `block` increment for scrolling in the specified direction - `int`"
-  (^Integer [^javax.swing.JLayer this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^JLayer this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableBlockIncrement visible-rect orientation direction))))
 
 (defn get-scrollable-unit-increment
@@ -176,14 +176,14 @@
 
   returns: The `unit` increment for scrolling in the specified direction.
            This value should always be positive. - `int`"
-  (^Integer [^javax.swing.JLayer this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^JLayer this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
 (defn property-change
   "This method gets called when a bound property is changed.
 
   evt - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.JLayer this ^java.beans.PropertyChangeEvent evt]
+  ([^JLayer this ^java.beans.PropertyChangeEvent evt]
     (-> this (.propertyChange evt))))
 
 (defn add-notify
@@ -192,7 +192,7 @@
    set up with KeyboardAction event listeners.
    This method is called by the toolkit internally and should
    not be called directly by programs."
-  ([^javax.swing.JLayer this]
+  ([^JLayer this]
     (-> this (.addNotify))))
 
 (defn get-preferred-scrollable-viewport-size
@@ -202,15 +202,15 @@
    implementation to the view component.
 
   returns: the preferred size of the viewport for a view component - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.JLayer this]
+  (^java.awt.Dimension [^JLayer this]
     (-> this (.getPreferredScrollableViewportSize))))
 
 (defn set-ui
   "Sets the LayerUI which will perform painting
    and receive input events for this JLayer.
 
-  ui - the LayerUI for this JLayer - `JLayer.V>`"
-  ([^javax.swing.JLayer this ^JLayer.V> ui]
+  ui - the LayerUI for this JLayer - `javax.swing.plaf.LayerUI`"
+  ([^JLayer this ^javax.swing.plaf.LayerUI ui]
     (-> this (.setUI ui))))
 
 (defn remove-notify
@@ -219,7 +219,7 @@
    set up in the the chain of parent components are removed.
    This method is called by the toolkit internally and should
    not be called directly by programs."
-  ([^javax.swing.JLayer this]
+  ([^JLayer this]
     (-> this (.removeNotify))))
 
 (defn get-layer-event-mask
@@ -232,7 +232,7 @@
    By default JLayer receives no events.
 
   returns: the bitmask of event types to receive for this JLayer - `long`"
-  (^Long [^javax.swing.JLayer this]
+  (^Long [^JLayer this]
     (-> this (.getLayerEventMask))))
 
 (defn remove
@@ -247,7 +247,7 @@
    reflect the changes.
 
   comp - the component to be removed - `java.awt.Component`"
-  ([^javax.swing.JLayer this ^java.awt.Component comp]
+  ([^JLayer this ^java.awt.Component comp]
     (-> this (.remove comp))))
 
 (defn paint-immediately
@@ -259,14 +259,14 @@
   y - the y value of the region to be painted - `int`
   w - the width of the region to be painted - `int`
   h - the height of the region to be painted - `int`"
-  ([^javax.swing.JLayer this ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^JLayer this ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintImmediately x y w h))))
 
 (defn get-ui
   "Returns the LayerUI for this JLayer.
 
-  returns: the LayerUI for this JLayer - `javax.swing.plaf.LayerUI<? super JLayer.V>`"
-  ([^javax.swing.JLayer this]
+  returns: the LayerUI for this JLayer - `javax.swing.plaf.LayerUI<? super V>`"
+  ([^JLayer this]
     (-> this (.getUI))))
 
 (defn set-layer-event-mask
@@ -300,7 +300,7 @@
    By default JLayer receives no events and its event mask is 0.
 
   layer-event-mask - the bitmask of event types to receive - `long`"
-  ([^javax.swing.JLayer this ^Long layer-event-mask]
+  ([^JLayer this ^Long layer-event-mask]
     (-> this (.setLayerEventMask layer-event-mask))))
 
 (defn get-scrollable-tracks-viewport-width?
@@ -312,7 +312,7 @@
    implementation to the view component.
 
   returns: whether the layer should track the width of the viewport - `boolean`"
-  (^Boolean [^javax.swing.JLayer this]
+  (^Boolean [^JLayer this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn get-glass-pane
@@ -321,21 +321,21 @@
 
   returns: the JLayer's glassPane component
            or null if none exists - `javax.swing.JPanel`"
-  (^javax.swing.JPanel [^javax.swing.JLayer this]
+  (^javax.swing.JPanel [^JLayer this]
     (-> this (.getGlassPane))))
 
 (defn paint
   "Delegates all painting to the LayerUI object.
 
   g - the Graphics to render to - `java.awt.Graphics`"
-  ([^javax.swing.JLayer this ^java.awt.Graphics g]
+  ([^JLayer this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn get-accessible-context
   "Gets the AccessibleContext associated with this JLayer.
 
   returns: the AccessibleContext associated with this JLayer. - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JLayer this]
+  (^javax.accessibility.AccessibleContext [^JLayer this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -343,13 +343,13 @@
    This is a bound property.
 
   glass-pane - the glassPane component of this JLayer - `javax.swing.JPanel`"
-  ([^javax.swing.JLayer this ^javax.swing.JPanel glass-pane]
+  ([^JLayer this ^javax.swing.JPanel glass-pane]
     (-> this (.setGlassPane glass-pane))))
 
 (defn do-layout
   "Delegates its functionality to the LayerUI.doLayout(JLayer) method,
    if LayerUI is set."
-  ([^javax.swing.JLayer this]
+  ([^JLayer this]
     (-> this (.doLayout))))
 
 (defn get-scrollable-tracks-viewport-height?
@@ -361,7 +361,7 @@
    implementation to the view component.
 
   returns: whether the layer should track the height of the viewport - `boolean`"
-  (^Boolean [^javax.swing.JLayer this]
+  (^Boolean [^JLayer this]
     (-> this (.getScrollableTracksViewportHeight))))
 
 (defn set-border
@@ -376,7 +376,7 @@
   border - the Border to set - `javax.swing.border.Border`
 
   throws: java.lang.IllegalArgumentException - this method is not supported"
-  ([^javax.swing.JLayer this ^javax.swing.border.Border border]
+  ([^JLayer this ^javax.swing.border.Border border]
     (-> this (.setBorder border))))
 
 (defn remove-all
@@ -389,21 +389,21 @@
    invalidates the component hierarchy. If the container has already been
    displayed, the hierarchy must be validated thereafter in order to
    reflect the changes."
-  ([^javax.swing.JLayer this]
+  ([^JLayer this]
     (-> this (.removeAll))))
 
 (defn update-ui
   "Delegates its functionality to the LayerUI.updateUI(JLayer) method,
    if LayerUI is set."
-  ([^javax.swing.JLayer this]
+  ([^JLayer this]
     (-> this (.updateUI))))
 
 (defn set-view
   "Sets the JLayer's view component, which can be null.
    This is a bound property.
 
-  view - the view component for this JLayer - `JLayer.V`"
-  ([^javax.swing.JLayer this ^JLayer.V view]
+  view - the view component for this JLayer - `V`"
+  ([^JLayer this view]
     (-> this (.setView view))))
 
 (defn optimized-drawing-enabled?
@@ -416,6 +416,6 @@
    children directly.
 
   returns: false - `boolean`"
-  (^Boolean [^javax.swing.JLayer this]
+  (^Boolean [^JLayer this]
     (-> this (.isOptimizedDrawingEnabled))))
 

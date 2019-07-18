@@ -18,7 +18,7 @@
 
 (defn ->navigation-filter
   "Constructor."
-  ([]
+  (^NavigationFilter []
     (new NavigationFilter )))
 
 (defn set-dot
@@ -28,10 +28,10 @@
    call super with a different location, or invoke the necessary method
    on the FilterBypass
 
-  fb - FilterBypass that can be used to mutate caret position - `javax.swing.text.NavigationFilter.FilterBypass`
+  fb - FilterBypass that can be used to mutate caret position - `javax.swing.text.NavigationFilter$FilterBypass`
   dot - the position >= 0 - `int`
-  bias - Bias to place the dot at - `javax.swing.text.Position.Bias`"
-  ([^javax.swing.text.NavigationFilter this ^javax.swing.text.NavigationFilter.FilterBypass fb ^Integer dot ^javax.swing.text.Position.Bias bias]
+  bias - Bias to place the dot at - `javax.swing.text.Position$Bias`"
+  ([^NavigationFilter this ^javax.swing.text.NavigationFilter$FilterBypass fb ^Integer dot ^javax.swing.text.Position$Bias bias]
     (-> this (.setDot fb dot bias))))
 
 (defn move-dot
@@ -41,10 +41,10 @@
    call super with a different location, or invoke the necessary
    methods on the FilterBypass.
 
-  fb - FilterBypass that can be used to mutate caret position - `javax.swing.text.NavigationFilter.FilterBypass`
+  fb - FilterBypass that can be used to mutate caret position - `javax.swing.text.NavigationFilter$FilterBypass`
   dot - the position >= 0 - `int`
-  bias - Bias for new location - `javax.swing.text.Position.Bias`"
-  ([^javax.swing.text.NavigationFilter this ^javax.swing.text.NavigationFilter.FilterBypass fb ^Integer dot ^javax.swing.text.Position.Bias bias]
+  bias - Bias for new location - `javax.swing.text.Position$Bias`"
+  ([^NavigationFilter this ^javax.swing.text.NavigationFilter$FilterBypass fb ^Integer dot ^javax.swing.text.Position$Bias bias]
     (-> this (.moveDot fb dot bias))))
 
 (defn get-next-visual-position-from
@@ -55,14 +55,14 @@
 
   text - JTextComponent containing text - `javax.swing.text.JTextComponent`
   pos - Position used in determining next position - `int`
-  bias - Bias used in determining next position - `javax.swing.text.Position.Bias`
+  bias - Bias used in determining next position - `javax.swing.text.Position$Bias`
   direction - the direction from the current position that can be thought of as the arrow keys typically found on a keyboard. This will be one of the following values: SwingConstants.WEST SwingConstants.EAST SwingConstants.NORTH SwingConstants.SOUTH - `int`
-  bias-ret - Used to return resulting Bias of next position - `javax.swing.text.Position.Bias[]`
+  bias-ret - Used to return resulting Bias of next position - `javax.swing.text.Position$Bias[]`
 
   returns: the location within the model that best represents the next
     location visual position - `int`
 
   throws: javax.swing.text.BadLocationException"
-  (^Integer [^javax.swing.text.NavigationFilter this ^javax.swing.text.JTextComponent text ^Integer pos ^javax.swing.text.Position.Bias bias ^Integer direction bias-ret]
+  (^Integer [^NavigationFilter this ^javax.swing.text.JTextComponent text ^Integer pos ^javax.swing.text.Position$Bias bias ^Integer direction bias-ret]
     (-> this (.getNextVisualPositionFrom text pos bias direction bias-ret))))
 

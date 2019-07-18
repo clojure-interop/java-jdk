@@ -12,8 +12,8 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^NumberFormatException [^java.lang.String s]
     (new NumberFormatException s))
-  ([]
+  (^NumberFormatException []
     (new NumberFormatException )))
 

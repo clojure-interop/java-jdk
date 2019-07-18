@@ -96,7 +96,7 @@
 (defn reset
   "Resets the cursor to the beginning of the string.  The next call
    to next() will return the first collation element in the string."
-  ([^java.text.CollationElementIterator this]
+  ([^CollationElementIterator this]
     (-> this (.reset))))
 
 (defn next
@@ -114,7 +114,7 @@
    back the same element twice.
 
   returns: the next collation element - `int`"
-  (^Integer [^java.text.CollationElementIterator this]
+  (^Integer [^CollationElementIterator this]
     (-> this (.next))))
 
 (defn previous
@@ -132,7 +132,7 @@
    and then call next()), you'll get back the same element twice.
 
   returns: the previous collation element - `int`"
-  (^Integer [^java.text.CollationElementIterator this]
+  (^Integer [^CollationElementIterator this]
     (-> this (.previous))))
 
 (defn set-offset
@@ -148,7 +148,7 @@
    call to setOffset().
 
   new-offset - The new character offset into the original text. - `int`"
-  ([^java.text.CollationElementIterator this ^Integer new-offset]
+  ([^CollationElementIterator this ^Integer new-offset]
     (-> this (.setOffset new-offset))))
 
 (defn get-offset
@@ -163,7 +163,7 @@
 
   returns: The character offset in the original text corresponding to the collation
    element that will be returned by the next call to next(). - `int`"
-  (^Integer [^java.text.CollationElementIterator this]
+  (^Integer [^CollationElementIterator this]
     (-> this (.getOffset))))
 
 (defn get-max-expansion
@@ -174,13 +174,13 @@
 
   returns: the maximum length of any expansion sequences ending
            with the specified order. - `int`"
-  (^Integer [^java.text.CollationElementIterator this ^Integer order]
+  (^Integer [^CollationElementIterator this ^Integer order]
     (-> this (.getMaxExpansion order))))
 
 (defn set-text
   "Set a new string over which to iterate.
 
   source - the new source text - `java.lang.String`"
-  ([^java.text.CollationElementIterator this ^java.lang.String source]
+  ([^CollationElementIterator this ^java.lang.String source]
     (-> this (.setText source))))
 

@@ -130,7 +130,7 @@
   out - output stream to write to - `java.io.OutputStream`
 
   throws: java.io.IOException - if an I/O error occurs while writing stream header"
-  ([^java.io.OutputStream out]
+  (^ObjectOutputStream [^java.io.OutputStream out]
     (new ObjectOutputStream out)))
 
 (defn write-unshared
@@ -167,14 +167,14 @@
   obj - object to write to stream - `java.lang.Object`
 
   throws: java.io.NotSerializableException - if an object in the graph to be serialized does not implement the Serializable interface"
-  ([^java.io.ObjectOutputStream this ^java.lang.Object obj]
+  ([^ObjectOutputStream this ^java.lang.Object obj]
     (-> this (.writeUnshared obj))))
 
 (defn write-fields
   "Write the buffered fields to the stream.
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this]
+  ([^ObjectOutputStream this]
     (-> this (.writeFields))))
 
 (defn write-utf
@@ -189,7 +189,7 @@
   str - the String to be written - `java.lang.String`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^java.lang.String str]
+  ([^ObjectOutputStream this ^java.lang.String str]
     (-> this (.writeUTF str))))
 
 (defn write-bytes
@@ -198,7 +198,7 @@
   str - the String of bytes to be written - `java.lang.String`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^java.lang.String str]
+  ([^ObjectOutputStream this ^java.lang.String str]
     (-> this (.writeBytes str))))
 
 (defn write-double
@@ -207,7 +207,7 @@
   val - the double value to be written - `double`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^Double val]
+  ([^ObjectOutputStream this ^Double val]
     (-> this (.writeDouble val))))
 
 (defn write-object
@@ -227,7 +227,7 @@
   obj - the object to be written - `java.lang.Object`
 
   throws: java.io.InvalidClassException - Something is wrong with a class used by serialization."
-  ([^java.io.ObjectOutputStream this ^java.lang.Object obj]
+  ([^ObjectOutputStream this ^java.lang.Object obj]
     (-> this (.writeObject obj))))
 
 (defn write-boolean
@@ -236,7 +236,7 @@
   val - the boolean to be written - `boolean`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^Boolean val]
+  ([^ObjectOutputStream this ^Boolean val]
     (-> this (.writeBoolean val))))
 
 (defn flush
@@ -244,7 +244,7 @@
    through to the underlying stream.
 
   throws: java.io.IOException - If an I/O error has occurred."
-  ([^java.io.ObjectOutputStream this]
+  ([^ObjectOutputStream this]
     (-> this (.flush))))
 
 (defn write-long
@@ -253,7 +253,7 @@
   val - the long value to be written - `long`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^Long val]
+  ([^ObjectOutputStream this ^Long val]
     (-> this (.writeLong val))))
 
 (defn write-short
@@ -262,7 +262,7 @@
   val - the short value to be written - `int`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^Integer val]
+  ([^ObjectOutputStream this ^Integer val]
     (-> this (.writeShort val))))
 
 (defn reset
@@ -274,7 +274,7 @@
    stream.  They will be written to the stream again.
 
   throws: java.io.IOException - if reset() is invoked while serializing an object."
-  ([^java.io.ObjectOutputStream this]
+  ([^ObjectOutputStream this]
     (-> this (.reset))))
 
 (defn use-protocol-version
@@ -291,7 +291,7 @@
   version - use ProtocolVersion from java.io.ObjectStreamConstants. - `int`
 
   throws: java.lang.IllegalStateException - if called after any objects have been serialized."
-  ([^java.io.ObjectOutputStream this ^Integer version]
+  ([^ObjectOutputStream this ^Integer version]
     (-> this (.useProtocolVersion version))))
 
 (defn close
@@ -299,7 +299,7 @@
    associated with the stream.
 
   throws: java.io.IOException - If an I/O error has occurred."
-  ([^java.io.ObjectOutputStream this]
+  ([^ObjectOutputStream this]
     (-> this (.close))))
 
 (defn write-int
@@ -308,7 +308,7 @@
   val - the integer value to be written - `int`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^Integer val]
+  ([^ObjectOutputStream this ^Integer val]
     (-> this (.writeInt val))))
 
 (defn write-float
@@ -317,7 +317,7 @@
   val - the float value to be written - `float`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^Float val]
+  ([^ObjectOutputStream this ^Float val]
     (-> this (.writeFloat val))))
 
 (defn write-chars
@@ -326,7 +326,7 @@
   str - the String of chars to be written - `java.lang.String`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^java.lang.String str]
+  ([^ObjectOutputStream this ^java.lang.String str]
     (-> this (.writeChars str))))
 
 (defn write-char
@@ -335,7 +335,7 @@
   val - the char value to be written - `int`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^Integer val]
+  ([^ObjectOutputStream this ^Integer val]
     (-> this (.writeChar val))))
 
 (defn write-byte
@@ -344,7 +344,7 @@
   val - the byte value to be written - `int`
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying stream"
-  ([^java.io.ObjectOutputStream this ^Integer val]
+  ([^ObjectOutputStream this ^Integer val]
     (-> this (.writeByte val))))
 
 (defn write
@@ -355,9 +355,9 @@
   len - the number of bytes that are written - `int`
 
   throws: java.io.IOException - If an I/O error has occurred."
-  ([^java.io.ObjectOutputStream this buf ^Integer off ^Integer len]
+  ([^ObjectOutputStream this buf ^Integer off ^Integer len]
     (-> this (.write buf off len)))
-  ([^java.io.ObjectOutputStream this ^Integer val]
+  ([^ObjectOutputStream this ^Integer val]
     (-> this (.write val))))
 
 (defn put-fields
@@ -366,10 +366,10 @@
    method is called.
 
   returns: an instance of the class Putfield that holds the serializable
-            fields - `java.io.ObjectOutputStream.PutField`
+            fields - `java.io.ObjectOutputStream$PutField`
 
   throws: java.io.IOException - if I/O errors occur"
-  (^java.io.ObjectOutputStream.PutField [^java.io.ObjectOutputStream this]
+  (^java.io.ObjectOutputStream$PutField [^ObjectOutputStream this]
     (-> this (.putFields))))
 
 (defn default-write-object
@@ -379,6 +379,6 @@
    called otherwise.
 
   throws: java.io.IOException - if I/O errors occur while writing to the underlying OutputStream"
-  ([^java.io.ObjectOutputStream this]
+  ([^ObjectOutputStream this]
     (-> this (.defaultWriteObject))))
 

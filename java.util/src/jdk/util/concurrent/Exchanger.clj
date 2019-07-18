@@ -64,7 +64,7 @@
   "Constructor.
 
   Creates a new Exchanger."
-  ([]
+  (^Exchanger []
     (new Exchanger )))
 
 (defn exchange
@@ -99,15 +99,15 @@
    If the specified waiting time elapses then TimeoutException is thrown.  If the time is less than or equal
    to zero, the method will not wait at all.
 
-  x - the object to exchange - `Exchanger.V`
+  x - the object to exchange - `V`
   timeout - the maximum time to wait - `long`
   unit - the time unit of the timeout argument - `java.util.concurrent.TimeUnit`
 
-  returns: the object provided by the other thread - `Exchanger.V`
+  returns: the object provided by the other thread - `V`
 
   throws: java.lang.InterruptedException - if the current thread was interrupted while waiting"
-  (^Exchanger.V [^java.util.concurrent.Exchanger this ^Exchanger.V x ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^Exchanger this x ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.exchange x timeout unit)))
-  (^Exchanger.V [^java.util.concurrent.Exchanger this ^Exchanger.V x]
+  ([^Exchanger this x]
     (-> this (.exchange x))))
 

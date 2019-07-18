@@ -17,7 +17,7 @@
   dtc - The DropTargetContext - `java.awt.dnd.DropTargetContext`
 
   throws: java.lang.NullPointerException - if dtc equals null."
-  ([^java.awt.dnd.DropTargetContext dtc]
+  (^DropTargetEvent [^java.awt.dnd.DropTargetContext dtc]
     (new DropTargetEvent dtc)))
 
 (defn get-drop-target-context
@@ -25,6 +25,6 @@
    associated with this DropTargetEvent.
 
   returns: the DropTargetContext - `java.awt.dnd.DropTargetContext`"
-  (^java.awt.dnd.DropTargetContext [^java.awt.dnd.DropTargetEvent this]
+  (^java.awt.dnd.DropTargetContext [^DropTargetEvent this]
     (-> this (.getDropTargetContext))))
 

@@ -13,8 +13,8 @@
 (defn accept
   "Performs this operation on the given arguments.
 
-  t - the first input argument - `ObjLongConsumer.T`
+  t - the first input argument - `T`
   value - the second input argument - `long`"
-  ([^java.util.function.ObjLongConsumer this ^ObjLongConsumer.T t ^Long value]
+  ([^ObjLongConsumer this t ^Long value]
     (-> this (.accept t value))))
 

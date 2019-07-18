@@ -23,13 +23,13 @@
   stylesheet - the XSLT stylesheet to be used - `javax.xml.crypto.XMLStructure`
 
   throws: java.lang.NullPointerException - if stylesheet is null"
-  ([^javax.xml.crypto.XMLStructure stylesheet]
+  (^XSLTTransformParameterSpec [^javax.xml.crypto.XMLStructure stylesheet]
     (new XSLTTransformParameterSpec stylesheet)))
 
 (defn get-stylesheet
   "Returns the stylesheet.
 
   returns: the stylesheet - `javax.xml.crypto.XMLStructure`"
-  (^javax.xml.crypto.XMLStructure [^javax.xml.crypto.dsig.spec.XSLTTransformParameterSpec this]
+  (^javax.xml.crypto.XMLStructure [^XSLTTransformParameterSpec this]
     (-> this (.getStylesheet))))
 

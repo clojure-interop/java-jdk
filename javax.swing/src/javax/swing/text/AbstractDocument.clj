@@ -105,7 +105,7 @@
    indicates that no filtering will occur.
 
   filter - the DocumentFilter used to constrain text - `javax.swing.text.DocumentFilter`"
-  ([^javax.swing.text.AbstractDocument this ^javax.swing.text.DocumentFilter filter]
+  ([^AbstractDocument this ^javax.swing.text.DocumentFilter filter]
     (-> this (.setDocumentFilter filter))))
 
 (defn get-document-properties
@@ -114,7 +114,7 @@
    to annotate the document with document-wide properties.
 
   returns: a non-null Dictionary - `java.util.Dictionary<java.lang.Object,java.lang.Object>`"
-  (^java.util.Dictionary [^javax.swing.text.AbstractDocument this]
+  (^java.util.Dictionary [^AbstractDocument this]
     (-> this (.getDocumentProperties))))
 
 (defn add-undoable-edit-listener
@@ -124,14 +124,14 @@
    the view(s) in sync with the model.
 
   listener - the UndoableEditListener to add - `javax.swing.event.UndoableEditListener`"
-  ([^javax.swing.text.AbstractDocument this ^javax.swing.event.UndoableEditListener listener]
+  ([^AbstractDocument this ^javax.swing.event.UndoableEditListener listener]
     (-> this (.addUndoableEditListener listener))))
 
 (defn remove-undoable-edit-listener
   "Removes an undo listener.
 
   listener - the UndoableEditListener to remove - `javax.swing.event.UndoableEditListener`"
-  ([^javax.swing.text.AbstractDocument this ^javax.swing.event.UndoableEditListener listener]
+  ([^AbstractDocument this ^javax.swing.event.UndoableEditListener listener]
     (-> this (.removeUndoableEditListener listener))))
 
 (defn read-unlock
@@ -149,7 +149,7 @@
        } finally {
            readUnlock();
        }"
-  ([^javax.swing.text.AbstractDocument this]
+  ([^AbstractDocument this]
     (-> this (.readUnlock))))
 
 (defn get-text
@@ -183,16 +183,16 @@
   txt - the Segment object to retrieve the text into - `javax.swing.text.Segment`
 
   throws: javax.swing.text.BadLocationException - the range given includes a position that is not a valid position within the document"
-  ([^javax.swing.text.AbstractDocument this ^Integer offset ^Integer length ^javax.swing.text.Segment txt]
+  ([^AbstractDocument this ^Integer offset ^Integer length ^javax.swing.text.Segment txt]
     (-> this (.getText offset length txt)))
-  (^java.lang.String [^javax.swing.text.AbstractDocument this ^Integer offset ^Integer length]
+  (^java.lang.String [^AbstractDocument this ^Integer offset ^Integer length]
     (-> this (.getText offset length))))
 
 (defn remove-document-listener
   "Removes a document listener.
 
   listener - the DocumentListener to remove - `javax.swing.event.DocumentListener`"
-  ([^javax.swing.text.AbstractDocument this ^javax.swing.event.DocumentListener listener]
+  ([^AbstractDocument this ^javax.swing.event.DocumentListener listener]
     (-> this (.removeDocumentListener listener))))
 
 (defn get-document-filter
@@ -201,7 +201,7 @@
    implies no filtering is to occur.
 
   returns: the DocumentFilter - `javax.swing.text.DocumentFilter`"
-  (^javax.swing.text.DocumentFilter [^javax.swing.text.AbstractDocument this]
+  (^javax.swing.text.DocumentFilter [^AbstractDocument this]
     (-> this (.getDocumentFilter))))
 
 (defn get-root-elements
@@ -210,7 +210,7 @@
    is to return the default root element.
 
   returns: the root element - `javax.swing.text.Element[]`"
-  ([^javax.swing.text.AbstractDocument this]
+  ([^AbstractDocument this]
     (-> this (.getRootElements))))
 
 (defn replace
@@ -227,7 +227,7 @@
   attrs - AttributeSet indicating attributes of inserted text, null is legal, and typically treated as an empty attributeset, but exact interpretation is left to the subclass - `javax.swing.text.AttributeSet`
 
   throws: javax.swing.text.BadLocationException - the given position is not a valid position within the document"
-  ([^javax.swing.text.AbstractDocument this ^Integer offset ^Integer length ^java.lang.String text ^javax.swing.text.AttributeSet attrs]
+  ([^AbstractDocument this ^Integer offset ^Integer length ^java.lang.String text ^javax.swing.text.AttributeSet attrs]
     (-> this (.replace offset length text attrs))))
 
 (defn remove
@@ -245,7 +245,7 @@
   len - the number of characters to remove >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - the given remove position is not a valid position within the document"
-  ([^javax.swing.text.AbstractDocument this ^Integer offs ^Integer len]
+  ([^AbstractDocument this ^Integer offs ^Integer len]
     (-> this (.remove offs len))))
 
 (defn get-undoable-edit-listeners
@@ -255,21 +255,21 @@
   returns: all of this document's UndoableEditListeners
            or an empty array if no undoable edit listeners are
            currently registered - `javax.swing.event.UndoableEditListener[]`"
-  ([^javax.swing.text.AbstractDocument this]
+  ([^AbstractDocument this]
     (-> this (.getUndoableEditListeners))))
 
 (defn set-document-properties
   "Replaces the document properties dictionary for this document.
 
-  x - the new dictionary - `java.util.Dictionary<java.lang.Object,java.lang.Object>`"
-  ([^javax.swing.text.AbstractDocument this ^java.util.Dictionary x]
+  x - the new dictionary - `java.util.Dictionary`"
+  ([^AbstractDocument this ^java.util.Dictionary x]
     (-> this (.setDocumentProperties x))))
 
 (defn dump
   "Gives a diagnostic dump.
 
   out - the output stream - `java.io.PrintStream`"
-  ([^javax.swing.text.AbstractDocument this ^java.io.PrintStream out]
+  ([^AbstractDocument this ^java.io.PrintStream out]
     (-> this (.dump out))))
 
 (defn get-start-position
@@ -278,7 +278,7 @@
    located at the beginning of the document.
 
   returns: the position - `javax.swing.text.Position`"
-  (^javax.swing.text.Position [^javax.swing.text.AbstractDocument this]
+  (^javax.swing.text.Position [^AbstractDocument this]
     (-> this (.getStartPosition))))
 
 (defn get-length
@@ -286,7 +286,7 @@
    characters of content that represents the users data.
 
   returns: the length >= 0 - `int`"
-  (^Integer [^javax.swing.text.AbstractDocument this]
+  (^Integer [^AbstractDocument this]
     (-> this (.getLength))))
 
 (defn get-property
@@ -299,7 +299,7 @@
   key - the non-null property key - `java.lang.Object`
 
   returns: the value of this property or null - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.text.AbstractDocument this ^java.lang.Object key]
+  (^java.lang.Object [^AbstractDocument this ^java.lang.Object key]
     (-> this (.getProperty key))))
 
 (defn render
@@ -331,7 +331,7 @@
    in Swing for more information.
 
   r - the renderer to execute - `java.lang.Runnable`"
-  ([^javax.swing.text.AbstractDocument this ^java.lang.Runnable r]
+  ([^AbstractDocument this ^java.lang.Runnable r]
     (-> this (.render r))))
 
 (defn get-bidi-root-element
@@ -340,7 +340,7 @@
    Unicode bidi level.
 
   returns: `javax.swing.text.Element`"
-  (^javax.swing.text.Element [^javax.swing.text.AbstractDocument this]
+  (^javax.swing.text.Element [^AbstractDocument this]
     (-> this (.getBidiRootElement))))
 
 (defn put-property
@@ -354,14 +354,14 @@
 
   key - the non-null key - `java.lang.Object`
   value - the property value - `java.lang.Object`"
-  ([^javax.swing.text.AbstractDocument this ^java.lang.Object key ^java.lang.Object value]
+  ([^AbstractDocument this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.putProperty key value))))
 
 (defn add-document-listener
   "Adds a document listener for notification of any changes.
 
   listener - the DocumentListener to add - `javax.swing.event.DocumentListener`"
-  ([^javax.swing.text.AbstractDocument this ^javax.swing.event.DocumentListener listener]
+  ([^AbstractDocument this ^javax.swing.event.DocumentListener listener]
     (-> this (.addDocumentListener listener))))
 
 (defn get-listeners
@@ -385,7 +385,7 @@
 
    If no such listeners exist, this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners on this component,
@@ -393,7 +393,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^javax.swing.text.AbstractDocument this ^java.lang.Class listener-type]
+  ([^AbstractDocument this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn insert-string
@@ -412,7 +412,7 @@
   a - the attributes for the inserted content - `javax.swing.text.AttributeSet`
 
   throws: javax.swing.text.BadLocationException - the given insert position is not a valid position within the document"
-  ([^javax.swing.text.AbstractDocument this ^Integer offs ^java.lang.String str ^javax.swing.text.AttributeSet a]
+  ([^AbstractDocument this ^Integer offs ^java.lang.String str ^javax.swing.text.AttributeSet a]
     (-> this (.insertString offs str a))))
 
 (defn get-end-position
@@ -421,7 +421,7 @@
    located at the end of the document.
 
   returns: the position - `javax.swing.text.Position`"
-  (^javax.swing.text.Position [^javax.swing.text.AbstractDocument this]
+  (^javax.swing.text.Position [^AbstractDocument this]
     (-> this (.getEndPosition))))
 
 (defn read-lock
@@ -432,7 +432,7 @@
    be used very carefully to avoid unintended compromise
    of the document.  It should always be balanced with a
    readUnlock."
-  ([^javax.swing.text.AbstractDocument this]
+  ([^AbstractDocument this]
     (-> this (.readLock))))
 
 (defn get-default-root-element
@@ -441,7 +441,7 @@
    structures is provided.
 
   returns: the root element - `javax.swing.text.Element`"
-  (^javax.swing.text.Element [^javax.swing.text.AbstractDocument this]
+  (^javax.swing.text.Element [^AbstractDocument this]
     (-> this (.getDefaultRootElement))))
 
 (defn get-asynchronous-load-priority
@@ -450,14 +450,14 @@
 
   returns: the asynchronous loading priority, or -1
      if the document should not be loaded asynchronously - `int`"
-  (^Integer [^javax.swing.text.AbstractDocument this]
+  (^Integer [^AbstractDocument this]
     (-> this (.getAsynchronousLoadPriority))))
 
 (defn set-asynchronous-load-priority
   "Sets the asynchronous loading priority.
 
   p - the new asynchronous loading priority; a value less than zero indicates that the document should not be loaded asynchronously - `int`"
-  ([^javax.swing.text.AbstractDocument this ^Integer p]
+  ([^AbstractDocument this ^Integer p]
     (-> this (.setAsynchronousLoadPriority p))))
 
 (defn get-paragraph-element
@@ -469,7 +469,7 @@
   pos - the starting offset >= 0 - `int`
 
   returns: the element - `javax.swing.text.Element`"
-  (^javax.swing.text.Element [^javax.swing.text.AbstractDocument this ^Integer pos]
+  (^javax.swing.text.Element [^AbstractDocument this ^Integer pos]
     (-> this (.getParagraphElement pos))))
 
 (defn get-document-listeners
@@ -479,7 +479,7 @@
   returns: all of this document's DocumentListeners
            or an empty array if no document listeners are
            currently registered - `javax.swing.event.DocumentListener[]`"
-  ([^javax.swing.text.AbstractDocument this]
+  ([^AbstractDocument this]
     (-> this (.getDocumentListeners))))
 
 (defn create-position
@@ -496,6 +496,6 @@
   returns: the position - `javax.swing.text.Position`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  (^javax.swing.text.Position [^javax.swing.text.AbstractDocument this ^Integer offs]
+  (^javax.swing.text.Position [^AbstractDocument this ^Integer offs]
     (-> this (.createPosition offs))))
 

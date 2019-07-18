@@ -61,6 +61,6 @@
   "Returns the string representation of this MemoryType.
 
   returns: the string representation of this MemoryType. - `java.lang.String`"
-  (^java.lang.String [^java.lang.management.MemoryType this]
+  (^java.lang.String [^MemoryType this]
     (-> this (.toString))))
 

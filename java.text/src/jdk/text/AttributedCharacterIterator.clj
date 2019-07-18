@@ -42,42 +42,42 @@
   "Returns the index of the first character of the run
    with respect to the given attribute containing the current character.
 
-  attribute - the desired attribute. - `java.text.AttributedCharacterIterator.Attribute`
+  attribute - the desired attribute. - `java.text.AttributedCharacterIterator$Attribute`
 
   returns: the index of the first character of the run - `int`"
-  (^Integer [^java.text.AttributedCharacterIterator this ^java.text.AttributedCharacterIterator.Attribute attribute]
+  (^Integer [^AttributedCharacterIterator this ^java.text.AttributedCharacterIterator$Attribute attribute]
     (-> this (.getRunStart attribute)))
-  (^Integer [^java.text.AttributedCharacterIterator this]
+  (^Integer [^AttributedCharacterIterator this]
     (-> this (.getRunStart))))
 
 (defn get-run-limit
   "Returns the index of the first character following the run
    with respect to the given attribute containing the current character.
 
-  attribute - the desired attribute - `java.text.AttributedCharacterIterator.Attribute`
+  attribute - the desired attribute - `java.text.AttributedCharacterIterator$Attribute`
 
   returns: the index of the first character following the run - `int`"
-  (^Integer [^java.text.AttributedCharacterIterator this ^java.text.AttributedCharacterIterator.Attribute attribute]
+  (^Integer [^AttributedCharacterIterator this ^java.text.AttributedCharacterIterator$Attribute attribute]
     (-> this (.getRunLimit attribute)))
-  (^Integer [^java.text.AttributedCharacterIterator this]
+  (^Integer [^AttributedCharacterIterator this]
     (-> this (.getRunLimit))))
 
 (defn get-attributes
   "Returns a map with the attributes defined on the current
    character.
 
-  returns: a map with the attributes defined on the current character - `java.util.Map<java.text.AttributedCharacterIterator.Attribute,java.lang.Object>`"
-  (^java.util.Map [^java.text.AttributedCharacterIterator this]
+  returns: a map with the attributes defined on the current character - `java.util.Map<java.text.AttributedCharacterIterator$Attribute,java.lang.Object>`"
+  (^java.util.Map [^AttributedCharacterIterator this]
     (-> this (.getAttributes))))
 
 (defn get-attribute
   "Returns the value of the named attribute for the current character.
    Returns null if the attribute is not defined.
 
-  attribute - the desired attribute - `java.text.AttributedCharacterIterator.Attribute`
+  attribute - the desired attribute - `java.text.AttributedCharacterIterator$Attribute`
 
   returns: the value of the named attribute or null - `java.lang.Object`"
-  (^java.lang.Object [^java.text.AttributedCharacterIterator this ^java.text.AttributedCharacterIterator.Attribute attribute]
+  (^java.lang.Object [^AttributedCharacterIterator this ^java.text.AttributedCharacterIterator$Attribute attribute]
     (-> this (.getAttribute attribute))))
 
 (defn get-all-attribute-keys
@@ -85,7 +85,7 @@
    iterator's text range. The set is empty if no
    attributes are defined.
 
-  returns: the keys of all attributes - `java.util.Set<java.text.AttributedCharacterIterator.Attribute>`"
-  (^java.util.Set [^java.text.AttributedCharacterIterator this]
+  returns: the keys of all attributes - `java.util.Set<java.text.AttributedCharacterIterator$Attribute>`"
+  (^java.util.Set [^AttributedCharacterIterator this]
     (-> this (.getAllAttributeKeys))))
 

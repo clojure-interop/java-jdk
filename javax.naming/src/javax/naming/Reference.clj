@@ -46,13 +46,13 @@
   addr - The non-null address of the object. - `javax.naming.RefAddr`
   factory - The possibly null class name of the object's factory. - `java.lang.String`
   factory-location - The possibly null location from which to load the factory (e.g. URL) - `java.lang.String`"
-  ([^java.lang.String class-name ^javax.naming.RefAddr addr ^java.lang.String factory ^java.lang.String factory-location]
+  (^Reference [^java.lang.String class-name ^javax.naming.RefAddr addr ^java.lang.String factory ^java.lang.String factory-location]
     (new Reference class-name addr factory factory-location))
-  ([^java.lang.String class-name ^java.lang.String factory ^java.lang.String factory-location]
+  (^Reference [^java.lang.String class-name ^java.lang.String factory ^java.lang.String factory-location]
     (new Reference class-name factory factory-location))
-  ([^java.lang.String class-name ^javax.naming.RefAddr addr]
+  (^Reference [^java.lang.String class-name ^javax.naming.RefAddr addr]
     (new Reference class-name addr))
-  ([^java.lang.String class-name]
+  (^Reference [^java.lang.String class-name]
     (new Reference class-name)))
 
 (defn get-class-name
@@ -60,7 +60,7 @@
 
   returns: The non-null fully-qualified class name of the object.
            (e.g. `java.lang.String`) - `java.lang.String`"
-  (^java.lang.String [^javax.naming.Reference this]
+  (^java.lang.String [^Reference this]
     (-> this (.getClassName))))
 
 (defn get-all
@@ -72,7 +72,7 @@
            (RefAddr) in this reference.
            If this reference has zero addresses, an enumeration with
            zero elements is returned. - `java.util.Enumeration<javax.naming.RefAddr>`"
-  (^java.util.Enumeration [^javax.naming.Reference this]
+  (^java.util.Enumeration [^Reference this]
     (-> this (.getAll))))
 
 (defn to-string
@@ -82,7 +82,7 @@
    This representation is intended for display only and not to be parsed.
 
   returns: The non-null string representation of this reference. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.Reference this]
+  (^java.lang.String [^Reference this]
     (-> this (.toString))))
 
 (defn remove
@@ -95,7 +95,7 @@
   returns: The address removed. - `java.lang.Object`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn not in the specified range."
-  (^java.lang.Object [^javax.naming.Reference this ^Integer posn]
+  (^java.lang.Object [^Reference this ^Integer posn]
     (-> this (.remove posn))))
 
 (defn clone
@@ -105,7 +105,7 @@
    and vice versa.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^javax.naming.Reference this]
+  (^java.lang.Object [^Reference this]
     (-> this (.clone))))
 
 (defn get-factory-class-name
@@ -114,7 +114,7 @@
 
   returns: The possibly null fully-qualified class name of the factory.
            (e.g. `java.lang.String`) - `java.lang.String`"
-  (^java.lang.String [^javax.naming.Reference this]
+  (^java.lang.String [^Reference this]
     (-> this (.getFactoryClassName))))
 
 (defn hash-code
@@ -122,7 +122,7 @@
    The hash code is the sum of the hash code of its addresses.
 
   returns: A hash code of this reference as an int. - `int`"
-  (^Integer [^javax.naming.Reference this]
+  (^Integer [^Reference this]
     (-> this (.hashCode))))
 
 (defn add
@@ -134,9 +134,9 @@
   addr - The non-null address to add. - `javax.naming.RefAddr`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - If posn not in the specified range."
-  ([^javax.naming.Reference this ^Integer posn ^javax.naming.RefAddr addr]
+  ([^Reference this ^Integer posn ^javax.naming.RefAddr addr]
     (-> this (.add posn addr)))
-  ([^javax.naming.Reference this ^javax.naming.RefAddr addr]
+  ([^Reference this ^javax.naming.RefAddr addr]
     (-> this (.add addr))))
 
 (defn get-factory-class-location
@@ -148,19 +148,19 @@
 
   returns: The possibly null string containing the
                    location for loading in the factory's class. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.Reference this]
+  (^java.lang.String [^Reference this]
     (-> this (.getFactoryClassLocation))))
 
 (defn size
   "Retrieves the number of addresses in this reference.
 
   returns: The nonnegative number of addresses in this reference. - `int`"
-  (^Integer [^javax.naming.Reference this]
+  (^Integer [^Reference this]
     (-> this (.size))))
 
 (defn clear
   "Deletes all addresses from this reference."
-  ([^javax.naming.Reference this]
+  ([^Reference this]
     (-> this (.clear))))
 
 (defn get
@@ -171,7 +171,7 @@
 
   returns: The address in this reference with address type 'addrType;
            null if no such address exist. - `javax.naming.RefAddr`"
-  (^javax.naming.RefAddr [^javax.naming.Reference this ^java.lang.String addr-type]
+  (^javax.naming.RefAddr [^Reference this ^java.lang.String addr-type]
     (-> this (.get addr-type))))
 
 (defn equals
@@ -186,6 +186,6 @@
   obj - The possibly null object to check. - `java.lang.Object`
 
   returns: true if obj is equal to this reference; false otherwise. - `boolean`"
-  (^Boolean [^javax.naming.Reference this ^java.lang.Object obj]
+  (^Boolean [^Reference this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

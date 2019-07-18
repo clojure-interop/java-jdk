@@ -73,6 +73,6 @@
    application class path, using the default
    ClassLoader.  This method is typically invoked by
    the ImageIO.scanForPlugins method."
-  ([^javax.imageio.spi.IIORegistry this]
+  ([^IIORegistry this]
     (-> this (.registerApplicationClasspathSpis))))
 

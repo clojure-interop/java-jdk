@@ -26,7 +26,7 @@
   "Constructor.
 
   The default constructor."
-  ([]
+  (^CertPathValidatorSpi []
     (new CertPathValidatorSpi )))
 
 (defn engine-validate
@@ -45,7 +45,7 @@
   returns: the result of the validation algorithm - `java.security.cert.CertPathValidatorResult`
 
   throws: java.security.cert.CertPathValidatorException - if the CertPath does not validate"
-  (^java.security.cert.CertPathValidatorResult [^java.security.cert.CertPathValidatorSpi this ^java.security.cert.CertPath cert-path ^java.security.cert.CertPathParameters params]
+  (^java.security.cert.CertPathValidatorResult [^CertPathValidatorSpi this ^java.security.cert.CertPath cert-path ^java.security.cert.CertPathParameters params]
     (-> this (.engineValidate cert-path params))))
 
 (defn engine-get-revocation-checker
@@ -66,6 +66,6 @@
    check the revocation status of certificates - `java.security.cert.CertPathChecker`
 
   throws: java.lang.UnsupportedOperationException - if this method is not supported"
-  (^java.security.cert.CertPathChecker [^java.security.cert.CertPathValidatorSpi this]
+  (^java.security.cert.CertPathChecker [^CertPathValidatorSpi this]
     (-> this (.engineGetRevocationChecker))))
 

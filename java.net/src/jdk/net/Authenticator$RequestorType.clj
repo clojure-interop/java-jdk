@@ -7,7 +7,7 @@
 
   Entity requesting authentication is a HTTP proxy server.
 
-  type: java.net.Authenticator.RequestorType"
+  type: java.net.Authenticator$RequestorType"
   Authenticator$RequestorType/PROXY)
 
 (def SERVER
@@ -15,7 +15,7 @@
 
   Entity requesting authentication is a HTTP origin server.
 
-  type: java.net.Authenticator.RequestorType"
+  type: java.net.Authenticator$RequestorType"
   Authenticator$RequestorType/SERVER)
 
 (defn *values
@@ -27,7 +27,7 @@
   for (Authenticator.RequestorType c : Authenticator.RequestorType.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.net.Authenticator.RequestorType[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.net.Authenticator$RequestorType[]`"
   ([]
     (Authenticator$RequestorType/values )))
 
@@ -39,9 +39,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.net.Authenticator.RequestorType`
+  returns: the enum constant with the specified name - `java.net.Authenticator$RequestorType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.net.Authenticator.RequestorType [^java.lang.String name]
+  (^java.net.Authenticator$RequestorType [^java.lang.String name]
     (Authenticator$RequestorType/valueOf name)))
 

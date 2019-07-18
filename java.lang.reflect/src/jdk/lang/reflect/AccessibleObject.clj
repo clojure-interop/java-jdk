@@ -44,44 +44,44 @@
 (defn get-declared-annotation
   "Description copied from interface: AnnotatedElement
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class<T>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: this element's annotation for the specified annotation type if
        directly present on this element, else null - `<T extends java.lang.annotation.Annotation> T`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.AccessibleObject this ^java.lang.Class annotation-class]
+  ([^AccessibleObject this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotation annotation-class))))
 
 (defn get-declared-annotations-by-type
   "Description copied from interface: AnnotatedElement
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class<T>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: all this element's annotations for the specified annotation type if
        directly or indirectly present on this element, else an array of length zero - `<T extends java.lang.annotation.Annotation> T[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.AccessibleObject this ^java.lang.Class annotation-class]
+  ([^AccessibleObject this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotationsByType annotation-class))))
 
 (defn get-annotation
   "Description copied from interface: AnnotatedElement
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class<T>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: this element's annotation for the specified annotation type if
        present on this element, else null - `<T extends java.lang.annotation.Annotation> T`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.AccessibleObject this ^java.lang.Class annotation-class]
+  ([^AccessibleObject this ^java.lang.Class annotation-class]
     (-> this (.getAnnotation annotation-class))))
 
 (defn get-declared-annotations
   "Description copied from interface: AnnotatedElement
 
   returns: annotations directly present on this element - `java.lang.annotation.Annotation[]`"
-  ([^java.lang.reflect.AccessibleObject this]
+  ([^AccessibleObject this]
     (-> this (.getDeclaredAnnotations))))
 
 (defn set-accessible
@@ -106,33 +106,33 @@
   flag - the new value for the accessible flag - `boolean`
 
   throws: java.lang.SecurityException - if the request is denied."
-  ([^java.lang.reflect.AccessibleObject this ^Boolean flag]
+  ([^AccessibleObject this ^Boolean flag]
     (-> this (.setAccessible flag))))
 
 (defn get-annotations
   "Description copied from interface: AnnotatedElement
 
   returns: annotations present on this element - `java.lang.annotation.Annotation[]`"
-  ([^java.lang.reflect.AccessibleObject this]
+  ([^AccessibleObject this]
     (-> this (.getAnnotations))))
 
 (defn get-annotations-by-type
   "Description copied from interface: AnnotatedElement
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class<T>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: all this element's annotations for the specified annotation type if
        associated with this element, else an array of length zero - `<T extends java.lang.annotation.Annotation> T[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.AccessibleObject this ^java.lang.Class annotation-class]
+  ([^AccessibleObject this ^java.lang.Class annotation-class]
     (-> this (.getAnnotationsByType annotation-class))))
 
 (defn accessible?
   "Get the value of the accessible flag for this object.
 
   returns: the value of the object's accessible flag - `boolean`"
-  (^Boolean [^java.lang.reflect.AccessibleObject this]
+  (^Boolean [^AccessibleObject this]
     (-> this (.isAccessible))))
 
 (defn annotation-present?
@@ -146,12 +146,12 @@
    The body of the default method is specified to be the code
    above.
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.annotation.Annotation>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: true if an annotation for the specified annotation
        type is present on this element, else false - `boolean`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  (^Boolean [^java.lang.reflect.AccessibleObject this ^java.lang.annotation.Annotation> annotation-class]
+  (^Boolean [^AccessibleObject this ^java.lang.Class annotation-class]
     (-> this (.isAnnotationPresent annotation-class))))
 

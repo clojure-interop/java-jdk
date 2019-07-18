@@ -42,7 +42,7 @@
   "Constructor.
 
   Constructs a StartTLS extended request."
-  ([]
+  (^StartTlsRequest []
     (new StartTlsRequest )))
 
 (def *-oid
@@ -58,7 +58,7 @@
   "Retrieves the StartTLS request's object identifier string.
 
   returns: The object identifier string, `1.3.6.1.4.1.1466.20037`. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.ldap.StartTlsRequest this]
+  (^java.lang.String [^StartTlsRequest this]
     (-> this (.getID))))
 
 (defn get-encoded-value
@@ -67,7 +67,7 @@
    returned.
 
   returns: The null value. - `byte[]`"
-  ([^javax.naming.ldap.StartTlsRequest this]
+  ([^StartTlsRequest this]
     (-> this (.getEncodedValue))))
 
 (defn create-extended-response
@@ -109,6 +109,6 @@
   returns: The StartTLS extended response object. - `javax.naming.ldap.ExtendedResponse`
 
   throws: javax.naming.NamingException - If a naming exception was encountered while creating the StartTLS extended response object."
-  (^javax.naming.ldap.ExtendedResponse [^javax.naming.ldap.StartTlsRequest this ^java.lang.String id ber-value ^Integer offset ^Integer length]
+  (^javax.naming.ldap.ExtendedResponse [^StartTlsRequest this ^java.lang.String id ber-value ^Integer offset ^Integer length]
     (-> this (.createExtendedResponse id ber-value offset length))))
 

@@ -44,9 +44,9 @@
   name-constraints - a byte array containing the ASN.1 DER encoding of a NameConstraints extension to be used for checking name constraints. Only the value of the extension is included, not the OID or criticality flag. Specify null to omit the parameter. - `byte[]`
 
   throws: java.lang.NullPointerException - if the specified caPrincipal or pubKey parameter is null"
-  ([^javax.security.auth.x500.X500Principal ca-principal ^java.security.PublicKey pub-key name-constraints]
+  (^TrustAnchor [^javax.security.auth.x500.X500Principal ca-principal ^java.security.PublicKey pub-key name-constraints]
     (new TrustAnchor ca-principal pub-key name-constraints))
-  ([^java.security.cert.X509Certificate trusted-cert name-constraints]
+  (^TrustAnchor [^java.security.cert.X509Certificate trusted-cert name-constraints]
     (new TrustAnchor trusted-cert name-constraints)))
 
 (defn get-trusted-cert
@@ -54,7 +54,7 @@
 
   returns: a trusted X509Certificate or null
    if the trust anchor was not specified as a trusted certificate - `java.security.cert.X509Certificate`"
-  (^java.security.cert.X509Certificate [^java.security.cert.TrustAnchor this]
+  (^java.security.cert.X509Certificate [^TrustAnchor this]
     (-> this (.getTrustedCert))))
 
 (defn get-ca
@@ -63,7 +63,7 @@
   returns: the X.500 distinguished name of the most-trusted CA, or
    null if the trust anchor was not specified as a trusted
    public key and name or X500Principal pair - `javax.security.auth.x500.X500Principal`"
-  (^javax.security.auth.x500.X500Principal [^java.security.cert.TrustAnchor this]
+  (^javax.security.auth.x500.X500Principal [^TrustAnchor this]
     (-> this (.getCA))))
 
 (defn get-ca-name
@@ -73,7 +73,7 @@
   returns: the X.500 distinguished name of the most-trusted CA, or
    null if the trust anchor was not specified as a trusted
    public key and name or X500Principal pair - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.TrustAnchor this]
+  (^java.lang.String [^TrustAnchor this]
     (-> this (.getCAName))))
 
 (defn get-ca-public-key
@@ -82,7 +82,7 @@
   returns: the public key of the most-trusted CA, or null
    if the trust anchor was not specified as a trusted public key and name
    or X500Principal pair - `java.security.PublicKey`"
-  (^java.security.PublicKey [^java.security.cert.TrustAnchor this]
+  (^java.security.PublicKey [^TrustAnchor this]
     (-> this (.getCAPublicKey))))
 
 (defn get-name-constraints
@@ -103,13 +103,13 @@
   returns: a byte array containing the ASN.1 DER encoding of
            a NameConstraints extension used for checking name constraints,
            or null if not set. - `byte[]`"
-  ([^java.security.cert.TrustAnchor this]
+  ([^TrustAnchor this]
     (-> this (.getNameConstraints))))
 
 (defn to-string
   "Returns a formatted string describing the TrustAnchor.
 
   returns: a formatted string describing the TrustAnchor - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.TrustAnchor this]
+  (^java.lang.String [^TrustAnchor this]
     (-> this (.toString))))
 

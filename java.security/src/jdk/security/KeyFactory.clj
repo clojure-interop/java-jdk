@@ -72,7 +72,7 @@
   "Returns the provider of this key factory object.
 
   returns: the provider of this key factory object - `java.security.Provider`"
-  (^java.security.Provider [^java.security.KeyFactory this]
+  (^java.security.Provider [^KeyFactory this]
     (-> this (.getProvider))))
 
 (defn get-algorithm
@@ -81,7 +81,7 @@
 
   returns: the name of the algorithm associated with this
    KeyFactory - `java.lang.String`"
-  (^java.lang.String [^java.security.KeyFactory this]
+  (^java.lang.String [^KeyFactory this]
     (-> this (.getAlgorithm))))
 
 (defn generate-public
@@ -93,7 +93,7 @@
   returns: the public key. - `java.security.PublicKey`
 
   throws: java.security.spec.InvalidKeySpecException - if the given key specification is inappropriate for this key factory to produce a public key."
-  (^java.security.PublicKey [^java.security.KeyFactory this ^java.security.spec.KeySpec key-spec]
+  (^java.security.PublicKey [^KeyFactory this ^java.security.spec.KeySpec key-spec]
     (-> this (.generatePublic key-spec))))
 
 (defn generate-private
@@ -105,7 +105,7 @@
   returns: the private key. - `java.security.PrivateKey`
 
   throws: java.security.spec.InvalidKeySpecException - if the given key specification is inappropriate for this key factory to produce a private key."
-  (^java.security.PrivateKey [^java.security.KeyFactory this ^java.security.spec.KeySpec key-spec]
+  (^java.security.PrivateKey [^KeyFactory this ^java.security.spec.KeySpec key-spec]
     (-> this (.generatePrivate key-spec))))
 
 (defn get-key-spec
@@ -117,13 +117,13 @@
    DSAPublicKeySpec class.
 
   key - the key. - `java.security.Key`
-  key-spec - the specification class in which the key material should be returned. - `java.lang.Class<T>`
+  key-spec - the specification class in which the key material should be returned. - `java.lang.Class`
 
   returns: the underlying key specification (key material) in an instance
    of the requested specification class. - `<T extends java.security.spec.KeySpec> T`
 
   throws: java.security.spec.InvalidKeySpecException - if the requested key specification is inappropriate for the given key, or the given key cannot be processed (e.g., the given key has an unrecognized algorithm or format)."
-  ([^java.security.KeyFactory this ^java.security.Key key ^java.lang.Class key-spec]
+  ([^KeyFactory this ^java.security.Key key ^java.lang.Class key-spec]
     (-> this (.getKeySpec key key-spec))))
 
 (defn translate-key
@@ -135,6 +135,6 @@
   returns: the translated key. - `java.security.Key`
 
   throws: java.security.InvalidKeyException - if the given key cannot be processed by this key factory."
-  (^java.security.Key [^java.security.KeyFactory this ^java.security.Key key]
+  (^java.security.Key [^KeyFactory this ^java.security.Key key]
     (-> this (.translateKey key))))
 

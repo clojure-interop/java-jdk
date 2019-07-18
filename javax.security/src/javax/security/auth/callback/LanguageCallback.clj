@@ -10,14 +10,14 @@
   "Constructor.
 
   Construct a LanguageCallback."
-  ([]
+  (^LanguageCallback []
     (new LanguageCallback )))
 
 (defn set-locale
   "Set the retrieved Locale.
 
   locale - the retrieved Locale. - `java.util.Locale`"
-  ([^javax.security.auth.callback.LanguageCallback this ^java.util.Locale locale]
+  ([^LanguageCallback this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn get-locale
@@ -25,6 +25,6 @@
 
   returns: the retrieved Locale, or null
             if no Locale could be retrieved. - `java.util.Locale`"
-  (^java.util.Locale [^javax.security.auth.callback.LanguageCallback this]
+  (^java.util.Locale [^LanguageCallback this]
     (-> this (.getLocale))))
 

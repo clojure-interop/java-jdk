@@ -16,7 +16,7 @@
 
   Sole constructor. (For invocation by subclass constructors,
    typically implicit.)"
-  ([]
+  (^ComponentUI []
     (new ComponentUI )))
 
 (defn *create-ui
@@ -55,7 +55,7 @@
    Initialize any appropriate instance data.
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  ([^ComponentUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn get-minimum-size
@@ -69,7 +69,7 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^ComponentUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-maximum-size
@@ -83,7 +83,7 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^ComponentUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn get-accessible-child
@@ -102,7 +102,7 @@
   i - zero-based index of child - `int`
 
   returns: the ith Accessible child of the object - `javax.accessibility.Accessible`"
-  (^javax.accessibility.Accessible [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c ^Integer i]
+  (^javax.accessibility.Accessible [^ComponentUI this ^javax.swing.JComponent c ^Integer i]
     (-> this (.getAccessibleChild c i))))
 
 (defn uninstall-ui
@@ -123,7 +123,7 @@
    Nullify any allocated instance data objects to allow for GC.
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  ([^ComponentUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn contains
@@ -140,7 +140,7 @@
   y - the y coordinate of the point - `int`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c ^Integer x ^Integer y]
+  (^Boolean [^ComponentUI this ^javax.swing.JComponent c ^Integer x ^Integer y]
     (-> this (.contains c x y))))
 
 (defn get-baseline-resize-behavior
@@ -154,10 +154,10 @@
   c - JComponent to return baseline resize behavior for - `javax.swing.JComponent`
 
   returns: an enum indicating how the baseline changes as the component
-           size changes - `java.awt.Component.BaselineResizeBehavior`
+           size changes - `java.awt.Component$BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  (^java.awt.Component$BaselineResizeBehavior [^ComponentUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn update
@@ -173,7 +173,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.ComponentUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^ComponentUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn get-accessible-children-count
@@ -192,7 +192,7 @@
   c - `javax.swing.JComponent`
 
   returns: the number of accessible children in the object - `int`"
-  (^Integer [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  (^Integer [^ComponentUI this ^javax.swing.JComponent c]
     (-> this (.getAccessibleChildrenCount c))))
 
 (defn paint
@@ -204,7 +204,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.ComponentUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^ComponentUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-baseline
@@ -227,7 +227,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^Integer [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^ComponentUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-preferred-size
@@ -241,6 +241,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.ComponentUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^ComponentUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

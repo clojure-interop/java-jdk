@@ -19,7 +19,7 @@
   f - a File to read from. - `java.io.File`
 
   throws: java.lang.IllegalArgumentException - if f is null."
-  ([^java.io.File f]
+  (^FileImageInputStream [^java.io.File f]
     (new FileImageInputStream f)))
 
 (defn read
@@ -33,9 +33,9 @@
    to indicate EOF. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Integer [^javax.imageio.stream.FileImageInputStream this b ^Integer off ^Integer len]
+  (^Integer [^FileImageInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^javax.imageio.stream.FileImageInputStream this]
+  (^Integer [^FileImageInputStream this]
     (-> this (.read))))
 
 (defn length
@@ -44,7 +44,7 @@
 
   returns: the file length as a long, or
    -1. - `long`"
-  (^Long [^javax.imageio.stream.FileImageInputStream this]
+  (^Long [^FileImageInputStream this]
     (-> this (.length))))
 
 (defn seek
@@ -53,13 +53,13 @@
   pos - a long containing the desired file pointer position. - `long`
 
   throws: java.io.IOException - if any other I/O error occurs."
-  ([^javax.imageio.stream.FileImageInputStream this ^Long pos]
+  ([^FileImageInputStream this ^Long pos]
     (-> this (.seek pos))))
 
 (defn close
   "Description copied from interface: ImageInputStream
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^javax.imageio.stream.FileImageInputStream this]
+  ([^FileImageInputStream this]
     (-> this (.close))))
 

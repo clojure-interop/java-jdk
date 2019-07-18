@@ -21,7 +21,7 @@
 
   orig - the specified ImageProducer - `java.awt.image.ImageProducer`
   imgf - the specified ImageFilter - `java.awt.image.ImageFilter`"
-  ([^java.awt.image.ImageProducer orig ^java.awt.image.ImageFilter imgf]
+  (^FilteredImageSource [^java.awt.image.ImageProducer orig ^java.awt.image.ImageFilter imgf]
     (new FilteredImageSource orig imgf)))
 
 (defn add-consumer
@@ -44,7 +44,7 @@
    and its behavior if called from user code is unspecified.
 
   ic - the consumer for the filtered image - `java.awt.image.ImageConsumer`"
-  ([^java.awt.image.FilteredImageSource this ^java.awt.image.ImageConsumer ic]
+  ([^FilteredImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.addConsumer ic))))
 
 (defn consumer?
@@ -61,7 +61,7 @@
   ic - the specified ImageConsumer - `java.awt.image.ImageConsumer`
 
   returns: true if the ImageConsumer is on the list; false otherwise - `boolean`"
-  (^Boolean [^java.awt.image.FilteredImageSource this ^java.awt.image.ImageConsumer ic]
+  (^Boolean [^FilteredImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.isConsumer ic))))
 
 (defn remove-consumer
@@ -76,7 +76,7 @@
    and its behavior if called from user code is unspecified.
 
   ic - the specified ImageConsumer - `java.awt.image.ImageConsumer`"
-  ([^java.awt.image.FilteredImageSource this ^java.awt.image.ImageConsumer ic]
+  ([^FilteredImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.removeConsumer ic))))
 
 (defn start-production
@@ -100,7 +100,7 @@
    and its behavior if called from user code is unspecified.
 
   ic - the consumer for the filtered image - `java.awt.image.ImageConsumer`"
-  ([^java.awt.image.FilteredImageSource this ^java.awt.image.ImageConsumer ic]
+  ([^FilteredImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.startProduction ic))))
 
 (defn request-top-down-left-right-resend
@@ -117,6 +117,6 @@
    and its behavior if called from user code is unspecified.
 
   ic - the specified ImageConsumer - `java.awt.image.ImageConsumer`"
-  ([^java.awt.image.FilteredImageSource this ^java.awt.image.ImageConsumer ic]
+  ([^FilteredImageSource this ^java.awt.image.ImageConsumer ic]
     (-> this (.requestTopDownLeftRightResend ic))))
 

@@ -8,7 +8,7 @@
 
    The default implementation returns an empty Set.
 
-  returns: an unmodifiable Set of attributes, possibly empty - `default java.util.Set<java.security.KeyStore.Entry.Attribute>`"
-  ([^java.security.KeyStore$Entry this]
+  returns: an unmodifiable Set of attributes, possibly empty - `default java.util.Set<java.security.KeyStore$Entry$Attribute>`"
+  ([^KeyStore$Entry this]
     (-> this (.getAttributes))))
 

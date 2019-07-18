@@ -33,7 +33,7 @@
    displayed by the editor part of a JSpinner.
 
   returns: the current spinner value. - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.SpinnerModel this]
+  (^java.lang.Object [^SpinnerModel this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -49,7 +49,7 @@
   value - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if value isn't allowed"
-  ([^javax.swing.SpinnerModel this ^java.lang.Object value]
+  ([^SpinnerModel this ^java.lang.Object value]
     (-> this (.setValue value))))
 
 (defn get-next-value
@@ -58,7 +58,7 @@
    then return null.  Calling this method does not effect value.
 
   returns: the next legal value or null if one doesn't exist - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.SpinnerModel this]
+  (^java.lang.Object [^SpinnerModel this]
     (-> this (.getNextValue))))
 
 (defn get-previous-value
@@ -67,7 +67,7 @@
    return null. Calling this method does not effect value.
 
   returns: the previous legal value or null if one doesn't exist - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.SpinnerModel this]
+  (^java.lang.Object [^SpinnerModel this]
     (-> this (.getPreviousValue))))
 
 (defn add-change-listener
@@ -76,13 +76,13 @@
    changes.
 
   l - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.SpinnerModel this ^javax.swing.event.ChangeListener l]
+  ([^SpinnerModel this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from the model's listener list.
 
   l - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.SpinnerModel this ^javax.swing.event.ChangeListener l]
+  ([^SpinnerModel this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 

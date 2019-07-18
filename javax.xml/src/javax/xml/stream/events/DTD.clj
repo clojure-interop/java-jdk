@@ -12,7 +12,7 @@
    production in the XML 1.0 specification
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.events.DTD this]
+  (^java.lang.String [^DTD this]
     (-> this (.getDocumentTypeDeclaration))))
 
 (defn get-processed-dtd
@@ -20,7 +20,7 @@
    This method may return null if no representation is available.
 
   returns: `java.lang.Object`"
-  (^java.lang.Object [^javax.xml.stream.events.DTD this]
+  (^java.lang.Object [^DTD this]
     (-> this (.getProcessedDTD))))
 
 (defn get-notations
@@ -28,7 +28,7 @@
    This list must contain NotationDeclaration events.
 
   returns: an unordered list of NotationDeclaration events - `java.util.List`"
-  (^java.util.List [^javax.xml.stream.events.DTD this]
+  (^java.util.List [^DTD this]
     (-> this (.getNotations))))
 
 (defn get-entities
@@ -37,6 +37,6 @@
    This list must contain EntityDeclaration events.
 
   returns: an unordered list of EntityDeclaration events - `java.util.List`"
-  (^java.util.List [^javax.xml.stream.events.DTD this]
+  (^java.util.List [^DTD this]
     (-> this (.getEntities))))
 

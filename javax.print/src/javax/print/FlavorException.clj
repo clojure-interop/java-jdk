@@ -10,6 +10,6 @@
   "Returns the unsupported flavors.
 
   returns: the unsupported doc flavors. - `javax.print.DocFlavor[]`"
-  ([^javax.print.FlavorException this]
+  ([^FlavorException this]
     (-> this (.getUnsupportedFlavors))))
 

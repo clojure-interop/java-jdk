@@ -14,7 +14,7 @@
   "Constructor.
 
   Constructs a LayoutFocusTraversalPolicy."
-  ([]
+  (^LayoutFocusTraversalPolicy []
     (new LayoutFocusTraversalPolicy )))
 
 (defn get-component-after
@@ -37,7 +37,7 @@
            null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is not a focus cycle root of aComponent or a focus traversal policy provider, or if either aContainer or aComponent is null"
-  (^java.awt.Component [^javax.swing.LayoutFocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
+  (^java.awt.Component [^LayoutFocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentAfter a-container a-component))))
 
 (defn get-component-before
@@ -60,7 +60,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is not a focus cycle root of aComponent or a focus traversal policy provider, or if either aContainer or aComponent is null"
-  (^java.awt.Component [^javax.swing.LayoutFocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
+  (^java.awt.Component [^LayoutFocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentBefore a-container a-component))))
 
 (defn get-first-component
@@ -74,7 +74,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  (^java.awt.Component [^javax.swing.LayoutFocusTraversalPolicy this ^java.awt.Container a-container]
+  (^java.awt.Component [^LayoutFocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getFirstComponent a-container))))
 
 (defn get-last-component
@@ -88,6 +88,6 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  (^java.awt.Component [^javax.swing.LayoutFocusTraversalPolicy this ^java.awt.Container a-container]
+  (^java.awt.Component [^LayoutFocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getLastComponent a-container))))
 

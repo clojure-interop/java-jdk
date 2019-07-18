@@ -23,9 +23,9 @@
 
   root - a TreeNode object that is the root of the tree - `javax.swing.tree.TreeNode`
   asks-allows-children - a boolean, false if any node can have children, true if each node is asked to see if it can have children - `boolean`"
-  ([^javax.swing.tree.TreeNode root ^Boolean asks-allows-children]
+  (^DefaultTreeModel [^javax.swing.tree.TreeNode root ^Boolean asks-allows-children]
     (new DefaultTreeModel root asks-allows-children))
-  ([^javax.swing.tree.TreeNode root]
+  (^DefaultTreeModel [^javax.swing.tree.TreeNode root]
     (new DefaultTreeModel root)))
 
 (defn set-asks-allows-children
@@ -34,7 +34,7 @@
    is messaged, otherwise isLeaf() is messaged.
 
   new-value - `boolean`"
-  ([^javax.swing.tree.DefaultTreeModel this ^Boolean new-value]
+  ([^DefaultTreeModel this ^Boolean new-value]
     (-> this (.setAsksAllowsChildren new-value))))
 
 (defn nodes-were-removed
@@ -46,7 +46,7 @@
   node - `javax.swing.tree.TreeNode`
   child-indices - `int[]`
   removed-children - `java.lang.Object[]`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreeNode node child-indices removed-children]
+  ([^DefaultTreeModel this ^javax.swing.tree.TreeNode node child-indices removed-children]
     (-> this (.nodesWereRemoved node child-indices removed-children))))
 
 (defn get-child-count
@@ -57,14 +57,14 @@
   parent - a node in the tree, obtained from this data source - `java.lang.Object`
 
   returns: the number of children of the node parent - `int`"
-  (^Integer [^javax.swing.tree.DefaultTreeModel this ^java.lang.Object parent]
+  (^Integer [^DefaultTreeModel this ^java.lang.Object parent]
     (-> this (.getChildCount parent))))
 
 (defn remove-tree-model-listener
   "Removes a listener previously added with addTreeModelListener().
 
   l - the listener to remove - `javax.swing.event.TreeModelListener`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.event.TreeModelListener l]
+  ([^DefaultTreeModel this ^javax.swing.event.TreeModelListener l]
     (-> this (.removeTreeModelListener l))))
 
 (defn remove-node-from-parent
@@ -74,7 +74,7 @@
    for you.
 
   node - `javax.swing.tree.MutableTreeNode`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.MutableTreeNode node]
+  ([^DefaultTreeModel this ^javax.swing.tree.MutableTreeNode node]
     (-> this (.removeNodeFromParent node))))
 
 (defn get-tree-model-listeners
@@ -84,7 +84,7 @@
   returns: all of this model's TreeModelListeners
            or an empty
            array if no tree model listeners are currently registered - `javax.swing.event.TreeModelListener[]`"
-  ([^javax.swing.tree.DefaultTreeModel this]
+  ([^DefaultTreeModel this]
     (-> this (.getTreeModelListeners))))
 
 (defn leaf?
@@ -95,7 +95,7 @@
   node - the node to check - `java.lang.Object`
 
   returns: true if the node is a leaf node - `boolean`"
-  (^Boolean [^javax.swing.tree.DefaultTreeModel this ^java.lang.Object node]
+  (^Boolean [^DefaultTreeModel this ^java.lang.Object node]
     (-> this (.isLeaf node))))
 
 (defn get-index-of-child
@@ -107,7 +107,7 @@
 
   returns: the index of the child in the parent, or -1
       if either the parent or the child is null - `int`"
-  (^Integer [^javax.swing.tree.DefaultTreeModel this ^java.lang.Object parent ^java.lang.Object child]
+  (^Integer [^DefaultTreeModel this ^java.lang.Object parent ^java.lang.Object child]
     (-> this (.getIndexOfChild parent child))))
 
 (defn node-structure-changed
@@ -116,7 +116,7 @@
    treeStructureChanged event.
 
   node - `javax.swing.tree.TreeNode`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreeNode node]
+  ([^DefaultTreeModel this ^javax.swing.tree.TreeNode node]
     (-> this (.nodeStructureChanged node))))
 
 (defn get-root
@@ -124,7 +124,7 @@
    no nodes.
 
   returns: the root of the tree - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.tree.DefaultTreeModel this]
+  (^java.lang.Object [^DefaultTreeModel this]
     (-> this (.getRoot))))
 
 (defn get-path-to-root
@@ -136,7 +136,7 @@
   a-node - the TreeNode to get the path for - `javax.swing.tree.TreeNode`
 
   returns: `javax.swing.tree.TreeNode[]`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreeNode a-node]
+  ([^DefaultTreeModel this ^javax.swing.tree.TreeNode a-node]
     (-> this (.getPathToRoot a-node))))
 
 (defn get-child
@@ -150,7 +150,7 @@
   index - `int`
 
   returns: the child of parent at index index - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.tree.DefaultTreeModel this ^java.lang.Object parent ^Integer index]
+  (^java.lang.Object [^DefaultTreeModel this ^java.lang.Object parent ^Integer index]
     (-> this (.getChild parent index))))
 
 (defn reload
@@ -159,9 +159,9 @@
    model has changed below the given node.
 
   node - the node below which the model has changed - `javax.swing.tree.TreeNode`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreeNode node]
+  ([^DefaultTreeModel this ^javax.swing.tree.TreeNode node]
     (-> this (.reload node)))
-  ([^javax.swing.tree.DefaultTreeModel this]
+  ([^DefaultTreeModel this]
     (-> this (.reload))))
 
 (defn node-changed
@@ -169,7 +169,7 @@
    represented in the tree.
 
   node - `javax.swing.tree.TreeNode`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreeNode node]
+  ([^DefaultTreeModel this ^javax.swing.tree.TreeNode node]
     (-> this (.nodeChanged node))))
 
 (defn nodes-changed
@@ -178,14 +178,14 @@
 
   node - `javax.swing.tree.TreeNode`
   child-indices - `int[]`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreeNode node child-indices]
+  ([^DefaultTreeModel this ^javax.swing.tree.TreeNode node child-indices]
     (-> this (.nodesChanged node child-indices))))
 
 (defn add-tree-model-listener
   "Adds a listener for the TreeModelEvent posted after the tree changes.
 
   l - the listener to add - `javax.swing.event.TreeModelListener`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.event.TreeModelListener l]
+  ([^DefaultTreeModel this ^javax.swing.event.TreeModelListener l]
     (-> this (.addTreeModelListener l))))
 
 (defn get-listeners
@@ -211,7 +211,7 @@
 
    If no such listeners exist, this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners on this component,
@@ -219,7 +219,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^javax.swing.tree.DefaultTreeModel this ^java.lang.Class listener-type]
+  ([^DefaultTreeModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn nodes-were-inserted
@@ -229,7 +229,7 @@
 
   node - `javax.swing.tree.TreeNode`
   child-indices - `int[]`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreeNode node child-indices]
+  ([^DefaultTreeModel this ^javax.swing.tree.TreeNode node child-indices]
     (-> this (.nodesWereInserted node child-indices))))
 
 (defn asks-allows-children
@@ -238,7 +238,7 @@
   returns: true if only nodes which do not allow children are
            leaf nodes, false if nodes which have no children
            (even if allowed) are leaf nodes - `boolean`"
-  (^Boolean [^javax.swing.tree.DefaultTreeModel this]
+  (^Boolean [^DefaultTreeModel this]
     (-> this (.asksAllowsChildren))))
 
 (defn set-root
@@ -246,7 +246,7 @@
    the tree is to display nothing, and is legal.
 
   root - `javax.swing.tree.TreeNode`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreeNode root]
+  ([^DefaultTreeModel this ^javax.swing.tree.TreeNode root]
     (-> this (.setRoot root))))
 
 (defn value-for-path-changed
@@ -257,7 +257,7 @@
 
   path - path to the node that the user has altered - `javax.swing.tree.TreePath`
   new-value - the new value from the TreeCellEditor - `java.lang.Object`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.TreePath path ^java.lang.Object new-value]
+  ([^DefaultTreeModel this ^javax.swing.tree.TreePath path ^java.lang.Object new-value]
     (-> this (.valueForPathChanged path new-value))))
 
 (defn insert-node-into
@@ -269,6 +269,6 @@
   new-child - `javax.swing.tree.MutableTreeNode`
   parent - `javax.swing.tree.MutableTreeNode`
   index - `int`"
-  ([^javax.swing.tree.DefaultTreeModel this ^javax.swing.tree.MutableTreeNode new-child ^javax.swing.tree.MutableTreeNode parent ^Integer index]
+  ([^DefaultTreeModel this ^javax.swing.tree.MutableTreeNode new-child ^javax.swing.tree.MutableTreeNode parent ^Integer index]
     (-> this (.insertNodeInto new-child parent index))))
 

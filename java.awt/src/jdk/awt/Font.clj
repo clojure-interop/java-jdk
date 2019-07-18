@@ -198,9 +198,9 @@
   name - the font name. This can be a font face name or a font family name, and may represent either a logical font or a physical font found in this GraphicsEnvironment. The family names for logical fonts are: Dialog, DialogInput, Monospaced, Serif, or SansSerif. Pre-defined String constants exist for all of these names, for example, DIALOG. If name is null, the logical font name of the new Font as returned by getName() is set to the name `Default`. - `java.lang.String`
   style - the style constant for the Font The style argument is an integer bitmask that may be PLAIN, or a bitwise union of BOLD and/or ITALIC (for example, ITALIC or BOLD|ITALIC). If the style argument does not conform to one of the expected integer bitmasks then the style is set to PLAIN. - `int`
   size - the point size of the Font - `int`"
-  ([^java.lang.String name ^Integer style ^Integer size]
+  (^Font [^java.lang.String name ^Integer style ^Integer size]
     (new Font name style size))
-  ([^java.text.AttributedCharacterIterator.Attribute,?> attributes]
+  (^Font [^java.util.Map attributes]
     (new Font attributes)))
 
 (def *-dialog
@@ -387,7 +387,7 @@
   throws: java.lang.NullPointerException - if nm is null."
   (^java.awt.Font [^java.lang.String nm ^java.awt.Font font]
     (Font/getFont nm font))
-  (^java.awt.Font [^java.text.AttributedCharacterIterator.Attribute,?> attributes]
+  (^java.awt.Font [^java.util.Map attributes]
     (Font/getFont attributes)))
 
 (defn *create-font
@@ -494,8 +494,8 @@
    fonts.
 
   returns: an array containing the keys of all the attributes
-            supported by this Font. - `java.text.AttributedCharacterIterator.Attribute[]`"
-  ([^java.awt.Font this]
+            supported by this Font. - `java.text.AttributedCharacterIterator$Attribute[]`"
+  ([^Font this]
     (-> this (.getAvailableAttributes))))
 
 (defn transformed?
@@ -506,7 +506,7 @@
   returns: true if this Font object
             has a non-identity AffineTransform attribute.
             false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Font this]
+  (^Boolean [^Font this]
     (-> this (.isTransformed))))
 
 (defn create-glyph-vector
@@ -524,7 +524,7 @@
   returns: a new GlyphVector created with the
    specified String and the specified
    FontRenderContext. - `java.awt.font.GlyphVector`"
-  (^java.awt.font.GlyphVector [^java.awt.Font this ^java.awt.font.FontRenderContext frc ^java.lang.String str]
+  (^java.awt.font.GlyphVector [^Font this ^java.awt.font.FontRenderContext frc ^java.lang.String str]
     (-> this (.createGlyphVector frc str))))
 
 (defn layout-glyph-vector
@@ -563,7 +563,7 @@
    the text - `java.awt.font.GlyphVector`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if start or limit is out of bounds"
-  (^java.awt.font.GlyphVector [^java.awt.Font this ^java.awt.font.FontRenderContext frc text ^Integer start ^Integer limit ^Integer flags]
+  (^java.awt.font.GlyphVector [^Font this ^java.awt.font.FontRenderContext frc text ^Integer start ^Integer limit ^Integer flags]
     (-> this (.layoutGlyphVector frc text start limit flags))))
 
 (defn can-display?
@@ -579,7 +579,7 @@
 
   returns: true if this Font has a glyph for this
             character; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Font this ^Character c]
+  (^Boolean [^Font this ^Character c]
     (-> this (.canDisplay c))))
 
 (defn plain?
@@ -589,7 +589,7 @@
   returns: true if this Font has a
               PLAIN style;
               false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Font this]
+  (^Boolean [^Font this]
     (-> this (.isPlain))))
 
 (defn bold?
@@ -599,7 +599,7 @@
   returns: true if this Font object's
               style is BOLD;
               false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Font this]
+  (^Boolean [^Font this]
     (-> this (.isBold))))
 
 (defn get-line-metrics
@@ -613,9 +613,9 @@
 
   returns: a LineMetrics object created with the
    specified arguments. - `java.awt.font.LineMetrics`"
-  (^java.awt.font.LineMetrics [^java.awt.Font this ^java.lang.String str ^Integer begin-index ^Integer limit ^java.awt.font.FontRenderContext frc]
+  (^java.awt.font.LineMetrics [^Font this ^java.lang.String str ^Integer begin-index ^Integer limit ^java.awt.font.FontRenderContext frc]
     (-> this (.getLineMetrics str begin-index limit frc)))
-  (^java.awt.font.LineMetrics [^java.awt.Font this ^java.lang.String str ^java.awt.font.FontRenderContext frc]
+  (^java.awt.font.LineMetrics [^Font this ^java.lang.String str ^java.awt.font.FontRenderContext frc]
     (-> this (.getLineMetrics str frc))))
 
 (defn to-string
@@ -624,7 +624,7 @@
 
   returns: a String representation of this
             Font object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Font this]
+  (^java.lang.String [^Font this]
     (-> this (.toString))))
 
 (defn derive-font
@@ -635,9 +635,9 @@
   size - the size for the new Font - `float`
 
   returns: a new Font object. - `java.awt.Font`"
-  (^java.awt.Font [^java.awt.Font this ^Integer style ^Float size]
+  (^java.awt.Font [^Font this ^Integer style ^Float size]
     (-> this (.deriveFont style size)))
-  (^java.awt.Font [^java.awt.Font this ^Float size]
+  (^java.awt.Font [^Font this ^Float size]
     (-> this (.deriveFont size))))
 
 (defn can-display-up-to
@@ -655,9 +655,9 @@
             Font cannot display; or -1 if
             this Font can display all characters in
             text. - `int`"
-  (^Integer [^java.awt.Font this text ^Integer start ^Integer limit]
+  (^Integer [^Font this text ^Integer start ^Integer limit]
     (-> this (.canDisplayUpTo text start limit)))
-  (^Integer [^java.awt.Font this ^java.lang.String str]
+  (^Integer [^Font this ^java.lang.String str]
     (-> this (.canDisplayUpTo str))))
 
 (defn get-string-bounds
@@ -683,9 +683,9 @@
    FontRenderContext. - `java.awt.geom.Rectangle2D`
 
   throws: java.lang.IndexOutOfBoundsException - if beginIndex is less than zero, or limit is greater than the length of str, or beginIndex is greater than limit."
-  (^java.awt.geom.Rectangle2D [^java.awt.Font this ^java.lang.String str ^Integer begin-index ^Integer limit ^java.awt.font.FontRenderContext frc]
+  (^java.awt.geom.Rectangle2D [^Font this ^java.lang.String str ^Integer begin-index ^Integer limit ^java.awt.font.FontRenderContext frc]
     (-> this (.getStringBounds str begin-index limit frc)))
-  (^java.awt.geom.Rectangle2D [^java.awt.Font this ^java.lang.String str ^java.awt.font.FontRenderContext frc]
+  (^java.awt.geom.Rectangle2D [^Font this ^java.lang.String str ^java.awt.font.FontRenderContext frc]
     (-> this (.getStringBounds str frc))))
 
 (defn get-name
@@ -695,7 +695,7 @@
 
   returns: a String representing the logical name of
             this Font. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Font this]
+  (^java.lang.String [^Font this]
     (-> this (.getName))))
 
 (defn get-num-glyphs
@@ -704,7 +704,7 @@
    getNumGlyphs() - 1.
 
   returns: the number of glyphs in this Font. - `int`"
-  (^Integer [^java.awt.Font this]
+  (^Integer [^Font this]
     (-> this (.getNumGlyphs))))
 
 (defn get-size-2-d
@@ -713,7 +713,7 @@
 
   returns: the point size of this Font as a
    float value. - `float`"
-  (^Float [^java.awt.Font this]
+  (^Float [^Font this]
     (-> this (.getSize2D))))
 
 (defn has-layout-attributes?
@@ -721,7 +721,7 @@
    layout processing.
 
   returns: true if the font has layout attributes - `boolean`"
-  (^Boolean [^java.awt.Font this]
+  (^Boolean [^Font this]
     (-> this (.hasLayoutAttributes))))
 
 (defn get-font-name
@@ -734,9 +734,9 @@
 
   returns: a String representing the font face name,
             localized for the specified locale. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Font this ^java.util.Locale l]
+  (^java.lang.String [^Font this ^java.util.Locale l]
     (-> this (.getFontName l)))
-  (^java.lang.String [^java.awt.Font this]
+  (^java.lang.String [^Font this]
     (-> this (.getFontName))))
 
 (defn get-family
@@ -756,9 +756,9 @@
 
   returns: a String representing the family name of the
             font, localized for the specified locale. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Font this ^java.util.Locale l]
+  (^java.lang.String [^Font this ^java.util.Locale l]
     (-> this (.getFamily l)))
-  (^java.lang.String [^java.awt.Font this]
+  (^java.lang.String [^Font this]
     (-> this (.getFamily))))
 
 (defn get-max-char-bounds
@@ -771,7 +771,7 @@
 
   returns: a Rectangle2D that is the bounding box
    for the character with the maximum bounds. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.Font this ^java.awt.font.FontRenderContext frc]
+  (^java.awt.geom.Rectangle2D [^Font this ^java.awt.font.FontRenderContext frc]
     (-> this (.getMaxCharBounds frc))))
 
 (defn get-italic-angle
@@ -780,7 +780,7 @@
    Font.
 
   returns: the angle of the ITALIC style of this Font. - `float`"
-  (^Float [^java.awt.Font this]
+  (^Float [^Font this]
     (-> this (.getItalicAngle))))
 
 (defn get-ps-name
@@ -790,14 +790,14 @@
 
   returns: a String representing the postscript name of
             this Font. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Font this]
+  (^java.lang.String [^Font this]
     (-> this (.getPSName))))
 
 (defn hash-code
   "Returns a hashcode for this Font.
 
   returns: a hashcode value for this Font. - `int`"
-  (^Integer [^java.awt.Font this]
+  (^Integer [^Font this]
     (-> this (.hashCode))))
 
 (defn get-missing-glyph-code
@@ -805,7 +805,7 @@
    does not have a glyph for a specified unicode code point.
 
   returns: the glyphCode of this Font. - `int`"
-  (^Integer [^java.awt.Font this]
+  (^Integer [^Font this]
     (-> this (.getMissingGlyphCode))))
 
 (defn get-transform
@@ -821,7 +821,7 @@
 
   returns: an AffineTransform object representing the
             transform attribute of this Font object. - `java.awt.geom.AffineTransform`"
-  (^java.awt.geom.AffineTransform [^java.awt.Font this]
+  (^java.awt.geom.AffineTransform [^Font this]
     (-> this (.getTransform))))
 
 (defn italic?
@@ -831,7 +831,7 @@
   returns: true if this Font object's
               style is ITALIC;
               false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Font this]
+  (^Boolean [^Font this]
     (-> this (.isItalic))))
 
 (defn get-size
@@ -852,7 +852,7 @@
 
   returns: the point size of this Font in 1/72 of an
             inch units. - `int`"
-  (^Integer [^java.awt.Font this]
+  (^Integer [^Font this]
     (-> this (.getSize))))
 
 (defn has-uniform-line-metrics?
@@ -866,7 +866,7 @@
 
   returns: true if this Font has
    uniform line metrics; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Font this]
+  (^Boolean [^Font this]
     (-> this (.hasUniformLineMetrics))))
 
 (defn equals
@@ -879,7 +879,7 @@
             or if the argument is a Font object
             describing the same font as this object;
             false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Font this ^java.lang.Object obj]
+  (^Boolean [^Font this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-baseline-for
@@ -893,7 +893,7 @@
   c - a character used to identify the writing system - `char`
 
   returns: the baseline appropriate for the specified character. - `byte`"
-  (^Byte [^java.awt.Font this ^Character c]
+  (^Byte [^Font this ^Character c]
     (-> this (.getBaselineFor c))))
 
 (defn get-attributes
@@ -902,14 +902,14 @@
    glyph substitution.
 
   returns: the attributes map of this Font. - `java.util.Map<java.awt.font.TextAttribute,?>`"
-  (^java.util.Map [^java.awt.Font this]
+  (^java.util.Map [^Font this]
     (-> this (.getAttributes))))
 
 (defn get-peer
   "Deprecated. Font rendering is now platform independent.
 
-  returns: the peer of the Font. - `java.lang.  java.awt.peer.FontPeer`"
-  ([^java.awt.Font this]
+  returns: the peer of the Font. - `java.awt.peer.FontPeer`"
+  (^java.awt.peer.FontPeer [^Font this]
     (-> this (.getPeer))))
 
 (defn get-style
@@ -917,6 +917,6 @@
    PLAIN, BOLD, ITALIC, or BOLD+ITALIC.
 
   returns: the style of this Font - `int`"
-  (^Integer [^java.awt.Font this]
+  (^Integer [^Font this]
     (-> this (.getStyle))))
 

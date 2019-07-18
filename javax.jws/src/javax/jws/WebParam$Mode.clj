@@ -5,19 +5,19 @@
 (def IN
   "Enum Constant.
 
-  type: javax.jws.WebParam.Mode"
+  type: javax.jws.WebParam$Mode"
   WebParam$Mode/IN)
 
 (def OUT
   "Enum Constant.
 
-  type: javax.jws.WebParam.Mode"
+  type: javax.jws.WebParam$Mode"
   WebParam$Mode/OUT)
 
 (def INOUT
   "Enum Constant.
 
-  type: javax.jws.WebParam.Mode"
+  type: javax.jws.WebParam$Mode"
   WebParam$Mode/INOUT)
 
 (defn *values
@@ -29,7 +29,7 @@
   for (WebParam.Mode c : WebParam.Mode.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.jws.WebParam.Mode[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.jws.WebParam$Mode[]`"
   ([]
     (WebParam$Mode/values )))
 
@@ -41,9 +41,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.jws.WebParam.Mode`
+  returns: the enum constant with the specified name - `javax.jws.WebParam$Mode`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.jws.WebParam.Mode [^java.lang.String name]
+  (^javax.jws.WebParam$Mode [^java.lang.String name]
     (WebParam$Mode/valueOf name)))
 

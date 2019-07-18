@@ -7,6 +7,6 @@
 
 (defn ->default
   "Constructor."
-  ([]
+  (^XmlSchemaType$DEFAULT []
     (new XmlSchemaType$DEFAULT )))
 

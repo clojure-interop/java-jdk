@@ -26,9 +26,9 @@
    directories (installed extensions) are loaded.
 
   loader - ClassLoader used to discover script engine factories. - `java.lang.ClassLoader`"
-  ([^java.lang.ClassLoader loader]
+  (^ScriptEngineManager [^java.lang.ClassLoader loader]
     (new ScriptEngineManager loader))
-  ([]
+  (^ScriptEngineManager []
     (new ScriptEngineManager )))
 
 (defn put
@@ -38,7 +38,7 @@
   value - Value to set. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([^javax.script.ScriptEngineManager this ^java.lang.String key ^java.lang.Object value]
+  ([^ScriptEngineManager this ^java.lang.String key ^java.lang.Object value]
     (-> this (.put key value))))
 
 (defn register-engine-extension
@@ -49,7 +49,7 @@
   factory - The class to associate with the given extension. - `javax.script.ScriptEngineFactory`
 
   throws: java.lang.NullPointerException - if any of the parameters is null."
-  ([^javax.script.ScriptEngineManager this ^java.lang.String extension ^javax.script.ScriptEngineFactory factory]
+  ([^ScriptEngineManager this ^java.lang.String extension ^javax.script.ScriptEngineFactory factory]
     (-> this (.registerEngineExtension extension factory))))
 
 (defn get-engine-by-extension
@@ -64,7 +64,7 @@
    if not found. - `javax.script.ScriptEngine`
 
   throws: java.lang.NullPointerException - if extension is null."
-  (^javax.script.ScriptEngine [^javax.script.ScriptEngineManager this ^java.lang.String extension]
+  (^javax.script.ScriptEngine [^ScriptEngineManager this ^java.lang.String extension]
     (-> this (.getEngineByExtension extension))))
 
 (defn register-engine-name
@@ -75,7 +75,7 @@
   factory - The class to associate with the given name. - `javax.script.ScriptEngineFactory`
 
   throws: java.lang.NullPointerException - if any of the parameters is null."
-  ([^javax.script.ScriptEngineManager this ^java.lang.String name ^javax.script.ScriptEngineFactory factory]
+  ([^ScriptEngineManager this ^java.lang.String name ^javax.script.ScriptEngineFactory factory]
     (-> this (.registerEngineName name factory))))
 
 (defn register-engine-mime-type
@@ -86,7 +86,7 @@
   factory - The class to associate with the given mime type. - `javax.script.ScriptEngineFactory`
 
   throws: java.lang.NullPointerException - if any of the parameters is null."
-  ([^javax.script.ScriptEngineManager this ^java.lang.String type ^javax.script.ScriptEngineFactory factory]
+  ([^ScriptEngineManager this ^java.lang.String type ^javax.script.ScriptEngineFactory factory]
     (-> this (.registerEngineMimeType type factory))))
 
 (defn get-engine-factories
@@ -94,7 +94,7 @@
    found by the discovery mechanism.
 
   returns: List of all discovered ScriptEngineFactorys. - `java.util.List<javax.script.ScriptEngineFactory>`"
-  (^java.util.List [^javax.script.ScriptEngineManager this]
+  (^java.util.List [^ScriptEngineManager this]
     (-> this (.getEngineFactories))))
 
 (defn get-engine-by-mime-type
@@ -109,7 +109,7 @@
    if not found. - `javax.script.ScriptEngine`
 
   throws: java.lang.NullPointerException - if mimeType is null."
-  (^javax.script.ScriptEngine [^javax.script.ScriptEngineManager this ^java.lang.String mime-type]
+  (^javax.script.ScriptEngine [^ScriptEngineManager this ^java.lang.String mime-type]
     (-> this (.getEngineByMimeType mime-type))))
 
 (defn get-engine-by-name
@@ -129,7 +129,7 @@
    created ScriptEngine. - `javax.script.ScriptEngine`
 
   throws: java.lang.NullPointerException - if shortName is null."
-  (^javax.script.ScriptEngine [^javax.script.ScriptEngineManager this ^java.lang.String short-name]
+  (^javax.script.ScriptEngine [^ScriptEngineManager this ^java.lang.String short-name]
     (-> this (.getEngineByName short-name))))
 
 (defn get-bindings
@@ -138,7 +138,7 @@
    ScriptEngine objects created by it.
 
   returns: The globalScope field. - `javax.script.Bindings`"
-  (^javax.script.Bindings [^javax.script.ScriptEngineManager this]
+  (^javax.script.Bindings [^ScriptEngineManager this]
     (-> this (.getBindings))))
 
 (defn get
@@ -147,7 +147,7 @@
   key - The key whose value is to be returned. - `java.lang.String`
 
   returns: The value for the specified key. - `java.lang.Object`"
-  (^java.lang.Object [^javax.script.ScriptEngineManager this ^java.lang.String key]
+  (^java.lang.Object [^ScriptEngineManager this ^java.lang.String key]
     (-> this (.get key))))
 
 (defn set-bindings
@@ -159,6 +159,6 @@
   bindings - The specified Bindings - `javax.script.Bindings`
 
   throws: java.lang.IllegalArgumentException - if bindings is null."
-  ([^javax.script.ScriptEngineManager this ^javax.script.Bindings bindings]
+  ([^ScriptEngineManager this ^javax.script.Bindings bindings]
     (-> this (.setBindings bindings))))
 

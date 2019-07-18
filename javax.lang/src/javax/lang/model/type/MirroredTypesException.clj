@@ -8,8 +8,8 @@
 
   Constructs a new MirroredTypesException for the specified types.
 
-  types - the types being accessed - `javax.lang.model.type.TypeMirror>`"
-  ([^javax.lang.model.type.TypeMirror> types]
+  types - the types being accessed - `java.util.List`"
+  (^MirroredTypesException [^java.util.List types]
     (new MirroredTypesException types)))
 
 (defn get-type-mirrors
@@ -18,6 +18,6 @@
    serialized and then read back in.
 
   returns: the type mirrors in construction order, or null if unavailable - `java.util.List<? extends javax.lang.model.type.TypeMirror>`"
-  ([^javax.lang.model.type.MirroredTypesException this]
+  ([^MirroredTypesException this]
     (-> this (.getTypeMirrors))))
 

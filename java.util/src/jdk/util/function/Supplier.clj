@@ -12,7 +12,7 @@
 (defn get
   "Gets a result.
 
-  returns: a result - `Supplier.T`"
-  (^Supplier.T [^java.util.function.Supplier this]
+  returns: a result - `T`"
+  ([^Supplier this]
     (-> this (.get))))
 

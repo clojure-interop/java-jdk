@@ -99,11 +99,11 @@
   load-factor - The load factor of the WeakHashMap - `float`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is negative, or if the load factor is nonpositive."
-  ([^Integer initial-capacity ^Float load-factor]
+  (^WeakHashMap [^Integer initial-capacity ^Float load-factor]
     (new WeakHashMap initial-capacity load-factor))
-  ([^Integer initial-capacity]
+  (^WeakHashMap [^Integer initial-capacity]
     (new WeakHashMap initial-capacity))
-  ([]
+  (^WeakHashMap []
     (new WeakHashMap )))
 
 (defn values
@@ -119,22 +119,22 @@
    retainAll and clear operations.  It does not
    support the add or addAll operations.
 
-  returns: a collection view of the values contained in this map - `java.util.Collection<WeakHashMap.V>`"
-  (^java.util.Collection [^java.util.WeakHashMap this]
+  returns: a collection view of the values contained in this map - `java.util.Collection<V>`"
+  (^java.util.Collection [^WeakHashMap this]
     (-> this (.values))))
 
 (defn for-each
   "Description copied from interface: Map
 
-  action - The action to be performed for each entry - `WeakHashMap.V>`"
-  ([^java.util.WeakHashMap this ^WeakHashMap.V> action]
+  action - The action to be performed for each entry - `java.util.function.BiConsumer`"
+  ([^WeakHashMap this ^java.util.function.BiConsumer action]
     (-> this (.forEach action))))
 
 (defn replace-all
   "Description copied from interface: Map
 
-  function - the function to apply to each entry - `WeakHashMap.V>`"
-  ([^java.util.WeakHashMap this ^WeakHashMap.V> function]
+  function - the function to apply to each entry - `java.util.function.BiFunction`"
+  ([^WeakHashMap this ^java.util.function.BiFunction function]
     (-> this (.replaceAll function))))
 
 (defn put-all
@@ -142,10 +142,10 @@
    These mappings will replace any mappings that this map had for any
    of the keys currently in the specified map.
 
-  m - mappings to be stored in this map. - `WeakHashMap.V>`
+  m - mappings to be stored in this map. - `java.util.Map`
 
   throws: java.lang.NullPointerException - if the specified map is null."
-  ([^java.util.WeakHashMap this ^WeakHashMap.V> m]
+  ([^WeakHashMap this ^java.util.Map m]
     (-> this (.putAll m))))
 
 (defn put
@@ -153,14 +153,14 @@
    If the map previously contained a mapping for this key, the old
    value is replaced.
 
-  key - key with which the specified value is to be associated. - `WeakHashMap.K`
-  value - value to be associated with the specified key. - `WeakHashMap.V`
+  key - key with which the specified value is to be associated. - `K`
+  value - value to be associated with the specified key. - `V`
 
   returns: the previous value associated with key, or
            null if there was no mapping for key.
            (A null return can also indicate that the map
-           previously associated null with key.) - `WeakHashMap.V`"
-  (^WeakHashMap.V [^java.util.WeakHashMap this ^WeakHashMap.K key ^WeakHashMap.V value]
+           previously associated null with key.) - `V`"
+  ([^WeakHashMap this key value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -177,8 +177,8 @@
    clear operations.  It does not support the
    add or addAll operations.
 
-  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<WeakHashMap.K,WeakHashMap.V>>`"
-  (^java.util.Set> [^java.util.WeakHashMap this]
+  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map$Entry<K,V>>`"
+  (^java.util.Set [^WeakHashMap this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -189,7 +189,7 @@
 
   returns: true if this map maps one or more keys to the
            specified value - `boolean`"
-  (^Boolean [^java.util.WeakHashMap this ^java.lang.Object value]
+  (^Boolean [^WeakHashMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -211,8 +211,8 @@
   key - key whose mapping is to be removed from the map - `java.lang.Object`
 
   returns: the previous value associated with key, or
-           null if there was no mapping for key - `WeakHashMap.V`"
-  (^WeakHashMap.V [^java.util.WeakHashMap this ^java.lang.Object key]
+           null if there was no mapping for key - `V`"
+  ([^WeakHashMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -228,8 +228,8 @@
    operations.  It does not support the add or addAll
    operations.
 
-  returns: a set view of the keys contained in this map - `java.util.Set<WeakHashMap.K>`"
-  (^java.util.Set [^java.util.WeakHashMap this]
+  returns: a set view of the keys contained in this map - `java.util.Set<K>`"
+  (^java.util.Set [^WeakHashMap this]
     (-> this (.keySet))))
 
 (defn empty?
@@ -239,7 +239,7 @@
    because they are no longer referenced.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  (^Boolean [^java.util.WeakHashMap this]
+  (^Boolean [^WeakHashMap this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -249,13 +249,13 @@
    because they are no longer referenced.
 
   returns: the number of key-value mappings in this map - `int`"
-  (^Integer [^java.util.WeakHashMap this]
+  (^Integer [^WeakHashMap this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the mappings from this map.
    The map will be empty after this call returns."
-  ([^java.util.WeakHashMap this]
+  ([^WeakHashMap this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -266,7 +266,7 @@
 
   returns: true if there is a mapping for key;
            false otherwise - `boolean`"
-  (^Boolean [^java.util.WeakHashMap this ^java.lang.Object key]
+  (^Boolean [^WeakHashMap this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -287,7 +287,7 @@
   key - the key whose associated value is to be returned - `java.lang.Object`
 
   returns: the value to which the specified key is mapped, or
-           null if this map contains no mapping for the key - `WeakHashMap.V`"
-  (^WeakHashMap.V [^java.util.WeakHashMap this ^java.lang.Object key]
+           null if this map contains no mapping for the key - `V`"
+  ([^WeakHashMap this ^java.lang.Object key]
     (-> this (.get key))))
 

@@ -14,8 +14,8 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^IllegalClassFormatException [^java.lang.String s]
     (new IllegalClassFormatException s))
-  ([]
+  (^IllegalClassFormatException []
     (new IllegalClassFormatException )))
 

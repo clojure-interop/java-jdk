@@ -12,7 +12,7 @@
   returns: the object read from the stream - `java.lang.Object`
 
   throws: java.lang.ClassNotFoundException - If the class of a serialized object cannot be found."
-  (^java.lang.Object [^java.io.ObjectInput this]
+  (^java.lang.Object [^ObjectInput this]
     (-> this (.readObject))))
 
 (defn read
@@ -27,11 +27,11 @@
             returned when the end of the stream is reached. - `int`
 
   throws: java.io.IOException - If an I/O error has occurred."
-  (^Integer [^java.io.ObjectInput this b ^Integer off ^Integer len]
+  (^Integer [^ObjectInput this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^java.io.ObjectInput this b]
+  (^Integer [^ObjectInput this b]
     (-> this (.read b)))
-  (^Integer [^java.io.ObjectInput this]
+  (^Integer [^ObjectInput this]
     (-> this (.read))))
 
 (defn skip
@@ -42,7 +42,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - If an I/O error has occurred."
-  (^Long [^java.io.ObjectInput this ^Long n]
+  (^Long [^ObjectInput this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -52,7 +52,7 @@
   returns: the number of available bytes. - `int`
 
   throws: java.io.IOException - If an I/O error has occurred."
-  (^Integer [^java.io.ObjectInput this]
+  (^Integer [^ObjectInput this]
     (-> this (.available))))
 
 (defn close
@@ -61,6 +61,6 @@
    the stream.
 
   throws: java.io.IOException - If an I/O error has occurred."
-  ([^java.io.ObjectInput this]
+  ([^ObjectInput this]
     (-> this (.close))))
 

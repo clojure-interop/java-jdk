@@ -20,20 +20,20 @@
 
   prime-size - the size (in bits) of the prime modulus. - `int`
   exponent-size - the size (in bits) of the random exponent. - `int`"
-  ([^Integer prime-size ^Integer exponent-size]
+  (^DHGenParameterSpec [^Integer prime-size ^Integer exponent-size]
     (new DHGenParameterSpec prime-size exponent-size)))
 
 (defn get-prime-size
   "Returns the size in bits of the prime modulus.
 
   returns: the size in bits of the prime modulus - `int`"
-  (^Integer [^javax.crypto.spec.DHGenParameterSpec this]
+  (^Integer [^DHGenParameterSpec this]
     (-> this (.getPrimeSize))))
 
 (defn get-exponent-size
   "Returns the size in bits of the random exponent (private value).
 
   returns: the size in bits of the random exponent (private value) - `int`"
-  (^Integer [^javax.crypto.spec.DHGenParameterSpec this]
+  (^Integer [^DHGenParameterSpec this]
     (-> this (.getExponentSize))))
 

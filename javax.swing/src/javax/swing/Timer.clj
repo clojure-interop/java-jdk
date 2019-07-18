@@ -108,7 +108,7 @@
 
   delay - milliseconds for the initial and between-event delay - `int`
   listener - an initial listener; can be null - `java.awt.event.ActionListener`"
-  ([^Integer delay ^java.awt.event.ActionListener listener]
+  (^Timer [^Integer delay ^java.awt.event.ActionListener listener]
     (new Timer delay listener)))
 
 (defn *set-log-timers
@@ -130,7 +130,7 @@
   "Stops the Timer,
    causing it to stop sending action events
    to its listeners."
-  ([^javax.swing.Timer this]
+  ([^Timer this]
     (-> this (.stop))))
 
 (defn set-delay
@@ -139,7 +139,7 @@
    property, which can be set by the setInitialDelay method.
 
   delay - the delay in milliseconds - `int`"
-  ([^javax.swing.Timer this ^Integer delay]
+  ([^Timer this ^Integer delay]
     (-> this (.setDelay delay))))
 
 (defn set-initial-delay
@@ -151,7 +151,7 @@
    by changes to the between-event delay.
 
   initial-delay - the initial delay, in milliseconds - `int`"
-  ([^javax.swing.Timer this ^Integer initial-delay]
+  ([^Timer this ^Integer initial-delay]
     (-> this (.setInitialDelay initial-delay))))
 
 (defn coalesce?
@@ -159,7 +159,7 @@
    multiple pending action events.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.Timer this]
+  (^Boolean [^Timer this]
     (-> this (.isCoalesce))))
 
 (defn get-delay
@@ -167,7 +167,7 @@
    between firings of action events.
 
   returns: `int`"
-  (^Integer [^javax.swing.Timer this]
+  (^Integer [^Timer this]
     (-> this (.getDelay))))
 
 (defn set-repeats
@@ -176,14 +176,14 @@
    action event to its listeners.
 
   flag - specify false to make the timer stop after sending its first action event - `boolean`"
-  ([^javax.swing.Timer this ^Boolean flag]
+  ([^Timer this ^Boolean flag]
     (-> this (.setRepeats flag))))
 
 (defn add-action-listener
   "Adds an action listener to the Timer.
 
   listener - the listener to add - `java.awt.event.ActionListener`"
-  ([^javax.swing.Timer this ^java.awt.event.ActionListener listener]
+  ([^Timer this ^java.awt.event.ActionListener listener]
     (-> this (.addActionListener listener))))
 
 (defn repeats?
@@ -193,21 +193,21 @@
    to its listeners multiple times.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.Timer this]
+  (^Boolean [^Timer this]
     (-> this (.isRepeats))))
 
 (defn get-initial-delay
   "Returns the Timer's initial delay.
 
   returns: `int`"
-  (^Integer [^javax.swing.Timer this]
+  (^Integer [^Timer this]
     (-> this (.getInitialDelay))))
 
 (defn start
   "Starts the Timer,
    causing it to start sending action events
    to its listeners."
-  ([^javax.swing.Timer this]
+  ([^Timer this]
     (-> this (.start))))
 
 (defn get-action-listeners
@@ -216,28 +216,28 @@
 
   returns: all of the timer's ActionListeners or an empty
            array if no action listeners are currently registered - `java.awt.event.ActionListener[]`"
-  ([^javax.swing.Timer this]
+  ([^Timer this]
     (-> this (.getActionListeners))))
 
 (defn restart
   "Restarts the Timer,
    canceling any pending firings and causing
    it to fire with its initial delay."
-  ([^javax.swing.Timer this]
+  ([^Timer this]
     (-> this (.restart))))
 
 (defn running?
   "Returns true if the Timer is running.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.Timer this]
+  (^Boolean [^Timer this]
     (-> this (.isRunning))))
 
 (defn remove-action-listener
   "Removes the specified action listener from the Timer.
 
   listener - the listener to remove - `java.awt.event.ActionListener`"
-  ([^javax.swing.Timer this ^java.awt.event.ActionListener listener]
+  ([^Timer this ^java.awt.event.ActionListener listener]
     (-> this (.removeActionListener listener))))
 
 (defn get-listeners
@@ -261,7 +261,7 @@
    If no such listeners exist,
    this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners
@@ -270,7 +270,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^javax.swing.Timer this ^java.lang.Class listener-type]
+  ([^Timer this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn get-action-command
@@ -279,7 +279,7 @@
    null, which is also the default.
 
   returns: the action command used in firing events - `java.lang.String`"
-  (^java.lang.String [^javax.swing.Timer this]
+  (^java.lang.String [^Timer this]
     (-> this (.getActionCommand))))
 
 (defn set-coalesce
@@ -297,7 +297,7 @@
    coalesce events by default.
 
   flag - specify false to turn off coalescing - `boolean`"
-  ([^javax.swing.Timer this ^Boolean flag]
+  ([^Timer this ^Boolean flag]
     (-> this (.setCoalesce flag))))
 
 (defn set-action-command
@@ -306,6 +306,6 @@
    null is an acceptable value.
 
   command - the action command - `java.lang.String`"
-  ([^javax.swing.Timer this ^java.lang.String command]
+  ([^Timer this ^java.lang.String command]
     (-> this (.setActionCommand command))))
 

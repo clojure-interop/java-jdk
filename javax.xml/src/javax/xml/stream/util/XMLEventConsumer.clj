@@ -17,6 +17,6 @@
   event - the event to add, may not be null - `javax.xml.stream.events.XMLEvent`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.util.XMLEventConsumer this ^javax.xml.stream.events.XMLEvent event]
+  ([^XMLEventConsumer this ^javax.xml.stream.events.XMLEvent event]
     (-> this (.add event))))
 

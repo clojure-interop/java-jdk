@@ -13,8 +13,8 @@
   Constructs an IllegalAccessException with a detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^IllegalAccessException [^java.lang.String s]
     (new IllegalAccessException s))
-  ([]
+  (^IllegalAccessException []
     (new IllegalAccessException )))
 

@@ -16,7 +16,7 @@
   t - the input argument - `double`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^java.util.stream.DoubleStream$Builder this ^Double t]
+  ([^DoubleStream$Builder this ^Double t]
     (-> this (.accept t))))
 
 (defn add
@@ -24,10 +24,10 @@
 
   t - the element to add - `double`
 
-  returns: this builder - `default java.util.stream.DoubleStream.Builder`
+  returns: this builder - `default java.util.stream.DoubleStream$Builder`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^java.util.stream.DoubleStream$Builder this ^Double t]
+  ([^DoubleStream$Builder this ^Double t]
     (-> this (.add t))))
 
 (defn build
@@ -39,6 +39,6 @@
   returns: the built stream - `java.util.stream.DoubleStream`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  (^java.util.stream.DoubleStream [^java.util.stream.DoubleStream$Builder this]
+  (^java.util.stream.DoubleStream [^DoubleStream$Builder this]
     (-> this (.build))))
 

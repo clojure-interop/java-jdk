@@ -40,7 +40,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if this date-time can be queried for the field, false if not - `boolean`"
-  (^Boolean [^java.time.temporal.TemporalAccessor this ^java.time.temporal.TemporalField field]
+  (^Boolean [^TemporalAccessor this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn range
@@ -61,7 +61,7 @@
   returns: the range of valid values for the field, not null - `default java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([^java.time.temporal.TemporalAccessor this ^java.time.temporal.TemporalField field]
+  ([^TemporalAccessor this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn get
@@ -77,7 +77,7 @@
   returns: the value for the field, within the valid range of values - `default int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([^java.time.temporal.TemporalAccessor this ^java.time.temporal.TemporalField field]
+  ([^TemporalAccessor this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn get-long
@@ -93,7 +93,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  (^Long [^java.time.temporal.TemporalAccessor this ^java.time.temporal.TemporalField field]
+  (^Long [^TemporalAccessor this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn query
@@ -111,11 +111,11 @@
    LocalDate::from and ZoneId::from.
    Additional implementations are provided as static methods on TemporalQuery.
 
-  query - the query to invoke, not null - `java.time.temporal.TemporalQuery<R>`
+  query - the query to invoke, not null - `java.time.temporal.TemporalQuery`
 
   returns: the query result, null may be returned (defined by the query) - `default <R> R`
 
   throws: java.time.DateTimeException - if unable to query"
-  ([^java.time.temporal.TemporalAccessor this ^java.time.temporal.TemporalQuery query]
+  ([^TemporalAccessor this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 

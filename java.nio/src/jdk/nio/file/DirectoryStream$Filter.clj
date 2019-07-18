@@ -10,11 +10,11 @@
 (defn accept
   "Decides if the given directory entry should be accepted or filtered.
 
-  entry - the directory entry to be tested - `DirectoryStream.Filter.T`
+  entry - the directory entry to be tested - `T`
 
   returns: true if the directory entry should be accepted - `boolean`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Boolean [^java.nio.file.DirectoryStream$Filter this ^DirectoryStream.Filter.T entry]
+  (^Boolean [^DirectoryStream$Filter this entry]
     (-> this (.accept entry))))
 

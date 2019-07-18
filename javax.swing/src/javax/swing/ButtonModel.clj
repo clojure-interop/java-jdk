@@ -46,28 +46,28 @@
   "Adds an ItemListener to the model.
 
   l - the listener to add - `java.awt.event.ItemListener`"
-  ([^javax.swing.ButtonModel this ^java.awt.event.ItemListener l]
+  ([^ButtonModel this ^java.awt.event.ItemListener l]
     (-> this (.addItemListener l))))
 
 (defn get-mnemonic
   "Gets the keyboard mnemonic for the button.
 
   returns: an int specifying the accelerator key - `int`"
-  (^Integer [^javax.swing.ButtonModel this]
+  (^Integer [^ButtonModel this]
     (-> this (.getMnemonic))))
 
 (defn add-change-listener
   "Adds a ChangeListener to the model.
 
   l - the listener to add - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.ButtonModel this ^javax.swing.event.ChangeListener l]
+  ([^ButtonModel this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn remove-item-listener
   "Removes an ItemListener from the model.
 
   l - the listener to remove - `java.awt.event.ItemListener`"
-  ([^javax.swing.ButtonModel this ^java.awt.event.ItemListener l]
+  ([^ButtonModel this ^java.awt.event.ItemListener l]
     (-> this (.removeItemListener l))))
 
 (defn set-group
@@ -76,14 +76,14 @@
    exclusive within their group.
 
   group - the ButtonGroup the button belongs to - `javax.swing.ButtonGroup`"
-  ([^javax.swing.ButtonModel this ^javax.swing.ButtonGroup group]
+  ([^ButtonModel this ^javax.swing.ButtonGroup group]
     (-> this (.setGroup group))))
 
 (defn set-selected
   "Selects or deselects the button.
 
   b - true selects the button, false deselects the button - `boolean`"
-  ([^javax.swing.ButtonModel this ^Boolean b]
+  ([^ButtonModel this ^Boolean b]
     (-> this (.setSelected b))))
 
 (defn armed?
@@ -92,56 +92,56 @@
 
   returns: true if the button is armed,
            and ready to be triggered - `boolean`"
-  (^Boolean [^javax.swing.ButtonModel this]
+  (^Boolean [^ButtonModel this]
     (-> this (.isArmed))))
 
 (defn add-action-listener
   "Adds an ActionListener to the model.
 
   l - the listener to add - `java.awt.event.ActionListener`"
-  ([^javax.swing.ButtonModel this ^java.awt.event.ActionListener l]
+  ([^ButtonModel this ^java.awt.event.ActionListener l]
     (-> this (.addActionListener l))))
 
 (defn set-armed
   "Marks the button as armed or unarmed.
 
   b - whether or not the button should be armed - `boolean`"
-  ([^javax.swing.ButtonModel this ^Boolean b]
+  ([^ButtonModel this ^Boolean b]
     (-> this (.setArmed b))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from the model.
 
   l - the listener to remove - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.ButtonModel this ^javax.swing.event.ChangeListener l]
+  ([^ButtonModel this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn set-pressed
   "Sets the button to pressed or unpressed.
 
   b - whether or not the button should be pressed - `boolean`"
-  ([^javax.swing.ButtonModel this ^Boolean b]
+  ([^ButtonModel this ^Boolean b]
     (-> this (.setPressed b))))
 
 (defn rollover?
   "Indicates that the mouse is over the button.
 
   returns: true if the mouse is over the button - `boolean`"
-  (^Boolean [^javax.swing.ButtonModel this]
+  (^Boolean [^ButtonModel this]
     (-> this (.isRollover))))
 
 (defn set-enabled
   "Enables or disables the button.
 
   b - whether or not the button should be enabled - `boolean`"
-  ([^javax.swing.ButtonModel this ^Boolean b]
+  ([^ButtonModel this ^Boolean b]
     (-> this (.setEnabled b))))
 
 (defn pressed?
   "Indicates if the button is pressed.
 
   returns: true if the button is pressed - `boolean`"
-  (^Boolean [^javax.swing.ButtonModel this]
+  (^Boolean [^ButtonModel this]
     (-> this (.isPressed))))
 
 (defn selected?
@@ -149,28 +149,28 @@
    certain types of buttons - such as radio buttons and check boxes.
 
   returns: true if the button is selected - `boolean`"
-  (^Boolean [^javax.swing.ButtonModel this]
+  (^Boolean [^ButtonModel this]
     (-> this (.isSelected))))
 
 (defn remove-action-listener
   "Removes an ActionListener from the model.
 
   l - the listener to remove - `java.awt.event.ActionListener`"
-  ([^javax.swing.ButtonModel this ^java.awt.event.ActionListener l]
+  ([^ButtonModel this ^java.awt.event.ActionListener l]
     (-> this (.removeActionListener l))))
 
 (defn get-action-command
   "Returns the action command string for the button.
 
   returns: the String that identifies the generated event - `java.lang.String`"
-  (^java.lang.String [^javax.swing.ButtonModel this]
+  (^java.lang.String [^ButtonModel this]
     (-> this (.getActionCommand))))
 
 (defn set-rollover
   "Sets or clears the button's rollover state
 
   b - whether or not the button is in the rollover state - `boolean`"
-  ([^javax.swing.ButtonModel this ^Boolean b]
+  ([^ButtonModel this ^Boolean b]
     (-> this (.setRollover b))))
 
 (defn set-action-command
@@ -178,7 +178,7 @@
    ActionEvent when the button is triggered.
 
   s - the String that identifies the generated event - `java.lang.String`"
-  ([^javax.swing.ButtonModel this ^java.lang.String s]
+  ([^ButtonModel this ^java.lang.String s]
     (-> this (.setActionCommand s))))
 
 (defn enabled?
@@ -186,7 +186,7 @@
    an input device, such as a mouse pointer.
 
   returns: true if the button is enabled - `boolean`"
-  (^Boolean [^javax.swing.ButtonModel this]
+  (^Boolean [^ButtonModel this]
     (-> this (.isEnabled))))
 
 (defn set-mnemonic
@@ -194,6 +194,6 @@
    accelerator key) for the button.
 
   key - an int specifying the accelerator key - `int`"
-  ([^javax.swing.ButtonModel this ^Integer key]
+  ([^ButtonModel this ^Integer key]
     (-> this (.setMnemonic key))))
 

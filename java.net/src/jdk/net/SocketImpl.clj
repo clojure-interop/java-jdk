@@ -10,13 +10,13 @@
 
 (defn ->socket-impl
   "Constructor."
-  ([]
+  (^SocketImpl []
     (new SocketImpl )))
 
 (defn to-string
   "Returns the address and port of this socket as a String.
 
   returns: a string representation of this socket. - `java.lang.String`"
-  (^java.lang.String [^java.net.SocketImpl this]
+  (^java.lang.String [^SocketImpl this]
     (-> this (.toString))))
 

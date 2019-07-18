@@ -129,13 +129,13 @@
 
 (defn ->recursive-action
   "Constructor."
-  ([]
+  (^RecursiveAction []
     (new RecursiveAction )))
 
 (defn get-raw-result
   "Always returns null.
 
   returns: null always - `java.lang.Void`"
-  (^java.lang.Void [^java.util.concurrent.RecursiveAction this]
+  (^java.lang.Void [^RecursiveAction this]
     (-> this (.getRawResult))))
 

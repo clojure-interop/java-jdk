@@ -11,8 +11,8 @@
    particular exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^InvalidParameterSpecException [^java.lang.String msg]
     (new InvalidParameterSpecException msg))
-  ([]
+  (^InvalidParameterSpecException []
     (new InvalidParameterSpecException )))
 

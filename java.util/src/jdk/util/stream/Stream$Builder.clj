@@ -16,21 +16,21 @@
 (defn accept
   "Adds an element to the stream being built.
 
-  t - the input argument - `Stream.Builder.T`
+  t - the input argument - `T`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^java.util.stream.Stream$Builder this ^Stream.Builder.T t]
+  ([^Stream$Builder this t]
     (-> this (.accept t))))
 
 (defn add
   "Adds an element to the stream being built.
 
-  t - the element to add - `Stream.Builder.T`
+  t - the element to add - `T`
 
-  returns: this builder - `default java.util.stream.Stream.Builder<Stream.Builder.T>`
+  returns: this builder - `default java.util.stream.Stream$Builder<T>`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^java.util.stream.Stream$Builder this ^Stream.Builder.T t]
+  ([^Stream$Builder this t]
     (-> this (.add t))))
 
 (defn build
@@ -38,9 +38,9 @@
    An IllegalStateException is thrown if there are further attempts
    to operate on the builder after it has entered the built state.
 
-  returns: the built stream - `java.util.stream.Stream<Stream.Builder.T>`
+  returns: the built stream - `java.util.stream.Stream<T>`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  (^java.util.stream.Stream [^java.util.stream.Stream$Builder this]
+  (^java.util.stream.Stream [^Stream$Builder this]
     (-> this (.build))))
 

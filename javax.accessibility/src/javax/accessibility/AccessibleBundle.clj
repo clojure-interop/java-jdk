@@ -12,7 +12,7 @@
   "Constructor.
 
   Construct an AccessibleBundle."
-  ([]
+  (^AccessibleBundle []
     (new AccessibleBundle )))
 
 (defn to-display-string
@@ -23,15 +23,15 @@
   locale - the locale for which to obtain a localized string - `java.util.Locale`
 
   returns: a localized String for the key. - `java.lang.String`"
-  (^java.lang.String [^javax.accessibility.AccessibleBundle this ^java.util.Locale locale]
+  (^java.lang.String [^AccessibleBundle this ^java.util.Locale locale]
     (-> this (.toDisplayString locale)))
-  (^java.lang.String [^javax.accessibility.AccessibleBundle this]
+  (^java.lang.String [^AccessibleBundle this]
     (-> this (.toDisplayString))))
 
 (defn to-string
   "Gets localized string describing the key using the default locale.
 
   returns: a localized String describing the key using the default locale - `java.lang.String`"
-  (^java.lang.String [^javax.accessibility.AccessibleBundle this]
+  (^java.lang.String [^AccessibleBundle this]
     (-> this (.toString))))
 

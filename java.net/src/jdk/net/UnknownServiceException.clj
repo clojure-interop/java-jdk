@@ -13,8 +13,8 @@
    specified detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^UnknownServiceException [^java.lang.String msg]
     (new UnknownServiceException msg))
-  ([]
+  (^UnknownServiceException []
     (new UnknownServiceException )))
 

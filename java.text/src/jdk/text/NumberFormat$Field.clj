@@ -11,7 +11,7 @@
 
   Constant identifying the integer field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/INTEGER)
 
 (def *-fraction
@@ -19,7 +19,7 @@
 
   Constant identifying the fraction field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/FRACTION)
 
 (def *-exponent
@@ -27,7 +27,7 @@
 
   Constant identifying the exponent field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/EXPONENT)
 
 (def *-decimal-separator
@@ -35,7 +35,7 @@
 
   Constant identifying the decimal separator field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/DECIMAL_SEPARATOR)
 
 (def *-sign
@@ -43,7 +43,7 @@
 
   Constant identifying the sign field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/SIGN)
 
 (def *-grouping-separator
@@ -51,7 +51,7 @@
 
   Constant identifying the grouping separator field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/GROUPING_SEPARATOR)
 
 (def *-exponent-symbol
@@ -59,7 +59,7 @@
 
   Constant identifying the exponent symbol field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/EXPONENT_SYMBOL)
 
 (def *-percent
@@ -67,7 +67,7 @@
 
   Constant identifying the percent field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/PERCENT)
 
 (def *-permille
@@ -75,7 +75,7 @@
 
   Constant identifying the permille field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/PERMILLE)
 
 (def *-currency
@@ -83,7 +83,7 @@
 
   Constant identifying the currency field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/CURRENCY)
 
 (def *-exponent-sign
@@ -91,6 +91,6 @@
 
   Constant identifying the exponent sign field.
 
-  type: java.text.NumberFormat.Field"
+  type: java.text.NumberFormat$Field"
   NumberFormat$Field/EXPONENT_SIGN)
 

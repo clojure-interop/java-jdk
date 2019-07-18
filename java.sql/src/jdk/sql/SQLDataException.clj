@@ -20,14 +20,14 @@
   sql-state - an XOPEN or SQL:2003 code identifying the exception - `java.lang.String`
   vendor-code - a database vendor-specific exception code - `int`
   cause - the underlying reason for this SQLException (which is saved for later retrieval by the getCause() method); may be null indicating the cause is non-existent or unknown. - `java.lang.Throwable`"
-  ([^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code ^java.lang.Throwable cause]
+  (^SQLDataException [^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code ^java.lang.Throwable cause]
     (new SQLDataException reason sql-state vendor-code cause))
-  ([^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code]
+  (^SQLDataException [^java.lang.String reason ^java.lang.String sql-state ^Integer vendor-code]
     (new SQLDataException reason sql-state vendor-code))
-  ([^java.lang.String reason ^java.lang.String sql-state]
+  (^SQLDataException [^java.lang.String reason ^java.lang.String sql-state]
     (new SQLDataException reason sql-state))
-  ([^java.lang.String reason]
+  (^SQLDataException [^java.lang.String reason]
     (new SQLDataException reason))
-  ([]
+  (^SQLDataException []
     (new SQLDataException )))
 

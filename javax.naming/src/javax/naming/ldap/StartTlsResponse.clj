@@ -53,7 +53,7 @@
   "Retrieves the StartTLS response's object identifier string.
 
   returns: The object identifier string, `1.3.6.1.4.1.1466.20037`. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.ldap.StartTlsResponse this]
+  (^java.lang.String [^StartTlsResponse this]
     (-> this (.getID))))
 
 (defn get-encoded-value
@@ -62,7 +62,7 @@
    returned.
 
   returns: The null value. - `byte[]`"
-  ([^javax.naming.ldap.StartTlsResponse this]
+  ([^StartTlsResponse this]
     (-> this (.getEncodedValue))))
 
 (defn set-enabled-cipher-suites
@@ -74,7 +74,7 @@
    (and private keys) are not available.
 
   suites - The non-null list of names of all the cipher suites to enable. - `java.lang.String[]`"
-  ([^javax.naming.ldap.StartTlsResponse this suites]
+  ([^StartTlsResponse this suites]
     (-> this (.setEnabledCipherSuites suites))))
 
 (defn set-hostname-verifier
@@ -87,7 +87,7 @@
    negotiate(), this method does not do anything.
 
   verifier - The non-null hostname verifier callback. - `javax.net.ssl.HostnameVerifier`"
-  ([^javax.naming.ldap.StartTlsResponse this ^javax.net.ssl.HostnameVerifier verifier]
+  ([^StartTlsResponse this ^javax.net.ssl.HostnameVerifier verifier]
     (-> this (.setHostnameVerifier verifier))))
 
 (defn negotiate
@@ -117,9 +117,9 @@
   returns: The negotiated SSL session - `javax.net.ssl.SSLSession`
 
   throws: java.io.IOException - If an IO error was encountered while establishing the TLS session."
-  (^javax.net.ssl.SSLSession [^javax.naming.ldap.StartTlsResponse this ^javax.net.ssl.SSLSocketFactory factory]
+  (^javax.net.ssl.SSLSession [^StartTlsResponse this ^javax.net.ssl.SSLSocketFactory factory]
     (-> this (.negotiate factory)))
-  (^javax.net.ssl.SSLSession [^javax.naming.ldap.StartTlsResponse this]
+  (^javax.net.ssl.SSLSession [^StartTlsResponse this]
     (-> this (.negotiate))))
 
 (defn close
@@ -127,6 +127,6 @@
    connection.
 
   throws: java.io.IOException - If an IO error was encountered while closing the TLS connection"
-  ([^javax.naming.ldap.StartTlsResponse this]
+  ([^StartTlsResponse this]
     (-> this (.close))))
 

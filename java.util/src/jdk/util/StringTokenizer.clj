@@ -91,11 +91,11 @@
   return-delims - flag indicating whether to return the delimiters as tokens. - `boolean`
 
   throws: java.lang.NullPointerException - if str is null"
-  ([^java.lang.String str ^java.lang.String delim ^Boolean return-delims]
+  (^StringTokenizer [^java.lang.String str ^java.lang.String delim ^Boolean return-delims]
     (new StringTokenizer str delim return-delims))
-  ([^java.lang.String str ^java.lang.String delim]
+  (^StringTokenizer [^java.lang.String str ^java.lang.String delim]
     (new StringTokenizer str delim))
-  ([^java.lang.String str]
+  (^StringTokenizer [^java.lang.String str]
     (new StringTokenizer str)))
 
 (defn has-more-tokens?
@@ -106,7 +106,7 @@
   returns: true if and only if there is at least one token
             in the string after the current position; false
             otherwise. - `boolean`"
-  (^Boolean [^java.util.StringTokenizer this]
+  (^Boolean [^StringTokenizer this]
     (-> this (.hasMoreTokens))))
 
 (defn next-token
@@ -123,9 +123,9 @@
   returns: the next token, after switching to the new delimiter set. - `java.lang.String`
 
   throws: java.util.NoSuchElementException - if there are no more tokens in this tokenizer's string."
-  (^java.lang.String [^java.util.StringTokenizer this ^java.lang.String delim]
+  (^java.lang.String [^StringTokenizer this ^java.lang.String delim]
     (-> this (.nextToken delim)))
-  (^java.lang.String [^java.util.StringTokenizer this]
+  (^java.lang.String [^StringTokenizer this]
     (-> this (.nextToken))))
 
 (defn has-more-elements?
@@ -135,7 +135,7 @@
 
   returns: true if there are more tokens;
             false otherwise. - `boolean`"
-  (^Boolean [^java.util.StringTokenizer this]
+  (^Boolean [^StringTokenizer this]
     (-> this (.hasMoreElements))))
 
 (defn next-element
@@ -147,7 +147,7 @@
   returns: the next token in the string. - `java.lang.Object`
 
   throws: java.util.NoSuchElementException - if there are no more tokens in this tokenizer's string."
-  (^java.lang.Object [^java.util.StringTokenizer this]
+  (^java.lang.Object [^StringTokenizer this]
     (-> this (.nextElement))))
 
 (defn count-tokens
@@ -157,6 +157,6 @@
 
   returns: the number of tokens remaining in the string using the current
             delimiter set. - `int`"
-  (^Integer [^java.util.StringTokenizer this]
+  (^Integer [^StringTokenizer this]
     (-> this (.countTokens))))
 

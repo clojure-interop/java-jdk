@@ -34,19 +34,19 @@
   Constructs a PageAttributes instance with the specified values for
    every attribute.
 
-  color - ColorType.COLOR or ColorType.MONOCHROME. - `java.awt.PageAttributes.ColorType`
-  media - one of the constant fields of the MediaType class. - `java.awt.PageAttributes.MediaType`
-  orientation-requested - OrientationRequestedType.PORTRAIT or OrientationRequestedType.LANDSCAPE. - `java.awt.PageAttributes.OrientationRequestedType`
-  origin - OriginType.PHYSICAL or OriginType.PRINTABLE - `java.awt.PageAttributes.OriginType`
-  print-quality - PrintQualityType.DRAFT, PrintQualityType.NORMAL, or PrintQualityType.HIGH - `java.awt.PageAttributes.PrintQualityType`
+  color - ColorType.COLOR or ColorType.MONOCHROME. - `java.awt.PageAttributes$ColorType`
+  media - one of the constant fields of the MediaType class. - `java.awt.PageAttributes$MediaType`
+  orientation-requested - OrientationRequestedType.PORTRAIT or OrientationRequestedType.LANDSCAPE. - `java.awt.PageAttributes$OrientationRequestedType`
+  origin - OriginType.PHYSICAL or OriginType.PRINTABLE - `java.awt.PageAttributes$OriginType`
+  print-quality - PrintQualityType.DRAFT, PrintQualityType.NORMAL, or PrintQualityType.HIGH - `java.awt.PageAttributes$PrintQualityType`
   printer-resolution - an integer array of 3 elements. The first element must be greater than 0. The second element must be must be greater than 0. The third element must be either 3 or 4. - `int[]`
 
   throws: java.lang.IllegalArgumentException - if one or more of the above conditions is violated."
-  ([^java.awt.PageAttributes.ColorType color ^java.awt.PageAttributes.MediaType media ^java.awt.PageAttributes.OrientationRequestedType orientation-requested ^java.awt.PageAttributes.OriginType origin ^java.awt.PageAttributes.PrintQualityType print-quality printer-resolution]
+  (^PageAttributes [^java.awt.PageAttributes$ColorType color ^java.awt.PageAttributes$MediaType media ^java.awt.PageAttributes$OrientationRequestedType orientation-requested ^java.awt.PageAttributes$OriginType origin ^java.awt.PageAttributes$PrintQualityType print-quality printer-resolution]
     (new PageAttributes color media orientation-requested origin print-quality printer-resolution))
-  ([^java.awt.PageAttributes obj]
+  (^PageAttributes [^java.awt.PageAttributes obj]
     (new PageAttributes obj))
-  ([]
+  (^PageAttributes []
     (new PageAttributes )))
 
 (defn set-media-to-default
@@ -54,7 +54,7 @@
    size for the default locale. The default size for locales in the
    United States and Canada is MediaType.NA_LETTER. The default size for
    all other locales is MediaType.ISO_A4."
-  ([^java.awt.PageAttributes this]
+  ([^PageAttributes this]
     (-> this (.setMediaToDefault))))
 
 (defn set-origin
@@ -64,16 +64,16 @@
    could be equivalent.) Not specifying the property is equivalent to
    specifying OriginType.PHYSICAL.
 
-  origin - OriginType.PHYSICAL or OriginType.PRINTABLE - `java.awt.PageAttributes.OriginType`
+  origin - OriginType.PHYSICAL or OriginType.PRINTABLE - `java.awt.PageAttributes$OriginType`
 
   throws: java.lang.IllegalArgumentException - if origin is null."
-  ([^java.awt.PageAttributes this ^java.awt.PageAttributes.OriginType origin]
+  ([^PageAttributes this ^java.awt.PageAttributes$OriginType origin]
     (-> this (.setOrigin origin))))
 
 (defn set-orientation-requested-to-default
   "Sets the print orientation for pages using these attributes to the
    default. The default orientation is portrait."
-  ([^java.awt.PageAttributes this]
+  ([^PageAttributes this]
     (-> this (.setOrientationRequestedToDefault))))
 
 (defn set-printer-resolution
@@ -93,7 +93,7 @@
   printer-resolution - an integer array of 3 elements. The first element must be greater than 0. The second element must be must be greater than 0. The third element must be either 3 or 4. - `int[]`
 
   throws: java.lang.IllegalArgumentException - if one or more of the above conditions is violated."
-  ([^java.awt.PageAttributes this printer-resolution]
+  ([^PageAttributes this printer-resolution]
     (-> this (.setPrinterResolution printer-resolution))))
 
 (defn get-printer-resolution
@@ -109,28 +109,28 @@
             element must be greater than 0. The second element must be
             must be greater than 0. The third element must be either
             3 or 4. - `int[]`"
-  ([^java.awt.PageAttributes this]
+  ([^PageAttributes this]
     (-> this (.getPrinterResolution))))
 
 (defn get-media
   "Returns the paper size for pages using these attributes. This
    attribute is updated to the value chosen by the user.
 
-  returns: one of the constant fields of the MediaType class. - `java.awt.PageAttributes.MediaType`"
-  (^java.awt.PageAttributes.MediaType [^java.awt.PageAttributes this]
+  returns: one of the constant fields of the MediaType class. - `java.awt.PageAttributes$MediaType`"
+  (^java.awt.PageAttributes$MediaType [^PageAttributes this]
     (-> this (.getMedia))))
 
 (defn set-print-quality-to-default
   "Sets the print quality for pages using these attributes to the default.
    The default print quality is normal."
-  ([^java.awt.PageAttributes this]
+  ([^PageAttributes this]
     (-> this (.setPrintQualityToDefault))))
 
 (defn to-string
   "Returns a string representation of this PageAttributes.
 
   returns: the string representation. - `java.lang.String`"
-  (^java.lang.String [^java.awt.PageAttributes this]
+  (^java.lang.String [^PageAttributes this]
     (-> this (.toString))))
 
 (defn set-media
@@ -143,10 +143,10 @@
    MediaType.NA_LETTER. The default size for all other locales is
    MediaType.ISO_A4.
 
-  media - one of the constant fields of the MediaType class. - `java.awt.PageAttributes.MediaType`
+  media - one of the constant fields of the MediaType class. - `java.awt.PageAttributes$MediaType`
 
   throws: java.lang.IllegalArgumentException - if media is null."
-  ([^java.awt.PageAttributes this ^java.awt.PageAttributes.MediaType media]
+  ([^PageAttributes this ^java.awt.PageAttributes$MediaType media]
     (-> this (.setMedia media))))
 
 (defn get-origin
@@ -157,8 +157,8 @@
    and is not subject to any limitations of, the implementation or the
    target printer.
 
-  returns: OriginType.PHYSICAL or OriginType.PRINTABLE - `java.awt.PageAttributes.OriginType`"
-  (^java.awt.PageAttributes.OriginType [^java.awt.PageAttributes this]
+  returns: OriginType.PHYSICAL or OriginType.PRINTABLE - `java.awt.PageAttributes$OriginType`"
+  (^java.awt.PageAttributes$OriginType [^PageAttributes this]
     (-> this (.getOrigin))))
 
 (defn get-orientation-requested
@@ -166,8 +166,8 @@
    attribute is updated to the value chosen by the user.
 
   returns: OrientationRequestedType.PORTRAIT or
-            OrientationRequestedType.LANDSCAPE. - `java.awt.PageAttributes.OrientationRequestedType`"
-  (^java.awt.PageAttributes.OrientationRequestedType [^java.awt.PageAttributes this]
+            OrientationRequestedType.LANDSCAPE. - `java.awt.PageAttributes$OrientationRequestedType`"
+  (^java.awt.PageAttributes$OrientationRequestedType [^PageAttributes this]
     (-> this (.getOrientationRequested))))
 
 (defn set-color
@@ -175,10 +175,10 @@
    color or monochrome. Not specifying this attribute is equivalent to
    specifying ColorType.MONOCHROME.
 
-  color - ColorType.COLOR or ColorType.MONOCHROME. - `java.awt.PageAttributes.ColorType`
+  color - ColorType.COLOR or ColorType.MONOCHROME. - `java.awt.PageAttributes$ColorType`
 
   throws: java.lang.IllegalArgumentException - if color is null."
-  ([^java.awt.PageAttributes this ^java.awt.PageAttributes.ColorType color]
+  ([^PageAttributes this ^java.awt.PageAttributes$ColorType color]
     (-> this (.setColor color))))
 
 (defn get-print-quality
@@ -186,8 +186,8 @@
    attribute is updated to the value chosen by the user.
 
   returns: PrintQualityType.DRAFT, PrintQualityType.NORMAL, or
-            PrintQualityType.HIGH - `java.awt.PageAttributes.PrintQualityType`"
-  (^java.awt.PageAttributes.PrintQualityType [^java.awt.PageAttributes this]
+            PrintQualityType.HIGH - `java.awt.PageAttributes$PrintQualityType`"
+  (^java.awt.PageAttributes$PrintQualityType [^PageAttributes this]
     (-> this (.getPrintQuality))))
 
 (defn set-orientation-requested
@@ -195,10 +195,10 @@
    specifying the property is equivalent to specifying
    OrientationRequestedType.PORTRAIT.
 
-  orientation-requested - OrientationRequestedType.PORTRAIT or OrientationRequestedType.LANDSCAPE. - `java.awt.PageAttributes.OrientationRequestedType`
+  orientation-requested - OrientationRequestedType.PORTRAIT or OrientationRequestedType.LANDSCAPE. - `java.awt.PageAttributes$OrientationRequestedType`
 
   throws: java.lang.IllegalArgumentException - if orientationRequested is null."
-  ([^java.awt.PageAttributes this ^java.awt.PageAttributes.OrientationRequestedType orientation-requested]
+  ([^PageAttributes this ^java.awt.PageAttributes$OrientationRequestedType orientation-requested]
     (-> this (.setOrientationRequested orientation-requested))))
 
 (defn clone
@@ -206,14 +206,14 @@
 
   returns: the newly created copy. It is safe to cast this Object into
             a PageAttributes. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.PageAttributes this]
+  (^java.lang.Object [^PageAttributes this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns a hash code value for this PageAttributes.
 
   returns: the hash code. - `int`"
-  (^Integer [^java.awt.PageAttributes this]
+  (^Integer [^PageAttributes this]
     (-> this (.hashCode))))
 
 (defn set
@@ -221,7 +221,7 @@
    the attributes of obj.
 
   obj - the PageAttributes to copy. - `java.awt.PageAttributes`"
-  ([^java.awt.PageAttributes this ^java.awt.PageAttributes obj]
+  ([^PageAttributes this ^java.awt.PageAttributes obj]
     (-> this (.set obj))))
 
 (defn set-print-quality
@@ -229,10 +229,10 @@
    specifying the property is equivalent to specifying
    PrintQualityType.NORMAL.
 
-  print-quality - PrintQualityType.DRAFT, PrintQualityType.NORMAL, or PrintQualityType.HIGH - `java.awt.PageAttributes.PrintQualityType`
+  print-quality - PrintQualityType.DRAFT, PrintQualityType.NORMAL, or PrintQualityType.HIGH - `java.awt.PageAttributes$PrintQualityType`
 
   throws: java.lang.IllegalArgumentException - if printQuality is null."
-  ([^java.awt.PageAttributes this ^java.awt.PageAttributes.PrintQualityType print-quality]
+  ([^PageAttributes this ^java.awt.PageAttributes$PrintQualityType print-quality]
     (-> this (.setPrintQuality print-quality))))
 
 (defn get-color
@@ -240,15 +240,15 @@
    color or monochrome. This attribute is updated to the value chosen
    by the user.
 
-  returns: ColorType.COLOR or ColorType.MONOCHROME. - `java.awt.PageAttributes.ColorType`"
-  (^java.awt.PageAttributes.ColorType [^java.awt.PageAttributes this]
+  returns: ColorType.COLOR or ColorType.MONOCHROME. - `java.awt.PageAttributes$ColorType`"
+  (^java.awt.PageAttributes$ColorType [^PageAttributes this]
     (-> this (.getColor))))
 
 (defn set-printer-resolution-to-default
   "Sets the printer resolution for pages using these attributes to the
    default. The default is 72 dpi for both the feed and cross feed
    resolutions."
-  ([^java.awt.PageAttributes this]
+  ([^PageAttributes this]
     (-> this (.setPrinterResolutionToDefault))))
 
 (defn equals
@@ -265,6 +265,6 @@
 
   returns: whether obj is equal to this PageAttribute according to the
             above criteria. - `boolean`"
-  (^Boolean [^java.awt.PageAttributes this ^java.lang.Object obj]
+  (^Boolean [^PageAttributes this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

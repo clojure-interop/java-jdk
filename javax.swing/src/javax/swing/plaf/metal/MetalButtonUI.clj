@@ -14,7 +14,7 @@
 
 (defn ->metal-button-ui
   "Constructor."
-  ([]
+  (^MetalButtonUI []
     (new MetalButtonUI )))
 
 (defn *create-ui
@@ -26,12 +26,12 @@
 
 (defn install-defaults
   "b - `javax.swing.AbstractButton`"
-  ([^javax.swing.plaf.metal.MetalButtonUI this ^javax.swing.AbstractButton b]
+  ([^MetalButtonUI this ^javax.swing.AbstractButton b]
     (-> this (.installDefaults b))))
 
 (defn uninstall-defaults
   "b - `javax.swing.AbstractButton`"
-  ([^javax.swing.plaf.metal.MetalButtonUI this ^javax.swing.AbstractButton b]
+  ([^MetalButtonUI this ^javax.swing.AbstractButton b]
     (-> this (.uninstallDefaults b))))
 
 (defn update
@@ -42,6 +42,6 @@
   c - JComponent painting on - `javax.swing.JComponent`
 
   throws: java.lang.NullPointerException - if g or c is null"
-  ([^javax.swing.plaf.metal.MetalButtonUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^MetalButtonUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 

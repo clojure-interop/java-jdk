@@ -24,8 +24,8 @@
    explanation supplied. All other fields default to null.
 
   explanation - A possibly null string containing additional detail about this exception. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^AuthenticationException [^java.lang.String explanation]
     (new AuthenticationException explanation))
-  ([]
+  (^AuthenticationException []
     (new AuthenticationException )))
 

@@ -10,8 +10,8 @@
    specified detail message.
 
   host - the detail message. - `java.lang.String`"
-  ([^java.lang.String host]
+  (^UnknownHostException [^java.lang.String host]
     (new UnknownHostException host))
-  ([]
+  (^UnknownHostException []
     (new UnknownHostException )))
 

@@ -681,6 +681,6 @@
   "Returns the string representation.
 
   returns: the string - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.StyleConstants this]
+  (^java.lang.String [^StyleConstants this]
     (-> this (.toString))))
 

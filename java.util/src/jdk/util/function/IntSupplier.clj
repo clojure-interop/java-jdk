@@ -14,6 +14,6 @@
   "Gets a result.
 
   returns: a result - `int`"
-  (^Integer [^java.util.function.IntSupplier this]
+  (^Integer [^IntSupplier this]
     (-> this (.getAsInt))))
 

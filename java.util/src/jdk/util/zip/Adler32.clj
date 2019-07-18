@@ -12,7 +12,7 @@
   "Constructor.
 
   Creates a new Adler32 object."
-  ([]
+  (^Adler32 []
     (new Adler32 )))
 
 (defn update
@@ -23,20 +23,20 @@
   len - the number of bytes to use for the update - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if off is negative, or len is negative, or off+len is greater than the length of the array b"
-  ([^java.util.zip.Adler32 this b ^Integer off ^Integer len]
+  ([^Adler32 this b ^Integer off ^Integer len]
     (-> this (.update b off len)))
-  ([^java.util.zip.Adler32 this ^Integer b]
+  ([^Adler32 this ^Integer b]
     (-> this (.update b))))
 
 (defn reset
   "Resets the checksum to initial value."
-  ([^java.util.zip.Adler32 this]
+  ([^Adler32 this]
     (-> this (.reset))))
 
 (defn get-value
   "Returns the checksum value.
 
   returns: the current checksum value - `long`"
-  (^Long [^java.util.zip.Adler32 this]
+  (^Long [^Adler32 this]
     (-> this (.getValue))))
 

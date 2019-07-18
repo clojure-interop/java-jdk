@@ -9,7 +9,7 @@
   Creates a new string reader.
 
   s - String providing the character stream. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^StringReader [^java.lang.String s]
     (new StringReader s)))
 
 (defn read
@@ -23,9 +23,9 @@
                stream has been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Integer [^java.io.StringReader this cbuf ^Integer off ^Integer len]
+  (^Integer [^StringReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  (^Integer [^java.io.StringReader this]
+  (^Integer [^StringReader this]
     (-> this (.read))))
 
 (defn skip
@@ -47,7 +47,7 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Long [^java.io.StringReader this ^Long ns]
+  (^Long [^StringReader this ^Long ns]
     (-> this (.skip ns))))
 
 (defn ready
@@ -56,14 +56,14 @@
   returns: True if the next read() is guaranteed not to block for input - `boolean`
 
   throws: java.io.IOException - If the stream is closed"
-  (^Boolean [^java.io.StringReader this]
+  (^Boolean [^StringReader this]
     (-> this (.ready))))
 
 (defn mark-supported
   "Tells whether this stream supports the mark() operation, which it does.
 
   returns: true if and only if this stream supports the mark operation. - `boolean`"
-  (^Boolean [^java.io.StringReader this]
+  (^Boolean [^StringReader this]
     (-> this (.markSupported))))
 
 (defn mark
@@ -73,7 +73,7 @@
   read-ahead-limit - Limit on the number of characters that may be read while still preserving the mark. Because the stream's input comes from a string, there is no actual limit, so this argument must not be negative, but is otherwise ignored. - `int`
 
   throws: java.lang.IllegalArgumentException - If readAheadLimit < 0"
-  ([^java.io.StringReader this ^Integer read-ahead-limit]
+  ([^StringReader this ^Integer read-ahead-limit]
     (-> this (.mark read-ahead-limit))))
 
 (defn reset
@@ -81,7 +81,7 @@
    string if it has never been marked.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.StringReader this]
+  ([^StringReader this]
     (-> this (.reset))))
 
 (defn close
@@ -89,6 +89,6 @@
    it. Once the stream has been closed, further read(),
    ready(), mark(), or reset() invocations will throw an IOException.
    Closing a previously closed stream has no effect."
-  ([^java.io.StringReader this]
+  ([^StringReader this]
     (-> this (.close))))
 

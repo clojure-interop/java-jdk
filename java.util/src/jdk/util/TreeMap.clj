@@ -76,10 +76,10 @@
    key, Object value) call will throw a
    ClassCastException.
 
-  comparator - the comparator that will be used to order this map. If null, the java.lang.natural ordering of the keys will be used. - `TreeMap.K>`"
-  ([^TreeMap.K> comparator]
+  comparator - the comparator that will be used to order this map. If null, the java.lang.natural ordering of the keys will be used. - `java.util.Comparator`"
+  (^TreeMap [^java.util.Comparator comparator]
     (new TreeMap comparator))
-  ([]
+  (^TreeMap []
     (new TreeMap )))
 
 (defn values
@@ -103,22 +103,22 @@
    retainAll and clear operations.  It does not
    support the add or addAll operations.
 
-  returns: a collection view of the values contained in this map - `java.util.Collection<TreeMap.V>`"
-  (^java.util.Collection [^java.util.TreeMap this]
+  returns: a collection view of the values contained in this map - `java.util.Collection<V>`"
+  (^java.util.Collection [^TreeMap this]
     (-> this (.values))))
 
 (defn for-each
   "Description copied from interface: Map
 
-  action - The action to be performed for each entry - `TreeMap.V>`"
-  ([^java.util.TreeMap this ^TreeMap.V> action]
+  action - The action to be performed for each entry - `java.util.function.BiConsumer`"
+  ([^TreeMap this ^java.util.function.BiConsumer action]
     (-> this (.forEach action))))
 
 (defn replace-all
   "Description copied from interface: Map
 
-  function - the function to apply to each entry - `TreeMap.V>`"
-  ([^java.util.TreeMap this ^TreeMap.V> function]
+  function - the function to apply to each entry - `java.util.function.BiFunction`"
+  ([^TreeMap this ^java.util.function.BiFunction function]
     (-> this (.replaceAll function))))
 
 (defn put-all
@@ -126,49 +126,49 @@
    These mappings replace any mappings that this map had for any
    of the keys currently in the specified map.
 
-  map - mappings to be stored in this map - `TreeMap.V>`
+  map - mappings to be stored in this map - `java.util.Map`
 
   throws: java.lang.ClassCastException - if the class of a key or value in the specified map prevents it from being stored in this map"
-  ([^java.util.TreeMap this ^TreeMap.V> map]
+  ([^TreeMap this ^java.util.Map map]
     (-> this (.putAll map))))
 
 (defn head-map
   "Description copied from interface: NavigableMap
 
-  to-key - high endpoint of the keys in the returned map - `TreeMap.K`
+  to-key - high endpoint of the keys in the returned map - `K`
   inclusive - true if the high endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this map whose keys are less than
-           (or equal to, if inclusive is true) toKey - `java.util.NavigableMap<TreeMap.K,TreeMap.V>`
+           (or equal to, if inclusive is true) toKey - `java.util.NavigableMap<K,V>`
 
   throws: java.lang.ClassCastException - if toKey is not compatible with this map's comparator (or, if the map has no comparator, if toKey does not implement Comparable). Implementations may, but are not required to, throw this exception if toKey cannot be compared to keys currently in the map."
-  (^java.util.NavigableMap [^java.util.TreeMap this ^TreeMap.K to-key ^Boolean inclusive]
+  (^java.util.NavigableMap [^TreeMap this to-key ^Boolean inclusive]
     (-> this (.headMap to-key inclusive)))
-  (^java.util.SortedMap [^java.util.TreeMap this ^TreeMap.K to-key]
+  (^java.util.SortedMap [^TreeMap this to-key]
     (-> this (.headMap to-key))))
 
 (defn floor-key
   "Description copied from interface: NavigableMap
 
-  key - the key - `TreeMap.K`
+  key - the key - `K`
 
   returns: the greatest key less than or equal to key,
-           or null if there is no such key - `TreeMap.K`
+           or null if there is no such key - `K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^TreeMap.K [^java.util.TreeMap this ^TreeMap.K key]
+  ([^TreeMap this key]
     (-> this (.floorKey key))))
 
 (defn lower-entry
   "Description copied from interface: NavigableMap
 
-  key - the key - `TreeMap.K`
+  key - the key - `K`
 
   returns: an entry with the greatest key less than key,
-           or null if there is no such key - `java.util.Map.Entry<TreeMap.K,TreeMap.V>`
+           or null if there is no such key - `java.util.Map$Entry<K,V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^java.util.Map.Entry [^java.util.TreeMap this ^TreeMap.K key]
+  (^java.util.Map$Entry [^TreeMap this key]
     (-> this (.lowerEntry key))))
 
 (defn put
@@ -176,16 +176,16 @@
    If the map previously contained a mapping for the key, the old
    value is replaced.
 
-  key - key with which the specified value is to be associated - `TreeMap.K`
-  value - value to be associated with the specified key - `TreeMap.V`
+  key - key with which the specified value is to be associated - `K`
+  value - value to be associated with the specified key - `V`
 
   returns: the previous value associated with key, or
            null if there was no mapping for key.
            (A null return can also indicate that the map
-           previously associated null with key.) - `TreeMap.V`
+           previously associated null with key.) - `V`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^TreeMap.V [^java.util.TreeMap this ^TreeMap.K key ^TreeMap.V value]
+  ([^TreeMap this key value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -210,55 +210,55 @@
    clear operations.  It does not support the
    add or addAll operations.
 
-  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<TreeMap.K,TreeMap.V>>`"
-  (^java.util.Set> [^java.util.TreeMap this]
+  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map$Entry<K,V>>`"
+  (^java.util.Set [^TreeMap this]
     (-> this (.entrySet))))
 
 (defn floor-entry
   "Description copied from interface: NavigableMap
 
-  key - the key - `TreeMap.K`
+  key - the key - `K`
 
   returns: an entry with the greatest key less than or equal to
-           key, or null if there is no such key - `java.util.Map.Entry<TreeMap.K,TreeMap.V>`
+           key, or null if there is no such key - `java.util.Map$Entry<K,V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^java.util.Map.Entry [^java.util.TreeMap this ^TreeMap.K key]
+  (^java.util.Map$Entry [^TreeMap this key]
     (-> this (.floorEntry key))))
 
 (defn ceiling-entry
   "Description copied from interface: NavigableMap
 
-  key - the key - `TreeMap.K`
+  key - the key - `K`
 
   returns: an entry with the least key greater than or equal to
-           key, or null if there is no such key - `java.util.Map.Entry<TreeMap.K,TreeMap.V>`
+           key, or null if there is no such key - `java.util.Map$Entry<K,V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^java.util.Map.Entry [^java.util.TreeMap this ^TreeMap.K key]
+  (^java.util.Map$Entry [^TreeMap this key]
     (-> this (.ceilingEntry key))))
 
 (defn descending-key-set
   "Description copied from interface: NavigableMap
 
-  returns: a reverse order navigable set view of the keys in this map - `java.util.NavigableSet<TreeMap.K>`"
-  (^java.util.NavigableSet [^java.util.TreeMap this]
+  returns: a reverse order navigable set view of the keys in this map - `java.util.NavigableSet<K>`"
+  (^java.util.NavigableSet [^TreeMap this]
     (-> this (.descendingKeySet))))
 
 (defn navigable-key-set
   "Description copied from interface: NavigableMap
 
-  returns: a navigable set view of the keys in this map - `java.util.NavigableSet<TreeMap.K>`"
-  (^java.util.NavigableSet [^java.util.TreeMap this]
+  returns: a navigable set view of the keys in this map - `java.util.NavigableSet<K>`"
+  (^java.util.NavigableSet [^TreeMap this]
     (-> this (.navigableKeySet))))
 
 (defn first-key
   "Description copied from interface: SortedMap
 
-  returns: the first (lowest) key currently in this map - `TreeMap.K`
+  returns: the first (lowest) key currently in this map - `K`
 
   throws: java.util.NoSuchElementException - if this map is empty"
-  (^TreeMap.K [^java.util.TreeMap this]
+  ([^TreeMap this]
     (-> this (.firstKey))))
 
 (defn contains-value
@@ -273,65 +273,65 @@
 
   returns: true if a mapping to value exists;
            false otherwise - `boolean`"
-  (^Boolean [^java.util.TreeMap this ^java.lang.Object value]
+  (^Boolean [^TreeMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn higher-key
   "Description copied from interface: NavigableMap
 
-  key - the key - `TreeMap.K`
+  key - the key - `K`
 
   returns: the least key greater than key,
-           or null if there is no such key - `TreeMap.K`
+           or null if there is no such key - `K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^TreeMap.K [^java.util.TreeMap this ^TreeMap.K key]
+  ([^TreeMap this key]
     (-> this (.higherKey key))))
 
 (defn replace
   "Description copied from interface: Map
 
-  key - key with which the specified value is associated - `TreeMap.K`
-  old-value - value expected to be associated with the specified key - `TreeMap.V`
-  new-value - value to be associated with the specified key - `TreeMap.V`
+  key - key with which the specified value is associated - `K`
+  old-value - value expected to be associated with the specified key - `V`
+  new-value - value to be associated with the specified key - `V`
 
   returns: true if the value was replaced - `boolean`"
-  (^Boolean [^java.util.TreeMap this ^TreeMap.K key ^TreeMap.V old-value ^TreeMap.V new-value]
+  (^Boolean [^TreeMap this key old-value new-value]
     (-> this (.replace key old-value new-value)))
-  (^TreeMap.V [^java.util.TreeMap this ^TreeMap.K key ^TreeMap.V value]
+  ([^TreeMap this key value]
     (-> this (.replace key value))))
 
 (defn poll-last-entry
   "Description copied from interface: NavigableMap
 
   returns: the removed last entry of this map,
-           or null if this map is empty - `java.util.Map.Entry<TreeMap.K,TreeMap.V>`"
-  (^java.util.Map.Entry [^java.util.TreeMap this]
+           or null if this map is empty - `java.util.Map$Entry<K,V>`"
+  (^java.util.Map$Entry [^TreeMap this]
     (-> this (.pollLastEntry))))
 
 (defn first-entry
   "Description copied from interface: NavigableMap
 
   returns: an entry with the least key,
-           or null if this map is empty - `java.util.Map.Entry<TreeMap.K,TreeMap.V>`"
-  (^java.util.Map.Entry [^java.util.TreeMap this]
+           or null if this map is empty - `java.util.Map$Entry<K,V>`"
+  (^java.util.Map$Entry [^TreeMap this]
     (-> this (.firstEntry))))
 
 (defn last-key
   "Description copied from interface: SortedMap
 
-  returns: the last (highest) key currently in this map - `TreeMap.K`
+  returns: the last (highest) key currently in this map - `K`
 
   throws: java.util.NoSuchElementException - if this map is empty"
-  (^TreeMap.K [^java.util.TreeMap this]
+  ([^TreeMap this]
     (-> this (.lastKey))))
 
 (defn poll-first-entry
   "Description copied from interface: NavigableMap
 
   returns: the removed first entry of this map,
-           or null if this map is empty - `java.util.Map.Entry<TreeMap.K,TreeMap.V>`"
-  (^java.util.Map.Entry [^java.util.TreeMap this]
+           or null if this map is empty - `java.util.Map$Entry<K,V>`"
+  (^java.util.Map$Entry [^TreeMap this]
     (-> this (.pollFirstEntry))))
 
 (defn remove
@@ -342,22 +342,22 @@
   returns: the previous value associated with key, or
            null if there was no mapping for key.
            (A null return can also indicate that the map
-           previously associated null with key.) - `TreeMap.V`
+           previously associated null with key.) - `V`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^TreeMap.V [^java.util.TreeMap this ^java.lang.Object key]
+  ([^TreeMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn lower-key
   "Description copied from interface: NavigableMap
 
-  key - the key - `TreeMap.K`
+  key - the key - `K`
 
   returns: the greatest key less than key,
-           or null if there is no such key - `TreeMap.K`
+           or null if there is no such key - `K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^TreeMap.K [^java.util.TreeMap this ^TreeMap.K key]
+  ([^TreeMap this key]
     (-> this (.lowerKey key))))
 
 (defn key-set
@@ -385,8 +385,8 @@
    operations.  It does not support the add or addAll
    operations.
 
-  returns: a set view of the keys contained in this map - `java.util.Set<TreeMap.K>`"
-  (^java.util.Set [^java.util.TreeMap this]
+  returns: a set view of the keys contained in this map - `java.util.Set<K>`"
+  (^java.util.Set [^TreeMap this]
     (-> this (.keySet))))
 
 (defn comparator
@@ -394,47 +394,47 @@
 
   returns: the comparator used to order the keys in this map,
            or null if this map uses the natural ordering
-           of its keys - `java.util.Comparator<? super TreeMap.K>`"
-  ([^java.util.TreeMap this]
+           of its keys - `java.util.Comparator<? super K>`"
+  ([^TreeMap this]
     (-> this (.comparator))))
 
 (defn sub-map
   "Description copied from interface: NavigableMap
 
-  from-key - low endpoint of the keys in the returned map - `TreeMap.K`
+  from-key - low endpoint of the keys in the returned map - `K`
   from-inclusive - true if the low endpoint is to be included in the returned view - `boolean`
-  to-key - high endpoint of the keys in the returned map - `TreeMap.K`
+  to-key - high endpoint of the keys in the returned map - `K`
   to-inclusive - true if the high endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this map whose keys range from
-           fromKey to toKey - `java.util.NavigableMap<TreeMap.K,TreeMap.V>`
+           fromKey to toKey - `java.util.NavigableMap<K,V>`
 
   throws: java.lang.ClassCastException - if fromKey and toKey cannot be compared to one another using this map's comparator (or, if the map has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromKey or toKey cannot be compared to keys currently in the map."
-  (^java.util.NavigableMap [^java.util.TreeMap this ^TreeMap.K from-key ^Boolean from-inclusive ^TreeMap.K to-key ^Boolean to-inclusive]
+  (^java.util.NavigableMap [^TreeMap this from-key ^Boolean from-inclusive to-key ^Boolean to-inclusive]
     (-> this (.subMap from-key from-inclusive to-key to-inclusive)))
-  (^java.util.SortedMap [^java.util.TreeMap this ^TreeMap.K from-key ^TreeMap.K to-key]
+  (^java.util.SortedMap [^TreeMap this from-key to-key]
     (-> this (.subMap from-key to-key))))
 
 (defn tail-map
   "Description copied from interface: NavigableMap
 
-  from-key - low endpoint of the keys in the returned map - `TreeMap.K`
+  from-key - low endpoint of the keys in the returned map - `K`
   inclusive - true if the low endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this map whose keys are greater than
-           (or equal to, if inclusive is true) fromKey - `java.util.NavigableMap<TreeMap.K,TreeMap.V>`
+           (or equal to, if inclusive is true) fromKey - `java.util.NavigableMap<K,V>`
 
   throws: java.lang.ClassCastException - if fromKey is not compatible with this map's comparator (or, if the map has no comparator, if fromKey does not implement Comparable). Implementations may, but are not required to, throw this exception if fromKey cannot be compared to keys currently in the map."
-  (^java.util.NavigableMap [^java.util.TreeMap this ^TreeMap.K from-key ^Boolean inclusive]
+  (^java.util.NavigableMap [^TreeMap this from-key ^Boolean inclusive]
     (-> this (.tailMap from-key inclusive)))
-  (^java.util.SortedMap [^java.util.TreeMap this ^TreeMap.K from-key]
+  (^java.util.SortedMap [^TreeMap this from-key]
     (-> this (.tailMap from-key))))
 
 (defn descending-map
   "Description copied from interface: NavigableMap
 
-  returns: a reverse order view of this map - `java.util.NavigableMap<TreeMap.K,TreeMap.V>`"
-  (^java.util.NavigableMap [^java.util.TreeMap this]
+  returns: a reverse order view of this map - `java.util.NavigableMap<K,V>`"
+  (^java.util.NavigableMap [^TreeMap this]
     (-> this (.descendingMap))))
 
 (defn clone
@@ -442,44 +442,44 @@
    values themselves are not cloned.)
 
   returns: a shallow copy of this map - `java.lang.Object`"
-  (^java.lang.Object [^java.util.TreeMap this]
+  (^java.lang.Object [^TreeMap this]
     (-> this (.clone))))
 
 (defn higher-entry
   "Description copied from interface: NavigableMap
 
-  key - the key - `TreeMap.K`
+  key - the key - `K`
 
   returns: an entry with the least key greater than key,
-           or null if there is no such key - `java.util.Map.Entry<TreeMap.K,TreeMap.V>`
+           or null if there is no such key - `java.util.Map$Entry<K,V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^java.util.Map.Entry [^java.util.TreeMap this ^TreeMap.K key]
+  (^java.util.Map$Entry [^TreeMap this key]
     (-> this (.higherEntry key))))
 
 (defn ceiling-key
   "Description copied from interface: NavigableMap
 
-  key - the key - `TreeMap.K`
+  key - the key - `K`
 
   returns: the least key greater than or equal to key,
-           or null if there is no such key - `TreeMap.K`
+           or null if there is no such key - `K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^TreeMap.K [^java.util.TreeMap this ^TreeMap.K key]
+  ([^TreeMap this key]
     (-> this (.ceilingKey key))))
 
 (defn size
   "Returns the number of key-value mappings in this map.
 
   returns: the number of key-value mappings in this map - `int`"
-  (^Integer [^java.util.TreeMap this]
+  (^Integer [^TreeMap this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the mappings from this map.
    The map will be empty after this call returns."
-  ([^java.util.TreeMap this]
+  ([^TreeMap this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -492,7 +492,7 @@
            specified key - `boolean`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^Boolean [^java.util.TreeMap this ^java.lang.Object key]
+  (^Boolean [^TreeMap this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -514,17 +514,17 @@
   key - the key whose associated value is to be returned - `java.lang.Object`
 
   returns: the value to which the specified key is mapped, or
-           null if this map contains no mapping for the key - `TreeMap.V`
+           null if this map contains no mapping for the key - `V`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^TreeMap.V [^java.util.TreeMap this ^java.lang.Object key]
+  ([^TreeMap this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn last-entry
   "Description copied from interface: NavigableMap
 
   returns: an entry with the greatest key,
-           or null if this map is empty - `java.util.Map.Entry<TreeMap.K,TreeMap.V>`"
-  (^java.util.Map.Entry [^java.util.TreeMap this]
+           or null if this map is empty - `java.util.Map$Entry<K,V>`"
+  (^java.util.Map$Entry [^TreeMap this]
     (-> this (.lastEntry))))
 

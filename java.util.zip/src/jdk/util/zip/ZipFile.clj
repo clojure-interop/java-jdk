@@ -23,11 +23,11 @@
   charset - the java.nio.charset.charset to be used to decode the ZIP entry name and comment that are not encoded by using UTF-8 encoding (indicated by entry's general purpose flag). - `java.nio.charset.Charset`
 
   throws: java.util.zip.ZipException - if a ZIP format error has occurred"
-  ([^java.io.File file ^Integer mode ^java.nio.charset.Charset charset]
+  (^ZipFile [^java.io.File file ^Integer mode ^java.nio.charset.Charset charset]
     (new ZipFile file mode charset))
-  ([^java.io.File file ^Integer mode]
+  (^ZipFile [^java.io.File file ^Integer mode]
     (new ZipFile file mode))
-  ([^java.lang.String name]
+  (^ZipFile [^java.lang.String name]
     (new ZipFile name)))
 
 (def *-open-read
@@ -296,7 +296,7 @@
   returns: the comment string for the zip file, or null if none - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if the zip file has been closed Since 1.7"
-  (^java.lang.String [^java.util.zip.ZipFile this]
+  (^java.lang.String [^ZipFile this]
     (-> this (.getComment))))
 
 (defn get-entry
@@ -308,7 +308,7 @@
   returns: the zip file entry, or null if not found - `java.util.zip.ZipEntry`
 
   throws: java.lang.IllegalStateException - if the zip file has been closed"
-  (^java.util.zip.ZipEntry [^java.util.zip.ZipFile this ^java.lang.String name]
+  (^java.util.zip.ZipEntry [^ZipFile this ^java.lang.String name]
     (-> this (.getEntry name))))
 
 (defn get-input-stream
@@ -324,14 +324,14 @@
    zip file entry. - `java.io.InputStream`
 
   throws: java.util.zip.ZipException - if a ZIP format error has occurred"
-  (^java.io.InputStream [^java.util.zip.ZipFile this ^java.util.zip.ZipEntry entry]
+  (^java.io.InputStream [^ZipFile this ^java.util.zip.ZipEntry entry]
     (-> this (.getInputStream entry))))
 
 (defn get-name
   "Returns the path name of the ZIP file.
 
   returns: the path name of the ZIP file - `java.lang.String`"
-  (^java.lang.String [^java.util.zip.ZipFile this]
+  (^java.lang.String [^ZipFile this]
     (-> this (.getName))))
 
 (defn entries
@@ -340,7 +340,7 @@
   returns: an enumeration of the ZIP file entries - `java.util.Enumeration<? extends java.util.zip.ZipEntry>`
 
   throws: java.lang.IllegalStateException - if the zip file has been closed"
-  ([^java.util.zip.ZipFile this]
+  ([^ZipFile this]
     (-> this (.entries))))
 
 (defn stream
@@ -351,7 +351,7 @@
   returns: an ordered Stream of entries in this ZIP file - `java.util..Stream<? extends java.util.zip.ZipEntry>`
 
   throws: java.lang.IllegalStateException - if the zip file has been closed"
-  ([^java.util.zip.ZipFile this]
+  ([^ZipFile this]
     (-> this (.stream))))
 
 (defn size
@@ -360,7 +360,7 @@
   returns: the number of entries in the ZIP file - `int`
 
   throws: java.lang.IllegalStateException - if the zip file has been closed"
-  (^Integer [^java.util.zip.ZipFile this]
+  (^Integer [^ZipFile this]
     (-> this (.size))))
 
 (defn close
@@ -369,6 +369,6 @@
    previously returned by invocations of the getInputStream method.
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.ZipFile this]
+  ([^ZipFile this]
     (-> this (.close))))
 

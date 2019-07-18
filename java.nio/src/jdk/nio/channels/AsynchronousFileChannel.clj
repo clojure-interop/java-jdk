@@ -154,14 +154,14 @@
    provider that created the Path.
 
   file - The path of the file to open or create - `java.nio.file.Path`
-  options - Options specifying how the file is opened - `java.nio.file.OpenOption>`
+  options - Options specifying how the file is opened - `java.util.Set`
   executor - The thread pool or null to associate the channel with the default thread pool - `java.util.concurrent.ExecutorService`
-  attrs - An optional list of file attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute<?>`
+  attrs - An optional list of file attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute`
 
   returns: A new asynchronous file channel - `java.nio.channels.AsynchronousFileChannel`
 
   throws: java.lang.IllegalArgumentException - If the set contains an invalid combination of options"
-  (^java.nio.channels.AsynchronousFileChannel [^java.nio.file.Path file ^java.nio.file.OpenOption> options ^java.util.concurrent.ExecutorService executor ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.channels.AsynchronousFileChannel [^java.nio.file.Path file ^java.util.Set options ^java.util.concurrent.ExecutorService executor ^java.nio.file.attribute.FileAttribute attrs]
     (AsynchronousFileChannel/open file options executor attrs))
   (^java.nio.channels.AsynchronousFileChannel [^java.nio.file.Path file ^java.nio.file.OpenOption options]
     (AsynchronousFileChannel/open file options)))
@@ -172,7 +172,7 @@
   returns: The current size of this channel's file, measured in bytes - `long`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  (^Long [^java.nio.channels.AsynchronousFileChannel this]
+  (^Long [^AsynchronousFileChannel this]
     (-> this (.size))))
 
 (defn truncate
@@ -188,7 +188,7 @@
   returns: This file channel - `java.nio.channels.AsynchronousFileChannel`
 
   throws: java.nio.channels.NonWritableChannelException - If this channel was not opened for writing"
-  (^java.nio.channels.AsynchronousFileChannel [^java.nio.channels.AsynchronousFileChannel this ^Long size]
+  (^java.nio.channels.AsynchronousFileChannel [^AsynchronousFileChannel this ^Long size]
     (-> this (.truncate size))))
 
 (defn force
@@ -225,7 +225,7 @@
   meta-data - If true then this method is required to force changes to both the file's content and metadata to be written to storage; otherwise, it need only force content changes to be written - `boolean`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  ([^java.nio.channels.AsynchronousFileChannel this ^Boolean meta-data]
+  ([^AsynchronousFileChannel this ^Boolean meta-data]
     (-> this (.force meta-data))))
 
 (defn lock
@@ -271,18 +271,18 @@
   size - The size of the locked region; must be non-negative, and the sum position size must be non-negative - `long`
   shared - true to request a shared lock, in which case this channel must be open for reading (and possibly writing); false to request an exclusive lock, in which case this channel must be open for writing (and possibly reading) - `boolean`
   attachment - The object to attach to the I/O operation; can be null - `A`
-  handler - The handler for consuming the result - `A>`
+  handler - The handler for consuming the result - `java.nio.channels.CompletionHandler`
 
   returns: `<A> void`
 
   throws: java.nio.channels.OverlappingFileLockException - If a lock that overlaps the requested region is already held by this Java virtual machine, or there is already a pending attempt to lock an overlapping region"
-  ([^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared attachment handler]
+  ([^AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.lock position size shared attachment handler)))
-  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared]
+  (^java.util.concurrent.Future [^AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared]
     (-> this (.lock position size shared)))
-  ([^java.nio.channels.AsynchronousFileChannel this attachment handler]
+  ([^AsynchronousFileChannel this attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.lock attachment handler)))
-  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousFileChannel this]
+  (^java.util.concurrent.Future [^AsynchronousFileChannel this]
     (-> this (.lock))))
 
 (defn try-lock
@@ -303,9 +303,9 @@
             because another program holds an overlapping lock - `java.nio.channels.FileLock`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on the parameters do not hold"
-  (^java.nio.channels.FileLock [^java.nio.channels.AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared]
+  (^java.nio.channels.FileLock [^AsynchronousFileChannel this ^Long position ^Long size ^Boolean shared]
     (-> this (.tryLock position size shared)))
-  (^java.nio.channels.FileLock [^java.nio.channels.AsynchronousFileChannel this]
+  (^java.nio.channels.FileLock [^AsynchronousFileChannel this]
     (-> this (.tryLock))))
 
 (defn read
@@ -326,14 +326,14 @@
   dst - The buffer into which bytes are to be transferred - `java.nio.ByteBuffer`
   position - The file position at which the transfer is to begin; must be non-negative - `long`
   attachment - The object to attach to the I/O operation; can be null - `A`
-  handler - The handler for consuming the result - `A>`
+  handler - The handler for consuming the result - `java.nio.channels.CompletionHandler`
 
   returns: `<A> void`
 
   throws: java.lang.IllegalArgumentException - If the position is negative or the buffer is read-only"
-  ([^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer dst ^Long position attachment handler]
+  ([^AsynchronousFileChannel this ^java.nio.ByteBuffer dst ^Long position attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.read dst position attachment handler)))
-  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer dst ^Long position]
+  (^java.util.concurrent.Future [^AsynchronousFileChannel this ^java.nio.ByteBuffer dst ^Long position]
     (-> this (.read dst position))))
 
 (defn write
@@ -350,13 +350,13 @@
   src - The buffer from which bytes are to be transferred - `java.nio.ByteBuffer`
   position - The file position at which the transfer is to begin; must be non-negative - `long`
   attachment - The object to attach to the I/O operation; can be null - `A`
-  handler - The handler for consuming the result - `A>`
+  handler - The handler for consuming the result - `java.nio.channels.CompletionHandler`
 
   returns: `<A> void`
 
   throws: java.lang.IllegalArgumentException - If the position is negative"
-  ([^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer src ^Long position attachment handler]
+  ([^AsynchronousFileChannel this ^java.nio.ByteBuffer src ^Long position attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.write src position attachment handler)))
-  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousFileChannel this ^java.nio.ByteBuffer src ^Long position]
+  (^java.util.concurrent.Future [^AsynchronousFileChannel this ^java.nio.ByteBuffer src ^Long position]
     (-> this (.write src position))))
 

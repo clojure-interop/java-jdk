@@ -26,11 +26,11 @@
    to it, although it may keep a reference to a clone or copy.
 
   obj - The possibly null object for which to create a factory. - `java.lang.Object`
-  environment - Environment to use when creating the factory. Can be null. - `java.util.Hashtable<?,?>`
+  environment - Environment to use when creating the factory. Can be null. - `java.util.Hashtable`
 
   returns: A non-null new instance of an ObjectFactory. - `javax.naming.spi.ObjectFactory`
 
   throws: javax.naming.NamingException - If an object factory cannot be created."
-  (^javax.naming.spi.ObjectFactory [^javax.naming.spi.ObjectFactoryBuilder this ^java.lang.Object obj ^java.util.Hashtable environment]
+  (^javax.naming.spi.ObjectFactory [^ObjectFactoryBuilder this ^java.lang.Object obj ^java.util.Hashtable environment]
     (-> this (.createObjectFactory obj environment))))
 

@@ -7,7 +7,7 @@
 
 (defn ->multi-combo-box-ui
   "Constructor."
-  ([]
+  (^MultiComboBoxUI []
     (new MultiComboBoxUI )))
 
 (defn *create-ui
@@ -25,7 +25,7 @@
   "Invokes the installUI method on each UI handled by this object.
 
   a - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComponent a]
+  ([^MultiComboBoxUI this ^javax.swing.JComponent a]
     (-> this (.installUI a))))
 
 (defn get-minimum-size
@@ -35,7 +35,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiComboBoxUI this ^javax.swing.JComponent a]
     (-> this (.getMinimumSize a))))
 
 (defn get-maximum-size
@@ -45,7 +45,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiComboBoxUI this ^javax.swing.JComponent a]
     (-> this (.getMaximumSize a))))
 
 (defn get-accessible-child
@@ -56,7 +56,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.accessibility.Accessible`"
-  (^javax.accessibility.Accessible [^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComponent a ^Integer b]
+  (^javax.accessibility.Accessible [^MultiComboBoxUI this ^javax.swing.JComponent a ^Integer b]
     (-> this (.getAccessibleChild a b))))
 
 (defn get-u-is
@@ -65,14 +65,14 @@
    UIs on components.
 
   returns: `javax.swing.plaf.ComponentUI[]`"
-  ([^javax.swing.plaf.multi.MultiComboBoxUI this]
+  ([^MultiComboBoxUI this]
     (-> this (.getUIs))))
 
 (defn uninstall-ui
   "Invokes the uninstallUI method on each UI handled by this object.
 
   a - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComponent a]
+  ([^MultiComboBoxUI this ^javax.swing.JComponent a]
     (-> this (.uninstallUI a))))
 
 (defn contains
@@ -84,7 +84,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  (^Boolean [^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
+  (^Boolean [^MultiComboBoxUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
     (-> this (.contains a b c))))
 
 (defn update
@@ -92,7 +92,7 @@
 
   a - the Graphics context in which to paint - `java.awt.Graphics`
   b - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiComboBoxUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
+  ([^MultiComboBoxUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
     (-> this (.update a b))))
 
 (defn focus-traversable?
@@ -102,7 +102,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  (^Boolean [^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComboBox a]
+  (^Boolean [^MultiComboBoxUI this ^javax.swing.JComboBox a]
     (-> this (.isFocusTraversable a))))
 
 (defn get-accessible-children-count
@@ -112,7 +112,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  (^Integer [^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComponent a]
+  (^Integer [^MultiComboBoxUI this ^javax.swing.JComponent a]
     (-> this (.getAccessibleChildrenCount a))))
 
 (defn paint
@@ -120,7 +120,7 @@
 
   a - the Graphics context in which to paint - `java.awt.Graphics`
   b - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiComboBoxUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
+  ([^MultiComboBoxUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
     (-> this (.paint a b))))
 
 (defn set-popup-visible
@@ -128,7 +128,7 @@
 
   a - `javax.swing.JComboBox`
   b - `boolean`"
-  ([^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComboBox a ^Boolean b]
+  ([^MultiComboBoxUI this ^javax.swing.JComboBox a ^Boolean b]
     (-> this (.setPopupVisible a b))))
 
 (defn popup-visible?
@@ -138,7 +138,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  (^Boolean [^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComboBox a]
+  (^Boolean [^MultiComboBoxUI this ^javax.swing.JComboBox a]
     (-> this (.isPopupVisible a))))
 
 (defn get-preferred-size
@@ -148,6 +148,6 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiComboBoxUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiComboBoxUI this ^javax.swing.JComponent a]
     (-> this (.getPreferredSize a))))
 

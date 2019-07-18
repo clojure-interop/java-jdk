@@ -9,8 +9,8 @@
   This provides a detailed message.
 
   s - the detailed message associated with the exception. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^CharConversionException [^java.lang.String s]
     (new CharConversionException s))
-  ([]
+  (^CharConversionException []
     (new CharConversionException )))
 

@@ -44,12 +44,12 @@
   "Constructor.
 
   Default constructor."
-  ([]
+  (^CounterMonitor []
     (new CounterMonitor )))
 
 (defn stop
   "Stops the counter monitor."
-  ([^javax.management.monitor.CounterMonitor this]
+  ([^CounterMonitor this]
     (-> this (.stop))))
 
 (defn set-notify
@@ -57,7 +57,7 @@
    observed MBeans.
 
   value - The notification's on/off switch value. - `boolean`"
-  ([^javax.management.monitor.CounterMonitor this ^Boolean value]
+  ([^CounterMonitor this ^Boolean value]
     (-> this (.setNotify value))))
 
 (defn get-derived-gauge-time-stamp
@@ -68,16 +68,16 @@
   object - the name of the object whose derived gauge timestamp is to be returned. - `javax.management.ObjectName`
 
   returns: The derived gauge timestamp of the specified object. - `long`"
-  (^Long [^javax.management.monitor.CounterMonitor this ^javax.management.ObjectName object]
+  (^Long [^CounterMonitor this ^javax.management.ObjectName object]
     (-> this (.getDerivedGaugeTimeStamp object)))
-  ([^javax.management.monitor.CounterMonitor this]
+  (^Long [^CounterMonitor this]
     (-> this (.getDerivedGaugeTimeStamp))))
 
 (defn set-difference-mode
   "Sets the difference mode flag value common to all observed MBeans.
 
   value - The difference mode flag value. - `boolean`"
-  ([^javax.management.monitor.CounterMonitor this ^Boolean value]
+  ([^CounterMonitor this ^Boolean value]
     (-> this (.setDifferenceMode value))))
 
 (defn get-notification-info
@@ -86,19 +86,19 @@
    types sent by the counter monitor.
 
   returns: the array of possible notifications. - `javax.management.MBeanNotificationInfo[]`"
-  ([^javax.management.monitor.CounterMonitor this]
+  ([^CounterMonitor this]
     (-> this (.getNotificationInfo))))
 
 (defn get-offset
   "Gets the offset value common to all observed MBeans.
 
   returns: The offset value. - `java.lang.Number`"
-  (^java.lang.Number [^javax.management.monitor.CounterMonitor this]
+  (^java.lang.Number [^CounterMonitor this]
     (-> this (.getOffset))))
 
 (defn start
   "Starts the counter monitor."
-  ([^javax.management.monitor.CounterMonitor this]
+  ([^CounterMonitor this]
     (-> this (.start))))
 
 (defn set-modulus
@@ -107,14 +107,14 @@
   value - The modulus value. - `java.lang.Number`
 
   throws: java.lang.IllegalArgumentException - The specified modulus is null or the modulus value is less than zero."
-  ([^javax.management.monitor.CounterMonitor this ^java.lang.Number value]
+  ([^CounterMonitor this ^java.lang.Number value]
     (-> this (.setModulus value))))
 
 (defn get-init-threshold
   "Gets the initial threshold value common to all observed objects.
 
   returns: The initial threshold. - `java.lang.Number`"
-  (^java.lang.Number [^javax.management.monitor.CounterMonitor this]
+  (^java.lang.Number [^CounterMonitor this]
     (-> this (.getInitThreshold))))
 
 (defn get-notify?
@@ -123,14 +123,14 @@
 
   returns: true if the counter monitor notifies when
    exceeding the threshold, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.monitor.CounterMonitor this]
+  (^Boolean [^CounterMonitor this]
     (-> this (.getNotify))))
 
 (defn get-modulus
   "Gets the modulus value common to all observed MBeans.
 
   returns: The modulus value. - `java.lang.Number`"
-  (^java.lang.Number [^javax.management.monitor.CounterMonitor this]
+  (^java.lang.Number [^CounterMonitor this]
     (-> this (.getModulus))))
 
 (defn set-threshold
@@ -138,10 +138,8 @@
 
   value - The initial threshold value. - `java.lang.Number`
 
-  returns: `java.lang.  void`
-
   throws: java.lang.IllegalArgumentException - The specified threshold is null or the threshold value is less than zero."
-  ([^javax.management.monitor.CounterMonitor this ^java.lang.Number value]
+  ([^CounterMonitor this ^java.lang.Number value]
     (-> this (.setThreshold value))))
 
 (defn get-threshold
@@ -152,9 +150,9 @@
   object - the name of the object whose threshold is to be returned. - `javax.management.ObjectName`
 
   returns: The threshold value of the specified object. - `java.lang.Number`"
-  (^java.lang.Number [^javax.management.monitor.CounterMonitor this ^javax.management.ObjectName object]
+  (^java.lang.Number [^CounterMonitor this ^javax.management.ObjectName object]
     (-> this (.getThreshold object)))
-  ([^javax.management.monitor.CounterMonitor this]
+  (^java.lang.Number [^CounterMonitor this]
     (-> this (.getThreshold))))
 
 (defn set-init-threshold
@@ -166,7 +164,7 @@
   value - The initial threshold value. - `java.lang.Number`
 
   throws: java.lang.IllegalArgumentException - The specified threshold is null or the threshold value is less than zero."
-  ([^javax.management.monitor.CounterMonitor this ^java.lang.Number value]
+  ([^CounterMonitor this ^java.lang.Number value]
     (-> this (.setInitThreshold value))))
 
 (defn get-difference-mode?
@@ -174,7 +172,7 @@
 
   returns: true if the difference mode is used,
    false otherwise. - `boolean`"
-  (^Boolean [^javax.management.monitor.CounterMonitor this]
+  (^Boolean [^CounterMonitor this]
     (-> this (.getDifferenceMode))))
 
 (defn set-offset
@@ -183,7 +181,7 @@
   value - The offset value. - `java.lang.Number`
 
   throws: java.lang.IllegalArgumentException - The specified offset is null or the offset value is less than zero."
-  ([^javax.management.monitor.CounterMonitor this ^java.lang.Number value]
+  ([^CounterMonitor this ^java.lang.Number value]
     (-> this (.setOffset value))))
 
 (defn get-derived-gauge
@@ -193,8 +191,8 @@
   object - the name of the object whose derived gauge is to be returned. - `javax.management.ObjectName`
 
   returns: The derived gauge of the specified object. - `java.lang.Number`"
-  (^java.lang.Number [^javax.management.monitor.CounterMonitor this ^javax.management.ObjectName object]
+  (^java.lang.Number [^CounterMonitor this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
-  ([^javax.management.monitor.CounterMonitor this]
+  (^java.lang.Number [^CounterMonitor this]
     (-> this (.getDerivedGauge))))
 

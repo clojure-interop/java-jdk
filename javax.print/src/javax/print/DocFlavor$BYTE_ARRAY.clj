@@ -14,7 +14,7 @@
   mime-type - MIME media type string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if mimeType is null."
-  ([^java.lang.String mime-type]
+  (^DocFlavor$BYTE_ARRAY [^java.lang.String mime-type]
     (new DocFlavor$BYTE_ARRAY mime-type)))
 
 (def *-text-plain-host
@@ -26,7 +26,7 @@
    Print data representation class name =
    `[B` (byte array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_PLAIN_HOST)
 
 (def *-text-plain-utf-8
@@ -37,7 +37,7 @@
    print data representation class name = `[B` (byte
    array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_PLAIN_UTF_8)
 
 (def *-text-plain-utf-16
@@ -48,7 +48,7 @@
    print data representation class name = `[B` (byte
    array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_PLAIN_UTF_16)
 
 (def *-text-plain-utf-16-be
@@ -60,7 +60,7 @@
    print data representation class name = `[B` (byte
    array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_PLAIN_UTF_16BE)
 
 (def *-text-plain-utf-16-le
@@ -72,7 +72,7 @@
    print data representation class name = `[B` (byte
    array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_PLAIN_UTF_16LE)
 
 (def *-text-plain-us-ascii
@@ -83,7 +83,7 @@
    print data representation class name =
    `[B` (byte array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_PLAIN_US_ASCII)
 
 (def *-text-html-host
@@ -95,7 +95,7 @@
    Print data representation class name =
    `[B` (byte array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_HTML_HOST)
 
 (def *-text-html-utf-8
@@ -106,7 +106,7 @@
    print data representation class name = `[B` (byte
    array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_HTML_UTF_8)
 
 (def *-text-html-utf-16
@@ -117,7 +117,7 @@
    print data representation class name = `[B` (byte
    array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_HTML_UTF_16)
 
 (def *-text-html-utf-16-be
@@ -129,7 +129,7 @@
    print data representation class name = `[B` (byte
    array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_HTML_UTF_16BE)
 
 (def *-text-html-utf-16-le
@@ -141,7 +141,7 @@
    print data representation class name = `[B` (byte
    array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_HTML_UTF_16LE)
 
 (def *-text-html-us-ascii
@@ -152,7 +152,7 @@
    print data representation class name =
    `[B` (byte array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_HTML_US_ASCII)
 
 (def *-pdf
@@ -161,7 +161,7 @@
   Doc flavor with MIME type = `application/pdf`, print
    data representation class name = `[B` (byte array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/PDF)
 
 (def *-postscript
@@ -171,7 +171,7 @@
    print data representation class name = `[B` (byte
    array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/POSTSCRIPT)
 
 (def *-pcl
@@ -181,7 +181,7 @@
    print data representation class name = `[B` (byte
    array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/PCL)
 
 (def *-gif
@@ -190,7 +190,7 @@
   Doc flavor with MIME type = `image/gif`, print data
    representation class name = `[B` (byte array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/GIF)
 
 (def *-jpeg
@@ -199,7 +199,7 @@
   Doc flavor with MIME type = `image/jpeg`, print data
    representation class name = `[B` (byte array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/JPEG)
 
 (def *-png
@@ -208,7 +208,7 @@
   Doc flavor with MIME type = `image/png`, print data
    representation class name = `[B` (byte array).
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/PNG)
 
 (def *-autosense
@@ -220,6 +220,6 @@
    array). The client must determine that data described
    using this DocFlavor is valid for the printer.
 
-  type: javax.print.DocFlavor.BYTE_ARRAY"
+  type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/AUTOSENSE)
 

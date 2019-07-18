@@ -20,8 +20,8 @@
    explanation. All other fields default to null.
 
   explanation - Possibly null string containing additional detail about this exception. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^ContextNotEmptyException [^java.lang.String explanation]
     (new ContextNotEmptyException explanation))
-  ([]
+  (^ContextNotEmptyException []
     (new ContextNotEmptyException )))
 

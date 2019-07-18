@@ -32,7 +32,7 @@
 
 (defn ->abstract-executor-service
   "Constructor."
-  ([]
+  (^AbstractExecutorService []
     (new AbstractExecutorService )))
 
 (defn submit
@@ -44,30 +44,30 @@
   returns: a Future representing pending completion of the task - `<T> java.util.concurrent.Future<T>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  ([^java.util.concurrent.AbstractExecutorService this ^java.lang.Runnable task result]
+  ([^AbstractExecutorService this ^java.lang.Runnable task result]
     (-> this (.submit task result)))
-  (^java.util.concurrent.Future [^java.util.concurrent.AbstractExecutorService this ^java.lang.Runnable task]
+  (^java.util.concurrent.Future [^AbstractExecutorService this ^java.lang.Runnable task]
     (-> this (.submit task))))
 
 (defn invoke-any
   "Description copied from interface: ExecutorService
 
-  tasks - the collection of tasks - `java.util.concurrent.Callable<T>>`
+  tasks - the collection of tasks - `java.util.Collection`
   timeout - the maximum time to wait - `long`
   unit - the time unit of the timeout argument - `java.util.concurrent.TimeUnit`
 
   returns: the result returned by one of the tasks - `<T> T`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.AbstractExecutorService this ^java.util.concurrent.Callable> tasks ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^AbstractExecutorService this ^java.util.Collection tasks ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.invokeAny tasks timeout unit)))
-  ([^java.util.concurrent.AbstractExecutorService this ^java.util.concurrent.Callable> tasks]
+  ([^AbstractExecutorService this ^java.util.Collection tasks]
     (-> this (.invokeAny tasks))))
 
 (defn invoke-all
   "Description copied from interface: ExecutorService
 
-  tasks - the collection of tasks - `java.util.concurrent.Callable<T>>`
+  tasks - the collection of tasks - `java.util.Collection`
   timeout - the maximum time to wait - `long`
   unit - the time unit of the timeout argument - `java.util.concurrent.TimeUnit`
 
@@ -78,8 +78,8 @@
            of these tasks will not have completed. - `<T> java.util.List<java.util.concurrent.Future<T>>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting, in which case unfinished tasks are cancelled"
-  ([^java.util.concurrent.AbstractExecutorService this ^java.util.concurrent.Callable> tasks ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^AbstractExecutorService this ^java.util.Collection tasks ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.invokeAll tasks timeout unit)))
-  ([^java.util.concurrent.AbstractExecutorService this ^java.util.concurrent.Callable> tasks]
+  ([^AbstractExecutorService this ^java.util.Collection tasks]
     (-> this (.invokeAll tasks))))
 

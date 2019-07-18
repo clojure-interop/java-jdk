@@ -30,7 +30,7 @@
    Earlier eras have sequentially lower values, which may be negative.
 
   returns: the numeric era value - `int`"
-  (^Integer [^java.time.chrono.Era this]
+  (^Integer [^Era this]
     (-> this (.getValue))))
 
 (defn is-supported
@@ -52,7 +52,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this era, false if not - `default boolean`"
-  ([^java.time.chrono.Era this ^java.time.temporal.TemporalField field]
+  ([^Era this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn range
@@ -80,7 +80,7 @@
   returns: the range of valid values for the field, not null - `default java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  ([^java.time.chrono.Era this ^java.time.temporal.TemporalField field]
+  ([^Era this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn get
@@ -105,7 +105,7 @@
   returns: the value for the field - `default int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  ([^java.time.chrono.Era this ^java.time.temporal.TemporalField field]
+  ([^Era this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn get-long
@@ -129,7 +129,7 @@
   returns: the value for the field - `default long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  ([^java.time.chrono.Era this ^java.time.temporal.TemporalField field]
+  ([^Era this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn query
@@ -144,12 +144,12 @@
    TemporalQuery.queryFrom(TemporalAccessor) method on the
    specified query passing this as the argument.
 
-  query - the query to invoke, not null - `java.time.temporal.TemporalQuery<R>`
+  query - the query to invoke, not null - `java.time.temporal.TemporalQuery`
 
   returns: the query result, null may be returned (defined by the query) - `default <R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([^java.time.chrono.Era this ^java.time.temporal.TemporalQuery query]
+  ([^Era this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn adjust-into
@@ -176,7 +176,7 @@
   returns: the adjusted object, not null - `default java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([^java.time.chrono.Era this ^java.time.temporal.Temporal temporal]
+  ([^Era this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn get-display-name
@@ -192,6 +192,6 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the text value of the era, not null - `default java.lang.String`"
-  ([^java.time.chrono.Era this ^java.time.format.TextStyle style ^java.util.Locale locale]
+  ([^Era this ^java.time.format.TextStyle style ^java.util.Locale locale]
     (-> this (.getDisplayName style locale))))
 

@@ -38,9 +38,9 @@
   weight - a weight value between MIN_WEIGHT and MAX_WEIGHT - `double`
 
   throws: java.lang.NullPointerException - if the given range is null"
-  ([^java.lang.String range ^Double weight]
+  (^Locale$LanguageRange [^java.lang.String range ^Double weight]
     (new Locale$LanguageRange range weight))
-  ([^java.lang.String range]
+  (^Locale$LanguageRange [^java.lang.String range]
     (new Locale$LanguageRange range)))
 
 (def *-max-weight
@@ -68,13 +68,13 @@
    mapEquivalents(parse(ranges), map).
 
   ranges - a list of comma-separated language ranges or a list of language ranges in the form of the `Accept-Language` header defined in RFC 2616 - `java.lang.String`
-  map - a map containing information to customize language ranges - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
+  map - a map containing information to customize language ranges - `java.util.Map`
 
   returns: a Language Priority List with customization. The list is
-       modifiable. - `java.util.List<java.util.Locale.LanguageRange>`
+       modifiable. - `java.util.List<java.util.Locale$LanguageRange>`
 
   throws: java.lang.NullPointerException - if ranges is null"
-  (^java.util.List [^java.lang.String ranges ^java.util.Map> map]
+  (^java.util.List [^java.lang.String ranges ^java.util.Map map]
     (Locale$LanguageRange/parse ranges map))
   (^java.util.List [^java.lang.String ranges]
     (Locale$LanguageRange/parse ranges)))
@@ -119,35 +119,35 @@
    map, a simple replacement will be performed and the customized list
    won't include `zh` and `zh-CN`.
 
-  priority-list - user's Language Priority List - `java.util.List<java.util.Locale.LanguageRange>`
-  map - a map containing information to customize language ranges - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
+  priority-list - user's Language Priority List - `java.util.List`
+  map - a map containing information to customize language ranges - `java.util.Map`
 
   returns: a new Language Priority List with customization. The list is
-       modifiable. - `java.util.List<java.util.Locale.LanguageRange>`
+       modifiable. - `java.util.List<java.util.Locale$LanguageRange>`
 
   throws: java.lang.NullPointerException - if priorityList is null"
-  (^java.util.List [^java.util.List priority-list ^java.util.Map> map]
+  (^java.util.List [^java.util.List priority-list ^java.util.Map map]
     (Locale$LanguageRange/mapEquivalents priority-list map)))
 
 (defn get-range
   "Returns the language range of this LanguageRange.
 
   returns: the language range. - `java.lang.String`"
-  (^java.lang.String [^java.util.Locale$LanguageRange this]
+  (^java.lang.String [^Locale$LanguageRange this]
     (-> this (.getRange))))
 
 (defn get-weight
   "Returns the weight of this LanguageRange.
 
   returns: the weight value. - `double`"
-  (^Double [^java.util.Locale$LanguageRange this]
+  (^Double [^Locale$LanguageRange this]
     (-> this (.getWeight))))
 
 (defn hash-code
   "Returns a hash code value for the object.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.util.Locale$LanguageRange this]
+  (^Integer [^Locale$LanguageRange this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -161,6 +161,6 @@
   returns: true if this object's range and
        weight are the same as the obj's; false
        otherwise. - `boolean`"
-  (^Boolean [^java.util.Locale$LanguageRange this ^java.lang.Object obj]
+  (^Boolean [^Locale$LanguageRange this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

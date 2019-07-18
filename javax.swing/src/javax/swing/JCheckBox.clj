@@ -38,13 +38,13 @@
   text - the text of the check box. - `java.lang.String`
   icon - the Icon image to display - `javax.swing.Icon`
   selected - a boolean value indicating the initial selection state. If true the check box is selected - `boolean`"
-  ([^java.lang.String text ^javax.swing.Icon icon ^Boolean selected]
+  (^JCheckBox [^java.lang.String text ^javax.swing.Icon icon ^Boolean selected]
     (new JCheckBox text icon selected))
-  ([^javax.swing.Icon icon ^Boolean selected]
+  (^JCheckBox [^javax.swing.Icon icon ^Boolean selected]
     (new JCheckBox icon selected))
-  ([^javax.swing.Icon icon]
+  (^JCheckBox [^javax.swing.Icon icon]
     (new JCheckBox icon))
-  ([]
+  (^JCheckBox []
     (new JCheckBox )))
 
 (def *-border-painted-flat-changed-property
@@ -69,19 +69,19 @@
    they will ignore this property.
 
   b - true requests that the border be painted flat; false requests normal borders - `boolean`"
-  ([^javax.swing.JCheckBox this ^Boolean b]
+  ([^JCheckBox this ^Boolean b]
     (-> this (.setBorderPaintedFlat b))))
 
 (defn border-painted-flat?
   "Gets the value of the borderPaintedFlat property.
 
   returns: the value of the borderPaintedFlat property - `boolean`"
-  (^Boolean [^javax.swing.JCheckBox this]
+  (^Boolean [^JCheckBox this]
     (-> this (.isBorderPaintedFlat))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([^javax.swing.JCheckBox this]
+  ([^JCheckBox this]
     (-> this (.updateUI))))
 
 (defn get-ui-class-id
@@ -89,7 +89,7 @@
    that renders this component.
 
   returns: the string `CheckBoxUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JCheckBox this]
+  (^java.lang.String [^JCheckBox this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -100,6 +100,6 @@
 
   returns: an AccessibleJCheckBox that serves as the
            AccessibleContext of this JCheckBox - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JCheckBox this]
+  (^javax.accessibility.AccessibleContext [^JCheckBox this]
     (-> this (.getAccessibleContext))))
 

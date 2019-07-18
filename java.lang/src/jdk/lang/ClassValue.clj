@@ -27,12 +27,12 @@
    the rules for value observation are more complex.
    See the documentation for remove for more information.
 
-  type - the type whose class value must be computed or retrieved - `java.lang.Class<?>`
+  type - the type whose class value must be computed or retrieved - `java.lang.Class`
 
-  returns: the current value associated with this ClassValue, for the given class or interface - `ClassValue.T`
+  returns: the current value associated with this ClassValue, for the given class or interface - `T`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  (^ClassValue.T [^java.lang.ClassValue this ^java.lang.Class type]
+  ([^ClassValue this ^java.lang.Class type]
     (-> this (.get type))))
 
 (defn remove
@@ -85,9 +85,9 @@
    between the return of computeValue in T and the installation
    of the the new value.  No user synchronization is possible during this time.
 
-  type - the type whose class value must be removed - `java.lang.Class<?>`
+  type - the type whose class value must be removed - `java.lang.Class`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([^java.lang.ClassValue this ^java.lang.Class type]
+  ([^ClassValue this ^java.lang.Class type]
     (-> this (.remove type))))
 

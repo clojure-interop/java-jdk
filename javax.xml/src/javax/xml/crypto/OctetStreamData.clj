@@ -13,16 +13,16 @@
   mime-type - the MIME type associated with the data object (may be null) - `java.lang.String`
 
   throws: java.lang.NullPointerException - if octetStream is null"
-  ([^java.io.InputStream octet-stream ^java.lang.String uri ^java.lang.String mime-type]
+  (^OctetStreamData [^java.io.InputStream octet-stream ^java.lang.String uri ^java.lang.String mime-type]
     (new OctetStreamData octet-stream uri mime-type))
-  ([^java.io.InputStream octet-stream]
+  (^OctetStreamData [^java.io.InputStream octet-stream]
     (new OctetStreamData octet-stream)))
 
 (defn get-octet-stream
   "Returns the input stream of this OctetStreamData.
 
   returns: the input stream of this OctetStreamData. - `java.io.InputStream`"
-  (^java.io.InputStream [^javax.xml.crypto.OctetStreamData this]
+  (^java.io.InputStream [^OctetStreamData this]
     (-> this (.getOctetStream))))
 
 (defn get-uri
@@ -30,7 +30,7 @@
    OctetStreamData.
 
   returns: the URI String or null if not applicable - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.OctetStreamData this]
+  (^java.lang.String [^OctetStreamData this]
     (-> this (.getURI))))
 
 (defn get-mime-type
@@ -38,6 +38,6 @@
    OctetStreamData.
 
   returns: the MIME type or null if not applicable - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.OctetStreamData this]
+  (^java.lang.String [^OctetStreamData this]
     (-> this (.getMimeType))))
 

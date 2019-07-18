@@ -41,7 +41,7 @@
    to continue with the referral.
 
   returns: Non-null referral information related to this referral. - `java.lang.Object`"
-  (^java.lang.Object [^javax.naming.ReferralException this]
+  (^java.lang.Object [^ReferralException this]
     (-> this (.getReferralInfo))))
 
 (defn get-referral-context
@@ -63,14 +63,14 @@
    To continue the operation, the client program should re-invoke
    the method using the same arguments as the original invocation.
 
-  env - The possibly null environment to use when retrieving the referral context. If null, no environment properties will be used. - `java.util.Hashtable<?,?>`
+  env - The possibly null environment to use when retrieving the referral context. If null, no environment properties will be used. - `java.util.Hashtable`
 
   returns: The non-null context at which to continue the method. - `javax.naming.Context`
 
   throws: javax.naming.NamingException - If a naming exception was encountered. Call either retryReferral() or skipReferral() to continue processing referrals."
-  (^javax.naming.Context [^javax.naming.ReferralException this ^java.util.Hashtable env]
+  (^javax.naming.Context [^ReferralException this ^java.util.Hashtable env]
     (-> this (.getReferralContext env)))
-  (^javax.naming.Context [^javax.naming.ReferralException this]
+  (^javax.naming.Context [^ReferralException this]
     (-> this (.getReferralContext))))
 
 (defn skip-referral
@@ -91,7 +91,7 @@
     }
 
   returns: true If more referral processing is pending; false otherwise. - `boolean`"
-  (^Boolean [^javax.naming.ReferralException this]
+  (^Boolean [^ReferralException this]
     (-> this (.skipReferral))))
 
 (defn retry-referral
@@ -116,6 +116,6 @@
             }
         }
     }"
-  ([^javax.naming.ReferralException this]
+  ([^ReferralException this]
     (-> this (.retryReferral))))
 

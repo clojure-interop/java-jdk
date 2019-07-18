@@ -19,20 +19,20 @@
 
 (defn ->hierarchy-bounds-adapter
   "Constructor."
-  ([]
+  (^HierarchyBoundsAdapter []
     (new HierarchyBoundsAdapter )))
 
 (defn ancestor-moved
   "Called when an ancestor of the source is moved.
 
   e - `java.awt.event.HierarchyEvent`"
-  ([^java.awt.event.HierarchyBoundsAdapter this ^java.awt.event.HierarchyEvent e]
+  ([^HierarchyBoundsAdapter this ^java.awt.event.HierarchyEvent e]
     (-> this (.ancestorMoved e))))
 
 (defn ancestor-resized
   "Called when an ancestor of the source is resized.
 
   e - `java.awt.event.HierarchyEvent`"
-  ([^java.awt.event.HierarchyBoundsAdapter this ^java.awt.event.HierarchyEvent e]
+  ([^HierarchyBoundsAdapter this ^java.awt.event.HierarchyEvent e]
     (-> this (.ancestorResized e))))
 

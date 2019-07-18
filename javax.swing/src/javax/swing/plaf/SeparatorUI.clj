@@ -5,6 +5,6 @@
 
 (defn ->separator-ui
   "Constructor."
-  ([]
+  (^SeparatorUI []
     (new SeparatorUI )))
 

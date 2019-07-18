@@ -44,9 +44,9 @@
    defaultAction.
 
   t - the type to visit - `javax.lang.model.type.IntersectionType`
-  p - a visitor-specified parameter - `TypeKindVisitor8.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `TypeKindVisitor8.R`"
-  (^TypeKindVisitor8.R [^javax.lang.model.util.TypeKindVisitor8 this ^javax.lang.model.type.IntersectionType t ^TypeKindVisitor8.P p]
+  returns: the result of defaultAction - `R`"
+  ([^TypeKindVisitor8 this ^javax.lang.model.type.IntersectionType t p]
     (-> this (.visitIntersection t p))))
 

@@ -235,7 +235,7 @@
             of the first element of the buffer - `int`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  (^Integer [^java.nio.ShortBuffer this]
+  (^Integer [^ShortBuffer this]
     (-> this (.arrayOffset))))
 
 (defn compact
@@ -259,7 +259,7 @@
   returns: This buffer - `java.nio.ShortBuffer`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is read-only"
-  (^java.nio.ShortBuffer [^java.nio.ShortBuffer this]
+  (^java.nio.ShortBuffer [^ShortBuffer this]
     (-> this (.compact))))
 
 (defn put
@@ -296,18 +296,18 @@
   returns: This buffer - `java.nio.ShortBuffer`
 
   throws: java.nio.BufferOverflowException - If there is insufficient space in this buffer"
-  (^java.nio.ShortBuffer [^java.nio.ShortBuffer this src ^Integer offset ^Integer length]
+  (^java.nio.ShortBuffer [^ShortBuffer this src ^Integer offset ^Integer length]
     (-> this (.put src offset length)))
-  (^java.nio.ShortBuffer [^java.nio.ShortBuffer this ^Integer index ^Short s]
+  (^java.nio.ShortBuffer [^ShortBuffer this ^Integer index ^Short s]
     (-> this (.put index s)))
-  (^java.nio.ShortBuffer [^java.nio.ShortBuffer this ^Short s]
+  (^java.nio.ShortBuffer [^ShortBuffer this ^Short s]
     (-> this (.put s))))
 
 (defn to-string
   "Returns a string summarizing the state of this buffer.
 
   returns: A summary string - `java.lang.String`"
-  (^java.lang.String [^java.nio.ShortBuffer this]
+  (^java.lang.String [^ShortBuffer this]
     (-> this (.toString))))
 
 (defn duplicate
@@ -324,7 +324,7 @@
    only if, this buffer is read-only.
 
   returns: The new short buffer - `java.nio.ShortBuffer`"
-  (^java.nio.ShortBuffer [^java.nio.ShortBuffer this]
+  (^java.nio.ShortBuffer [^ShortBuffer this]
     (-> this (.duplicate))))
 
 (defn has-array?
@@ -336,14 +336,14 @@
 
   returns: true if, and only if, this buffer
             is backed by an array and is not read-only - `boolean`"
-  (^Boolean [^java.nio.ShortBuffer this]
+  (^Boolean [^ShortBuffer this]
     (-> this (.hasArray))))
 
 (defn direct?
   "Tells whether or not this short buffer is direct.
 
   returns: true if, and only if, this buffer is direct - `boolean`"
-  (^Boolean [^java.nio.ShortBuffer this]
+  (^Boolean [^ShortBuffer this]
     (-> this (.isDirect))))
 
 (defn order
@@ -355,7 +355,7 @@
    byte buffer at the moment that the view is created.
 
   returns: This buffer's byte order - `java.nio.ByteOrder`"
-  (^java.nio.ByteOrder [^java.nio.ShortBuffer this]
+  (^java.nio.ByteOrder [^ShortBuffer this]
     (-> this (.order))))
 
 (defn slice
@@ -374,7 +374,7 @@
    is read-only.
 
   returns: The new short buffer - `java.nio.ShortBuffer`"
-  (^java.nio.ShortBuffer [^java.nio.ShortBuffer this]
+  (^java.nio.ShortBuffer [^ShortBuffer this]
     (-> this (.slice))))
 
 (defn hash-code
@@ -389,7 +389,7 @@
    is known that their contents will not change.
 
   returns: The current hash code of this buffer - `int`"
-  (^Integer [^java.nio.ShortBuffer this]
+  (^Integer [^ShortBuffer this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -416,7 +416,7 @@
 
   returns: A negative integer, zero, or a positive integer as this buffer
             is less than, equal to, or greater than the given buffer - `int`"
-  (^Integer [^java.nio.ShortBuffer this ^java.nio.ShortBuffer that]
+  (^Integer [^ShortBuffer this ^java.nio.ShortBuffer that]
     (-> this (.compareTo that))))
 
 (defn get
@@ -453,11 +453,11 @@
   returns: This buffer - `java.nio.ShortBuffer`
 
   throws: java.nio.BufferUnderflowException - If there are fewer than length shorts remaining in this buffer"
-  (^java.nio.ShortBuffer [^java.nio.ShortBuffer this dst ^Integer offset ^Integer length]
+  (^java.nio.ShortBuffer [^ShortBuffer this dst ^Integer offset ^Integer length]
     (-> this (.get dst offset length)))
-  (^Short [^java.nio.ShortBuffer this ^Integer index]
+  (^Short [^ShortBuffer this ^Integer index]
     (-> this (.get index)))
-  (^Short [^java.nio.ShortBuffer this]
+  (^Short [^ShortBuffer this]
     (-> this (.get))))
 
 (defn equals
@@ -491,7 +491,7 @@
 
   returns: true if, and only if, this buffer is equal to the
              given object - `boolean`"
-  (^Boolean [^java.nio.ShortBuffer this ^java.lang.Object ob]
+  (^Boolean [^ShortBuffer this ^java.lang.Object ob]
     (-> this (.equals ob))))
 
 (defn array
@@ -508,7 +508,7 @@
   returns: The array that backs this buffer - `short[]`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  ([^java.nio.ShortBuffer this]
+  ([^ShortBuffer this]
     (-> this (.array))))
 
 (defn as-read-only-buffer
@@ -528,6 +528,6 @@
    exactly the same way as the duplicate method.
 
   returns: The new, read-only short buffer - `java.nio.ShortBuffer`"
-  (^java.nio.ShortBuffer [^java.nio.ShortBuffer this]
+  (^java.nio.ShortBuffer [^ShortBuffer this]
     (-> this (.asReadOnlyBuffer))))
 

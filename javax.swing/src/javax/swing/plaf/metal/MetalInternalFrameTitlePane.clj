@@ -7,28 +7,28 @@
   "Constructor.
 
   f - `javax.swing.JInternalFrame`"
-  ([^javax.swing.JInternalFrame f]
+  (^MetalInternalFrameTitlePane [^javax.swing.JInternalFrame f]
     (new MetalInternalFrameTitlePane f)))
 
 (defn add-notify
   "Description copied from class: JComponent"
-  ([^javax.swing.plaf.metal.MetalInternalFrameTitlePane this]
+  ([^MetalInternalFrameTitlePane this]
     (-> this (.addNotify))))
 
 (defn paint-palette
   "g - `java.awt.Graphics`"
-  ([^javax.swing.plaf.metal.MetalInternalFrameTitlePane this ^java.awt.Graphics g]
+  ([^MetalInternalFrameTitlePane this ^java.awt.Graphics g]
     (-> this (.paintPalette g))))
 
 (defn paint-component
   "Description copied from class: JComponent
 
   g - the Graphics object to protect - `java.awt.Graphics`"
-  ([^javax.swing.plaf.metal.MetalInternalFrameTitlePane this ^java.awt.Graphics g]
+  ([^MetalInternalFrameTitlePane this ^java.awt.Graphics g]
     (-> this (.paintComponent g))))
 
 (defn set-palette
   "b - `boolean`"
-  ([^javax.swing.plaf.metal.MetalInternalFrameTitlePane this ^Boolean b]
+  ([^MetalInternalFrameTitlePane this ^Boolean b]
     (-> this (.setPalette b))))
 

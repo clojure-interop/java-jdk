@@ -25,7 +25,7 @@
 
 (defn ->proxy-selector
   "Constructor."
-  ([]
+  (^ProxySelector []
     (new ProxySelector )))
 
 (defn *get-default
@@ -70,7 +70,7 @@
             that represents a direct connection. - `java.util.List<java.net.Proxy>`
 
   throws: java.lang.IllegalArgumentException - if the argument is null"
-  (^java.util.List [^java.net.ProxySelector this ^java.net.URI uri]
+  (^java.util.List [^ProxySelector this ^java.net.URI uri]
     (-> this (.select uri))))
 
 (defn connect-failed
@@ -85,6 +85,6 @@
   ioe - The I/O exception thrown when the connect failed. - `java.io.IOException`
 
   throws: java.lang.IllegalArgumentException - if either argument is null"
-  ([^java.net.ProxySelector this ^java.net.URI uri ^java.net.SocketAddress sa ^java.io.IOException ioe]
+  ([^ProxySelector this ^java.net.URI uri ^java.net.SocketAddress sa ^java.io.IOException ioe]
     (-> this (.connectFailed uri sa ioe))))
 

@@ -96,8 +96,8 @@
    retainAll and clear operations.  It does not
    support the add or addAll operations.
 
-  returns: a collection view of the values contained in this map - `java.util.Collection<Map.V>`"
-  (^java.util.Collection [^java.util.Map this]
+  returns: a collection view of the values contained in this map - `java.util.Collection<V>`"
+  (^java.util.Collection [^Map this]
     (-> this (.values))))
 
 (defn for-each
@@ -107,12 +107,12 @@
    the order of entry set iteration (if an iteration order is specified.)
    Exceptions thrown by the action are relayed to the caller.
 
-  action - The action to be performed for each entry - `Map.V>`
+  action - The action to be performed for each entry - `java.util.function.BiConsumer`
 
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^java.util.Map this ^Map.V> action]
+  ([^Map this ^java.util.function.BiConsumer action]
     (-> this (.forEach action))))
 
 (defn replace-all
@@ -121,12 +121,12 @@
    function throws an exception.  Exceptions thrown by the function are
    relayed to the caller.
 
-  function - the function to apply to each entry - `Map.V>`
+  function - the function to apply to each entry - `java.util.function.BiFunction`
 
   returns: `default void`
 
   throws: java.lang.UnsupportedOperationException - if the set operation is not supported by this map's entry set iterator."
-  ([^java.util.Map this ^Map.V> function]
+  ([^Map this ^java.util.function.BiFunction function]
     (-> this (.replaceAll function))))
 
 (defn put-all
@@ -137,10 +137,10 @@
    specified map.  The behavior of this operation is undefined if the
    specified map is modified while the operation is in progress.
 
-  m - mappings to be stored in this map - `Map.V>`
+  m - mappings to be stored in this map - `java.util.Map`
 
   throws: java.lang.UnsupportedOperationException - if the putAll operation is not supported by this map"
-  ([^java.util.Map this ^Map.V> m]
+  ([^Map this ^java.util.Map m]
     (-> this (.putAll m))))
 
 (defn put-if-absent
@@ -148,17 +148,17 @@
    to null) associates it with the given value and returns
    null, else returns the current value.
 
-  key - key with which the specified value is to be associated - `Map.K`
-  value - value to be associated with the specified key - `Map.V`
+  key - key with which the specified value is to be associated - `K`
+  value - value to be associated with the specified key - `V`
 
   returns: the previous value associated with the specified key, or
            null if there was no mapping for the key.
            (A null return can also indicate that the map
            previously associated null with the key,
-           if the implementation supports null values.) - `default Map.V`
+           if the implementation supports null values.) - `default V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^java.util.Map this ^Map.K key ^Map.V value]
+  ([^Map this key value]
     (-> this (.putIfAbsent key value))))
 
 (defn put
@@ -169,17 +169,17 @@
    if m.containsKey(k) would return
    true.)
 
-  key - key with which the specified value is to be associated - `Map.K`
-  value - value to be associated with the specified key - `Map.V`
+  key - key with which the specified value is to be associated - `K`
+  value - value to be associated with the specified key - `V`
 
   returns: the previous value associated with key, or
            null if there was no mapping for key.
            (A null return can also indicate that the map
            previously associated null with key,
-           if the implementation supports null values.) - `Map.V`
+           if the implementation supports null values.) - `V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map"
-  (^Map.V [^java.util.Map this ^Map.K key ^Map.V value]
+  ([^Map this key value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -196,8 +196,8 @@
    clear operations.  It does not support the
    add or addAll operations.
 
-  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<Map.K,Map.V>>`"
-  (^java.util.Set> [^java.util.Map this]
+  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map$Entry<K,V>>`"
+  (^java.util.Set [^Map this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -214,7 +214,7 @@
            specified value - `boolean`
 
   throws: java.lang.ClassCastException - if the value is of an inappropriate type for this map (optional)"
-  (^Boolean [^java.util.Map this ^java.lang.Object value]
+  (^Boolean [^Map this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn get-or-default
@@ -222,29 +222,29 @@
    defaultValue if this map contains no mapping for the key.
 
   key - the key whose associated value is to be returned - `java.lang.Object`
-  default-value - the default mapping of the key - `Map.V`
+  default-value - the default mapping of the key - `V`
 
   returns: the value to which the specified key is mapped, or
-   defaultValue if this map contains no mapping for the key - `default Map.V`
+   defaultValue if this map contains no mapping for the key - `default V`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  ([^java.util.Map this ^java.lang.Object key ^Map.V default-value]
+  ([^Map this ^java.lang.Object key default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn replace
   "Replaces the entry for the specified key only if currently
    mapped to the specified value.
 
-  key - key with which the specified value is associated - `Map.K`
-  old-value - value expected to be associated with the specified key - `Map.V`
-  new-value - value to be associated with the specified key - `Map.V`
+  key - key with which the specified value is associated - `K`
+  old-value - value expected to be associated with the specified key - `V`
+  new-value - value to be associated with the specified key - `V`
 
   returns: true if the value was replaced - `default boolean`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^java.util.Map this ^Map.K key ^Map.V old-value ^Map.V new-value]
+  ([^Map this key old-value new-value]
     (-> this (.replace key old-value new-value)))
-  ([^java.util.Map this ^Map.K key ^Map.V value]
+  ([^Map this key value]
     (-> this (.replace key value))))
 
 (defn remove
@@ -257,9 +257,9 @@
   returns: true if the value was removed - `default boolean`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this map (optional)"
-  ([^java.util.Map this ^java.lang.Object key ^java.lang.Object value]
+  ([^Map this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value)))
-  (^Map.V [^java.util.Map this ^java.lang.Object key]
+  ([^Map this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -275,8 +275,8 @@
    operations.  It does not support the add or addAll
    operations.
 
-  returns: a set view of the keys contained in this map - `java.util.Set<Map.K>`"
-  (^java.util.Set [^java.util.Map this]
+  returns: a set view of the keys contained in this map - `java.util.Set<K>`"
+  (^java.util.Set [^Map this]
     (-> this (.keySet))))
 
 (defn compute-if-present
@@ -287,13 +287,13 @@
    function itself throws an (unchecked) exception, the exception is
    rethrown, and the current mapping is left unchanged.
 
-  key - key with which the specified value is to be associated - `Map.K`
-  remapping-function - the function to compute a value - `Map.V>`
+  key - key with which the specified value is to be associated - `K`
+  remapping-function - the function to compute a value - `java.util.function.BiFunction`
 
-  returns: the new value associated with the specified key, or null if none - `default Map.V`
+  returns: the new value associated with the specified key, or null if none - `default V`
 
   throws: java.lang.NullPointerException - if the specified key is null and this map does not support null keys, or the remappingFunction is null"
-  ([^java.util.Map this ^Map.K key ^Map.V> remapping-function]
+  ([^Map this key ^java.util.function.BiFunction remapping-function]
     (-> this (.computeIfPresent key remapping-function))))
 
 (defn hash-code
@@ -305,14 +305,14 @@
    Object.hashCode().
 
   returns: the hash code value for this map - `int`"
-  (^Integer [^java.util.Map this]
+  (^Integer [^Map this]
     (-> this (.hashCode))))
 
 (defn empty?
   "Returns true if this map contains no key-value mappings.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  (^Boolean [^java.util.Map this]
+  (^Boolean [^Map this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -321,7 +321,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of key-value mappings in this map - `int`"
-  (^Integer [^java.util.Map this]
+  (^Integer [^Map this]
     (-> this (.size))))
 
 (defn clear
@@ -329,7 +329,7 @@
    The map will be empty after this call returns.
 
   throws: java.lang.UnsupportedOperationException - if the clear operation is not supported by this map"
-  ([^java.util.Map this]
+  ([^Map this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -345,7 +345,7 @@
            key - `boolean`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  (^Boolean [^java.util.Map this ^java.lang.Object key]
+  (^Boolean [^Map this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -365,10 +365,10 @@
   key - the key whose associated value is to be returned - `java.lang.Object`
 
   returns: the value to which the specified key is mapped, or
-           null if this map contains no mapping for the key - `Map.V`
+           null if this map contains no mapping for the key - `V`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  (^Map.V [^java.util.Map this ^java.lang.Object key]
+  ([^Map this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn merge
@@ -388,15 +388,15 @@
    function itself throws an (unchecked) exception, the exception is
    rethrown, and the current mapping is left unchanged.
 
-  key - key with which the resulting value is to be associated - `Map.K`
-  value - the non-null value to be merged with the existing value associated with the key or, if no existing value or a null value is associated with the key, to be associated with the key - `Map.V`
-  remapping-function - the function to recompute a value if present - `Map.V>`
+  key - key with which the resulting value is to be associated - `K`
+  value - the non-null value to be merged with the existing value associated with the key or, if no existing value or a null value is associated with the key, to be associated with the key - `V`
+  remapping-function - the function to recompute a value if present - `java.util.function.BiFunction`
 
   returns: the new value associated with the specified key, or null if no
-           value is associated with the key - `default Map.V`
+           value is associated with the key - `default V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^java.util.Map this ^Map.K key ^Map.V value ^Map.V> remapping-function]
+  ([^Map this key value ^java.util.function.BiFunction remapping-function]
     (-> this (.merge key value remapping-function))))
 
 (defn equals
@@ -411,7 +411,7 @@
   o - object to be compared for equality with this map - `java.lang.Object`
 
   returns: true if the specified object is equal to this map - `boolean`"
-  (^Boolean [^java.util.Map this ^java.lang.Object o]
+  (^Boolean [^Map this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn compute
@@ -430,13 +430,13 @@
    (unchecked) exception, the exception is rethrown, and the current mapping
    is left unchanged.
 
-  key - key with which the specified value is to be associated - `Map.K`
-  remapping-function - the function to compute a value - `Map.V>`
+  key - key with which the specified value is to be associated - `K`
+  remapping-function - the function to compute a value - `java.util.function.BiFunction`
 
-  returns: the new value associated with the specified key, or null if none - `default Map.V`
+  returns: the new value associated with the specified key, or null if none - `default V`
 
   throws: java.lang.NullPointerException - if the specified key is null and this map does not support null keys, or the remappingFunction is null"
-  ([^java.util.Map this ^Map.K key ^Map.V> remapping-function]
+  ([^Map this key ^java.util.function.BiFunction remapping-function]
     (-> this (.compute key remapping-function))))
 
 (defn compute-if-absent
@@ -461,13 +461,13 @@
 
    map.computeIfAbsent(key, k -> new HashSet<V>()).add(v);
 
-  key - key with which the specified value is to be associated - `Map.K`
-  mapping-function - the function to compute a value - `Map.V>`
+  key - key with which the specified value is to be associated - `K`
+  mapping-function - the function to compute a value - `java.util.function.Function`
 
   returns: the current (existing or computed) value associated with
-           the specified key, or null if the computed value is null - `default Map.V`
+           the specified key, or null if the computed value is null - `default V`
 
   throws: java.lang.NullPointerException - if the specified key is null and this map does not support null keys, or the mappingFunction is null"
-  ([^java.util.Map this ^Map.K key ^Map.V> mapping-function]
+  ([^Map this key ^java.util.function.Function mapping-function]
     (-> this (.computeIfAbsent key mapping-function))))
 

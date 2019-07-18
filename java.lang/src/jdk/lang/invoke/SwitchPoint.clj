@@ -86,7 +86,7 @@
   "Constructor.
 
   Creates a new switch point."
-  ([]
+  (^SwitchPoint []
     (new SwitchPoint )))
 
 (defn *invalidate-all
@@ -154,7 +154,7 @@
    constant true and false method handles.
 
   returns: true if this switch point has been invalidated - `boolean`"
-  (^Boolean [^java.lang.invoke.SwitchPoint this]
+  (^Boolean [^SwitchPoint this]
     (-> this (.hasBeenInvalidated))))
 
 (defn guard-with-test
@@ -171,6 +171,6 @@
   returns: a combined method handle which always calls either the target or fallback - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if either argument is null"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.SwitchPoint this ^java.lang.invoke.MethodHandle target ^java.lang.invoke.MethodHandle fallback]
+  (^java.lang.invoke.MethodHandle [^SwitchPoint this ^java.lang.invoke.MethodHandle target ^java.lang.invoke.MethodHandle fallback]
     (-> this (.guardWithTest target fallback))))
 

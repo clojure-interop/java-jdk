@@ -66,9 +66,9 @@
   port - port to use - `int`
 
   throws: java.io.IOException - if an I/O exception occurs while creating the MulticastSocket"
-  ([^Integer port]
+  (^MulticastSocket [^Integer port]
     (new MulticastSocket port))
-  ([]
+  (^MulticastSocket []
     (new MulticastSocket )))
 
 (defn set-time-to-live
@@ -84,7 +84,7 @@
   ttl - the time-to-live - `int`
 
   throws: java.io.IOException - if an I/O exception occurs while setting the default time-to-live value"
-  ([^java.net.MulticastSocket this ^Integer ttl]
+  ([^MulticastSocket this ^Integer ttl]
     (-> this (.setTimeToLive ttl))))
 
 (defn get-interface
@@ -96,7 +96,7 @@
     multicast packets. - `java.net.InetAddress`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  (^java.net.InetAddress [^java.net.MulticastSocket this]
+  (^java.net.InetAddress [^MulticastSocket this]
     (-> this (.getInterface))))
 
 (defn get-network-interface
@@ -105,7 +105,7 @@
   returns: the multicast NetworkInterface currently set - `java.net.NetworkInterface`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  (^java.net.NetworkInterface [^java.net.MulticastSocket this]
+  (^java.net.NetworkInterface [^MulticastSocket this]
     (-> this (.getNetworkInterface))))
 
 (defn send
@@ -120,10 +120,8 @@
   p - is the packet to be sent. The packet should contain the destination multicast ip address and the data to be sent. One does not need to be the member of the group to send packets to a destination multicast address. - `java.net.DatagramPacket`
   ttl - optional time to live for multicast packet. default ttl is 1. - `byte`
 
-  returns: `java.lang.  void`
-
   throws: java.io.IOException - is raised if an error occurs i.e error while setting ttl."
-  ([^java.net.MulticastSocket this ^java.net.DatagramPacket p ^Byte ttl]
+  ([^MulticastSocket this ^java.net.DatagramPacket p ^Byte ttl]
     (-> this (.send p ttl))))
 
 (defn set-network-interface
@@ -133,7 +131,7 @@
   net-if - the interface - `java.net.NetworkInterface`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.MulticastSocket this ^java.net.NetworkInterface net-if]
+  ([^MulticastSocket this ^java.net.NetworkInterface net-if]
     (-> this (.setNetworkInterface net-if))))
 
 (defn get-time-to-live
@@ -143,7 +141,7 @@
   returns: the default time-to-live value - `int`
 
   throws: java.io.IOException - if an I/O exception occurs while getting the default time-to-live value"
-  (^Integer [^java.net.MulticastSocket this]
+  (^Integer [^MulticastSocket this]
     (-> this (.getTimeToLive))))
 
 (defn set-interface
@@ -154,7 +152,7 @@
   inf - the InetAddress - `java.net.InetAddress`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.MulticastSocket this ^java.net.InetAddress inf]
+  ([^MulticastSocket this ^java.net.InetAddress inf]
     (-> this (.setInterface inf))))
 
 (defn set-ttl
@@ -163,10 +161,8 @@
 
   ttl - the time-to-live - `byte`
 
-  returns: `java.lang.  void`
-
   throws: java.io.IOException - if an I/O exception occurs while setting the default time-to-live value"
-  ([^java.net.MulticastSocket this ^Byte ttl]
+  ([^MulticastSocket this ^Byte ttl]
     (-> this (.setTTL ttl))))
 
 (defn set-loopback-mode
@@ -182,7 +178,7 @@
   disable - true to disable the LoopbackMode - `boolean`
 
   throws: java.net.SocketException - if an error occurs while setting the value"
-  ([^java.net.MulticastSocket this ^Boolean disable]
+  ([^MulticastSocket this ^Boolean disable]
     (-> this (.setLoopbackMode disable))))
 
 (defn join-group
@@ -197,19 +193,19 @@
   net-if - specifies the local interface to receive multicast datagram packets, or null to defer to the interface set by setInterface(InetAddress) or setNetworkInterface(NetworkInterface) - `java.net.NetworkInterface`
 
   throws: java.io.IOException - if there is an error joining or when the address is not a multicast address."
-  ([^java.net.MulticastSocket this ^java.net.SocketAddress mcastaddr ^java.net.NetworkInterface net-if]
+  ([^MulticastSocket this ^java.net.SocketAddress mcastaddr ^java.net.NetworkInterface net-if]
     (-> this (.joinGroup mcastaddr net-if)))
-  ([^java.net.MulticastSocket this ^java.net.InetAddress mcastaddr]
+  ([^MulticastSocket this ^java.net.InetAddress mcastaddr]
     (-> this (.joinGroup mcastaddr))))
 
 (defn get-ttl
   "Deprecated. use the getTimeToLive method instead, which returns
    an int instead of a byte.
 
-  returns: the default time-to-live value - `java.lang.  byte`
+  returns: the default time-to-live value - `byte`
 
   throws: java.io.IOException - if an I/O exception occurs while getting the default time-to-live value"
-  ([^java.net.MulticastSocket this]
+  (^Byte [^MulticastSocket this]
     (-> this (.getTTL))))
 
 (defn leave-group
@@ -224,9 +220,9 @@
   net-if - specifies the local interface or null to defer to the interface set by setInterface(InetAddress) or setNetworkInterface(NetworkInterface) - `java.net.NetworkInterface`
 
   throws: java.io.IOException - if there is an error leaving or when the address is not a multicast address."
-  ([^java.net.MulticastSocket this ^java.net.SocketAddress mcastaddr ^java.net.NetworkInterface net-if]
+  ([^MulticastSocket this ^java.net.SocketAddress mcastaddr ^java.net.NetworkInterface net-if]
     (-> this (.leaveGroup mcastaddr net-if)))
-  ([^java.net.MulticastSocket this ^java.net.InetAddress mcastaddr]
+  ([^MulticastSocket this ^java.net.InetAddress mcastaddr]
     (-> this (.leaveGroup mcastaddr))))
 
 (defn get-loopback-mode?
@@ -235,6 +231,6 @@
   returns: true if the LoopbackMode has been disabled - `boolean`
 
   throws: java.net.SocketException - if an error occurs while getting the value"
-  (^Boolean [^java.net.MulticastSocket this]
+  (^Boolean [^MulticastSocket this]
     (-> this (.getLoopbackMode))))
 

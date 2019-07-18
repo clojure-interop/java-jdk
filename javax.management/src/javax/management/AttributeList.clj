@@ -20,9 +20,9 @@
    the initial capacity specified.
 
   initial-capacity - the initial capacity of the AttributeList, as specified by ArrayList.ArrayList(int). - `int`"
-  ([^Integer initial-capacity]
+  (^AttributeList [^Integer initial-capacity]
     (new AttributeList initial-capacity))
-  ([]
+  (^AttributeList []
     (new AttributeList )))
 
 (defn as-list
@@ -42,7 +42,7 @@
    be added. - `java.util.List<javax.management.Attribute>`
 
   throws: java.lang.IllegalArgumentException - if this AttributeList contains an element that is not an Attribute."
-  (^java.util.List [^javax.management.AttributeList this]
+  (^java.util.List [^AttributeList this]
     (-> this (.asList))))
 
 (defn add
@@ -54,9 +54,9 @@
 
   index - The position in the list where the new Attribute object is to be inserted. - `int`
   object - The Attribute object to be inserted. - `javax.management.Attribute`"
-  ([^javax.management.AttributeList this ^Integer index ^javax.management.Attribute object]
+  ([^AttributeList this ^Integer index ^javax.management.Attribute object]
     (-> this (.add index object)))
-  ([^javax.management.AttributeList this ^javax.management.Attribute object]
+  ([^AttributeList this ^javax.management.Attribute object]
     (-> this (.add object))))
 
 (defn set
@@ -67,7 +67,7 @@
 
   index - The position specified. - `int`
   object - The value to which the attribute element should be set. - `javax.management.Attribute`"
-  ([^javax.management.AttributeList this ^Integer index ^javax.management.Attribute object]
+  ([^AttributeList this ^Integer index ^javax.management.Attribute object]
     (-> this (.set index object))))
 
 (defn add-all
@@ -82,8 +82,8 @@
   list - Elements to be inserted into the list. - `javax.management.AttributeList`
 
   returns: true if this list changed as a result of the call. - `boolean`"
-  (^Boolean [^javax.management.AttributeList this ^Integer index ^javax.management.AttributeList list]
+  (^Boolean [^AttributeList this ^Integer index ^javax.management.AttributeList list]
     (-> this (.addAll index list)))
-  (^Boolean [^javax.management.AttributeList this ^javax.management.AttributeList list]
+  (^Boolean [^AttributeList this ^javax.management.AttributeList list]
     (-> this (.addAll list))))
 

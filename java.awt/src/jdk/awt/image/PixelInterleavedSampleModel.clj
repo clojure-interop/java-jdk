@@ -42,7 +42,7 @@
   band-offsets - The offsets of all bands. - `int[]`
 
   throws: java.lang.IllegalArgumentException - if dataType is not one of the supported data types"
-  ([^Integer data-type ^Integer w ^Integer h ^Integer pixel-stride ^Integer scanline-stride band-offsets]
+  (^PixelInterleavedSampleModel [^Integer data-type ^Integer w ^Integer h ^Integer pixel-stride ^Integer scanline-stride band-offsets]
     (new PixelInterleavedSampleModel data-type w h pixel-stride scanline-stride band-offsets)))
 
 (defn create-compatible-sample-model
@@ -59,7 +59,7 @@
            and height. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if w or h is not greater than 0"
-  (^java.awt.image.SampleModel [^java.awt.image.PixelInterleavedSampleModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^PixelInterleavedSampleModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn create-subset-sample-model
@@ -75,13 +75,13 @@
 
   returns: a ComponentSampleModel created with a subset
             of bands from this ComponentSampleModel. - `java.awt.image.SampleModel`"
-  (^java.awt.image.SampleModel [^java.awt.image.PixelInterleavedSampleModel this bands]
+  (^java.awt.image.SampleModel [^PixelInterleavedSampleModel this bands]
     (-> this (.createSubsetSampleModel bands))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.image.PixelInterleavedSampleModel this]
+  (^Integer [^PixelInterleavedSampleModel this]
     (-> this (.hashCode))))
 

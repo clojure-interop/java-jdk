@@ -19,14 +19,14 @@
   Creates a new CaretEvent object.
 
   source - the object responsible for the event - `java.lang.Object`"
-  ([^java.lang.Object source]
+  (^CaretEvent [^java.lang.Object source]
     (new CaretEvent source)))
 
 (defn get-dot
   "Fetches the location of the caret.
 
   returns: the dot >= 0 - `int`"
-  (^Integer [^javax.swing.event.CaretEvent this]
+  (^Integer [^CaretEvent this]
     (-> this (.getDot))))
 
 (defn get-mark
@@ -35,6 +35,6 @@
    will be the same as dot.
 
   returns: the mark >= 0 - `int`"
-  (^Integer [^javax.swing.event.CaretEvent this]
+  (^Integer [^CaretEvent this]
     (-> this (.getMark))))
 

@@ -89,7 +89,7 @@
 
   connection - the MBean server to forward to. - `javax.management.MBeanServerConnection`
   object-name - the name of the MBean within connection to forward to. - `javax.management.ObjectName`
-  interface-class - the management interface that the MBean exports, which will also be implemented by the returned proxy. - `java.lang.Class<T>`
+  interface-class - the management interface that the MBean exports, which will also be implemented by the returned proxy. - `java.lang.Class`
   notification-emitter - make the returned proxy implement NotificationEmitter by forwarding its methods via connection. - `boolean`
 
   returns: the new proxy instance. - `<T> T`
@@ -114,7 +114,7 @@
 
   connection - the MBean server to forward to. - `javax.management.MBeanServerConnection`
   object-name - the name of the MBean within connection to forward to. - `javax.management.ObjectName`
-  interface-class - the MXBean interface, which will also be implemented by the returned proxy. - `java.lang.Class<T>`
+  interface-class - the MXBean interface, which will also be implemented by the returned proxy. - `java.lang.Class`
   notification-emitter - make the returned proxy implement NotificationEmitter by forwarding its methods via connection. - `boolean`
 
   returns: the new proxy instance. - `<T> T`
@@ -132,7 +132,7 @@
    or if it does not have an @MXBean annotation
    and its name ends with `MXBean`.
 
-  interface-class - The candidate interface. - `java.lang.Class<?>`
+  interface-class - The candidate interface. - `java.lang.Class`
 
   returns: true if interfaceClass is a
    compliant MXBean interface - `boolean`

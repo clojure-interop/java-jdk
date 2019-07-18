@@ -5,19 +5,19 @@
 (def NO_CACHING
   "Enum Constant.
 
-  type: javax.swing.plaf.nimbus.AbstractRegionPainter.PaintContext.CacheMode"
+  type: javax.swing.plaf.nimbus.AbstractRegionPainter$PaintContext$CacheMode"
   AbstractRegionPainter$PaintContext$CacheMode/NO_CACHING)
 
 (def FIXED_SIZES
   "Enum Constant.
 
-  type: javax.swing.plaf.nimbus.AbstractRegionPainter.PaintContext.CacheMode"
+  type: javax.swing.plaf.nimbus.AbstractRegionPainter$PaintContext$CacheMode"
   AbstractRegionPainter$PaintContext$CacheMode/FIXED_SIZES)
 
 (def NINE_SQUARE_SCALE
   "Enum Constant.
 
-  type: javax.swing.plaf.nimbus.AbstractRegionPainter.PaintContext.CacheMode"
+  type: javax.swing.plaf.nimbus.AbstractRegionPainter$PaintContext$CacheMode"
   AbstractRegionPainter$PaintContext$CacheMode/NINE_SQUARE_SCALE)
 
 (defn *values
@@ -29,7 +29,7 @@
   for (AbstractRegionPainter.PaintContext.CacheMode c : AbstractRegionPainter.PaintContext.CacheMode.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.plaf.nimbus.AbstractRegionPainter.PaintContext.CacheMode[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.plaf.nimbus.AbstractRegionPainter$PaintContext$CacheMode[]`"
   ([]
     (AbstractRegionPainter$PaintContext$CacheMode/values )))
 
@@ -41,9 +41,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.swing.plaf.nimbus.AbstractRegionPainter.PaintContext.CacheMode`
+  returns: the enum constant with the specified name - `javax.swing.plaf.nimbus.AbstractRegionPainter$PaintContext$CacheMode`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.swing.plaf.nimbus.AbstractRegionPainter.PaintContext.CacheMode [^java.lang.String name]
+  (^javax.swing.plaf.nimbus.AbstractRegionPainter$PaintContext$CacheMode [^java.lang.String name]
     (AbstractRegionPainter$PaintContext$CacheMode/valueOf name)))
 

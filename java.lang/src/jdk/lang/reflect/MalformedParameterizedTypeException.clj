@@ -8,6 +8,6 @@
 
 (defn ->malformed-parameterized-type-exception
   "Constructor."
-  ([]
+  (^MalformedParameterizedTypeException []
     (new MalformedParameterizedTypeException )))
 

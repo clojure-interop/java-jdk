@@ -11,8 +11,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^StackOverflowError [^java.lang.String s]
     (new StackOverflowError s))
-  ([]
+  (^StackOverflowError []
     (new StackOverflowError )))
 

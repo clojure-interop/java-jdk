@@ -38,27 +38,27 @@
    against subsequent modification.
 
   expression - the XPath expression to be evaluated - `java.lang.String`
-  filter - the filter operation (XPathType.Filter.INTERSECT, XPathType.Filter.SUBTRACT, or XPathType.Filter.UNION) - `javax.xml.crypto.dsig.spec.XPathType.Filter`
+  filter - the filter operation (XPathType.Filter.INTERSECT, XPathType.Filter.SUBTRACT, or XPathType.Filter.UNION) - `javax.xml.crypto.dsig.spec.XPathType$Filter`
   namespace-map - the map of namespace prefixes. Each key is a namespace prefix String that maps to a corresponding namespace URI String. - `java.util.Map`
 
   throws: java.lang.NullPointerException - if expression, filter or namespaceMap are null"
-  ([^java.lang.String expression ^javax.xml.crypto.dsig.spec.XPathType.Filter filter ^java.util.Map namespace-map]
+  (^XPathType [^java.lang.String expression ^javax.xml.crypto.dsig.spec.XPathType$Filter filter ^java.util.Map namespace-map]
     (new XPathType expression filter namespace-map))
-  ([^java.lang.String expression ^javax.xml.crypto.dsig.spec.XPathType.Filter filter]
+  (^XPathType [^java.lang.String expression ^javax.xml.crypto.dsig.spec.XPathType$Filter filter]
     (new XPathType expression filter)))
 
 (defn get-expression
   "Returns the XPath expression to be evaluated.
 
   returns: the XPath expression to be evaluated - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.spec.XPathType this]
+  (^java.lang.String [^XPathType this]
     (-> this (.getExpression))))
 
 (defn get-filter
   "Returns the filter operation.
 
-  returns: the filter operation - `javax.xml.crypto.dsig.spec.XPathType.Filter`"
-  (^javax.xml.crypto.dsig.spec.XPathType.Filter [^javax.xml.crypto.dsig.spec.XPathType this]
+  returns: the filter operation - `javax.xml.crypto.dsig.spec.XPathType$Filter`"
+  (^javax.xml.crypto.dsig.spec.XPathType$Filter [^XPathType this]
     (-> this (.getFilter))))
 
 (defn get-namespace-map
@@ -70,6 +70,6 @@
 
   returns: a Map of namespace prefixes to namespace URIs
       (may be empty, but never null) - `java.util.Map`"
-  (^java.util.Map [^javax.xml.crypto.dsig.spec.XPathType this]
+  (^java.util.Map [^XPathType this]
     (-> this (.getNamespaceMap))))
 

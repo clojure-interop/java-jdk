@@ -45,7 +45,7 @@
 
 (defn ->process
   "Constructor."
-  ([]
+  (^Process []
     (new Process )))
 
 (defn get-output-stream
@@ -63,7 +63,7 @@
 
   returns: the output stream connected to the normal input of the
            subprocess - `java.io.OutputStream`"
-  (^java.io.OutputStream [^java.lang.Process this]
+  (^java.io.OutputStream [^Process this]
     (-> this (.getOutputStream))))
 
 (defn get-input-stream
@@ -87,7 +87,7 @@
 
   returns: the input stream connected to the normal output of the
            subprocess - `java.io.InputStream`"
-  (^java.io.InputStream [^java.lang.Process this]
+  (^java.io.InputStream [^Process this]
     (-> this (.getInputStream))))
 
 (defn get-error-stream
@@ -106,7 +106,7 @@
 
   returns: the input stream connected to the error output of
            the subprocess - `java.io.InputStream`"
-  (^java.io.InputStream [^java.lang.Process this]
+  (^java.io.InputStream [^Process this]
     (-> this (.getErrorStream))))
 
 (defn wait-for
@@ -131,9 +131,9 @@
            the waiting time elapsed before the subprocess has exited. - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted while waiting."
-  (^Boolean [^java.lang.Process this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^Process this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.waitFor timeout unit)))
-  (^Integer [^java.lang.Process this]
+  (^Integer [^Process this]
     (-> this (.waitFor))))
 
 (defn exit-value
@@ -144,14 +144,14 @@
            0 indicates normal termination. - `int`
 
   throws: java.lang.IllegalThreadStateException - if the subprocess represented by this Process object has not yet terminated"
-  (^Integer [^java.lang.Process this]
+  (^Integer [^Process this]
     (-> this (.exitValue))))
 
 (defn destroy
   "Kills the subprocess. Whether the subprocess represented by this
    Process object is forcibly terminated or not is
    implementation dependent."
-  ([^java.lang.Process this]
+  ([^Process this]
     (-> this (.destroy))))
 
 (defn destroy-forcibly
@@ -172,7 +172,7 @@
 
   returns: the Process object representing the
            subprocess to be forcibly destroyed. - `java.lang.Process`"
-  (^java.lang.Process [^java.lang.Process this]
+  (^java.lang.Process [^Process this]
     (-> this (.destroyForcibly))))
 
 (defn alive?
@@ -181,6 +181,6 @@
 
   returns: true if the subprocess represented by this
            Process object has not yet terminated. - `boolean`"
-  (^Boolean [^java.lang.Process this]
+  (^Boolean [^Process this]
     (-> this (.isAlive))))
 

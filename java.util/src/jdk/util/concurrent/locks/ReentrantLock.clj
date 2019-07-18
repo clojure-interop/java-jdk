@@ -70,9 +70,9 @@
    given fairness policy.
 
   fair - true if this lock should use a fair ordering policy - `boolean`"
-  ([^Boolean fair]
+  (^ReentrantLock [^Boolean fair]
     (new ReentrantLock fair))
-  ([]
+  (^ReentrantLock []
     (new ReentrantLock )))
 
 (defn locked?
@@ -82,14 +82,14 @@
 
   returns: true if any thread holds this lock and
            false otherwise - `boolean`"
-  (^Boolean [^java.util.concurrent.locks.ReentrantLock this]
+  (^Boolean [^ReentrantLock this]
     (-> this (.isLocked))))
 
 (defn fair?
   "Returns true if this lock has fairness set true.
 
   returns: true if this lock has fairness set true - `boolean`"
-  (^Boolean [^java.util.concurrent.locks.ReentrantLock this]
+  (^Boolean [^ReentrantLock this]
     (-> this (.isFair))))
 
 (defn try-lock
@@ -165,9 +165,9 @@
            the lock could be acquired - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  (^Boolean [^java.util.concurrent.locks.ReentrantLock this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^ReentrantLock this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryLock timeout unit)))
-  (^Boolean [^java.util.concurrent.locks.ReentrantLock this]
+  (^Boolean [^ReentrantLock this]
     (-> this (.tryLock))))
 
 (defn get-queue-length
@@ -179,7 +179,7 @@
    control.
 
   returns: the estimated number of threads waiting for this lock - `int`"
-  (^Integer [^java.util.concurrent.locks.ReentrantLock this]
+  (^Integer [^ReentrantLock this]
     (-> this (.getQueueLength))))
 
 (defn unlock
@@ -191,7 +191,7 @@
    lock then IllegalMonitorStateException is thrown.
 
   throws: java.lang.IllegalMonitorStateException - if the current thread does not hold this lock"
-  ([^java.util.concurrent.locks.ReentrantLock this]
+  ([^ReentrantLock this]
     (-> this (.unlock))))
 
 (defn has-waiters?
@@ -207,7 +207,7 @@
   returns: true if there are any waiting threads - `boolean`
 
   throws: java.lang.IllegalMonitorStateException - if this lock is not held"
-  (^Boolean [^java.util.concurrent.locks.ReentrantLock this ^java.util.concurrent.locks.Condition condition]
+  (^Boolean [^ReentrantLock this ^java.util.concurrent.locks.Condition condition]
     (-> this (.hasWaiters condition))))
 
 (defn new-condition
@@ -241,7 +241,7 @@
    waiting the longest.
 
   returns: the Condition object - `java.util.concurrent.locks.Condition`"
-  (^java.util.concurrent.locks.Condition [^java.util.concurrent.locks.ReentrantLock this]
+  (^java.util.concurrent.locks.Condition [^ReentrantLock this]
     (-> this (.newCondition))))
 
 (defn to-string
@@ -251,7 +251,7 @@
    name of the owning thread.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.locks.ReentrantLock this]
+  (^java.lang.String [^ReentrantLock this]
     (-> this (.toString))))
 
 (defn lock-interruptibly
@@ -299,7 +299,7 @@
    interrupt over normal or reentrant acquisition of the lock.
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  ([^java.util.concurrent.locks.ReentrantLock this]
+  ([^ReentrantLock this]
     (-> this (.lockInterruptibly))))
 
 (defn has-queued-threads?
@@ -311,7 +311,7 @@
 
   returns: true if there may be other threads waiting to
            acquire the lock - `boolean`"
-  (^Boolean [^java.util.concurrent.locks.ReentrantLock this]
+  (^Boolean [^ReentrantLock this]
     (-> this (.hasQueuedThreads))))
 
 (defn lock
@@ -327,7 +327,7 @@
    current thread becomes disabled for thread scheduling
    purposes and lies dormant until the lock has been acquired,
    at which time the lock hold count is set to one."
-  ([^java.util.concurrent.locks.ReentrantLock this]
+  ([^ReentrantLock this]
     (-> this (.lock))))
 
 (defn has-queued-thread?
@@ -342,7 +342,7 @@
   returns: true if the given thread is queued waiting for this lock - `boolean`
 
   throws: java.lang.NullPointerException - if the thread is null"
-  (^Boolean [^java.util.concurrent.locks.ReentrantLock this ^java.lang.Thread thread]
+  (^Boolean [^ReentrantLock this ^java.lang.Thread thread]
     (-> this (.hasQueuedThread thread))))
 
 (defn get-wait-queue-length
@@ -358,7 +358,7 @@
   returns: the estimated number of waiting threads - `int`
 
   throws: java.lang.IllegalMonitorStateException - if this lock is not held"
-  (^Integer [^java.util.concurrent.locks.ReentrantLock this ^java.util.concurrent.locks.Condition condition]
+  (^Integer [^ReentrantLock this ^java.util.concurrent.locks.Condition condition]
     (-> this (.getWaitQueueLength condition))))
 
 (defn held-by-current-thread?
@@ -403,7 +403,7 @@
 
   returns: true if current thread holds this lock and
            false otherwise - `boolean`"
-  (^Boolean [^java.util.concurrent.locks.ReentrantLock this]
+  (^Boolean [^ReentrantLock this]
     (-> this (.isHeldByCurrentThread))))
 
 (defn get-hold-count
@@ -435,6 +435,6 @@
 
   returns: the number of holds on this lock by the current thread,
            or zero if this lock is not held by the current thread - `int`"
-  (^Integer [^java.util.concurrent.locks.ReentrantLock this]
+  (^Integer [^ReentrantLock this]
     (-> this (.getHoldCount))))
 

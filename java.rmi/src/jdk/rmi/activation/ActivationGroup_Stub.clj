@@ -13,7 +13,7 @@
    constructor with its argument, ref.
 
   ref - a remote ref - `java.rmi.server.RemoteRef`"
-  ([^java.rmi.server.RemoteRef ref]
+  (^ActivationGroup_Stub [^java.rmi.server.RemoteRef ref]
     (new ActivationGroup_Stub ref)))
 
 (defn new-instance
@@ -37,6 +37,6 @@
   returns: the result of the invocation - `java.rmi.MarshalledObject`
 
   throws: java.rmi.RemoteException - if invocation results in a RemoteException"
-  (^java.rmi.MarshalledObject [^java.rmi.activation.ActivationGroup_Stub this ^java.rmi.activation.ActivationID id ^java.rmi.activation.ActivationDesc desc]
+  (^java.rmi.MarshalledObject [^ActivationGroup_Stub this ^java.rmi.activation.ActivationID id ^java.rmi.activation.ActivationDesc desc]
     (-> this (.newInstance id desc))))
 

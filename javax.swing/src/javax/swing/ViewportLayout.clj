@@ -21,7 +21,7 @@
 
 (defn ->viewport-layout
   "Constructor."
-  ([]
+  (^ViewportLayout []
     (new ViewportLayout )))
 
 (defn add-layout-component
@@ -29,7 +29,7 @@
 
   name - the name of the component - `java.lang.String`
   c - the the component to be added - `java.awt.Component`"
-  ([^javax.swing.ViewportLayout this ^java.lang.String name ^java.awt.Component c]
+  ([^ViewportLayout this ^java.lang.String name ^java.awt.Component c]
     (-> this (.addLayoutComponent name c))))
 
 (defn remove-layout-component
@@ -37,7 +37,7 @@
    this class.
 
   c - the component to remove - `java.awt.Component`"
-  ([^javax.swing.ViewportLayout this ^java.awt.Component c]
+  ([^ViewportLayout this ^java.awt.Component c]
     (-> this (.removeLayoutComponent c))))
 
 (defn preferred-layout-size
@@ -48,7 +48,7 @@
 
   returns: a Dimension object containing the
             preferred dimensions - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.ViewportLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^ViewportLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn minimum-layout-size
@@ -59,7 +59,7 @@
 
   returns: a Dimension object containing the minimum
             dimensions - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.ViewportLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^ViewportLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn layout-container
@@ -68,6 +68,6 @@
   parent - the container to lay out - `java.awt.Container`
 
   throws: java.awt.AWTError - if the target isn't the container specified to the BoxLayout constructor"
-  ([^javax.swing.ViewportLayout this ^java.awt.Container parent]
+  ([^ViewportLayout this ^java.awt.Container parent]
     (-> this (.layoutContainer parent))))
 

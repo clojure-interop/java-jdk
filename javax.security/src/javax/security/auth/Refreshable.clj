@@ -12,7 +12,7 @@
 
   returns: true if this Object is currently current,
             false otherwise. - `boolean`"
-  (^Boolean [^javax.security.auth.Refreshable this]
+  (^Boolean [^Refreshable this]
     (-> this (.isCurrent))))
 
 (defn refresh
@@ -20,6 +20,6 @@
    Object.
 
   throws: java.lang.SecurityException - if the caller does not have permission to update or extend the validity period for this Object."
-  ([^javax.security.auth.Refreshable this]
+  ([^Refreshable this]
     (-> this (.refresh))))
 

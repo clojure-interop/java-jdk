@@ -10,6 +10,6 @@
 
 (defn ->ssl-context-spi
   "Constructor."
-  ([]
+  (^SSLContextSpi []
     (new SSLContextSpi )))
 

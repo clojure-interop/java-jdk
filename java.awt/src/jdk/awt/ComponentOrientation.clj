@@ -92,7 +92,7 @@
    systems such as Roman.
 
   returns: `boolean`"
-  (^Boolean [^java.awt.ComponentOrientation this]
+  (^Boolean [^ComponentOrientation this]
     (-> this (.isHorizontal))))
 
 (defn left-to-right?
@@ -102,6 +102,6 @@
    systems such as Roman.
 
   returns: `boolean`"
-  (^Boolean [^java.awt.ComponentOrientation this]
+  (^Boolean [^ComponentOrientation this]
     (-> this (.isLeftToRight))))
 

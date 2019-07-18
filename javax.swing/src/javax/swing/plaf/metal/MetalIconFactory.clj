@@ -24,7 +24,7 @@
 
 (defn ->metal-icon-factory
   "Constructor."
-  ([]
+  (^MetalIconFactory []
     (new MetalIconFactory )))
 
 (def *-dark

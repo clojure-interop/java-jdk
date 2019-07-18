@@ -37,7 +37,7 @@
    a reverb return control, and, on each of its source lines, an individual aux
    send and reverb send.
 
-  type: javax.sound.sampled.FloatControl.Type"
+  type: javax.sound.sampled.FloatControl$Type"
   FloatControl$Type/MASTER_GAIN)
 
 (def *-aux-send
@@ -45,7 +45,7 @@
 
   Represents a control for the auxiliary send gain on a line.
 
-  type: javax.sound.sampled.FloatControl.Type"
+  type: javax.sound.sampled.FloatControl$Type"
   FloatControl$Type/AUX_SEND)
 
 (def *-aux-return
@@ -53,7 +53,7 @@
 
   Represents a control for the auxiliary return gain on a line.
 
-  type: javax.sound.sampled.FloatControl.Type"
+  type: javax.sound.sampled.FloatControl$Type"
   FloatControl$Type/AUX_RETURN)
 
 (def *-reverb-send
@@ -63,7 +63,7 @@
    This control may be used to affect how much
    of a line's signal is directed to a mixer's internal reverberation unit.
 
-  type: javax.sound.sampled.FloatControl.Type"
+  type: javax.sound.sampled.FloatControl$Type"
   FloatControl$Type/REVERB_SEND)
 
 (def *-reverb-return
@@ -73,7 +73,7 @@
    This control may be used to control the relative amplitude
    of the signal returned from an internal reverberation unit.
 
-  type: javax.sound.sampled.FloatControl.Type"
+  type: javax.sound.sampled.FloatControl$Type"
   FloatControl$Type/REVERB_RETURN)
 
 (def *-volume
@@ -81,7 +81,7 @@
 
   Represents a control for the volume on a line.
 
-  type: javax.sound.sampled.FloatControl.Type"
+  type: javax.sound.sampled.FloatControl$Type"
   FloatControl$Type/VOLUME)
 
 (def *-pan
@@ -93,7 +93,7 @@
    (left channel only) to 1.0 (right channel
    only).  The default is 0.0 (centered).
 
-  type: javax.sound.sampled.FloatControl.Type"
+  type: javax.sound.sampled.FloatControl$Type"
   FloatControl$Type/PAN)
 
 (def *-balance
@@ -103,7 +103,7 @@
    between two stereo speakers.  The valid range of values is -1.0 (left channel only) to 1.0 (right channel
    only).  The default is 0.0 (centered).
 
-  type: javax.sound.sampled.FloatControl.Type"
+  type: javax.sound.sampled.FloatControl$Type"
   FloatControl$Type/BALANCE)
 
 (def *-sample-rate
@@ -124,6 +124,6 @@
    rate has the effect of doubling the frequencies in the sound's spectrum,
    which raises the pitch by an octave.
 
-  type: javax.sound.sampled.FloatControl.Type"
+  type: javax.sound.sampled.FloatControl$Type"
   FloatControl$Type/SAMPLE_RATE)
 

@@ -16,11 +16,11 @@
 
   rule - the winding rule - `int`
   initial-capacity - the estimate for the number of path segments in the path - `int`"
-  ([^Integer rule ^Integer initial-capacity]
+  (^Path2D$Float [^Integer rule ^Integer initial-capacity]
     (new Path2D$Float rule initial-capacity))
-  ([^Integer rule]
+  (^Path2D$Float [^Integer rule]
     (new Path2D$Float rule))
-  ([]
+  (^Path2D$Float []
     (new Path2D$Float )))
 
 (defn get-path-iterator
@@ -50,7 +50,7 @@
 
   returns: a new PathIterator object, which independently
             traverses the geometry of the Shape. - `java.awt.geom.PathIterator`"
-  (^java.awt.geom.PathIterator [^java.awt.geom.Path2D$Float this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^Path2D$Float this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn line-to
@@ -60,7 +60,7 @@
 
   x - the specified X coordinate - `double`
   y - the specified Y coordinate - `double`"
-  ([^java.awt.geom.Path2D$Float this ^Double x ^Double y]
+  ([^Path2D$Float this ^Double x ^Double y]
     (-> this (.lineTo x y))))
 
 (defn transform
@@ -70,7 +70,7 @@
    boundary defined by this object.
 
   at - the AffineTransform used to transform the area - `java.awt.geom.AffineTransform`"
-  ([^java.awt.geom.Path2D$Float this ^java.awt.geom.AffineTransform at]
+  ([^Path2D$Float this ^java.awt.geom.AffineTransform at]
     (-> this (.transform at))))
 
 (defn curve-to
@@ -87,7 +87,7 @@
   y-2 - the Y coordinate of the second Bézier control point - `double`
   x-3 - the X coordinate of the final end point - `double`
   y-3 - the Y coordinate of the final end point - `double`"
-  ([^java.awt.geom.Path2D$Float this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2 ^Double x-3 ^Double y-3]
+  ([^Path2D$Float this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2 ^Double x-3 ^Double y-3]
     (-> this (.curveTo x-1 y-1 x-2 y-2 x-3 y-3))))
 
 (defn get-bounds-2-d
@@ -130,7 +130,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.geom.Path2D$Float this]
+  (^java.awt.geom.Rectangle2D [^Path2D$Float this]
     (-> this (.getBounds2D))))
 
 (defn move-to
@@ -139,7 +139,7 @@
 
   x - the specified X coordinate - `double`
   y - the specified Y coordinate - `double`"
-  ([^java.awt.geom.Path2D$Float this ^Double x ^Double y]
+  ([^Path2D$Float this ^Double x ^Double y]
     (-> this (.moveTo x y))))
 
 (defn append
@@ -160,7 +160,7 @@
 
   pi - the PathIterator whose geometry is appended to this path - `java.awt.geom.PathIterator`
   connect - a boolean to control whether or not to turn an initial moveTo segment into a lineTo segment to connect the new geometry to the existing path - `boolean`"
-  ([^java.awt.geom.Path2D$Float this ^java.awt.geom.PathIterator pi ^Boolean connect]
+  ([^Path2D$Float this ^java.awt.geom.PathIterator pi ^Boolean connect]
     (-> this (.append pi connect))))
 
 (defn clone
@@ -169,7 +169,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.OutOfMemoryError - if there is not enough memory."
-  (^java.lang.Object [^java.awt.geom.Path2D$Float this]
+  (^java.lang.Object [^Path2D$Float this]
     (-> this (.clone))))
 
 (defn quad-to
@@ -184,6 +184,6 @@
   y-1 - the Y coordinate of the quadratic control point - `double`
   x-2 - the X coordinate of the final end point - `double`
   y-2 - the Y coordinate of the final end point - `double`"
-  ([^java.awt.geom.Path2D$Float this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
+  ([^Path2D$Float this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
     (-> this (.quadTo x-1 y-1 x-2 y-2))))
 

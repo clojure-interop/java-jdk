@@ -311,7 +311,7 @@
 
   connection - the MBeanServerConnection to forward to. - `javax.management.MBeanServerConnection`
   mxbean-name - the name of a platform MXBean within connection to forward to. mxbeanName must be in the format of ObjectName. - `java.lang.String`
-  mxbean-interface - the MXBean interface to be implemented by the proxy. - `java.lang.Class<T>`
+  mxbean-interface - the MXBean interface to be implemented by the proxy. - `java.lang.Class`
 
   returns: a proxy for a platform MXBean interface of a
    given MXBean name
@@ -464,7 +464,7 @@
        getPlatformMXBeans(connection, mxbeanInterface).get(0);
 
   connection - the MBeanServerConnection to forward to. - `javax.management.MBeanServerConnection`
-  mxbean-interface - a management interface for a platform MXBean with one single instance in the Java virtual machine being monitored, if implemented. - `java.lang.Class<T>`
+  mxbean-interface - a management interface for a platform MXBean with one single instance in the Java virtual machine being monitored, if implemented. - `java.lang.Class`
 
   returns: the platform MXBean proxy for
    forwarding the method calls of the mxbeanInterface
@@ -488,7 +488,7 @@
    the list returned is in the same order as previous invocations.
 
   connection - the MBeanServerConnection to forward to. - `javax.management.MBeanServerConnection`
-  mxbean-interface - a management interface for a platform MXBean - `java.lang.Class<T>`
+  mxbean-interface - a management interface for a platform MXBean - `java.lang.Class`
 
   returns: the list of platform MXBean proxies for
    forwarding the method calls of the mxbeanInterface

@@ -38,11 +38,11 @@
   hints - the RenderingHints object used to control the color conversion, or null - `java.awt.RenderingHints`
 
   throws: java.lang.NullPointerException - if either srcCspace or dstCspace is null"
-  ([^java.awt.color.ColorSpace src-cspace ^java.awt.color.ColorSpace dst-cspace ^java.awt.RenderingHints hints]
+  (^ColorConvertOp [^java.awt.color.ColorSpace src-cspace ^java.awt.color.ColorSpace dst-cspace ^java.awt.RenderingHints hints]
     (new ColorConvertOp src-cspace dst-cspace hints))
-  ([^java.awt.color.ColorSpace cspace ^java.awt.RenderingHints hints]
+  (^ColorConvertOp [^java.awt.color.ColorSpace cspace ^java.awt.RenderingHints hints]
     (new ColorConvertOp cspace hints))
-  ([^java.awt.RenderingHints hints]
+  (^ColorConvertOp [^java.awt.RenderingHints hints]
     (new ColorConvertOp hints)))
 
 (defn get-icc-profiles
@@ -54,7 +54,7 @@
            ColorConvertOp, or null if this
            ColorConvertOp was not constructed with an
            array of ICC_Profile objects. - `java.awt.color.ICC_Profile[]`"
-  ([^java.awt.image.ColorConvertOp this]
+  ([^ColorConvertOp this]
     (-> this (.getICC_Profiles))))
 
 (defn filter
@@ -70,7 +70,7 @@
            if dest is null - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if dest is null and this op was constructed using the constructor which takes only a RenderingHints argument, since the operation is ill defined."
-  (^java.awt.image.BufferedImage [^java.awt.image.ColorConvertOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dest]
+  (^java.awt.image.BufferedImage [^ColorConvertOp this ^java.awt.image.BufferedImage src ^java.awt.image.BufferedImage dest]
     (-> this (.filter src dest))))
 
 (defn get-bounds-2-d
@@ -82,7 +82,7 @@
 
   returns: a Rectangle2D that is the bounding box
            of the destination, given the specified src - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.image.ColorConvertOp this ^java.awt.image.BufferedImage src]
+  (^java.awt.geom.Rectangle2D [^ColorConvertOp this ^java.awt.image.BufferedImage src]
     (-> this (.getBounds2D src))))
 
 (defn create-compatible-dest-image
@@ -96,7 +96,7 @@
    number of bands from the specified src. - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if destCM is null and this ColorConvertOp was created without any ICC_Profile or ColorSpace defined for the destination"
-  (^java.awt.image.BufferedImage [^java.awt.image.ColorConvertOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
+  (^java.awt.image.BufferedImage [^ColorConvertOp this ^java.awt.image.BufferedImage src ^java.awt.image.ColorModel dest-cm]
     (-> this (.createCompatibleDestImage src dest-cm))))
 
 (defn create-compatible-dest-raster
@@ -109,7 +109,7 @@
            of bands from the specified src - `java.awt.image.WritableRaster`
 
   throws: java.lang.IllegalArgumentException - if this ColorConvertOp was created without sufficient information to define the dst and src color spaces"
-  (^java.awt.image.WritableRaster [^java.awt.image.ColorConvertOp this ^java.awt.image.Raster src]
+  (^java.awt.image.WritableRaster [^ColorConvertOp this ^java.awt.image.Raster src]
     (-> this (.createCompatibleDestRaster src))))
 
 (defn get-point-2-d
@@ -124,7 +124,7 @@
 
   returns: dstPt after setting its location to be
            the same as srcPt - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.image.ColorConvertOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
+  (^java.awt.geom.Point2D [^ColorConvertOp this ^java.awt.geom.Point2D src-pt ^java.awt.geom.Point2D dst-pt]
     (-> this (.getPoint2D src-pt dst-pt))))
 
 (defn get-rendering-hints
@@ -132,6 +132,6 @@
 
   returns: the RenderingHints object of this
            ColorConvertOp - `java.awt.RenderingHints`"
-  (^java.awt.RenderingHints [^java.awt.image.ColorConvertOp this]
+  (^java.awt.RenderingHints [^ColorConvertOp this]
     (-> this (.getRenderingHints))))
 

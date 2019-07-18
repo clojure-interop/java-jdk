@@ -74,7 +74,7 @@
   source - The MBeanServerNotification object responsible for forwarding MBean server notification. - `java.lang.Object`
   sequence-number - A sequence number that can be used to order received notifications. - `long`
   object-name - The object name of the MBean that caused the notification. - `javax.management.ObjectName`"
-  ([^java.lang.String type ^java.lang.Object source ^Long sequence-number ^javax.management.ObjectName object-name]
+  (^MBeanServerNotification [^java.lang.String type ^java.lang.Object source ^Long sequence-number ^javax.management.ObjectName object-name]
     (new MBeanServerNotification type source sequence-number object-name)))
 
 (def *-registration-notification
@@ -99,13 +99,13 @@
   "Returns the  object name of the MBean that caused the notification.
 
   returns: the object name of the MBean that caused the notification. - `javax.management.ObjectName`"
-  (^javax.management.ObjectName [^javax.management.MBeanServerNotification this]
+  (^javax.management.ObjectName [^MBeanServerNotification this]
     (-> this (.getMBeanName))))
 
 (defn to-string
   "Description copied from class: Notification
 
   returns: A String representation of this notification. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanServerNotification this]
+  (^java.lang.String [^MBeanServerNotification this]
     (-> this (.toString))))
 

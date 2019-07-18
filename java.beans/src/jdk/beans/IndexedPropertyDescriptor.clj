@@ -17,18 +17,18 @@
    and non-indexed.
 
   property-name - The programmatic name of the property. - `java.lang.String`
-  bean-class - The Class object for the target bean. - `java.lang.Class<?>`
+  bean-class - The Class object for the target bean. - `java.lang.Class`
   read-method-name - The name of the method used for reading the property values as an array. May be null if the property is write-only or must be indexed. - `java.lang.String`
   write-method-name - The name of the method used for writing the property values as an array. May be null if the property is read-only or must be indexed. - `java.lang.String`
   indexed-read-method-name - The name of the method used for reading an indexed property value. May be null if the property is write-only. - `java.lang.String`
   indexed-write-method-name - The name of the method used for writing an indexed property value. May be null if the property is read-only. - `java.lang.String`
 
   throws: java.beans.IntrospectionException - if an exception occurs during introspection."
-  ([^java.lang.String property-name ^java.lang.Class bean-class ^java.lang.String read-method-name ^java.lang.String write-method-name ^java.lang.String indexed-read-method-name ^java.lang.String indexed-write-method-name]
+  (^IndexedPropertyDescriptor [^java.lang.String property-name ^java.lang.Class bean-class ^java.lang.String read-method-name ^java.lang.String write-method-name ^java.lang.String indexed-read-method-name ^java.lang.String indexed-write-method-name]
     (new IndexedPropertyDescriptor property-name bean-class read-method-name write-method-name indexed-read-method-name indexed-write-method-name))
-  ([^java.lang.String property-name ^java.lang.reflect.Method read-method ^java.lang.reflect.Method write-method ^java.lang.reflect.Method indexed-read-method ^java.lang.reflect.Method indexed-write-method]
+  (^IndexedPropertyDescriptor [^java.lang.String property-name ^java.lang.reflect.Method read-method ^java.lang.reflect.Method write-method ^java.lang.reflect.Method indexed-read-method ^java.lang.reflect.Method indexed-write-method]
     (new IndexedPropertyDescriptor property-name read-method write-method indexed-read-method indexed-write-method))
-  ([^java.lang.String property-name ^java.lang.Class bean-class]
+  (^IndexedPropertyDescriptor [^java.lang.String property-name ^java.lang.Class bean-class]
     (new IndexedPropertyDescriptor property-name bean-class)))
 
 (defn get-indexed-read-method
@@ -38,7 +38,7 @@
   returns: The method that should be used to read an indexed
    property value.
    May return null if the property isn't indexed or is write-only. - `java.lang.reflect.Method`"
-  (^java.lang.reflect.Method [^java.beans.IndexedPropertyDescriptor this]
+  (^java.lang.reflect.Method [^IndexedPropertyDescriptor this]
     (-> this (.getIndexedReadMethod))))
 
 (defn set-indexed-read-method
@@ -47,7 +47,7 @@
   read-method - The new indexed read method. - `java.lang.reflect.Method`
 
   throws: java.beans.IntrospectionException - if an exception occurs during introspection."
-  ([^java.beans.IndexedPropertyDescriptor this ^java.lang.reflect.Method read-method]
+  ([^IndexedPropertyDescriptor this ^java.lang.reflect.Method read-method]
     (-> this (.setIndexedReadMethod read-method))))
 
 (defn get-indexed-write-method
@@ -56,7 +56,7 @@
   returns: The method that should be used to write an indexed
    property value.
    May return null if the property isn't indexed or is read-only. - `java.lang.reflect.Method`"
-  (^java.lang.reflect.Method [^java.beans.IndexedPropertyDescriptor this]
+  (^java.lang.reflect.Method [^IndexedPropertyDescriptor this]
     (-> this (.getIndexedWriteMethod))))
 
 (defn set-indexed-write-method
@@ -65,7 +65,7 @@
   write-method - The new indexed write method. - `java.lang.reflect.Method`
 
   throws: java.beans.IntrospectionException - if an exception occurs during introspection."
-  ([^java.beans.IndexedPropertyDescriptor this ^java.lang.reflect.Method write-method]
+  ([^IndexedPropertyDescriptor this ^java.lang.reflect.Method write-method]
     (-> this (.setIndexedWriteMethod write-method))))
 
 (defn get-indexed-property-type
@@ -77,7 +77,7 @@
 
   returns: the Class object that represents the Java type info,
            or null if the type cannot be determined - `java.lang.Class<?>`"
-  (^java.lang.Class [^java.beans.IndexedPropertyDescriptor this]
+  (^java.lang.Class [^IndexedPropertyDescriptor this]
     (-> this (.getIndexedPropertyType))))
 
 (defn equals
@@ -90,7 +90,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.beans.IndexedPropertyDescriptor this ^java.lang.Object obj]
+  (^Boolean [^IndexedPropertyDescriptor this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -98,6 +98,6 @@
    See Object.hashCode() for a complete description.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.beans.IndexedPropertyDescriptor this]
+  (^Integer [^IndexedPropertyDescriptor this]
     (-> this (.hashCode))))
 

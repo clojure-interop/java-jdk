@@ -7,7 +7,7 @@
 
 (defn ->multi-file-chooser-ui
   "Constructor."
-  ([]
+  (^MultiFileChooserUI []
     (new MultiFileChooserUI )))
 
 (defn *create-ui
@@ -25,7 +25,7 @@
   "Invokes the installUI method on each UI handled by this object.
 
   a - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JComponent a]
+  ([^MultiFileChooserUI this ^javax.swing.JComponent a]
     (-> this (.installUI a))))
 
 (defn get-minimum-size
@@ -35,7 +35,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiFileChooserUI this ^javax.swing.JComponent a]
     (-> this (.getMinimumSize a))))
 
 (defn get-maximum-size
@@ -45,7 +45,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiFileChooserUI this ^javax.swing.JComponent a]
     (-> this (.getMaximumSize a))))
 
 (defn get-accessible-child
@@ -56,7 +56,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.accessibility.Accessible`"
-  (^javax.accessibility.Accessible [^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JComponent a ^Integer b]
+  (^javax.accessibility.Accessible [^MultiFileChooserUI this ^javax.swing.JComponent a ^Integer b]
     (-> this (.getAccessibleChild a b))))
 
 (defn get-u-is
@@ -65,7 +65,7 @@
    UIs on components.
 
   returns: `javax.swing.plaf.ComponentUI[]`"
-  ([^javax.swing.plaf.multi.MultiFileChooserUI this]
+  ([^MultiFileChooserUI this]
     (-> this (.getUIs))))
 
 (defn get-approve-button-text
@@ -75,14 +75,14 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JFileChooser a]
+  (^java.lang.String [^MultiFileChooserUI this ^javax.swing.JFileChooser a]
     (-> this (.getApproveButtonText a))))
 
 (defn uninstall-ui
   "Invokes the uninstallUI method on each UI handled by this object.
 
   a - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JComponent a]
+  ([^MultiFileChooserUI this ^javax.swing.JComponent a]
     (-> this (.uninstallUI a))))
 
 (defn contains
@@ -94,7 +94,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  (^Boolean [^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
+  (^Boolean [^MultiFileChooserUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
     (-> this (.contains a b c))))
 
 (defn get-accept-all-file-filter
@@ -104,7 +104,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.swing.filechooser.FileFilter`"
-  (^javax.swing.filechooser.FileFilter [^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JFileChooser a]
+  (^javax.swing.filechooser.FileFilter [^MultiFileChooserUI this ^javax.swing.JFileChooser a]
     (-> this (.getAcceptAllFileFilter a))))
 
 (defn update
@@ -112,7 +112,7 @@
 
   a - the Graphics context in which to paint - `java.awt.Graphics`
   b - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiFileChooserUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
+  ([^MultiFileChooserUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
     (-> this (.update a b))))
 
 (defn get-dialog-title
@@ -122,7 +122,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JFileChooser a]
+  (^java.lang.String [^MultiFileChooserUI this ^javax.swing.JFileChooser a]
     (-> this (.getDialogTitle a))))
 
 (defn ensure-file-is-visible
@@ -130,7 +130,7 @@
 
   a - `javax.swing.JFileChooser`
   b - `java.io.File`"
-  ([^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JFileChooser a ^java.io.File b]
+  ([^MultiFileChooserUI this ^javax.swing.JFileChooser a ^java.io.File b]
     (-> this (.ensureFileIsVisible a b))))
 
 (defn get-accessible-children-count
@@ -140,14 +140,14 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  (^Integer [^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JComponent a]
+  (^Integer [^MultiFileChooserUI this ^javax.swing.JComponent a]
     (-> this (.getAccessibleChildrenCount a))))
 
 (defn rescan-current-directory
   "Invokes the rescanCurrentDirectory method on each UI handled by this object.
 
   a - `javax.swing.JFileChooser`"
-  ([^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JFileChooser a]
+  ([^MultiFileChooserUI this ^javax.swing.JFileChooser a]
     (-> this (.rescanCurrentDirectory a))))
 
 (defn paint
@@ -155,7 +155,7 @@
 
   a - the Graphics context in which to paint - `java.awt.Graphics`
   b - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiFileChooserUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
+  ([^MultiFileChooserUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
     (-> this (.paint a b))))
 
 (defn get-file-view
@@ -165,7 +165,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.swing.filechooser.FileView`"
-  (^javax.swing.filechooser.FileView [^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JFileChooser a]
+  (^javax.swing.filechooser.FileView [^MultiFileChooserUI this ^javax.swing.JFileChooser a]
     (-> this (.getFileView a))))
 
 (defn get-preferred-size
@@ -175,6 +175,6 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiFileChooserUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiFileChooserUI this ^javax.swing.JComponent a]
     (-> this (.getPreferredSize a))))
 

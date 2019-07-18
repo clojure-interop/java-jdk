@@ -16,14 +16,14 @@
   "Constructor.
 
   Creates a default table column model."
-  ([]
+  (^DefaultTableColumnModel []
     (new DefaultTableColumnModel )))
 
 (defn set-column-selection-allowed
   "Sets whether column selection is allowed.  The default is false.
 
   flag - true if column selection will be allowed, false otherwise - `boolean`"
-  ([^javax.swing.table.DefaultTableColumnModel this ^Boolean flag]
+  ([^DefaultTableColumnModel this ^Boolean flag]
     (-> this (.setColumnSelectionAllowed flag))))
 
 (defn get-column
@@ -34,21 +34,21 @@
 
   returns: the TableColumn object for the column
                             at columnIndex - `javax.swing.table.TableColumn`"
-  (^javax.swing.table.TableColumn [^javax.swing.table.DefaultTableColumnModel this ^Integer column-index]
+  (^javax.swing.table.TableColumn [^DefaultTableColumnModel this ^Integer column-index]
     (-> this (.getColumn column-index))))
 
 (defn get-columns
   "Returns an Enumeration of all the columns in the model.
 
   returns: an Enumeration of the columns in the model - `java.util.Enumeration<javax.swing.table.TableColumn>`"
-  (^java.util.Enumeration [^javax.swing.table.DefaultTableColumnModel this]
+  (^java.util.Enumeration [^DefaultTableColumnModel this]
     (-> this (.getColumns))))
 
 (defn get-column-count
   "Returns the number of columns in the tableColumns array.
 
   returns: the number of columns in the tableColumns array - `int`"
-  (^Integer [^javax.swing.table.DefaultTableColumnModel this]
+  (^Integer [^DefaultTableColumnModel this]
     (-> this (.getColumnCount))))
 
 (defn set-selection-model
@@ -61,7 +61,7 @@
   new-model - the new selection model - `javax.swing.ListSelectionModel`
 
   throws: java.lang.IllegalArgumentException - if newModel is null"
-  ([^javax.swing.table.DefaultTableColumnModel this ^javax.swing.ListSelectionModel new-model]
+  ([^DefaultTableColumnModel this ^javax.swing.ListSelectionModel new-model]
     (-> this (.setSelectionModel new-model))))
 
 (defn get-column-selection-allowed?
@@ -69,7 +69,7 @@
    The default is false.
 
   returns: the columnSelectionAllowed property - `boolean`"
-  (^Boolean [^javax.swing.table.DefaultTableColumnModel this]
+  (^Boolean [^DefaultTableColumnModel this]
     (-> this (.getColumnSelectionAllowed))))
 
 (defn remove-column
@@ -82,7 +82,7 @@
     event to its listeners.
 
   column - the TableColumn to be removed - `javax.swing.table.TableColumn`"
-  ([^javax.swing.table.DefaultTableColumnModel this ^javax.swing.table.TableColumn column]
+  ([^DefaultTableColumnModel this ^javax.swing.table.TableColumn column]
     (-> this (.removeColumn column))))
 
 (defn property-change
@@ -90,14 +90,14 @@
    to the column width or preferred column width.
 
   evt - PropertyChangeEvent - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.table.DefaultTableColumnModel this ^java.beans.PropertyChangeEvent evt]
+  ([^DefaultTableColumnModel this ^java.beans.PropertyChangeEvent evt]
     (-> this (.propertyChange evt))))
 
 (defn remove-column-model-listener
   "Removes a listener for table column model events.
 
   x - a TableColumnModelListener object - `javax.swing.event.TableColumnModelListener`"
-  ([^javax.swing.table.DefaultTableColumnModel this ^javax.swing.event.TableColumnModelListener x]
+  ([^DefaultTableColumnModel this ^javax.swing.event.TableColumnModelListener x]
     (-> this (.removeColumnModelListener x))))
 
 (defn get-selection-model
@@ -106,7 +106,7 @@
 
   returns: the object that provides column selection state.  Or
             null if row selection is not allowed. - `javax.swing.ListSelectionModel`"
-  (^javax.swing.ListSelectionModel [^javax.swing.table.DefaultTableColumnModel this]
+  (^javax.swing.ListSelectionModel [^DefaultTableColumnModel this]
     (-> this (.getSelectionModel))))
 
 (defn value-changed
@@ -115,14 +115,14 @@
    selection change.
 
   e - the change event - `javax.swing.event.ListSelectionEvent`"
-  ([^javax.swing.table.DefaultTableColumnModel this ^javax.swing.event.ListSelectionEvent e]
+  ([^DefaultTableColumnModel this ^javax.swing.event.ListSelectionEvent e]
     (-> this (.valueChanged e))))
 
 (defn get-selected-column-count
   "Returns the number of columns selected.
 
   returns: the number of columns selected - `int`"
-  (^Integer [^javax.swing.table.DefaultTableColumnModel this]
+  (^Integer [^DefaultTableColumnModel this]
     (-> this (.getSelectedColumnCount))))
 
 (defn move-column
@@ -138,7 +138,7 @@
   new-index - new index to move the column - `int`
 
   throws: java.lang.IllegalArgumentException - if column or newIndex are not in the valid range"
-  ([^javax.swing.table.DefaultTableColumnModel this ^Integer column-index ^Integer new-index]
+  ([^DefaultTableColumnModel this ^Integer column-index ^Integer new-index]
     (-> this (.moveColumn column-index new-index))))
 
 (defn add-column
@@ -150,7 +150,7 @@
   a-column - the TableColumn to be added - `javax.swing.table.TableColumn`
 
   throws: java.lang.IllegalArgumentException - if aColumn is null"
-  ([^javax.swing.table.DefaultTableColumnModel this ^javax.swing.table.TableColumn a-column]
+  ([^DefaultTableColumnModel this ^javax.swing.table.TableColumn a-column]
     (-> this (.addColumn a-column))))
 
 (defn set-column-margin
@@ -159,7 +159,7 @@
    listeners.
 
   new-margin - the new margin width, in pixels - `int`"
-  ([^javax.swing.table.DefaultTableColumnModel this ^Integer new-margin]
+  ([^DefaultTableColumnModel this ^Integer new-margin]
     (-> this (.setColumnMargin new-margin))))
 
 (defn get-column-model-listeners
@@ -169,7 +169,7 @@
   returns: all of this default table column model's ColumnModelListeners
            or an empty
            array if no column model listeners are currently registered - `javax.swing.event.TableColumnModelListener[]`"
-  ([^javax.swing.table.DefaultTableColumnModel this]
+  ([^DefaultTableColumnModel this]
     (-> this (.getColumnModelListeners))))
 
 (defn get-column-margin
@@ -177,7 +177,7 @@
    The default columnMargin is 1.
 
   returns: the maximum width for the TableColumn - `int`"
-  (^Integer [^javax.swing.table.DefaultTableColumnModel this]
+  (^Integer [^DefaultTableColumnModel this]
     (-> this (.getColumnMargin))))
 
 (defn get-selected-columns
@@ -187,14 +187,14 @@
   returns: an array of selected columns or an empty array if nothing
                     is selected or the selectionModel is
                     null - `int[]`"
-  ([^javax.swing.table.DefaultTableColumnModel this]
+  ([^DefaultTableColumnModel this]
     (-> this (.getSelectedColumns))))
 
 (defn get-total-column-width
   "Returns the total combined width of all columns.
 
   returns: the totalColumnWidth property - `int`"
-  (^Integer [^javax.swing.table.DefaultTableColumnModel this]
+  (^Integer [^DefaultTableColumnModel this]
     (-> this (.getTotalColumnWidth))))
 
 (defn get-column-index-at-x
@@ -218,7 +218,7 @@
   x - the horizontal location of interest - `int`
 
   returns: the index of the column or -1 if no column is found - `int`"
-  (^Integer [^javax.swing.table.DefaultTableColumnModel this ^Integer x]
+  (^Integer [^DefaultTableColumnModel this ^Integer x]
     (-> this (.getColumnIndexAtX x))))
 
 (defn get-listeners
@@ -244,7 +244,7 @@
 
    If no such listeners exist, this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners on this model,
@@ -252,14 +252,14 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^javax.swing.table.DefaultTableColumnModel this ^java.lang.Class listener-type]
+  ([^DefaultTableColumnModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn add-column-model-listener
   "Adds a listener for table column model events.
 
   x - a TableColumnModelListener object - `javax.swing.event.TableColumnModelListener`"
-  ([^javax.swing.table.DefaultTableColumnModel this ^javax.swing.event.TableColumnModelListener x]
+  ([^DefaultTableColumnModel this ^javax.swing.event.TableColumnModelListener x]
     (-> this (.addColumnModelListener x))))
 
 (defn get-column-index
@@ -274,6 +274,6 @@
                     is equal to identifier - `int`
 
   throws: java.lang.IllegalArgumentException - if identifier is null, or if no TableColumn has this identifier"
-  (^Integer [^javax.swing.table.DefaultTableColumnModel this ^java.lang.Object identifier]
+  (^Integer [^DefaultTableColumnModel this ^java.lang.Object identifier]
     (-> this (.getColumnIndex identifier))))
 

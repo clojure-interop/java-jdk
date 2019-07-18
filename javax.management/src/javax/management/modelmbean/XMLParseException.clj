@@ -15,10 +15,10 @@
 
   e - the nested exception. - `java.lang.Exception`
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.Exception e ^java.lang.String s]
+  (^XMLParseException [^java.lang.Exception e ^java.lang.String s]
     (new XMLParseException e s))
-  ([^java.lang.String s]
+  (^XMLParseException [^java.lang.String s]
     (new XMLParseException s))
-  ([]
+  (^XMLParseException []
     (new XMLParseException )))
 

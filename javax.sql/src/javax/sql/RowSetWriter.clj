@@ -26,6 +26,6 @@
             if not, which will be the case if there is a conflict - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^javax.sql.RowSetWriter this ^javax.sql.RowSetInternal caller]
+  (^Boolean [^RowSetWriter this ^javax.sql.RowSetInternal caller]
     (-> this (.writeData caller))))
 

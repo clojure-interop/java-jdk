@@ -54,21 +54,21 @@
    This is a concurrent and
    unordered Collector.
 
-  key-mapper - a mapping function to produce keys - `K>`
-  value-mapper - a mapping function to produce values - `U>`
-  merge-function - a merge function, used to resolve collisions between values associated with the same key, as supplied to Map.merge(Object, Object, BiFunction) - `java.util.function.BinaryOperator<U>`
-  map-supplier - a function which returns a new, empty Map into which the results will be inserted - `java.util.function.Supplier<M>`
+  key-mapper - a mapping function to produce keys - `java.util.function.Function`
+  value-mapper - a mapping function to produce values - `java.util.function.Function`
+  merge-function - a merge function, used to resolve collisions between values associated with the same key, as supplied to Map.merge(Object, Object, BiFunction) - `java.util.function.BinaryOperator`
+  map-supplier - a function which returns a new, empty Map into which the results will be inserted - `java.util.function.Supplier`
 
   returns: a concurrent, unordered Collector which collects elements into a
    ConcurrentMap whose keys are the result of applying a key mapping
    function to the input elements, and whose values are the result of
    applying a value mapping function to all input elements equal to the key
    and combining them using the merge function - `<T,K,U,M extends java.util.concurrent.ConcurrentMap<K,U>> java.util.stream.Collector<T,?,M>`"
-  ([key-mapper value-mapper ^java.util.function.BinaryOperator merge-function ^java.util.function.Supplier map-supplier]
+  ([^java.util.function.Function key-mapper ^java.util.function.Function value-mapper ^java.util.function.BinaryOperator merge-function ^java.util.function.Supplier map-supplier]
     (Collectors/toConcurrentMap key-mapper value-mapper merge-function map-supplier))
-  ([key-mapper value-mapper ^java.util.function.BinaryOperator merge-function]
+  ([^java.util.function.Function key-mapper ^java.util.function.Function value-mapper ^java.util.function.BinaryOperator merge-function]
     (Collectors/toConcurrentMap key-mapper value-mapper merge-function))
-  ([key-mapper value-mapper]
+  ([^java.util.function.Function key-mapper ^java.util.function.Function value-mapper]
     (Collectors/toConcurrentMap key-mapper value-mapper)))
 
 (defn *averaging-double
@@ -83,10 +83,10 @@
    value is a NaN or the sum is at any point a NaN then the
    average will be NaN.
 
-  mapper - a function extracting the property to be summed - `T>`
+  mapper - a function extracting the property to be summed - `java.util.function.ToDoubleFunction`
 
   returns: a Collector that produces the sum of a derived property - `<T> java.util.stream.Collector<T,?,java.lang.Double>`"
-  ([mapper]
+  ([^java.util.function.ToDoubleFunction mapper]
     (Collectors/averagingDouble mapper)))
 
 (defn *averaging-long
@@ -94,10 +94,10 @@
    function applied to the input elements.  If no elements are present,
    the result is 0.
 
-  mapper - a function extracting the property to be summed - `T>`
+  mapper - a function extracting the property to be summed - `java.util.function.ToLongFunction`
 
   returns: a Collector that produces the sum of a derived property - `<T> java.util.stream.Collector<T,?,java.lang.Double>`"
-  ([mapper]
+  ([^java.util.function.ToLongFunction mapper]
     (Collectors/averagingLong mapper)))
 
 (defn *summing-double
@@ -112,10 +112,10 @@
    value is a NaN or the sum is at any point a NaN then the
    sum will be NaN.
 
-  mapper - a function extracting the property to be summed - `T>`
+  mapper - a function extracting the property to be summed - `java.util.function.ToDoubleFunction`
 
   returns: a Collector that produces the sum of a derived property - `<T> java.util.stream.Collector<T,?,java.lang.Double>`"
-  ([mapper]
+  ([^java.util.function.ToDoubleFunction mapper]
     (Collectors/summingDouble mapper)))
 
 (defn *summing-long
@@ -123,10 +123,10 @@
    function applied to the input elements.  If no elements are present,
    the result is 0.
 
-  mapper - a function extracting the property to be summed - `T>`
+  mapper - a function extracting the property to be summed - `java.util.function.ToLongFunction`
 
   returns: a Collector that produces the sum of a derived property - `<T> java.util.stream.Collector<T,?,java.lang.Long>`"
-  ([mapper]
+  ([^java.util.function.ToLongFunction mapper]
     (Collectors/summingLong mapper)))
 
 (defn *joining
@@ -155,11 +155,11 @@
    of the elements before reduction.
 
   identity - the identity value for the reduction (also, the value that is returned when there are no input elements) - `U`
-  mapper - a mapping function to apply to each input value - `U>`
-  op - a BinaryOperator<U> used to reduce the mapped values - `java.util.function.BinaryOperator<U>`
+  mapper - a mapping function to apply to each input value - `java.util.function.Function`
+  op - a BinaryOperator<U> used to reduce the mapped values - `java.util.function.BinaryOperator`
 
   returns: a Collector implementing the map-reduce operation - `<T,U> java.util.stream.Collector<T,?,U>`"
-  ([identity mapper ^java.util.function.BinaryOperator op]
+  ([identity ^java.util.function.Function mapper ^java.util.function.BinaryOperator op]
     (Collectors/reducing identity mapper op))
   ([identity ^java.util.function.BinaryOperator op]
     (Collectors/reducing identity op))
@@ -181,10 +181,10 @@
   "Returns a Collector that produces the minimal element according
    to a given Comparator, described as an Optional<T>.
 
-  comparator - a Comparator for comparing elements - `T>`
+  comparator - a Comparator for comparing elements - `java.util.Comparator`
 
   returns: a Collector that produces the minimal value - `<T> java.util.stream.Collector<T,?,java.util.Optional<T>>`"
-  ([comparator]
+  ([^java.util.Comparator comparator]
     (Collectors/minBy comparator)))
 
 (defn *summing-int
@@ -192,20 +192,20 @@
    function applied to the input elements.  If no elements are present,
    the result is 0.
 
-  mapper - a function extracting the property to be summed - `T>`
+  mapper - a function extracting the property to be summed - `java.util.function.ToIntFunction`
 
   returns: a Collector that produces the sum of a derived property - `<T> java.util.stream.Collector<T,?,java.lang.Integer>`"
-  ([mapper]
+  ([^java.util.function.ToIntFunction mapper]
     (Collectors/summingInt mapper)))
 
 (defn *max-by
   "Returns a Collector that produces the maximal element according
    to a given Comparator, described as an Optional<T>.
 
-  comparator - a Comparator for comparing elements - `T>`
+  comparator - a Comparator for comparing elements - `java.util.Comparator`
 
   returns: a Collector that produces the maximal value - `<T> java.util.stream.Collector<T,?,java.util.Optional<T>>`"
-  ([comparator]
+  ([^java.util.Comparator comparator]
     (Collectors/maxBy comparator)))
 
 (defn *to-collection
@@ -213,7 +213,7 @@
    new Collection, in encounter order.  The Collection is
    created by the provided factory.
 
-  collection-factory - a Supplier which returns a new, empty Collection of the appropriate type - `java.util.function.Supplier<C>`
+  collection-factory - a Supplier which returns a new, empty Collection of the appropriate type - `java.util.function.Supplier`
 
   returns: a Collector which collects all the input elements into a
    Collection, in encounter order - `<T,C extends java.util.Collection<T>> java.util.stream.Collector<T,?,C>`"
@@ -259,16 +259,16 @@
            = people.stream().collect(groupingBy(Person::getCity, ConcurrentSkipListMap::new,
                                                 mapping(Person::getLastName, toSet())));
 
-  classifier - a classifier function mapping input elements to keys - `K>`
-  map-factory - a function which, when called, produces a new empty ConcurrentMap of the desired type - `java.util.function.Supplier<M>`
-  downstream - a Collector implementing the downstream reduction - `T,A,D>`
+  classifier - a classifier function mapping input elements to keys - `java.util.function.Function`
+  map-factory - a function which, when called, produces a new empty ConcurrentMap of the desired type - `java.util.function.Supplier`
+  downstream - a Collector implementing the downstream reduction - `java.util.stream.Collector`
 
   returns: a concurrent, unordered Collector implementing the cascaded group-by operation - `<T,K,A,D,M extends java.util.concurrent.ConcurrentMap<K,D>> java.util.stream.Collector<T,?,M>`"
-  ([classifier ^java.util.function.Supplier map-factory downstream]
+  ([^java.util.function.Function classifier ^java.util.function.Supplier map-factory ^java.util.stream.Collector downstream]
     (Collectors/groupingByConcurrent classifier map-factory downstream))
-  ([classifier downstream]
+  ([^java.util.function.Function classifier ^java.util.stream.Collector downstream]
     (Collectors/groupingByConcurrent classifier downstream))
-  ([classifier]
+  ([^java.util.function.Function classifier]
     (Collectors/groupingByConcurrent classifier)))
 
 (defn *to-map
@@ -282,21 +282,21 @@
    results are merged using the provided merging function.  The Map
    is created by a provided supplier function.
 
-  key-mapper - a mapping function to produce keys - `K>`
-  value-mapper - a mapping function to produce values - `U>`
-  merge-function - a merge function, used to resolve collisions between values associated with the same key, as supplied to Map.merge(Object, Object, BiFunction) - `java.util.function.BinaryOperator<U>`
-  map-supplier - a function which returns a new, empty Map into which the results will be inserted - `java.util.function.Supplier<M>`
+  key-mapper - a mapping function to produce keys - `java.util.function.Function`
+  value-mapper - a mapping function to produce values - `java.util.function.Function`
+  merge-function - a merge function, used to resolve collisions between values associated with the same key, as supplied to Map.merge(Object, Object, BiFunction) - `java.util.function.BinaryOperator`
+  map-supplier - a function which returns a new, empty Map into which the results will be inserted - `java.util.function.Supplier`
 
   returns: a Collector which collects elements into a Map
    whose keys are the result of applying a key mapping function to the input
    elements, and whose values are the result of applying a value mapping
    function to all input elements equal to the key and combining them
    using the merge function - `<T,K,U,M extends java.util.Map<K,U>> java.util.stream.Collector<T,?,M>`"
-  ([key-mapper value-mapper ^java.util.function.BinaryOperator merge-function ^java.util.function.Supplier map-supplier]
+  ([^java.util.function.Function key-mapper ^java.util.function.Function value-mapper ^java.util.function.BinaryOperator merge-function ^java.util.function.Supplier map-supplier]
     (Collectors/toMap key-mapper value-mapper merge-function map-supplier))
-  ([key-mapper value-mapper ^java.util.function.BinaryOperator merge-function]
+  ([^java.util.function.Function key-mapper ^java.util.function.Function value-mapper ^java.util.function.BinaryOperator merge-function]
     (Collectors/toMap key-mapper value-mapper merge-function))
-  ([key-mapper value-mapper]
+  ([^java.util.function.Function key-mapper ^java.util.function.Function value-mapper]
     (Collectors/toMap key-mapper value-mapper)))
 
 (defn *averaging-int
@@ -304,10 +304,10 @@
    function applied to the input elements.  If no elements are present,
    the result is 0.
 
-  mapper - a function extracting the property to be summed - `T>`
+  mapper - a function extracting the property to be summed - `java.util.function.ToIntFunction`
 
   returns: a Collector that produces the sum of a derived property - `<T> java.util.stream.Collector<T,?,java.lang.Double>`"
-  ([mapper]
+  ([^java.util.function.ToIntFunction mapper]
     (Collectors/averagingInt mapper)))
 
 (defn *summarizing-double
@@ -315,10 +315,10 @@
    mapping function to each input element, and returns summary statistics
    for the resulting values.
 
-  mapper - a mapping function to apply to each element - `T>`
+  mapper - a mapping function to apply to each element - `java.util.function.ToDoubleFunction`
 
   returns: a Collector implementing the summary-statistics reduction - `<T> java.util.stream.Collector<T,?,java.util.DoubleSummaryStatistics>`"
-  ([mapper]
+  ([^java.util.function.ToDoubleFunction mapper]
     (Collectors/summarizingDouble mapper)))
 
 (defn *summarizing-int
@@ -326,10 +326,10 @@
    mapping function to each input element, and returns summary statistics
    for the resulting values.
 
-  mapper - a mapping function to apply to each element - `T>`
+  mapper - a mapping function to apply to each element - `java.util.function.ToIntFunction`
 
   returns: a Collector implementing the summary-statistics reduction - `<T> java.util.stream.Collector<T,?,java.util.IntSummaryStatistics>`"
-  ([mapper]
+  ([^java.util.function.ToIntFunction mapper]
     (Collectors/summarizingInt mapper)))
 
 (defn *counting
@@ -346,12 +346,12 @@
    accepting elements of type T by applying a mapping function to
    each input element before accumulation.
 
-  mapper - a function to be applied to the input elements - `U>`
-  downstream - a collector which will accept mapped values - `U,A,R>`
+  mapper - a function to be applied to the input elements - `java.util.function.Function`
+  downstream - a collector which will accept mapped values - `java.util.stream.Collector`
 
   returns: a collector which applies the mapping function to the input
    elements and provides the mapped results to the downstream collector - `<T,U,A,R> java.util.stream.Collector<T,?,R>`"
-  ([mapper downstream]
+  ([^java.util.function.Function mapper ^java.util.stream.Collector downstream]
     (Collectors/mapping mapper downstream)))
 
 (defn *collecting-and-then
@@ -363,8 +363,8 @@
        List<String> people
            = people.stream().collect(collectingAndThen(toList(), Collections::unmodifiableList));
 
-  downstream - a collector - `java.util.stream.Collector<T,A,R>`
-  finisher - a function to be applied to the final result of the downstream collector - `java.util.function.Function<R,RR>`
+  downstream - a collector - `java.util.stream.Collector`
+  finisher - a function to be applied to the final result of the downstream collector - `java.util.function.Function`
 
   returns: a collector which performs the action of the downstream collector,
    followed by an additional finishing step - `<T,A,R,RR> java.util.stream.Collector<T,A,RR>`"
@@ -381,14 +381,14 @@
    There are no guarantees on the type, mutability,
    serializability, or thread-safety of the Map returned.
 
-  predicate - a predicate used for classifying input elements - `T>`
-  downstream - a Collector implementing the downstream reduction - `T,A,D>`
+  predicate - a predicate used for classifying input elements - `java.util.function.Predicate`
+  downstream - a Collector implementing the downstream reduction - `java.util.stream.Collector`
 
   returns: a Collector implementing the cascaded partitioning
            operation - `<T,D,A> java.util.stream.Collector<T,?,java.util.Map<java.lang.Boolean,D>>`"
-  ([predicate downstream]
+  ([^java.util.function.Predicate predicate ^java.util.stream.Collector downstream]
     (Collectors/partitioningBy predicate downstream))
-  ([predicate]
+  ([^java.util.function.Predicate predicate]
     (Collectors/partitioningBy predicate)))
 
 (defn *summarizing-long
@@ -396,10 +396,10 @@
    mapping function to each input element, and returns summary statistics
    for the resulting values.
 
-  mapper - the mapping function to apply to each element - `T>`
+  mapper - the mapping function to apply to each element - `java.util.function.ToLongFunction`
 
   returns: a Collector implementing the summary-statistics reduction - `<T> java.util.stream.Collector<T,?,java.util.LongSummaryStatistics>`"
-  ([mapper]
+  ([^java.util.function.ToLongFunction mapper]
     (Collectors/summarizingLong mapper)))
 
 (defn *grouping-by
@@ -423,15 +423,15 @@
            = people.stream().collect(groupingBy(Person::getCity, TreeMap::new,
                                                 mapping(Person::getLastName, toSet())));
 
-  classifier - a classifier function mapping input elements to keys - `K>`
-  map-factory - a function which, when called, produces a new empty Map of the desired type - `java.util.function.Supplier<M>`
-  downstream - a Collector implementing the downstream reduction - `T,A,D>`
+  classifier - a classifier function mapping input elements to keys - `java.util.function.Function`
+  map-factory - a function which, when called, produces a new empty Map of the desired type - `java.util.function.Supplier`
+  downstream - a Collector implementing the downstream reduction - `java.util.stream.Collector`
 
   returns: a Collector implementing the cascaded group-by operation - `<T,K,D,A,M extends java.util.Map<K,D>> java.util.stream.Collector<T,?,M>`"
-  ([classifier ^java.util.function.Supplier map-factory downstream]
+  ([^java.util.function.Function classifier ^java.util.function.Supplier map-factory ^java.util.stream.Collector downstream]
     (Collectors/groupingBy classifier map-factory downstream))
-  ([classifier downstream]
+  ([^java.util.function.Function classifier ^java.util.stream.Collector downstream]
     (Collectors/groupingBy classifier downstream))
-  ([classifier]
+  ([^java.util.function.Function classifier]
     (Collectors/groupingBy classifier)))
 

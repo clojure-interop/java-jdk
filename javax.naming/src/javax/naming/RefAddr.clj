@@ -19,14 +19,14 @@
   "Retrieves the address type of this address.
 
   returns: The non-null address type of this address. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.RefAddr this]
+  (^java.lang.String [^RefAddr this]
     (-> this (.getType))))
 
 (defn get-content
   "Retrieves the contents of this address.
 
   returns: The possibly null address contents. - `java.lang.Object`"
-  (^java.lang.Object [^javax.naming.RefAddr this]
+  (^java.lang.Object [^RefAddr this]
     (-> this (.getContent))))
 
 (defn equals
@@ -43,7 +43,7 @@
   obj - possibly null obj to check. - `java.lang.Object`
 
   returns: true if obj is equal to this refaddr; false otherwise. - `boolean`"
-  (^Boolean [^javax.naming.RefAddr this ^java.lang.Object obj]
+  (^Boolean [^RefAddr this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -52,7 +52,7 @@
    the hash code of the address contents.
 
   returns: The hash code of this address as an int. - `int`"
-  (^Integer [^javax.naming.RefAddr this]
+  (^Integer [^RefAddr this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -61,6 +61,6 @@
    This representation is intended for display only and not to be parsed.
 
   returns: The non-null string representation of this address. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.RefAddr this]
+  (^java.lang.String [^RefAddr this]
     (-> this (.toString))))
 

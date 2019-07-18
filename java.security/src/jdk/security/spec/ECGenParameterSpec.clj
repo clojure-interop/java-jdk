@@ -17,7 +17,7 @@
   std-name - the standard name of the to-be-generated EC domain parameters. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if stdName is null."
-  ([^java.lang.String std-name]
+  (^ECGenParameterSpec [^java.lang.String std-name]
     (new ECGenParameterSpec std-name)))
 
 (defn get-name
@@ -25,6 +25,6 @@
    to-be-generated EC domain parameters.
 
   returns: the standard or predefined name. - `java.lang.String`"
-  (^java.lang.String [^java.security.spec.ECGenParameterSpec this]
+  (^java.lang.String [^ECGenParameterSpec this]
     (-> this (.getName))))
 

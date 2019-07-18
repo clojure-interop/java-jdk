@@ -5,6 +5,6 @@
 
 (defn ->internal-frame-ui
   "Constructor."
-  ([]
+  (^InternalFrameUI []
     (new InternalFrameUI )))
 

@@ -29,7 +29,7 @@
   first-index - the first index in the range, <= lastIndex - `int`
   last-index - the last index in the range, >= firstIndex - `int`
   is-adjusting - whether or not this is one in a series of multiple events, where changes are still being made - `boolean`"
-  ([^java.lang.Object source ^Integer first-index ^Integer last-index ^Boolean is-adjusting]
+  (^ListSelectionEvent [^java.lang.Object source ^Integer first-index ^Integer last-index ^Boolean is-adjusting]
     (new ListSelectionEvent source first-index last-index is-adjusting)))
 
 (defn get-first-index
@@ -38,7 +38,7 @@
 
   returns: the first row whose selection value may have changed,
            where zero is the first row - `int`"
-  (^Integer [^javax.swing.event.ListSelectionEvent this]
+  (^Integer [^ListSelectionEvent this]
     (-> this (.getFirstIndex))))
 
 (defn get-last-index
@@ -47,7 +47,7 @@
 
   returns: the last row whose selection value may have changed,
            where zero is the first row - `int`"
-  (^Integer [^javax.swing.event.ListSelectionEvent this]
+  (^Integer [^ListSelectionEvent this]
     (-> this (.getLastIndex))))
 
 (defn get-value-is-adjusting?
@@ -58,7 +58,7 @@
 
   returns: true if this is one in a series of multiple events,
            where changes are still being made - `boolean`"
-  (^Boolean [^javax.swing.event.ListSelectionEvent this]
+  (^Boolean [^ListSelectionEvent this]
     (-> this (.getValueIsAdjusting))))
 
 (defn to-string
@@ -66,6 +66,6 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  (^java.lang.String [^javax.swing.event.ListSelectionEvent this]
+  (^java.lang.String [^ListSelectionEvent this]
     (-> this (.toString))))
 

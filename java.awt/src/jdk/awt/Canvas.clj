@@ -16,15 +16,15 @@
   Constructs a new Canvas given a GraphicsConfiguration object.
 
   config - a reference to a GraphicsConfiguration object. - `java.awt.GraphicsConfiguration`"
-  ([^java.awt.GraphicsConfiguration config]
+  (^Canvas [^java.awt.GraphicsConfiguration config]
     (new Canvas config))
-  ([]
+  (^Canvas []
     (new Canvas )))
 
 (defn add-notify
   "Creates the peer of the canvas.  This peer allows you to change the
    user interface of the canvas without changing its functionality."
-  ([^java.awt.Canvas this]
+  ([^Canvas this]
     (-> this (.addNotify))))
 
 (defn paint
@@ -38,7 +38,7 @@
    super.paint(g).
 
   g - the specified Graphics context - `java.awt.Graphics`"
-  ([^java.awt.Canvas this ^java.awt.Graphics g]
+  ([^Canvas this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn update
@@ -53,7 +53,7 @@
    above into their own code.
 
   g - the specified Graphics context - `java.awt.Graphics`"
-  ([^java.awt.Canvas this ^java.awt.Graphics g]
+  ([^Canvas this ^java.awt.Graphics g]
     (-> this (.update g))))
 
 (defn create-buffer-strategy
@@ -69,9 +69,9 @@
   caps - the required capabilities for creating the buffer strategy; cannot be null - `java.awt.BufferCapabilities`
 
   throws: java.awt.AWTException - if the capabilities supplied could not be supported or met; this may happen, for example, if there is not enough accelerated memory currently available, or if page flipping is specified but not possible."
-  ([^java.awt.Canvas this ^Integer num-buffers ^java.awt.BufferCapabilities caps]
+  ([^Canvas this ^Integer num-buffers ^java.awt.BufferCapabilities caps]
     (-> this (.createBufferStrategy num-buffers caps)))
-  ([^java.awt.Canvas this ^Integer num-buffers]
+  ([^Canvas this ^Integer num-buffers]
     (-> this (.createBufferStrategy num-buffers))))
 
 (defn get-buffer-strategy
@@ -80,7 +80,7 @@
    been created or has been disposed.
 
   returns: the buffer strategy used by this component - `java.awt.image.BufferStrategy`"
-  (^java.awt.image.BufferStrategy [^java.awt.Canvas this]
+  (^java.awt.image.BufferStrategy [^Canvas this]
     (-> this (.getBufferStrategy))))
 
 (defn get-accessible-context
@@ -91,6 +91,6 @@
 
   returns: an AccessibleAWTCanvas that serves as the
            AccessibleContext of this Canvas - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^java.awt.Canvas this]
+  (^javax.accessibility.AccessibleContext [^Canvas this]
     (-> this (.getAccessibleContext))))
 

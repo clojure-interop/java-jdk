@@ -20,22 +20,22 @@
   "Returns the underlying model that this Model is
    wrapping.
 
-  returns: the underlying model - `DefaultRowSorter.ModelWrapper.M`"
-  (^DefaultRowSorter.ModelWrapper.M [^javax.swing.DefaultRowSorter$ModelWrapper this]
+  returns: the underlying model - `M`"
+  ([^DefaultRowSorter$ModelWrapper this]
     (-> this (.getModel))))
 
 (defn get-column-count
   "Returns the number of columns in the model.
 
   returns: the number of columns in the model - `int`"
-  (^Integer [^javax.swing.DefaultRowSorter$ModelWrapper this]
+  (^Integer [^DefaultRowSorter$ModelWrapper this]
     (-> this (.getColumnCount))))
 
 (defn get-row-count
   "Returns the number of rows in the model.
 
   returns: the number of rows in the model - `int`"
-  (^Integer [^javax.swing.DefaultRowSorter$ModelWrapper this]
+  (^Integer [^DefaultRowSorter$ModelWrapper this]
     (-> this (.getRowCount))))
 
 (defn get-value-at
@@ -47,7 +47,7 @@
   returns: the value at the specified index - `java.lang.Object`
 
   throws: java.lang.IndexOutOfBoundsException - if the indices are outside the range of the model"
-  (^java.lang.Object [^javax.swing.DefaultRowSorter$ModelWrapper this ^Integer row ^Integer column]
+  (^java.lang.Object [^DefaultRowSorter$ModelWrapper this ^Integer row ^Integer column]
     (-> this (.getValueAt row column))))
 
 (defn get-string-value-at
@@ -63,7 +63,7 @@
   returns: the value at the specified index as a String - `java.lang.String`
 
   throws: java.lang.IndexOutOfBoundsException - if the indices are outside the range of the model"
-  (^java.lang.String [^javax.swing.DefaultRowSorter$ModelWrapper this ^Integer row ^Integer column]
+  (^java.lang.String [^DefaultRowSorter$ModelWrapper this ^Integer row ^Integer column]
     (-> this (.getStringValueAt row column))))
 
 (defn get-identifier
@@ -74,7 +74,7 @@
 
   row - the row to return the identifier for, in terms of the underlying model - `int`
 
-  returns: the identifier - `DefaultRowSorter.ModelWrapper.I`"
-  (^DefaultRowSorter.ModelWrapper.I [^javax.swing.DefaultRowSorter$ModelWrapper this ^Integer row]
+  returns: the identifier - `I`"
+  ([^DefaultRowSorter$ModelWrapper this ^Integer row]
     (-> this (.getIdentifier row))))
 

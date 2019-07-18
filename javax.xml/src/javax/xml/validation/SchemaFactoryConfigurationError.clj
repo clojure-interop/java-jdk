@@ -14,10 +14,10 @@
 
   message - The detail message. - `java.lang.String`
   cause - The exception or error to be encapsulated in a SchemaFactoryConfigurationError. - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^SchemaFactoryConfigurationError [^java.lang.String message ^java.lang.Throwable cause]
     (new SchemaFactoryConfigurationError message cause))
-  ([^java.lang.String message]
+  (^SchemaFactoryConfigurationError [^java.lang.String message]
     (new SchemaFactoryConfigurationError message))
-  ([]
+  (^SchemaFactoryConfigurationError []
     (new SchemaFactoryConfigurationError )))
 

@@ -81,12 +81,12 @@
   obj - A non-null object whose state is to be retrieved. - `java.lang.Object`
   name - The name of this object relative to nameCtx, or null if no name is specified. - `javax.naming.Name`
   name-ctx - The context relative to which the name parameter is specified, or null if name is relative to the default initial context. - `javax.naming.Context`
-  environment - The possibly null environment to be used in the creation of the object's state. - `java.util.Hashtable<?,?>`
+  environment - The possibly null environment to be used in the creation of the object's state. - `java.util.Hashtable`
 
   returns: The object's state for binding;
                 null if the factory is not returning any changes. - `java.lang.Object`
 
   throws: javax.naming.NamingException - if this factory encountered an exception while attempting to get the object's state, and no other factories are to be tried."
-  (^java.lang.Object [^javax.naming.spi.StateFactory this ^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment]
+  (^java.lang.Object [^StateFactory this ^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment]
     (-> this (.getStateToBind obj name name-ctx environment))))
 

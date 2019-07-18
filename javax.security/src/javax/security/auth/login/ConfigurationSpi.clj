@@ -14,6 +14,6 @@
 
 (defn ->configuration-spi
   "Constructor."
-  ([]
+  (^ConfigurationSpi []
     (new ConfigurationSpi )))
 

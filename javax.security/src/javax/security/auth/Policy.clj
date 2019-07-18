@@ -49,13 +49,13 @@
                     Subject and code specified in
                     the provided subject and cs
                     parameters. - `java.security.PermissionCollection`"
-  (^java.security.PermissionCollection [^javax.security.auth.Policy this ^javax.security.auth.Subject subject ^java.security.CodeSource cs]
+  (^java.security.PermissionCollection [^Policy this ^javax.security.auth.Subject subject ^java.security.CodeSource cs]
     (-> this (.getPermissions subject cs))))
 
 (defn refresh
   "Deprecated.
 
   throws: java.lang.SecurityException - if the caller does not have permission to refresh the Policy."
-  ([^javax.security.auth.Policy this]
+  ([^Policy this]
     (-> this (.refresh))))
 

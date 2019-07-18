@@ -196,13 +196,13 @@
   concurrency-level - the estimated number of concurrently updating threads. The implementation may use this value as a sizing hint. - `int`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is negative or the load factor or concurrencyLevel are nonpositive"
-  ([^Integer initial-capacity ^Float load-factor ^Integer concurrency-level]
+  (^ConcurrentHashMap [^Integer initial-capacity ^Float load-factor ^Integer concurrency-level]
     (new ConcurrentHashMap initial-capacity load-factor concurrency-level))
-  ([^Integer initial-capacity ^Float load-factor]
+  (^ConcurrentHashMap [^Integer initial-capacity ^Float load-factor]
     (new ConcurrentHashMap initial-capacity load-factor))
-  ([^Integer initial-capacity]
+  (^ConcurrentHashMap [^Integer initial-capacity]
     (new ConcurrentHashMap initial-capacity))
-  ([]
+  (^ConcurrentHashMap []
     (new ConcurrentHashMap )))
 
 (defn *new-key-set
@@ -211,7 +211,7 @@
 
   initial-capacity - The implementation performs internal sizing to accommodate this many elements. - `int`
 
-  returns: the new set - `<K> java.util.concurrent.ConcurrentHashMap.KeySetView<K,java.lang.Boolean>`
+  returns: the new set - `<K> java.util.concurrent.ConcurrentHashMap$KeySetView<K,java.lang.Boolean>`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity of elements is negative"
   ([^Integer initial-capacity]
@@ -224,13 +224,13 @@
    of each key.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) - `U>`
-  action - the action - `U>`
+  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) - `java.util.function.Function`
+  action - the action - `java.util.function.Consumer`
 
   returns: `<U> void`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer action]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Function transformer ^java.util.function.Consumer action]
     (-> this (.forEachKey parallelism-threshold transformer action)))
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.K> action]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Consumer action]
     (-> this (.forEachKey parallelism-threshold action))))
 
 (defn values
@@ -249,8 +249,8 @@
    The view's spliterator reports Spliterator.CONCURRENT
    and Spliterator.NONNULL.
 
-  returns: the collection view - `java.util.Collection<ConcurrentHashMap.V>`"
-  (^java.util.Collection [^java.util.concurrent.ConcurrentHashMap this]
+  returns: the collection view - `java.util.Collection<V>`"
+  (^java.util.Collection [^ConcurrentHashMap this]
     (-> this (.values))))
 
 (defn for-each
@@ -258,15 +258,15 @@
    of each (key, value).
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) - `U>`
-  action - the action - `U>`
+  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) - `java.util.function.BiFunction`
+  action - the action - `java.util.function.Consumer`
 
   returns: `<U> void`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer action]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.BiFunction transformer ^java.util.function.Consumer action]
     (-> this (.forEach parallelism-threshold transformer action)))
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> action]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.BiConsumer action]
     (-> this (.forEach parallelism-threshold action)))
-  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.V> action]
+  ([^ConcurrentHashMap this ^java.util.function.BiConsumer action]
     (-> this (.forEach action))))
 
 (defn reduce-entries-to-int
@@ -275,27 +275,27 @@
    and the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `java.util.function.ToIntFunction<java.util.Map.Entry<ConcurrentHashMap.K,ConcurrentHashMap.V>>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToIntFunction`
   basis - the identity (initial default value) for the reduction - `int`
   reducer - a commutative associative combining function - `java.util.function.IntBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all entries - `int`"
-  (^Integer [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToIntFunction> transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
+  (^Integer [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToIntFunction transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
     (-> this (.reduceEntriesToInt parallelism-threshold transformer basis reducer))))
 
 (defn keys
   "Returns an enumeration of the keys in this table.
 
-  returns: an enumeration of the keys in this table - `java.util.Enumeration<ConcurrentHashMap.K>`"
-  (^java.util.Enumeration [^java.util.concurrent.ConcurrentHashMap this]
+  returns: an enumeration of the keys in this table - `java.util.Enumeration<K>`"
+  (^java.util.Enumeration [^ConcurrentHashMap this]
     (-> this (.keys))))
 
 (defn replace-all
   "Description copied from interface: ConcurrentMap
 
-  function - the function to apply to each entry - `ConcurrentHashMap.V>`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.V> function]
+  function - the function to apply to each entry - `java.util.function.BiFunction`"
+  ([^ConcurrentHashMap this ^java.util.function.BiFunction function]
     (-> this (.replaceAll function))))
 
 (defn put-all
@@ -303,8 +303,8 @@
    These mappings replace any mappings that this map had for any of the
    keys currently in the specified map.
 
-  m - mappings to be stored in this map - `ConcurrentHashMap.V>`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.V> m]
+  m - mappings to be stored in this map - `java.util.Map`"
+  ([^ConcurrentHashMap this ^java.util.Map m]
     (-> this (.putAll m))))
 
 (defn put-if-absent
@@ -320,14 +320,14 @@
 
    except that the action is performed atomically.
 
-  key - key with which the specified value is to be associated - `ConcurrentHashMap.K`
-  value - value to be associated with the specified key - `ConcurrentHashMap.V`
+  key - key with which the specified value is to be associated - `K`
+  value - value to be associated with the specified key - `V`
 
   returns: the previous value associated with the specified key,
-           or null if there was no mapping for the key - `ConcurrentHashMap.V`
+           or null if there was no mapping for the key - `V`
 
   throws: java.lang.NullPointerException - if the specified key or value is null"
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V value]
+  ([^ConcurrentHashMap this key value]
     (-> this (.putIfAbsent key value))))
 
 (defn reduce-keys
@@ -336,14 +336,14 @@
    null if none.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) - `U>`
-  reducer - a commutative associative combining function - `U>`
+  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) - `java.util.function.Function`
+  reducer - a commutative associative combining function - `java.util.function.BiFunction`
 
   returns: the result of accumulating the given transformation
    of all keys - `<U> U`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer reducer]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Function transformer ^java.util.function.BiFunction reducer]
     (-> this (.reduceKeys parallelism-threshold transformer reducer)))
-  (^ConcurrentHashMap.K [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.K> reducer]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.BiFunction reducer]
     (-> this (.reduceKeys parallelism-threshold reducer))))
 
 (defn reduce-entries
@@ -352,14 +352,14 @@
    or null if none.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) - `U>`
-  reducer - a commutative associative combining function - `U>`
+  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) - `java.util.function.Function`
+  reducer - a commutative associative combining function - `java.util.function.BiFunction`
 
   returns: the result of accumulating the given transformation
    of all entries - `<U> U`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer reducer]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Function transformer ^java.util.function.BiFunction reducer]
     (-> this (.reduceEntries parallelism-threshold transformer reducer)))
-  (^java.util.Map.Entry [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^java.util.Map.Entry> reducer]
+  (^java.util.Map$Entry [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.BiFunction reducer]
     (-> this (.reduceEntries parallelism-threshold reducer))))
 
 (defn put
@@ -369,14 +369,14 @@
    The value can be retrieved by calling the get method
    with a key that is equal to the original key.
 
-  key - key with which the specified value is to be associated - `ConcurrentHashMap.K`
-  value - value to be associated with the specified key - `ConcurrentHashMap.V`
+  key - key with which the specified value is to be associated - `K`
+  value - value to be associated with the specified key - `V`
 
   returns: the previous value associated with key, or
-           null if there was no mapping for key - `ConcurrentHashMap.V`
+           null if there was no mapping for key - `V`
 
   throws: java.lang.NullPointerException - if the specified key or value is null"
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V value]
+  ([^ConcurrentHashMap this key value]
     (-> this (.put key value))))
 
 (defn reduce-keys-to-long
@@ -385,13 +385,13 @@
    the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `ConcurrentHashMap.K>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToLongFunction`
   basis - the identity (initial default value) for the reduction - `long`
   reducer - a commutative associative combining function - `java.util.function.LongBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all keys - `long`"
-  (^Long [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.K> transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
+  (^Long [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToLongFunction transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
     (-> this (.reduceKeysToLong parallelism-threshold transformer basis reducer))))
 
 (defn entry-set
@@ -409,8 +409,8 @@
    The view's spliterator reports Spliterator.CONCURRENT,
    Spliterator.DISTINCT, and Spliterator.NONNULL.
 
-  returns: the set view - `java.util.Set<java.util.Map.Entry<ConcurrentHashMap.K,ConcurrentHashMap.V>>`"
-  (^java.util.Set> [^java.util.concurrent.ConcurrentHashMap this]
+  returns: the set view - `java.util.Set<java.util.Map$Entry<K,V>>`"
+  (^java.util.Set [^ConcurrentHashMap this]
     (-> this (.entrySet))))
 
 (defn contains
@@ -429,7 +429,7 @@
            false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if the specified value is null"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object value]
+  (^Boolean [^ConcurrentHashMap this ^java.lang.Object value]
     (-> this (.contains value))))
 
 (defn reduce-values-to-long
@@ -438,13 +438,13 @@
    and the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `ConcurrentHashMap.V>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToLongFunction`
   basis - the identity (initial default value) for the reduction - `long`
   reducer - a commutative associative combining function - `java.util.function.LongBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all values - `long`"
-  (^Long [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
+  (^Long [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToLongFunction transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
     (-> this (.reduceValuesToLong parallelism-threshold transformer basis reducer))))
 
 (defn to-string
@@ -457,7 +457,7 @@
    associated value.
 
   returns: a string representation of this map - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.ConcurrentHashMap this]
+  (^java.lang.String [^ConcurrentHashMap this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -471,7 +471,7 @@
            specified value - `boolean`
 
   throws: java.lang.NullPointerException - if the specified value is null"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object value]
+  (^Boolean [^ConcurrentHashMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn search-keys
@@ -482,11 +482,11 @@
    ignored.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  search-function - a function returning a non-null result on success, else null - `U>`
+  search-function - a function returning a non-null result on success, else null - `java.util.function.Function`
 
   returns: a non-null result from applying the given search
    function on each key, or null if none - `<U> U`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold search-function]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Function search-function]
     (-> this (.searchKeys parallelism-threshold search-function))))
 
 (defn get-or-default
@@ -495,12 +495,12 @@
    key.
 
   key - the key whose associated value is to be returned - `java.lang.Object`
-  default-value - the value to return if this map contains no mapping for the given key - `ConcurrentHashMap.V`
+  default-value - the value to return if this map contains no mapping for the given key - `V`
 
-  returns: the mapping for the key, if present; else the default value - `ConcurrentHashMap.V`
+  returns: the mapping for the key, if present; else the default value - `V`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object key ^ConcurrentHashMap.V default-value]
+  ([^ConcurrentHashMap this ^java.lang.Object key default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn replace
@@ -516,16 +516,16 @@
 
    except that the action is performed atomically.
 
-  key - key with which the specified value is associated - `ConcurrentHashMap.K`
-  old-value - value expected to be associated with the specified key - `ConcurrentHashMap.V`
-  new-value - value to be associated with the specified key - `ConcurrentHashMap.V`
+  key - key with which the specified value is associated - `K`
+  old-value - value expected to be associated with the specified key - `V`
+  new-value - value to be associated with the specified key - `V`
 
   returns: true if the value was replaced - `boolean`
 
   throws: java.lang.NullPointerException - if any of the arguments are null"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V old-value ^ConcurrentHashMap.V new-value]
+  (^Boolean [^ConcurrentHashMap this key old-value new-value]
     (-> this (.replace key old-value new-value)))
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V value]
+  ([^ConcurrentHashMap this key value]
     (-> this (.replace key value))))
 
 (defn reduce-keys-to-int
@@ -534,13 +534,13 @@
    the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `ConcurrentHashMap.K>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToIntFunction`
   basis - the identity (initial default value) for the reduction - `int`
   reducer - a commutative associative combining function - `java.util.function.IntBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all keys - `int`"
-  (^Integer [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.K> transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
+  (^Integer [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToIntFunction transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
     (-> this (.reduceKeysToInt parallelism-threshold transformer basis reducer))))
 
 (defn reduce-values-to-int
@@ -549,13 +549,13 @@
    and the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `ConcurrentHashMap.V>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToIntFunction`
   basis - the identity (initial default value) for the reduction - `int`
   reducer - a commutative associative combining function - `java.util.function.IntBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all values - `int`"
-  (^Integer [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
+  (^Integer [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToIntFunction transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
     (-> this (.reduceValuesToInt parallelism-threshold transformer basis reducer))))
 
 (defn remove
@@ -577,9 +577,9 @@
   returns: true if the value was removed - `boolean`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object key ^java.lang.Object value]
+  (^Boolean [^ConcurrentHashMap this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value)))
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object key]
+  ([^ConcurrentHashMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn mapping-count
@@ -590,7 +590,7 @@
    there are concurrent insertions or removals.
 
   returns: the number of mappings - `long`"
-  (^Long [^java.util.concurrent.ConcurrentHashMap this]
+  (^Long [^ConcurrentHashMap this]
     (-> this (.mappingCount))))
 
 (defn key-set
@@ -599,14 +599,14 @@
    This is of course only appropriate if it is acceptable to use
    the same value for all additions from this view.
 
-  mapped-value - the mapped value to use for any additions - `ConcurrentHashMap.V`
+  mapped-value - the mapped value to use for any additions - `V`
 
-  returns: the set view - `java.util.concurrent.ConcurrentHashMap.KeySetView<ConcurrentHashMap.K,ConcurrentHashMap.V>`
+  returns: the set view - `java.util.concurrent.ConcurrentHashMap$KeySetView<K,V>`
 
   throws: java.lang.NullPointerException - if the mappedValue is null"
-  (^java.util.concurrent.ConcurrentHashMap.KeySetView [^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.V mapped-value]
+  (^java.util.concurrent.ConcurrentHashMap$KeySetView [^ConcurrentHashMap this mapped-value]
     (-> this (.keySet mapped-value)))
-  (^java.util.concurrent.ConcurrentHashMap.KeySetView [^java.util.concurrent.ConcurrentHashMap this]
+  (^java.util.concurrent.ConcurrentHashMap$KeySetView [^ConcurrentHashMap this]
     (-> this (.keySet))))
 
 (defn for-each-entry
@@ -614,13 +614,13 @@
    of each entry.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) - `U>`
-  action - the action - `U>`
+  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) - `java.util.function.Function`
+  action - the action - `java.util.function.Consumer`
 
   returns: `<U> void`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer action]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Function transformer ^java.util.function.Consumer action]
     (-> this (.forEachEntry parallelism-threshold transformer action)))
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^java.util.Map.Entry> action]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Consumer action]
     (-> this (.forEachEntry parallelism-threshold action))))
 
 (defn search-values
@@ -631,11 +631,11 @@
    ignored.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  search-function - a function returning a non-null result on success, else null - `U>`
+  search-function - a function returning a non-null result on success, else null - `java.util.function.Function`
 
   returns: a non-null result from applying the given search
    function on each value, or null if none - `<U> U`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold search-function]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Function search-function]
     (-> this (.searchValues parallelism-threshold search-function))))
 
 (defn reduce-values
@@ -644,14 +644,14 @@
    null if none.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) - `U>`
-  reducer - a commutative associative combining function - `U>`
+  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) - `java.util.function.Function`
+  reducer - a commutative associative combining function - `java.util.function.BiFunction`
 
   returns: the result of accumulating the given transformation
    of all values - `<U> U`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer reducer]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Function transformer ^java.util.function.BiFunction reducer]
     (-> this (.reduceValues parallelism-threshold transformer reducer)))
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> reducer]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.BiFunction reducer]
     (-> this (.reduceValues parallelism-threshold reducer))))
 
 (defn reduce-to-int
@@ -660,13 +660,13 @@
    combine values, and the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `ConcurrentHashMap.V>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToIntBiFunction`
   basis - the identity (initial default value) for the reduction - `int`
   reducer - a commutative associative combining function - `java.util.function.IntBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all (key, value) pairs - `int`"
-  (^Integer [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
+  (^Integer [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToIntBiFunction transformer ^Integer basis ^java.util.function.IntBinaryOperator reducer]
     (-> this (.reduceToInt parallelism-threshold transformer basis reducer))))
 
 (defn reduce-values-to-double
@@ -675,13 +675,13 @@
    and the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `ConcurrentHashMap.V>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToDoubleFunction`
   basis - the identity (initial default value) for the reduction - `double`
   reducer - a commutative associative combining function - `java.util.function.DoubleBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all values - `double`"
-  (^Double [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
+  (^Double [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToDoubleFunction transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
     (-> this (.reduceValuesToDouble parallelism-threshold transformer basis reducer))))
 
 (defn compute-if-present
@@ -693,13 +693,13 @@
    computation should be short and simple, and must not attempt to
    update any other mappings of this map.
 
-  key - key with which a value may be associated - `ConcurrentHashMap.K`
-  remapping-function - the function to compute a value - `ConcurrentHashMap.V>`
+  key - key with which a value may be associated - `K`
+  remapping-function - the function to compute a value - `java.util.function.BiFunction`
 
-  returns: the new value associated with the specified key, or null if none - `ConcurrentHashMap.V`
+  returns: the new value associated with the specified key, or null if none - `V`
 
   throws: java.lang.NullPointerException - if the specified key or remappingFunction is null"
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V> remapping-function]
+  ([^ConcurrentHashMap this key ^java.util.function.BiFunction remapping-function]
     (-> this (.computeIfPresent key remapping-function))))
 
 (defn hash-code
@@ -708,7 +708,7 @@
    key.hashCode() ^ value.hashCode().
 
   returns: the hash code value for this map - `int`"
-  (^Integer [^java.util.concurrent.ConcurrentHashMap this]
+  (^Integer [^ConcurrentHashMap this]
     (-> this (.hashCode))))
 
 (defn reduce-to-double
@@ -717,20 +717,20 @@
    combine values, and the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `ConcurrentHashMap.V>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToDoubleBiFunction`
   basis - the identity (initial default value) for the reduction - `double`
   reducer - a commutative associative combining function - `java.util.function.DoubleBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all (key, value) pairs - `double`"
-  (^Double [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
+  (^Double [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToDoubleBiFunction transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
     (-> this (.reduceToDouble parallelism-threshold transformer basis reducer))))
 
 (defn empty?
   "Returns true if this map contains no key-value mappings.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap this]
+  (^Boolean [^ConcurrentHashMap this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -739,7 +739,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of key-value mappings in this map - `int`"
-  (^Integer [^java.util.concurrent.ConcurrentHashMap this]
+  (^Integer [^ConcurrentHashMap this]
     (-> this (.size))))
 
 (defn reduce
@@ -748,17 +748,17 @@
    combine values, or null if none.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) - `U>`
-  reducer - a commutative associative combining function - `U>`
+  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case it is not combined) - `java.util.function.BiFunction`
+  reducer - a commutative associative combining function - `java.util.function.BiFunction`
 
   returns: the result of accumulating the given transformation
    of all (key, value) pairs - `<U> U`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer reducer]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.BiFunction transformer ^java.util.function.BiFunction reducer]
     (-> this (.reduce parallelism-threshold transformer reducer))))
 
 (defn clear
   "Removes all of the mappings from this map."
-  ([^java.util.concurrent.ConcurrentHashMap this]
+  ([^ConcurrentHashMap this]
     (-> this (.clear))))
 
 (defn reduce-entries-to-double
@@ -767,13 +767,13 @@
    and the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `java.util.function.ToDoubleFunction<java.util.Map.Entry<ConcurrentHashMap.K,ConcurrentHashMap.V>>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToDoubleFunction`
   basis - the identity (initial default value) for the reduction - `double`
   reducer - a commutative associative combining function - `java.util.function.DoubleBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all entries - `double`"
-  (^Double [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToDoubleFunction> transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
+  (^Double [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToDoubleFunction transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
     (-> this (.reduceEntriesToDouble parallelism-threshold transformer basis reducer))))
 
 (defn for-each-value
@@ -781,13 +781,13 @@
    of each value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) - `U>`
-  action - the action - `U>`
+  transformer - a function returning the transformation for an element, or null if there is no transformation (in which case the action is not applied) - `java.util.function.Function`
+  action - the action - `java.util.function.Consumer`
 
   returns: `<U> void`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold transformer action]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Function transformer ^java.util.function.Consumer action]
     (-> this (.forEachValue parallelism-threshold transformer action)))
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> action]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Consumer action]
     (-> this (.forEachValue parallelism-threshold action))))
 
 (defn reduce-entries-to-long
@@ -796,13 +796,13 @@
    and the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `java.util.function.ToLongFunction<java.util.Map.Entry<ConcurrentHashMap.K,ConcurrentHashMap.V>>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToLongFunction`
   basis - the identity (initial default value) for the reduction - `long`
   reducer - a commutative associative combining function - `java.util.function.LongBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all entries - `long`"
-  (^Long [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToLongFunction> transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
+  (^Long [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToLongFunction transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
     (-> this (.reduceEntriesToLong parallelism-threshold transformer basis reducer))))
 
 (defn contains-key
@@ -815,7 +815,7 @@
            equals method; false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object key]
+  (^Boolean [^ConcurrentHashMap this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn search
@@ -826,11 +826,11 @@
    function are ignored.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  search-function - a function returning a non-null result on success, else null - `U>`
+  search-function - a function returning a non-null result on success, else null - `java.util.function.BiFunction`
 
   returns: a non-null result from applying the given search
    function on each (key, value), or null if none - `<U> U`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold search-function]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.BiFunction search-function]
     (-> this (.search parallelism-threshold search-function))))
 
 (defn get
@@ -845,10 +845,10 @@
   key - the key whose associated value is to be returned - `java.lang.Object`
 
   returns: the value to which the specified key is mapped, or
-           null if this map contains no mapping for the key - `ConcurrentHashMap.V`
+           null if this map contains no mapping for the key - `V`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object key]
+  ([^ConcurrentHashMap this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn reduce-keys-to-double
@@ -857,13 +857,13 @@
    the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `ConcurrentHashMap.K>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToDoubleFunction`
   basis - the identity (initial default value) for the reduction - `double`
   reducer - a commutative associative combining function - `java.util.function.DoubleBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all keys - `double`"
-  (^Double [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.K> transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
+  (^Double [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToDoubleFunction transformer ^Double basis ^java.util.function.DoubleBinaryOperator reducer]
     (-> this (.reduceKeysToDouble parallelism-threshold transformer basis reducer))))
 
 (defn merge
@@ -877,14 +877,14 @@
    short and simple, and must not attempt to update any other
    mappings of this Map.
 
-  key - key with which the specified value is to be associated - `ConcurrentHashMap.K`
-  value - the value to use if absent - `ConcurrentHashMap.V`
-  remapping-function - the function to recompute a value if present - `ConcurrentHashMap.V>`
+  key - key with which the specified value is to be associated - `K`
+  value - the value to use if absent - `V`
+  remapping-function - the function to recompute a value if present - `java.util.function.BiFunction`
 
-  returns: the new value associated with the specified key, or null if none - `ConcurrentHashMap.V`
+  returns: the new value associated with the specified key, or null if none - `V`
 
   throws: java.lang.NullPointerException - if the specified key or the remappingFunction is null"
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V value ^ConcurrentHashMap.V> remapping-function]
+  ([^ConcurrentHashMap this key value ^java.util.function.BiFunction remapping-function]
     (-> this (.merge key value remapping-function))))
 
 (defn equals
@@ -897,7 +897,7 @@
   o - object to be compared for equality with this map - `java.lang.Object`
 
   returns: true if the specified object is equal to this map - `boolean`"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap this ^java.lang.Object o]
+  (^Boolean [^ConcurrentHashMap this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn compute
@@ -909,13 +909,13 @@
    computation should be short and simple, and must not attempt to
    update any other mappings of this Map.
 
-  key - key with which the specified value is to be associated - `ConcurrentHashMap.K`
-  remapping-function - the function to compute a value - `ConcurrentHashMap.V>`
+  key - key with which the specified value is to be associated - `K`
+  remapping-function - the function to compute a value - `java.util.function.BiFunction`
 
-  returns: the new value associated with the specified key, or null if none - `ConcurrentHashMap.V`
+  returns: the new value associated with the specified key, or null if none - `V`
 
   throws: java.lang.NullPointerException - if the specified key or remappingFunction is null"
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V> remapping-function]
+  ([^ConcurrentHashMap this key ^java.util.function.BiFunction remapping-function]
     (-> this (.compute key remapping-function))))
 
 (defn reduce-to-long
@@ -924,13 +924,13 @@
    combine values, and the given basis as an identity value.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  transformer - a function returning the transformation for an element - `ConcurrentHashMap.V>`
+  transformer - a function returning the transformation for an element - `java.util.function.ToLongBiFunction`
   basis - the identity (initial default value) for the reduction - `long`
   reducer - a commutative associative combining function - `java.util.function.LongBinaryOperator`
 
   returns: the result of accumulating the given transformation
    of all (key, value) pairs - `long`"
-  (^Long [^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold ^ConcurrentHashMap.V> transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
+  (^Long [^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.ToLongBiFunction transformer ^Long basis ^java.util.function.LongBinaryOperator reducer]
     (-> this (.reduceToLong parallelism-threshold transformer basis reducer))))
 
 (defn search-entries
@@ -941,18 +941,18 @@
    ignored.
 
   parallelism-threshold - the (estimated) number of elements needed for this operation to be executed in parallel - `long`
-  search-function - a function returning a non-null result on success, else null - `U>`
+  search-function - a function returning a non-null result on success, else null - `java.util.function.Function`
 
   returns: a non-null result from applying the given search
    function on each entry, or null if none - `<U> U`"
-  ([^java.util.concurrent.ConcurrentHashMap this ^Long parallelism-threshold search-function]
+  ([^ConcurrentHashMap this ^Long parallelism-threshold ^java.util.function.Function search-function]
     (-> this (.searchEntries parallelism-threshold search-function))))
 
 (defn elements
   "Returns an enumeration of the values in this table.
 
-  returns: an enumeration of the values in this table - `java.util.Enumeration<ConcurrentHashMap.V>`"
-  (^java.util.Enumeration [^java.util.concurrent.ConcurrentHashMap this]
+  returns: an enumeration of the values in this table - `java.util.Enumeration<V>`"
+  (^java.util.Enumeration [^ConcurrentHashMap this]
     (-> this (.elements))))
 
 (defn compute-if-absent
@@ -965,13 +965,13 @@
    is in progress, so the computation should be short and simple,
    and must not attempt to update any other mappings of this map.
 
-  key - key with which the specified value is to be associated - `ConcurrentHashMap.K`
-  mapping-function - the function to compute a value - `ConcurrentHashMap.V>`
+  key - key with which the specified value is to be associated - `K`
+  mapping-function - the function to compute a value - `java.util.function.Function`
 
   returns: the current (existing or computed) value associated with
-           the specified key, or null if the computed value is null - `ConcurrentHashMap.V`
+           the specified key, or null if the computed value is null - `V`
 
   throws: java.lang.NullPointerException - if the specified key or mappingFunction is null"
-  (^ConcurrentHashMap.V [^java.util.concurrent.ConcurrentHashMap this ^ConcurrentHashMap.K key ^ConcurrentHashMap.V> mapping-function]
+  ([^ConcurrentHashMap this key ^java.util.function.Function mapping-function]
     (-> this (.computeIfAbsent key mapping-function))))
 

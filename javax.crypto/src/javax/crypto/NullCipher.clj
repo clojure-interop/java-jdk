@@ -11,6 +11,6 @@
   "Constructor.
 
   Creates a NullCipher object."
-  ([]
+  (^NullCipher []
     (new NullCipher )))
 

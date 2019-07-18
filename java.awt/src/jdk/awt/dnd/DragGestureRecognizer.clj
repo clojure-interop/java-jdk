@@ -46,7 +46,7 @@
 
   returns: The Component this DragGestureRecognizer
    is associated with - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.dnd.DragGestureRecognizer this]
+  (^java.awt.Component [^DragGestureRecognizer this]
     (-> this (.getComponent))))
 
 (defn get-source-actions
@@ -55,7 +55,7 @@
    operation will support.
 
   returns: the currently permitted source action(s) - `int`"
-  (^Integer [^java.awt.dnd.DragGestureRecognizer this]
+  (^Integer [^DragGestureRecognizer this]
     (-> this (.getSourceActions))))
 
 (defn get-drag-source
@@ -65,7 +65,7 @@
    operation.
 
   returns: the DragSource - `java.awt.dnd.DragSource`"
-  (^java.awt.dnd.DragSource [^java.awt.dnd.DragGestureRecognizer this]
+  (^java.awt.dnd.DragSource [^DragGestureRecognizer this]
     (-> this (.getDragSource))))
 
 (defn get-trigger-event
@@ -74,7 +74,7 @@
    the Drag and Drop operation.
 
   returns: the initial event that triggered the drag gesture - `java.awt.event.InputEvent`"
-  (^java.awt.event.InputEvent [^java.awt.dnd.DragGestureRecognizer this]
+  (^java.awt.event.InputEvent [^DragGestureRecognizer this]
     (-> this (.getTriggerEvent))))
 
 (defn set-source-actions
@@ -82,7 +82,7 @@
    for this Drag and Drop operation.
 
   actions - the permitted source drag action(s) - `int`"
-  ([^java.awt.dnd.DragGestureRecognizer this ^Integer actions]
+  ([^DragGestureRecognizer this ^Integer actions]
     (-> this (.setSourceActions actions))))
 
 (defn set-component
@@ -92,7 +92,7 @@
    effect as appropriate.
 
   c - The Component or null - `java.awt.Component`"
-  ([^java.awt.dnd.DragGestureRecognizer this ^java.awt.Component c]
+  ([^DragGestureRecognizer this ^java.awt.Component c]
     (-> this (.setComponent c))))
 
 (defn remove-drag-gesture-listener
@@ -101,13 +101,13 @@
   dgl - the DragGestureListener to unregister from this DragGestureRecognizer - `java.awt.dnd.DragGestureListener`
 
   throws: java.lang.IllegalArgumentException - if dgl is not (equal to) the currently registered DragGestureListener."
-  ([^java.awt.dnd.DragGestureRecognizer this ^java.awt.dnd.DragGestureListener dgl]
+  ([^DragGestureRecognizer this ^java.awt.dnd.DragGestureListener dgl]
     (-> this (.removeDragGestureListener dgl))))
 
 (defn reset-recognizer
   "Reset the Recognizer, if its currently recognizing a gesture, ignore
    it."
-  ([^java.awt.dnd.DragGestureRecognizer this]
+  ([^DragGestureRecognizer this]
     (-> this (.resetRecognizer))))
 
 (defn add-drag-gesture-listener
@@ -116,6 +116,6 @@
   dgl - the DragGestureListener to register with this DragGestureRecognizer. - `java.awt.dnd.DragGestureListener`
 
   throws: java.util.TooManyListenersException - if a DragGestureListener has already been added."
-  ([^java.awt.dnd.DragGestureRecognizer this ^java.awt.dnd.DragGestureListener dgl]
+  ([^DragGestureRecognizer this ^java.awt.dnd.DragGestureListener dgl]
     (-> this (.addDragGestureListener dgl))))
 

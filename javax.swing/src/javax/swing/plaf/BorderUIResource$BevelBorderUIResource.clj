@@ -10,10 +10,10 @@
   highlight-inner - `java.awt.Color`
   shadow-outer - `java.awt.Color`
   shadow-inner - `java.awt.Color`"
-  ([^Integer bevel-type ^java.awt.Color highlight-outer ^java.awt.Color highlight-inner ^java.awt.Color shadow-outer ^java.awt.Color shadow-inner]
+  (^BorderUIResource$BevelBorderUIResource [^Integer bevel-type ^java.awt.Color highlight-outer ^java.awt.Color highlight-inner ^java.awt.Color shadow-outer ^java.awt.Color shadow-inner]
     (new BorderUIResource$BevelBorderUIResource bevel-type highlight-outer highlight-inner shadow-outer shadow-inner))
-  ([^Integer bevel-type ^java.awt.Color highlight ^java.awt.Color shadow]
+  (^BorderUIResource$BevelBorderUIResource [^Integer bevel-type ^java.awt.Color highlight ^java.awt.Color shadow]
     (new BorderUIResource$BevelBorderUIResource bevel-type highlight shadow))
-  ([^Integer bevel-type]
+  (^BorderUIResource$BevelBorderUIResource [^Integer bevel-type]
     (new BorderUIResource$BevelBorderUIResource bevel-type)))
 

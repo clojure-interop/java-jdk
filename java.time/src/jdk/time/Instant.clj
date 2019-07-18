@@ -256,7 +256,7 @@
   returns: an Instant based on this instant with the time truncated, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the unit is invalid for truncation"
-  (^java.time.Instant [^java.time.Instant this ^java.time.temporal.TemporalUnit unit]
+  (^java.time.Instant [^Instant this ^java.time.temporal.TemporalUnit unit]
     (-> this (.truncatedTo unit))))
 
 (defn range
@@ -282,7 +282,7 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  (^java.time.temporal.ValueRange [^java.time.Instant this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^Instant this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn at-offset
@@ -300,7 +300,7 @@
   returns: the offset date-time formed from this instant and the specified offset, not null - `java.time.OffsetDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported range"
-  (^java.time.OffsetDateTime [^java.time.Instant this ^java.time.ZoneOffset offset]
+  (^java.time.OffsetDateTime [^Instant this ^java.time.ZoneOffset offset]
     (-> this (.atOffset offset))))
 
 (defn minus-millis
@@ -313,7 +313,7 @@
   returns: an Instant based on this instant with the specified milliseconds subtracted, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the result exceeds the maximum or minimum instant"
-  (^java.time.Instant [^java.time.Instant this ^Long millis-to-subtract]
+  (^java.time.Instant [^Instant this ^Long millis-to-subtract]
     (-> this (.minusMillis millis-to-subtract))))
 
 (defn get-nano
@@ -324,7 +324,7 @@
    the second returned by getEpochSecond.
 
   returns: the nanoseconds within the second, always positive, never exceeds 999,999,999 - `int`"
-  (^Integer [^java.time.Instant this]
+  (^Integer [^Instant this]
     (-> this (.getNano))))
 
 (defn plus-millis
@@ -337,7 +337,7 @@
   returns: an Instant based on this instant with the specified milliseconds added, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the result exceeds the maximum or minimum instant"
-  (^java.time.Instant [^java.time.Instant this ^Long millis-to-add]
+  (^java.time.Instant [^Instant this ^Long millis-to-add]
     (-> this (.plusMillis millis-to-add))))
 
 (defn minus-seconds
@@ -350,7 +350,7 @@
   returns: an Instant based on this instant with the specified seconds subtracted, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the result exceeds the maximum or minimum instant"
-  (^java.time.Instant [^java.time.Instant this ^Long seconds-to-subtract]
+  (^java.time.Instant [^Instant this ^Long seconds-to-subtract]
     (-> this (.minusSeconds seconds-to-subtract))))
 
 (defn plus-nanos
@@ -363,7 +363,7 @@
   returns: an Instant based on this instant with the specified nanoseconds added, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the result exceeds the maximum or minimum instant"
-  (^java.time.Instant [^java.time.Instant this ^Long nanos-to-add]
+  (^java.time.Instant [^Instant this ^Long nanos-to-add]
     (-> this (.plusNanos nanos-to-add))))
 
 (defn plus
@@ -423,9 +423,9 @@
   returns: an Instant based on this instant with the specified amount added, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the addition cannot be made"
-  (^java.time.Instant [^java.time.Instant this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  (^java.time.Instant [^Instant this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  (^java.time.Instant [^java.time.Instant this ^java.time.temporal.TemporalAmount amount-to-add]
+  (^java.time.Instant [^Instant this ^java.time.temporal.TemporalAmount amount-to-add]
     (-> this (.plus amount-to-add))))
 
 (defn query
@@ -440,12 +440,12 @@
    TemporalQuery.queryFrom(TemporalAccessor) method on the
    specified query passing this as the argument.
 
-  query - the query to invoke, not null - `java.time.temporal.TemporalQuery<R>`
+  query - the query to invoke, not null - `java.time.temporal.TemporalQuery`
 
   returns: the query result, null may be returned (defined by the query) - `<R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([^java.time.Instant this ^java.time.temporal.TemporalQuery query]
+  ([^Instant this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn to-string
@@ -454,7 +454,7 @@
    The format used is the same as DateTimeFormatter.ISO_INSTANT.
 
   returns: an ISO-8601 representation of this instant, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.Instant this]
+  (^java.lang.String [^Instant this]
     (-> this (.toString))))
 
 (defn before?
@@ -467,7 +467,7 @@
   returns: true if this instant is before the specified instant - `boolean`
 
   throws: java.lang.NullPointerException - if otherInstant is null"
-  (^Boolean [^java.time.Instant this ^java.time.Instant other-instant]
+  (^Boolean [^Instant this ^java.time.Instant other-instant]
     (-> this (.isBefore other-instant))))
 
 (defn minus
@@ -488,9 +488,9 @@
   returns: an Instant based on this instant with the specified amount subtracted, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the subtraction cannot be made"
-  (^java.time.Instant [^java.time.Instant this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
+  (^java.time.Instant [^Instant this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  (^java.time.Instant [^java.time.Instant this ^java.time.temporal.TemporalAmount amount-to-subtract]
+  (^java.time.Instant [^Instant this ^java.time.temporal.TemporalAmount amount-to-subtract]
     (-> this (.minus amount-to-subtract))))
 
 (defn at-zone
@@ -508,7 +508,7 @@
   returns: the zoned date-time formed from this instant and the specified zone, not null - `java.time.ZonedDateTime`
 
   throws: java.time.DateTimeException - if the result exceeds the supported range"
-  (^java.time.ZonedDateTime [^java.time.Instant this ^java.time.ZoneId zone]
+  (^java.time.ZonedDateTime [^Instant this ^java.time.ZoneId zone]
     (-> this (.atZone zone))))
 
 (defn get-long
@@ -533,7 +533,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  (^Long [^java.time.Instant this ^java.time.temporal.TemporalField field]
+  (^Long [^Instant this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn until
@@ -578,7 +578,7 @@
   returns: the amount of time between this instant and the end instant - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to an Instant"
-  (^Long [^java.time.Instant this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
+  (^Long [^Instant this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit))))
 
 (defn after?
@@ -591,7 +591,7 @@
   returns: true if this instant is after the specified instant - `boolean`
 
   throws: java.lang.NullPointerException - if otherInstant is null"
-  (^Boolean [^java.time.Instant this ^java.time.Instant other-instant]
+  (^Boolean [^Instant this ^java.time.Instant other-instant]
     (-> this (.isAfter other-instant))))
 
 (defn minus-nanos
@@ -604,7 +604,7 @@
   returns: an Instant based on this instant with the specified nanoseconds subtracted, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the result exceeds the maximum or minimum instant"
-  (^java.time.Instant [^java.time.Instant this ^Long nanos-to-subtract]
+  (^java.time.Instant [^Instant this ^Long nanos-to-subtract]
     (-> this (.minusNanos nanos-to-subtract))))
 
 (defn supported?
@@ -633,14 +633,14 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this instant, false if not - `boolean`"
-  (^Boolean [^java.time.Instant this ^java.time.temporal.TemporalField field]
+  (^Boolean [^Instant this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn hash-code
   "Returns a hash code for this instant.
 
   returns: a suitable hash code - `int`"
-  (^Integer [^java.time.Instant this]
+  (^Integer [^Instant this]
     (-> this (.hashCode))))
 
 (defn adjust-into
@@ -668,7 +668,7 @@
   returns: the adjusted object, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  (^java.time.temporal.Temporal [^java.time.Instant this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^Instant this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn with
@@ -714,9 +714,9 @@
   returns: an Instant based on this with the specified field set, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  (^java.time.Instant [^java.time.Instant this ^java.time.temporal.TemporalField field ^Long new-value]
+  (^java.time.Instant [^Instant this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  (^java.time.Instant [^java.time.Instant this ^java.time.temporal.TemporalAdjuster adjuster]
+  (^java.time.Instant [^Instant this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn to-epoch-milli
@@ -733,7 +733,7 @@
   returns: the number of milliseconds since the epoch of 1970-01-01T00:00:00Z - `long`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  (^Long [^java.time.Instant this]
+  (^Long [^Instant this]
     (-> this (.toEpochMilli))))
 
 (defn get-epoch-second
@@ -744,7 +744,7 @@
    The nanosecond part of the day is returned by getNanosOfSecond.
 
   returns: the seconds from the epoch of 1970-01-01T00:00:00Z - `long`"
-  (^Long [^java.time.Instant this]
+  (^Long [^Instant this]
     (-> this (.getEpochSecond))))
 
 (defn compare-to
@@ -758,7 +758,7 @@
   returns: the comparator value, negative if less, positive if greater - `int`
 
   throws: java.lang.NullPointerException - if otherInstant is null"
-  (^Integer [^java.time.Instant this ^java.time.Instant other-instant]
+  (^Integer [^Instant this ^java.time.Instant other-instant]
     (-> this (.compareTo other-instant))))
 
 (defn plus-seconds
@@ -771,7 +771,7 @@
   returns: an Instant based on this instant with the specified seconds added, not null - `java.time.Instant`
 
   throws: java.time.DateTimeException - if the result exceeds the maximum or minimum instant"
-  (^java.time.Instant [^java.time.Instant this ^Long seconds-to-add]
+  (^java.time.Instant [^Instant this ^Long seconds-to-add]
     (-> this (.plusSeconds seconds-to-add))))
 
 (defn get
@@ -798,7 +798,7 @@
   returns: the value for the field - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  (^Integer [^java.time.Instant this ^java.time.temporal.TemporalField field]
+  (^Integer [^Instant this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn equals
@@ -809,6 +809,6 @@
   other-instant - the other instant, null returns false - `java.lang.Object`
 
   returns: true if the other instant is equal to this one - `boolean`"
-  (^Boolean [^java.time.Instant this ^java.lang.Object other-instant]
+  (^Boolean [^Instant this ^java.lang.Object other-instant]
     (-> this (.equals other-instant))))
 

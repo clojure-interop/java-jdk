@@ -14,14 +14,14 @@
   attributes - the attribute changes being reported - `javax.print.attribute.PrintServiceAttributeSet`
 
   throws: java.lang.IllegalArgumentException - if source is null."
-  ([^javax.print.PrintService source ^javax.print.attribute.PrintServiceAttributeSet attributes]
+  (^PrintServiceAttributeEvent [^javax.print.PrintService source ^javax.print.attribute.PrintServiceAttributeSet attributes]
     (new PrintServiceAttributeEvent source attributes)))
 
 (defn get-print-service
   "Returns the print service.
 
   returns: Print Service object. - `javax.print.PrintService`"
-  (^javax.print.PrintService [^javax.print.event.PrintServiceAttributeEvent this]
+  (^javax.print.PrintService [^PrintServiceAttributeEvent this]
     (-> this (.getPrintService))))
 
 (defn get-attributes
@@ -30,6 +30,6 @@
 
   returns: Attributes containing the new values for the service
    attributes that changed. The returned set may be unmodifiable. - `javax.print.attribute.PrintServiceAttributeSet`"
-  (^javax.print.attribute.PrintServiceAttributeSet [^javax.print.event.PrintServiceAttributeEvent this]
+  (^javax.print.attribute.PrintServiceAttributeSet [^PrintServiceAttributeEvent this]
     (-> this (.getAttributes))))
 

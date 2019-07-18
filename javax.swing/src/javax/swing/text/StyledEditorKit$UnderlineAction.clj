@@ -16,13 +16,13 @@
   "Constructor.
 
   Constructs a new UnderlineAction."
-  ([]
+  (^StyledEditorKit$UnderlineAction []
     (new StyledEditorKit$UnderlineAction )))
 
 (defn action-performed
   "Toggles the Underline attribute.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([^javax.swing.text.StyledEditorKit$UnderlineAction this ^java.awt.event.ActionEvent e]
+  ([^StyledEditorKit$UnderlineAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

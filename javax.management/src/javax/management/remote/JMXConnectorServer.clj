@@ -31,9 +31,9 @@
    in any MBean server.
 
   mbean-server - the MBean server that this connector server is attached to. Null if this connector server will be attached to an MBean server by being registered in it. - `javax.management.MBeanServer`"
-  ([^javax.management.MBeanServer mbean-server]
+  (^JMXConnectorServer [^javax.management.MBeanServer mbean-server]
     (new JMXConnectorServer mbean-server))
-  ([]
+  (^JMXConnectorServer []
     (new JMXConnectorServer )))
 
 (def *-authenticator
@@ -52,14 +52,14 @@
 
   returns: the MBean server that this connector server is attached
    to, or null if it is not yet attached to an MBean server. - `javax.management.MBeanServer`"
-  (^javax.management.MBeanServer [^javax.management.remote.JMXConnectorServer this]
+  (^javax.management.MBeanServer [^JMXConnectorServer this]
     (-> this (.getMBeanServer))))
 
 (defn set-m-bean-server-forwarder
   "Description copied from interface: JMXConnectorServerMBean
 
   mbsf - the new MBeanServerForwarder. - `javax.management.remote.MBeanServerForwarder`"
-  ([^javax.management.remote.JMXConnectorServer this ^javax.management.remote.MBeanServerForwarder mbsf]
+  ([^JMXConnectorServer this ^javax.management.remote.MBeanServerForwarder mbsf]
     (-> this (.setMBeanServerForwarder mbsf))))
 
 (defn get-notification-info
@@ -72,12 +72,12 @@
    plus descriptions of the other notifications.
 
   returns: the array of possible notifications. - `javax.management.MBeanNotificationInfo[]`"
-  ([^javax.management.remote.JMXConnectorServer this]
+  ([^JMXConnectorServer this]
     (-> this (.getNotificationInfo))))
 
 (defn post-deregister
   "Description copied from interface: MBeanRegistration"
-  ([^javax.management.remote.JMXConnectorServer this]
+  ([^JMXConnectorServer this]
     (-> this (.postDeregister))))
 
 (defn pre-deregister
@@ -92,7 +92,7 @@
    the MBean.
 
   throws: java.io.IOException - if thrown by the stop method."
-  ([^javax.management.remote.JMXConnectorServer this]
+  ([^JMXConnectorServer this]
     (-> this (.preDeregister))))
 
 (defn get-connection-ids
@@ -101,7 +101,7 @@
   returns: a new string array containing the list of IDs.  If
    there are no currently-open connections, this array will be
    empty. - `java.lang.String[]`"
-  ([^javax.management.remote.JMXConnectorServer this]
+  ([^JMXConnectorServer this]
     (-> this (.getConnectionIds))))
 
 (defn to-jmx-connector
@@ -125,20 +125,20 @@
    override this method so that it either implements the
    appropriate logic or throws UnsupportedOperationException.
 
-  env - client connection parameters of the same sort that could be provided to JMXConnector.connect(Map). Can be null, which is equivalent to an empty map. - `java.util.Map<java.lang.String,?>`
+  env - client connection parameters of the same sort that could be provided to JMXConnector.connect(Map). Can be null, which is equivalent to an empty map. - `java.util.Map`
 
   returns: a client stub that can be used to make a new connection
    to this connector server. - `javax.management.remote.JMXConnector`
 
   throws: java.lang.UnsupportedOperationException - if this connector server does not support the generation of client stubs."
-  (^javax.management.remote.JMXConnector [^javax.management.remote.JMXConnectorServer this ^java.util.Map env]
+  (^javax.management.remote.JMXConnector [^JMXConnectorServer this ^java.util.Map env]
     (-> this (.toJMXConnector env))))
 
 (defn post-register
   "Description copied from interface: MBeanRegistration
 
   registration-done - Indicates whether or not the MBean has been successfully registered in the MBean server. The value false means that the registration phase has failed. - `java.lang.Boolean`"
-  ([^javax.management.remote.JMXConnectorServer this ^java.lang.Boolean registration-done]
+  ([^JMXConnectorServer this ^java.lang.Boolean registration-done]
     (-> this (.postRegister registration-done))))
 
 (defn pre-register
@@ -158,6 +158,6 @@
   returns: The name under which the MBean is to be registered. - `javax.management.ObjectName`
 
   throws: java.lang.NullPointerException - if mbs or name is null."
-  (^javax.management.ObjectName [^javax.management.remote.JMXConnectorServer this ^javax.management.MBeanServer mbs ^javax.management.ObjectName name]
+  (^javax.management.ObjectName [^JMXConnectorServer this ^javax.management.MBeanServer mbs ^javax.management.ObjectName name]
     (-> this (.preRegister mbs name))))
 

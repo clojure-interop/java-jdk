@@ -17,7 +17,7 @@
   returns: a new ACL entry - `java.nio.file.attribute.AclEntry`
 
   throws: java.lang.IllegalStateException - if the type or who component have not been set"
-  (^java.nio.file.attribute.AclEntry [^java.nio.file.attribute.AclEntry$Builder this]
+  (^java.nio.file.attribute.AclEntry [^AclEntry$Builder this]
     (-> this (.build))))
 
 (defn set-type
@@ -25,8 +25,8 @@
 
   type - the component type - `java.nio.file.attribute.AclEntryType`
 
-  returns: this builder - `java.nio.file.attribute.AclEntry.Builder`"
-  (^java.nio.file.attribute.AclEntry.Builder [^java.nio.file.attribute.AclEntry$Builder this ^java.nio.file.attribute.AclEntryType type]
+  returns: this builder - `java.nio.file.attribute.AclEntry$Builder`"
+  (^java.nio.file.attribute.AclEntry$Builder [^AclEntry$Builder this ^java.nio.file.attribute.AclEntryType type]
     (-> this (.setType type))))
 
 (defn set-principal
@@ -34,31 +34,31 @@
 
   who - the principal component - `java.nio.file.attribute.UserPrincipal`
 
-  returns: this builder - `java.nio.file.attribute.AclEntry.Builder`"
-  (^java.nio.file.attribute.AclEntry.Builder [^java.nio.file.attribute.AclEntry$Builder this ^java.nio.file.attribute.UserPrincipal who]
+  returns: this builder - `java.nio.file.attribute.AclEntry$Builder`"
+  (^java.nio.file.attribute.AclEntry$Builder [^AclEntry$Builder this ^java.nio.file.attribute.UserPrincipal who]
     (-> this (.setPrincipal who))))
 
 (defn set-permissions
   "Sets the permissions component of this builder. On return, the
    permissions component of this builder is a copy of the given set.
 
-  perms - the permissions component - `java.util.Set<java.nio.file.attribute.AclEntryPermission>`
+  perms - the permissions component - `java.util.Set`
 
-  returns: this builder - `java.nio.file.attribute.AclEntry.Builder`
+  returns: this builder - `java.nio.file.attribute.AclEntry$Builder`
 
   throws: java.lang.ClassCastException - if the set contains elements that are not of type AclEntryPermission"
-  (^java.nio.file.attribute.AclEntry.Builder [^java.nio.file.attribute.AclEntry$Builder this ^java.util.Set perms]
+  (^java.nio.file.attribute.AclEntry$Builder [^AclEntry$Builder this ^java.util.Set perms]
     (-> this (.setPermissions perms))))
 
 (defn set-flags
   "Sets the flags component of this builder. On return, the flags
    component of this builder is a copy of the given set.
 
-  flags - the flags component - `java.util.Set<java.nio.file.attribute.AclEntryFlag>`
+  flags - the flags component - `java.util.Set`
 
-  returns: this builder - `java.nio.file.attribute.AclEntry.Builder`
+  returns: this builder - `java.nio.file.attribute.AclEntry$Builder`
 
   throws: java.lang.ClassCastException - if the set contains elements that are not of type AclEntryFlag"
-  (^java.nio.file.attribute.AclEntry.Builder [^java.nio.file.attribute.AclEntry$Builder this ^java.util.Set flags]
+  (^java.nio.file.attribute.AclEntry$Builder [^AclEntry$Builder this ^java.util.Set flags]
     (-> this (.setFlags flags))))
 

@@ -10,9 +10,9 @@
 (defn apply-as-double
   "Applies this function to the given argument.
 
-  value - the function argument - `ToDoubleFunction.T`
+  value - the function argument - `T`
 
   returns: the function result - `double`"
-  (^Double [^java.util.function.ToDoubleFunction this ^ToDoubleFunction.T value]
+  (^Double [^ToDoubleFunction this value]
     (-> this (.applyAsDouble value))))
 

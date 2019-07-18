@@ -18,36 +18,36 @@
   alias - KeyStore alias - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if either cert, key or alias is null"
-  ([^java.security.cert.X509Certificate cert ^java.security.PrivateKey key ^java.lang.String alias]
+  (^X500PrivateCredential [^java.security.cert.X509Certificate cert ^java.security.PrivateKey key ^java.lang.String alias]
     (new X500PrivateCredential cert key alias))
-  ([^java.security.cert.X509Certificate cert ^java.security.PrivateKey key]
+  (^X500PrivateCredential [^java.security.cert.X509Certificate cert ^java.security.PrivateKey key]
     (new X500PrivateCredential cert key)))
 
 (defn get-certificate
   "Returns the X.509 certificate.
 
   returns: the X509Certificate - `java.security.cert.X509Certificate`"
-  (^java.security.cert.X509Certificate [^javax.security.auth.x500.X500PrivateCredential this]
+  (^java.security.cert.X509Certificate [^X500PrivateCredential this]
     (-> this (.getCertificate))))
 
 (defn get-private-key
   "Returns the PrivateKey.
 
   returns: the PrivateKey - `java.security.PrivateKey`"
-  (^java.security.PrivateKey [^javax.security.auth.x500.X500PrivateCredential this]
+  (^java.security.PrivateKey [^X500PrivateCredential this]
     (-> this (.getPrivateKey))))
 
 (defn get-alias
   "Returns the KeyStore alias.
 
   returns: the KeyStore alias - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.x500.X500PrivateCredential this]
+  (^java.lang.String [^X500PrivateCredential this]
     (-> this (.getAlias))))
 
 (defn destroy
   "Clears the references to the X.509 certificate, private key and the
    KeyStore alias in this object."
-  ([^javax.security.auth.x500.X500PrivateCredential this]
+  ([^X500PrivateCredential this]
     (-> this (.destroy))))
 
 (defn destroyed?
@@ -55,6 +55,6 @@
    in this object have been cleared.
 
   returns: true if X509Certificate and the PrivateKey are null - `boolean`"
-  (^Boolean [^javax.security.auth.x500.X500PrivateCredential this]
+  (^Boolean [^X500PrivateCredential this]
     (-> this (.isDestroyed))))
 

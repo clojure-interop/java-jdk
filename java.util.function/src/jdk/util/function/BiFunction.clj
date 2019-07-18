@@ -10,11 +10,11 @@
 (defn apply
   "Applies this function to the given arguments.
 
-  t - the first function argument - `BiFunction.T`
-  u - the second function argument - `BiFunction.U`
+  t - the first function argument - `T`
+  u - the second function argument - `U`
 
-  returns: the function result - `BiFunction.R`"
-  (^BiFunction.R [^java.util.function.BiFunction this ^BiFunction.T t ^BiFunction.U u]
+  returns: the function result - `R`"
+  ([^BiFunction this t u]
     (-> this (.apply t u))))
 
 (defn and-then
@@ -23,12 +23,12 @@
    If evaluation of either function throws an exception, it is relayed to
    the caller of the composed function.
 
-  after - the function to apply after this function is applied - `V>`
+  after - the function to apply after this function is applied - `java.util.function.Function`
 
   returns: a composed function that first applies this function and then
-   applies the after function - `default <V> java.util.function.BiFunction<BiFunction.T,BiFunction.U,V>`
+   applies the after function - `default <V> java.util.function.BiFunction<T,U,V>`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([^java.util.function.BiFunction this after]
+  ([^BiFunction this ^java.util.function.Function after]
     (-> this (.andThen after))))
 

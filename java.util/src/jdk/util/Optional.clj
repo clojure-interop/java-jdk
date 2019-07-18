@@ -51,33 +51,33 @@
    and if the result is non-null, return an Optional describing the
    result.  Otherwise return an empty Optional.
 
-  mapper - a mapping function to apply to the value, if present - `U>`
+  mapper - a mapping function to apply to the value, if present - `java.util.function.Function`
 
   returns: an Optional describing the result of applying a mapping
    function to the value of this Optional, if a value is present,
    otherwise an empty Optional - `<U> java.util.Optional<U>`
 
   throws: java.lang.NullPointerException - if the mapping function is null"
-  ([^java.util.Optional this mapper]
+  ([^Optional this ^java.util.function.Function mapper]
     (-> this (.map mapper))))
 
 (defn or-else-throw
   "Return the contained value, if present, otherwise throw an exception
    to be created by the provided supplier.
 
-  exception-supplier - The supplier which will return the exception to be thrown - `X>`
+  exception-supplier - The supplier which will return the exception to be thrown - `java.util.function.Supplier`
 
-  returns: the present value - `<X extends java.lang.Throwable> Optional.T`
+  returns: the present value - `<X extends java.lang.Throwable> T`
 
   throws: X - if there is no value present"
-  ([^java.util.Optional this exception-supplier]
+  ([^Optional this ^java.util.function.Supplier exception-supplier]
     (-> this (.orElseThrow exception-supplier))))
 
 (defn present?
   "Return true if there is a value present, otherwise false.
 
   returns: true if there is a value present, otherwise false - `boolean`"
-  (^Boolean [^java.util.Optional this]
+  (^Boolean [^Optional this]
     (-> this (.isPresent))))
 
 (defn to-string
@@ -86,7 +86,7 @@
    between implementations and versions.
 
   returns: the string representation of this instance - `java.lang.String`"
-  (^java.lang.String [^java.util.Optional this]
+  (^java.lang.String [^Optional this]
     (-> this (.toString))))
 
 (defn flat-map
@@ -97,26 +97,26 @@
    and if invoked, flatMap does not wrap it with an additional
    Optional.
 
-  mapper - a mapping function to apply to the value, if present the mapping function - `Optional.T,java.util.Optional<U>>`
+  mapper - a mapping function to apply to the value, if present the mapping function - `java.util.function.Function`
 
   returns: the result of applying an Optional-bearing mapping
    function to the value of this Optional, if a value is present,
    otherwise an empty Optional - `<U> java.util.Optional<U>`
 
   throws: java.lang.NullPointerException - if the mapping function is null or returns a null result"
-  ([^java.util.Optional this ^Optional.T,java.util.Optional> mapper]
+  ([^Optional this ^java.util.function.Function mapper]
     (-> this (.flatMap mapper))))
 
 (defn or-else-get
   "Return the value if present, otherwise invoke other and return
    the result of that invocation.
 
-  other - a Supplier whose result is returned if no value is present - `Optional.T>`
+  other - a Supplier whose result is returned if no value is present - `java.util.function.Supplier`
 
-  returns: the value if present otherwise the result of other.get() - `Optional.T`
+  returns: the value if present otherwise the result of other.get() - `T`
 
   throws: java.lang.NullPointerException - if value is not present and other is null"
-  (^Optional.T [^java.util.Optional this ^Optional.T> other]
+  ([^Optional this ^java.util.function.Supplier other]
     (-> this (.orElseGet other))))
 
 (defn filter
@@ -124,24 +124,24 @@
    return an Optional describing the value, otherwise return an
    empty Optional.
 
-  predicate - a predicate to apply to the value, if present - `Optional.T>`
+  predicate - a predicate to apply to the value, if present - `java.util.function.Predicate`
 
   returns: an Optional describing the value of this Optional
    if a value is present and the value matches the given predicate,
-   otherwise an empty Optional - `java.util.Optional<Optional.T>`
+   otherwise an empty Optional - `java.util.Optional<T>`
 
   throws: java.lang.NullPointerException - if the predicate is null"
-  (^java.util.Optional [^java.util.Optional this ^Optional.T> predicate]
+  (^java.util.Optional [^Optional this ^java.util.function.Predicate predicate]
     (-> this (.filter predicate))))
 
 (defn if-present
   "If a value is present, invoke the specified consumer with the value,
    otherwise do nothing.
 
-  consumer - block to be executed if a value is present - `Optional.T>`
+  consumer - block to be executed if a value is present - `java.util.function.Consumer`
 
   throws: java.lang.NullPointerException - if value is present and consumer is null"
-  ([^java.util.Optional this ^Optional.T> consumer]
+  ([^Optional this ^java.util.function.Consumer consumer]
     (-> this (.ifPresent consumer))))
 
 (defn hash-code
@@ -149,26 +149,26 @@
    no value is present.
 
   returns: hash code value of the present value or 0 if no value is present - `int`"
-  (^Integer [^java.util.Optional this]
+  (^Integer [^Optional this]
     (-> this (.hashCode))))
 
 (defn or-else
   "Return the value if present, otherwise return other.
 
-  other - the value to be returned if there is no value present, may be null - `Optional.T`
+  other - the value to be returned if there is no value present, may be null - `T`
 
-  returns: the value, if present, otherwise other - `Optional.T`"
-  (^Optional.T [^java.util.Optional this ^Optional.T other]
+  returns: the value, if present, otherwise other - `T`"
+  ([^Optional this other]
     (-> this (.orElse other))))
 
 (defn get
   "If a value is present in this Optional, returns the value,
    otherwise throws NoSuchElementException.
 
-  returns: the non-null value held by this Optional - `Optional.T`
+  returns: the non-null value held by this Optional - `T`
 
   throws: java.util.NoSuchElementException - if there is no value present"
-  (^Optional.T [^java.util.Optional this]
+  ([^Optional this]
     (-> this (.get))))
 
 (defn equals
@@ -183,6 +183,6 @@
 
   returns: {code true} if the other object is `equal to` this object
    otherwise false - `boolean`"
-  (^Boolean [^java.util.Optional this ^java.lang.Object obj]
+  (^Boolean [^Optional this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

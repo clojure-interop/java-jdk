@@ -66,7 +66,7 @@
   result - for writing infoset - `javax.xml.transform.Result`
 
   throws: javax.xml.ws.WebServiceException - if there is an error writing the EndpointReference to the specified result."
-  ([^javax.xml.ws.EndpointReference this ^javax.xml.transform.Result result]
+  ([^EndpointReference this ^javax.xml.transform.Result result]
     (-> this (.writeTo result))))
 
 (defn get-port
@@ -95,20 +95,20 @@
    BindingProvider().getBinding().setHandlerChain()
    method can be used to manually configure handlers for this port.
 
-  service-endpoint-interface - Service endpoint interface - `java.lang.Class<T>`
+  service-endpoint-interface - Service endpoint interface - `java.lang.Class`
   features - An array of WebServiceFeatures to configure on the proxy. Supported features not in the features parameter will have their default values. - `javax.xml.ws.WebServiceFeature`
 
   returns: Object Proxy instance that supports the
                     specified service endpoint interface - `<T> T`
 
   throws: javax.xml.ws.WebServiceException - If there is an error during creation of the proxy If there is any missing WSDL metadata as required by this method If this endpointReference is invalid If an illegal serviceEndpointInterface is specified If a feature is enabled that is not compatible with this port or is unsupported."
-  ([^javax.xml.ws.EndpointReference this ^java.lang.Class service-endpoint-interface ^javax.xml.ws.WebServiceFeature features]
+  ([^EndpointReference this ^java.lang.Class service-endpoint-interface ^javax.xml.ws.WebServiceFeature features]
     (-> this (.getPort service-endpoint-interface features))))
 
 (defn to-string
   "Displays EPR infoset for debugging convenience.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.ws.EndpointReference this]
+  (^java.lang.String [^EndpointReference this]
     (-> this (.toString))))
 

@@ -77,7 +77,7 @@
 
   returns: an integer Rectangle that completely encloses
                    the Shape. - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^java.awt.Shape this]
+  (^java.awt.Rectangle [^Shape this]
     (-> this (.getBounds))))
 
 (defn get-bounds-2-d
@@ -120,7 +120,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.Shape this]
+  (^java.awt.geom.Rectangle2D [^Shape this]
     (-> this (.getBounds2D))))
 
 (defn contains
@@ -160,11 +160,11 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  (^Boolean [^java.awt.Shape this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^Shape this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  (^Boolean [^java.awt.Shape this ^Double x ^Double y]
+  (^Boolean [^Shape this ^Double x ^Double y]
     (-> this (.contains x y)))
-  (^Boolean [^java.awt.Shape this ^java.awt.geom.Point2D p]
+  (^Boolean [^Shape this ^java.awt.geom.Point2D p]
     (-> this (.contains p))))
 
 (defn intersects
@@ -201,9 +201,9 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Shape this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^Shape this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  (^Boolean [^java.awt.Shape this ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^Shape this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 
 (defn get-path-iterator
@@ -242,8 +242,8 @@
 
   returns: a new PathIterator that independently traverses
            a flattened view of the geometry of the  Shape. - `java.awt.geom.PathIterator`"
-  (^java.awt.geom.PathIterator [^java.awt.Shape this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^Shape this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness)))
-  (^java.awt.geom.PathIterator [^java.awt.Shape this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^Shape this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 

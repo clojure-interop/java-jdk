@@ -19,15 +19,15 @@
   lcle - The current Locale for this BeanContext. - `java.util.Locale`
   d-time - The initial state, true if in design mode, false if runtime. - `boolean`
   visible - The initial visibility. - `boolean`"
-  ([^java.beans.beancontext.BeanContextServices peer ^java.util.Locale lcle ^Boolean d-time ^Boolean visible]
+  (^BeanContextServicesSupport [^java.beans.beancontext.BeanContextServices peer ^java.util.Locale lcle ^Boolean d-time ^Boolean visible]
     (new BeanContextServicesSupport peer lcle d-time visible))
-  ([^java.beans.beancontext.BeanContextServices peer ^java.util.Locale lcle ^Boolean dtime]
+  (^BeanContextServicesSupport [^java.beans.beancontext.BeanContextServices peer ^java.util.Locale lcle ^Boolean dtime]
     (new BeanContextServicesSupport peer lcle dtime))
-  ([^java.beans.beancontext.BeanContextServices peer ^java.util.Locale lcle]
+  (^BeanContextServicesSupport [^java.beans.beancontext.BeanContextServices peer ^java.util.Locale lcle]
     (new BeanContextServicesSupport peer lcle))
-  ([^java.beans.beancontext.BeanContextServices peer]
+  (^BeanContextServicesSupport [^java.beans.beancontext.BeanContextServices peer]
     (new BeanContextServicesSupport peer))
-  ([]
+  (^BeanContextServicesSupport []
     (new BeanContextServicesSupport )))
 
 (defn get-service
@@ -43,7 +43,7 @@
    Service as requested or null - `java.lang.Object`
 
   throws: java.util.TooManyListenersException - if there are too many listeners"
-  (^java.lang.Object [^java.beans.beancontext.BeanContextServicesSupport this ^java.beans.beancontext.BeanContextChild child ^java.lang.Object requestor ^java.lang.Class service-class ^java.lang.Object service-selector ^java.beans.beancontext.BeanContextServiceRevokedListener bcsrl]
+  (^java.lang.Object [^BeanContextServicesSupport this ^java.beans.beancontext.BeanContextChild child ^java.lang.Object requestor ^java.lang.Class service-class ^java.lang.Object service-selector ^java.beans.beancontext.BeanContextServiceRevokedListener bcsrl]
     (-> this (.getService child requestor service-class service-selector bcsrl))))
 
 (defn release-service
@@ -52,7 +52,7 @@
   child - the BeanContextChild - `java.beans.beancontext.BeanContextChild`
   requestor - the requestor - `java.lang.Object`
   service - the service - `java.lang.Object`"
-  ([^java.beans.beancontext.BeanContextServicesSupport this ^java.beans.beancontext.BeanContextChild child ^java.lang.Object requestor ^java.lang.Object service]
+  ([^BeanContextServicesSupport this ^java.beans.beancontext.BeanContextChild child ^java.lang.Object requestor ^java.lang.Object service]
     (-> this (.releaseService child requestor service))))
 
 (defn has-service?
@@ -61,7 +61,7 @@
   service-class - the service in question - `java.lang.Class`
 
   returns: true if the service is available - `boolean`"
-  (^Boolean [^java.beans.beancontext.BeanContextServicesSupport this ^java.lang.Class service-class]
+  (^Boolean [^BeanContextServicesSupport this ^java.lang.Class service-class]
     (-> this (.hasService service-class))))
 
 (defn revoke-service
@@ -70,7 +70,7 @@
   service-class - the service class - `java.lang.Class`
   bcsp - the service provider - `java.beans.beancontext.BeanContextServiceProvider`
   revoke-current-services-now - whether or not to revoke the service - `boolean`"
-  ([^java.beans.beancontext.BeanContextServicesSupport this ^java.lang.Class service-class ^java.beans.beancontext.BeanContextServiceProvider bcsp ^Boolean revoke-current-services-now]
+  ([^BeanContextServicesSupport this ^java.lang.Class service-class ^java.beans.beancontext.BeanContextServiceProvider bcsp ^Boolean revoke-current-services-now]
     (-> this (.revokeService service-class bcsp revoke-current-services-now))))
 
 (defn get-bean-context-services-peer
@@ -79,7 +79,7 @@
 
   returns: the instance of BeanContext
    this object is providing the implementation for. - `java.beans.beancontext.BeanContextServices`"
-  (^java.beans.beancontext.BeanContextServices [^java.beans.beancontext.BeanContextServicesSupport this]
+  (^java.beans.beancontext.BeanContextServices [^BeanContextServicesSupport this]
     (-> this (.getBeanContextServicesPeer))))
 
 (defn add-service
@@ -89,7 +89,7 @@
   bcsp - the service provider - `java.beans.beancontext.BeanContextServiceProvider`
 
   returns: true if the service was successful added, false otherwise - `boolean`"
-  (^Boolean [^java.beans.beancontext.BeanContextServicesSupport this ^java.lang.Class service-class ^java.beans.beancontext.BeanContextServiceProvider bcsp]
+  (^Boolean [^BeanContextServicesSupport this ^java.lang.Class service-class ^java.beans.beancontext.BeanContextServiceProvider bcsp]
     (-> this (.addService service-class bcsp))))
 
 (defn get-current-service-selectors
@@ -99,7 +99,7 @@
 
   returns: an iterator for all the currently available service selectors
    (if any) available for the specified service. - `java.util.Iterator`"
-  (^java.util.Iterator [^java.beans.beancontext.BeanContextServicesSupport this ^java.lang.Class service-class]
+  (^java.util.Iterator [^BeanContextServicesSupport this ^java.lang.Class service-class]
     (-> this (.getCurrentServiceSelectors service-class))))
 
 (defn initialize
@@ -108,7 +108,7 @@
 
    subclasses may envelope this method, but should not override it or
    call it directly."
-  ([^java.beans.beancontext.BeanContextServicesSupport this]
+  ([^BeanContextServicesSupport this]
     (-> this (.initialize))))
 
 (defn add-bean-context-services-listener
@@ -117,14 +117,14 @@
   bcsl - the BeanContextServicesListener to add - `java.beans.beancontext.BeanContextServicesListener`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([^java.beans.beancontext.BeanContextServicesSupport this ^java.beans.beancontext.BeanContextServicesListener bcsl]
+  ([^BeanContextServicesSupport this ^java.beans.beancontext.BeanContextServicesListener bcsl]
     (-> this (.addBeanContextServicesListener bcsl))))
 
 (defn remove-bean-context-services-listener
   "remove a BeanContextServicesListener
 
   bcsl - the BeanContextServicesListener to remove from this context - `java.beans.beancontext.BeanContextServicesListener`"
-  ([^java.beans.beancontext.BeanContextServicesSupport this ^java.beans.beancontext.BeanContextServicesListener bcsl]
+  ([^BeanContextServicesSupport this ^java.beans.beancontext.BeanContextServicesListener bcsl]
     (-> this (.removeBeanContextServicesListener bcsl))))
 
 (defn service-available
@@ -137,7 +137,7 @@
    own propagation semantics.
 
   bcssae - The BeanContextServiceAvailableEvent fired as a result of a service becoming available - `java.beans.beancontext.BeanContextServiceAvailableEvent`"
-  ([^java.beans.beancontext.BeanContextServicesSupport this ^java.beans.beancontext.BeanContextServiceAvailableEvent bcssae]
+  ([^BeanContextServicesSupport this ^java.beans.beancontext.BeanContextServiceAvailableEvent bcssae]
     (-> this (.serviceAvailable bcssae))))
 
 (defn service-revoked
@@ -150,13 +150,13 @@
    own propagation semantics.
 
   bcssre - The BeanContextServiceRevokedEvent fired as a result of a service being revoked - `java.beans.beancontext.BeanContextServiceRevokedEvent`"
-  ([^java.beans.beancontext.BeanContextServicesSupport this ^java.beans.beancontext.BeanContextServiceRevokedEvent bcssre]
+  ([^BeanContextServicesSupport this ^java.beans.beancontext.BeanContextServiceRevokedEvent bcssre]
     (-> this (.serviceRevoked bcssre))))
 
 (defn get-current-service-classes
   "Description copied from interface: BeanContextServices
 
   returns: an iterator for all the currently registered service classes. - `java.util.Iterator`"
-  (^java.util.Iterator [^java.beans.beancontext.BeanContextServicesSupport this]
+  (^java.util.Iterator [^BeanContextServicesSupport this]
     (-> this (.getCurrentServiceClasses))))
 

@@ -12,8 +12,8 @@
    specified message.
 
   message - the detail message, may be null - `java.lang.String`"
-  ([^java.lang.String message]
+  (^GenericSignatureFormatError [^java.lang.String message]
     (new GenericSignatureFormatError message))
-  ([]
+  (^GenericSignatureFormatError []
     (new GenericSignatureFormatError )))
 

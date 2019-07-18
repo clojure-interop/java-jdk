@@ -49,7 +49,7 @@
   value - The control's ASN.1 BER encoded value. It is not cloned - any changes to value will affect the contents of the control. - `byte[]`
 
   throws: java.io.IOException - if an error is encountered while decoding the control's value."
-  ([^java.lang.String id ^Boolean criticality value]
+  (^SortResponseControl [^java.lang.String id ^Boolean criticality value]
     (new SortResponseControl id criticality value)))
 
 (def *-oid
@@ -66,14 +66,14 @@
    If an error occurred during sorting a NamingException is thrown.
 
   returns: true if the search results have been sorted. - `boolean`"
-  (^Boolean [^javax.naming.ldap.SortResponseControl this]
+  (^Boolean [^SortResponseControl this]
     (-> this (.isSorted))))
 
 (defn get-result-code
   "Retrieves the LDAP result code of the sort operation.
 
   returns: The result code. A zero value indicates success. - `int`"
-  (^Integer [^javax.naming.ldap.SortResponseControl this]
+  (^Integer [^SortResponseControl this]
     (-> this (.getResultCode))))
 
 (defn get-attribute-id
@@ -81,7 +81,7 @@
    Returns null if no ID was returned by the server.
 
   returns: The possibly null ID of the bad attribute. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.ldap.SortResponseControl this]
+  (^java.lang.String [^SortResponseControl this]
     (-> this (.getAttributeID))))
 
 (defn get-exception
@@ -89,6 +89,6 @@
 
   returns: A NamingException or null if the result code indicates
            success. - `javax.naming.NamingException`"
-  (^javax.naming.NamingException [^javax.naming.ldap.SortResponseControl this]
+  (^javax.naming.NamingException [^SortResponseControl this]
     (-> this (.getException))))
 

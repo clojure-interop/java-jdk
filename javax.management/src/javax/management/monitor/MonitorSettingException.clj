@@ -12,8 +12,8 @@
   Constructor that allows an error message to be specified.
 
   message - The specific error message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^MonitorSettingException [^java.lang.String message]
     (new MonitorSettingException message))
-  ([]
+  (^MonitorSettingException []
     (new MonitorSettingException )))
 

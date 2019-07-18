@@ -24,7 +24,7 @@
 
 (defn ->drag-source-adapter
   "Constructor."
-  ([]
+  (^DragSourceAdapter []
     (new DragSourceAdapter )))
 
 (defn drag-enter
@@ -37,7 +37,7 @@
    The drop site accepts the drag.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([^java.awt.dnd.DragSourceAdapter this ^java.awt.dnd.DragSourceDragEvent dsde]
+  ([^DragSourceAdapter this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dragEnter dsde))))
 
 (defn drag-over
@@ -51,14 +51,14 @@
    The drop site accepts the drag.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([^java.awt.dnd.DragSourceAdapter this ^java.awt.dnd.DragSourceDragEvent dsde]
+  ([^DragSourceAdapter this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dragOver dsde))))
 
 (defn drag-mouse-moved
   "Called whenever the mouse is moved during a drag operation.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([^java.awt.dnd.DragSourceAdapter this ^java.awt.dnd.DragSourceDragEvent dsde]
+  ([^DragSourceAdapter this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dragMouseMoved dsde))))
 
 (defn drop-action-changed
@@ -69,7 +69,7 @@
    modifiers that the user is interacting with.
 
   dsde - the DragSourceDragEvent - `java.awt.dnd.DragSourceDragEvent`"
-  ([^java.awt.dnd.DragSourceAdapter this ^java.awt.dnd.DragSourceDragEvent dsde]
+  ([^DragSourceAdapter this ^java.awt.dnd.DragSourceDragEvent dsde]
     (-> this (.dropActionChanged dsde))))
 
 (defn drag-exit
@@ -90,7 +90,7 @@
    has rejected the drag.
 
   dse - the DragSourceEvent - `java.awt.dnd.DragSourceEvent`"
-  ([^java.awt.dnd.DragSourceAdapter this ^java.awt.dnd.DragSourceEvent dse]
+  ([^DragSourceAdapter this ^java.awt.dnd.DragSourceEvent dse]
     (-> this (.dragExit dse))))
 
 (defn drag-drop-end
@@ -104,6 +104,6 @@
    associated resources become invalid.
 
   dsde - the DragSourceDropEvent - `java.awt.dnd.DragSourceDropEvent`"
-  ([^java.awt.dnd.DragSourceAdapter this ^java.awt.dnd.DragSourceDropEvent dsde]
+  ([^DragSourceAdapter this ^java.awt.dnd.DragSourceDropEvent dsde]
     (-> this (.dragDropEnd dsde))))
 

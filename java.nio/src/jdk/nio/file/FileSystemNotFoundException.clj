@@ -9,8 +9,8 @@
   Constructs an instance of this class.
 
   msg - the detail message - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^FileSystemNotFoundException [^java.lang.String msg]
     (new FileSystemNotFoundException msg))
-  ([]
+  (^FileSystemNotFoundException []
     (new FileSystemNotFoundException )))
 

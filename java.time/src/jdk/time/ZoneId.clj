@@ -170,7 +170,7 @@
    within an application.
 
   zone-id - the time-zone ID, not null - `java.lang.String`
-  alias-map - a map of alias zone IDs (typically abbreviations) to real zone IDs, not null - `java.util.Map<java.lang.String,java.lang.String>`
+  alias-map - a map of alias zone IDs (typically abbreviations) to real zone IDs, not null - `java.util.Map`
 
   returns: the zone ID, not null - `java.time.ZoneId`
 
@@ -227,7 +227,7 @@
    The format of an offset based ID is defined by ZoneOffset.getId().
 
   returns: the time-zone unique ID, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.ZoneId this]
+  (^java.lang.String [^ZoneId this]
     (-> this (.getId))))
 
 (defn get-display-name
@@ -244,7 +244,7 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the text value of the zone, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.ZoneId this ^java.time.format.TextStyle style ^java.util.Locale locale]
+  (^java.lang.String [^ZoneId this ^java.time.format.TextStyle style ^java.util.Locale locale]
     (-> this (.getDisplayName style locale))))
 
 (defn get-rules
@@ -267,7 +267,7 @@
   returns: the rules, not null - `java.time.zone.ZoneRules`
 
   throws: java.time.zone.ZoneRulesException - if no rules are available for this ID"
-  (^java.time.zone.ZoneRules [^java.time.ZoneId this]
+  (^java.time.zone.ZoneRules [^ZoneId this]
     (-> this (.getRules))))
 
 (defn normalized
@@ -282,7 +282,7 @@
    Otherwise this is returned.
 
   returns: the time-zone unique ID, not null - `java.time.ZoneId`"
-  (^java.time.ZoneId [^java.time.ZoneId this]
+  (^java.time.ZoneId [^ZoneId this]
     (-> this (.normalized))))
 
 (defn equals
@@ -293,20 +293,20 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other time-zone ID - `boolean`"
-  (^Boolean [^java.time.ZoneId this ^java.lang.Object obj]
+  (^Boolean [^ZoneId this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "A hash code for this time-zone ID.
 
   returns: a suitable hash code - `int`"
-  (^Integer [^java.time.ZoneId this]
+  (^Integer [^ZoneId this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Outputs this zone as a String, using the ID.
 
   returns: a string representation of this time-zone ID, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.ZoneId this]
+  (^java.lang.String [^ZoneId this]
     (-> this (.toString))))
 

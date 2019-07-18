@@ -11,21 +11,21 @@
 
   name - A String containing the name of the attribute to be created. Cannot be null. - `java.lang.String`
   value - The Object which is assigned to the attribute. This object must be of the same type as the attribute. - `java.lang.Object`"
-  ([^java.lang.String name ^java.lang.Object value]
+  (^Attribute [^java.lang.String name ^java.lang.Object value]
     (new Attribute name value)))
 
 (defn get-name
   "Returns a String containing the  name of the attribute.
 
   returns: the name of the attribute. - `java.lang.String`"
-  (^java.lang.String [^javax.management.Attribute this]
+  (^java.lang.String [^Attribute this]
     (-> this (.getName))))
 
 (defn get-value
   "Returns an Object that is the value of this attribute.
 
   returns: the value of the attribute. - `java.lang.Object`"
-  (^java.lang.Object [^javax.management.Attribute this]
+  (^java.lang.Object [^Attribute this]
     (-> this (.getValue))))
 
 (defn equals
@@ -34,14 +34,14 @@
   object - The Attribute that the current Attribute is to be compared with. - `java.lang.Object`
 
   returns: True if the two Attribute objects are equal, otherwise false. - `boolean`"
-  (^Boolean [^javax.management.Attribute this ^java.lang.Object object]
+  (^Boolean [^Attribute this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn hash-code
   "Returns a hash code value for this attribute.
 
   returns: a hash code value for this attribute. - `int`"
-  (^Integer [^javax.management.Attribute this]
+  (^Integer [^Attribute this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -50,6 +50,6 @@
    same string if and only if they are equal.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.management.Attribute this]
+  (^java.lang.String [^Attribute this]
     (-> this (.toString))))
 

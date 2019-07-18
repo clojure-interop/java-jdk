@@ -18,8 +18,8 @@
    using the explanation supplied. All other fields are set to null.
 
   explanation - Detail about this exception. Can be null. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^SchemaViolationException [^java.lang.String explanation]
     (new SchemaViolationException explanation))
-  ([]
+  (^SchemaViolationException []
     (new SchemaViolationException )))
 

@@ -14,7 +14,7 @@
 
 (defn ->metal-radio-button-ui
   "Constructor."
-  ([]
+  (^MetalRadioButtonUI []
     (new MetalRadioButtonUI )))
 
 (defn *create-ui
@@ -26,7 +26,7 @@
 
 (defn install-defaults
   "b - `javax.swing.AbstractButton`"
-  ([^javax.swing.plaf.metal.MetalRadioButtonUI this ^javax.swing.AbstractButton b]
+  ([^MetalRadioButtonUI this ^javax.swing.AbstractButton b]
     (-> this (.installDefaults b))))
 
 (defn paint
@@ -34,6 +34,6 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalRadioButtonUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^MetalRadioButtonUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 

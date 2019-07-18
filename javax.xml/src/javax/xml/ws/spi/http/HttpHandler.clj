@@ -9,7 +9,7 @@
 
 (defn ->http-handler
   "Constructor."
-  ([]
+  (^HttpHandler []
     (new HttpHandler )))
 
 (defn handle
@@ -21,6 +21,6 @@
   exchange - the exchange containing the request from the client and used to send the response - `javax.xml.ws.spi.http.HttpExchange`
 
   throws: java.io.IOException - when an I/O error happens during request handling"
-  ([^javax.xml.ws.spi.http.HttpHandler this ^javax.xml.ws.spi.http.HttpExchange exchange]
+  ([^HttpHandler this ^javax.xml.ws.spi.http.HttpExchange exchange]
     (-> this (.handle exchange))))
 

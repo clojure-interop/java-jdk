@@ -13,20 +13,20 @@
   "The notation name.
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.events.NotationDeclaration this]
+  (^java.lang.String [^NotationDeclaration this]
     (-> this (.getName))))
 
 (defn get-public-id
   "The notation's public identifier, or null if none was given.
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.events.NotationDeclaration this]
+  (^java.lang.String [^NotationDeclaration this]
     (-> this (.getPublicId))))
 
 (defn get-system-id
   "The notation's system identifier, or null if none was given.
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.events.NotationDeclaration this]
+  (^java.lang.String [^NotationDeclaration this]
     (-> this (.getSystemId))))
 

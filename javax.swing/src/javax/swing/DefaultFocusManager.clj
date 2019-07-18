@@ -15,7 +15,7 @@
 
 (defn ->default-focus-manager
   "Constructor."
-  ([]
+  (^DefaultFocusManager []
     (new DefaultFocusManager )))
 
 (defn get-component-after
@@ -23,7 +23,7 @@
   a-component - `java.awt.Component`
 
   returns: `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.DefaultFocusManager this ^java.awt.Container a-container ^java.awt.Component a-component]
+  (^java.awt.Component [^DefaultFocusManager this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentAfter a-container a-component))))
 
 (defn get-component-before
@@ -31,21 +31,21 @@
   a-component - `java.awt.Component`
 
   returns: `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.DefaultFocusManager this ^java.awt.Container a-container ^java.awt.Component a-component]
+  (^java.awt.Component [^DefaultFocusManager this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentBefore a-container a-component))))
 
 (defn get-first-component
   "a-container - `java.awt.Container`
 
   returns: `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.DefaultFocusManager this ^java.awt.Container a-container]
+  (^java.awt.Component [^DefaultFocusManager this ^java.awt.Container a-container]
     (-> this (.getFirstComponent a-container))))
 
 (defn get-last-component
   "a-container - `java.awt.Container`
 
   returns: `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.DefaultFocusManager this ^java.awt.Container a-container]
+  (^java.awt.Component [^DefaultFocusManager this ^java.awt.Container a-container]
     (-> this (.getLastComponent a-container))))
 
 (defn compare-tab-order
@@ -53,6 +53,6 @@
   b - `java.awt.Component`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.DefaultFocusManager this ^java.awt.Component a ^java.awt.Component b]
+  (^Boolean [^DefaultFocusManager this ^java.awt.Component a ^java.awt.Component b]
     (-> this (.compareTabOrder a b))))
 

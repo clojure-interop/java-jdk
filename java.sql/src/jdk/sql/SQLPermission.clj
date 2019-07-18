@@ -87,8 +87,8 @@
   actions - should be null - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^SQLPermission [^java.lang.String name ^java.lang.String actions]
     (new SQLPermission name actions))
-  ([^java.lang.String name]
+  (^SQLPermission [^java.lang.String name]
     (new SQLPermission name)))
 

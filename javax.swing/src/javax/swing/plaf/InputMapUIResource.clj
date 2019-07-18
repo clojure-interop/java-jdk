@@ -6,6 +6,6 @@
 
 (defn ->input-map-ui-resource
   "Constructor."
-  ([]
+  (^InputMapUIResource []
     (new InputMapUIResource )))
 

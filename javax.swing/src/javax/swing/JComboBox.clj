@@ -33,10 +33,10 @@
    this constructor does not create a default combo box model and
    may impact how the insert, remove and add methods behave.
 
-  a-model - the ComboBoxModel that provides the displayed list of items - `javax.swing.ComboBoxModel<JComboBox.E>`"
-  ([^javax.swing.ComboBoxModel a-model]
+  a-model - the ComboBoxModel that provides the displayed list of items - `javax.swing.ComboBoxModel`"
+  (^JComboBox [^javax.swing.ComboBoxModel a-model]
     (new JComboBox a-model))
-  ([]
+  (^JComboBox []
     (new JComboBox )))
 
 (defn add-item-listener
@@ -46,7 +46,7 @@
    the selected item changes.
 
   a-listener - the ItemListener that is to be notified - `java.awt.event.ItemListener`"
-  ([^javax.swing.JComboBox this ^java.awt.event.ItemListener a-listener]
+  ([^JComboBox this ^java.awt.event.ItemListener a-listener]
     (-> this (.addItemListener a-listener))))
 
 (defn set-selected-item
@@ -72,7 +72,7 @@
    with an ActionEvent when this method is called.
 
   an-object - the list object to select; use null to clear the selection - `java.lang.Object`"
-  ([^javax.swing.JComboBox this ^java.lang.Object an-object]
+  ([^JComboBox this ^java.lang.Object an-object]
     (-> this (.setSelectedItem an-object))))
 
 (defn light-weight-popup-enabled?
@@ -81,12 +81,12 @@
 
   returns: the value of the lightWeightPopupEnabled
       property - `boolean`"
-  (^Boolean [^javax.swing.JComboBox this]
+  (^Boolean [^JComboBox this]
     (-> this (.isLightWeightPopupEnabled))))
 
 (defn show-popup
   "Causes the combo box to display its popup window."
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.showPopup))))
 
 (defn add-item
@@ -108,8 +108,8 @@
        return new Object() { public String toString() { return item; } };
      }
 
-  item - the item to add to the list - `JComboBox.E`"
-  ([^javax.swing.JComboBox this ^JComboBox.E item]
+  item - the item to add to the list - `E`"
+  ([^JComboBox this item]
     (-> this (.addItem item))))
 
 (defn get-editor
@@ -117,7 +117,7 @@
    JComboBox field.
 
   returns: the ComboBoxEditor that displays the selected item - `javax.swing.ComboBoxEditor`"
-  (^javax.swing.ComboBoxEditor [^javax.swing.JComboBox this]
+  (^javax.swing.ComboBoxEditor [^JComboBox this]
     (-> this (.getEditor))))
 
 (defn remove-item
@@ -126,7 +126,7 @@
    mutable data model.
 
   an-object - the object to remove from the item list - `java.lang.Object`"
-  ([^javax.swing.JComboBox this ^java.lang.Object an-object]
+  ([^JComboBox this ^java.lang.Object an-object]
     (-> this (.removeItem an-object))))
 
 (defn configure-editor
@@ -134,14 +134,14 @@
 
   an-editor - the ComboBoxEditor that displays the list item in the combo box field and allows it to be edited - `javax.swing.ComboBoxEditor`
   an-item - the object to display and edit in the field - `java.lang.Object`"
-  ([^javax.swing.JComboBox this ^javax.swing.ComboBoxEditor an-editor ^java.lang.Object an-item]
+  ([^JComboBox this ^javax.swing.ComboBoxEditor an-editor ^java.lang.Object an-item]
     (-> this (.configureEditor an-editor an-item))))
 
 (defn get-item-count
   "Returns the number of items in the list.
 
   returns: an integer equal to the number of items in the list - `int`"
-  (^Integer [^javax.swing.JComboBox this]
+  (^Integer [^JComboBox this]
     (-> this (.getItemCount))))
 
 (defn fire-popup-menu-will-become-invisible
@@ -150,14 +150,14 @@
 
    This method is public but should not be called by anything other than
    the UI delegate."
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.firePopupMenuWillBecomeInvisible))))
 
 (defn remove-item-listener
   "Removes an ItemListener.
 
   a-listener - the ItemListener to remove - `java.awt.event.ItemListener`"
-  ([^javax.swing.JComboBox this ^java.awt.event.ItemListener a-listener]
+  ([^JComboBox this ^java.awt.event.ItemListener a-listener]
     (-> this (.removeItemListener a-listener))))
 
 (defn get-item-at
@@ -168,8 +168,8 @@
   index - an integer indicating the list position, where the first item starts at zero - `int`
 
   returns: the item at that list position; or
-                    null if out of range - `JComboBox.E`"
-  (^JComboBox.E [^javax.swing.JComboBox this ^Integer index]
+                    null if out of range - `E`"
+  ([^JComboBox this ^Integer index]
     (-> this (.getItemAt index))))
 
 (defn remove-item-at
@@ -178,7 +178,7 @@
    mutable data model.
 
   an-index - an int specifying the index of the item to remove, where 0 indicates the first item in the list - `int`"
-  ([^javax.swing.JComboBox this ^Integer an-index]
+  ([^JComboBox this ^Integer an-index]
     (-> this (.removeItemAt an-index))))
 
 (defn add-popup-menu-listener
@@ -191,7 +191,7 @@
    therefore not receive the notification.
 
   l - the PopupMenuListener to add - `javax.swing.event.PopupMenuListener`"
-  ([^javax.swing.JComboBox this ^javax.swing.event.PopupMenuListener l]
+  ([^JComboBox this ^javax.swing.event.PopupMenuListener l]
     (-> this (.addPopupMenuListener l))))
 
 (defn get-action
@@ -201,7 +201,7 @@
 
   returns: the Action for this ActionEvent
             source; or null - `javax.swing.Action`"
-  (^javax.swing.Action [^javax.swing.JComboBox this]
+  (^javax.swing.Action [^JComboBox this]
     (-> this (.getAction))))
 
 (defn add-action-listener
@@ -212,7 +212,7 @@
    an ActionEvent will be fired when editing has stopped.
 
   l - the ActionListener that is to be notified - `java.awt.event.ActionListener`"
-  ([^javax.swing.JComboBox this ^java.awt.event.ActionListener l]
+  ([^JComboBox this ^java.awt.event.ActionListener l]
     (-> this (.addActionListener l))))
 
 (defn get-maximum-row-count
@@ -221,26 +221,26 @@
 
   returns: an integer specifying the maximum number of items that are
            displayed in the list before using a scrollbar - `int`"
-  (^Integer [^javax.swing.JComboBox this]
+  (^Integer [^JComboBox this]
     (-> this (.getMaximumRowCount))))
 
 (defn remove-popup-menu-listener
   "Removes a PopupMenuListener.
 
   l - the PopupMenuListener to remove - `javax.swing.event.PopupMenuListener`"
-  ([^javax.swing.JComboBox this ^javax.swing.event.PopupMenuListener l]
+  ([^JComboBox this ^javax.swing.event.PopupMenuListener l]
     (-> this (.removePopupMenuListener l))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `ComboBoxUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JComboBox this]
+  (^java.lang.String [^JComboBox this]
     (-> this (.getUIClassID))))
 
 (defn hide-popup
   "Causes the combo box to close its popup window."
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.hidePopup))))
 
 (defn get-selected-index
@@ -255,7 +255,7 @@
                     the first item in the list;
                     or -1 if no item is selected or if
                     the currently selected item is not in the list - `int`"
-  (^Integer [^javax.swing.JComboBox this]
+  (^Integer [^JComboBox this]
     (-> this (.getSelectedIndex))))
 
 (defn select-with-key-char
@@ -266,7 +266,7 @@
   key-char - a char, typically this is a keyboard key typed by the user - `char`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.JComboBox this ^Character key-char]
+  (^Boolean [^JComboBox this ^Character key-char]
     (-> this (.selectWithKeyChar key-char))))
 
 (defn set-maximum-row-count
@@ -275,14 +275,14 @@
    the combo box uses a scrollbar.
 
   count - an integer specifying the maximum number of items to display in the list before using a scrollbar - `int`"
-  ([^javax.swing.JComboBox this ^Integer count]
+  ([^JComboBox this ^Integer count]
     (-> this (.setMaximumRowCount count))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the ComboBoxUI L&F object - `javax.swing.plaf.ComboBoxUI`"
-  ([^javax.swing.JComboBox this ^javax.swing.plaf.ComboBoxUI ui]
+  ([^JComboBox this ^javax.swing.plaf.ComboBoxUI ui]
     (-> this (.setUI ui))))
 
 (defn editable?
@@ -290,7 +290,7 @@
    By default, a combo box is not editable.
 
   returns: true if the JComboBox is editable, else false - `boolean`"
-  (^Boolean [^javax.swing.JComboBox this]
+  (^Boolean [^JComboBox this]
     (-> this (.isEditable))))
 
 (defn set-prototype-display-value
@@ -306,13 +306,13 @@
    the model and its preferred size obtained, which can be
    relatively expensive.
 
-  prototype-display-value - `JComboBox.E`"
-  ([^javax.swing.JComboBox this ^JComboBox.E prototype-display-value]
+  prototype-display-value - `E`"
+  ([^JComboBox this prototype-display-value]
     (-> this (.setPrototypeDisplayValue prototype-display-value))))
 
 (defn remove-all-items
   "Removes all items from the item list."
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.removeAllItems))))
 
 (defn set-renderer
@@ -328,15 +328,15 @@
    aRenderer.getListCellRendererComponent
    is called, passing the list object and an index of -1.
 
-  a-renderer - the ListCellRenderer that displays the selected item - `JComboBox.E>`"
-  ([^javax.swing.JComboBox this ^JComboBox.E> a-renderer]
+  a-renderer - the ListCellRenderer that displays the selected item - `javax.swing.ListCellRenderer`"
+  ([^JComboBox this ^javax.swing.ListCellRenderer a-renderer]
     (-> this (.setRenderer a-renderer))))
 
 (defn get-ui
   "Returns the L&F object that renders this component.
 
   returns: the ComboBoxUI object that renders this component - `javax.swing.plaf.ComboBoxUI`"
-  (^javax.swing.plaf.ComboBoxUI [^javax.swing.JComboBox this]
+  (^javax.swing.plaf.ComboBoxUI [^JComboBox this]
     (-> this (.getUI))))
 
 (defn get-action-listeners
@@ -345,7 +345,7 @@
 
   returns: all of the ActionListeners added or an empty
            array if no listeners have been added - `java.awt.event.ActionListener[]`"
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.getActionListeners))))
 
 (defn get-renderer
@@ -353,8 +353,8 @@
    JComboBox field.
 
   returns: the ListCellRenderer that displays
-                    the selected item. - `javax.swing.ListCellRenderer<? super JComboBox.E>`"
-  ([^javax.swing.JComboBox this]
+                    the selected item. - `javax.swing.ListCellRenderer<? super E>`"
+  ([^JComboBox this]
     (-> this (.getRenderer))))
 
 (defn fire-popup-menu-canceled
@@ -363,7 +363,7 @@
 
    This method is public but should not be called by anything other than
    the UI delegate."
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.firePopupMenuCanceled))))
 
 (defn contents-changed
@@ -371,7 +371,7 @@
    do not call or override.
 
   e - a ListDataEvent encapsulating the event information - `javax.swing.event.ListDataEvent`"
-  ([^javax.swing.JComboBox this ^javax.swing.event.ListDataEvent e]
+  ([^JComboBox this ^javax.swing.event.ListDataEvent e]
     (-> this (.contentsChanged e))))
 
 (defn action-performed
@@ -379,7 +379,7 @@
    do not call or override.
 
   e - `java.awt.event.ActionEvent`"
-  ([^javax.swing.JComboBox this ^java.awt.event.ActionEvent e]
+  ([^JComboBox this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 
 (defn get-accessible-context
@@ -390,14 +390,14 @@
 
   returns: an AccessibleJComboBox that serves as the
            AccessibleContext of this JComboBox - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JComboBox this]
+  (^javax.accessibility.AccessibleContext [^JComboBox this]
     (-> this (.getAccessibleContext))))
 
 (defn get-key-selection-manager
   "Returns the list's key-selection manager.
 
-  returns: the KeySelectionManager currently in use - `javax.swing.JComboBox.KeySelectionManager`"
-  (^javax.swing.JComboBox.KeySelectionManager [^javax.swing.JComboBox this]
+  returns: the KeySelectionManager currently in use - `javax.swing.JComboBox$KeySelectionManager`"
+  (^javax.swing.JComboBox$KeySelectionManager [^JComboBox this]
     (-> this (.getKeySelectionManager))))
 
 (defn get-selected-item
@@ -408,7 +408,7 @@
    or the data constructors.
 
   returns: the current selected Object - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.JComboBox this]
+  (^java.lang.Object [^JComboBox this]
     (-> this (.getSelectedItem))))
 
 (defn set-enabled
@@ -417,7 +417,7 @@
    cannot be typed into its field (if it is editable).
 
   b - a boolean value, where true enables the component and false disables it - `boolean`"
-  ([^javax.swing.JComboBox this ^Boolean b]
+  ([^JComboBox this ^Boolean b]
     (-> this (.setEnabled b))))
 
 (defn interval-added
@@ -425,14 +425,14 @@
    do not call or override.
 
   e - a ListDataEvent encapsulating the event information - `javax.swing.event.ListDataEvent`"
-  ([^javax.swing.JComboBox this ^javax.swing.event.ListDataEvent e]
+  ([^JComboBox this ^javax.swing.event.ListDataEvent e]
     (-> this (.intervalAdded e))))
 
 (defn set-popup-visible
   "Sets the visibility of the popup.
 
   v - `boolean`"
-  ([^javax.swing.JComboBox this ^Boolean v]
+  ([^JComboBox this ^Boolean v]
     (-> this (.setPopupVisible v))))
 
 (defn process-key-event
@@ -440,7 +440,7 @@
    If the Tab key is found, the popup window is closed.
 
   e - the KeyEvent containing the keyboard key that was pressed - `java.awt.event.KeyEvent`"
-  ([^javax.swing.JComboBox this ^java.awt.event.KeyEvent e]
+  ([^JComboBox this ^java.awt.event.KeyEvent e]
     (-> this (.processKeyEvent e))))
 
 (defn set-editable
@@ -453,15 +453,15 @@
    but the selection cannot be modified.
 
   a-flag - a boolean value, where true indicates that the field is editable - `boolean`"
-  ([^javax.swing.JComboBox this ^Boolean a-flag]
+  ([^JComboBox this ^Boolean a-flag]
     (-> this (.setEditable a-flag))))
 
 (defn get-prototype-display-value
   "Returns the `prototypical display` value - an Object used
    for the calculation of the display height and width.
 
-  returns: the value of the prototypeDisplayValue property - `JComboBox.E`"
-  (^JComboBox.E [^javax.swing.JComboBox this]
+  returns: the value of the prototypeDisplayValue property - `E`"
+  ([^JComboBox this]
     (-> this (.getPrototypeDisplayValue))))
 
 (defn get-selected-objects
@@ -471,7 +471,7 @@
 
   returns: an array of Objects containing one
             element -- the selected item - `java.lang.Object[]`"
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.getSelectedObjects))))
 
 (defn set-key-selection-manager
@@ -479,8 +479,8 @@
    selection. Typically, the first selection with a matching first
    character becomes the selected item.
 
-  a-manager - `javax.swing.JComboBox.KeySelectionManager`"
-  ([^javax.swing.JComboBox this ^javax.swing.JComboBox.KeySelectionManager a-manager]
+  a-manager - `javax.swing.JComboBox$KeySelectionManager`"
+  ([^JComboBox this ^javax.swing.JComboBox$KeySelectionManager a-manager]
     (-> this (.setKeySelectionManager a-manager))))
 
 (defn set-selected-index
@@ -489,14 +489,14 @@
   an-index - an integer specifying the list item to select, where 0 specifies the first item in the list and -1 indicates no selection - `int`
 
   throws: java.lang.IllegalArgumentException - if anIndex < -1 or anIndex is greater than or equal to size"
-  ([^javax.swing.JComboBox this ^Integer an-index]
+  ([^JComboBox this ^Integer an-index]
     (-> this (.setSelectedIndex an-index))))
 
 (defn remove-action-listener
   "Removes an ActionListener.
 
   l - the ActionListener to remove - `java.awt.event.ActionListener`"
-  ([^javax.swing.JComboBox this ^java.awt.event.ActionListener l]
+  ([^JComboBox this ^java.awt.event.ActionListener l]
     (-> this (.removeActionListener l))))
 
 (defn set-light-weight-popup-enabled
@@ -521,7 +521,7 @@
    This method fires a property changed event.
 
   a-flag - if true, lightweight popups are desired - `boolean`"
-  ([^javax.swing.JComboBox this ^Boolean a-flag]
+  ([^JComboBox this ^Boolean a-flag]
     (-> this (.setLightWeightPopupEnabled a-flag))))
 
 (defn interval-removed
@@ -529,7 +529,7 @@
    do not call or override.
 
   e - a ListDataEvent encapsulating the event information - `javax.swing.event.ListDataEvent`"
-  ([^javax.swing.JComboBox this ^javax.swing.event.ListDataEvent e]
+  ([^JComboBox this ^javax.swing.event.ListDataEvent e]
     (-> this (.intervalRemoved e))))
 
 (defn get-action-command
@@ -538,7 +538,7 @@
 
   returns: the string containing the `command` that is sent
             to action listeners. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JComboBox this]
+  (^java.lang.String [^JComboBox this]
     (-> this (.getActionCommand))))
 
 (defn set-action
@@ -568,30 +568,30 @@
    Action changes.
 
   a - the Action for the JComboBox, or null. - `javax.swing.Action`"
-  ([^javax.swing.JComboBox this ^javax.swing.Action a]
+  ([^JComboBox this ^javax.swing.Action a]
     (-> this (.setAction a))))
 
 (defn get-model
   "Returns the data model currently used by the JComboBox.
 
   returns: the ComboBoxModel that provides the displayed
-                    list of items - `javax.swing.ComboBoxModel<JComboBox.E>`"
-  (^javax.swing.ComboBoxModel [^javax.swing.JComboBox this]
+                    list of items - `javax.swing.ComboBoxModel<E>`"
+  (^javax.swing.ComboBoxModel [^JComboBox this]
     (-> this (.getModel))))
 
 (defn popup-visible?
   "Determines the visibility of the popup.
 
   returns: true if the popup is visible, otherwise returns false - `boolean`"
-  (^Boolean [^javax.swing.JComboBox this]
+  (^Boolean [^JComboBox this]
     (-> this (.isPopupVisible))))
 
 (defn set-model
   "Sets the data model that the JComboBox uses to obtain
    the list of items.
 
-  a-model - the ComboBoxModel that provides the displayed list of items - `javax.swing.ComboBoxModel<JComboBox.E>`"
-  ([^javax.swing.JComboBox this ^javax.swing.ComboBoxModel a-model]
+  a-model - the ComboBoxModel that provides the displayed list of items - `javax.swing.ComboBoxModel`"
+  ([^JComboBox this ^javax.swing.ComboBoxModel a-model]
     (-> this (.setModel a-model))))
 
 (defn insert-item-at
@@ -599,9 +599,9 @@
    This method works only if the JComboBox uses a
    mutable data model.
 
-  item - the item to add to the list - `JComboBox.E`
+  item - the item to add to the list - `E`
   index - an integer specifying the position at which to add the item - `int`"
-  ([^javax.swing.JComboBox this ^JComboBox.E item ^Integer index]
+  ([^JComboBox this item ^Integer index]
     (-> this (.insertItemAt item index))))
 
 (defn set-action-command
@@ -609,7 +609,7 @@
    sent to action listeners.
 
   a-command - a string containing the `command` that is sent to action listeners; the same listener can then do different things depending on the command it receives - `java.lang.String`"
-  ([^javax.swing.JComboBox this ^java.lang.String a-command]
+  ([^JComboBox this ^java.lang.String a-command]
     (-> this (.setActionCommand a-command))))
 
 (defn fire-popup-menu-will-become-visible
@@ -618,12 +618,12 @@
 
    This method is public but should not be called by anything other than
    the UI delegate."
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.firePopupMenuWillBecomeVisible))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.updateUI))))
 
 (defn get-popup-menu-listeners
@@ -632,7 +632,7 @@
 
   returns: all of the PopupMenuListeners added or an empty
            array if no listeners have been added - `javax.swing.event.PopupMenuListener[]`"
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.getPopupMenuListeners))))
 
 (defn set-editor
@@ -642,7 +642,7 @@
    the combo box uses the renderer to paint the selected item.
 
   an-editor - the ComboBoxEditor that displays the selected item - `javax.swing.ComboBoxEditor`"
-  ([^javax.swing.JComboBox this ^javax.swing.ComboBoxEditor an-editor]
+  ([^JComboBox this ^javax.swing.ComboBoxEditor an-editor]
     (-> this (.setEditor an-editor))))
 
 (defn get-item-listeners
@@ -651,6 +651,6 @@
 
   returns: all of the ItemListeners added or an empty
            array if no listeners have been added - `java.awt.event.ItemListener[]`"
-  ([^javax.swing.JComboBox this]
+  ([^JComboBox this]
     (-> this (.getItemListeners))))
 

@@ -14,8 +14,8 @@
    explanation supplied. All other fields default to null.
 
   explanation - Possibly null additional detail about this exception. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^NameNotFoundException [^java.lang.String explanation]
     (new NameNotFoundException explanation))
-  ([]
+  (^NameNotFoundException []
     (new NameNotFoundException )))
 

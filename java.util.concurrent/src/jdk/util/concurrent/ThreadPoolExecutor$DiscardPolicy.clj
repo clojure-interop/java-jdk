@@ -8,7 +8,7 @@
   "Constructor.
 
   Creates a DiscardPolicy."
-  ([]
+  (^ThreadPoolExecutor$DiscardPolicy []
     (new ThreadPoolExecutor$DiscardPolicy )))
 
 (defn rejected-execution
@@ -16,6 +16,6 @@
 
   r - the runnable task requested to be executed - `java.lang.Runnable`
   e - the executor attempting to execute this task - `java.util.concurrent.ThreadPoolExecutor`"
-  ([^java.util.concurrent.ThreadPoolExecutor$DiscardPolicy this ^java.lang.Runnable r ^java.util.concurrent.ThreadPoolExecutor e]
+  ([^ThreadPoolExecutor$DiscardPolicy this ^java.lang.Runnable r ^java.util.concurrent.ThreadPoolExecutor e]
     (-> this (.rejectedExecution r e))))
 

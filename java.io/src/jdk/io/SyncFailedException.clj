@@ -10,6 +10,6 @@
    A detail message is a String that describes this particular exception.
 
   desc - a String describing the exception. - `java.lang.String`"
-  ([^java.lang.String desc]
+  (^SyncFailedException [^java.lang.String desc]
     (new SyncFailedException desc)))
 

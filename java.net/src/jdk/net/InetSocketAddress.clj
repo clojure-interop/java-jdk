@@ -28,9 +28,9 @@
   port - The port number - `int`
 
   throws: java.lang.IllegalArgumentException - if the port parameter is outside the specified range of valid port values."
-  ([^java.net.InetAddress addr ^Integer port]
+  (^InetSocketAddress [^java.net.InetAddress addr ^Integer port]
     (new InetSocketAddress addr port))
-  ([^Integer port]
+  (^InetSocketAddress [^Integer port]
     (new InetSocketAddress port)))
 
 (defn *create-unresolved
@@ -57,14 +57,14 @@
   "Gets the port number.
 
   returns: the port number. - `int`"
-  (^Integer [^java.net.InetSocketAddress this]
+  (^Integer [^InetSocketAddress this]
     (-> this (.getPort))))
 
 (defn get-address
   "Gets the InetAddress.
 
   returns: the InetAdress or null if it is unresolved. - `java.net.InetAddress`"
-  (^java.net.InetAddress [^java.net.InetSocketAddress this]
+  (^java.net.InetAddress [^InetSocketAddress this]
     (-> this (.getAddress))))
 
 (defn get-host-name
@@ -73,7 +73,7 @@
    address was created with a literal IP address.
 
   returns: the hostname part of the address. - `java.lang.String`"
-  (^java.lang.String [^java.net.InetSocketAddress this]
+  (^java.lang.String [^InetSocketAddress this]
     (-> this (.getHostName))))
 
 (defn get-host-string
@@ -82,7 +82,7 @@
    This has the benefit of not attempting a reverse lookup.
 
   returns: the hostname, or String representation of the address. - `java.lang.String`"
-  (^java.lang.String [^java.net.InetSocketAddress this]
+  (^java.lang.String [^InetSocketAddress this]
     (-> this (.getHostString))))
 
 (defn unresolved?
@@ -90,7 +90,7 @@
 
   returns: true if the hostname couldn't be resolved into
             an InetAddress. - `boolean`"
-  (^Boolean [^java.net.InetSocketAddress this]
+  (^Boolean [^InetSocketAddress this]
     (-> this (.isUnresolved))))
 
 (defn to-string
@@ -100,7 +100,7 @@
    is unresolved then the part before the colon will only contain the hostname.
 
   returns: a string representation of this object. - `java.lang.String`"
-  (^java.lang.String [^java.net.InetSocketAddress this]
+  (^java.lang.String [^InetSocketAddress this]
     (-> this (.toString))))
 
 (defn equals
@@ -122,13 +122,13 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  (^Boolean [^java.net.InetSocketAddress this ^java.lang.Object obj]
+  (^Boolean [^InetSocketAddress this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hashcode for this socket address.
 
   returns: a hash code value for this socket address. - `int`"
-  (^Integer [^java.net.InetSocketAddress this]
+  (^Integer [^InetSocketAddress this]
     (-> this (.hashCode))))
 

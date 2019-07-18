@@ -16,8 +16,8 @@
    explanation. All other fields default to null.
 
   explanation - Possibly null additional detail about this exception. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^NoPermissionException [^java.lang.String explanation]
     (new NoPermissionException explanation))
-  ([]
+  (^NoPermissionException []
     (new NoPermissionException )))
 

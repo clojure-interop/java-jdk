@@ -42,13 +42,13 @@
   "Returns the greatest element in this set less than or equal to
    the given element, or null if there is no such element.
 
-  e - the value to match - `NavigableSet.E`
+  e - the value to match - `E`
 
   returns: the greatest element less than or equal to e,
-           or null if there is no such element - `NavigableSet.E`
+           or null if there is no such element - `E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  (^NavigableSet.E [^java.util.NavigableSet this ^NavigableSet.E e]
+  ([^NavigableSet this e]
     (-> this (.floor e))))
 
 (defn tail-set
@@ -61,23 +61,23 @@
    The returned set will throw an IllegalArgumentException
    on an attempt to insert an element outside its range.
 
-  from-element - low endpoint of the returned set - `NavigableSet.E`
+  from-element - low endpoint of the returned set - `E`
   inclusive - true if the low endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this set whose elements are greater
-           than or equal to fromElement - `java.util.NavigableSet<NavigableSet.E>`
+           than or equal to fromElement - `java.util.NavigableSet<E>`
 
   throws: java.lang.ClassCastException - if fromElement is not compatible with this set's comparator (or, if the set has no comparator, if fromElement does not implement Comparable). Implementations may, but are not required to, throw this exception if fromElement cannot be compared to elements currently in the set."
-  (^java.util.NavigableSet [^java.util.NavigableSet this ^NavigableSet.E from-element ^Boolean inclusive]
+  (^java.util.NavigableSet [^NavigableSet this from-element ^Boolean inclusive]
     (-> this (.tailSet from-element inclusive)))
-  (^java.util.SortedSet [^java.util.NavigableSet this ^NavigableSet.E from-element]
+  (^java.util.SortedSet [^NavigableSet this from-element]
     (-> this (.tailSet from-element))))
 
 (defn iterator
   "Returns an iterator over the elements in this set, in ascending order.
 
-  returns: an iterator over the elements in this set, in ascending order - `java.util.Iterator<NavigableSet.E>`"
-  (^java.util.Iterator [^java.util.NavigableSet this]
+  returns: an iterator over the elements in this set, in ascending order - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^NavigableSet this]
     (-> this (.iterator))))
 
 (defn descending-set
@@ -93,8 +93,8 @@
    The expression s.descendingSet().descendingSet() returns a
    view of s essentially equivalent to s.
 
-  returns: a reverse order view of this set - `java.util.NavigableSet<NavigableSet.E>`"
-  (^java.util.NavigableSet [^java.util.NavigableSet this]
+  returns: a reverse order view of this set - `java.util.NavigableSet<E>`"
+  (^java.util.NavigableSet [^NavigableSet this]
     (-> this (.descendingSet))))
 
 (defn sub-set
@@ -108,68 +108,68 @@
    The returned set will throw an IllegalArgumentException
    on an attempt to insert an element outside its range.
 
-  from-element - low endpoint of the returned set - `NavigableSet.E`
+  from-element - low endpoint of the returned set - `E`
   from-inclusive - true if the low endpoint is to be included in the returned view - `boolean`
-  to-element - high endpoint of the returned set - `NavigableSet.E`
+  to-element - high endpoint of the returned set - `E`
   to-inclusive - true if the high endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this set whose elements range from
-           fromElement, inclusive, to toElement, exclusive - `java.util.NavigableSet<NavigableSet.E>`
+           fromElement, inclusive, to toElement, exclusive - `java.util.NavigableSet<E>`
 
   throws: java.lang.ClassCastException - if fromElement and toElement cannot be compared to one another using this set's comparator (or, if the set has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromElement or toElement cannot be compared to elements currently in the set."
-  (^java.util.NavigableSet [^java.util.NavigableSet this ^NavigableSet.E from-element ^Boolean from-inclusive ^NavigableSet.E to-element ^Boolean to-inclusive]
+  (^java.util.NavigableSet [^NavigableSet this from-element ^Boolean from-inclusive to-element ^Boolean to-inclusive]
     (-> this (.subSet from-element from-inclusive to-element to-inclusive)))
-  (^java.util.SortedSet [^java.util.NavigableSet this ^NavigableSet.E from-element ^NavigableSet.E to-element]
+  (^java.util.SortedSet [^NavigableSet this from-element to-element]
     (-> this (.subSet from-element to-element))))
 
 (defn poll-last
   "Retrieves and removes the last (highest) element,
    or returns null if this set is empty.
 
-  returns: the last element, or null if this set is empty - `NavigableSet.E`"
-  (^NavigableSet.E [^java.util.NavigableSet this]
+  returns: the last element, or null if this set is empty - `E`"
+  ([^NavigableSet this]
     (-> this (.pollLast))))
 
 (defn poll-first
   "Retrieves and removes the first (lowest) element,
    or returns null if this set is empty.
 
-  returns: the first element, or null if this set is empty - `NavigableSet.E`"
-  (^NavigableSet.E [^java.util.NavigableSet this]
+  returns: the first element, or null if this set is empty - `E`"
+  ([^NavigableSet this]
     (-> this (.pollFirst))))
 
 (defn higher
   "Returns the least element in this set strictly greater than the
    given element, or null if there is no such element.
 
-  e - the value to match - `NavigableSet.E`
+  e - the value to match - `E`
 
   returns: the least element greater than e,
-           or null if there is no such element - `NavigableSet.E`
+           or null if there is no such element - `E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  (^NavigableSet.E [^java.util.NavigableSet this ^NavigableSet.E e]
+  ([^NavigableSet this e]
     (-> this (.higher e))))
 
 (defn lower
   "Returns the greatest element in this set strictly less than the
    given element, or null if there is no such element.
 
-  e - the value to match - `NavigableSet.E`
+  e - the value to match - `E`
 
   returns: the greatest element less than e,
-           or null if there is no such element - `NavigableSet.E`
+           or null if there is no such element - `E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  (^NavigableSet.E [^java.util.NavigableSet this ^NavigableSet.E e]
+  ([^NavigableSet this e]
     (-> this (.lower e))))
 
 (defn descending-iterator
   "Returns an iterator over the elements in this set, in descending order.
    Equivalent in effect to descendingSet().iterator().
 
-  returns: an iterator over the elements in this set, in descending order - `java.util.Iterator<NavigableSet.E>`"
-  (^java.util.Iterator [^java.util.NavigableSet this]
+  returns: an iterator over the elements in this set, in descending order - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^NavigableSet this]
     (-> this (.descendingIterator))))
 
 (defn head-set
@@ -182,28 +182,28 @@
    The returned set will throw an IllegalArgumentException
    on an attempt to insert an element outside its range.
 
-  to-element - high endpoint of the returned set - `NavigableSet.E`
+  to-element - high endpoint of the returned set - `E`
   inclusive - true if the high endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this set whose elements are less than
-           (or equal to, if inclusive is true) toElement - `java.util.NavigableSet<NavigableSet.E>`
+           (or equal to, if inclusive is true) toElement - `java.util.NavigableSet<E>`
 
   throws: java.lang.ClassCastException - if toElement is not compatible with this set's comparator (or, if the set has no comparator, if toElement does not implement Comparable). Implementations may, but are not required to, throw this exception if toElement cannot be compared to elements currently in the set."
-  (^java.util.NavigableSet [^java.util.NavigableSet this ^NavigableSet.E to-element ^Boolean inclusive]
+  (^java.util.NavigableSet [^NavigableSet this to-element ^Boolean inclusive]
     (-> this (.headSet to-element inclusive)))
-  (^java.util.SortedSet [^java.util.NavigableSet this ^NavigableSet.E to-element]
+  (^java.util.SortedSet [^NavigableSet this to-element]
     (-> this (.headSet to-element))))
 
 (defn ceiling
   "Returns the least element in this set greater than or equal to
    the given element, or null if there is no such element.
 
-  e - the value to match - `NavigableSet.E`
+  e - the value to match - `E`
 
   returns: the least element greater than or equal to e,
-           or null if there is no such element - `NavigableSet.E`
+           or null if there is no such element - `E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  (^NavigableSet.E [^java.util.NavigableSet this ^NavigableSet.E e]
+  ([^NavigableSet this e]
     (-> this (.ceiling e))))
 

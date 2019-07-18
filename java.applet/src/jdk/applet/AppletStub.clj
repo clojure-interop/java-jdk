@@ -14,7 +14,7 @@
 
   returns: true if the applet is active;
             false otherwise. - `boolean`"
-  (^Boolean [^java.applet.AppletStub this]
+  (^Boolean [^AppletStub this]
     (-> this (.isActive))))
 
 (defn get-document-base
@@ -31,7 +31,7 @@
 
   returns: the URL of the document that contains the
             applet. - `java.net.URL`"
-  (^java.net.URL [^java.applet.AppletStub this]
+  (^java.net.URL [^AppletStub this]
     (-> this (.getDocumentBase))))
 
 (defn get-code-base
@@ -39,7 +39,7 @@
 
   returns: the base URL of
             the directory which contains the applet. - `java.net.URL`"
-  (^java.net.URL [^java.applet.AppletStub this]
+  (^java.net.URL [^AppletStub this]
     (-> this (.getCodeBase))))
 
 (defn get-parameter
@@ -58,14 +58,14 @@
 
   returns: the value of the named parameter,
    or null if not set. - `java.lang.String`"
-  (^java.lang.String [^java.applet.AppletStub this ^java.lang.String name]
+  (^java.lang.String [^AppletStub this ^java.lang.String name]
     (-> this (.getParameter name))))
 
 (defn get-applet-context
   "Returns the applet's context.
 
   returns: the applet's context. - `java.applet.AppletContext`"
-  (^java.applet.AppletContext [^java.applet.AppletStub this]
+  (^java.applet.AppletContext [^AppletStub this]
     (-> this (.getAppletContext))))
 
 (defn applet-resize
@@ -73,6 +73,6 @@
 
   width - the new requested width for the applet. - `int`
   height - the new requested height for the applet. - `int`"
-  ([^java.applet.AppletStub this ^Integer width ^Integer height]
+  ([^AppletStub this ^Integer width ^Integer height]
     (-> this (.appletResize width height))))
 

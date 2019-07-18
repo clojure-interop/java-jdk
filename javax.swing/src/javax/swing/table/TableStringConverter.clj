@@ -7,7 +7,7 @@
 
 (defn ->table-string-converter
   "Constructor."
-  ([]
+  (^TableStringConverter []
     (new TableStringConverter )))
 
 (defn to-string
@@ -21,6 +21,6 @@
   returns: the string representation.  This should never return null. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if model is null"
-  (^java.lang.String [^javax.swing.table.TableStringConverter this ^javax.swing.table.TableModel model ^Integer row ^Integer column]
+  (^java.lang.String [^TableStringConverter this ^javax.swing.table.TableModel model ^Integer row ^Integer column]
     (-> this (.toString model row column))))
 

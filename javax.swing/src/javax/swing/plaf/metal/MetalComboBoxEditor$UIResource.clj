@@ -17,6 +17,6 @@
 
 (defn ->ui-resource
   "Constructor."
-  ([]
+  (^MetalComboBoxEditor$UIResource []
     (new MetalComboBoxEditor$UIResource )))
 

@@ -73,7 +73,7 @@
   returns: false if the task could not be cancelled,
    typically because it has already completed normally;
    true otherwise - `boolean`"
-  (^Boolean [^java.util.concurrent.Future this ^Boolean may-interrupt-if-running]
+  (^Boolean [^Future this ^Boolean may-interrupt-if-running]
     (-> this (.cancel may-interrupt-if-running))))
 
 (defn cancelled?
@@ -81,7 +81,7 @@
    normally.
 
   returns: true if this task was cancelled before it completed - `boolean`"
-  (^Boolean [^java.util.concurrent.Future this]
+  (^Boolean [^Future this]
     (-> this (.isCancelled))))
 
 (defn done?
@@ -92,7 +92,7 @@
    true.
 
   returns: true if this task completed - `boolean`"
-  (^Boolean [^java.util.concurrent.Future this]
+  (^Boolean [^Future this]
     (-> this (.isDone))))
 
 (defn get
@@ -102,11 +102,11 @@
   timeout - the maximum time to wait - `long`
   unit - the time unit of the timeout argument - `java.util.concurrent.TimeUnit`
 
-  returns: the computed result - `Future.V`
+  returns: the computed result - `V`
 
   throws: java.util.concurrent.CancellationException - if the computation was cancelled"
-  (^Future.V [^java.util.concurrent.Future this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^Future this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.get timeout unit)))
-  (^Future.V [^java.util.concurrent.Future this]
+  ([^Future this]
     (-> this (.get))))
 

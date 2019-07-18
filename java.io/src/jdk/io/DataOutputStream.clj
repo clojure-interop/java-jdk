@@ -13,7 +13,7 @@
    set to zero.
 
   out - the underlying output stream, to be saved for later use. - `java.io.OutputStream`"
-  ([^java.io.OutputStream out]
+  (^DataOutputStream [^java.io.OutputStream out]
     (new DataOutputStream out)))
 
 (defn write-utf
@@ -35,7 +35,7 @@
   str - a string to be written. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^java.lang.String str]
+  ([^DataOutputStream this ^java.lang.String str]
     (-> this (.writeUTF str))))
 
 (defn write-bytes
@@ -48,7 +48,7 @@
   s - a string of bytes to be written. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^java.lang.String s]
+  ([^DataOutputStream this ^java.lang.String s]
     (-> this (.writeBytes s))))
 
 (defn write-double
@@ -62,7 +62,7 @@
   v - a double value to be written. - `double`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^Double v]
+  ([^DataOutputStream this ^Double v]
     (-> this (.writeDouble v))))
 
 (defn write-boolean
@@ -76,7 +76,7 @@
   v - a boolean value to be written. - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^Boolean v]
+  ([^DataOutputStream this ^Boolean v]
     (-> this (.writeBoolean v))))
 
 (defn flush
@@ -87,7 +87,7 @@
    calls the flush method of its underlying output stream.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this]
+  ([^DataOutputStream this]
     (-> this (.flush))))
 
 (defn write-long
@@ -98,7 +98,7 @@
   v - a long to be written. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^Long v]
+  ([^DataOutputStream this ^Long v]
     (-> this (.writeLong v))))
 
 (defn write-short
@@ -109,7 +109,7 @@
   v - a short to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^Integer v]
+  ([^DataOutputStream this ^Integer v]
     (-> this (.writeShort v))))
 
 (defn write-int
@@ -120,7 +120,7 @@
   v - an int to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^Integer v]
+  ([^DataOutputStream this ^Integer v]
     (-> this (.writeInt v))))
 
 (defn write-float
@@ -134,7 +134,7 @@
   v - a float value to be written. - `float`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^Float v]
+  ([^DataOutputStream this ^Float v]
     (-> this (.writeFloat v))))
 
 (defn write-chars
@@ -147,7 +147,7 @@
   s - a String value to be written. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^java.lang.String s]
+  ([^DataOutputStream this ^java.lang.String s]
     (-> this (.writeChars s))))
 
 (defn size
@@ -156,7 +156,7 @@
    If the counter overflows, it will be wrapped to Integer.MAX_VALUE.
 
   returns: the value of the written field. - `int`"
-  (^Integer [^java.io.DataOutputStream this]
+  (^Integer [^DataOutputStream this]
     (-> this (.size))))
 
 (defn write-char
@@ -167,7 +167,7 @@
   v - a char value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^Integer v]
+  ([^DataOutputStream this ^Integer v]
     (-> this (.writeChar v))))
 
 (defn write-byte
@@ -178,7 +178,7 @@
   v - a byte value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this ^Integer v]
+  ([^DataOutputStream this ^Integer v]
     (-> this (.writeByte v))))
 
 (defn write
@@ -192,8 +192,8 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutputStream this b ^Integer off ^Integer len]
+  ([^DataOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([^java.io.DataOutputStream this ^Integer b]
+  ([^DataOutputStream this ^Integer b]
     (-> this (.write b))))
 

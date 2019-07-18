@@ -20,7 +20,7 @@
   line-number - the line number of the source line containing the execution point represented by this stack trace element, or a negative number if this information is unavailable. A value of -2 indicates that the method containing the execution point is a native method - `int`
 
   throws: java.lang.NullPointerException - if declaringClass or methodName is null"
-  ([^java.lang.String declaring-class ^java.lang.String method-name ^java.lang.String file-name ^Integer line-number]
+  (^StackTraceElement [^java.lang.String declaring-class ^java.lang.String method-name ^java.lang.String file-name ^Integer line-number]
     (new StackTraceElement declaring-class method-name file-name line-number)))
 
 (defn get-file-name
@@ -34,7 +34,7 @@
   returns: the name of the file containing the execution point
            represented by this stack trace element, or null if
            this information is unavailable. - `java.lang.String`"
-  (^java.lang.String [^java.lang.StackTraceElement this]
+  (^java.lang.String [^StackTraceElement this]
     (-> this (.getFileName))))
 
 (defn get-line-number
@@ -47,7 +47,7 @@
   returns: the line number of the source line containing the execution
            point represented by this stack trace element, or a negative
            number if this information is unavailable. - `int`"
-  (^Integer [^java.lang.StackTraceElement this]
+  (^Integer [^StackTraceElement this]
     (-> this (.getLineNumber))))
 
 (defn get-class-name
@@ -56,7 +56,7 @@
 
   returns: the fully qualified name of the Class containing
            the execution point represented by this stack trace element. - `java.lang.String`"
-  (^java.lang.String [^java.lang.StackTraceElement this]
+  (^java.lang.String [^StackTraceElement this]
     (-> this (.getClassName))))
 
 (defn get-method-name
@@ -69,7 +69,7 @@
 
   returns: the name of the method containing the execution point
            represented by this stack trace element. - `java.lang.String`"
-  (^java.lang.String [^java.lang.StackTraceElement this]
+  (^java.lang.String [^StackTraceElement this]
     (-> this (.getMethodName))))
 
 (defn native-method?
@@ -78,7 +78,7 @@
 
   returns: true if the method containing the execution point
            represented by this stack trace element is a native method. - `boolean`"
-  (^Boolean [^java.lang.StackTraceElement this]
+  (^Boolean [^StackTraceElement this]
     (-> this (.isNativeMethod))))
 
 (defn to-string
@@ -106,7 +106,7 @@
      containing the execution point is known to be a native method.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.lang.StackTraceElement this]
+  (^java.lang.String [^StackTraceElement this]
     (-> this (.toString))))
 
 (defn equals
@@ -127,13 +127,13 @@
   returns: true if the specified object is another
            StackTraceElement instance representing the same
            execution point as this instance. - `boolean`"
-  (^Boolean [^java.lang.StackTraceElement this ^java.lang.Object obj]
+  (^Boolean [^StackTraceElement this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hash code value for this stack trace element.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.lang.StackTraceElement this]
+  (^Integer [^StackTraceElement this]
     (-> this (.hashCode))))
 

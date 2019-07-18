@@ -13,33 +13,33 @@
   "Adds all of the elements in the specified collection to this set,
    as if by calling add(K) on each one.
 
-  c - the elements to be inserted into this set - `ConcurrentHashMap.KeySetView.K>`
+  c - the elements to be inserted into this set - `java.util.Collection`
 
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.NullPointerException - if the collection or any of its elements are null"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap$KeySetView this ^ConcurrentHashMap.KeySetView.K> c]
+  (^Boolean [^ConcurrentHashMap$KeySetView this ^java.util.Collection c]
     (-> this (.addAll c))))
 
 (defn spliterator
   "Description copied from interface: Set
 
-  returns: a Spliterator over the elements in this set - `java.util.Spliterator<ConcurrentHashMap.KeySetView.K>`"
-  (^java.util.Spliterator [^java.util.concurrent.ConcurrentHashMap$KeySetView this]
+  returns: a Spliterator over the elements in this set - `java.util.Spliterator<K>`"
+  (^java.util.Spliterator [^ConcurrentHashMap$KeySetView this]
     (-> this (.spliterator))))
 
 (defn for-each
   "Description copied from interface: Iterable
 
-  action - The action to be performed for each element - `ConcurrentHashMap.KeySetView.K>`"
-  ([^java.util.concurrent.ConcurrentHashMap$KeySetView this ^ConcurrentHashMap.KeySetView.K> action]
+  action - The action to be performed for each element - `java.util.function.Consumer`"
+  ([^ConcurrentHashMap$KeySetView this ^java.util.function.Consumer action]
     (-> this (.forEach action))))
 
 (defn get-map
   "Returns the map backing this view.
 
   returns: the map backing this view - `java.util.concurrent.ConcurrentHashMap<K,V>`"
-  (^java.util.concurrent.ConcurrentHashMap [^java.util.concurrent.ConcurrentHashMap$KeySetView this]
+  (^java.util.concurrent.ConcurrentHashMap [^ConcurrentHashMap$KeySetView this]
     (-> this (.getMap))))
 
 (defn contains
@@ -54,7 +54,7 @@
            element - `boolean`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap$KeySetView this ^java.lang.Object o]
+  (^Boolean [^ConcurrentHashMap$KeySetView this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn to-string
@@ -67,7 +67,7 @@
    String.valueOf(Object).
 
   returns: a string representation of this collection - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.ConcurrentHashMap$KeySetView this]
+  (^java.lang.String [^ConcurrentHashMap$KeySetView this]
     (-> this (.toString))))
 
 (defn iterator
@@ -76,8 +76,8 @@
    The returned iterator is
    weakly consistent.
 
-  returns: an iterator over the keys of the backing map - `java.util.Iterator<ConcurrentHashMap.KeySetView.K>`"
-  (^java.util.Iterator [^java.util.concurrent.ConcurrentHashMap$KeySetView this]
+  returns: an iterator over the keys of the backing map - `java.util.Iterator<K>`"
+  (^java.util.Iterator [^ConcurrentHashMap$KeySetView this]
     (-> this (.iterator))))
 
 (defn remove
@@ -90,7 +90,7 @@
   returns: true if the backing map contained the specified key - `boolean`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap$KeySetView this ^java.lang.Object o]
+  (^Boolean [^ConcurrentHashMap$KeySetView this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn get-mapped-value
@@ -98,56 +98,56 @@
    or null if additions are not supported.
 
   returns: the default mapped value for additions, or null
-   if not supported - `ConcurrentHashMap.KeySetView.V`"
-  (^ConcurrentHashMap.KeySetView.V [^java.util.concurrent.ConcurrentHashMap$KeySetView this]
+   if not supported - `V`"
+  ([^ConcurrentHashMap$KeySetView this]
     (-> this (.getMappedValue))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.util.concurrent.ConcurrentHashMap$KeySetView this]
+  (^Integer [^ConcurrentHashMap$KeySetView this]
     (-> this (.hashCode))))
 
 (defn add
   "Adds the specified key to this set view by mapping the key to
    the default mapped value in the backing map, if defined.
 
-  e - key to be added - `ConcurrentHashMap.KeySetView.K`
+  e - key to be added - `K`
 
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap$KeySetView this ^ConcurrentHashMap.KeySetView.K e]
+  (^Boolean [^ConcurrentHashMap$KeySetView this e]
     (-> this (.add e))))
 
 (defn empty?
   "Description copied from interface: Collection
 
   returns: true if this collection contains no elements - `boolean`"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap$KeySetView this]
+  (^Boolean [^ConcurrentHashMap$KeySetView this]
     (-> this (.isEmpty))))
 
 (defn size
   "Description copied from interface: Collection
 
   returns: the number of elements in this collection - `int`"
-  (^Integer [^java.util.concurrent.ConcurrentHashMap$KeySetView this]
+  (^Integer [^ConcurrentHashMap$KeySetView this]
     (-> this (.size))))
 
 (defn retain-all
   "Description copied from interface: Collection
 
-  c - collection containing elements to be retained in this collection - `java.util.Collection<?>`
+  c - collection containing elements to be retained in this collection - `java.util.Collection`
 
   returns: true if this collection changed as a result of the call - `boolean`"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap$KeySetView this ^java.util.Collection c]
+  (^Boolean [^ConcurrentHashMap$KeySetView this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
   "Removes all of the elements from this view, by removing all
    the mappings from the map backing this view."
-  ([^java.util.concurrent.ConcurrentHashMap$KeySetView this]
+  ([^ConcurrentHashMap$KeySetView this]
     (-> this (.clear))))
 
 (defn to-array
@@ -156,19 +156,19 @@
   a - the array into which the elements of this collection are to be stored, if it is big enough; otherwise, a new array of the same runtime type is allocated for this purpose. - `T[]`
 
   returns: an array containing all of the elements in this collection - `<T> T[]`"
-  ([^java.util.concurrent.ConcurrentHashMap$KeySetView this a]
+  ([^ConcurrentHashMap$KeySetView this a]
     (-> this (.toArray a)))
-  ([^java.util.concurrent.ConcurrentHashMap$KeySetView this]
+  ([^ConcurrentHashMap$KeySetView this]
     (-> this (.toArray))))
 
 (defn remove-all
   "Description copied from interface: Collection
 
-  c - collection containing elements to be removed from this collection - `java.util.Collection<?>`
+  c - collection containing elements to be removed from this collection - `java.util.Collection`
 
   returns: true if this collection changed as a result of the
            call - `boolean`"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap$KeySetView this ^java.util.Collection c]
+  (^Boolean [^ConcurrentHashMap$KeySetView this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn equals
@@ -178,16 +178,16 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap$KeySetView this ^java.lang.Object o]
+  (^Boolean [^ConcurrentHashMap$KeySetView this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn contains-all
   "Description copied from interface: Collection
 
-  c - collection to be checked for containment in this collection - `java.util.Collection<?>`
+  c - collection to be checked for containment in this collection - `java.util.Collection`
 
   returns: true if this collection contains all of the elements
            in the specified collection - `boolean`"
-  (^Boolean [^java.util.concurrent.ConcurrentHashMap$KeySetView this ^java.util.Collection c]
+  (^Boolean [^ConcurrentHashMap$KeySetView this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

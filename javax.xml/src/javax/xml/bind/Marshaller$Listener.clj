@@ -16,7 +16,7 @@
 
 (defn ->listener
   "Constructor."
-  ([]
+  (^Marshaller$Listener []
     (new Marshaller$Listener )))
 
 (defn before-marshal
@@ -28,7 +28,7 @@
    the class specific callback method is invoked just before this method is invoked.
 
   source - instance of JAXB mapped class prior to marshalling from it. - `java.lang.Object`"
-  ([^javax.xml.bind.Marshaller$Listener this ^java.lang.Object source]
+  ([^Marshaller$Listener this ^java.lang.Object source]
     (-> this (.beforeMarshal source))))
 
 (defn after-marshal
@@ -40,6 +40,6 @@
    the class specific callback method is invoked just before this method is invoked.
 
   source - instance of JAXB mapped class after marshalling it. - `java.lang.Object`"
-  ([^javax.xml.bind.Marshaller$Listener this ^java.lang.Object source]
+  ([^Marshaller$Listener this ^java.lang.Object source]
     (-> this (.afterMarshal source))))
 

@@ -23,7 +23,7 @@
   ref - a Ref object; cannot be null - `java.sql.Ref`
 
   throws: java.sql.SQLException - if a database access occurs; if ref is null; or if the Ref object returns a null value base type name."
-  ([^java.sql.Ref ref]
+  (^SerialRef [^java.sql.Ref ref]
     (new SerialRef ref)))
 
 (defn get-base-type-name
@@ -32,7 +32,7 @@
   returns: a string of the base type name of the Ref - `java.lang.String`
 
   throws: javax.sql.rowset.serial.SerialException - in no Ref object has been set"
-  (^java.lang.String [^javax.sql.rowset.serial.SerialRef this]
+  (^java.lang.String [^SerialRef this]
     (-> this (.getBaseTypeName))))
 
 (defn get-object
@@ -40,15 +40,15 @@
    to which this SerialRef object refers.  The attributes
    of the structured type are mapped according to the given type map.
 
-  map - a java.util.Map object containing zero or more entries, with each entry consisting of 1) a String giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map<java.lang.String,java.lang.Class<?>>`
+  map - a java.util.Map object containing zero or more entries, with each entry consisting of 1) a String giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map`
 
   returns: an object instance resolved from the Ref reference and mapped
           according to the supplied type map - `java.lang.Object`
 
   throws: javax.sql.rowset.serial.SerialException - if an error is encountered in the reference resolution"
-  (^java.lang.Object [^javax.sql.rowset.serial.SerialRef this ^java.util.Map> map]
+  (^java.lang.Object [^SerialRef this ^java.util.Map map]
     (-> this (.getObject map)))
-  (^java.lang.Object [^javax.sql.rowset.serial.SerialRef this]
+  (^java.lang.Object [^SerialRef this]
     (-> this (.getObject))))
 
 (defn set-object
@@ -58,7 +58,7 @@
   obj - an Object representing the SQL structured type to be referenced - `java.lang.Object`
 
   throws: javax.sql.rowset.serial.SerialException - if an error is encountered generating the the structured type referenced by this SerialRef object"
-  ([^javax.sql.rowset.serial.SerialRef this ^java.lang.Object obj]
+  ([^SerialRef this ^java.lang.Object obj]
     (-> this (.setObject obj))))
 
 (defn equals
@@ -69,14 +69,14 @@
 
   returns: true if the given object represents a SerialRef
             equivalent to this SerialRef, false otherwise - `boolean`"
-  (^Boolean [^javax.sql.rowset.serial.SerialRef this ^java.lang.Object obj]
+  (^Boolean [^SerialRef this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hash code for this SerialRef.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.sql.rowset.serial.SerialRef this]
+  (^Integer [^SerialRef this]
     (-> this (.hashCode))))
 
 (defn clone
@@ -84,6 +84,6 @@
    The underlying Ref object will be set to null.
 
   returns: a clone of this SerialRef - `java.lang.Object`"
-  (^java.lang.Object [^javax.sql.rowset.serial.SerialRef this]
+  (^java.lang.Object [^SerialRef this]
     (-> this (.clone))))
 

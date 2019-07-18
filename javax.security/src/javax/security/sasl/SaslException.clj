@@ -17,11 +17,11 @@
 
   detail - A possibly null string containing details of the exception. - `java.lang.String`
   ex - A possibly null root exception that caused this exception. - `java.lang.Throwable`"
-  ([^java.lang.String detail ^java.lang.Throwable ex]
+  (^SaslException [^java.lang.String detail ^java.lang.Throwable ex]
     (new SaslException detail ex))
-  ([^java.lang.String detail]
+  (^SaslException [^java.lang.String detail]
     (new SaslException detail))
-  ([]
+  (^SaslException []
     (new SaslException )))
 
 (defn get-cause
@@ -29,7 +29,7 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.security.sasl.SaslException this]
+  (^java.lang.Throwable [^SaslException this]
     (-> this (.getCause))))
 
 (defn init-cause
@@ -38,7 +38,7 @@
   cause - the cause (which is saved for later retrieval by the Throwable.getCause() method). (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`
 
   returns: a reference to this Throwable instance. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.security.sasl.SaslException this ^java.lang.Throwable cause]
+  (^java.lang.Throwable [^SaslException this ^java.lang.Throwable cause]
     (-> this (.initCause cause))))
 
 (defn to-string
@@ -51,6 +51,6 @@
    programmatically.
 
   returns: The non-null string representation of this exception. - `java.lang.String`"
-  (^java.lang.String [^javax.security.sasl.SaslException this]
+  (^java.lang.String [^SaslException this]
     (-> this (.toString))))
 

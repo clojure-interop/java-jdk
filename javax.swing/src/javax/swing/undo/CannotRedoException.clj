@@ -14,6 +14,6 @@
 
 (defn ->cannot-redo-exception
   "Constructor."
-  ([]
+  (^CannotRedoException []
     (new CannotRedoException )))
 

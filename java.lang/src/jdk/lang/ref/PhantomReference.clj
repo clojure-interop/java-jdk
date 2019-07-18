@@ -30,9 +30,9 @@
    method will always return null and, since it does not have a queue, it
    will never be enqueued.
 
-  referent - the object the new phantom reference will refer to - `PhantomReference.T`
-  q - the queue with which the reference is to be registered, or null if registration is not required - `PhantomReference.T>`"
-  ([^PhantomReference.T referent ^PhantomReference.T> q]
+  referent - the object the new phantom reference will refer to - `T`
+  q - the queue with which the reference is to be registered, or null if registration is not required - `java.lang.ref.ReferenceQueue`"
+  (^PhantomReference [referent ^java.lang.ref.ReferenceQueue q]
     (new PhantomReference referent q)))
 
 (defn get
@@ -40,7 +40,7 @@
    phantom reference is always inaccessible, this method always returns
    null.
 
-  returns: null - `PhantomReference.T`"
-  (^PhantomReference.T [^java.lang.ref.PhantomReference this]
+  returns: null - `T`"
+  ([^PhantomReference this]
     (-> this (.get))))
 

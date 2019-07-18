@@ -5,7 +5,7 @@
 
 (defn ->metal-borders
   "Constructor."
-  ([]
+  (^MetalBorders []
     (new MetalBorders )))
 
 (defn *get-button-border

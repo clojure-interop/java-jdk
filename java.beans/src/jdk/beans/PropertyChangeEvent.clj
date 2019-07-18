@@ -28,7 +28,7 @@
   new-value - the new value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.lang.Object source ^java.lang.String property-name ^java.lang.Object old-value ^java.lang.Object new-value]
+  (^PropertyChangeEvent [^java.lang.Object source ^java.lang.String property-name ^java.lang.Object old-value ^java.lang.Object new-value]
     (new PropertyChangeEvent source property-name old-value new-value)))
 
 (defn get-property-name
@@ -36,7 +36,7 @@
 
   returns: The programmatic name of the property that was changed.
             May be null if multiple properties have changed. - `java.lang.String`"
-  (^java.lang.String [^java.beans.PropertyChangeEvent this]
+  (^java.lang.String [^PropertyChangeEvent this]
     (-> this (.getPropertyName))))
 
 (defn get-new-value
@@ -44,7 +44,7 @@
 
   returns: The new value for the property, expressed as an Object.
             May be null if multiple properties have changed. - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.PropertyChangeEvent this]
+  (^java.lang.Object [^PropertyChangeEvent this]
     (-> this (.getNewValue))))
 
 (defn get-old-value
@@ -52,14 +52,14 @@
 
   returns: The old value for the property, expressed as an Object.
             May be null if multiple properties have changed. - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.PropertyChangeEvent this]
+  (^java.lang.Object [^PropertyChangeEvent this]
     (-> this (.getOldValue))))
 
 (defn set-propagation-id
   "Sets the propagationId object for the event.
 
   propagation-id - The propagationId object for the event. - `java.lang.Object`"
-  ([^java.beans.PropertyChangeEvent this ^java.lang.Object propagation-id]
+  ([^PropertyChangeEvent this ^java.lang.Object propagation-id]
     (-> this (.setPropagationId propagation-id))))
 
 (defn get-propagation-id
@@ -71,13 +71,13 @@
 
   returns: the propagationId object associated with a bound/constrained
             property update. - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.PropertyChangeEvent this]
+  (^java.lang.Object [^PropertyChangeEvent this]
     (-> this (.getPropagationId))))
 
 (defn to-string
   "Returns a string representation of the object.
 
   returns: a string representation of the object - `java.lang.String`"
-  (^java.lang.String [^java.beans.PropertyChangeEvent this]
+  (^java.lang.String [^PropertyChangeEvent this]
     (-> this (.toString))))
 

@@ -8,7 +8,7 @@
 
   Insert type.
 
-  type: javax.swing.event.DocumentEvent.EventType"
+  type: javax.swing.event.DocumentEvent$EventType"
   DocumentEvent$EventType/INSERT)
 
 (def *-remove
@@ -16,7 +16,7 @@
 
   Remove type.
 
-  type: javax.swing.event.DocumentEvent.EventType"
+  type: javax.swing.event.DocumentEvent$EventType"
   DocumentEvent$EventType/REMOVE)
 
 (def *-change
@@ -24,13 +24,13 @@
 
   Change type.
 
-  type: javax.swing.event.DocumentEvent.EventType"
+  type: javax.swing.event.DocumentEvent$EventType"
   DocumentEvent$EventType/CHANGE)
 
 (defn to-string
   "Converts the type to a string.
 
   returns: the string - `java.lang.String`"
-  (^java.lang.String [^javax.swing.event.DocumentEvent$EventType this]
+  (^java.lang.String [^DocumentEvent$EventType this]
     (-> this (.toString))))
 

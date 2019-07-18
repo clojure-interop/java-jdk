@@ -2,7 +2,7 @@
   (:refer-clojure :only [require comment defn ->])
   (:import ))
 
-(require '[jdk.util.stream.BaseStream>])
+(require '[jdk.util.stream.BaseStream])
 (require '[jdk.util.stream.Collector$Characteristics])
 (require '[jdk.util.stream.Collector])
 (require '[jdk.util.stream.Collectors])

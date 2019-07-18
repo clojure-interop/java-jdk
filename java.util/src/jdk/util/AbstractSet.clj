@@ -37,7 +37,7 @@
   o - object to be compared for equality with this set - `java.lang.Object`
 
   returns: true if the specified object is equal to this set - `boolean`"
-  (^Boolean [^java.util.AbstractSet this ^java.lang.Object o]
+  (^Boolean [^AbstractSet this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -54,7 +54,7 @@
    the results.
 
   returns: the hash code value for this set - `int`"
-  (^Integer [^java.util.AbstractSet this]
+  (^Integer [^AbstractSet this]
     (-> this (.hashCode))))
 
 (defn remove-all
@@ -80,11 +80,11 @@
    UnsupportedOperationException if the iterator returned by the
    iterator method does not implement the remove method.
 
-  c - collection containing elements to be removed from this set - `java.util.Collection<?>`
+  c - collection containing elements to be removed from this set - `java.util.Collection`
 
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the removeAll operation is not supported by this set"
-  (^Boolean [^java.util.AbstractSet this ^java.util.Collection c]
+  (^Boolean [^AbstractSet this ^java.util.Collection c]
     (-> this (.removeAll c))))
 

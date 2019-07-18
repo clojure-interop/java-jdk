@@ -16,9 +16,9 @@
   version - a version identifier. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if version is null."
-  ([^java.lang.String vendor-name ^java.lang.String version]
+  (^IIOServiceProvider [^java.lang.String vendor-name ^java.lang.String version]
     (new IIOServiceProvider vendor-name version))
-  ([]
+  (^IIOServiceProvider []
     (new IIOServiceProvider )))
 
 (defn on-registration
@@ -35,8 +35,8 @@
     The default implementation does nothing.
 
   registry - a ServiceRegistry where this object has been registered. - `javax.imageio.spi.ServiceRegistry`
-  category - a Class object indicating the registry category under which this object has been registered. - `java.lang.Class<?>`"
-  ([^javax.imageio.spi.IIOServiceProvider this ^javax.imageio.spi.ServiceRegistry registry ^java.lang.Class category]
+  category - a Class object indicating the registry category under which this object has been registered. - `java.lang.Class`"
+  ([^IIOServiceProvider this ^javax.imageio.spi.ServiceRegistry registry ^java.lang.Class category]
     (-> this (.onRegistration registry category))))
 
 (defn on-deregistration
@@ -48,8 +48,8 @@
     The default implementation does nothing.
 
   registry - a ServiceRegistry from which this object is being (wholly or partially) deregistered. - `javax.imageio.spi.ServiceRegistry`
-  category - a Class object indicating the registry category from which this object is being deregistered. - `java.lang.Class<?>`"
-  ([^javax.imageio.spi.IIOServiceProvider this ^javax.imageio.spi.ServiceRegistry registry ^java.lang.Class category]
+  category - a Class object indicating the registry category from which this object is being deregistered. - `java.lang.Class`"
+  ([^IIOServiceProvider this ^javax.imageio.spi.ServiceRegistry registry ^java.lang.Class category]
     (-> this (.onDeregistration registry category))))
 
 (defn get-vendor-name
@@ -63,7 +63,7 @@
 
   returns: a non-null String containing
    the name of the vendor. - `java.lang.String`"
-  (^java.lang.String [^javax.imageio.spi.IIOServiceProvider this]
+  (^java.lang.String [^IIOServiceProvider this]
     (-> this (.getVendorName))))
 
 (defn get-version
@@ -78,7 +78,7 @@
 
   returns: a non-null String containing
    the version of this service provider. - `java.lang.String`"
-  (^java.lang.String [^javax.imageio.spi.IIOServiceProvider this]
+  (^java.lang.String [^IIOServiceProvider this]
     (-> this (.getVersion))))
 
 (defn get-description
@@ -91,6 +91,6 @@
 
   returns: a String containing a description of this
    service provider. - `java.lang.String`"
-  (^java.lang.String [^javax.imageio.spi.IIOServiceProvider this ^java.util.Locale locale]
+  (^java.lang.String [^IIOServiceProvider this ^java.util.Locale locale]
     (-> this (.getDescription locale))))
 

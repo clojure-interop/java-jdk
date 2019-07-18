@@ -67,6 +67,6 @@
    The era BCE has the value 0, while the era CE has the value 1.
 
   returns: the era value, from 0 (BCE) to 1 (CE) - `int`"
-  (^Integer [^java.time.chrono.IsoEra this]
+  (^Integer [^IsoEra this]
     (-> this (.getValue))))
 

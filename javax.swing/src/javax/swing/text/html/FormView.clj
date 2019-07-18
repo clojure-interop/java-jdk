@@ -72,7 +72,7 @@
   Creates a new FormView object.
 
   elem - the element to decorate - `javax.swing.text.Element`"
-  ([^javax.swing.text.Element elem]
+  (^FormView [^javax.swing.text.Element elem]
     (new FormView elem)))
 
 (def *-submit
@@ -81,7 +81,7 @@
   Deprecated. As of 1.3, value now comes from UIManager property
                FormView.submitButtonText
 
-  type: java.lang.    java.lang.String"
+  type: java.lang.String"
   FormView/SUBMIT)
 
 (def *-reset
@@ -90,7 +90,7 @@
   Deprecated. As of 1.3, value comes from UIManager UIManager property
                FormView.resetButtonText
 
-  type: java.lang.    java.lang.String"
+  type: java.lang.String"
   FormView/RESET)
 
 (defn get-maximum-span
@@ -108,7 +108,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  (^Float [^javax.swing.text.html.FormView this ^Integer axis]
+  (^Float [^FormView this ^Integer axis]
     (-> this (.getMaximumSpan axis))))
 
 (defn action-performed
@@ -124,6 +124,6 @@
    to the next component in the form.
 
   evt - the ActionEvent. - `java.awt.event.ActionEvent`"
-  ([^javax.swing.text.html.FormView this ^java.awt.event.ActionEvent evt]
+  ([^FormView this ^java.awt.event.ActionEvent evt]
     (-> this (.actionPerformed evt))))
 

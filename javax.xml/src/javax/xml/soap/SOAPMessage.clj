@@ -69,7 +69,7 @@
 
 (defn ->soap-message
   "Constructor."
-  ([]
+  (^SOAPMessage []
     (new SOAPMessage )))
 
 (def *-character-set-encoding
@@ -98,7 +98,7 @@
 
   returns: the number of AttachmentPart objects that are
            part of this SOAPMessage object - `int`"
-  (^Integer [^javax.xml.soap.SOAPMessage this]
+  (^Integer [^SOAPMessage this]
     (-> this (.countAttachments))))
 
 (defn get-attachment
@@ -124,7 +124,7 @@
             found in this SOAPElement. - `javax.xml.soap.AttachmentPart`
 
   throws: javax.xml.soap.SOAPException - if there is an error in the attempt to access the attachment"
-  (^javax.xml.soap.AttachmentPart [^javax.xml.soap.SOAPMessage this ^javax.xml.soap.SOAPElement element]
+  (^javax.xml.soap.AttachmentPart [^SOAPMessage this ^javax.xml.soap.SOAPElement element]
     (-> this (.getAttachment element))))
 
 (defn set-content-description
@@ -132,7 +132,7 @@
    content with the given description.
 
   description - a String describing the content of this message - `java.lang.String`"
-  ([^javax.xml.soap.SOAPMessage this ^java.lang.String description]
+  ([^SOAPMessage this ^java.lang.String description]
     (-> this (.setContentDescription description))))
 
 (defn get-soap-body
@@ -142,7 +142,7 @@
            object - `javax.xml.soap.SOAPBody`
 
   throws: javax.xml.soap.SOAPException - if the SOAP Body does not exist or cannot be retrieved"
-  (^javax.xml.soap.SOAPBody [^javax.xml.soap.SOAPMessage this]
+  (^javax.xml.soap.SOAPBody [^SOAPMessage this]
     (-> this (.getSOAPBody))))
 
 (defn remove-all-attachments
@@ -150,7 +150,7 @@
    to this SOAPMessage object.
 
    This method does not touch the SOAP part."
-  ([^javax.xml.soap.SOAPMessage this]
+  ([^SOAPMessage this]
     (-> this (.removeAllAttachments))))
 
 (defn get-mime-headers
@@ -159,7 +159,7 @@
 
   returns: a MimeHeaders object containing the MimeHeader
            objects - `javax.xml.soap.MimeHeaders`"
-  (^javax.xml.soap.MimeHeaders [^javax.xml.soap.SOAPMessage this]
+  (^javax.xml.soap.MimeHeaders [^SOAPMessage this]
     (-> this (.getMimeHeaders))))
 
 (defn write-to
@@ -177,7 +177,7 @@
   out - the OutputStream object to which this SOAPMessage object will be written - `java.io.OutputStream`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^javax.xml.soap.SOAPMessage this ^java.io.OutputStream out]
+  ([^SOAPMessage this ^java.io.OutputStream out]
     (-> this (.writeTo out))))
 
 (defn get-attachments
@@ -189,9 +189,9 @@
 
   returns: an iterator over all attachments that have a header that matches
            one of the given headers - `java.util.Iterator`"
-  (^java.util.Iterator [^javax.xml.soap.SOAPMessage this ^javax.xml.soap.MimeHeaders headers]
+  (^java.util.Iterator [^SOAPMessage this ^javax.xml.soap.MimeHeaders headers]
     (-> this (.getAttachments headers)))
-  (^java.util.Iterator [^javax.xml.soap.SOAPMessage this]
+  (^java.util.Iterator [^SOAPMessage this]
     (-> this (.getAttachments))))
 
 (defn save-required
@@ -200,7 +200,7 @@
 
   returns: true if saveChanges needs to be
            called; false otherwise. - `boolean`"
-  (^Boolean [^javax.xml.soap.SOAPMessage this]
+  (^Boolean [^SOAPMessage this]
     (-> this (.saveRequired))))
 
 (defn get-property
@@ -212,7 +212,7 @@
            if no such property exists. - `java.lang.Object`
 
   throws: javax.xml.soap.SOAPException - if the property name is not recognized."
-  (^java.lang.Object [^javax.xml.soap.SOAPMessage this ^java.lang.String property]
+  (^java.lang.Object [^SOAPMessage this ^java.lang.String property]
     (-> this (.getProperty property))))
 
 (defn get-soap-part
@@ -223,7 +223,7 @@
 
   returns: the SOAPPart object for this SOAPMessage
            object - `javax.xml.soap.SOAPPart`"
-  (^javax.xml.soap.SOAPPart [^javax.xml.soap.SOAPMessage this]
+  (^javax.xml.soap.SOAPPart [^SOAPMessage this]
     (-> this (.getSOAPPart))))
 
 (defn get-soap-header
@@ -234,7 +234,7 @@
            object - `javax.xml.soap.SOAPHeader`
 
   throws: javax.xml.soap.SOAPException - if the SOAP Header does not exist or cannot be retrieved"
-  (^javax.xml.soap.SOAPHeader [^javax.xml.soap.SOAPMessage this]
+  (^javax.xml.soap.SOAPHeader [^SOAPMessage this]
     (-> this (.getSOAPHeader))))
 
 (defn add-attachment-part
@@ -245,7 +245,7 @@
   attachment-part - an AttachmentPart object that is to become part of this SOAPMessage object - `javax.xml.soap.AttachmentPart`
 
   throws: java.lang.IllegalArgumentException"
-  ([^javax.xml.soap.SOAPMessage this ^javax.xml.soap.AttachmentPart attachment-part]
+  ([^SOAPMessage this ^javax.xml.soap.AttachmentPart attachment-part]
     (-> this (.addAttachmentPart attachment-part))))
 
 (defn remove-attachments
@@ -254,7 +254,7 @@
    attachment could have headers in addition to those specified.
 
   headers - a MimeHeaders object containing the MIME headers for which to search - `javax.xml.soap.MimeHeaders`"
-  ([^javax.xml.soap.SOAPMessage this ^javax.xml.soap.MimeHeaders headers]
+  ([^SOAPMessage this ^javax.xml.soap.MimeHeaders headers]
     (-> this (.removeAttachments headers))))
 
 (defn set-property
@@ -285,7 +285,7 @@
   value - the value to be associated with the specified property - `java.lang.Object`
 
   throws: javax.xml.soap.SOAPException - if the property name is not recognized."
-  ([^javax.xml.soap.SOAPMessage this ^java.lang.String property ^java.lang.Object value]
+  ([^SOAPMessage this ^java.lang.String property ^java.lang.Object value]
     (-> this (.setProperty property value))))
 
 (defn get-content-description
@@ -294,7 +294,7 @@
 
   returns: a String describing the content of this
            message or null if no description has been set - `java.lang.String`"
-  (^java.lang.String [^javax.xml.soap.SOAPMessage this]
+  (^java.lang.String [^SOAPMessage this]
     (-> this (.getContentDescription))))
 
 (defn save-changes
@@ -314,7 +314,7 @@
    message.
 
   throws: SOAPException - if there was a problem saving changes to this message."
-  ([^javax.xml.soap.SOAPMessage this]
+  ([^SOAPMessage this]
     (-> this (.saveChanges))))
 
 (defn create-attachment-part
@@ -330,10 +330,10 @@
            given data - `javax.xml.soap.AttachmentPart`
 
   throws: java.lang.IllegalArgumentException - may be thrown if the contentType does not match the type of the content object, or if there was no DataContentHandler object for the given content object"
-  (^javax.xml.soap.AttachmentPart [^javax.xml.soap.SOAPMessage this ^java.lang.Object content ^java.lang.String content-type]
+  (^javax.xml.soap.AttachmentPart [^SOAPMessage this ^java.lang.Object content ^java.lang.String content-type]
     (-> this (.createAttachmentPart content content-type)))
-  (^javax.xml.soap.AttachmentPart [^javax.xml.soap.SOAPMessage this ^javax.activation.DataHandler data-handler]
+  (^javax.xml.soap.AttachmentPart [^SOAPMessage this ^javax.activation.DataHandler data-handler]
     (-> this (.createAttachmentPart data-handler)))
-  (^javax.xml.soap.AttachmentPart [^javax.xml.soap.SOAPMessage this]
+  (^javax.xml.soap.AttachmentPart [^SOAPMessage this]
     (-> this (.createAttachmentPart))))
 

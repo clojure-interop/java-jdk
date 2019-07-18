@@ -61,11 +61,11 @@
   columns - the number of columns. If columns is less than 0, columns is set to 0. - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([^java.lang.String text ^Integer columns]
+  (^TextField [^java.lang.String text ^Integer columns]
     (new TextField text columns))
-  ([^java.lang.String text]
+  (^TextField [^java.lang.String text]
     (new TextField text))
-  ([]
+  (^TextField []
     (new TextField )))
 
 (defn get-minimum-size
@@ -75,9 +75,9 @@
   columns - the number of columns in this text field. - `int`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^java.awt.TextField this ^Integer columns]
+  (^java.awt.Dimension [^TextField this ^Integer columns]
     (-> this (.getMinimumSize columns)))
-  (^java.awt.Dimension [^java.awt.TextField this]
+  (^java.awt.Dimension [^TextField this]
     (-> this (.getMinimumSize))))
 
 (defn get-echo-char
@@ -96,7 +96,7 @@
    different.
 
   returns: the echo character for this text field. - `char`"
-  (^Character [^java.awt.TextField this]
+  (^Character [^TextField this]
     (-> this (.getEchoChar))))
 
 (defn set-columns
@@ -106,7 +106,7 @@
   columns - the number of columns. - `int`
 
   throws: java.lang.IllegalArgumentException - if the value supplied for columns is less than 0."
-  ([^java.awt.TextField this ^Integer columns]
+  ([^TextField this ^Integer columns]
     (-> this (.setColumns columns))))
 
 (defn set-text
@@ -114,17 +114,15 @@
    text component to be the specified text.
 
   t - the new text. - `java.lang.String`"
-  ([^java.awt.TextField this ^java.lang.String t]
+  ([^TextField this ^java.lang.String t]
     (-> this (.setText t))))
 
 (defn set-echo-character
   "Deprecated. As of JDK version 1.1,
    replaced by setEchoChar(char).
 
-  c - `char`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.TextField this ^Character c]
+  c - `char`"
+  ([^TextField this ^Character c]
     (-> this (.setEchoCharacter c))))
 
 (defn get-columns
@@ -132,7 +130,7 @@
    approximate average character width that is platform-dependent.
 
   returns: the number of columns. - `int`"
-  (^Integer [^java.awt.TextField this]
+  (^Integer [^TextField this]
     (-> this (.getColumns))))
 
 (defn add-action-listener
@@ -142,13 +140,13 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the action listener. - `java.awt.event.ActionListener`"
-  ([^java.awt.TextField this ^java.awt.event.ActionListener l]
+  ([^TextField this ^java.awt.event.ActionListener l]
     (-> this (.addActionListener l))))
 
 (defn add-notify
   "Creates the TextField's peer.  The peer allows us to modify the
    appearance of the TextField without changing its functionality."
-  ([^java.awt.TextField this]
+  ([^TextField this]
     (-> this (.addNotify))))
 
 (defn set-echo-char
@@ -169,7 +167,7 @@
    used by the TextField implementation.
 
   c - the echo character for this text field. - `char`"
-  ([^java.awt.TextField this ^Character c]
+  ([^TextField this ^Character c]
     (-> this (.setEchoChar c))))
 
 (defn get-action-listeners
@@ -179,7 +177,7 @@
   returns: all of this textfield's ActionListeners
            or an empty array if no action
            listeners are currently registered - `java.awt.event.ActionListener[]`"
-  ([^java.awt.TextField this]
+  ([^TextField this]
     (-> this (.getActionListeners))))
 
 (defn preferred-size
@@ -188,10 +186,10 @@
 
   columns - `int`
 
-  returns: `java.lang.  java.awt.Dimension`"
-  ([^java.awt.TextField this ^Integer columns]
+  returns: `java.awt.Dimension`"
+  (^java.awt.Dimension [^TextField this ^Integer columns]
     (-> this (.preferredSize columns)))
-  ([^java.awt.TextField this]
+  (^java.awt.Dimension [^TextField this]
     (-> this (.preferredSize))))
 
 (defn get-accessible-context
@@ -202,7 +200,7 @@
 
   returns: an AccessibleAWTTextField that serves as the
            AccessibleContext of this TextField - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^java.awt.TextField this]
+  (^javax.accessibility.AccessibleContext [^TextField this]
     (-> this (.getAccessibleContext))))
 
 (defn echo-char-is-set
@@ -216,7 +214,7 @@
   returns: true if this text field has
                    a character set for echoing;
                    false otherwise. - `boolean`"
-  (^Boolean [^java.awt.TextField this]
+  (^Boolean [^TextField this]
     (-> this (.echoCharIsSet))))
 
 (defn remove-action-listener
@@ -226,7 +224,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the action listener. - `java.awt.event.ActionListener`"
-  ([^java.awt.TextField this ^java.awt.event.ActionListener l]
+  ([^TextField this ^java.awt.event.ActionListener l]
     (-> this (.removeActionListener l))))
 
 (defn get-listeners
@@ -250,7 +248,7 @@
 
    If no such listeners exist, this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners on this textfield,
@@ -258,7 +256,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^java.awt.TextField this ^java.lang.Class listener-type]
+  ([^TextField this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn minimum-size
@@ -267,10 +265,10 @@
 
   columns - `int`
 
-  returns: `java.lang.  java.awt.Dimension`"
-  ([^java.awt.TextField this ^Integer columns]
+  returns: `java.awt.Dimension`"
+  (^java.awt.Dimension [^TextField this ^Integer columns]
     (-> this (.minimumSize columns)))
-  ([^java.awt.TextField this]
+  (^java.awt.Dimension [^TextField this]
     (-> this (.minimumSize))))
 
 (defn get-preferred-size
@@ -281,8 +279,8 @@
 
   returns: the preferred dimensions for
                    displaying this text field. - `java.awt.Dimension`"
-  (^java.awt.Dimension [^java.awt.TextField this ^Integer columns]
+  (^java.awt.Dimension [^TextField this ^Integer columns]
     (-> this (.getPreferredSize columns)))
-  (^java.awt.Dimension [^java.awt.TextField this]
+  (^java.awt.Dimension [^TextField this]
     (-> this (.getPreferredSize))))
 

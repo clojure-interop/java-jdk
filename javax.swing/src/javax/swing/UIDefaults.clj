@@ -21,11 +21,11 @@
 
   initial-capacity - the initial capacity of the defaults table - `int`
   load-factor - the load factor of the defaults table - `float`"
-  ([^Integer initial-capacity ^Float load-factor]
+  (^UIDefaults [^Integer initial-capacity ^Float load-factor]
     (new UIDefaults initial-capacity load-factor))
-  ([key-value-list]
+  (^UIDefaults [key-value-list]
     (new UIDefaults key-value-list))
-  ([]
+  (^UIDefaults []
     (new UIDefaults )))
 
 (defn set-default-locale
@@ -37,7 +37,7 @@
    pre 1.4 behaviour.
 
   l - the new default locale - `java.util.Locale`"
-  ([^javax.swing.UIDefaults this ^java.util.Locale l]
+  ([^UIDefaults this ^java.util.Locale l]
     (-> this (.setDefaultLocale l))))
 
 (defn get-insets
@@ -51,9 +51,9 @@
             is an Insets,
             return the Insets object; otherwise return
             null - `java.awt.Insets`"
-  (^java.awt.Insets [^javax.swing.UIDefaults this ^java.lang.Object key ^java.util.Locale l]
+  (^java.awt.Insets [^UIDefaults this ^java.lang.Object key ^java.util.Locale l]
     (-> this (.getInsets key l)))
-  (^java.awt.Insets [^javax.swing.UIDefaults this ^java.lang.Object key]
+  (^java.awt.Insets [^UIDefaults this ^java.lang.Object key]
     (-> this (.getInsets key))))
 
 (defn put
@@ -66,7 +66,7 @@
   value - the new Object to store as data under that key - `java.lang.Object`
 
   returns: the previous Object value, or null - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.UIDefaults this ^java.lang.Object key ^java.lang.Object value]
+  (^java.lang.Object [^UIDefaults this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.put key value))))
 
 (defn get-default-locale
@@ -78,7 +78,7 @@
    pre 1.4 behaviour.
 
   returns: the default locale - `java.util.Locale`"
-  (^java.util.Locale [^javax.swing.UIDefaults this]
+  (^java.util.Locale [^UIDefaults this]
     (-> this (.getDefaultLocale))))
 
 (defn get-string
@@ -92,9 +92,9 @@
             Locale is a String,
             return the String object; otherwise return
             null - `java.lang.String`"
-  (^java.lang.String [^javax.swing.UIDefaults this ^java.lang.Object key ^java.util.Locale l]
+  (^java.lang.String [^UIDefaults this ^java.lang.Object key ^java.util.Locale l]
     (-> this (.getString key l)))
-  (^java.lang.String [^javax.swing.UIDefaults this ^java.lang.Object key]
+  (^java.lang.String [^UIDefaults this ^java.lang.Object key]
     (-> this (.getString key))))
 
 (defn get-border
@@ -108,9 +108,9 @@
             is a Border,
             return the Border object; otherwise return
             null - `javax.swing.border.Border`"
-  (^javax.swing.border.Border [^javax.swing.UIDefaults this ^java.lang.Object key ^java.util.Locale l]
+  (^javax.swing.border.Border [^UIDefaults this ^java.lang.Object key ^java.util.Locale l]
     (-> this (.getBorder key l)))
-  (^javax.swing.border.Border [^javax.swing.UIDefaults this ^java.lang.Object key]
+  (^javax.swing.border.Border [^UIDefaults this ^java.lang.Object key]
     (-> this (.getBorder key))))
 
 (defn get-icon
@@ -124,9 +124,9 @@
             is an Icon,
             return the Icon object; otherwise return
             null - `javax.swing.Icon`"
-  (^javax.swing.Icon [^javax.swing.UIDefaults this ^java.lang.Object key ^java.util.Locale l]
+  (^javax.swing.Icon [^UIDefaults this ^java.lang.Object key ^java.util.Locale l]
     (-> this (.getIcon key l)))
-  (^javax.swing.Icon [^javax.swing.UIDefaults this ^java.lang.Object key]
+  (^javax.swing.Icon [^UIDefaults this ^java.lang.Object key]
     (-> this (.getIcon key))))
 
 (defn put-defaults
@@ -137,7 +137,7 @@
    added for all locales.
 
   key-value-list - an array of key/value pairs - `java.lang.Object[]`"
-  ([^javax.swing.UIDefaults this key-value-list]
+  ([^UIDefaults this key-value-list]
     (-> this (.putDefaults key-value-list))))
 
 (defn get-dimension
@@ -151,9 +151,9 @@
             is a Dimension,
             return the Dimension object; otherwise return
             null - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.UIDefaults this ^java.lang.Object key ^java.util.Locale l]
+  (^java.awt.Dimension [^UIDefaults this ^java.lang.Object key ^java.util.Locale l]
     (-> this (.getDimension key l)))
-  (^java.awt.Dimension [^javax.swing.UIDefaults this ^java.lang.Object key]
+  (^java.awt.Dimension [^UIDefaults this ^java.lang.Object key]
     (-> this (.getDimension key))))
 
 (defn remove-property-change-listener
@@ -162,7 +162,7 @@
    for all properties.
 
   listener - the PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([^javax.swing.UIDefaults this ^java.beans.PropertyChangeListener listener]
+  ([^UIDefaults this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn get-int
@@ -175,9 +175,9 @@
   returns: if the value for key and Locale
             is an Integer,
             return its value, otherwise return 0 - `int`"
-  (^Integer [^javax.swing.UIDefaults this ^java.lang.Object key ^java.util.Locale l]
+  (^Integer [^UIDefaults this ^java.lang.Object key ^java.util.Locale l]
     (-> this (.getInt key l)))
-  (^Integer [^javax.swing.UIDefaults this ^java.lang.Object key]
+  (^Integer [^UIDefaults this ^java.lang.Object key]
     (-> this (.getInt key))))
 
 (defn get-ui
@@ -194,7 +194,7 @@
   target - the JComponent which needs a UI - `javax.swing.JComponent`
 
   returns: the ComponentUI object - `javax.swing.plaf.ComponentUI`"
-  (^javax.swing.plaf.ComponentUI [^javax.swing.UIDefaults this ^javax.swing.JComponent target]
+  (^javax.swing.plaf.ComponentUI [^UIDefaults this ^javax.swing.JComponent target]
     (-> this (.getUI target))))
 
 (defn get-property-change-listeners
@@ -203,7 +203,7 @@
 
   returns: all of the PropertyChangeListeners added or an empty
            array if no listeners have been added - `java.beans.PropertyChangeListener[]`"
-  ([^javax.swing.UIDefaults this]
+  ([^UIDefaults this]
     (-> this (.getPropertyChangeListeners))))
 
 (defn get-font
@@ -217,9 +217,9 @@
             is a Font,
             return the Font object; otherwise return
             null - `java.awt.Font`"
-  (^java.awt.Font [^javax.swing.UIDefaults this ^java.lang.Object key ^java.util.Locale l]
+  (^java.awt.Font [^UIDefaults this ^java.lang.Object key ^java.util.Locale l]
     (-> this (.getFont key l)))
-  (^java.awt.Font [^javax.swing.UIDefaults this ^java.lang.Object key]
+  (^java.awt.Font [^UIDefaults this ^java.lang.Object key]
     (-> this (.getFont key))))
 
 (defn get-boolean?
@@ -232,9 +232,9 @@
   returns: if the value for key and Locale
            is boolean, return the
            boolean value, otherwise return false. - `boolean`"
-  (^Boolean [^javax.swing.UIDefaults this ^java.lang.Object key ^java.util.Locale l]
+  (^Boolean [^UIDefaults this ^java.lang.Object key ^java.util.Locale l]
     (-> this (.getBoolean key l)))
-  (^Boolean [^javax.swing.UIDefaults this ^java.lang.Object key]
+  (^Boolean [^UIDefaults this ^java.lang.Object key]
     (-> this (.getBoolean key))))
 
 (defn get-ui-class
@@ -256,9 +256,9 @@
   ui-class-loader - the object which will load the class - `java.lang.ClassLoader`
 
   returns: the value of Class.forName(get(uidClassID)) - `java.lang.Class<? extends javax.swing.plaf.ComponentUI>`"
-  ([^javax.swing.UIDefaults this ^java.lang.String ui-class-id ^java.lang.ClassLoader ui-class-loader]
+  ([^UIDefaults this ^java.lang.String ui-class-id ^java.lang.ClassLoader ui-class-loader]
     (-> this (.getUIClass ui-class-id ui-class-loader)))
-  ([^javax.swing.UIDefaults this ^java.lang.String ui-class-id]
+  ([^UIDefaults this ^java.lang.String ui-class-id]
     (-> this (.getUIClass ui-class-id))))
 
 (defn get-color
@@ -272,9 +272,9 @@
             is a Color,
             return the Color object; otherwise return
             null - `java.awt.Color`"
-  (^java.awt.Color [^javax.swing.UIDefaults this ^java.lang.Object key ^java.util.Locale l]
+  (^java.awt.Color [^UIDefaults this ^java.lang.Object key ^java.util.Locale l]
     (-> this (.getColor key l)))
-  (^java.awt.Color [^javax.swing.UIDefaults this ^java.lang.Object key]
+  (^java.awt.Color [^UIDefaults this ^java.lang.Object key]
     (-> this (.getColor key))))
 
 (defn add-property-change-listener
@@ -285,7 +285,7 @@
    is changed.
 
   listener - the PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([^javax.swing.UIDefaults this ^java.beans.PropertyChangeListener listener]
+  ([^UIDefaults this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn add-resource-bundle
@@ -295,7 +295,7 @@
    bundle is searched first.
 
   bundle-name - the base name of the resource bundle to be added - `java.lang.String`"
-  ([^javax.swing.UIDefaults this ^java.lang.String bundle-name]
+  ([^UIDefaults this ^java.lang.String bundle-name]
     (-> this (.addResourceBundle bundle-name))))
 
 (defn remove-resource-bundle
@@ -303,7 +303,7 @@
    searched for localized defaults.
 
   bundle-name - the base name of the resource bundle to be removed - `java.lang.String`"
-  ([^javax.swing.UIDefaults this ^java.lang.String bundle-name]
+  ([^UIDefaults this ^java.lang.String bundle-name]
     (-> this (.removeResourceBundle bundle-name))))
 
 (defn get
@@ -326,8 +326,8 @@
   l - the desired locale - `java.util.Locale`
 
   returns: the value for key - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.UIDefaults this ^java.lang.Object key ^java.util.Locale l]
+  (^java.lang.Object [^UIDefaults this ^java.lang.Object key ^java.util.Locale l]
     (-> this (.get key l)))
-  (^java.lang.Object [^javax.swing.UIDefaults this ^java.lang.Object key]
+  (^java.lang.Object [^UIDefaults this ^java.lang.Object key]
     (-> this (.get key))))
 

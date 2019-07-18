@@ -21,9 +21,9 @@
   upper-bound - Upper bound of the range. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if a null range is specified or if a non-null range is specified with lowerBound less than 1."
-  ([^Integer lower-bound ^Integer upper-bound]
+  (^NumberUpSupported [^Integer lower-bound ^Integer upper-bound]
     (new NumberUpSupported lower-bound upper-bound))
-  ([members]
+  (^NumberUpSupported [members]
     (new NumberUpSupported members)))
 
 (defn equals
@@ -43,7 +43,7 @@
 
   returns: True if object is equivalent to this number up
             supported attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.NumberUpSupported this ^java.lang.Object object]
+  (^Boolean [^NumberUpSupported this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -55,7 +55,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.NumberUpSupported this]
+  ([^NumberUpSupported this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -66,6 +66,6 @@
    category name is `number-up-supported`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.NumberUpSupported this]
+  (^java.lang.String [^NumberUpSupported this]
     (-> this (.getName))))
 

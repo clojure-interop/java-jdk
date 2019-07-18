@@ -9,14 +9,14 @@
   "Returns this URI attribute's URI value.
 
   returns: the URI. - `java.net.URI`"
-  (^java.net.URI [^javax.print.attribute.URISyntax this]
+  (^java.net.URI [^URISyntax this]
     (-> this (.getURI))))
 
 (defn hash-code
   "Returns a hashcode for this URI attribute.
 
   returns: A hashcode value for this object. - `int`"
-  (^Integer [^javax.print.attribute.URISyntax this]
+  (^Integer [^URISyntax this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -36,7 +36,7 @@
 
   returns: True if object is equivalent to this URI
             attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.URISyntax this ^java.lang.Object object]
+  (^Boolean [^URISyntax this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn to-string
@@ -44,6 +44,6 @@
    string representation of the attribute's underlying URI.
 
   returns: A String identifying this object. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.URISyntax this]
+  (^java.lang.String [^URISyntax this]
     (-> this (.toString))))
 

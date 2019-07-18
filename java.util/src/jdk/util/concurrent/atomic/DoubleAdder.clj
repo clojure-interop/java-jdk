@@ -23,14 +23,14 @@
   "Constructor.
 
   Creates a new adder with initial sum of zero."
-  ([]
+  (^DoubleAdder []
     (new DoubleAdder )))
 
 (defn double-value
   "Equivalent to sum().
 
   returns: the sum - `double`"
-  (^Double [^java.util.concurrent.atomic.DoubleAdder this]
+  (^Double [^DoubleAdder this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -39,7 +39,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  (^Long [^java.util.concurrent.atomic.DoubleAdder this]
+  (^Long [^DoubleAdder this]
     (-> this (.longValue))))
 
 (defn sum
@@ -53,7 +53,7 @@
    updates to a single variable.
 
   returns: the sum - `double`"
-  (^Double [^java.util.concurrent.atomic.DoubleAdder this]
+  (^Double [^DoubleAdder this]
     (-> this (.sum))))
 
 (defn sum-then-reset
@@ -64,14 +64,14 @@
    the reset.
 
   returns: the sum - `double`"
-  (^Double [^java.util.concurrent.atomic.DoubleAdder this]
+  (^Double [^DoubleAdder this]
     (-> this (.sumThenReset))))
 
 (defn to-string
   "Returns the String representation of the sum().
 
   returns: the String representation of the sum() - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.atomic.DoubleAdder this]
+  (^java.lang.String [^DoubleAdder this]
     (-> this (.toString))))
 
 (defn reset
@@ -80,7 +80,7 @@
    effective if there are no concurrent updates.  Because this
    method is intrinsically racy, it should only be used when it is
    known that no threads are concurrently updating."
-  ([^java.util.concurrent.atomic.DoubleAdder this]
+  ([^DoubleAdder this]
     (-> this (.reset))))
 
 (defn float-value
@@ -89,7 +89,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  (^Float [^java.util.concurrent.atomic.DoubleAdder this]
+  (^Float [^DoubleAdder this]
     (-> this (.floatValue))))
 
 (defn int-value
@@ -98,13 +98,13 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  (^Integer [^java.util.concurrent.atomic.DoubleAdder this]
+  (^Integer [^DoubleAdder this]
     (-> this (.intValue))))
 
 (defn add
   "Adds the given value.
 
   x - the value to add - `double`"
-  ([^java.util.concurrent.atomic.DoubleAdder this ^Double x]
+  ([^DoubleAdder this ^Double x]
     (-> this (.add x))))
 

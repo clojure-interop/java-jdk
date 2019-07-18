@@ -7,7 +7,7 @@
   "Constructor.
 
   b - `javax.swing.JSlider`"
-  ([^javax.swing.JSlider b]
+  (^BasicSliderUI [^javax.swing.JSlider b]
     (new BasicSliderUI b)))
 
 (def *-positive-scroll
@@ -45,7 +45,7 @@
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^javax.swing.JComponent c]
+  ([^BasicSliderUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn get-minimum-size
@@ -54,12 +54,12 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicSliderUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicSliderUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn paint-track
   "g - `java.awt.Graphics`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^java.awt.Graphics g]
+  ([^BasicSliderUI this ^java.awt.Graphics g]
     (-> this (.paintTrack g))))
 
 (defn get-maximum-size
@@ -68,24 +68,24 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicSliderUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicSliderUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn paint-focus
   "g - `java.awt.Graphics`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^java.awt.Graphics g]
+  ([^BasicSliderUI this ^java.awt.Graphics g]
     (-> this (.paintFocus g))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^javax.swing.JComponent c]
+  ([^BasicSliderUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-preferred-horizontal-size
   "returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicSliderUI this]
+  (^java.awt.Dimension [^BasicSliderUI this]
     (-> this (.getPreferredHorizontalSize))))
 
 (defn value-for-y-position
@@ -97,7 +97,7 @@
   y-pos - `int`
 
   returns: `int`"
-  (^Integer [^javax.swing.plaf.basic.BasicSliderUI this ^Integer y-pos]
+  (^Integer [^BasicSliderUI this ^Integer y-pos]
     (-> this (.valueForYPosition y-pos))))
 
 (defn get-baseline-resize-behavior
@@ -107,10 +107,10 @@
   c - JComponent to return baseline resize behavior for - `javax.swing.JComponent`
 
   returns: an enum indicating how the baseline changes as the component
-           size changes - `java.awt.Component.BaselineResizeBehavior`
+           size changes - `java.awt.Component$BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.basic.BasicSliderUI this ^javax.swing.JComponent c]
+  (^java.awt.Component$BaselineResizeBehavior [^BasicSliderUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn value-for-x-position
@@ -122,28 +122,28 @@
   x-pos - `int`
 
   returns: `int`"
-  (^Integer [^javax.swing.plaf.basic.BasicSliderUI this ^Integer x-pos]
+  (^Integer [^BasicSliderUI this ^Integer x-pos]
     (-> this (.valueForXPosition x-pos))))
 
 (defn set-thumb-location
   "x - `int`
   y - `int`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^Integer x ^Integer y]
+  ([^BasicSliderUI this ^Integer x ^Integer y]
     (-> this (.setThumbLocation x y))))
 
 (defn get-minimum-horizontal-size
   "returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicSliderUI this]
+  (^java.awt.Dimension [^BasicSliderUI this]
     (-> this (.getMinimumHorizontalSize))))
 
 (defn scroll-by-block
   "direction - `int`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^Integer direction]
+  ([^BasicSliderUI this ^Integer direction]
     (-> this (.scrollByBlock direction))))
 
 (defn scroll-by-unit
   "direction - `int`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^Integer direction]
+  ([^BasicSliderUI this ^Integer direction]
     (-> this (.scrollByUnit direction))))
 
 (defn paint
@@ -151,22 +151,22 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^BasicSliderUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn paint-ticks
   "g - `java.awt.Graphics`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^java.awt.Graphics g]
+  ([^BasicSliderUI this ^java.awt.Graphics g]
     (-> this (.paintTicks g))))
 
 (defn get-preferred-vertical-size
   "returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicSliderUI this]
+  (^java.awt.Dimension [^BasicSliderUI this]
     (-> this (.getPreferredVerticalSize))))
 
 (defn paint-labels
   "g - `java.awt.Graphics`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^java.awt.Graphics g]
+  ([^BasicSliderUI this ^java.awt.Graphics g]
     (-> this (.paintLabels g))))
 
 (defn get-baseline
@@ -180,12 +180,12 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^Integer [^javax.swing.plaf.basic.BasicSliderUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^BasicSliderUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn paint-thumb
   "g - `java.awt.Graphics`"
-  ([^javax.swing.plaf.basic.BasicSliderUI this ^java.awt.Graphics g]
+  ([^BasicSliderUI this ^java.awt.Graphics g]
     (-> this (.paintThumb g))))
 
 (defn get-preferred-size
@@ -194,11 +194,11 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicSliderUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicSliderUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn get-minimum-vertical-size
   "returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicSliderUI this]
+  (^java.awt.Dimension [^BasicSliderUI this]
     (-> this (.getMinimumVerticalSize))))
 

@@ -21,7 +21,7 @@
   min - Minimum size - `java.awt.Dimension`
   pref - Preferred size - `java.awt.Dimension`
   max - Maximum size - `java.awt.Dimension`"
-  ([^java.awt.Dimension min ^java.awt.Dimension pref ^java.awt.Dimension max]
+  (^Box$Filler [^java.awt.Dimension min ^java.awt.Dimension pref ^java.awt.Dimension max]
     (new Box$Filler min pref max)))
 
 (defn change-shape
@@ -32,7 +32,7 @@
   min - Value to return for getMinimumSize - `java.awt.Dimension`
   pref - Value to return for getPreferredSize - `java.awt.Dimension`
   max - Value to return for getMaximumSize - `java.awt.Dimension`"
-  ([^javax.swing.Box$Filler this ^java.awt.Dimension min ^java.awt.Dimension pref ^java.awt.Dimension max]
+  ([^Box$Filler this ^java.awt.Dimension min ^java.awt.Dimension pref ^java.awt.Dimension max]
     (-> this (.changeShape min pref max))))
 
 (defn get-accessible-context
@@ -43,6 +43,6 @@
 
   returns: an AccessibleBoxFiller that serves as the
            AccessibleContext of this Box.Filler. - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.Box$Filler this]
+  (^javax.accessibility.AccessibleContext [^Box$Filler this]
     (-> this (.getAccessibleContext))))
 

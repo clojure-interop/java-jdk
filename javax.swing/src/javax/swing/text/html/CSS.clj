@@ -79,13 +79,13 @@
 
 (defn ->css
   "Constructor."
-  ([]
+  (^CSS []
     (new CSS )))
 
 (defn *get-all-attribute-keys
   "Return the set of all possible CSS attribute keys.
 
-  returns: `javax.swing.text.html.CSS.Attribute[]`"
+  returns: `javax.swing.text.html.CSS$Attribute[]`"
   ([]
     (CSS/getAllAttributeKeys )))
 
@@ -98,7 +98,7 @@
 
   returns: the CSS.Attribute object,
     or null if the string
-    doesn't represent a valid attribute key - `javax.swing.text.html.CSS.Attribute`"
-  (^javax.swing.text.html.CSS.Attribute [^java.lang.String name]
+    doesn't represent a valid attribute key - `javax.swing.text.html.CSS$Attribute`"
+  (^javax.swing.text.html.CSS$Attribute [^java.lang.String name]
     (CSS/getAttribute name)))
 

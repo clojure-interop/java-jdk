@@ -8,13 +8,13 @@
   "This tells the listeners the editor has ended editing
 
   e - `javax.swing.event.ChangeEvent`"
-  ([^javax.swing.event.CellEditorListener this ^javax.swing.event.ChangeEvent e]
+  ([^CellEditorListener this ^javax.swing.event.ChangeEvent e]
     (-> this (.editingStopped e))))
 
 (defn editing-canceled
   "This tells the listeners the editor has canceled editing
 
   e - `javax.swing.event.ChangeEvent`"
-  ([^javax.swing.event.CellEditorListener this ^javax.swing.event.ChangeEvent e]
+  ([^CellEditorListener this ^javax.swing.event.ChangeEvent e]
     (-> this (.editingCanceled e))))
 

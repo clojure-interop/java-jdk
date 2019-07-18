@@ -9,16 +9,16 @@
 
   char-set-spec - `java.lang.String`
   char-set-key - `boolean`"
-  ([^java.lang.String char-set-spec ^Boolean char-set-key]
+  (^ChangedCharSetException [^java.lang.String char-set-spec ^Boolean char-set-key]
     (new ChangedCharSetException char-set-spec char-set-key)))
 
 (defn get-char-set-spec
   "returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.ChangedCharSetException this]
+  (^java.lang.String [^ChangedCharSetException this]
     (-> this (.getCharSetSpec))))
 
 (defn key-equals-char-set
   "returns: `boolean`"
-  (^Boolean [^javax.swing.text.ChangedCharSetException this]
+  (^Boolean [^ChangedCharSetException this]
     (-> this (.keyEqualsCharSet))))
 

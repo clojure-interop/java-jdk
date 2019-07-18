@@ -17,11 +17,11 @@
 
   message - the detail message - `java.lang.String`
   cause - the cause (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^KeySelectorException [^java.lang.String message ^java.lang.Throwable cause]
     (new KeySelectorException message cause))
-  ([^java.lang.String message]
+  (^KeySelectorException [^java.lang.String message]
     (new KeySelectorException message))
-  ([]
+  (^KeySelectorException []
     (new KeySelectorException )))
 
 (defn get-cause
@@ -32,7 +32,7 @@
 
   returns: the cause of this KeySelectorException or
            null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.xml.crypto.KeySelectorException this]
+  (^java.lang.Throwable [^KeySelectorException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace
@@ -40,8 +40,8 @@
    the cause's backtrace to the specified print stream.
 
   s - PrintStream to use for output - `java.io.PrintStream`"
-  ([^javax.xml.crypto.KeySelectorException this ^java.io.PrintStream s]
+  ([^KeySelectorException this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([^javax.xml.crypto.KeySelectorException this]
+  ([^KeySelectorException this]
     (-> this (.printStackTrace))))
 

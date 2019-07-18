@@ -55,7 +55,7 @@
    connections, so this method returns SelectionKey.OP_ACCEPT.
 
   returns: The valid-operation set - `int`"
-  (^Integer [^java.nio.channels.ServerSocketChannel this]
+  (^Integer [^ServerSocketChannel this]
     (-> this (.validOps))))
 
 (defn bind
@@ -79,21 +79,21 @@
   returns: This channel - `java.nio.channels.ServerSocketChannel`
 
   throws: java.nio.channels.AlreadyBoundException - If the socket is already bound"
-  (^java.nio.channels.ServerSocketChannel [^java.nio.channels.ServerSocketChannel this ^java.net.SocketAddress local ^Integer backlog]
+  (^java.nio.channels.ServerSocketChannel [^ServerSocketChannel this ^java.net.SocketAddress local ^Integer backlog]
     (-> this (.bind local backlog)))
-  (^java.nio.channels.ServerSocketChannel [^java.nio.channels.ServerSocketChannel this ^java.net.SocketAddress local]
+  (^java.nio.channels.ServerSocketChannel [^ServerSocketChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn set-option
   "Description copied from interface: NetworkChannel
 
-  name - The socket option - `java.net.SocketOption<T>`
+  name - The socket option - `java.net.SocketOption`
   value - The value of the socket option. A value of null may be a valid value for some socket options. - `T`
 
   returns: This channel - `<T> java.nio.channels.ServerSocketChannel`
 
   throws: java.lang.UnsupportedOperationException - If the socket option is not supported by this channel"
-  ([^java.nio.channels.ServerSocketChannel this ^java.net.SocketOption name value]
+  ([^ServerSocketChannel this ^java.net.SocketOption name value]
     (-> this (.setOption name value))))
 
 (defn socket
@@ -103,7 +103,7 @@
    declared in the ServerSocket class.
 
   returns: A server socket associated with this channel - `java.net.ServerSocket`"
-  (^java.net.ServerSocket [^java.nio.channels.ServerSocketChannel this]
+  (^java.net.ServerSocket [^ServerSocketChannel this]
     (-> this (.socket))))
 
 (defn accept
@@ -127,7 +127,7 @@
             and no connection is available to be accepted - `java.nio.channels.SocketChannel`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  (^java.nio.channels.SocketChannel [^java.nio.channels.ServerSocketChannel this]
+  (^java.nio.channels.SocketChannel [^ServerSocketChannel this]
     (-> this (.accept))))
 
 (defn get-local-address
@@ -149,6 +149,6 @@
             channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  (^java.net.SocketAddress [^java.nio.channels.ServerSocketChannel this]
+  (^java.net.SocketAddress [^ServerSocketChannel this]
     (-> this (.getLocalAddress))))
 

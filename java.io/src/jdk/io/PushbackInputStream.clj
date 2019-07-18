@@ -34,9 +34,9 @@
   size - the size of the pushback buffer. - `int`
 
   throws: java.lang.IllegalArgumentException - if size <= 0"
-  ([^java.io.InputStream in ^Integer size]
+  (^PushbackInputStream [^java.io.InputStream in ^Integer size]
     (new PushbackInputStream in size))
-  ([^java.io.InputStream in]
+  (^PushbackInputStream [^java.io.InputStream in]
     (new PushbackInputStream in)))
 
 (defn read
@@ -56,9 +56,9 @@
                the stream has been reached. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  (^Integer [^java.io.PushbackInputStream this b ^Integer off ^Integer len]
+  (^Integer [^PushbackInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^java.io.PushbackInputStream this]
+  (^Integer [^PushbackInputStream this]
     (-> this (.read))))
 
 (defn unread
@@ -72,9 +72,9 @@
   len - the number of bytes to push back. - `int`
 
   throws: java.io.IOException - If there is not enough room in the pushback buffer for the specified number of bytes, or this input stream has been closed by invoking its close() method."
-  ([^java.io.PushbackInputStream this b ^Integer off ^Integer len]
+  ([^PushbackInputStream this b ^Integer off ^Integer len]
     (-> this (.unread b off len)))
-  ([^java.io.PushbackInputStream this ^Integer b]
+  ([^PushbackInputStream this ^Integer b]
     (-> this (.unread b))))
 
 (defn available
@@ -91,7 +91,7 @@
                the input stream without blocking. - `int`
 
   throws: java.io.IOException - if this input stream has been closed by invoking its close() method, or an I/O error occurs."
-  (^Integer [^java.io.PushbackInputStream this]
+  (^Integer [^PushbackInputStream this]
     (-> this (.available))))
 
 (defn skip
@@ -111,7 +111,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if the stream does not support seek, or the stream has been closed by invoking its close() method, or an I/O error occurs."
-  (^Long [^java.io.PushbackInputStream this ^Long n]
+  (^Long [^PushbackInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn mark-supported
@@ -120,7 +120,7 @@
 
   returns: false, since this class does not support the
              mark and reset methods. - `boolean`"
-  (^Boolean [^java.io.PushbackInputStream this]
+  (^Boolean [^PushbackInputStream this]
     (-> this (.markSupported))))
 
 (defn mark
@@ -130,7 +130,7 @@
    does nothing.
 
   readlimit - the maximum limit of bytes that can be read before the mark position becomes invalid. - `int`"
-  ([^java.io.PushbackInputStream this ^Integer readlimit]
+  ([^PushbackInputStream this ^Integer readlimit]
     (-> this (.mark readlimit))))
 
 (defn reset
@@ -142,7 +142,7 @@
    IOException.
 
   throws: java.io.IOException - if this method is invoked."
-  ([^java.io.PushbackInputStream this]
+  ([^PushbackInputStream this]
     (-> this (.reset))))
 
 (defn close
@@ -153,6 +153,6 @@
    Closing a previously closed stream has no effect.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.PushbackInputStream this]
+  ([^PushbackInputStream this]
     (-> this (.close))))
 

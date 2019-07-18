@@ -16,6 +16,6 @@
   provider - a service provider Object. - `java.lang.Object`
 
   returns: true if the provider matches the criterion. - `boolean`"
-  (^Boolean [^javax.imageio.spi.ServiceRegistry$Filter this ^java.lang.Object provider]
+  (^Boolean [^ServiceRegistry$Filter this ^java.lang.Object provider]
     (-> this (.filter provider))))
 

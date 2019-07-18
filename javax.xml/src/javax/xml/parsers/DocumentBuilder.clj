@@ -21,7 +21,7 @@
   "Obtain an instance of a DOMImplementation object.
 
   returns: A new instance of a DOMImplementation. - `org.w3c.dom.DOMImplementation`"
-  (^org.w3c.dom.DOMImplementation [^javax.xml.parsers.DocumentBuilder this]
+  (^org.w3c.dom.DOMImplementation [^DocumentBuilder this]
     (-> this (.getDOMImplementation))))
 
 (defn new-document
@@ -29,7 +29,7 @@
    to build a DOM tree with.
 
   returns: A new instance of a DOM Document object. - `org.w3c.dom.Document`"
-  (^org.w3c.dom.Document [^javax.xml.parsers.DocumentBuilder this]
+  (^org.w3c.dom.Document [^DocumentBuilder this]
     (-> this (.newDocument))))
 
 (defn reset
@@ -45,7 +45,7 @@
    EntityResolver and ErrorHandler.
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method."
-  ([^javax.xml.parsers.DocumentBuilder this]
+  ([^DocumentBuilder this]
     (-> this (.reset))))
 
 (defn set-error-handler
@@ -55,7 +55,7 @@
    behavior.
 
   eh - The ErrorHandler to be used by the parser. - `org.xml.sax.ErrorHandler`"
-  ([^javax.xml.parsers.DocumentBuilder this ^org.xml.sax.ErrorHandler eh]
+  ([^DocumentBuilder this ^org.xml.sax.ErrorHandler eh]
     (-> this (.setErrorHandler eh))))
 
 (defn get-schema
@@ -68,7 +68,7 @@
     if none in use - `javax.xml.validation.Schema`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  (^javax.xml.validation.Schema [^javax.xml.parsers.DocumentBuilder this]
+  (^javax.xml.validation.Schema [^DocumentBuilder this]
     (-> this (.getSchema))))
 
 (defn parse
@@ -83,9 +83,9 @@
   returns: A new DOM Document object. - `org.w3c.dom.Document`
 
   throws: java.io.IOException - If any IO errors occur."
-  (^org.w3c.dom.Document [^javax.xml.parsers.DocumentBuilder this ^java.io.InputStream is ^java.lang.String system-id]
+  (^org.w3c.dom.Document [^DocumentBuilder this ^java.io.InputStream is ^java.lang.String system-id]
     (-> this (.parse is system-id)))
-  (^org.w3c.dom.Document [^javax.xml.parsers.DocumentBuilder this ^java.io.InputStream is]
+  (^org.w3c.dom.Document [^DocumentBuilder this ^java.io.InputStream is]
     (-> this (.parse is))))
 
 (defn set-entity-resolver
@@ -96,7 +96,7 @@
    behavior.
 
   er - The EntityResolver to be used to resolve entities present in the XML document to be parsed. - `org.xml.sax.EntityResolver`"
-  ([^javax.xml.parsers.DocumentBuilder this ^org.xml.sax.EntityResolver er]
+  ([^DocumentBuilder this ^org.xml.sax.EntityResolver er]
     (-> this (.setEntityResolver er))))
 
 (defn namespace-aware?
@@ -105,7 +105,7 @@
 
   returns: true if this parser is configured to understand
            namespaces; false otherwise. - `boolean`"
-  (^Boolean [^javax.xml.parsers.DocumentBuilder this]
+  (^Boolean [^DocumentBuilder this]
     (-> this (.isNamespaceAware))))
 
 (defn validating?
@@ -114,7 +114,7 @@
 
   returns: true if this parser is configured to validate
            XML documents; false otherwise. - `boolean`"
-  (^Boolean [^javax.xml.parsers.DocumentBuilder this]
+  (^Boolean [^DocumentBuilder this]
     (-> this (.isValidating))))
 
 (defn x-include-aware?
@@ -125,6 +125,6 @@
         when this parser was created from factory. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method"
-  (^Boolean [^javax.xml.parsers.DocumentBuilder this]
+  (^Boolean [^DocumentBuilder this]
     (-> this (.isXIncludeAware))))
 

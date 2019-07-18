@@ -42,7 +42,7 @@
 
   returns: value in the given unit of granularity, since the epoch
             since the epoch (1970-01-01T00:00:00Z); can be negative - `long`"
-  (^Long [^java.nio.file.attribute.FileTime this ^java.util.concurrent.TimeUnit unit]
+  (^Long [^FileTime this ^java.util.concurrent.TimeUnit unit]
     (-> this (.to unit))))
 
 (defn to-millis
@@ -53,7 +53,7 @@
    if positive.
 
   returns: the value in milliseconds, since the epoch (1970-01-01T00:00:00Z) - `long`"
-  (^Long [^java.nio.file.attribute.FileTime this]
+  (^Long [^FileTime this]
     (-> this (.toMillis))))
 
 (defn to-instant
@@ -70,7 +70,7 @@
 
   returns: an instant representing the same point on the time-line as
             this FileTime object - `java.time.Instant`"
-  (^java.time.Instant [^java.nio.file.attribute.FileTime this]
+  (^java.time.Instant [^FileTime this]
     (-> this (.toInstant))))
 
 (defn equals
@@ -82,7 +82,7 @@
   obj - the object to compare with - `java.lang.Object`
 
   returns: true if, and only if, the given object is a FileTime that represents the same time - `boolean`"
-  (^Boolean [^java.nio.file.attribute.FileTime this ^java.lang.Object obj]
+  (^Boolean [^FileTime this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -92,7 +92,7 @@
    general contract of the Object.hashCode() method.
 
   returns: the hash-code value - `int`"
-  (^Integer [^java.nio.file.attribute.FileTime this]
+  (^Integer [^FileTime this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -104,7 +104,7 @@
             value less than 0 if this FileTime represents a time
             that is before other, and a value greater than 0 if this
             FileTime represents a time that is after other - `int`"
-  (^Integer [^java.nio.file.attribute.FileTime this ^java.nio.file.attribute.FileTime other]
+  (^Integer [^FileTime this ^java.nio.file.attribute.FileTime other]
     (-> this (.compareTo other))))
 
 (defn to-string
@@ -128,6 +128,6 @@
    are not present. The year before `0001` is `-0001`.
 
   returns: the string representation of this file time - `java.lang.String`"
-  (^java.lang.String [^java.nio.file.attribute.FileTime this]
+  (^java.lang.String [^FileTime this]
     (-> this (.toString))))
 

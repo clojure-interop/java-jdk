@@ -20,7 +20,7 @@
 
 (defn ->listener
   "Constructor."
-  ([]
+  (^Unmarshaller$Listener []
     (new Unmarshaller$Listener )))
 
 (defn before-unmarshal
@@ -34,7 +34,7 @@
 
   target - non-null instance of JAXB mapped class prior to unmarshalling into it. - `java.lang.Object`
   parent - instance of JAXB mapped class that will eventually reference target. null when target is root element. - `java.lang.Object`"
-  ([^javax.xml.bind.Unmarshaller$Listener this ^java.lang.Object target ^java.lang.Object parent]
+  ([^Unmarshaller$Listener this ^java.lang.Object target ^java.lang.Object parent]
     (-> this (.beforeUnmarshal target parent))))
 
 (defn after-unmarshal
@@ -48,6 +48,6 @@
 
   target - non-null instance of JAXB mapped class prior to unmarshalling into it. - `java.lang.Object`
   parent - instance of JAXB mapped class that will reference target. null when target is root element. - `java.lang.Object`"
-  ([^javax.xml.bind.Unmarshaller$Listener this ^java.lang.Object target ^java.lang.Object parent]
+  ([^Unmarshaller$Listener this ^java.lang.Object target ^java.lang.Object parent]
     (-> this (.afterUnmarshal target parent))))
 

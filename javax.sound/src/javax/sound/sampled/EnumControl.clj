@@ -31,27 +31,27 @@
   value - the desired new value - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the value indicated does not fall within the allowable range"
-  ([^javax.sound.sampled.EnumControl this ^java.lang.Object value]
+  ([^EnumControl this ^java.lang.Object value]
     (-> this (.setValue value))))
 
 (defn get-value
   "Obtains this control's current value.
 
   returns: the current value - `java.lang.Object`"
-  (^java.lang.Object [^javax.sound.sampled.EnumControl this]
+  (^java.lang.Object [^EnumControl this]
     (-> this (.getValue))))
 
 (defn get-values
   "Returns the set of possible values for this control.
 
   returns: the set of possible values - `java.lang.Object[]`"
-  ([^javax.sound.sampled.EnumControl this]
+  ([^EnumControl this]
     (-> this (.getValues))))
 
 (defn to-string
   "Provides a string representation of the control.
 
   returns: a string description - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.EnumControl this]
+  (^java.lang.String [^EnumControl this]
     (-> this (.toString))))
 

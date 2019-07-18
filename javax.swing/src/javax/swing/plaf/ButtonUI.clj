@@ -5,6 +5,6 @@
 
 (defn ->button-ui
   "Constructor."
-  ([]
+  (^ButtonUI []
     (new ButtonUI )))
 

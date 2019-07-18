@@ -5,7 +5,7 @@
 
 (defn ->beans
   "Constructor."
-  ([]
+  (^Beans []
     (new Beans )))
 
 (defn *instantiate
@@ -73,7 +73,7 @@
    addition of more flexible bean behaviour in the future.
 
   bean - Object from which we want to obtain a view. - `java.lang.Object`
-  target-type - The type of view we'd like to get. - `java.lang.Class<?>`
+  target-type - The type of view we'd like to get. - `java.lang.Class`
 
   returns: an object representing a specified type view of the
    source object - `java.lang.Object`"
@@ -87,7 +87,7 @@
    represents the specified targetType type view.
 
   bean - Bean from which we want to obtain a view. - `java.lang.Object`
-  target-type - The type of view we'd like to get. - `java.lang.Class<?>`
+  target-type - The type of view we'd like to get. - `java.lang.Class`
 
   returns: `true` if the given bean supports the given targetType. - `boolean`"
   (^Boolean [^java.lang.Object bean ^java.lang.Class target-type]

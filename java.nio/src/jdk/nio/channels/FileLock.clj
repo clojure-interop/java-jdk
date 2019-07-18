@@ -88,14 +88,14 @@
    then invoking this method has no effect.
 
   throws: java.nio.channels.ClosedChannelException - If the channel that was used to acquire this lock is no longer open"
-  ([^java.nio.channels.FileLock this]
+  ([^FileLock this]
     (-> this (.release))))
 
 (defn to-string
   "Returns a string describing the range, type, and validity of this lock.
 
   returns: A descriptive string - `java.lang.String`"
-  (^java.lang.String [^java.nio.channels.FileLock this]
+  (^java.lang.String [^FileLock this]
     (-> this (.toString))))
 
 (defn overlaps
@@ -106,7 +106,7 @@
 
   returns: true if, and only if, this lock and the given lock
             range overlap by at least one byte - `boolean`"
-  (^Boolean [^java.nio.channels.FileLock this ^Long position ^Long size]
+  (^Boolean [^FileLock this ^Long position ^Long size]
     (-> this (.overlaps position size))))
 
 (defn position
@@ -118,7 +118,7 @@
    the file's current size.
 
   returns: The position - `long`"
-  (^Long [^java.nio.channels.FileLock this]
+  (^Long [^FileLock this]
     (-> this (.position))))
 
 (defn shared?
@@ -126,14 +126,14 @@
 
   returns: true if lock is shared,
            false if it is exclusive - `boolean`"
-  (^Boolean [^java.nio.channels.FileLock this]
+  (^Boolean [^FileLock this]
     (-> this (.isShared))))
 
 (defn acquired-by
   "Returns the channel upon whose file this lock was acquired.
 
   returns: The channel upon whose file this lock was acquired. - `java.nio.channels.Channel`"
-  (^java.nio.channels.Channel [^java.nio.channels.FileLock this]
+  (^java.nio.channels.Channel [^FileLock this]
     (-> this (.acquiredBy))))
 
 (defn close
@@ -142,7 +142,7 @@
    automatic resource management block construct.
 
   throws: java.io.IOException"
-  ([^java.nio.channels.FileLock this]
+  ([^FileLock this]
     (-> this (.close))))
 
 (defn valid?
@@ -152,7 +152,7 @@
    file channel is closed, whichever comes first.
 
   returns: true if, and only if, this lock is valid - `boolean`"
-  (^Boolean [^java.nio.channels.FileLock this]
+  (^Boolean [^FileLock this]
     (-> this (.isValid))))
 
 (defn channel
@@ -163,7 +163,7 @@
 
   returns: The file channel, or null if the file lock was not
             acquired by a file channel. - `java.nio.s.FileChannel`"
-  (^java.nio.s.FileChannel [^java.nio.channels.FileLock this]
+  (^java.nio.s.FileChannel [^FileLock this]
     (-> this (.channel))))
 
 (defn size
@@ -174,6 +174,6 @@
    the file's current size.
 
   returns: The size of the locked region - `long`"
-  (^Long [^java.nio.channels.FileLock this]
+  (^Long [^FileLock this]
     (-> this (.size))))
 

@@ -43,18 +43,18 @@
    fieldID. If the field has no corresponding integer
    constant, fieldID should be -1.
 
-  attribute - Format.Field constant identifying a field - `java.text.Format.Field`
+  attribute - Format.Field constant identifying a field - `java.text.Format$Field`
   field-id - integer constant identifying a field - `int`"
-  ([^java.text.Format.Field attribute ^Integer field-id]
+  (^FieldPosition [^java.text.Format$Field attribute ^Integer field-id]
     (new FieldPosition attribute field-id))
-  ([^Integer field]
+  (^FieldPosition [^Integer field]
     (new FieldPosition field)))
 
 (defn set-end-index
   "Sets the end index.  For use by subclasses of Format.
 
   ei - the end index - `int`"
-  ([^java.text.FieldPosition this ^Integer ei]
+  ([^FieldPosition this ^Integer ei]
     (-> this (.setEndIndex ei))))
 
 (defn get-end-index
@@ -62,35 +62,35 @@
    requested field.
 
   returns: the end index - `int`"
-  (^Integer [^java.text.FieldPosition this]
+  (^Integer [^FieldPosition this]
     (-> this (.getEndIndex))))
 
 (defn to-string
   "Return a string representation of this FieldPosition.
 
   returns: a string representation of this object - `java.lang.String`"
-  (^java.lang.String [^java.text.FieldPosition this]
+  (^java.lang.String [^FieldPosition this]
     (-> this (.toString))))
 
 (defn set-begin-index
   "Sets the begin index.  For use by subclasses of Format.
 
   bi - the begin index - `int`"
-  ([^java.text.FieldPosition this ^Integer bi]
+  ([^FieldPosition this ^Integer bi]
     (-> this (.setBeginIndex bi))))
 
 (defn get-begin-index
   "Retrieves the index of the first character in the requested field.
 
   returns: the begin index - `int`"
-  (^Integer [^java.text.FieldPosition this]
+  (^Integer [^FieldPosition this]
     (-> this (.getBeginIndex))))
 
 (defn get-field
   "Retrieves the field identifier.
 
   returns: the field identifier - `int`"
-  (^Integer [^java.text.FieldPosition this]
+  (^Integer [^FieldPosition this]
     (-> this (.getField))))
 
 (defn get-field-attribute
@@ -98,15 +98,15 @@
    from one of the Field subclasses. May return null if
    the field is specified only by an integer field ID.
 
-  returns: Identifier for the field - `java.text.Format.Field`"
-  (^java.text.Format.Field [^java.text.FieldPosition this]
+  returns: Identifier for the field - `java.text.Format$Field`"
+  (^java.text.Format$Field [^FieldPosition this]
     (-> this (.getFieldAttribute))))
 
 (defn hash-code
   "Returns a hash code for this FieldPosition.
 
   returns: a hash code value for this object - `int`"
-  (^Integer [^java.text.FieldPosition this]
+  (^Integer [^FieldPosition this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -116,6 +116,6 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.text.FieldPosition this ^java.lang.Object obj]
+  (^Boolean [^FieldPosition this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

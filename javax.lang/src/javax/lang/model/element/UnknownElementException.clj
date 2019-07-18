@@ -17,7 +17,7 @@
 
   e - the unknown element, may be null - `javax.lang.model.element.Element`
   p - an additional parameter, may be null - `java.lang.Object`"
-  ([^javax.lang.model.element.Element e ^java.lang.Object p]
+  (^UnknownElementException [^javax.lang.model.element.Element e ^java.lang.Object p]
     (new UnknownElementException e p)))
 
 (defn get-unknown-element
@@ -26,13 +26,13 @@
    serialized and then read back in.
 
   returns: the unknown element, or null if unavailable - `javax.lang.model.element.Element`"
-  (^javax.lang.model.element.Element [^javax.lang.model.element.UnknownElementException this]
+  (^javax.lang.model.element.Element [^UnknownElementException this]
     (-> this (.getUnknownElement))))
 
 (defn get-argument
   "Returns the additional argument.
 
   returns: the additional argument - `java.lang.Object`"
-  (^java.lang.Object [^javax.lang.model.element.UnknownElementException this]
+  (^java.lang.Object [^UnknownElementException this]
     (-> this (.getArgument))))
 

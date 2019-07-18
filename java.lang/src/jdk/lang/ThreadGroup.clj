@@ -23,25 +23,23 @@
   name - the name of the new thread group. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if the thread group argument is null."
-  ([^java.lang.ThreadGroup parent ^java.lang.String name]
+  (^ThreadGroup [^java.lang.ThreadGroup parent ^java.lang.String name]
     (new ThreadGroup parent name))
-  ([^java.lang.String name]
+  (^ThreadGroup [^java.lang.String name]
     (new ThreadGroup name)))
 
 (defn stop
   "Deprecated. This method is inherently unsafe.  See
        Thread.stop() for details.
 
-  returns: `java.lang.   void`
-
   throws: java.lang.SecurityException - if the current thread is not allowed to access this thread group or any of the threads in the thread group."
-  ([^java.lang.ThreadGroup this]
+  ([^ThreadGroup this]
     (-> this (.stop))))
 
 (defn list
   "Prints information about this thread group to the standard
    output. This method is useful only for debugging."
-  ([^java.lang.ThreadGroup this]
+  ([^ThreadGroup this]
     (-> this (.list))))
 
 (defn allow-thread-suspension
@@ -51,18 +49,16 @@
 
   b - boolean to allow or disallow suspension - `boolean`
 
-  returns: true on success - `java.lang.  boolean`"
-  ([^java.lang.ThreadGroup this ^Boolean b]
+  returns: true on success - `boolean`"
+  (^Boolean [^ThreadGroup this ^Boolean b]
     (-> this (.allowThreadSuspension b))))
 
 (defn suspend
   "Deprecated. This method is inherently deadlock-prone.  See
        Thread.suspend() for details.
 
-  returns: `java.lang.   void`
-
   throws: java.lang.SecurityException - if the current thread is not allowed to access this thread group or any of the threads in the thread group."
-  ([^java.lang.ThreadGroup this]
+  ([^ThreadGroup this]
     (-> this (.suspend))))
 
 (defn parent-of
@@ -74,14 +70,14 @@
   returns: true if this thread group is the thread group
             argument or one of its ancestor thread groups;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.ThreadGroup this ^java.lang.ThreadGroup g]
+  (^Boolean [^ThreadGroup this ^java.lang.ThreadGroup g]
     (-> this (.parentOf g))))
 
 (defn to-string
   "Returns a string representation of this Thread group.
 
   returns: a string representation of this thread group. - `java.lang.String`"
-  (^java.lang.String [^java.lang.ThreadGroup this]
+  (^java.lang.String [^ThreadGroup this]
     (-> this (.toString))))
 
 (defn uncaught-exception
@@ -115,7 +111,7 @@
 
   t - the thread that is about to exit. - `java.lang.Thread`
   e - the uncaught exception. - `java.lang.Throwable`"
-  ([^java.lang.ThreadGroup this ^java.lang.Thread t ^java.lang.Throwable e]
+  ([^ThreadGroup this ^java.lang.Thread t ^java.lang.Throwable e]
     (-> this (.uncaughtException t e))))
 
 (defn check-access
@@ -127,14 +123,14 @@
    in throwing a SecurityException.
 
   throws: java.lang.SecurityException - if the current thread is not allowed to access this thread group."
-  ([^java.lang.ThreadGroup this]
+  ([^ThreadGroup this]
     (-> this (.checkAccess))))
 
 (defn get-name
   "Returns the name of this thread group.
 
   returns: the name of this thread group. - `java.lang.String`"
-  (^java.lang.String [^java.lang.ThreadGroup this]
+  (^java.lang.String [^ThreadGroup this]
     (-> this (.getName))))
 
 (defn enumerate
@@ -161,9 +157,9 @@
   returns: the number of threads put into the array - `int`
 
   throws: java.lang.SecurityException - if checkAccess determines that the current thread cannot access this thread group"
-  (^Integer [^java.lang.ThreadGroup this list ^Boolean recurse]
+  (^Integer [^ThreadGroup this list ^Boolean recurse]
     (-> this (.enumerate list recurse)))
-  (^Integer [^java.lang.ThreadGroup this list]
+  (^Integer [^ThreadGroup this list]
     (-> this (.enumerate list))))
 
 (defn destroy
@@ -175,7 +171,7 @@
    called with no arguments; this may result in a security exception.
 
   throws: java.lang.IllegalThreadStateException - if the thread group is not empty or if the thread group has already been destroyed."
-  ([^java.lang.ThreadGroup this]
+  ([^ThreadGroup this]
     (-> this (.destroy))))
 
 (defn get-parent
@@ -189,7 +185,7 @@
             is the only thread group whose parent is null. - `java.lang.ThreadGroup`
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread group."
-  (^java.lang.ThreadGroup [^java.lang.ThreadGroup this]
+  (^java.lang.ThreadGroup [^ThreadGroup this]
     (-> this (.getParent))))
 
 (defn set-max-priority
@@ -215,7 +211,7 @@
   pri - the new priority of the thread group. - `int`
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread group."
-  ([^java.lang.ThreadGroup this ^Integer pri]
+  ([^ThreadGroup this ^Integer pri]
     (-> this (.setMaxPriority pri))))
 
 (defn get-max-priority
@@ -225,7 +221,7 @@
 
   returns: the maximum priority that a thread in this thread group
             can have. - `int`"
-  (^Integer [^java.lang.ThreadGroup this]
+  (^Integer [^ThreadGroup this]
     (-> this (.getMaxPriority))))
 
 (defn active-count
@@ -242,7 +238,7 @@
   returns: an estimate of the number of active threads in this thread
             group and in any other thread group that has this thread
             group as an ancestor - `int`"
-  (^Integer [^java.lang.ThreadGroup this]
+  (^Integer [^ThreadGroup this]
     (-> this (.activeCount))))
 
 (defn interrupt
@@ -255,7 +251,7 @@
    threads in this thread group and in all of its subgroups.
 
   throws: java.lang.SecurityException - if the current thread is not allowed to access this thread group or any of the threads in the thread group."
-  ([^java.lang.ThreadGroup this]
+  ([^ThreadGroup this]
     (-> this (.interrupt))))
 
 (defn daemon?
@@ -265,7 +261,7 @@
 
   returns: true if this thread group is a daemon thread group;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.ThreadGroup this]
+  (^Boolean [^ThreadGroup this]
     (-> this (.isDaemon))))
 
 (defn set-daemon
@@ -280,7 +276,7 @@
   daemon - if true, marks this thread group as a daemon thread group; otherwise, marks this thread group as normal. - `boolean`
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread group."
-  ([^java.lang.ThreadGroup this ^Boolean daemon]
+  ([^ThreadGroup this ^Boolean daemon]
     (-> this (.setDaemon daemon))))
 
 (defn active-group-count
@@ -295,14 +291,14 @@
 
   returns: the number of active thread groups with this thread group as
             an ancestor - `int`"
-  (^Integer [^java.lang.ThreadGroup this]
+  (^Integer [^ThreadGroup this]
     (-> this (.activeGroupCount))))
 
 (defn destroyed?
   "Tests if this thread group has been destroyed.
 
   returns: true if this object is destroyed - `boolean`"
-  (^Boolean [^java.lang.ThreadGroup this]
+  (^Boolean [^ThreadGroup this]
     (-> this (.isDestroyed))))
 
 (defn resume
@@ -311,9 +307,7 @@
          both of which have been deprecated, as they are inherently
          deadlock-prone.  See Thread.suspend() for details.
 
-  returns: `java.lang.   void`
-
   throws: java.lang.SecurityException - if the current thread is not allowed to access this thread group or any of the threads in the thread group."
-  ([^java.lang.ThreadGroup this]
+  ([^ThreadGroup this]
     (-> this (.resume))))
 

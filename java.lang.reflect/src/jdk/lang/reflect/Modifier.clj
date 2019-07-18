@@ -10,7 +10,7 @@
 
 (defn ->modifier
   "Constructor."
-  ([]
+  (^Modifier []
     (new Modifier )))
 
 (def *-public

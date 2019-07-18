@@ -64,33 +64,33 @@
    an element to the set that violates this constraint, the
    add call will throw a ClassCastException.
 
-  comparator - the comparator that will be used to order this set. If null, the java.lang.natural ordering of the elements will be used. - `TreeSet.E>`"
-  ([^TreeSet.E> comparator]
+  comparator - the comparator that will be used to order this set. If null, the java.lang.natural ordering of the elements will be used. - `java.util.Comparator`"
+  (^TreeSet [^java.util.Comparator comparator]
     (new TreeSet comparator))
-  ([]
+  (^TreeSet []
     (new TreeSet )))
 
 (defn add-all
   "Adds all of the elements in the specified collection to this set.
 
-  c - collection containing elements to be added to this set - `TreeSet.E>`
+  c - collection containing elements to be added to this set - `java.util.Collection`
 
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the elements provided cannot be compared with the elements currently in the set"
-  (^Boolean [^java.util.TreeSet this ^TreeSet.E> c]
+  (^Boolean [^TreeSet this ^java.util.Collection c]
     (-> this (.addAll c))))
 
 (defn floor
   "Description copied from interface: NavigableSet
 
-  e - the value to match - `TreeSet.E`
+  e - the value to match - `E`
 
   returns: the greatest element less than or equal to e,
-           or null if there is no such element - `TreeSet.E`
+           or null if there is no such element - `E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  (^TreeSet.E [^java.util.TreeSet this ^TreeSet.E e]
+  ([^TreeSet this e]
     (-> this (.floor e))))
 
 (defn spliterator
@@ -109,23 +109,23 @@
    Otherwise, the spliterator's comparator is the same as or imposes the
    same total ordering as the tree set's comparator.
 
-  returns: a Spliterator over the elements in this set - `java.util.Spliterator<TreeSet.E>`"
-  (^java.util.Spliterator [^java.util.TreeSet this]
+  returns: a Spliterator over the elements in this set - `java.util.Spliterator<E>`"
+  (^java.util.Spliterator [^TreeSet this]
     (-> this (.spliterator))))
 
 (defn tail-set
   "Description copied from interface: NavigableSet
 
-  from-element - low endpoint of the returned set - `TreeSet.E`
+  from-element - low endpoint of the returned set - `E`
   inclusive - true if the low endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this set whose elements are greater
-           than or equal to fromElement - `java.util.NavigableSet<TreeSet.E>`
+           than or equal to fromElement - `java.util.NavigableSet<E>`
 
   throws: java.lang.ClassCastException - if fromElement is not compatible with this set's comparator (or, if the set has no comparator, if fromElement does not implement Comparable). Implementations may, but are not required to, throw this exception if fromElement cannot be compared to elements currently in the set."
-  (^java.util.NavigableSet [^java.util.TreeSet this ^TreeSet.E from-element ^Boolean inclusive]
+  (^java.util.NavigableSet [^TreeSet this from-element ^Boolean inclusive]
     (-> this (.tailSet from-element inclusive)))
-  (^java.util.SortedSet [^java.util.TreeSet this ^TreeSet.E from-element]
+  (^java.util.SortedSet [^TreeSet this from-element]
     (-> this (.tailSet from-element))))
 
 (defn contains
@@ -139,38 +139,38 @@
   returns: true if this set contains the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the specified object cannot be compared with the elements currently in the set"
-  (^Boolean [^java.util.TreeSet this ^java.lang.Object o]
+  (^Boolean [^TreeSet this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
   "Returns an iterator over the elements in this set in ascending order.
 
-  returns: an iterator over the elements in this set in ascending order - `java.util.Iterator<TreeSet.E>`"
-  (^java.util.Iterator [^java.util.TreeSet this]
+  returns: an iterator over the elements in this set in ascending order - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^TreeSet this]
     (-> this (.iterator))))
 
 (defn descending-set
   "Description copied from interface: NavigableSet
 
-  returns: a reverse order view of this set - `java.util.NavigableSet<TreeSet.E>`"
-  (^java.util.NavigableSet [^java.util.TreeSet this]
+  returns: a reverse order view of this set - `java.util.NavigableSet<E>`"
+  (^java.util.NavigableSet [^TreeSet this]
     (-> this (.descendingSet))))
 
 (defn sub-set
   "Description copied from interface: NavigableSet
 
-  from-element - low endpoint of the returned set - `TreeSet.E`
+  from-element - low endpoint of the returned set - `E`
   from-inclusive - true if the low endpoint is to be included in the returned view - `boolean`
-  to-element - high endpoint of the returned set - `TreeSet.E`
+  to-element - high endpoint of the returned set - `E`
   to-inclusive - true if the high endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this set whose elements range from
-           fromElement, inclusive, to toElement, exclusive - `java.util.NavigableSet<TreeSet.E>`
+           fromElement, inclusive, to toElement, exclusive - `java.util.NavigableSet<E>`
 
   throws: java.lang.ClassCastException - if fromElement and toElement cannot be compared to one another using this set's comparator (or, if the set has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromElement or toElement cannot be compared to elements currently in the set."
-  (^java.util.NavigableSet [^java.util.TreeSet this ^TreeSet.E from-element ^Boolean from-inclusive ^TreeSet.E to-element ^Boolean to-inclusive]
+  (^java.util.NavigableSet [^TreeSet this from-element ^Boolean from-inclusive to-element ^Boolean to-inclusive]
     (-> this (.subSet from-element from-inclusive to-element to-inclusive)))
-  (^java.util.SortedSet [^java.util.TreeSet this ^TreeSet.E from-element ^TreeSet.E to-element]
+  (^java.util.SortedSet [^TreeSet this from-element to-element]
     (-> this (.subSet from-element to-element))))
 
 (defn remove
@@ -187,14 +187,14 @@
   returns: true if this set contained the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the specified object cannot be compared with the elements currently in this set"
-  (^Boolean [^java.util.TreeSet this ^java.lang.Object o]
+  (^Boolean [^TreeSet this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn poll-last
   "Description copied from interface: NavigableSet
 
-  returns: the last element, or null if this set is empty - `TreeSet.E`"
-  (^TreeSet.E [^java.util.TreeSet this]
+  returns: the last element, or null if this set is empty - `E`"
+  ([^TreeSet this]
     (-> this (.pollLast))))
 
 (defn comparator
@@ -202,36 +202,36 @@
 
   returns: the comparator used to order the elements in this set,
            or null if this set uses the natural ordering
-           of its elements - `java.util.Comparator<? super TreeSet.E>`"
-  ([^java.util.TreeSet this]
+           of its elements - `java.util.Comparator<? super E>`"
+  ([^TreeSet this]
     (-> this (.comparator))))
 
 (defn last
   "Description copied from interface: SortedSet
 
-  returns: the last (highest) element currently in this set - `TreeSet.E`
+  returns: the last (highest) element currently in this set - `E`
 
   throws: java.util.NoSuchElementException - if this set is empty"
-  (^TreeSet.E [^java.util.TreeSet this]
+  ([^TreeSet this]
     (-> this (.last))))
 
 (defn poll-first
   "Description copied from interface: NavigableSet
 
-  returns: the first element, or null if this set is empty - `TreeSet.E`"
-  (^TreeSet.E [^java.util.TreeSet this]
+  returns: the first element, or null if this set is empty - `E`"
+  ([^TreeSet this]
     (-> this (.pollFirst))))
 
 (defn higher
   "Description copied from interface: NavigableSet
 
-  e - the value to match - `TreeSet.E`
+  e - the value to match - `E`
 
   returns: the least element greater than e,
-           or null if there is no such element - `TreeSet.E`
+           or null if there is no such element - `E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  (^TreeSet.E [^java.util.TreeSet this ^TreeSet.E e]
+  ([^TreeSet this e]
     (-> this (.higher e))))
 
 (defn clone
@@ -239,19 +239,19 @@
    themselves are not cloned.)
 
   returns: a shallow copy of this set - `java.lang.Object`"
-  (^java.lang.Object [^java.util.TreeSet this]
+  (^java.lang.Object [^TreeSet this]
     (-> this (.clone))))
 
 (defn lower
   "Description copied from interface: NavigableSet
 
-  e - the value to match - `TreeSet.E`
+  e - the value to match - `E`
 
   returns: the greatest element less than e,
-           or null if there is no such element - `TreeSet.E`
+           or null if there is no such element - `E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  (^TreeSet.E [^java.util.TreeSet this ^TreeSet.E e]
+  ([^TreeSet this e]
     (-> this (.lower e))))
 
 (defn add
@@ -262,75 +262,75 @@
    If this set already contains the element, the call leaves the set
    unchanged and returns false.
 
-  e - element to be added to this set - `TreeSet.E`
+  e - element to be added to this set - `E`
 
   returns: true if this set did not already contain the specified
            element - `boolean`
 
   throws: java.lang.ClassCastException - if the specified object cannot be compared with the elements currently in this set"
-  (^Boolean [^java.util.TreeSet this ^TreeSet.E e]
+  (^Boolean [^TreeSet this e]
     (-> this (.add e))))
 
 (defn descending-iterator
   "Returns an iterator over the elements in this set in descending order.
 
-  returns: an iterator over the elements in this set in descending order - `java.util.Iterator<TreeSet.E>`"
-  (^java.util.Iterator [^java.util.TreeSet this]
+  returns: an iterator over the elements in this set in descending order - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^TreeSet this]
     (-> this (.descendingIterator))))
 
 (defn empty?
   "Returns true if this set contains no elements.
 
   returns: true if this set contains no elements - `boolean`"
-  (^Boolean [^java.util.TreeSet this]
+  (^Boolean [^TreeSet this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of elements in this set (its cardinality).
 
   returns: the number of elements in this set (its cardinality) - `int`"
-  (^Integer [^java.util.TreeSet this]
+  (^Integer [^TreeSet this]
     (-> this (.size))))
 
 (defn head-set
   "Description copied from interface: NavigableSet
 
-  to-element - high endpoint of the returned set - `TreeSet.E`
+  to-element - high endpoint of the returned set - `E`
   inclusive - true if the high endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this set whose elements are less than
-           (or equal to, if inclusive is true) toElement - `java.util.NavigableSet<TreeSet.E>`
+           (or equal to, if inclusive is true) toElement - `java.util.NavigableSet<E>`
 
   throws: java.lang.ClassCastException - if toElement is not compatible with this set's comparator (or, if the set has no comparator, if toElement does not implement Comparable). Implementations may, but are not required to, throw this exception if toElement cannot be compared to elements currently in the set."
-  (^java.util.NavigableSet [^java.util.TreeSet this ^TreeSet.E to-element ^Boolean inclusive]
+  (^java.util.NavigableSet [^TreeSet this to-element ^Boolean inclusive]
     (-> this (.headSet to-element inclusive)))
-  (^java.util.SortedSet [^java.util.TreeSet this ^TreeSet.E to-element]
+  (^java.util.SortedSet [^TreeSet this to-element]
     (-> this (.headSet to-element))))
 
 (defn clear
   "Removes all of the elements from this set.
    The set will be empty after this call returns."
-  ([^java.util.TreeSet this]
+  ([^TreeSet this]
     (-> this (.clear))))
 
 (defn ceiling
   "Description copied from interface: NavigableSet
 
-  e - the value to match - `TreeSet.E`
+  e - the value to match - `E`
 
   returns: the least element greater than or equal to e,
-           or null if there is no such element - `TreeSet.E`
+           or null if there is no such element - `E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with the elements currently in the set"
-  (^TreeSet.E [^java.util.TreeSet this ^TreeSet.E e]
+  ([^TreeSet this e]
     (-> this (.ceiling e))))
 
 (defn first
   "Description copied from interface: SortedSet
 
-  returns: the first (lowest) element currently in this set - `TreeSet.E`
+  returns: the first (lowest) element currently in this set - `E`
 
   throws: java.util.NoSuchElementException - if this set is empty"
-  (^TreeSet.E [^java.util.TreeSet this]
+  ([^TreeSet this]
     (-> this (.first))))
 

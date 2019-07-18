@@ -47,13 +47,13 @@
            each with the given origin (inclusive) and bound (exclusive) - `java.util.stream.LongStream`
 
   throws: java.lang.IllegalArgumentException - if streamSize is less than zero, or randomNumberOrigin is greater than or equal to randomNumberBound"
-  (^java.util.stream.LongStream [^java.util.concurrent.ThreadLocalRandom this ^Long stream-size ^Long random-number-origin ^Long random-number-bound]
+  (^java.util.stream.LongStream [^ThreadLocalRandom this ^Long stream-size ^Long random-number-origin ^Long random-number-bound]
     (-> this (.longs stream-size random-number-origin random-number-bound)))
-  (^java.util.stream.LongStream [^java.util.concurrent.ThreadLocalRandom this ^Long random-number-origin ^Long random-number-bound]
+  (^java.util.stream.LongStream [^ThreadLocalRandom this ^Long random-number-origin ^Long random-number-bound]
     (-> this (.longs random-number-origin random-number-bound)))
-  (^java.util.stream.LongStream [^java.util.concurrent.ThreadLocalRandom this ^Long stream-size]
+  (^java.util.stream.LongStream [^ThreadLocalRandom this ^Long stream-size]
     (-> this (.longs stream-size)))
-  (^java.util.stream.LongStream [^java.util.concurrent.ThreadLocalRandom this]
+  (^java.util.stream.LongStream [^ThreadLocalRandom this]
     (-> this (.longs))))
 
 (defn set-seed
@@ -63,7 +63,7 @@
   seed - the initial seed - `long`
 
   throws: java.lang.UnsupportedOperationException - always"
-  ([^java.util.concurrent.ThreadLocalRandom this ^Long seed]
+  ([^ThreadLocalRandom this ^Long seed]
     (-> this (.setSeed seed))))
 
 (defn next-float
@@ -72,7 +72,7 @@
 
   returns: a pseudorandom float value between zero
            (inclusive) and one (exclusive) - `float`"
-  (^Float [^java.util.concurrent.ThreadLocalRandom this]
+  (^Float [^ThreadLocalRandom this]
     (-> this (.nextFloat))))
 
 (defn next-int
@@ -86,11 +86,11 @@
            (inclusive) and the bound (exclusive) - `int`
 
   throws: java.lang.IllegalArgumentException - if origin is greater than or equal to bound"
-  (^Integer [^java.util.concurrent.ThreadLocalRandom this ^Integer origin ^Integer bound]
+  (^Integer [^ThreadLocalRandom this ^Integer origin ^Integer bound]
     (-> this (.nextInt origin bound)))
-  (^Integer [^java.util.concurrent.ThreadLocalRandom this ^Integer bound]
+  (^Integer [^ThreadLocalRandom this ^Integer bound]
     (-> this (.nextInt bound)))
-  (^Integer [^java.util.concurrent.ThreadLocalRandom this]
+  (^Integer [^ThreadLocalRandom this]
     (-> this (.nextInt))))
 
 (defn next-long
@@ -104,11 +104,11 @@
            (inclusive) and the bound (exclusive) - `long`
 
   throws: java.lang.IllegalArgumentException - if origin is greater than or equal to bound"
-  (^Long [^java.util.concurrent.ThreadLocalRandom this ^Long origin ^Long bound]
+  (^Long [^ThreadLocalRandom this ^Long origin ^Long bound]
     (-> this (.nextLong origin bound)))
-  (^Long [^java.util.concurrent.ThreadLocalRandom this ^Long bound]
+  (^Long [^ThreadLocalRandom this ^Long bound]
     (-> this (.nextLong bound)))
-  (^Long [^java.util.concurrent.ThreadLocalRandom this]
+  (^Long [^ThreadLocalRandom this]
     (-> this (.nextLong))))
 
 (defn doubles
@@ -124,13 +124,13 @@
            each with the given origin (inclusive) and bound (exclusive) - `java.util.stream.DoubleStream`
 
   throws: java.lang.IllegalArgumentException - if randomNumberOrigin is greater than or equal to randomNumberBound"
-  (^java.util.stream.DoubleStream [^java.util.concurrent.ThreadLocalRandom this ^Long stream-size ^Double random-number-origin ^Double random-number-bound]
+  (^java.util.stream.DoubleStream [^ThreadLocalRandom this ^Long stream-size ^Double random-number-origin ^Double random-number-bound]
     (-> this (.doubles stream-size random-number-origin random-number-bound)))
-  (^java.util.stream.DoubleStream [^java.util.concurrent.ThreadLocalRandom this ^Double random-number-origin ^Double random-number-bound]
+  (^java.util.stream.DoubleStream [^ThreadLocalRandom this ^Double random-number-origin ^Double random-number-bound]
     (-> this (.doubles random-number-origin random-number-bound)))
-  (^java.util.stream.DoubleStream [^java.util.concurrent.ThreadLocalRandom this ^Long stream-size]
+  (^java.util.stream.DoubleStream [^ThreadLocalRandom this ^Long stream-size]
     (-> this (.doubles stream-size)))
-  (^java.util.stream.DoubleStream [^java.util.concurrent.ThreadLocalRandom this]
+  (^java.util.stream.DoubleStream [^ThreadLocalRandom this]
     (-> this (.doubles))))
 
 (defn ints
@@ -146,13 +146,13 @@
            each with the given origin (inclusive) and bound (exclusive) - `java.util.stream.IntStream`
 
   throws: java.lang.IllegalArgumentException - if streamSize is less than zero, or randomNumberOrigin is greater than or equal to randomNumberBound"
-  (^java.util.stream.IntStream [^java.util.concurrent.ThreadLocalRandom this ^Long stream-size ^Integer random-number-origin ^Integer random-number-bound]
+  (^java.util.stream.IntStream [^ThreadLocalRandom this ^Long stream-size ^Integer random-number-origin ^Integer random-number-bound]
     (-> this (.ints stream-size random-number-origin random-number-bound)))
-  (^java.util.stream.IntStream [^java.util.concurrent.ThreadLocalRandom this ^Integer random-number-origin ^Integer random-number-bound]
+  (^java.util.stream.IntStream [^ThreadLocalRandom this ^Integer random-number-origin ^Integer random-number-bound]
     (-> this (.ints random-number-origin random-number-bound)))
-  (^java.util.stream.IntStream [^java.util.concurrent.ThreadLocalRandom this ^Long stream-size]
+  (^java.util.stream.IntStream [^ThreadLocalRandom this ^Long stream-size]
     (-> this (.ints stream-size)))
-  (^java.util.stream.IntStream [^java.util.concurrent.ThreadLocalRandom this]
+  (^java.util.stream.IntStream [^ThreadLocalRandom this]
     (-> this (.ints))))
 
 (defn next-gaussian
@@ -162,7 +162,7 @@
            double value with mean 0.0 and
            standard deviation 1.0 from this random number
            generator's sequence - `double`"
-  (^Double [^java.util.concurrent.ThreadLocalRandom this]
+  (^Double [^ThreadLocalRandom this]
     (-> this (.nextGaussian))))
 
 (defn next-double
@@ -176,17 +176,17 @@
            (inclusive) and the bound (exclusive) - `double`
 
   throws: java.lang.IllegalArgumentException - if origin is greater than or equal to bound"
-  (^Double [^java.util.concurrent.ThreadLocalRandom this ^Double origin ^Double bound]
+  (^Double [^ThreadLocalRandom this ^Double origin ^Double bound]
     (-> this (.nextDouble origin bound)))
-  (^Double [^java.util.concurrent.ThreadLocalRandom this ^Double bound]
+  (^Double [^ThreadLocalRandom this ^Double bound]
     (-> this (.nextDouble bound)))
-  (^Double [^java.util.concurrent.ThreadLocalRandom this]
+  (^Double [^ThreadLocalRandom this]
     (-> this (.nextDouble))))
 
 (defn next-boolean
   "Returns a pseudorandom boolean value.
 
   returns: a pseudorandom boolean value - `boolean`"
-  (^Boolean [^java.util.concurrent.ThreadLocalRandom this]
+  (^Boolean [^ThreadLocalRandom this]
     (-> this (.nextBoolean))))
 

@@ -19,8 +19,8 @@
    method of class java.lang.Throwable.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^FileNotFoundException [^java.lang.String s]
     (new FileNotFoundException s))
-  ([]
+  (^FileNotFoundException []
     (new FileNotFoundException )))
 

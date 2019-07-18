@@ -44,9 +44,9 @@
    defaultAction.
 
   t - the type to visit - `javax.lang.model.type.UnionType`
-  p - a visitor-specified parameter - `TypeKindVisitor7.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `TypeKindVisitor7.R`"
-  (^TypeKindVisitor7.R [^javax.lang.model.util.TypeKindVisitor7 this ^javax.lang.model.type.UnionType t ^TypeKindVisitor7.P p]
+  returns: the result of defaultAction - `R`"
+  ([^TypeKindVisitor7 this ^javax.lang.model.type.UnionType t p]
     (-> this (.visitUnion t p))))
 

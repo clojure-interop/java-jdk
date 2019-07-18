@@ -69,11 +69,11 @@
   tab-layout-policy - the policy for laying out tabs when all tabs will not fit on one run - `int`
 
   throws: java.lang.IllegalArgumentException - if tab placement or tab layout policy are not one of the above supported values"
-  ([^Integer tab-placement ^Integer tab-layout-policy]
+  (^JTabbedPane [^Integer tab-placement ^Integer tab-layout-policy]
     (new JTabbedPane tab-placement tab-layout-policy))
-  ([^Integer tab-placement]
+  (^JTabbedPane [^Integer tab-placement]
     (new JTabbedPane tab-placement))
-  ([]
+  (^JTabbedPane []
     (new JTabbedPane )))
 
 (def *-wrap-tab-layout
@@ -120,21 +120,21 @@
   mnemonic-index - index into the String to underline - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if tabIndex is out of range (tabIndex < 0 || tabIndex >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer tab-index ^Integer mnemonic-index]
+  ([^JTabbedPane this ^Integer tab-index ^Integer mnemonic-index]
     (-> this (.setDisplayedMnemonicIndexAt tab-index mnemonic-index))))
 
 (defn add-change-listener
   "Adds a ChangeListener to this tabbedpane.
 
   l - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.JTabbedPane this ^javax.swing.event.ChangeListener l]
+  ([^JTabbedPane this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn get-tab-count
   "Returns the number of tabs in this tabbedpane.
 
   returns: an integer specifying the number of tabbed pages - `int`"
-  (^Integer [^javax.swing.JTabbedPane this]
+  (^Integer [^JTabbedPane this]
     (-> this (.getTabCount))))
 
 (defn set-mnemonic-at
@@ -159,7 +159,7 @@
   mnemonic - the key code which represents the mnemonic - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if tabIndex is out of range (tabIndex < 0 || tabIndex >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer tab-index ^Integer mnemonic]
+  ([^JTabbedPane this ^Integer tab-index ^Integer mnemonic]
     (-> this (.setMnemonicAt tab-index mnemonic))))
 
 (defn set-selected-component
@@ -170,7 +170,7 @@
   c - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if component not found in tabbed pane"
-  ([^javax.swing.JTabbedPane this ^java.awt.Component c]
+  ([^JTabbedPane this ^java.awt.Component c]
     (-> this (.setSelectedComponent c))))
 
 (defn set-tab-layout-policy
@@ -191,7 +191,7 @@
   tab-layout-policy - the policy used to layout the tabs - `int`
 
   throws: java.lang.IllegalArgumentException - if layoutPolicy value isn't one of the above valid values"
-  ([^javax.swing.JTabbedPane this ^Integer tab-layout-policy]
+  ([^JTabbedPane this ^Integer tab-layout-policy]
     (-> this (.setTabLayoutPolicy tab-layout-policy))))
 
 (defn get-tab-component-at
@@ -202,7 +202,7 @@
   returns: the tab component at index - `java.awt.Component`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  (^java.awt.Component [^javax.swing.JTabbedPane this ^Integer index]
+  (^java.awt.Component [^JTabbedPane this ^Integer index]
     (-> this (.getTabComponentAt index))))
 
 (defn remove-tab-at
@@ -214,7 +214,7 @@
   index - the index of the tab to be removed - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index]
+  ([^JTabbedPane this ^Integer index]
     (-> this (.removeTabAt index))))
 
 (defn set-foreground-at
@@ -231,7 +231,7 @@
   foreground - the color to be displayed as the tab's foreground - `java.awt.Color`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index ^java.awt.Color foreground]
+  ([^JTabbedPane this ^Integer index ^java.awt.Color foreground]
     (-> this (.setForegroundAt index foreground))))
 
 (defn set-tab-placement
@@ -247,7 +247,7 @@
   tab-placement - the placement for the tabs relative to the content - `int`
 
   throws: java.lang.IllegalArgumentException - if tab placement value isn't one of the above valid values"
-  ([^javax.swing.JTabbedPane this ^Integer tab-placement]
+  ([^JTabbedPane this ^Integer tab-placement]
     (-> this (.setTabPlacement tab-placement))))
 
 (defn get-tab-run-count
@@ -261,7 +261,7 @@
             tabPlacement
             is LEFT or RIGHT,
             or 0 if there is no UI set on this tabbedpane - `int`"
-  (^Integer [^javax.swing.JTabbedPane this]
+  (^Integer [^JTabbedPane this]
     (-> this (.getTabRunCount))))
 
 (defn index-of-tab
@@ -272,7 +272,7 @@
 
   returns: the first tab index which matches title, or
             -1 if no tab has this title - `int`"
-  (^Integer [^javax.swing.JTabbedPane this ^java.lang.String title]
+  (^Integer [^JTabbedPane this ^java.lang.String title]
     (-> this (.indexOfTab title))))
 
 (defn get-bounds-at
@@ -290,7 +290,7 @@
             or if there is no UI set on this tabbedpane - `java.awt.Rectangle`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  (^java.awt.Rectangle [^javax.swing.JTabbedPane this ^Integer index]
+  (^java.awt.Rectangle [^JTabbedPane this ^Integer index]
     (-> this (.getBoundsAt index))))
 
 (defn get-background-at
@@ -302,7 +302,7 @@
             index - `java.awt.Color`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  (^java.awt.Color [^javax.swing.JTabbedPane this ^Integer index]
+  (^java.awt.Color [^JTabbedPane this ^Integer index]
     (-> this (.getBackgroundAt index))))
 
 (defn enabled-at?
@@ -315,7 +315,7 @@
             false otherwise - `boolean`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  (^Boolean [^javax.swing.JTabbedPane this ^Integer index]
+  (^Boolean [^JTabbedPane this ^Integer index]
     (-> this (.isEnabledAt index))))
 
 (defn index-at-location
@@ -328,7 +328,7 @@
 
   returns: the tab index which intersects the location, or
            -1 if no tab intersects the location - `int`"
-  (^Integer [^javax.swing.JTabbedPane this ^Integer x ^Integer y]
+  (^Integer [^JTabbedPane this ^Integer x ^Integer y]
     (-> this (.indexAtLocation x y))))
 
 (defn set-tool-tip-text-at
@@ -340,7 +340,7 @@
   tool-tip-text - the tooltip text to be displayed for the tab - `java.lang.String`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index ^java.lang.String tool-tip-text]
+  ([^JTabbedPane this ^Integer index ^java.lang.String tool-tip-text]
     (-> this (.setToolTipTextAt index tool-tip-text))))
 
 (defn get-ui-class-id
@@ -348,7 +348,7 @@
    L&F for this component.
 
   returns: the string `TabbedPaneUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JTabbedPane this]
+  (^java.lang.String [^JTabbedPane this]
     (-> this (.getUIClassID))))
 
 (defn get-selected-index
@@ -356,7 +356,7 @@
    Returns -1 if there is no currently selected tab.
 
   returns: the index of the selected tab - `int`"
-  (^Integer [^javax.swing.JTabbedPane this]
+  (^Integer [^JTabbedPane this]
     (-> this (.getSelectedIndex))))
 
 (defn set-tab-component-at
@@ -374,7 +374,7 @@
   component - the component to render the title for the specified tab - `java.awt.Component`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index ^java.awt.Component component]
+  ([^JTabbedPane this ^Integer index ^java.awt.Component component]
     (-> this (.setTabComponentAt index component))))
 
 (defn set-disabled-icon-at
@@ -386,14 +386,14 @@
   disabled-icon - the icon to be displayed in the tab when disabled - `javax.swing.Icon`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index ^javax.swing.Icon disabled-icon]
+  ([^JTabbedPane this ^Integer index ^javax.swing.Icon disabled-icon]
     (-> this (.setDisabledIconAt index disabled-icon))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from this tabbedpane.
 
   l - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.JTabbedPane this ^javax.swing.event.ChangeListener l]
+  ([^JTabbedPane this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -402,7 +402,7 @@
 
   returns: all of the ChangeListeners added or an empty
            array if no listeners have been added - `javax.swing.event.ChangeListener[]`"
-  ([^javax.swing.JTabbedPane this]
+  ([^JTabbedPane this]
     (-> this (.getChangeListeners))))
 
 (defn get-tool-tip-text-at
@@ -413,14 +413,14 @@
   returns: a string containing the tool tip text at index - `java.lang.String`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  (^java.lang.String [^javax.swing.JTabbedPane this ^Integer index]
+  (^java.lang.String [^JTabbedPane this ^Integer index]
     (-> this (.getToolTipTextAt index))))
 
 (defn set-ui
   "Sets the UI object which implements the L&F for this component.
 
   ui - the new UI object - `javax.swing.plaf.TabbedPaneUI`"
-  ([^javax.swing.JTabbedPane this ^javax.swing.plaf.TabbedPaneUI ui]
+  ([^JTabbedPane this ^javax.swing.plaf.TabbedPaneUI ui]
     (-> this (.setUI ui))))
 
 (defn get-selected-component
@@ -428,7 +428,7 @@
    Returns null if there is no currently selected tab.
 
   returns: the component corresponding to the selected tab - `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.JTabbedPane this]
+  (^java.awt.Component [^JTabbedPane this]
     (-> this (.getSelectedComponent))))
 
 (defn get-tool-tip-text
@@ -438,7 +438,7 @@
   event - the MouseEvent that tells where the cursor is lingering - `java.awt.event.MouseEvent`
 
   returns: the String containing the tooltip text - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JTabbedPane this ^java.awt.event.MouseEvent event]
+  (^java.lang.String [^JTabbedPane this event]
     (-> this (.getToolTipText event))))
 
 (defn index-of-component
@@ -449,7 +449,7 @@
 
   returns: the first tab which matches this component, or -1
             if there is no tab for this component - `int`"
-  (^Integer [^javax.swing.JTabbedPane this ^java.awt.Component component]
+  (^Integer [^JTabbedPane this ^java.awt.Component component]
     (-> this (.indexOfComponent component))))
 
 (defn remove
@@ -458,7 +458,7 @@
    if the component is null.
 
   component - the component to remove from the tabbedpane - `java.awt.Component`"
-  ([^javax.swing.JTabbedPane this ^java.awt.Component component]
+  ([^JTabbedPane this ^java.awt.Component component]
     (-> this (.remove component))))
 
 (defn set-component-at
@@ -469,14 +469,14 @@
   component - the component for the tab - `java.awt.Component`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index ^java.awt.Component component]
+  ([^JTabbedPane this ^Integer index ^java.awt.Component component]
     (-> this (.setComponentAt index component))))
 
 (defn get-ui
   "Returns the UI object which implements the L&F for this component.
 
   returns: a TabbedPaneUI object - `javax.swing.plaf.TabbedPaneUI`"
-  (^javax.swing.plaf.TabbedPaneUI [^javax.swing.JTabbedPane this]
+  (^javax.swing.plaf.TabbedPaneUI [^JTabbedPane this]
     (-> this (.getUI))))
 
 (defn get-displayed-mnemonic-index-at
@@ -489,7 +489,7 @@
       otherwise returns -1 - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (tabIndex < 0 || tabIndex >= tab count)"
-  (^Integer [^javax.swing.JTabbedPane this ^Integer tab-index]
+  (^Integer [^JTabbedPane this ^Integer tab-index]
     (-> this (.getDisplayedMnemonicIndexAt tab-index))))
 
 (defn get-component-at
@@ -500,7 +500,7 @@
   returns: the Component at index - `java.awt.Component`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  (^java.awt.Component [^javax.swing.JTabbedPane this ^Integer index]
+  (^java.awt.Component [^JTabbedPane this ^Integer index]
     (-> this (.getComponentAt index))))
 
 (defn get-accessible-context
@@ -511,7 +511,7 @@
 
   returns: an AccessibleJTabbedPane that serves as the
            AccessibleContext of this JTabbedPane - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JTabbedPane this]
+  (^javax.accessibility.AccessibleContext [^JTabbedPane this]
     (-> this (.getAccessibleContext))))
 
 (defn get-mnemonic-at
@@ -526,7 +526,7 @@
            -1 if a mnemonic is not specified for the tab - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (tabIndex < 0 || tabIndex >= tab count)"
-  (^Integer [^javax.swing.JTabbedPane this ^Integer tab-index]
+  (^Integer [^JTabbedPane this ^Integer tab-index]
     (-> this (.getMnemonicAt tab-index))))
 
 (defn index-of-tab-component
@@ -537,7 +537,7 @@
 
   returns: the first tab which matches this tab component, or -1
             if there is no tab for this tab component - `int`"
-  (^Integer [^javax.swing.JTabbedPane this ^java.awt.Component tab-component]
+  (^Integer [^JTabbedPane this ^java.awt.Component tab-component]
     (-> this (.indexOfTabComponent tab-component))))
 
 (defn get-title-at
@@ -548,7 +548,7 @@
   returns: the title at index - `java.lang.String`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  (^java.lang.String [^javax.swing.JTabbedPane this ^Integer index]
+  (^java.lang.String [^JTabbedPane this ^Integer index]
     (-> this (.getTitleAt index))))
 
 (defn set-title-at
@@ -561,7 +561,7 @@
   title - the title to be displayed in the tab - `java.lang.String`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index ^java.lang.String title]
+  ([^JTabbedPane this ^Integer index ^java.lang.String title]
     (-> this (.setTitleAt index title))))
 
 (defn set-background-at
@@ -578,7 +578,7 @@
   background - the color to be displayed in the tab's background - `java.awt.Color`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index ^java.awt.Color background]
+  ([^JTabbedPane this ^Integer index ^java.awt.Color background]
     (-> this (.setBackgroundAt index background))))
 
 (defn add-tab
@@ -591,11 +591,11 @@
   icon - the icon to be displayed in this tab - `javax.swing.Icon`
   component - the component to be displayed when this tab is clicked - `java.awt.Component`
   tip - the tooltip to be displayed for this tab - `java.lang.String`"
-  ([^javax.swing.JTabbedPane this ^java.lang.String title ^javax.swing.Icon icon ^java.awt.Component component ^java.lang.String tip]
+  ([^JTabbedPane this ^java.lang.String title ^javax.swing.Icon icon ^java.awt.Component component ^java.lang.String tip]
     (-> this (.addTab title icon component tip)))
-  ([^javax.swing.JTabbedPane this ^java.lang.String title ^javax.swing.Icon icon ^java.awt.Component component]
+  ([^JTabbedPane this ^java.lang.String title ^javax.swing.Icon icon ^java.awt.Component component]
     (-> this (.addTab title icon component)))
-  ([^javax.swing.JTabbedPane this ^java.lang.String title ^java.awt.Component component]
+  ([^JTabbedPane this ^java.lang.String title ^java.awt.Component component]
     (-> this (.addTab title component))))
 
 (defn set-selected-index
@@ -608,7 +608,7 @@
   index - the index to be selected - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < -1 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index]
+  ([^JTabbedPane this ^Integer index]
     (-> this (.setSelectedIndex index))))
 
 (defn add
@@ -621,18 +621,18 @@
   component - the component to be displayed when this tab is clicked - `java.awt.Component`
   constraints - the object to be displayed in the tab - `java.lang.Object`
   index - the position to insert this new tab - `int`"
-  ([^javax.swing.JTabbedPane this ^java.awt.Component component ^java.lang.Object constraints ^Integer index]
+  ([^JTabbedPane this ^java.awt.Component component ^java.lang.Object constraints ^Integer index]
     (-> this (.add component constraints index)))
-  (^java.awt.Component [^javax.swing.JTabbedPane this ^java.lang.String title ^java.awt.Component component]
+  (^java.awt.Component [^JTabbedPane this ^java.lang.String title ^java.awt.Component component]
     (-> this (.add title component)))
-  (^java.awt.Component [^javax.swing.JTabbedPane this ^java.awt.Component component]
+  (^java.awt.Component [^JTabbedPane this ^java.awt.Component component]
     (-> this (.add component))))
 
 (defn get-tab-placement
   "Returns the placement of the tabs for this tabbedpane.
 
   returns: `int`"
-  (^Integer [^javax.swing.JTabbedPane this]
+  (^Integer [^JTabbedPane this]
     (-> this (.getTabPlacement))))
 
 (defn get-foreground-at
@@ -644,7 +644,7 @@
             index - `java.awt.Color`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  (^java.awt.Color [^javax.swing.JTabbedPane this ^Integer index]
+  (^java.awt.Color [^JTabbedPane this ^Integer index]
     (-> this (.getForegroundAt index))))
 
 (defn insert-tab
@@ -659,7 +659,7 @@
   index - the position to insert this new tab (> 0 and <= getTabCount()) - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (< 0 or > getTabCount())"
-  ([^javax.swing.JTabbedPane this ^java.lang.String title ^javax.swing.Icon icon ^java.awt.Component component ^java.lang.String tip ^Integer index]
+  ([^JTabbedPane this ^java.lang.String title ^javax.swing.Icon icon ^java.awt.Component component ^java.lang.String tip ^Integer index]
     (-> this (.insertTab title icon component tip index))))
 
 (defn set-icon-at
@@ -675,14 +675,14 @@
   icon - the icon to be displayed in the tab - `javax.swing.Icon`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index ^javax.swing.Icon icon]
+  ([^JTabbedPane this ^Integer index ^javax.swing.Icon icon]
     (-> this (.setIconAt index icon))))
 
 (defn get-model
   "Returns the model associated with this tabbedpane.
 
   returns: `javax.swing.SingleSelectionModel`"
-  (^javax.swing.SingleSelectionModel [^javax.swing.JTabbedPane this]
+  (^javax.swing.SingleSelectionModel [^JTabbedPane this]
     (-> this (.getModel))))
 
 (defn get-tab-layout-policy
@@ -690,25 +690,25 @@
    tabs will not fit within a single run.
 
   returns: `int`"
-  (^Integer [^javax.swing.JTabbedPane this]
+  (^Integer [^JTabbedPane this]
     (-> this (.getTabLayoutPolicy))))
 
 (defn remove-all
   "Removes all the tabs and their corresponding components
    from the tabbedpane."
-  ([^javax.swing.JTabbedPane this]
+  ([^JTabbedPane this]
     (-> this (.removeAll))))
 
 (defn set-model
   "Sets the model to be used with this tabbedpane.
 
   model - the model to be used - `javax.swing.SingleSelectionModel`"
-  ([^javax.swing.JTabbedPane this ^javax.swing.SingleSelectionModel model]
+  ([^JTabbedPane this ^javax.swing.SingleSelectionModel model]
     (-> this (.setModel model))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([^javax.swing.JTabbedPane this]
+  ([^JTabbedPane this]
     (-> this (.updateUI))))
 
 (defn set-enabled-at
@@ -719,7 +719,7 @@
   enabled - whether or not the tab should be enabled - `boolean`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  ([^javax.swing.JTabbedPane this ^Integer index ^Boolean enabled]
+  ([^JTabbedPane this ^Integer index ^Boolean enabled]
     (-> this (.setEnabledAt index enabled))))
 
 (defn get-disabled-icon-at
@@ -735,7 +735,7 @@
   returns: the icon at index - `javax.swing.Icon`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  (^javax.swing.Icon [^javax.swing.JTabbedPane this ^Integer index]
+  (^javax.swing.Icon [^JTabbedPane this ^Integer index]
     (-> this (.getDisabledIconAt index))))
 
 (defn get-icon-at
@@ -746,6 +746,6 @@
   returns: the icon at index - `javax.swing.Icon`
 
   throws: java.lang.IndexOutOfBoundsException - if index is out of range (index < 0 || index >= tab count)"
-  (^javax.swing.Icon [^javax.swing.JTabbedPane this ^Integer index]
+  (^javax.swing.Icon [^JTabbedPane this ^Integer index]
     (-> this (.getIconAt index))))
 

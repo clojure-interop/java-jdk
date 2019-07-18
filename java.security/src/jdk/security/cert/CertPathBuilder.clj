@@ -102,14 +102,14 @@
   "Returns the provider of this CertPathBuilder.
 
   returns: the provider of this CertPathBuilder - `java.security.Provider`"
-  (^java.security.Provider [^java.security.cert.CertPathBuilder this]
+  (^java.security.Provider [^CertPathBuilder this]
     (-> this (.getProvider))))
 
 (defn get-algorithm
   "Returns the name of the algorithm of this CertPathBuilder.
 
   returns: the name of the algorithm of this CertPathBuilder - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.CertPathBuilder this]
+  (^java.lang.String [^CertPathBuilder this]
     (-> this (.getAlgorithm))))
 
 (defn build
@@ -121,7 +121,7 @@
   returns: the result of the build algorithm - `java.security.cert.CertPathBuilderResult`
 
   throws: java.security.cert.CertPathBuilderException - if the builder is unable to construct a certification path that satisfies the specified parameters"
-  (^java.security.cert.CertPathBuilderResult [^java.security.cert.CertPathBuilder this ^java.security.cert.CertPathParameters params]
+  (^java.security.cert.CertPathBuilderResult [^CertPathBuilder this ^java.security.cert.CertPathParameters params]
     (-> this (.build params))))
 
 (defn get-revocation-checker
@@ -138,6 +138,6 @@
   returns: a CertPathChecker - `java.security.cert.CertPathChecker`
 
   throws: java.lang.UnsupportedOperationException - if the service provider does not support this method"
-  (^java.security.cert.CertPathChecker [^java.security.cert.CertPathBuilder this]
+  (^java.security.cert.CertPathChecker [^CertPathBuilder this]
     (-> this (.getRevocationChecker))))
 

@@ -21,7 +21,7 @@
   value - Integer value. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if value is less than 0."
-  ([^Integer value]
+  (^PagesPerMinute [^Integer value]
     (new PagesPerMinute value)))
 
 (defn equals
@@ -41,7 +41,7 @@
 
   returns: True if object is equivalent to this pages per
             minute attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.PagesPerMinute this ^java.lang.Object object]
+  (^Boolean [^PagesPerMinute this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -52,7 +52,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.PagesPerMinute this]
+  ([^PagesPerMinute this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -63,6 +63,6 @@
    category name is `pages-per-minute`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.PagesPerMinute this]
+  (^java.lang.String [^PagesPerMinute this]
     (-> this (.getName))))
 

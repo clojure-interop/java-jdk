@@ -27,7 +27,7 @@
 
 (defn ->service-ui
   "Constructor."
-  ([]
+  (^ServiceUI []
     (new ServiceUI )))
 
 (defn *print-dialog

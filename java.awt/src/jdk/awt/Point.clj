@@ -12,11 +12,11 @@
 
   x - the X coordinate of the newly constructed Point - `int`
   y - the Y coordinate of the newly constructed Point - `int`"
-  ([^Integer x ^Integer y]
+  (^Point [^Integer x ^Integer y]
     (new Point x y))
-  ([^java.awt.Point p]
+  (^Point [^java.awt.Point p]
     (new Point p))
-  ([]
+  (^Point []
     (new Point )))
 
 (defn -x
@@ -44,7 +44,7 @@
    double precision.
 
   returns: the X coordinate of this Point2D. - `double`"
-  (^Double [^java.awt.Point this]
+  (^Double [^Point this]
     (-> this (.getX))))
 
 (defn get-y
@@ -52,7 +52,7 @@
    double precision.
 
   returns: the Y coordinate of this Point2D. - `double`"
-  (^Double [^java.awt.Point this]
+  (^Double [^Point this]
     (-> this (.getY))))
 
 (defn get-location
@@ -61,7 +61,7 @@
    getLocation method of Component.
 
   returns: a copy of this point, at the same location - `java.awt.Point`"
-  (^java.awt.Point [^java.awt.Point this]
+  (^java.awt.Point [^Point this]
     (-> this (.getLocation))))
 
 (defn set-location
@@ -73,9 +73,9 @@
 
   x - the X coordinate of the new location - `int`
   y - the Y coordinate of the new location - `int`"
-  ([^java.awt.Point this ^Integer x ^Integer y]
+  ([^Point this ^Integer x ^Integer y]
     (-> this (.setLocation x y)))
-  ([^java.awt.Point this ^java.awt.Point p]
+  ([^Point this ^java.awt.Point p]
     (-> this (.setLocation p))))
 
 (defn move
@@ -85,7 +85,7 @@
 
   x - the X coordinate of the new location - `int`
   y - the Y coordinate of the new location - `int`"
-  ([^java.awt.Point this ^Integer x ^Integer y]
+  ([^Point this ^Integer x ^Integer y]
     (-> this (.move x y))))
 
 (defn translate
@@ -96,7 +96,7 @@
 
   dx - the distance to move this point along the X axis - `int`
   dy - the distance to move this point along the Y axis - `int`"
-  ([^java.awt.Point this ^Integer dx ^Integer dy]
+  ([^Point this ^Integer dx ^Integer dy]
     (-> this (.translate dx dy))))
 
 (defn equals
@@ -110,7 +110,7 @@
   returns: true if the object to be compared is
            an instance of Point2D and has
            the same values; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Point this ^java.lang.Object obj]
+  (^Boolean [^Point this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -121,6 +121,6 @@
    The returned string may be empty but may not be null.
 
   returns: a string representation of this point - `java.lang.String`"
-  (^java.lang.String [^java.awt.Point this]
+  (^java.lang.String [^Point this]
     (-> this (.toString))))
 

@@ -29,14 +29,14 @@
 (defn source
   "Returns this pipe's source channel.
 
-  returns: This pipe's source channel - `java.nio.channels.Pipe.SourceChannel`"
-  (^java.nio.channels.Pipe.SourceChannel [^java.nio.channels.Pipe this]
+  returns: This pipe's source channel - `java.nio.channels.Pipe$SourceChannel`"
+  (^java.nio.channels.Pipe$SourceChannel [^Pipe this]
     (-> this (.source))))
 
 (defn sink
   "Returns this pipe's sink channel.
 
-  returns: This pipe's sink channel - `java.nio.channels.Pipe.SinkChannel`"
-  (^java.nio.channels.Pipe.SinkChannel [^java.nio.channels.Pipe this]
+  returns: This pipe's sink channel - `java.nio.channels.Pipe$SinkChannel`"
+  (^java.nio.channels.Pipe$SinkChannel [^Pipe this]
     (-> this (.sink))))
 

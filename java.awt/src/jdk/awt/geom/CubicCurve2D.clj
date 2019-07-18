@@ -106,7 +106,7 @@
 
   left - the cubic curve object for storing for the left or first half of the subdivided curve - `java.awt.geom.CubicCurve2D`
   right - the cubic curve object for storing for the right or second half of the subdivided curve - `java.awt.geom.CubicCurve2D`"
-  ([^java.awt.geom.CubicCurve2D this ^java.awt.geom.CubicCurve2D left ^java.awt.geom.CubicCurve2D right]
+  ([^CubicCurve2D this ^java.awt.geom.CubicCurve2D left ^java.awt.geom.CubicCurve2D right]
     (-> this (.subdivide left right))))
 
 (defn get-x-1
@@ -114,7 +114,7 @@
 
   returns: the X coordinate of the start point of the
            CubicCurve2D. - `double`"
-  (^Double [^java.awt.geom.CubicCurve2D this]
+  (^Double [^CubicCurve2D this]
     (-> this (.getX1))))
 
 (defn get-path-iterator
@@ -132,9 +132,9 @@
   returns: the PathIterator object that returns the
    geometry of the outline of this CubicCurve2D,
    one segment at a time. - `java.awt.geom.PathIterator`"
-  (^java.awt.geom.PathIterator [^java.awt.geom.CubicCurve2D this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^CubicCurve2D this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness)))
-  (^java.awt.geom.PathIterator [^java.awt.geom.CubicCurve2D this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^CubicCurve2D this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn get-p-1
@@ -142,7 +142,7 @@
 
   returns: a Point2D that is the start point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.geom.CubicCurve2D this]
+  (^java.awt.geom.Point2D [^CubicCurve2D this]
     (-> this (.getP1))))
 
 (defn contains
@@ -182,11 +182,11 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  (^Boolean [^java.awt.geom.CubicCurve2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^CubicCurve2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  (^Boolean [^java.awt.geom.CubicCurve2D this ^Double x ^Double y]
+  (^Boolean [^CubicCurve2D this ^Double x ^Double y]
     (-> this (.contains x y)))
-  (^Boolean [^java.awt.geom.CubicCurve2D this ^java.awt.geom.Point2D p]
+  (^Boolean [^CubicCurve2D this ^java.awt.geom.Point2D p]
     (-> this (.contains p))))
 
 (defn get-flatness
@@ -195,7 +195,7 @@
    end points.
 
   returns: the flatness of this curve. - `double`"
-  (^Double [^java.awt.geom.CubicCurve2D this]
+  (^Double [^CubicCurve2D this]
     (-> this (.getFlatness))))
 
 (defn get-flatness-sq
@@ -204,7 +204,7 @@
    end points.
 
   returns: the square of the flatness of this curve. - `double`"
-  (^Double [^java.awt.geom.CubicCurve2D this]
+  (^Double [^CubicCurve2D this]
     (-> this (.getFlatnessSq))))
 
 (defn get-y-2
@@ -212,7 +212,7 @@
 
   returns: the Y coordinate of the end point of the
            CubicCurve2D. - `double`"
-  (^Double [^java.awt.geom.CubicCurve2D this]
+  (^Double [^CubicCurve2D this]
     (-> this (.getY2))))
 
 (defn get-x-2
@@ -220,7 +220,7 @@
 
   returns: the X coordinate of the end point of the
            CubicCurve2D. - `double`"
-  (^Double [^java.awt.geom.CubicCurve2D this]
+  (^Double [^CubicCurve2D this]
     (-> this (.getX2))))
 
 (defn clone
@@ -229,7 +229,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.OutOfMemoryError - if there is not enough memory."
-  (^java.lang.Object [^java.awt.geom.CubicCurve2D this]
+  (^java.lang.Object [^CubicCurve2D this]
     (-> this (.clone))))
 
 (defn get-ctrl-y-2
@@ -238,7 +238,7 @@
 
   returns: the Y coordinate of the second control point of the
            CubicCurve2D. - `double`"
-  (^Double [^java.awt.geom.CubicCurve2D this]
+  (^Double [^CubicCurve2D this]
     (-> this (.getCtrlY2))))
 
 (defn get-ctrl-y-1
@@ -246,7 +246,7 @@
 
   returns: the Y coordinate of the first control point of the
            CubicCurve2D. - `double`"
-  (^Double [^java.awt.geom.CubicCurve2D this]
+  (^Double [^CubicCurve2D this]
     (-> this (.getCtrlY1))))
 
 (defn get-bounds
@@ -289,7 +289,7 @@
 
   returns: an integer Rectangle that completely encloses
                    the Shape. - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^java.awt.geom.CubicCurve2D this]
+  (^java.awt.Rectangle [^CubicCurve2D this]
     (-> this (.getBounds))))
 
 (defn get-y-1
@@ -297,7 +297,7 @@
 
   returns: the Y coordinate of the start point of the
            CubicCurve2D. - `double`"
-  (^Double [^java.awt.geom.CubicCurve2D this]
+  (^Double [^CubicCurve2D this]
     (-> this (.getY1))))
 
 (defn get-ctrl-x-1
@@ -305,7 +305,7 @@
 
   returns: the X coordinate of the first control point of the
            CubicCurve2D. - `double`"
-  (^Double [^java.awt.geom.CubicCurve2D this]
+  (^Double [^CubicCurve2D this]
     (-> this (.getCtrlX1))))
 
 (defn intersects
@@ -342,9 +342,9 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.geom.CubicCurve2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^CubicCurve2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  (^Boolean [^java.awt.geom.CubicCurve2D this ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^CubicCurve2D this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 
 (defn get-p-2
@@ -352,7 +352,7 @@
 
   returns: a Point2D that is the end point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.geom.CubicCurve2D this]
+  (^java.awt.geom.Point2D [^CubicCurve2D this]
     (-> this (.getP2))))
 
 (defn get-ctrl-x-2
@@ -361,7 +361,7 @@
 
   returns: the X coordinate of the second control point of the
            CubicCurve2D. - `double`"
-  (^Double [^java.awt.geom.CubicCurve2D this]
+  (^Double [^CubicCurve2D this]
     (-> this (.getCtrlX2))))
 
 (defn set-curve
@@ -376,13 +376,13 @@
   ctrly-2 - the Y coordinate used to set the second control point of this CubicCurve2D - `double`
   x-2 - the X coordinate used to set the end point of this CubicCurve2D - `double`
   y-2 - the Y coordinate used to set the end point of this CubicCurve2D - `double`"
-  ([^java.awt.geom.CubicCurve2D this ^Double x-1 ^Double y-1 ^Double ctrlx-1 ^Double ctrly-1 ^Double ctrlx-2 ^Double ctrly-2 ^Double x-2 ^Double y-2]
+  ([^CubicCurve2D this ^Double x-1 ^Double y-1 ^Double ctrlx-1 ^Double ctrly-1 ^Double ctrlx-2 ^Double ctrly-2 ^Double x-2 ^Double y-2]
     (-> this (.setCurve x-1 y-1 ctrlx-1 ctrly-1 ctrlx-2 ctrly-2 x-2 y-2)))
-  ([^java.awt.geom.CubicCurve2D this ^java.awt.geom.Point2D p-1 ^java.awt.geom.Point2D cp-1 ^java.awt.geom.Point2D cp-2 ^java.awt.geom.Point2D p-2]
+  ([^CubicCurve2D this ^java.awt.geom.Point2D p-1 ^java.awt.geom.Point2D cp-1 ^java.awt.geom.Point2D cp-2 ^java.awt.geom.Point2D p-2]
     (-> this (.setCurve p-1 cp-1 cp-2 p-2)))
-  ([^java.awt.geom.CubicCurve2D this coords ^Integer offset]
+  ([^CubicCurve2D this coords ^Integer offset]
     (-> this (.setCurve coords offset)))
-  ([^java.awt.geom.CubicCurve2D this ^java.awt.geom.CubicCurve2D c]
+  ([^CubicCurve2D this ^java.awt.geom.CubicCurve2D c]
     (-> this (.setCurve c))))
 
 (defn get-ctrl-p-2
@@ -390,7 +390,7 @@
 
   returns: a Point2D that is the second control point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.geom.CubicCurve2D this]
+  (^java.awt.geom.Point2D [^CubicCurve2D this]
     (-> this (.getCtrlP2))))
 
 (defn get-ctrl-p-1
@@ -398,6 +398,6 @@
 
   returns: a Point2D that is the first control point of
            the CubicCurve2D. - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.geom.CubicCurve2D this]
+  (^java.awt.geom.Point2D [^CubicCurve2D this]
     (-> this (.getCtrlP1))))
 

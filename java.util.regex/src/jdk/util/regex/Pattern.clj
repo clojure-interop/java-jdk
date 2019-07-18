@@ -932,7 +932,7 @@
   "Returns the regular expression from which this pattern was compiled.
 
   returns: The source of this pattern - `java.lang.String`"
-  (^java.lang.String [^java.util.regex.Pattern this]
+  (^java.lang.String [^Pattern this]
     (-> this (.pattern))))
 
 (defn to-string
@@ -941,7 +941,7 @@
    compiled.
 
   returns: The string representation of this pattern - `java.lang.String`"
-  (^java.lang.String [^java.util.regex.Pattern this]
+  (^java.lang.String [^Pattern this]
     (-> this (.toString))))
 
 (defn matcher
@@ -950,14 +950,14 @@
   input - The character sequence to be matched - `java.lang.CharSequence`
 
   returns: A new matcher for this pattern - `java.util.regex.Matcher`"
-  (^java.util.regex.Matcher [^java.util.regex.Pattern this ^java.lang.CharSequence input]
+  (^java.util.regex.Matcher [^Pattern this ^java.lang.CharSequence input]
     (-> this (.matcher input))))
 
 (defn flags
   "Returns this pattern's match flags.
 
   returns: The match flags specified when this pattern was compiled - `int`"
-  (^Integer [^java.util.regex.Pattern this]
+  (^Integer [^Pattern this]
     (-> this (.flags))))
 
 (defn split
@@ -1018,16 +1018,16 @@
 
   returns: The array of strings computed by splitting the input
             around matches of this pattern - `java.lang.String[]`"
-  ([^java.util.regex.Pattern this ^java.lang.CharSequence input ^Integer limit]
+  ([^Pattern this ^java.lang.CharSequence input ^Integer limit]
     (-> this (.split input limit)))
-  ([^java.util.regex.Pattern this ^java.lang.CharSequence input]
+  ([^Pattern this ^java.lang.CharSequence input]
     (-> this (.split input))))
 
 (defn as-predicate
   "Creates a predicate which can be used to match a string.
 
   returns: The predicate which can be used for matching on a string - `java.util.function.Predicate<java.lang.String>`"
-  (^java.util.function.Predicate [^java.util.regex.Pattern this]
+  (^java.util.function.Predicate [^Pattern this]
     (-> this (.asPredicate))))
 
 (defn split-as-stream
@@ -1058,6 +1058,6 @@
 
   returns: The stream of strings computed by splitting the input
             around matches of this pattern - `java.util.stream.Stream<java.lang.String>`"
-  (^java.util.stream.Stream [^java.util.regex.Pattern this ^java.lang.CharSequence input]
+  (^java.util.stream.Stream [^Pattern this ^java.lang.CharSequence input]
     (-> this (.splitAsStream input))))
 

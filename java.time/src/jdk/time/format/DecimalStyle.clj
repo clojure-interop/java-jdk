@@ -58,7 +58,7 @@
   decimal-separator - the character for the decimal point - `char`
 
   returns: a copy with a new character that represents the decimal point, not null - `java.time.format.DecimalStyle`"
-  (^java.time.format.DecimalStyle [^java.time.format.DecimalStyle this ^Character decimal-separator]
+  (^java.time.format.DecimalStyle [^DecimalStyle this ^Character decimal-separator]
     (-> this (.withDecimalSeparator decimal-separator))))
 
 (defn with-positive-sign
@@ -70,7 +70,7 @@
   positive-sign - the character for the positive sign - `char`
 
   returns: a copy with a new character that represents the positive sign, not null - `java.time.format.DecimalStyle`"
-  (^java.time.format.DecimalStyle [^java.time.format.DecimalStyle this ^Character positive-sign]
+  (^java.time.format.DecimalStyle [^DecimalStyle this ^Character positive-sign]
     (-> this (.withPositiveSign positive-sign))))
 
 (defn get-decimal-separator
@@ -80,7 +80,7 @@
    This method specifies the character to use.
 
   returns: the character for the decimal point - `char`"
-  (^Character [^java.time.format.DecimalStyle this]
+  (^Character [^DecimalStyle this]
     (-> this (.getDecimalSeparator))))
 
 (defn with-zero-digit
@@ -92,14 +92,14 @@
   zero-digit - the character for zero - `char`
 
   returns: a copy with a new character that represents zero, not null - `java.time.format.DecimalStyle`"
-  (^java.time.format.DecimalStyle [^java.time.format.DecimalStyle this ^Character zero-digit]
+  (^java.time.format.DecimalStyle [^DecimalStyle this ^Character zero-digit]
     (-> this (.withZeroDigit zero-digit))))
 
 (defn to-string
   "Returns a string describing this DecimalStyle.
 
   returns: a string description, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.format.DecimalStyle this]
+  (^java.lang.String [^DecimalStyle this]
     (-> this (.toString))))
 
 (defn get-zero-digit
@@ -109,7 +109,7 @@
    This method specifies the zero character to use, which implies the characters for one to nine.
 
   returns: the character for zero - `char`"
-  (^Character [^java.time.format.DecimalStyle this]
+  (^Character [^DecimalStyle this]
     (-> this (.getZeroDigit))))
 
 (defn with-negative-sign
@@ -121,7 +121,7 @@
   negative-sign - the character for the negative sign - `char`
 
   returns: a copy with a new character that represents the negative sign, not null - `java.time.format.DecimalStyle`"
-  (^java.time.format.DecimalStyle [^java.time.format.DecimalStyle this ^Character negative-sign]
+  (^java.time.format.DecimalStyle [^DecimalStyle this ^Character negative-sign]
     (-> this (.withNegativeSign negative-sign))))
 
 (defn get-positive-sign
@@ -131,14 +131,14 @@
    This method specifies the character to use.
 
   returns: the character for the positive sign - `char`"
-  (^Character [^java.time.format.DecimalStyle this]
+  (^Character [^DecimalStyle this]
     (-> this (.getPositiveSign))))
 
 (defn hash-code
   "A hash code for this DecimalStyle.
 
   returns: a suitable hash code - `int`"
-  (^Integer [^java.time.format.DecimalStyle this]
+  (^Integer [^DecimalStyle this]
     (-> this (.hashCode))))
 
 (defn get-negative-sign
@@ -148,7 +148,7 @@
    This method specifies the character to use.
 
   returns: the character for the negative sign - `char`"
-  (^Character [^java.time.format.DecimalStyle this]
+  (^Character [^DecimalStyle this]
     (-> this (.getNegativeSign))))
 
 (defn equals
@@ -157,6 +157,6 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other date - `boolean`"
-  (^Boolean [^java.time.format.DecimalStyle this ^java.lang.Object obj]
+  (^Boolean [^DecimalStyle this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

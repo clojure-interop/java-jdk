@@ -46,11 +46,11 @@
    Note that the Set is copied to protect against
    subsequent modifications.
 
-  trust-anchors - a Set of TrustAnchors - `java.util.Set<java.security.cert.TrustAnchor>`
+  trust-anchors - a Set of TrustAnchors - `java.util.Set`
   target-constraints - a CertSelector specifying the constraints on the target certificate - `java.security.cert.CertSelector`
 
   throws: java.security.InvalidAlgorithmParameterException - if trustAnchors is empty (trustAnchors.isEmpty() == true)"
-  ([^java.util.Set trust-anchors ^java.security.cert.CertSelector target-constraints]
+  (^PKIXBuilderParameters [^java.util.Set trust-anchors ^java.security.cert.CertSelector target-constraints]
     (new PKIXBuilderParameters trust-anchors target-constraints)))
 
 (defn set-max-path-length
@@ -79,7 +79,7 @@
   max-path-length - the maximum number of non-self-issued intermediate certificates that may exist in a certification path - `int`
 
   throws: java.security.InvalidParameterException - if maxPathLength is set to a value less than -1"
-  ([^java.security.cert.PKIXBuilderParameters this ^Integer max-path-length]
+  ([^PKIXBuilderParameters this ^Integer max-path-length]
     (-> this (.setMaxPathLength max-path-length))))
 
 (defn get-max-path-length
@@ -89,13 +89,13 @@
 
   returns: the maximum number of non-self-issued intermediate certificates
     that may exist in a certification path, or -1 if there is no limit - `int`"
-  (^Integer [^java.security.cert.PKIXBuilderParameters this]
+  (^Integer [^PKIXBuilderParameters this]
     (-> this (.getMaxPathLength))))
 
 (defn to-string
   "Returns a formatted string describing the parameters.
 
   returns: a formatted string describing the parameters - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.PKIXBuilderParameters this]
+  (^java.lang.String [^PKIXBuilderParameters this]
     (-> this (.toString))))
 

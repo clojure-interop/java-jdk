@@ -32,27 +32,27 @@
   "Constructor.
 
   Construct a CellRendererPane object."
-  ([]
+  (^CellRendererPane []
     (new CellRendererPane )))
 
 (defn invalidate
   "Overridden to avoid propagating a invalidate up the tree when the
    cell renderer child is configured."
-  ([^javax.swing.CellRendererPane this]
+  ([^CellRendererPane this]
     (-> this (.invalidate))))
 
 (defn paint
   "Shouldn't be called.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([^javax.swing.CellRendererPane this ^java.awt.Graphics g]
+  ([^CellRendererPane this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn update
   "Shouldn't be called.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([^javax.swing.CellRendererPane this ^java.awt.Graphics g]
+  ([^CellRendererPane this ^java.awt.Graphics g]
     (-> this (.update g))))
 
 (defn paint-component
@@ -74,11 +74,11 @@
   w - `int`
   h - `int`
   should-validate - `boolean`"
-  ([^javax.swing.CellRendererPane this ^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^Integer x ^Integer y ^Integer w ^Integer h ^Boolean should-validate]
+  ([^CellRendererPane this ^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^Integer x ^Integer y ^Integer w ^Integer h ^Boolean should-validate]
     (-> this (.paintComponent g c p x y w h should-validate)))
-  ([^javax.swing.CellRendererPane this ^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^CellRendererPane this ^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintComponent g c p x y w h)))
-  ([^javax.swing.CellRendererPane this ^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^java.awt.Rectangle r]
+  ([^CellRendererPane this ^java.awt.Graphics g ^java.awt.Component c ^java.awt.Container p ^java.awt.Rectangle r]
     (-> this (.paintComponent g c p r))))
 
 (defn get-accessible-context
@@ -89,6 +89,6 @@
 
   returns: an AccessibleCellRendererPane that serves as the
            AccessibleContext of this CellRendererPane - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.CellRendererPane this]
+  (^javax.accessibility.AccessibleContext [^CellRendererPane this]
     (-> this (.getAccessibleContext))))
 

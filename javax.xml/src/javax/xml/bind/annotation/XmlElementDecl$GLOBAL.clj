@@ -6,6 +6,6 @@
 
 (defn ->global
   "Constructor."
-  ([]
+  (^XmlElementDecl$GLOBAL []
     (new XmlElementDecl$GLOBAL )))
 

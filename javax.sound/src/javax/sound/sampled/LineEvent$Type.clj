@@ -10,7 +10,7 @@
   A type of event that is sent when a line opens, reserving system
    resources for itself.
 
-  type: javax.sound.sampled.LineEvent.Type"
+  type: javax.sound.sampled.LineEvent$Type"
   LineEvent$Type/OPEN)
 
 (def *-close
@@ -19,7 +19,7 @@
   A type of event that is sent when a line closes, freeing the system
    resources it had obtained when it was opened.
 
-  type: javax.sound.sampled.LineEvent.Type"
+  type: javax.sound.sampled.LineEvent$Type"
   LineEvent$Type/CLOSE)
 
 (def *-start
@@ -29,7 +29,7 @@
    input or output of audio data in response to a
    start request.
 
-  type: javax.sound.sampled.LineEvent.Type"
+  type: javax.sound.sampled.LineEvent$Type"
   LineEvent$Type/START)
 
 (def *-stop
@@ -39,7 +39,7 @@
    of audio data in response to a stop request,
    or because the end of media has been reached.
 
-  type: javax.sound.sampled.LineEvent.Type"
+  type: javax.sound.sampled.LineEvent$Type"
   LineEvent$Type/STOP)
 
 (defn equals
@@ -50,20 +50,20 @@
 
   returns: true if this event type is the same as
    obj; false otherwise - `boolean`"
-  (^Boolean [^javax.sound.sampled.LineEvent$Type this ^java.lang.Object obj]
+  (^Boolean [^LineEvent$Type this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashcode method.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.sound.sampled.LineEvent$Type this]
+  (^Integer [^LineEvent$Type this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns the type name as the string representation.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.LineEvent$Type this]
+  (^java.lang.String [^LineEvent$Type this]
     (-> this (.toString))))
 

@@ -12,7 +12,7 @@
 
    Repeat the call once more bytes are available.
 
-  type: javax.net.ssl.SSLEngineResult.Status"
+  type: javax.net.ssl.SSLEngineResult$Status"
   SSLEngineResult$Status/BUFFER_UNDERFLOW)
 
 (def BUFFER_OVERFLOW
@@ -24,7 +24,7 @@
 
    Repeat the call once more bytes are available.
 
-  type: javax.net.ssl.SSLEngineResult.Status"
+  type: javax.net.ssl.SSLEngineResult$Status"
   SSLEngineResult$Status/BUFFER_OVERFLOW)
 
 (def OK
@@ -33,7 +33,7 @@
   The SSLEngine completed the operation, and
    is available to process similar calls.
 
-  type: javax.net.ssl.SSLEngineResult.Status"
+  type: javax.net.ssl.SSLEngineResult$Status"
   SSLEngineResult$Status/OK)
 
 (def CLOSED
@@ -43,7 +43,7 @@
    SSLEngine, or the operation
    could not be completed because it was already closed.
 
-  type: javax.net.ssl.SSLEngineResult.Status"
+  type: javax.net.ssl.SSLEngineResult$Status"
   SSLEngineResult$Status/CLOSED)
 
 (defn *values
@@ -55,7 +55,7 @@
   for (SSLEngineResult.Status c : SSLEngineResult.Status.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.net.ssl.SSLEngineResult.Status[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.net.ssl.SSLEngineResult$Status[]`"
   ([]
     (SSLEngineResult$Status/values )))
 
@@ -67,9 +67,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.net.ssl.SSLEngineResult.Status`
+  returns: the enum constant with the specified name - `javax.net.ssl.SSLEngineResult$Status`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.net.ssl.SSLEngineResult.Status [^java.lang.String name]
+  (^javax.net.ssl.SSLEngineResult$Status [^java.lang.String name]
     (SSLEngineResult$Status/valueOf name)))
 

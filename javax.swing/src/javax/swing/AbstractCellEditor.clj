@@ -19,7 +19,7 @@
 
 (defn ->abstract-cell-editor
   "Constructor."
-  ([]
+  (^AbstractCellEditor []
     (new AbstractCellEditor )))
 
 (defn cell-editable?
@@ -28,7 +28,7 @@
   e - an event object - `java.util.EventObject`
 
   returns: true - `boolean`"
-  (^Boolean [^javax.swing.AbstractCellEditor this ^java.util.EventObject e]
+  (^Boolean [^AbstractCellEditor this ^java.util.EventObject e]
     (-> this (.isCellEditable e))))
 
 (defn should-select-cell?
@@ -37,33 +37,33 @@
   an-event - an event object - `java.util.EventObject`
 
   returns: true - `boolean`"
-  (^Boolean [^javax.swing.AbstractCellEditor this ^java.util.EventObject an-event]
+  (^Boolean [^AbstractCellEditor this ^java.util.EventObject an-event]
     (-> this (.shouldSelectCell an-event))))
 
 (defn stop-cell-editing
   "Calls fireEditingStopped and returns true.
 
   returns: true - `boolean`"
-  (^Boolean [^javax.swing.AbstractCellEditor this]
+  (^Boolean [^AbstractCellEditor this]
     (-> this (.stopCellEditing))))
 
 (defn cancel-cell-editing
   "Calls fireEditingCanceled."
-  ([^javax.swing.AbstractCellEditor this]
+  ([^AbstractCellEditor this]
     (-> this (.cancelCellEditing))))
 
 (defn add-cell-editor-listener
   "Adds a CellEditorListener to the listener list.
 
   l - the new listener to be added - `javax.swing.event.CellEditorListener`"
-  ([^javax.swing.AbstractCellEditor this ^javax.swing.event.CellEditorListener l]
+  ([^AbstractCellEditor this ^javax.swing.event.CellEditorListener l]
     (-> this (.addCellEditorListener l))))
 
 (defn remove-cell-editor-listener
   "Removes a CellEditorListener from the listener list.
 
   l - the listener to be removed - `javax.swing.event.CellEditorListener`"
-  ([^javax.swing.AbstractCellEditor this ^javax.swing.event.CellEditorListener l]
+  ([^AbstractCellEditor this ^javax.swing.event.CellEditorListener l]
     (-> this (.removeCellEditorListener l))))
 
 (defn get-cell-editor-listeners
@@ -72,6 +72,6 @@
 
   returns: all of the CellEditorListeners added or an empty
            array if no listeners have been added - `javax.swing.event.CellEditorListener[]`"
-  ([^javax.swing.AbstractCellEditor this]
+  ([^AbstractCellEditor this]
     (-> this (.getCellEditorListeners))))
 

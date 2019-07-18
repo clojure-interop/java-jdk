@@ -16,10 +16,10 @@
   revocation-date - the date on which the certificate was revoked. The date is copied to protect against subsequent modification. - `java.util.Date`
   reason - the revocation reason - `java.security.cert.CRLReason`
   authority - the X500Principal that represents the name of the authority that signed the certificate's revocation status information - `javax.security.auth.x500.X500Principal`
-  extensions - a map of X.509 Extensions. Each key is an OID String that maps to the corresponding Extension. The map is copied to prevent subsequent modification. - `java.util.Map<java.lang.String,java.security.cert.Extension>`
+  extensions - a map of X.509 Extensions. Each key is an OID String that maps to the corresponding Extension. The map is copied to prevent subsequent modification. - `java.util.Map`
 
   throws: java.lang.NullPointerException - if revocationDate, reason, authority, or extensions is null"
-  ([^java.util.Date revocation-date ^java.security.cert.CRLReason reason ^javax.security.auth.x500.X500Principal authority ^java.util.Map extensions]
+  (^CertificateRevokedException [^java.util.Date revocation-date ^java.security.cert.CRLReason reason ^javax.security.auth.x500.X500Principal authority ^java.util.Map extensions]
     (new CertificateRevokedException revocation-date reason authority extensions)))
 
 (defn get-revocation-date
@@ -28,14 +28,14 @@
    modification.
 
   returns: the revocation date - `java.util.Date`"
-  (^java.util.Date [^java.security.cert.CertificateRevokedException this]
+  (^java.util.Date [^CertificateRevokedException this]
     (-> this (.getRevocationDate))))
 
 (defn get-revocation-reason
   "Returns the reason the certificate was revoked.
 
   returns: the revocation reason - `java.security.cert.CRLReason`"
-  (^java.security.cert.CRLReason [^java.security.cert.CertificateRevokedException this]
+  (^java.security.cert.CRLReason [^CertificateRevokedException this]
     (-> this (.getRevocationReason))))
 
 (defn get-authority-name
@@ -44,7 +44,7 @@
 
   returns: the X500Principal that represents the name of the
        authority that signed the certificate's revocation status information - `javax.security.auth.x500.X500Principal`"
-  (^javax.security.auth.x500.X500Principal [^java.security.cert.CertificateRevokedException this]
+  (^javax.security.auth.x500.X500Principal [^CertificateRevokedException this]
     (-> this (.getAuthorityName))))
 
 (defn get-invalidity-date
@@ -59,7 +59,7 @@
    method is invoked to protect against subsequent modification.
 
   returns: the invalidity date, or null if not specified - `java.util.Date`"
-  (^java.util.Date [^java.security.cert.CertificateRevokedException this]
+  (^java.util.Date [^CertificateRevokedException this]
     (-> this (.getInvalidityDate))))
 
 (defn get-extensions
@@ -70,7 +70,7 @@
 
   returns: an unmodifiable map of X.509 extensions, or an empty map
       if there are no extensions - `java.util.Map<java.lang.String,java.security.cert.Extension>`"
-  (^java.util.Map [^java.security.cert.CertificateRevokedException this]
+  (^java.util.Map [^CertificateRevokedException this]
     (-> this (.getExtensions))))
 
 (defn get-message
@@ -78,6 +78,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.CertificateRevokedException this]
+  (^java.lang.String [^CertificateRevokedException this]
     (-> this (.getMessage))))
 

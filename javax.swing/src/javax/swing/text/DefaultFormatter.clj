@@ -26,7 +26,7 @@
   "Constructor.
 
   Creates a DefaultFormatter."
-  ([]
+  (^DefaultFormatter []
     (new DefaultFormatter )))
 
 (defn set-allows-invalid
@@ -37,7 +37,7 @@
    invalid value.
 
   allows-invalid - Used to indicate if the edited value must always be valid - `boolean`"
-  ([^javax.swing.text.DefaultFormatter this ^Boolean allows-invalid]
+  ([^DefaultFormatter this ^Boolean allows-invalid]
     (-> this (.setAllowsInvalid allows-invalid))))
 
 (defn string-to-value
@@ -55,7 +55,7 @@
   returns: Object representation of text - `java.lang.Object`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  (^java.lang.Object [^javax.swing.text.DefaultFormatter this ^java.lang.String string]
+  (^java.lang.Object [^DefaultFormatter this ^java.lang.String string]
     (-> this (.stringToValue string))))
 
 (defn get-allows-invalid?
@@ -63,14 +63,14 @@
    for a length of time.
 
   returns: false if the edited value must always be valid - `boolean`"
-  (^Boolean [^javax.swing.text.DefaultFormatter this]
+  (^Boolean [^DefaultFormatter this]
     (-> this (.getAllowsInvalid))))
 
 (defn get-value-class
   "Returns that class that is used to create new Objects.
 
   returns: Class used to construct return value from stringToValue - `java.lang.Class<?>`"
-  (^java.lang.Class [^javax.swing.text.DefaultFormatter this]
+  (^java.lang.Class [^DefaultFormatter this]
     (-> this (.getValueClass))))
 
 (defn set-overwrite-mode
@@ -79,7 +79,7 @@
    overwrite existing characters in the model.
 
   overwrite-mode - Indicates if overwrite or overstrike mode is used - `boolean`"
-  ([^javax.swing.text.DefaultFormatter this ^Boolean overwrite-mode]
+  ([^DefaultFormatter this ^Boolean overwrite-mode]
     (-> this (.setOverwriteMode overwrite-mode))))
 
 (defn set-value-class
@@ -87,8 +87,8 @@
    passed in class does not have a single argument constructor that
    takes a String, String values will be used.
 
-  value-class - Class used to construct return value from stringToValue - `java.lang.Class<?>`"
-  ([^javax.swing.text.DefaultFormatter this ^java.lang.Class value-class]
+  value-class - Class used to construct return value from stringToValue - `java.lang.Class`"
+  ([^DefaultFormatter this ^java.lang.Class value-class]
     (-> this (.setValueClass value-class))))
 
 (defn install
@@ -119,7 +119,7 @@
    state changes.
 
   ftf - JFormattedTextField to format for, may be null indicating uninstall from current JFormattedTextField. - `javax.swing.JFormattedTextField`"
-  ([^javax.swing.text.DefaultFormatter this ^javax.swing.JFormattedTextField ftf]
+  ([^DefaultFormatter this ^javax.swing.JFormattedTextField ftf]
     (-> this (.install ftf))))
 
 (defn set-commits-on-valid-edit
@@ -134,7 +134,7 @@
    or focus leaves the JFormattedTextField.
 
   commit - Used to indicate when edits are committed back to the JTextComponent - `boolean`"
-  ([^javax.swing.text.DefaultFormatter this ^Boolean commit]
+  ([^DefaultFormatter this ^Boolean commit]
     (-> this (.setCommitsOnValidEdit commit))))
 
 (defn clone
@@ -143,7 +143,7 @@
   returns: copy of the DefaultFormatter - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if the object's class does not support the Cloneable interface. Subclasses that override the clone method can also throw this exception to indicate that an instance cannot be cloned."
-  (^java.lang.Object [^javax.swing.text.DefaultFormatter this]
+  (^java.lang.Object [^DefaultFormatter this]
     (-> this (.clone))))
 
 (defn value-to-string
@@ -155,7 +155,7 @@
   returns: String representation of value - `java.lang.String`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  (^java.lang.String [^javax.swing.text.DefaultFormatter this ^java.lang.Object value]
+  (^java.lang.String [^DefaultFormatter this ^java.lang.Object value]
     (-> this (.valueToString value))))
 
 (defn get-commits-on-valid-edit?
@@ -163,13 +163,13 @@
    JFormattedTextField.
 
   returns: true if edits are committed after every valid edit - `boolean`"
-  (^Boolean [^javax.swing.text.DefaultFormatter this]
+  (^Boolean [^DefaultFormatter this]
     (-> this (.getCommitsOnValidEdit))))
 
 (defn get-overwrite-mode?
   "Returns the behavior when inserting characters.
 
   returns: true if newly inserted characters overwrite existing characters - `boolean`"
-  (^Boolean [^javax.swing.text.DefaultFormatter this]
+  (^Boolean [^DefaultFormatter this]
     (-> this (.getOverwriteMode))))
 

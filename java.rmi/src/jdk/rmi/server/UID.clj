@@ -46,9 +46,9 @@
    constructor.
 
   num - number for well-known UID - `short`"
-  ([^Short num]
+  (^UID [^Short num]
     (new UID num))
-  ([]
+  (^UID []
     (new UID )))
 
 (defn *read
@@ -78,7 +78,7 @@
   "Returns the hash code value for this UID.
 
   returns: the hash code value for this UID - `int`"
-  (^Integer [^java.rmi.server.UID this]
+  (^Integer [^UID this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -94,14 +94,14 @@
 
   returns: true if the given object is equivalent to
    this one, and false otherwise - `boolean`"
-  (^Boolean [^java.rmi.server.UID this ^java.lang.Object obj]
+  (^Boolean [^UID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
   "Returns a string representation of this UID.
 
   returns: a string representation of this UID - `java.lang.String`"
-  (^java.lang.String [^java.rmi.server.UID this]
+  (^java.lang.String [^UID this]
     (-> this (.toString))))
 
 (defn write
@@ -119,6 +119,6 @@
   out - the DataOutput instance to write this UID to - `java.io.DataOutput`
 
   throws: java.io.IOException - if an I/O error occurs while performing this operation"
-  ([^java.rmi.server.UID this ^java.io.DataOutput out]
+  ([^UID this ^java.io.DataOutput out]
     (-> this (.write out))))
 

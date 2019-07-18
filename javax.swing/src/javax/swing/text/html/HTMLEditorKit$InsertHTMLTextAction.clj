@@ -22,19 +22,19 @@
 
   name - `java.lang.String`
   html - `java.lang.String`
-  parent-tag - `javax.swing.text.html.HTML.Tag`
-  add-tag - `javax.swing.text.html.HTML.Tag`
-  alternate-parent-tag - `javax.swing.text.html.HTML.Tag`
-  alternate-add-tag - `javax.swing.text.html.HTML.Tag`"
-  ([^java.lang.String name ^java.lang.String html ^javax.swing.text.html.HTML.Tag parent-tag ^javax.swing.text.html.HTML.Tag add-tag ^javax.swing.text.html.HTML.Tag alternate-parent-tag ^javax.swing.text.html.HTML.Tag alternate-add-tag]
+  parent-tag - `javax.swing.text.html.HTML$Tag`
+  add-tag - `javax.swing.text.html.HTML$Tag`
+  alternate-parent-tag - `javax.swing.text.html.HTML$Tag`
+  alternate-add-tag - `javax.swing.text.html.HTML$Tag`"
+  (^HTMLEditorKit$InsertHTMLTextAction [^java.lang.String name ^java.lang.String html ^javax.swing.text.html.HTML$Tag parent-tag ^javax.swing.text.html.HTML$Tag add-tag ^javax.swing.text.html.HTML$Tag alternate-parent-tag ^javax.swing.text.html.HTML$Tag alternate-add-tag]
     (new HTMLEditorKit$InsertHTMLTextAction name html parent-tag add-tag alternate-parent-tag alternate-add-tag))
-  ([^java.lang.String name ^java.lang.String html ^javax.swing.text.html.HTML.Tag parent-tag ^javax.swing.text.html.HTML.Tag add-tag]
+  (^HTMLEditorKit$InsertHTMLTextAction [^java.lang.String name ^java.lang.String html ^javax.swing.text.html.HTML$Tag parent-tag ^javax.swing.text.html.HTML$Tag add-tag]
     (new HTMLEditorKit$InsertHTMLTextAction name html parent-tag add-tag)))
 
 (defn action-performed
   "Inserts the HTML into the document.
 
   ae - the event - `java.awt.event.ActionEvent`"
-  ([^javax.swing.text.html.HTMLEditorKit$InsertHTMLTextAction this ^java.awt.event.ActionEvent ae]
+  ([^HTMLEditorKit$InsertHTMLTextAction this ^java.awt.event.ActionEvent ae]
     (-> this (.actionPerformed ae))))
 

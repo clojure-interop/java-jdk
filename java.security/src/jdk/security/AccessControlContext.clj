@@ -51,9 +51,9 @@
   combiner - the DomainCombiner to be associated with the provided AccessControlContext. - `java.security.DomainCombiner`
 
   throws: java.lang.NullPointerException - if the provided context is null."
-  ([^java.security.AccessControlContext acc ^java.security.DomainCombiner combiner]
+  (^AccessControlContext [^java.security.AccessControlContext acc ^java.security.DomainCombiner combiner]
     (new AccessControlContext acc combiner))
-  ([context]
+  (^AccessControlContext [context]
     (new AccessControlContext context)))
 
 (defn get-domain-combiner
@@ -65,7 +65,7 @@
             if there is none. - `java.security.DomainCombiner`
 
   throws: java.lang.SecurityException - if a security manager is installed and the caller does not have the `getDomainCombiner` SecurityPermission"
-  (^java.security.DomainCombiner [^java.security.AccessControlContext this]
+  (^java.security.DomainCombiner [^AccessControlContext this]
     (-> this (.getDomainCombiner))))
 
 (defn check-permission
@@ -83,7 +83,7 @@
   perm - the requested permission. - `java.security.Permission`
 
   throws: java.security.AccessControlException - if the specified permission is not permitted, based on the current security policy and the context encapsulated by this object."
-  ([^java.security.AccessControlContext this ^java.security.Permission perm]
+  ([^AccessControlContext this ^java.security.Permission perm]
     (-> this (.checkPermission perm))))
 
 (defn equals
@@ -96,7 +96,7 @@
 
   returns: true if obj is an AccessControlContext, and has the
    same set of ProtectionDomains as this context, false otherwise. - `boolean`"
-  (^Boolean [^java.security.AccessControlContext this ^java.lang.Object obj]
+  (^Boolean [^AccessControlContext this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -105,6 +105,6 @@
    domains in the context together.
 
   returns: a hash code value for this context. - `int`"
-  (^Integer [^java.security.AccessControlContext this]
+  (^Integer [^AccessControlContext this]
     (-> this (.hashCode))))
 

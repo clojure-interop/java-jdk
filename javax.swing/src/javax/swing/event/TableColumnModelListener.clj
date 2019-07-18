@@ -8,28 +8,28 @@
   "Tells listeners that a column was added to the model.
 
   e - `javax.swing.event.TableColumnModelEvent`"
-  ([^javax.swing.event.TableColumnModelListener this ^javax.swing.event.TableColumnModelEvent e]
+  ([^TableColumnModelListener this ^javax.swing.event.TableColumnModelEvent e]
     (-> this (.columnAdded e))))
 
 (defn column-removed
   "Tells listeners that a column was removed from the model.
 
   e - `javax.swing.event.TableColumnModelEvent`"
-  ([^javax.swing.event.TableColumnModelListener this ^javax.swing.event.TableColumnModelEvent e]
+  ([^TableColumnModelListener this ^javax.swing.event.TableColumnModelEvent e]
     (-> this (.columnRemoved e))))
 
 (defn column-moved
   "Tells listeners that a column was repositioned.
 
   e - `javax.swing.event.TableColumnModelEvent`"
-  ([^javax.swing.event.TableColumnModelListener this ^javax.swing.event.TableColumnModelEvent e]
+  ([^TableColumnModelListener this ^javax.swing.event.TableColumnModelEvent e]
     (-> this (.columnMoved e))))
 
 (defn column-margin-changed
   "Tells listeners that a column was moved due to a margin change.
 
   e - `javax.swing.event.ChangeEvent`"
-  ([^javax.swing.event.TableColumnModelListener this ^javax.swing.event.ChangeEvent e]
+  ([^TableColumnModelListener this ^javax.swing.event.ChangeEvent e]
     (-> this (.columnMarginChanged e))))
 
 (defn column-selection-changed
@@ -37,6 +37,6 @@
    TableColumnModel changed.
 
   e - `javax.swing.event.ListSelectionEvent`"
-  ([^javax.swing.event.TableColumnModelListener this ^javax.swing.event.ListSelectionEvent e]
+  ([^TableColumnModelListener this ^javax.swing.event.ListSelectionEvent e]
     (-> this (.columnSelectionChanged e))))
 

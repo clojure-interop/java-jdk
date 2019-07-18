@@ -10,6 +10,6 @@
   Constructs an instance of this class.
 
   file - a string identifying the file or null if not known - `java.lang.String`"
-  ([^java.lang.String file]
+  (^NotDirectoryException [^java.lang.String file]
     (new NotDirectoryException file)))
 

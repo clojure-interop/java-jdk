@@ -45,7 +45,7 @@
 
 (defn ->binder
   "Constructor."
-  ([]
+  (^Binder []
     (new Binder )))
 
 (defn update-xml
@@ -67,17 +67,17 @@
    XML nodes and JAXB objects.
 
   jaxb-object - root of potentially modified JAXB object tree - `java.lang.Object`
-  xml-node - root of update target XML parse tree - `Binder.XmlNode`
+  xml-node - root of update target XML parse tree - `XmlNode`
 
   returns: Returns the updated XML node. Typically, this is the same
         node you passed in as xmlNode, but it maybe
         a different object, for example when the tag name of the object
-        has changed. - `Binder.XmlNode`
+        has changed. - `XmlNode`
 
   throws: javax.xml.bind.JAXBException - If any unexpected problem occurs updating corresponding XML content."
-  (^Binder.XmlNode [^javax.xml.bind.Binder this ^java.lang.Object jaxb-object ^Binder.XmlNode xml-node]
+  ([^Binder this ^java.lang.Object jaxb-object xml-node]
     (-> this (.updateXML jaxb-object xml-node)))
-  (^Binder.XmlNode [^javax.xml.bind.Binder this ^java.lang.Object jaxb-object]
+  ([^Binder this ^java.lang.Object jaxb-object]
     (-> this (.updateXML jaxb-object))))
 
 (defn marshal
@@ -95,10 +95,10 @@
    xml content is validated during this operation.
 
   jaxb-object - The content tree to be marshalled. - `java.lang.Object`
-  xml-node - The parameter must be a Node that accepts children. - `Binder.XmlNode`
+  xml-node - The parameter must be a Node that accepts children. - `XmlNode`
 
   throws: javax.xml.bind.JAXBException - If any unexpected problem occurs during the marshalling."
-  ([^javax.xml.bind.Binder this ^java.lang.Object jaxb-object ^Binder.XmlNode xml-node]
+  ([^Binder this ^java.lang.Object jaxb-object xml-node]
     (-> this (.marshal jaxb-object xml-node))))
 
 (defn set-event-handler
@@ -115,7 +115,7 @@
   handler - the validation event handler - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while setting the event handler"
-  ([^javax.xml.bind.Binder this ^javax.xml.bind.ValidationEventHandler handler]
+  ([^Binder this ^javax.xml.bind.ValidationEventHandler handler]
     (-> this (.setEventHandler handler))))
 
 (defn get-event-handler
@@ -126,7 +126,7 @@
            if it hasn't been set - `javax.xml.bind.ValidationEventHandler`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while getting the current event handler"
-  (^javax.xml.bind.ValidationEventHandler [^javax.xml.bind.Binder this]
+  (^javax.xml.bind.ValidationEventHandler [^Binder this]
     (-> this (.getEventHandler))))
 
 (defn update-jaxb
@@ -142,7 +142,7 @@
    As a side-effect, this operation updates the association between
    XML nodes and JAXB objects.
 
-  xml-node - `Binder.XmlNode`
+  xml-node - `XmlNode`
 
   returns: Returns the updated JAXB object. Typically, this is the same
         object that was returned from earlier
@@ -153,7 +153,7 @@
         element has changed. - `java.lang.Object`
 
   throws: javax.xml.bind.JAXBException - If any unexpected problem occurs updating corresponding JAXB mapped content."
-  (^java.lang.Object [^javax.xml.bind.Binder this ^Binder.XmlNode xml-node]
+  (^java.lang.Object [^Binder this xml-node]
     (-> this (.updateJAXB xml-node))))
 
 (defn get-xml-node
@@ -174,10 +174,10 @@
 
   returns: null if the specified JAXB object is not known to this
         Binder, or if it is not associated with an
-        XML element. - `Binder.XmlNode`
+        XML element. - `XmlNode`
 
   throws: java.lang.IllegalArgumentException - If the jaxbObject parameter is null"
-  (^Binder.XmlNode [^javax.xml.bind.Binder this ^java.lang.Object jaxb-object]
+  ([^Binder this ^java.lang.Object jaxb-object]
     (-> this (.getXMLNode jaxb-object))))
 
 (defn set-schema
@@ -185,7 +185,7 @@
    performs validation on their XML content.
 
   schema - set to null to disable validation. - `javax.xml.validation.Schema`"
-  ([^javax.xml.bind.Binder this ^javax.xml.validation.Schema schema]
+  ([^Binder this ^javax.xml.validation.Schema schema]
     (-> this (.setSchema schema))))
 
 (defn get-property
@@ -205,7 +205,7 @@
   returns: the value of the requested property - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error retrieving the given property or value property name"
-  (^java.lang.Object [^javax.xml.bind.Binder this ^java.lang.String name]
+  (^java.lang.Object [^Binder this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-jaxb-node
@@ -222,14 +222,14 @@
    have associated JAXB objects, and not all JAXB objects have
    associated XML elements.
 
-  xml-node - `Binder.XmlNode`
+  xml-node - `XmlNode`
 
   returns: null if the specified XML node is not known to this
         Binder, or if it is not associated with a
         JAXB object. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - If the node parameter is null"
-  (^java.lang.Object [^javax.xml.bind.Binder this ^Binder.XmlNode xml-node]
+  (^java.lang.Object [^Binder this xml-node]
     (-> this (.getJAXBNode xml-node))))
 
 (defn get-schema
@@ -237,7 +237,7 @@
    setSchema(Schema) method.
 
   returns: the Schema object for validation or null if not present - `javax.xml.validation.Schema`"
-  (^javax.xml.validation.Schema [^javax.xml.bind.Binder this]
+  (^javax.xml.validation.Schema [^Binder this]
     (-> this (.getSchema))))
 
 (defn set-property
@@ -255,7 +255,7 @@
   value - the value of the property to be set - `java.lang.Object`
 
   throws: javax.xml.bind.PropertyException - when there is an error processing the given property or value"
-  ([^javax.xml.bind.Binder this ^java.lang.String name ^java.lang.Object value]
+  ([^Binder this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setProperty name value))))
 
 (defn unmarshal
@@ -275,15 +275,15 @@
    When getSchema() is non-null, xmlNode
    and its descendants is validated during this operation.
 
-  xml-node - the document/element to unmarshal XML data from. - `Binder.XmlNode`
-  declared-type - appropriate JAXB mapped class to hold node's XML data. - `java.lang.Class<T>`
+  xml-node - the document/element to unmarshal XML data from. - `XmlNode`
+  declared-type - appropriate JAXB mapped class to hold node's XML data. - `java.lang.Class`
 
   returns: JAXB Element representation
    of node - `<T> javax.xml.bind.JAXBElement<T>`
 
   throws: javax.xml.bind.JAXBException - If any unexpected errors occur while unmarshalling"
-  ([^javax.xml.bind.Binder this ^Binder.XmlNode xml-node ^java.lang.Class declared-type]
+  ([^Binder this xml-node ^java.lang.Class declared-type]
     (-> this (.unmarshal xml-node declared-type)))
-  (^java.lang.Object [^javax.xml.bind.Binder this ^Binder.XmlNode xml-node]
+  (^java.lang.Object [^Binder this xml-node]
     (-> this (.unmarshal xml-node))))
 

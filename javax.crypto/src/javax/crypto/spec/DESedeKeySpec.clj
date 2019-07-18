@@ -17,9 +17,9 @@
   offset - the offset in key, where the DES-EDE key material starts. - `int`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([key ^Integer offset]
+  (^DESedeKeySpec [key ^Integer offset]
     (new DESedeKeySpec key offset))
-  ([key]
+  (^DESedeKeySpec [key]
     (new DESedeKeySpec key)))
 
 (def *-des-ede-key-len
@@ -49,6 +49,6 @@
 
   returns: the DES-EDE key. Returns a new array
    each time this method is called. - `byte[]`"
-  ([^javax.crypto.spec.DESedeKeySpec this]
+  ([^DESedeKeySpec this]
     (-> this (.getKey))))
 

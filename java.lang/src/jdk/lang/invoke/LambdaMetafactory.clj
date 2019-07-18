@@ -150,7 +150,7 @@
 
 (defn ->lambda-metafactory
   "Constructor."
-  ([]
+  (^LambdaMetafactory []
     (new LambdaMetafactory )))
 
 (def *-flag-serializable
@@ -201,7 +201,7 @@
    signature given by samMethodType.  It may also override additional
    methods from Object.
 
-  caller - Represents a lookup context with the accessibility privileges of the caller. When used with invokedynamic, this is stacked automatically by the VM. - `java.lang.invoke.MethodHandles.Lookup`
+  caller - Represents a lookup context with the accessibility privileges of the caller. When used with invokedynamic, this is stacked automatically by the VM. - `java.lang.invoke.MethodHandles$Lookup`
   invoked-name - The name of the method to implement. When used with invokedynamic, this is provided by the NameAndType of the InvokeDynamic structure and is stacked automatically by the VM. - `java.lang.String`
   invoked-type - The expected signature of the CallSite. The parameter types represent the types of capture variables; the return type is the interface to implement. When used with invokedynamic, this is provided by the NameAndType of the InvokeDynamic structure and is stacked automatically by the VM. In the event that the implementation method is an instance method and this signature has any parameters, the first parameter in the invocation signature must correspond to the receiver. - `java.lang.invoke.MethodType`
   sam-method-type - Signature and return type of method to be implemented by the function object. - `java.lang.invoke.MethodType`
@@ -212,7 +212,7 @@
            instances of the interface named by invokedType - `java.lang.invoke.CallSite`
 
   throws: java.lang.invoke.LambdaConversionException - If any of the linkage invariants described above are violated"
-  (^java.lang.invoke.CallSite [^java.lang.invoke.MethodHandles.Lookup caller ^java.lang.String invoked-name ^java.lang.invoke.MethodType invoked-type ^java.lang.invoke.MethodType sam-method-type ^java.lang.invoke.MethodHandle impl-method ^java.lang.invoke.MethodType instantiated-method-type]
+  (^java.lang.invoke.CallSite [^java.lang.invoke.MethodHandles$Lookup caller ^java.lang.String invoked-name ^java.lang.invoke.MethodType invoked-type ^java.lang.invoke.MethodType sam-method-type ^java.lang.invoke.MethodHandle impl-method ^java.lang.invoke.MethodType instantiated-method-type]
     (LambdaMetafactory/metafactory caller invoked-name invoked-type sam-method-type impl-method instantiated-method-type)))
 
 (defn *alt-metafactory
@@ -305,7 +305,7 @@
        The class may override methods from Object, and may
        implement methods related to serialization.
 
-  caller - Represents a lookup context with the accessibility privileges of the caller. When used with invokedynamic, this is stacked automatically by the VM. - `java.lang.invoke.MethodHandles.Lookup`
+  caller - Represents a lookup context with the accessibility privileges of the caller. When used with invokedynamic, this is stacked automatically by the VM. - `java.lang.invoke.MethodHandles$Lookup`
   invoked-name - The name of the method to implement. When used with invokedynamic, this is provided by the NameAndType of the InvokeDynamic structure and is stacked automatically by the VM. - `java.lang.String`
   invoked-type - The expected signature of the CallSite. The parameter types represent the types of capture variables; the return type is the interface to implement. When used with invokedynamic, this is provided by the NameAndType of the InvokeDynamic structure and is stacked automatically by the VM. In the event that the implementation method is an instance method and this signature has any parameters, the first parameter in the invocation signature must correspond to the receiver. - `java.lang.invoke.MethodType`
   args - An Object[] array containing the required arguments samMethodType, implMethod, instantiatedMethodType, flags, and any optional arguments, as described altMetafactory(MethodHandles.Lookup, String, MethodType, Object...) above} - `java.lang.Object`
@@ -314,6 +314,6 @@
            instances of the interface named by invokedType - `java.lang.invoke.CallSite`
 
   throws: java.lang.invoke.LambdaConversionException - If any of the linkage invariants described above are violated"
-  (^java.lang.invoke.CallSite [^java.lang.invoke.MethodHandles.Lookup caller ^java.lang.String invoked-name ^java.lang.invoke.MethodType invoked-type ^java.lang.Object args]
+  (^java.lang.invoke.CallSite [^java.lang.invoke.MethodHandles$Lookup caller ^java.lang.String invoked-name ^java.lang.invoke.MethodType invoked-type ^java.lang.Object args]
     (LambdaMetafactory/altMetafactory caller invoked-name invoked-type args)))
 

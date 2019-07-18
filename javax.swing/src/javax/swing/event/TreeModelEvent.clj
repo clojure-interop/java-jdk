@@ -74,9 +74,9 @@
   path - an array of Object identifying the path to the parent of the modified item(s), where the first element of the array is the Object stored at the root node and the last element is the Object stored at the parent node - `java.lang.Object[]`
   child-indices - an array of int that specifies the index values of the removed items. The indices must be in sorted order, from lowest to highest - `int[]`
   children - an array of Object containing the inserted, removed, or changed objects - `java.lang.Object[]`"
-  ([^java.lang.Object source path child-indices children]
+  (^TreeModelEvent [^java.lang.Object source path child-indices children]
     (new TreeModelEvent source path child-indices children))
-  ([^java.lang.Object source path]
+  (^TreeModelEvent [^java.lang.Object source path]
     (new TreeModelEvent source path)))
 
 (defn get-tree-path
@@ -92,7 +92,7 @@
    and getChildIndices will return null.
 
   returns: the TreePath used in identifying the changed nodes. - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.event.TreeModelEvent this]
+  (^javax.swing.tree.TreePath [^TreeModelEvent this]
     (-> this (.getTreePath))))
 
 (defn get-path
@@ -102,7 +102,7 @@
   returns: an array of Objects, where the first Object is the one
            stored at the root and the last object is the one
            stored at the node identified by the path - `java.lang.Object[]`"
-  ([^javax.swing.event.TreeModelEvent this]
+  ([^TreeModelEvent this]
     (-> this (.getPath))))
 
 (defn get-children
@@ -113,7 +113,7 @@
 
   returns: an array of Object containing the children specified by
            the event - `java.lang.Object[]`"
-  ([^javax.swing.event.TreeModelEvent this]
+  ([^TreeModelEvent this]
     (-> this (.getChildren))))
 
 (defn get-child-indices
@@ -125,7 +125,7 @@
 
   returns: an array of int containing index locations for
            the children specified by the event - `int[]`"
-  ([^javax.swing.event.TreeModelEvent this]
+  ([^TreeModelEvent this]
     (-> this (.getChildIndices))))
 
 (defn to-string
@@ -133,6 +133,6 @@
    properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  (^java.lang.String [^javax.swing.event.TreeModelEvent this]
+  (^java.lang.String [^TreeModelEvent this]
     (-> this (.toString))))
 

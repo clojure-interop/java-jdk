@@ -31,7 +31,7 @@
   "Constructor.
 
   Constructs an RMISocketFactory."
-  ([]
+  (^RMISocketFactory []
     (new RMISocketFactory )))
 
 (defn *set-socket-factory
@@ -101,7 +101,7 @@
   returns: a socket connected to the specified host and port. - `java.net.Socket`
 
   throws: java.io.IOException - if an I/O error occurs during socket creation"
-  (^java.net.Socket [^java.rmi.server.RMISocketFactory this ^java.lang.String host ^Integer port]
+  (^java.net.Socket [^RMISocketFactory this ^java.lang.String host ^Integer port]
     (-> this (.createSocket host port))))
 
 (defn create-server-socket
@@ -113,6 +113,6 @@
   returns: the server socket on the specified port - `java.net.ServerSocket`
 
   throws: java.io.IOException - if an I/O error occurs during server socket creation"
-  (^java.net.ServerSocket [^java.rmi.server.RMISocketFactory this ^Integer port]
+  (^java.net.ServerSocket [^RMISocketFactory this ^Integer port]
     (-> this (.createServerSocket port))))
 

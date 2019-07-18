@@ -17,6 +17,6 @@
    detail message.
 
   s - the detail message - `java.lang.String`"
-  ([^java.lang.String s]
+  (^UnknownObjectException [^java.lang.String s]
     (new UnknownObjectException s)))
 

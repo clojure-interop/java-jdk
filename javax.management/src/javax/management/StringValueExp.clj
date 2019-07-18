@@ -11,9 +11,9 @@
    given string.
 
   val - the string that will be the value of this expression - `java.lang.String`"
-  ([^java.lang.String val]
+  (^StringValueExp [^java.lang.String val]
     (new StringValueExp val))
-  ([]
+  (^StringValueExp []
     (new StringValueExp )))
 
 (defn get-value
@@ -21,23 +21,21 @@
    StringValueExp instance.
 
   returns: the string. - `java.lang.String`"
-  (^java.lang.String [^javax.management.StringValueExp this]
+  (^java.lang.String [^StringValueExp this]
     (-> this (.getValue))))
 
 (defn to-string
   "Returns the string representing the object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.management.StringValueExp this]
+  (^java.lang.String [^StringValueExp this]
     (-> this (.toString))))
 
 (defn set-m-bean-server
   "Deprecated.
 
-  s - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`
-
-  returns: `java.lang.  void`"
-  ([^javax.management.StringValueExp this ^javax.management.MBeanServer s]
+  s - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`"
+  ([^StringValueExp this ^javax.management.MBeanServer s]
     (-> this (.setMBeanServer s))))
 
 (defn apply
@@ -48,6 +46,6 @@
   returns: The ValueExp. - `javax.management.ValueExp`
 
   throws: javax.management.BadStringOperationException"
-  (^javax.management.ValueExp [^javax.management.StringValueExp this ^javax.management.ObjectName name]
+  (^javax.management.ValueExp [^StringValueExp this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 

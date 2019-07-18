@@ -150,7 +150,7 @@
    resultant server is not started until its start method is called.
 
   service-url - the address of the new connector server. The actual address of the new connector server, as returned by its getAddress method, will not necessarily be exactly the same. For example, it might include a port number if the original address did not. - `javax.management.remote.JMXServiceURL`
-  environment - a set of attributes to control the new connector server's behavior. This parameter can be null. Keys in this map must be Strings. The appropriate type of each associated value depends on the attribute. The contents of environment are not changed by this call. - `java.util.Map<java.lang.String,?>`
+  environment - a set of attributes to control the new connector server's behavior. This parameter can be null. Keys in this map must be Strings. The appropriate type of each associated value depends on the attribute. The contents of environment are not changed by this call. - `java.util.Map`
   mbean-server - the MBean server that this connector server is attached to. Null if this connector server will be attached to an MBean server by being registered in it. - `javax.management.MBeanServer`
 
   returns: a JMXConnectorServer representing the new

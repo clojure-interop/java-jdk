@@ -12,8 +12,8 @@
 
   s - the detail message - `java.lang.String`
   ex - the nested exception - `java.lang.Exception`"
-  ([^java.lang.String s ^java.lang.Exception ex]
+  (^ActivateFailedException [^java.lang.String s ^java.lang.Exception ex]
     (new ActivateFailedException s ex))
-  ([^java.lang.String s]
+  (^ActivateFailedException [^java.lang.String s]
     (new ActivateFailedException s)))
 

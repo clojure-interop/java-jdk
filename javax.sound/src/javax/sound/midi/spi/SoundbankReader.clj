@@ -8,7 +8,7 @@
 
 (defn ->soundbank-reader
   "Constructor."
-  ([]
+  (^SoundbankReader []
     (new SoundbankReader )))
 
 (defn get-soundbank
@@ -19,6 +19,6 @@
   returns: soundbank object - `javax.sound.midi.Soundbank`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the URL does not point to valid MIDI soundbank data recognized by this soundbank reader"
-  (^javax.sound.midi.Soundbank [^javax.sound.midi.spi.SoundbankReader this ^java.net.URL url]
+  (^javax.sound.midi.Soundbank [^SoundbankReader this ^java.net.URL url]
     (-> this (.getSoundbank url))))
 

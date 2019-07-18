@@ -59,29 +59,29 @@
    The returned map will throw an IllegalArgumentException
    on an attempt to insert a key outside its range.
 
-  to-key - high endpoint of the keys in the returned map - `NavigableMap.K`
+  to-key - high endpoint of the keys in the returned map - `K`
   inclusive - true if the high endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this map whose keys are less than
-           (or equal to, if inclusive is true) toKey - `java.util.NavigableMap<NavigableMap.K,NavigableMap.V>`
+           (or equal to, if inclusive is true) toKey - `java.util.NavigableMap<K,V>`
 
   throws: java.lang.ClassCastException - if toKey is not compatible with this map's comparator (or, if the map has no comparator, if toKey does not implement Comparable). Implementations may, but are not required to, throw this exception if toKey cannot be compared to keys currently in the map."
-  (^java.util.NavigableMap [^java.util.NavigableMap this ^NavigableMap.K to-key ^Boolean inclusive]
+  (^java.util.NavigableMap [^NavigableMap this to-key ^Boolean inclusive]
     (-> this (.headMap to-key inclusive)))
-  (^java.util.SortedMap [^java.util.NavigableMap this ^NavigableMap.K to-key]
+  (^java.util.SortedMap [^NavigableMap this to-key]
     (-> this (.headMap to-key))))
 
 (defn floor-key
   "Returns the greatest key less than or equal to the given key,
    or null if there is no such key.
 
-  key - the key - `NavigableMap.K`
+  key - the key - `K`
 
   returns: the greatest key less than or equal to key,
-           or null if there is no such key - `NavigableMap.K`
+           or null if there is no such key - `K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^NavigableMap.K [^java.util.NavigableMap this ^NavigableMap.K key]
+  ([^NavigableMap this key]
     (-> this (.floorKey key))))
 
 (defn lower-entry
@@ -89,13 +89,13 @@
    strictly less than the given key, or null if there is
    no such key.
 
-  key - the key - `NavigableMap.K`
+  key - the key - `K`
 
   returns: an entry with the greatest key less than key,
-           or null if there is no such key - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`
+           or null if there is no such key - `java.util.Map$Entry<K,V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^java.util.Map.Entry [^java.util.NavigableMap this ^NavigableMap.K key]
+  (^java.util.Map$Entry [^NavigableMap this key]
     (-> this (.lowerEntry key))))
 
 (defn floor-entry
@@ -103,13 +103,13 @@
    less than or equal to the given key, or null if there
    is no such key.
 
-  key - the key - `NavigableMap.K`
+  key - the key - `K`
 
   returns: an entry with the greatest key less than or equal to
-           key, or null if there is no such key - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`
+           key, or null if there is no such key - `java.util.Map$Entry<K,V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^java.util.Map.Entry [^java.util.NavigableMap this ^NavigableMap.K key]
+  (^java.util.Map$Entry [^NavigableMap this key]
     (-> this (.floorEntry key))))
 
 (defn ceiling-entry
@@ -117,13 +117,13 @@
    greater than or equal to the given key, or null if
    there is no such key.
 
-  key - the key - `NavigableMap.K`
+  key - the key - `K`
 
   returns: an entry with the least key greater than or equal to
-           key, or null if there is no such key - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`
+           key, or null if there is no such key - `java.util.Map$Entry<K,V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^java.util.Map.Entry [^java.util.NavigableMap this ^NavigableMap.K key]
+  (^java.util.Map$Entry [^NavigableMap this key]
     (-> this (.ceilingEntry key))))
 
 (defn descending-key-set
@@ -137,8 +137,8 @@
    removeAll, retainAll, and clear operations.
    It does not support the add or addAll operations.
 
-  returns: a reverse order navigable set view of the keys in this map - `java.util.NavigableSet<NavigableMap.K>`"
-  (^java.util.NavigableSet [^java.util.NavigableMap this]
+  returns: a reverse order navigable set view of the keys in this map - `java.util.NavigableSet<K>`"
+  (^java.util.NavigableSet [^NavigableMap this]
     (-> this (.descendingKeySet))))
 
 (defn navigable-key-set
@@ -152,21 +152,21 @@
    removeAll, retainAll, and clear operations.
    It does not support the add or addAll operations.
 
-  returns: a navigable set view of the keys in this map - `java.util.NavigableSet<NavigableMap.K>`"
-  (^java.util.NavigableSet [^java.util.NavigableMap this]
+  returns: a navigable set view of the keys in this map - `java.util.NavigableSet<K>`"
+  (^java.util.NavigableSet [^NavigableMap this]
     (-> this (.navigableKeySet))))
 
 (defn higher-key
   "Returns the least key strictly greater than the given key, or
    null if there is no such key.
 
-  key - the key - `NavigableMap.K`
+  key - the key - `K`
 
   returns: the least key greater than key,
-           or null if there is no such key - `NavigableMap.K`
+           or null if there is no such key - `K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^NavigableMap.K [^java.util.NavigableMap this ^NavigableMap.K key]
+  ([^NavigableMap this key]
     (-> this (.higherKey key))))
 
 (defn poll-last-entry
@@ -174,8 +174,8 @@
    the greatest key in this map, or null if the map is empty.
 
   returns: the removed last entry of this map,
-           or null if this map is empty - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`"
-  (^java.util.Map.Entry [^java.util.NavigableMap this]
+           or null if this map is empty - `java.util.Map$Entry<K,V>`"
+  (^java.util.Map$Entry [^NavigableMap this]
     (-> this (.pollLastEntry))))
 
 (defn first-entry
@@ -183,8 +183,8 @@
    key in this map, or null if the map is empty.
 
   returns: an entry with the least key,
-           or null if this map is empty - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`"
-  (^java.util.Map.Entry [^java.util.NavigableMap this]
+           or null if this map is empty - `java.util.Map$Entry<K,V>`"
+  (^java.util.Map$Entry [^NavigableMap this]
     (-> this (.firstEntry))))
 
 (defn poll-first-entry
@@ -192,21 +192,21 @@
    the least key in this map, or null if the map is empty.
 
   returns: the removed first entry of this map,
-           or null if this map is empty - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`"
-  (^java.util.Map.Entry [^java.util.NavigableMap this]
+           or null if this map is empty - `java.util.Map$Entry<K,V>`"
+  (^java.util.Map$Entry [^NavigableMap this]
     (-> this (.pollFirstEntry))))
 
 (defn lower-key
   "Returns the greatest key strictly less than the given key, or
    null if there is no such key.
 
-  key - the key - `NavigableMap.K`
+  key - the key - `K`
 
   returns: the greatest key less than key,
-           or null if there is no such key - `NavigableMap.K`
+           or null if there is no such key - `K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^NavigableMap.K [^java.util.NavigableMap this ^NavigableMap.K key]
+  ([^NavigableMap this key]
     (-> this (.lowerKey key))))
 
 (defn sub-map
@@ -222,18 +222,18 @@
    on an attempt to insert a key outside of its range, or to construct a
    submap either of whose endpoints lie outside its range.
 
-  from-key - low endpoint of the keys in the returned map - `NavigableMap.K`
+  from-key - low endpoint of the keys in the returned map - `K`
   from-inclusive - true if the low endpoint is to be included in the returned view - `boolean`
-  to-key - high endpoint of the keys in the returned map - `NavigableMap.K`
+  to-key - high endpoint of the keys in the returned map - `K`
   to-inclusive - true if the high endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this map whose keys range from
-           fromKey to toKey - `java.util.NavigableMap<NavigableMap.K,NavigableMap.V>`
+           fromKey to toKey - `java.util.NavigableMap<K,V>`
 
   throws: java.lang.ClassCastException - if fromKey and toKey cannot be compared to one another using this map's comparator (or, if the map has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromKey or toKey cannot be compared to keys currently in the map."
-  (^java.util.NavigableMap [^java.util.NavigableMap this ^NavigableMap.K from-key ^Boolean from-inclusive ^NavigableMap.K to-key ^Boolean to-inclusive]
+  (^java.util.NavigableMap [^NavigableMap this from-key ^Boolean from-inclusive to-key ^Boolean to-inclusive]
     (-> this (.subMap from-key from-inclusive to-key to-inclusive)))
-  (^java.util.SortedMap [^java.util.NavigableMap this ^NavigableMap.K from-key ^NavigableMap.K to-key]
+  (^java.util.SortedMap [^NavigableMap this from-key to-key]
     (-> this (.subMap from-key to-key))))
 
 (defn tail-map
@@ -246,16 +246,16 @@
    The returned map will throw an IllegalArgumentException
    on an attempt to insert a key outside its range.
 
-  from-key - low endpoint of the keys in the returned map - `NavigableMap.K`
+  from-key - low endpoint of the keys in the returned map - `K`
   inclusive - true if the low endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this map whose keys are greater than
-           (or equal to, if inclusive is true) fromKey - `java.util.NavigableMap<NavigableMap.K,NavigableMap.V>`
+           (or equal to, if inclusive is true) fromKey - `java.util.NavigableMap<K,V>`
 
   throws: java.lang.ClassCastException - if fromKey is not compatible with this map's comparator (or, if the map has no comparator, if fromKey does not implement Comparable). Implementations may, but are not required to, throw this exception if fromKey cannot be compared to keys currently in the map."
-  (^java.util.NavigableMap [^java.util.NavigableMap this ^NavigableMap.K from-key ^Boolean inclusive]
+  (^java.util.NavigableMap [^NavigableMap this from-key ^Boolean inclusive]
     (-> this (.tailMap from-key inclusive)))
-  (^java.util.SortedMap [^java.util.NavigableMap this ^NavigableMap.K from-key]
+  (^java.util.SortedMap [^NavigableMap this from-key]
     (-> this (.tailMap from-key))))
 
 (defn descending-map
@@ -271,8 +271,8 @@
    The expression m.descendingMap().descendingMap() returns a
    view of m essentially equivalent to m.
 
-  returns: a reverse order view of this map - `java.util.NavigableMap<NavigableMap.K,NavigableMap.V>`"
-  (^java.util.NavigableMap [^java.util.NavigableMap this]
+  returns: a reverse order view of this map - `java.util.NavigableMap<K,V>`"
+  (^java.util.NavigableMap [^NavigableMap this]
     (-> this (.descendingMap))))
 
 (defn higher-entry
@@ -280,26 +280,26 @@
    strictly greater than the given key, or null if there
    is no such key.
 
-  key - the key - `NavigableMap.K`
+  key - the key - `K`
 
   returns: an entry with the least key greater than key,
-           or null if there is no such key - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`
+           or null if there is no such key - `java.util.Map$Entry<K,V>`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^java.util.Map.Entry [^java.util.NavigableMap this ^NavigableMap.K key]
+  (^java.util.Map$Entry [^NavigableMap this key]
     (-> this (.higherEntry key))))
 
 (defn ceiling-key
   "Returns the least key greater than or equal to the given key,
    or null if there is no such key.
 
-  key - the key - `NavigableMap.K`
+  key - the key - `K`
 
   returns: the least key greater than or equal to key,
-           or null if there is no such key - `NavigableMap.K`
+           or null if there is no such key - `K`
 
   throws: java.lang.ClassCastException - if the specified key cannot be compared with the keys currently in the map"
-  (^NavigableMap.K [^java.util.NavigableMap this ^NavigableMap.K key]
+  ([^NavigableMap this key]
     (-> this (.ceilingKey key))))
 
 (defn last-entry
@@ -307,7 +307,7 @@
    key in this map, or null if the map is empty.
 
   returns: an entry with the greatest key,
-           or null if this map is empty - `java.util.Map.Entry<NavigableMap.K,NavigableMap.V>`"
-  (^java.util.Map.Entry [^java.util.NavigableMap this]
+           or null if this map is empty - `java.util.Map$Entry<K,V>`"
+  (^java.util.Map$Entry [^NavigableMap this]
     (-> this (.lastEntry))))
 

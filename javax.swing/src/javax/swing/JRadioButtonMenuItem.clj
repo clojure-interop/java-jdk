@@ -45,20 +45,20 @@
   text - the string displayed on the radio button - `java.lang.String`
   icon - the image that the button should display - `javax.swing.Icon`
   selected - `boolean`"
-  ([^java.lang.String text ^javax.swing.Icon icon ^Boolean selected]
+  (^JRadioButtonMenuItem [^java.lang.String text ^javax.swing.Icon icon ^Boolean selected]
     (new JRadioButtonMenuItem text icon selected))
-  ([^java.lang.String text ^javax.swing.Icon icon]
+  (^JRadioButtonMenuItem [^java.lang.String text ^javax.swing.Icon icon]
     (new JRadioButtonMenuItem text icon))
-  ([^javax.swing.Icon icon]
+  (^JRadioButtonMenuItem [^javax.swing.Icon icon]
     (new JRadioButtonMenuItem icon))
-  ([]
+  (^JRadioButtonMenuItem []
     (new JRadioButtonMenuItem )))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `RadioButtonMenuItemUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JRadioButtonMenuItem this]
+  (^java.lang.String [^JRadioButtonMenuItem this]
     (-> this (.getUIClassID))))
 
 (defn get-accessible-context
@@ -69,6 +69,6 @@
 
   returns: an AccessibleJRadioButtonMenuItem that serves as the
            AccessibleContext of this JRadioButtonMenuItem - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JRadioButtonMenuItem this]
+  (^javax.accessibility.AccessibleContext [^JRadioButtonMenuItem this]
     (-> this (.getAccessibleContext))))
 

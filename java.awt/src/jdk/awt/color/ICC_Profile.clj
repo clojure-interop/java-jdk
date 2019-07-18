@@ -1001,7 +1001,7 @@
   tag-data - the data to set for the specified tag signature - `byte[]`
 
   throws: java.lang.IllegalArgumentException - if a content of the tagData array can not be interpreted as valid tag data, corresponding to the tagSignature."
-  ([^java.awt.color.ICC_Profile this ^Integer tag-signature tag-data]
+  ([^ICC_Profile this ^Integer tag-signature tag-data]
     (-> this (.setData tag-signature tag-data))))
 
 (defn get-data
@@ -1016,23 +1016,23 @@
 
   returns: A byte array that contains the tagged data element. Returns
    null if the specified tag doesn't exist. - `byte[]`"
-  ([^java.awt.color.ICC_Profile this ^Integer tag-signature]
+  ([^ICC_Profile this ^Integer tag-signature]
     (-> this (.getData tag-signature)))
-  ([^java.awt.color.ICC_Profile this]
+  ([^ICC_Profile this]
     (-> this (.getData))))
 
 (defn get-minor-version
   "Returns profile minor version.
 
   returns: The minor version of the profile. - `int`"
-  (^Integer [^java.awt.color.ICC_Profile this]
+  (^Integer [^ICC_Profile this]
     (-> this (.getMinorVersion))))
 
 (defn get-profile-class
   "Returns the profile class.
 
   returns: One of the predefined profile class constants. - `int`"
-  (^Integer [^java.awt.color.ICC_Profile this]
+  (^Integer [^ICC_Profile this]
     (-> this (.getProfileClass))))
 
 (defn get-pcs-type
@@ -1047,7 +1047,7 @@
 
   returns: One of the color space type constants defined in the
    ColorSpace class. - `int`"
-  (^Integer [^java.awt.color.ICC_Profile this]
+  (^Integer [^ICC_Profile this]
     (-> this (.getPCSType))))
 
 (defn get-color-space-type
@@ -1062,7 +1062,7 @@
 
   returns: One of the color space type constants defined in the
    ColorSpace class. - `int`"
-  (^Integer [^java.awt.color.ICC_Profile this]
+  (^Integer [^ICC_Profile this]
     (-> this (.getColorSpaceType))))
 
 (defn get-num-components
@@ -1074,14 +1074,14 @@
    color space. - `int`
 
   throws: java.awt.color.ProfileDataException - if color space is in the profile is invalid"
-  (^Integer [^java.awt.color.ICC_Profile this]
+  (^Integer [^ICC_Profile this]
     (-> this (.getNumComponents))))
 
 (defn get-major-version
   "Returns profile major version.
 
   returns: The major version of the profile. - `int`"
-  (^Integer [^java.awt.color.ICC_Profile this]
+  (^Integer [^ICC_Profile this]
     (-> this (.getMajorVersion))))
 
 (defn write
@@ -1090,6 +1090,6 @@
   file-name - The file to write the profile data to. - `java.lang.String`
 
   throws: java.io.IOException - If the file cannot be opened for writing or an I/O error occurs while writing to the file."
-  ([^java.awt.color.ICC_Profile this ^java.lang.String file-name]
+  ([^ICC_Profile this ^java.lang.String file-name]
     (-> this (.write file-name))))
 

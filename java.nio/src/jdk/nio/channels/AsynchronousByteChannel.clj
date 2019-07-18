@@ -51,14 +51,14 @@
 
   dst - The buffer into which bytes are to be transferred - `java.nio.ByteBuffer`
   attachment - The object to attach to the I/O operation; can be null - `A`
-  handler - The completion handler - `A>`
+  handler - The completion handler - `java.nio.channels.CompletionHandler`
 
   returns: `<A> void`
 
   throws: java.lang.IllegalArgumentException - If the buffer is read-only"
-  ([^java.nio.channels.AsynchronousByteChannel this ^java.nio.ByteBuffer dst attachment handler]
+  ([^AsynchronousByteChannel this ^java.nio.ByteBuffer dst attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.read dst attachment handler)))
-  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousByteChannel this ^java.nio.ByteBuffer dst]
+  (^java.util.concurrent.Future [^AsynchronousByteChannel this ^java.nio.ByteBuffer dst]
     (-> this (.read dst))))
 
 (defn write
@@ -95,13 +95,13 @@
 
   src - The buffer from which bytes are to be retrieved - `java.nio.ByteBuffer`
   attachment - The object to attach to the I/O operation; can be null - `A`
-  handler - The completion handler object - `A>`
+  handler - The completion handler object - `java.nio.channels.CompletionHandler`
 
   returns: `<A> void`
 
   throws: java.nio.channels.WritePendingException - If the channel does not allow more than one write to be outstanding and a previous write has not completed"
-  ([^java.nio.channels.AsynchronousByteChannel this ^java.nio.ByteBuffer src attachment handler]
+  ([^AsynchronousByteChannel this ^java.nio.ByteBuffer src attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.write src attachment handler)))
-  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousByteChannel this ^java.nio.ByteBuffer src]
+  (^java.util.concurrent.Future [^AsynchronousByteChannel this ^java.nio.ByteBuffer src]
     (-> this (.write src))))
 

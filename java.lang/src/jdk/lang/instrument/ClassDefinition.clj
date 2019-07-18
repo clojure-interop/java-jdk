@@ -10,24 +10,24 @@
   Creates a new ClassDefinition binding using the supplied
     class and class file bytes. Does not copy the supplied buffer, just captures a reference to it.
 
-  the-class - the Class that needs redefining - `java.lang.Class<?>`
+  the-class - the Class that needs redefining - `java.lang.Class`
   the-class-file - the new class file bytes - `byte[]`
 
   throws: java.lang.NullPointerException - if the supplied class or array is null."
-  ([^java.lang.Class the-class the-class-file]
+  (^ClassDefinition [^java.lang.Class the-class the-class-file]
     (new ClassDefinition the-class the-class-file)))
 
 (defn get-definition-class
   "Returns the class.
 
   returns: the Class object referred to. - `java.lang.Class<?>`"
-  (^java.lang.Class [^java.lang.instrument.ClassDefinition this]
+  (^java.lang.Class [^ClassDefinition this]
     (-> this (.getDefinitionClass))))
 
 (defn get-definition-class-file
   "Returns the array of bytes that contains the new class file.
 
   returns: the class file bytes. - `byte[]`"
-  ([^java.lang.instrument.ClassDefinition this]
+  ([^ClassDefinition this]
     (-> this (.getDefinitionClassFile))))
 

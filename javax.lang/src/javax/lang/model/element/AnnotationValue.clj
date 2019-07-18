@@ -15,7 +15,7 @@
   "Returns the value.
 
   returns: the value - `java.lang.Object`"
-  (^java.lang.Object [^javax.lang.model.element.AnnotationValue this]
+  (^java.lang.Object [^AnnotationValue this]
     (-> this (.getValue))))
 
 (defn to-string
@@ -24,16 +24,16 @@
    in the source code of an annotation.
 
   returns: a string representation of this value - `java.lang.String`"
-  (^java.lang.String [^javax.lang.model.element.AnnotationValue this]
+  (^java.lang.String [^AnnotationValue this]
     (-> this (.toString))))
 
 (defn accept
   "Applies a visitor to this value.
 
-  v - the visitor operating on this value - `javax.lang.model.element.AnnotationValueVisitor<R,P>`
+  v - the visitor operating on this value - `javax.lang.model.element.AnnotationValueVisitor`
   p - additional parameter to the visitor - `P`
 
   returns: a visitor-specified result - `<R,P> R`"
-  ([^javax.lang.model.element.AnnotationValue this ^javax.lang.model.element.AnnotationValueVisitor v p]
+  ([^AnnotationValue this ^javax.lang.model.element.AnnotationValueVisitor v p]
     (-> this (.accept v p))))
 

@@ -22,7 +22,7 @@
   writer - The writer that will output the data - `java.io.Writer`
 
   throws: XMLStreamException - if there is a fatal error writing the event"
-  ([^javax.xml.stream.events.XMLEvent this ^java.io.Writer writer]
+  ([^XMLEvent this ^java.io.Writer writer]
     (-> this (.writeAsEncodedUnicode writer))))
 
 (defn get-location
@@ -31,56 +31,56 @@
    will retain its information.
 
   returns: `javax.xml.stream.Location`"
-  (^javax.xml.stream.Location [^javax.xml.stream.events.XMLEvent this]
+  (^javax.xml.stream.Location [^XMLEvent this]
     (-> this (.getLocation))))
 
 (defn get-event-type
   "Returns an integer code for this event.
 
   returns: `int`"
-  (^Integer [^javax.xml.stream.events.XMLEvent this]
+  (^Integer [^XMLEvent this]
     (-> this (.getEventType))))
 
 (defn namespace?
   "A utility function to check if this event is a Namespace.
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.events.XMLEvent this]
+  (^Boolean [^XMLEvent this]
     (-> this (.isNamespace))))
 
 (defn characters?
   "A utility function to check if this event is Characters.
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.events.XMLEvent this]
+  (^Boolean [^XMLEvent this]
     (-> this (.isCharacters))))
 
 (defn start-element?
   "A utility function to check if this event is a StartElement.
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.events.XMLEvent this]
+  (^Boolean [^XMLEvent this]
     (-> this (.isStartElement))))
 
 (defn processing-instruction?
   "A utility function to check if this event is a ProcessingInstruction.
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.events.XMLEvent this]
+  (^Boolean [^XMLEvent this]
     (-> this (.isProcessingInstruction))))
 
 (defn end-document?
   "A utility function to check if this event is an EndDocument.
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.events.XMLEvent this]
+  (^Boolean [^XMLEvent this]
     (-> this (.isEndDocument))))
 
 (defn entity-reference?
   "A utility function to check if this event is an EntityReference.
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.events.XMLEvent this]
+  (^Boolean [^XMLEvent this]
     (-> this (.isEntityReference))))
 
 (defn as-characters
@@ -88,7 +88,7 @@
    a class cast exception if this event is not Characters.
 
   returns: `javax.xml.stream.events.Characters`"
-  (^javax.xml.stream.events.Characters [^javax.xml.stream.events.XMLEvent this]
+  (^javax.xml.stream.events.Characters [^XMLEvent this]
     (-> this (.asCharacters))))
 
 (defn get-schema-type
@@ -98,7 +98,7 @@
    is available.
 
   returns: `javax.xml.namespace.QName`"
-  (^javax.xml.namespace.QName [^javax.xml.stream.events.XMLEvent this]
+  (^javax.xml.namespace.QName [^XMLEvent this]
     (-> this (.getSchemaType))))
 
 (defn as-end-element
@@ -106,7 +106,7 @@
    a class cast exception if this event is not a end element.
 
   returns: `javax.xml.stream.events.EndElement`"
-  (^javax.xml.stream.events.EndElement [^javax.xml.stream.events.XMLEvent this]
+  (^javax.xml.stream.events.EndElement [^XMLEvent this]
     (-> this (.asEndElement))))
 
 (defn as-start-element
@@ -114,27 +114,27 @@
    a class cast exception if this event is not a start element.
 
   returns: `javax.xml.stream.events.StartElement`"
-  (^javax.xml.stream.events.StartElement [^javax.xml.stream.events.XMLEvent this]
+  (^javax.xml.stream.events.StartElement [^XMLEvent this]
     (-> this (.asStartElement))))
 
 (defn start-document?
   "A utility function to check if this event is a StartDocument.
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.events.XMLEvent this]
+  (^Boolean [^XMLEvent this]
     (-> this (.isStartDocument))))
 
 (defn attribute?
   "A utility function to check if this event is an Attribute.
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.events.XMLEvent this]
+  (^Boolean [^XMLEvent this]
     (-> this (.isAttribute))))
 
 (defn end-element?
   "A utility function to check if this event is a EndElement.
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.events.XMLEvent this]
+  (^Boolean [^XMLEvent this]
     (-> this (.isEndElement))))
 

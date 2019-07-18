@@ -39,16 +39,16 @@
    Service provider implementors should read the `Service Provider` section
    in the LdapContext class description for implementation details.
 
-  env - The possibly null environment properties to use when for the new context. If null, the context is initialized with no environment properties. - `java.util.Hashtable<?,?>`
+  env - The possibly null environment properties to use when for the new context. If null, the context is initialized with no environment properties. - `java.util.Hashtable`
   req-ctls - The possibly null request controls to use for the new context. If null or the empty array means use no request controls. - `javax.naming.ldap.Control[]`
 
   returns: The non-null context at which to continue the method. - `javax.naming.Context`
 
   throws: javax.naming.NamingException - If a naming exception was encountered. Call either retryReferral() or skipReferral() to continue processing referrals."
-  (^javax.naming.Context [^javax.naming.ldap.LdapReferralException this ^java.util.Hashtable env req-ctls]
+  (^javax.naming.Context [^LdapReferralException this ^java.util.Hashtable env req-ctls]
     (-> this (.getReferralContext env req-ctls)))
-  (^javax.naming.Context [^javax.naming.ldap.LdapReferralException this ^java.util.Hashtable env]
+  (^javax.naming.Context [^LdapReferralException this ^java.util.Hashtable env]
     (-> this (.getReferralContext env)))
-  (^javax.naming.Context [^javax.naming.ldap.LdapReferralException this]
+  (^javax.naming.Context [^LdapReferralException this]
     (-> this (.getReferralContext))))
 

@@ -24,10 +24,10 @@
 
   msg - the detail message - `java.lang.String`
   cause - the cause (which is saved for later retrieval by the getCause() method). (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String msg ^java.lang.Throwable cause]
+  (^CertStoreException [^java.lang.String msg ^java.lang.Throwable cause]
     (new CertStoreException msg cause))
-  ([^java.lang.String msg]
+  (^CertStoreException [^java.lang.String msg]
     (new CertStoreException msg))
-  ([]
+  (^CertStoreException []
     (new CertStoreException )))
 

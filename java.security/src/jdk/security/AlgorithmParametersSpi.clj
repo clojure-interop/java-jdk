@@ -11,6 +11,6 @@
 
 (defn ->algorithm-parameters-spi
   "Constructor."
-  ([]
+  (^AlgorithmParametersSpi []
     (new AlgorithmParametersSpi )))
 

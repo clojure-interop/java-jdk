@@ -251,7 +251,7 @@
 
   returns: a boolean indicating if the InetAddress is
    a site local address; or false if address is not a site local unicast address. - `boolean`"
-  (^Boolean [^java.net.InetAddress this]
+  (^Boolean [^InetAddress this]
     (-> this (.isSiteLocalAddress))))
 
 (defn loopback-address?
@@ -259,14 +259,14 @@
 
   returns: a boolean indicating if the InetAddress is
    a loopback address; or false otherwise. - `boolean`"
-  (^Boolean [^java.net.InetAddress this]
+  (^Boolean [^InetAddress this]
     (-> this (.isLoopbackAddress))))
 
 (defn get-host-address
   "Returns the IP address string in textual presentation.
 
   returns: the raw IP address in a string format. - `java.lang.String`"
-  (^java.lang.String [^java.net.InetAddress this]
+  (^java.lang.String [^InetAddress this]
     (-> this (.getHostAddress))))
 
 (defn link-local-address?
@@ -274,7 +274,7 @@
 
   returns: a boolean indicating if the InetAddress is
    a link local address; or false if address is not a link local unicast address. - `boolean`"
-  (^Boolean [^java.net.InetAddress this]
+  (^Boolean [^InetAddress this]
     (-> this (.isLinkLocalAddress))))
 
 (defn any-local-address?
@@ -282,7 +282,7 @@
 
   returns: a boolean indicating if the Inetaddress is
            a wildcard address. - `boolean`"
-  (^Boolean [^java.net.InetAddress this]
+  (^Boolean [^InetAddress this]
     (-> this (.isAnyLocalAddress))))
 
 (defn mc-link-local?
@@ -291,7 +291,7 @@
   returns: a boolean indicating if the address has
            is a multicast address of link-local scope, false if it is not
            of link-local scope or it is not a multicast address - `boolean`"
-  (^Boolean [^java.net.InetAddress this]
+  (^Boolean [^InetAddress this]
     (-> this (.isMCLinkLocal))))
 
 (defn mc-global?
@@ -300,7 +300,7 @@
   returns: a boolean indicating if the address has
            is a multicast address of global scope, false if it is not
            of global scope or it is not a multicast address - `boolean`"
-  (^Boolean [^java.net.InetAddress this]
+  (^Boolean [^InetAddress this]
     (-> this (.isMCGlobal))))
 
 (defn reachable?
@@ -330,9 +330,9 @@
   returns: a booleanindicating if the address is reachable. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if either timeout or ttl are negative."
-  (^Boolean [^java.net.InetAddress this ^java.net.NetworkInterface netif ^Integer ttl ^Integer timeout]
+  (^Boolean [^InetAddress this ^java.net.NetworkInterface netif ^Integer ttl ^Integer timeout]
     (-> this (.isReachable netif ttl timeout)))
-  (^Boolean [^java.net.InetAddress this ^Integer timeout]
+  (^Boolean [^InetAddress this ^Integer timeout]
     (-> this (.isReachable timeout))))
 
 (defn multicast-address?
@@ -341,7 +341,7 @@
 
   returns: a boolean indicating if the InetAddress is
    an IP multicast address - `boolean`"
-  (^Boolean [^java.net.InetAddress this]
+  (^Boolean [^InetAddress this]
     (-> this (.isMulticastAddress))))
 
 (defn mc-node-local?
@@ -350,7 +350,7 @@
   returns: a boolean indicating if the address has
            is a multicast address of node-local scope, false if it is not
            of node-local scope or it is not a multicast address - `boolean`"
-  (^Boolean [^java.net.InetAddress this]
+  (^Boolean [^InetAddress this]
     (-> this (.isMCNodeLocal))))
 
 (defn to-string
@@ -362,7 +362,7 @@
    is performed. The hostname part will be represented by an empty string.
 
   returns: a string representation of this IP address. - `java.lang.String`"
-  (^java.lang.String [^java.net.InetAddress this]
+  (^java.lang.String [^InetAddress this]
     (-> this (.toString))))
 
 (defn get-address
@@ -371,7 +371,7 @@
    byte of the address is in getAddress()[0].
 
   returns: the raw IP address of this object. - `byte[]`"
-  ([^java.net.InetAddress this]
+  ([^InetAddress this]
     (-> this (.getAddress))))
 
 (defn mc-org-local?
@@ -381,7 +381,7 @@
            is a multicast address of organization-local scope,
            false if it is not of organization-local scope
            or it is not a multicast address - `boolean`"
-  (^Boolean [^java.net.InetAddress this]
+  (^Boolean [^InetAddress this]
     (-> this (.isMCOrgLocal))))
 
 (defn mc-site-local?
@@ -390,14 +390,14 @@
   returns: a boolean indicating if the address has
            is a multicast address of site-local scope, false if it is not
            of site-local scope or it is not a multicast address - `boolean`"
-  (^Boolean [^java.net.InetAddress this]
+  (^Boolean [^InetAddress this]
     (-> this (.isMCSiteLocal))))
 
 (defn hash-code
   "Returns a hashcode for this IP address.
 
   returns: a hash code value for this IP address. - `int`"
-  (^Integer [^java.net.InetAddress this]
+  (^Integer [^InetAddress this]
     (-> this (.hashCode))))
 
 (defn get-canonical-host-name
@@ -416,7 +416,7 @@
   returns: the fully qualified domain name for this IP address,
       or if the operation is not allowed by the security check,
       the textual representation of the IP address. - `java.lang.String`"
-  (^java.lang.String [^java.net.InetAddress this]
+  (^java.lang.String [^InetAddress this]
     (-> this (.getCanonicalHostName))))
 
 (defn equals
@@ -434,7 +434,7 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  (^Boolean [^java.net.InetAddress this ^java.lang.Object obj]
+  (^Boolean [^InetAddress this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-host-name
@@ -458,6 +458,6 @@
   returns: the host name for this IP address, or if the operation
       is not allowed by the security check, the textual
       representation of the IP address. - `java.lang.String`"
-  (^java.lang.String [^java.net.InetAddress this]
+  (^java.lang.String [^InetAddress this]
     (-> this (.getHostName))))
 

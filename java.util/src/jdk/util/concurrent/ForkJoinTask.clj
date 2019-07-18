@@ -144,7 +144,7 @@
 
 (defn ->fork-join-task
   "Constructor."
-  ([]
+  (^ForkJoinTask []
     (new ForkJoinTask )))
 
 (defn *invoke-all
@@ -159,8 +159,8 @@
    cancelled, completed normally or exceptionally, or left
    unprocessed.
 
-  t-1 - the first task - `java.util.concurrent.ForkJoinTask<?>`
-  t-2 - the second task - `java.util.concurrent.ForkJoinTask<?>`
+  t-1 - the first task - `java.util.concurrent.ForkJoinTask`
+  t-2 - the second task - `java.util.concurrent.ForkJoinTask`
 
   throws: java.lang.NullPointerException - if any task is null"
   ([^java.util.concurrent.ForkJoinTask t-1 ^java.util.concurrent.ForkJoinTask t-2]
@@ -244,7 +244,7 @@
 
   returns: true if successful; i.e., the current value was
    equal to e and is now tag. - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinTask this ^Short e ^Short tag]
+  (^Boolean [^ForkJoinTask this ^Short e ^Short tag]
     (-> this (.compareAndSetForkJoinTaskTag e tag))))
 
 (defn invoke
@@ -253,15 +253,15 @@
    RuntimeException or Error if the underlying
    computation did so.
 
-  returns: the computed result - `ForkJoinTask.V`"
-  (^ForkJoinTask.V [^java.util.concurrent.ForkJoinTask this]
+  returns: the computed result - `V`"
+  ([^ForkJoinTask this]
     (-> this (.invoke))))
 
 (defn quietly-invoke
   "Commences performing this task and awaits its completion if
    necessary, without returning its result or throwing its
    exception."
-  ([^java.util.concurrent.ForkJoinTask this]
+  ([^ForkJoinTask this]
     (-> this (.quietlyInvoke))))
 
 (defn try-unfork
@@ -273,7 +273,7 @@
    that could have been, but were not, stolen.
 
   returns: true if unforked - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinTask this]
+  (^Boolean [^ForkJoinTask this]
     (-> this (.tryUnfork))))
 
 (defn cancel
@@ -299,14 +299,14 @@
   may-interrupt-if-running - this value has no effect in the default implementation because interrupts are not used to control cancellation. - `boolean`
 
   returns: true if this task is now cancelled - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinTask this ^Boolean may-interrupt-if-running]
+  (^Boolean [^ForkJoinTask this ^Boolean may-interrupt-if-running]
     (-> this (.cancel may-interrupt-if-running))))
 
 (defn cancelled?
   "Description copied from interface: Future
 
   returns: true if this task was cancelled before it completed - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinTask this]
+  (^Boolean [^ForkJoinTask this]
     (-> this (.isCancelled))))
 
 (defn complete
@@ -320,15 +320,15 @@
    versions must invoke super implementation to maintain
    guarantees.
 
-  value - the result value for this task - `ForkJoinTask.V`"
-  ([^java.util.concurrent.ForkJoinTask this ^ForkJoinTask.V value]
+  value - the result value for this task - `V`"
+  ([^ForkJoinTask this value]
     (-> this (.complete value))))
 
 (defn get-fork-join-task-tag
   "Returns the tag for this task.
 
   returns: the tag for this task - `short`"
-  (^Short [^java.util.concurrent.ForkJoinTask this]
+  (^Short [^ForkJoinTask this]
     (-> this (.getForkJoinTaskTag))))
 
 (defn complete-exceptionally
@@ -342,14 +342,14 @@
    implementation to maintain guarantees.
 
   ex - the exception to throw. If this exception is not a RuntimeException or Error, the actual exception thrown will be a RuntimeException with cause ex. - `java.lang.Throwable`"
-  ([^java.util.concurrent.ForkJoinTask this ^java.lang.Throwable ex]
+  ([^ForkJoinTask this ^java.lang.Throwable ex]
     (-> this (.completeExceptionally ex))))
 
 (defn completed-abnormally?
   "Returns true if this task threw an exception or was cancelled.
 
   returns: true if this task threw an exception or was cancelled - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinTask this]
+  (^Boolean [^ForkJoinTask this]
     (-> this (.isCompletedAbnormally))))
 
 (defn reinitialize
@@ -365,7 +365,7 @@
    Upon completion of this method, isDone() reports
    false, and getException() reports null. However, the value returned by getRawResult is
    unaffected. To clear this value, you can invoke setRawResult(null)."
-  ([^java.util.concurrent.ForkJoinTask this]
+  ([^ForkJoinTask this]
     (-> this (.reinitialize))))
 
 (defn get-exception
@@ -374,7 +374,7 @@
    none or if the method has not yet completed.
 
   returns: the exception, or null if none - `java.lang.Throwable`"
-  (^java.lang.Throwable [^java.util.concurrent.ForkJoinTask this]
+  (^java.lang.Throwable [^ForkJoinTask this]
     (-> this (.getException))))
 
 (defn get-raw-result
@@ -384,8 +384,8 @@
    to aid debugging, as well as to support extensions. Its use in
    any other context is discouraged.
 
-  returns: the result, or null if not completed - `ForkJoinTask.V`"
-  (^ForkJoinTask.V [^java.util.concurrent.ForkJoinTask this]
+  returns: the result, or null if not completed - `V`"
+  ([^ForkJoinTask this]
     (-> this (.getRawResult))))
 
 (defn set-fork-join-task-tag
@@ -394,7 +394,7 @@
   tag - the tag value - `short`
 
   returns: the previous value of the tag - `short`"
-  (^Short [^java.util.concurrent.ForkJoinTask this ^Short tag]
+  (^Short [^ForkJoinTask this ^Short tag]
     (-> this (.setForkJoinTaskTag tag))))
 
 (defn completed-normally?
@@ -403,7 +403,7 @@
 
   returns: true if this task completed without throwing an
    exception and was not cancelled - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinTask this]
+  (^Boolean [^ForkJoinTask this]
     (-> this (.isCompletedNormally))))
 
 (defn join
@@ -414,15 +414,15 @@
    interrupts of the calling thread do not cause the
    method to abruptly return by throwing InterruptedException.
 
-  returns: the computed result - `ForkJoinTask.V`"
-  (^ForkJoinTask.V [^java.util.concurrent.ForkJoinTask this]
+  returns: the computed result - `V`"
+  ([^ForkJoinTask this]
     (-> this (.join))))
 
 (defn done?
   "Description copied from interface: Future
 
   returns: true if this task completed - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinTask this]
+  (^Boolean [^ForkJoinTask this]
     (-> this (.isDone))))
 
 (defn fork
@@ -436,8 +436,8 @@
    executing it unless preceded by a call to join() or
    related methods, or a call to isDone() returning true.
 
-  returns: this, to simplify usage - `java.util.concurrent.ForkJoinTask<ForkJoinTask.V>`"
-  (^java.util.concurrent.ForkJoinTask [^java.util.concurrent.ForkJoinTask this]
+  returns: this, to simplify usage - `java.util.concurrent.ForkJoinTask<V>`"
+  (^java.util.concurrent.ForkJoinTask [^ForkJoinTask this]
     (-> this (.fork))))
 
 (defn quietly-join
@@ -445,14 +445,14 @@
    exception. This method may be useful when processing
    collections of tasks when some have been cancelled or otherwise
    known to have aborted."
-  ([^java.util.concurrent.ForkJoinTask this]
+  ([^ForkJoinTask this]
     (-> this (.quietlyJoin))))
 
 (defn quietly-complete
   "Completes this task normally without setting a value. The most
    recent value established by setRawResult(V) (or null by default) will be returned as the result of subsequent
    invocations of join and related operations."
-  ([^java.util.concurrent.ForkJoinTask this]
+  ([^ForkJoinTask this]
     (-> this (.quietlyComplete))))
 
 (defn get
@@ -462,11 +462,11 @@
   timeout - the maximum time to wait - `long`
   unit - the time unit of the timeout argument - `java.util.concurrent.TimeUnit`
 
-  returns: the computed result - `ForkJoinTask.V`
+  returns: the computed result - `V`
 
   throws: java.util.concurrent.CancellationException - if the computation was cancelled"
-  (^ForkJoinTask.V [^java.util.concurrent.ForkJoinTask this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^ForkJoinTask this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.get timeout unit)))
-  (^ForkJoinTask.V [^java.util.concurrent.ForkJoinTask this]
+  ([^ForkJoinTask this]
     (-> this (.get))))
 

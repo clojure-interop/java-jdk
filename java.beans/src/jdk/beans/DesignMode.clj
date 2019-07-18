@@ -27,7 +27,7 @@
    associated with a BeanContext that it is nested within.
 
   design-time - the current `value` of the `designTime` property - `boolean`"
-  ([^java.beans.DesignMode this ^Boolean design-time]
+  ([^DesignMode this ^Boolean design-time]
     (-> this (.setDesignTime design-time))))
 
 (defn design-time?
@@ -35,6 +35,6 @@
    mode, a value of false denotes runtime behavior.
 
   returns: the current `value` of the `designTime` property. - `boolean`"
-  (^Boolean [^java.beans.DesignMode this]
+  (^Boolean [^DesignMode this]
     (-> this (.isDesignTime))))
 

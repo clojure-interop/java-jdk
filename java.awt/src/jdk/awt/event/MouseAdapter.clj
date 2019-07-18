@@ -31,7 +31,7 @@
 
 (defn ->mouse-adapter
   "Constructor."
-  ([]
+  (^MouseAdapter []
     (new MouseAdapter )))
 
 (defn mouse-clicked
@@ -39,42 +39,42 @@
    and released) on a component.
 
   e - `java.awt.event.MouseEvent`"
-  ([^java.awt.event.MouseAdapter this ^java.awt.event.MouseEvent e]
+  ([^MouseAdapter this e]
     (-> this (.mouseClicked e))))
 
 (defn mouse-pressed
   "Invoked when a mouse button has been pressed on a component.
 
   e - `java.awt.event.MouseEvent`"
-  ([^java.awt.event.MouseAdapter this ^java.awt.event.MouseEvent e]
+  ([^MouseAdapter this e]
     (-> this (.mousePressed e))))
 
 (defn mouse-released
   "Invoked when a mouse button has been released on a component.
 
   e - `java.awt.event.MouseEvent`"
-  ([^java.awt.event.MouseAdapter this ^java.awt.event.MouseEvent e]
+  ([^MouseAdapter this e]
     (-> this (.mouseReleased e))))
 
 (defn mouse-entered
   "Invoked when the mouse enters a component.
 
   e - `java.awt.event.MouseEvent`"
-  ([^java.awt.event.MouseAdapter this ^java.awt.event.MouseEvent e]
+  ([^MouseAdapter this e]
     (-> this (.mouseEntered e))))
 
 (defn mouse-exited
   "Invoked when the mouse exits a component.
 
   e - `java.awt.event.MouseEvent`"
-  ([^java.awt.event.MouseAdapter this ^java.awt.event.MouseEvent e]
+  ([^MouseAdapter this e]
     (-> this (.mouseExited e))))
 
 (defn mouse-wheel-moved
   "Invoked when the mouse wheel is rotated.
 
   e - `java.awt.event.MouseWheelEvent`"
-  ([^java.awt.event.MouseAdapter this ^java.awt.event.MouseWheelEvent e]
+  ([^MouseAdapter this ^java.awt.event.MouseWheelEvent e]
     (-> this (.mouseWheelMoved e))))
 
 (defn mouse-dragged
@@ -89,7 +89,7 @@
    Drag&Drop operation.
 
   e - `java.awt.event.MouseEvent`"
-  ([^java.awt.event.MouseAdapter this ^java.awt.event.MouseEvent e]
+  ([^MouseAdapter this e]
     (-> this (.mouseDragged e))))
 
 (defn mouse-moved
@@ -97,6 +97,6 @@
    but no buttons have been pushed.
 
   e - `java.awt.event.MouseEvent`"
-  ([^java.awt.event.MouseAdapter this ^java.awt.event.MouseEvent e]
+  ([^MouseAdapter this e]
     (-> this (.mouseMoved e))))
 

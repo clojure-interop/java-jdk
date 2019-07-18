@@ -32,10 +32,10 @@
    The object is serialized with the semantics used for marshaling
    parameters for RMI calls.
 
-  obj - the object to be serialized (must be serializable) - `MarshalledObject.T`
+  obj - the object to be serialized (must be serializable) - `T`
 
   throws: java.io.IOException - if an IOException occurs; an IOException may occur if obj is not serializable."
-  ([^MarshalledObject.T obj]
+  (^MarshalledObject [obj]
     (new MarshalledObject obj)))
 
 (defn get
@@ -43,17 +43,17 @@
    representation is deserialized with the semantics used for
    unmarshaling parameters for RMI calls.
 
-  returns: a copy of the contained object - `MarshalledObject.T`
+  returns: a copy of the contained object - `T`
 
   throws: java.io.IOException - if an IOException occurs while deserializing the object from its internal representation."
-  (^MarshalledObject.T [^java.rmi.MarshalledObject this]
+  ([^MarshalledObject this]
     (-> this (.get))))
 
 (defn hash-code
   "Return a hash code for this MarshalledObject.
 
   returns: a hash code - `int`"
-  (^Integer [^java.rmi.MarshalledObject this]
+  (^Integer [^MarshalledObject this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -70,6 +70,6 @@
 
   returns: true if the argument contains an equivalent
    serialized object; false otherwise - `boolean`"
-  (^Boolean [^java.rmi.MarshalledObject this ^java.lang.Object obj]
+  (^Boolean [^MarshalledObject this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

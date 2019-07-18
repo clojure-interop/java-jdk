@@ -5,13 +5,13 @@
 (def CONTAINER
   "Enum Constant.
 
-  type: javax.annotation.Resource.AuthenticationType"
+  type: javax.annotation.Resource$AuthenticationType"
   Resource$AuthenticationType/CONTAINER)
 
 (def APPLICATION
   "Enum Constant.
 
-  type: javax.annotation.Resource.AuthenticationType"
+  type: javax.annotation.Resource$AuthenticationType"
   Resource$AuthenticationType/APPLICATION)
 
 (defn *values
@@ -23,7 +23,7 @@
   for (Resource.AuthenticationType c : Resource.AuthenticationType.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.annotation.Resource.AuthenticationType[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.annotation.Resource$AuthenticationType[]`"
   ([]
     (Resource$AuthenticationType/values )))
 
@@ -35,9 +35,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.annotation.Resource.AuthenticationType`
+  returns: the enum constant with the specified name - `javax.annotation.Resource$AuthenticationType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.annotation.Resource.AuthenticationType [^java.lang.String name]
+  (^javax.annotation.Resource$AuthenticationType [^java.lang.String name]
     (Resource$AuthenticationType/valueOf name)))
 

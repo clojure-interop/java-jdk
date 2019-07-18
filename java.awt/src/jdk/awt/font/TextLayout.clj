@@ -176,9 +176,9 @@
   string - the text to display - `java.lang.String`
   font - a Font used to style the text - `java.awt.Font`
   frc - contains information about a graphics device which is needed to measure the text correctly. Text measurements can vary slightly depending on the device resolution, and attributes such as antialiasing. This parameter does not specify a translation between the TextLayout and user space. - `java.awt.font.FontRenderContext`"
-  ([^java.lang.String string ^java.awt.Font font ^java.awt.font.FontRenderContext frc]
+  (^TextLayout [^java.lang.String string ^java.awt.Font font ^java.awt.font.FontRenderContext frc]
     (new TextLayout string font frc))
-  ([^java.text.AttributedCharacterIterator text ^java.awt.font.FontRenderContext frc]
+  (^TextLayout [^java.text.AttributedCharacterIterator text ^java.awt.font.FontRenderContext frc]
     (new TextLayout text frc)))
 
 (def *-default-caret-policy
@@ -191,7 +191,7 @@
    the same, a hit on the leading edge of a character is stronger
    than a hit on the trailing edge of a character.
 
-  type: java.awt.font.TextLayout.CaretPolicy"
+  type: java.awt.font.TextLayout$CaretPolicy"
   TextLayout/DEFAULT_CARET_POLICY)
 
 (defn get-caret-shapes
@@ -199,17 +199,17 @@
 
   offset - an offset in this TextLayout - `int`
   bounds - the bounds to which to extend the carets. The bounds is in baseline-relative coordinates. - `java.awt.geom.Rectangle2D`
-  policy - the specified CaretPolicy - `java.awt.font.TextLayout.CaretPolicy`
+  policy - the specified CaretPolicy - `java.awt.font.TextLayout$CaretPolicy`
 
   returns: an array of two paths.  Element zero is the strong
    caret.  If there are two carets, element one is the weak caret,
    otherwise it is null. The returned shapes
    are in standard coordinates. - `java.awt.Shape[]`"
-  ([^java.awt.font.TextLayout this ^Integer offset ^java.awt.geom.Rectangle2D bounds ^java.awt.font.TextLayout.CaretPolicy policy]
+  ([^TextLayout this ^Integer offset ^java.awt.geom.Rectangle2D bounds ^java.awt.font.TextLayout$CaretPolicy policy]
     (-> this (.getCaretShapes offset bounds policy)))
-  ([^java.awt.font.TextLayout this ^Integer offset ^java.awt.geom.Rectangle2D bounds]
+  ([^TextLayout this ^Integer offset ^java.awt.geom.Rectangle2D bounds]
     (-> this (.getCaretShapes offset bounds)))
-  ([^java.awt.font.TextLayout this ^Integer offset]
+  ([^TextLayout this ^Integer offset]
     (-> this (.getCaretShapes offset))))
 
 (defn get-visual-highlight-shape
@@ -246,9 +246,9 @@
 
   returns: a Shape enclosing the selection.  This is in
        standard coordinates. - `java.awt.Shape`"
-  (^java.awt.Shape [^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo first-endpoint ^java.awt.font.TextHitInfo second-endpoint ^java.awt.geom.Rectangle2D bounds]
+  (^java.awt.Shape [^TextLayout this ^java.awt.font.TextHitInfo first-endpoint ^java.awt.font.TextHitInfo second-endpoint ^java.awt.geom.Rectangle2D bounds]
     (-> this (.getVisualHighlightShape first-endpoint second-endpoint bounds)))
-  (^java.awt.Shape [^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo first-endpoint ^java.awt.font.TextHitInfo second-endpoint]
+  (^java.awt.Shape [^TextLayout this ^java.awt.font.TextHitInfo first-endpoint ^java.awt.font.TextHitInfo second-endpoint]
     (-> this (.getVisualHighlightShape first-endpoint second-endpoint))))
 
 (defn get-advance
@@ -258,7 +258,7 @@
    coordinates.
 
   returns: the advance of this TextLayout. - `float`"
-  (^Float [^java.awt.font.TextLayout this]
+  (^Float [^TextLayout this]
     (-> this (.getAdvance))))
 
 (defn get-caret-info
@@ -276,9 +276,9 @@
 
   returns: a two-element array containing the position and slope of
    the caret.  The returned caret info is in baseline-relative coordinates. - `float[]`"
-  ([^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo hit ^java.awt.geom.Rectangle2D bounds]
+  ([^TextLayout this ^java.awt.font.TextHitInfo hit ^java.awt.geom.Rectangle2D bounds]
     (-> this (.getCaretInfo hit bounds)))
-  ([^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo hit]
+  ([^TextLayout this ^java.awt.font.TextHitInfo hit]
     (-> this (.getCaretInfo hit))))
 
 (defn hit-test-char
@@ -296,9 +296,9 @@
 
   returns: a hit describing the character and edge (leading or trailing)
        under the specified point. - `java.awt.font.TextHitInfo`"
-  (^java.awt.font.TextHitInfo [^java.awt.font.TextLayout this ^Float x ^Float y ^java.awt.geom.Rectangle2D bounds]
+  (^java.awt.font.TextHitInfo [^TextLayout this ^Float x ^Float y ^java.awt.geom.Rectangle2D bounds]
     (-> this (.hitTestChar x y bounds)))
-  (^java.awt.font.TextHitInfo [^java.awt.font.TextLayout this ^Float x ^Float y]
+  (^java.awt.font.TextHitInfo [^TextLayout this ^Float x ^Float y]
     (-> this (.hitTestChar x y))))
 
 (defn left-to-right?
@@ -317,7 +317,7 @@
   returns: true if the base direction of this
            TextLayout is left-to-right; false
            otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.TextLayout this]
+  (^Boolean [^TextLayout this]
     (-> this (.isLeftToRight))))
 
 (defn get-ascent
@@ -331,7 +331,7 @@
    TextLayout.  It is in baseline-relative coordinates.
 
   returns: the ascent of this TextLayout. - `float`"
-  (^Float [^java.awt.font.TextLayout this]
+  (^Float [^TextLayout this]
     (-> this (.getAscent))))
 
 (defn to-string
@@ -339,7 +339,7 @@
 
   returns: the textLine of this TextLayout
           as a String. - `java.lang.String`"
-  (^java.lang.String [^java.awt.font.TextLayout this]
+  (^java.lang.String [^TextLayout this]
     (-> this (.toString))))
 
 (defn get-layout-path
@@ -347,7 +347,7 @@
    default path (x maps to advance, y maps to offset).
 
   returns: the layout path - `java.awt.font.LayoutPath`"
-  (^java.awt.font.LayoutPath [^java.awt.font.TextLayout this]
+  (^java.awt.font.LayoutPath [^TextLayout this]
     (-> this (.getLayoutPath))))
 
 (defn get-next-right-hit
@@ -359,13 +359,13 @@
    hits, as determined by the specified policy.
 
   offset - an insertion offset in this TextLayout. Cannot be less than 0 or greater than this TextLayout object's character count. - `int`
-  policy - the policy used to select the strong caret - `java.awt.font.TextLayout.CaretPolicy`
+  policy - the policy used to select the strong caret - `java.awt.font.TextLayout$CaretPolicy`
 
   returns: a hit whose caret appears at the next position to the
    right (bottom) of the caret of the provided hit, or null. - `java.awt.font.TextHitInfo`"
-  (^java.awt.font.TextHitInfo [^java.awt.font.TextLayout this ^Integer offset ^java.awt.font.TextLayout.CaretPolicy policy]
+  (^java.awt.font.TextHitInfo [^TextLayout this ^Integer offset ^java.awt.font.TextLayout$CaretPolicy policy]
     (-> this (.getNextRightHit offset policy)))
-  (^java.awt.font.TextHitInfo [^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo hit]
+  (^java.awt.font.TextHitInfo [^TextLayout this ^java.awt.font.TextHitInfo hit]
     (-> this (.getNextRightHit hit))))
 
 (defn get-descent
@@ -378,7 +378,7 @@
    the TextLayout.  It is in baseline-relative coordinates.
 
   returns: the descent of this TextLayout. - `float`"
-  (^Float [^java.awt.font.TextLayout this]
+  (^Float [^TextLayout this]
     (-> this (.getDescent))))
 
 (defn get-logical-highlight-shape
@@ -416,9 +416,9 @@
 
   returns: an area enclosing the selection.  This is in standard
        coordinates. - `java.awt.Shape`"
-  (^java.awt.Shape [^java.awt.font.TextLayout this ^Integer first-endpoint ^Integer second-endpoint ^java.awt.geom.Rectangle2D bounds]
+  (^java.awt.Shape [^TextLayout this ^Integer first-endpoint ^Integer second-endpoint ^java.awt.geom.Rectangle2D bounds]
     (-> this (.getLogicalHighlightShape first-endpoint second-endpoint bounds)))
-  (^java.awt.Shape [^java.awt.font.TextLayout this ^Integer first-endpoint ^Integer second-endpoint]
+  (^java.awt.Shape [^TextLayout this ^Integer first-endpoint ^Integer second-endpoint]
     (-> this (.getLogicalHighlightShape first-endpoint second-endpoint))))
 
 (defn get-baseline-offsets
@@ -434,7 +434,7 @@
 
   returns: the offsets array containing the baselines used for this
       TextLayout. - `float[]`"
-  ([^java.awt.font.TextLayout this]
+  ([^TextLayout this]
     (-> this (.getBaselineOffsets))))
 
 (defn get-character-level
@@ -445,7 +445,7 @@
   index - the index of the character from which to get the level - `int`
 
   returns: the level of the character at the specified index. - `byte`"
-  (^Byte [^java.awt.font.TextLayout this ^Integer index]
+  (^Byte [^TextLayout this ^Integer index]
     (-> this (.getCharacterLevel index))))
 
 (defn get-caret-shape
@@ -457,9 +457,9 @@
 
   returns: a Shape representing the caret.  The returned
       shape is in standard coordinates. - `java.awt.Shape`"
-  (^java.awt.Shape [^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo hit ^java.awt.geom.Rectangle2D bounds]
+  (^java.awt.Shape [^TextLayout this ^java.awt.font.TextHitInfo hit ^java.awt.geom.Rectangle2D bounds]
     (-> this (.getCaretShape hit bounds)))
-  (^java.awt.Shape [^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo hit]
+  (^java.awt.Shape [^TextLayout this ^java.awt.font.TextHitInfo hit]
     (-> this (.getCaretShape hit))))
 
 (defn get-outline
@@ -470,7 +470,7 @@
 
   returns: a Shape that is the outline of this
        TextLayout.  This is in standard coordinates. - `java.awt.Shape`"
-  (^java.awt.Shape [^java.awt.font.TextLayout this ^java.awt.geom.AffineTransform tx]
+  (^java.awt.Shape [^TextLayout this ^java.awt.geom.AffineTransform tx]
     (-> this (.getOutline tx))))
 
 (defn get-logical-ranges-for-visual-selection
@@ -481,7 +481,7 @@
 
   returns: an array of integers representing start/limit pairs for the
    selected ranges. - `int[]`"
-  ([^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo first-endpoint ^java.awt.font.TextHitInfo second-endpoint]
+  ([^TextLayout this ^java.awt.font.TextHitInfo first-endpoint ^java.awt.font.TextHitInfo second-endpoint]
     (-> this (.getLogicalRangesForVisualSelection first-endpoint second-endpoint))))
 
 (defn get-next-left-hit
@@ -493,13 +493,13 @@
    hits, as determined by the specified policy.
 
   offset - an insertion offset in this TextLayout. Cannot be less than 0 or greater than this TextLayout object's character count. - `int`
-  policy - the policy used to select the strong caret - `java.awt.font.TextLayout.CaretPolicy`
+  policy - the policy used to select the strong caret - `java.awt.font.TextLayout$CaretPolicy`
 
   returns: a hit whose caret appears at the next position to the
    left (top) of the caret of the provided hit, or null. - `java.awt.font.TextHitInfo`"
-  (^java.awt.font.TextHitInfo [^java.awt.font.TextLayout this ^Integer offset ^java.awt.font.TextLayout.CaretPolicy policy]
+  (^java.awt.font.TextHitInfo [^TextLayout this ^Integer offset ^java.awt.font.TextLayout$CaretPolicy policy]
     (-> this (.getNextLeftHit offset policy)))
-  (^java.awt.font.TextHitInfo [^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo hit]
+  (^java.awt.font.TextHitInfo [^TextLayout this ^java.awt.font.TextHitInfo hit]
     (-> this (.getNextLeftHit hit))))
 
 (defn get-leading
@@ -523,7 +523,7 @@
    return maxDL - maxD;
 
   returns: the leading of this TextLayout. - `float`"
-  (^Float [^java.awt.font.TextLayout this]
+  (^Float [^TextLayout this]
     (-> this (.getLeading))))
 
 (defn draw
@@ -537,7 +537,7 @@
   g-2 - the Graphics2D context into which to render the layout - `java.awt.Graphics2D`
   x - the X coordinate of the origin of this TextLayout - `float`
   y - the Y coordinate of the origin of this TextLayout - `float`"
-  ([^java.awt.font.TextLayout this ^java.awt.Graphics2D g-2 ^Float x ^Float y]
+  ([^TextLayout this ^java.awt.Graphics2D g-2 ^Float x ^Float y]
     (-> this (.draw g-2 x y))))
 
 (defn vertical?
@@ -545,14 +545,14 @@
 
   returns: true if this TextLayout is vertical;
         false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.TextLayout this]
+  (^Boolean [^TextLayout this]
     (-> this (.isVertical))))
 
 (defn hash-code
   "Returns the hash code of this TextLayout.
 
   returns: the hash code of this TextLayout. - `int`"
-  (^Integer [^java.awt.font.TextLayout this]
+  (^Integer [^TextLayout this]
     (-> this (.hashCode))))
 
 (defn get-bounds
@@ -565,7 +565,7 @@
 
   returns: a Rectangle2D that is the bounds of this
           TextLayout. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.font.TextLayout this]
+  (^java.awt.geom.Rectangle2D [^TextLayout this]
     (-> this (.getBounds))))
 
 (defn get-pixel-bounds
@@ -583,7 +583,7 @@
   y - the y-coordinate at which to render this TextLayout. - `float`
 
   returns: a Rectangle bounding the pixels that would be affected. - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^java.awt.font.TextLayout this ^java.awt.font.FontRenderContext frc ^Float x ^Float y]
+  (^java.awt.Rectangle [^TextLayout this ^java.awt.font.FontRenderContext frc ^Float x ^Float y]
     (-> this (.getPixelBounds frc x y))))
 
 (defn get-justified-layout
@@ -600,7 +600,7 @@
   returns: a TextLayout justified to the specified width. - `java.awt.font.TextLayout`
 
   throws: java.lang.Error - if this layout has already been justified, an Error is thrown."
-  (^java.awt.font.TextLayout [^java.awt.font.TextLayout this ^Float justification-width]
+  (^java.awt.font.TextLayout [^TextLayout this ^Float justification-width]
     (-> this (.getJustifiedLayout justification-width))))
 
 (defn get-character-count
@@ -608,7 +608,7 @@
    TextLayout.
 
   returns: the number of characters in this TextLayout. - `int`"
-  (^Integer [^java.awt.font.TextLayout this]
+  (^Integer [^TextLayout this]
     (-> this (.getCharacterCount))))
 
 (defn get-baseline
@@ -619,7 +619,7 @@
    are also relative to this baseline.
 
   returns: the baseline of this TextLayout. - `byte`"
-  (^Byte [^java.awt.font.TextLayout this]
+  (^Byte [^TextLayout this]
     (-> this (.getBaseline))))
 
 (defn get-black-box-bounds
@@ -633,7 +633,7 @@
 
   returns: a Shape enclosing the black box bounds.  This is
        in standard coordinates. - `java.awt.Shape`"
-  (^java.awt.Shape [^java.awt.font.TextLayout this ^Integer first-endpoint ^Integer second-endpoint]
+  (^java.awt.Shape [^TextLayout this ^Integer first-endpoint ^Integer second-endpoint]
     (-> this (.getBlackBoxBounds first-endpoint second-endpoint))))
 
 (defn equals
@@ -646,7 +646,7 @@
   returns: true if the specified Object
         equals this TextLayout; false
         otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.TextLayout this ^java.lang.Object obj]
+  (^Boolean [^TextLayout this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-visible-advance
@@ -655,7 +655,7 @@
 
   returns: the advance of this TextLayout without the
         trailing whitespace. - `float`"
-  (^Float [^java.awt.font.TextLayout this]
+  (^Float [^TextLayout this]
     (-> this (.getVisibleAdvance))))
 
 (defn hit-to-point
@@ -669,7 +669,7 @@
   point - the returned point. The point is in standard coordinates. - `java.awt.geom.Point2D`
 
   throws: java.lang.IllegalArgumentException - if the hit is not valid for the TextLayout."
-  ([^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo hit ^java.awt.geom.Point2D point]
+  ([^TextLayout this ^java.awt.font.TextHitInfo hit ^java.awt.geom.Point2D point]
     (-> this (.hitToPoint hit point))))
 
 (defn get-visual-other-hit
@@ -679,6 +679,6 @@
 
   returns: a hit that is on the opposite side of the specified hit's
       caret. - `java.awt.font.TextHitInfo`"
-  (^java.awt.font.TextHitInfo [^java.awt.font.TextLayout this ^java.awt.font.TextHitInfo hit]
+  (^java.awt.font.TextHitInfo [^TextLayout this ^java.awt.font.TextHitInfo hit]
     (-> this (.getVisualOtherHit hit))))
 

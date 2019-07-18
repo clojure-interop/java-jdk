@@ -207,9 +207,9 @@
   frc - contains information about a graphics device which is needed to measure the text correctly; text measurements can vary slightly depending on the device resolution, and attributes such as antialiasing; this parameter does not specify a translation between the LineBreakMeasurer and user space - `java.awt.font.FontRenderContext`
 
   throws: java.lang.IllegalArgumentException - if the text has less than one character"
-  ([^java.text.AttributedCharacterIterator text ^java.text.BreakIterator break-iter ^java.awt.font.FontRenderContext frc]
+  (^LineBreakMeasurer [^java.text.AttributedCharacterIterator text ^java.text.BreakIterator break-iter ^java.awt.font.FontRenderContext frc]
     (new LineBreakMeasurer text break-iter frc))
-  ([^java.text.AttributedCharacterIterator text ^java.awt.font.FontRenderContext frc]
+  (^LineBreakMeasurer [^java.text.AttributedCharacterIterator text ^java.awt.font.FontRenderContext frc]
     (new LineBreakMeasurer text frc)))
 
 (defn next-offset
@@ -222,9 +222,9 @@
 
   returns: an offset in the text representing the limit of the
       next TextLayout - `int`"
-  (^Integer [^java.awt.font.LineBreakMeasurer this ^Float wrapping-width ^Integer offset-limit ^Boolean require-next-word]
+  (^Integer [^LineBreakMeasurer this ^Float wrapping-width ^Integer offset-limit ^Boolean require-next-word]
     (-> this (.nextOffset wrapping-width offset-limit require-next-word)))
-  (^Integer [^java.awt.font.LineBreakMeasurer this ^Float wrapping-width]
+  (^Integer [^LineBreakMeasurer this ^Float wrapping-width]
     (-> this (.nextOffset wrapping-width))))
 
 (defn next-layout
@@ -239,23 +239,23 @@
       wrappingWidth.  If the current position is at the end
       of the text used by this LineBreakMeasurer,
       null is returned - `java.awt.font.TextLayout`"
-  (^java.awt.font.TextLayout [^java.awt.font.LineBreakMeasurer this ^Float wrapping-width ^Integer offset-limit ^Boolean require-next-word]
+  (^java.awt.font.TextLayout [^LineBreakMeasurer this ^Float wrapping-width ^Integer offset-limit ^Boolean require-next-word]
     (-> this (.nextLayout wrapping-width offset-limit require-next-word)))
-  (^java.awt.font.TextLayout [^java.awt.font.LineBreakMeasurer this ^Float wrapping-width]
+  (^java.awt.font.TextLayout [^LineBreakMeasurer this ^Float wrapping-width]
     (-> this (.nextLayout wrapping-width))))
 
 (defn get-position
   "Returns the current position of this LineBreakMeasurer.
 
   returns: the current position of this LineBreakMeasurer - `int`"
-  (^Integer [^java.awt.font.LineBreakMeasurer this]
+  (^Integer [^LineBreakMeasurer this]
     (-> this (.getPosition))))
 
 (defn set-position
   "Sets the current position of this LineBreakMeasurer.
 
   new-position - the current position of this LineBreakMeasurer; the position should be within the text used to construct this LineBreakMeasurer (or in the text most recently passed to insertChar or deleteChar - `int`"
-  ([^java.awt.font.LineBreakMeasurer this ^Integer new-position]
+  ([^LineBreakMeasurer this ^Integer new-position]
     (-> this (.setPosition new-position))))
 
 (defn insert-char
@@ -267,7 +267,7 @@
   insert-pos - the position in the text at which the character is inserted - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if insertPos is less than the start of newParagraph or greater than or equal to the end of newParagraph"
-  ([^java.awt.font.LineBreakMeasurer this ^java.text.AttributedCharacterIterator new-paragraph ^Integer insert-pos]
+  ([^LineBreakMeasurer this ^java.text.AttributedCharacterIterator new-paragraph ^Integer insert-pos]
     (-> this (.insertChar new-paragraph insert-pos))))
 
 (defn delete-char
@@ -279,6 +279,6 @@
   delete-pos - the position in the text at which the character is deleted - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if deletePos is less than the start of newParagraph or greater than the end of newParagraph"
-  ([^java.awt.font.LineBreakMeasurer this ^java.text.AttributedCharacterIterator new-paragraph ^Integer delete-pos]
+  ([^LineBreakMeasurer this ^java.text.AttributedCharacterIterator new-paragraph ^Integer delete-pos]
     (-> this (.deleteChar new-paragraph delete-pos))))
 

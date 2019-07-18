@@ -5,6 +5,6 @@
 
 (defn ->viewport-ui
   "Constructor."
-  ([]
+  (^ViewportUI []
     (new ViewportUI )))
 

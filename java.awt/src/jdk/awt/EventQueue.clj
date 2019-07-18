@@ -39,7 +39,7 @@
 
 (defn ->event-queue
   "Constructor."
-  ([]
+  (^EventQueue []
     (new EventQueue )))
 
 (defn *get-most-recent-event-time
@@ -130,7 +130,7 @@
   the-event - an instance of java.awt.AWTEvent, or a subclass of it - `java.awt.AWTEvent`
 
   throws: java.lang.NullPointerException - if theEvent is null"
-  ([^java.awt.EventQueue this ^java.awt.AWTEvent the-event]
+  ([^EventQueue this ^java.awt.AWTEvent the-event]
     (-> this (.postEvent the-event))))
 
 (defn get-next-event
@@ -141,7 +141,7 @@
   returns: the next AWTEvent - `java.awt.AWTEvent`
 
   throws: java.lang.InterruptedException - if any thread has interrupted this thread"
-  (^java.awt.AWTEvent [^java.awt.EventQueue this]
+  (^java.awt.AWTEvent [^EventQueue this]
     (-> this (.getNextEvent))))
 
 (defn peek-event
@@ -151,9 +151,9 @@
 
   returns: the first event of the specified id or null
       if there is no such event - `java.awt.AWTEvent`"
-  (^java.awt.AWTEvent [^java.awt.EventQueue this ^Integer id]
+  (^java.awt.AWTEvent [^EventQueue this ^Integer id]
     (-> this (.peekEvent id)))
-  (^java.awt.AWTEvent [^java.awt.EventQueue this]
+  (^java.awt.AWTEvent [^EventQueue this]
     (-> this (.peekEvent))))
 
 (defn push
@@ -164,7 +164,7 @@
   new-event-queue - an EventQueue (or subclass thereof) instance to be use - `java.awt.EventQueue`
 
   throws: java.lang.NullPointerException - if newEventQueue is null"
-  ([^java.awt.EventQueue this ^java.awt.EventQueue new-event-queue]
+  ([^EventQueue this ^java.awt.EventQueue new-event-queue]
     (-> this (.push new-event-queue))))
 
 (defn create-secondary-loop
@@ -176,6 +176,6 @@
   returns: secondaryLoop A new secondary loop object, which can
                          be used to launch a new nested event
                          loop and dispatch events from this queue - `java.awt.SecondaryLoop`"
-  (^java.awt.SecondaryLoop [^java.awt.EventQueue this]
+  (^java.awt.SecondaryLoop [^EventQueue this]
     (-> this (.createSecondaryLoop))))
 

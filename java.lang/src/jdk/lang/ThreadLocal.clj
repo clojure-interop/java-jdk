@@ -43,19 +43,19 @@
   "Constructor.
 
   Creates a thread local variable."
-  ([]
+  (^ThreadLocal []
     (new ThreadLocal )))
 
 (defn *with-initial
   "Creates a thread local variable. The initial value of the variable is
    determined by invoking the get method on the Supplier.
 
-  supplier - the supplier to be used to determine the initial value - `S>`
+  supplier - the supplier to be used to determine the initial value - `java.util.function.Supplier`
 
   returns: a new thread local variable - `<S> java.lang.ThreadLocal<S>`
 
   throws: java.lang.NullPointerException - if the specified supplier is null"
-  ([supplier]
+  ([^java.util.function.Supplier supplier]
     (ThreadLocal/withInitial supplier)))
 
 (defn get
@@ -64,8 +64,8 @@
    current thread, it is first initialized to the value returned
    by an invocation of the initialValue() method.
 
-  returns: the current thread's value of this thread-local - `ThreadLocal.T`"
-  (^ThreadLocal.T [^java.lang.ThreadLocal this]
+  returns: the current thread's value of this thread-local - `T`"
+  ([^ThreadLocal this]
     (-> this (.get))))
 
 (defn set
@@ -74,8 +74,8 @@
    override this method, relying solely on the initialValue()
    method to set the values of thread-locals.
 
-  value - the value to be stored in the current thread's copy of this thread-local. - `ThreadLocal.T`"
-  ([^java.lang.ThreadLocal this ^ThreadLocal.T value]
+  value - the value to be stored in the current thread's copy of this thread-local. - `T`"
+  ([^ThreadLocal this value]
     (-> this (.set value))))
 
 (defn remove
@@ -86,6 +86,6 @@
    unless its value is set by the current thread
    in the interim.  This may result in multiple invocations of the
    initialValue method in the current thread."
-  ([^java.lang.ThreadLocal this]
+  ([^ThreadLocal this]
     (-> this (.remove))))
 

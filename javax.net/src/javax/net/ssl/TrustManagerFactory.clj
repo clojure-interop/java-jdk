@@ -52,14 +52,14 @@
 
   returns: the algorithm name of this TrustManagerFactory
             object - `java.lang.String`"
-  (^java.lang.String [^javax.net.ssl.TrustManagerFactory this]
+  (^java.lang.String [^TrustManagerFactory this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this TrustManagerFactory object.
 
   returns: the provider of this TrustManagerFactory object - `java.security.Provider`"
-  (^java.security.Provider [^javax.net.ssl.TrustManagerFactory this]
+  (^java.security.Provider [^TrustManagerFactory this]
     (-> this (.getProvider))))
 
 (defn init
@@ -75,7 +75,7 @@
   ks - the key store, or null - `java.security.KeyStore`
 
   throws: java.security.KeyStoreException - if this operation fails"
-  ([^javax.net.ssl.TrustManagerFactory this ^java.security.KeyStore ks]
+  ([^TrustManagerFactory this ^java.security.KeyStore ks]
     (-> this (.init ks))))
 
 (defn get-trust-managers
@@ -84,6 +84,6 @@
   returns: the trust managers - `javax.net.ssl.TrustManager[]`
 
   throws: java.lang.IllegalStateException - if the factory is not initialized."
-  ([^javax.net.ssl.TrustManagerFactory this]
+  ([^TrustManagerFactory this]
     (-> this (.getTrustManagers))))
 

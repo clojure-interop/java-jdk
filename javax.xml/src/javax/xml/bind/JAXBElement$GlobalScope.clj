@@ -5,6 +5,6 @@
 
 (defn ->global-scope
   "Constructor."
-  ([]
+  (^JAXBElement$GlobalScope []
     (new JAXBElement$GlobalScope )))
 

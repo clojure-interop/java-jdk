@@ -142,15 +142,15 @@
   stack-size - the desired stack size for the new thread, or zero to indicate that this parameter is to be ignored. - `long`
 
   throws: java.lang.SecurityException - if the current thread cannot create a thread in the specified thread group"
-  ([^java.lang.ThreadGroup group ^java.lang.Runnable target ^java.lang.String name ^Long stack-size]
+  (^Thread [^java.lang.ThreadGroup group ^java.lang.Runnable target ^java.lang.String name ^Long stack-size]
     (new Thread group target name stack-size))
-  ([^java.lang.ThreadGroup group ^java.lang.Runnable target ^java.lang.String name]
+  (^Thread [^java.lang.ThreadGroup group ^java.lang.Runnable target ^java.lang.String name]
     (new Thread group target name))
-  ([^java.lang.ThreadGroup group ^java.lang.Runnable target]
+  (^Thread [^java.lang.ThreadGroup group ^java.lang.Runnable target]
     (new Thread group target))
-  ([^java.lang.Runnable target]
+  (^Thread [^java.lang.Runnable target]
     (new Thread target))
-  ([]
+  (^Thread []
     (new Thread )))
 
 (def *-min-priority
@@ -234,8 +234,8 @@
    due to an uncaught exception. If the returned value is null,
    there is no default.
 
-  returns: the default uncaught exception handler for all threads - `java.lang.Thread.UncaughtExceptionHandler`"
-  (^java.lang.Thread.UncaughtExceptionHandler []
+  returns: the default uncaught exception handler for all threads - `java.lang.Thread$UncaughtExceptionHandler`"
+  (^java.lang.Thread$UncaughtExceptionHandler []
     (Thread/getDefaultUncaughtExceptionHandler )))
 
 (defn *set-default-uncaught-exception-handler
@@ -260,10 +260,10 @@
    defer to the thread's ThreadGroup object, as that could cause
    infinite recursion.
 
-  eh - the object to use as the default uncaught exception handler. If null then there is no default handler. - `java.lang.Thread.UncaughtExceptionHandler`
+  eh - the object to use as the default uncaught exception handler. If null then there is no default handler. - `java.lang.Thread$UncaughtExceptionHandler`
 
   throws: java.lang.SecurityException - if a security manager is present and it denies RuntimePermission (`setDefaultUncaughtExceptionHandler`)"
-  ([^java.lang.Thread.UncaughtExceptionHandler eh]
+  ([^java.lang.Thread$UncaughtExceptionHandler eh]
     (Thread/setDefaultUncaughtExceptionHandler eh)))
 
 (defn *sleep
@@ -382,36 +382,24 @@
   cl - the context ClassLoader for this Thread, or null indicating the system class loader (or, failing that, the bootstrap class loader) - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - if the current thread cannot set the context ClassLoader"
-  ([^java.lang.Thread this ^java.lang.ClassLoader cl]
+  ([^Thread this ^java.lang.ClassLoader cl]
     (-> this (.setContextClassLoader cl))))
 
 (defn stop
-  "Deprecated. This method is inherently unsafe.  Stopping a thread with
-         Thread.stop causes it to unlock all of the monitors that it
-         has locked (as a natural consequence of the unchecked
-         ThreadDeath exception propagating up the stack).  If
-         any of the objects previously protected by these monitors were in
-         an inconsistent state, the damaged objects become visible to
-         other threads, potentially resulting in arbitrary behavior.  Many
-         uses of stop should be replaced by code that simply
-         modifies some variable to indicate that the target thread should
-         stop running.  The target thread should check this variable
-         regularly, and return from its run method in an orderly fashion
-         if the variable indicates that it is to stop running.  If the
-         target thread waits for long periods (on a condition variable,
-         for example), the interrupt method should be used to
-         interrupt the wait.
-         For more information, see
-         Why
-         are Thread.stop, Thread.suspend and Thread.resume Deprecated?.
+  "Deprecated. This method was originally designed to force a thread to stop
+          and throw a given Throwable as an exception. It was
+          inherently unsafe (see stop() for details), and furthermore
+          could be used to generate exceptions that the target thread was
+          not prepared to handle.
+          For more information, see
+          Why
+          are Thread.stop, Thread.suspend and Thread.resume Deprecated?.
 
-  returns: `java.lang.   void`
-
-  throws: java.lang.SecurityException - if the current thread cannot modify this thread."
-  ([^java.lang.Thread this]
-    (-> this (.stop)))
-  ([^java.lang.Thread this ^java.lang.Throwable obj]
-    (-> this (.stop obj))))
+  obj - ignored - `java.lang.Throwable`"
+  ([^Thread this ^java.lang.Throwable obj]
+    (-> this (.stop obj)))
+  ([^Thread this]
+    (-> this (.stop))))
 
 (defn get-stack-trace
   "Returns an array of stack trace elements representing the stack dump
@@ -440,7 +428,7 @@
    each represents one stack frame. - `java.lang.StackTraceElement[]`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow getting the stack trace of thread."
-  ([^java.lang.Thread this]
+  ([^Thread this]
     (-> this (.getStackTrace))))
 
 (defn get-thread-group
@@ -449,7 +437,7 @@
    (been stopped).
 
   returns: this thread's thread group. - `java.lang.ThreadGroup`"
-  (^java.lang.ThreadGroup [^java.lang.Thread this]
+  (^java.lang.ThreadGroup [^Thread this]
     (-> this (.getThreadGroup))))
 
 (defn alive?
@@ -458,7 +446,7 @@
 
   returns: true if this thread is alive;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Thread this]
+  (^Boolean [^Thread this]
     (-> this (.isAlive))))
 
 (defn suspend
@@ -473,10 +461,8 @@
      Why
      are Thread.stop, Thread.suspend and Thread.resume Deprecated?.
 
-  returns: `java.lang.   void`
-
   throws: java.lang.SecurityException - if the current thread cannot modify this thread."
-  ([^java.lang.Thread this]
+  ([^Thread this]
     (-> this (.suspend))))
 
 (defn set-name
@@ -490,7 +476,7 @@
   name - the new name for this thread. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread."
-  ([^java.lang.Thread this ^java.lang.String name]
+  ([^Thread this ^java.lang.String name]
     (-> this (.setName name))))
 
 (defn run
@@ -500,7 +486,7 @@
    otherwise, this method does nothing and returns.
 
    Subclasses of Thread should override this method."
-  ([^java.lang.Thread this]
+  ([^Thread this]
     (-> this (.run))))
 
 (defn get-uncaught-exception-handler
@@ -510,8 +496,8 @@
    ThreadGroup object is returned, unless this thread
    has terminated, in which case null is returned.
 
-  returns: the uncaught exception handler for this thread - `java.lang.Thread.UncaughtExceptionHandler`"
-  (^java.lang.Thread.UncaughtExceptionHandler [^java.lang.Thread this]
+  returns: the uncaught exception handler for this thread - `java.lang.Thread$UncaughtExceptionHandler`"
+  (^java.lang.Thread$UncaughtExceptionHandler [^Thread this]
     (-> this (.getUncaughtExceptionHandler))))
 
 (defn to-string
@@ -519,7 +505,7 @@
    thread's name, priority, and thread group.
 
   returns: a string representation of this thread. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Thread this]
+  (^java.lang.String [^Thread this]
     (-> this (.toString))))
 
 (defn check-access
@@ -531,14 +517,14 @@
    throwing a SecurityException.
 
   throws: java.lang.SecurityException - if the current thread is not allowed to access this thread."
-  ([^java.lang.Thread this]
+  ([^Thread this]
     (-> this (.checkAccess))))
 
 (defn get-name
   "Returns this thread's name.
 
   returns: this thread's name. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Thread this]
+  (^java.lang.String [^Thread this]
     (-> this (.getName))))
 
 (defn get-state
@@ -546,8 +532,8 @@
    This method is designed for use in monitoring of the system state,
    not for synchronization control.
 
-  returns: this thread's state. - `java.lang.Thread.State`"
-  (^java.lang.Thread.State [^java.lang.Thread this]
+  returns: this thread's state. - `java.lang.Thread$State`"
+  (^java.lang.Thread$State [^Thread this]
     (-> this (.getState))))
 
 (defn get-context-class-loader
@@ -570,7 +556,7 @@
             bootstrap class loader) - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - if the current thread cannot get the context ClassLoader"
-  (^java.lang.ClassLoader [^java.lang.Thread this]
+  (^java.lang.ClassLoader [^Thread this]
     (-> this (.getContextClassLoader))))
 
 (defn destroy
@@ -587,10 +573,8 @@
 
        Why are Thread.stop, Thread.suspend and Thread.resume Deprecated?.
 
-  returns: `java.lang.  void`
-
   throws: java.lang.NoSuchMethodError - always"
-  ([^java.lang.Thread this]
+  ([^Thread this]
     (-> this (.destroy))))
 
 (defn interrupted?
@@ -603,7 +587,7 @@
 
   returns: true if this thread has been interrupted;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Thread this]
+  (^Boolean [^Thread this]
     (-> this (.isInterrupted))))
 
 (defn start
@@ -620,7 +604,7 @@
    execution.
 
   throws: java.lang.IllegalThreadStateException - if the thread was already started."
-  ([^java.lang.Thread this]
+  ([^Thread this]
     (-> this (.start))))
 
 (defn count-stack-frames
@@ -628,10 +612,10 @@
                which is deprecated.  Further, the results of this call
                were never well-defined.
 
-  returns: the number of stack frames in this thread. - `java.lang.  int`
+  returns: the number of stack frames in this thread. - `int`
 
   throws: java.lang.IllegalThreadStateException - if this thread is not suspended."
-  ([^java.lang.Thread this]
+  (^Integer [^Thread this]
     (-> this (.countStackFrames))))
 
 (defn set-priority
@@ -648,7 +632,7 @@
   new-priority - priority to set this thread to - `int`
 
   throws: java.lang.IllegalArgumentException - If the priority is not in the range MIN_PRIORITY to MAX_PRIORITY."
-  ([^java.lang.Thread this ^Integer new-priority]
+  ([^Thread this ^Integer new-priority]
     (-> this (.setPriority new-priority))))
 
 (defn get-id
@@ -658,7 +642,7 @@
    When a thread is terminated, this thread ID may be reused.
 
   returns: this thread's ID. - `long`"
-  (^Long [^java.lang.Thread this]
+  (^Long [^Thread this]
     (-> this (.getId))))
 
 (defn interrupt
@@ -688,7 +672,7 @@
     Interrupting a thread that is not alive need not have any effect.
 
   throws: java.lang.SecurityException - if the current thread cannot modify this thread"
-  ([^java.lang.Thread this]
+  ([^Thread this]
     (-> this (.interrupt))))
 
 (defn daemon?
@@ -696,7 +680,7 @@
 
   returns: true if this thread is a daemon thread;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Thread this]
+  (^Boolean [^Thread this]
     (-> this (.isDaemon))))
 
 (defn join
@@ -713,11 +697,11 @@
   nanos - 0-999999 additional nanoseconds to wait - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of millis is negative, or the value of nanos is not in the range 0-999999"
-  ([^java.lang.Thread this ^Long millis ^Integer nanos]
+  ([^Thread this ^Long millis ^Integer nanos]
     (-> this (.join millis nanos)))
-  ([^java.lang.Thread this ^Long millis]
+  ([^Thread this ^Long millis]
     (-> this (.join millis)))
-  ([^java.lang.Thread this]
+  ([^Thread this]
     (-> this (.join))))
 
 (defn set-daemon
@@ -730,14 +714,14 @@
   on - if true, marks this thread as a daemon thread - `boolean`
 
   throws: java.lang.IllegalThreadStateException - if this thread is alive"
-  ([^java.lang.Thread this ^Boolean on]
+  ([^Thread this ^Boolean on]
     (-> this (.setDaemon on))))
 
 (defn get-priority
   "Returns this thread's priority.
 
   returns: this thread's priority. - `int`"
-  (^Integer [^java.lang.Thread this]
+  (^Integer [^Thread this]
     (-> this (.getPriority))))
 
 (defn set-uncaught-exception-handler
@@ -748,10 +732,10 @@
    If no such handler is set then the thread's ThreadGroup
    object acts as its handler.
 
-  eh - the object to use as this thread's uncaught exception handler. If null then this thread has no explicit handler. - `java.lang.Thread.UncaughtExceptionHandler`
+  eh - the object to use as this thread's uncaught exception handler. If null then this thread has no explicit handler. - `java.lang.Thread$UncaughtExceptionHandler`
 
   throws: java.lang.SecurityException - if the current thread is not allowed to modify this thread."
-  ([^java.lang.Thread this ^java.lang.Thread.UncaughtExceptionHandler eh]
+  ([^Thread this ^java.lang.Thread$UncaughtExceptionHandler eh]
     (-> this (.setUncaughtExceptionHandler eh))))
 
 (defn resume
@@ -761,9 +745,7 @@
        Why
        are Thread.stop, Thread.suspend and Thread.resume Deprecated?.
 
-  returns: `java.lang.   void`
-
   throws: java.lang.SecurityException - if the current thread cannot modify this thread."
-  ([^java.lang.Thread this]
+  ([^Thread this]
     (-> this (.resume))))
 

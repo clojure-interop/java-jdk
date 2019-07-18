@@ -16,23 +16,23 @@
   index - the index at which the error occurred, or -1 if the index is not known - `int`
 
   throws: java.lang.NullPointerException - if either the input or reason strings are null"
-  ([^java.lang.String input ^java.lang.String reason ^Integer index]
+  (^InvalidPathException [^java.lang.String input ^java.lang.String reason ^Integer index]
     (new InvalidPathException input reason index))
-  ([^java.lang.String input ^java.lang.String reason]
+  (^InvalidPathException [^java.lang.String input ^java.lang.String reason]
     (new InvalidPathException input reason)))
 
 (defn get-input
   "Returns the input string.
 
   returns: the input string - `java.lang.String`"
-  (^java.lang.String [^java.nio.file.InvalidPathException this]
+  (^java.lang.String [^InvalidPathException this]
     (-> this (.getInput))))
 
 (defn get-reason
   "Returns a string explaining why the input string was rejected.
 
   returns: the reason string - `java.lang.String`"
-  (^java.lang.String [^java.nio.file.InvalidPathException this]
+  (^java.lang.String [^InvalidPathException this]
     (-> this (.getReason))))
 
 (defn get-index
@@ -40,7 +40,7 @@
    error occurred, or -1 if this position is not known.
 
   returns: the error index - `int`"
-  (^Integer [^java.nio.file.InvalidPathException this]
+  (^Integer [^InvalidPathException this]
     (-> this (.getIndex))))
 
 (defn get-message
@@ -52,6 +52,6 @@
    character.
 
   returns: a string describing the error - `java.lang.String`"
-  (^java.lang.String [^java.nio.file.InvalidPathException this]
+  (^java.lang.String [^InvalidPathException this]
     (-> this (.getMessage))))
 

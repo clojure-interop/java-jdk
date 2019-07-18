@@ -28,11 +28,11 @@
   alignment - the alignment value. - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([^java.lang.String text ^Integer alignment]
+  (^Label [^java.lang.String text ^Integer alignment]
     (new Label text alignment))
-  ([^java.lang.String text]
+  (^Label [^java.lang.String text]
     (new Label text))
-  ([]
+  (^Label []
     (new Label )))
 
 (def *-left
@@ -63,7 +63,7 @@
   "Creates the peer for this label.  The peer allows us to
    modify the appearance of the label without changing its
    functionality."
-  ([^java.awt.Label this]
+  ([^Label this]
     (-> this (.addNotify))))
 
 (defn get-alignment
@@ -72,7 +72,7 @@
    Label.CENTER.
 
   returns: `int`"
-  (^Integer [^java.awt.Label this]
+  (^Integer [^Label this]
     (-> this (.getAlignment))))
 
 (defn set-alignment
@@ -83,7 +83,7 @@
   alignment - the alignment to be set. - `int`
 
   throws: java.lang.IllegalArgumentException - if an improper value for alignment is given."
-  ([^java.awt.Label this ^Integer alignment]
+  ([^Label this ^Integer alignment]
     (-> this (.setAlignment alignment))))
 
 (defn get-text
@@ -91,14 +91,14 @@
 
   returns: the text of this label, or null if
                the text has been set to null. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Label this]
+  (^java.lang.String [^Label this]
     (-> this (.getText))))
 
 (defn set-text
   "Sets the text for this label to the specified text.
 
   text - the text that this label displays. If text is null, it is treated for display purposes like an empty string ``. - `java.lang.String`"
-  ([^java.awt.Label this ^java.lang.String text]
+  ([^Label this ^java.lang.String text]
     (-> this (.setText text))))
 
 (defn get-accessible-context
@@ -109,6 +109,6 @@
 
   returns: an AccessibleAWTLabel that serves as the
            AccessibleContext of this Label - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^java.awt.Label this]
+  (^javax.accessibility.AccessibleContext [^Label this]
     (-> this (.getAccessibleContext))))
 

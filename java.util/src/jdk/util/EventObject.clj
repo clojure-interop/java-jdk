@@ -15,20 +15,20 @@
   source - The object on which the Event initially occurred. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if source is null."
-  ([^java.lang.Object source]
+  (^EventObject [^java.lang.Object source]
     (new EventObject source)))
 
 (defn get-source
   "The object on which the Event initially occurred.
 
   returns: The object on which the Event initially occurred. - `java.lang.Object`"
-  (^java.lang.Object [^java.util.EventObject this]
+  (^java.lang.Object [^EventObject this]
     (-> this (.getSource))))
 
 (defn to-string
   "Returns a String representation of this EventObject.
 
   returns: A a String representation of this EventObject. - `java.lang.String`"
-  (^java.lang.String [^java.util.EventObject this]
+  (^java.lang.String [^EventObject this]
     (-> this (.toString))))
 

@@ -13,8 +13,8 @@
    the specified detail message.
 
   msg - the message to be generated when a PrinterAbortException is thrown - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^PrinterAbortException [^java.lang.String msg]
     (new PrinterAbortException msg))
-  ([]
+  (^PrinterAbortException []
     (new PrinterAbortException )))
 

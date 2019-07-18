@@ -33,7 +33,7 @@
 
   public class VerifierTest extends JFrame {
       public VerifierTest() {
-          JTextField tf1 = new JTextField (`Type \`pass\` here`);
+          JTextField tf1 = new JTextField (`Type `pass` here`);
           getContentPane().add (tf1, BorderLayout.NORTH);
           tf1.setInputVerifier(new PassVerifier());
 
@@ -66,7 +66,7 @@
 
 (defn ->input-verifier
   "Constructor."
-  ([]
+  (^InputVerifier []
     (new InputVerifier )))
 
 (defn verify
@@ -77,7 +77,7 @@
   input - the JComponent to verify - `javax.swing.JComponent`
 
   returns: true when valid, false when invalid - `boolean`"
-  (^Boolean [^javax.swing.InputVerifier this ^javax.swing.JComponent input]
+  (^Boolean [^InputVerifier this ^javax.swing.JComponent input]
     (-> this (.verify input))))
 
 (defn should-yield-focus?
@@ -92,6 +92,6 @@
   input - the JComponent to verify - `javax.swing.JComponent`
 
   returns: true when valid, false when invalid - `boolean`"
-  (^Boolean [^javax.swing.InputVerifier this ^javax.swing.JComponent input]
+  (^Boolean [^InputVerifier this ^javax.swing.JComponent input]
     (-> this (.shouldYieldFocus input))))
 

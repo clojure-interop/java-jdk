@@ -13,8 +13,8 @@
    getMessage method.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^InputMismatchException [^java.lang.String s]
     (new InputMismatchException s))
-  ([]
+  (^InputMismatchException []
     (new InputMismatchException )))
 

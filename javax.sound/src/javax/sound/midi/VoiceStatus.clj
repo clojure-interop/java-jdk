@@ -53,7 +53,7 @@
 
 (defn ->voice-status
   "Constructor."
-  ([]
+  (^VoiceStatus []
     (new VoiceStatus )))
 
 (defn -active

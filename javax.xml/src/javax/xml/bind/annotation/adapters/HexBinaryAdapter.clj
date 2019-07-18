@@ -8,7 +8,7 @@
 
 (defn ->hex-binary-adapter
   "Constructor."
-  ([]
+  (^HexBinaryAdapter []
     (new HexBinaryAdapter )))
 
 (defn unmarshal
@@ -17,7 +17,7 @@
   s - The value to be converted. Can be null. - `java.lang.String`
 
   returns: `byte[]`"
-  ([^javax.xml.bind.annotation.adapters.HexBinaryAdapter this ^java.lang.String s]
+  ([^HexBinaryAdapter this ^java.lang.String s]
     (-> this (.unmarshal s))))
 
 (defn marshal
@@ -26,6 +26,6 @@
   bytes - The value to be convereted. Can be null. - `byte[]`
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.xml.bind.annotation.adapters.HexBinaryAdapter this bytes]
+  (^java.lang.String [^HexBinaryAdapter this bytes]
     (-> this (.marshal bytes))))
 

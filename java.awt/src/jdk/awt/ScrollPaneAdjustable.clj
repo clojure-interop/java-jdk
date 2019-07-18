@@ -13,21 +13,21 @@
            AdjustmentListeners
            or an empty array if no adjustment
            listeners are currently registered - `java.awt.event.AdjustmentListener[]`"
-  ([^java.awt.ScrollPaneAdjustable this]
+  ([^ScrollPaneAdjustable this]
     (-> this (.getAdjustmentListeners))))
 
 (defn get-visible-amount
   "Description copied from interface: Adjustable
 
   returns: the length of the proportional indicator - `int`"
-  (^Integer [^java.awt.ScrollPaneAdjustable this]
+  (^Integer [^ScrollPaneAdjustable this]
     (-> this (.getVisibleAmount))))
 
 (defn set-block-increment
   "Description copied from interface: Adjustable
 
   b - the block increment - `int`"
-  ([^java.awt.ScrollPaneAdjustable this ^Integer b]
+  ([^ScrollPaneAdjustable this ^Integer b]
     (-> this (.setBlockIncrement b))))
 
 (defn get-value-is-adjusting?
@@ -35,7 +35,7 @@
    result of actions being taken by the user.
 
   returns: the value of the valueIsAdjusting property - `boolean`"
-  (^Boolean [^java.awt.ScrollPaneAdjustable this]
+  (^Boolean [^ScrollPaneAdjustable this]
     (-> this (.getValueIsAdjusting))))
 
 (defn get-orientation
@@ -44,28 +44,28 @@
   returns: the orientation of this scrollbar, either
               Adjustable.HORIZONTAL or
               Adjustable.VERTICAL - `int`"
-  (^Integer [^java.awt.ScrollPaneAdjustable this]
+  (^Integer [^ScrollPaneAdjustable this]
     (-> this (.getOrientation))))
 
 (defn get-minimum
   "Description copied from interface: Adjustable
 
   returns: the minimum value of the adjustable object - `int`"
-  (^Integer [^java.awt.ScrollPaneAdjustable this]
+  (^Integer [^ScrollPaneAdjustable this]
     (-> this (.getMinimum))))
 
 (defn get-unit-increment
   "Description copied from interface: Adjustable
 
   returns: the unit value increment for the adjustable object - `int`"
-  (^Integer [^java.awt.ScrollPaneAdjustable this]
+  (^Integer [^ScrollPaneAdjustable this]
     (-> this (.getUnitIncrement))))
 
 (defn get-block-increment
   "Description copied from interface: Adjustable
 
   returns: the block value increment for the adjustable object - `int`"
-  (^Integer [^java.awt.ScrollPaneAdjustable this]
+  (^Integer [^ScrollPaneAdjustable this]
     (-> this (.getBlockIncrement))))
 
 (defn add-adjustment-listener
@@ -76,21 +76,21 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the adjustment listener. - `java.awt.event.AdjustmentListener`"
-  ([^java.awt.ScrollPaneAdjustable this ^java.awt.event.AdjustmentListener l]
+  ([^ScrollPaneAdjustable this ^java.awt.event.AdjustmentListener l]
     (-> this (.addAdjustmentListener l))))
 
 (defn to-string
   "Returns a string representation of this scrollbar and its values.
 
   returns: a string representation of this scrollbar. - `java.lang.String`"
-  (^java.lang.String [^java.awt.ScrollPaneAdjustable this]
+  (^java.lang.String [^ScrollPaneAdjustable this]
     (-> this (.toString))))
 
 (defn get-value
   "Description copied from interface: Adjustable
 
   returns: the current value of the adjustable object - `int`"
-  (^Integer [^java.awt.ScrollPaneAdjustable this]
+  (^Integer [^ScrollPaneAdjustable this]
     (-> this (.getValue))))
 
 (defn remove-adjustment-listener
@@ -101,7 +101,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the adjustment listener. - `java.awt.event.AdjustmentListener`"
-  ([^java.awt.ScrollPaneAdjustable this ^java.awt.event.AdjustmentListener l]
+  ([^ScrollPaneAdjustable this ^java.awt.event.AdjustmentListener l]
     (-> this (.removeAdjustmentListener l))))
 
 (defn set-maximum
@@ -112,14 +112,14 @@
   max - the maximum value - `int`
 
   throws: java.awt.AWTError - Always throws an error when called."
-  ([^java.awt.ScrollPaneAdjustable this ^Integer max]
+  ([^ScrollPaneAdjustable this ^Integer max]
     (-> this (.setMaximum max))))
 
 (defn set-value-is-adjusting
   "Sets the valueIsAdjusting property.
 
   b - new adjustment-in-progress status - `boolean`"
-  ([^java.awt.ScrollPaneAdjustable this ^Boolean b]
+  ([^ScrollPaneAdjustable this ^Boolean b]
     (-> this (.setValueIsAdjusting b))))
 
 (defn param-string
@@ -130,14 +130,14 @@
    may not be null.
 
   returns: the parameter string of this scrollbar. - `java.lang.String`"
-  (^java.lang.String [^java.awt.ScrollPaneAdjustable this]
+  (^java.lang.String [^ScrollPaneAdjustable this]
     (-> this (.paramString))))
 
 (defn set-unit-increment
   "Description copied from interface: Adjustable
 
   u - the unit increment - `int`"
-  ([^java.awt.ScrollPaneAdjustable this ^Integer u]
+  ([^ScrollPaneAdjustable this ^Integer u]
     (-> this (.setUnitIncrement u))))
 
 (defn set-value
@@ -148,7 +148,7 @@
    substituted, as appropriate.
 
   v - the new value of the scrollbar - `int`"
-  ([^java.awt.ScrollPaneAdjustable this ^Integer v]
+  ([^ScrollPaneAdjustable this ^Integer v]
     (-> this (.setValue v))))
 
 (defn set-visible-amount
@@ -159,7 +159,7 @@
   v - the length of the indicator - `int`
 
   throws: java.awt.AWTError - Always throws an error when called."
-  ([^java.awt.ScrollPaneAdjustable this ^Integer v]
+  ([^ScrollPaneAdjustable this ^Integer v]
     (-> this (.setVisibleAmount v))))
 
 (defn set-minimum
@@ -170,13 +170,13 @@
   min - the minimum value - `int`
 
   throws: java.awt.AWTError - Always throws an error when called."
-  ([^java.awt.ScrollPaneAdjustable this ^Integer min]
+  ([^ScrollPaneAdjustable this ^Integer min]
     (-> this (.setMinimum min))))
 
 (defn get-maximum
   "Description copied from interface: Adjustable
 
   returns: the maximum value of the adjustable object - `int`"
-  (^Integer [^java.awt.ScrollPaneAdjustable this]
+  (^Integer [^ScrollPaneAdjustable this]
     (-> this (.getMaximum))))
 

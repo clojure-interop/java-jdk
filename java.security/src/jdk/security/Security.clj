@@ -103,8 +103,8 @@
   alg-name - the algorithm name. - `java.lang.String`
   prop-name - the name of the property to get. - `java.lang.String`
 
-  returns: the value of the specified property. - `java.lang.   java.lang.String`"
-  ([^java.lang.String alg-name ^java.lang.String prop-name]
+  returns: the value of the specified property. - `java.lang.String`"
+  (^java.lang.String [^java.lang.String alg-name ^java.lang.String prop-name]
     (Security/getAlgorithmProperty alg-name prop-name)))
 
 (defn *get-provider

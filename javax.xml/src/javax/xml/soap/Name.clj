@@ -52,7 +52,7 @@
    object represents.
 
   returns: a string giving the local name - `java.lang.String`"
-  (^java.lang.String [^javax.xml.soap.Name this]
+  (^java.lang.String [^Name this]
     (-> this (.getLocalName))))
 
 (defn get-qualified-name
@@ -60,7 +60,7 @@
    Name object represents.
 
   returns: the namespace-qualified name as a string - `java.lang.String`"
-  (^java.lang.String [^javax.xml.soap.Name this]
+  (^java.lang.String [^Name this]
     (-> this (.getQualifiedName))))
 
 (defn get-prefix
@@ -69,7 +69,7 @@
    name that this Name object represents.
 
   returns: the prefix as a string - `java.lang.String`"
-  (^java.lang.String [^javax.xml.soap.Name this]
+  (^java.lang.String [^Name this]
     (-> this (.getPrefix))))
 
 (defn get-uri
@@ -77,6 +77,6 @@
    name that this Name object represents.
 
   returns: the URI as a string - `java.lang.String`"
-  (^java.lang.String [^javax.xml.soap.Name this]
+  (^java.lang.String [^Name this]
     (-> this (.getURI))))
 

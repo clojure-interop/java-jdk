@@ -15,8 +15,8 @@
   Constructor with given message put in exception.
 
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^InvalidRoleValueException [^java.lang.String message]
     (new InvalidRoleValueException message))
-  ([]
+  (^InvalidRoleValueException []
     (new InvalidRoleValueException )))
 

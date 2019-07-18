@@ -34,7 +34,7 @@
   x - the parameter value - `byte[]`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index x]
+  ([^PreparedStatement this ^Integer parameter-index x]
     (-> this (.setBytes parameter-index x))))
 
 (defn execute-large-update
@@ -53,7 +53,7 @@
    (DML) statements or (2) 0 for SQL statements that return nothing - `default long`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed PreparedStatement or the SQL statement returns a ResultSet object"
-  ([^java.sql.PreparedStatement this]
+  ([^PreparedStatement this]
     (-> this (.executeLargeUpdate))))
 
 (defn set-string
@@ -68,7 +68,7 @@
   x - the parameter value - `java.lang.String`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.lang.String x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.lang.String x]
     (-> this (.setString parameter-index x))))
 
 (defn set-array
@@ -80,7 +80,7 @@
   x - an Array object that maps an SQL ARRAY value - `java.sql.Array`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.Array x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.Array x]
     (-> this (.setArray parameter-index x))))
 
 (defn set-time
@@ -98,9 +98,9 @@
   cal - the Calendar object the driver will use to construct the time - `java.util.Calendar`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.Time x ^java.util.Calendar cal]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.Time x ^java.util.Calendar cal]
     (-> this (.setTime parameter-index x cal)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.Time x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.Time x]
     (-> this (.setTime parameter-index x))))
 
 (defn set-timestamp
@@ -118,9 +118,9 @@
   cal - the Calendar object the driver will use to construct the timestamp - `java.util.Calendar`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.Timestamp x ^java.util.Calendar cal]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.Timestamp x ^java.util.Calendar cal]
     (-> this (.setTimestamp parameter-index x cal)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.Timestamp x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.Timestamp x]
     (-> this (.setTimestamp parameter-index x))))
 
 (defn set-date
@@ -138,9 +138,9 @@
   cal - the Calendar object the driver will use to construct the date - `java.util.Calendar`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.Date x ^java.util.Calendar cal]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.Date x ^java.util.Calendar cal]
     (-> this (.setDate parameter-index x cal)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.Date x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.Date x]
     (-> this (.setDate parameter-index x))))
 
 (defn set-boolean
@@ -152,7 +152,7 @@
   x - the parameter value - `boolean`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^Boolean x]
+  ([^PreparedStatement this ^Integer parameter-index ^Boolean x]
     (-> this (.setBoolean parameter-index x))))
 
 (defn set-n-character-stream
@@ -166,9 +166,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if the driver does not support national character sets; if the driver can detect that a data conversion error could occur; if a database access error occurs; or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.Reader value ^Long length]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.Reader value ^Long length]
     (-> this (.setNCharacterStream parameter-index value length)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.Reader value]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.Reader value]
     (-> this (.setNCharacterStream parameter-index value))))
 
 (defn set-null
@@ -196,9 +196,9 @@
   type-name - the fully-qualified name of an SQL user-defined type; ignored if the parameter is not a user-defined type or REF - `java.lang.String`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^Integer sql-type ^java.lang.String type-name]
+  ([^PreparedStatement this ^Integer parameter-index ^Integer sql-type ^java.lang.String type-name]
     (-> this (.setNull parameter-index sql-type type-name)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^Integer sql-type]
+  ([^PreparedStatement this ^Integer parameter-index ^Integer sql-type]
     (-> this (.setNull parameter-index sql-type))))
 
 (defn set-binary-stream
@@ -218,9 +218,9 @@
   length - the number of bytes in the stream - `int`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
     (-> this (.setBinaryStream parameter-index x length)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.InputStream x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.InputStream x]
     (-> this (.setBinaryStream parameter-index x))))
 
 (defn add-batch
@@ -228,7 +228,7 @@
    object's batch of commands.
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this]
+  ([^PreparedStatement this]
     (-> this (.addBatch))))
 
 (defn set-blob
@@ -246,9 +246,9 @@
   length - the number of bytes in the parameter data. - `long`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs; this method is called on a closed PreparedStatement; if the length specified is less than zero or if the number of bytes in the inputstream does not match the specified length."
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.InputStream input-stream ^Long length]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.InputStream input-stream ^Long length]
     (-> this (.setBlob parameter-index input-stream length)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.Blob x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.Blob x]
     (-> this (.setBlob parameter-index x))))
 
 (defn set-object
@@ -282,11 +282,11 @@
   scale-or-length - for java.sql.Types.DECIMAL or java.sql.Types.NUMERIC types, this is the number of digits after the decimal point. For Java Object types InputStream and Reader, this is the length of the data in the stream or reader. For all other types, this value will be ignored. - `int`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs; this method is called on a closed PreparedStatement or if the Java Object specified by x is an InputStream or Reader object and the value of the scale parameter is less than zero"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.lang.Object x ^Integer target-sql-type ^Integer scale-or-length]
+  ([^PreparedStatement this ^Integer parameter-index ^java.lang.Object x ^Integer target-sql-type ^Integer scale-or-length]
     (-> this (.setObject parameter-index x target-sql-type scale-or-length)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.lang.Object x ^Integer target-sql-type]
+  ([^PreparedStatement this ^Integer parameter-index ^java.lang.Object x ^Integer target-sql-type]
     (-> this (.setObject parameter-index x target-sql-type)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.lang.Object x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.lang.Object x]
     (-> this (.setObject parameter-index x))))
 
 (defn clear-parameters
@@ -298,7 +298,7 @@
    be done by calling the method clearParameters.
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this]
+  ([^PreparedStatement this]
     (-> this (.clearParameters))))
 
 (defn set-n-clob
@@ -316,9 +316,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if the length specified is less than zero; if the driver does not support national character sets; if the driver can detect that a data conversion error could occur; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.Reader reader ^Long length]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.Reader reader ^Long length]
     (-> this (.setNClob parameter-index reader length)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.NClob value]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.NClob value]
     (-> this (.setNClob parameter-index value))))
 
 (defn set-clob
@@ -336,9 +336,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs; this method is called on a closed PreparedStatement or if the length specified is less than zero."
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.Reader reader ^Long length]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.Reader reader ^Long length]
     (-> this (.setClob parameter-index reader length)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.Clob x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.Clob x]
     (-> this (.setClob parameter-index x))))
 
 (defn set-double
@@ -350,7 +350,7 @@
   x - the parameter value - `double`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^Double x]
+  ([^PreparedStatement this ^Integer parameter-index ^Double x]
     (-> this (.setDouble parameter-index x))))
 
 (defn set-ref
@@ -363,7 +363,7 @@
   x - an SQL REF value - `java.sql.Ref`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.Ref x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.Ref x]
     (-> this (.setRef parameter-index x))))
 
 (defn set-long
@@ -375,7 +375,7 @@
   x - the parameter value - `long`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^Long x]
+  ([^PreparedStatement this ^Integer parameter-index ^Long x]
     (-> this (.setLong parameter-index x))))
 
 (defn get-meta-data
@@ -400,7 +400,7 @@
            ResultSetMetaData object - `java.sql.ResultSetMetaData`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed PreparedStatement"
-  (^java.sql.ResultSetMetaData [^java.sql.PreparedStatement this]
+  (^java.sql.ResultSetMetaData [^PreparedStatement this]
     (-> this (.getMetaData))))
 
 (defn set-byte
@@ -412,7 +412,7 @@
   x - the parameter value - `byte`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^Byte x]
+  ([^PreparedStatement this ^Integer parameter-index ^Byte x]
     (-> this (.setByte parameter-index x))))
 
 (defn set-n-string
@@ -427,7 +427,7 @@
   value - the parameter value - `java.lang.String`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if the driver does not support national character sets; if the driver can detect that a data conversion error could occur; if a database access error occurs; or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.lang.String value]
+  ([^PreparedStatement this ^Integer parameter-index ^java.lang.String value]
     (-> this (.setNString parameter-index value))))
 
 (defn set-short
@@ -439,7 +439,7 @@
   x - the parameter value - `short`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^Short x]
+  ([^PreparedStatement this ^Integer parameter-index ^Short x]
     (-> this (.setShort parameter-index x))))
 
 (defn set-ascii-stream
@@ -460,9 +460,9 @@
   length - the number of bytes in the stream - `int`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
     (-> this (.setAsciiStream parameter-index x length)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.InputStream x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.InputStream x]
     (-> this (.setAsciiStream parameter-index x))))
 
 (defn set-big-decimal
@@ -474,7 +474,7 @@
   x - the parameter value - `java.math.BigDecimal`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.math.BigDecimal x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.math.BigDecimal x]
     (-> this (.setBigDecimal parameter-index x))))
 
 (defn set-int
@@ -486,7 +486,7 @@
   x - the parameter value - `int`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^Integer x]
+  ([^PreparedStatement this ^Integer parameter-index ^Integer x]
     (-> this (.setInt parameter-index x))))
 
 (defn execute
@@ -508,7 +508,7 @@
            count or there is no result - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed PreparedStatement or an argument is supplied to this method"
-  (^Boolean [^java.sql.PreparedStatement this]
+  (^Boolean [^PreparedStatement this]
     (-> this (.execute))))
 
 (defn set-character-stream
@@ -529,9 +529,9 @@
   length - the number of characters in the stream - `int`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.Reader reader ^Integer length]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.Reader reader ^Integer length]
     (-> this (.setCharacterStream parameter-index reader length)))
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.Reader reader]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.Reader reader]
     (-> this (.setCharacterStream parameter-index reader))))
 
 (defn set-url
@@ -543,7 +543,7 @@
   x - the java.net.URL object to be set - `java.net.URL`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.net.URL x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.net.URL x]
     (-> this (.setURL parameter-index x))))
 
 (defn get-parameter-meta-data
@@ -555,7 +555,7 @@
     parameter marker of this PreparedStatement object - `java.sql.ParameterMetaData`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed PreparedStatement"
-  (^java.sql.ParameterMetaData [^java.sql.PreparedStatement this]
+  (^java.sql.ParameterMetaData [^PreparedStatement this]
     (-> this (.getParameterMetaData))))
 
 (defn set-unicode-stream
@@ -565,10 +565,8 @@
   x - a java.io.InputStream object that contains the Unicode parameter value - `java.io.InputStream`
   length - the number of bytes in the stream - `int`
 
-  returns: `java.lang. void`
-
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
+  ([^PreparedStatement this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
     (-> this (.setUnicodeStream parameter-index x length))))
 
 (defn execute-update
@@ -581,7 +579,7 @@
            or (2) 0 for SQL statements that return nothing - `int`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed PreparedStatement or the SQL statement returns a ResultSet object"
-  (^Integer [^java.sql.PreparedStatement this]
+  (^Integer [^PreparedStatement this]
     (-> this (.executeUpdate))))
 
 (defn execute-query
@@ -592,7 +590,7 @@
            query; never null - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs; this method is called on a closed PreparedStatement or the SQL statement does not return a ResultSet object"
-  (^java.sql.ResultSet [^java.sql.PreparedStatement this]
+  (^java.sql.ResultSet [^PreparedStatement this]
     (-> this (.executeQuery))))
 
 (defn set-sqlxml
@@ -604,7 +602,7 @@
   xml-object - a SQLXML object that maps an SQL XML value - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs; this method is called on a closed PreparedStatement or the java.xml.transform.Result, Writer or OutputStream has not been closed for the SQLXML object"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.SQLXML xml-object]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.SQLXML xml-object]
     (-> this (.setSQLXML parameter-index xml-object))))
 
 (defn set-float
@@ -616,7 +614,7 @@
   x - the parameter value - `float`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^Float x]
+  ([^PreparedStatement this ^Integer parameter-index ^Float x]
     (-> this (.setFloat parameter-index x))))
 
 (defn set-row-id
@@ -628,6 +626,6 @@
   x - the parameter value - `java.sql.RowId`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^java.sql.PreparedStatement this ^Integer parameter-index ^java.sql.RowId x]
+  ([^PreparedStatement this ^Integer parameter-index ^java.sql.RowId x]
     (-> this (.setRowId parameter-index x))))
 

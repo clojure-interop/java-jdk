@@ -12,8 +12,8 @@
    with the specified detail message.
 
   msg - the message to generate when a PrinterException is thrown - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^PrinterException [^java.lang.String msg]
     (new PrinterException msg))
-  ([]
+  (^PrinterException []
     (new PrinterException )))
 

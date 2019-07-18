@@ -43,7 +43,7 @@
 
 (defn ->policy
   "Constructor."
-  ([]
+  (^Policy []
     (new Policy )))
 
 (def *-unsupported-empty-collection
@@ -92,15 +92,15 @@
    the Security.getProviders() method.
 
   type - the specified Policy type. See the Policy section in the Java Cryptography Architecture Standard Algorithm Name Documentation for a list of standard Policy types. - `java.lang.String`
-  params - parameters for the Policy, which may be null. - `java.security.Policy.Parameters`
+  params - parameters for the Policy, which may be null. - `java.security.Policy$Parameters`
   provider - the provider. - `java.lang.String`
 
   returns: the new Policy object. - `java.security.Policy`
 
   throws: java.lang.SecurityException - if the caller does not have permission to get a Policy instance for the specified type."
-  (^java.security.Policy [^java.lang.String type ^java.security.Policy.Parameters params ^java.lang.String provider]
+  (^java.security.Policy [^java.lang.String type ^java.security.Policy$Parameters params ^java.lang.String provider]
     (Policy/getInstance type params provider))
-  (^java.security.Policy [^java.lang.String type ^java.security.Policy.Parameters params]
+  (^java.security.Policy [^java.lang.String type ^java.security.Policy$Parameters params]
     (Policy/getInstance type params)))
 
 (defn get-provider
@@ -111,7 +111,7 @@
    Otherwise this method returns null.
 
   returns: the Provider of this Policy, or null. - `java.security.Provider`"
-  (^java.security.Provider [^java.security.Policy this]
+  (^java.security.Provider [^Policy this]
     (-> this (.getProvider))))
 
 (defn get-type
@@ -122,7 +122,7 @@
    Otherwise this method returns null.
 
   returns: the type of this Policy, or null. - `java.lang.String`"
-  (^java.lang.String [^java.security.Policy this]
+  (^java.lang.String [^Policy this]
     (-> this (.getType))))
 
 (defn get-parameters
@@ -132,8 +132,8 @@
    was obtained via a call to Policy.getInstance.
    Otherwise this method returns null.
 
-  returns: Policy parameters, or null. - `java.security.Policy.Parameters`"
-  (^java.security.Policy.Parameters [^java.security.Policy this]
+  returns: Policy parameters, or null. - `java.security.Policy$Parameters`"
+  (^java.security.Policy$Parameters [^Policy this]
     (-> this (.getParameters))))
 
 (defn get-permissions
@@ -160,7 +160,7 @@
             and it must support heterogeneous Permission types.
             If this operation is not supported,
             Policy.UNSUPPORTED_EMPTY_COLLECTION is returned. - `java.security.PermissionCollection`"
-  (^java.security.PermissionCollection [^java.security.Policy this ^java.security.CodeSource codesource]
+  (^java.security.PermissionCollection [^Policy this ^java.security.CodeSource codesource]
     (-> this (.getPermissions codesource))))
 
 (defn implies
@@ -173,7 +173,7 @@
 
   returns: true if `permission` is a proper subset of a permission
    granted to this ProtectionDomain. - `boolean`"
-  (^Boolean [^java.security.Policy this ^java.security.ProtectionDomain domain ^java.security.Permission permission]
+  (^Boolean [^Policy this ^java.security.ProtectionDomain domain ^java.security.Permission permission]
     (-> this (.implies domain permission))))
 
 (defn refresh
@@ -184,6 +184,6 @@
     The default implementation of this method does nothing.
    This method should be overridden if a refresh operation is supported
    by the policy implementation."
-  ([^java.security.Policy this]
+  ([^Policy this]
     (-> this (.refresh))))
 

@@ -16,9 +16,9 @@
   is - the input stream containing manifest data - `java.io.InputStream`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.io.InputStream is]
+  (^Manifest [^java.io.InputStream is]
     (new Manifest is))
-  ([]
+  (^Manifest []
     (new Manifest )))
 
 (defn read
@@ -29,14 +29,14 @@
   is - the input stream - `java.io.InputStream`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.jar.Manifest this ^java.io.InputStream is]
+  ([^Manifest this ^java.io.InputStream is]
     (-> this (.read is))))
 
 (defn get-main-attributes
   "Returns the main Attributes for the Manifest.
 
   returns: the main Attributes for the Manifest - `java.util.jar.Attributes`"
-  (^java.util.jar.Attributes [^java.util.jar.Manifest this]
+  (^java.util.jar.Attributes [^Manifest this]
     (-> this (.getMainAttributes))))
 
 (defn get-entries
@@ -46,7 +46,7 @@
    created by read(java.io.InputStream), nor is such an entry written by using write(java.io.OutputStream).
 
   returns: a Map of the entries contained in this Manifest - `java.util.Map<java.lang.String,java.util.jar.Attributes>`"
-  (^java.util.Map [^java.util.jar.Manifest this]
+  (^java.util.Map [^Manifest this]
     (-> this (.getEntries))))
 
 (defn clone
@@ -57,19 +57,19 @@
        public Object clone() { return new Manifest(this); }
 
   returns: a shallow copy of this Manifest - `java.lang.Object`"
-  (^java.lang.Object [^java.util.jar.Manifest this]
+  (^java.lang.Object [^Manifest this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns the hash code for this Manifest.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.util.jar.Manifest this]
+  (^Integer [^Manifest this]
     (-> this (.hashCode))))
 
 (defn clear
   "Clears the main Attributes as well as the entries in this Manifest."
-  ([^java.util.jar.Manifest this]
+  ([^Manifest this]
     (-> this (.clear))))
 
 (defn write
@@ -80,7 +80,7 @@
   out - the output stream - `java.io.OutputStream`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.jar.Manifest this ^java.io.OutputStream out]
+  ([^Manifest this ^java.io.OutputStream out]
     (-> this (.write out))))
 
 (defn equals
@@ -91,7 +91,7 @@
 
   returns: true if the specified Object is also a Manifest and has
    the same main Attributes and entries - `boolean`"
-  (^Boolean [^java.util.jar.Manifest this ^java.lang.Object o]
+  (^Boolean [^Manifest this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn get-attributes
@@ -116,6 +116,6 @@
   name - entry name - `java.lang.String`
 
   returns: the Attributes for the specified entry name - `java.util.jar.Attributes`"
-  (^java.util.jar.Attributes [^java.util.jar.Manifest this ^java.lang.String name]
+  (^java.util.jar.Attributes [^Manifest this ^java.lang.String name]
     (-> this (.getAttributes name))))
 

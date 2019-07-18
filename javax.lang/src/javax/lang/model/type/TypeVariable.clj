@@ -14,7 +14,7 @@
   "Returns the element corresponding to this type variable.
 
   returns: the element corresponding to this type variable - `javax.lang.model.element.Element`"
-  (^javax.lang.model.element.Element [^javax.lang.model.type.TypeVariable this]
+  (^javax.lang.model.element.Element [^TypeVariable this]
     (-> this (.asElement))))
 
 (defn get-upper-bound
@@ -28,7 +28,7 @@
    bounds.
 
   returns: the upper bound of this type variable - `javax.lang.model.type.TypeMirror`"
-  (^javax.lang.model.type.TypeMirror [^javax.lang.model.type.TypeVariable this]
+  (^javax.lang.model.type.TypeMirror [^TypeVariable this]
     (-> this (.getUpperBound))))
 
 (defn get-lower-bound
@@ -39,6 +39,6 @@
    lower bound of NullType.
 
   returns: the lower bound of this type variable - `javax.lang.model.type.TypeMirror`"
-  (^javax.lang.model.type.TypeMirror [^javax.lang.model.type.TypeVariable this]
+  (^javax.lang.model.type.TypeMirror [^TypeVariable this]
     (-> this (.getLowerBound))))
 

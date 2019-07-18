@@ -122,7 +122,7 @@
            match the specified selector (never null) - `java.util.Collection<? extends java.security.cert.Certificate>`
 
   throws: java.security.cert.CertStoreException - if an exception occurs"
-  ([^java.security.cert.CertStore this ^java.security.cert.CertSelector selector]
+  ([^CertStore this ^java.security.cert.CertSelector selector]
     (-> this (.getCertificates selector))))
 
 (defn get-cr-ls
@@ -149,7 +149,7 @@
            match the specified selector (never null) - `java.util.Collection<? extends java.security.cert.CRL>`
 
   throws: java.security.cert.CertStoreException - if an exception occurs"
-  ([^java.security.cert.CertStore this ^java.security.cert.CRLSelector selector]
+  ([^CertStore this ^java.security.cert.CRLSelector selector]
     (-> this (.getCRLs selector))))
 
 (defn get-cert-store-parameters
@@ -159,20 +159,20 @@
 
   returns: the parameters used to initialize this CertStore
    (may be null) - `java.security.cert.CertStoreParameters`"
-  (^java.security.cert.CertStoreParameters [^java.security.cert.CertStore this]
+  (^java.security.cert.CertStoreParameters [^CertStore this]
     (-> this (.getCertStoreParameters))))
 
 (defn get-type
   "Returns the type of this CertStore.
 
   returns: the type of this CertStore - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.CertStore this]
+  (^java.lang.String [^CertStore this]
     (-> this (.getType))))
 
 (defn get-provider
   "Returns the provider of this CertStore.
 
   returns: the provider of this CertStore - `java.security.Provider`"
-  (^java.security.Provider [^java.security.cert.CertStore this]
+  (^java.security.Provider [^CertStore this]
     (-> this (.getProvider))))
 

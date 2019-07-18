@@ -7,7 +7,7 @@
 
   Type for secret keys.
 
-  type: java.security.KeyRep.Type"
+  type: java.security.KeyRep$Type"
   KeyRep$Type/SECRET)
 
 (def PUBLIC
@@ -15,7 +15,7 @@
 
   Type for public keys.
 
-  type: java.security.KeyRep.Type"
+  type: java.security.KeyRep$Type"
   KeyRep$Type/PUBLIC)
 
 (def PRIVATE
@@ -23,7 +23,7 @@
 
   Type for private keys.
 
-  type: java.security.KeyRep.Type"
+  type: java.security.KeyRep$Type"
   KeyRep$Type/PRIVATE)
 
 (defn *values
@@ -35,7 +35,7 @@
   for (KeyRep.Type c : KeyRep.Type.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.security.KeyRep.Type[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.security.KeyRep$Type[]`"
   ([]
     (KeyRep$Type/values )))
 
@@ -47,9 +47,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.security.KeyRep.Type`
+  returns: the enum constant with the specified name - `java.security.KeyRep$Type`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.security.KeyRep.Type [^java.lang.String name]
+  (^java.security.KeyRep$Type [^java.lang.String name]
     (KeyRep$Type/valueOf name)))
 

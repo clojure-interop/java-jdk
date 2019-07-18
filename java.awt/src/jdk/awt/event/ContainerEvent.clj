@@ -35,7 +35,7 @@
   child - the component that was added or removed - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.awt.Component source ^Integer id ^java.awt.Component child]
+  (^ContainerEvent [^java.awt.Component source ^Integer id ^java.awt.Component child]
     (new ContainerEvent source id child)))
 
 (def *-container-first
@@ -76,14 +76,14 @@
   returns: the Container object that originated
    the event, or null if the object is not a
    Container. - `java.awt.Container`"
-  (^java.awt.Container [^java.awt.event.ContainerEvent this]
+  (^java.awt.Container [^ContainerEvent this]
     (-> this (.getContainer))))
 
 (defn get-child
   "Returns the component that was affected by the event.
 
   returns: the Component object that was added or removed - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.event.ContainerEvent this]
+  (^java.awt.Component [^ContainerEvent this]
     (-> this (.getChild))))
 
 (defn param-string
@@ -91,6 +91,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.ContainerEvent this]
+  (^java.lang.String [^ContainerEvent this]
     (-> this (.paramString))))
 

@@ -12,13 +12,13 @@
 
   mess - Descriptive message - `java.lang.String`
   evt - A PropertyChangeEvent describing the vetoed change. - `java.beans.PropertyChangeEvent`"
-  ([^java.lang.String mess ^java.beans.PropertyChangeEvent evt]
+  (^PropertyVetoException [^java.lang.String mess ^java.beans.PropertyChangeEvent evt]
     (new PropertyVetoException mess evt)))
 
 (defn get-property-change-event
   "Gets the vetoed PropertyChangeEvent.
 
   returns: A PropertyChangeEvent describing the vetoed change. - `java.beans.PropertyChangeEvent`"
-  (^java.beans.PropertyChangeEvent [^java.beans.PropertyVetoException this]
+  (^java.beans.PropertyChangeEvent [^PropertyVetoException this]
     (-> this (.getPropertyChangeEvent))))
 

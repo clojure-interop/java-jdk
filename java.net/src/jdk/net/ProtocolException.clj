@@ -11,8 +11,8 @@
    specified detail message.
 
   host - the detail message. - `java.lang.String`"
-  ([^java.lang.String host]
+  (^ProtocolException [^java.lang.String host]
     (new ProtocolException host))
-  ([]
+  (^ProtocolException []
     (new ProtocolException )))
 

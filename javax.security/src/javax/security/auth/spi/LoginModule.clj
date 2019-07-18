@@ -105,9 +105,9 @@
 
   subject - the Subject to be authenticated. - `javax.security.auth.Subject`
   callback-handler - a CallbackHandler for communicating with the end user (prompting for usernames and passwords, for example). - `javax.security.auth.callback.CallbackHandler`
-  shared-state - state shared with other configured LoginModules. - `java.util.Map<java.lang.String,?>`
-  options - options specified in the login Configuration for this particular LoginModule. - `java.util.Map<java.lang.String,?>`"
-  ([^javax.security.auth.spi.LoginModule this ^javax.security.auth.Subject subject ^javax.security.auth.callback.CallbackHandler callback-handler ^java.util.Map shared-state ^java.util.Map options]
+  shared-state - state shared with other configured LoginModules. - `java.util.Map`
+  options - options specified in the login Configuration for this particular LoginModule. - `java.util.Map`"
+  ([^LoginModule this ^javax.security.auth.Subject subject ^javax.security.auth.callback.CallbackHandler callback-handler ^java.util.Map shared-state ^java.util.Map options]
     (-> this (.initialize subject callback-handler shared-state options))))
 
 (defn login
@@ -124,7 +124,7 @@
                     LoginModule should be ignored. - `boolean`
 
   throws: javax.security.auth.login.LoginException - if the authentication fails"
-  (^Boolean [^javax.security.auth.spi.LoginModule this]
+  (^Boolean [^LoginModule this]
     (-> this (.login))))
 
 (defn commit
@@ -147,7 +147,7 @@
                     LoginModule should be ignored. - `boolean`
 
   throws: javax.security.auth.login.LoginException - if the commit fails"
-  (^Boolean [^javax.security.auth.spi.LoginModule this]
+  (^Boolean [^LoginModule this]
     (-> this (.commit))))
 
 (defn abort
@@ -167,7 +167,7 @@
                     LoginModule should be ignored. - `boolean`
 
   throws: javax.security.auth.login.LoginException - if the abort fails"
-  (^Boolean [^javax.security.auth.spi.LoginModule this]
+  (^Boolean [^LoginModule this]
     (-> this (.abort))))
 
 (defn logout
@@ -180,6 +180,6 @@
                     LoginModule should be ignored. - `boolean`
 
   throws: javax.security.auth.login.LoginException - if the logout fails"
-  (^Boolean [^javax.security.auth.spi.LoginModule this]
+  (^Boolean [^LoginModule this]
     (-> this (.logout))))
 

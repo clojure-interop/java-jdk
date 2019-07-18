@@ -11,8 +11,8 @@
   Constructs an instance of this class.
 
   msg - the detail message - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^ProviderMismatchException [^java.lang.String msg]
     (new ProviderMismatchException msg))
-  ([]
+  (^ProviderMismatchException []
     (new ProviderMismatchException )))
 

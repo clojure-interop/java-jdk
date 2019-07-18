@@ -76,7 +76,7 @@
    piece of print data.
 
   returns: Doc flavor. - `javax.print.DocFlavor`"
-  (^javax.print.DocFlavor [^javax.print.Doc this]
+  (^javax.print.DocFlavor [^Doc this]
     (-> this (.getDocFlavor))))
 
 (defn get-print-data
@@ -90,7 +90,7 @@
   returns: Print data representation object. - `java.lang.Object`
 
   throws: java.io.IOException - Thrown if the representation class is a stream and there was an I/O error while constructing the stream."
-  (^java.lang.Object [^javax.print.Doc this]
+  (^java.lang.Object [^Doc this]
     (-> this (.getPrintData))))
 
 (defn get-attributes
@@ -108,7 +108,7 @@
   returns: Unmodifiable set of printing attributes for this doc, or null
             to obtain all attribute values from the job's attribute
             set. - `javax.print.attribute.DocAttributeSet`"
-  (^javax.print.attribute.DocAttributeSet [^javax.print.Doc this]
+  (^javax.print.attribute.DocAttributeSet [^Doc this]
     (-> this (.getAttributes))))
 
 (defn get-reader-for-text
@@ -132,7 +132,7 @@
             the criteria stated above, null is returned. - `java.io.Reader`
 
   throws: java.io.IOException - Thrown if there was an I/O error while creating the reader."
-  (^java.io.Reader [^javax.print.Doc this]
+  (^java.io.Reader [^Doc this]
     (-> this (.getReaderForText))))
 
 (defn get-stream-for-bytes
@@ -155,6 +155,6 @@
             meet the criteria stated above, null is returned. - `java.io.InputStream`
 
   throws: java.io.IOException - Thrown if there was an I/O error while creating the input stream."
-  (^java.io.InputStream [^javax.print.Doc this]
+  (^java.io.InputStream [^Doc this]
     (-> this (.getStreamForBytes))))
 

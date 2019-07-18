@@ -14,23 +14,23 @@
   Creates a new AtomicMarkableReference with the given
    initial values.
 
-  initial-ref - the initial reference - `AtomicMarkableReference.V`
+  initial-ref - the initial reference - `V`
   initial-mark - the initial mark - `boolean`"
-  ([^AtomicMarkableReference.V initial-ref ^Boolean initial-mark]
+  (^AtomicMarkableReference [initial-ref ^Boolean initial-mark]
     (new AtomicMarkableReference initial-ref initial-mark)))
 
 (defn get-reference
   "Returns the current value of the reference.
 
-  returns: the current value of the reference - `AtomicMarkableReference.V`"
-  (^AtomicMarkableReference.V [^java.util.concurrent.atomic.AtomicMarkableReference this]
+  returns: the current value of the reference - `V`"
+  ([^AtomicMarkableReference this]
     (-> this (.getReference))))
 
 (defn marked?
   "Returns the current value of the mark.
 
   returns: the current value of the mark - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicMarkableReference this]
+  (^Boolean [^AtomicMarkableReference this]
     (-> this (.isMarked))))
 
 (defn get
@@ -39,8 +39,8 @@
 
   mark-holder - an array of size of at least one. On return, markholder[0] will hold the value of the mark. - `boolean[]`
 
-  returns: the current value of the reference - `AtomicMarkableReference.V`"
-  (^AtomicMarkableReference.V [^java.util.concurrent.atomic.AtomicMarkableReference this mark-holder]
+  returns: the current value of the reference - `V`"
+  ([^AtomicMarkableReference this mark-holder]
     (-> this (.get mark-holder))))
 
 (defn weak-compare-and-set
@@ -53,13 +53,13 @@
    spuriously and does not provide ordering guarantees, so is
    only rarely an appropriate alternative to compareAndSet.
 
-  expected-reference - the expected value of the reference - `AtomicMarkableReference.V`
-  new-reference - the new value for the reference - `AtomicMarkableReference.V`
+  expected-reference - the expected value of the reference - `V`
+  new-reference - the new value for the reference - `V`
   expected-mark - the expected value of the mark - `boolean`
   new-mark - the new value for the mark - `boolean`
 
   returns: true if successful - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicMarkableReference this ^AtomicMarkableReference.V expected-reference ^AtomicMarkableReference.V new-reference ^Boolean expected-mark ^Boolean new-mark]
+  (^Boolean [^AtomicMarkableReference this expected-reference new-reference ^Boolean expected-mark ^Boolean new-mark]
     (-> this (.weakCompareAndSet expected-reference new-reference expected-mark new-mark))))
 
 (defn compare-and-set
@@ -68,21 +68,21 @@
    current reference is == to the expected reference
    and the current mark is equal to the expected mark.
 
-  expected-reference - the expected value of the reference - `AtomicMarkableReference.V`
-  new-reference - the new value for the reference - `AtomicMarkableReference.V`
+  expected-reference - the expected value of the reference - `V`
+  new-reference - the new value for the reference - `V`
   expected-mark - the expected value of the mark - `boolean`
   new-mark - the new value for the mark - `boolean`
 
   returns: true if successful - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicMarkableReference this ^AtomicMarkableReference.V expected-reference ^AtomicMarkableReference.V new-reference ^Boolean expected-mark ^Boolean new-mark]
+  (^Boolean [^AtomicMarkableReference this expected-reference new-reference ^Boolean expected-mark ^Boolean new-mark]
     (-> this (.compareAndSet expected-reference new-reference expected-mark new-mark))))
 
 (defn set
   "Unconditionally sets the value of both the reference and mark.
 
-  new-reference - the new value for the reference - `AtomicMarkableReference.V`
+  new-reference - the new value for the reference - `V`
   new-mark - the new value for the mark - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicMarkableReference this ^AtomicMarkableReference.V new-reference ^Boolean new-mark]
+  ([^AtomicMarkableReference this new-reference ^Boolean new-mark]
     (-> this (.set new-reference new-mark))))
 
 (defn attempt-mark
@@ -94,10 +94,10 @@
    thread is also attempting to set the value will eventually
    succeed.
 
-  expected-reference - the expected value of the reference - `AtomicMarkableReference.V`
+  expected-reference - the expected value of the reference - `V`
   new-mark - the new value for the mark - `boolean`
 
   returns: true if successful - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicMarkableReference this ^AtomicMarkableReference.V expected-reference ^Boolean new-mark]
+  (^Boolean [^AtomicMarkableReference this expected-reference ^Boolean new-mark]
     (-> this (.attemptMark expected-reference new-mark))))
 

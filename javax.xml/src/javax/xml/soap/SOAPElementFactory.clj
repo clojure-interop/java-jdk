@@ -27,8 +27,8 @@
   returns: `javax.xml.soap.SOAPElement`
 
   throws: javax.xml.soap.SOAPException - if there is an error in creating the SOAPElement object"
-  (^javax.xml.soap.SOAPElement [^javax.xml.soap.SOAPElementFactory this ^java.lang.String local-name ^java.lang.String prefix ^java.lang.String uri]
+  (^javax.xml.soap.SOAPElement [^SOAPElementFactory this ^java.lang.String local-name ^java.lang.String prefix ^java.lang.String uri]
     (-> this (.create local-name prefix uri)))
-  (^javax.xml.soap.SOAPElement [^javax.xml.soap.SOAPElementFactory this ^javax.xml.soap.Name name]
+  (^javax.xml.soap.SOAPElement [^SOAPElementFactory this ^javax.xml.soap.Name name]
     (-> this (.create name))))
 

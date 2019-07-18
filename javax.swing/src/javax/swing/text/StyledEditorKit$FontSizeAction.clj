@@ -22,13 +22,13 @@
 
   nm - the action name - `java.lang.String`
   size - the font size - `int`"
-  ([^java.lang.String nm ^Integer size]
+  (^StyledEditorKit$FontSizeAction [^java.lang.String nm ^Integer size]
     (new StyledEditorKit$FontSizeAction nm size)))
 
 (defn action-performed
   "Sets the font size.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([^javax.swing.text.StyledEditorKit$FontSizeAction this ^java.awt.event.ActionEvent e]
+  ([^StyledEditorKit$FontSizeAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

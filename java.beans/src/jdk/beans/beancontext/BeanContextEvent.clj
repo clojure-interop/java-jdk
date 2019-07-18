@@ -15,14 +15,14 @@
   "Gets the BeanContext associated with this event.
 
   returns: the BeanContext associated with this event. - `java.beans.beancontext.BeanContext`"
-  (^java.beans.beancontext.BeanContext [^java.beans.beancontext.BeanContextEvent this]
+  (^java.beans.beancontext.BeanContext [^BeanContextEvent this]
     (-> this (.getBeanContext))))
 
 (defn set-propagated-from
   "Sets the BeanContext from which this event was propagated.
 
   bc - the BeanContext from which this event was propagated - `java.beans.beancontext.BeanContext`"
-  ([^java.beans.beancontext.BeanContextEvent this ^java.beans.beancontext.BeanContext bc]
+  ([^BeanContextEvent this ^java.beans.beancontext.BeanContext bc]
     (-> this (.setPropagatedFrom bc))))
 
 (defn get-propagated-from
@@ -30,7 +30,7 @@
 
   returns: the BeanContext from which this
    event was propagated - `java.beans.beancontext.BeanContext`"
-  (^java.beans.beancontext.BeanContext [^java.beans.beancontext.BeanContextEvent this]
+  (^java.beans.beancontext.BeanContext [^BeanContextEvent this]
     (-> this (.getPropagatedFrom))))
 
 (defn propagated?
@@ -39,6 +39,6 @@
 
   returns: true if propagated, false
    if not - `boolean`"
-  (^Boolean [^java.beans.beancontext.BeanContextEvent this]
+  (^Boolean [^BeanContextEvent this]
     (-> this (.isPropagated))))
 

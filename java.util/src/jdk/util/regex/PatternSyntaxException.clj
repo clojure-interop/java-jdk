@@ -12,7 +12,7 @@
   desc - A description of the error - `java.lang.String`
   regex - The erroneous pattern - `java.lang.String`
   index - The approximate index in the pattern of the error, or -1 if the index is not known - `int`"
-  ([^java.lang.String desc ^java.lang.String regex ^Integer index]
+  (^PatternSyntaxException [^java.lang.String desc ^java.lang.String regex ^Integer index]
     (new PatternSyntaxException desc regex index)))
 
 (defn get-index
@@ -20,21 +20,21 @@
 
   returns: The approximate index in the pattern of the error,
            or -1 if the index is not known - `int`"
-  (^Integer [^java.util.regex.PatternSyntaxException this]
+  (^Integer [^PatternSyntaxException this]
     (-> this (.getIndex))))
 
 (defn get-description
   "Retrieves the description of the error.
 
   returns: The description of the error - `java.lang.String`"
-  (^java.lang.String [^java.util.regex.PatternSyntaxException this]
+  (^java.lang.String [^PatternSyntaxException this]
     (-> this (.getDescription))))
 
 (defn get-pattern
   "Retrieves the erroneous regular-expression pattern.
 
   returns: The erroneous pattern - `java.lang.String`"
-  (^java.lang.String [^java.util.regex.PatternSyntaxException this]
+  (^java.lang.String [^PatternSyntaxException this]
     (-> this (.getPattern))))
 
 (defn get-message
@@ -43,6 +43,6 @@
    visual indication of the error index within the pattern.
 
   returns: The full detail message - `java.lang.String`"
-  (^java.lang.String [^java.util.regex.PatternSyntaxException this]
+  (^java.lang.String [^PatternSyntaxException this]
     (-> this (.getMessage))))
 

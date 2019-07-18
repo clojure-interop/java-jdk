@@ -65,9 +65,9 @@
   Creates a NumberFormatter with the specified Format instance.
 
   format - Format used to dictate legal values - `java.text.NumberFormat`"
-  ([^java.text.NumberFormat format]
+  (^NumberFormatter [^java.text.NumberFormat format]
     (new NumberFormatter format))
-  ([]
+  (^NumberFormatter []
     (new NumberFormatter )))
 
 (defn set-format
@@ -79,6 +79,6 @@
    NumberFormat.getNumberInstance() method.
 
   format - NumberFormat instance used to dictate legal values - `java.text.Format`"
-  ([^javax.swing.text.NumberFormatter this ^java.text.Format format]
+  ([^NumberFormatter this ^java.text.Format format]
     (-> this (.setFormat format))))
 

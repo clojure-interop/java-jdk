@@ -45,7 +45,7 @@
 
 (defn ->url-decoder
   "Constructor."
-  ([]
+  (^URLDecoder []
     (new URLDecoder )))
 
 (defn *decode
@@ -68,6 +68,6 @@
   throws: java.io.UnsupportedEncodingException - If character encoding needs to be consulted, but named character encoding is not supported"
   (^java.lang.String [^java.lang.String s ^java.lang.String enc]
     (URLDecoder/decode s enc))
-  ([^java.lang.String s]
+  (^java.lang.String [^java.lang.String s]
     (URLDecoder/decode s)))
 

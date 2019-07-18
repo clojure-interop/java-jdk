@@ -14,7 +14,7 @@
   Indicates to bias toward the next character
    in the model.
 
-  type: javax.swing.text.Position.Bias"
+  type: javax.swing.text.Position$Bias"
   Position$Bias/Forward)
 
 (def *-backward
@@ -23,13 +23,13 @@
   Indicates a bias toward the previous character
    in the model.
 
-  type: javax.swing.text.Position.Bias"
+  type: javax.swing.text.Position$Bias"
   Position$Bias/Backward)
 
 (defn to-string
   "string representation
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.Position$Bias this]
+  (^java.lang.String [^Position$Bias this]
     (-> this (.toString))))
 

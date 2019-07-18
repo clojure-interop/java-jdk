@@ -27,7 +27,7 @@
 
   Tag for unsigned byte data.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DataBuffer/TYPE_BYTE)
 
 (def *-type-ushort
@@ -35,7 +35,7 @@
 
   Tag for unsigned short data.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DataBuffer/TYPE_USHORT)
 
 (def *-type-short
@@ -43,7 +43,7 @@
 
   Tag for signed short data.  Placeholder for future use.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DataBuffer/TYPE_SHORT)
 
 (def *-type-int
@@ -51,7 +51,7 @@
 
   Tag for int data.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DataBuffer/TYPE_INT)
 
 (def *-type-float
@@ -59,7 +59,7 @@
 
   Tag for float data.  Placeholder for future use.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DataBuffer/TYPE_FLOAT)
 
 (def *-type-double
@@ -67,7 +67,7 @@
 
   Tag for double data.  Placeholder for future use.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DataBuffer/TYPE_DOUBLE)
 
 (def *-type-undefined
@@ -75,7 +75,7 @@
 
   Tag for undefined data.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DataBuffer/TYPE_UNDEFINED)
 
 (defn *get-data-type-size
@@ -100,9 +100,9 @@
 
   returns: a double value representing the element from the specified
    bank at the specified index in the data array. - `double`"
-  (^Double [^java.awt.image.DataBuffer this ^Integer bank ^Integer i]
+  (^Double [^DataBuffer this ^Integer bank ^Integer i]
     (-> this (.getElemDouble bank i)))
-  (^Double [^java.awt.image.DataBuffer this ^Integer i]
+  (^Double [^DataBuffer this ^Integer i]
     (-> this (.getElemDouble i))))
 
 (defn get-elem
@@ -114,23 +114,23 @@
 
   returns: the data array element at the specified index from the
            specified bank at the specified index. - `int`"
-  (^Integer [^java.awt.image.DataBuffer this ^Integer bank ^Integer i]
+  (^Integer [^DataBuffer this ^Integer bank ^Integer i]
     (-> this (.getElem bank i)))
-  (^Integer [^java.awt.image.DataBuffer this ^Integer i]
+  (^Integer [^DataBuffer this ^Integer i]
     (-> this (.getElem i))))
 
 (defn get-data-type
   "Returns the data type of this DataBuffer.
 
   returns: the data type of this DataBuffer. - `int`"
-  (^Integer [^java.awt.image.DataBuffer this]
+  (^Integer [^DataBuffer this]
     (-> this (.getDataType))))
 
 (defn get-num-banks
   "Returns the number of banks in this DataBuffer.
 
   returns: the number of banks. - `int`"
-  (^Integer [^java.awt.image.DataBuffer this]
+  (^Integer [^DataBuffer this]
     (-> this (.getNumBanks))))
 
 (defn set-elem-float
@@ -142,9 +142,9 @@
   bank - the specified bank - `int`
   i - the specified index - `int`
   val - the value to set the element in the specified bank at the specified index in the data array - `float`"
-  ([^java.awt.image.DataBuffer this ^Integer bank ^Integer i ^Float val]
+  ([^DataBuffer this ^Integer bank ^Integer i ^Float val]
     (-> this (.setElemFloat bank i val)))
-  ([^java.awt.image.DataBuffer this ^Integer i ^Float val]
+  ([^DataBuffer this ^Integer i ^Float val]
     (-> this (.setElemFloat i val))))
 
 (defn get-elem-float
@@ -159,23 +159,23 @@
 
   returns: a float value representing the data array element from the
    specified bank at the specified index. - `float`"
-  (^Float [^java.awt.image.DataBuffer this ^Integer bank ^Integer i]
+  (^Float [^DataBuffer this ^Integer bank ^Integer i]
     (-> this (.getElemFloat bank i)))
-  (^Float [^java.awt.image.DataBuffer this ^Integer i]
+  (^Float [^DataBuffer this ^Integer i]
     (-> this (.getElemFloat i))))
 
 (defn get-offset
   "Returns the offset of the default bank in array elements.
 
   returns: the offset of the default bank. - `int`"
-  (^Integer [^java.awt.image.DataBuffer this]
+  (^Integer [^DataBuffer this]
     (-> this (.getOffset))))
 
 (defn get-offsets
   "Returns the offsets (in array elements) of all the banks.
 
   returns: the offsets of all banks. - `int[]`"
-  ([^java.awt.image.DataBuffer this]
+  ([^DataBuffer this]
     (-> this (.getOffsets))))
 
 (defn set-elem-double
@@ -187,16 +187,16 @@
   bank - the specified bank - `int`
   i - the specified index - `int`
   val - the value to set the element in the specified bank at the specified index of the data array - `double`"
-  ([^java.awt.image.DataBuffer this ^Integer bank ^Integer i ^Double val]
+  ([^DataBuffer this ^Integer bank ^Integer i ^Double val]
     (-> this (.setElemDouble bank i val)))
-  ([^java.awt.image.DataBuffer this ^Integer i ^Double val]
+  ([^DataBuffer this ^Integer i ^Double val]
     (-> this (.setElemDouble i val))))
 
 (defn get-size
   "Returns the size (in array elements) of all banks.
 
   returns: the size of all banks. - `int`"
-  (^Integer [^java.awt.image.DataBuffer this]
+  (^Integer [^DataBuffer this]
     (-> this (.getSize))))
 
 (defn set-elem
@@ -206,8 +206,8 @@
   bank - the specified bank - `int`
   i - the specified index into the data array - `int`
   val - the data to set the element in the specified bank at the specified index in the data array - `int`"
-  ([^java.awt.image.DataBuffer this ^Integer bank ^Integer i ^Integer val]
+  ([^DataBuffer this ^Integer bank ^Integer i ^Integer val]
     (-> this (.setElem bank i val)))
-  ([^java.awt.image.DataBuffer this ^Integer i ^Integer val]
+  ([^DataBuffer this ^Integer i ^Integer val]
     (-> this (.setElem i val))))
 

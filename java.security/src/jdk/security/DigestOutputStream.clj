@@ -23,21 +23,21 @@
 
   stream - the output stream. - `java.io.OutputStream`
   digest - the message digest to associate with this stream. - `java.security.MessageDigest`"
-  ([^java.io.OutputStream stream ^java.security.MessageDigest digest]
+  (^DigestOutputStream [^java.io.OutputStream stream ^java.security.MessageDigest digest]
     (new DigestOutputStream stream digest)))
 
 (defn get-message-digest
   "Returns the message digest associated with this stream.
 
   returns: the message digest associated with this stream. - `java.security.MessageDigest`"
-  (^java.security.MessageDigest [^java.security.DigestOutputStream this]
+  (^java.security.MessageDigest [^DigestOutputStream this]
     (-> this (.getMessageDigest))))
 
 (defn set-message-digest
   "Associates the specified message digest with this stream.
 
   digest - the message digest to be associated with this stream. - `java.security.MessageDigest`"
-  ([^java.security.DigestOutputStream this ^java.security.MessageDigest digest]
+  ([^DigestOutputStream this ^java.security.MessageDigest digest]
     (-> this (.setMessageDigest digest))))
 
 (defn write
@@ -55,9 +55,9 @@
   len - the number of bytes of data to be updated and written from b, starting at offset off. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.security.DigestOutputStream this b ^Integer off ^Integer len]
+  ([^DigestOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([^java.security.DigestOutputStream this ^Integer b]
+  ([^DigestOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn on
@@ -67,7 +67,7 @@
    digest is not updated.
 
   on - true to turn the digest function on, false to turn it off. - `boolean`"
-  ([^java.security.DigestOutputStream this ^Boolean on]
+  ([^DigestOutputStream this ^Boolean on]
     (-> this (.on on))))
 
 (defn to-string
@@ -75,6 +75,6 @@
    its associated message digest object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.security.DigestOutputStream this]
+  (^java.lang.String [^DigestOutputStream this]
     (-> this (.toString))))
 

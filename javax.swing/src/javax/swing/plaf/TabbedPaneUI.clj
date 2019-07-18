@@ -5,7 +5,7 @@
 
 (defn ->tabbed-pane-ui
   "Constructor."
-  ([]
+  (^TabbedPaneUI []
     (new TabbedPaneUI )))
 
 (defn tab-for-coordinate
@@ -14,7 +14,7 @@
   y - `int`
 
   returns: `int`"
-  (^Integer [^javax.swing.plaf.TabbedPaneUI this ^javax.swing.JTabbedPane pane ^Integer x ^Integer y]
+  (^Integer [^TabbedPaneUI this ^javax.swing.JTabbedPane pane ^Integer x ^Integer y]
     (-> this (.tabForCoordinate pane x y))))
 
 (defn get-tab-bounds
@@ -22,13 +22,13 @@
   index - `int`
 
   returns: `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.plaf.TabbedPaneUI this ^javax.swing.JTabbedPane pane ^Integer index]
+  (^java.awt.Rectangle [^TabbedPaneUI this ^javax.swing.JTabbedPane pane ^Integer index]
     (-> this (.getTabBounds pane index))))
 
 (defn get-tab-run-count
   "pane - `javax.swing.JTabbedPane`
 
   returns: `int`"
-  (^Integer [^javax.swing.plaf.TabbedPaneUI this ^javax.swing.JTabbedPane pane]
+  (^Integer [^TabbedPaneUI this ^javax.swing.JTabbedPane pane]
     (-> this (.getTabRunCount pane))))
 

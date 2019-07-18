@@ -83,9 +83,9 @@
 (defn iterator
   "Returns the iterator associated with this DirectoryStream.
 
-  returns: the iterator associated with this DirectoryStream - `java.util.Iterator<DirectoryStream.T>`
+  returns: the iterator associated with this DirectoryStream - `java.util.Iterator<T>`
 
   throws: java.lang.IllegalStateException - if this directory stream is closed or the iterator has already been returned"
-  (^java.util.Iterator [^java.nio.file.DirectoryStream this]
+  (^java.util.Iterator [^DirectoryStream this]
     (-> this (.iterator))))
 

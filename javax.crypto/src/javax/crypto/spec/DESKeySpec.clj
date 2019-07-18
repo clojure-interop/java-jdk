@@ -17,9 +17,9 @@
   offset - the offset in key, where the DES key material starts. - `int`
 
   throws: java.lang.NullPointerException - if the given key material is null"
-  ([key ^Integer offset]
+  (^DESKeySpec [key ^Integer offset]
     (new DESKeySpec key offset))
-  ([key]
+  (^DESKeySpec [key]
     (new DESKeySpec key)))
 
 (def *-des-key-len
@@ -62,6 +62,6 @@
 
   returns: the DES key material. Returns a new array
    each time this method is called. - `byte[]`"
-  ([^javax.crypto.spec.DESKeySpec this]
+  ([^DESKeySpec this]
     (-> this (.getKey))))
 

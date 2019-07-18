@@ -8,6 +8,6 @@
   "Constructor.
 
   component - `javax.swing.JComponent`"
-  ([^javax.swing.JComponent component]
+  (^ComponentInputMapUIResource [^javax.swing.JComponent component]
     (new ComponentInputMapUIResource component)))
 

@@ -38,9 +38,9 @@
   sz - Output-buffer size, a positive integer - `int`
 
   throws: java.lang.IllegalArgumentException - If sz <= 0"
-  ([^java.io.Writer out ^Integer sz]
+  (^BufferedWriter [^java.io.Writer out ^Integer sz]
     (new BufferedWriter out sz))
-  ([^java.io.Writer out]
+  (^BufferedWriter [^java.io.Writer out]
     (new BufferedWriter out)))
 
 (defn write
@@ -58,9 +58,9 @@
   len - Number of characters to write - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.BufferedWriter this cbuf ^Integer off ^Integer len]
+  ([^BufferedWriter this cbuf ^Integer off ^Integer len]
     (-> this (.write cbuf off len)))
-  ([^java.io.BufferedWriter this ^Integer c]
+  ([^BufferedWriter this ^Integer c]
     (-> this (.write c))))
 
 (defn new-line
@@ -69,20 +69,20 @@
    newline ('\n') character.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.BufferedWriter this]
+  ([^BufferedWriter this]
     (-> this (.newLine))))
 
 (defn flush
   "Flushes the stream.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.BufferedWriter this]
+  ([^BufferedWriter this]
     (-> this (.flush))))
 
 (defn close
   "Description copied from class: Writer
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.BufferedWriter this]
+  ([^BufferedWriter this]
     (-> this (.close))))
 

@@ -67,6 +67,6 @@
    The era BEFORE_ROC has the value 0, while the era ROC has the value 1.
 
   returns: the era value, from 0 (BEFORE_ROC) to 1 (ROC) - `int`"
-  (^Integer [^java.time.chrono.MinguoEra this]
+  (^Integer [^MinguoEra this]
     (-> this (.getValue))))
 

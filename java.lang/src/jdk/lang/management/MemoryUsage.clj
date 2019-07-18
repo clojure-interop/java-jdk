@@ -83,7 +83,7 @@
   max - the maximum amount of memory in bytes that can be used; or -1 if undefined. - `long`
 
   throws: java.lang.IllegalArgumentException - if the value of init or max is negative but not -1; or the value of used or committed is negative; or used is greater than the value of committed; or committed is greater than the value of max max if defined."
-  ([^Long init ^Long used ^Long committed ^Long max]
+  (^MemoryUsage [^Long init ^Long used ^Long committed ^Long max]
     (new MemoryUsage init used committed max)))
 
 (defn *from
@@ -130,14 +130,14 @@
 
   returns: the initial size of memory in bytes;
    -1 if undefined. - `long`"
-  (^Long [^java.lang.management.MemoryUsage this]
+  (^Long [^MemoryUsage this]
     (-> this (.getInit))))
 
 (defn get-used
   "Returns the amount of used memory in bytes.
 
   returns: the amount of used memory in bytes. - `long`"
-  (^Long [^java.lang.management.MemoryUsage this]
+  (^Long [^MemoryUsage this]
     (-> this (.getUsed))))
 
 (defn get-committed
@@ -146,7 +146,7 @@
    guaranteed for the Java virtual machine to use.
 
   returns: the amount of committed memory in bytes. - `long`"
-  (^Long [^java.lang.management.MemoryUsage this]
+  (^Long [^MemoryUsage this]
     (-> this (.getCommitted))))
 
 (defn get-max
@@ -162,13 +162,13 @@
 
   returns: the maximum amount of memory in bytes;
    -1 if undefined. - `long`"
-  (^Long [^java.lang.management.MemoryUsage this]
+  (^Long [^MemoryUsage this]
     (-> this (.getMax))))
 
 (defn to-string
   "Returns a descriptive representation of this memory usage.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.lang.management.MemoryUsage this]
+  (^java.lang.String [^MemoryUsage this]
     (-> this (.toString))))
 

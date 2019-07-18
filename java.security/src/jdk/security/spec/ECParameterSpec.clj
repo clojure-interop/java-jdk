@@ -16,34 +16,34 @@
   h - the cofactor. - `int`
 
   throws: java.lang.NullPointerException - if curve, g, or n is null."
-  ([^java.security.spec.EllipticCurve curve ^java.security.spec.ECPoint g ^java.math.BigInteger n ^Integer h]
+  (^ECParameterSpec [^java.security.spec.EllipticCurve curve ^java.security.spec.ECPoint g ^java.math.BigInteger n ^Integer h]
     (new ECParameterSpec curve g n h)))
 
 (defn get-curve
   "Returns the elliptic curve that this parameter defines.
 
   returns: the elliptic curve that this parameter defines. - `java.security.spec.EllipticCurve`"
-  (^java.security.spec.EllipticCurve [^java.security.spec.ECParameterSpec this]
+  (^java.security.spec.EllipticCurve [^ECParameterSpec this]
     (-> this (.getCurve))))
 
 (defn get-generator
   "Returns the generator which is also known as the base point.
 
   returns: the generator which is also known as the base point. - `java.security.spec.ECPoint`"
-  (^java.security.spec.ECPoint [^java.security.spec.ECParameterSpec this]
+  (^java.security.spec.ECPoint [^ECParameterSpec this]
     (-> this (.getGenerator))))
 
 (defn get-order
   "Returns the order of the generator.
 
   returns: the order of the generator. - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.security.spec.ECParameterSpec this]
+  (^java.math.BigInteger [^ECParameterSpec this]
     (-> this (.getOrder))))
 
 (defn get-cofactor
   "Returns the cofactor.
 
   returns: the cofactor. - `int`"
-  (^Integer [^java.security.spec.ECParameterSpec this]
+  (^Integer [^ECParameterSpec this]
     (-> this (.getCofactor))))
 

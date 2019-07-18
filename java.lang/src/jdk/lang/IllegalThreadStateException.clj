@@ -13,8 +13,8 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^IllegalThreadStateException [^java.lang.String s]
     (new IllegalThreadStateException s))
-  ([]
+  (^IllegalThreadStateException []
     (new IllegalThreadStateException )))
 

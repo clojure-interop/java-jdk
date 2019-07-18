@@ -35,7 +35,7 @@
   Constructs a TableView for the given element.
 
   elem - the element that this view is responsible for - `javax.swing.text.Element`"
-  ([^javax.swing.text.Element elem]
+  (^TableView [^javax.swing.text.Element elem]
     (new TableView elem)))
 
 (defn replace
@@ -46,6 +46,6 @@
   offset - the starting index into the child views to insert the new views; this should be a value >= 0 and <= getViewCount - `int`
   length - the number of existing child views to remove; This should be a value >= 0 and <= (getViewCount() - offset) - `int`
   views - the child views to add; this value can be nullto indicate no children are being added (useful to remove) - `javax.swing.text.View[]`"
-  ([^javax.swing.text.TableView this ^Integer offset ^Integer length views]
+  ([^TableView this ^Integer offset ^Integer length views]
     (-> this (.replace offset length views))))
 

@@ -5,14 +5,14 @@
 
 (defn stop
   "Stops the monitor."
-  ([^javax.management.monitor.MonitorMBean this]
+  ([^MonitorMBean this]
     (-> this (.stop))))
 
 (defn set-observed-attribute
   "Sets the attribute to observe.
 
   attribute - The attribute to observe. - `java.lang.String`"
-  ([^javax.management.monitor.MonitorMBean this ^java.lang.String attribute]
+  ([^MonitorMBean this ^java.lang.String attribute]
     (-> this (.setObservedAttribute attribute))))
 
 (defn active?
@@ -21,14 +21,14 @@
    It becomes inactive when the stop method is called.
 
   returns: true if the monitor MBean is active, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.monitor.MonitorMBean this]
+  (^Boolean [^MonitorMBean this]
     (-> this (.isActive))))
 
 (defn remove-observed-object
   "Removes the specified object from the set of observed MBeans.
 
   object - The object to remove. - `javax.management.ObjectName`"
-  ([^javax.management.monitor.MonitorMBean this ^javax.management.ObjectName object]
+  ([^MonitorMBean this ^javax.management.ObjectName object]
     (-> this (.removeObservedObject object))))
 
 (defn contains-observed-object
@@ -37,7 +37,7 @@
   object - The object to check. - `javax.management.ObjectName`
 
   returns: true if the specified object is in the set, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.monitor.MonitorMBean this ^javax.management.ObjectName object]
+  (^Boolean [^MonitorMBean this ^javax.management.ObjectName object]
     (-> this (.containsObservedObject object))))
 
 (defn add-observed-object
@@ -46,49 +46,47 @@
   object - The object to observe. - `javax.management.ObjectName`
 
   throws: java.lang.IllegalArgumentException - the specified object is null."
-  ([^javax.management.monitor.MonitorMBean this ^javax.management.ObjectName object]
+  ([^MonitorMBean this ^javax.management.ObjectName object]
     (-> this (.addObservedObject object))))
 
 (defn get-observed-object
   "Deprecated. As of JMX 1.2, replaced by getObservedObjects()
 
-  returns: The object being observed. - `java.lang..management.ObjectName`"
-  (^java.lang..management.ObjectName [^javax.management.monitor.MonitorMBean this]
+  returns: The object being observed. - `.management.ObjectName`"
+  (^.management.ObjectName [^MonitorMBean this]
     (-> this (.getObservedObject))))
 
 (defn get-observed-attribute
   "Gets the attribute being observed.
 
   returns: The attribute being observed. - `java.lang.String`"
-  (^java.lang.String [^javax.management.monitor.MonitorMBean this]
+  (^java.lang.String [^MonitorMBean this]
     (-> this (.getObservedAttribute))))
 
 (defn set-observed-object
   "Deprecated. As of JMX 1.2, replaced by addObservedObject(javax.management.ObjectName)
 
-  object - The object to observe. - `javax.management.ObjectName`
-
-  returns: `java.lang. void`"
-  ([^javax.management.monitor.MonitorMBean this ^javax.management.ObjectName object]
+  object - The object to observe. - `javax.management.ObjectName`"
+  ([^MonitorMBean this ^javax.management.ObjectName object]
     (-> this (.setObservedObject object))))
 
 (defn start
   "Starts the monitor."
-  ([^javax.management.monitor.MonitorMBean this]
+  ([^MonitorMBean this]
     (-> this (.start))))
 
 (defn get-observed-objects
   "Returns an array containing the objects being observed.
 
   returns: The objects being observed. - `javax.management.ObjectName[]`"
-  ([^javax.management.monitor.MonitorMBean this]
+  ([^MonitorMBean this]
     (-> this (.getObservedObjects))))
 
 (defn get-granularity-period
   "Gets the granularity period (in milliseconds).
 
   returns: The granularity period. - `long`"
-  (^Long [^javax.management.monitor.MonitorMBean this]
+  (^Long [^MonitorMBean this]
     (-> this (.getGranularityPeriod))))
 
 (defn set-granularity-period
@@ -97,6 +95,6 @@
   period - The granularity period. - `long`
 
   throws: java.lang.IllegalArgumentException - The granularity period is less than or equal to zero."
-  ([^javax.management.monitor.MonitorMBean this ^Long period]
+  ([^MonitorMBean this ^Long period]
     (-> this (.setGranularityPeriod period))))
 

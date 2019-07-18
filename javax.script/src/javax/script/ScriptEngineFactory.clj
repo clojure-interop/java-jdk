@@ -15,7 +15,7 @@
   "Returns the version of the ScriptEngine.
 
   returns: The ScriptEngine implementation version. - `java.lang.String`"
-  (^java.lang.String [^javax.script.ScriptEngineFactory this]
+  (^java.lang.String [^ScriptEngineFactory this]
     (-> this (.getEngineVersion))))
 
 (defn get-language-version
@@ -23,7 +23,7 @@
    ScriptEngine.
 
   returns: The version of the supported language. - `java.lang.String`"
-  (^java.lang.String [^javax.script.ScriptEngineFactory this]
+  (^java.lang.String [^ScriptEngineFactory this]
     (-> this (.getLanguageVersion))))
 
 (defn get-program
@@ -44,7 +44,7 @@
   statements - The statements to be executed. May be return values of calls to the getMethodCallSyntax and getOutputStatement methods. - `java.lang.String`
 
   returns: The Program - `java.lang.String`"
-  (^java.lang.String [^javax.script.ScriptEngineFactory this ^java.lang.String statements]
+  (^java.lang.String [^ScriptEngineFactory this ^java.lang.String statements]
     (-> this (.getProgram statements))))
 
 (defn get-extensions
@@ -54,7 +54,7 @@
    getEngineByExtension method.
 
   returns: The list of extensions. - `java.util.List<java.lang.String>`"
-  (^java.util.List [^javax.script.ScriptEngineFactory this]
+  (^java.util.List [^ScriptEngineFactory this]
     (-> this (.getExtensions))))
 
 (defn get-output-statement
@@ -71,7 +71,7 @@
   to-display - The String to be displayed by the returned statement. - `java.lang.String`
 
   returns: The string used to display the String in the syntax of the scripting language. - `java.lang.String`"
-  (^java.lang.String [^javax.script.ScriptEngineFactory this ^java.lang.String to-display]
+  (^java.lang.String [^ScriptEngineFactory this ^java.lang.String to-display]
     (-> this (.getOutputStatement to-display))))
 
 (defn get-parameter
@@ -114,7 +114,7 @@
 
   returns: The value for the given parameter. Returns null if no
    value is assigned to the key. - `java.lang.Object`"
-  (^java.lang.Object [^javax.script.ScriptEngineFactory this ^java.lang.String key]
+  (^java.lang.Object [^ScriptEngineFactory this ^java.lang.String key]
     (-> this (.getParameter key))))
 
 (defn get-mime-types
@@ -124,7 +124,7 @@
    getEngineByMimetype method.
 
   returns: The list of mime types. - `java.util.List<java.lang.String>`"
-  (^java.util.List [^javax.script.ScriptEngineFactory this]
+  (^java.util.List [^ScriptEngineFactory this]
     (-> this (.getMimeTypes))))
 
 (defn get-method-call-syntax
@@ -153,7 +153,7 @@
   args - names of the arguments in the method call. - `java.lang.String`
 
   returns: The String used to invoke the method in the syntax of the scripting language. - `java.lang.String`"
-  (^java.lang.String [^javax.script.ScriptEngineFactory this ^java.lang.String obj ^java.lang.String m ^java.lang.String args]
+  (^java.lang.String [^ScriptEngineFactory this ^java.lang.String obj ^java.lang.String m ^java.lang.String args]
     (-> this (.getMethodCallSyntax obj m args))))
 
 (defn get-language-name
@@ -161,7 +161,7 @@
    ScriptEngine.
 
   returns: The name of the supported language. - `java.lang.String`"
-  (^java.lang.String [^javax.script.ScriptEngineFactory this]
+  (^java.lang.String [^ScriptEngineFactory this]
     (-> this (.getLanguageName))))
 
 (defn get-script-engine
@@ -170,7 +170,7 @@
    returned, but implementations may pool, share or reuse engines.
 
   returns: A new ScriptEngine instance. - `javax.script.ScriptEngine`"
-  (^javax.script.ScriptEngine [^javax.script.ScriptEngineFactory this]
+  (^javax.script.ScriptEngine [^ScriptEngineFactory this]
     (-> this (.getScriptEngine))))
 
 (defn get-engine-name
@@ -179,7 +179,7 @@
    might return Rhino Mozilla Javascript Engine.
 
   returns: The name of the engine implementation. - `java.lang.String`"
-  (^java.lang.String [^javax.script.ScriptEngineFactory this]
+  (^java.lang.String [^ScriptEngineFactory this]
     (-> this (.getEngineName))))
 
 (defn get-names
@@ -189,6 +189,6 @@
    return list containing {`javascript`, `rhino`}.
 
   returns: an immutable list of short names - `java.util.List<java.lang.String>`"
-  (^java.util.List [^javax.script.ScriptEngineFactory this]
+  (^java.util.List [^ScriptEngineFactory this]
     (-> this (.getNames))))
 

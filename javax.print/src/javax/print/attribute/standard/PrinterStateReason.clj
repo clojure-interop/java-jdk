@@ -355,7 +355,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.PrinterStateReason this]
+  ([^PrinterStateReason this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -366,6 +366,6 @@
    category name is `printer-state-reason`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.PrinterStateReason this]
+  (^java.lang.String [^PrinterStateReason this]
     (-> this (.getName))))
 

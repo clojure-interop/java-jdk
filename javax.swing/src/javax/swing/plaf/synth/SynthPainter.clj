@@ -32,7 +32,7 @@
 
 (defn ->synth-painter
   "Constructor."
-  ([]
+  (^SynthPainter []
     (new SynthPainter )))
 
 (defn paint-file-chooser-border
@@ -44,7 +44,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintFileChooserBorder context g x y w h))))
 
 (defn paint-root-pane-background
@@ -56,7 +56,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintRootPaneBackground context g x y w h))))
 
 (defn paint-tool-tip-border
@@ -68,7 +68,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintToolTipBorder context g x y w h))))
 
 (defn paint-popup-menu-background
@@ -80,7 +80,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintPopupMenuBackground context g x y w h))))
 
 (defn paint-tree-cell-focus
@@ -92,7 +92,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTreeCellFocus context g x y w h))))
 
 (defn paint-tool-bar-content-border
@@ -106,9 +106,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JToolBar.HORIZONTAL or JToolBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintToolBarContentBorder context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintToolBarContentBorder context g x y w h))))
 
 (defn paint-slider-background
@@ -122,9 +122,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSlider.HORIZONTAL or JSlider.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSliderBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSliderBackground context g x y w h))))
 
 (defn paint-desktop-pane-border
@@ -136,7 +136,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintDesktopPaneBorder context g x y w h))))
 
 (defn paint-tabbed-pane-content-background
@@ -149,7 +149,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTabbedPaneContentBackground context g x y w h))))
 
 (defn paint-scroll-bar-track-background
@@ -164,9 +164,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - Orientation of the JScrollBar, one of JScrollBar.HORIZONTAL or JScrollBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintScrollBarTrackBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintScrollBarTrackBackground context g x y w h))))
 
 (defn paint-scroll-bar-border
@@ -180,9 +180,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - Orientation of the JScrollBar, one of JScrollBar.HORIZONTAL or JScrollBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintScrollBarBorder context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintScrollBarBorder context g x y w h))))
 
 (defn paint-toggle-button-border
@@ -194,7 +194,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintToggleButtonBorder context g x y w h))))
 
 (defn paint-tool-bar-background
@@ -208,9 +208,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JToolBar.HORIZONTAL or JToolBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintToolBarBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintToolBarBackground context g x y w h))))
 
 (defn paint-internal-frame-border
@@ -222,7 +222,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintInternalFrameBorder context g x y w h))))
 
 (defn paint-arrow-button-foreground
@@ -238,7 +238,7 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   direction - One of SwingConstants.NORTH, SwingConstants.SOUTH SwingConstants.EAST or SwingConstants.WEST - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer direction]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer direction]
     (-> this (.paintArrowButtonForeground context g x y w h direction))))
 
 (defn paint-internal-frame-title-pane-background
@@ -250,7 +250,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintInternalFrameTitlePaneBackground context g x y w h))))
 
 (defn paint-check-box-menu-item-background
@@ -262,7 +262,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintCheckBoxMenuItemBackground context g x y w h))))
 
 (defn paint-split-pane-divider-background
@@ -276,9 +276,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSplitPane.HORIZONTAL_SPLIT or JSplitPane.VERTICAL_SPLIT - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSplitPaneDividerBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSplitPaneDividerBackground context g x y w h))))
 
 (defn paint-separator-foreground
@@ -291,7 +291,7 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSeparator.HORIZONTAL or JSeparator.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSeparatorForeground context g x y w h orientation))))
 
 (defn paint-file-chooser-background
@@ -303,7 +303,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintFileChooserBackground context g x y w h))))
 
 (defn paint-spinner-border
@@ -315,7 +315,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSpinnerBorder context g x y w h))))
 
 (defn paint-table-background
@@ -327,7 +327,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTableBackground context g x y w h))))
 
 (defn paint-split-pane-divider-foreground
@@ -340,7 +340,7 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSplitPane.HORIZONTAL_SPLIT or JSplitPane.VERTICAL_SPLIT - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSplitPaneDividerForeground context g x y w h orientation))))
 
 (defn paint-tool-tip-background
@@ -352,7 +352,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintToolTipBackground context g x y w h))))
 
 (defn paint-spinner-background
@@ -364,7 +364,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSpinnerBackground context g x y w h))))
 
 (defn paint-split-pane-drag-divider
@@ -378,7 +378,7 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSplitPane.HORIZONTAL_SPLIT or JSplitPane.VERTICAL_SPLIT - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSplitPaneDragDivider context g x y w h orientation))))
 
 (defn paint-editor-pane-border
@@ -390,7 +390,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintEditorPaneBorder context g x y w h))))
 
 (defn paint-tree-cell-border
@@ -402,7 +402,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTreeCellBorder context g x y w h))))
 
 (defn paint-menu-bar-border
@@ -414,7 +414,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintMenuBarBorder context g x y w h))))
 
 (defn paint-label-border
@@ -426,7 +426,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintLabelBorder context g x y w h))))
 
 (defn paint-panel-background
@@ -438,7 +438,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintPanelBackground context g x y w h))))
 
 (defn paint-desktop-icon-border
@@ -450,7 +450,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintDesktopIconBorder context g x y w h))))
 
 (defn paint-combo-box-background
@@ -462,7 +462,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintComboBoxBackground context g x y w h))))
 
 (defn paint-tabbed-pane-tab-area-border
@@ -476,9 +476,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JTabbedPane.TOP, JTabbedPane.LEFT, JTabbedPane.BOTTOM, or JTabbedPane.RIGHT - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintTabbedPaneTabAreaBorder context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTabbedPaneTabAreaBorder context g x y w h))))
 
 (defn paint-scroll-bar-thumb-background
@@ -493,7 +493,7 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - Orientation of the JScrollBar, one of JScrollBar.HORIZONTAL or JScrollBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintScrollBarThumbBackground context g x y w h orientation))))
 
 (defn paint-internal-frame-background
@@ -505,7 +505,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintInternalFrameBackground context g x y w h))))
 
 (defn paint-label-background
@@ -517,7 +517,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintLabelBackground context g x y w h))))
 
 (defn paint-slider-thumb-background
@@ -530,7 +530,7 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSlider.HORIZONTAL or JSlider.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSliderThumbBackground context g x y w h orientation))))
 
 (defn paint-editor-pane-background
@@ -542,7 +542,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintEditorPaneBackground context g x y w h))))
 
 (defn paint-scroll-bar-background
@@ -556,9 +556,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - Orientation of the JScrollBar, one of JScrollBar.HORIZONTAL or JScrollBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintScrollBarBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintScrollBarBackground context g x y w h))))
 
 (defn paint-split-pane-border
@@ -570,7 +570,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSplitPaneBorder context g x y w h))))
 
 (defn paint-popup-menu-border
@@ -582,7 +582,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintPopupMenuBorder context g x y w h))))
 
 (defn paint-progress-bar-border
@@ -596,9 +596,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - one of JProgressBar.HORIZONTAL or JProgressBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintProgressBarBorder context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintProgressBarBorder context g x y w h))))
 
 (defn paint-slider-track-border
@@ -612,9 +612,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSlider.HORIZONTAL or JSlider.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSliderTrackBorder context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSliderTrackBorder context g x y w h))))
 
 (defn paint-split-pane-background
@@ -626,7 +626,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSplitPaneBackground context g x y w h))))
 
 (defn paint-internal-frame-title-pane-border
@@ -638,7 +638,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintInternalFrameTitlePaneBorder context g x y w h))))
 
 (defn paint-button-background
@@ -650,7 +650,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintButtonBackground context g x y w h))))
 
 (defn paint-formatted-text-field-border
@@ -662,7 +662,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintFormattedTextFieldBorder context g x y w h))))
 
 (defn paint-slider-border
@@ -676,9 +676,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSlider.HORIZONTAL or JSlider.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSliderBorder context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSliderBorder context g x y w h))))
 
 (defn paint-tabbed-pane-tab-background
@@ -693,9 +693,9 @@
   h - Height of the area to paint to - `int`
   tab-index - Index of tab being painted. - `int`
   orientation - One of JTabbedPane.TOP, JTabbedPane.LEFT, JTabbedPane.BOTTOM, or JTabbedPane.RIGHT - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer tab-index ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer tab-index ^Integer orientation]
     (-> this (.paintTabbedPaneTabBackground context g x y w h tab-index orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer tab-index]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer tab-index]
     (-> this (.paintTabbedPaneTabBackground context g x y w h tab-index))))
 
 (defn paint-scroll-pane-background
@@ -707,7 +707,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintScrollPaneBackground context g x y w h))))
 
 (defn paint-table-header-background
@@ -719,7 +719,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTableHeaderBackground context g x y w h))))
 
 (defn paint-tree-background
@@ -731,7 +731,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTreeBackground context g x y w h))))
 
 (defn paint-color-chooser-background
@@ -743,7 +743,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintColorChooserBackground context g x y w h))))
 
 (defn paint-radio-button-background
@@ -755,7 +755,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintRadioButtonBackground context g x y w h))))
 
 (defn paint-menu-background
@@ -767,7 +767,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintMenuBackground context g x y w h))))
 
 (defn paint-panel-border
@@ -779,7 +779,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintPanelBorder context g x y w h))))
 
 (defn paint-scroll-bar-thumb-border
@@ -794,7 +794,7 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - Orientation of the JScrollBar, one of JScrollBar.HORIZONTAL or JScrollBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintScrollBarThumbBorder context g x y w h orientation))))
 
 (defn paint-menu-bar-background
@@ -806,7 +806,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintMenuBarBackground context g x y w h))))
 
 (defn paint-desktop-icon-background
@@ -818,7 +818,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintDesktopIconBackground context g x y w h))))
 
 (defn paint-radio-button-menu-item-border
@@ -830,7 +830,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintRadioButtonMenuItemBorder context g x y w h))))
 
 (defn paint-option-pane-background
@@ -842,7 +842,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintOptionPaneBackground context g x y w h))))
 
 (defn paint-tabbed-pane-tab-border
@@ -857,9 +857,9 @@
   h - Height of the area to paint to - `int`
   tab-index - Index of tab being painted. - `int`
   orientation - One of JTabbedPane.TOP, JTabbedPane.LEFT, JTabbedPane.BOTTOM, or JTabbedPane.RIGHT - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer tab-index ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer tab-index ^Integer orientation]
     (-> this (.paintTabbedPaneTabBorder context g x y w h tab-index orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer tab-index]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer tab-index]
     (-> this (.paintTabbedPaneTabBorder context g x y w h tab-index))))
 
 (defn paint-slider-thumb-border
@@ -872,7 +872,7 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSlider.HORIZONTAL or JSlider.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSliderThumbBorder context g x y w h orientation))))
 
 (defn paint-arrow-button-background
@@ -885,7 +885,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintArrowButtonBackground context g x y w h))))
 
 (defn paint-text-field-border
@@ -897,7 +897,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTextFieldBorder context g x y w h))))
 
 (defn paint-tabbed-pane-border
@@ -909,7 +909,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTabbedPaneBorder context g x y w h))))
 
 (defn paint-table-border
@@ -921,7 +921,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTableBorder context g x y w h))))
 
 (defn paint-option-pane-border
@@ -933,7 +933,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintOptionPaneBorder context g x y w h))))
 
 (defn paint-tool-bar-drag-window-background
@@ -948,9 +948,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JToolBar.HORIZONTAL or JToolBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintToolBarDragWindowBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintToolBarDragWindowBackground context g x y w h))))
 
 (defn paint-password-field-border
@@ -962,7 +962,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintPasswordFieldBorder context g x y w h))))
 
 (defn paint-text-area-background
@@ -974,7 +974,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTextAreaBackground context g x y w h))))
 
 (defn paint-check-box-menu-item-border
@@ -986,7 +986,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintCheckBoxMenuItemBorder context g x y w h))))
 
 (defn paint-desktop-pane-background
@@ -998,7 +998,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintDesktopPaneBackground context g x y w h))))
 
 (defn paint-tabbed-pane-content-border
@@ -1011,7 +1011,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTabbedPaneContentBorder context g x y w h))))
 
 (defn paint-separator-background
@@ -1025,9 +1025,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSeparator.HORIZONTAL or JSeparator.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSeparatorBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSeparatorBackground context g x y w h))))
 
 (defn paint-text-pane-background
@@ -1039,7 +1039,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTextPaneBackground context g x y w h))))
 
 (defn paint-slider-track-background
@@ -1053,9 +1053,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSlider.HORIZONTAL or JSlider.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSliderTrackBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSliderTrackBackground context g x y w h))))
 
 (defn paint-formatted-text-field-background
@@ -1067,7 +1067,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintFormattedTextFieldBackground context g x y w h))))
 
 (defn paint-text-pane-border
@@ -1079,7 +1079,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTextPaneBorder context g x y w h))))
 
 (defn paint-separator-border
@@ -1093,9 +1093,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JSeparator.HORIZONTAL or JSeparator.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintSeparatorBorder context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintSeparatorBorder context g x y w h))))
 
 (defn paint-arrow-button-border
@@ -1108,7 +1108,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintArrowButtonBorder context g x y w h))))
 
 (defn paint-menu-border
@@ -1120,7 +1120,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintMenuBorder context g x y w h))))
 
 (defn paint-root-pane-border
@@ -1132,7 +1132,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintRootPaneBorder context g x y w h))))
 
 (defn paint-viewport-border
@@ -1144,7 +1144,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintViewportBorder context g x y w h))))
 
 (defn paint-text-field-background
@@ -1156,7 +1156,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTextFieldBackground context g x y w h))))
 
 (defn paint-list-background
@@ -1168,7 +1168,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintListBackground context g x y w h))))
 
 (defn paint-menu-item-background
@@ -1180,7 +1180,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintMenuItemBackground context g x y w h))))
 
 (defn paint-combo-box-border
@@ -1192,7 +1192,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintComboBoxBorder context g x y w h))))
 
 (defn paint-menu-item-border
@@ -1204,7 +1204,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintMenuItemBorder context g x y w h))))
 
 (defn paint-toggle-button-background
@@ -1216,7 +1216,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintToggleButtonBackground context g x y w h))))
 
 (defn paint-radio-button-border
@@ -1228,7 +1228,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintRadioButtonBorder context g x y w h))))
 
 (defn paint-tree-border
@@ -1240,7 +1240,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTreeBorder context g x y w h))))
 
 (defn paint-text-area-border
@@ -1252,7 +1252,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTextAreaBorder context g x y w h))))
 
 (defn paint-progress-bar-foreground
@@ -1266,7 +1266,7 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - one of JProgressBar.HORIZONTAL or JProgressBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintProgressBarForeground context g x y w h orientation))))
 
 (defn paint-tool-bar-drag-window-border
@@ -1281,9 +1281,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JToolBar.HORIZONTAL or JToolBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintToolBarDragWindowBorder context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintToolBarDragWindowBorder context g x y w h))))
 
 (defn paint-color-chooser-border
@@ -1295,7 +1295,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintColorChooserBorder context g x y w h))))
 
 (defn paint-viewport-background
@@ -1307,7 +1307,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintViewportBackground context g x y w h))))
 
 (defn paint-scroll-bar-track-border
@@ -1322,9 +1322,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - Orientation of the JScrollBar, one of JScrollBar.HORIZONTAL or JScrollBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintScrollBarTrackBorder context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintScrollBarTrackBorder context g x y w h))))
 
 (defn paint-table-header-border
@@ -1336,7 +1336,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTableHeaderBorder context g x y w h))))
 
 (defn paint-password-field-background
@@ -1348,7 +1348,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintPasswordFieldBackground context g x y w h))))
 
 (defn paint-check-box-border
@@ -1360,7 +1360,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintCheckBoxBorder context g x y w h))))
 
 (defn paint-tool-bar-border
@@ -1374,9 +1374,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JToolBar.HORIZONTAL or JToolBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintToolBarBorder context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintToolBarBorder context g x y w h))))
 
 (defn paint-tool-bar-content-background
@@ -1390,9 +1390,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JToolBar.HORIZONTAL or JToolBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintToolBarContentBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintToolBarContentBackground context g x y w h))))
 
 (defn paint-check-box-background
@@ -1404,7 +1404,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintCheckBoxBackground context g x y w h))))
 
 (defn paint-tree-cell-background
@@ -1416,7 +1416,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTreeCellBackground context g x y w h))))
 
 (defn paint-list-border
@@ -1428,7 +1428,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintListBorder context g x y w h))))
 
 (defn paint-tabbed-pane-background
@@ -1440,7 +1440,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTabbedPaneBackground context g x y w h))))
 
 (defn paint-progress-bar-background
@@ -1454,9 +1454,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - one of JProgressBar.HORIZONTAL or JProgressBar.VERTICAL - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintProgressBarBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintProgressBarBackground context g x y w h))))
 
 (defn paint-tabbed-pane-tab-area-background
@@ -1471,9 +1471,9 @@
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`
   orientation - One of JTabbedPane.TOP, JTabbedPane.LEFT, JTabbedPane.BOTTOM, or JTabbedPane.RIGHT - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h ^Integer orientation]
     (-> this (.paintTabbedPaneTabAreaBackground context g x y w h orientation)))
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintTabbedPaneTabAreaBackground context g x y w h))))
 
 (defn paint-button-border
@@ -1485,7 +1485,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintButtonBorder context g x y w h))))
 
 (defn paint-scroll-pane-border
@@ -1497,7 +1497,7 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintScrollPaneBorder context g x y w h))))
 
 (defn paint-radio-button-menu-item-background
@@ -1509,6 +1509,6 @@
   y - Y coordinate of the area to paint to - `int`
   w - Width of the area to paint to - `int`
   h - Height of the area to paint to - `int`"
-  ([^javax.swing.plaf.synth.SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPainter this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintRadioButtonMenuItemBackground context g x y w h))))
 

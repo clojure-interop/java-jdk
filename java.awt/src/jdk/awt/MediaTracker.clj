@@ -139,7 +139,7 @@
   Creates a media tracker to track images for a given component.
 
   comp - the component on which the images will eventually be drawn - `java.awt.Component`"
-  ([^java.awt.Component comp]
+  (^MediaTracker [^java.awt.Component comp]
     (new MediaTracker comp)))
 
 (def *-loading
@@ -193,7 +193,7 @@
 
   returns: the bitwise inclusive OR of the status of
                               all of the media being tracked - `int`"
-  (^Integer [^java.awt.MediaTracker this ^Boolean load]
+  (^Integer [^MediaTracker this ^Boolean load]
     (-> this (.statusAll load))))
 
 (defn wait-for-id
@@ -214,9 +214,9 @@
   returns: `boolean`
 
   throws: java.lang.InterruptedException - if any thread has interrupted this thread."
-  (^Boolean [^java.awt.MediaTracker this ^Integer id ^Long ms]
+  (^Boolean [^MediaTracker this ^Integer id ^Long ms]
     (-> this (.waitForID id ms)))
-  ([^java.awt.MediaTracker this ^Integer id]
+  ([^MediaTracker this ^Integer id]
     (-> this (.waitForID id))))
 
 (defn status-id
@@ -239,7 +239,7 @@
   returns: the bitwise inclusive OR of the status of
                               all of the media with the specified
                               identifier that are being tracked - `int`"
-  (^Integer [^java.awt.MediaTracker this ^Integer id ^Boolean load]
+  (^Integer [^MediaTracker this ^Integer id ^Boolean load]
     (-> this (.statusID id load))))
 
 (defn check-id
@@ -261,9 +261,9 @@
   returns: true if all images have finished loading,
                          have been aborted, or have encountered
                          an error; false otherwise - `boolean`"
-  (^Boolean [^java.awt.MediaTracker this ^Integer id ^Boolean load]
+  (^Boolean [^MediaTracker this ^Integer id ^Boolean load]
     (-> this (.checkID id load)))
-  (^Boolean [^java.awt.MediaTracker this ^Integer id]
+  (^Boolean [^MediaTracker this ^Integer id]
     (-> this (.checkID id))))
 
 (defn get-errors-id
@@ -276,7 +276,7 @@
                          tracker with the specified identifier
                          that have encountered an error, or
                          null if there are none with errors - `java.lang.Object[]`"
-  ([^java.awt.MediaTracker this ^Integer id]
+  ([^MediaTracker this ^Integer id]
     (-> this (.getErrorsID id))))
 
 (defn error-id?
@@ -288,7 +288,7 @@
   returns: true if any of the images with the
                             specified identifier had an error during
                             loading; false otherwise - `boolean`"
-  (^Boolean [^java.awt.MediaTracker this ^Integer id]
+  (^Boolean [^MediaTracker this ^Integer id]
     (-> this (.isErrorID id))))
 
 (defn add-image
@@ -300,9 +300,9 @@
   id - an identifier that can be used to track this image - `int`
   w - the width at which the image is rendered - `int`
   h - the height at which the image is rendered - `int`"
-  ([^java.awt.MediaTracker this ^java.awt.Image image ^Integer id ^Integer w ^Integer h]
+  ([^MediaTracker this ^java.awt.Image image ^Integer id ^Integer w ^Integer h]
     (-> this (.addImage image id w h)))
-  ([^java.awt.MediaTracker this ^java.awt.Image image ^Integer id]
+  ([^MediaTracker this ^java.awt.Image image ^Integer id]
     (-> this (.addImage image id))))
 
 (defn remove-image
@@ -314,11 +314,11 @@
   id - the tracking ID from which to remove the image - `int`
   width - the width to remove (-1 for unscaled) - `int`
   height - the height to remove (-1 for unscaled) - `int`"
-  ([^java.awt.MediaTracker this ^java.awt.Image image ^Integer id ^Integer width ^Integer height]
+  ([^MediaTracker this ^java.awt.Image image ^Integer id ^Integer width ^Integer height]
     (-> this (.removeImage image id width height)))
-  ([^java.awt.MediaTracker this ^java.awt.Image image ^Integer id]
+  ([^MediaTracker this ^java.awt.Image image ^Integer id]
     (-> this (.removeImage image id)))
-  ([^java.awt.MediaTracker this ^java.awt.Image image]
+  ([^MediaTracker this ^java.awt.Image image]
     (-> this (.removeImage image))))
 
 (defn check-all
@@ -339,9 +339,9 @@
   returns: true if all images have finished loading,
                          have been aborted, or have encountered
                          an error; false otherwise - `boolean`"
-  (^Boolean [^java.awt.MediaTracker this ^Boolean load]
+  (^Boolean [^MediaTracker this ^Boolean load]
     (-> this (.checkAll load)))
-  (^Boolean [^java.awt.MediaTracker this]
+  (^Boolean [^MediaTracker this]
     (-> this (.checkAll))))
 
 (defn get-errors-any
@@ -351,7 +351,7 @@
                           media tracker that have encountered
                           an error, or null if
                           there are none with errors - `java.lang.Object[]`"
-  ([^java.awt.MediaTracker this]
+  ([^MediaTracker this]
     (-> this (.getErrorsAny))))
 
 (defn error-any?
@@ -360,7 +360,7 @@
   returns: true if any of the images tracked
                     by this media tracker had an error during
                     loading; false otherwise - `boolean`"
-  (^Boolean [^java.awt.MediaTracker this]
+  (^Boolean [^MediaTracker this]
     (-> this (.isErrorAny))))
 
 (defn wait-for-all
@@ -380,8 +380,8 @@
                          loaded; false otherwise - `boolean`
 
   throws: java.lang.InterruptedException - if any thread has interrupted this thread."
-  (^Boolean [^java.awt.MediaTracker this ^Long ms]
+  (^Boolean [^MediaTracker this ^Long ms]
     (-> this (.waitForAll ms)))
-  ([^java.awt.MediaTracker this]
+  ([^MediaTracker this]
     (-> this (.waitForAll))))
 

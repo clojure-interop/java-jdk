@@ -16,9 +16,9 @@
   returns: a class-dependent value that may represent the results of the
            computation.  Each class that implements
            PrivilegedExceptionAction should document what
-           (if anything) this value represents. - `PrivilegedExceptionAction.T`
+           (if anything) this value represents. - `T`
 
   throws: java.lang.Exception - an exceptional condition has occurred. Each class that implements PrivilegedExceptionAction should document the exceptions that its run method can throw."
-  (^PrivilegedExceptionAction.T [^java.security.PrivilegedExceptionAction this]
+  ([^PrivilegedExceptionAction this]
     (-> this (.run))))
 

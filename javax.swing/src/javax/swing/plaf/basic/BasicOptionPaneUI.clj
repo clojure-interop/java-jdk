@@ -31,7 +31,7 @@
 
 (defn ->basic-option-pane-ui
   "Constructor."
-  ([]
+  (^BasicOptionPaneUI []
     (new BasicOptionPaneUI )))
 
 (def *-minimum-width
@@ -60,7 +60,7 @@
    JOptionPane.
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JComponent c]
+  ([^BasicOptionPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
@@ -68,7 +68,7 @@
    pane.
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JComponent c]
+  ([^BasicOptionPaneUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-minimum-option-pane-size
@@ -76,7 +76,7 @@
    provided for subclassers wishing to offer a different minimum size.
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicOptionPaneUI this]
+  (^java.awt.Dimension [^BasicOptionPaneUI this]
     (-> this (.getMinimumOptionPaneSize))))
 
 (defn get-preferred-size
@@ -89,7 +89,7 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicOptionPaneUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn select-initial-value
@@ -97,7 +97,7 @@
    otherwise request focus on the default value
 
   op - `javax.swing.JOptionPane`"
-  ([^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JOptionPane op]
+  ([^BasicOptionPaneUI this ^javax.swing.JOptionPane op]
     (-> this (.selectInitialValue op))))
 
 (defn contains-custom-components
@@ -107,6 +107,6 @@
   op - `javax.swing.JOptionPane`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.plaf.basic.BasicOptionPaneUI this ^javax.swing.JOptionPane op]
+  (^Boolean [^BasicOptionPaneUI this ^javax.swing.JOptionPane op]
     (-> this (.containsCustomComponents op))))
 

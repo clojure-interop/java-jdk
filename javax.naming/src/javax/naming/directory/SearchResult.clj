@@ -19,25 +19,25 @@
   obj - The object bound to name. Can be null. - `java.lang.Object`
   attrs - The attributes that were requested to be returned with this search item. Cannot be null. - `javax.naming.directory.Attributes`
   is-relative - true if name is relative to the target context of the search (which is named by the first parameter of the search() method); false if name is a URL string. - `boolean`"
-  ([^java.lang.String name ^java.lang.String class-name ^java.lang.Object obj ^javax.naming.directory.Attributes attrs ^Boolean is-relative]
+  (^SearchResult [^java.lang.String name ^java.lang.String class-name ^java.lang.Object obj ^javax.naming.directory.Attributes attrs ^Boolean is-relative]
     (new SearchResult name class-name obj attrs is-relative))
-  ([^java.lang.String name ^java.lang.Object obj ^javax.naming.directory.Attributes attrs ^Boolean is-relative]
+  (^SearchResult [^java.lang.String name ^java.lang.Object obj ^javax.naming.directory.Attributes attrs ^Boolean is-relative]
     (new SearchResult name obj attrs is-relative))
-  ([^java.lang.String name ^java.lang.Object obj ^javax.naming.directory.Attributes attrs]
+  (^SearchResult [^java.lang.String name ^java.lang.Object obj ^javax.naming.directory.Attributes attrs]
     (new SearchResult name obj attrs)))
 
 (defn get-attributes
   "Retrieves the attributes in this search result.
 
   returns: The non-null attributes in this search result. Can be empty. - `javax.naming.directory.Attributes`"
-  (^javax.naming.directory.Attributes [^javax.naming.directory.SearchResult this]
+  (^javax.naming.directory.Attributes [^SearchResult this]
     (-> this (.getAttributes))))
 
 (defn set-attributes
   "Sets the attributes of this search result to attrs.
 
   attrs - The non-null attributes to use. Can be empty. - `javax.naming.directory.Attributes`"
-  ([^javax.naming.directory.SearchResult this ^javax.naming.directory.Attributes attrs]
+  ([^SearchResult this ^javax.naming.directory.Attributes attrs]
     (-> this (.setAttributes attrs))))
 
 (defn to-string
@@ -49,6 +49,6 @@
    for debugging and is not meant to be interpreted programmatically.
 
   returns: The string representation of this SearchResult. Cannot be null. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.directory.SearchResult this]
+  (^java.lang.String [^SearchResult this]
     (-> this (.toString))))
 

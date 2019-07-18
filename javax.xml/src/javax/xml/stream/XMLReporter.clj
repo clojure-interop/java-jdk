@@ -19,6 +19,6 @@
   location - the location of the error, if available - `javax.xml.stream.Location`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLReporter this ^java.lang.String message ^java.lang.String error-type ^java.lang.Object related-information ^javax.xml.stream.Location location]
+  ([^XMLReporter this ^java.lang.String message ^java.lang.String error-type ^java.lang.Object related-information ^javax.xml.stream.Location location]
     (-> this (.report message error-type related-information location))))
 

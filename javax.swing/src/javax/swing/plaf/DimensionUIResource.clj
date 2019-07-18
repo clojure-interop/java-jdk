@@ -7,6 +7,6 @@
 
   width - `int`
   height - `int`"
-  ([^Integer width ^Integer height]
+  (^DimensionUIResource [^Integer width ^Integer height]
     (new DimensionUIResource width height)))
 

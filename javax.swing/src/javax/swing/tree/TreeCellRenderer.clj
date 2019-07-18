@@ -42,6 +42,6 @@
   has-focus - `boolean`
 
   returns: the Component that the renderer uses to draw the value - `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.tree.TreeCellRenderer this ^javax.swing.JTree tree ^java.lang.Object value ^Boolean selected ^Boolean expanded ^Boolean leaf ^Integer row ^Boolean has-focus]
+  (^java.awt.Component [^TreeCellRenderer this ^javax.swing.JTree tree ^java.lang.Object value ^Boolean selected ^Boolean expanded ^Boolean leaf ^Integer row ^Boolean has-focus]
     (-> this (.getTreeCellRendererComponent tree value selected expanded leaf row has-focus))))
 

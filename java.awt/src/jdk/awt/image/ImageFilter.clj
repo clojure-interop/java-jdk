@@ -12,7 +12,7 @@
 
 (defn ->image-filter
   "Constructor."
-  ([]
+  (^ImageFilter []
     (new ImageFilter )))
 
 (defn get-filter-instance
@@ -30,7 +30,7 @@
 
   returns: an ImageFilter used to perform the
            filtering for the specified ImageConsumer. - `java.awt.image.ImageFilter`"
-  (^java.awt.image.ImageFilter [^java.awt.image.ImageFilter this ^java.awt.image.ImageConsumer ic]
+  (^java.awt.image.ImageFilter [^ImageFilter this ^java.awt.image.ImageConsumer ic]
     (-> this (.getFilterInstance ic))))
 
 (defn set-dimensions
@@ -45,7 +45,7 @@
 
   width - the width of the source image - `int`
   height - the height of the source image - `int`"
-  ([^java.awt.image.ImageFilter this ^Integer width ^Integer height]
+  ([^ImageFilter this ^Integer width ^Integer height]
     (-> this (.setDimensions width height))))
 
 (defn set-pixels
@@ -66,7 +66,7 @@
   pixels - the array of pixels - `byte[]`
   off - the offset into the pixels array - `int`
   scansize - the distance from one row of pixels to the next in the pixels array - `int`"
-  ([^java.awt.image.ImageFilter this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
+  ([^ImageFilter this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
     (-> this (.setPixels x y w h model pixels off scansize))))
 
 (defn set-hints
@@ -80,7 +80,7 @@
    with the filtering operation.
 
   hints - a set of hints that the ImageConsumer uses to process the pixels - `int`"
-  ([^java.awt.image.ImageFilter this ^Integer hints]
+  ([^ImageFilter this ^Integer hints]
     (-> this (.setHints hints))))
 
 (defn set-color-model
@@ -94,7 +94,7 @@
    with the filtering operation.
 
   model - the specified ColorModel - `java.awt.image.ColorModel`"
-  ([^java.awt.image.ImageFilter this ^java.awt.image.ColorModel model]
+  ([^ImageFilter this ^java.awt.image.ColorModel model]
     (-> this (.setColorModel model))))
 
 (defn resend-top-down-left-right
@@ -140,7 +140,7 @@
   ip - the ImageProducer that is feeding this instance of the filter - also the ImageProducer that the request should be forwarded to if necessary - `java.awt.image.ImageProducer`
 
   throws: java.lang.NullPointerException - if ip is null"
-  ([^java.awt.image.ImageFilter this ^java.awt.image.ImageProducer ip]
+  ([^ImageFilter this ^java.awt.image.ImageProducer ip]
     (-> this (.resendTopDownLeftRight ip))))
 
 (defn set-properties
@@ -153,17 +153,17 @@
    this method directly since that operation could interfere
    with the filtering operation.
 
-  props - the properties from the source object - `java.util.Hashtable<?,?>`
+  props - the properties from the source object - `java.util.Hashtable`
 
   throws: java.lang.NullPointerException - if props is null"
-  ([^java.awt.image.ImageFilter this ^java.util.Hashtable props]
+  ([^ImageFilter this ^java.util.Hashtable props]
     (-> this (.setProperties props))))
 
 (defn clone
   "Clones this object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.image.ImageFilter this]
+  (^java.lang.Object [^ImageFilter this]
     (-> this (.clone))))
 
 (defn image-complete
@@ -177,6 +177,6 @@
    with the filtering operation.
 
   status - the status of image loading - `int`"
-  ([^java.awt.image.ImageFilter this ^Integer status]
+  ([^ImageFilter this ^Integer status]
     (-> this (.imageComplete status))))
 

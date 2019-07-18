@@ -22,8 +22,8 @@
    All name resolution-related fields are initialized to null.
 
   explanation - A possibly null message explaining the problem. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^InterruptedNamingException [^java.lang.String explanation]
     (new InterruptedNamingException explanation))
-  ([]
+  (^InterruptedNamingException []
     (new InterruptedNamingException )))
 

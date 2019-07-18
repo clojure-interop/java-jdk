@@ -28,7 +28,7 @@
 
   bank - the bank index (in the range from 0 to 16383) - `int`
   program - the program index (in the range from 0 to 127) - `int`"
-  ([^Integer bank ^Integer program]
+  (^Patch [^Integer bank ^Integer program]
     (new Patch bank program)))
 
 (defn get-bank
@@ -36,7 +36,7 @@
    whose location this Patch specifies.
 
   returns: the bank number, whose range is from 0 to 16383 - `int`"
-  (^Integer [^javax.sound.midi.Patch this]
+  (^Integer [^Patch this]
     (-> this (.getBank))))
 
 (defn get-program
@@ -44,6 +44,6 @@
    a bank, of the instrument whose location this Patch specifies.
 
   returns: the instrument's program number, whose range is from 0 to 127 - `int`"
-  (^Integer [^javax.sound.midi.Patch this]
+  (^Integer [^Patch this]
     (-> this (.getProgram))))
 

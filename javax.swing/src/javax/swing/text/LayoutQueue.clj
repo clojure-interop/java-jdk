@@ -7,7 +7,7 @@
   "Constructor.
 
   Construct a layout queue."
-  ([]
+  (^LayoutQueue []
     (new LayoutQueue )))
 
 (defn *get-default-queue
@@ -29,6 +29,6 @@
    the results are not believed to be visible.
 
   task - `java.lang.Runnable`"
-  ([^javax.swing.text.LayoutQueue this ^java.lang.Runnable task]
+  ([^LayoutQueue this ^java.lang.Runnable task]
     (-> this (.addTask task))))
 

@@ -14,7 +14,7 @@
 
 (defn ->basic-icon-factory
   "Constructor."
-  ([]
+  (^BasicIconFactory []
     (new BasicIconFactory )))
 
 (defn *get-menu-item-check-icon

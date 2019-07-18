@@ -28,6 +28,6 @@
   returns: the authenticated subject containing its associated principals. - `javax.security.auth.Subject`
 
   throws: java.lang.SecurityException - if the server cannot authenticate the user with the provided credentials."
-  (^javax.security.auth.Subject [^javax.management.remote.JMXAuthenticator this ^java.lang.Object credentials]
+  (^javax.security.auth.Subject [^JMXAuthenticator this ^java.lang.Object credentials]
     (-> this (.authenticate credentials))))
 

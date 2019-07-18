@@ -211,7 +211,7 @@
 
   Sole constructor.  (For invocation by subclass constructors, typically
    implicit.)"
-  ([]
+  (^ResourceBundle []
     (new ResourceBundle )))
 
 (defn *get-bundle
@@ -386,16 +386,16 @@
   base-name - the base name of the resource bundle, a fully qualified class name - `java.lang.String`
   target-locale - the locale for which a resource bundle is desired - `java.util.Locale`
   loader - the class loader from which to load the resource bundle - `java.lang.ClassLoader`
-  control - the control which gives information for the resource bundle loading process - `java.util.ResourceBundle.Control`
+  control - the control which gives information for the resource bundle loading process - `java.util.ResourceBundle$Control`
 
   returns: a resource bundle for the given base name and locale - `java.util.ResourceBundle`
 
   throws: java.lang.NullPointerException - if baseName, targetLocale, loader, or control is null"
-  (^java.util.ResourceBundle [^java.lang.String base-name ^java.util.Locale target-locale ^java.lang.ClassLoader loader ^java.util.ResourceBundle.Control control]
+  (^java.util.ResourceBundle [^java.lang.String base-name ^java.util.Locale target-locale ^java.lang.ClassLoader loader ^java.util.ResourceBundle$Control control]
     (ResourceBundle/getBundle base-name target-locale loader control))
-  (^java.util.ResourceBundle [^java.lang.String base-name ^java.util.Locale target-locale ^java.util.ResourceBundle.Control control]
+  (^java.util.ResourceBundle [^java.lang.String base-name ^java.util.Locale target-locale ^java.util.ResourceBundle$Control control]
     (ResourceBundle/getBundle base-name target-locale control))
-  (^java.util.ResourceBundle [^java.lang.String base-name ^java.util.ResourceBundle.Control control]
+  (^java.util.ResourceBundle [^java.lang.String base-name ^java.util.ResourceBundle$Control control]
     (ResourceBundle/getBundle base-name control))
   (^java.util.ResourceBundle [^java.lang.String base-name]
     (ResourceBundle/getBundle base-name)))
@@ -421,7 +421,7 @@
 
   returns: The base name of the resource bundle, as provided to and expected
    by the ResourceBundle.getBundle(...) methods. - `java.lang.String`"
-  (^java.lang.String [^java.util.ResourceBundle this]
+  (^java.lang.String [^ResourceBundle this]
     (-> this (.getBaseBundleName))))
 
 (defn get-string
@@ -435,7 +435,7 @@
   returns: the string for the given key - `java.lang.String`
 
   throws: java.lang.NullPointerException - if key is null"
-  (^java.lang.String [^java.util.ResourceBundle this ^java.lang.String key]
+  (^java.lang.String [^ResourceBundle this ^java.lang.String key]
     (-> this (.getString key))))
 
 (defn get-string-array
@@ -449,7 +449,7 @@
   returns: the string array for the given key - `java.lang.String[]`
 
   throws: java.lang.NullPointerException - if key is null"
-  ([^java.util.ResourceBundle this ^java.lang.String key]
+  ([^ResourceBundle this ^java.lang.String key]
     (-> this (.getStringArray key))))
 
 (defn get-object
@@ -465,7 +465,7 @@
   returns: the object for the given key - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  (^java.lang.Object [^java.util.ResourceBundle this ^java.lang.String key]
+  (^java.lang.Object [^ResourceBundle this ^java.lang.String key]
     (-> this (.getObject key))))
 
 (defn get-locale
@@ -474,7 +474,7 @@
    corresponds to the requested locale or is a fallback.
 
   returns: the locale of this resource bundle - `java.util.Locale`"
-  (^java.util.Locale [^java.util.ResourceBundle this]
+  (^java.util.Locale [^ResourceBundle this]
     (-> this (.getLocale))))
 
 (defn get-keys
@@ -482,7 +482,7 @@
 
   returns: an Enumeration of the keys contained in
            this ResourceBundle and its parent bundles. - `java.util.Enumeration<java.lang.String>`"
-  (^java.util.Enumeration [^java.util.ResourceBundle this]
+  (^java.util.Enumeration [^ResourceBundle this]
     (-> this (.getKeys))))
 
 (defn contains-key
@@ -496,7 +496,7 @@
           parent bundles; false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if key is null"
-  (^Boolean [^java.util.ResourceBundle this ^java.lang.String key]
+  (^Boolean [^ResourceBundle this ^java.lang.String key]
     (-> this (.containsKey key))))
 
 (defn key-set
@@ -505,6 +505,6 @@
 
   returns: a Set of all keys contained in this
            ResourceBundle and its parent bundles. - `java.util.Set<java.lang.String>`"
-  (^java.util.Set [^java.util.ResourceBundle this]
+  (^java.util.Set [^ResourceBundle this]
     (-> this (.keySet))))
 

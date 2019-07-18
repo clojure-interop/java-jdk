@@ -15,8 +15,8 @@
   attribute - Attribute value to add to the set. - `javax.print.attribute.PrintRequestAttribute`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if attribute is null."
-  ([^javax.print.attribute.PrintRequestAttribute attribute]
+  (^HashPrintRequestAttributeSet [^javax.print.attribute.PrintRequestAttribute attribute]
     (new HashPrintRequestAttributeSet attribute))
-  ([]
+  (^HashPrintRequestAttributeSet []
     (new HashPrintRequestAttributeSet )))
 

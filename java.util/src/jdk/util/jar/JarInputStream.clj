@@ -18,9 +18,9 @@
   verify - whether or not to verify the JarInputStream if it is signed. - `boolean`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.io.InputStream in ^Boolean verify]
+  (^JarInputStream [^java.io.InputStream in ^Boolean verify]
     (new JarInputStream in verify))
-  ([^java.io.InputStream in]
+  (^JarInputStream [^java.io.InputStream in]
     (new JarInputStream in)))
 
 (def *-locsig
@@ -269,7 +269,7 @@
 
   returns: the Manifest for this JAR file, or
            null if none. - `java.util.jar.Manifest`"
-  (^java.util.jar.Manifest [^java.util.jar.JarInputStream this]
+  (^java.util.jar.Manifest [^JarInputStream this]
     (-> this (.getManifest))))
 
 (defn get-next-entry
@@ -281,7 +281,7 @@
   returns: the next ZIP file entry, or null if there are no more entries - `java.util.zip.ZipEntry`
 
   throws: java.util.zip.ZipException - if a ZIP file error has occurred"
-  (^java.util.zip.ZipEntry [^java.util.jar.JarInputStream this]
+  (^java.util.zip.ZipEntry [^JarInputStream this]
     (-> this (.getNextEntry))))
 
 (defn get-next-jar-entry
@@ -293,7 +293,7 @@
   returns: the next JAR file entry, or null if there are no more entries - `java.util.jar.JarEntry`
 
   throws: java.util.zip.ZipException - if a ZIP file error has occurred"
-  (^java.util.jar.JarEntry [^java.util.jar.JarInputStream this]
+  (^java.util.jar.JarEntry [^JarInputStream this]
     (-> this (.getNextJarEntry))))
 
 (defn read
@@ -313,6 +313,6 @@
            entry is reached - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  (^Integer [^java.util.jar.JarInputStream this b ^Integer off ^Integer len]
+  (^Integer [^JarInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len))))
 

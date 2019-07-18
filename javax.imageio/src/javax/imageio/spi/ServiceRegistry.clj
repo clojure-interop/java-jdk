@@ -65,10 +65,10 @@
    set of categories taken from the categories
    argument.
 
-  categories - an Iterator containing Class objects to be used to define categories. - `java.util.Iterator<java.lang.Class<?>>`
+  categories - an Iterator containing Class objects to be used to define categories. - `java.util.Iterator`
 
   throws: java.lang.IllegalArgumentException - if categories is null."
-  ([^java.util.Iterator> categories]
+  (^ServiceRegistry [^java.util.Iterator categories]
     (new ServiceRegistry categories)))
 
 (defn *lookup-providers
@@ -88,7 +88,7 @@
    a running Java virtual machine, this method may return
    different results each time it is invoked.
 
-  provider-class - a Classobject indicating the class or interface of the service providers being detected. - `java.lang.Class<T>`
+  provider-class - a Classobject indicating the class or interface of the service providers being detected. - `java.lang.Class`
   loader - the class loader to be used to load provider-configuration files and instantiate provider classes, or null if the system class loader (or, failing that the bootstrap class loader) is to be used. - `java.lang.ClassLoader`
 
   returns: An Iterator that yields provider objects
@@ -117,10 +117,10 @@
    it is deregistered from a category or when the registry is
    finalized.
 
-  providers - an Iterator containing service provider objects to be registered. - `java.util.Iterator<?>`
+  providers - an Iterator containing service provider objects to be registered. - `java.util.Iterator`
 
   throws: java.lang.IllegalArgumentException - if providers is null or contains a null entry."
-  ([^javax.imageio.spi.ServiceRegistry this ^java.util.Iterator providers]
+  ([^ServiceRegistry this ^java.util.Iterator providers]
     (-> this (.registerServiceProviders providers))))
 
 (defn contains
@@ -133,19 +133,19 @@
    registered. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if provider is null."
-  (^Boolean [^javax.imageio.spi.ServiceRegistry this ^java.lang.Object provider]
+  (^Boolean [^ServiceRegistry this ^java.lang.Object provider]
     (-> this (.contains provider))))
 
 (defn deregister-all
   "Deregisters all service provider object currently registered
    under the given category.
 
-  category - the category to be emptied. - `java.lang.Class<?>`
+  category - the category to be emptied. - `java.lang.Class`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class category]
+  ([^ServiceRegistry this ^java.lang.Class category]
     (-> this (.deregisterAll category)))
-  ([^javax.imageio.spi.ServiceRegistry this]
+  ([^ServiceRegistry this]
     (-> this (.deregisterAll))))
 
 (defn get-service-providers
@@ -158,17 +158,17 @@
    ordering of the results using the same rules as
    getServiceProviders(Class, boolean).
 
-  category - the category to be retrieved from. - `java.lang.Class<T>`
-  filter - an instance of ServiceRegistry.Filter whose filter method will be invoked. - `javax.imageio.spi.ServiceRegistry.Filter`
+  category - the category to be retrieved from. - `java.lang.Class`
+  filter - an instance of ServiceRegistry.Filter whose filter method will be invoked. - `javax.imageio.spi.ServiceRegistry$Filter`
   use-ordering - true if pairwise orderings should be taken account in ordering the returned objects. - `boolean`
 
   returns: an Iterator containing service provider
    objects from the given category, possibly in order. - `<T> java.util.Iterator<T>`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class category ^javax.imageio.spi.ServiceRegistry.Filter filter ^Boolean use-ordering]
+  ([^ServiceRegistry this ^java.lang.Class category ^javax.imageio.spi.ServiceRegistry$Filter filter ^Boolean use-ordering]
     (-> this (.getServiceProviders category filter use-ordering)))
-  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class category ^Boolean use-ordering]
+  ([^ServiceRegistry this ^java.lang.Class category ^Boolean use-ordering]
     (-> this (.getServiceProviders category use-ordering))))
 
 (defn deregister-service-provider
@@ -185,16 +185,16 @@
    onDeregistration method will be called.
 
   provider - the service provider object to be deregistered. - `T`
-  category - the category from which to deregister the provider. - `java.lang.Class<T>`
+  category - the category from which to deregister the provider. - `java.lang.Class`
 
   returns: true if the provider was previously
    registered in the same category category,
    false otherwise. - `<T> boolean`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([^javax.imageio.spi.ServiceRegistry this provider ^java.lang.Class category]
+  ([^ServiceRegistry this provider ^java.lang.Class category]
     (-> this (.deregisterServiceProvider provider category)))
-  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Object provider]
+  ([^ServiceRegistry this ^java.lang.Object provider]
     (-> this (.deregisterServiceProvider provider))))
 
 (defn get-service-provider-by-class
@@ -204,14 +204,14 @@
    registered object has the desired class type, null
    is returned.
 
-  provider-class - the Class of the desired service provider object. - `java.lang.Class<T>`
+  provider-class - the Class of the desired service provider object. - `java.lang.Class`
 
   returns: a currently registered service provider object with the
    desired Classtype, or null is none is
    present. - `<T> T`
 
   throws: java.lang.IllegalArgumentException - if providerClass is null."
-  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class provider-class]
+  ([^ServiceRegistry this ^java.lang.Class provider-class]
     (-> this (.getServiceProviderByClass provider-class))))
 
 (defn set-ordering
@@ -227,7 +227,7 @@
    getServiceProviders methods when their
    useOrdering argument is true.
 
-  category - a Class object indicating the category under which the preference is to be established. - `java.lang.Class<T>`
+  category - a Class object indicating the category under which the preference is to be established. - `java.lang.Class`
   first-provider - the preferred provider. - `T`
   second-provider - the provider to which firstProvider is preferred. - `T`
 
@@ -235,7 +235,7 @@
    was established. - `<T> boolean`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class category first-provider second-provider]
+  ([^ServiceRegistry this ^java.lang.Class category first-provider second-provider]
     (-> this (.setOrdering category first-provider second-provider))))
 
 (defn get-categories
@@ -245,7 +245,7 @@
 
   returns: an Iterator containing
    Classobjects. - `java.util.Iterator<java.lang.Class<?>>`"
-  (^java.util.Iterator> [^javax.imageio.spi.ServiceRegistry this]
+  (^java.util.Iterator [^ServiceRegistry this]
     (-> this (.getCategories))))
 
 (defn register-service-provider
@@ -260,15 +260,15 @@
    category is removed or the registry is garbage collected.
 
   provider - the service provide object to be registered. - `T`
-  category - the category under which to register the provider. - `java.lang.Class<T>`
+  category - the category under which to register the provider. - `java.lang.Class`
 
   returns: true if no provider of the same class was previously
    registered in the same category category. - `<T> boolean`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([^javax.imageio.spi.ServiceRegistry this provider ^java.lang.Class category]
+  ([^ServiceRegistry this provider ^java.lang.Class category]
     (-> this (.registerServiceProvider provider category)))
-  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Object provider]
+  ([^ServiceRegistry this ^java.lang.Object provider]
     (-> this (.registerServiceProvider provider))))
 
 (defn unset-ordering
@@ -282,7 +282,7 @@
    getServiceProviders methods when their
    useOrdering argument is true.
 
-  category - a Class object indicating the category under which the preference is to be disestablished. - `java.lang.Class<T>`
+  category - a Class object indicating the category under which the preference is to be disestablished. - `java.lang.Class`
   first-provider - the formerly preferred provider. - `T`
   second-provider - the provider to which firstProvider was formerly preferred. - `T`
 
@@ -290,7 +290,7 @@
    disestablished. - `<T> boolean`
 
   throws: java.lang.IllegalArgumentException - if there is no category corresponding to category."
-  ([^javax.imageio.spi.ServiceRegistry this ^java.lang.Class category first-provider second-provider]
+  ([^ServiceRegistry this ^java.lang.Class category first-provider second-provider]
     (-> this (.unsetOrdering category first-provider second-provider))))
 
 (defn finalize
@@ -300,6 +300,6 @@
    be called from application code.
 
   throws: java.lang.Throwable - if an error occurs during superclass finalization."
-  ([^javax.imageio.spi.ServiceRegistry this]
+  ([^ServiceRegistry this]
     (-> this (.finalize))))
 

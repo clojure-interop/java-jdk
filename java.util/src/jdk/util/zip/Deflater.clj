@@ -52,11 +52,11 @@
 
   level - the compression level (0-9) - `int`
   nowrap - if true then use GZIP compatible compression - `boolean`"
-  ([^Integer level ^Boolean nowrap]
+  (^Deflater [^Integer level ^Boolean nowrap]
     (new Deflater level nowrap))
-  ([^Integer level]
+  (^Deflater [^Integer level]
     (new Deflater level))
-  ([]
+  (^Deflater []
     (new Deflater )))
 
 (def *-deflated
@@ -160,9 +160,9 @@
   b - the input data bytes - `byte[]`
   off - the start offset of the data - `int`
   len - the length of the data - `int`"
-  ([^java.util.zip.Deflater this b ^Integer off ^Integer len]
+  ([^Deflater this b ^Integer off ^Integer len]
     (-> this (.setInput b off len)))
-  ([^java.util.zip.Deflater this b]
+  ([^Deflater this b]
     (-> this (.setInput b))))
 
 (defn get-total-out
@@ -173,14 +173,14 @@
    the preferred means of obtaining this information.
 
   returns: the total number of compressed bytes output so far - `int`"
-  (^Integer [^java.util.zip.Deflater this]
+  (^Integer [^Deflater this]
     (-> this (.getTotalOut))))
 
 (defn get-bytes-written
   "Returns the total number of compressed bytes output so far.
 
   returns: the total (non-negative) number of compressed bytes output so far - `long`"
-  (^Long [^java.util.zip.Deflater this]
+  (^Long [^Deflater this]
     (-> this (.getBytesWritten))))
 
 (defn needs-input
@@ -189,13 +189,13 @@
 
   returns: true if the input data buffer is empty and setInput()
    should be called in order to provide more input - `boolean`"
-  (^Boolean [^java.util.zip.Deflater this]
+  (^Boolean [^Deflater this]
     (-> this (.needsInput))))
 
 (defn reset
   "Resets deflater so that a new set of input data can be processed.
    Keeps current compression level and strategy settings."
-  ([^java.util.zip.Deflater this]
+  ([^Deflater this]
     (-> this (.reset))))
 
 (defn set-strategy
@@ -209,27 +209,27 @@
   strategy - the new compression strategy - `int`
 
   throws: java.lang.IllegalArgumentException - if the compression strategy is invalid"
-  ([^java.util.zip.Deflater this ^Integer strategy]
+  ([^Deflater this ^Integer strategy]
     (-> this (.setStrategy strategy))))
 
 (defn finish
   "When called, indicates that compression should end with the current
    contents of the input buffer."
-  ([^java.util.zip.Deflater this]
+  ([^Deflater this]
     (-> this (.finish))))
 
 (defn get-bytes-read
   "Returns the total number of uncompressed bytes input so far.
 
   returns: the total (non-negative) number of uncompressed bytes input so far - `long`"
-  (^Long [^java.util.zip.Deflater this]
+  (^Long [^Deflater this]
     (-> this (.getBytesRead))))
 
 (defn get-adler
   "Returns the ADLER-32 value of the uncompressed data.
 
   returns: the ADLER-32 value of the uncompressed data - `int`"
-  (^Integer [^java.util.zip.Deflater this]
+  (^Integer [^Deflater this]
     (-> this (.getAdler))))
 
 (defn set-level
@@ -243,7 +243,7 @@
   level - the new compression level (0-9) - `int`
 
   throws: java.lang.IllegalArgumentException - if the compression level is invalid"
-  ([^java.util.zip.Deflater this ^Integer level]
+  ([^Deflater this ^Integer level]
     (-> this (.setLevel level))))
 
 (defn deflate
@@ -289,11 +289,11 @@
            the output buffer - `int`
 
   throws: java.lang.IllegalArgumentException - if the flush mode is invalid"
-  (^Integer [^java.util.zip.Deflater this b ^Integer off ^Integer len ^Integer flush]
+  (^Integer [^Deflater this b ^Integer off ^Integer len ^Integer flush]
     (-> this (.deflate b off len flush)))
-  (^Integer [^java.util.zip.Deflater this b ^Integer off ^Integer len]
+  (^Integer [^Deflater this b ^Integer off ^Integer len]
     (-> this (.deflate b off len)))
-  (^Integer [^java.util.zip.Deflater this b]
+  (^Integer [^Deflater this b]
     (-> this (.deflate b))))
 
 (defn get-total-in
@@ -304,7 +304,7 @@
    the preferred means of obtaining this information.
 
   returns: the total number of uncompressed bytes input so far - `int`"
-  (^Integer [^java.util.zip.Deflater this]
+  (^Integer [^Deflater this]
     (-> this (.getTotalIn))))
 
 (defn set-dictionary
@@ -317,9 +317,9 @@
   b - the dictionary data bytes - `byte[]`
   off - the start offset of the data - `int`
   len - the length of the data - `int`"
-  ([^java.util.zip.Deflater this b ^Integer off ^Integer len]
+  ([^Deflater this b ^Integer off ^Integer len]
     (-> this (.setDictionary b off len)))
-  ([^java.util.zip.Deflater this b]
+  ([^Deflater this b]
     (-> this (.setDictionary b))))
 
 (defn end
@@ -328,7 +328,7 @@
    being used, but will also be called automatically by the
    finalize() method. Once this method is called, the behavior
    of the Deflater object is undefined."
-  ([^java.util.zip.Deflater this]
+  ([^Deflater this]
     (-> this (.end))))
 
 (defn finished
@@ -337,6 +337,6 @@
 
   returns: true if the end of the compressed data output stream has
    been reached - `boolean`"
-  (^Boolean [^java.util.zip.Deflater this]
+  (^Boolean [^Deflater this]
     (-> this (.finished))))
 

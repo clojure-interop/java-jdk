@@ -21,7 +21,7 @@
   data - a byte array. - `byte[]`
   offset - an int offset within the array. - `int`
   length - an int specifying the length of the data of interest within byte array, in bytes. - `int`"
-  ([data ^Integer offset ^Integer length]
+  (^IIOByteBuffer [data ^Integer offset ^Integer length]
     (new IIOByteBuffer data offset length)))
 
 (defn get-data
@@ -31,7 +31,7 @@
    be used.
 
   returns: a byte array reference. - `byte[]`"
-  ([^javax.imageio.stream.IIOByteBuffer this]
+  ([^IIOByteBuffer this]
     (-> this (.getData))))
 
 (defn set-data
@@ -39,7 +39,7 @@
    to the getData method.
 
   data - a byte array reference containing the new data value. - `byte[]`"
-  ([^javax.imageio.stream.IIOByteBuffer this data]
+  ([^IIOByteBuffer this data]
     (-> this (.setData data))))
 
 (defn get-offset
@@ -47,7 +47,7 @@
    getData at which the data of interest start.
 
   returns: an int offset. - `int`"
-  (^Integer [^javax.imageio.stream.IIOByteBuffer this]
+  (^Integer [^IIOByteBuffer this]
     (-> this (.getOffset))))
 
 (defn set-offset
@@ -55,7 +55,7 @@
    to the getOffset method.
 
   offset - an int containing the new offset value. - `int`"
-  ([^javax.imageio.stream.IIOByteBuffer this ^Integer offset]
+  ([^IIOByteBuffer this ^Integer offset]
     (-> this (.setOffset offset))))
 
 (defn get-length
@@ -63,7 +63,7 @@
    array returned by getData.
 
   returns: an int length. - `int`"
-  (^Integer [^javax.imageio.stream.IIOByteBuffer this]
+  (^Integer [^IIOByteBuffer this]
     (-> this (.getLength))))
 
 (defn set-length
@@ -71,6 +71,6 @@
    to the getLength method.
 
   length - an int containing the new length value. - `int`"
-  ([^javax.imageio.stream.IIOByteBuffer this ^Integer length]
+  ([^IIOByteBuffer this ^Integer length]
     (-> this (.setLength length))))
 

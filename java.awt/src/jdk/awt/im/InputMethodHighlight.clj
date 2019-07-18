@@ -43,14 +43,14 @@
   selected - whether the text range is selected - `boolean`
   state - the conversion state for the text range - RAW_TEXT or CONVERTED_TEXT - `int`
   variation - the variation for the text range - `int`
-  style - the rendering style attributes for the text range, or null - `java.util.Map<java.awt.font.TextAttribute,?>`
+  style - the rendering style attributes for the text range, or null - `java.util.Map`
 
   throws: java.lang.IllegalArgumentException - if a state other than RAW_TEXT or CONVERTED_TEXT is given"
-  ([^Boolean selected ^Integer state ^Integer variation ^java.util.Map style]
+  (^InputMethodHighlight [^Boolean selected ^Integer state ^Integer variation ^java.util.Map style]
     (new InputMethodHighlight selected state variation style))
-  ([^Boolean selected ^Integer state ^Integer variation]
+  (^InputMethodHighlight [^Boolean selected ^Integer state ^Integer variation]
     (new InputMethodHighlight selected state variation))
-  ([^Boolean selected ^Integer state]
+  (^InputMethodHighlight [^Boolean selected ^Integer state]
     (new InputMethodHighlight selected state)))
 
 (def *-raw-text
@@ -105,27 +105,27 @@
   "Returns whether the text range is selected.
 
   returns: `boolean`"
-  (^Boolean [^java.awt.im.InputMethodHighlight this]
+  (^Boolean [^InputMethodHighlight this]
     (-> this (.isSelected))))
 
 (defn get-state
   "Returns the conversion state of the text range.
 
   returns: The conversion state for the text range - RAW_TEXT or CONVERTED_TEXT. - `int`"
-  (^Integer [^java.awt.im.InputMethodHighlight this]
+  (^Integer [^InputMethodHighlight this]
     (-> this (.getState))))
 
 (defn get-variation
   "Returns the variation of the text range.
 
   returns: `int`"
-  (^Integer [^java.awt.im.InputMethodHighlight this]
+  (^Integer [^InputMethodHighlight this]
     (-> this (.getVariation))))
 
 (defn get-style
   "Returns the rendering style attributes for the text range, or null.
 
   returns: `java.util.Map<java.awt.font.TextAttribute,?>`"
-  (^java.util.Map [^java.awt.im.InputMethodHighlight this]
+  (^java.util.Map [^InputMethodHighlight this]
     (-> this (.getStyle))))
 

@@ -12,6 +12,6 @@
   returns: Set of QNames of header blocks processed by this
              handler instance. QName is the qualified
              name of the outermost element of the Header block. - `java.util.Set<javax.xml.namespace.QName>`"
-  (^java.util.Set [^javax.xml.ws.handler.soap.SOAPHandler this]
+  (^java.util.Set [^SOAPHandler this]
     (-> this (.getHeaders))))
 

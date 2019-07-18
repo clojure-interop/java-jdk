@@ -77,7 +77,7 @@
             dimension at index 1. - `float[]`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  ([^javax.print.attribute.Size2DSyntax this ^Integer units]
+  ([^Size2DSyntax this ^Integer units]
     (-> this (.getSize units))))
 
 (defn get-x
@@ -89,7 +89,7 @@
   returns: X dimension. - `float`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  (^Float [^javax.print.attribute.Size2DSyntax this ^Integer units]
+  (^Float [^Size2DSyntax this ^Integer units]
     (-> this (.getX units))))
 
 (defn get-y
@@ -101,7 +101,7 @@
   returns: Y dimension. - `float`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  (^Float [^javax.print.attribute.Size2DSyntax this ^Integer units]
+  (^Float [^Size2DSyntax this ^Integer units]
     (-> this (.getY units))))
 
 (defn to-string
@@ -117,9 +117,9 @@
   returns: String version of this two-dimensional size attribute. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if units < 1."
-  (^java.lang.String [^javax.print.attribute.Size2DSyntax this ^Integer units ^java.lang.String units-name]
+  (^java.lang.String [^Size2DSyntax this ^Integer units ^java.lang.String units-name]
     (-> this (.toString units units-name)))
-  (^java.lang.String [^javax.print.attribute.Size2DSyntax this]
+  (^java.lang.String [^Size2DSyntax this]
     (-> this (.toString))))
 
 (defn equals
@@ -142,13 +142,13 @@
 
   returns: True if object is equivalent to this
             two-dimensional size attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.Size2DSyntax this ^java.lang.Object object]
+  (^Boolean [^Size2DSyntax this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn hash-code
   "Returns a hash code value for this two-dimensional size attribute.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.print.attribute.Size2DSyntax this]
+  (^Integer [^Size2DSyntax this]
     (-> this (.hashCode))))
 

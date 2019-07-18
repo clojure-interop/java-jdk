@@ -26,7 +26,7 @@
    For the returned SynthLookAndFeel to be useful you need to
    invoke load to specify the set of
    SynthStyles, or invoke setStyleFactory."
-  ([]
+  (^SynthLookAndFeel []
     (new SynthLookAndFeel )))
 
 (defn *set-style-factory
@@ -86,7 +86,7 @@
 
 (defn uninitialize
   "Called by UIManager when this look and feel is uninstalled."
-  ([^javax.swing.plaf.synth.SynthLookAndFeel this]
+  ([^SynthLookAndFeel this]
     (-> this (.uninitialize))))
 
 (defn load
@@ -99,40 +99,40 @@
    for more information.
 
   input - InputStream to load from - `java.io.InputStream`
-  resource-base - used to resolve any images or other resources - `java.lang.Class<?>`
+  resource-base - used to resolve any images or other resources - `java.lang.Class`
 
   throws: java.text.ParseException - if there is an error in parsing"
-  ([^javax.swing.plaf.synth.SynthLookAndFeel this ^java.io.InputStream input ^java.lang.Class resource-base]
+  ([^SynthLookAndFeel this ^java.io.InputStream input ^java.lang.Class resource-base]
     (-> this (.load input resource-base)))
-  ([^javax.swing.plaf.synth.SynthLookAndFeel this ^java.net.URL url]
+  ([^SynthLookAndFeel this ^java.net.URL url]
     (-> this (.load url))))
 
 (defn get-defaults
   "Returns the defaults for this SynthLookAndFeel.
 
   returns: Defaults table. - `javax.swing.UIDefaults`"
-  (^javax.swing.UIDefaults [^javax.swing.plaf.synth.SynthLookAndFeel this]
+  (^javax.swing.UIDefaults [^SynthLookAndFeel this]
     (-> this (.getDefaults))))
 
 (defn get-name
   "Return a short string that identifies this look and feel.
 
   returns: a short string identifying this look and feel. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.synth.SynthLookAndFeel this]
+  (^java.lang.String [^SynthLookAndFeel this]
     (-> this (.getName))))
 
 (defn get-description
   "Returns a textual description of SynthLookAndFeel.
 
   returns: textual description of synth. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.synth.SynthLookAndFeel this]
+  (^java.lang.String [^SynthLookAndFeel this]
     (-> this (.getDescription))))
 
 (defn supported-look-and-feel?
   "Returns true, SynthLookAndFeel is always supported.
 
   returns: true. - `boolean`"
-  (^Boolean [^javax.swing.plaf.synth.SynthLookAndFeel this]
+  (^Boolean [^SynthLookAndFeel this]
     (-> this (.isSupportedLookAndFeel))))
 
 (defn should-update-style-on-ancestor-changed?
@@ -146,25 +146,25 @@
   returns: whether or not the UIs should update their
    SynthStyles from the SynthStyleFactory
    when the ancestor changed. - `boolean`"
-  (^Boolean [^javax.swing.plaf.synth.SynthLookAndFeel this]
+  (^Boolean [^SynthLookAndFeel this]
     (-> this (.shouldUpdateStyleOnAncestorChanged))))
 
 (defn initialize
   "Called by UIManager when this look and feel is installed."
-  ([^javax.swing.plaf.synth.SynthLookAndFeel this]
+  ([^SynthLookAndFeel this]
     (-> this (.initialize))))
 
 (defn native-look-and-feel?
   "Returns false, SynthLookAndFeel is not a native look and feel.
 
   returns: false - `boolean`"
-  (^Boolean [^javax.swing.plaf.synth.SynthLookAndFeel this]
+  (^Boolean [^SynthLookAndFeel this]
     (-> this (.isNativeLookAndFeel))))
 
 (defn get-id
   "Return a string that identifies this look and feel.
 
   returns: a short string identifying this look and feel. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.synth.SynthLookAndFeel this]
+  (^java.lang.String [^SynthLookAndFeel this]
     (-> this (.getID))))
 

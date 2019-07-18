@@ -65,8 +65,8 @@
   actions - ignored. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^SSLPermission [^java.lang.String name ^java.lang.String actions]
     (new SSLPermission name actions))
-  ([^java.lang.String name]
+  (^SSLPermission [^java.lang.String name]
     (new SSLPermission name)))
 

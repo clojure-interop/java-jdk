@@ -9,6 +9,6 @@
   "Returns the potentially annotated bounds of this type variable.
 
   returns: the potentially annotated bounds of this type variable - `java.lang.reflect.AnnotatedType[]`"
-  ([^java.lang.reflect.AnnotatedTypeVariable this]
+  ([^AnnotatedTypeVariable this]
     (-> this (.getAnnotatedBounds))))
 

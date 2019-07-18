@@ -14,16 +14,16 @@
    Returns null if no value was previously associated with the name. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the name is null."
-  (^java.lang.Object [^javax.script.Bindings this ^java.lang.String name ^java.lang.Object value]
+  (^java.lang.Object [^Bindings this ^java.lang.String name ^java.lang.Object value]
     (-> this (.put name value))))
 
 (defn put-all
   "Adds all the mappings in a given Map to this Bindings.
 
-  to-merge - The Map to merge with this one. - `java.lang.Object>`
+  to-merge - The Map to merge with this one. - `java.util.Map`
 
   throws: java.lang.NullPointerException - if toMerge map is null or if some key in the map is null."
-  ([^javax.script.Bindings this ^java.lang.Object> to-merge]
+  ([^Bindings this ^java.util.Map to-merge]
     (-> this (.putAll to-merge))))
 
 (defn contains-key
@@ -39,7 +39,7 @@
            key. - `boolean`
 
   throws: java.lang.NullPointerException - if key is null"
-  (^Boolean [^javax.script.Bindings this ^java.lang.Object key]
+  (^Boolean [^Bindings this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -61,7 +61,7 @@
            null if the map contains no mapping for this key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  (^java.lang.Object [^javax.script.Bindings this ^java.lang.Object key]
+  (^java.lang.Object [^Bindings this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn remove
@@ -84,6 +84,6 @@
            if there was no mapping for key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null"
-  (^java.lang.Object [^javax.script.Bindings this ^java.lang.Object key]
+  (^java.lang.Object [^Bindings this ^java.lang.Object key]
     (-> this (.remove key))))
 

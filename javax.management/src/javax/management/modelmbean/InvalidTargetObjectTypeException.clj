@@ -13,10 +13,10 @@
 
   e - Exception that we may have caught to reissue as an InvalidTargetObjectTypeException. The message will be used, and we may want to consider overriding the printStackTrace() methods to get data pointing back to original throw stack. - `java.lang.Exception`
   s - String value that will be incorporated in message for this exception. - `java.lang.String`"
-  ([^java.lang.Exception e ^java.lang.String s]
+  (^InvalidTargetObjectTypeException [^java.lang.Exception e ^java.lang.String s]
     (new InvalidTargetObjectTypeException e s))
-  ([^java.lang.String s]
+  (^InvalidTargetObjectTypeException [^java.lang.String s]
     (new InvalidTargetObjectTypeException s))
-  ([]
+  (^InvalidTargetObjectTypeException []
     (new InvalidTargetObjectTypeException )))
 

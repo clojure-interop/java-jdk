@@ -12,7 +12,7 @@
 
   out - the output stream - `java.io.OutputStream`
   cksum - the checksum - `java.util.zip.Checksum`"
-  ([^java.io.OutputStream out ^java.util.zip.Checksum cksum]
+  (^CheckedOutputStream [^java.io.OutputStream out ^java.util.zip.Checksum cksum]
     (new CheckedOutputStream out cksum)))
 
 (defn write
@@ -24,15 +24,15 @@
   len - the number of bytes to be written - `int`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.CheckedOutputStream this b ^Integer off ^Integer len]
+  ([^CheckedOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([^java.util.zip.CheckedOutputStream this ^Integer b]
+  ([^CheckedOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn get-checksum
   "Returns the Checksum for this output stream.
 
   returns: the Checksum - `java.util.zip.Checksum`"
-  (^java.util.zip.Checksum [^java.util.zip.CheckedOutputStream this]
+  (^java.util.zip.Checksum [^CheckedOutputStream this]
     (-> this (.getChecksum))))
 

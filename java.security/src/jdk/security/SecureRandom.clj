@@ -73,9 +73,9 @@
    for information about standard RNG algorithm names.
 
   seed - the seed. - `byte[]`"
-  ([seed]
+  (^SecureRandom [seed]
     (new SecureRandom seed))
-  ([]
+  (^SecureRandom []
     (new SecureRandom )))
 
 (defn *get-instance
@@ -151,7 +151,7 @@
   "Returns the provider of this SecureRandom object.
 
   returns: the provider of this SecureRandom object. - `java.security.Provider`"
-  (^java.security.Provider [^java.security.SecureRandom this]
+  (^java.security.Provider [^SecureRandom this]
     (-> this (.getProvider))))
 
 (defn get-algorithm
@@ -160,7 +160,7 @@
 
   returns: the name of the algorithm or unknown
             if the algorithm name cannot be determined. - `java.lang.String`"
-  (^java.lang.String [^java.security.SecureRandom this]
+  (^java.lang.String [^SecureRandom this]
     (-> this (.getAlgorithm))))
 
 (defn set-seed
@@ -169,7 +169,7 @@
    never to reduce randomness.
 
   seed - the seed. - `byte[]`"
-  ([^java.security.SecureRandom this seed]
+  ([^SecureRandom this seed]
     (-> this (.setSeed seed))))
 
 (defn next-bytes
@@ -181,7 +181,7 @@
    setSeed was previously called.
 
   bytes - the array to be filled in with random bytes. - `byte[]`"
-  ([^java.security.SecureRandom this bytes]
+  ([^SecureRandom this bytes]
     (-> this (.nextBytes bytes))))
 
 (defn generate-seed
@@ -192,6 +192,6 @@
   num-bytes - the number of seed bytes to generate. - `int`
 
   returns: the seed bytes. - `byte[]`"
-  ([^java.security.SecureRandom this ^Integer num-bytes]
+  ([^SecureRandom this ^Integer num-bytes]
     (-> this (.generateSeed num-bytes))))
 

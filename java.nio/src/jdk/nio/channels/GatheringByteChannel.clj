@@ -54,8 +54,8 @@
   returns: The number of bytes written, possibly zero - `long`
 
   throws: java.lang.IndexOutOfBoundsException - If the preconditions on the offset and length parameters do not hold"
-  (^Long [^java.nio.channels.GatheringByteChannel this srcs ^Integer offset ^Integer length]
+  (^Long [^GatheringByteChannel this srcs ^Integer offset ^Integer length]
     (-> this (.write srcs offset length)))
-  (^Long [^java.nio.channels.GatheringByteChannel this srcs]
+  (^Long [^GatheringByteChannel this srcs]
     (-> this (.write srcs))))
 

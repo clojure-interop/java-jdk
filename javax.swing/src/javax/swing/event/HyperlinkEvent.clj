@@ -19,25 +19,25 @@
   Creates a new object representing a hypertext link event.
 
   source - the object responsible for the event - `java.lang.Object`
-  type - the event type - `javax.swing.event.HyperlinkEvent.EventType`
+  type - the event type - `javax.swing.event.HyperlinkEvent$EventType`
   u - the affected URL. This may be null if a valid URL could not be created. - `java.net.URL`
   desc - the description of the link. This may be useful when attempting to form a URL resulted in a MalformedURLException. The description provides the text used when attempting to form the URL. - `java.lang.String`
   source-element - Element in the Document representing the anchor - `javax.swing.text.Element`
   input-event - InputEvent that triggered the hyperlink event - `java.awt.event.InputEvent`"
-  ([^java.lang.Object source ^javax.swing.event.HyperlinkEvent.EventType type ^java.net.URL u ^java.lang.String desc ^javax.swing.text.Element source-element ^java.awt.event.InputEvent input-event]
+  (^HyperlinkEvent [^java.lang.Object source ^javax.swing.event.HyperlinkEvent$EventType type ^java.net.URL u ^java.lang.String desc ^javax.swing.text.Element source-element ^java.awt.event.InputEvent input-event]
     (new HyperlinkEvent source type u desc source-element input-event))
-  ([^java.lang.Object source ^javax.swing.event.HyperlinkEvent.EventType type ^java.net.URL u ^java.lang.String desc ^javax.swing.text.Element source-element]
+  (^HyperlinkEvent [^java.lang.Object source ^javax.swing.event.HyperlinkEvent$EventType type ^java.net.URL u ^java.lang.String desc ^javax.swing.text.Element source-element]
     (new HyperlinkEvent source type u desc source-element))
-  ([^java.lang.Object source ^javax.swing.event.HyperlinkEvent.EventType type ^java.net.URL u ^java.lang.String desc]
+  (^HyperlinkEvent [^java.lang.Object source ^javax.swing.event.HyperlinkEvent$EventType type ^java.net.URL u ^java.lang.String desc]
     (new HyperlinkEvent source type u desc))
-  ([^java.lang.Object source ^javax.swing.event.HyperlinkEvent.EventType type ^java.net.URL u]
+  (^HyperlinkEvent [^java.lang.Object source ^javax.swing.event.HyperlinkEvent$EventType type ^java.net.URL u]
     (new HyperlinkEvent source type u)))
 
 (defn get-event-type
   "Gets the type of event.
 
-  returns: the type - `javax.swing.event.HyperlinkEvent.EventType`"
-  (^javax.swing.event.HyperlinkEvent.EventType [^javax.swing.event.HyperlinkEvent this]
+  returns: the type - `javax.swing.event.HyperlinkEvent$EventType`"
+  (^javax.swing.event.HyperlinkEvent$EventType [^HyperlinkEvent this]
     (-> this (.getEventType))))
 
 (defn get-description
@@ -47,14 +47,14 @@
    URL would be null.
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.event.HyperlinkEvent this]
+  (^java.lang.String [^HyperlinkEvent this]
     (-> this (.getDescription))))
 
 (defn get-url
   "Gets the URL that the link refers to.
 
   returns: the URL - `java.net.URL`"
-  (^java.net.URL [^javax.swing.event.HyperlinkEvent this]
+  (^java.net.URL [^HyperlinkEvent this]
     (-> this (.getURL))))
 
 (defn get-source-element
@@ -65,7 +65,7 @@
    Element, this will return null.
 
   returns: Element indicating source of event, or null - `javax.swing.text.Element`"
-  (^javax.swing.text.Element [^javax.swing.event.HyperlinkEvent this]
+  (^javax.swing.text.Element [^HyperlinkEvent this]
     (-> this (.getSourceElement))))
 
 (defn get-input-event
@@ -75,6 +75,6 @@
    was specified as the InputEvent, this returns null.
 
   returns: InputEvent that triggered the hyperlink event, or null - `java.awt.event.InputEvent`"
-  (^java.awt.event.InputEvent [^javax.swing.event.HyperlinkEvent this]
+  (^java.awt.event.InputEvent [^HyperlinkEvent this]
     (-> this (.getInputEvent))))
 

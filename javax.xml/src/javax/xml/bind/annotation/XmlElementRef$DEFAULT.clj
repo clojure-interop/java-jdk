@@ -7,6 +7,6 @@
 
 (defn ->default
   "Constructor."
-  ([]
+  (^XmlElementRef$DEFAULT []
     (new XmlElementRef$DEFAULT )))
 

@@ -9,7 +9,7 @@
   returns: the next long element in the iteration - `long`
 
   throws: java.util.NoSuchElementException - if the iteration has no more elements"
-  (^Long [^java.util.PrimitiveIterator$OfLong this]
+  (^Long [^PrimitiveIterator$OfLong this]
     (-> this (.nextLong))))
 
 (defn for-each-remaining
@@ -23,13 +23,13 @@
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^java.util.PrimitiveIterator$OfLong this ^java.util.function.LongConsumer action]
+  ([^PrimitiveIterator$OfLong this ^java.util.function.LongConsumer action]
     (-> this (.forEachRemaining action))))
 
 (defn next
   "Returns the next element in the iteration.
 
   returns: the next element in the iteration - `default java.lang.Long`"
-  ([^java.util.PrimitiveIterator$OfLong this]
+  ([^PrimitiveIterator$OfLong this]
     (-> this (.next))))
 

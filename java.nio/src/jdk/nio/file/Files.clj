@@ -37,7 +37,7 @@
   dir - the path to directory in which to create the file - `java.nio.file.Path`
   prefix - the prefix string to be used in generating the file's name; may be null - `java.lang.String`
   suffix - the suffix string to be used in generating the file's name; may be null, in which case `.tmp` is used - `java.lang.String`
-  attrs - an optional list of file attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute<?>`
+  attrs - an optional list of file attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute`
 
   returns: the path to the newly created file that did not exist before
             this method was invoked - `java.nio.file.Path`
@@ -94,7 +94,7 @@
 
   link - the path of the symbolic link to create - `java.nio.file.Path`
   target - the target of the symbolic link - `java.nio.file.Path`
-  attrs - the array of attributes to set atomically when creating the symbolic link - `java.nio.file.attribute.FileAttribute<?>`
+  attrs - the array of attributes to set atomically when creating the symbolic link - `java.nio.file.attribute.FileAttribute`
 
   returns: the path to the symbolic link - `java.nio.file.Path`
 
@@ -177,7 +177,7 @@
    occurrence is ignored.
 
   path - the path to the file to create - `java.nio.file.Path`
-  attrs - an optional list of file attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute<?>`
+  attrs - an optional list of file attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute`
 
   returns: the file - `java.nio.file.Path`
 
@@ -195,7 +195,7 @@
    System Interface (POSIX) family of standards.
 
   path - The path to the file - `java.nio.file.Path`
-  perms - The new set of permissions - `java.util.Set<java.nio.file.attribute.PosixFilePermission>`
+  perms - The new set of permissions - `java.util.Set`
 
   returns: The path - `java.nio.file.Path`
 
@@ -305,7 +305,7 @@
 
   start - the starting file - `java.nio.file.Path`
   max-depth - the maximum number of directory levels to search - `int`
-  matcher - the function used to decide whether a file should be included in the returned stream - `java.util.function.BiPredicate<java.nio.file.Path,java.nio.file.attribute.BasicFileAttributes>`
+  matcher - the function used to decide whether a file should be included in the returned stream - `java.util.function.BiPredicate`
   options - options to configure the traversal - `java.nio.file.FileVisitOption`
 
   returns: the Stream of Path - `java.util.stream.Stream<java.nio.file.Path>`
@@ -452,7 +452,7 @@
       PosixFileAttributes attrs = Files.readAttributes(path, PosixFileAttributes.class, NOFOLLOW_LINKS);
 
   path - the path to the file - `java.nio.file.Path`
-  type - the Class of the file attributes required to read - `java.lang.Class<A>`
+  type - the Class of the file attributes required to read - `java.lang.Class`
   options - options indicating how symbolic links are handled - `java.nio.file.LinkOption`
 
   returns: the file attributes - `<A extends java.nio.file.attribute.BasicFileAttributes> A`
@@ -501,7 +501,7 @@
 
   dir - the path to directory in which to create the directory - `java.nio.file.Path`
   prefix - the prefix string to be used in generating the directory's name; may be null - `java.lang.String`
-  attrs - an optional list of file attributes to set atomically when creating the directory - `java.nio.file.attribute.FileAttribute<?>`
+  attrs - an optional list of file attributes to set atomically when creating the directory - `java.nio.file.attribute.FileAttribute`
 
   returns: the path to the newly created directory that did not exist before
             this method was invoked - `java.nio.file.Path`
@@ -543,7 +543,7 @@
        }
 
   path - the path to the file - `java.nio.file.Path`
-  type - the Class object corresponding to the file attribute view - `java.lang.Class<V>`
+  type - the Class object corresponding to the file attribute view - `java.lang.Class`
   options - options indicating how symbolic links are handled - `java.nio.file.LinkOption`
 
   returns: a file attribute view of the specified type, or null if
@@ -621,7 +621,7 @@
    all, of the parent directories.
 
   dir - the directory to create - `java.nio.file.Path`
-  attrs - an optional list of file attributes to set atomically when creating the directory - `java.nio.file.attribute.FileAttribute<?>`
+  attrs - an optional list of file attributes to set atomically when creating the directory - `java.nio.file.attribute.FileAttribute`
 
   returns: the directory - `java.nio.file.Path`
 
@@ -1164,13 +1164,13 @@
        SeekableByteChannel sbc = Files.newByteChannel(path, EnumSet.of(CREATE_NEW,READ,WRITE), perms);
 
   path - the path to the file to open or create - `java.nio.file.Path`
-  options - options specifying how the file is opened - `java.nio.file.OpenOption>`
-  attrs - an optional list of file attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute<?>`
+  options - options specifying how the file is opened - `java.util.Set`
+  attrs - an optional list of file attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute`
 
   returns: a new seekable byte channel - `java.nio.channels.SeekableByteChannel`
 
   throws: java.lang.IllegalArgumentException - if the set contains an invalid combination of options"
-  (^java.nio.channels.SeekableByteChannel [^java.nio.file.Path path ^java.nio.file.OpenOption> options ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.channels.SeekableByteChannel [^java.nio.file.Path path ^java.util.Set options ^java.nio.file.attribute.FileAttribute attrs]
     (Files/newByteChannel path options attrs))
   (^java.nio.channels.SeekableByteChannel [^java.nio.file.Path path ^java.nio.file.OpenOption options]
     (Files/newByteChannel path options)))
@@ -1335,16 +1335,16 @@
    that file (or directory).
 
   start - the starting file - `java.nio.file.Path`
-  options - options to configure the traversal - `java.util.Set<java.nio.file.FileVisitOption>`
+  options - options to configure the traversal - `java.util.Set`
   max-depth - the maximum number of directory levels to visit - `int`
-  visitor - the file visitor to invoke for each file - `java.nio.file.Path>`
+  visitor - the file visitor to invoke for each file - `java.nio.file.FileVisitor`
 
   returns: the starting file - `java.nio.file.Path`
 
   throws: java.lang.IllegalArgumentException - if the maxDepth parameter is negative"
-  (^java.nio.file.Path [^java.nio.file.Path start ^java.util.Set options ^Integer max-depth ^java.nio.file.Path> visitor]
+  (^java.nio.file.Path [^java.nio.file.Path start ^java.util.Set options ^Integer max-depth ^java.nio.file.FileVisitor visitor]
     (Files/walkFileTree start options max-depth visitor))
-  (^java.nio.file.Path [^java.nio.file.Path start ^java.nio.file.Path> visitor]
+  (^java.nio.file.Path [^java.nio.file.Path start ^java.nio.file.FileVisitor visitor]
     (Files/walkFileTree start visitor)))
 
 (defn *exists?
@@ -1492,14 +1492,14 @@
    created or truncated, or after some bytes have been written to the file.
 
   path - the path to the file - `java.nio.file.Path`
-  lines - an object to iterate over the char sequences - `java.lang.CharSequence>`
+  lines - an object to iterate over the char sequences - `java.lang.Iterable`
   cs - the charset to use for encoding - `java.nio.charset.Charset`
   options - options specifying how the file is opened - `java.nio.file.OpenOption`
 
   returns: the path - `java.nio.file.Path`
 
   throws: java.io.IOException - if an I/O error occurs writing to or creating the file, or the text cannot be encoded using the specified charset"
-  (^java.nio.file.Path [^java.nio.file.Path path ^java.lang.CharSequence> lines ^java.nio.charset.Charset cs ^java.nio.file.OpenOption options]
+  (^java.nio.file.Path [^java.nio.file.Path path ^java.lang.Iterable lines ^java.nio.charset.Charset cs ^java.nio.file.OpenOption options]
     (Files/write path lines cs options))
   (^java.nio.file.Path [^java.nio.file.Path path bytes ^java.nio.file.OpenOption options]
     (Files/write path bytes options)))
@@ -1518,7 +1518,7 @@
    the last occurrence is ignored.
 
   dir - the directory to create - `java.nio.file.Path`
-  attrs - an optional list of file attributes to set atomically when creating the directory - `java.nio.file.attribute.FileAttribute<?>`
+  attrs - an optional list of file attributes to set atomically when creating the directory - `java.nio.file.attribute.FileAttribute`
 
   returns: the directory - `java.nio.file.Path`
 

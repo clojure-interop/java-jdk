@@ -124,7 +124,7 @@
    that consists of all whitespace
 
   returns: true if the cursor points to all whitespace, false otherwise - `boolean`"
-  (^Boolean [^javax.xml.stream.XMLStreamReader this]
+  (^Boolean [^XMLStreamReader this]
     (-> this (.isWhiteSpace))))
 
 (defn get-location
@@ -136,7 +136,7 @@
    called.
 
   returns: `javax.xml.stream.Location`"
-  (^javax.xml.stream.Location [^javax.xml.stream.XMLStreamReader this]
+  (^javax.xml.stream.Location [^XMLStreamReader this]
     (-> this (.getLocation))))
 
 (defn get-attribute-name
@@ -147,7 +147,7 @@
   returns: the QName of the attribute - `javax.xml.namespace.QName`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT or ATTRIBUTE"
-  (^javax.xml.namespace.QName [^javax.xml.stream.XMLStreamReader this ^Integer index]
+  (^javax.xml.namespace.QName [^XMLStreamReader this ^Integer index]
     (-> this (.getAttributeName index))))
 
 (defn get-namespace-uri
@@ -166,9 +166,9 @@
   returns: the uri bound to the given prefix or null if it is not bound - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the prefix is null"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this ^java.lang.String prefix]
+  (^java.lang.String [^XMLStreamReader this ^java.lang.String prefix]
     (-> this (.getNamespaceURI prefix)))
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this]
+  (^java.lang.String [^XMLStreamReader this]
     (-> this (.getNamespaceURI))))
 
 (defn next
@@ -202,7 +202,7 @@
   returns: the integer code corresponding to the current parse event - `int`
 
   throws: NoSuchElementException - if this is called when hasNext() returns false"
-  (^Integer [^javax.xml.stream.XMLStreamReader this]
+  (^Integer [^XMLStreamReader this]
     (-> this (.next))))
 
 (defn get-event-type
@@ -210,35 +210,35 @@
    of the event the cursor is pointing to.
 
   returns: `int`"
-  (^Integer [^javax.xml.stream.XMLStreamReader this]
+  (^Integer [^XMLStreamReader this]
     (-> this (.getEventType))))
 
 (defn get-encoding
   "Return input encoding if known or null if unknown.
 
   returns: the encoding of this instance or null - `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this]
+  (^java.lang.String [^XMLStreamReader this]
     (-> this (.getEncoding))))
 
 (defn get-pi-data
   "Get the data section of a processing instruction
 
   returns: the data or null - `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this]
+  (^java.lang.String [^XMLStreamReader this]
     (-> this (.getPIData))))
 
 (defn characters?
   "Returns true if the cursor points to a character data event
 
   returns: true if the cursor points to character data, false otherwise - `boolean`"
-  (^Boolean [^javax.xml.stream.XMLStreamReader this]
+  (^Boolean [^XMLStreamReader this]
     (-> this (.isCharacters))))
 
 (defn start-element?
   "Returns true if the cursor points to a start tag (otherwise false)
 
   returns: true if the cursor points to a start tag, false otherwise - `boolean`"
-  (^Boolean [^javax.xml.stream.XMLStreamReader this]
+  (^Boolean [^XMLStreamReader this]
     (-> this (.isStartElement))))
 
 (defn has-name?
@@ -246,7 +246,7 @@
    returns false otherwise
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.XMLStreamReader this]
+  (^Boolean [^XMLStreamReader this]
     (-> this (.hasName))))
 
 (defn get-text-start
@@ -256,7 +256,7 @@
   returns: `int`
 
   throws: java.lang.IllegalStateException - if this state is not a valid text state."
-  (^Integer [^javax.xml.stream.XMLStreamReader this]
+  (^Integer [^XMLStreamReader this]
     (-> this (.getTextStart))))
 
 (defn has-text?
@@ -265,7 +265,7 @@
    CHARACTERS,DTD ,ENTITY_REFERENCE, COMMENT, SPACE
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.stream.XMLStreamReader this]
+  (^Boolean [^XMLStreamReader this]
     (-> this (.hasText))))
 
 (defn get-text
@@ -281,7 +281,7 @@
   returns: the current text or null - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this state is not a valid text state."
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this]
+  (^java.lang.String [^XMLStreamReader this]
     (-> this (.getText))))
 
 (defn get-element-text
@@ -327,7 +327,7 @@
   returns: `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException - if the current event is not a START_ELEMENT or if a non text element is encountered"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this]
+  (^java.lang.String [^XMLStreamReader this]
     (-> this (.getElementText))))
 
 (defn require
@@ -340,7 +340,7 @@
   local-name - the localName of the event, may be null - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException - if the required values are not matched."
-  ([^javax.xml.stream.XMLStreamReader this ^Integer type ^java.lang.String namespace-uri ^java.lang.String local-name]
+  ([^XMLStreamReader this ^Integer type ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.require type namespace-uri local-name))))
 
 (defn attribute-specified?
@@ -352,7 +352,7 @@
   returns: true if this is a default attribute - `boolean`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT or ATTRIBUTE"
-  (^Boolean [^javax.xml.stream.XMLStreamReader this ^Integer index]
+  (^Boolean [^XMLStreamReader this ^Integer index]
     (-> this (.isAttributeSpecified index))))
 
 (defn get-namespace-count
@@ -365,7 +365,7 @@
   returns: returns the number of namespace declarations on this specific element - `int`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE"
-  (^Integer [^javax.xml.stream.XMLStreamReader this]
+  (^Integer [^XMLStreamReader this]
     (-> this (.getNamespaceCount))))
 
 (defn get-attribute-count
@@ -377,7 +377,7 @@
   returns: returns the number of attributes - `int`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT or ATTRIBUTE"
-  (^Integer [^javax.xml.stream.XMLStreamReader this]
+  (^Integer [^XMLStreamReader this]
     (-> this (.getAttributeCount))))
 
 (defn get-text-length
@@ -387,7 +387,7 @@
   returns: `int`
 
   throws: java.lang.IllegalStateException - if this state is not a valid text state."
-  (^Integer [^javax.xml.stream.XMLStreamReader this]
+  (^Integer [^XMLStreamReader this]
     (-> this (.getTextLength))))
 
 (defn get-character-encoding-scheme
@@ -395,7 +395,7 @@
    Returns null if none was declared
 
   returns: the encoding declared in the document or null - `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this]
+  (^java.lang.String [^XMLStreamReader this]
     (-> this (.getCharacterEncodingScheme))))
 
 (defn get-name
@@ -404,7 +404,7 @@
   returns: the QName for the current START_ELEMENT or END_ELEMENT event - `javax.xml.namespace.QName`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT or END_ELEMENT"
-  (^javax.xml.namespace.QName [^javax.xml.stream.XMLStreamReader this]
+  (^javax.xml.namespace.QName [^XMLStreamReader this]
     (-> this (.getName))))
 
 (defn get-namespace-context
@@ -413,7 +413,7 @@
    a call to next() changes the state of the reader.
 
   returns: return a namespace context - `javax.xml.namespace.NamespaceContext`"
-  (^javax.xml.namespace.NamespaceContext [^javax.xml.stream.XMLStreamReader this]
+  (^javax.xml.namespace.NamespaceContext [^XMLStreamReader this]
     (-> this (.getNamespaceContext))))
 
 (defn get-text-characters
@@ -450,9 +450,9 @@
   returns: the number of characters actually copied - `int`
 
   throws: javax.xml.stream.XMLStreamException - if the underlying XML source is not well-formed"
-  (^Integer [^javax.xml.stream.XMLStreamReader this ^Integer source-start target ^Integer target-start ^Integer length]
+  (^Integer [^XMLStreamReader this ^Integer source-start target ^Integer target-start ^Integer length]
     (-> this (.getTextCharacters source-start target target-start length)))
-  ([^javax.xml.stream.XMLStreamReader this]
+  ([^XMLStreamReader this]
     (-> this (.getTextCharacters))))
 
 (defn get-version
@@ -460,7 +460,7 @@
    Returns null if none was declared
 
   returns: the XML version or null - `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this]
+  (^java.lang.String [^XMLStreamReader this]
     (-> this (.getVersion))))
 
 (defn has-next?
@@ -472,7 +472,7 @@
   returns: true if there are more events, false otherwise - `boolean`
 
   throws: javax.xml.stream.XMLStreamException - if there is a fatal error detecting the next state"
-  (^Boolean [^javax.xml.stream.XMLStreamReader this]
+  (^Boolean [^XMLStreamReader this]
     (-> this (.hasNext))))
 
 (defn get-attribute-value
@@ -487,9 +487,9 @@
   returns: returns the value of the attribute , returns null if not found - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT or ATTRIBUTE"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this ^java.lang.String namespace-uri ^java.lang.String local-name]
+  (^java.lang.String [^XMLStreamReader this ^java.lang.String namespace-uri ^java.lang.String local-name]
     (-> this (.getAttributeValue namespace-uri local-name)))
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this ^Integer index]
+  (^java.lang.String [^XMLStreamReader this ^Integer index]
     (-> this (.getAttributeValue index))))
 
 (defn close
@@ -497,7 +497,7 @@
    underlying input source.
 
   throws: javax.xml.stream.XMLStreamException - if there are errors freeing associated resources"
-  ([^javax.xml.stream.XMLStreamReader this]
+  ([^XMLStreamReader this]
     (-> this (.close))))
 
 (defn get-property
@@ -508,7 +508,7 @@
   returns: The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if name is null"
-  (^java.lang.Object [^javax.xml.stream.XMLStreamReader this ^java.lang.String name]
+  (^java.lang.Object [^XMLStreamReader this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-namespace-prefix
@@ -521,7 +521,7 @@
   returns: returns the namespace prefix - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT, END_ELEMENT or NAMESPACE"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this ^Integer index]
+  (^java.lang.String [^XMLStreamReader this ^Integer index]
     (-> this (.getNamespacePrefix index))))
 
 (defn next-tag
@@ -558,7 +558,7 @@
   returns: the event type of the element read (START_ELEMENT or END_ELEMENT) - `int`
 
   throws: javax.xml.stream.XMLStreamException - if the current event is not white space, PROCESSING_INSTRUCTION, START_ELEMENT or END_ELEMENT"
-  (^Integer [^javax.xml.stream.XMLStreamReader this]
+  (^Integer [^XMLStreamReader this]
     (-> this (.nextTag))))
 
 (defn get-attribute-local-name
@@ -570,28 +570,28 @@
   returns: the localName of the attribute - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT or ATTRIBUTE"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this ^Integer index]
+  (^java.lang.String [^XMLStreamReader this ^Integer index]
     (-> this (.getAttributeLocalName index))))
 
 (defn standalone?
   "Get the standalone declaration from the xml declaration
 
   returns: true if this is standalone, or false otherwise - `boolean`"
-  (^Boolean [^javax.xml.stream.XMLStreamReader this]
+  (^Boolean [^XMLStreamReader this]
     (-> this (.isStandalone))))
 
 (defn get-prefix
   "Returns the prefix of the current event or null if the event does not have a prefix
 
   returns: the prefix or null - `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this]
+  (^java.lang.String [^XMLStreamReader this]
     (-> this (.getPrefix))))
 
 (defn get-pi-target
   "Get the target of a processing instruction
 
   returns: the target or null - `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this]
+  (^java.lang.String [^XMLStreamReader this]
     (-> this (.getPITarget))))
 
 (defn get-attribute-prefix
@@ -603,7 +603,7 @@
   returns: the prefix of the attribute - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT or ATTRIBUTE"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this ^Integer index]
+  (^java.lang.String [^XMLStreamReader this ^Integer index]
     (-> this (.getAttributePrefix index))))
 
 (defn get-local-name
@@ -616,14 +616,14 @@
   returns: the localName - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this not a START_ELEMENT, END_ELEMENT or ENTITY_REFERENCE"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this]
+  (^java.lang.String [^XMLStreamReader this]
     (-> this (.getLocalName))))
 
 (defn end-element?
   "Returns true if the cursor points to an end tag (otherwise false)
 
   returns: true if the cursor points to an end tag, false otherwise - `boolean`"
-  (^Boolean [^javax.xml.stream.XMLStreamReader this]
+  (^Boolean [^XMLStreamReader this]
     (-> this (.isEndElement))))
 
 (defn get-attribute-type
@@ -635,14 +635,14 @@
   returns: the XML type of the attribute - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT or ATTRIBUTE"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this ^Integer index]
+  (^java.lang.String [^XMLStreamReader this ^Integer index]
     (-> this (.getAttributeType index))))
 
 (defn standalone-set
   "Checks if standalone was set in the document
 
   returns: true if standalone was set in the document, or false otherwise - `boolean`"
-  (^Boolean [^javax.xml.stream.XMLStreamReader this]
+  (^Boolean [^XMLStreamReader this]
     (-> this (.standaloneSet))))
 
 (defn get-attribute-namespace
@@ -654,6 +654,6 @@
   returns: the namespace URI (can be null) - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this is not a START_ELEMENT or ATTRIBUTE"
-  (^java.lang.String [^javax.xml.stream.XMLStreamReader this ^Integer index]
+  (^java.lang.String [^XMLStreamReader this ^Integer index]
     (-> this (.getAttributeNamespace index))))
 

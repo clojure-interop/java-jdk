@@ -15,14 +15,14 @@
 
 
 
-   DelegationPermission(`\`host/foo.example.com@EXAMPLE.COM\` \`krbtgt/EXAMPLE.COM@EXAMPLE.COM\``);
+   DelegationPermission(``host/foo.example.com@EXAMPLE.COM` `krbtgt/EXAMPLE.COM@EXAMPLE.COM``);
 
   To give the `backup` service a proxiable nfs service ticket the target permission
   might be specified:
 
 
 
-   DelegationPermission(`\`backup/bar.example.com@EXAMPLE.COM\` \`nfs/home.EXAMPLE.COM@EXAMPLE.COM\``);"
+   DelegationPermission(``backup/bar.example.com@EXAMPLE.COM` `nfs/home.EXAMPLE.COM@EXAMPLE.COM``);"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.security.auth.kerberos DelegationPermission]))
 
@@ -36,9 +36,9 @@
   actions - should be null. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if principals is null."
-  ([^java.lang.String principals ^java.lang.String actions]
+  (^DelegationPermission [^java.lang.String principals ^java.lang.String actions]
     (new DelegationPermission principals actions))
-  ([^java.lang.String principals]
+  (^DelegationPermission [^java.lang.String principals]
     (new DelegationPermission principals)))
 
 (defn implies
@@ -51,7 +51,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.DelegationPermission this ^java.security.Permission p]
+  (^Boolean [^DelegationPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -62,14 +62,14 @@
   returns: true if obj is a DelegationPermission, and
     has the same subordinate and service principal as this.
     DelegationPermission object. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.DelegationPermission this ^java.lang.Object obj]
+  (^Boolean [^DelegationPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.security.auth.kerberos.DelegationPermission this]
+  (^Integer [^DelegationPermission this]
     (-> this (.hashCode))))
 
 (defn new-permission-collection
@@ -83,6 +83,6 @@
 
   returns: a new PermissionCollection object suitable for storing
    DelegationPermissions. - `java.security.PermissionCollection`"
-  (^java.security.PermissionCollection [^javax.security.auth.kerberos.DelegationPermission this]
+  (^java.security.PermissionCollection [^DelegationPermission this]
     (-> this (.newPermissionCollection))))
 

@@ -28,7 +28,7 @@
   id - An integer that identifies the event type. For information on allowable values, see the class description for TextEvent - `int`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.lang.Object source ^Integer id]
+  (^TextEvent [^java.lang.Object source ^Integer id]
     (new TextEvent source id)))
 
 (def *-text-first
@@ -60,6 +60,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.TextEvent this]
+  (^java.lang.String [^TextEvent this]
     (-> this (.paramString))))
 

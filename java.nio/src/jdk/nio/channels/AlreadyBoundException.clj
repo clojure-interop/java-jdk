@@ -8,6 +8,6 @@
   "Constructor.
 
   Constructs an instance of this class."
-  ([]
+  (^AlreadyBoundException []
     (new AlreadyBoundException )))
 

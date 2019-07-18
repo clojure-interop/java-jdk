@@ -75,15 +75,15 @@
   descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the Attribute. If it is null then a default descriptor will be created. If the descriptor does not contain the field `displayName` this field is added in the descriptor with its default value. - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field `name` is not equal to name parameter, or descriptor field `descriptorType` is not equal to `attribute`."
-  ([^java.lang.String name ^java.lang.String type ^java.lang.String description ^Boolean is-readable ^Boolean is-writable ^Boolean is-is ^javax.management.Descriptor descriptor]
+  (^ModelMBeanAttributeInfo [^java.lang.String name ^java.lang.String type ^java.lang.String description ^Boolean is-readable ^Boolean is-writable ^Boolean is-is ^javax.management.Descriptor descriptor]
     (new ModelMBeanAttributeInfo name type description is-readable is-writable is-is descriptor))
-  ([^java.lang.String name ^java.lang.String type ^java.lang.String description ^Boolean is-readable ^Boolean is-writable ^Boolean is-is]
+  (^ModelMBeanAttributeInfo [^java.lang.String name ^java.lang.String type ^java.lang.String description ^Boolean is-readable ^Boolean is-writable ^Boolean is-is]
     (new ModelMBeanAttributeInfo name type description is-readable is-writable is-is))
-  ([^java.lang.String name ^java.lang.String description ^java.lang.reflect.Method getter ^java.lang.reflect.Method setter ^javax.management.Descriptor descriptor]
+  (^ModelMBeanAttributeInfo [^java.lang.String name ^java.lang.String description ^java.lang.reflect.Method getter ^java.lang.reflect.Method setter ^javax.management.Descriptor descriptor]
     (new ModelMBeanAttributeInfo name description getter setter descriptor))
-  ([^java.lang.String name ^java.lang.String description ^java.lang.reflect.Method getter ^java.lang.reflect.Method setter]
+  (^ModelMBeanAttributeInfo [^java.lang.String name ^java.lang.String description ^java.lang.reflect.Method getter ^java.lang.reflect.Method setter]
     (new ModelMBeanAttributeInfo name description getter setter))
-  ([^javax.management.modelmbean.ModelMBeanAttributeInfo in-info]
+  (^ModelMBeanAttributeInfo [^javax.management.modelmbean.ModelMBeanAttributeInfo in-info]
     (new ModelMBeanAttributeInfo in-info)))
 
 (defn get-descriptor
@@ -92,7 +92,7 @@
 
   returns: Descriptor associated with the
    ModelMBeanAttributeInfo object. - `javax.management.Descriptor`"
-  (^javax.management.Descriptor [^javax.management.modelmbean.ModelMBeanAttributeInfo this]
+  (^javax.management.Descriptor [^ModelMBeanAttributeInfo this]
     (-> this (.getDescriptor))))
 
 (defn set-descriptor
@@ -107,7 +107,7 @@
   in-descriptor - replaces the Descriptor associated with the ModelMBeanAttributeInfo - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException for an invalid Descriptor"
-  ([^javax.management.modelmbean.ModelMBeanAttributeInfo this ^javax.management.Descriptor in-descriptor]
+  ([^ModelMBeanAttributeInfo this ^javax.management.Descriptor in-descriptor]
     (-> this (.setDescriptor in-descriptor))))
 
 (defn clone
@@ -116,7 +116,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - for illegal value for field Names or field Values. If the descriptor construction fails for any reason, this exception will be thrown."
-  (^java.lang.Object [^javax.management.modelmbean.ModelMBeanAttributeInfo this]
+  (^java.lang.Object [^ModelMBeanAttributeInfo this]
     (-> this (.clone))))
 
 (defn to-string
@@ -124,6 +124,6 @@
    ModelMBeanAttributeInfo instance.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.management.modelmbean.ModelMBeanAttributeInfo this]
+  (^java.lang.String [^ModelMBeanAttributeInfo this]
     (-> this (.toString))))
 

@@ -10,7 +10,7 @@
    This is the default type for objects of the Window class or
    its descendants. Use this type for regular top-level windows.
 
-  type: java.awt.Window.Type"
+  type: java.awt.Window$Type"
   Window$Type/NORMAL)
 
 (def UTILITY
@@ -22,7 +22,7 @@
    palette. The native system may render the window with smaller
    title-bar if the window is either a Frame or a Dialog object, and if it has its decorations enabled.
 
-  type: java.awt.Window.Type"
+  type: java.awt.Window$Type"
   Window$Type/UTILITY)
 
 (def POPUP
@@ -35,7 +35,7 @@
    made undecorated even if they are instances of the Frame or
    Dialog class, and have decorations enabled.
 
-  type: java.awt.Window.Type"
+  type: java.awt.Window$Type"
   Window$Type/POPUP)
 
 (defn *values
@@ -47,7 +47,7 @@
   for (Window.Type c : Window.Type.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.Window.Type[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.Window$Type[]`"
   ([]
     (Window$Type/values )))
 
@@ -59,9 +59,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.awt.Window.Type`
+  returns: the enum constant with the specified name - `java.awt.Window$Type`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.awt.Window.Type [^java.lang.String name]
+  (^java.awt.Window$Type [^java.lang.String name]
     (Window$Type/valueOf name)))
 

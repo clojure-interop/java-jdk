@@ -28,7 +28,7 @@
   xml-event-reader - XMLEventReader used to create this StAXSource. - `javax.xml.stream.XMLEventReader`
 
   throws: javax.xml.stream.XMLStreamException - If xmlEventReader access throws an Exception."
-  ([^javax.xml.stream.XMLEventReader xml-event-reader]
+  (^StAXSource [^javax.xml.stream.XMLEventReader xml-event-reader]
     (new StAXSource xml-event-reader)))
 
 (def *-feature
@@ -51,7 +51,7 @@
 
   returns: XMLEventReader used by this
      StAXSource. - `javax.xml.stream.XMLEventReader`"
-  (^javax.xml.stream.XMLEventReader [^javax.xml.transform.stax.StAXSource this]
+  (^javax.xml.stream.XMLEventReader [^StAXSource this]
     (-> this (.getXMLEventReader))))
 
 (defn get-xml-stream-reader
@@ -64,7 +64,7 @@
 
   returns: XMLStreamReader used by this
      StAXSource. - `javax.xml.stream.XMLStreamReader`"
-  (^javax.xml.stream.XMLStreamReader [^javax.xml.transform.stax.StAXSource this]
+  (^javax.xml.stream.XMLStreamReader [^StAXSource this]
     (-> this (.getXMLStreamReader))))
 
 (defn set-system-id
@@ -80,7 +80,7 @@
   system-id - Ignored. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - Is always thrown by this method."
-  ([^javax.xml.transform.stax.StAXSource this ^java.lang.String system-id]
+  ([^StAXSource this ^java.lang.String system-id]
     (-> this (.setSystemId system-id))))
 
 (defn get-system-id
@@ -95,6 +95,6 @@
    an empty `` String.
 
   returns: System identifier used by this StAXSource. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.transform.stax.StAXSource this]
+  (^java.lang.String [^StAXSource this]
     (-> this (.getSystemId))))
 

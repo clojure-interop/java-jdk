@@ -11,8 +11,8 @@
    exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^AccountException [^java.lang.String msg]
     (new AccountException msg))
-  ([]
+  (^AccountException []
     (new AccountException )))
 

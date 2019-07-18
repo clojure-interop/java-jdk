@@ -12,9 +12,9 @@
 
   in - the actual input stream - `java.io.InputStream`
   charset - The java.nio.charset.charset to be used to decode the ZIP entry name (ignored if the language encoding bit of the ZIP entry's general purpose bit flag is set). - `java.nio.charset.Charset`"
-  ([^java.io.InputStream in ^java.nio.charset.Charset charset]
+  (^ZipInputStream [^java.io.InputStream in ^java.nio.charset.Charset charset]
     (new ZipInputStream in charset))
-  ([^java.io.InputStream in]
+  (^ZipInputStream [^java.io.InputStream in]
     (new ZipInputStream in)))
 
 (def *-locsig
@@ -264,7 +264,7 @@
   returns: the next ZIP file entry, or null if there are no more entries - `java.util.zip.ZipEntry`
 
   throws: java.util.zip.ZipException - if a ZIP file error has occurred"
-  (^java.util.zip.ZipEntry [^java.util.zip.ZipInputStream this]
+  (^java.util.zip.ZipEntry [^ZipInputStream this]
     (-> this (.getNextEntry))))
 
 (defn close-entry
@@ -272,7 +272,7 @@
    next entry.
 
   throws: java.util.zip.ZipException - if a ZIP file error has occurred"
-  ([^java.util.zip.ZipInputStream this]
+  ([^ZipInputStream this]
     (-> this (.closeEntry))))
 
 (defn available
@@ -285,7 +285,7 @@
   returns: 1 before EOF and 0 after EOF has reached for current entry. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Integer [^java.util.zip.ZipInputStream this]
+  (^Integer [^ZipInputStream this]
     (-> this (.available))))
 
 (defn read
@@ -302,7 +302,7 @@
            entry is reached - `int`
 
   throws: java.lang.NullPointerException - if b is null."
-  (^Integer [^java.util.zip.ZipInputStream this b ^Integer off ^Integer len]
+  (^Integer [^ZipInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len))))
 
 (defn skip
@@ -313,7 +313,7 @@
   returns: the actual number of bytes skipped - `long`
 
   throws: java.util.zip.ZipException - if a ZIP file error has occurred"
-  (^Long [^java.util.zip.ZipInputStream this ^Long n]
+  (^Long [^ZipInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn close
@@ -321,6 +321,6 @@
    with the stream.
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.ZipInputStream this]
+  ([^ZipInputStream this]
     (-> this (.close))))
 

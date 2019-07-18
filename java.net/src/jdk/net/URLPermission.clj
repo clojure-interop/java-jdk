@@ -113,9 +113,9 @@
   actions - the actions string - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if url is invalid or if actions contains white-space."
-  ([^java.lang.String url ^java.lang.String actions]
+  (^URLPermission [^java.lang.String url ^java.lang.String actions]
     (new URLPermission url actions))
-  ([^java.lang.String url]
+  (^URLPermission [^java.lang.String url]
     (new URLPermission url)))
 
 (defn get-actions
@@ -131,7 +131,7 @@
    then the colon separator will not be present.
 
   returns: the actions of this Permission. - `java.lang.String`"
-  (^java.lang.String [^java.net.URLPermission this]
+  (^java.lang.String [^URLPermission this]
     (-> this (.getActions))))
 
 (defn implies
@@ -172,7 +172,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  (^Boolean [^java.net.URLPermission this ^java.security.Permission p]
+  (^Boolean [^URLPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -182,7 +182,7 @@
   p - the object we are testing for equality with this object. - `java.lang.Object`
 
   returns: true if both Permission objects are equivalent. - `boolean`"
-  (^Boolean [^java.net.URLPermission this ^java.lang.Object p]
+  (^Boolean [^URLPermission this ^java.lang.Object p]
     (-> this (.equals p))))
 
 (defn hash-code
@@ -190,6 +190,6 @@
    actions String and the url string.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.net.URLPermission this]
+  (^Integer [^URLPermission this]
     (-> this (.hashCode))))
 

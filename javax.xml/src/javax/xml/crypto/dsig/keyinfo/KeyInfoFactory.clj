@@ -82,7 +82,7 @@
   returns: a KeyName - `javax.xml.crypto.dsig.keyinfo.KeyName`
 
   throws: java.lang.NullPointerException - if name is null"
-  (^javax.xml.crypto.dsig.keyinfo.KeyName [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this ^java.lang.String name]
+  (^javax.xml.crypto.dsig.keyinfo.KeyName [^KeyInfoFactory this ^java.lang.String name]
     (-> this (.newKeyName name))))
 
 (defn get-uri-dereferencer
@@ -90,7 +90,7 @@
    default to dereference URIs in RetrievalMethod objects.
 
   returns: a reference to the default URIDereferencer - `javax.xml.crypto.URIDereferencer`"
-  (^javax.xml.crypto.URIDereferencer [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this]
+  (^javax.xml.crypto.URIDereferencer [^KeyInfoFactory this]
     (-> this (.getURIDereferencer))))
 
 (defn new-retrieval-method
@@ -103,9 +103,9 @@
   returns: a RetrievalMethod - `javax.xml.crypto.dsig.keyinfo.RetrievalMethod`
 
   throws: java.lang.NullPointerException - if uri is null"
-  (^javax.xml.crypto.dsig.keyinfo.RetrievalMethod [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this ^java.lang.String uri ^java.lang.String type ^java.util.List transforms]
+  (^javax.xml.crypto.dsig.keyinfo.RetrievalMethod [^KeyInfoFactory this ^java.lang.String uri ^java.lang.String type ^java.util.List transforms]
     (-> this (.newRetrievalMethod uri type transforms)))
-  (^javax.xml.crypto.dsig.keyinfo.RetrievalMethod [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this ^java.lang.String uri]
+  (^javax.xml.crypto.dsig.keyinfo.RetrievalMethod [^KeyInfoFactory this ^java.lang.String uri]
     (-> this (.newRetrievalMethod uri))))
 
 (defn new-x-509-issuer-serial
@@ -118,7 +118,7 @@
   returns: an X509IssuerSerial - `javax.xml.crypto.dsig.keyinfo.X509IssuerSerial`
 
   throws: java.lang.NullPointerException - if issuerName or serialNumber are null"
-  (^javax.xml.crypto.dsig.keyinfo.X509IssuerSerial [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this ^java.lang.String issuer-name ^java.math.BigInteger serial-number]
+  (^javax.xml.crypto.dsig.keyinfo.X509IssuerSerial [^KeyInfoFactory this ^java.lang.String issuer-name ^java.math.BigInteger serial-number]
     (-> this (.newX509IssuerSerial issuer-name serial-number))))
 
 (defn new-x-509-data
@@ -130,14 +130,14 @@
   returns: a X509Data - `javax.xml.crypto.dsig.keyinfo.X509Data`
 
   throws: java.lang.NullPointerException - if content is null"
-  (^javax.xml.crypto.dsig.keyinfo.X509Data [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this ^java.util.List content]
+  (^javax.xml.crypto.dsig.keyinfo.X509Data [^KeyInfoFactory this ^java.util.List content]
     (-> this (.newX509Data content))))
 
 (defn get-provider
   "Returns the provider of this KeyInfoFactory.
 
   returns: the provider of this KeyInfoFactory - `java.security.Provider`"
-  (^java.security.Provider [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this]
+  (^java.security.Provider [^KeyInfoFactory this]
     (-> this (.getProvider))))
 
 (defn new-pgp-data
@@ -152,11 +152,11 @@
   returns: a PGPData - `javax.xml.crypto.dsig.keyinfo.PGPData`
 
   throws: java.lang.NullPointerException - if keyId is null"
-  (^javax.xml.crypto.dsig.keyinfo.PGPData [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this key-id key-packet ^java.util.List other]
+  (^javax.xml.crypto.dsig.keyinfo.PGPData [^KeyInfoFactory this key-id key-packet ^java.util.List other]
     (-> this (.newPGPData key-id key-packet other)))
-  (^javax.xml.crypto.dsig.keyinfo.PGPData [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this key-packet ^java.util.List other]
+  (^javax.xml.crypto.dsig.keyinfo.PGPData [^KeyInfoFactory this key-packet ^java.util.List other]
     (-> this (.newPGPData key-packet other)))
-  (^javax.xml.crypto.dsig.keyinfo.PGPData [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this key-id]
+  (^javax.xml.crypto.dsig.keyinfo.PGPData [^KeyInfoFactory this key-id]
     (-> this (.newPGPData key-id))))
 
 (defn new-key-info
@@ -172,9 +172,9 @@
   returns: a KeyInfo - `javax.xml.crypto.dsig.keyinfo.KeyInfo`
 
   throws: java.lang.NullPointerException - if content is null"
-  (^javax.xml.crypto.dsig.keyinfo.KeyInfo [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this ^java.util.List content ^java.lang.String id]
+  (^javax.xml.crypto.dsig.keyinfo.KeyInfo [^KeyInfoFactory this ^java.util.List content ^java.lang.String id]
     (-> this (.newKeyInfo content id)))
-  (^javax.xml.crypto.dsig.keyinfo.KeyInfo [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this ^java.util.List content]
+  (^javax.xml.crypto.dsig.keyinfo.KeyInfo [^KeyInfoFactory this ^java.util.List content]
     (-> this (.newKeyInfo content))))
 
 (defn feature-supported?
@@ -186,7 +186,7 @@
       false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if feature is null"
-  (^Boolean [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this ^java.lang.String feature]
+  (^Boolean [^KeyInfoFactory this ^java.lang.String feature]
     (-> this (.isFeatureSupported feature))))
 
 (defn get-mechanism-type
@@ -195,7 +195,7 @@
 
   returns: the XML processing mechanism type supported by this
       KeyInfoFactory - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this]
+  (^java.lang.String [^KeyInfoFactory this]
     (-> this (.getMechanismType))))
 
 (defn new-key-value
@@ -206,7 +206,7 @@
   returns: a KeyValue - `javax.xml.crypto.dsig.keyinfo.KeyValue`
 
   throws: java.security.KeyException - if the key's algorithm is not recognized or supported by this KeyInfoFactory"
-  (^javax.xml.crypto.dsig.keyinfo.KeyValue [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this ^java.security.PublicKey key]
+  (^javax.xml.crypto.dsig.keyinfo.KeyValue [^KeyInfoFactory this ^java.security.PublicKey key]
     (-> this (.newKeyValue key))))
 
 (defn unmarshal-key-info
@@ -219,6 +219,6 @@
   returns: the KeyInfo - `javax.xml.crypto.dsig.keyinfo.KeyInfo`
 
   throws: java.lang.NullPointerException - if xmlStructure is null"
-  (^javax.xml.crypto.dsig.keyinfo.KeyInfo [^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory this ^javax.xml.crypto.XMLStructure xml-structure]
+  (^javax.xml.crypto.dsig.keyinfo.KeyInfo [^KeyInfoFactory this ^javax.xml.crypto.XMLStructure xml-structure]
     (-> this (.unmarshalKeyInfo xml-structure))))
 

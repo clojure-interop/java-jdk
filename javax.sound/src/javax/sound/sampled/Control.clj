@@ -13,14 +13,14 @@
 (defn get-type
   "Obtains the control's type.
 
-  returns: the control's type. - `javax.sound.sampled.Control.Type`"
-  (^javax.sound.sampled.Control.Type [^javax.sound.sampled.Control this]
+  returns: the control's type. - `javax.sound.sampled.Control$Type`"
+  (^javax.sound.sampled.Control$Type [^Control this]
     (-> this (.getType))))
 
 (defn to-string
   "Obtains a String describing the control type and its current state.
 
   returns: a String representation of the Control. - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.Control this]
+  (^java.lang.String [^Control this]
     (-> this (.toString))))
 

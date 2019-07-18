@@ -48,7 +48,7 @@
   mode - the access mode - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the mode argument is not equal to one of `r`, `rw`, `rws`, or `rwd`"
-  ([^java.lang.String name ^java.lang.String mode]
+  (^RandomAccessFile [^java.lang.String name ^java.lang.String mode]
     (new RandomAccessFile name mode)))
 
 (defn read-unsigned-byte
@@ -63,7 +63,7 @@
                eight-bit number. - `int`
 
   throws: java.io.EOFException - if this file has reached the end."
-  (^Integer [^java.io.RandomAccessFile this]
+  (^Integer [^RandomAccessFile this]
     (-> this (.readUnsignedByte))))
 
 (defn write-utf
@@ -82,7 +82,7 @@
   str - a string to be written. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^java.lang.String str]
+  ([^RandomAccessFile this ^java.lang.String str]
     (-> this (.writeUTF str))))
 
 (defn get-fd
@@ -92,7 +92,7 @@
   returns: the file descriptor object associated with this stream. - `java.io.FileDescriptor`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^java.io.FileDescriptor [^java.io.RandomAccessFile this]
+  (^java.io.FileDescriptor [^RandomAccessFile this]
     (-> this (.getFD))))
 
 (defn read-byte
@@ -112,7 +112,7 @@
                byte. - `byte`
 
   throws: java.io.EOFException - if this file has reached the end."
-  (^Byte [^java.io.RandomAccessFile this]
+  (^Byte [^RandomAccessFile this]
     (-> this (.readByte))))
 
 (defn read-fully
@@ -127,9 +127,9 @@
   len - the number of bytes to read. - `int`
 
   throws: java.io.EOFException - if this file reaches the end before reading all the bytes."
-  ([^java.io.RandomAccessFile this b ^Integer off ^Integer len]
+  ([^RandomAccessFile this b ^Integer off ^Integer len]
     (-> this (.readFully b off len)))
-  ([^java.io.RandomAccessFile this b]
+  ([^RandomAccessFile this b]
     (-> this (.readFully b))))
 
 (defn read-char
@@ -150,7 +150,7 @@
                     char. - `char`
 
   throws: java.io.EOFException - if this file reaches the end before reading two bytes."
-  (^Character [^java.io.RandomAccessFile this]
+  (^Character [^RandomAccessFile this]
     (-> this (.readChar))))
 
 (defn write-bytes
@@ -162,7 +162,7 @@
   s - a string of bytes to be written. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^java.lang.String s]
+  ([^RandomAccessFile this ^java.lang.String s]
     (-> this (.writeBytes s))))
 
 (defn write-double
@@ -175,7 +175,7 @@
   v - a double value to be written. - `double`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^Double v]
+  ([^RandomAccessFile this ^Double v]
     (-> this (.writeDouble v))))
 
 (defn get-file-pointer
@@ -185,7 +185,7 @@
                at which the next read or write occurs. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Long [^java.io.RandomAccessFile this]
+  (^Long [^RandomAccessFile this]
     (-> this (.getFilePointer))))
 
 (defn read-float
@@ -203,7 +203,7 @@
                float. - `float`
 
   throws: java.io.EOFException - if this file reaches the end before reading four bytes."
-  (^Float [^java.io.RandomAccessFile this]
+  (^Float [^RandomAccessFile this]
     (-> this (.readFloat))))
 
 (defn write-boolean
@@ -216,7 +216,7 @@
   v - a boolean value to be written. - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^Boolean v]
+  ([^RandomAccessFile this ^Boolean v]
     (-> this (.writeBoolean v))))
 
 (defn read
@@ -238,11 +238,11 @@
                the file has been reached. - `int`
 
   throws: java.io.IOException - If the first byte cannot be read for any reason other than end of file, or if the random access file has been closed, or if some other I/O error occurs."
-  (^Integer [^java.io.RandomAccessFile this b ^Integer off ^Integer len]
+  (^Integer [^RandomAccessFile this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^java.io.RandomAccessFile this b]
+  (^Integer [^RandomAccessFile this b]
     (-> this (.read b)))
-  (^Integer [^java.io.RandomAccessFile this]
+  (^Integer [^RandomAccessFile this]
     (-> this (.read))))
 
 (defn write-long
@@ -252,7 +252,7 @@
   v - a long to be written. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^Long v]
+  ([^RandomAccessFile this ^Long v]
     (-> this (.writeLong v))))
 
 (defn write-short
@@ -262,7 +262,7 @@
   v - a short to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^Integer v]
+  ([^RandomAccessFile this ^Integer v]
     (-> this (.writeShort v))))
 
 (defn set-length
@@ -283,7 +283,7 @@
   new-length - The desired length of the file - `long`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.RandomAccessFile this ^Long new-length]
+  ([^RandomAccessFile this ^Long new-length]
     (-> this (.setLength new-length))))
 
 (defn seek
@@ -297,7 +297,7 @@
   pos - the offset position, measured in bytes from the beginning of the file, at which to set the file pointer. - `long`
 
   throws: java.io.IOException - if pos is less than 0 or if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^Long pos]
+  ([^RandomAccessFile this ^Long pos]
     (-> this (.seek pos))))
 
 (defn read-boolean
@@ -311,7 +311,7 @@
   returns: the boolean value read. - `boolean`
 
   throws: java.io.EOFException - if this file has reached the end."
-  (^Boolean [^java.io.RandomAccessFile this]
+  (^Boolean [^RandomAccessFile this]
     (-> this (.readBoolean))))
 
 (defn read-int
@@ -332,7 +332,7 @@
                int. - `int`
 
   throws: java.io.EOFException - if this file reaches the end before reading four bytes."
-  (^Integer [^java.io.RandomAccessFile this]
+  (^Integer [^RandomAccessFile this]
     (-> this (.readInt))))
 
 (defn read-long
@@ -361,7 +361,7 @@
                long. - `long`
 
   throws: java.io.EOFException - if this file reaches the end before reading eight bytes."
-  (^Long [^java.io.RandomAccessFile this]
+  (^Long [^RandomAccessFile this]
     (-> this (.readLong))))
 
 (defn length
@@ -370,7 +370,7 @@
   returns: the length of this file, measured in bytes. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Long [^java.io.RandomAccessFile this]
+  (^Long [^RandomAccessFile this]
     (-> this (.length))))
 
 (defn close
@@ -383,7 +383,7 @@
    as well.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this]
+  ([^RandomAccessFile this]
     (-> this (.close))))
 
 (defn write-int
@@ -393,7 +393,7 @@
   v - an int to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^Integer v]
+  ([^RandomAccessFile this ^Integer v]
     (-> this (.writeInt v))))
 
 (defn write-float
@@ -406,7 +406,7 @@
   v - a float value to be written. - `float`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^Float v]
+  ([^RandomAccessFile this ^Float v]
     (-> this (.writeFloat v))))
 
 (defn write-chars
@@ -418,7 +418,7 @@
   s - a String value to be written. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^java.lang.String s]
+  ([^RandomAccessFile this ^java.lang.String s]
     (-> this (.writeChars s))))
 
 (defn read-short
@@ -439,7 +439,7 @@
                16-bit number. - `short`
 
   throws: java.io.EOFException - if this file reaches the end before reading two bytes."
-  (^Short [^java.io.RandomAccessFile this]
+  (^Short [^RandomAccessFile this]
     (-> this (.readShort))))
 
 (defn skip-bytes
@@ -459,7 +459,7 @@
   returns: the actual number of bytes skipped. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Integer [^java.io.RandomAccessFile this ^Integer n]
+  (^Integer [^RandomAccessFile this ^Integer n]
     (-> this (.skipBytes n))))
 
 (defn write-char
@@ -470,7 +470,7 @@
   v - a char value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^Integer v]
+  ([^RandomAccessFile this ^Integer v]
     (-> this (.writeChar v))))
 
 (defn write-byte
@@ -480,7 +480,7 @@
   v - a byte value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this ^Integer v]
+  ([^RandomAccessFile this ^Integer v]
     (-> this (.writeByte v))))
 
 (defn read-utf
@@ -503,7 +503,7 @@
   returns: a Unicode string. - `java.lang.String`
 
   throws: java.io.EOFException - if this file reaches the end before reading all the bytes."
-  (^java.lang.String [^java.io.RandomAccessFile this]
+  (^java.lang.String [^RandomAccessFile this]
     (-> this (.readUTF))))
 
 (defn read-double
@@ -521,7 +521,7 @@
                double. - `double`
 
   throws: java.io.EOFException - if this file reaches the end before reading eight bytes."
-  (^Double [^java.io.RandomAccessFile this]
+  (^Double [^RandomAccessFile this]
     (-> this (.readDouble))))
 
 (defn get-channel
@@ -536,7 +536,7 @@
    channel, and vice versa.
 
   returns: the file channel associated with this file - `java.nio.channels.FileChannel`"
-  (^java.nio.channels.FileChannel [^java.io.RandomAccessFile this]
+  (^java.nio.channels.FileChannel [^RandomAccessFile this]
     (-> this (.getChannel))))
 
 (defn write
@@ -548,9 +548,9 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.RandomAccessFile this b ^Integer off ^Integer len]
+  ([^RandomAccessFile this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([^java.io.RandomAccessFile this ^Integer b]
+  ([^RandomAccessFile this ^Integer b]
     (-> this (.write b))))
 
 (defn read-line
@@ -576,7 +576,7 @@
                of file is encountered before even one byte is read. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^java.lang.String [^java.io.RandomAccessFile this]
+  (^java.lang.String [^RandomAccessFile this]
     (-> this (.readLine))))
 
 (defn read-unsigned-short
@@ -597,6 +597,6 @@
                16-bit integer. - `int`
 
   throws: java.io.EOFException - if this file reaches the end before reading two bytes."
-  (^Integer [^java.io.RandomAccessFile this]
+  (^Integer [^RandomAccessFile this]
     (-> this (.readUnsignedShort))))
 

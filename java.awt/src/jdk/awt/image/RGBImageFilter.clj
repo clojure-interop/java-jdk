@@ -30,7 +30,7 @@
 
 (defn ->rgb-image-filter
   "Constructor."
-  ([]
+  (^RGBImageFilter []
     (new RGBImageFilter )))
 
 (defn set-color-model
@@ -50,7 +50,7 @@
    with the filtering operation.
 
   model - the specified ColorModel - `java.awt.image.ColorModel`"
-  ([^java.awt.image.RGBImageFilter this ^java.awt.image.ColorModel model]
+  ([^RGBImageFilter this ^java.awt.image.ColorModel model]
     (-> this (.setColorModel model))))
 
 (defn substitute-color-model
@@ -61,7 +61,7 @@
 
   oldcm - the ColorModel object to be replaced on the fly - `java.awt.image.ColorModel`
   newcm - the ColorModel object to replace oldcm on the fly - `java.awt.image.ColorModel`"
-  ([^java.awt.image.RGBImageFilter this ^java.awt.image.ColorModel oldcm ^java.awt.image.ColorModel newcm]
+  ([^RGBImageFilter this ^java.awt.image.ColorModel oldcm ^java.awt.image.ColorModel newcm]
     (-> this (.substituteColorModel oldcm newcm))))
 
 (defn filter-index-color-model
@@ -76,7 +76,7 @@
   returns: a new IndexColorModel representing the filtered colors - `java.awt.image.IndexColorModel`
 
   throws: java.lang.NullPointerException - if icm is null"
-  (^java.awt.image.IndexColorModel [^java.awt.image.RGBImageFilter this ^java.awt.image.IndexColorModel icm]
+  (^java.awt.image.IndexColorModel [^RGBImageFilter this ^java.awt.image.IndexColorModel icm]
     (-> this (.filterIndexColorModel icm))))
 
 (defn filter-rgb-pixels
@@ -90,7 +90,7 @@
   pixels - the array of pixels - `int[]`
   off - the offset into the pixels array - `int`
   scansize - the distance from one row of pixels to the next in the array - `int`"
-  ([^java.awt.image.RGBImageFilter this ^Integer x ^Integer y ^Integer w ^Integer h pixels ^Integer off ^Integer scansize]
+  ([^RGBImageFilter this ^Integer x ^Integer y ^Integer w ^Integer h pixels ^Integer off ^Integer scansize]
     (-> this (.filterRGBPixels x y w h pixels off scansize))))
 
 (defn set-pixels
@@ -115,7 +115,7 @@
   pixels - the array of pixels - `byte[]`
   off - the offset into the pixels array - `int`
   scansize - the distance from one row of pixels to the next in the pixels array - `int`"
-  ([^java.awt.image.RGBImageFilter this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
+  ([^RGBImageFilter this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
     (-> this (.setPixels x y w h model pixels off scansize))))
 
 (defn filter-rgb
@@ -127,6 +127,6 @@
   rgb - the integer pixel representation in the default RGB color model - `int`
 
   returns: a filtered pixel in the default RGB color model. - `int`"
-  (^Integer [^java.awt.image.RGBImageFilter this ^Integer x ^Integer y ^Integer rgb]
+  (^Integer [^RGBImageFilter this ^Integer x ^Integer y ^Integer rgb]
     (-> this (.filterRGB x y rgb))))
 

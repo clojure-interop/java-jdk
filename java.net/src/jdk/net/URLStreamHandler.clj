@@ -14,6 +14,6 @@
 
 (defn ->url-stream-handler
   "Constructor."
-  ([]
+  (^URLStreamHandler []
     (new URLStreamHandler )))
 

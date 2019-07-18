@@ -58,7 +58,7 @@
   "Constructor.
 
   Creates a new UI."
-  ([]
+  (^BasicTextUI []
     (new BasicTextUI )))
 
 (defn install-ui
@@ -82,7 +82,7 @@
    to represent the model.
 
   c - the editor component - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
+  ([^BasicTextUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn get-minimum-size
@@ -91,7 +91,7 @@
   c - the editor component - `javax.swing.JComponent`
 
   returns: the size - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicTextUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-maximum-size
@@ -100,7 +100,7 @@
   c - the editor component - `javax.swing.JComponent`
 
   returns: the size - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicTextUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn uninstall-ui
@@ -108,7 +108,7 @@
    uninstalls the highlighter, removes views, and nulls out the keymap.
 
   c - the editor component - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
+  ([^BasicTextUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn update
@@ -123,7 +123,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^BasicTextUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn get-tool-tip-text
@@ -134,7 +134,7 @@
   pt - `java.awt.Point`
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent t ^java.awt.Point pt]
+  (^java.lang.String [^BasicTextUI this ^javax.swing.text.JTextComponent t ^java.awt.Point pt]
     (-> this (.getToolTipText t pt))))
 
 (defn paint
@@ -147,7 +147,7 @@
 
   g - the graphics context - `java.awt.Graphics`
   c - the editor component - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^BasicTextUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn damage-range
@@ -157,11 +157,11 @@
   t - `javax.swing.text.JTextComponent`
   p-0 - the beginning of the range >= 0 - `int`
   p-1 - the end of the range >= p0 - `int`
-  p-0-bias - `javax.swing.text.Position.Bias`
-  p-1-bias - `javax.swing.text.Position.Bias`"
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent t ^Integer p-0 ^Integer p-1 ^javax.swing.text.Position.Bias p-0-bias ^javax.swing.text.Position.Bias p-1-bias]
+  p-0-bias - `javax.swing.text.Position$Bias`
+  p-1-bias - `javax.swing.text.Position$Bias`"
+  ([^BasicTextUI this ^javax.swing.text.JTextComponent t ^Integer p-0 ^Integer p-1 ^javax.swing.text.Position$Bias p-0-bias ^javax.swing.text.Position$Bias p-1-bias]
     (-> this (.damageRange t p-0 p-1 p-0-bias p-1-bias)))
-  ([^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^Integer p-0 ^Integer p-1]
+  ([^BasicTextUI this ^javax.swing.text.JTextComponent tc ^Integer p-0 ^Integer p-1]
     (-> this (.damageRange tc p-0 p-1))))
 
 (defn view-to-model
@@ -172,13 +172,13 @@
 
   tc - the text component for which this UI is installed - `javax.swing.text.JTextComponent`
   pt - the location in the view to translate. This should be in the same coordinate system as the mouse events. - `java.awt.Point`
-  bias-return - filled in by this method to indicate whether the point given is closer to the previous or the next character in the model - `javax.swing.text.Position.Bias[]`
+  bias-return - filled in by this method to indicate whether the point given is closer to the previous or the next character in the model - `javax.swing.text.Position$Bias[]`
 
   returns: the offset from the start of the document >= 0,
      -1 if the component doesn't yet have a positive size. - `int`"
-  (^Integer [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^java.awt.Point pt bias-return]
+  (^Integer [^BasicTextUI this ^javax.swing.text.JTextComponent tc ^java.awt.Point pt bias-return]
     (-> this (.viewToModel tc pt bias-return)))
-  (^Integer [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^java.awt.Point pt]
+  (^Integer [^BasicTextUI this ^javax.swing.text.JTextComponent tc ^java.awt.Point pt]
     (-> this (.viewToModel tc pt))))
 
 (defn create
@@ -193,9 +193,9 @@
   p-1 - the ending offset >= p0 - `int`
 
   returns: the view - `javax.swing.text.View`"
-  (^javax.swing.text.View [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.Element elem ^Integer p-0 ^Integer p-1]
+  (^javax.swing.text.View [^BasicTextUI this ^javax.swing.text.Element elem ^Integer p-0 ^Integer p-1]
     (-> this (.create elem p-0 p-1)))
-  (^javax.swing.text.View [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.Element elem]
+  (^javax.swing.text.View [^BasicTextUI this ^javax.swing.text.Element elem]
     (-> this (.create elem))))
 
 (defn get-editor-kit
@@ -204,7 +204,7 @@
   tc - the text component for which this UI is installed - `javax.swing.text.JTextComponent`
 
   returns: the editor capabilities - `javax.swing.text.EditorKit`"
-  (^javax.swing.text.EditorKit [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc]
+  (^javax.swing.text.EditorKit [^BasicTextUI this ^javax.swing.text.JTextComponent tc]
     (-> this (.getEditorKit tc))))
 
 (defn model-to-view
@@ -215,14 +215,14 @@
 
   tc - the text component for which this UI is installed - `javax.swing.text.JTextComponent`
   pos - the local location in the model to translate >= 0 - `int`
-  bias - `javax.swing.text.Position.Bias`
+  bias - `javax.swing.text.Position$Bias`
 
   returns: the coordinates as a rectangle, null if the model is not painted - `java.awt.Rectangle`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  (^java.awt.Rectangle [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^Integer pos ^javax.swing.text.Position.Bias bias]
+  (^java.awt.Rectangle [^BasicTextUI this ^javax.swing.text.JTextComponent tc ^Integer pos ^javax.swing.text.Position$Bias bias]
     (-> this (.modelToView tc pos bias)))
-  (^java.awt.Rectangle [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc ^Integer pos]
+  (^java.awt.Rectangle [^BasicTextUI this ^javax.swing.text.JTextComponent tc ^Integer pos]
     (-> this (.modelToView tc pos))))
 
 (defn get-preferred-size
@@ -237,7 +237,7 @@
   c - the editor component - `javax.swing.JComponent`
 
   returns: the size - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicTextUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn get-root-view
@@ -256,7 +256,7 @@
   tc - the text component for which this UI is installed - `javax.swing.text.JTextComponent`
 
   returns: the view - `javax.swing.text.View`"
-  (^javax.swing.text.View [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent tc]
+  (^javax.swing.text.View [^BasicTextUI this ^javax.swing.text.JTextComponent tc]
     (-> this (.getRootView tc))))
 
 (defn get-next-visual-position-from
@@ -267,14 +267,14 @@
 
   t - the text component for which this UI is installed - `javax.swing.text.JTextComponent`
   pos - the position to convert >= 0 - `int`
-  b - the bias for the position - `javax.swing.text.Position.Bias`
+  b - the bias for the position - `javax.swing.text.Position$Bias`
   direction - the direction from the current position that can be thought of as the arrow keys typically found on a keyboard. This may be SwingConstants.WEST, SwingConstants.EAST, SwingConstants.NORTH, or SwingConstants.SOUTH - `int`
-  bias-ret - an array to contain the bias for the returned position - `javax.swing.text.Position.Bias[]`
+  bias-ret - an array to contain the bias for the returned position - `javax.swing.text.Position$Bias[]`
 
   returns: the location within the model that best represents the next
     location visual position - `int`
 
   throws: javax.swing.text.BadLocationException"
-  (^Integer [^javax.swing.plaf.basic.BasicTextUI this ^javax.swing.text.JTextComponent t ^Integer pos ^javax.swing.text.Position.Bias b ^Integer direction bias-ret]
+  (^Integer [^BasicTextUI this ^javax.swing.text.JTextComponent t ^Integer pos ^javax.swing.text.Position$Bias b ^Integer direction bias-ret]
     (-> this (.getNextVisualPositionFrom t pos b direction bias-ret))))
 

@@ -18,8 +18,8 @@
    particular exception.
 
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^CertificateEncodingException [^java.lang.String message]
     (new CertificateEncodingException message))
-  ([]
+  (^CertificateEncodingException []
     (new CertificateEncodingException )))
 

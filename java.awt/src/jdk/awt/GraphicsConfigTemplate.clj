@@ -15,7 +15,7 @@
 
   This class is an abstract class so only subclasses can be
    instantiated."
-  ([]
+  (^GraphicsConfigTemplate []
     (new GraphicsConfigTemplate )))
 
 (def *-required
@@ -61,7 +61,7 @@
 
   returns: a GraphicsConfiguration object that is
    the best configuration possible. - `java.awt.GraphicsConfiguration`"
-  (^java.awt.GraphicsConfiguration [^java.awt.GraphicsConfigTemplate this gc]
+  (^java.awt.GraphicsConfiguration [^GraphicsConfigTemplate this gc]
     (-> this (.getBestConfiguration gc))))
 
 (defn graphics-config-supported?
@@ -78,6 +78,6 @@
    false if the GraphicsConfiguration can
    not be used to create a drawing surface usable by this Java(tm)
    API. - `boolean`"
-  (^Boolean [^java.awt.GraphicsConfigTemplate this ^java.awt.GraphicsConfiguration gc]
+  (^Boolean [^GraphicsConfigTemplate this ^java.awt.GraphicsConfiguration gc]
     (-> this (.isGraphicsConfigSupported gc))))
 

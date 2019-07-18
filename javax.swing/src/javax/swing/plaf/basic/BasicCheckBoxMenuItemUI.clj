@@ -5,7 +5,7 @@
 
 (defn ->basic-check-box-menu-item-ui
   "Constructor."
-  ([]
+  (^BasicCheckBoxMenuItemUI []
     (new BasicCheckBoxMenuItemUI )))
 
 (defn *create-ui
@@ -20,6 +20,6 @@
   e - `java.awt.event.MouseEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.plaf.basic.BasicCheckBoxMenuItemUI this ^javax.swing.JMenuItem item ^java.awt.event.MouseEvent e path ^javax.swing.MenuSelectionManager manager]
+  ([^BasicCheckBoxMenuItemUI this ^javax.swing.JMenuItem item e path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processMouseEvent item e path manager))))
 

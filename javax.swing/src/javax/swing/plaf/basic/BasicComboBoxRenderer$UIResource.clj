@@ -17,6 +17,6 @@
 
 (defn ->ui-resource
   "Constructor."
-  ([]
+  (^BasicComboBoxRenderer$UIResource []
     (new BasicComboBoxRenderer$UIResource )))
 

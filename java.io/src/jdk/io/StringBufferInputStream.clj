@@ -12,7 +12,7 @@
   Deprecated.
 
   s - the underlying input buffer. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^StringBufferInputStream [^java.lang.String s]
     (new StringBufferInputStream s)))
 
 (defn read
@@ -25,9 +25,9 @@
   returns: the total number of bytes read into the buffer, or
                -1 if there is no more data because the end of
                the stream has been reached. - `int`"
-  (^Integer [^java.io.StringBufferInputStream this b ^Integer off ^Integer len]
+  (^Integer [^StringBufferInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^java.io.StringBufferInputStream this]
+  (^Integer [^StringBufferInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -36,7 +36,7 @@
   n - the number of bytes to be skipped. - `long`
 
   returns: the actual number of bytes skipped. - `long`"
-  (^Long [^java.io.StringBufferInputStream this ^Long n]
+  (^Long [^StringBufferInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -44,11 +44,11 @@
 
   returns: the value of count - pos, which is the
                number of bytes remaining to be read from the input buffer. - `int`"
-  (^Integer [^java.io.StringBufferInputStream this]
+  (^Integer [^StringBufferInputStream this]
     (-> this (.available))))
 
 (defn reset
   "Deprecated."
-  ([^java.io.StringBufferInputStream this]
+  ([^StringBufferInputStream this]
     (-> this (.reset))))
 

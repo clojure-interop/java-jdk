@@ -46,7 +46,7 @@
    isAttributeCategorySupported(Class) method to
    distinguish these cases.
 
-  category - Printing attribute category for which the default attribute value is requested. It must be a Class that implements interface Attribute. - `javax.print.attribute.Attribute>`
+  category - Printing attribute category for which the default attribute value is requested. It must be a Class that implements interface Attribute. - `java.lang.Class`
 
   returns: Default attribute value for category, or null
          if this Print Service does not support specifying a doc-level or
@@ -55,7 +55,7 @@
             for this attribute. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if category is null."
-  (^java.lang.Object [^javax.print.PrintService this ^javax.print.attribute.Attribute> category]
+  (^java.lang.Object [^PrintService this ^java.lang.Class category]
     (-> this (.getDefaultAttributeValue category))))
 
 (defn doc-flavor-supported?
@@ -74,7 +74,7 @@
    specified DocFlavor; false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if flavor is null."
-  (^Boolean [^javax.print.PrintService this ^javax.print.DocFlavor flavor]
+  (^Boolean [^PrintService this ^javax.print.DocFlavor flavor]
     (-> this (.isDocFlavorSupported flavor))))
 
 (defn attribute-value-supported?
@@ -112,7 +112,7 @@
             Print Request, false if it doesn't. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) if attrval is null."
-  (^Boolean [^javax.print.PrintService this ^javax.print.attribute.Attribute attrval ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
+  (^Boolean [^PrintService this ^javax.print.attribute.Attribute attrval ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
     (-> this (.isAttributeValueSupported attrval flavor attributes))))
 
 (defn get-unsupported-attributes
@@ -152,7 +152,7 @@
    specification, else the unsupported attributes. - `javax.print.attribute.AttributeSet`
 
   throws: java.lang.IllegalArgumentException - ifflavor is not supported by this PrintService."
-  (^javax.print.attribute.AttributeSet [^javax.print.PrintService this ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
+  (^javax.print.attribute.AttributeSet [^PrintService this ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
     (-> this (.getUnsupportedAttributes flavor attributes))))
 
 (defn get-supported-attribute-categories
@@ -176,7 +176,7 @@
             specify as a doc-level or job-level attribute in a Print
             Request. Each element in the array is a Class that implements interface Attribute.
             The array is empty if no categories are supported. - `java.lang.Class<?>[]`"
-  ([^javax.print.PrintService this]
+  ([^PrintService this]
     (-> this (.getSupportedAttributeCategories))))
 
 (defn get-attribute
@@ -184,13 +184,13 @@
    This may be useful to clients which only need the value of one
    attribute and want to minimize overhead.
 
-  category - the category of a PrintServiceAttribute supported by this service - may not be null. - `java.lang.Class<T>`
+  category - the category of a PrintServiceAttribute supported by this service - may not be null. - `java.lang.Class`
 
   returns: the value of the supported attribute or null if the
    attribute is not supported by this service. - `<T extends javax.print.attribute.PrintServiceAttribute> T`
 
   throws: java.lang.NullPointerException - if the category is null."
-  ([^javax.print.PrintService this ^java.lang.Class category]
+  ([^PrintService this ^java.lang.Class category]
     (-> this (.getAttribute category))))
 
 (defn get-name
@@ -204,7 +204,7 @@
    attribute.
 
   returns: name of the service. - `java.lang.String`"
-  (^java.lang.String [^javax.print.PrintService this]
+  (^java.lang.String [^PrintService this]
     (-> this (.getName))))
 
 (defn get-supported-attribute-values
@@ -255,7 +255,7 @@
    that indicates bounds on the legal values -- used, for example, by an
    integer-valued attribute that must lie within a certain range.
 
-  category - Printing attribute category to test. It must be a Class that implements interface Attribute. - `javax.print.attribute.Attribute>`
+  category - Printing attribute category to test. It must be a Class that implements interface Attribute. - `java.lang.Class`
   flavor - Doc flavor for a supposed job, or null. - `javax.print.DocFlavor`
   attributes - Set of printing attributes for a supposed job (both job-level attributes and document-level attributes), or null. - `javax.print.attribute.AttributeSet`
 
@@ -265,7 +265,7 @@
             a Print Request. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if category is null."
-  (^java.lang.Object [^javax.print.PrintService this ^javax.print.attribute.Attribute> category ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
+  (^java.lang.Object [^PrintService this ^java.lang.Class category ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
     (-> this (.getSupportedAttributeValues category flavor attributes))))
 
 (defn get-service-ui-factory
@@ -279,7 +279,7 @@
    See ServiceUIFactory for more information.
 
   returns: null or a factory for UI components. - `javax.print.ServiceUIFactory`"
-  (^javax.print.ServiceUIFactory [^javax.print.PrintService this]
+  (^javax.print.ServiceUIFactory [^PrintService this]
     (-> this (.getServiceUIFactory))))
 
 (defn attribute-category-supported?
@@ -300,7 +300,7 @@
    would be a member of the result of
    getSupportedAttributeCategories().
 
-  category - Printing attribute category to test. It must be a Class that implements interface Attribute. - `javax.print.attribute.Attribute>`
+  category - Printing attribute category to test. It must be a Class that implements interface Attribute. - `java.lang.Class`
 
   returns: true if this print service supports
             specifying a doc-level or
@@ -308,7 +308,7 @@
             Request; false if it doesn't. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if category is null."
-  (^Boolean [^javax.print.PrintService this ^javax.print.attribute.Attribute> category]
+  (^Boolean [^PrintService this ^java.lang.Class category]
     (-> this (.isAttributeCategorySupported category))))
 
 (defn remove-print-service-attribute-listener
@@ -317,7 +317,7 @@
    PrintService events.
 
   listener - a PrintServiceAttributeListener object - `javax.print.event.PrintServiceAttributeListener`"
-  ([^javax.print.PrintService this ^javax.print.event.PrintServiceAttributeListener listener]
+  ([^PrintService this ^javax.print.event.PrintServiceAttributeListener listener]
     (-> this (.removePrintServiceAttributeListener listener))))
 
 (defn get-supported-doc-flavors
@@ -333,7 +333,7 @@
 
   returns: Array of supported doc flavors, should have at least
             one element. - `javax.print.DocFlavor[]`"
-  ([^javax.print.PrintService this]
+  ([^PrintService this]
     (-> this (.getSupportedDocFlavors))))
 
 (defn hash-code
@@ -341,14 +341,14 @@
    equals(Object).
 
   returns: hash code of this object. - `int`"
-  (^Integer [^javax.print.PrintService this]
+  (^Integer [^PrintService this]
     (-> this (.hashCode))))
 
 (defn add-print-service-attribute-listener
   "Registers a listener for events on this PrintService.
 
   listener - a PrintServiceAttributeListener, which monitors the status of a print service - `javax.print.event.PrintServiceAttributeListener`"
-  ([^javax.print.PrintService this ^javax.print.event.PrintServiceAttributeListener listener]
+  ([^PrintService this ^javax.print.event.PrintServiceAttributeListener listener]
     (-> this (.addPrintServiceAttributeListener listener))))
 
 (defn equals
@@ -370,7 +370,7 @@
 
   returns: true if this service is the same as the obj argument,
    false otherwise. - `boolean`"
-  (^Boolean [^javax.print.PrintService this ^java.lang.Object obj]
+  (^Boolean [^PrintService this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-attributes
@@ -387,7 +387,7 @@
 
   returns: Unmodifiable snapshot of this Print Service's attribute set.
             May be empty, but not null. - `javax.print.attribute.PrintServiceAttributeSet`"
-  (^javax.print.attribute.PrintServiceAttributeSet [^javax.print.PrintService this]
+  (^javax.print.attribute.PrintServiceAttributeSet [^PrintService this]
     (-> this (.getAttributes))))
 
 (defn create-print-job
@@ -395,6 +395,6 @@
    any of the supported document flavors.
 
   returns: a DocPrintJob object - `javax.print.DocPrintJob`"
-  (^javax.print.DocPrintJob [^javax.print.PrintService this]
+  (^javax.print.DocPrintJob [^PrintService this]
     (-> this (.createPrintJob))))
 

@@ -11,14 +11,14 @@
   Constructs an instance of this class with the specified precision.
 
   p - The precision - `int`"
-  ([^Integer p]
+  (^IllegalFormatPrecisionException [^Integer p]
     (new IllegalFormatPrecisionException p)))
 
 (defn get-precision
   "Returns the precision
 
   returns: The precision - `int`"
-  (^Integer [^java.util.IllegalFormatPrecisionException this]
+  (^Integer [^IllegalFormatPrecisionException this]
     (-> this (.getPrecision))))
 
 (defn get-message
@@ -26,6 +26,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  (^java.lang.String [^java.util.IllegalFormatPrecisionException this]
+  (^java.lang.String [^IllegalFormatPrecisionException this]
     (-> this (.getMessage))))
 

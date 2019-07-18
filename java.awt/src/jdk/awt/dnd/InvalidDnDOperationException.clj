@@ -12,8 +12,8 @@
   Create an Exception with its own descriptive message
 
   msg - the detail message - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^InvalidDnDOperationException [^java.lang.String msg]
     (new InvalidDnDOperationException msg))
-  ([]
+  (^InvalidDnDOperationException []
     (new InvalidDnDOperationException )))
 

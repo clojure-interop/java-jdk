@@ -7,6 +7,6 @@
   "Constructor.
 
   Constructs an instance of this class."
-  ([]
+  (^AlreadyConnectedException []
     (new AlreadyConnectedException )))
 

@@ -22,6 +22,6 @@
   source - the RowSet object whose data has changed or whose cursor has moved - `javax.sql.RowSet`
 
   throws: java.lang.IllegalArgumentException - if source is null."
-  ([^javax.sql.RowSet source]
+  (^RowSetEvent [^javax.sql.RowSet source]
     (new RowSetEvent source)))
 

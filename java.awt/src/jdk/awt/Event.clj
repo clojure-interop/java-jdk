@@ -49,11 +49,11 @@
   key - the key pressed in a keyboard event. - `int`
   modifiers - the state of the modifier keys. - `int`
   arg - the specified argument. - `java.lang.Object`"
-  ([^java.lang.Object target ^Long when ^Integer id ^Integer x ^Integer y ^Integer key ^Integer modifiers ^java.lang.Object arg]
+  (^Event [^java.lang.Object target ^Long when ^Integer id ^Integer x ^Integer y ^Integer key ^Integer modifiers ^java.lang.Object arg]
     (new Event target when id x y key modifiers arg))
-  ([^java.lang.Object target ^Long when ^Integer id ^Integer x ^Integer y ^Integer key ^Integer modifiers]
+  (^Event [^java.lang.Object target ^Long when ^Integer id ^Integer x ^Integer y ^Integer key ^Integer modifiers]
     (new Event target when id x y key modifiers))
-  ([^java.lang.Object target ^Integer id ^java.lang.Object arg]
+  (^Event [^java.lang.Object target ^Integer id ^java.lang.Object arg]
     (new Event target id arg)))
 
 (def *-shift-mask
@@ -723,7 +723,7 @@
 
   dx - the distance to translate the x coordinate. - `int`
   dy - the distance to translate the y coordinate. - `int`"
-  ([^java.awt.Event this ^Integer dx ^Integer dy]
+  ([^Event this ^Integer dx ^Integer dy]
     (-> this (.translate dx dy))))
 
 (defn shift-down
@@ -735,7 +735,7 @@
 
   returns: true if the key is down;
               false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Event this]
+  (^Boolean [^Event this]
     (-> this (.shiftDown))))
 
 (defn control-down
@@ -747,7 +747,7 @@
 
   returns: true if the key is down;
               false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Event this]
+  (^Boolean [^Event this]
     (-> this (.controlDown))))
 
 (defn meta-down
@@ -759,7 +759,7 @@
 
   returns: true if the key is down;
               false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Event this]
+  (^Boolean [^Event this]
     (-> this (.metaDown))))
 
 (defn to-string
@@ -771,6 +771,6 @@
 
   returns: a string that represents the event and the values
                    of its member fields. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Event this]
+  (^java.lang.String [^Event this]
     (-> this (.toString))))
 

@@ -10,7 +10,7 @@
    an alpha value of 1.0, or completely transparent, with an alpha
    value of 0.0.
 
-  type: java.awt.GraphicsDevice.WindowTranslucency"
+  type: java.awt.GraphicsDevice$WindowTranslucency"
   GraphicsDevice$WindowTranslucency/PERPIXEL_TRANSPARENT)
 
 (def TRANSLUCENT
@@ -20,7 +20,7 @@
    the pixels of which have the same alpha value between or including
    0.0 and 1.0.
 
-  type: java.awt.GraphicsDevice.WindowTranslucency"
+  type: java.awt.GraphicsDevice$WindowTranslucency"
   GraphicsDevice$WindowTranslucency/TRANSLUCENT)
 
 (def PERPIXEL_TRANSLUCENT
@@ -30,7 +30,7 @@
    contain or might contain pixels with arbitrary alpha values
    between and including 0.0 and 1.0.
 
-  type: java.awt.GraphicsDevice.WindowTranslucency"
+  type: java.awt.GraphicsDevice$WindowTranslucency"
   GraphicsDevice$WindowTranslucency/PERPIXEL_TRANSLUCENT)
 
 (defn *values
@@ -42,7 +42,7 @@
   for (GraphicsDevice.WindowTranslucency c : GraphicsDevice.WindowTranslucency.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.GraphicsDevice.WindowTranslucency[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.GraphicsDevice$WindowTranslucency[]`"
   ([]
     (GraphicsDevice$WindowTranslucency/values )))
 
@@ -54,9 +54,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.awt.GraphicsDevice.WindowTranslucency`
+  returns: the enum constant with the specified name - `java.awt.GraphicsDevice$WindowTranslucency`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.awt.GraphicsDevice.WindowTranslucency [^java.lang.String name]
+  (^java.awt.GraphicsDevice$WindowTranslucency [^java.lang.String name]
     (GraphicsDevice$WindowTranslucency/valueOf name)))
 

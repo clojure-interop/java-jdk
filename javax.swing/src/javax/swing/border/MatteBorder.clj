@@ -23,11 +23,11 @@
   bottom - the bottom inset of the border - `int`
   right - the right inset of the border - `int`
   matte-color - the color rendered for the border - `java.awt.Color`"
-  ([^Integer top ^Integer left ^Integer bottom ^Integer right ^java.awt.Color matte-color]
+  (^MatteBorder [^Integer top ^Integer left ^Integer bottom ^Integer right ^java.awt.Color matte-color]
     (new MatteBorder top left bottom right matte-color))
-  ([^java.awt.Insets border-insets ^java.awt.Color matte-color]
+  (^MatteBorder [^java.awt.Insets border-insets ^java.awt.Color matte-color]
     (new MatteBorder border-insets matte-color))
-  ([^javax.swing.Icon tile-icon]
+  (^MatteBorder [^javax.swing.Icon tile-icon]
     (new MatteBorder tile-icon)))
 
 (defn paint-border
@@ -39,7 +39,7 @@
   y - the y position of the painted border - `int`
   width - the width of the painted border - `int`
   height - the height of the painted border - `int`"
-  ([^javax.swing.border.MatteBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
+  ([^MatteBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.paintBorder c g x y width height))))
 
 (defn get-border-insets
@@ -49,9 +49,9 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  (^java.awt.Insets [^javax.swing.border.MatteBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^MatteBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets)))
-  (^java.awt.Insets [^javax.swing.border.MatteBorder this]
+  (^java.awt.Insets [^MatteBorder this]
     (-> this (.getBorderInsets))))
 
 (defn get-matte-color
@@ -59,7 +59,7 @@
    if a tile icon is being used.
 
   returns: `java.awt.Color`"
-  (^java.awt.Color [^javax.swing.border.MatteBorder this]
+  (^java.awt.Color [^MatteBorder this]
     (-> this (.getMatteColor))))
 
 (defn get-tile-icon
@@ -67,13 +67,13 @@
    if a solid color is being used.
 
   returns: `javax.swing.Icon`"
-  (^javax.swing.Icon [^javax.swing.border.MatteBorder this]
+  (^javax.swing.Icon [^MatteBorder this]
     (-> this (.getTileIcon))))
 
 (defn border-opaque?
   "Returns whether or not the border is opaque.
 
   returns: false - `boolean`"
-  (^Boolean [^javax.swing.border.MatteBorder this]
+  (^Boolean [^MatteBorder this]
     (-> this (.isBorderOpaque))))
 

@@ -20,6 +20,6 @@
 
 (defn ->thread-death
   "Constructor."
-  ([]
+  (^ThreadDeath []
     (new ThreadDeath )))
 

@@ -13,10 +13,10 @@
 (defn get-key
   "Returns the key corresponding to this entry.
 
-  returns: the key corresponding to this entry - `Map.Entry.K`
+  returns: the key corresponding to this entry - `K`
 
   throws: java.lang.IllegalStateException - implementations may, but are not required to, throw this exception if the entry has been removed from the backing map."
-  (^Map.Entry.K [^java.util.Map$Entry this]
+  ([^Map$Entry this]
     (-> this (.getKey))))
 
 (defn get-value
@@ -24,10 +24,10 @@
    has been removed from the backing map (by the iterator's
    remove operation), the results of this call are undefined.
 
-  returns: the value corresponding to this entry - `Map.Entry.V`
+  returns: the value corresponding to this entry - `V`
 
   throws: java.lang.IllegalStateException - implementations may, but are not required to, throw this exception if the entry has been removed from the backing map."
-  (^Map.Entry.V [^java.util.Map$Entry this]
+  ([^Map$Entry this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -36,12 +36,12 @@
    behavior of this call is undefined if the mapping has already been
    removed from the map (by the iterator's remove operation).
 
-  value - new value to be stored in this entry - `Map.Entry.V`
+  value - new value to be stored in this entry - `V`
 
-  returns: old value corresponding to the entry - `Map.Entry.V`
+  returns: old value corresponding to the entry - `V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by the backing map"
-  (^Map.Entry.V [^java.util.Map$Entry this ^Map.Entry.V value]
+  ([^Map$Entry this value]
     (-> this (.setValue value))))
 
 (defn equals
@@ -62,7 +62,7 @@
 
   returns: true if the specified object is equal to this map
            entry - `boolean`"
-  (^Boolean [^java.util.Map$Entry this ^java.lang.Object o]
+  (^Boolean [^Map$Entry this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -77,7 +77,7 @@
    contract of Object.hashCode.
 
   returns: the hash code value for this map entry - `int`"
-  (^Integer [^java.util.Map$Entry this]
+  (^Integer [^Map$Entry this]
     (-> this (.hashCode))))
 
 (defn *comparing-by-key
@@ -87,10 +87,10 @@
    The returned comparator is serializable if the specified comparator
    is also serializable.
 
-  cmp - the key Comparator - `K>`
+  cmp - the key Comparator - `java.util.Comparator`
 
-  returns: a comparator that compares Map.Entry by the key. - `<K,V> java.util.Comparator<java.util.Map.Entry<K,V>>`"
-  ([cmp]
+  returns: a comparator that compares Map.Entry by the key. - `<K,V> java.util.Comparator<java.util.Map$Entry<K,V>>`"
+  ([^java.util.Comparator cmp]
     (Map$Entry/comparingByKey cmp))
   ([]
     (Map$Entry/comparingByKey )))
@@ -102,10 +102,10 @@
    The returned comparator is serializable if the specified comparator
    is also serializable.
 
-  cmp - the value Comparator - `V>`
+  cmp - the value Comparator - `java.util.Comparator`
 
-  returns: a comparator that compares Map.Entry by the value. - `<K,V> java.util.Comparator<java.util.Map.Entry<K,V>>`"
-  ([cmp]
+  returns: a comparator that compares Map.Entry by the value. - `<K,V> java.util.Comparator<java.util.Map$Entry<K,V>>`"
+  ([^java.util.Comparator cmp]
     (Map$Entry/comparingByValue cmp))
   ([]
     (Map$Entry/comparingByValue )))

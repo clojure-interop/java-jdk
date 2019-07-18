@@ -14,8 +14,8 @@
    an explanation. All other fields are set to null.
 
   explanation - Additional detail about this exception. Can be null. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^NoSuchAttributeException [^java.lang.String explanation]
     (new NoSuchAttributeException explanation))
-  ([]
+  (^NoSuchAttributeException []
     (new NoSuchAttributeException )))
 

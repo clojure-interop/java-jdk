@@ -24,7 +24,7 @@
    but are lightweight in this case and must be contained by a parent
    somewhere higher up in the component tree that is native.
    (such as Frame for example)."
-  ([]
+  (^Container []
     (new Container )))
 
 (defn get-minimum-size
@@ -42,7 +42,7 @@
 
   returns: an instance of Dimension that represents
                   the minimum size of this container. - `java.awt.Dimension`"
-  (^java.awt.Dimension [^java.awt.Container this]
+  (^java.awt.Dimension [^Container this]
     (-> this (.getMinimumSize))))
 
 (defn set-component-z-order
@@ -79,7 +79,7 @@
   index - the position in the container's list to insert the component, where getComponentCount() appends to the end - `int`
 
   throws: java.lang.NullPointerException - if comp is null"
-  ([^java.awt.Container this ^java.awt.Component comp ^Integer index]
+  ([^Container this ^java.awt.Component comp ^Integer index]
     (-> this (.setComponentZOrder comp index))))
 
 (defn get-component
@@ -92,7 +92,7 @@
   returns: the nth component in this container. - `java.awt.Component`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the nth value does not exist."
-  (^java.awt.Component [^java.awt.Container this ^Integer n]
+  (^java.awt.Component [^Container this ^Integer n]
     (-> this (.getComponent n))))
 
 (defn set-layout
@@ -102,7 +102,7 @@
    invalidates the component hierarchy.
 
   mgr - the specified layout manager - `java.awt.LayoutManager`"
-  ([^java.awt.Container this ^java.awt.LayoutManager mgr]
+  ([^Container this ^java.awt.LayoutManager mgr]
     (-> this (.setLayout mgr))))
 
 (defn get-focus-traversal-policy
@@ -114,7 +114,7 @@
 
   returns: this Container's focus traversal policy, or null if this
            Container is not a focus cycle root. - `java.awt.FocusTraversalPolicy`"
-  (^java.awt.FocusTraversalPolicy [^java.awt.Container this]
+  (^java.awt.FocusTraversalPolicy [^Container this]
     (-> this (.getFocusTraversalPolicy))))
 
 (defn set-focus-traversal-policy
@@ -131,7 +131,7 @@
    Containers until this Container is made a focus cycle root.
 
   policy - the new focus traversal policy for this Container - `java.awt.FocusTraversalPolicy`"
-  ([^java.awt.Container this ^java.awt.FocusTraversalPolicy policy]
+  ([^Container this ^java.awt.FocusTraversalPolicy policy]
     (-> this (.setFocusTraversalPolicy policy))))
 
 (defn get-maximum-size
@@ -150,7 +150,7 @@
 
   returns: an instance of Dimension that represents
                   the maximum size of this container. - `java.awt.Dimension`"
-  (^java.awt.Dimension [^java.awt.Container this]
+  (^java.awt.Dimension [^Container this]
     (-> this (.getMaximumSize))))
 
 (defn list
@@ -166,14 +166,14 @@
   indent - the number of spaces to indent - `int`
 
   throws: java.lang.NullPointerException - if out is null"
-  ([^java.awt.Container this ^java.io.PrintStream out ^Integer indent]
+  ([^Container this ^java.io.PrintStream out ^Integer indent]
     (-> this (.list out indent))))
 
 (defn paint-components
   "Paints each of the components in this container.
 
   g - the graphics context. - `java.awt.Graphics`"
-  ([^java.awt.Container this ^java.awt.Graphics g]
+  ([^Container this ^java.awt.Graphics g]
     (-> this (.paintComponents g))))
 
 (defn get-insets
@@ -184,7 +184,7 @@
    corresponds to the height of the frame's title bar.
 
   returns: the insets of this container. - `java.awt.Insets`"
-  (^java.awt.Insets [^java.awt.Container this]
+  (^java.awt.Insets [^Container this]
     (-> this (.getInsets))))
 
 (defn add-container-listener
@@ -194,7 +194,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the container listener - `java.awt.event.ContainerListener`"
-  ([^java.awt.Container this ^java.awt.event.ContainerListener l]
+  ([^Container this ^java.awt.event.ContainerListener l]
     (-> this (.addContainerListener l))))
 
 (defn get-focus-traversal-keys
@@ -214,7 +214,7 @@
            returned. - `java.util.Set<java.awt.AWTKeyStroke>`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS"
-  (^java.util.Set [^java.awt.Container this ^Integer id]
+  (^java.util.Set [^Container this ^Integer id]
     (-> this (.getFocusTraversalKeys id))))
 
 (defn get-container-listeners
@@ -224,7 +224,7 @@
   returns: all of this container's ContainerListeners
            or an empty array if no container
            listeners are currently registered - `java.awt.event.ContainerListener[]`"
-  ([^java.awt.Container this]
+  ([^Container this]
     (-> this (.getContainerListeners))))
 
 (defn set-focus-cycle-root
@@ -242,7 +242,7 @@
    focus traversal policy provider.
 
   focus-cycle-root - indicates whether this Container is the root of a focus traversal cycle - `boolean`"
-  ([^java.awt.Container this ^Boolean focus-cycle-root]
+  ([^Container this ^Boolean focus-cycle-root]
     (-> this (.setFocusCycleRoot focus-cycle-root))))
 
 (defn get-mouse-position
@@ -263,7 +263,7 @@
   returns: mouse coordinates relative to this Component, or null - `java.awt.Point`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  (^java.awt.Point [^java.awt.Container this ^Boolean allow-children]
+  (^java.awt.Point [^Container this ^Boolean allow-children]
     (-> this (.getMousePosition allow-children))))
 
 (defn validate
@@ -285,7 +285,7 @@
    If this Container is not valid, this method invokes
    the validateTree method and marks this Container
    as valid. Otherwise, no action is performed."
-  ([^java.awt.Container this]
+  ([^Container this]
     (-> this (.validate))))
 
 (defn focus-traversal-policy-set?
@@ -295,7 +295,7 @@
 
   returns: true if the focus traversal policy has been
            explicitly set for this Container; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Container this]
+  (^Boolean [^Container this]
     (-> this (.isFocusTraversalPolicySet))))
 
 (defn transfer-focus-down-cycle
@@ -304,7 +304,7 @@
    default Component to focus, and the current focus cycle root is set to
    this Container. If this Container is not a focus cycle root, then no
    focus traversal operation occurs."
-  ([^java.awt.Container this]
+  ([^Container this]
     (-> this (.transferFocusDownCycle))))
 
 (defn are-focus-traversal-keys-set
@@ -320,7 +320,7 @@
            this Component; false otherwise. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS"
-  (^Boolean [^java.awt.Container this ^Integer id]
+  (^Boolean [^Container this ^Integer id]
     (-> this (.areFocusTraversalKeysSet id))))
 
 (defn update
@@ -332,7 +332,7 @@
    forwarded to that child.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([^java.awt.Container this ^java.awt.Graphics g]
+  ([^Container this ^java.awt.Graphics g]
     (-> this (.update g))))
 
 (defn validate-root?
@@ -358,7 +358,7 @@
    roots in AWT.  Swing introduces more validate roots.
 
   returns: whether this container is a validate root - `boolean`"
-  (^Boolean [^java.awt.Container this]
+  (^Boolean [^Container this]
     (-> this (.isValidateRoot))))
 
 (defn remove-container-listener
@@ -368,14 +368,14 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the container listener - `java.awt.event.ContainerListener`"
-  ([^java.awt.Container this ^java.awt.event.ContainerListener l]
+  ([^Container this ^java.awt.event.ContainerListener l]
     (-> this (.removeContainerListener l))))
 
 (defn get-layout
   "Gets the layout manager for this container.
 
   returns: `java.awt.LayoutManager`"
-  (^java.awt.LayoutManager [^java.awt.Container this]
+  (^java.awt.LayoutManager [^Container this]
     (-> this (.getLayout))))
 
 (defn get-alignment-x
@@ -386,7 +386,7 @@
    the furthest away from the origin, 0.5 is centered, etc.
 
   returns: `float`"
-  (^Float [^java.awt.Container this]
+  (^Float [^Container this]
     (-> this (.getAlignmentX))))
 
 (defn add-notify
@@ -395,7 +395,7 @@
    cause all of its children to be made displayable.
    This method is called internally by the toolkit and should
    not be called directly by programs."
-  ([^java.awt.Container this]
+  ([^Container this]
     (-> this (.addNotify))))
 
 (defn remove-notify
@@ -404,7 +404,7 @@
    will cause all of its children to be made undisplayable.
    This method is called by the toolkit internally and should
    not be called directly by programs."
-  ([^java.awt.Container this]
+  ([^Container this]
     (-> this (.removeNotify))))
 
 (defn get-components
@@ -413,7 +413,7 @@
    Note: This method should be called under AWT tree lock.
 
   returns: an array of all the components in this container. - `java.awt.Component[]`"
-  ([^java.awt.Container this]
+  ([^Container this]
     (-> this (.getComponents))))
 
 (defn remove
@@ -431,15 +431,13 @@
   index - the index of the component to be removed - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if index is not in range [0, getComponentCount()-1]"
-  ([^java.awt.Container this ^Integer index]
+  ([^Container this ^Integer index]
     (-> this (.remove index))))
 
 (defn layout
   "Deprecated. As of JDK version 1.1,
-   replaced by doLayout().
-
-  returns: `java.lang.  void`"
-  ([^java.awt.Container this]
+   replaced by doLayout()."
+  ([^Container this]
     (-> this (.layout))))
 
 (defn get-component-z-order
@@ -453,15 +451,15 @@
   returns: the z-order index of the component; otherwise
             returns -1 if the component is null
             or doesn't belong to the container - `int`"
-  (^Integer [^java.awt.Container this ^java.awt.Component comp]
+  (^Integer [^Container this ^java.awt.Component comp]
     (-> this (.getComponentZOrder comp))))
 
 (defn preferred-size
   "Deprecated. As of JDK version 1.1,
    replaced by getPreferredSize().
 
-  returns: `java.lang.  java.awt.Dimension`"
-  ([^java.awt.Container this]
+  returns: `java.awt.Dimension`"
+  (^java.awt.Dimension [^Container this]
     (-> this (.preferredSize))))
 
 (defn set-font
@@ -471,7 +469,7 @@
    invalidates the component hierarchy.
 
   f - The font to become this container's font. - `java.awt.Font`"
-  ([^java.awt.Container this ^java.awt.Font f]
+  ([^Container this ^java.awt.Font f]
     (-> this (.setFont f))))
 
 (defn invalidate
@@ -484,14 +482,14 @@
 
    Afterwards this method marks this container invalid, and invalidates its
    ancestors. See the Component.invalidate() method for more details."
-  ([^java.awt.Container this]
+  ([^Container this]
     (-> this (.invalidate))))
 
 (defn print-components
   "Prints each of the components in this container.
 
   g - the graphics context. - `java.awt.Graphics`"
-  ([^java.awt.Container this ^java.awt.Graphics g]
+  ([^Container this ^java.awt.Graphics g]
     (-> this (.printComponents g))))
 
 (defn get-component-at
@@ -510,9 +508,9 @@
    If there is no child component at the requested point and the
    point is within the bounds of the container the container itself
    is returned; otherwise the top-most child is returned. - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.Container this ^Integer x ^Integer y]
+  (^java.awt.Component [^Container this ^Integer x ^Integer y]
     (-> this (.getComponentAt x y)))
-  (^java.awt.Component [^java.awt.Container this ^java.awt.Point p]
+  (^java.awt.Component [^Container this ^java.awt.Point p]
     (-> this (.getComponentAt p))))
 
 (defn get-alignment-y
@@ -523,7 +521,7 @@
    the furthest away from the origin, 0.5 is centered, etc.
 
   returns: `float`"
-  (^Float [^java.awt.Container this]
+  (^Float [^Container this]
     (-> this (.getAlignmentY))))
 
 (defn ancestor-of?
@@ -534,7 +532,7 @@
 
   returns: true if it is an ancestor;
                false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Container this ^java.awt.Component c]
+  (^Boolean [^Container this ^java.awt.Component c]
     (-> this (.isAncestorOf c))))
 
 (defn paint
@@ -546,15 +544,15 @@
    forwarded to that child.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([^java.awt.Container this ^java.awt.Graphics g]
+  ([^Container this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn insets
   "Deprecated. As of JDK version 1.1,
    replaced by getInsets().
 
-  returns: `java.lang.  java.awt.Insets`"
-  ([^java.awt.Container this]
+  returns: `java.awt.Insets`"
+  (^java.awt.Insets [^Container this]
     (-> this (.insets))))
 
 (defn apply-component-orientation
@@ -567,14 +565,14 @@
   o - the new component orientation of this container and the components contained within it. - `java.awt.ComponentOrientation`
 
   throws: java.lang.NullPointerException - if orientation is null."
-  ([^java.awt.Container this ^java.awt.ComponentOrientation o]
+  ([^Container this ^java.awt.ComponentOrientation o]
     (-> this (.applyComponentOrientation o))))
 
 (defn do-layout
   "Causes this container to lay out its components.  Most programs
    should not call this method directly, but should invoke
    the validate method instead."
-  ([^java.awt.Container this]
+  ([^Container this]
     (-> this (.doLayout))))
 
 (defn print
@@ -586,7 +584,7 @@
    forwarded to that child.
 
   g - the specified Graphics window - `java.awt.Graphics`"
-  ([^java.awt.Container this ^java.awt.Graphics g]
+  ([^Container this ^java.awt.Graphics g]
     (-> this (.print g))))
 
 (defn focus-traversal-policy-provider?
@@ -600,7 +598,7 @@
 
   returns: true if this container provides focus traversal
            policy, false otherwise - `boolean`"
-  (^Boolean [^java.awt.Container this]
+  (^Boolean [^Container this]
     (-> this (.isFocusTraversalPolicyProvider))))
 
 (defn add
@@ -620,11 +618,11 @@
   index - the position in the container's list at which to insert the component; -1 means insert at the end component - `int`
 
   throws: java.lang.NullPointerException - if comp is null"
-  ([^java.awt.Container this ^java.awt.Component comp ^java.lang.Object constraints ^Integer index]
+  ([^Container this ^java.awt.Component comp ^java.lang.Object constraints ^Integer index]
     (-> this (.add comp constraints index)))
-  (^java.awt.Component [^java.awt.Container this ^java.lang.String name ^java.awt.Component comp]
+  (^java.awt.Component [^Container this ^java.lang.String name ^java.awt.Component comp]
     (-> this (.add name comp)))
-  (^java.awt.Component [^java.awt.Container this ^java.awt.Component comp]
+  (^java.awt.Component [^Container this ^java.awt.Component comp]
     (-> this (.add comp))))
 
 (defn set-focus-traversal-keys
@@ -686,20 +684,18 @@
    in keystrokes is not an AWTKeyStroke.
 
   id - one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS - `int`
-  keystrokes - the Set of AWTKeyStroke for the specified operation - `java.awt.AWTKeyStroke>`
+  keystrokes - the Set of AWTKeyStroke for the specified operation - `java.util.Set`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS, or if keystrokes contains null, or if any keystroke represents a KEY_TYPED event, or if any keystroke already maps to another focus traversal operation for this Container"
-  ([^java.awt.Container this ^Integer id ^java.awt.AWTKeyStroke> keystrokes]
+  ([^Container this ^Integer id ^java.util.Set keystrokes]
     (-> this (.setFocusTraversalKeys id keystrokes))))
 
 (defn deliver-event
   "Deprecated. As of JDK version 1.1,
    replaced by dispatchEvent(AWTEvent e)
 
-  e - `java.awt.Event`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.Container this ^java.awt.Event e]
+  e - `java.awt.Event`"
+  ([^Container this ^java.awt.Event e]
     (-> this (.deliverEvent e))))
 
 (defn get-component-count
@@ -708,7 +704,7 @@
    Note: This method should be called under AWT tree lock.
 
   returns: the number of components in this panel. - `int`"
-  (^Integer [^java.awt.Container this]
+  (^Integer [^Container this]
     (-> this (.getComponentCount))))
 
 (defn get-listeners
@@ -732,14 +728,14 @@
 
    If no such listeners exist, this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners on this container,
             or an empty array if no such listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^java.awt.Container this ^java.lang.Class listener-type]
+  ([^Container this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn add-property-change-listener
@@ -774,17 +770,17 @@
 
   property-name - one of the property names listed above - `java.lang.String`
   listener - the PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([^java.awt.Container this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
+  ([^Container this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener property-name listener)))
-  ([^java.awt.Container this ^java.beans.PropertyChangeListener listener]
+  ([^Container this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn minimum-size
   "Deprecated. As of JDK version 1.1,
    replaced by getMinimumSize().
 
-  returns: `java.lang.  java.awt.Dimension`"
-  ([^java.awt.Container this]
+  returns: `java.awt.Dimension`"
+  (^java.awt.Dimension [^Container this]
     (-> this (.minimumSize))))
 
 (defn remove-all
@@ -797,7 +793,7 @@
    invalidates the component hierarchy. If the container has already been
    displayed, the hierarchy must be validated thereafter in order to
    reflect the changes."
-  ([^java.awt.Container this]
+  ([^Container this]
     (-> this (.removeAll))))
 
 (defn focus-cycle-root?
@@ -814,9 +810,9 @@
 
   returns: true if the specified Container is a focus-cycle-
            root of this Container; false otherwise - `boolean`"
-  (^Boolean [^java.awt.Container this ^java.awt.Container container]
+  (^Boolean [^Container this ^java.awt.Container container]
     (-> this (.isFocusCycleRoot container)))
-  (^Boolean [^java.awt.Container this]
+  (^Boolean [^Container this]
     (-> this (.isFocusCycleRoot))))
 
 (defn set-focus-traversal-policy-provider
@@ -826,7 +822,7 @@
    instead of closest focus cycle root ancestor.
 
   provider - indicates whether this container will be used to provide focus traversal policy - `boolean`"
-  ([^java.awt.Container this ^Boolean provider]
+  ([^Container this ^Boolean provider]
     (-> this (.setFocusTraversalPolicyProvider provider))))
 
 (defn get-preferred-size
@@ -844,7 +840,7 @@
 
   returns: an instance of Dimension that represents
                   the preferred size of this container. - `java.awt.Dimension`"
-  (^java.awt.Dimension [^java.awt.Container this]
+  (^java.awt.Dimension [^Container this]
     (-> this (.getPreferredSize))))
 
 (defn find-component-at
@@ -867,9 +863,9 @@
    If there is no child component at the requested point and the
    point is within the bounds of the container the container itself
    is returned. - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.Container this ^Integer x ^Integer y]
+  (^java.awt.Component [^Container this ^Integer x ^Integer y]
     (-> this (.findComponentAt x y)))
-  (^java.awt.Component [^java.awt.Container this ^java.awt.Point p]
+  (^java.awt.Component [^Container this ^java.awt.Point p]
     (-> this (.findComponentAt p))))
 
 (defn locate
@@ -879,15 +875,15 @@
   x - `int`
   y - `int`
 
-  returns: `java.lang.  java.awt.Component`"
-  ([^java.awt.Container this ^Integer x ^Integer y]
+  returns: `java.awt.Component`"
+  (^java.awt.Component [^Container this ^Integer x ^Integer y]
     (-> this (.locate x y))))
 
 (defn count-components
   "Deprecated. As of JDK version 1.1,
    replaced by getComponentCount().
 
-  returns: `java.lang.  int`"
-  ([^java.awt.Container this]
+  returns: `int`"
+  (^Integer [^Container this]
     (-> this (.countComponents))))
 

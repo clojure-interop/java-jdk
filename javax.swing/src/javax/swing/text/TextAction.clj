@@ -29,7 +29,7 @@
   Creates a new JTextAction object.
 
   name - the name of the action - `java.lang.String`"
-  ([^java.lang.String name]
+  (^TextAction [^java.lang.String name]
     (new TextAction name)))
 
 (defn *augment-list

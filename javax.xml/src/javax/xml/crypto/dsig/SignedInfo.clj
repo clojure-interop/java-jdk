@@ -25,21 +25,21 @@
   "Returns the canonicalization method of this SignedInfo.
 
   returns: the canonicalization method - `javax.xml.crypto.dsig.CanonicalizationMethod`"
-  (^javax.xml.crypto.dsig.CanonicalizationMethod [^javax.xml.crypto.dsig.SignedInfo this]
+  (^javax.xml.crypto.dsig.CanonicalizationMethod [^SignedInfo this]
     (-> this (.getCanonicalizationMethod))))
 
 (defn get-signature-method
   "Returns the signature method of this SignedInfo.
 
   returns: the signature method - `javax.xml.crypto.dsig.SignatureMethod`"
-  (^javax.xml.crypto.dsig.SignatureMethod [^javax.xml.crypto.dsig.SignedInfo this]
+  (^javax.xml.crypto.dsig.SignatureMethod [^SignedInfo this]
     (-> this (.getSignatureMethod))))
 
 (defn get-references
   "Returns an unmodifiable list of one or more References.
 
   returns: an unmodifiable list of one or more References - `java.util.List`"
-  (^java.util.List [^javax.xml.crypto.dsig.SignedInfo this]
+  (^java.util.List [^SignedInfo this]
     (-> this (.getReferences))))
 
 (defn get-id
@@ -47,7 +47,7 @@
    SignedInfo.
 
   returns: the id (may be null if not specified) - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.SignedInfo this]
+  (^java.lang.String [^SignedInfo this]
     (-> this (.getId))))
 
 (defn get-canonicalized-data
@@ -57,6 +57,6 @@
   returns: an InputStream containing the canonicalized bytes,
       or null if this SignedInfo has not been
       signed or validated yet - `java.io.InputStream`"
-  (^java.io.InputStream [^javax.xml.crypto.dsig.SignedInfo this]
+  (^java.io.InputStream [^SignedInfo this]
     (-> this (.getCanonicalizedData))))
 

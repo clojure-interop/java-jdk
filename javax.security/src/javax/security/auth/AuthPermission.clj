@@ -111,8 +111,8 @@
   actions - should be null. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^AuthPermission [^java.lang.String name ^java.lang.String actions]
     (new AuthPermission name actions))
-  ([^java.lang.String name]
+  (^AuthPermission [^java.lang.String name]
     (new AuthPermission name)))
 

@@ -12,7 +12,7 @@
    scope in the ScriptContext.
 
   returns: list of scope values - `java.util.List<java.lang.Integer>`"
-  (^java.util.List [^javax.script.ScriptContext this]
+  (^java.util.List [^ScriptContext this]
     (-> this (.getScopes))))
 
 (defn set-reader
@@ -20,21 +20,21 @@
    .
 
   reader - The new Reader. - `java.io.Reader`"
-  ([^javax.script.ScriptContext this ^java.io.Reader reader]
+  ([^ScriptContext this ^java.io.Reader reader]
     (-> this (.setReader reader))))
 
 (defn get-writer
   "Returns the Writer for scripts to use when displaying output.
 
   returns: The Writer. - `java.io.Writer`"
-  (^java.io.Writer [^javax.script.ScriptContext this]
+  (^java.io.Writer [^ScriptContext this]
     (-> this (.getWriter))))
 
 (defn get-error-writer
   "Returns the Writer used to display error output.
 
   returns: The Writer - `java.io.Writer`"
-  (^java.io.Writer [^javax.script.ScriptContext this]
+  (^java.io.Writer [^ScriptContext this]
     (-> this (.getErrorWriter))))
 
 (defn get-attribute
@@ -47,9 +47,9 @@
    does not exist in the given scope. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the name is empty or if the value of scope is invalid."
-  (^java.lang.Object [^javax.script.ScriptContext this ^java.lang.String name ^Integer scope]
+  (^java.lang.Object [^ScriptContext this ^java.lang.String name ^Integer scope]
     (-> this (.getAttribute name scope)))
-  (^java.lang.Object [^javax.script.ScriptContext this ^java.lang.String name]
+  (^java.lang.Object [^ScriptContext this ^java.lang.String name]
     (-> this (.getAttribute name))))
 
 (defn get-reader
@@ -57,7 +57,7 @@
    input.
 
   returns: The Reader. - `java.io.Reader`"
-  (^java.io.Reader [^javax.script.ScriptContext this]
+  (^java.io.Reader [^ScriptContext this]
     (-> this (.getReader))))
 
 (defn remove-attribute
@@ -69,7 +69,7 @@
   returns: The removed value. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the name is empty or if the scope is invalid."
-  (^java.lang.Object [^javax.script.ScriptContext this ^java.lang.String name ^Integer scope]
+  (^java.lang.Object [^ScriptContext this ^java.lang.String name ^Integer scope]
     (-> this (.removeAttribute name scope))))
 
 (defn set-attribute
@@ -80,21 +80,21 @@
   scope - The scope in which to set the attribute - `int`
 
   throws: java.lang.IllegalArgumentException - if the name is empty or if the scope is invalid."
-  ([^javax.script.ScriptContext this ^java.lang.String name ^java.lang.Object value ^Integer scope]
+  ([^ScriptContext this ^java.lang.String name ^java.lang.Object value ^Integer scope]
     (-> this (.setAttribute name value scope))))
 
 (defn set-writer
   "Sets the Writer for scripts to use when displaying output.
 
   writer - The new Writer. - `java.io.Writer`"
-  ([^javax.script.ScriptContext this ^java.io.Writer writer]
+  ([^ScriptContext this ^java.io.Writer writer]
     (-> this (.setWriter writer))))
 
 (defn set-error-writer
   "Sets the Writer used to display error output.
 
   writer - The Writer. - `java.io.Writer`"
-  ([^javax.script.ScriptContext this ^java.io.Writer writer]
+  ([^ScriptContext this ^java.io.Writer writer]
     (-> this (.setErrorWriter writer))))
 
 (defn get-bindings
@@ -107,7 +107,7 @@
    been set. - `javax.script.Bindings`
 
   throws: java.lang.IllegalArgumentException - If no Bindings is defined for the specified scope value in ScriptContext of this type."
-  (^javax.script.Bindings [^javax.script.ScriptContext this ^Integer scope]
+  (^javax.script.Bindings [^ScriptContext this ^Integer scope]
     (-> this (.getBindings scope))))
 
 (defn get-attributes-scope
@@ -119,7 +119,7 @@
    name is defined in any scope. - `int`
 
   throws: java.lang.NullPointerException - if name is null."
-  (^Integer [^javax.script.ScriptContext this ^java.lang.String name]
+  (^Integer [^ScriptContext this ^java.lang.String name]
     (-> this (.getAttributesScope name))))
 
 (defn set-bindings
@@ -132,6 +132,6 @@
   scope - The scope - `int`
 
   throws: java.lang.IllegalArgumentException - If no Bindings is defined for the specified scope value in ScriptContexts of this type."
-  ([^javax.script.ScriptContext this ^javax.script.Bindings bindings ^Integer scope]
+  ([^ScriptContext this ^javax.script.Bindings bindings ^Integer scope]
     (-> this (.setBindings bindings scope))))
 

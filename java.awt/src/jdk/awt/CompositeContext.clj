@@ -10,7 +10,7 @@
 
 (defn dispose
   "Releases resources allocated for a context."
-  ([^java.awt.CompositeContext this]
+  ([^CompositeContext this]
     (-> this (.dispose))))
 
 (defn compose
@@ -27,6 +27,6 @@
   src - the first source for the compositing operation - `java.awt.image.Raster`
   dst-in - the second source for the compositing operation - `java.awt.image.Raster`
   dst-out - the WritableRaster into which the result of the operation is stored - `java.awt.image.WritableRaster`"
-  ([^java.awt.CompositeContext this ^java.awt.image.Raster src ^java.awt.image.Raster dst-in ^java.awt.image.WritableRaster dst-out]
+  ([^CompositeContext this ^java.awt.image.Raster src ^java.awt.image.Raster dst-in ^java.awt.image.WritableRaster dst-out]
     (-> this (.compose src dst-in dst-out))))
 

@@ -9,8 +9,8 @@
   Constructor with a detail message.
 
   s - the detail message - `java.lang.String`"
-  ([^java.lang.String s]
+  (^NoSuchFieldException [^java.lang.String s]
     (new NoSuchFieldException s))
-  ([]
+  (^NoSuchFieldException []
     (new NoSuchFieldException )))
 

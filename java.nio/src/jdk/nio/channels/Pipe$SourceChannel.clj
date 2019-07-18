@@ -11,6 +11,6 @@
    returns SelectionKey.OP_READ.
 
   returns: The valid-operation set - `int`"
-  (^Integer [^java.nio.channels.Pipe$SourceChannel this]
+  (^Integer [^Pipe$SourceChannel this]
     (-> this (.validOps))))
 

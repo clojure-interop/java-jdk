@@ -107,9 +107,9 @@
   expected-max-size - the expected maximum size of the map - `int`
 
   throws: java.lang.IllegalArgumentException - if expectedMaxSize is negative"
-  ([^Integer expected-max-size]
+  (^IdentityHashMap [^Integer expected-max-size]
     (new IdentityHashMap expected-max-size))
-  ([]
+  (^IdentityHashMap []
     (new IdentityHashMap )))
 
 (defn values
@@ -132,22 +132,22 @@
    behavior of its contains, remove and
    containsAll methods.
 
-  returns: a collection view of the values contained in this map - `java.util.Collection<IdentityHashMap.V>`"
-  (^java.util.Collection [^java.util.IdentityHashMap this]
+  returns: a collection view of the values contained in this map - `java.util.Collection<V>`"
+  (^java.util.Collection [^IdentityHashMap this]
     (-> this (.values))))
 
 (defn for-each
   "Description copied from interface: Map
 
-  action - The action to be performed for each entry - `IdentityHashMap.V>`"
-  ([^java.util.IdentityHashMap this ^IdentityHashMap.V> action]
+  action - The action to be performed for each entry - `java.util.function.BiConsumer`"
+  ([^IdentityHashMap this ^java.util.function.BiConsumer action]
     (-> this (.forEach action))))
 
 (defn replace-all
   "Description copied from interface: Map
 
-  function - the function to apply to each entry - `IdentityHashMap.V>`"
-  ([^java.util.IdentityHashMap this ^IdentityHashMap.V> function]
+  function - the function to apply to each entry - `java.util.function.BiFunction`"
+  ([^IdentityHashMap this ^java.util.function.BiFunction function]
     (-> this (.replaceAll function))))
 
 (defn put-all
@@ -155,10 +155,10 @@
    These mappings will replace any mappings that this map had for
    any of the keys currently in the specified map.
 
-  m - mappings to be stored in this map - `IdentityHashMap.V>`
+  m - mappings to be stored in this map - `java.util.Map`
 
   throws: java.lang.NullPointerException - if the specified map is null"
-  ([^java.util.IdentityHashMap this ^IdentityHashMap.V> m]
+  ([^IdentityHashMap this ^java.util.Map m]
     (-> this (.putAll m))))
 
 (defn put
@@ -166,14 +166,14 @@
    hash map.  If the map previously contained a mapping for the key, the
    old value is replaced.
 
-  key - the key with which the specified value is to be associated - `IdentityHashMap.K`
-  value - the value to be associated with the specified key - `IdentityHashMap.V`
+  key - the key with which the specified value is to be associated - `K`
+  value - the value to be associated with the specified key - `V`
 
   returns: the previous value associated with key, or
            null if there was no mapping for key.
            (A null return can also indicate that the map
-           previously associated null with key.) - `IdentityHashMap.V`"
-  (^IdentityHashMap.V [^java.util.IdentityHashMap this ^IdentityHashMap.K key ^IdentityHashMap.V value]
+           previously associated null with key.) - `V`"
+  ([^IdentityHashMap this key value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -211,8 +211,8 @@
    map).  However, the Object.equals contract is guaranteed to
    hold among identity-based map entries, and among sets of such entries.
 
-  returns: a set view of the identity-mappings contained in this map - `java.util.Set<java.util.Map.Entry<IdentityHashMap.K,IdentityHashMap.V>>`"
-  (^java.util.Set> [^java.util.IdentityHashMap this]
+  returns: a set view of the identity-mappings contained in this map - `java.util.Set<java.util.Map$Entry<K,V>>`"
+  (^java.util.Set [^IdentityHashMap this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -223,7 +223,7 @@
 
   returns: true if this map maps one or more keys to the
            specified object reference - `boolean`"
-  (^Boolean [^java.util.IdentityHashMap this ^java.lang.Object value]
+  (^Boolean [^IdentityHashMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -234,8 +234,8 @@
   returns: the previous value associated with key, or
            null if there was no mapping for key.
            (A null return can also indicate that the map
-           previously associated null with key.) - `IdentityHashMap.V`"
-  (^IdentityHashMap.V [^java.util.IdentityHashMap this ^java.lang.Object key]
+           previously associated null with key.) - `V`"
+  ([^IdentityHashMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -272,8 +272,8 @@
    general contract of the Object.hashCode method among sets
    returned by this method.
 
-  returns: an identity-based set view of the keys contained in this map - `java.util.Set<IdentityHashMap.K>`"
-  (^java.util.Set [^java.util.IdentityHashMap this]
+  returns: an identity-based set view of the keys contained in this map - `java.util.Set<K>`"
+  (^java.util.Set [^IdentityHashMap this]
     (-> this (.keySet))))
 
 (defn clone
@@ -281,7 +281,7 @@
    themselves are not cloned.
 
   returns: a shallow copy of this map - `java.lang.Object`"
-  (^java.lang.Object [^java.util.IdentityHashMap this]
+  (^java.lang.Object [^IdentityHashMap this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -300,7 +300,7 @@
    an IdentityHashMap instance and the other is a normal map.
 
   returns: the hash code value for this map - `int`"
-  (^Integer [^java.util.IdentityHashMap this]
+  (^Integer [^IdentityHashMap this]
     (-> this (.hashCode))))
 
 (defn empty?
@@ -309,20 +309,20 @@
 
   returns: true if this identity hash map contains no key-value
            mappings - `boolean`"
-  (^Boolean [^java.util.IdentityHashMap this]
+  (^Boolean [^IdentityHashMap this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of key-value mappings in this identity hash map.
 
   returns: the number of key-value mappings in this map - `int`"
-  (^Integer [^java.util.IdentityHashMap this]
+  (^Integer [^IdentityHashMap this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the mappings from this map.
    The map will be empty after this call returns."
-  ([^java.util.IdentityHashMap this]
+  ([^IdentityHashMap this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -333,7 +333,7 @@
 
   returns: true if the specified object reference is a key
             in this map - `boolean`"
-  (^Boolean [^java.util.IdentityHashMap this ^java.lang.Object key]
+  (^Boolean [^IdentityHashMap this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -354,8 +354,8 @@
   key - the key whose associated value is to be returned - `java.lang.Object`
 
   returns: the value to which the specified key is mapped, or
-           null if this map contains no mapping for the key - `IdentityHashMap.V`"
-  (^IdentityHashMap.V [^java.util.IdentityHashMap this ^java.lang.Object key]
+           null if this map contains no mapping for the key - `V`"
+  ([^IdentityHashMap this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn equals
@@ -374,6 +374,6 @@
   o - object to be compared for equality with this map - `java.lang.Object`
 
   returns: true if the specified object is equal to this map - `boolean`"
-  (^Boolean [^java.util.IdentityHashMap this ^java.lang.Object o]
+  (^Boolean [^IdentityHashMap this ^java.lang.Object o]
     (-> this (.equals o))))
 

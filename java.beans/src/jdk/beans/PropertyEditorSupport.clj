@@ -11,16 +11,16 @@
   Constructs a PropertyEditorSupport object.
 
   source - the source used for event firing - `java.lang.Object`"
-  ([^java.lang.Object source]
+  (^PropertyEditorSupport [^java.lang.Object source]
     (new PropertyEditorSupport source))
-  ([]
+  (^PropertyEditorSupport []
     (new PropertyEditorSupport )))
 
 (defn paintable?
   "Determines whether the class will honor the paintValue method.
 
   returns: True if the class will honor the paintValue method. - `boolean`"
-  (^Boolean [^java.beans.PropertyEditorSupport this]
+  (^Boolean [^PropertyEditorSupport this]
     (-> this (.isPaintable))))
 
 (defn paint-value
@@ -33,7 +33,7 @@
 
   gfx - Graphics object to paint into. - `java.awt.Graphics`
   box - Rectangle within graphics object into which we should paint. - `java.awt.Rectangle`"
-  ([^java.beans.PropertyEditorSupport this ^java.awt.Graphics gfx ^java.awt.Rectangle box]
+  ([^PropertyEditorSupport this ^java.awt.Graphics gfx ^java.awt.Rectangle box]
     (-> this (.paintValue gfx box))))
 
 (defn set-as-text
@@ -45,12 +45,12 @@
   text - The string to be parsed. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException"
-  ([^java.beans.PropertyEditorSupport this ^java.lang.String text]
+  ([^PropertyEditorSupport this ^java.lang.String text]
     (-> this (.setAsText text))))
 
 (defn fire-property-change
   "Report that we have been modified to any interested listeners."
-  ([^java.beans.PropertyEditorSupport this]
+  ([^PropertyEditorSupport this]
     (-> this (.firePropertyChange))))
 
 (defn get-as-text
@@ -62,7 +62,7 @@
       Returns null if the value can't be expressed as a string.
       If a non-null value is returned, then the PropertyEditor should
          be prepared to parse that string back in setAsText(). - `java.lang.String`"
-  (^java.lang.String [^java.beans.PropertyEditorSupport this]
+  (^java.lang.String [^PropertyEditorSupport this]
     (-> this (.getAsText))))
 
 (defn get-java-initialization-string
@@ -75,21 +75,21 @@
 
   returns: A fragment of Java code representing an initializer for the
             current value. - `java.lang.String`"
-  (^java.lang.String [^java.beans.PropertyEditorSupport this]
+  (^java.lang.String [^PropertyEditorSupport this]
     (-> this (.getJavaInitializationString))))
 
 (defn supports-custom-editor
   "Determines whether the propertyEditor can provide a custom editor.
 
   returns: True if the propertyEditor can provide a custom editor. - `boolean`"
-  (^Boolean [^java.beans.PropertyEditorSupport this]
+  (^Boolean [^PropertyEditorSupport this]
     (-> this (.supportsCustomEditor))))
 
 (defn get-value
   "Gets the value of the property.
 
   returns: The value of the property. - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.PropertyEditorSupport this]
+  (^java.lang.Object [^PropertyEditorSupport this]
     (-> this (.getValue))))
 
 (defn get-custom-editor
@@ -105,7 +105,7 @@
   returns: A java.awt.Component that will allow a human to directly
         edit the current property value.  May be null if this is
         not supported. - `java.awt.Component`"
-  (^java.awt.Component [^java.beans.PropertyEditorSupport this]
+  (^java.awt.Component [^PropertyEditorSupport this]
     (-> this (.getCustomEditor))))
 
 (defn remove-property-change-listener
@@ -117,7 +117,7 @@
    no exception is thrown and no action is taken.
 
   listener - the PropertyChangeListener to remove - `java.beans.PropertyChangeListener`"
-  ([^java.beans.PropertyEditorSupport this ^java.beans.PropertyChangeListener listener]
+  ([^PropertyEditorSupport this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn get-source
@@ -127,7 +127,7 @@
    PropertyEditorSupport is returned.
 
   returns: the source object or this instance - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.PropertyEditorSupport this]
+  (^java.lang.Object [^PropertyEditorSupport this]
     (-> this (.getSource))))
 
 (defn get-tags
@@ -139,14 +139,14 @@
 
   returns: The tag values for this property.  May be null if this
      property cannot be represented as a tagged value. - `java.lang.String[]`"
-  ([^java.beans.PropertyEditorSupport this]
+  ([^PropertyEditorSupport this]
     (-> this (.getTags))))
 
 (defn set-value
   "Set (or change) the object that is to be edited.
 
   value - The new target object to be edited. Note that this object should not be modified by the PropertyEditor, rather the PropertyEditor should create a new object to hold any modified value. - `java.lang.Object`"
-  ([^java.beans.PropertyEditorSupport this ^java.lang.Object value]
+  ([^PropertyEditorSupport this ^java.lang.Object value]
     (-> this (.setValue value))))
 
 (defn add-property-change-listener
@@ -164,7 +164,7 @@
    no exception is thrown and no action is taken.
 
   listener - the PropertyChangeListener to add - `java.beans.PropertyChangeListener`"
-  ([^java.beans.PropertyEditorSupport this ^java.beans.PropertyChangeListener listener]
+  ([^PropertyEditorSupport this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn set-source
@@ -175,6 +175,6 @@
    purposes only and should not be modified by the PropertyEditor.
 
   source - source object to be used for events - `java.lang.Object`"
-  ([^java.beans.PropertyEditorSupport this ^java.lang.Object source]
+  ([^PropertyEditorSupport this ^java.lang.Object source]
     (-> this (.setSource source))))
 

@@ -106,7 +106,7 @@
 
 (defn ->ui-manager
   "Constructor."
-  ([]
+  (^UIManager []
     (new UIManager )))
 
 (defn *get-insets
@@ -134,7 +134,7 @@
   class-name - name of the class that implements the look and feel - `java.lang.String`"
   ([^java.lang.String name ^java.lang.String class-name]
     (UIManager/installLookAndFeel name class-name))
-  ([^javax.swing.UIManager.LookAndFeelInfo info]
+  ([^javax.swing.UIManager$LookAndFeelInfo info]
     (UIManager/installLookAndFeel info)))
 
 (defn *put
@@ -267,7 +267,7 @@
 
      UIManager.setLookAndFeel(info.getClassName());
 
-  returns: an array of LookAndFeelInfo objects - `javax.swing.UIManager.LookAndFeelInfo[]`"
+  returns: an array of LookAndFeelInfo objects - `javax.swing.UIManager$LookAndFeelInfo[]`"
   ([]
     (UIManager/getInstalledLookAndFeels )))
 
@@ -477,7 +477,7 @@
    non-null, it is strongly recommended that only non-null
    values are supplied in the infos array.
 
-  infos - set of LookAndFeelInfo objects specifying the available look and feels - `javax.swing.UIManager.LookAndFeelInfo[]`
+  infos - set of LookAndFeelInfo objects specifying the available look and feels - `javax.swing.UIManager$LookAndFeelInfo[]`
 
   throws: java.lang.NullPointerException - if infos is null"
   ([infos]

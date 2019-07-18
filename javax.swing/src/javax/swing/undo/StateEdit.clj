@@ -29,31 +29,31 @@
 
   an-object - The object to watch for changing state - `javax.swing.undo.StateEditable`
   name - The presentation name to be used for this edit - `java.lang.String`"
-  ([^javax.swing.undo.StateEditable an-object ^java.lang.String name]
+  (^StateEdit [^javax.swing.undo.StateEditable an-object ^java.lang.String name]
     (new StateEdit an-object name))
-  ([^javax.swing.undo.StateEditable an-object]
+  (^StateEdit [^javax.swing.undo.StateEditable an-object]
     (new StateEdit an-object)))
 
 (defn end
   "Gets the post-edit state of the StateEditable object and
    ends the edit."
-  ([^javax.swing.undo.StateEdit this]
+  ([^StateEdit this]
     (-> this (.end))))
 
 (defn undo
   "Tells the edited object to apply the state prior to the edit"
-  ([^javax.swing.undo.StateEdit this]
+  ([^StateEdit this]
     (-> this (.undo))))
 
 (defn redo
   "Tells the edited object to apply the state after the edit"
-  ([^javax.swing.undo.StateEdit this]
+  ([^StateEdit this]
     (-> this (.redo))))
 
 (defn get-presentation-name
   "Gets the presentation name for this edit
 
   returns: the empty string `` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.undo.StateEdit this]
+  (^java.lang.String [^StateEdit this]
     (-> this (.getPresentationName))))
 

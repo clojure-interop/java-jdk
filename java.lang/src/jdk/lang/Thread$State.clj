@@ -7,7 +7,7 @@
 
   Thread state for a thread which has not yet started.
 
-  type: java.lang.Thread.State"
+  type: java.lang.Thread$State"
   Thread$State/NEW)
 
 (def RUNNABLE
@@ -18,7 +18,7 @@
    be waiting for other resources from the operating system
    such as processor.
 
-  type: java.lang.Thread.State"
+  type: java.lang.Thread$State"
   Thread$State/RUNNABLE)
 
 (def BLOCKED
@@ -30,7 +30,7 @@
    reenter a synchronized block/method after calling
    Object.wait.
 
-  type: java.lang.Thread.State"
+  type: java.lang.Thread$State"
   Thread$State/BLOCKED)
 
 (def WAITING
@@ -54,7 +54,7 @@
    that object. A thread that has called Thread.join()
    is waiting for a specified thread to terminate.
 
-  type: java.lang.Thread.State"
+  type: java.lang.Thread$State"
   Thread$State/WAITING)
 
 (def TIMED_WAITING
@@ -70,7 +70,7 @@
      LockSupport.parkNanos
      LockSupport.parkUntil
 
-  type: java.lang.Thread.State"
+  type: java.lang.Thread$State"
   Thread$State/TIMED_WAITING)
 
 (def TERMINATED
@@ -79,7 +79,7 @@
   Thread state for a terminated thread.
    The thread has completed execution.
 
-  type: java.lang.Thread.State"
+  type: java.lang.Thread$State"
   Thread$State/TERMINATED)
 
 (defn *values
@@ -91,7 +91,7 @@
   for (Thread.State c : Thread.State.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.lang.Thread.State[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.lang.Thread$State[]`"
   ([]
     (Thread$State/values )))
 
@@ -103,9 +103,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.lang.Thread.State`
+  returns: the enum constant with the specified name - `java.lang.Thread$State`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.lang.Thread.State [^java.lang.String name]
+  (^java.lang.Thread$State [^java.lang.String name]
     (Thread$State/valueOf name)))
 

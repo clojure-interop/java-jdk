@@ -13,7 +13,7 @@
   event - `javax.swing.event.TreeExpansionEvent`
 
   throws: javax.swing.tree.ExpandVetoException"
-  ([^javax.swing.event.TreeWillExpandListener this ^javax.swing.event.TreeExpansionEvent event]
+  ([^TreeWillExpandListener this ^javax.swing.event.TreeExpansionEvent event]
     (-> this (.treeWillExpand event))))
 
 (defn tree-will-collapse
@@ -22,6 +22,6 @@
   event - `javax.swing.event.TreeExpansionEvent`
 
   throws: javax.swing.tree.ExpandVetoException"
-  ([^javax.swing.event.TreeWillExpandListener this ^javax.swing.event.TreeExpansionEvent event]
+  ([^TreeWillExpandListener this ^javax.swing.event.TreeExpansionEvent event]
     (-> this (.treeWillCollapse event))))
 

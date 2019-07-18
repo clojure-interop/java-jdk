@@ -15,8 +15,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^InstantiationError [^java.lang.String s]
     (new InstantiationError s))
-  ([]
+  (^InstantiationError []
     (new InstantiationError )))
 

@@ -40,7 +40,7 @@
   state-change - An integer that indicates whether the item was selected or deselected. For information on allowable values, see the class description for ItemEvent - `int`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.awt.ItemSelectable source ^Integer id ^java.lang.Object item ^Integer state-change]
+  (^ItemEvent [^java.awt.ItemSelectable source ^Integer id ^java.lang.Object item ^Integer state-change]
     (new ItemEvent source id item state-change)))
 
 (def *-item-first
@@ -87,14 +87,14 @@
   "Returns the originator of the event.
 
   returns: the ItemSelectable object that originated the event. - `java.awt.ItemSelectable`"
-  (^java.awt.ItemSelectable [^java.awt.event.ItemEvent this]
+  (^java.awt.ItemSelectable [^ItemEvent this]
     (-> this (.getItemSelectable))))
 
 (defn get-item
   "Returns the item affected by the event.
 
   returns: the item (object) that was affected by the event - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.event.ItemEvent this]
+  (^java.lang.Object [^ItemEvent this]
     (-> this (.getItem))))
 
 (defn get-state-change
@@ -102,7 +102,7 @@
 
   returns: an integer that indicates whether the item was selected
            or deselected - `int`"
-  (^Integer [^java.awt.event.ItemEvent this]
+  (^Integer [^ItemEvent this]
     (-> this (.getStateChange))))
 
 (defn param-string
@@ -110,6 +110,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.ItemEvent this]
+  (^java.lang.String [^ItemEvent this]
     (-> this (.paramString))))
 

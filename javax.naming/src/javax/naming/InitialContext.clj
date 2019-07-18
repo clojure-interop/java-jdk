@@ -100,12 +100,12 @@
    Caller should not modify mutable keys and values in
    environment after it has been passed to the constructor.
 
-  environment - environment used to create the initial context. Null indicates an empty environment. - `java.util.Hashtable<?,?>`
+  environment - environment used to create the initial context. Null indicates an empty environment. - `java.util.Hashtable`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^java.util.Hashtable environment]
+  (^InitialContext [^java.util.Hashtable environment]
     (new InitialContext environment))
-  ([]
+  (^InitialContext []
     (new InitialContext )))
 
 (defn *do-lookup
@@ -135,7 +135,7 @@
   name - the name of the context to be destroyed; may not be empty - `java.lang.String`
 
   throws: javax.naming.NameNotFoundException - if an intermediate context does not exist"
-  ([^javax.naming.InitialContext this ^java.lang.String name]
+  ([^InitialContext this ^java.lang.String name]
     (-> this (.destroySubcontext name))))
 
 (defn unbind
@@ -144,7 +144,7 @@
   name - the name to unbind; may not be empty - `java.lang.String`
 
   throws: javax.naming.NameNotFoundException - if an intermediate context does not exist"
-  ([^javax.naming.InitialContext this ^java.lang.String name]
+  ([^InitialContext this ^java.lang.String name]
     (-> this (.unbind name))))
 
 (defn compose-name
@@ -160,7 +160,7 @@
   returns: the composition of prefix and name - `java.lang.String`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  (^java.lang.String [^javax.naming.InitialContext this ^java.lang.String name ^java.lang.String prefix]
+  (^java.lang.String [^InitialContext this ^java.lang.String name ^java.lang.String prefix]
     (-> this (.composeName name prefix))))
 
 (defn rename
@@ -170,7 +170,7 @@
   new-name - the name of the new binding; may not be empty - `java.lang.String`
 
   throws: javax.naming.NameAlreadyBoundException - if newName is already bound"
-  ([^javax.naming.InitialContext this ^java.lang.String old-name ^java.lang.String new-name]
+  ([^InitialContext this ^java.lang.String old-name ^java.lang.String new-name]
     (-> this (.rename old-name new-name))))
 
 (defn list
@@ -183,7 +183,7 @@
             enumeration is of type NameClassPair. - `javax.naming.NamingEnumeration<javax.naming.NameClassPair>`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  (^javax.naming.NamingEnumeration [^javax.naming.InitialContext this ^java.lang.String name]
+  (^javax.naming.NamingEnumeration [^InitialContext this ^java.lang.String name]
     (-> this (.list name))))
 
 (defn add-to-environment
@@ -196,7 +196,7 @@
             not in the environment before - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  (^java.lang.Object [^javax.naming.InitialContext this ^java.lang.String prop-name ^java.lang.Object prop-val]
+  (^java.lang.Object [^InitialContext this ^java.lang.String prop-name ^java.lang.Object prop-val]
     (-> this (.addToEnvironment prop-name prop-val))))
 
 (defn bind
@@ -206,7 +206,7 @@
   obj - the object to bind; possibly null - `java.lang.Object`
 
   throws: javax.naming.NameAlreadyBoundException - if name is already bound"
-  ([^javax.naming.InitialContext this ^java.lang.String name ^java.lang.Object obj]
+  ([^InitialContext this ^java.lang.String name ^java.lang.Object obj]
     (-> this (.bind name obj))))
 
 (defn list-bindings
@@ -219,7 +219,7 @@
             Binding. - `javax.naming.NamingEnumeration<javax.naming.Binding>`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  (^javax.naming.NamingEnumeration [^javax.naming.InitialContext this ^java.lang.String name]
+  (^javax.naming.NamingEnumeration [^InitialContext this ^java.lang.String name]
     (-> this (.listBindings name))))
 
 (defn lookup
@@ -230,7 +230,7 @@
   returns: the object bound to name - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  (^java.lang.Object [^javax.naming.InitialContext this ^java.lang.String name]
+  (^java.lang.Object [^InitialContext this ^java.lang.String name]
     (-> this (.lookup name))))
 
 (defn remove-from-environment
@@ -242,7 +242,7 @@
             not in the environment - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  (^java.lang.Object [^javax.naming.InitialContext this ^java.lang.String prop-name]
+  (^java.lang.Object [^InitialContext this ^java.lang.String prop-name]
     (-> this (.removeFromEnvironment prop-name))))
 
 (defn create-subcontext
@@ -253,7 +253,7 @@
   returns: the newly created context - `javax.naming.Context`
 
   throws: javax.naming.NameAlreadyBoundException - if name is already bound"
-  (^javax.naming.Context [^javax.naming.InitialContext this ^java.lang.String name]
+  (^javax.naming.Context [^InitialContext this ^java.lang.String name]
     (-> this (.createSubcontext name))))
 
 (defn get-name-parser
@@ -265,7 +265,7 @@
             components - `javax.naming.NameParser`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  (^javax.naming.NameParser [^javax.naming.InitialContext this ^java.lang.String name]
+  (^javax.naming.NameParser [^InitialContext this ^java.lang.String name]
     (-> this (.getNameParser name))))
 
 (defn get-environment
@@ -274,7 +274,7 @@
   returns: the environment of this context; never null - `java.util.Hashtable<?,?>`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  (^java.util.Hashtable [^javax.naming.InitialContext this]
+  (^java.util.Hashtable [^InitialContext this]
     (-> this (.getEnvironment))))
 
 (defn rebind
@@ -284,14 +284,14 @@
   obj - the object to bind; possibly null - `java.lang.Object`
 
   throws: javax.naming.directory.InvalidAttributesException - if object did not supply all mandatory attributes"
-  ([^javax.naming.InitialContext this ^java.lang.String name ^java.lang.Object obj]
+  ([^InitialContext this ^java.lang.String name ^java.lang.Object obj]
     (-> this (.rebind name obj))))
 
 (defn close
   "Description copied from interface: Context
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  ([^javax.naming.InitialContext this]
+  ([^InitialContext this]
     (-> this (.close))))
 
 (defn get-name-in-namespace
@@ -300,7 +300,7 @@
   returns: this context's name in its own namespace; never null - `java.lang.String`
 
   throws: javax.naming.OperationNotSupportedException - if the naming system does not have the notion of a full name"
-  (^java.lang.String [^javax.naming.InitialContext this]
+  (^java.lang.String [^InitialContext this]
     (-> this (.getNameInNamespace))))
 
 (defn lookup-link
@@ -312,6 +312,6 @@
             terminal link (if any) - `java.lang.Object`
 
   throws: javax.naming.NamingException - if a naming exception is encountered"
-  (^java.lang.Object [^javax.naming.InitialContext this ^java.lang.String name]
+  (^java.lang.Object [^InitialContext this ^java.lang.String name]
     (-> this (.lookupLink name))))
 

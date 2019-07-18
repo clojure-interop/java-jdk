@@ -83,9 +83,9 @@
            local name, namespace prefix, and namespace URI - `javax.xml.soap.Name`
 
   throws: javax.xml.soap.SOAPException - if there is a SOAP error"
-  (^javax.xml.soap.Name [^javax.xml.soap.SOAPEnvelope this ^java.lang.String local-name ^java.lang.String prefix ^java.lang.String uri]
+  (^javax.xml.soap.Name [^SOAPEnvelope this ^java.lang.String local-name ^java.lang.String prefix ^java.lang.String uri]
     (-> this (.createName local-name prefix uri)))
-  (^javax.xml.soap.Name [^javax.xml.soap.SOAPEnvelope this ^java.lang.String local-name]
+  (^javax.xml.soap.Name [^SOAPEnvelope this ^java.lang.String local-name]
     (-> this (.createName local-name))))
 
 (defn get-header
@@ -103,7 +103,7 @@
            there is none - `javax.xml.soap.SOAPHeader`
 
   throws: javax.xml.soap.SOAPException - if there is a problem obtaining the SOAPHeader object"
-  (^javax.xml.soap.SOAPHeader [^javax.xml.soap.SOAPEnvelope this]
+  (^javax.xml.soap.SOAPHeader [^SOAPEnvelope this]
     (-> this (.getHeader))))
 
 (defn get-body
@@ -122,7 +122,7 @@
            if there is none - `javax.xml.soap.SOAPBody`
 
   throws: javax.xml.soap.SOAPException - if there is a problem obtaining the SOAPBody object"
-  (^javax.xml.soap.SOAPBody [^javax.xml.soap.SOAPEnvelope this]
+  (^javax.xml.soap.SOAPBody [^SOAPEnvelope this]
     (-> this (.getBody))))
 
 (defn add-header
@@ -137,7 +137,7 @@
   returns: the new SOAPHeader object - `javax.xml.soap.SOAPHeader`
 
   throws: javax.xml.soap.SOAPException - if this SOAPEnvelope object already contains a valid SOAPHeader object"
-  (^javax.xml.soap.SOAPHeader [^javax.xml.soap.SOAPEnvelope this]
+  (^javax.xml.soap.SOAPHeader [^SOAPEnvelope this]
     (-> this (.addHeader))))
 
 (defn add-body
@@ -152,6 +152,6 @@
   returns: the new SOAPBody object - `javax.xml.soap.SOAPBody`
 
   throws: javax.xml.soap.SOAPException - if this SOAPEnvelope object already contains a valid SOAPBody object"
-  (^javax.xml.soap.SOAPBody [^javax.xml.soap.SOAPEnvelope this]
+  (^javax.xml.soap.SOAPBody [^SOAPEnvelope this]
     (-> this (.addBody))))
 

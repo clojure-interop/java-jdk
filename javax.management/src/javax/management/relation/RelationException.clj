@@ -10,8 +10,8 @@
   Constructor with given message put in exception.
 
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^RelationException [^java.lang.String message]
     (new RelationException message))
-  ([]
+  (^RelationException []
     (new RelationException )))
 

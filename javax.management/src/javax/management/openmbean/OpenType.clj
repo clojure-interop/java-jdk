@@ -48,7 +48,7 @@
 
   Deprecated. Use ALLOWED_CLASSNAMES_LIST instead.
 
-  type: java.lang.    java.lang.String[]"
+  type: java.lang.String[]"
   OpenType/ALLOWED_CLASSNAMES)
 
 (defn get-class-name
@@ -68,21 +68,21 @@
    `[[[I` (without the quotes)
 
   returns: the class name. - `java.lang.String`"
-  (^java.lang.String [^javax.management.openmbean.OpenType this]
+  (^java.lang.String [^OpenType this]
     (-> this (.getClassName))))
 
 (defn get-type-name
   "Returns the name of this OpenType instance.
 
   returns: the type name. - `java.lang.String`"
-  (^java.lang.String [^javax.management.openmbean.OpenType this]
+  (^java.lang.String [^OpenType this]
     (-> this (.getTypeName))))
 
 (defn get-description
   "Returns the text description of this OpenType instance.
 
   returns: the description. - `java.lang.String`"
-  (^java.lang.String [^javax.management.openmbean.OpenType this]
+  (^java.lang.String [^OpenType this]
     (-> this (.getDescription))))
 
 (defn array?
@@ -90,7 +90,7 @@
    type describes are arrays, false otherwise.
 
   returns: true if this is an array type. - `boolean`"
-  (^Boolean [^javax.management.openmbean.OpenType this]
+  (^Boolean [^OpenType this]
     (-> this (.isArray))))
 
 (defn value?
@@ -100,7 +100,7 @@
 
   returns: true if obj is a value for this
    open type, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.openmbean.OpenType this ^java.lang.Object obj]
+  (^Boolean [^OpenType this ^java.lang.Object obj]
     (-> this (.isValue obj))))
 
 (defn equals
@@ -110,20 +110,20 @@
   obj - the object to compare to. - `java.lang.Object`
 
   returns: true if this object and obj are equal. - `boolean`"
-  (^Boolean [^javax.management.openmbean.OpenType this ^java.lang.Object obj]
+  (^Boolean [^OpenType this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.management.openmbean.OpenType this]
+  (^Integer [^OpenType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns a string representation of this open type instance.
 
   returns: the string representation. - `java.lang.String`"
-  (^java.lang.String [^javax.management.openmbean.OpenType this]
+  (^java.lang.String [^OpenType this]
     (-> this (.toString))))
 

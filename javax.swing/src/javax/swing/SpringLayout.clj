@@ -147,7 +147,7 @@
   "Constructor.
 
   Constructs a new SpringLayout."
-  ([]
+  (^SpringLayout []
     (new SpringLayout )))
 
 (def *-north
@@ -226,7 +226,7 @@
   "Description copied from interface: LayoutManager2
 
   p - `java.awt.Container`"
-  ([^javax.swing.SpringLayout this ^java.awt.Container p]
+  ([^SpringLayout this ^java.awt.Container p]
     (-> this (.invalidateLayout p))))
 
 (defn put-constraint
@@ -244,7 +244,7 @@
   pad - the fixed distance between dependent and anchor - `int`
   e-2 - the edge of the anchor - `java.lang.String`
   c-2 - the component of the anchor - `java.awt.Component`"
-  ([^javax.swing.SpringLayout this ^java.lang.String e-1 ^java.awt.Component c-1 ^Integer pad ^java.lang.String e-2 ^java.awt.Component c-2]
+  ([^SpringLayout this ^java.lang.String e-1 ^java.awt.Component c-1 ^Integer pad ^java.lang.String e-2 ^java.awt.Component c-2]
     (-> this (.putConstraint e-1 c-1 pad e-2 c-2))))
 
 (defn get-layout-alignment-y
@@ -253,7 +253,7 @@
   p - `java.awt.Container`
 
   returns: `float`"
-  (^Float [^javax.swing.SpringLayout this ^java.awt.Container p]
+  (^Float [^SpringLayout this ^java.awt.Container p]
     (-> this (.getLayoutAlignmentY p))))
 
 (defn get-constraint
@@ -276,7 +276,7 @@
 
   returns: a proxy for the spring controlling the distance between the
            specified edge and the top or left edge of its parent - `javax.swing.Spring`"
-  (^javax.swing.Spring [^javax.swing.SpringLayout this ^java.lang.String edge-name ^java.awt.Component c]
+  (^javax.swing.Spring [^SpringLayout this ^java.lang.String edge-name ^java.awt.Component c]
     (-> this (.getConstraint edge-name c))))
 
 (defn preferred-layout-size
@@ -285,7 +285,7 @@
   parent - the container to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.SpringLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^SpringLayout this ^java.awt.Container parent]
     (-> this (.preferredLayoutSize parent))))
 
 (defn get-layout-alignment-x
@@ -294,7 +294,7 @@
   p - `java.awt.Container`
 
   returns: `float`"
-  (^Float [^javax.swing.SpringLayout this ^java.awt.Container p]
+  (^Float [^SpringLayout this ^java.awt.Container p]
     (-> this (.getLayoutAlignmentX p))))
 
 (defn minimum-layout-size
@@ -303,7 +303,7 @@
   parent - the component to be laid out - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.SpringLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^SpringLayout this ^java.awt.Container parent]
     (-> this (.minimumLayoutSize parent))))
 
 (defn get-constraints
@@ -326,8 +326,8 @@
 
   c - the component whose constraints will be returned - `java.awt.Component`
 
-  returns: the constraints for the specified component - `javax.swing.SpringLayout.Constraints`"
-  (^javax.swing.SpringLayout.Constraints [^javax.swing.SpringLayout this ^java.awt.Component c]
+  returns: the constraints for the specified component - `javax.swing.SpringLayout$Constraints`"
+  (^javax.swing.SpringLayout$Constraints [^SpringLayout this ^java.awt.Component c]
     (-> this (.getConstraints c))))
 
 (defn maximum-layout-size
@@ -336,7 +336,7 @@
   parent - `java.awt.Container`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.SpringLayout this ^java.awt.Container parent]
+  (^java.awt.Dimension [^SpringLayout this ^java.awt.Container parent]
     (-> this (.maximumLayoutSize parent))))
 
 (defn add-layout-component
@@ -346,20 +346,20 @@
 
   name - the string to be associated with the component - `java.lang.String`
   c - the component to be added - `java.awt.Component`"
-  ([^javax.swing.SpringLayout this ^java.lang.String name ^java.awt.Component c]
+  ([^SpringLayout this ^java.lang.String name ^java.awt.Component c]
     (-> this (.addLayoutComponent name c))))
 
 (defn remove-layout-component
   "Removes the constraints associated with the specified component.
 
   c - the component being removed from the container - `java.awt.Component`"
-  ([^javax.swing.SpringLayout this ^java.awt.Component c]
+  ([^SpringLayout this ^java.awt.Component c]
     (-> this (.removeLayoutComponent c))))
 
 (defn layout-container
   "Description copied from interface: LayoutManager
 
   parent - the container to be laid out - `java.awt.Container`"
-  ([^javax.swing.SpringLayout this ^java.awt.Container parent]
+  ([^SpringLayout this ^java.awt.Container parent]
     (-> this (.layoutContainer parent))))
 

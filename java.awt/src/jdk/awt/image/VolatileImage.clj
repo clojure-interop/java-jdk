@@ -94,7 +94,7 @@
 
 (defn ->volatile-image
   "Constructor."
-  ([]
+  (^VolatileImage []
     (new VolatileImage )))
 
 (def *-image-ok
@@ -131,14 +131,14 @@
    or TRANSLUCENT.
 
   returns: the transparency of this VolatileImage. - `int`"
-  (^Integer [^java.awt.image.VolatileImage this]
+  (^Integer [^VolatileImage this]
     (-> this (.getTransparency))))
 
 (defn get-width
   "Returns the width of the VolatileImage.
 
   returns: the width of this VolatileImage. - `int`"
-  (^Integer [^java.awt.image.VolatileImage this]
+  (^Integer [^VolatileImage this]
     (-> this (.getWidth))))
 
 (defn get-snapshot
@@ -150,7 +150,7 @@
 
   returns: a BufferedImage representation of this
             VolatileImage - `java.awt.image.BufferedImage`"
-  (^java.awt.image.BufferedImage [^java.awt.image.VolatileImage this]
+  (^java.awt.image.BufferedImage [^VolatileImage this]
     (-> this (.getSnapshot))))
 
 (defn validate
@@ -187,7 +187,7 @@
             after a return value of IMAGE_INCOMPATIBLE
             and this return value implies nothing about whether the
             image needs to be restored. - `int`"
-  (^Integer [^java.awt.image.VolatileImage this ^java.awt.GraphicsConfiguration gc]
+  (^Integer [^VolatileImage this ^java.awt.GraphicsConfiguration gc]
     (-> this (.validate gc))))
 
 (defn get-graphics
@@ -198,7 +198,7 @@
 
   returns: a Graphics2D, which can be used to draw into
             this image. - `java.awt.Graphics`"
-  (^java.awt.Graphics [^java.awt.image.VolatileImage this]
+  (^java.awt.Graphics [^VolatileImage this]
     (-> this (.getGraphics))))
 
 (defn contents-lost
@@ -210,7 +210,7 @@
 
   returns: true if the drawing surface needs to be restored;
    false otherwise. - `boolean`"
-  (^Boolean [^java.awt.image.VolatileImage this]
+  (^Boolean [^VolatileImage this]
     (-> this (.contentsLost))))
 
 (defn get-source
@@ -233,14 +233,14 @@
   returns: an ImageProducer that can be used to produce the
    pixels for a BufferedImage representation of
    this Image. - `java.awt.image.ImageProducer`"
-  (^java.awt.image.ImageProducer [^java.awt.image.VolatileImage this]
+  (^java.awt.image.ImageProducer [^VolatileImage this]
     (-> this (.getSource))))
 
 (defn get-height
   "Returns the height of the VolatileImage.
 
   returns: the height of this VolatileImage. - `int`"
-  (^Integer [^java.awt.image.VolatileImage this]
+  (^Integer [^VolatileImage this]
     (-> this (.getHeight))))
 
 (defn create-graphics
@@ -249,7 +249,7 @@
 
   returns: a Graphics2D, used for drawing into this
             image. - `java.awt.Graphics2D`"
-  (^java.awt.Graphics2D [^java.awt.image.VolatileImage this]
+  (^java.awt.Graphics2D [^VolatileImage this]
     (-> this (.createGraphics))))
 
 (defn get-capabilities
@@ -267,6 +267,6 @@
 
   returns: an ImageCapabilities object that contains
            the capabilities of this VolatileImage. - `java.awt.ImageCapabilities`"
-  (^java.awt.ImageCapabilities [^java.awt.image.VolatileImage this]
+  (^java.awt.ImageCapabilities [^VolatileImage this]
     (-> this (.getCapabilities))))
 

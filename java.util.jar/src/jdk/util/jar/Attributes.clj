@@ -16,26 +16,26 @@
    initial size.
 
   size - the initial number of attributes - `int`"
-  ([^Integer size]
+  (^Attributes [^Integer size]
     (new Attributes size))
-  ([]
+  (^Attributes []
     (new Attributes )))
 
 (defn values
   "Returns a Collection view of the attribute values contained in this Map.
 
   returns: a collection view of the values contained in this map - `java.util.Collection<java.lang.Object>`"
-  (^java.util.Collection [^java.util.jar.Attributes this]
+  (^java.util.Collection [^Attributes this]
     (-> this (.values))))
 
 (defn put-all
   "Copies all of the attribute name-value mappings from the specified
    Attributes to this Map. Duplicate mappings will be replaced.
 
-  attr - the Attributes to be stored in this map - `java.util.Map<?,?>`
+  attr - the Attributes to be stored in this map - `java.util.Map`
 
   throws: java.lang.ClassCastException - if attr is not an Attributes"
-  ([^java.util.jar.Attributes this ^java.util.Map attr]
+  ([^Attributes this ^java.util.Map attr]
     (-> this (.putAll attr))))
 
 (defn put
@@ -49,15 +49,15 @@
   returns: the previous value of the attribute, or null if none - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if the name is not a Attributes.Name or the value is not a String"
-  (^java.lang.Object [^java.util.jar.Attributes this ^java.lang.Object name ^java.lang.Object value]
+  (^java.lang.Object [^Attributes this ^java.lang.Object name ^java.lang.Object value]
     (-> this (.put name value))))
 
 (defn entry-set
   "Returns a Collection view of the attribute name-value mappings
    contained in this Map.
 
-  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<java.lang.Object,java.lang.Object>>`"
-  (^java.util.Set> [^java.util.jar.Attributes this]
+  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map$Entry<java.lang.Object,java.lang.Object>>`"
+  (^java.util.Set [^Attributes this]
     (-> this (.entrySet))))
 
 (defn put-value
@@ -77,7 +77,7 @@
   returns: the previous value of the attribute, or null if none - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the attribute name is invalid"
-  (^java.lang.String [^java.util.jar.Attributes this ^java.lang.String name ^java.lang.String value]
+  (^java.lang.String [^Attributes this ^java.lang.String name ^java.lang.String value]
     (-> this (.putValue name value))))
 
 (defn get-value
@@ -96,7 +96,7 @@
            not found. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the attribute name is invalid"
-  (^java.lang.String [^java.util.jar.Attributes this ^java.lang.String name]
+  (^java.lang.String [^Attributes this ^java.lang.String name]
     (-> this (.getValue name))))
 
 (defn contains-value
@@ -107,7 +107,7 @@
 
   returns: true if this Map maps one or more attribute names to
            the specified value - `boolean`"
-  (^Boolean [^java.util.jar.Attributes this ^java.lang.Object value]
+  (^Boolean [^Attributes this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -117,14 +117,14 @@
   name - attribute name - `java.lang.Object`
 
   returns: the previous value of the attribute, or null if none - `java.lang.Object`"
-  (^java.lang.Object [^java.util.jar.Attributes this ^java.lang.Object name]
+  (^java.lang.Object [^Attributes this ^java.lang.Object name]
     (-> this (.remove name))))
 
 (defn key-set
   "Returns a Set view of the attribute names (keys) contained in this Map.
 
   returns: a set view of the keys contained in this map - `java.util.Set<java.lang.Object>`"
-  (^java.util.Set [^java.util.jar.Attributes this]
+  (^java.util.Set [^Attributes this]
     (-> this (.keySet))))
 
 (defn clone
@@ -137,33 +137,33 @@
    the original.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^java.util.jar.Attributes this]
+  (^java.lang.Object [^Attributes this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns the hash code value for this Map.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.util.jar.Attributes this]
+  (^Integer [^Attributes this]
     (-> this (.hashCode))))
 
 (defn empty?
   "Returns true if this Map contains no attributes.
 
   returns: true if this map contains no key-value mappings - `boolean`"
-  (^Boolean [^java.util.jar.Attributes this]
+  (^Boolean [^Attributes this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of attributes in this Map.
 
   returns: the number of key-value mappings in this map - `int`"
-  (^Integer [^java.util.jar.Attributes this]
+  (^Integer [^Attributes this]
     (-> this (.size))))
 
 (defn clear
   "Removes all attributes from this Map."
-  ([^java.util.jar.Attributes this]
+  ([^Attributes this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -172,7 +172,7 @@
   name - the attribute name - `java.lang.Object`
 
   returns: true if this Map contains the specified attribute name - `boolean`"
-  (^Boolean [^java.util.jar.Attributes this ^java.lang.Object name]
+  (^Boolean [^Attributes this ^java.lang.Object name]
     (-> this (.containsKey name))))
 
 (defn get
@@ -183,7 +183,7 @@
 
   returns: the value of the specified attribute name, or null if
            not found. - `java.lang.Object`"
-  (^java.lang.Object [^java.util.jar.Attributes this ^java.lang.Object name]
+  (^java.lang.Object [^Attributes this ^java.lang.Object name]
     (-> this (.get name))))
 
 (defn equals
@@ -194,6 +194,6 @@
   o - the Object to be compared - `java.lang.Object`
 
   returns: true if the specified Object is equal to this Map - `boolean`"
-  (^Boolean [^java.util.jar.Attributes this ^java.lang.Object o]
+  (^Boolean [^Attributes this ^java.lang.Object o]
     (-> this (.equals o))))
 

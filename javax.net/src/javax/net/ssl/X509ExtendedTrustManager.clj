@@ -18,7 +18,7 @@
 
 (defn ->x-509-extended-trust-manager
   "Constructor."
-  ([]
+  (^X509ExtendedTrustManager []
     (new X509ExtendedTrustManager )))
 
 (defn check-client-trusted
@@ -50,7 +50,7 @@
   socket - the socket used for this connection. This parameter can be null, which indicates that implementations need not check the ssl parameters - `java.net.Socket`
 
   throws: java.lang.IllegalArgumentException - if null or zero-length array is passed in for the chain parameter or if null or zero-length string is passed in for the authType parameter"
-  ([^javax.net.ssl.X509ExtendedTrustManager this chain ^java.lang.String auth-type ^java.net.Socket socket]
+  ([^X509ExtendedTrustManager this chain ^java.lang.String auth-type ^java.net.Socket socket]
     (-> this (.checkClientTrusted chain auth-type socket))))
 
 (defn check-server-trusted
@@ -87,6 +87,6 @@
   socket - the socket used for this connection. This parameter can be null, which indicates that implementations need not check the ssl parameters - `java.net.Socket`
 
   throws: java.lang.IllegalArgumentException - if null or zero-length array is passed in for the chain parameter or if null or zero-length string is passed in for the authType parameter"
-  ([^javax.net.ssl.X509ExtendedTrustManager this chain ^java.lang.String auth-type ^java.net.Socket socket]
+  ([^X509ExtendedTrustManager this chain ^java.lang.String auth-type ^java.net.Socket socket]
     (-> this (.checkServerTrusted chain auth-type socket))))
 

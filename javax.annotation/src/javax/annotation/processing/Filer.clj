@@ -117,7 +117,7 @@
   returns: a JavaFileObject to write the new source file - `javax.tools.JavaFileObject`
 
   throws: javax.annotation.processing.FilerException - if the same pathname has already been created, the same type has already been created, or the name is not valid for a type"
-  (^javax.tools.JavaFileObject [^javax.annotation.processing.Filer this ^java.lang.CharSequence name ^javax.lang.model.element.Element originating-elements]
+  (^javax.tools.JavaFileObject [^Filer this ^java.lang.CharSequence name ^javax.lang.model.element.Element originating-elements]
     (-> this (.createSourceFile name originating-elements))))
 
 (defn create-class-file
@@ -141,7 +141,7 @@
   returns: a JavaFileObject to write the new class file - `javax.tools.JavaFileObject`
 
   throws: javax.annotation.processing.FilerException - if the same pathname has already been created, the same type has already been created, or the name is not valid for a type"
-  (^javax.tools.JavaFileObject [^javax.annotation.processing.Filer this ^java.lang.CharSequence name ^javax.lang.model.element.Element originating-elements]
+  (^javax.tools.JavaFileObject [^Filer this ^java.lang.CharSequence name ^javax.lang.model.element.Element originating-elements]
     (-> this (.createClassFile name originating-elements))))
 
 (defn create-resource
@@ -160,7 +160,7 @@
    would correspond to the full pathname of a new source file
    or new class file.
 
-  location - location of the new file - `javax.tools.JavaFileManager.Location`
+  location - location of the new file - `javax.tools.JavaFileManager$Location`
   pkg - package relative to which the file should be named, or the empty string if none - `java.lang.CharSequence`
   relative-name - final pathname components of the file - `java.lang.CharSequence`
   originating-elements - type or package elements causally associated with the creation of this file, may be elided or null - `javax.lang.model.element.Element`
@@ -168,7 +168,7 @@
   returns: a FileObject to write the new resource - `javax.tools.FileObject`
 
   throws: java.io.IOException - if the file cannot be created"
-  (^javax.tools.FileObject [^javax.annotation.processing.Filer this ^javax.tools.JavaFileManager.Location location ^java.lang.CharSequence pkg ^java.lang.CharSequence relative-name ^javax.lang.model.element.Element originating-elements]
+  (^javax.tools.FileObject [^Filer this ^javax.tools.JavaFileManager$Location location ^java.lang.CharSequence pkg ^java.lang.CharSequence relative-name ^javax.lang.model.element.Element originating-elements]
     (-> this (.createResource location pkg relative-name originating-elements))))
 
 (defn get-resource
@@ -177,13 +177,13 @@
    and SOURCE_OUTPUT must
    be supported.
 
-  location - location of the file - `javax.tools.JavaFileManager.Location`
+  location - location of the file - `javax.tools.JavaFileManager$Location`
   pkg - package relative to which the file should be searched, or the empty string if none - `java.lang.CharSequence`
   relative-name - final pathname components of the file - `java.lang.CharSequence`
 
   returns: an object to read the file - `javax.tools.FileObject`
 
   throws: javax.annotation.processing.FilerException - if the same pathname has already been opened for writing"
-  (^javax.tools.FileObject [^javax.annotation.processing.Filer this ^javax.tools.JavaFileManager.Location location ^java.lang.CharSequence pkg ^java.lang.CharSequence relative-name]
+  (^javax.tools.FileObject [^Filer this ^javax.tools.JavaFileManager$Location location ^java.lang.CharSequence pkg ^java.lang.CharSequence relative-name]
     (-> this (.getResource location pkg relative-name))))
 

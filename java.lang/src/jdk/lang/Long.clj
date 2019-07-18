@@ -21,7 +21,7 @@
    represents the specified long argument.
 
   value - the value to be represented by the Long object. - `long`"
-  ([^Long value]
+  (^Long [^Long value]
     (new Long value)))
 
 (def *-min-value
@@ -30,7 +30,7 @@
   A constant holding the minimum value a long can
    have, -263.
 
-  type: java.lang.annotation.    long"
+  type: long"
   Long/MIN_VALUE)
 
 (def *-max-value
@@ -39,7 +39,7 @@
   A constant holding the maximum value a long can
    have, 263-1.
 
-  type: java.lang.annotation.    long"
+  type: long"
   Long/MAX_VALUE)
 
 (def *-type
@@ -57,7 +57,7 @@
   The number of bits used to represent a long value in two's
    complement binary form.
 
-  type: java.lang.annotation.    int"
+  type: int"
   Long/SIZE)
 
 (def *-bytes
@@ -731,7 +731,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type short. - `short`"
-  (^Short [^java.lang.Long this]
+  (^Short [^Long this]
     (-> this (.shortValue))))
 
 (defn double-value
@@ -740,7 +740,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  (^Double [^java.lang.Long this]
+  (^Double [^Long this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -749,7 +749,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  (^Long [^java.lang.Long this]
+  (^Long [^Long this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -758,7 +758,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type byte. - `byte`"
-  (^Byte [^java.lang.Long this]
+  (^Byte [^Long this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -770,7 +770,7 @@
 
   returns: a string representation of the value of this object in
             base 10. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Long this]
+  (^java.lang.String [^Long this]
     (-> this (.toString))))
 
 (defn float-value
@@ -779,7 +779,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  (^Float [^java.lang.Long this]
+  (^Float [^Long this]
     (-> this (.floatValue))))
 
 (defn int-value
@@ -788,7 +788,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  (^Integer [^java.lang.Long this]
+  (^Integer [^Long this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -801,7 +801,7 @@
     (int)(this.longValue()^(this.longValue()>>>32))
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.lang.Long this]
+  (^Integer [^Long this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -816,7 +816,7 @@
             than 0 if this Long is numerically
              greater than the argument Long (signed
              comparison). - `int`"
-  (^Integer [^java.lang.Long this ^java.lang.Long another-long]
+  (^Integer [^Long this ^java.lang.Long another-long]
     (-> this (.compareTo another-long))))
 
 (defn equals
@@ -829,6 +829,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Long this ^java.lang.Object obj]
+  (^Boolean [^Long this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

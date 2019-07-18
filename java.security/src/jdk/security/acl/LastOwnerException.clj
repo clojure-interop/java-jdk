@@ -8,6 +8,6 @@
   "Constructor.
 
   Constructs a LastOwnerException."
-  ([]
+  (^LastOwnerException []
     (new LastOwnerException )))
 

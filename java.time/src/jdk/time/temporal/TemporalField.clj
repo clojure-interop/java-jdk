@@ -26,7 +26,7 @@
    'YearOfForever'. It therefore has a unit of 'Years' and a range of 'Forever'.
 
   returns: the unit defining the range of the field, not null - `java.time.temporal.TemporalUnit`"
-  (^java.time.temporal.TemporalUnit [^java.time.temporal.TemporalField this]
+  (^java.time.temporal.TemporalUnit [^TemporalField this]
     (-> this (.getRangeUnit))))
 
 (defn range
@@ -41,7 +41,7 @@
    could be values within the range that are invalid for the field.
 
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`"
-  (^java.time.temporal.ValueRange [^java.time.temporal.TemporalField this]
+  (^java.time.temporal.ValueRange [^TemporalField this]
     (-> this (.range))))
 
 (defn resolve
@@ -53,7 +53,7 @@
 
    Applications should not normally invoke this method directly.
 
-  field-values - the map of fields to values, which can be updated, not null - `java.util.Map<java.time.temporal.TemporalField,java.lang.Long>`
+  field-values - the map of fields to values, which can be updated, not null - `java.util.Map`
   partial-temporal - the partially complete temporal to query for zone and chronology; querying for other things is undefined and not recommended, not null - `java.time.temporal.TemporalAccessor`
   resolver-style - the requested type of resolve, not null - `java.time.format.ResolverStyle`
 
@@ -61,7 +61,7 @@
     changed the map, or no resolve occurred - `default java.time.temporal.TemporalAccessor`
 
   throws: java.lang.ArithmeticException - if numeric overflow occurs"
-  ([^java.time.temporal.TemporalField this ^java.util.Map field-values ^java.time.temporal.TemporalAccessor partial-temporal ^java.time.format.ResolverStyle resolver-style]
+  ([^TemporalField this ^java.util.Map field-values ^java.time.temporal.TemporalAccessor partial-temporal ^java.time.format.ResolverStyle resolver-style]
     (-> this (.resolve field-values partial-temporal resolver-style))))
 
 (defn get-base-unit
@@ -72,7 +72,7 @@
    See also getRangeUnit().
 
   returns: the unit defining the base unit of the field, not null - `java.time.temporal.TemporalUnit`"
-  (^java.time.temporal.TemporalUnit [^java.time.temporal.TemporalField this]
+  (^java.time.temporal.TemporalUnit [^TemporalField this]
     (-> this (.getBaseUnit))))
 
 (defn to-string
@@ -83,7 +83,7 @@
    the base unit is mentioned, such as 'Year' or 'Era'.
 
   returns: the name of the field, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.temporal.TemporalField this]
+  (^java.lang.String [^TemporalField this]
     (-> this (.toString))))
 
 (defn date-based?
@@ -95,7 +95,7 @@
    to return false, such as when representing a field like minute-of-week.
 
   returns: true if this field is a component of a date - `boolean`"
-  (^Boolean [^java.time.temporal.TemporalField this]
+  (^Boolean [^TemporalField this]
     (-> this (.isDateBased))))
 
 (defn get-display-name
@@ -109,7 +109,7 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the display name for the locale or a suitable default, not null - `default java.lang.String`"
-  ([^java.time.temporal.TemporalField this ^java.util.Locale locale]
+  ([^TemporalField this ^java.util.Locale locale]
     (-> this (.getDisplayName locale))))
 
 (defn supported-by?
@@ -135,7 +135,7 @@
   temporal - the temporal object to query, not null - `java.time.temporal.TemporalAccessor`
 
   returns: true if the date-time can be queried for this field, false if not - `boolean`"
-  (^Boolean [^java.time.temporal.TemporalField this ^java.time.temporal.TemporalAccessor temporal]
+  (^Boolean [^TemporalField this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.isSupportedBy temporal))))
 
 (defn range-refined-by
@@ -169,7 +169,7 @@
   returns: the range of valid values for this field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  (^java.time.temporal.ValueRange [^java.time.temporal.TemporalField this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.temporal.ValueRange [^TemporalField this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.rangeRefinedBy temporal))))
 
 (defn adjust-into
@@ -211,7 +211,7 @@
   returns: the adjusted temporal object, not null - `<R extends java.time.temporal.Temporal> R`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([^java.time.temporal.TemporalField this temporal ^Long new-value]
+  ([^TemporalField this temporal ^Long new-value]
     (-> this (.adjustInto temporal new-value))))
 
 (defn get-from
@@ -240,7 +240,7 @@
   returns: the value of this field, not null - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  (^Long [^java.time.temporal.TemporalField this ^java.time.temporal.TemporalAccessor temporal]
+  (^Long [^TemporalField this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.getFrom temporal))))
 
 (defn time-based?
@@ -252,6 +252,6 @@
    to return false, such as when representing a field like minute-of-week.
 
   returns: true if this field is a component of a time - `boolean`"
-  (^Boolean [^java.time.temporal.TemporalField this]
+  (^Boolean [^TemporalField this]
     (-> this (.isTimeBased))))
 

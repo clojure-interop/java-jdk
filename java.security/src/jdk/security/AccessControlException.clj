@@ -20,9 +20,9 @@
 
   s - the detail message. - `java.lang.String`
   p - the permission that caused the exception. - `java.security.Permission`"
-  ([^java.lang.String s ^java.security.Permission p]
+  (^AccessControlException [^java.lang.String s ^java.security.Permission p]
     (new AccessControlException s p))
-  ([^java.lang.String s]
+  (^AccessControlException [^java.lang.String s]
     (new AccessControlException s)))
 
 (defn get-permission
@@ -30,6 +30,6 @@
    null if there was no corresponding Permission object.
 
   returns: the Permission object. - `java.security.Permission`"
-  (^java.security.Permission [^java.security.AccessControlException this]
+  (^java.security.Permission [^AccessControlException this]
     (-> this (.getPermission))))
 

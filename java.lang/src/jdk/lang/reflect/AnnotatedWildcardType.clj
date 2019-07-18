@@ -9,13 +9,13 @@
   "Returns the potentially annotated lower bounds of this wildcard type.
 
   returns: the potentially annotated lower bounds of this wildcard type - `java.lang.reflect.AnnotatedType[]`"
-  ([^java.lang.reflect.AnnotatedWildcardType this]
+  ([^AnnotatedWildcardType this]
     (-> this (.getAnnotatedLowerBounds))))
 
 (defn get-annotated-upper-bounds
   "Returns the potentially annotated upper bounds of this wildcard type.
 
   returns: the potentially annotated upper bounds of this wildcard type - `java.lang.reflect.AnnotatedType[]`"
-  ([^java.lang.reflect.AnnotatedWildcardType this]
+  ([^AnnotatedWildcardType this]
     (-> this (.getAnnotatedUpperBounds))))
 

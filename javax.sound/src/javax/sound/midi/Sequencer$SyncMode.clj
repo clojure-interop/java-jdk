@@ -29,7 +29,7 @@
    its timing information from its internal clock.  This is not
    a legal slave sync mode.
 
-  type: javax.sound.midi.Sequencer.SyncMode"
+  type: javax.sound.midi.Sequencer$SyncMode"
   Sequencer$SyncMode/INTERNAL_CLOCK)
 
 (def *-midi-sync
@@ -45,7 +45,7 @@
    messages to its receiver.  MIDI clock messages are sent at a rate
    of 24 per quarter note.
 
-  type: javax.sound.midi.Sequencer.SyncMode"
+  type: javax.sound.midi.Sequencer$SyncMode"
   Sequencer$SyncMode/MIDI_SYNC)
 
 (def *-midi-time-code
@@ -62,7 +62,7 @@
    messages to its receiver.  (See the MIDI 1.0 Detailed
    Specification for a description of MIDI Time Code.)
 
-  type: javax.sound.midi.Sequencer.SyncMode"
+  type: javax.sound.midi.Sequencer$SyncMode"
   Sequencer$SyncMode/MIDI_TIME_CODE)
 
 (def *-no-sync
@@ -72,7 +72,7 @@
    should be sent to the receiver.  This is not a legal master sync
    mode.
 
-  type: javax.sound.midi.Sequencer.SyncMode"
+  type: javax.sound.midi.Sequencer$SyncMode"
   Sequencer$SyncMode/NO_SYNC)
 
 (defn equals
@@ -83,14 +83,14 @@
 
   returns: true if this object is the same as the
    obj argument, false otherwise - `boolean`"
-  (^Boolean [^javax.sound.midi.Sequencer$SyncMode this ^java.lang.Object obj]
+  (^Boolean [^Sequencer$SyncMode this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashcode method.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.sound.midi.Sequencer$SyncMode this]
+  (^Integer [^Sequencer$SyncMode this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -98,6 +98,6 @@
    representation of the mode.
 
   returns: the name of this synchronization mode - `java.lang.String`"
-  (^java.lang.String [^javax.sound.midi.Sequencer$SyncMode this]
+  (^java.lang.String [^Sequencer$SyncMode this]
     (-> this (.toString))))
 

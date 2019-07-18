@@ -10,7 +10,7 @@
    right orientation this means aligned to the left edge. For the
    vertical axis leading means aligned to the top edge.
 
-  type: javax.swing.GroupLayout.Alignment"
+  type: javax.swing.GroupLayout$Alignment"
   GroupLayout$Alignment/LEADING)
 
 (def TRAILING
@@ -21,7 +21,7 @@
    orientation this means aligned to the right edge. For the
    vertical axis trailing means aligned to the bottom edge.
 
-  type: javax.swing.GroupLayout.Alignment"
+  type: javax.swing.GroupLayout$Alignment"
   GroupLayout$Alignment/TRAILING)
 
 (def CENTER
@@ -30,7 +30,7 @@
   Indicates the elements should be centered in
    the region.
 
-  type: javax.swing.GroupLayout.Alignment"
+  type: javax.swing.GroupLayout$Alignment"
   GroupLayout$Alignment/CENTER)
 
 (def BASELINE
@@ -39,7 +39,7 @@
   Indicates the elements should be aligned along
    their baseline.
 
-  type: javax.swing.GroupLayout.Alignment"
+  type: javax.swing.GroupLayout$Alignment"
   GroupLayout$Alignment/BASELINE)
 
 (defn *values
@@ -51,7 +51,7 @@
   for (GroupLayout.Alignment c : GroupLayout.Alignment.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.GroupLayout.Alignment[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.GroupLayout$Alignment[]`"
   ([]
     (GroupLayout$Alignment/values )))
 
@@ -63,9 +63,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.swing.GroupLayout.Alignment`
+  returns: the enum constant with the specified name - `javax.swing.GroupLayout$Alignment`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.swing.GroupLayout.Alignment [^java.lang.String name]
+  (^javax.swing.GroupLayout$Alignment [^java.lang.String name]
     (GroupLayout$Alignment/valueOf name)))
 

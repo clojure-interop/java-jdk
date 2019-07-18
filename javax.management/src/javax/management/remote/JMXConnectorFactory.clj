@@ -151,7 +151,7 @@
    conn.connect(environment);
 
   service-url - the address of the connector server to connect to. - `javax.management.remote.JMXServiceURL`
-  environment - a set of attributes to determine how the connection is made. This parameter can be null. Keys in this map must be Strings. The appropriate type of each associated value depends on the attribute. The contents of environment are not changed by this call. - `java.util.Map<java.lang.String,?>`
+  environment - a set of attributes to determine how the connection is made. This parameter can be null. Keys in this map must be Strings. The appropriate type of each associated value depends on the attribute. The contents of environment are not changed by this call. - `java.util.Map`
 
   returns: a JMXConnector representing the newly-made
    connection.  Each successful call to this method produces a
@@ -169,7 +169,7 @@
    connect method is called.
 
   service-url - the address of the connector server to connect to. - `javax.management.remote.JMXServiceURL`
-  environment - a set of attributes to determine how the connection is made. This parameter can be null. Keys in this map must be Strings. The appropriate type of each associated value depends on the attribute. The contents of environment are not changed by this call. - `java.util.Map<java.lang.String,?>`
+  environment - a set of attributes to determine how the connection is made. This parameter can be null. Keys in this map must be Strings. The appropriate type of each associated value depends on the attribute. The contents of environment are not changed by this call. - `java.util.Map`
 
   returns: a JMXConnector representing the new
    connector client.  Each successful call to this method produces

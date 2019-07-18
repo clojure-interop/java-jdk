@@ -10,6 +10,6 @@
 
   returns: the java.awt.Container associated
    with this BeanContext. - `java.awt.Container`"
-  (^java.awt.Container [^java.beans.beancontext.BeanContextContainerProxy this]
+  (^java.awt.Container [^BeanContextContainerProxy this]
     (-> this (.getContainer))))
 

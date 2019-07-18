@@ -51,6 +51,6 @@
 
   returns: an unmodifiable list of the content in this X509Data
       (never null or empty) - `java.util.List`"
-  (^java.util.List [^javax.xml.crypto.dsig.keyinfo.X509Data this]
+  (^java.util.List [^X509Data this]
     (-> this (.getContent))))
 

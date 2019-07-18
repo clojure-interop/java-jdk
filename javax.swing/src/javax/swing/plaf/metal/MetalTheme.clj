@@ -30,7 +30,7 @@
 
 (defn ->metal-theme
   "Constructor."
-  ([]
+  (^MetalTheme []
     (new MetalTheme )))
 
 (defn get-text-highlight-color
@@ -38,7 +38,7 @@
    getPrimary3().
 
   returns: the text highlight color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getTextHighlightColor))))
 
 (defn get-control-text-color
@@ -46,7 +46,7 @@
    getControlInfo().
 
   returns: the control text color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getControlTextColor))))
 
 (defn get-control-disabled
@@ -54,7 +54,7 @@
    the value of getSecondary2().
 
   returns: the control disabled color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getControlDisabled))))
 
 (defn get-window-title-background
@@ -62,7 +62,7 @@
    getPrimary3().
 
   returns: the window title background color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getWindowTitleBackground))))
 
 (defn get-window-title-inactive-background
@@ -70,7 +70,7 @@
    returns the value of getSecondary3().
 
   returns: the window title inactive background color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getWindowTitleInactiveBackground))))
 
 (defn get-user-text-color
@@ -78,7 +78,7 @@
    getBlack().
 
   returns: the user text color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getUserTextColor))))
 
 (defn get-primary-control-dark-shadow
@@ -86,7 +86,7 @@
    returns the value of getPrimary1().
 
   returns: the primary control dark shadow color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getPrimaryControlDarkShadow))))
 
 (defn get-window-title-foreground
@@ -94,7 +94,7 @@
    getBlack().
 
   returns: the window title foreground color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getWindowTitleForeground))))
 
 (defn get-control-dark-shadow
@@ -102,7 +102,7 @@
    the value of getSecondary1().
 
   returns: the control dark shadow color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getControlDarkShadow))))
 
 (defn get-menu-background
@@ -110,7 +110,7 @@
    returns the value of getSecondary3().
 
   returns: the menu background color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getMenuBackground))))
 
 (defn get-inactive-system-text-color
@@ -118,7 +118,7 @@
    getSecondary2().
 
   returns: the inactive system text color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getInactiveSystemTextColor))))
 
 (defn get-control-shadow
@@ -126,28 +126,28 @@
    the value of getSecondary2().
 
   returns: the control shadow color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getControlShadow))))
 
 (defn get-menu-text-font
   "Returns the menu text font.
 
   returns: the menu text font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^MetalTheme this]
     (-> this (.getMenuTextFont))))
 
 (defn get-user-text-font
   "Returns the user text font.
 
   returns: the user text font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^MetalTheme this]
     (-> this (.getUserTextFont))))
 
 (defn get-name
   "Returns the name of this theme.
 
   returns: the name of this theme - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.metal.MetalTheme this]
+  (^java.lang.String [^MetalTheme this]
     (-> this (.getName))))
 
 (defn get-primary-control-shadow
@@ -155,14 +155,14 @@
    the value of getPrimary2().
 
   returns: the primary control shadow color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getPrimaryControlShadow))))
 
 (defn get-control-text-font
   "Returns the control text font.
 
   returns: the control text font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^MetalTheme this]
     (-> this (.getControlTextFont))))
 
 (defn get-menu-selected-foreground
@@ -170,7 +170,7 @@
    returns the value of getBlack().
 
   returns: the menu selected foreground color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getMenuSelectedForeground))))
 
 (defn get-primary-control
@@ -178,7 +178,7 @@
    the value of getPrimary3().
 
   returns: the primary control color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getPrimaryControl))))
 
 (defn get-focus-color
@@ -186,7 +186,7 @@
    getPrimary2().
 
   returns: the focus color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getFocusColor))))
 
 (defn get-control
@@ -194,7 +194,7 @@
    getSecondary3().
 
   returns: the control color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getControl))))
 
 (defn get-control-highlight
@@ -202,7 +202,7 @@
    the value of getWhite().
 
   returns: the control highlight color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getControlHighlight))))
 
 (defn get-menu-foreground
@@ -210,7 +210,7 @@
    returns the value of getBlack().
 
   returns: the menu foreground color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getMenuForeground))))
 
 (defn get-desktop-color
@@ -218,7 +218,7 @@
    getPrimary2().
 
   returns: the desktop color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getDesktopColor))))
 
 (defn get-highlighted-text-color
@@ -226,14 +226,14 @@
    getControlTextColor().
 
   returns: the highlighted text color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getHighlightedTextColor))))
 
 (defn get-window-title-font
   "Returns the window title font.
 
   returns: the window title font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^MetalTheme this]
     (-> this (.getWindowTitleFont))))
 
 (defn get-separator-foreground
@@ -241,14 +241,14 @@
    returns the value of getPrimary1().
 
   returns: the separator foreground color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getSeparatorForeground))))
 
 (defn get-sub-text-font
   "Returns the sub-text font.
 
   returns: the sub-text font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^MetalTheme this]
     (-> this (.getSubTextFont))))
 
 (defn get-accelerator-foreground
@@ -256,7 +256,7 @@
    returns the value of getPrimary1().
 
   returns: the accelerator foreground color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getAcceleratorForeground))))
 
 (defn get-separator-background
@@ -264,7 +264,7 @@
    returns the value of getWhite().
 
   returns: the separator background color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getSeparatorBackground))))
 
 (defn get-accelerator-selected-foreground
@@ -272,7 +272,7 @@
    returns the value of getBlack().
 
   returns: the accelerator selected foreground color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getAcceleratorSelectedForeground))))
 
 (defn get-system-text-color
@@ -280,7 +280,7 @@
    getBlack().
 
   returns: the system text color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getSystemTextColor))))
 
 (defn get-window-background
@@ -288,7 +288,7 @@
    getWhite().
 
   returns: the window background color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getWindowBackground))))
 
 (defn get-menu-disabled-foreground
@@ -296,7 +296,7 @@
    returns the value of getSecondary2().
 
   returns: the menu disabled foreground color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getMenuDisabledForeground))))
 
 (defn get-primary-control-info
@@ -304,7 +304,7 @@
    returns the value of getBlack().
 
   returns: the primary control info color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getPrimaryControlInfo))))
 
 (defn get-menu-selected-background
@@ -312,7 +312,7 @@
    returns the value of getPrimary2().
 
   returns: the menu selected background color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getMenuSelectedBackground))))
 
 (defn get-inactive-control-text-color
@@ -320,7 +320,7 @@
    getControlDisabled().
 
   returns: the inactive control text color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getInactiveControlTextColor))))
 
 (defn get-control-info
@@ -328,7 +328,7 @@
    the value of getBlack().
 
   returns: the control info color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getControlInfo))))
 
 (defn get-window-title-inactive-foreground
@@ -336,14 +336,14 @@
    returns the value of getBlack().
 
   returns: the window title inactive foreground color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getWindowTitleInactiveForeground))))
 
 (defn get-system-text-font
   "Returns the system text font.
 
   returns: the system text font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^MetalTheme this]
     (-> this (.getSystemTextFont))))
 
 (defn get-primary-control-highlight
@@ -351,7 +351,7 @@
    returns the value of getWhite().
 
   returns: the primary control highlight color - `javax.swing.plaf.ColorUIResource`"
-  (^javax.swing.plaf.ColorUIResource [^javax.swing.plaf.metal.MetalTheme this]
+  (^javax.swing.plaf.ColorUIResource [^MetalTheme this]
     (-> this (.getPrimaryControlHighlight))))
 
 (defn add-custom-entries-to-table
@@ -363,6 +363,6 @@
    that wish to customize the defaults table.
 
   table - the UIDefaults to add the values to - `javax.swing.UIDefaults`"
-  ([^javax.swing.plaf.metal.MetalTheme this ^javax.swing.UIDefaults table]
+  ([^MetalTheme this ^javax.swing.UIDefaults table]
     (-> this (.addCustomEntriesToTable table))))
 

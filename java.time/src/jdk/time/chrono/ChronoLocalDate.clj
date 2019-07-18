@@ -151,7 +151,7 @@
    The default implementation uses isLeapYear() and returns 365 or 366.
 
   returns: the length of the year in days - `default int`"
-  ([^java.time.chrono.ChronoLocalDate this]
+  ([^ChronoLocalDate this]
     (-> this (.lengthOfYear))))
 
 (defn get-era
@@ -168,7 +168,7 @@
    This default implementation uses Chronology.eraOf(int).
 
   returns: the chronology specific era constant applicable at this date, not null - `default java.time.chrono.Era`"
-  ([^java.time.chrono.ChronoLocalDate this]
+  ([^ChronoLocalDate this]
     (-> this (.getEra))))
 
 (defn is-equal
@@ -185,7 +185,7 @@
   other - the other date to compare to, not null - `java.time.chrono.ChronoLocalDate`
 
   returns: true if the underlying date is equal to the specified date - `default boolean`"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.chrono.ChronoLocalDate other]
+  ([^ChronoLocalDate this ^java.time.chrono.ChronoLocalDate other]
     (-> this (.isEqual other))))
 
 (defn to-epoch-day
@@ -198,7 +198,7 @@
    This default implementation queries the EPOCH_DAY field.
 
   returns: the Epoch Day equivalent to this date - `default long`"
-  ([^java.time.chrono.ChronoLocalDate this]
+  ([^ChronoLocalDate this]
     (-> this (.toEpochDay))))
 
 (defn plus
@@ -219,9 +219,9 @@
   returns: an object of the same type with the specified period added, not null - `default java.time.chrono.ChronoLocalDate`
 
   throws: java.time.DateTimeException - if the unit cannot be added"
-  ([^java.time.chrono.ChronoLocalDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  ([^ChronoLocalDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.temporal.TemporalAmount amount]
+  ([^ChronoLocalDate this ^java.time.temporal.TemporalAmount amount]
     (-> this (.plus amount))))
 
 (defn *time-line-order
@@ -248,7 +248,7 @@
    This default implementation uses Chronology.isLeapYear(long).
 
   returns: true if this date is in a leap year, false otherwise - `default boolean`"
-  ([^java.time.chrono.ChronoLocalDate this]
+  ([^ChronoLocalDate this]
     (-> this (.isLeapYear))))
 
 (defn query
@@ -263,12 +263,12 @@
    TemporalQuery.queryFrom(TemporalAccessor) method on the
    specified query passing this as the argument.
 
-  query - the query to invoke, not null - `java.time.temporal.TemporalQuery<R>`
+  query - the query to invoke, not null - `java.time.temporal.TemporalQuery`
 
   returns: the query result, null may be returned (defined by the query) - `default <R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.temporal.TemporalQuery query]
+  ([^ChronoLocalDate this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn to-string
@@ -277,7 +277,7 @@
    The output will include the full local date.
 
   returns: the formatted date, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.chrono.ChronoLocalDate this]
+  (^java.lang.String [^ChronoLocalDate this]
     (-> this (.toString))))
 
 (defn is-before
@@ -294,7 +294,7 @@
   other - the other date to compare to, not null - `java.time.chrono.ChronoLocalDate`
 
   returns: true if this is before the specified date - `default boolean`"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.chrono.ChronoLocalDate other]
+  ([^ChronoLocalDate this ^java.time.chrono.ChronoLocalDate other]
     (-> this (.isBefore other))))
 
 (defn minus
@@ -315,9 +315,9 @@
   returns: an object of the same type with the specified period subtracted, not null - `default java.time.chrono.ChronoLocalDate`
 
   throws: java.time.DateTimeException - if the unit cannot be subtracted"
-  ([^java.time.chrono.ChronoLocalDate this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
+  ([^ChronoLocalDate this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.temporal.TemporalAmount amount]
+  ([^ChronoLocalDate this ^java.time.temporal.TemporalAmount amount]
     (-> this (.minus amount))))
 
 (defn length-of-month
@@ -326,7 +326,7 @@
    This returns the length of the month in days.
 
   returns: the length of the month in days - `int`"
-  (^Integer [^java.time.chrono.ChronoLocalDate this]
+  (^Integer [^ChronoLocalDate this]
     (-> this (.lengthOfMonth))))
 
 (defn until
@@ -372,9 +372,9 @@
   returns: the amount of time between this date and the end date - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to a ChronoLocalDate"
-  (^Long [^java.time.chrono.ChronoLocalDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
+  (^Long [^ChronoLocalDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit)))
-  (^java.time.chrono.ChronoPeriod [^java.time.chrono.ChronoLocalDate this ^java.time.chrono.ChronoLocalDate end-date-exclusive]
+  (^java.time.chrono.ChronoPeriod [^ChronoLocalDate this ^java.time.chrono.ChronoLocalDate end-date-exclusive]
     (-> this (.until end-date-exclusive))))
 
 (defn *from
@@ -415,7 +415,7 @@
   other - the other date to compare to, not null - `java.time.chrono.ChronoLocalDate`
 
   returns: true if this is after the specified date - `default boolean`"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.chrono.ChronoLocalDate other]
+  ([^ChronoLocalDate this ^java.time.chrono.ChronoLocalDate other]
     (-> this (.isAfter other))))
 
 (defn is-supported
@@ -437,7 +437,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field can be queried, false if not - `default boolean`"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.temporal.TemporalField field]
+  ([^ChronoLocalDate this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn get-chronology
@@ -447,14 +447,14 @@
    The era and other fields in ChronoField are defined by the chronology.
 
   returns: the chronology, not null - `java.time.chrono.Chronology`"
-  (^java.time.chrono.Chronology [^java.time.chrono.ChronoLocalDate this]
+  (^java.time.chrono.Chronology [^ChronoLocalDate this]
     (-> this (.getChronology))))
 
 (defn hash-code
   "A hash code for this date.
 
   returns: a suitable hash code - `int`"
-  (^Integer [^java.time.chrono.ChronoLocalDate this]
+  (^Integer [^ChronoLocalDate this]
     (-> this (.hashCode))))
 
 (defn adjust-into
@@ -481,7 +481,7 @@
   returns: the adjusted object, not null - `default java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.temporal.Temporal temporal]
+  ([^ChronoLocalDate this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn with
@@ -502,9 +502,9 @@
   returns: an object of the same type with the specified field set, not null - `default java.time.chrono.ChronoLocalDate`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.temporal.TemporalField field ^Long new-value]
+  ([^ChronoLocalDate this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.temporal.TemporalAdjuster adjuster]
+  ([^ChronoLocalDate this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn compare-to
@@ -535,7 +535,7 @@
   other - the other date to compare to, not null - `java.time.chrono.ChronoLocalDate`
 
   returns: the comparator value, negative if less, positive if greater - `default int`"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.chrono.ChronoLocalDate other]
+  ([^ChronoLocalDate this ^java.time.chrono.ChronoLocalDate other]
     (-> this (.compareTo other))))
 
 (defn equals
@@ -549,7 +549,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other date - `boolean`"
-  (^Boolean [^java.time.chrono.ChronoLocalDate this ^java.lang.Object obj]
+  (^Boolean [^ChronoLocalDate this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn at-time
@@ -561,7 +561,7 @@
   local-time - the local time to use, not null - `java.time.LocalTime`
 
   returns: the local date-time formed from this date and the specified time, not null - `default java.time.chrono.ChronoLocalDateTime<?>`"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.LocalTime local-time]
+  ([^ChronoLocalDate this ^java.time.LocalTime local-time]
     (-> this (.atTime local-time))))
 
 (defn format
@@ -579,6 +579,6 @@
   returns: the formatted date string, not null - `default java.lang.String`
 
   throws: java.time.DateTimeException - if an error occurs during printing"
-  ([^java.time.chrono.ChronoLocalDate this ^java.time.format.DateTimeFormatter formatter]
+  ([^ChronoLocalDate this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.format formatter))))
 

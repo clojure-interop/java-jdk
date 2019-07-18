@@ -14,23 +14,23 @@
   Creates a new AtomicStampedReference with the given
    initial values.
 
-  initial-ref - the initial reference - `AtomicStampedReference.V`
+  initial-ref - the initial reference - `V`
   initial-stamp - the initial stamp - `int`"
-  ([^AtomicStampedReference.V initial-ref ^Integer initial-stamp]
+  (^AtomicStampedReference [initial-ref ^Integer initial-stamp]
     (new AtomicStampedReference initial-ref initial-stamp)))
 
 (defn get-reference
   "Returns the current value of the reference.
 
-  returns: the current value of the reference - `AtomicStampedReference.V`"
-  (^AtomicStampedReference.V [^java.util.concurrent.atomic.AtomicStampedReference this]
+  returns: the current value of the reference - `V`"
+  ([^AtomicStampedReference this]
     (-> this (.getReference))))
 
 (defn get-stamp
   "Returns the current value of the stamp.
 
   returns: the current value of the stamp - `int`"
-  (^Integer [^java.util.concurrent.atomic.AtomicStampedReference this]
+  (^Integer [^AtomicStampedReference this]
     (-> this (.getStamp))))
 
 (defn get
@@ -39,8 +39,8 @@
 
   stamp-holder - an array of size of at least one. On return, stampholder[0] will hold the value of the stamp. - `int[]`
 
-  returns: the current value of the reference - `AtomicStampedReference.V`"
-  (^AtomicStampedReference.V [^java.util.concurrent.atomic.AtomicStampedReference this stamp-holder]
+  returns: the current value of the reference - `V`"
+  ([^AtomicStampedReference this stamp-holder]
     (-> this (.get stamp-holder))))
 
 (defn weak-compare-and-set
@@ -53,13 +53,13 @@
    spuriously and does not provide ordering guarantees, so is
    only rarely an appropriate alternative to compareAndSet.
 
-  expected-reference - the expected value of the reference - `AtomicStampedReference.V`
-  new-reference - the new value for the reference - `AtomicStampedReference.V`
+  expected-reference - the expected value of the reference - `V`
+  new-reference - the new value for the reference - `V`
   expected-stamp - the expected value of the stamp - `int`
   new-stamp - the new value for the stamp - `int`
 
   returns: true if successful - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicStampedReference this ^AtomicStampedReference.V expected-reference ^AtomicStampedReference.V new-reference ^Integer expected-stamp ^Integer new-stamp]
+  (^Boolean [^AtomicStampedReference this expected-reference new-reference ^Integer expected-stamp ^Integer new-stamp]
     (-> this (.weakCompareAndSet expected-reference new-reference expected-stamp new-stamp))))
 
 (defn compare-and-set
@@ -68,21 +68,21 @@
    current reference is == to the expected reference
    and the current stamp is equal to the expected stamp.
 
-  expected-reference - the expected value of the reference - `AtomicStampedReference.V`
-  new-reference - the new value for the reference - `AtomicStampedReference.V`
+  expected-reference - the expected value of the reference - `V`
+  new-reference - the new value for the reference - `V`
   expected-stamp - the expected value of the stamp - `int`
   new-stamp - the new value for the stamp - `int`
 
   returns: true if successful - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicStampedReference this ^AtomicStampedReference.V expected-reference ^AtomicStampedReference.V new-reference ^Integer expected-stamp ^Integer new-stamp]
+  (^Boolean [^AtomicStampedReference this expected-reference new-reference ^Integer expected-stamp ^Integer new-stamp]
     (-> this (.compareAndSet expected-reference new-reference expected-stamp new-stamp))))
 
 (defn set
   "Unconditionally sets the value of both the reference and stamp.
 
-  new-reference - the new value for the reference - `AtomicStampedReference.V`
+  new-reference - the new value for the reference - `V`
   new-stamp - the new value for the stamp - `int`"
-  ([^java.util.concurrent.atomic.AtomicStampedReference this ^AtomicStampedReference.V new-reference ^Integer new-stamp]
+  ([^AtomicStampedReference this new-reference ^Integer new-stamp]
     (-> this (.set new-reference new-stamp))))
 
 (defn attempt-stamp
@@ -94,10 +94,10 @@
    thread is also attempting to set the value will eventually
    succeed.
 
-  expected-reference - the expected value of the reference - `AtomicStampedReference.V`
+  expected-reference - the expected value of the reference - `V`
   new-stamp - the new value for the stamp - `int`
 
   returns: true if successful - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicStampedReference this ^AtomicStampedReference.V expected-reference ^Integer new-stamp]
+  (^Boolean [^AtomicStampedReference this expected-reference ^Integer new-stamp]
     (-> this (.attemptStamp expected-reference new-stamp))))
 

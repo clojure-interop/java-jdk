@@ -21,9 +21,9 @@
     with a default TableColumnModel.
 
   cm - the column model for the table - `javax.swing.table.TableColumnModel`"
-  ([^javax.swing.table.TableColumnModel cm]
+  (^JTableHeader [^javax.swing.table.TableColumnModel cm]
     (new JTableHeader cm))
-  ([]
+  (^JTableHeader []
     (new JTableHeader )))
 
 (defn set-column-model
@@ -33,21 +33,21 @@
   column-model - the new data source for this table - `javax.swing.table.TableColumnModel`
 
   throws: java.lang.IllegalArgumentException - if newModel is null"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.table.TableColumnModel column-model]
+  ([^JTableHeader this ^javax.swing.table.TableColumnModel column-model]
     (-> this (.setColumnModel column-model))))
 
 (defn set-reordering-allowed
   "Sets whether the user can drag column headers to reorder columns.
 
   reordering-allowed - true if the table view should allow reordering; otherwise false - `boolean`"
-  ([^javax.swing.table.JTableHeader this ^Boolean reordering-allowed]
+  ([^JTableHeader this ^Boolean reordering-allowed]
     (-> this (.setReorderingAllowed reordering-allowed))))
 
 (defn set-resizing-allowed
   "Sets whether the user can resize columns by dragging between headers.
 
   resizing-allowed - true if table view should allow resizing - `boolean`"
-  ([^javax.swing.table.JTableHeader this ^Boolean resizing-allowed]
+  ([^JTableHeader this ^Boolean resizing-allowed]
     (-> this (.setResizingAllowed resizing-allowed))))
 
 (defn get-update-table-in-real-time?
@@ -55,7 +55,7 @@
    column dragging or resizing, are now unconditional.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.table.JTableHeader this]
+  (^Boolean [^JTableHeader this]
     (-> this (.getUpdateTableInRealTime))))
 
 (defn get-resizing-allowed?
@@ -64,7 +64,7 @@
    resize columns programmatically regardless of this setting.
 
   returns: the resizingAllowed property - `boolean`"
-  (^Boolean [^javax.swing.table.JTableHeader this]
+  (^Boolean [^JTableHeader this]
     (-> this (.getResizingAllowed))))
 
 (defn set-update-table-in-real-time
@@ -72,7 +72,7 @@
    column dragging or resizing, are now unconditional.
 
   flag - `boolean`"
-  ([^javax.swing.table.JTableHeader this ^Boolean flag]
+  ([^JTableHeader this ^Boolean flag]
     (-> this (.setUpdateTableInRealTime flag))))
 
 (defn column-moved
@@ -82,7 +82,7 @@
    are used internally by JTable.
 
   e - the event received - `javax.swing.event.TableColumnModelEvent`"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.event.TableColumnModelEvent e]
+  ([^JTableHeader this ^javax.swing.event.TableColumnModelEvent e]
     (-> this (.columnMoved e))))
 
 (defn get-dragged-column
@@ -91,7 +91,7 @@
 
   returns: the dragged column, if a drag is in
             process, otherwise returns null - `javax.swing.table.TableColumn`"
-  (^javax.swing.table.TableColumn [^javax.swing.table.JTableHeader this]
+  (^javax.swing.table.TableColumn [^JTableHeader this]
     (-> this (.getDraggedColumn))))
 
 (defn get-ui-class-id
@@ -99,7 +99,7 @@
    (L&F) class used to render this component.
 
   returns: the string `TableHeaderUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.table.JTableHeader this]
+  (^java.lang.String [^JTableHeader this]
     (-> this (.getUIClassID))))
 
 (defn get-resizing-column
@@ -108,7 +108,7 @@
 
   returns: the resizing column, if a resize is in process, otherwise
             returns null - `javax.swing.table.TableColumn`"
-  (^javax.swing.table.TableColumn [^javax.swing.table.JTableHeader this]
+  (^javax.swing.table.TableColumn [^JTableHeader this]
     (-> this (.getResizingColumn))))
 
 (defn set-dragged-column
@@ -118,21 +118,21 @@
     internally by the column dragging mechanism.
 
   a-column - the column being dragged, or null if no column is being dragged - `javax.swing.table.TableColumn`"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.table.TableColumn a-column]
+  ([^JTableHeader this ^javax.swing.table.TableColumn a-column]
     (-> this (.setDraggedColumn a-column))))
 
 (defn set-dragged-distance
   "Sets the header's draggedDistance to distance.
 
   distance - the distance dragged - `int`"
-  ([^javax.swing.table.JTableHeader this ^Integer distance]
+  ([^JTableHeader this ^Integer distance]
     (-> this (.setDraggedDistance distance))))
 
 (defn set-table
   "Sets the table associated with this header.
 
   table - the new table - `javax.swing.JTable`"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.JTable table]
+  ([^JTableHeader this ^javax.swing.JTable table]
     (-> this (.setTable table))))
 
 (defn get-header-rect
@@ -143,14 +143,14 @@
   column - `int`
 
   returns: the rectangle containing the header tile at column - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.table.JTableHeader this ^Integer column]
+  (^java.awt.Rectangle [^JTableHeader this ^Integer column]
     (-> this (.getHeaderRect column))))
 
 (defn set-ui
   "Sets the look and feel (L&F) object that renders this component.
 
   ui - the TableHeaderUI L&F object - `javax.swing.plaf.TableHeaderUI`"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.plaf.TableHeaderUI ui]
+  ([^JTableHeader this ^javax.swing.plaf.TableHeaderUI ui]
     (-> this (.setUI ui))))
 
 (defn get-tool-tip-text
@@ -159,14 +159,14 @@
   event - the location of the event identifies the proper renderer and, therefore, the proper tip - `java.awt.event.MouseEvent`
 
   returns: the tool tip for this component - `java.lang.String`"
-  (^java.lang.String [^javax.swing.table.JTableHeader this ^java.awt.event.MouseEvent event]
+  (^java.lang.String [^JTableHeader this event]
     (-> this (.getToolTipText event))))
 
 (defn get-ui
   "Returns the look and feel (L&F) object that renders this component.
 
   returns: the TableHeaderUI object that renders this component - `javax.swing.plaf.TableHeaderUI`"
-  (^javax.swing.plaf.TableHeaderUI [^javax.swing.table.JTableHeader this]
+  (^javax.swing.plaf.TableHeaderUI [^JTableHeader this]
     (-> this (.getUI))))
 
 (defn column-margin-changed
@@ -176,7 +176,7 @@
    are used internally by JTable.
 
   e - the event received - `javax.swing.event.ChangeEvent`"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.event.ChangeEvent e]
+  ([^JTableHeader this ^javax.swing.event.ChangeEvent e]
     (-> this (.columnMarginChanged e))))
 
 (defn get-accessible-context
@@ -187,7 +187,7 @@
 
   returns: an AccessibleJTableHeader that serves as the
            AccessibleContext of this JTableHeader - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.table.JTableHeader this]
+  (^javax.accessibility.AccessibleContext [^JTableHeader this]
     (-> this (.getAccessibleContext))))
 
 (defn set-resizing-column
@@ -197,13 +197,13 @@
     is used internally by the column sizing mechanism.
 
   a-column - the column being resized, or null if no column is being resized - `javax.swing.table.TableColumn`"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.table.TableColumn a-column]
+  ([^JTableHeader this ^javax.swing.table.TableColumn a-column]
     (-> this (.setResizingColumn a-column))))
 
 (defn resize-and-repaint
   "Sizes the header and marks it as needing display.  Equivalent
    to revalidate followed by repaint."
-  ([^javax.swing.table.JTableHeader this]
+  ([^JTableHeader this]
     (-> this (.resizeAndRepaint))))
 
 (defn column-selection-changed
@@ -215,7 +215,7 @@
    are used internally by JTable.
 
   e - the event received - `javax.swing.event.ListSelectionEvent`"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.event.ListSelectionEvent e]
+  ([^JTableHeader this ^javax.swing.event.ListSelectionEvent e]
     (-> this (.columnSelectionChanged e))))
 
 (defn column-removed
@@ -225,7 +225,7 @@
    are used internally by JTable.
 
   e - the event received - `javax.swing.event.TableColumnModelEvent`"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.event.TableColumnModelEvent e]
+  ([^JTableHeader this ^javax.swing.event.TableColumnModelEvent e]
     (-> this (.columnRemoved e))))
 
 (defn get-column-model
@@ -233,7 +233,7 @@
    of this table header.
 
   returns: the columnModel property - `javax.swing.table.TableColumnModel`"
-  (^javax.swing.table.TableColumnModel [^javax.swing.table.JTableHeader this]
+  (^javax.swing.table.TableColumnModel [^JTableHeader this]
     (-> this (.getColumnModel))))
 
 (defn get-reordering-allowed?
@@ -242,14 +242,14 @@
    rearrange columns programmatically regardless of this setting.
 
   returns: the reorderingAllowed property - `boolean`"
-  (^Boolean [^javax.swing.table.JTableHeader this]
+  (^Boolean [^JTableHeader this]
     (-> this (.getReorderingAllowed))))
 
 (defn get-table
   "Returns the table associated with this header.
 
   returns: the table property - `javax.swing.JTable`"
-  (^javax.swing.JTable [^javax.swing.table.JTableHeader this]
+  (^javax.swing.JTable [^JTableHeader this]
     (-> this (.getTable))))
 
 (defn column-at-point
@@ -260,7 +260,7 @@
 
   returns: the index of the column that point lies in, or -1 if it
             lies out of bounds - `int`"
-  (^Integer [^javax.swing.table.JTableHeader this ^java.awt.Point point]
+  (^Integer [^JTableHeader this ^java.awt.Point point]
     (-> this (.columnAtPoint point))))
 
 (defn get-dragged-distance
@@ -271,7 +271,7 @@
   returns: the column's horizontal distance from its original
             position, if a drag is in process, otherwise the return
             value is meaningless - `int`"
-  (^Integer [^javax.swing.table.JTableHeader this]
+  (^Integer [^JTableHeader this]
     (-> this (.getDraggedDistance))))
 
 (defn column-added
@@ -281,7 +281,7 @@
    are used internally by JTable.
 
   e - the event received - `javax.swing.event.TableColumnModelEvent`"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.event.TableColumnModelEvent e]
+  ([^JTableHeader this ^javax.swing.event.TableColumnModelEvent e]
     (-> this (.columnAdded e))))
 
 (defn get-default-renderer
@@ -289,7 +289,7 @@
    is defined by a TableColumn.
 
   returns: the default renderer - `javax.swing.table.TableCellRenderer`"
-  (^javax.swing.table.TableCellRenderer [^javax.swing.table.JTableHeader this]
+  (^javax.swing.table.TableCellRenderer [^JTableHeader this]
     (-> this (.getDefaultRenderer))))
 
 (defn update-ui
@@ -297,7 +297,7 @@
    (L&F) has changed.
    Replaces the current UI object with the latest version from the
    UIManager."
-  ([^javax.swing.table.JTableHeader this]
+  ([^JTableHeader this]
     (-> this (.updateUI))))
 
 (defn set-default-renderer
@@ -305,6 +305,6 @@
    is defined by a TableColumn.
 
   default-renderer - the default renderer - `javax.swing.table.TableCellRenderer`"
-  ([^javax.swing.table.JTableHeader this ^javax.swing.table.TableCellRenderer default-renderer]
+  ([^JTableHeader this ^javax.swing.table.TableCellRenderer default-renderer]
     (-> this (.setDefaultRenderer default-renderer))))
 

@@ -31,9 +31,9 @@
   encrypted-data - encrypted data. The contents of encrypedData are copied to protect against subsequent modification when constructing this object. - `byte[]`
 
   throws: java.lang.NullPointerException - if algName or encryptedData is null."
-  ([^java.lang.String alg-name encrypted-data]
+  (^EncryptedPrivateKeyInfo [^java.lang.String alg-name encrypted-data]
     (new EncryptedPrivateKeyInfo alg-name encrypted-data))
-  ([encoded]
+  (^EncryptedPrivateKeyInfo [encoded]
     (new EncryptedPrivateKeyInfo encoded)))
 
 (defn get-alg-name
@@ -46,14 +46,14 @@
    for information about standard Cipher algorithm names.
 
   returns: the encryption algorithm name. - `java.lang.String`"
-  (^java.lang.String [^javax.crypto.EncryptedPrivateKeyInfo this]
+  (^java.lang.String [^EncryptedPrivateKeyInfo this]
     (-> this (.getAlgName))))
 
 (defn get-alg-parameters
   "Returns the algorithm parameters used by the encryption algorithm.
 
   returns: the algorithm parameters. - `java.security.AlgorithmParameters`"
-  (^java.security.AlgorithmParameters [^javax.crypto.EncryptedPrivateKeyInfo this]
+  (^java.security.AlgorithmParameters [^EncryptedPrivateKeyInfo this]
     (-> this (.getAlgParameters))))
 
 (defn get-encrypted-data
@@ -61,7 +61,7 @@
 
   returns: the encrypted data. Returns a new array
    each time this method is called. - `byte[]`"
-  ([^javax.crypto.EncryptedPrivateKeyInfo this]
+  ([^EncryptedPrivateKeyInfo this]
     (-> this (.getEncryptedData))))
 
 (defn get-key-spec
@@ -74,9 +74,9 @@
   returns: the PKCS8EncodedKeySpec object. - `java.security.spec.PKCS8EncodedKeySpec`
 
   throws: java.lang.NullPointerException - if decryptKey or providerName is null."
-  (^java.security.spec.PKCS8EncodedKeySpec [^javax.crypto.EncryptedPrivateKeyInfo this ^java.security.Key decrypt-key ^java.lang.String provider-name]
+  (^java.security.spec.PKCS8EncodedKeySpec [^EncryptedPrivateKeyInfo this ^java.security.Key decrypt-key ^java.lang.String provider-name]
     (-> this (.getKeySpec decrypt-key provider-name)))
-  (^java.security.spec.PKCS8EncodedKeySpec [^javax.crypto.EncryptedPrivateKeyInfo this ^javax.crypto.Cipher cipher]
+  (^java.security.spec.PKCS8EncodedKeySpec [^EncryptedPrivateKeyInfo this ^javax.crypto.Cipher cipher]
     (-> this (.getKeySpec cipher))))
 
 (defn get-encoded
@@ -86,6 +86,6 @@
    each time this method is called. - `byte[]`
 
   throws: java.io.IOException - if error occurs when constructing its ASN.1 encoding."
-  ([^javax.crypto.EncryptedPrivateKeyInfo this]
+  ([^EncryptedPrivateKeyInfo this]
     (-> this (.getEncoded))))
 

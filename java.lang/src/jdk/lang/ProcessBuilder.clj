@@ -145,10 +145,10 @@
    command corresponds to a valid operating system
    command.
 
-  command - the list containing the program and its arguments - `java.util.List<java.lang.String>`
+  command - the list containing the program and its arguments - `java.util.List`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([^java.util.List command]
+  (^ProcessBuilder [^java.util.List command]
     (new ProcessBuilder command)))
 
 (defn command
@@ -159,14 +159,14 @@
    checked whether command corresponds to a valid
    operating system command.
 
-  command - the list containing the program and its arguments - `java.util.List<java.lang.String>`
+  command - the list containing the program and its arguments - `java.util.List`
 
   returns: this process builder - `java.lang.ProcessBuilder`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^java.util.List command]
+  (^java.lang.ProcessBuilder [^ProcessBuilder this ^java.util.List command]
     (-> this (.command command)))
-  (^java.util.List [^java.lang.ProcessBuilder this]
+  (^java.util.List [^ProcessBuilder this]
     (-> this (.command))))
 
 (defn directory
@@ -181,9 +181,9 @@
   directory - the new working directory - `java.io.File`
 
   returns: this process builder - `java.lang.ProcessBuilder`"
-  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^java.io.File directory]
+  (^java.lang.ProcessBuilder [^ProcessBuilder this ^java.io.File directory]
     (-> this (.directory directory)))
-  (^java.io.File [^java.lang.ProcessBuilder this]
+  (^java.io.File [^ProcessBuilder this]
     (-> this (.directory))))
 
 (defn redirect-error
@@ -203,14 +203,14 @@
    attribute has been set true, then the redirection set
    by this method has no effect.
 
-  destination - the new standard error destination - `java.lang.ProcessBuilder.Redirect`
+  destination - the new standard error destination - `java.lang.ProcessBuilder$Redirect`
 
   returns: this process builder - `java.lang.ProcessBuilder`
 
   throws: java.lang.IllegalArgumentException - if the redirect does not correspond to a valid destination of data, that is, has type READ"
-  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^java.lang.ProcessBuilder.Redirect destination]
+  (^java.lang.ProcessBuilder [^ProcessBuilder this ^java.lang.ProcessBuilder$Redirect destination]
     (-> this (.redirectError destination)))
-  (^java.lang.ProcessBuilder.Redirect [^java.lang.ProcessBuilder this]
+  (^java.lang.ProcessBuilder$Redirect [^ProcessBuilder this]
     (-> this (.redirectError))))
 
 (defn inherit-io
@@ -233,7 +233,7 @@
    system().
 
   returns: this process builder - `java.lang.ProcessBuilder`"
-  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this]
+  (^java.lang.ProcessBuilder [^ProcessBuilder this]
     (-> this (.inheritIO))))
 
 (defn redirect-output
@@ -249,14 +249,14 @@
    Process.getInputStream() will return a
    null input stream.
 
-  destination - the new standard output destination - `java.lang.ProcessBuilder.Redirect`
+  destination - the new standard output destination - `java.lang.ProcessBuilder$Redirect`
 
   returns: this process builder - `java.lang.ProcessBuilder`
 
   throws: java.lang.IllegalArgumentException - if the redirect does not correspond to a valid destination of data, that is, has type READ"
-  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^java.lang.ProcessBuilder.Redirect destination]
+  (^java.lang.ProcessBuilder [^ProcessBuilder this ^java.lang.ProcessBuilder$Redirect destination]
     (-> this (.redirectOutput destination)))
-  (^java.lang.ProcessBuilder.Redirect [^java.lang.ProcessBuilder this]
+  (^java.lang.ProcessBuilder$Redirect [^ProcessBuilder this]
     (-> this (.redirectOutput))))
 
 (defn redirect-input
@@ -273,14 +273,14 @@
    Process.getOutputStream() will return a
    null output stream.
 
-  source - the new standard input source - `java.lang.ProcessBuilder.Redirect`
+  source - the new standard input source - `java.lang.ProcessBuilder$Redirect`
 
   returns: this process builder - `java.lang.ProcessBuilder`
 
   throws: java.lang.IllegalArgumentException - if the redirect does not correspond to a valid source of data, that is, has type WRITE or APPEND"
-  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^java.lang.ProcessBuilder.Redirect source]
+  (^java.lang.ProcessBuilder [^ProcessBuilder this ^java.lang.ProcessBuilder$Redirect source]
     (-> this (.redirectInput source)))
-  (^java.lang.ProcessBuilder.Redirect [^java.lang.ProcessBuilder this]
+  (^java.lang.ProcessBuilder$Redirect [^ProcessBuilder this]
     (-> this (.redirectInput))))
 
 (defn redirect-error-stream
@@ -297,9 +297,9 @@
   redirect-error-stream - the new property value - `boolean`
 
   returns: this process builder - `java.lang.ProcessBuilder`"
-  (^java.lang.ProcessBuilder [^java.lang.ProcessBuilder this ^Boolean redirect-error-stream]
+  (^java.lang.ProcessBuilder [^ProcessBuilder this ^Boolean redirect-error-stream]
     (-> this (.redirectErrorStream redirect-error-stream)))
-  (^Boolean [^java.lang.ProcessBuilder this]
+  (^Boolean [^ProcessBuilder this]
     (-> this (.redirectErrorStream))))
 
 (defn start
@@ -344,7 +344,7 @@
   returns: a new Process object for managing the subprocess - `java.lang.Process`
 
   throws: java.lang.NullPointerException - if an element of the command list is null"
-  (^java.lang.Process [^java.lang.ProcessBuilder this]
+  (^java.lang.Process [^ProcessBuilder this]
     (-> this (.start))))
 
 (defn environment
@@ -407,6 +407,6 @@
   returns: this process builder's environment - `java.util.Map<java.lang.String,java.lang.String>`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method doesn't allow access to the process environment"
-  (^java.util.Map [^java.lang.ProcessBuilder this]
+  (^java.util.Map [^ProcessBuilder this]
     (-> this (.environment))))
 

@@ -30,6 +30,6 @@
   returns: A possibly null array of Control objects. - `javax.naming.ldap.Control[]`
 
   throws: javax.naming.NamingException - If cannot return controls due to an error."
-  ([^javax.naming.ldap.HasControls this]
+  ([^HasControls this]
     (-> this (.getControls))))
 

@@ -32,16 +32,16 @@
 
   row-count - the number of rows the table holds - `int`
   column-count - the number of columns the table holds - `int`"
-  ([^Integer row-count ^Integer column-count]
+  (^DefaultTableModel [^Integer row-count ^Integer column-count]
     (new DefaultTableModel row-count column-count))
-  ([]
+  (^DefaultTableModel []
     (new DefaultTableModel )))
 
 (defn rows-removed
   "Equivalent to fireTableChanged.
 
   event - the change event - `javax.swing.event.TableModelEvent`"
-  ([^javax.swing.table.DefaultTableModel this ^javax.swing.event.TableModelEvent event]
+  ([^DefaultTableModel this ^javax.swing.event.TableModelEvent event]
     (-> this (.rowsRemoved event))))
 
 (defn set-column-identifiers
@@ -53,7 +53,7 @@
    discarded.
 
   column-identifiers - vector of column identifiers. If null, set the model to zero columns - `java.util.Vector`"
-  ([^javax.swing.table.DefaultTableModel this ^java.util.Vector column-identifiers]
+  ([^DefaultTableModel this ^java.util.Vector column-identifiers]
     (-> this (.setColumnIdentifiers column-identifiers))))
 
 (defn get-value-at
@@ -66,7 +66,7 @@
   returns: the value Object at the specified cell - `java.lang.Object`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if an invalid row or column was given"
-  (^java.lang.Object [^javax.swing.table.DefaultTableModel this ^Integer row ^Integer column]
+  (^java.lang.Object [^DefaultTableModel this ^Integer row ^Integer column]
     (-> this (.getValueAt row column))))
 
 (defn remove-row
@@ -76,21 +76,21 @@
   row - the row index of the row to be removed - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the row was invalid"
-  ([^javax.swing.table.DefaultTableModel this ^Integer row]
+  ([^DefaultTableModel this ^Integer row]
     (-> this (.removeRow row))))
 
 (defn get-column-count
   "Returns the number of columns in this data table.
 
   returns: the number of columns in the model - `int`"
-  (^Integer [^javax.swing.table.DefaultTableModel this]
+  (^Integer [^DefaultTableModel this]
     (-> this (.getColumnCount))))
 
 (defn get-row-count
   "Returns the number of rows in this data table.
 
   returns: the number of rows in the model - `int`"
-  (^Integer [^javax.swing.table.DefaultTableModel this]
+  (^Integer [^DefaultTableModel this]
     (-> this (.getRowCount))))
 
 (defn set-row-count
@@ -100,14 +100,14 @@
     rows at index rowCount and greater are discarded.
 
   row-count - `int`"
-  ([^javax.swing.table.DefaultTableModel this ^Integer row-count]
+  ([^DefaultTableModel this ^Integer row-count]
     (-> this (.setRowCount row-count))))
 
 (defn set-num-rows
   "Obsolete as of Java 2 platform v1.3.  Please use setRowCount instead.
 
   row-count - `int`"
-  ([^javax.swing.table.DefaultTableModel this ^Integer row-count]
+  ([^DefaultTableModel this ^Integer row-count]
     (-> this (.setNumRows row-count))))
 
 (defn new-rows-added
@@ -120,7 +120,7 @@
     notification message to all the listeners.
 
   e - this TableModelEvent describes where the rows were added. If null it assumes all the rows were newly added - `javax.swing.event.TableModelEvent`"
-  ([^javax.swing.table.DefaultTableModel this ^javax.swing.event.TableModelEvent e]
+  ([^DefaultTableModel this ^javax.swing.event.TableModelEvent e]
     (-> this (.newRowsAdded e))))
 
 (defn cell-editable?
@@ -130,14 +130,14 @@
   column - the column whose value is to be queried - `int`
 
   returns: true - `boolean`"
-  (^Boolean [^javax.swing.table.DefaultTableModel this ^Integer row ^Integer column]
+  (^Boolean [^DefaultTableModel this ^Integer row ^Integer column]
     (-> this (.isCellEditable row column))))
 
 (defn new-data-available
   "Equivalent to fireTableChanged.
 
   event - the change event - `javax.swing.event.TableModelEvent`"
-  ([^javax.swing.table.DefaultTableModel this ^javax.swing.event.TableModelEvent event]
+  ([^DefaultTableModel this ^javax.swing.event.TableModelEvent event]
     (-> this (.newDataAvailable event))))
 
 (defn get-data-vector
@@ -150,7 +150,7 @@
     ((Vector)getDataVector().elementAt(1)).elementAt(5);
 
   returns: the vector of vectors containing the tables data values - `java.util.Vector`"
-  (^java.util.Vector [^javax.swing.table.DefaultTableModel this]
+  (^java.util.Vector [^DefaultTableModel this]
     (-> this (.getDataVector))))
 
 (defn get-column-name
@@ -163,7 +163,7 @@
    If columnIdentifiers does not have an entry
    for this index, returns the default
    name provided by the superclass. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.table.DefaultTableModel this ^Integer column]
+  (^java.lang.String [^DefaultTableModel this ^Integer column]
     (-> this (.getColumnName column))))
 
 (defn add-column
@@ -178,9 +178,9 @@
 
   column-name - the identifier of the column being added - `java.lang.Object`
   column-data - optional data of the column being added - `java.util.Vector`"
-  ([^javax.swing.table.DefaultTableModel this ^java.lang.Object column-name ^java.util.Vector column-data]
+  ([^DefaultTableModel this ^java.lang.Object column-name ^java.util.Vector column-data]
     (-> this (.addColumn column-name column-data)))
-  ([^javax.swing.table.DefaultTableModel this ^java.lang.Object column-name]
+  ([^DefaultTableModel this ^java.lang.Object column-name]
     (-> this (.addColumn column-name))))
 
 (defn set-value-at
@@ -193,7 +193,7 @@
   column - the column whose value is to be changed - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if an invalid row or column was given"
-  ([^javax.swing.table.DefaultTableModel this ^java.lang.Object a-value ^Integer row ^Integer column]
+  ([^DefaultTableModel this ^java.lang.Object a-value ^Integer row ^Integer column]
     (-> this (.setValueAt a-value row column))))
 
 (defn set-column-count
@@ -204,7 +204,7 @@
     columnCount and greater are discarded.
 
   column-count - the new number of columns in the model - `int`"
-  ([^javax.swing.table.DefaultTableModel this ^Integer column-count]
+  ([^DefaultTableModel this ^Integer column-count]
     (-> this (.setColumnCount column-count))))
 
 (defn add-row
@@ -213,7 +213,7 @@
     Notification of the row being added will be generated.
 
   row-data - optional data of the row being added - `java.util.Vector`"
-  ([^javax.swing.table.DefaultTableModel this ^java.util.Vector row-data]
+  ([^DefaultTableModel this ^java.util.Vector row-data]
     (-> this (.addRow row-data))))
 
 (defn move-row
@@ -241,7 +241,7 @@
   to - the destination of the rows to be moved - `int`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if any of the elements would be moved out of the table's range"
-  ([^javax.swing.table.DefaultTableModel this ^Integer start ^Integer end ^Integer to]
+  ([^DefaultTableModel this ^Integer start ^Integer end ^Integer to]
     (-> this (.moveRow start end to))))
 
 (defn set-data-vector
@@ -262,7 +262,7 @@
 
   data-vector - the new data vector - `java.util.Vector`
   column-identifiers - the names of the columns - `java.util.Vector`"
-  ([^javax.swing.table.DefaultTableModel this ^java.util.Vector data-vector ^java.util.Vector column-identifiers]
+  ([^DefaultTableModel this ^java.util.Vector data-vector ^java.util.Vector column-identifiers]
     (-> this (.setDataVector data-vector column-identifiers))))
 
 (defn insert-row
@@ -274,6 +274,6 @@
   row-data - optional data of the row being added - `java.util.Vector`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the row was invalid"
-  ([^javax.swing.table.DefaultTableModel this ^Integer row ^java.util.Vector row-data]
+  ([^DefaultTableModel this ^Integer row ^java.util.Vector row-data]
     (-> this (.insertRow row row-data))))
 

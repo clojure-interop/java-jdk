@@ -14,6 +14,6 @@
    with the specified detail message.
 
   s - the detail message - `java.lang.String`"
-  ([^java.lang.String s]
+  (^NoninvertibleTransformException [^java.lang.String s]
     (new NoninvertibleTransformException s)))
 

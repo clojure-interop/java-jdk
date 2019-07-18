@@ -21,8 +21,8 @@
    explanation supplied. All other fields default to null.
 
   explanation - Possibly null additional detail about this exception. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^NamingSecurityException [^java.lang.String explanation]
     (new NamingSecurityException explanation))
-  ([]
+  (^NamingSecurityException []
     (new NamingSecurityException )))
 

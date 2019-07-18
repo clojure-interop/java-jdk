@@ -30,7 +30,7 @@
   returns: a BeanDescriptor object,
             or null if the information is to
             be obtained through the automatic analysis - `java.beans.BeanDescriptor`"
-  (^java.beans.BeanDescriptor [^java.beans.BeanInfo this]
+  (^java.beans.BeanDescriptor [^BeanInfo this]
     (-> this (.getBeanDescriptor))))
 
 (defn get-event-set-descriptors
@@ -40,7 +40,7 @@
   returns: an array of EventSetDescriptor objects,
             or null if the information is to
             be obtained through the automatic analysis - `java.beans.EventSetDescriptor[]`"
-  ([^java.beans.BeanInfo this]
+  ([^BeanInfo this]
     (-> this (.getEventSetDescriptors))))
 
 (defn get-default-event-index
@@ -49,7 +49,7 @@
   returns: index of the default event in the EventSetDescriptor array
             returned by the getEventSetDescriptors method,
             or -1 if there is no default event - `int`"
-  (^Integer [^java.beans.BeanInfo this]
+  (^Integer [^BeanInfo this]
     (-> this (.getDefaultEventIndex))))
 
 (defn get-property-descriptors
@@ -66,7 +66,7 @@
   returns: an array of PropertyDescriptor objects,
             or null if the information is to
             be obtained through the automatic analysis - `java.beans.PropertyDescriptor[]`"
-  ([^java.beans.BeanInfo this]
+  ([^BeanInfo this]
     (-> this (.getPropertyDescriptors))))
 
 (defn get-default-property-index
@@ -75,7 +75,7 @@
   returns: index of the default property in the PropertyDescriptor array
             returned by the getPropertyDescriptors method,
             or -1 if there is no default property - `int`"
-  (^Integer [^java.beans.BeanInfo this]
+  (^Integer [^BeanInfo this]
     (-> this (.getDefaultPropertyIndex))))
 
 (defn get-method-descriptors
@@ -85,7 +85,7 @@
   returns: an array of MethodDescriptor objects,
             or null if the information is to
             be obtained through the automatic analysis - `java.beans.MethodDescriptor[]`"
-  ([^java.beans.BeanInfo this]
+  ([^BeanInfo this]
     (-> this (.getMethodDescriptors))))
 
 (defn get-additional-bean-info
@@ -102,7 +102,7 @@
 
   returns: an array of BeanInfo objects,
             or null if there are no additional BeanInfo objects - `java.beans.BeanInfo[]`"
-  ([^java.beans.BeanInfo this]
+  ([^BeanInfo this]
     (-> this (.getAdditionalBeanInfo))))
 
 (defn get-icon
@@ -118,6 +118,6 @@
 
   returns: an image object representing the requested icon,
                      or null if no suitable icon is available - `java.awt.Image`"
-  (^java.awt.Image [^java.beans.BeanInfo this ^Integer icon-kind]
+  (^java.awt.Image [^BeanInfo this ^Integer icon-kind]
     (-> this (.getIcon icon-kind))))
 

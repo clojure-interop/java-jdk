@@ -12,20 +12,20 @@
   g - `java.awt.Graphics`
   x - `int`
   y - `int`"
-  ([^javax.swing.Icon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
+  ([^Icon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
     (-> this (.paintIcon c g x y))))
 
 (defn get-icon-width
   "Returns the icon's width.
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  (^Integer [^javax.swing.Icon this]
+  (^Integer [^Icon this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Returns the icon's height.
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  (^Integer [^javax.swing.Icon this]
+  (^Integer [^Icon this]
     (-> this (.getIconHeight))))
 

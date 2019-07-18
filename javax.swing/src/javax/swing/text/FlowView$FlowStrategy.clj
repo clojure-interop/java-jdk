@@ -12,7 +12,7 @@
 
 (defn ->flow-strategy
   "Constructor."
-  ([]
+  (^FlowView$FlowStrategy []
     (new FlowView$FlowStrategy )))
 
 (defn insert-update
@@ -24,7 +24,7 @@
   fv - `javax.swing.text.FlowView`
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   alloc - the current allocation of the view inside of the insets. This value will be null if the view has not yet been displayed. - `java.awt.Rectangle`"
-  ([^javax.swing.text.FlowView$FlowStrategy this ^javax.swing.text.FlowView fv ^javax.swing.event.DocumentEvent e ^java.awt.Rectangle alloc]
+  ([^FlowView$FlowStrategy this ^javax.swing.text.FlowView fv ^javax.swing.event.DocumentEvent e ^java.awt.Rectangle alloc]
     (-> this (.insertUpdate fv e alloc))))
 
 (defn remove-update
@@ -34,7 +34,7 @@
   fv - `javax.swing.text.FlowView`
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   alloc - the current allocation of the view inside of the insets. - `java.awt.Rectangle`"
-  ([^javax.swing.text.FlowView$FlowStrategy this ^javax.swing.text.FlowView fv ^javax.swing.event.DocumentEvent e ^java.awt.Rectangle alloc]
+  ([^FlowView$FlowStrategy this ^javax.swing.text.FlowView fv ^javax.swing.event.DocumentEvent e ^java.awt.Rectangle alloc]
     (-> this (.removeUpdate fv e alloc))))
 
 (defn changed-update
@@ -44,7 +44,7 @@
   fv - the FlowView containing the changes - `javax.swing.text.FlowView`
   e - the DocumentEvent describing the changes done to the Document - `javax.swing.event.DocumentEvent`
   alloc - Bounds of the View - `java.awt.Rectangle`"
-  ([^javax.swing.text.FlowView$FlowStrategy this ^javax.swing.text.FlowView fv ^javax.swing.event.DocumentEvent e ^java.awt.Rectangle alloc]
+  ([^FlowView$FlowStrategy this ^javax.swing.text.FlowView fv ^javax.swing.event.DocumentEvent e ^java.awt.Rectangle alloc]
     (-> this (.changedUpdate fv e alloc))))
 
 (defn layout
@@ -54,6 +54,6 @@
    to update the child views in the flow.
 
   fv - the view to reflow - `javax.swing.text.FlowView`"
-  ([^javax.swing.text.FlowView$FlowStrategy this ^javax.swing.text.FlowView fv]
+  ([^FlowView$FlowStrategy this ^javax.swing.text.FlowView fv]
     (-> this (.layout fv))))
 

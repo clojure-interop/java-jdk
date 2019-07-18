@@ -18,27 +18,27 @@
 
   message - the MIDI message contained in the event - `javax.sound.midi.MidiMessage`
   tick - the time-stamp for the event, in MIDI ticks - `long`"
-  ([^javax.sound.midi.MidiMessage message ^Long tick]
+  (^MidiEvent [^javax.sound.midi.MidiMessage message ^Long tick]
     (new MidiEvent message tick)))
 
 (defn get-message
   "Obtains the MIDI message contained in the event.
 
   returns: the MIDI message - `javax.sound.midi.MidiMessage`"
-  (^javax.sound.midi.MidiMessage [^javax.sound.midi.MidiEvent this]
+  (^javax.sound.midi.MidiMessage [^MidiEvent this]
     (-> this (.getMessage))))
 
 (defn set-tick
   "Sets the time-stamp for the event, in MIDI ticks
 
   tick - the new time-stamp, in MIDI ticks - `long`"
-  ([^javax.sound.midi.MidiEvent this ^Long tick]
+  ([^MidiEvent this ^Long tick]
     (-> this (.setTick tick))))
 
 (defn get-tick
   "Obtains the time-stamp for the event, in MIDI ticks
 
   returns: the time-stamp for the event, in MIDI ticks - `long`"
-  (^Long [^javax.sound.midi.MidiEvent this]
+  (^Long [^MidiEvent this]
     (-> this (.getTick))))
 

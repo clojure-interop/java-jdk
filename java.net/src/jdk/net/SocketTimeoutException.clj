@@ -10,8 +10,8 @@
    message.
 
   msg - the detail message - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^SocketTimeoutException [^java.lang.String msg]
     (new SocketTimeoutException msg))
-  ([]
+  (^SocketTimeoutException []
     (new SocketTimeoutException )))
 

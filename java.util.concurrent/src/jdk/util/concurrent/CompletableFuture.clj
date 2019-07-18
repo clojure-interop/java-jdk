@@ -55,7 +55,7 @@
   "Constructor.
 
   Creates a new incomplete CompletableFuture."
-  ([]
+  (^CompletableFuture []
     (new CompletableFuture )))
 
 (defn *supply-async
@@ -63,7 +63,7 @@
    by a task running in the given executor with the value obtained
    by calling the given Supplier.
 
-  supplier - a function returning the value to be used to complete the returned CompletableFuture - `java.util.function.Supplier<U>`
+  supplier - a function returning the value to be used to complete the returned CompletableFuture - `java.util.function.Supplier`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletableFuture - `<U> java.util.concurrent.CompletableFuture<U>`"
@@ -113,7 +113,7 @@
    program, as in: CompletableFuture.allOf(c1, c2,
    c3).join();.
 
-  cfs - the CompletableFutures - `java.util.concurrent.CompletableFuture<?>`
+  cfs - the CompletableFutures - `java.util.concurrent.CompletableFuture`
 
   returns: a new CompletableFuture that is completed when all of the
    given CompletableFutures complete - `java.util.concurrent.CompletableFuture<java.lang.Void>`
@@ -130,7 +130,7 @@
    holding this exception as its cause.  If no CompletableFutures
    are provided, returns an incomplete CompletableFuture.
 
-  cfs - the CompletableFutures - `java.util.concurrent.CompletableFuture<?>`
+  cfs - the CompletableFutures - `java.util.concurrent.CompletableFuture`
 
   returns: a new CompletableFuture that is completed with the
    result or exception of any of the given CompletableFutures when
@@ -143,55 +143,55 @@
 (defn run-after-either-async
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `java.util.concurrent.CompletionStage<?>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
   action - the action to perform before completing the returned CompletionStage - `java.lang.Runnable`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
     (-> this (.runAfterEitherAsync other action executor)))
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
     (-> this (.runAfterEitherAsync other action))))
 
 (defn handle
   "Description copied from interface: CompletionStage
 
-  fn - the function to use to compute the value of the returned CompletionStage - `U>`
+  fn - the function to use to compute the value of the returned CompletionStage - `java.util.function.BiFunction`
 
   returns: the new CompletionStage - `<U> java.util.concurrent.CompletableFuture<U>`"
-  ([^java.util.concurrent.CompletableFuture this fn]
+  ([^CompletableFuture this ^java.util.function.BiFunction fn]
     (-> this (.handle fn))))
 
 (defn accept-either
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `CompletableFuture.T>`
-  action - the action to perform before completing the returned CompletionStage - `CompletableFuture.T>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
+  action - the action to perform before completing the returned CompletionStage - `java.util.function.Consumer`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^CompletableFuture.T> other ^CompletableFuture.T> action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.Consumer action]
     (-> this (.acceptEither other action))))
 
 (defn run-after-both
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `java.util.concurrent.CompletionStage<?>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
   action - the action to perform before completing the returned CompletionStage - `java.lang.Runnable`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
     (-> this (.runAfterBoth other action))))
 
 (defn when-complete-async
   "Description copied from interface: CompletionStage
 
-  action - the action to perform - `java.lang.Throwable>`
+  action - the action to perform - `java.util.function.BiConsumer`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
-  returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<CompletableFuture.T>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.lang.Throwable> action ^java.util.concurrent.Executor executor]
+  returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<T>`"
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.function.BiConsumer action ^java.util.concurrent.Executor executor]
     (-> this (.whenCompleteAsync action executor)))
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.lang.Throwable> action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.function.BiConsumer action]
     (-> this (.whenCompleteAsync action))))
 
 (defn cancel
@@ -204,7 +204,7 @@
   may-interrupt-if-running - this value has no effect in this implementation because interrupts are not used to control processing. - `boolean`
 
   returns: true if this task is now cancelled - `boolean`"
-  (^Boolean [^java.util.concurrent.CompletableFuture this ^Boolean may-interrupt-if-running]
+  (^Boolean [^CompletableFuture this ^Boolean may-interrupt-if-running]
     (-> this (.cancel may-interrupt-if-running))))
 
 (defn obtrude-exception
@@ -218,26 +218,26 @@
   ex - the exception - `java.lang.Throwable`
 
   throws: java.lang.NullPointerException - if the exception is null"
-  ([^java.util.concurrent.CompletableFuture this ^java.lang.Throwable ex]
+  ([^CompletableFuture this ^java.lang.Throwable ex]
     (-> this (.obtrudeException ex))))
 
 (defn then-accept-async
   "Description copied from interface: CompletionStage
 
-  action - the action to perform before completing the returned CompletionStage - `CompletableFuture.T>`
+  action - the action to perform before completing the returned CompletionStage - `java.util.function.Consumer`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^CompletableFuture.T> action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.function.Consumer action ^java.util.concurrent.Executor executor]
     (-> this (.thenAcceptAsync action executor)))
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^CompletableFuture.T> action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.function.Consumer action]
     (-> this (.thenAcceptAsync action))))
 
 (defn to-completable-future
   "Returns this CompletableFuture.
 
-  returns: this CompletableFuture - `java.util.concurrent.CompletableFuture<CompletableFuture.T>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this]
+  returns: this CompletableFuture - `java.util.concurrent.CompletableFuture<T>`"
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this]
     (-> this (.toCompletableFuture))))
 
 (defn cancelled?
@@ -246,7 +246,7 @@
 
   returns: true if this CompletableFuture was cancelled
    before it completed normally - `boolean`"
-  (^Boolean [^java.util.concurrent.CompletableFuture this]
+  (^Boolean [^CompletableFuture this]
     (-> this (.isCancelled))))
 
 (defn obtrude-value
@@ -257,18 +257,18 @@
    in ongoing dependent completions using established versus
    overwritten outcomes.
 
-  value - the completion value - `CompletableFuture.T`"
-  ([^java.util.concurrent.CompletableFuture this ^CompletableFuture.T value]
+  value - the completion value - `T`"
+  ([^CompletableFuture this value]
     (-> this (.obtrudeValue value))))
 
 (defn then-accept-both
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `U>`
-  action - the action to perform before completing the returned CompletionStage - `U>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
+  action - the action to perform before completing the returned CompletionStage - `java.util.function.BiConsumer`
 
   returns: the new CompletionStage - `<U> java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  ([^java.util.concurrent.CompletableFuture this other action]
+  ([^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.BiConsumer action]
     (-> this (.thenAcceptBoth other action))))
 
 (defn then-run-async
@@ -278,64 +278,64 @@
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
     (-> this (.thenRunAsync action executor)))
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.lang.Runnable action]
     (-> this (.thenRunAsync action))))
 
 (defn apply-to-either
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `CompletableFuture.T>`
-  fn - the function to use to compute the value of the returned CompletionStage - `CompletableFuture.T,U>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
+  fn - the function to use to compute the value of the returned CompletionStage - `java.util.function.Function`
 
   returns: the new CompletionStage - `<U> java.util.concurrent.CompletableFuture<U>`"
-  ([^java.util.concurrent.CompletableFuture this ^CompletableFuture.T> other ^CompletableFuture.T,U> fn]
+  ([^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.Function fn]
     (-> this (.applyToEither other fn))))
 
 (defn complete
   "If not already completed, sets the value returned by get() and related methods to the given value.
 
-  value - the result value - `CompletableFuture.T`
+  value - the result value - `T`
 
   returns: true if this invocation caused this CompletableFuture
    to transition to a completed state, else false - `boolean`"
-  (^Boolean [^java.util.concurrent.CompletableFuture this ^CompletableFuture.T value]
+  (^Boolean [^CompletableFuture this value]
     (-> this (.complete value))))
 
 (defn then-apply
   "Description copied from interface: CompletionStage
 
-  fn - the function to use to compute the value of the returned CompletionStage - `U>`
+  fn - the function to use to compute the value of the returned CompletionStage - `java.util.function.Function`
 
   returns: the new CompletionStage - `<U> java.util.concurrent.CompletableFuture<U>`"
-  ([^java.util.concurrent.CompletableFuture this fn]
+  ([^CompletableFuture this ^java.util.function.Function fn]
     (-> this (.thenApply fn))))
 
 (defn run-after-both-async
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `java.util.concurrent.CompletionStage<?>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
   action - the action to perform before completing the returned CompletionStage - `java.lang.Runnable`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action ^java.util.concurrent.Executor executor]
     (-> this (.runAfterBothAsync other action executor)))
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
     (-> this (.runAfterBothAsync other action))))
 
 (defn accept-either-async
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `CompletableFuture.T>`
-  action - the action to perform before completing the returned CompletionStage - `CompletableFuture.T>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
+  action - the action to perform before completing the returned CompletionStage - `java.util.function.Consumer`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^CompletableFuture.T> other ^CompletableFuture.T> action ^java.util.concurrent.Executor executor]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.Consumer action ^java.util.concurrent.Executor executor]
     (-> this (.acceptEitherAsync other action executor)))
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^CompletableFuture.T> other ^CompletableFuture.T> action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.Consumer action]
     (-> this (.acceptEitherAsync other action))))
 
 (defn to-string
@@ -346,7 +346,7 @@
    dependent upon its completion, if any.
 
   returns: a string identifying this CompletableFuture, as well as its state - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.CompletableFuture this]
+  (^java.lang.String [^CompletableFuture this]
     (-> this (.toString))))
 
 (defn exceptionally
@@ -359,23 +359,23 @@
    Note: More flexible versions of this functionality are
    available using methods whenComplete and handle.
 
-  fn - the function to use to compute the value of the returned CompletableFuture if this CompletableFuture completed exceptionally - `CompletableFuture.T>`
+  fn - the function to use to compute the value of the returned CompletableFuture if this CompletableFuture completed exceptionally - `java.util.function.Function`
 
-  returns: the new CompletableFuture - `java.util.concurrent.CompletableFuture<CompletableFuture.T>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^CompletableFuture.T> fn]
+  returns: the new CompletableFuture - `java.util.concurrent.CompletableFuture<T>`"
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.function.Function fn]
     (-> this (.exceptionally fn))))
 
 (defn apply-to-either-async
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `CompletableFuture.T>`
-  fn - the function to use to compute the value of the returned CompletionStage - `CompletableFuture.T,U>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
+  fn - the function to use to compute the value of the returned CompletionStage - `java.util.function.Function`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `<U> java.util.concurrent.CompletableFuture<U>`"
-  ([^java.util.concurrent.CompletableFuture this ^CompletableFuture.T> other ^CompletableFuture.T,U> fn ^java.util.concurrent.Executor executor]
+  ([^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.Function fn ^java.util.concurrent.Executor executor]
     (-> this (.applyToEitherAsync other fn executor)))
-  ([^java.util.concurrent.CompletableFuture this ^CompletableFuture.T> other ^CompletableFuture.T,U> fn]
+  ([^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.Function fn]
     (-> this (.applyToEitherAsync other fn))))
 
 (defn complete-exceptionally
@@ -386,7 +386,7 @@
 
   returns: true if this invocation caused this CompletableFuture
    to transition to a completed state, else false - `boolean`"
-  (^Boolean [^java.util.concurrent.CompletableFuture this ^java.lang.Throwable ex]
+  (^Boolean [^CompletableFuture this ^java.lang.Throwable ex]
     (-> this (.completeExceptionally ex))))
 
 (defn completed-exceptionally?
@@ -397,38 +397,38 @@
 
   returns: true if this CompletableFuture completed
    exceptionally - `boolean`"
-  (^Boolean [^java.util.concurrent.CompletableFuture this]
+  (^Boolean [^CompletableFuture this]
     (-> this (.isCompletedExceptionally))))
 
 (defn when-complete
   "Description copied from interface: CompletionStage
 
-  action - the action to perform - `java.lang.Throwable>`
+  action - the action to perform - `java.util.function.BiConsumer`
 
-  returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<CompletableFuture.T>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.lang.Throwable> action]
+  returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<T>`"
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.function.BiConsumer action]
     (-> this (.whenComplete action))))
 
 (defn get-now
   "Returns the result value (or throws any encountered exception)
    if completed, else returns the given valueIfAbsent.
 
-  value-if-absent - the value to return if not completed - `CompletableFuture.T`
+  value-if-absent - the value to return if not completed - `T`
 
-  returns: the result value, if completed, else the given valueIfAbsent - `CompletableFuture.T`
+  returns: the result value, if completed, else the given valueIfAbsent - `T`
 
   throws: java.util.concurrent.CancellationException - if the computation was cancelled"
-  (^CompletableFuture.T [^java.util.concurrent.CompletableFuture this ^CompletableFuture.T value-if-absent]
+  ([^CompletableFuture this value-if-absent]
     (-> this (.getNow value-if-absent))))
 
 (defn run-after-either
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `java.util.concurrent.CompletionStage<?>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
   action - the action to perform before completing the returned CompletionStage - `java.lang.Runnable`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.lang.Runnable action]
     (-> this (.runAfterEither other action))))
 
 (defn get-number-of-dependents
@@ -438,16 +438,16 @@
    for synchronization control.
 
   returns: the number of dependent CompletableFutures - `int`"
-  (^Integer [^java.util.concurrent.CompletableFuture this]
+  (^Integer [^CompletableFuture this]
     (-> this (.getNumberOfDependents))))
 
 (defn then-accept
   "Description copied from interface: CompletionStage
 
-  action - the action to perform before completing the returned CompletionStage - `CompletableFuture.T>`
+  action - the action to perform before completing the returned CompletionStage - `java.util.function.Consumer`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^CompletableFuture.T> action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.util.function.Consumer action]
     (-> this (.thenAccept action))))
 
 (defn join
@@ -459,22 +459,22 @@
    (unchecked) CompletionException with the underlying
    exception as its cause.
 
-  returns: the result value - `CompletableFuture.T`
+  returns: the result value - `T`
 
   throws: java.util.concurrent.CancellationException - if the computation was cancelled"
-  (^CompletableFuture.T [^java.util.concurrent.CompletableFuture this]
+  ([^CompletableFuture this]
     (-> this (.join))))
 
 (defn then-compose-async
   "Description copied from interface: CompletionStage
 
-  fn - the function returning a new CompletionStage - `java.util.concurrent.CompletionStage<U>>`
+  fn - the function returning a new CompletionStage - `java.util.function.Function`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the CompletionStage - `<U> java.util.concurrent.CompletableFuture<U>`"
-  ([^java.util.concurrent.CompletableFuture this ^java.util.concurrent.CompletionStage> fn ^java.util.concurrent.Executor executor]
+  ([^CompletableFuture this ^java.util.function.Function fn ^java.util.concurrent.Executor executor]
     (-> this (.thenComposeAsync fn executor)))
-  ([^java.util.concurrent.CompletableFuture this ^java.util.concurrent.CompletionStage> fn]
+  ([^CompletableFuture this ^java.util.function.Function fn]
     (-> this (.thenComposeAsync fn))))
 
 (defn done?
@@ -482,33 +482,33 @@
    exceptionally, or via cancellation.
 
   returns: true if completed - `boolean`"
-  (^Boolean [^java.util.concurrent.CompletableFuture this]
+  (^Boolean [^CompletableFuture this]
     (-> this (.isDone))))
 
 (defn then-combine-async
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `U>`
-  fn - the function to use to compute the value of the returned CompletionStage - `V>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
+  fn - the function to use to compute the value of the returned CompletionStage - `java.util.function.BiFunction`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `<U,V> java.util.concurrent.CompletableFuture<V>`"
-  ([^java.util.concurrent.CompletableFuture this other fn ^java.util.concurrent.Executor executor]
+  ([^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.BiFunction fn ^java.util.concurrent.Executor executor]
     (-> this (.thenCombineAsync other fn executor)))
-  ([^java.util.concurrent.CompletableFuture this other fn]
+  ([^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.BiFunction fn]
     (-> this (.thenCombineAsync other fn))))
 
 (defn then-accept-both-async
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `U>`
-  action - the action to perform before completing the returned CompletionStage - `U>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
+  action - the action to perform before completing the returned CompletionStage - `java.util.function.BiConsumer`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `<U> java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  ([^java.util.concurrent.CompletableFuture this other action ^java.util.concurrent.Executor executor]
+  ([^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.BiConsumer action ^java.util.concurrent.Executor executor]
     (-> this (.thenAcceptBothAsync other action executor)))
-  ([^java.util.concurrent.CompletableFuture this other action]
+  ([^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.BiConsumer action]
     (-> this (.thenAcceptBothAsync other action))))
 
 (defn then-run
@@ -517,7 +517,7 @@
   action - the action to perform before completing the returned CompletionStage - `java.lang.Runnable`
 
   returns: the new CompletionStage - `java.util.concurrent.CompletableFuture<java.lang.Void>`"
-  (^java.util.concurrent.CompletableFuture [^java.util.concurrent.CompletableFuture this ^java.lang.Runnable action]
+  (^java.util.concurrent.CompletableFuture [^CompletableFuture this ^java.lang.Runnable action]
     (-> this (.thenRun action))))
 
 (defn get
@@ -527,54 +527,54 @@
   timeout - the maximum time to wait - `long`
   unit - the time unit of the timeout argument - `java.util.concurrent.TimeUnit`
 
-  returns: the result value - `CompletableFuture.T`
+  returns: the result value - `T`
 
   throws: java.util.concurrent.CancellationException - if this future was cancelled"
-  (^CompletableFuture.T [^java.util.concurrent.CompletableFuture this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^CompletableFuture this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.get timeout unit)))
-  (^CompletableFuture.T [^java.util.concurrent.CompletableFuture this]
+  ([^CompletableFuture this]
     (-> this (.get))))
 
 (defn handle-async
   "Description copied from interface: CompletionStage
 
-  fn - the function to use to compute the value of the returned CompletionStage - `U>`
+  fn - the function to use to compute the value of the returned CompletionStage - `java.util.function.BiFunction`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `<U> java.util.concurrent.CompletableFuture<U>`"
-  ([^java.util.concurrent.CompletableFuture this fn ^java.util.concurrent.Executor executor]
+  ([^CompletableFuture this ^java.util.function.BiFunction fn ^java.util.concurrent.Executor executor]
     (-> this (.handleAsync fn executor)))
-  ([^java.util.concurrent.CompletableFuture this fn]
+  ([^CompletableFuture this ^java.util.function.BiFunction fn]
     (-> this (.handleAsync fn))))
 
 (defn then-compose
   "Description copied from interface: CompletionStage
 
-  fn - the function returning a new CompletionStage - `java.util.concurrent.CompletionStage<U>>`
+  fn - the function returning a new CompletionStage - `java.util.function.Function`
 
   returns: the CompletionStage - `<U> java.util.concurrent.CompletableFuture<U>`"
-  ([^java.util.concurrent.CompletableFuture this ^java.util.concurrent.CompletionStage> fn]
+  ([^CompletableFuture this ^java.util.function.Function fn]
     (-> this (.thenCompose fn))))
 
 (defn then-apply-async
   "Description copied from interface: CompletionStage
 
-  fn - the function to use to compute the value of the returned CompletionStage - `U>`
+  fn - the function to use to compute the value of the returned CompletionStage - `java.util.function.Function`
   executor - the executor to use for asynchronous execution - `java.util.concurrent.Executor`
 
   returns: the new CompletionStage - `<U> java.util.concurrent.CompletableFuture<U>`"
-  ([^java.util.concurrent.CompletableFuture this fn ^java.util.concurrent.Executor executor]
+  ([^CompletableFuture this ^java.util.function.Function fn ^java.util.concurrent.Executor executor]
     (-> this (.thenApplyAsync fn executor)))
-  ([^java.util.concurrent.CompletableFuture this fn]
+  ([^CompletableFuture this ^java.util.function.Function fn]
     (-> this (.thenApplyAsync fn))))
 
 (defn then-combine
   "Description copied from interface: CompletionStage
 
-  other - the other CompletionStage - `U>`
-  fn - the function to use to compute the value of the returned CompletionStage - `V>`
+  other - the other CompletionStage - `java.util.concurrent.CompletionStage`
+  fn - the function to use to compute the value of the returned CompletionStage - `java.util.function.BiFunction`
 
   returns: the new CompletionStage - `<U,V> java.util.concurrent.CompletableFuture<V>`"
-  ([^java.util.concurrent.CompletableFuture this other fn]
+  ([^CompletableFuture this ^java.util.concurrent.CompletionStage other ^java.util.function.BiFunction fn]
     (-> this (.thenCombine other fn))))
 

@@ -12,10 +12,10 @@
 
   message - the detail message - `java.lang.String`
   cause - the cause (which is saved for later retrieval by the Throwable.getCause() method) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^RejectedExecutionException [^java.lang.String message ^java.lang.Throwable cause]
     (new RejectedExecutionException message cause))
-  ([^java.lang.String message]
+  (^RejectedExecutionException [^java.lang.String message]
     (new RejectedExecutionException message))
-  ([]
+  (^RejectedExecutionException []
     (new RejectedExecutionException )))
 

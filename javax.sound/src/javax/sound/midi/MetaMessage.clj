@@ -34,9 +34,9 @@
   length - an amount of bytes in the data byte array; it should be non-negative and less than or equal to data.length - `int`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the parameter values do not specify a valid MIDI meta message"
-  ([^Integer type data ^Integer length]
+  (^MetaMessage [^Integer type data ^Integer length]
     (new MetaMessage type data length))
-  ([]
+  (^MetaMessage []
     (new MetaMessage )))
 
 (def *-meta
@@ -65,14 +65,14 @@
   length - the number of bytes in the data byte array - `int`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the parameter values do not specify a valid MIDI meta message"
-  ([^javax.sound.midi.MetaMessage this ^Integer type data ^Integer length]
+  ([^MetaMessage this ^Integer type data ^Integer length]
     (-> this (.setMessage type data length))))
 
 (defn get-type
   "Obtains the type of the MetaMessage.
 
   returns: an integer representing the MetaMessage type - `int`"
-  (^Integer [^javax.sound.midi.MetaMessage this]
+  (^Integer [^MetaMessage this]
     (-> this (.getType))))
 
 (defn get-data
@@ -84,7 +84,7 @@
    byte, and therefore may be longer than the returned array.
 
   returns: array containing the meta message data. - `byte[]`"
-  ([^javax.sound.midi.MetaMessage this]
+  ([^MetaMessage this]
     (-> this (.getData))))
 
 (defn clone
@@ -92,6 +92,6 @@
    as this object.
 
   returns: a clone of this instance - `java.lang.Object`"
-  (^java.lang.Object [^javax.sound.midi.MetaMessage this]
+  (^java.lang.Object [^MetaMessage this]
     (-> this (.clone))))
 

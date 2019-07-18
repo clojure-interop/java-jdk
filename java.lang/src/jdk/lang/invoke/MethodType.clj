@@ -52,9 +52,9 @@
    Convenience method for methodType.
    The leading parameter type is prepended to the remaining array.
 
-  rtype - the return type - `java.lang.Class<?>`
-  ptype-0 - the first parameter type - `java.lang.Class<?>`
-  ptypes - the remaining parameter types - `java.lang.Class<?>`
+  rtype - the return type - `java.lang.Class`
+  ptype-0 - the first parameter type - `java.lang.Class`
+  ptypes - the remaining parameter types - `java.lang.Class`
 
   returns: a method type with the given components - `java.lang.invoke.MethodType`
 
@@ -116,7 +116,7 @@
   returns: the same type, except with the selected parameter(s) removed - `java.lang.invoke.MethodType`
 
   throws: java.lang.IndexOutOfBoundsException - if start is negative or greater than parameterCount() or if end is negative or greater than parameterCount() or if start is greater than end"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodType this ^Integer start ^Integer end]
+  (^java.lang.invoke.MethodType [^MethodType this ^Integer start ^Integer end]
     (-> this (.dropParameterTypes start end))))
 
 (defn generic
@@ -126,7 +126,7 @@
    as type.generic().
 
   returns: a version of the original type with all types replaced - `java.lang.invoke.MethodType`"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodType this]
+  (^java.lang.invoke.MethodType [^MethodType this]
     (-> this (.generic))))
 
 (defn change-parameter-type
@@ -134,24 +134,24 @@
    Convenience method for methodType.
 
   num - the index (zero-based) of the parameter type to change - `int`
-  nptype - a new parameter type to replace the old one with - `java.lang.Class<?>`
+  nptype - a new parameter type to replace the old one with - `java.lang.Class`
 
   returns: the same type, except with the selected parameter changed - `java.lang.invoke.MethodType`
 
   throws: java.lang.IndexOutOfBoundsException - if num is not a valid index into parameterArray()"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodType this ^Integer num ^java.lang.Class nptype]
+  (^java.lang.invoke.MethodType [^MethodType this ^Integer num ^java.lang.Class nptype]
     (-> this (.changeParameterType num nptype))))
 
 (defn append-parameter-types
   "Finds or creates a method type with additional parameter types.
    Convenience method for methodType.
 
-  ptypes-to-insert - zero or more new parameter types to insert after the end of the parameter list - `java.lang.Class<?>`
+  ptypes-to-insert - zero or more new parameter types to insert after the end of the parameter list - `java.lang.Class`
 
   returns: the same type, except with the selected parameter(s) appended - `java.lang.invoke.MethodType`
 
   throws: java.lang.IllegalArgumentException - if any element of ptypesToInsert is void.class or if the resulting method type would have more than 255 parameter slots"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodType this ^java.lang.Class ptypes-to-insert]
+  (^java.lang.invoke.MethodType [^MethodType this ^java.lang.Class ptypes-to-insert]
     (-> this (.appendParameterTypes ptypes-to-insert))))
 
 (defn insert-parameter-types
@@ -159,12 +159,12 @@
    Convenience method for methodType.
 
   num - the position (zero-based) of the inserted parameter type(s) - `int`
-  ptypes-to-insert - zero or more new parameter types to insert into the parameter list - `java.lang.Class<?>`
+  ptypes-to-insert - zero or more new parameter types to insert into the parameter list - `java.lang.Class`
 
   returns: the same type, except with the selected parameter(s) inserted - `java.lang.invoke.MethodType`
 
   throws: java.lang.IndexOutOfBoundsException - if num is negative or greater than parameterCount()"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodType this ^Integer num ^java.lang.Class ptypes-to-insert]
+  (^java.lang.invoke.MethodType [^MethodType this ^Integer num ^java.lang.Class ptypes-to-insert]
     (-> this (.insertParameterTypes num ptypes-to-insert))))
 
 (defn parameter-type
@@ -175,21 +175,21 @@
   returns: the selected parameter type - `java.lang.Class<?>`
 
   throws: java.lang.IndexOutOfBoundsException - if num is not a valid index into parameterArray()"
-  (^java.lang.Class [^java.lang.invoke.MethodType this ^Integer num]
+  (^java.lang.Class [^MethodType this ^Integer num]
     (-> this (.parameterType num))))
 
 (defn parameter-count
   "Returns the number of parameter types in this method type.
 
   returns: the number of parameter types - `int`"
-  (^Integer [^java.lang.invoke.MethodType this]
+  (^Integer [^MethodType this]
     (-> this (.parameterCount))))
 
 (defn return-type
   "Returns the return type of this method type.
 
   returns: the return type - `java.lang.Class<?>`"
-  (^java.lang.Class [^java.lang.invoke.MethodType this]
+  (^java.lang.Class [^MethodType this]
     (-> this (.returnType))))
 
 (defn parameter-list
@@ -197,7 +197,7 @@
    The list will be immutable.
 
   returns: the parameter types (as an immutable list) - `java.util.List<java.lang.Class<?>>`"
-  (^java.util.List> [^java.lang.invoke.MethodType this]
+  (^java.util.List [^MethodType this]
     (-> this (.parameterList))))
 
 (defn to-string
@@ -211,7 +211,7 @@
    simple name.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.lang.invoke.MethodType this]
+  (^java.lang.String [^MethodType this]
     (-> this (.toString))))
 
 (defn has-primitives?
@@ -219,7 +219,7 @@
    The return type void counts as a primitive.
 
   returns: true if any of the types are primitives - `boolean`"
-  (^Boolean [^java.lang.invoke.MethodType this]
+  (^Boolean [^MethodType this]
     (-> this (.hasPrimitives))))
 
 (defn unwrap
@@ -229,7 +229,7 @@
    A return type of java.lang.Void is changed to void.
 
   returns: a version of the original type with all wrapper types replaced - `java.lang.invoke.MethodType`"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodType this]
+  (^java.lang.invoke.MethodType [^MethodType this]
     (-> this (.unwrap))))
 
 (defn wrap
@@ -241,7 +241,7 @@
    as type.generic().
 
   returns: a version of the original type with all primitive types replaced - `java.lang.invoke.MethodType`"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodType this]
+  (^java.lang.invoke.MethodType [^MethodType this]
     (-> this (.wrap))))
 
 (defn to-method-descriptor-string
@@ -257,19 +257,19 @@
    because the latter requires a suitable class loader argument.
 
   returns: the bytecode type descriptor representation - `java.lang.String`"
-  (^java.lang.String [^java.lang.invoke.MethodType this]
+  (^java.lang.String [^MethodType this]
     (-> this (.toMethodDescriptorString))))
 
 (defn change-return-type
   "Finds or creates a method type with a different return type.
    Convenience method for methodType.
 
-  nrtype - a return parameter type to replace the old one with - `java.lang.Class<?>`
+  nrtype - a return parameter type to replace the old one with - `java.lang.Class`
 
   returns: the same type, except with the return type change - `java.lang.invoke.MethodType`
 
   throws: java.lang.NullPointerException - if nrtype is null"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodType this ^java.lang.Class nrtype]
+  (^java.lang.invoke.MethodType [^MethodType this ^java.lang.Class nrtype]
     (-> this (.changeReturnType nrtype))))
 
 (defn erase
@@ -278,7 +278,7 @@
    All primitive types (including void) will remain unchanged.
 
   returns: a version of the original type with all reference types replaced - `java.lang.invoke.MethodType`"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodType this]
+  (^java.lang.invoke.MethodType [^MethodType this]
     (-> this (.erase))))
 
 (defn hash-code
@@ -288,7 +288,7 @@
    parameter types.
 
   returns: the hash code value for this method type - `int`"
-  (^Integer [^java.lang.invoke.MethodType this]
+  (^Integer [^MethodType this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -300,7 +300,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.lang.invoke.MethodType this ^java.lang.Object x]
+  (^Boolean [^MethodType this ^java.lang.Object x]
     (-> this (.equals x))))
 
 (defn has-wrappers?
@@ -310,7 +310,7 @@
    if it occurs as a return type.
 
   returns: true if any of the types are wrappers - `boolean`"
-  (^Boolean [^java.lang.invoke.MethodType this]
+  (^Boolean [^MethodType this]
     (-> this (.hasWrappers))))
 
 (defn parameter-array
@@ -318,6 +318,6 @@
    Changes to the array will not result in changes to the type.
 
   returns: the parameter types (as a fresh copy if necessary) - `java.lang.Class<?>[]`"
-  ([^java.lang.invoke.MethodType this]
+  ([^MethodType this]
     (-> this (.parameterArray))))
 

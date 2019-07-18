@@ -10,8 +10,8 @@
   An InvalidOpenTypeException with a detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^InvalidOpenTypeException [^java.lang.String msg]
     (new InvalidOpenTypeException msg))
-  ([]
+  (^InvalidOpenTypeException []
     (new InvalidOpenTypeException )))
 

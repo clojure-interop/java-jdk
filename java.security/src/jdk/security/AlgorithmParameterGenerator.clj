@@ -80,14 +80,14 @@
    generator is associated with.
 
   returns: the string name of the algorithm. - `java.lang.String`"
-  (^java.lang.String [^java.security.AlgorithmParameterGenerator this]
+  (^java.lang.String [^AlgorithmParameterGenerator this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this algorithm parameter generator object.
 
   returns: the provider of this algorithm parameter generator object - `java.security.Provider`"
-  (^java.security.Provider [^java.security.AlgorithmParameterGenerator this]
+  (^java.security.Provider [^AlgorithmParameterGenerator this]
     (-> this (.getProvider))))
 
 (defn init
@@ -96,15 +96,15 @@
 
   size - the size (number of bits). - `int`
   random - the source of randomness. - `java.security.SecureRandom`"
-  ([^java.security.AlgorithmParameterGenerator this ^Integer size ^java.security.SecureRandom random]
+  ([^AlgorithmParameterGenerator this ^Integer size ^java.security.SecureRandom random]
     (-> this (.init size random)))
-  ([^java.security.AlgorithmParameterGenerator this ^Integer size]
+  ([^AlgorithmParameterGenerator this ^Integer size]
     (-> this (.init size))))
 
 (defn generate-parameters
   "Generates the parameters.
 
   returns: the new AlgorithmParameters object. - `java.security.AlgorithmParameters`"
-  (^java.security.AlgorithmParameters [^java.security.AlgorithmParameterGenerator this]
+  (^java.security.AlgorithmParameters [^AlgorithmParameterGenerator this]
     (-> this (.generateParameters))))
 

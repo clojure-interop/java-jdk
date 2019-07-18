@@ -22,7 +22,7 @@
   "Constructor.
 
   Creates an empty Stack."
-  ([]
+  (^Stack []
     (new Stack )))
 
 (defn push
@@ -32,10 +32,10 @@
 
    addElement(item)
 
-  item - the item to be pushed onto this stack. - `Stack.E`
+  item - the item to be pushed onto this stack. - `E`
 
-  returns: the item argument. - `Stack.E`"
-  (^Stack.E [^java.util.Stack this ^Stack.E item]
+  returns: the item argument. - `E`"
+  ([^Stack this item]
     (-> this (.push item))))
 
 (defn pop
@@ -43,10 +43,10 @@
    object as the value of this function.
 
   returns: The object at the top of this stack (the last item
-            of the Vector object). - `Stack.E`
+            of the Vector object). - `E`
 
   throws: java.util.EmptyStackException - if this stack is empty."
-  (^Stack.E [^java.util.Stack this]
+  ([^Stack this]
     (-> this (.pop))))
 
 (defn peek
@@ -54,10 +54,10 @@
    from the stack.
 
   returns: the object at the top of this stack (the last item
-            of the Vector object). - `Stack.E`
+            of the Vector object). - `E`
 
   throws: java.util.EmptyStackException - if this stack is empty."
-  (^Stack.E [^java.util.Stack this]
+  ([^Stack this]
     (-> this (.peek))))
 
 (defn empty
@@ -65,7 +65,7 @@
 
   returns: true if and only if this stack contains
             no items; false otherwise. - `boolean`"
-  (^Boolean [^java.util.Stack this]
+  (^Boolean [^Stack this]
     (-> this (.empty))))
 
 (defn search
@@ -82,6 +82,6 @@
   returns: the 1-based position from the top of the stack where
             the object is located; the return value -1
             indicates that the object is not on the stack. - `int`"
-  (^Integer [^java.util.Stack this ^java.lang.Object o]
+  (^Integer [^Stack this ^java.lang.Object o]
     (-> this (.search o))))
 

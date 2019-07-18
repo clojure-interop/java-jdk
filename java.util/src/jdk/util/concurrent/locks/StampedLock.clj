@@ -147,7 +147,7 @@
   "Constructor.
 
   Creates a new lock, initially in unlocked state."
-  ([]
+  (^StampedLock []
     (new StampedLock )))
 
 (defn try-convert-to-read-lock
@@ -161,7 +161,7 @@
   stamp - a stamp - `long`
 
   returns: a valid read stamp, or zero on failure - `long`"
-  (^Long [^java.util.concurrent.locks.StampedLock this ^Long stamp]
+  (^Long [^StampedLock this ^Long stamp]
     (-> this (.tryConvertToReadLock stamp))))
 
 (defn write-lock-interruptibly
@@ -173,7 +173,7 @@
   returns: a stamp that can be used to unlock or convert mode - `long`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted before acquiring the lock"
-  (^Long [^java.util.concurrent.locks.StampedLock this]
+  (^Long [^StampedLock this]
     (-> this (.writeLockInterruptibly))))
 
 (defn write-lock
@@ -181,7 +181,7 @@
    until available.
 
   returns: a stamp that can be used to unlock or convert mode - `long`"
-  (^Long [^java.util.concurrent.locks.StampedLock this]
+  (^Long [^StampedLock this]
     (-> this (.writeLock))))
 
 (defn try-unlock-read
@@ -190,7 +190,7 @@
    after errors.
 
   returns: true if the read lock was held, else false - `boolean`"
-  (^Boolean [^java.util.concurrent.locks.StampedLock this]
+  (^Boolean [^StampedLock this]
     (-> this (.tryUnlockRead))))
 
 (defn try-convert-to-optimistic-read
@@ -203,7 +203,7 @@
   stamp - a stamp - `long`
 
   returns: a valid optimistic read stamp, or zero on failure - `long`"
-  (^Long [^java.util.concurrent.locks.StampedLock this ^Long stamp]
+  (^Long [^StampedLock this ^Long stamp]
     (-> this (.tryConvertToOptimisticRead stamp))))
 
 (defn unlock
@@ -213,7 +213,7 @@
   stamp - a stamp returned by a lock operation - `long`
 
   throws: java.lang.IllegalMonitorStateException - if the stamp does not match the current state of this lock"
-  ([^java.util.concurrent.locks.StampedLock this ^Long stamp]
+  ([^StampedLock this ^Long stamp]
     (-> this (.unlock stamp))))
 
 (defn validate
@@ -228,7 +228,7 @@
 
   returns: true if the lock has not been exclusively acquired
    since issuance of the given stamp; else false - `boolean`"
-  (^Boolean [^java.util.concurrent.locks.StampedLock this ^Long stamp]
+  (^Boolean [^StampedLock this ^Long stamp]
     (-> this (.validate stamp))))
 
 (defn as-read-lock
@@ -238,7 +238,7 @@
    support a Condition; method Lock.newCondition() throws UnsupportedOperationException.
 
   returns: the lock - `java.util.concurrent.locks.Lock`"
-  (^java.util.concurrent.locks.Lock [^java.util.concurrent.locks.StampedLock this]
+  (^java.util.concurrent.locks.Lock [^StampedLock this]
     (-> this (.asReadLock))))
 
 (defn unlock-write
@@ -248,7 +248,7 @@
   stamp - a stamp returned by a write-lock operation - `long`
 
   throws: java.lang.IllegalMonitorStateException - if the stamp does not match the current state of this lock"
-  ([^java.util.concurrent.locks.StampedLock this ^Long stamp]
+  ([^StampedLock this ^Long stamp]
     (-> this (.unlockWrite stamp))))
 
 (defn to-string
@@ -258,7 +258,7 @@
    read-locks held.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.locks.StampedLock this]
+  (^java.lang.String [^StampedLock this]
     (-> this (.toString))))
 
 (defn try-convert-to-write-lock
@@ -273,14 +273,14 @@
   stamp - a stamp - `long`
 
   returns: a valid write stamp, or zero on failure - `long`"
-  (^Long [^java.util.concurrent.locks.StampedLock this ^Long stamp]
+  (^Long [^StampedLock this ^Long stamp]
     (-> this (.tryConvertToWriteLock stamp))))
 
 (defn read-locked?
   "Returns true if the lock is currently held non-exclusively.
 
   returns: true if the lock is currently held non-exclusively - `boolean`"
-  (^Boolean [^java.util.concurrent.locks.StampedLock this]
+  (^Boolean [^StampedLock this]
     (-> this (.isReadLocked))))
 
 (defn try-unlock-write
@@ -289,7 +289,7 @@
    errors.
 
   returns: true if the lock was held, else false - `boolean`"
-  (^Boolean [^java.util.concurrent.locks.StampedLock this]
+  (^Boolean [^StampedLock this]
     (-> this (.tryUnlockWrite))))
 
 (defn get-read-lock-count
@@ -298,7 +298,7 @@
    synchronization control.
 
   returns: the number of read locks held - `int`"
-  (^Integer [^java.util.concurrent.locks.StampedLock this]
+  (^Integer [^StampedLock this]
     (-> this (.getReadLockCount))))
 
 (defn as-read-write-lock
@@ -308,7 +308,7 @@
    asWriteLock().
 
   returns: the lock - `java.util.concurrent.locks.ReadWriteLock`"
-  (^java.util.concurrent.locks.ReadWriteLock [^java.util.concurrent.locks.StampedLock this]
+  (^java.util.concurrent.locks.ReadWriteLock [^StampedLock this]
     (-> this (.asReadWriteLock))))
 
 (defn try-optimistic-read
@@ -316,7 +316,7 @@
    if exclusively locked.
 
   returns: a stamp, or zero if exclusively locked - `long`"
-  (^Long [^java.util.concurrent.locks.StampedLock this]
+  (^Long [^StampedLock this]
     (-> this (.tryOptimisticRead))))
 
 (defn as-write-lock
@@ -326,14 +326,14 @@
    support a Condition; method Lock.newCondition() throws UnsupportedOperationException.
 
   returns: the lock - `java.util.concurrent.locks.Lock`"
-  (^java.util.concurrent.locks.Lock [^java.util.concurrent.locks.StampedLock this]
+  (^java.util.concurrent.locks.Lock [^StampedLock this]
     (-> this (.asWriteLock))))
 
 (defn write-locked?
   "Returns true if the lock is currently held exclusively.
 
   returns: true if the lock is currently held exclusively - `boolean`"
-  (^Boolean [^java.util.concurrent.locks.StampedLock this]
+  (^Boolean [^StampedLock this]
     (-> this (.isWriteLocked))))
 
 (defn read-lock-interruptibly
@@ -345,7 +345,7 @@
   returns: a stamp that can be used to unlock or convert mode - `long`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted before acquiring the lock"
-  (^Long [^java.util.concurrent.locks.StampedLock this]
+  (^Long [^StampedLock this]
     (-> this (.readLockInterruptibly))))
 
 (defn try-read-lock
@@ -361,9 +361,9 @@
    or zero if the lock is not available - `long`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted before acquiring the lock"
-  (^Long [^java.util.concurrent.locks.StampedLock this ^Long time ^java.util.concurrent.TimeUnit unit]
+  (^Long [^StampedLock this ^Long time ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryReadLock time unit)))
-  (^Long [^java.util.concurrent.locks.StampedLock this]
+  (^Long [^StampedLock this]
     (-> this (.tryReadLock))))
 
 (defn read-lock
@@ -371,7 +371,7 @@
    until available.
 
   returns: a stamp that can be used to unlock or convert mode - `long`"
-  (^Long [^java.util.concurrent.locks.StampedLock this]
+  (^Long [^StampedLock this]
     (-> this (.readLock))))
 
 (defn unlock-read
@@ -381,7 +381,7 @@
   stamp - a stamp returned by a read-lock operation - `long`
 
   throws: java.lang.IllegalMonitorStateException - if the stamp does not match the current state of this lock"
-  ([^java.util.concurrent.locks.StampedLock this ^Long stamp]
+  ([^StampedLock this ^Long stamp]
     (-> this (.unlockRead stamp))))
 
 (defn try-write-lock
@@ -397,8 +397,8 @@
    or zero if the lock is not available - `long`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted before acquiring the lock"
-  (^Long [^java.util.concurrent.locks.StampedLock this ^Long time ^java.util.concurrent.TimeUnit unit]
+  (^Long [^StampedLock this ^Long time ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryWriteLock time unit)))
-  (^Long [^java.util.concurrent.locks.StampedLock this]
+  (^Long [^StampedLock this]
     (-> this (.tryWriteLock))))
 

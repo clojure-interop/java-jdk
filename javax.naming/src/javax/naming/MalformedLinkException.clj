@@ -14,8 +14,8 @@
    All the other fields are initialized to null.
 
   explanation - A possibly null string containing additional detail about this exception. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^MalformedLinkException [^java.lang.String explanation]
     (new MalformedLinkException explanation))
-  ([]
+  (^MalformedLinkException []
     (new MalformedLinkException )))
 

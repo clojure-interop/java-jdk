@@ -20,8 +20,8 @@
 
   message - the error message. - `java.lang.String`
   cause - the Throwable (Error or Exception) that caused this exception to occur. - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^IIOException [^java.lang.String message ^java.lang.Throwable cause]
     (new IIOException message cause))
-  ([^java.lang.String message]
+  (^IIOException [^java.lang.String message]
     (new IIOException message)))
 

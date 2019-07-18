@@ -104,7 +104,7 @@
    null. It does, however, set the component's locale
    property to the value returned by
    JComponent.getDefaultLocale."
-  ([]
+  (^JComponent []
     (new JComponent )))
 
 (def *-when-focused
@@ -205,7 +205,7 @@
    should override this method and return true.
 
   returns: true if this component is completely opaque - `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.isOpaque))))
 
 (defn set-opaque
@@ -219,14 +219,14 @@
    JTree) is look-and-feel dependent.
 
   is-opaque - true if this component should be opaque - `boolean`"
-  ([^javax.swing.JComponent this ^Boolean is-opaque]
+  ([^JComponent this ^Boolean is-opaque]
     (-> this (.setOpaque is-opaque))))
 
 (defn double-buffered?
   "Returns whether this component should use a buffer to paint.
 
   returns: true if this component is double buffered, otherwise false - `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.isDoubleBuffered))))
 
 (defn get-debug-graphics-options
@@ -242,7 +242,7 @@
            performed on the View's offscreen buffer.
    DebugGraphics.NONE_OPTION disables debugging.
    A value of 0 causes no changes to the debugging options. - `int`"
-  (^Integer [^javax.swing.JComponent this]
+  (^Integer [^JComponent this]
     (-> this (.getDebugGraphicsOptions))))
 
 (defn get-minimum-size
@@ -252,16 +252,14 @@
    defer to the component's layout manager.
 
   returns: the value of the minimumSize property - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.JComponent this]
+  (^java.awt.Dimension [^JComponent this]
     (-> this (.getMinimumSize))))
 
 (defn set-next-focusable-component
   "Deprecated. As of 1.4, replaced by FocusTraversalPolicy
 
-  a-component - the Component that should follow this JComponent in the focus traversal cycle - `java.awt.Component`
-
-  returns: `java.lang.  void`"
-  ([^javax.swing.JComponent this ^java.awt.Component a-component]
+  a-component - the Component that should follow this JComponent in the focus traversal cycle - `java.awt.Component`"
+  ([^JComponent this ^java.awt.Component a-component]
     (-> this (.setNextFocusableComponent a-component))))
 
 (defn get-location
@@ -275,14 +273,14 @@
   rv - the return value, modified to the component's location - `java.awt.Point`
 
   returns: rv - `java.awt.Point`"
-  (^java.awt.Point [^javax.swing.JComponent this ^java.awt.Point rv]
+  (^java.awt.Point [^JComponent this ^java.awt.Point rv]
     (-> this (.getLocation rv))))
 
 (defn set-alignment-y
   "Sets the the horizontal alignment.
 
   alignment-y - the new horizontal alignment - `float`"
-  ([^javax.swing.JComponent this ^Float alignment-y]
+  ([^JComponent this ^Float alignment-y]
     (-> this (.setAlignmentY alignment-y))))
 
 (defn print-all
@@ -290,7 +288,7 @@
    print on the component.
 
   g - the Graphics context in which to paint - `java.awt.Graphics`"
-  ([^javax.swing.JComponent this ^java.awt.Graphics g]
+  ([^JComponent this ^java.awt.Graphics g]
     (-> this (.printAll g))))
 
 (defn get-maximum-size
@@ -300,7 +298,7 @@
    otherwise defer to the component's layout manager.
 
   returns: the value of the maximumSize property - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.JComponent this]
+  (^java.awt.Dimension [^JComponent this]
     (-> this (.getMaximumSize))))
 
 (defn get-width
@@ -311,14 +309,12 @@
    heap allocations.
 
   returns: the current width of this component - `int`"
-  (^Integer [^javax.swing.JComponent this]
+  (^Integer [^JComponent this]
     (-> this (.getWidth))))
 
 (defn hide
-  "Deprecated.
-
-  returns: `java.lang.  void`"
-  ([^javax.swing.JComponent this]
+  "Deprecated."
+  ([^JComponent this]
     (-> this (.hide))))
 
 (defn compute-visible-rect
@@ -328,7 +324,7 @@
    visibleRect.
 
   visible-rect - a Rectangle computed as the intersection of all visible rectangles for this component and all of its ancestors -- this is the return value for this method - `java.awt.Rectangle`"
-  ([^javax.swing.JComponent this ^java.awt.Rectangle visible-rect]
+  ([^JComponent this ^java.awt.Rectangle visible-rect]
     (-> this (.computeVisibleRect visible-rect))))
 
 (defn get-action-map
@@ -338,7 +334,7 @@
    set, will have the ActionMap from the UI set as the parent.
 
   returns: the ActionMap containing the key/action bindings - `javax.swing.ActionMap`"
-  (^javax.swing.ActionMap [^javax.swing.JComponent this]
+  (^javax.swing.ActionMap [^JComponent this]
     (-> this (.getActionMap))))
 
 (defn get-action-for-key-stroke
@@ -349,7 +345,7 @@
 
   returns: the ActionListener
             object invoked when the keystroke occurs - `java.awt.event.ActionListener`"
-  (^java.awt.event.ActionListener [^javax.swing.JComponent this ^javax.swing.KeyStroke a-key-stroke]
+  (^java.awt.event.ActionListener [^JComponent this ^javax.swing.KeyStroke a-key-stroke]
     (-> this (.getActionForKeyStroke a-key-stroke))))
 
 (defn set-foreground
@@ -358,7 +354,7 @@
    it.
 
   fg - the desired foreground Color - `java.awt.Color`"
-  ([^javax.swing.JComponent this ^java.awt.Color fg]
+  ([^JComponent this ^java.awt.Color fg]
     (-> this (.setForeground fg))))
 
 (defn set-inherits-popup-menu
@@ -373,7 +369,7 @@
    This is a bound property.
 
   value - whether or not the JPopupMenu is inherited - `boolean`"
-  ([^javax.swing.JComponent this ^Boolean value]
+  ([^JComponent this ^Boolean value]
     (-> this (.setInheritsPopupMenu value))))
 
 (defn get-popup-location
@@ -385,7 +381,7 @@
   event - the MouseEvent that triggered the popup to be shown, or null if the popup is not being shown as the result of a mouse event - `java.awt.event.MouseEvent`
 
   returns: location to display the JPopupMenu, or null - `java.awt.Point`"
-  (^java.awt.Point [^javax.swing.JComponent this ^java.awt.event.MouseEvent event]
+  (^java.awt.Point [^JComponent this event]
     (-> this (.getPopupLocation event))))
 
 (defn get-insets
@@ -399,9 +395,9 @@
   insets - the Insets object, which can be reused - `java.awt.Insets`
 
   returns: the Insets object - `java.awt.Insets`"
-  (^java.awt.Insets [^javax.swing.JComponent this ^java.awt.Insets insets]
+  (^java.awt.Insets [^JComponent this ^java.awt.Insets insets]
     (-> this (.getInsets insets)))
-  (^java.awt.Insets [^javax.swing.JComponent this]
+  (^java.awt.Insets [^JComponent this]
     (-> this (.getInsets))))
 
 (defn fire-property-change
@@ -413,7 +409,7 @@
   property-name - the property whose value has changed - `java.lang.String`
   old-value - the property's previous value - `boolean`
   new-value - the property's new value - `boolean`"
-  ([^javax.swing.JComponent this ^java.lang.String property-name ^Boolean old-value ^Boolean new-value]
+  ([^JComponent this ^java.lang.String property-name ^Boolean old-value ^Boolean new-value]
     (-> this (.firePropertyChange property-name old-value new-value))))
 
 (defn put-client-property
@@ -440,7 +436,7 @@
 
   key - the new client property key - `java.lang.Object`
   value - the new client property value; if null this method will remove the property - `java.lang.Object`"
-  ([^javax.swing.JComponent this ^java.lang.Object key ^java.lang.Object value]
+  ([^JComponent this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.putClientProperty key value))))
 
 (defn painting-tile?
@@ -452,7 +448,7 @@
 
   returns: true if the component is currently painting a tile,
             false otherwise - `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.isPaintingTile))))
 
 (defn scroll-rect-to-visible
@@ -462,7 +458,7 @@
    override this method and perform the scrolling.
 
   a-rect - the visible Rectangle - `java.awt.Rectangle`"
-  ([^javax.swing.JComponent this ^java.awt.Rectangle a-rect]
+  ([^JComponent this ^java.awt.Rectangle a-rect]
     (-> this (.scrollRectToVisible a-rect))))
 
 (defn contains
@@ -473,7 +469,7 @@
   y - the y coordinate of the point - `int`
 
   returns: true if this component logically contains x,y - `boolean`"
-  (^Boolean [^javax.swing.JComponent this ^Integer x ^Integer y]
+  (^Boolean [^JComponent this ^Integer x ^Integer y]
     (-> this (.contains x y))))
 
 (defn get-border
@@ -481,7 +477,7 @@
    border is currently set.
 
   returns: the border object for this component - `javax.swing.border.Border`"
-  (^javax.swing.border.Border [^javax.swing.JComponent this]
+  (^javax.swing.border.Border [^JComponent this]
     (-> this (.getBorder))))
 
 (defn create-tool-tip
@@ -492,22 +488,20 @@
    cause different tooltips to be displayed differently.
 
   returns: the JToolTip used to display this toolTip - `javax.swing.JToolTip`"
-  (^javax.swing.JToolTip [^javax.swing.JComponent this]
+  (^javax.swing.JToolTip [^JComponent this]
     (-> this (.createToolTip))))
 
 (defn set-alignment-x
   "Sets the the vertical alignment.
 
   alignment-x - the new vertical alignment - `float`"
-  ([^javax.swing.JComponent this ^Float alignment-x]
+  ([^JComponent this ^Float alignment-x]
     (-> this (.setAlignmentX alignment-x))))
 
 (defn enable
   "Deprecated. As of JDK version 1.1,
-   replaced by java.awt.Component.setEnabled(boolean).
-
-  returns: `java.lang.  void`"
-  ([^javax.swing.JComponent this]
+   replaced by java.awt.Component.setEnabled(boolean)."
+  ([^JComponent this]
     (-> this (.enable))))
 
 (defn get-graphics
@@ -516,7 +510,7 @@
    then invoke operations on that object to draw on the component.
 
   returns: this components graphics context - `java.awt.Graphics`"
-  (^java.awt.Graphics [^javax.swing.JComponent this]
+  (^java.awt.Graphics [^JComponent this]
     (-> this (.getGraphics))))
 
 (defn get-tool-tip-location
@@ -527,7 +521,7 @@
   event - the MouseEvent that caused the ToolTipManager to show the tooltip - `java.awt.event.MouseEvent`
 
   returns: always returns null - `java.awt.Point`"
-  (^java.awt.Point [^javax.swing.JComponent this ^java.awt.event.MouseEvent event]
+  (^java.awt.Point [^JComponent this event]
     (-> this (.getToolTipLocation event))))
 
 (defn set-double-buffered
@@ -539,7 +533,7 @@
     is also buffered, the ancestor buffer will be used.
 
   a-flag - if true, set this component to be double buffered - `boolean`"
-  ([^javax.swing.JComponent this ^Boolean a-flag]
+  ([^JComponent this ^Boolean a-flag]
     (-> this (.setDoubleBuffered a-flag))))
 
 (defn get-baseline-resize-behavior
@@ -561,8 +555,8 @@
    getBaseline returns a value less than 0.
 
   returns: an enum indicating how the baseline changes as the component
-           size changes - `java.awt.Component.BaselineResizeBehavior`"
-  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.JComponent this]
+           size changes - `java.awt.Component$BaselineResizeBehavior`"
+  (^java.awt.Component$BaselineResizeBehavior [^JComponent this]
     (-> this (.getBaselineResizeBehavior))))
 
 (defn set-tool-tip-text
@@ -574,7 +568,7 @@
    for further documentation.
 
   text - the string to display; if the text is null, the tool tip is turned off for this component - `java.lang.String`"
-  ([^javax.swing.JComponent this ^java.lang.String text]
+  ([^JComponent this ^java.lang.String text]
     (-> this (.setToolTipText text))))
 
 (defn get-ui-class-id
@@ -589,7 +583,7 @@
 
   returns: the UIDefaults key for a
             ComponentUI subclass - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JComponent this]
+  (^java.lang.String [^JComponent this]
     (-> this (.getUIClassID))))
 
 (defn update
@@ -598,7 +592,7 @@
    paintComponent.
 
   g - the Graphics context in which to paint - `java.awt.Graphics`"
-  ([^javax.swing.JComponent this ^java.awt.Graphics g]
+  ([^JComponent this ^java.awt.Graphics g]
     (-> this (.update g))))
 
 (defn get-registered-key-strokes
@@ -606,7 +600,7 @@
    registered actions.
 
   returns: an array of KeyStroke objects - `javax.swing.KeyStroke[]`"
-  ([^javax.swing.JComponent this]
+  ([^JComponent this]
     (-> this (.getRegisteredKeyStrokes))))
 
 (defn validate-root?
@@ -617,14 +611,14 @@
    this method and returns true.
 
   returns: always returns false - `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.isValidateRoot))))
 
 (defn get-input-verifier
   "Returns the input verifier for this component.
 
   returns: the inputVerifier property - `javax.swing.InputVerifier`"
-  (^javax.swing.InputVerifier [^javax.swing.JComponent this]
+  (^javax.swing.InputVerifier [^JComponent this]
     (-> this (.getInputVerifier))))
 
 (defn set-background
@@ -639,7 +633,7 @@
    choose to ignore it.
 
   bg - the desired background Color - `java.awt.Color`"
-  ([^javax.swing.JComponent this ^java.awt.Color bg]
+  ([^JComponent this ^java.awt.Color bg]
     (-> this (.setBackground bg))))
 
 (defn reshape
@@ -651,10 +645,8 @@
   x - the new horizontal location - `int`
   y - the new vertical location - `int`
   w - the new width - `int`
-  h - the new height - `int`
-
-  returns: `java.lang.  void`"
-  ([^javax.swing.JComponent this ^Integer x ^Integer y ^Integer w ^Integer h]
+  h - the new height - `int`"
+  ([^JComponent this ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.reshape x y w h))))
 
 (defn get-component-popup-menu
@@ -666,14 +658,14 @@
 
   returns: JPopupMenu assigned for this component
            or null if no popup assigned - `javax.swing.JPopupMenu`"
-  (^javax.swing.JPopupMenu [^javax.swing.JComponent this]
+  (^javax.swing.JPopupMenu [^JComponent this]
     (-> this (.getComponentPopupMenu))))
 
 (defn get-autoscrolls?
   "Gets the autoscrolls property.
 
   returns: the value of the autoscrolls property - `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.getAutoscrolls))))
 
 (defn get-alignment-x
@@ -681,7 +673,7 @@
    the vertical alignment.
 
   returns: the value of the alignmentX property - `float`"
-  (^Float [^javax.swing.JComponent this]
+  (^Float [^JComponent this]
     (-> this (.getAlignmentX))))
 
 (defn add-notify
@@ -690,7 +682,7 @@
    set up with KeyboardAction event listeners.
    This method is called by the toolkit internally and should
    not be called directly by programs."
-  ([^javax.swing.JComponent this]
+  ([^JComponent this]
     (-> this (.addNotify))))
 
 (defn get-font-metrics
@@ -701,7 +693,7 @@
   returns: the font metrics for font - `java.awt.FontMetrics`
 
   throws: java.lang.NullPointerException - if font is null"
-  (^java.awt.FontMetrics [^javax.swing.JComponent this ^java.awt.Font font]
+  (^java.awt.FontMetrics [^JComponent this ^java.awt.Font font]
     (-> this (.getFontMetrics font))))
 
 (defn set-input-map
@@ -726,7 +718,7 @@
   map - the InputMap to use for the given condition - `javax.swing.InputMap`
 
   throws: java.lang.IllegalArgumentException - if condition is WHEN_IN_FOCUSED_WINDOW and map is not an instance of ComponentInputMap; or if condition is not one of the legal values specified above"
-  ([^javax.swing.JComponent this ^Integer condition ^javax.swing.InputMap map]
+  ([^JComponent this ^Integer condition ^javax.swing.InputMap map]
     (-> this (.setInputMap condition map))))
 
 (defn set-preferred-size
@@ -735,7 +727,7 @@
    be asked for the preferred size.
 
   preferred-size - The new preferred size, or null - `java.awt.Dimension`"
-  ([^javax.swing.JComponent this ^java.awt.Dimension preferred-size]
+  ([^JComponent this ^java.awt.Dimension preferred-size]
     (-> this (.setPreferredSize preferred-size))))
 
 (defn get-y
@@ -746,7 +738,7 @@
    heap allocations.
 
   returns: the current y coordinate of the component's origin - `int`"
-  (^Integer [^javax.swing.JComponent this]
+  (^Integer [^JComponent this]
     (-> this (.getY))))
 
 (defn set-component-popup-menu
@@ -765,7 +757,7 @@
    This is a bound property.
 
   popup - - the popup that will be assigned to this component may be null - `javax.swing.JPopupMenu`"
-  ([^javax.swing.JComponent this ^javax.swing.JPopupMenu popup]
+  ([^JComponent this ^javax.swing.JPopupMenu popup]
     (-> this (.setComponentPopupMenu popup))))
 
 (defn get-tool-tip-text
@@ -778,9 +770,9 @@
   event - `java.awt.event.MouseEvent`
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.JComponent this ^java.awt.event.MouseEvent event]
+  (^java.lang.String [^JComponent this event]
     (-> this (.getToolTipText event)))
-  (^java.lang.String [^javax.swing.JComponent this]
+  (^java.lang.String [^JComponent this]
     (-> this (.getToolTipText))))
 
 (defn remove-notify
@@ -789,14 +781,14 @@
    set up in the the chain of parent components are removed.
    This method is called by the toolkit internally and should
    not be called directly by programs."
-  ([^javax.swing.JComponent this]
+  ([^JComponent this]
     (-> this (.removeNotify))))
 
 (defn get-inherits-popup-menu?
   "Returns true if the JPopupMenu should be inherited from the parent.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.getInheritsPopupMenu))))
 
 (defn set-action-map
@@ -805,7 +797,7 @@
    from the UI (if there was one), it is up to the caller to have done this.
 
   am - the new ActionMap - `javax.swing.ActionMap`"
-  ([^javax.swing.JComponent this ^javax.swing.ActionMap am]
+  ([^JComponent this ^javax.swing.ActionMap am]
     (-> this (.setActionMap am))))
 
 (defn set-transfer-handler
@@ -838,7 +830,7 @@
    a section in The Java Tutorial, for more information.
 
   new-handler - the new TransferHandler - `javax.swing.TransferHandler`"
-  ([^javax.swing.JComponent this ^javax.swing.TransferHandler new-handler]
+  ([^JComponent this ^javax.swing.TransferHandler new-handler]
     (-> this (.setTransferHandler new-handler))))
 
 (defn register-keyboard-action
@@ -903,17 +895,15 @@
   a-command - the command to be set in the delivered event - `java.lang.String`
   a-key-stroke - the KeyStroke to bind to the action - `javax.swing.KeyStroke`
   a-condition - the condition that needs to be met, see above - `int`"
-  ([^javax.swing.JComponent this ^java.awt.event.ActionListener an-action ^java.lang.String a-command ^javax.swing.KeyStroke a-key-stroke ^Integer a-condition]
+  ([^JComponent this ^java.awt.event.ActionListener an-action ^java.lang.String a-command ^javax.swing.KeyStroke a-key-stroke ^Integer a-condition]
     (-> this (.registerKeyboardAction an-action a-command a-key-stroke a-condition)))
-  ([^javax.swing.JComponent this ^java.awt.event.ActionListener an-action ^javax.swing.KeyStroke a-key-stroke ^Integer a-condition]
+  ([^JComponent this ^java.awt.event.ActionListener an-action ^javax.swing.KeyStroke a-key-stroke ^Integer a-condition]
     (-> this (.registerKeyboardAction an-action a-key-stroke a-condition))))
 
 (defn disable
   "Deprecated. As of JDK version 1.1,
-   replaced by java.awt.Component.setEnabled(boolean).
-
-  returns: `java.lang.  void`"
-  ([^javax.swing.JComponent this]
+   replaced by java.awt.Component.setEnabled(boolean)."
+  ([^JComponent this]
     (-> this (.disable))))
 
 (defn add-ancestor-listener
@@ -924,7 +914,7 @@
    or removed from the containment hierarchy.
 
   listener - the AncestorListener to register - `javax.swing.event.AncestorListener`"
-  ([^javax.swing.JComponent this ^javax.swing.event.AncestorListener listener]
+  ([^JComponent this ^javax.swing.event.AncestorListener listener]
     (-> this (.addAncestorListener listener))))
 
 (defn paint-immediately
@@ -944,9 +934,9 @@
   y - the y value of the region to be painted - `int`
   w - the width of the region to be painted - `int`
   h - the height of the region to be painted - `int`"
-  ([^javax.swing.JComponent this ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^JComponent this ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintImmediately x y w h)))
-  ([^javax.swing.JComponent this ^java.awt.Rectangle r]
+  ([^JComponent this ^java.awt.Rectangle r]
     (-> this (.paintImmediately r))))
 
 (defn unregister-keyboard-action
@@ -964,7 +954,7 @@
    (if it exists) as well as the InputMaps.
 
   a-key-stroke - `javax.swing.KeyStroke`"
-  ([^javax.swing.JComponent this ^javax.swing.KeyStroke a-key-stroke]
+  ([^JComponent this ^javax.swing.KeyStroke a-key-stroke]
     (-> this (.unregisterKeyboardAction a-key-stroke))))
 
 (defn repaint
@@ -977,9 +967,9 @@
   y - the y value of the dirty region - `int`
   width - the width of the dirty region - `int`
   height - the height of the dirty region - `int`"
-  ([^javax.swing.JComponent this ^Long tm ^Integer x ^Integer y ^Integer width ^Integer height]
+  ([^JComponent this ^Long tm ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.repaint tm x y width height)))
-  ([^javax.swing.JComponent this ^java.awt.Rectangle r]
+  ([^JComponent this ^java.awt.Rectangle r]
     (-> this (.repaint r))))
 
 (defn request-focus-enabled?
@@ -994,7 +984,7 @@
 
   returns: true if this component should get focus,
        otherwise returns false - `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.isRequestFocusEnabled))))
 
 (defn get-x
@@ -1005,14 +995,14 @@
    heap allocations.
 
   returns: the current x coordinate of the component's origin - `int`"
-  (^Integer [^javax.swing.JComponent this]
+  (^Integer [^JComponent this]
     (-> this (.getX))))
 
 (defn set-font
   "Sets the font for this component.
 
   font - the desired Font for this component - `java.awt.Font`"
-  ([^javax.swing.JComponent this ^java.awt.Font font]
+  ([^JComponent this ^java.awt.Font font]
     (-> this (.setFont font))))
 
 (defn get-height
@@ -1023,7 +1013,7 @@
    heap allocations.
 
   returns: the current height of this component - `int`"
-  (^Integer [^javax.swing.JComponent this]
+  (^Integer [^JComponent this]
     (-> this (.getHeight))))
 
 (defn get-condition-for-key-stroke
@@ -1039,7 +1029,7 @@
   a-key-stroke - `javax.swing.KeyStroke`
 
   returns: the action-keystroke condition - `int`"
-  (^Integer [^javax.swing.JComponent this ^javax.swing.KeyStroke a-key-stroke]
+  (^Integer [^JComponent this ^javax.swing.KeyStroke a-key-stroke]
     (-> this (.getConditionForKeyStroke a-key-stroke))))
 
 (defn get-alignment-y
@@ -1047,7 +1037,7 @@
    the horizontal alignment.
 
   returns: the value of the alignmentY property - `float`"
-  (^Float [^javax.swing.JComponent this]
+  (^Float [^JComponent this]
     (-> this (.getAlignmentY))))
 
 (defn paint
@@ -1069,7 +1059,7 @@
    paintComponent.
 
   g - the Graphics context in which to paint - `java.awt.Graphics`"
-  ([^javax.swing.JComponent this ^java.awt.Graphics g]
+  ([^JComponent this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn get-next-focusable-component
@@ -1077,8 +1067,8 @@
 
   returns: the Component that will follow this
           JComponent in the focus traversal cycle, or
-          null if none has been explicitly specified - `java.lang.  java.awt.Component`"
-  ([^javax.swing.JComponent this]
+          null if none has been explicitly specified - `java.awt.Component`"
+  (^java.awt.Component [^JComponent this]
     (-> this (.getNextFocusableComponent))))
 
 (defn grab-focus
@@ -1090,7 +1080,7 @@
    This method is intended for use by focus implementations. Client code
    should not use this method; instead, it should use
    requestFocusInWindow()."
-  ([^javax.swing.JComponent this]
+  ([^JComponent this]
     (-> this (.grabFocus))))
 
 (defn get-vetoable-change-listeners
@@ -1100,7 +1090,7 @@
   returns: all of the component's VetoableChangeListeners
            or an empty
            array if no vetoable change listeners are currently registered - `java.beans.VetoableChangeListener[]`"
-  ([^javax.swing.JComponent this]
+  ([^JComponent this]
     (-> this (.getVetoableChangeListeners))))
 
 (defn set-minimum-size
@@ -1111,7 +1101,7 @@
    restores the default behavior.
 
   minimum-size - the new minimum size of this component - `java.awt.Dimension`"
-  ([^javax.swing.JComponent this ^java.awt.Dimension minimum-size]
+  ([^JComponent this ^java.awt.Dimension minimum-size]
     (-> this (.setMinimumSize minimum-size))))
 
 (defn set-visible
@@ -1119,7 +1109,7 @@
    Overrides Component.setVisible.
 
   a-flag - true to make the component visible; false to make it invisible - `boolean`"
-  ([^javax.swing.JComponent this ^Boolean a-flag]
+  ([^JComponent this ^Boolean a-flag]
     (-> this (.setVisible a-flag))))
 
 (defn set-enabled
@@ -1135,7 +1125,7 @@
    receiving MouseEvents.
 
   enabled - true if this component should be enabled, false otherwise - `boolean`"
-  ([^javax.swing.JComponent this ^Boolean enabled]
+  ([^JComponent this ^Boolean enabled]
     (-> this (.setEnabled enabled))))
 
 (defn remove-ancestor-listener
@@ -1143,7 +1133,7 @@
    AncestorEvents.
 
   listener - the AncestorListener to be removed - `javax.swing.event.AncestorListener`"
-  ([^javax.swing.JComponent this ^javax.swing.event.AncestorListener listener]
+  ([^JComponent this ^javax.swing.event.AncestorListener listener]
     (-> this (.removeAncestorListener listener))))
 
 (defn painting-for-print?
@@ -1169,7 +1159,7 @@
 
   returns: true if the current painting operation on this component
            is part of a print operation - `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.isPaintingForPrint))))
 
 (defn set-autoscrolls
@@ -1205,14 +1195,14 @@
    property is false.
 
   autoscrolls - if true, synthetic mouse dragged events are generated when the mouse is dragged outside of a component's bounds and the mouse button continues to be held down; otherwise false - `boolean`"
-  ([^javax.swing.JComponent this ^Boolean autoscrolls]
+  ([^JComponent this ^Boolean autoscrolls]
     (-> this (.setAutoscrolls autoscrolls))))
 
 (defn set-input-verifier
   "Sets the input verifier for this component.
 
   input-verifier - the new input verifier - `javax.swing.InputVerifier`"
-  ([^javax.swing.JComponent this ^javax.swing.InputVerifier input-verifier]
+  ([^JComponent this ^javax.swing.InputVerifier input-verifier]
     (-> this (.setInputVerifier input-verifier))))
 
 (defn print
@@ -1253,15 +1243,15 @@
    Graphics.
 
   g - the Graphics context in which to paint - `java.awt.Graphics`"
-  ([^javax.swing.JComponent this ^java.awt.Graphics g]
+  ([^JComponent this ^java.awt.Graphics g]
     (-> this (.print g))))
 
 (defn request-default-focus
   "Deprecated. As of 1.4, replaced by
    FocusTraversalPolicy.getDefaultComponent(Container).requestFocus()
 
-  returns: `java.lang.  boolean`"
-  ([^javax.swing.JComponent this]
+  returns: `boolean`"
+  (^Boolean [^JComponent this]
     (-> this (.requestDefaultFocus))))
 
 (defn request-focus
@@ -1281,9 +1271,9 @@
 
   returns: false if the focus change request is guaranteed to
            fail; true if it is likely to succeed - `boolean`"
-  (^Boolean [^javax.swing.JComponent this ^Boolean temporary]
+  (^Boolean [^JComponent this ^Boolean temporary]
     (-> this (.requestFocus temporary)))
-  ([^javax.swing.JComponent this]
+  ([^JComponent this]
     (-> this (.requestFocus))))
 
 (defn get-bounds
@@ -1299,7 +1289,7 @@
   returns: rv; if rv is null
             return a newly created Rectangle with this
             component's bounds - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.JComponent this ^java.awt.Rectangle rv]
+  (^java.awt.Rectangle [^JComponent this ^java.awt.Rectangle rv]
     (-> this (.getBounds rv))))
 
 (defn remove-vetoable-change-listener
@@ -1308,7 +1298,7 @@
    for all properties.
 
   listener - the VetoableChangeListener to be removed - `java.beans.VetoableChangeListener`"
-  ([^javax.swing.JComponent this ^java.beans.VetoableChangeListener listener]
+  ([^JComponent this ^java.beans.VetoableChangeListener listener]
     (-> this (.removeVetoableChangeListener listener))))
 
 (defn set-focus-traversal-keys
@@ -1322,10 +1312,10 @@
    in keystrokes is not an AWTKeyStroke.
 
   id - one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, or KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS - `int`
-  keystrokes - the Set of AWTKeyStroke for the specified operation - `java.awt.AWTKeyStroke>`
+  keystrokes - the Set of AWTKeyStroke for the specified operation - `java.util.Set`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, or KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or if keystrokes contains null, or if any keystroke represents a KEY_TYPED event, or if any keystroke already maps to another focus traversal operation for this Component"
-  ([^javax.swing.JComponent this ^Integer id ^java.awt.AWTKeyStroke> keystrokes]
+  ([^JComponent this ^Integer id ^java.util.Set keystrokes]
     (-> this (.setFocusTraversalKeys id keystrokes))))
 
 (defn reset-keyboard-actions
@@ -1334,7 +1324,7 @@
    local bindings, and allowing the bindings defined in parent
    InputMap/ActionMaps
    (the UI is usually defined in the second tier) to persist."
-  ([^javax.swing.JComponent this]
+  ([^JComponent this]
     (-> this (.resetKeyboardActions))))
 
 (defn set-verify-input-when-focus-target
@@ -1346,7 +1336,7 @@
    verifier for that component.
 
   verify-input-when-focus-target - value for the verifyInputWhenFocusTarget property - `boolean`"
-  ([^javax.swing.JComponent this ^Boolean verify-input-when-focus-target]
+  ([^JComponent this ^Boolean verify-input-when-focus-target]
     (-> this (.setVerifyInputWhenFocusTarget verify-input-when-focus-target))))
 
 (defn set-request-focus-enabled
@@ -1368,14 +1358,14 @@
    for more information.
 
   request-focus-enabled - indicates whether you want this JComponent to be focusable or not - `boolean`"
-  ([^javax.swing.JComponent this ^Boolean request-focus-enabled]
+  ([^JComponent this ^Boolean request-focus-enabled]
     (-> this (.setRequestFocusEnabled request-focus-enabled))))
 
 (defn get-transfer-handler
   "Gets the transferHandler property.
 
   returns: the value of the transferHandler property - `javax.swing.TransferHandler`"
-  (^javax.swing.TransferHandler [^javax.swing.JComponent this]
+  (^javax.swing.TransferHandler [^JComponent this]
     (-> this (.getTransferHandler))))
 
 (defn get-client-property
@@ -1386,7 +1376,7 @@
   key - the being queried - `java.lang.Object`
 
   returns: the value of this property or null - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.JComponent this ^java.lang.Object key]
+  (^java.lang.Object [^JComponent this ^java.lang.Object key]
     (-> this (.getClientProperty key))))
 
 (defn get-listeners
@@ -1410,7 +1400,7 @@
   MouseListener[] mls = (MouseListener[])(c.getListeners(MouseListener.class));
    If no such listeners exist, this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners on this component,
@@ -1418,7 +1408,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^javax.swing.JComponent this ^java.lang.Class listener-type]
+  ([^JComponent this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn get-visible-rect
@@ -1428,7 +1418,7 @@
    and all of its ancestors' visible rectangles.
 
   returns: the visible rectangle - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.JComponent this]
+  (^java.awt.Rectangle [^JComponent this]
     (-> this (.getVisibleRect))))
 
 (defn set-border
@@ -1454,7 +1444,7 @@
    This is a bound property.
 
   border - the border to be rendered for this component - `javax.swing.border.Border`"
-  ([^javax.swing.JComponent this ^javax.swing.border.Border border]
+  ([^JComponent this ^javax.swing.border.Border border]
     (-> this (.setBorder border))))
 
 (defn get-baseline
@@ -1480,7 +1470,7 @@
            baseline - `int`
 
   throws: java.lang.IllegalArgumentException - if width or height is < 0"
-  (^Integer [^javax.swing.JComponent this ^Integer width ^Integer height]
+  (^Integer [^JComponent this ^Integer width ^Integer height]
     (-> this (.getBaseline width height))))
 
 (defn get-root-pane
@@ -1488,7 +1478,7 @@
 
   returns: the JRootPane that contains this component,
             or null if no JRootPane is found - `javax.swing.JRootPane`"
-  (^javax.swing.JRootPane [^javax.swing.JComponent this]
+  (^javax.swing.JRootPane [^JComponent this]
     (-> this (.getRootPane))))
 
 (defn set-maximum-size
@@ -1499,7 +1489,7 @@
    restores the default behavior.
 
   maximum-size - a Dimension containing the desired maximum allowable size - `java.awt.Dimension`"
-  ([^javax.swing.JComponent this ^java.awt.Dimension maximum-size]
+  ([^JComponent this ^java.awt.Dimension maximum-size]
     (-> this (.setMaximumSize maximum-size))))
 
 (defn get-ancestor-listeners
@@ -1509,7 +1499,7 @@
   returns: all of the component's AncestorListeners
            or an empty
            array if no ancestor listeners are currently registered - `javax.swing.event.AncestorListener[]`"
-  ([^javax.swing.JComponent this]
+  ([^JComponent this]
     (-> this (.getAncestorListeners))))
 
 (defn revalidate
@@ -1531,7 +1521,7 @@
    updating differs from the AWT because programs generally no
    longer need to invoke validate to get the contents of the
    GUI to update."
-  ([^javax.swing.JComponent this]
+  ([^JComponent this]
     (-> this (.revalidate))))
 
 (defn get-size
@@ -1545,16 +1535,16 @@
   rv - the return value, modified to the component's size - `java.awt.Dimension`
 
   returns: rv - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.JComponent this ^java.awt.Dimension rv]
+  (^java.awt.Dimension [^JComponent this ^java.awt.Dimension rv]
     (-> this (.getSize rv))))
 
-(defn is-managing-focus
+(defn managing-focus?
   "Deprecated. As of 1.4, replaced by
      Component.setFocusTraversalKeys(int, Set) and
      Container.setFocusCycleRoot(boolean).
 
-  returns: `java.lang.  boolean`"
-  ([^javax.swing.JComponent this]
+  returns: `boolean`"
+  (^Boolean [^JComponent this]
     (-> this (.isManagingFocus))))
 
 (defn update-ui
@@ -1566,7 +1556,7 @@
      public void updateUI() {
         setUI((SliderUI)UIManager.getUI(this);
      }"
-  ([^javax.swing.JComponent this]
+  ([^JComponent this]
     (-> this (.updateUI))))
 
 (defn set-debug-graphics-options
@@ -1574,7 +1564,7 @@
    operation performed within the component or one of its children.
 
   debug-options - determines how the component should display the information; one of the following options: DebugGraphics.LOG_OPTION - causes a text message to be printed. DebugGraphics.FLASH_OPTION - causes the drawing to flash several times. DebugGraphics.BUFFERED_OPTION - creates an ExternalWindow that displays the operations performed on the View's offscreen buffer. DebugGraphics.NONE_OPTION disables debugging. A value of 0 causes no changes to the debugging options. debugOptions is bitwise OR'd into the current value - `int`"
-  ([^javax.swing.JComponent this ^Integer debug-options]
+  ([^JComponent this ^Integer debug-options]
     (-> this (.setDebugGraphicsOptions debug-options))))
 
 (defn get-verify-input-when-focus-target?
@@ -1583,7 +1573,7 @@
    focus.
 
   returns: value of the verifyInputWhenFocusTarget property - `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.getVerifyInputWhenFocusTarget))))
 
 (defn optimized-drawing-enabled?
@@ -1595,7 +1585,7 @@
    should override this method to return false.
 
   returns: always returns true - `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.isOptimizedDrawingEnabled))))
 
 (defn get-top-level-ancestor
@@ -1606,7 +1596,7 @@
 
   returns: the top-level Container that this component is in,
             or null if not in any container - `java.awt.Container`"
-  (^java.awt.Container [^javax.swing.JComponent this]
+  (^java.awt.Container [^JComponent this]
     (-> this (.getTopLevelAncestor))))
 
 (defn get-preferred-size
@@ -1617,7 +1607,7 @@
    otherwise defer to the component's layout manager.
 
   returns: the value of the preferredSize property - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.JComponent this]
+  (^java.awt.Dimension [^JComponent this]
     (-> this (.getPreferredSize))))
 
 (defn get-input-map
@@ -1628,9 +1618,9 @@
 
   returns: the InputMap for the specified
             condition - `javax.swing.InputMap`"
-  (^javax.swing.InputMap [^javax.swing.JComponent this ^Integer condition]
+  (^javax.swing.InputMap [^JComponent this ^Integer condition]
     (-> this (.getInputMap condition)))
-  (^javax.swing.InputMap [^javax.swing.JComponent this]
+  (^javax.swing.InputMap [^JComponent this]
     (-> this (.getInputMap))))
 
 (defn request-focus-in-window
@@ -1645,7 +1635,7 @@
 
   returns: false if the focus change request is guaranteed to
            fail; true if it is likely to succeed - `boolean`"
-  (^Boolean [^javax.swing.JComponent this]
+  (^Boolean [^JComponent this]
     (-> this (.requestFocusInWindow))))
 
 (defn add-vetoable-change-listener
@@ -1653,6 +1643,6 @@
    The listener is registered for all properties.
 
   listener - the VetoableChangeListener to be added - `java.beans.VetoableChangeListener`"
-  ([^javax.swing.JComponent this ^java.beans.VetoableChangeListener listener]
+  ([^JComponent this ^java.beans.VetoableChangeListener listener]
     (-> this (.addVetoableChangeListener listener))))
 

@@ -5,6 +5,6 @@
 
 (defn ->label-ui
   "Constructor."
-  ([]
+  (^LabelUI []
     (new LabelUI )))
 

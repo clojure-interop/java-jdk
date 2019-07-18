@@ -155,7 +155,7 @@
             of the first element of the buffer - `int`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  (^Integer [^java.nio.Buffer this]
+  (^Integer [^Buffer this]
     (-> this (.arrayOffset))))
 
 (defn rewind
@@ -173,7 +173,7 @@
    buf.get(array);    // Copy data into array
 
   returns: This buffer - `java.nio.Buffer`"
-  (^java.nio.Buffer [^java.nio.Buffer this]
+  (^java.nio.Buffer [^Buffer this]
     (-> this (.rewind))))
 
 (defn reset
@@ -185,7 +185,7 @@
   returns: This buffer - `java.nio.Buffer`
 
   throws: java.nio.InvalidMarkException - If the mark has not been set"
-  (^java.nio.Buffer [^java.nio.Buffer this]
+  (^java.nio.Buffer [^Buffer this]
     (-> this (.reset))))
 
 (defn flip
@@ -208,7 +208,7 @@
    one place to another.
 
   returns: This buffer - `java.nio.Buffer`"
-  (^java.nio.Buffer [^java.nio.Buffer this]
+  (^java.nio.Buffer [^Buffer this]
     (-> this (.flip))))
 
 (defn position
@@ -220,9 +220,9 @@
   returns: This buffer - `java.nio.Buffer`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on newPosition do not hold"
-  (^java.nio.Buffer [^java.nio.Buffer this ^Integer new-position]
+  (^java.nio.Buffer [^Buffer this ^Integer new-position]
     (-> this (.position new-position)))
-  (^Integer [^java.nio.Buffer this]
+  (^Integer [^Buffer this]
     (-> this (.position))))
 
 (defn limit
@@ -235,9 +235,9 @@
   returns: This buffer - `java.nio.Buffer`
 
   throws: java.lang.IllegalArgumentException - If the preconditions on newLimit do not hold"
-  (^java.nio.Buffer [^java.nio.Buffer this ^Integer new-limit]
+  (^java.nio.Buffer [^Buffer this ^Integer new-limit]
     (-> this (.limit new-limit)))
-  (^Integer [^java.nio.Buffer this]
+  (^Integer [^Buffer this]
     (-> this (.limit))))
 
 (defn has-array?
@@ -249,7 +249,7 @@
 
   returns: true if, and only if, this buffer
             is backed by an array and is not read-only - `boolean`"
-  (^Boolean [^java.nio.Buffer this]
+  (^Boolean [^Buffer this]
     (-> this (.hasArray))))
 
 (defn direct?
@@ -257,7 +257,7 @@
    direct.
 
   returns: true if, and only if, this buffer is direct - `boolean`"
-  (^Boolean [^java.nio.Buffer this]
+  (^Boolean [^Buffer this]
     (-> this (.isDirect))))
 
 (defn has-remaining?
@@ -266,7 +266,7 @@
 
   returns: true if, and only if, there is at least one element
             remaining in this buffer - `boolean`"
-  (^Boolean [^java.nio.Buffer this]
+  (^Boolean [^Buffer this]
     (-> this (.hasRemaining))))
 
 (defn remaining
@@ -274,7 +274,7 @@
    limit.
 
   returns: The number of elements remaining in this buffer - `int`"
-  (^Integer [^java.nio.Buffer this]
+  (^Integer [^Buffer this]
     (-> this (.remaining))))
 
 (defn clear
@@ -294,28 +294,28 @@
    in which that might as well be the case.
 
   returns: This buffer - `java.nio.Buffer`"
-  (^java.nio.Buffer [^java.nio.Buffer this]
+  (^java.nio.Buffer [^Buffer this]
     (-> this (.clear))))
 
 (defn read-only?
   "Tells whether or not this buffer is read-only.
 
   returns: true if, and only if, this buffer is read-only - `boolean`"
-  (^Boolean [^java.nio.Buffer this]
+  (^Boolean [^Buffer this]
     (-> this (.isReadOnly))))
 
 (defn mark
   "Sets this buffer's mark at its position.
 
   returns: This buffer - `java.nio.Buffer`"
-  (^java.nio.Buffer [^java.nio.Buffer this]
+  (^java.nio.Buffer [^Buffer this]
     (-> this (.mark))))
 
 (defn capacity
   "Returns this buffer's capacity.
 
   returns: The capacity of this buffer - `int`"
-  (^Integer [^java.nio.Buffer this]
+  (^Integer [^Buffer this]
     (-> this (.capacity))))
 
 (defn array
@@ -336,6 +336,6 @@
   returns: The array that backs this buffer - `java.lang.Object`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  (^java.lang.Object [^java.nio.Buffer this]
+  (^java.lang.Object [^Buffer this]
     (-> this (.array))))
 

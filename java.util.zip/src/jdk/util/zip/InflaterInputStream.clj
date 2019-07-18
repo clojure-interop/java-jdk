@@ -16,11 +16,11 @@
   size - the input buffer size - `int`
 
   throws: java.lang.IllegalArgumentException - if size <= 0"
-  ([^java.io.InputStream in ^java.util.zip.Inflater inf ^Integer size]
+  (^InflaterInputStream [^java.io.InputStream in ^java.util.zip.Inflater inf ^Integer size]
     (new InflaterInputStream in inf size))
-  ([^java.io.InputStream in ^java.util.zip.Inflater inf]
+  (^InflaterInputStream [^java.io.InputStream in ^java.util.zip.Inflater inf]
     (new InflaterInputStream in inf))
-  ([^java.io.InputStream in]
+  (^InflaterInputStream [^java.io.InputStream in]
     (new InflaterInputStream in)))
 
 (defn read
@@ -36,9 +36,9 @@
            compressed input is reached or a preset dictionary is needed - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  (^Integer [^java.util.zip.InflaterInputStream this b ^Integer off ^Integer len]
+  (^Integer [^InflaterInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^java.util.zip.InflaterInputStream this]
+  (^Integer [^InflaterInputStream this]
     (-> this (.read))))
 
 (defn available
@@ -50,7 +50,7 @@
   returns: 1 before EOF and 0 after EOF. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Integer [^java.util.zip.InflaterInputStream this]
+  (^Integer [^InflaterInputStream this]
     (-> this (.available))))
 
 (defn skip
@@ -61,7 +61,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  (^Long [^java.util.zip.InflaterInputStream this ^Long n]
+  (^Long [^InflaterInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn close
@@ -69,7 +69,7 @@
    with the stream.
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.InflaterInputStream this]
+  ([^InflaterInputStream this]
     (-> this (.close))))
 
 (defn mark-supported
@@ -80,7 +80,7 @@
 
   returns: a boolean indicating if this stream type supports
             the mark and reset methods. - `boolean`"
-  (^Boolean [^java.util.zip.InflaterInputStream this]
+  (^Boolean [^InflaterInputStream this]
     (-> this (.markSupported))))
 
 (defn mark
@@ -90,7 +90,7 @@
    does nothing.
 
   readlimit - the maximum limit of bytes that can be read before the mark position becomes invalid. - `int`"
-  ([^java.util.zip.InflaterInputStream this ^Integer readlimit]
+  ([^InflaterInputStream this ^Integer readlimit]
     (-> this (.mark readlimit))))
 
 (defn reset
@@ -102,6 +102,6 @@
    IOException.
 
   throws: java.io.IOException - if this method is invoked."
-  ([^java.util.zip.InflaterInputStream this]
+  ([^InflaterInputStream this]
     (-> this (.reset))))
 

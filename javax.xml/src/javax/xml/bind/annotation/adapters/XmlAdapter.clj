@@ -125,22 +125,22 @@
 (defn unmarshal
   "Convert a value type to a bound type.
 
-  v - The value to be converted. Can be null. - `XmlAdapter.ValueType`
+  v - The value to be converted. Can be null. - `ValueType`
 
-  returns: `XmlAdapter.BoundType`
+  returns: `BoundType`
 
   throws: java.lang.Exception - if there's an error during the conversion. The caller is responsible for reporting the error to the user through ValidationEventHandler."
-  (^XmlAdapter.BoundType [^javax.xml.bind.annotation.adapters.XmlAdapter this ^XmlAdapter.ValueType v]
+  ([^XmlAdapter this v]
     (-> this (.unmarshal v))))
 
 (defn marshal
   "Convert a bound type to a value type.
 
-  v - The value to be convereted. Can be null. - `XmlAdapter.BoundType`
+  v - The value to be convereted. Can be null. - `BoundType`
 
-  returns: `XmlAdapter.ValueType`
+  returns: `ValueType`
 
   throws: java.lang.Exception - if there's an error during the conversion. The caller is responsible for reporting the error to the user through ValidationEventHandler."
-  (^XmlAdapter.ValueType [^javax.xml.bind.annotation.adapters.XmlAdapter this ^XmlAdapter.BoundType v]
+  ([^XmlAdapter this v]
     (-> this (.marshal v))))
 

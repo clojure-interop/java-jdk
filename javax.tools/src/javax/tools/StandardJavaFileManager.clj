@@ -1,5 +1,5 @@
 (ns javax.tools.StandardJavaFileManager
-  "File manager based on java.io.java.io.File.  A common way
+  "File manager based on java.io.java$io$File.  A common way
   to obtain an instance of this class is using getStandardFileManager, for example:
 
 
@@ -117,18 +117,18 @@
    canonical file or zip file entry; false otherwise - `boolean`
 
   throws: java.lang.IllegalArgumentException - if either of the arguments were created with another file manager implementation"
-  (^Boolean [^javax.tools.StandardJavaFileManager this ^javax.tools.FileObject a ^javax.tools.FileObject b]
+  (^Boolean [^StandardJavaFileManager this ^javax.tools.FileObject a ^javax.tools.FileObject b]
     (-> this (.isSameFile a b))))
 
 (defn get-java-file-objects-from-files
   "Gets file objects representing the given files.
 
-  files - a list of files - `java.io.File>`
+  files - a list of files - `java.lang.Iterable`
 
   returns: a list of file objects - `java.lang.Iterable<? extends javax.tools.JavaFileObject>`
 
   throws: java.lang.IllegalArgumentException - if the list of files includes a directory"
-  ([^javax.tools.StandardJavaFileManager this ^java.io.File> files]
+  ([^StandardJavaFileManager this ^java.lang.Iterable files]
     (-> this (.getJavaFileObjectsFromFiles files))))
 
 (defn get-java-file-objects
@@ -144,38 +144,38 @@
   returns: a list of file objects - `java.lang.Iterable<? extends javax.tools.JavaFileObject>`
 
   throws: java.lang.IllegalArgumentException - if the array of files includes a directory"
-  ([^javax.tools.StandardJavaFileManager this ^java.io.File files]
+  ([^StandardJavaFileManager this ^java.io.File files]
     (-> this (.getJavaFileObjects files))))
 
 (defn get-java-file-objects-from-strings
   "Gets file objects representing the given file names.
 
-  names - a list of file names - `java.lang.Iterable<java.lang.String>`
+  names - a list of file names - `java.lang.Iterable`
 
   returns: a list of file objects - `java.lang.Iterable<? extends javax.tools.JavaFileObject>`
 
   throws: java.lang.IllegalArgumentException - if the list of file names includes a directory"
-  ([^javax.tools.StandardJavaFileManager this ^java.lang.Iterable names]
+  ([^StandardJavaFileManager this ^java.lang.Iterable names]
     (-> this (.getJavaFileObjectsFromStrings names))))
 
 (defn set-location
   "Associates the given path with the given location.  Any
    previous value will be discarded.
 
-  location - a location - `javax.tools.JavaFileManager.Location`
-  path - a list of files, if null use the default path for this location - `java.io.File>`
+  location - a location - `javax.tools.JavaFileManager$Location`
+  path - a list of files, if null use the default path for this location - `java.lang.Iterable`
 
   throws: java.lang.IllegalArgumentException - if location is an output location and path does not contain exactly one element"
-  ([^javax.tools.StandardJavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.io.File> path]
+  ([^StandardJavaFileManager this ^javax.tools.JavaFileManager$Location location ^java.lang.Iterable path]
     (-> this (.setLocation location path))))
 
 (defn get-location
   "Gets the path associated with the given location.
 
-  location - a location - `javax.tools.JavaFileManager.Location`
+  location - a location - `javax.tools.JavaFileManager$Location`
 
   returns: a list of files or null if this location has no
    associated path - `java.lang.Iterable<? extends java.io.File>`"
-  ([^javax.tools.StandardJavaFileManager this ^javax.tools.JavaFileManager.Location location]
+  ([^StandardJavaFileManager this ^javax.tools.JavaFileManager$Location location]
     (-> this (.getLocation location))))
 

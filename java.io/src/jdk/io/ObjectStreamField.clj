@@ -17,11 +17,11 @@
    calls to writeUnshared and readUnshared.
 
   name - field name - `java.lang.String`
-  type - field type - `java.lang.Class<?>`
+  type - field type - `java.lang.Class`
   unshared - if false, write/read field values in the same manner as writeObject/readObject; if true, write/read in the same manner as writeUnshared/readUnshared - `boolean`"
-  ([^java.lang.String name ^java.lang.Class type ^Boolean unshared]
+  (^ObjectStreamField [^java.lang.String name ^java.lang.Class type ^Boolean unshared]
     (new ObjectStreamField name type unshared))
-  ([^java.lang.String name ^java.lang.Class type]
+  (^ObjectStreamField [^java.lang.String name ^java.lang.Class type]
     (new ObjectStreamField name type)))
 
 (defn get-type
@@ -32,14 +32,14 @@
 
   returns: a Class object representing the type of the
             serializable field - `java.lang.Class<?>`"
-  (^java.lang.Class [^java.io.ObjectStreamField this]
+  (^java.lang.Class [^ObjectStreamField this]
     (-> this (.getType))))
 
 (defn get-type-string
   "Return the JVM type signature.
 
   returns: null if this field has a primitive type. - `java.lang.String`"
-  (^java.lang.String [^java.io.ObjectStreamField this]
+  (^java.lang.String [^ObjectStreamField this]
     (-> this (.getTypeString))))
 
 (defn get-type-code
@@ -58,14 +58,14 @@
    [            array
 
   returns: the typecode of the serializable field - `char`"
-  (^Character [^java.io.ObjectStreamField this]
+  (^Character [^ObjectStreamField this]
     (-> this (.getTypeCode))))
 
 (defn to-string
   "Return a string that describes this field.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.io.ObjectStreamField this]
+  (^java.lang.String [^ObjectStreamField this]
     (-> this (.toString))))
 
 (defn unshared?
@@ -73,14 +73,14 @@
    represented by this ObjectStreamField instance is unshared.
 
   returns: true if this field is unshared - `boolean`"
-  (^Boolean [^java.io.ObjectStreamField this]
+  (^Boolean [^ObjectStreamField this]
     (-> this (.isUnshared))))
 
 (defn primitive?
   "Return true if this field has a primitive type.
 
   returns: true if and only if this field corresponds to a primitive type - `boolean`"
-  (^Boolean [^java.io.ObjectStreamField this]
+  (^Boolean [^ObjectStreamField this]
     (-> this (.isPrimitive))))
 
 (defn get-name
@@ -88,14 +88,14 @@
 
   returns: a String representing the name of the serializable
             field - `java.lang.String`"
-  (^java.lang.String [^java.io.ObjectStreamField this]
+  (^java.lang.String [^ObjectStreamField this]
     (-> this (.getName))))
 
 (defn get-offset
   "Offset of field within instance data.
 
   returns: the offset of this field - `int`"
-  (^Integer [^java.io.ObjectStreamField this]
+  (^Integer [^ObjectStreamField this]
     (-> this (.getOffset))))
 
 (defn compare-to
@@ -108,6 +108,6 @@
 
   returns: a negative integer, zero, or a positive integer as this object
             is less than, equal to, or greater than the specified object. - `int`"
-  (^Integer [^java.io.ObjectStreamField this ^java.lang.Object obj]
+  (^Integer [^ObjectStreamField this ^java.lang.Object obj]
     (-> this (.compareTo obj))))
 

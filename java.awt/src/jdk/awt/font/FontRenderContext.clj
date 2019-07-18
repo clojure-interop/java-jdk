@@ -43,7 +43,7 @@
   tx - the transform which is used to scale typographical points to pixels in this FontRenderContext. If null, an identity transform is used. - `java.awt.geom.AffineTransform`
   is-anti-aliased - determines if the newly constructed object has anti-aliasing. - `boolean`
   uses-fractional-metrics - determines if the newly constructed object has fractional metrics. - `boolean`"
-  ([^java.awt.geom.AffineTransform tx ^Boolean is-anti-aliased ^Boolean uses-fractional-metrics]
+  (^FontRenderContext [^java.awt.geom.AffineTransform tx ^Boolean is-anti-aliased ^Boolean uses-fractional-metrics]
     (new FontRenderContext tx is-anti-aliased uses-fractional-metrics)))
 
 (defn transformed?
@@ -53,7 +53,7 @@
   returns: true if this FontRenderContext
             object has a non-identity AffineTransform attribute.
             false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.FontRenderContext this]
+  (^Boolean [^FontRenderContext this]
     (-> this (.isTransformed))))
 
 (defn get-anti-aliasing-hint
@@ -64,7 +64,7 @@
 
   returns: text anti-aliasing rendering mode hint used in this
    FontRenderContext. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.font.FontRenderContext this]
+  (^java.lang.Object [^FontRenderContext this]
     (-> this (.getAntiAliasingHint))))
 
 (defn get-transform-type
@@ -73,7 +73,7 @@
    AffineTransform.getType()
 
   returns: the type of the transform. - `int`"
-  (^Integer [^java.awt.font.FontRenderContext this]
+  (^Integer [^FontRenderContext this]
     (-> this (.getTransformType))))
 
 (defn uses-fractional-metrics
@@ -85,14 +85,14 @@
   returns: true, if layout should be performed with
      fractional metrics; false otherwise.
                  in this FontRenderContext. - `boolean`"
-  (^Boolean [^java.awt.font.FontRenderContext this]
+  (^Boolean [^FontRenderContext this]
     (-> this (.usesFractionalMetrics))))
 
 (defn hash-code
   "Return a hashcode for this FontRenderContext.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.font.FontRenderContext this]
+  (^Integer [^FontRenderContext this]
     (-> this (.hashCode))))
 
 (defn get-transform
@@ -101,7 +101,7 @@
 
   returns: the AffineTransform of this
       FontRenderContext. - `java.awt.geom.AffineTransform`"
-  (^java.awt.geom.AffineTransform [^java.awt.font.FontRenderContext this]
+  (^java.awt.geom.AffineTransform [^FontRenderContext this]
     (-> this (.getTransform))))
 
 (defn get-fractional-metrics-hint
@@ -112,7 +112,7 @@
 
   returns: the text fractional metrics rendering mode hint used in this
    FontRenderContext. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.font.FontRenderContext this]
+  (^java.lang.Object [^FontRenderContext this]
     (-> this (.getFractionalMetricsHint))))
 
 (defn equals
@@ -124,7 +124,7 @@
   returns: true if the specified object is equal to
            this FontRenderContext; false
            otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.FontRenderContext this ^java.lang.Object obj]
+  (^Boolean [^FontRenderContext this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn anti-aliased?
@@ -135,6 +135,6 @@
 
   returns: true, if text is anti-aliased in this
      FontRenderContext; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.FontRenderContext this]
+  (^Boolean [^FontRenderContext this]
     (-> this (.isAntiAliased))))
 

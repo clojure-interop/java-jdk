@@ -17,14 +17,14 @@
   name - cannot be a null or empty string. - `java.lang.String`
   description - cannot be a null or empty string. - `java.lang.String`
   signature - can be null or empty if there are no parameters to describe. - `javax.management.openmbean.OpenMBeanParameterInfo[]`
-  return-open-type - cannot be null: use SimpleType.VOID for operations that return nothing. - `javax.management.openmbean.OpenType<?>`
+  return-open-type - cannot be null: use SimpleType.VOID for operations that return nothing. - `javax.management.openmbean.OpenType`
   impact - must be one of ACTION, ACTION_INFO, INFO, or UNKNOWN. - `int`
   descriptor - The descriptor for the operation. This may be null, which is equivalent to an empty descriptor. - `javax.management.Descriptor`
 
   throws: java.lang.IllegalArgumentException - if name or description are null or empty string, or returnOpenType is null, or impact is not one of ACTION, ACTION_INFO, INFO, or UNKNOWN."
-  ([^java.lang.String name ^java.lang.String description signature ^javax.management.openmbean.OpenType return-open-type ^Integer impact ^javax.management.Descriptor descriptor]
+  (^OpenMBeanOperationInfoSupport [^java.lang.String name ^java.lang.String description signature ^javax.management.openmbean.OpenType return-open-type ^Integer impact ^javax.management.Descriptor descriptor]
     (new OpenMBeanOperationInfoSupport name description signature return-open-type impact descriptor))
-  ([^java.lang.String name ^java.lang.String description signature ^javax.management.openmbean.OpenType return-open-type ^Integer impact]
+  (^OpenMBeanOperationInfoSupport [^java.lang.String name ^java.lang.String description signature ^javax.management.openmbean.OpenType return-open-type ^Integer impact]
     (new OpenMBeanOperationInfoSupport name description signature return-open-type impact)))
 
 (defn get-return-open-type
@@ -33,7 +33,7 @@
    instance.
 
   returns: the return type. - `javax.management.openmbean.OpenType<?>`"
-  (^javax.management.openmbean.OpenType [^javax.management.openmbean.OpenMBeanOperationInfoSupport this]
+  (^javax.management.openmbean.OpenType [^OpenMBeanOperationInfoSupport this]
     (-> this (.getReturnOpenType))))
 
 (defn equals
@@ -61,7 +61,7 @@
 
   returns: true if the specified object is equal to this
    OpenMBeanOperationInfoSupport instance. - `boolean`"
-  (^Boolean [^javax.management.openmbean.OpenMBeanOperationInfoSupport this ^java.lang.Object obj]
+  (^Boolean [^OpenMBeanOperationInfoSupport this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -87,7 +87,7 @@
    is returned for subsequent calls.
 
   returns: the hash code value for this OpenMBeanOperationInfoSupport instance - `int`"
-  (^Integer [^javax.management.openmbean.OpenMBeanOperationInfoSupport this]
+  (^Integer [^OpenMBeanOperationInfoSupport this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -104,6 +104,6 @@
    then the same value is returned for subsequent calls.
 
   returns: a string representation of this OpenMBeanOperationInfoSupport instance - `java.lang.String`"
-  (^java.lang.String [^javax.management.openmbean.OpenMBeanOperationInfoSupport this]
+  (^java.lang.String [^OpenMBeanOperationInfoSupport this]
     (-> this (.toString))))
 

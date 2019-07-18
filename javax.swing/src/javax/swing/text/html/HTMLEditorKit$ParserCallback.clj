@@ -12,7 +12,7 @@
 
 (defn ->parser-callback
   "Constructor."
-  ([]
+  (^HTMLEditorKit$ParserCallback []
     (new HTMLEditorKit$ParserCallback )))
 
 (def *-implied
@@ -27,45 +27,45 @@
 
 (defn flush
   "throws: javax.swing.text.BadLocationException"
-  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this]
+  ([^HTMLEditorKit$ParserCallback this]
     (-> this (.flush))))
 
 (defn handle-text
   "data - `char[]`
   pos - `int`"
-  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this data ^Integer pos]
+  ([^HTMLEditorKit$ParserCallback this data ^Integer pos]
     (-> this (.handleText data pos))))
 
 (defn handle-comment
   "data - `char[]`
   pos - `int`"
-  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this data ^Integer pos]
+  ([^HTMLEditorKit$ParserCallback this data ^Integer pos]
     (-> this (.handleComment data pos))))
 
 (defn handle-start-tag
-  "t - `javax.swing.text.html.HTML.Tag`
+  "t - `javax.swing.text.html.HTML$Tag`
   a - `javax.swing.text.MutableAttributeSet`
   pos - `int`"
-  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this ^javax.swing.text.html.HTML.Tag t ^javax.swing.text.MutableAttributeSet a ^Integer pos]
+  ([^HTMLEditorKit$ParserCallback this ^javax.swing.text.html.HTML$Tag t ^javax.swing.text.MutableAttributeSet a ^Integer pos]
     (-> this (.handleStartTag t a pos))))
 
 (defn handle-end-tag
-  "t - `javax.swing.text.html.HTML.Tag`
+  "t - `javax.swing.text.html.HTML$Tag`
   pos - `int`"
-  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this ^javax.swing.text.html.HTML.Tag t ^Integer pos]
+  ([^HTMLEditorKit$ParserCallback this ^javax.swing.text.html.HTML$Tag t ^Integer pos]
     (-> this (.handleEndTag t pos))))
 
 (defn handle-simple-tag
-  "t - `javax.swing.text.html.HTML.Tag`
+  "t - `javax.swing.text.html.HTML$Tag`
   a - `javax.swing.text.MutableAttributeSet`
   pos - `int`"
-  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this ^javax.swing.text.html.HTML.Tag t ^javax.swing.text.MutableAttributeSet a ^Integer pos]
+  ([^HTMLEditorKit$ParserCallback this ^javax.swing.text.html.HTML$Tag t ^javax.swing.text.MutableAttributeSet a ^Integer pos]
     (-> this (.handleSimpleTag t a pos))))
 
 (defn handle-error
   "error-msg - `java.lang.String`
   pos - `int`"
-  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this ^java.lang.String error-msg ^Integer pos]
+  ([^HTMLEditorKit$ParserCallback this ^java.lang.String error-msg ^Integer pos]
     (-> this (.handleError error-msg pos))))
 
 (defn handle-end-of-line-string
@@ -75,6 +75,6 @@
    stream.
 
   eol - `java.lang.String`"
-  ([^javax.swing.text.html.HTMLEditorKit$ParserCallback this ^java.lang.String eol]
+  ([^HTMLEditorKit$ParserCallback this ^java.lang.String eol]
     (-> this (.handleEndOfLineString eol))))
 

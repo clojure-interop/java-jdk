@@ -10,9 +10,9 @@
   Create an XAException with a given string.
 
   s - The String object containing the exception message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^XAException [^java.lang.String s]
     (new XAException s))
-  ([]
+  (^XAException []
     (new XAException )))
 
 (defn -error-code

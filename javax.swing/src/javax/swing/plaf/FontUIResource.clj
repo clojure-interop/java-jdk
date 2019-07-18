@@ -20,8 +20,8 @@
   name - `java.lang.String`
   style - `int`
   size - `int`"
-  ([^java.lang.String name ^Integer style ^Integer size]
+  (^FontUIResource [^java.lang.String name ^Integer style ^Integer size]
     (new FontUIResource name style size))
-  ([^java.awt.Font font]
+  (^FontUIResource [^java.awt.Font font]
     (new FontUIResource font)))
 

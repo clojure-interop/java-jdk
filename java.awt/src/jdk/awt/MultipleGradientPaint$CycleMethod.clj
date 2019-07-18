@@ -7,7 +7,7 @@
 
   Use the terminal colors to fill the remaining area.
 
-  type: java.awt.MultipleGradientPaint.CycleMethod"
+  type: java.awt.MultipleGradientPaint$CycleMethod"
   MultipleGradientPaint$CycleMethod/NO_CYCLE)
 
 (def REFLECT
@@ -16,7 +16,7 @@
   Cycle the gradient colors start-to-end, end-to-start
    to fill the remaining area.
 
-  type: java.awt.MultipleGradientPaint.CycleMethod"
+  type: java.awt.MultipleGradientPaint$CycleMethod"
   MultipleGradientPaint$CycleMethod/REFLECT)
 
 (def REPEAT
@@ -25,7 +25,7 @@
   Cycle the gradient colors start-to-end, start-to-end
    to fill the remaining area.
 
-  type: java.awt.MultipleGradientPaint.CycleMethod"
+  type: java.awt.MultipleGradientPaint$CycleMethod"
   MultipleGradientPaint$CycleMethod/REPEAT)
 
 (defn *values
@@ -37,7 +37,7 @@
   for (MultipleGradientPaint.CycleMethod c : MultipleGradientPaint.CycleMethod.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.MultipleGradientPaint.CycleMethod[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.MultipleGradientPaint$CycleMethod[]`"
   ([]
     (MultipleGradientPaint$CycleMethod/values )))
 
@@ -49,9 +49,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.awt.MultipleGradientPaint.CycleMethod`
+  returns: the enum constant with the specified name - `java.awt.MultipleGradientPaint$CycleMethod`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.awt.MultipleGradientPaint.CycleMethod [^java.lang.String name]
+  (^java.awt.MultipleGradientPaint$CycleMethod [^java.lang.String name]
     (MultipleGradientPaint$CycleMethod/valueOf name)))
 

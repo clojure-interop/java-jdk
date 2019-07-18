@@ -9,6 +9,6 @@
 
 (defn ->exemption-mechanism-spi
   "Constructor."
-  ([]
+  (^ExemptionMechanismSpi []
     (new ExemptionMechanismSpi )))
 

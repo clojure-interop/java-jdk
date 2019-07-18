@@ -11,6 +11,6 @@
   Constructs a BackingStoreException with the specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^BackingStoreException [^java.lang.String s]
     (new BackingStoreException s)))
 

@@ -22,21 +22,21 @@
   "Constructor.
 
   Creates an InputMap with no parent and no mappings."
-  ([]
+  (^InputMap []
     (new InputMap )))
 
 (defn set-parent
   "Sets this InputMap's parent.
 
   map - the InputMap that is the parent of this one - `javax.swing.InputMap`"
-  ([^javax.swing.InputMap this ^javax.swing.InputMap map]
+  ([^InputMap this ^javax.swing.InputMap map]
     (-> this (.setParent map))))
 
 (defn keys
   "Returns the KeyStrokes that are bound in this InputMap.
 
   returns: `javax.swing.KeyStroke[]`"
-  ([^javax.swing.InputMap this]
+  ([^InputMap this]
     (-> this (.keys))))
 
 (defn all-keys
@@ -45,7 +45,7 @@
    this method includes the keys defined in the parent.
 
   returns: `javax.swing.KeyStroke[]`"
-  ([^javax.swing.InputMap this]
+  ([^InputMap this]
     (-> this (.allKeys))))
 
 (defn put
@@ -55,7 +55,7 @@
 
   key-stroke - `javax.swing.KeyStroke`
   action-map-key - `java.lang.Object`"
-  ([^javax.swing.InputMap this ^javax.swing.KeyStroke key-stroke ^java.lang.Object action-map-key]
+  ([^InputMap this ^javax.swing.KeyStroke key-stroke ^java.lang.Object action-map-key]
     (-> this (.put key-stroke action-map-key))))
 
 (defn get-parent
@@ -63,7 +63,7 @@
 
   returns: map  the InputMap that is the parent of this one,
                 or null if this InputMap has no parent - `javax.swing.InputMap`"
-  (^javax.swing.InputMap [^javax.swing.InputMap this]
+  (^javax.swing.InputMap [^InputMap this]
     (-> this (.getParent))))
 
 (defn remove
@@ -71,19 +71,19 @@
    InputMap.
 
   key - `javax.swing.KeyStroke`"
-  ([^javax.swing.InputMap this ^javax.swing.KeyStroke key]
+  ([^InputMap this ^javax.swing.KeyStroke key]
     (-> this (.remove key))))
 
 (defn size
   "Returns the number of KeyStroke bindings.
 
   returns: `int`"
-  (^Integer [^javax.swing.InputMap this]
+  (^Integer [^InputMap this]
     (-> this (.size))))
 
 (defn clear
   "Removes all the mappings from this InputMap."
-  ([^javax.swing.InputMap this]
+  ([^InputMap this]
     (-> this (.clear))))
 
 (defn get
@@ -93,6 +93,6 @@
   key-stroke - `javax.swing.KeyStroke`
 
   returns: `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.InputMap this ^javax.swing.KeyStroke key-stroke]
+  (^java.lang.Object [^InputMap this ^javax.swing.KeyStroke key-stroke]
     (-> this (.get key-stroke))))
 

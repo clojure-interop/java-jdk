@@ -14,7 +14,7 @@
 
 (defn ->metal-check-box-ui
   "Constructor."
-  ([]
+  (^MetalCheckBoxUI []
     (new MetalCheckBoxUI )))
 
 (defn *create-ui
@@ -26,11 +26,11 @@
 
 (defn get-property-prefix
   "returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.metal.MetalCheckBoxUI this]
+  (^java.lang.String [^MetalCheckBoxUI this]
     (-> this (.getPropertyPrefix))))
 
 (defn install-defaults
   "b - `javax.swing.AbstractButton`"
-  ([^javax.swing.plaf.metal.MetalCheckBoxUI this ^javax.swing.AbstractButton b]
+  ([^MetalCheckBoxUI this ^javax.swing.AbstractButton b]
     (-> this (.installDefaults b))))
 

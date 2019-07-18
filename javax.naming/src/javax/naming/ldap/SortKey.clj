@@ -16,23 +16,23 @@
   attr-id - The non-null ID of the attribute to be used as a sort key. - `java.lang.String`
   ascending-order - If true then entries are arranged in ascending order. Otherwise there are arranged in descending order. - `boolean`
   matching-rule-id - The possibly null ID of the matching rule to use to order the attribute values. If not specified then the ordering matching rule defined for the sort key attribute is used. - `java.lang.String`"
-  ([^java.lang.String attr-id ^Boolean ascending-order ^java.lang.String matching-rule-id]
+  (^SortKey [^java.lang.String attr-id ^Boolean ascending-order ^java.lang.String matching-rule-id]
     (new SortKey attr-id ascending-order matching-rule-id))
-  ([^java.lang.String attr-id]
+  (^SortKey [^java.lang.String attr-id]
     (new SortKey attr-id)))
 
 (defn get-attribute-id
   "Retrieves the attribute ID of the sort key.
 
   returns: The non-null Attribute ID of the sort key. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.ldap.SortKey this]
+  (^java.lang.String [^SortKey this]
     (-> this (.getAttributeID))))
 
 (defn ascending?
   "Determines the sort order.
 
   returns: true if the sort order is ascending, false if descending. - `boolean`"
-  (^Boolean [^javax.naming.ldap.SortKey this]
+  (^Boolean [^SortKey this]
     (-> this (.isAscending))))
 
 (defn get-matching-rule-id
@@ -41,6 +41,6 @@
   returns: The possibly null matching rule ID. If null then the
               ordering matching rule defined for the sort key attribute
               is used. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.ldap.SortKey this]
+  (^java.lang.String [^SortKey this]
     (-> this (.getMatchingRuleID))))
 

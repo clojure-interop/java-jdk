@@ -14,7 +14,7 @@
 
 (defn ->basic-check-box-ui
   "Constructor."
-  ([]
+  (^BasicCheckBoxUI []
     (new BasicCheckBoxUI )))
 
 (defn *create-ui
@@ -26,6 +26,6 @@
 
 (defn get-property-prefix
   "returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.basic.BasicCheckBoxUI this]
+  (^java.lang.String [^BasicCheckBoxUI this]
     (-> this (.getPropertyPrefix))))
 

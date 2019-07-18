@@ -12,6 +12,6 @@
   "Constructor.
 
   Public default constructor."
-  ([]
+  (^ParameterDescriptor []
     (new ParameterDescriptor )))
 

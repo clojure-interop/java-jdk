@@ -7,6 +7,6 @@
   "Constructor.
 
   Deprecated."
-  ([]
+  (^DefaultTextUI []
     (new DefaultTextUI )))
 

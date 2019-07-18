@@ -31,26 +31,26 @@
   "Constructor.
 
   Creates a tool tip."
-  ([]
+  (^JToolTip []
     (new JToolTip )))
 
 (defn get-ui
   "Returns the L&F object that renders this component.
 
   returns: the ToolTipUI object that renders this component - `javax.swing.plaf.ToolTipUI`"
-  (^javax.swing.plaf.ToolTipUI [^javax.swing.JToolTip this]
+  (^javax.swing.plaf.ToolTipUI [^JToolTip this]
     (-> this (.getUI))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([^javax.swing.JToolTip this]
+  ([^JToolTip this]
     (-> this (.updateUI))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `ToolTipUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JToolTip this]
+  (^java.lang.String [^JToolTip this]
     (-> this (.getUIClassID))))
 
 (defn set-tip-text
@@ -58,7 +58,7 @@
    The string tipText may be null.
 
   tip-text - the String to display - `java.lang.String`"
-  ([^javax.swing.JToolTip this ^java.lang.String tip-text]
+  ([^JToolTip this ^java.lang.String tip-text]
     (-> this (.setTipText tip-text))))
 
 (defn get-tip-text
@@ -66,7 +66,7 @@
    The returned value may be null.
 
   returns: the String that is displayed - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JToolTip this]
+  (^java.lang.String [^JToolTip this]
     (-> this (.getTipText))))
 
 (defn set-component
@@ -77,7 +77,7 @@
    This is a bound property.
 
   c - the JComponent being described - `javax.swing.JComponent`"
-  ([^javax.swing.JToolTip this ^javax.swing.JComponent c]
+  ([^JToolTip this ^javax.swing.JComponent c]
     (-> this (.setComponent c))))
 
 (defn get-component
@@ -85,7 +85,7 @@
    The returned value may be null.
 
   returns: the component that the tooltip describes - `javax.swing.JComponent`"
-  (^javax.swing.JComponent [^javax.swing.JToolTip this]
+  (^javax.swing.JComponent [^JToolTip this]
     (-> this (.getComponent))))
 
 (defn get-accessible-context
@@ -96,6 +96,6 @@
 
   returns: an AccessibleJToolTip that serves as the
            AccessibleContext of this JToolTip - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JToolTip this]
+  (^javax.accessibility.AccessibleContext [^JToolTip this]
     (-> this (.getAccessibleContext))))
 

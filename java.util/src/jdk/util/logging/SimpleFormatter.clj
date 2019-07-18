@@ -23,7 +23,7 @@
 
 (defn ->simple-formatter
   "Constructor."
-  ([]
+  (^SimpleFormatter []
     (new SimpleFormatter )))
 
 (defn format
@@ -99,6 +99,6 @@
   record - the log record to be formatted. - `java.util.logging.LogRecord`
 
   returns: a formatted log record - `java.lang.String`"
-  (^java.lang.String [^java.util.logging.SimpleFormatter this ^java.util.logging.LogRecord record]
+  (^java.lang.String [^SimpleFormatter this ^java.util.logging.LogRecord record]
     (-> this (.format record))))
 

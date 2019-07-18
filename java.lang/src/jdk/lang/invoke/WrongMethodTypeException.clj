@@ -19,8 +19,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^WrongMethodTypeException [^java.lang.String s]
     (new WrongMethodTypeException s))
-  ([]
+  (^WrongMethodTypeException []
     (new WrongMethodTypeException )))
 

@@ -7,7 +7,7 @@
 
   Location of new documentation files.
 
-  type: javax.tools.DocumentationTool.Location"
+  type: javax.tools.DocumentationTool$Location"
   DocumentationTool$Location/DOCUMENTATION_OUTPUT)
 
 (def DOCLET_PATH
@@ -15,7 +15,7 @@
 
   Location to search for doclets.
 
-  type: javax.tools.DocumentationTool.Location"
+  type: javax.tools.DocumentationTool$Location"
   DocumentationTool$Location/DOCLET_PATH)
 
 (def TAGLET_PATH
@@ -23,7 +23,7 @@
 
   Location to search for taglets.
 
-  type: javax.tools.DocumentationTool.Location"
+  type: javax.tools.DocumentationTool$Location"
   DocumentationTool$Location/TAGLET_PATH)
 
 (defn *values
@@ -35,7 +35,7 @@
   for (DocumentationTool.Location c : DocumentationTool.Location.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.tools.DocumentationTool.Location[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.tools.DocumentationTool$Location[]`"
   ([]
     (DocumentationTool$Location/values )))
 
@@ -47,23 +47,23 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.tools.DocumentationTool.Location`
+  returns: the enum constant with the specified name - `javax.tools.DocumentationTool$Location`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.tools.DocumentationTool.Location [^java.lang.String name]
+  (^javax.tools.DocumentationTool$Location [^java.lang.String name]
     (DocumentationTool$Location/valueOf name)))
 
 (defn get-name
   "Description copied from interface: JavaFileManager.Location
 
   returns: a name - `java.lang.String`"
-  (^java.lang.String [^javax.tools.DocumentationTool$Location this]
+  (^java.lang.String [^DocumentationTool$Location this]
     (-> this (.getName))))
 
 (defn output-location?
   "Description copied from interface: JavaFileManager.Location
 
   returns: true if this is an output location, false otherwise - `boolean`"
-  (^Boolean [^javax.tools.DocumentationTool$Location this]
+  (^Boolean [^DocumentationTool$Location this]
     (-> this (.isOutputLocation))))
 

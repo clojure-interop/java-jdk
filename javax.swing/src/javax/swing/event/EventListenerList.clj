@@ -66,7 +66,7 @@
 
 (defn ->event-listener-list
   "Constructor."
-  ([]
+  (^EventListenerList []
     (new EventListenerList )))
 
 (defn get-listener-list
@@ -87,56 +87,56 @@
    itself.
 
   returns: `java.lang.Object[]`"
-  ([^javax.swing.event.EventListenerList this]
+  ([^EventListenerList this]
     (-> this (.getListenerList))))
 
 (defn get-listeners
   "Return an array of all the listeners of the given type.
 
-  t - `java.lang.Class<T>`
+  t - `java.lang.Class`
 
   returns: all of the listeners of the specified type. - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if the supplied class is not assignable to EventListener"
-  ([^javax.swing.event.EventListenerList this ^java.lang.Class t]
+  ([^EventListenerList this ^java.lang.Class t]
     (-> this (.getListeners t))))
 
 (defn get-listener-count
   "Returns the total number of listeners of the supplied type
    for this listener list.
 
-  t - `java.lang.Class<?>`
+  t - `java.lang.Class`
 
   returns: `int`"
-  (^Integer [^javax.swing.event.EventListenerList this ^java.lang.Class t]
+  (^Integer [^EventListenerList this ^java.lang.Class t]
     (-> this (.getListenerCount t)))
-  (^Integer [^javax.swing.event.EventListenerList this]
+  (^Integer [^EventListenerList this]
     (-> this (.getListenerCount))))
 
 (defn add
   "Adds the listener as a listener of the specified type.
 
-  t - the type of the listener to be added - `java.lang.Class<T>`
+  t - the type of the listener to be added - `java.lang.Class`
   l - the listener to be added - `T`
 
   returns: `<T extends java.util.EventListener> void`"
-  ([^javax.swing.event.EventListenerList this ^java.lang.Class t l]
+  ([^EventListenerList this ^java.lang.Class t l]
     (-> this (.add t l))))
 
 (defn remove
   "Removes the listener as a listener of the specified type.
 
-  t - the type of the listener to be removed - `java.lang.Class<T>`
+  t - the type of the listener to be removed - `java.lang.Class`
   l - the listener to be removed - `T`
 
   returns: `<T extends java.util.EventListener> void`"
-  ([^javax.swing.event.EventListenerList this ^java.lang.Class t l]
+  ([^EventListenerList this ^java.lang.Class t l]
     (-> this (.remove t l))))
 
 (defn to-string
   "Returns a string representation of the EventListenerList.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.event.EventListenerList this]
+  (^java.lang.String [^EventListenerList this]
     (-> this (.toString))))
 

@@ -52,9 +52,9 @@
   pix - the array of integers which are to be used to hold the RGB pixels retrieved from the image - `int[]`
   off - the offset into the array of where to store the first pixel - `int`
   scansize - the distance from one row of pixels to the next in the array - `int`"
-  ([^java.awt.Image img ^Integer x ^Integer y ^Integer w ^Integer h pix ^Integer off ^Integer scansize]
+  (^PixelGrabber [^java.awt.Image img ^Integer x ^Integer y ^Integer w ^Integer h pix ^Integer off ^Integer scansize]
     (new PixelGrabber img x y w h pix off scansize))
-  ([^java.awt.Image img ^Integer x ^Integer y ^Integer w ^Integer h ^Boolean force-rgb]
+  (^PixelGrabber [^java.awt.Image img ^Integer x ^Integer y ^Integer w ^Integer h ^Boolean force-rgb]
     (new PixelGrabber img x y w h force-rgb)))
 
 (defn get-width
@@ -65,7 +65,7 @@
 
   returns: the final width used for the pixel buffer or -1 if the width
    is not yet known - `int`"
-  (^Integer [^java.awt.image.PixelGrabber this]
+  (^Integer [^PixelGrabber this]
     (-> this (.getWidth))))
 
 (defn get-status
@@ -73,12 +73,12 @@
    representing the available pixel information are returned.
 
   returns: the bitwise OR of all relevant ImageObserver flags - `int`"
-  (^Integer [^java.awt.image.PixelGrabber this]
+  (^Integer [^PixelGrabber this]
     (-> this (.getStatus))))
 
 (defn start-grabbing
   "Request the PixelGrabber to start fetching the pixels."
-  ([^java.awt.image.PixelGrabber this]
+  ([^PixelGrabber this]
     (-> this (.startGrabbing))))
 
 (defn set-dimensions
@@ -93,7 +93,7 @@
 
   width - the width of the dimension - `int`
   height - the height of the dimension - `int`"
-  ([^java.awt.image.PixelGrabber this ^Integer width ^Integer height]
+  ([^PixelGrabber this ^Integer width ^Integer height]
     (-> this (.setDimensions width height))))
 
 (defn get-pixels
@@ -108,7 +108,7 @@
    image grab is complete.
 
   returns: either a byte array or an int array - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.image.PixelGrabber this]
+  (^java.lang.Object [^PixelGrabber this]
     (-> this (.getPixels))))
 
 (defn set-pixels
@@ -129,7 +129,7 @@
   pixels - the array of pixels - `byte[]`
   src-off - the offset into the pixels array - `int`
   src-scan - the distance from one row of pixels to the next in the pixels array - `int`"
-  ([^java.awt.image.PixelGrabber this ^Integer src-x ^Integer src-y ^Integer src-w ^Integer src-h ^java.awt.image.ColorModel model pixels ^Integer src-off ^Integer src-scan]
+  ([^PixelGrabber this ^Integer src-x ^Integer src-y ^Integer src-w ^Integer src-h ^java.awt.image.ColorModel model pixels ^Integer src-off ^Integer src-scan]
     (-> this (.setPixels src-x src-y src-w src-h model pixels src-off src-scan))))
 
 (defn set-hints
@@ -143,12 +143,12 @@
    with retrieving the requested pixels.
 
   hints - a set of hints used to process the pixels - `int`"
-  ([^java.awt.image.PixelGrabber this ^Integer hints]
+  ([^PixelGrabber this ^Integer hints]
     (-> this (.setHints hints))))
 
 (defn abort-grabbing
   "Request the PixelGrabber to abort the image fetch."
-  ([^java.awt.image.PixelGrabber this]
+  ([^PixelGrabber this]
     (-> this (.abortGrabbing))))
 
 (defn set-color-model
@@ -162,7 +162,7 @@
    with retrieving the requested pixels.
 
   model - the specified ColorModel - `java.awt.image.ColorModel`"
-  ([^java.awt.image.PixelGrabber this ^java.awt.image.ColorModel model]
+  ([^PixelGrabber this ^java.awt.image.ColorModel model]
     (-> this (.setColorModel model))))
 
 (defn status
@@ -175,7 +175,7 @@
    `getXXX`.
 
   returns: the bitwise OR of all relevant ImageObserver flags - `int`"
-  (^Integer [^java.awt.image.PixelGrabber this]
+  (^Integer [^PixelGrabber this]
     (-> this (.status))))
 
 (defn get-height
@@ -186,7 +186,7 @@
 
   returns: the final height used for the pixel buffer or -1 if the height
    is not yet known - `int`"
-  (^Integer [^java.awt.image.PixelGrabber this]
+  (^Integer [^PixelGrabber this]
     (-> this (.getHeight))))
 
 (defn set-properties
@@ -199,8 +199,8 @@
    this method directly since that operation could result in problems
    with retrieving the requested pixels.
 
-  props - the list of properties - `java.util.Hashtable<?,?>`"
-  ([^java.awt.image.PixelGrabber this ^java.util.Hashtable props]
+  props - the list of properties - `java.util.Hashtable`"
+  ([^PixelGrabber this ^java.util.Hashtable props]
     (-> this (.setProperties props))))
 
 (defn grab-pixels
@@ -222,9 +222,9 @@
    abort, error or timeout - `boolean`
 
   throws: java.lang.InterruptedException - Another thread has interrupted this thread."
-  (^Boolean [^java.awt.image.PixelGrabber this ^Long ms]
+  (^Boolean [^PixelGrabber this ^Long ms]
     (-> this (.grabPixels ms)))
-  (^Boolean [^java.awt.image.PixelGrabber this]
+  (^Boolean [^PixelGrabber this]
     (-> this (.grabPixels))))
 
 (defn image-complete
@@ -238,7 +238,7 @@
    with retrieving the requested pixels.
 
   status - the status of image loading - `int`"
-  ([^java.awt.image.PixelGrabber this ^Integer status]
+  ([^PixelGrabber this ^Integer status]
     (-> this (.imageComplete status))))
 
 (defn get-color-model
@@ -255,6 +255,6 @@
    objects that was used by the ImageProducer to deliver the pixels.
 
   returns: the ColorModel object used for storing the pixels - `java.awt.image.ColorModel`"
-  (^java.awt.image.ColorModel [^java.awt.image.PixelGrabber this]
+  (^java.awt.image.ColorModel [^PixelGrabber this]
     (-> this (.getColorModel))))
 

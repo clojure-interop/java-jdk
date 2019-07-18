@@ -10,20 +10,20 @@
 
   modulus - the modulus - `java.math.BigInteger`
   public-exponent - the public exponent - `java.math.BigInteger`"
-  ([^java.math.BigInteger modulus ^java.math.BigInteger public-exponent]
+  (^RSAPublicKeySpec [^java.math.BigInteger modulus ^java.math.BigInteger public-exponent]
     (new RSAPublicKeySpec modulus public-exponent)))
 
 (defn get-modulus
   "Returns the modulus.
 
   returns: the modulus - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.security.spec.RSAPublicKeySpec this]
+  (^java.math.BigInteger [^RSAPublicKeySpec this]
     (-> this (.getModulus))))
 
 (defn get-public-exponent
   "Returns the public exponent.
 
   returns: the public exponent - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.security.spec.RSAPublicKeySpec this]
+  (^java.math.BigInteger [^RSAPublicKeySpec this]
     (-> this (.getPublicExponent))))
 

@@ -17,6 +17,6 @@
                    or -1 if this source of characters is at its end - `int`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^Integer [^java.lang.Readable this ^java.nio.CharBuffer cb]
+  (^Integer [^Readable this ^java.nio.CharBuffer cb]
     (-> this (.read cb))))
 

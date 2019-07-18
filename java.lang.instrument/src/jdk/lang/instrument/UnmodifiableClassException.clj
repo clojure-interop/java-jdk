@@ -12,8 +12,8 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^UnmodifiableClassException [^java.lang.String s]
     (new UnmodifiableClassException s))
-  ([]
+  (^UnmodifiableClassException []
     (new UnmodifiableClassException )))
 

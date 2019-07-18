@@ -5,6 +5,6 @@
 
 (defn ->progress-bar-ui
   "Constructor."
-  ([]
+  (^ProgressBarUI []
     (new ProgressBarUI )))
 

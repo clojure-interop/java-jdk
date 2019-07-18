@@ -32,11 +32,16 @@
 (defn ->stream-tokenizer
   "Constructor.
 
-  Create a tokenizer that parses the given character stream.
+  Deprecated. As of JDK version 1.1, the preferred way to tokenize an
+   input stream is to convert it into a character stream, for example:
 
-  r - a Reader object providing the input stream. - `java.io.Reader`"
-  ([^java.io.Reader r]
-    (new StreamTokenizer r)))
+
+     Reader r = new BufferedReader(new InputStreamReader(is));
+     StreamTokenizer st = new StreamTokenizer(r);
+
+  is - an input stream. - `java.io.InputStream`"
+  (^StreamTokenizer [^java.io.InputStream is]
+    (new StreamTokenizer is)))
 
 (defn -ttype
   "Instance Field.
@@ -144,7 +149,7 @@
    treated as white space and serve only to separate tokens.
 
   flag - true indicates that end-of-line characters are separate tokens; false indicates that end-of-line characters are white space. - `boolean`"
-  ([^java.io.StreamTokenizer this ^Boolean flag]
+  ([^StreamTokenizer this ^Boolean flag]
     (-> this (.eolIsSignificant flag))))
 
 (defn slash-slash-comments
@@ -158,7 +163,7 @@
    comments are not treated specially.
 
   flag - true indicates to recognize and ignore C++-style comments. - `boolean`"
-  ([^java.io.StreamTokenizer this ^Boolean flag]
+  ([^StreamTokenizer this ^Boolean flag]
     (-> this (.slashSlashComments flag))))
 
 (defn comment-char
@@ -169,7 +174,7 @@
    Any other attribute settings for the specified character are cleared.
 
   ch - the character. - `int`"
-  ([^java.io.StreamTokenizer this ^Integer ch]
+  ([^StreamTokenizer this ^Integer ch]
     (-> this (.commentChar ch))))
 
 (defn slash-star-comments
@@ -182,7 +187,7 @@
    are not treated specially.
 
   flag - true indicates to recognize and ignore C-style comments. - `boolean`"
-  ([^java.io.StreamTokenizer this ^Boolean flag]
+  ([^StreamTokenizer this ^Boolean flag]
     (-> this (.slashStarComments flag))))
 
 (defn quote-char
@@ -205,7 +210,7 @@
    Any other attribute settings for the specified character are cleared.
 
   ch - the character. - `int`"
-  ([^java.io.StreamTokenizer this ^Integer ch]
+  ([^StreamTokenizer this ^Integer ch]
     (-> this (.quoteChar ch))))
 
 (defn lower-case-mode
@@ -220,7 +225,7 @@
    sval field is not modified.
 
   fl - true indicates that all word tokens should be lowercased. - `boolean`"
-  ([^java.io.StreamTokenizer this ^Boolean fl]
+  ([^StreamTokenizer this ^Boolean fl]
     (-> this (.lowerCaseMode fl))))
 
 (defn to-string
@@ -235,7 +240,7 @@
   Token['a'], line 10
 
   returns: a string representation of the token - `java.lang.String`"
-  (^java.lang.String [^java.io.StreamTokenizer this]
+  (^java.lang.String [^StreamTokenizer this]
     (-> this (.toString))))
 
 (defn push-back
@@ -243,7 +248,7 @@
    tokenizer to return the current value in the ttype
    field, and not to modify the value in the nval or
    sval field."
-  ([^java.io.StreamTokenizer this]
+  ([^StreamTokenizer this]
     (-> this (.pushBack))))
 
 (defn next-token
@@ -261,7 +266,7 @@
   returns: the value of the ttype field. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Integer [^java.io.StreamTokenizer this]
+  (^Integer [^StreamTokenizer this]
     (-> this (.nextToken))))
 
 (defn ordinary-char
@@ -279,7 +284,7 @@
    the presence of such terminator characters in its line count.
 
   ch - the character. - `int`"
-  ([^java.io.StreamTokenizer this ^Integer ch]
+  ([^StreamTokenizer this ^Integer ch]
     (-> this (.ordinaryChar ch))))
 
 (defn whitespace-chars
@@ -293,7 +298,7 @@
 
   low - the low end of the range. - `int`
   hi - the high end of the range. - `int`"
-  ([^java.io.StreamTokenizer this ^Integer low ^Integer hi]
+  ([^StreamTokenizer this ^Integer low ^Integer hi]
     (-> this (.whitespaceChars low hi))))
 
 (defn parse-numbers
@@ -311,7 +316,7 @@
    number rather than a word, by setting the ttype
    field to the value TT_NUMBER and putting the numeric
    value of the token into the nval field."
-  ([^java.io.StreamTokenizer this]
+  ([^StreamTokenizer this]
     (-> this (.parseNumbers))))
 
 (defn ordinary-chars
@@ -323,14 +328,14 @@
 
   low - the low end of the range. - `int`
   hi - the high end of the range. - `int`"
-  ([^java.io.StreamTokenizer this ^Integer low ^Integer hi]
+  ([^StreamTokenizer this ^Integer low ^Integer hi]
     (-> this (.ordinaryChars low hi))))
 
 (defn reset-syntax
   "Resets this tokenizer's syntax table so that all characters are
    `ordinary.` See the ordinaryChar method
    for more information on a character being ordinary."
-  ([^java.io.StreamTokenizer this]
+  ([^StreamTokenizer this]
     (-> this (.resetSyntax))))
 
 (defn word-chars
@@ -341,13 +346,13 @@
 
   low - the low end of the range. - `int`
   hi - the high end of the range. - `int`"
-  ([^java.io.StreamTokenizer this ^Integer low ^Integer hi]
+  ([^StreamTokenizer this ^Integer low ^Integer hi]
     (-> this (.wordChars low hi))))
 
 (defn lineno
   "Return the current line number.
 
   returns: the current line number of this stream tokenizer. - `int`"
-  (^Integer [^java.io.StreamTokenizer this]
+  (^Integer [^StreamTokenizer this]
     (-> this (.lineno))))
 

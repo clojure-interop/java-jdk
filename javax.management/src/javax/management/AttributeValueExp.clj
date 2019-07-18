@@ -14,16 +14,16 @@
    specified object attribute, named attr.
 
   attr - the name of the attribute whose value is the value of this ValueExp. - `java.lang.String`"
-  ([^java.lang.String attr]
+  (^AttributeValueExp [^java.lang.String attr]
     (new AttributeValueExp attr))
-  ([]
+  (^AttributeValueExp []
     (new AttributeValueExp )))
 
 (defn get-attribute-name
   "Returns a string representation of the name of the attribute.
 
   returns: the attribute name. - `java.lang.String`"
-  (^java.lang.String [^javax.management.AttributeValueExp this]
+  (^java.lang.String [^AttributeValueExp this]
     (-> this (.getAttributeName))))
 
 (defn apply
@@ -40,23 +40,21 @@
   returns: The ValueExp. - `javax.management.ValueExp`
 
   throws: javax.management.BadAttributeValueExpException"
-  (^javax.management.ValueExp [^javax.management.AttributeValueExp this ^javax.management.ObjectName name]
+  (^javax.management.ValueExp [^AttributeValueExp this ^javax.management.ObjectName name]
     (-> this (.apply name))))
 
 (defn to-string
   "Returns the string representing its value.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.management.AttributeValueExp this]
+  (^java.lang.String [^AttributeValueExp this]
     (-> this (.toString))))
 
 (defn set-m-bean-server
   "Deprecated. This method has no effect.  The MBean Server used to
    obtain an attribute value is QueryEval.getMBeanServer().
 
-  s - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`
-
-  returns: `java.lang.  void`"
-  ([^javax.management.AttributeValueExp this ^javax.management.MBeanServer s]
+  s - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`"
+  ([^AttributeValueExp this ^javax.management.MBeanServer s]
     (-> this (.setMBeanServer s))))
 

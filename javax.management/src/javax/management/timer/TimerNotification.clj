@@ -18,13 +18,13 @@
   time-stamp - The notification emission date. - `long`
   msg - The notification message. - `java.lang.String`
   id - The notification identifier. - `java.lang.Integer`"
-  ([^java.lang.String type ^java.lang.Object source ^Long sequence-number ^Long time-stamp ^java.lang.String msg ^java.lang.Integer id]
+  (^TimerNotification [^java.lang.String type ^java.lang.Object source ^Long sequence-number ^Long time-stamp ^java.lang.String msg ^java.lang.Integer id]
     (new TimerNotification type source sequence-number time-stamp msg id)))
 
 (defn get-notification-id
   "Gets the identifier of this timer notification.
 
   returns: The identifier. - `java.lang.Integer`"
-  (^java.lang.Integer [^javax.management.timer.TimerNotification this]
+  (^java.lang.Integer [^TimerNotification this]
     (-> this (.getNotificationID))))
 

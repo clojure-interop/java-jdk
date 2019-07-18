@@ -120,28 +120,28 @@
   append - specifies append mode - `boolean`
 
   throws: java.io.IOException - if there are IO problems opening the files."
-  ([^java.lang.String pattern ^Integer limit ^Integer count ^Boolean append]
+  (^FileHandler [^java.lang.String pattern ^Integer limit ^Integer count ^Boolean append]
     (new FileHandler pattern limit count append))
-  ([^java.lang.String pattern ^Integer limit ^Integer count]
+  (^FileHandler [^java.lang.String pattern ^Integer limit ^Integer count]
     (new FileHandler pattern limit count))
-  ([^java.lang.String pattern ^Boolean append]
+  (^FileHandler [^java.lang.String pattern ^Boolean append]
     (new FileHandler pattern append))
-  ([^java.lang.String pattern]
+  (^FileHandler [^java.lang.String pattern]
     (new FileHandler pattern))
-  ([]
+  (^FileHandler []
     (new FileHandler )))
 
 (defn publish
   "Format and publish a LogRecord.
 
   record - description of the log event. A null record is silently ignored and is not published - `java.util.logging.LogRecord`"
-  ([^java.util.logging.FileHandler this ^java.util.logging.LogRecord record]
+  ([^FileHandler this ^java.util.logging.LogRecord record]
     (-> this (.publish record))))
 
 (defn close
   "Close all the files.
 
   throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
-  ([^java.util.logging.FileHandler this]
+  ([^FileHandler this]
     (-> this (.close))))
 

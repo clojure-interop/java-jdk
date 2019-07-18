@@ -36,7 +36,7 @@
 
   returns: an unmodifiable list of Transform objects (may be
       empty but never null). - `java.util.List`"
-  (^java.util.List [^javax.xml.crypto.dsig.keyinfo.RetrievalMethod this]
+  (^java.util.List [^RetrievalMethod this]
     (-> this (.getTransforms))))
 
 (defn get-uri
@@ -44,7 +44,7 @@
 
   returns: the URI of the referenced KeyInfo information in
       RFC 2396 format (never null) - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.keyinfo.RetrievalMethod this]
+  (^java.lang.String [^RetrievalMethod this]
     (-> this (.getURI))))
 
 (defn dereference
@@ -61,6 +61,6 @@
       KeyInfo object. - `javax.xml.crypto.Data`
 
   throws: java.lang.NullPointerException - if context is null"
-  (^javax.xml.crypto.Data [^javax.xml.crypto.dsig.keyinfo.RetrievalMethod this ^javax.xml.crypto.XMLCryptoContext context]
+  (^javax.xml.crypto.Data [^RetrievalMethod this ^javax.xml.crypto.XMLCryptoContext context]
     (-> this (.dereference context))))
 

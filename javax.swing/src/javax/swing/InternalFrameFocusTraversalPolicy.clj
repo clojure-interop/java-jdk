@@ -9,7 +9,7 @@
 
 (defn ->internal-frame-focus-traversal-policy
   "Constructor."
-  ([]
+  (^InternalFrameFocusTraversalPolicy []
     (new InternalFrameFocusTraversalPolicy )))
 
 (defn get-initial-component
@@ -30,6 +30,6 @@
            can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if window is null"
-  (^java.awt.Component [^javax.swing.InternalFrameFocusTraversalPolicy this ^javax.swing.JInternalFrame frame]
+  (^java.awt.Component [^InternalFrameFocusTraversalPolicy this ^javax.swing.JInternalFrame frame]
     (-> this (.getInitialComponent frame))))
 

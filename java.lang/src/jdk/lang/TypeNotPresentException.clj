@@ -21,13 +21,13 @@
 
   type-name - the fully qualified name of the unavailable type - `java.lang.String`
   cause - the exception that was thrown when the system attempted to load the named type, or null if unavailable or inapplicable - `java.lang.Throwable`"
-  ([^java.lang.String type-name ^java.lang.Throwable cause]
+  (^TypeNotPresentException [^java.lang.String type-name ^java.lang.Throwable cause]
     (new TypeNotPresentException type-name cause)))
 
 (defn type-name
   "Returns the fully qualified name of the unavailable type.
 
   returns: the fully qualified name of the unavailable type - `java.lang.String`"
-  (^java.lang.String [^java.lang.TypeNotPresentException this]
+  (^java.lang.String [^TypeNotPresentException this]
     (-> this (.typeName))))
 

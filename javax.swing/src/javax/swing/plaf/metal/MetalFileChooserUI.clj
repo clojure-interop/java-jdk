@@ -7,7 +7,7 @@
   "Constructor.
 
   filechooser - `javax.swing.JFileChooser`"
-  ([^javax.swing.JFileChooser filechooser]
+  (^MetalFileChooserUI [^javax.swing.JFileChooser filechooser]
     (new MetalFileChooserUI filechooser)))
 
 (defn *create-ui
@@ -21,12 +21,12 @@
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
+  ([^MetalFileChooserUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn install-components
   "fc - `javax.swing.JFileChooser`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JFileChooser fc]
+  ([^MetalFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.installComponents fc))))
 
 (defn get-minimum-size
@@ -36,12 +36,12 @@
 
   returns: a Dimension specifying the minimum
              width and height of the file chooser - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^MetalFileChooserUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-file-name
   "returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.metal.MetalFileChooserUI this]
+  (^java.lang.String [^MetalFileChooserUI this]
     (-> this (.getFileName))))
 
 (defn get-maximum-size
@@ -51,52 +51,52 @@
 
   returns: a Dimension specifying the maximum
              width and height of the file chooser - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^MetalFileChooserUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn set-file-name
   "filename - `java.lang.String`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^java.lang.String filename]
+  ([^MetalFileChooserUI this ^java.lang.String filename]
     (-> this (.setFileName filename))))
 
 (defn create-property-change-listener
   "fc - `javax.swing.JFileChooser`
 
   returns: `java.beans.PropertyChangeListener`"
-  (^java.beans.PropertyChangeListener [^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^java.beans.PropertyChangeListener [^MetalFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.createPropertyChangeListener fc))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
+  ([^MetalFileChooserUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn set-directory-name
   "dirname - `java.lang.String`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^java.lang.String dirname]
+  ([^MetalFileChooserUI this ^java.lang.String dirname]
     (-> this (.setDirectoryName dirname))))
 
 (defn get-directory-name
   "returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.metal.MetalFileChooserUI this]
+  (^java.lang.String [^MetalFileChooserUI this]
     (-> this (.getDirectoryName))))
 
 (defn ensure-file-is-visible
   "fc - `javax.swing.JFileChooser`
   f - `java.io.File`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JFileChooser fc ^java.io.File f]
+  ([^MetalFileChooserUI this ^javax.swing.JFileChooser fc ^java.io.File f]
     (-> this (.ensureFileIsVisible fc f))))
 
 (defn value-changed
   "e - `javax.swing.event.ListSelectionEvent`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.event.ListSelectionEvent e]
+  ([^MetalFileChooserUI this ^javax.swing.event.ListSelectionEvent e]
     (-> this (.valueChanged e))))
 
 (defn rescan-current-directory
   "fc - `javax.swing.JFileChooser`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JFileChooser fc]
+  ([^MetalFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.rescanCurrentDirectory fc))))
 
 (defn create-list-selection-listener
@@ -105,7 +105,7 @@
   fc - a JFileChooser - `javax.swing.JFileChooser`
 
   returns: a ListSelectionListener - `javax.swing.event.ListSelectionListener`"
-  (^javax.swing.event.ListSelectionListener [^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JFileChooser fc]
+  (^javax.swing.event.ListSelectionListener [^MetalFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.createListSelectionListener fc))))
 
 (defn get-preferred-size
@@ -120,11 +120,11 @@
 
   returns: a Dimension specifying the preferred
              width and height of the file chooser - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^MetalFileChooserUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn uninstall-components
   "fc - `javax.swing.JFileChooser`"
-  ([^javax.swing.plaf.metal.MetalFileChooserUI this ^javax.swing.JFileChooser fc]
+  ([^MetalFileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.uninstallComponents fc))))
 

@@ -9,7 +9,7 @@
 
   An int representing no action.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DnDConstants/ACTION_NONE)
 
 (def *-action-copy
@@ -17,7 +17,7 @@
 
   An int representing a `copy` action.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DnDConstants/ACTION_COPY)
 
 (def *-action-move
@@ -25,7 +25,7 @@
 
   An int representing a `move` action.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DnDConstants/ACTION_MOVE)
 
 (def *-action-copy-or-move
@@ -34,7 +34,7 @@
   An int representing a `copy` or
    `move` action.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DnDConstants/ACTION_COPY_OR_MOVE)
 
 (def *-action-link
@@ -54,7 +54,7 @@
    misinterpretation of the operations semantics could lead to confusing
    results for the user.
 
-  type: java.lang.annotation.    int"
+  type: int"
   DnDConstants/ACTION_LINK)
 
 (def *-action-reference
@@ -63,6 +63,6 @@
   An int representing a `reference`
    action (synonym for ACTION_LINK).
 
-  type: java.lang.annotation.    int"
+  type: int"
   DnDConstants/ACTION_REFERENCE)
 

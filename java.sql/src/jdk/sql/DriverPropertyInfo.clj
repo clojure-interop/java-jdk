@@ -17,7 +17,7 @@
 
   name - the name of the property - `java.lang.String`
   value - the current value, which may be null - `java.lang.String`"
-  ([^java.lang.String name ^java.lang.String value]
+  (^DriverPropertyInfo [^java.lang.String name ^java.lang.String value]
     (new DriverPropertyInfo name value)))
 
 (defn -name

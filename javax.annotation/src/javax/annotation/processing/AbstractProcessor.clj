@@ -22,7 +22,7 @@
 
   returns: the options recognized by this processor, or an empty
    set if none - `java.util.Set<java.lang.String>`"
-  (^java.util.Set [^javax.annotation.processing.AbstractProcessor this]
+  (^java.util.Set [^AbstractProcessor this]
     (-> this (.getSupportedOptions))))
 
 (defn get-supported-annotation-types
@@ -32,7 +32,7 @@
 
   returns: the names of the annotation types supported by this
    processor, or an empty set if none - `java.util.Set<java.lang.String>`"
-  (^java.util.Set [^javax.annotation.processing.AbstractProcessor this]
+  (^java.util.Set [^AbstractProcessor this]
     (-> this (.getSupportedAnnotationTypes))))
 
 (defn get-supported-source-version
@@ -40,7 +40,7 @@
    annotation.  If the class is not so annotated, SourceVersion.RELEASE_6 is returned.
 
   returns: the latest source version supported by this processor - `javax.lang.model.SourceVersion`"
-  (^javax.lang.model.SourceVersion [^javax.annotation.processing.AbstractProcessor this]
+  (^javax.lang.model.SourceVersion [^AbstractProcessor this]
     (-> this (.getSupportedSourceVersion))))
 
 (defn init
@@ -52,7 +52,7 @@
   processing-env - environment to access facilities the tool framework provides to the processor - `javax.annotation.processing.ProcessingEnvironment`
 
   throws: java.lang.IllegalStateException - if this method is called more than once."
-  ([^javax.annotation.processing.AbstractProcessor this ^javax.annotation.processing.ProcessingEnvironment processing-env]
+  ([^AbstractProcessor this ^javax.annotation.processing.ProcessingEnvironment processing-env]
     (-> this (.init processing-env))))
 
 (defn process
@@ -67,11 +67,11 @@
 
    The input set will be empty if the processor supports `*` and the root elements have no annotations.  A Processor must gracefully handle an empty set of annotations.
 
-  annotations - the annotation types requested to be processed - `javax.lang.model.element.TypeElement>`
+  annotations - the annotation types requested to be processed - `java.util.Set`
   round-env - environment for information about the current and prior round - `javax.annotation.processing.RoundEnvironment`
 
   returns: whether or not the set of annotation types are claimed by this processor - `boolean`"
-  (^Boolean [^javax.annotation.processing.AbstractProcessor this ^javax.lang.model.element.TypeElement> annotations ^javax.annotation.processing.RoundEnvironment round-env]
+  (^Boolean [^AbstractProcessor this ^java.util.Set annotations ^javax.annotation.processing.RoundEnvironment round-env]
     (-> this (.process annotations round-env))))
 
 (defn get-completions
@@ -83,6 +83,6 @@
   user-text - source code text to be completed - `java.lang.String`
 
   returns: suggested completions to the annotation - `java.lang.Iterable<? extends javax.annotation.processing.Completion>`"
-  ([^javax.annotation.processing.AbstractProcessor this ^javax.lang.model.element.Element element ^javax.lang.model.element.AnnotationMirror annotation ^javax.lang.model.element.ExecutableElement member ^java.lang.String user-text]
+  ([^AbstractProcessor this ^javax.lang.model.element.Element element ^javax.lang.model.element.AnnotationMirror annotation ^javax.lang.model.element.ExecutableElement member ^java.lang.String user-text]
     (-> this (.getCompletions element annotation member user-text))))
 

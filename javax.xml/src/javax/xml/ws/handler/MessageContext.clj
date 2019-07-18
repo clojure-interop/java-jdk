@@ -14,10 +14,10 @@
   "Sets the scope of a property.
 
   name - Name of the property associated with the MessageContext - `java.lang.String`
-  scope - Desired scope of the property - `javax.xml.ws.handler.MessageContext.Scope`
+  scope - Desired scope of the property - `javax.xml.ws.handler.MessageContext$Scope`
 
   throws: java.lang.IllegalArgumentException - if an illegal property name is specified"
-  ([^javax.xml.ws.handler.MessageContext this ^java.lang.String name ^javax.xml.ws.handler.MessageContext.Scope scope]
+  ([^MessageContext this ^java.lang.String name ^javax.xml.ws.handler.MessageContext$Scope scope]
     (-> this (.setScope name scope))))
 
 (defn get-scope
@@ -25,9 +25,9 @@
 
   name - Name of the property - `java.lang.String`
 
-  returns: Scope of the property - `javax.xml.ws.handler.MessageContext.Scope`
+  returns: Scope of the property - `javax.xml.ws.handler.MessageContext$Scope`
 
   throws: java.lang.IllegalArgumentException - if a non-existant property name is specified"
-  (^javax.xml.ws.handler.MessageContext.Scope [^javax.xml.ws.handler.MessageContext this ^java.lang.String name]
+  (^javax.xml.ws.handler.MessageContext$Scope [^MessageContext this ^java.lang.String name]
     (-> this (.getScope name))))
 

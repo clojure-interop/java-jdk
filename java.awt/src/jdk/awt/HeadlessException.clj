@@ -9,9 +9,9 @@
   "Constructor.
 
   msg - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^HeadlessException [^java.lang.String msg]
     (new HeadlessException msg))
-  ([]
+  (^HeadlessException []
     (new HeadlessException )))
 
 (defn get-message
@@ -19,6 +19,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  (^java.lang.String [^java.awt.HeadlessException this]
+  (^java.lang.String [^HeadlessException this]
     (-> this (.getMessage))))
 

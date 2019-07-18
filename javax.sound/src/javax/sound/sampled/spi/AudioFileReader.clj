@@ -7,7 +7,7 @@
 
 (defn ->audio-file-reader
   "Constructor."
-  ([]
+  (^AudioFileReader []
     (new AudioFileReader )))
 
 (defn get-audio-file-format
@@ -25,7 +25,7 @@
   returns: an AudioFileFormat object describing the audio file format - `javax.sound.sampled.AudioFileFormat`
 
   throws: javax.sound.sampled.UnsupportedAudioFileException - if the stream does not point to valid audio file data recognized by the system"
-  (^javax.sound.sampled.AudioFileFormat [^javax.sound.sampled.spi.AudioFileReader this ^java.io.InputStream stream]
+  (^javax.sound.sampled.AudioFileFormat [^AudioFileReader this ^java.io.InputStream stream]
     (-> this (.getAudioFileFormat stream))))
 
 (defn get-audio-input-stream
@@ -44,6 +44,6 @@
    in the input stream. - `javax.sound.sampled.AudioInputStream`
 
   throws: javax.sound.sampled.UnsupportedAudioFileException - if the stream does not point to valid audio file data recognized by the system"
-  (^javax.sound.sampled.AudioInputStream [^javax.sound.sampled.spi.AudioFileReader this ^java.io.InputStream stream]
+  (^javax.sound.sampled.AudioInputStream [^AudioFileReader this ^java.io.InputStream stream]
     (-> this (.getAudioInputStream stream))))
 

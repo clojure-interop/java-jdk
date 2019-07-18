@@ -13,10 +13,10 @@
 
   s - the detail message. - `java.lang.String`
   cause - the cause, may be null - `java.lang.Throwable`"
-  ([^java.lang.String s ^java.lang.Throwable cause]
+  (^LinkageError [^java.lang.String s ^java.lang.Throwable cause]
     (new LinkageError s cause))
-  ([^java.lang.String s]
+  (^LinkageError [^java.lang.String s]
     (new LinkageError s))
-  ([]
+  (^LinkageError []
     (new LinkageError )))
 

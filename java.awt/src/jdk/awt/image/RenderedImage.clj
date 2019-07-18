@@ -10,14 +10,14 @@
   "Returns the minimum tile index in the Y direction.
 
   returns: the minimum tile index in the X direction. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getMinTileY))))
 
 (defn get-width
   "Returns the width of the RenderedImage.
 
   returns: the width of this RenderedImage. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getWidth))))
 
 (defn get-data
@@ -29,9 +29,9 @@
 
   returns: the region of the RenderedImage
    indicated by the specified Rectangle. - `java.awt.image.Raster`"
-  (^java.awt.image.Raster [^java.awt.image.RenderedImage this ^java.awt.Rectangle rect]
+  (^java.awt.image.Raster [^RenderedImage this ^java.awt.Rectangle rect]
     (-> this (.getData rect)))
-  (^java.awt.image.Raster [^java.awt.image.RenderedImage this]
+  (^java.awt.image.Raster [^RenderedImage this]
     (-> this (.getData))))
 
 (defn get-tile
@@ -43,7 +43,7 @@
   tile-y - the Y index of the requested tile in the tile array - `int`
 
   returns: the tile given the specified indices. - `java.awt.image.Raster`"
-  (^java.awt.image.Raster [^java.awt.image.RenderedImage this ^Integer tile-x ^Integer tile-y]
+  (^java.awt.image.Raster [^RenderedImage this ^Integer tile-x ^Integer tile-y]
     (-> this (.getTile tile-x tile-y))))
 
 (defn get-tile-grid-x-offset
@@ -52,14 +52,14 @@
    (Note that tile (0, 0) may not actually exist.)
 
   returns: the X offset of the tile grid relative to the origin. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getTileGridXOffset))))
 
 (defn get-min-y
   "Returns the minimum Y coordinate (inclusive) of the RenderedImage.
 
   returns: the Y coordinate of this RenderedImage. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getMinY))))
 
 (defn copy-data
@@ -73,7 +73,7 @@
   raster - a WritableRaster to hold the returned portion of the image, or null. - `java.awt.image.WritableRaster`
 
   returns: a reference to the supplied or created WritableRaster. - `java.awt.image.WritableRaster`"
-  (^java.awt.image.WritableRaster [^java.awt.image.RenderedImage this ^java.awt.image.WritableRaster raster]
+  (^java.awt.image.WritableRaster [^RenderedImage this ^java.awt.image.WritableRaster raster]
     (-> this (.copyData raster))))
 
 (defn get-property-names
@@ -84,7 +84,7 @@
   returns: a String array containing all of the
    property names that getProperty(String) recognizes;
    or null if no property names are recognized. - `java.lang.String[]`"
-  ([^java.awt.image.RenderedImage this]
+  ([^RenderedImage this]
     (-> this (.getPropertyNames))))
 
 (defn get-sample-model
@@ -92,7 +92,7 @@
    returned from this image will have this as their SampleModel.
 
   returns: the SampleModel of this image. - `java.awt.image.SampleModel`"
-  (^java.awt.image.SampleModel [^java.awt.image.RenderedImage this]
+  (^java.awt.image.SampleModel [^RenderedImage this]
     (-> this (.getSampleModel))))
 
 (defn get-tile-grid-y-offset
@@ -101,14 +101,14 @@
    (Note that tile (0, 0) may not actually exist.)
 
   returns: the Y offset of the tile grid relative to the origin. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getTileGridYOffset))))
 
 (defn get-height
   "Returns the height of the RenderedImage.
 
   returns: the height of this RenderedImage. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getHeight))))
 
 (defn get-property
@@ -121,7 +121,7 @@
   name - the name of the property - `java.lang.String`
 
   returns: the property indicated by the specified name. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.image.RenderedImage this ^java.lang.String name]
+  (^java.lang.Object [^RenderedImage this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn get-tile-height
@@ -129,21 +129,21 @@
     height.
 
   returns: the tile height in pixels. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getTileHeight))))
 
 (defn get-num-x-tiles
   "Returns the number of tiles in the X direction.
 
   returns: the number of tiles in the X direction. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getNumXTiles))))
 
 (defn get-min-x
   "Returns the minimum X coordinate (inclusive) of the RenderedImage.
 
   returns: the X coordinate of this RenderedImage. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getMinX))))
 
 (defn get-tile-width
@@ -151,7 +151,7 @@
     width.
 
   returns: the tile width in pixels. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getTileWidth))))
 
 (defn get-sources
@@ -162,14 +162,14 @@
    no immediate sources.
 
   returns: a Vector of RenderedImage objects. - `java.util.Vector<java.awt.image.RenderedImage>`"
-  (^java.util.Vector [^java.awt.image.RenderedImage this]
+  (^java.util.Vector [^RenderedImage this]
     (-> this (.getSources))))
 
 (defn get-num-y-tiles
   "Returns the number of tiles in the Y direction.
 
   returns: the number of tiles in the Y direction. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getNumYTiles))))
 
 (defn get-color-model
@@ -178,13 +178,13 @@
    can return null.
 
   returns: the ColorModel of this image. - `java.awt.image.ColorModel`"
-  (^java.awt.image.ColorModel [^java.awt.image.RenderedImage this]
+  (^java.awt.image.ColorModel [^RenderedImage this]
     (-> this (.getColorModel))))
 
 (defn get-min-tile-x
   "Returns the minimum tile index in the X direction.
 
   returns: the minimum tile index in the X direction. - `int`"
-  (^Integer [^java.awt.image.RenderedImage this]
+  (^Integer [^RenderedImage this]
     (-> this (.getMinTileX))))
 

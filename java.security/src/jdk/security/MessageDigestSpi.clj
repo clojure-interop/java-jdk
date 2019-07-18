@@ -15,7 +15,7 @@
 
 (defn ->message-digest-spi
   "Constructor."
-  ([]
+  (^MessageDigestSpi []
     (new MessageDigestSpi )))
 
 (defn clone
@@ -24,6 +24,6 @@
   returns: a clone if the implementation is cloneable. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if this is called on an implementation that does not support Cloneable."
-  (^java.lang.Object [^java.security.MessageDigestSpi this]
+  (^java.lang.Object [^MessageDigestSpi this]
     (-> this (.clone))))
 

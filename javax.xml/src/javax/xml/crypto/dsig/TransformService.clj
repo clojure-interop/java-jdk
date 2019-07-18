@@ -85,7 +85,7 @@
   "Returns the mechanism type supported by this TransformService.
 
   returns: the mechanism type - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.TransformService this]
+  (^java.lang.String [^TransformService this]
     (-> this (.getMechanismType))))
 
 (defn get-algorithm
@@ -93,14 +93,14 @@
    TransformService.
 
   returns: the algorithm URI - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.TransformService this]
+  (^java.lang.String [^TransformService this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this TransformService.
 
   returns: the provider - `java.security.Provider`"
-  (^java.security.Provider [^javax.xml.crypto.dsig.TransformService this]
+  (^java.security.Provider [^TransformService this]
     (-> this (.getProvider))))
 
 (defn init
@@ -111,9 +111,9 @@
   context - the XMLCryptoContext containing additional context (may be null if not applicable) - `javax.xml.crypto.XMLCryptoContext`
 
   throws: java.lang.ClassCastException - if the type of parent or context is not compatible with this TransformService"
-  ([^javax.xml.crypto.dsig.TransformService this ^javax.xml.crypto.XMLStructure parent ^javax.xml.crypto.XMLCryptoContext context]
+  ([^TransformService this ^javax.xml.crypto.XMLStructure parent ^javax.xml.crypto.XMLCryptoContext context]
     (-> this (.init parent context)))
-  ([^javax.xml.crypto.dsig.TransformService this ^javax.xml.crypto.dsig.spec.TransformParameterSpec params]
+  ([^TransformService this ^javax.xml.crypto.dsig.spec.TransformParameterSpec params]
     (-> this (.init params))))
 
 (defn marshal-params
@@ -124,6 +124,6 @@
   context - the XMLCryptoContext containing additional context (may be null if not applicable) - `javax.xml.crypto.XMLCryptoContext`
 
   throws: java.lang.ClassCastException - if the type of parent or context is not compatible with this TransformService"
-  ([^javax.xml.crypto.dsig.TransformService this ^javax.xml.crypto.XMLStructure parent ^javax.xml.crypto.XMLCryptoContext context]
+  ([^TransformService this ^javax.xml.crypto.XMLStructure parent ^javax.xml.crypto.XMLCryptoContext context]
     (-> this (.marshalParams parent context))))
 

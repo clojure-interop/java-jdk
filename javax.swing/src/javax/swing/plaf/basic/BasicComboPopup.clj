@@ -24,19 +24,19 @@
   "Constructor.
 
   combo - `javax.swing.JComboBox`"
-  ([^javax.swing.JComboBox combo]
+  (^BasicComboPopup [^javax.swing.JComboBox combo]
     (new BasicComboPopup combo)))
 
 (defn hide
   "Implementation of ComboPopup.hide()."
-  ([^javax.swing.plaf.basic.BasicComboPopup this]
+  ([^BasicComboPopup this]
     (-> this (.hide))))
 
 (defn get-mouse-listener
   "Implementation of ComboPopup.getMouseListener().
 
   returns: a MouseListener or null - `java.awt.event.MouseListener`"
-  (^java.awt.event.MouseListener [^javax.swing.plaf.basic.BasicComboPopup this]
+  (^java.awt.event.MouseListener [^BasicComboPopup this]
     (-> this (.getMouseListener))))
 
 (defn focus-traversable?
@@ -44,33 +44,33 @@
 
   returns: true if this Component is
    focusable; false otherwise - `boolean`"
-  (^Boolean [^javax.swing.plaf.basic.BasicComboPopup this]
+  (^Boolean [^BasicComboPopup this]
     (-> this (.isFocusTraversable))))
 
 (defn get-key-listener
   "Implementation of ComboPopup.getKeyListener().
 
   returns: a KeyListener or null - `java.awt.event.KeyListener`"
-  (^java.awt.event.KeyListener [^javax.swing.plaf.basic.BasicComboPopup this]
+  (^java.awt.event.KeyListener [^BasicComboPopup this]
     (-> this (.getKeyListener))))
 
 (defn show
   "Implementation of ComboPopup.show()."
-  ([^javax.swing.plaf.basic.BasicComboPopup this]
+  ([^BasicComboPopup this]
     (-> this (.show))))
 
 (defn uninstalling-ui
   "Called when the UI is uninstalling.  Since this popup isn't in the component
    tree, it won't get it's uninstallUI() called.  It removes the listeners that
    were added in addComboBoxListeners()."
-  ([^javax.swing.plaf.basic.BasicComboPopup this]
+  ([^BasicComboPopup this]
     (-> this (.uninstallingUI))))
 
 (defn get-list
   "Implementation of ComboPopup.getList().
 
   returns: `javax.swing.JList`"
-  (^javax.swing.JList [^javax.swing.plaf.basic.BasicComboPopup this]
+  (^javax.swing.JList [^BasicComboPopup this]
     (-> this (.getList))))
 
 (defn get-accessible-context
@@ -78,13 +78,13 @@
    The AccessibleContext will have its parent set to the ComboBox.
 
   returns: an AccessibleContext for the BasicComboPopup - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.plaf.basic.BasicComboPopup this]
+  (^javax.accessibility.AccessibleContext [^BasicComboPopup this]
     (-> this (.getAccessibleContext))))
 
 (defn get-mouse-motion-listener
   "Implementation of ComboPopup.getMouseMotionListener().
 
   returns: a MouseMotionListener or null - `java.awt.event.MouseMotionListener`"
-  (^java.awt.event.MouseMotionListener [^javax.swing.plaf.basic.BasicComboPopup this]
+  (^java.awt.event.MouseMotionListener [^BasicComboPopup this]
     (-> this (.getMouseMotionListener))))
 

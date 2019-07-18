@@ -123,7 +123,7 @@
   count - the number of times countDown() must be invoked before threads can pass through await() - `int`
 
   throws: java.lang.IllegalArgumentException - if count is negative"
-  ([^Integer count]
+  (^CountDownLatch [^Integer count]
     (new CountDownLatch count)))
 
 (defn await
@@ -167,9 +167,9 @@
            if the waiting time elapsed before the count reached zero - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted while waiting"
-  (^Boolean [^java.util.concurrent.CountDownLatch this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^CountDownLatch this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.await timeout unit)))
-  ([^java.util.concurrent.CountDownLatch this]
+  ([^CountDownLatch this]
     (-> this (.await))))
 
 (defn count-down
@@ -181,7 +181,7 @@
    thread scheduling purposes.
 
    If the current count equals zero then nothing happens."
-  ([^java.util.concurrent.CountDownLatch this]
+  ([^CountDownLatch this]
     (-> this (.countDown))))
 
 (defn get-count
@@ -190,7 +190,7 @@
    This method is typically used for debugging and testing purposes.
 
   returns: the current count - `long`"
-  (^Long [^java.util.concurrent.CountDownLatch this]
+  (^Long [^CountDownLatch this]
     (-> this (.getCount))))
 
 (defn to-string
@@ -199,6 +199,6 @@
    followed by the current count.
 
   returns: a string identifying this latch, as well as its state - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.CountDownLatch this]
+  (^java.lang.String [^CountDownLatch this]
     (-> this (.toString))))
 

@@ -30,14 +30,14 @@
 
   returns: true if client authentication is required,
             or false if no client authentication is desired. - `boolean`"
-  (^Boolean [^javax.net.ssl.SSLServerSocket this]
+  (^Boolean [^SSLServerSocket this]
     (-> this (.getNeedClientAuth))))
 
 (defn get-supported-protocols
   "Returns the names of the protocols which could be enabled for use.
 
   returns: an array of protocol names supported - `java.lang.String[]`"
-  ([^javax.net.ssl.SSLServerSocket this]
+  ([^SSLServerSocket this]
     (-> this (.getSupportedProtocols))))
 
 (defn set-use-client-mode
@@ -61,14 +61,14 @@
    inherit this setting.
 
   mode - true if newly accepted connections should use SSL client mode. - `boolean`"
-  ([^javax.net.ssl.SSLServerSocket this ^Boolean mode]
+  ([^SSLServerSocket this ^Boolean mode]
     (-> this (.setUseClientMode mode))))
 
 (defn get-use-client-mode?
   "Returns true if accepted connections will be in SSL client mode.
 
   returns: true if the connection should use SSL client mode. - `boolean`"
-  (^Boolean [^javax.net.ssl.SSLServerSocket this]
+  (^Boolean [^SSLServerSocket this]
     (-> this (.getUseClientMode))))
 
 (defn set-want-client-auth
@@ -96,7 +96,7 @@
    SSLSocket.setWantClientAuth(boolean).
 
   want - set to true if client authentication is requested, or false if no client authentication is desired. - `boolean`"
-  ([^javax.net.ssl.SSLServerSocket this ^Boolean want]
+  ([^SSLServerSocket this ^Boolean want]
     (-> this (.setWantClientAuth want))))
 
 (defn get-ssl-parameters
@@ -105,7 +105,7 @@
    are always non-null.
 
   returns: the SSLParameters in effect for newly accepted connections - `javax.net.ssl.SSLParameters`"
-  (^javax.net.ssl.SSLParameters [^javax.net.ssl.SSLServerSocket this]
+  (^javax.net.ssl.SSLParameters [^SSLServerSocket this]
     (-> this (.getSSLParameters))))
 
 (defn get-enabled-cipher-suites
@@ -124,7 +124,7 @@
    authentication.
 
   returns: an array of cipher suites enabled - `java.lang.String[]`"
-  ([^javax.net.ssl.SSLServerSocket this]
+  ([^SSLServerSocket this]
     (-> this (.getEnabledCipherSuites))))
 
 (defn get-supported-cipher-suites
@@ -137,7 +137,7 @@
    cipher suites are useful in specialized applications.
 
   returns: an array of cipher suite names - `java.lang.String[]`"
-  ([^javax.net.ssl.SSLServerSocket this]
+  ([^SSLServerSocket this]
     (-> this (.getSupportedCipherSuites))))
 
 (defn set-ssl-parameters
@@ -162,7 +162,7 @@
   params - the parameters - `javax.net.ssl.SSLParameters`
 
   throws: java.lang.IllegalArgumentException - if the setEnabledCipherSuites() or the setEnabledProtocols() call fails"
-  ([^javax.net.ssl.SSLServerSocket this ^javax.net.ssl.SSLParameters params]
+  ([^SSLServerSocket this ^javax.net.ssl.SSLParameters params]
     (-> this (.setSSLParameters params))))
 
 (defn set-enabled-cipher-suites
@@ -183,7 +183,7 @@
   suites - Names of all the cipher suites to enable - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - when one or more of ciphers named by the parameter is not supported, or when the parameter is null."
-  ([^javax.net.ssl.SSLServerSocket this suites]
+  ([^SSLServerSocket this suites]
     (-> this (.setEnabledCipherSuites suites))))
 
 (defn get-enable-session-creation?
@@ -193,7 +193,7 @@
   returns: true indicates that sessions may be created; this
             is the default.  false indicates that an existing
             session must be resumed - `boolean`"
-  (^Boolean [^javax.net.ssl.SSLServerSocket this]
+  (^Boolean [^SSLServerSocket this]
     (-> this (.getEnableSessionCreation))))
 
 (defn set-enable-session-creation
@@ -204,7 +204,7 @@
    inherit this setting.
 
   flag - true indicates that sessions may be created; this is the default. false indicates that an existing session must be resumed. - `boolean`"
-  ([^javax.net.ssl.SSLServerSocket this ^Boolean flag]
+  ([^SSLServerSocket this ^Boolean flag]
     (-> this (.setEnableSessionCreation flag))))
 
 (defn set-enabled-protocols
@@ -222,7 +222,7 @@
   protocols - Names of all the protocols to enable. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - when one or more of the protocols named by the parameter is not supported or when the protocols parameter is null."
-  ([^javax.net.ssl.SSLServerSocket this protocols]
+  ([^SSLServerSocket this protocols]
     (-> this (.setEnabledProtocols protocols))))
 
 (defn set-need-client-auth
@@ -250,7 +250,7 @@
    SSLSocket.setWantClientAuth(boolean).
 
   need - set to true if client authentication is required, or false if no client authentication is desired. - `boolean`"
-  ([^javax.net.ssl.SSLServerSocket this ^Boolean need]
+  ([^SSLServerSocket this ^Boolean need]
     (-> this (.setNeedClientAuth need))))
 
 (defn get-enabled-protocols
@@ -258,7 +258,7 @@
    enabled for use by the newly accepted connections.
 
   returns: an array of protocol names - `java.lang.String[]`"
-  ([^javax.net.ssl.SSLServerSocket this]
+  ([^SSLServerSocket this]
     (-> this (.getEnabledProtocols))))
 
 (defn get-want-client-auth?
@@ -271,6 +271,6 @@
 
   returns: true if client authentication is requested,
             or false if no client authentication is desired. - `boolean`"
-  (^Boolean [^javax.net.ssl.SSLServerSocket this]
+  (^Boolean [^SSLServerSocket this]
     (-> this (.getWantClientAuth))))
 

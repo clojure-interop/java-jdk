@@ -79,8 +79,6 @@
 
   out - the new logging/tracing PrintStream; to disable, set to null - `java.io.PrintStream`
 
-  returns: `java.lang.   void`
-
   throws: java.lang.SecurityException - if a security manager exists and its checkPermission method denies setting the log stream"
   ([^java.io.PrintStream out]
     (DriverManager/setLogStream out)))
@@ -149,8 +147,8 @@
 (defn *get-log-stream
   "Deprecated. Use getLogWriter
 
-  returns: the logging/tracing PrintStream; if disabled, is null - `java.lang.   java.io.PrintStream`"
-  ([]
+  returns: the logging/tracing PrintStream; if disabled, is null - `java.io.PrintStream`"
+  (^java.io.PrintStream []
     (DriverManager/getLogStream )))
 
 (defn *get-drivers

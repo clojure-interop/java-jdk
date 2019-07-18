@@ -57,7 +57,7 @@
 
 (defn ->row-filter
   "Constructor."
-  ([]
+  (^RowFilter []
     (new RowFilter )))
 
 (defn *regex-filter
@@ -97,14 +97,14 @@
 
      RowFilter.dateFilter(ComparisonType.AFTER, new Date());
 
-  type - the type of comparison to perform - `javax.swing.RowFilter.ComparisonType`
+  type - the type of comparison to perform - `javax.swing.RowFilter$ComparisonType`
   date - the date to compare against - `java.util.Date`
   indices - the indices of the values to check. If not supplied all values are evaluated - `int`
 
   returns: a RowFilter implementing the specified criteria - `<M,I> javax.swing.RowFilter<M,I>`
 
   throws: java.lang.NullPointerException - if date is null"
-  ([^javax.swing.RowFilter.ComparisonType type ^java.util.Date date ^Integer indices]
+  ([^javax.swing.RowFilter$ComparisonType type ^java.util.Date date ^Integer indices]
     (RowFilter/dateFilter type date indices)))
 
 (defn *number-filter
@@ -117,14 +117,14 @@
 
      RowFilter.numberFilter(ComparisonType.EQUAL, 10);
 
-  type - the type of comparison to perform - `javax.swing.RowFilter.ComparisonType`
+  type - the type of comparison to perform - `javax.swing.RowFilter$ComparisonType`
   number - `java.lang.Number`
   indices - the indices of the values to check. If not supplied all values are evaluated - `int`
 
   returns: a RowFilter implementing the specified criteria - `<M,I> javax.swing.RowFilter<M,I>`
 
   throws: java.lang.IllegalArgumentException - if any of the indices are < 0, type is null or number is null"
-  ([^javax.swing.RowFilter.ComparisonType type ^java.lang.Number number ^Integer indices]
+  ([^javax.swing.RowFilter$ComparisonType type ^java.lang.Number number ^Integer indices]
     (RowFilter/numberFilter type number indices)))
 
 (defn *or-filter
@@ -141,12 +141,12 @@
      filters.add(RowFilter.regexFilter(`bar`));
      RowFilter<Object,Object> fooBarFilter = RowFilter.orFilter(filters);
 
-  filters - the RowFilters to test - `I>>`
+  filters - the RowFilters to test - `java.lang.Iterable`
 
   returns: a RowFilter implementing the specified criteria - `<M,I> javax.swing.RowFilter<M,I>`
 
   throws: java.lang.IllegalArgumentException - if any of the filters are null"
-  ([filters]
+  ([^java.lang.Iterable filters]
     (RowFilter/orFilter filters)))
 
 (defn *and-filter
@@ -163,19 +163,19 @@
      filters.add(RowFilter.regexFilter(`bar`));
      RowFilter<Object,Object> fooBarFilter = RowFilter.andFilter(filters);
 
-  filters - the RowFilters to test - `I>>`
+  filters - the RowFilters to test - `java.lang.Iterable`
 
   returns: a RowFilter implementing the specified criteria - `<M,I> javax.swing.RowFilter<M,I>`
 
   throws: java.lang.IllegalArgumentException - if any of the filters are null"
-  ([filters]
+  ([^java.lang.Iterable filters]
     (RowFilter/andFilter filters)))
 
 (defn *not-filter
   "Returns a RowFilter that includes entries if the
    supplied filter does not include the entry.
 
-  filter - the RowFilter to negate - `javax.swing.RowFilter<M,I>`
+  filter - the RowFilter to negate - `javax.swing.RowFilter`
 
   returns: a RowFilter implementing the specified criteria - `<M,I> javax.swing.RowFilter<M,I>`
 
@@ -191,9 +191,9 @@
    the invocation.  Using entry after the call returns
    results in undefined behavior.
 
-  entry - a non-null object that wraps the underlying object from the model - `RowFilter.I>`
+  entry - a non-null object that wraps the underlying object from the model - `javax.swing.RowFilter$Entry`
 
   returns: true if the entry should be shown - `boolean`"
-  (^Boolean [^javax.swing.RowFilter this ^RowFilter.I> entry]
+  (^Boolean [^RowFilter this ^javax.swing.RowFilter$Entry entry]
     (-> this (.include entry))))
 

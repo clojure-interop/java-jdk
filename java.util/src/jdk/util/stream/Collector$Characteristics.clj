@@ -14,7 +14,7 @@
    then it should only be evaluated concurrently if applied to an
    unordered data source.
 
-  type: java.util.stream.Collector.Characteristics"
+  type: java.util.stream.Collector$Characteristics"
   Collector$Characteristics/CONCURRENT)
 
 (def UNORDERED
@@ -24,7 +24,7 @@
    the encounter order of input elements.  (This might be true if the
    result container has no intrinsic order, such as a Set.)
 
-  type: java.util.stream.Collector.Characteristics"
+  type: java.util.stream.Collector$Characteristics"
   Collector$Characteristics/UNORDERED)
 
 (def IDENTITY_FINISH
@@ -34,7 +34,7 @@
    can be elided.  If set, it must be the case that an unchecked cast
    from A to R will succeed.
 
-  type: java.util.stream.Collector.Characteristics"
+  type: java.util.stream.Collector$Characteristics"
   Collector$Characteristics/IDENTITY_FINISH)
 
 (defn *values
@@ -46,7 +46,7 @@
   for (Collector.Characteristics c : Collector.Characteristics.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.util.stream.Collector.Characteristics[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.util.stream.Collector$Characteristics[]`"
   ([]
     (Collector$Characteristics/values )))
 
@@ -58,9 +58,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.util.stream.Collector.Characteristics`
+  returns: the enum constant with the specified name - `java.util.stream.Collector$Characteristics`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.util.stream.Collector.Characteristics [^java.lang.String name]
+  (^java.util.stream.Collector$Characteristics [^java.lang.String name]
     (Collector$Characteristics/valueOf name)))
 

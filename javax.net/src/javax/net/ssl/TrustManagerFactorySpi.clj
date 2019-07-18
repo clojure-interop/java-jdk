@@ -10,6 +10,6 @@
 
 (defn ->trust-manager-factory-spi
   "Constructor."
-  ([]
+  (^TrustManagerFactorySpi []
     (new TrustManagerFactorySpi )))
 

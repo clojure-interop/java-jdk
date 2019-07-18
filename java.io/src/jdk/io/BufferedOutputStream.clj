@@ -17,9 +17,9 @@
   size - the buffer size. - `int`
 
   throws: java.lang.IllegalArgumentException - if size <= 0."
-  ([^java.io.OutputStream out ^Integer size]
+  (^BufferedOutputStream [^java.io.OutputStream out ^Integer size]
     (new BufferedOutputStream out size))
-  ([^java.io.OutputStream out]
+  (^BufferedOutputStream [^java.io.OutputStream out]
     (new BufferedOutputStream out)))
 
 (defn write
@@ -38,9 +38,9 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.BufferedOutputStream this b ^Integer off ^Integer len]
+  ([^BufferedOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([^java.io.BufferedOutputStream this ^Integer b]
+  ([^BufferedOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn flush
@@ -48,6 +48,6 @@
    output bytes to be written out to the underlying output stream.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.BufferedOutputStream this]
+  ([^BufferedOutputStream this]
     (-> this (.flush))))
 

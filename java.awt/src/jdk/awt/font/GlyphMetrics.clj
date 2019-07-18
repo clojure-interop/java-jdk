@@ -71,9 +71,9 @@
   advance-y - the Y-component of the glyph's advance - `float`
   bounds - the visual bounds of the glyph - `java.awt.geom.Rectangle2D`
   glyph-type - the type of the glyph - `byte`"
-  ([^Boolean horizontal ^Float advance-x ^Float advance-y ^java.awt.geom.Rectangle2D bounds ^Byte glyph-type]
+  (^GlyphMetrics [^Boolean horizontal ^Float advance-x ^Float advance-y ^java.awt.geom.Rectangle2D bounds ^Byte glyph-type]
     (new GlyphMetrics horizontal advance-x advance-y bounds glyph-type))
-  ([^Float advance ^java.awt.geom.Rectangle2D bounds ^Byte glyph-type]
+  (^GlyphMetrics [^Float advance ^java.awt.geom.Rectangle2D bounds ^Byte glyph-type]
     (new GlyphMetrics advance bounds glyph-type)))
 
 (def *-standard
@@ -133,14 +133,14 @@
   "Returns the y-component of the advance of the glyph.
 
   returns: the y-component of the advance of the glyph - `float`"
-  (^Float [^java.awt.font.GlyphMetrics this]
+  (^Float [^GlyphMetrics this]
     (-> this (.getAdvanceY))))
 
 (defn get-type
   "Returns the raw glyph type code.
 
   returns: the raw glyph type code. - `int`"
-  (^Integer [^java.awt.font.GlyphMetrics this]
+  (^Integer [^GlyphMetrics this]
     (-> this (.getType))))
 
 (defn get-advance
@@ -148,7 +148,7 @@
    horizontal or vertical).
 
   returns: the advance of the glyph - `float`"
-  (^Float [^java.awt.font.GlyphMetrics this]
+  (^Float [^GlyphMetrics this]
     (-> this (.getAdvance))))
 
 (defn component?
@@ -156,7 +156,7 @@
 
   returns: true if this is a component glyph;
             false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.GlyphMetrics this]
+  (^Boolean [^GlyphMetrics this]
     (-> this (.isComponent))))
 
 (defn get-lsb
@@ -167,7 +167,7 @@
    origin, the LSB is negative.
 
   returns: the left side bearing of the glyph. - `float`"
-  (^Float [^java.awt.font.GlyphMetrics this]
+  (^Float [^GlyphMetrics this]
     (-> this (.getLSB))))
 
 (defn combining?
@@ -175,7 +175,7 @@
 
   returns: true if this is a combining glyph;
             false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.GlyphMetrics this]
+  (^Boolean [^GlyphMetrics this]
     (-> this (.isCombining))))
 
 (defn standard?
@@ -183,7 +183,7 @@
 
   returns: true if this is a standard glyph;
             false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.GlyphMetrics this]
+  (^Boolean [^GlyphMetrics this]
     (-> this (.isStandard))))
 
 (defn get-bounds-2-d
@@ -192,7 +192,7 @@
    enclose the pixels that are affected when rendering the glyph.
 
   returns: a Rectangle2D that is the bounds of the glyph. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.font.GlyphMetrics this]
+  (^java.awt.geom.Rectangle2D [^GlyphMetrics this]
     (-> this (.getBounds2D))))
 
 (defn ligature?
@@ -200,7 +200,7 @@
 
   returns: true if this is a ligature glyph;
             false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.GlyphMetrics this]
+  (^Boolean [^GlyphMetrics this]
     (-> this (.isLigature))))
 
 (defn get-rsb
@@ -211,14 +211,14 @@
    the advance, the RSB is negative.
 
   returns: the right side bearing of the glyph. - `float`"
-  (^Float [^java.awt.font.GlyphMetrics this]
+  (^Float [^GlyphMetrics this]
     (-> this (.getRSB))))
 
 (defn get-advance-x
   "Returns the x-component of the advance of the glyph.
 
   returns: the x-component of the advance of the glyph - `float`"
-  (^Float [^java.awt.font.GlyphMetrics this]
+  (^Float [^GlyphMetrics this]
     (-> this (.getAdvanceX))))
 
 (defn whitespace?
@@ -226,6 +226,6 @@
 
   returns: true if this is a whitespace glyph;
             false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.GlyphMetrics this]
+  (^Boolean [^GlyphMetrics this]
     (-> this (.isWhitespace))))
 

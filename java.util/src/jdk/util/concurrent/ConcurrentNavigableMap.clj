@@ -11,48 +11,48 @@
 (defn sub-map
   "Description copied from interface: NavigableMap
 
-  from-key - low endpoint of the keys in the returned map - `ConcurrentNavigableMap.K`
+  from-key - low endpoint of the keys in the returned map - `K`
   from-inclusive - true if the low endpoint is to be included in the returned view - `boolean`
-  to-key - high endpoint of the keys in the returned map - `ConcurrentNavigableMap.K`
+  to-key - high endpoint of the keys in the returned map - `K`
   to-inclusive - true if the high endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this map whose keys range from
-           fromKey to toKey - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentNavigableMap.K,ConcurrentNavigableMap.V>`
+           fromKey to toKey - `java.util.concurrent.ConcurrentNavigableMap<K,V>`
 
   throws: java.lang.ClassCastException - if fromKey and toKey cannot be compared to one another using this map's comparator (or, if the map has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromKey or toKey cannot be compared to keys currently in the map."
-  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K from-key ^Boolean from-inclusive ^ConcurrentNavigableMap.K to-key ^Boolean to-inclusive]
+  (^java.util.concurrent.ConcurrentNavigableMap [^ConcurrentNavigableMap this from-key ^Boolean from-inclusive to-key ^Boolean to-inclusive]
     (-> this (.subMap from-key from-inclusive to-key to-inclusive)))
-  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K from-key ^ConcurrentNavigableMap.K to-key]
+  (^java.util.concurrent.ConcurrentNavigableMap [^ConcurrentNavigableMap this from-key to-key]
     (-> this (.subMap from-key to-key))))
 
 (defn head-map
   "Description copied from interface: NavigableMap
 
-  to-key - high endpoint of the keys in the returned map - `ConcurrentNavigableMap.K`
+  to-key - high endpoint of the keys in the returned map - `K`
   inclusive - true if the high endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this map whose keys are less than
-           (or equal to, if inclusive is true) toKey - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentNavigableMap.K,ConcurrentNavigableMap.V>`
+           (or equal to, if inclusive is true) toKey - `java.util.concurrent.ConcurrentNavigableMap<K,V>`
 
   throws: java.lang.ClassCastException - if toKey is not compatible with this map's comparator (or, if the map has no comparator, if toKey does not implement Comparable). Implementations may, but are not required to, throw this exception if toKey cannot be compared to keys currently in the map."
-  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K to-key ^Boolean inclusive]
+  (^java.util.concurrent.ConcurrentNavigableMap [^ConcurrentNavigableMap this to-key ^Boolean inclusive]
     (-> this (.headMap to-key inclusive)))
-  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K to-key]
+  (^java.util.concurrent.ConcurrentNavigableMap [^ConcurrentNavigableMap this to-key]
     (-> this (.headMap to-key))))
 
 (defn tail-map
   "Description copied from interface: NavigableMap
 
-  from-key - low endpoint of the keys in the returned map - `ConcurrentNavigableMap.K`
+  from-key - low endpoint of the keys in the returned map - `K`
   inclusive - true if the low endpoint is to be included in the returned view - `boolean`
 
   returns: a view of the portion of this map whose keys are greater than
-           (or equal to, if inclusive is true) fromKey - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentNavigableMap.K,ConcurrentNavigableMap.V>`
+           (or equal to, if inclusive is true) fromKey - `java.util.concurrent.ConcurrentNavigableMap<K,V>`
 
   throws: java.lang.ClassCastException - if fromKey is not compatible with this map's comparator (or, if the map has no comparator, if fromKey does not implement Comparable). Implementations may, but are not required to, throw this exception if fromKey cannot be compared to keys currently in the map."
-  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K from-key ^Boolean inclusive]
+  (^java.util.concurrent.ConcurrentNavigableMap [^ConcurrentNavigableMap this from-key ^Boolean inclusive]
     (-> this (.tailMap from-key inclusive)))
-  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentNavigableMap this ^ConcurrentNavigableMap.K from-key]
+  (^java.util.concurrent.ConcurrentNavigableMap [^ConcurrentNavigableMap this from-key]
     (-> this (.tailMap from-key))))
 
 (defn descending-map
@@ -65,8 +65,8 @@
    The expression m.descendingMap().descendingMap() returns a
    view of m essentially equivalent to m.
 
-  returns: a reverse order view of this map - `java.util.concurrent.ConcurrentNavigableMap<ConcurrentNavigableMap.K,ConcurrentNavigableMap.V>`"
-  (^java.util.concurrent.ConcurrentNavigableMap [^java.util.concurrent.ConcurrentNavigableMap this]
+  returns: a reverse order view of this map - `java.util.concurrent.ConcurrentNavigableMap<K,V>`"
+  (^java.util.concurrent.ConcurrentNavigableMap [^ConcurrentNavigableMap this]
     (-> this (.descendingMap))))
 
 (defn navigable-key-set
@@ -83,8 +83,8 @@
    The view's iterators and spliterators are
    weakly consistent.
 
-  returns: a navigable set view of the keys in this map - `java.util.NavigableSet<ConcurrentNavigableMap.K>`"
-  (^java.util.NavigableSet [^java.util.concurrent.ConcurrentNavigableMap this]
+  returns: a navigable set view of the keys in this map - `java.util.NavigableSet<K>`"
+  (^java.util.NavigableSet [^ConcurrentNavigableMap this]
     (-> this (.navigableKeySet))))
 
 (defn key-set
@@ -103,8 +103,8 @@
 
    This method is equivalent to method navigableKeySet.
 
-  returns: a navigable set view of the keys in this map - `java.util.NavigableSet<ConcurrentNavigableMap.K>`"
-  (^java.util.NavigableSet [^java.util.concurrent.ConcurrentNavigableMap this]
+  returns: a navigable set view of the keys in this map - `java.util.NavigableSet<K>`"
+  (^java.util.NavigableSet [^ConcurrentNavigableMap this]
     (-> this (.keySet))))
 
 (defn descending-key-set
@@ -121,7 +121,7 @@
    The view's iterators and spliterators are
    weakly consistent.
 
-  returns: a reverse order navigable set view of the keys in this map - `java.util.NavigableSet<ConcurrentNavigableMap.K>`"
-  (^java.util.NavigableSet [^java.util.concurrent.ConcurrentNavigableMap this]
+  returns: a reverse order navigable set view of the keys in this map - `java.util.NavigableSet<K>`"
+  (^java.util.NavigableSet [^ConcurrentNavigableMap this]
     (-> this (.descendingKeySet))))
 

@@ -7,7 +7,7 @@
   "Constructor.
 
   Create a new NimbusLookAndFeel."
-  ([]
+  (^NimbusLookAndFeel []
     (new NimbusLookAndFeel )))
 
 (defn *get-style
@@ -24,14 +24,14 @@
 
 (defn uninitialize
   "Called by UIManager when this look and feel is uninstalled."
-  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  ([^NimbusLookAndFeel this]
     (-> this (.uninitialize))))
 
 (defn get-defaults
   "Returns the defaults for this SynthLookAndFeel.
 
   returns: Defaults table. - `javax.swing.UIDefaults`"
-  (^javax.swing.UIDefaults [^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  (^javax.swing.UIDefaults [^NimbusLookAndFeel this]
     (-> this (.getDefaults))))
 
 (defn get-derived-color
@@ -46,7 +46,7 @@
   ui-resource - True if the derived color should be a UIResource, false if it should not be - `boolean`
 
   returns: The stored derived color - `java.awt.Color`"
-  (^java.awt.Color [^javax.swing.plaf.nimbus.NimbusLookAndFeel this ^java.lang.String ui-default-parent-name ^Float h-offset ^Float s-offset ^Float b-offset ^Integer a-offset ^Boolean ui-resource]
+  (^java.awt.Color [^NimbusLookAndFeel this ^java.lang.String ui-default-parent-name ^Float h-offset ^Float s-offset ^Float b-offset ^Integer a-offset ^Boolean ui-resource]
     (-> this (.getDerivedColor ui-default-parent-name h-offset s-offset b-offset a-offset ui-resource))))
 
 (defn get-name
@@ -54,14 +54,14 @@
    String will be the unquoted String `Nimbus`.
 
   returns: a short string identifying this look and feel. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  (^java.lang.String [^NimbusLookAndFeel this]
     (-> this (.getName))))
 
 (defn get-description
   "Returns a textual description of this look and feel.
 
   returns: textual description of this look and feel. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  (^java.lang.String [^NimbusLookAndFeel this]
     (-> this (.getDescription))))
 
 (defn register
@@ -99,12 +99,12 @@
 
 
 
-       laf.register(Region.PANEL, `\`MyPanel\``);
-       UIManager.put(`\`MyPanel\`.background`, new ColorUIResource(Color.RED));
+       laf.register(Region.PANEL, ``MyPanel``);
+       UIManager.put(``MyPanel`.background`, new ColorUIResource(Color.RED));
 
   region - The Synth Region that is being registered. Such as Button, or ScrollBarThumb, or NimbusFooUI.FOO_REGION. - `javax.swing.plaf.synth.Region`
   prefix - The UIDefault prefix. For example, could be ComboBox, or if a named components, `MyComboBox`, or even something like ToolBar.`MyComboBox`.`ComboBox.arrowButton` - `java.lang.String`"
-  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this ^javax.swing.plaf.synth.Region region ^java.lang.String prefix]
+  ([^NimbusLookAndFeel this ^javax.swing.plaf.synth.Region region ^java.lang.String prefix]
     (-> this (.register region prefix))))
 
 (defn should-update-style-on-ancestor-changed?
@@ -116,12 +116,12 @@
    would override this method to return true.
 
   returns: true - `boolean`"
-  (^Boolean [^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  (^Boolean [^NimbusLookAndFeel this]
     (-> this (.shouldUpdateStyleOnAncestorChanged))))
 
 (defn initialize
   "Called by UIManager when this look and feel is installed."
-  ([^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  ([^NimbusLookAndFeel this]
     (-> this (.initialize))))
 
 (defn get-id
@@ -129,7 +129,7 @@
    be the unquoted String `Nimbus`.
 
   returns: a short string identifying this look and feel. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.nimbus.NimbusLookAndFeel this]
+  (^java.lang.String [^NimbusLookAndFeel this]
     (-> this (.getID))))
 
 (defn get-disabled-icon
@@ -140,6 +140,6 @@
 
   returns: disabled Icon, or null if a suitable
            Icon can not be generated - `javax.swing.Icon`"
-  (^javax.swing.Icon [^javax.swing.plaf.nimbus.NimbusLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
+  (^javax.swing.Icon [^NimbusLookAndFeel this ^javax.swing.JComponent component ^javax.swing.Icon icon]
     (-> this (.getDisabledIcon component icon))))
 

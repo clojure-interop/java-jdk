@@ -9,7 +9,7 @@
   "Constructor.
 
   Create a MBeanServerDelegate object."
-  ([]
+  (^MBeanServerDelegate []
     (new MBeanServerDelegate )))
 
 (def *-delegate-name
@@ -24,7 +24,7 @@
   "Description copied from interface: NotificationBroadcaster
 
   returns: the array of possible notifications. - `javax.management.MBeanNotificationInfo[]`"
-  ([^javax.management.MBeanServerDelegate this]
+  ([^MBeanServerDelegate this]
     (-> this (.getNotificationInfo))))
 
 (defn remove-notification-listener
@@ -35,30 +35,30 @@
   handback - The handback that was specified when the listener was added. - `java.lang.Object`
 
   throws: javax.management.ListenerNotFoundException - The listener is not registered with the MBean, or it is not registered with the given filter and handback."
-  ([^javax.management.MBeanServerDelegate this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
+  ([^MBeanServerDelegate this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
     (-> this (.removeNotificationListener listener filter handback)))
-  ([^javax.management.MBeanServerDelegate this ^javax.management.NotificationListener listener]
+  ([^MBeanServerDelegate this ^javax.management.NotificationListener listener]
     (-> this (.removeNotificationListener listener))))
 
 (defn get-m-bean-server-id
   "Returns the MBean server agent identity.
 
   returns: the identity. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanServerDelegate this]
+  (^java.lang.String [^MBeanServerDelegate this]
     (-> this (.getMBeanServerId))))
 
 (defn get-implementation-version
   "Returns the JMX implementation version (the version of this product).
 
   returns: the implementation version. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanServerDelegate this]
+  (^java.lang.String [^MBeanServerDelegate this]
     (-> this (.getImplementationVersion))))
 
 (defn get-implementation-vendor
   "Returns the JMX implementation vendor (the vendor of this product).
 
   returns: the implementation vendor. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanServerDelegate this]
+  (^java.lang.String [^MBeanServerDelegate this]
     (-> this (.getImplementationVendor))))
 
 (defn get-specification-vendor
@@ -66,7 +66,7 @@
    by this product.
 
   returns: the specification vendor. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanServerDelegate this]
+  (^java.lang.String [^MBeanServerDelegate this]
     (-> this (.getSpecificationVendor))))
 
 (defn add-notification-listener
@@ -77,7 +77,7 @@
   handback - An opaque object to be sent back to the listener when a notification is emitted. This object cannot be used by the Notification broadcaster object. It should be resent unchanged with the notification to the listener. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - Listener parameter is null."
-  ([^javax.management.MBeanServerDelegate this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
+  ([^MBeanServerDelegate this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
     (-> this (.addNotificationListener listener filter handback))))
 
 (defn send-notification
@@ -87,7 +87,7 @@
    number.
 
   notification - The notification to send. - `javax.management.Notification`"
-  ([^javax.management.MBeanServerDelegate this ^javax.management.Notification notification]
+  ([^MBeanServerDelegate this ^javax.management.Notification notification]
     (-> this (.sendNotification notification))))
 
 (defn get-specification-version
@@ -95,14 +95,14 @@
    by this product.
 
   returns: the specification version. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanServerDelegate this]
+  (^java.lang.String [^MBeanServerDelegate this]
     (-> this (.getSpecificationVersion))))
 
 (defn get-implementation-name
   "Returns the JMX implementation name (the name of this product).
 
   returns: the implementation name. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanServerDelegate this]
+  (^java.lang.String [^MBeanServerDelegate this]
     (-> this (.getImplementationName))))
 
 (defn get-specification-name
@@ -110,6 +110,6 @@
    by this product.
 
   returns: the specification name. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanServerDelegate this]
+  (^java.lang.String [^MBeanServerDelegate this]
     (-> this (.getSpecificationName))))
 

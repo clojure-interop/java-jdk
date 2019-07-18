@@ -20,8 +20,8 @@
    particular exception.
 
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^CertificateExpiredException [^java.lang.String message]
     (new CertificateExpiredException message))
-  ([]
+  (^CertificateExpiredException []
     (new CertificateExpiredException )))
 

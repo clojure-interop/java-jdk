@@ -21,12 +21,12 @@
    The implementation will not modify the object or keep a reference
    to it, although it may keep a reference to a clone or copy.
 
-  environment - The possibly null environment specifying information to be used in the creation of the initial context. - `java.util.Hashtable<?,?>`
+  environment - The possibly null environment specifying information to be used in the creation of the initial context. - `java.util.Hashtable`
 
   returns: A non-null initial context object that implements the Context
                interface. - `javax.naming.Context`
 
   throws: javax.naming.NamingException - If cannot create an initial context."
-  (^javax.naming.Context [^javax.naming.spi.InitialContextFactory this ^java.util.Hashtable environment]
+  (^javax.naming.Context [^InitialContextFactory this ^java.util.Hashtable environment]
     (-> this (.getInitialContext environment))))
 

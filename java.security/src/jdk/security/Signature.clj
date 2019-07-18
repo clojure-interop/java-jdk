@@ -93,7 +93,7 @@
    and the name of the algorithm used.
 
   returns: a string representation of this signature object. - `java.lang.String`"
-  (^java.lang.String [^java.security.Signature this]
+  (^java.lang.String [^Signature this]
     (-> this (.toString))))
 
 (defn get-parameters
@@ -107,14 +107,14 @@
 
   returns: the parameters used with this signature, or null if this
    signature does not use any parameters. - `java.security.AlgorithmParameters`"
-  (^java.security.AlgorithmParameters [^java.security.Signature this]
+  (^java.security.AlgorithmParameters [^Signature this]
     (-> this (.getParameters))))
 
 (defn get-provider
   "Returns the provider of this signature object.
 
   returns: the provider of this signature object - `java.security.Provider`"
-  (^java.security.Provider [^java.security.Signature this]
+  (^java.security.Provider [^Signature this]
     (-> this (.getProvider))))
 
 (defn update
@@ -126,9 +126,9 @@
   len - the number of bytes to use, starting at offset. - `int`
 
   throws: java.security.SignatureException - if this signature object is not initialized properly."
-  ([^java.security.Signature this data ^Integer off ^Integer len]
+  ([^Signature this data ^Integer off ^Integer len]
     (-> this (.update data off len)))
-  ([^java.security.Signature this ^Byte b]
+  ([^Signature this ^Byte b]
     (-> this (.update b))))
 
 (defn verify
@@ -148,16 +148,16 @@
   returns: true if the signature was verified, false if not. - `boolean`
 
   throws: java.security.SignatureException - if this signature object is not initialized properly, the passed-in signature is improperly encoded or of the wrong type, if this signature algorithm is unable to process the input data provided, etc."
-  (^Boolean [^java.security.Signature this signature ^Integer offset ^Integer length]
+  (^Boolean [^Signature this signature ^Integer offset ^Integer length]
     (-> this (.verify signature offset length)))
-  (^Boolean [^java.security.Signature this signature]
+  (^Boolean [^Signature this signature]
     (-> this (.verify signature))))
 
 (defn get-algorithm
   "Returns the name of the algorithm for this signature object.
 
   returns: the name of the algorithm for this signature object. - `java.lang.String`"
-  (^java.lang.String [^java.security.Signature this]
+  (^java.lang.String [^Signature this]
     (-> this (.getAlgorithm))))
 
 (defn get-parameter
@@ -166,10 +166,10 @@
   param - the string name of the parameter. - `java.lang.String`
 
   returns: the object that represents the parameter value, or null if
-   there is none. - `java.lang.   java.lang.Object`
+   there is none. - `java.lang.Object`
 
   throws: java.security.InvalidParameterException - if param is an invalid parameter for this engine, or another exception occurs while trying to get this parameter."
-  ([^java.security.Signature this ^java.lang.String param]
+  (^java.lang.Object [^Signature this ^java.lang.String param]
     (-> this (.getParameter param))))
 
 (defn init-verify
@@ -180,7 +180,7 @@
   public-key - the public key of the identity whose signature is going to be verified. - `java.security.PublicKey`
 
   throws: java.security.InvalidKeyException - if the key is invalid."
-  ([^java.security.Signature this ^java.security.PublicKey public-key]
+  ([^Signature this ^java.security.PublicKey public-key]
     (-> this (.initVerify public-key))))
 
 (defn clone
@@ -189,7 +189,7 @@
   returns: a clone if the implementation is cloneable. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if this is called on an implementation that does not support Cloneable."
-  (^java.lang.Object [^java.security.Signature this]
+  (^java.lang.Object [^Signature this]
     (-> this (.clone))))
 
 (defn init-sign
@@ -201,21 +201,23 @@
   random - the source of randomness for this signature. - `java.security.SecureRandom`
 
   throws: java.security.InvalidKeyException - if the key is invalid."
-  ([^java.security.Signature this ^java.security.PrivateKey private-key ^java.security.SecureRandom random]
+  ([^Signature this ^java.security.PrivateKey private-key ^java.security.SecureRandom random]
     (-> this (.initSign private-key random)))
-  ([^java.security.Signature this ^java.security.PrivateKey private-key]
+  ([^Signature this ^java.security.PrivateKey private-key]
     (-> this (.initSign private-key))))
 
 (defn set-parameter
-  "Initializes this signature engine with the specified parameter set.
+  "Deprecated. Use
+   setParameter.
 
-  params - the parameters - `java.security.spec.AlgorithmParameterSpec`
+  param - the string identifier of the parameter. - `java.lang.String`
+  value - the parameter value. - `java.lang.Object`
 
-  throws: java.security.InvalidAlgorithmParameterException - if the given parameters are inappropriate for this signature engine"
-  ([^java.security.Signature this ^java.security.spec.AlgorithmParameterSpec params]
-    (-> this (.setParameter params)))
-  ([^java.security.Signature this ^java.lang.String param ^java.lang.Object value]
-    (-> this (.setParameter param value))))
+  throws: java.security.InvalidParameterException - if param is an invalid parameter for this signature algorithm engine, the parameter is already set and cannot be set again, a security exception occurs, and so on."
+  ([^Signature this ^java.lang.String param ^java.lang.Object value]
+    (-> this (.setParameter param value)))
+  ([^Signature this ^java.security.spec.AlgorithmParameterSpec params]
+    (-> this (.setParameter params))))
 
 (defn sign
   "Finishes the signature operation and stores the resulting signature
@@ -235,8 +237,8 @@
   returns: the number of bytes placed into outbuf. - `int`
 
   throws: java.security.SignatureException - if this signature object is not initialized properly, if this signature algorithm is unable to process the input data provided, or if len is less than the actual signature length."
-  (^Integer [^java.security.Signature this outbuf ^Integer offset ^Integer len]
+  (^Integer [^Signature this outbuf ^Integer offset ^Integer len]
     (-> this (.sign outbuf offset len)))
-  ([^java.security.Signature this]
+  ([^Signature this]
     (-> this (.sign))))
 

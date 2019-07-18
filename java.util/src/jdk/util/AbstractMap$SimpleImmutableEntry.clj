@@ -12,25 +12,25 @@
   Creates an entry representing a mapping from the specified
    key to the specified value.
 
-  key - the key represented by this entry - `AbstractMap.SimpleImmutableEntry.K`
-  value - the value represented by this entry - `AbstractMap.SimpleImmutableEntry.V`"
-  ([^AbstractMap.SimpleImmutableEntry.K key ^AbstractMap.SimpleImmutableEntry.V value]
+  key - the key represented by this entry - `K`
+  value - the value represented by this entry - `V`"
+  (^AbstractMap$SimpleImmutableEntry [key value]
     (new AbstractMap$SimpleImmutableEntry key value))
-  ([^AbstractMap.SimpleImmutableEntry.V> entry]
+  (^AbstractMap$SimpleImmutableEntry [^java.util.Map$Entry entry]
     (new AbstractMap$SimpleImmutableEntry entry)))
 
 (defn get-key
   "Returns the key corresponding to this entry.
 
-  returns: the key corresponding to this entry - `AbstractMap.SimpleImmutableEntry.K`"
-  (^AbstractMap.SimpleImmutableEntry.K [^java.util.AbstractMap$SimpleImmutableEntry this]
+  returns: the key corresponding to this entry - `K`"
+  ([^AbstractMap$SimpleImmutableEntry this]
     (-> this (.getKey))))
 
 (defn get-value
   "Returns the value corresponding to this entry.
 
-  returns: the value corresponding to this entry - `AbstractMap.SimpleImmutableEntry.V`"
-  (^AbstractMap.SimpleImmutableEntry.V [^java.util.AbstractMap$SimpleImmutableEntry this]
+  returns: the value corresponding to this entry - `V`"
+  ([^AbstractMap$SimpleImmutableEntry this]
     (-> this (.getValue))))
 
 (defn set-value
@@ -39,12 +39,12 @@
    UnsupportedOperationException, as this class implements
    an immutable map entry.
 
-  value - new value to be stored in this entry - `AbstractMap.SimpleImmutableEntry.V`
+  value - new value to be stored in this entry - `V`
 
-  returns: (Does not return) - `AbstractMap.SimpleImmutableEntry.V`
+  returns: (Does not return) - `V`
 
   throws: java.lang.UnsupportedOperationException - always"
-  (^AbstractMap.SimpleImmutableEntry.V [^java.util.AbstractMap$SimpleImmutableEntry this ^AbstractMap.SimpleImmutableEntry.V value]
+  ([^AbstractMap$SimpleImmutableEntry this value]
     (-> this (.setValue value))))
 
 (defn equals
@@ -68,7 +68,7 @@
 
   returns: true if the specified object is equal to this map
            entry - `boolean`"
-  (^Boolean [^java.util.AbstractMap$SimpleImmutableEntry this ^java.lang.Object o]
+  (^Boolean [^AbstractMap$SimpleImmutableEntry this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -83,7 +83,7 @@
    contract of Object.hashCode().
 
   returns: the hash code value for this map entry - `int`"
-  (^Integer [^java.util.AbstractMap$SimpleImmutableEntry this]
+  (^Integer [^AbstractMap$SimpleImmutableEntry this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -93,6 +93,6 @@
    followed by the string representation of this entry's value.
 
   returns: a String representation of this map entry - `java.lang.String`"
-  (^java.lang.String [^java.util.AbstractMap$SimpleImmutableEntry this]
+  (^java.lang.String [^AbstractMap$SimpleImmutableEntry this]
     (-> this (.toString))))
 

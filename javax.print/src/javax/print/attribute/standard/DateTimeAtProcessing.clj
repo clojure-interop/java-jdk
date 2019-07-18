@@ -24,7 +24,7 @@
   date-time - Date value. - `java.util.Date`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if dateTime is null."
-  ([^java.util.Date date-time]
+  (^DateTimeAtProcessing [^java.util.Date date-time]
     (new DateTimeAtProcessing date-time)))
 
 (defn equals
@@ -45,7 +45,7 @@
 
   returns: True if object is equivalent to this date-time
             at processing attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.DateTimeAtProcessing this ^java.lang.Object object]
+  (^Boolean [^DateTimeAtProcessing this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -57,7 +57,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.DateTimeAtProcessing this]
+  ([^DateTimeAtProcessing this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -68,6 +68,6 @@
    `date-time-at-processing`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.DateTimeAtProcessing this]
+  (^java.lang.String [^DateTimeAtProcessing this]
     (-> this (.getName))))
 

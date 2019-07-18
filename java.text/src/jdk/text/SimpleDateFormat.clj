@@ -362,25 +362,25 @@
   locale - the locale whose date format symbols should be used - `java.util.Locale`
 
   throws: java.lang.NullPointerException - if the given pattern or locale is null"
-  ([^java.lang.String pattern ^java.util.Locale locale]
+  (^SimpleDateFormat [^java.lang.String pattern ^java.util.Locale locale]
     (new SimpleDateFormat pattern locale))
-  ([^java.lang.String pattern]
+  (^SimpleDateFormat [^java.lang.String pattern]
     (new SimpleDateFormat pattern))
-  ([]
+  (^SimpleDateFormat []
     (new SimpleDateFormat )))
 
 (defn get-date-format-symbols
   "Gets a copy of the date and time format symbols of this date format.
 
   returns: the date and time format symbols of this date format - `java.text.DateFormatSymbols`"
-  (^java.text.DateFormatSymbols [^java.text.SimpleDateFormat this]
+  (^java.text.DateFormatSymbols [^SimpleDateFormat this]
     (-> this (.getDateFormatSymbols))))
 
 (defn to-pattern
   "Returns a pattern string describing this date format.
 
   returns: a pattern string describing this date format. - `java.lang.String`"
-  (^java.lang.String [^java.text.SimpleDateFormat this]
+  (^java.lang.String [^SimpleDateFormat this]
     (-> this (.toPattern))))
 
 (defn set-2-digit-year-start
@@ -388,7 +388,7 @@
    to begin on the date the user specifies.
 
   start-date - During parsing, two digit years will be placed in the range startDate to startDate 100 years. - `java.util.Date`"
-  ([^java.text.SimpleDateFormat this ^java.util.Date start-date]
+  ([^SimpleDateFormat this ^java.util.Date start-date]
     (-> this (.set2DigitYearStart start-date))))
 
 (defn format-to-character-iterator
@@ -406,7 +406,7 @@
   returns: AttributedCharacterIterator describing the formatted value. - `java.text.AttributedCharacterIterator`
 
   throws: java.lang.NullPointerException - if obj is null."
-  (^java.text.AttributedCharacterIterator [^java.text.SimpleDateFormat this ^java.lang.Object obj]
+  (^java.text.AttributedCharacterIterator [^SimpleDateFormat this ^java.lang.Object obj]
     (-> this (.formatToCharacterIterator obj))))
 
 (defn get-2-digit-year-start
@@ -415,7 +415,7 @@
 
   returns: the start of the 100-year period into which two digit years are
    parsed - `java.util.Date`"
-  (^java.util.Date [^java.text.SimpleDateFormat this]
+  (^java.util.Date [^SimpleDateFormat this]
     (-> this (.get2DigitYearStart))))
 
 (defn apply-localized-pattern
@@ -424,7 +424,7 @@
   pattern - a String to be mapped to the new date and time format pattern for this format - `java.lang.String`
 
   throws: java.lang.NullPointerException - if the given pattern is null"
-  ([^java.text.SimpleDateFormat this ^java.lang.String pattern]
+  ([^SimpleDateFormat this ^java.lang.String pattern]
     (-> this (.applyLocalizedPattern pattern))))
 
 (defn clone
@@ -432,7 +432,7 @@
    clones the format's date format symbols.
 
   returns: a clone of this SimpleDateFormat - `java.lang.Object`"
-  (^java.lang.Object [^java.text.SimpleDateFormat this]
+  (^java.lang.Object [^SimpleDateFormat this]
     (-> this (.clone))))
 
 (defn parse
@@ -465,14 +465,14 @@
            error, returns null. - `java.util.Date`
 
   throws: java.lang.NullPointerException - if text or pos is null."
-  (^java.util.Date [^java.text.SimpleDateFormat this ^java.lang.String text ^java.text.ParsePosition pos]
+  (^java.util.Date [^SimpleDateFormat this ^java.lang.String text ^java.text.ParsePosition pos]
     (-> this (.parse text pos))))
 
 (defn hash-code
   "Returns the hash code value for this SimpleDateFormat object.
 
   returns: the hash code value for this SimpleDateFormat object. - `int`"
-  (^Integer [^java.text.SimpleDateFormat this]
+  (^Integer [^SimpleDateFormat this]
     (-> this (.hashCode))))
 
 (defn apply-pattern
@@ -481,7 +481,7 @@
   pattern - the new date and time pattern for this date format - `java.lang.String`
 
   throws: java.lang.NullPointerException - if the given pattern is null"
-  ([^java.text.SimpleDateFormat this ^java.lang.String pattern]
+  ([^SimpleDateFormat this ^java.lang.String pattern]
     (-> this (.applyPattern pattern))))
 
 (defn set-date-format-symbols
@@ -490,7 +490,7 @@
   new-format-symbols - the new date and time format symbols - `java.text.DateFormatSymbols`
 
   throws: java.lang.NullPointerException - if the given newFormatSymbols is null"
-  ([^java.text.SimpleDateFormat this ^java.text.DateFormatSymbols new-format-symbols]
+  ([^SimpleDateFormat this ^java.text.DateFormatSymbols new-format-symbols]
     (-> this (.setDateFormatSymbols new-format-symbols))))
 
 (defn equals
@@ -501,7 +501,7 @@
 
   returns: true if the given object is equal to this
    SimpleDateFormat - `boolean`"
-  (^Boolean [^java.text.SimpleDateFormat this ^java.lang.Object obj]
+  (^Boolean [^SimpleDateFormat this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -515,13 +515,13 @@
   returns: the formatted date-time string. - `java.lang.StringBuffer`
 
   throws: java.lang.NullPointerException - if the given date is null."
-  (^java.lang.StringBuffer [^java.text.SimpleDateFormat this ^java.util.Date date ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
+  (^java.lang.StringBuffer [^SimpleDateFormat this ^java.util.Date date ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
     (-> this (.format date to-append-to pos))))
 
 (defn to-localized-pattern
   "Returns a localized pattern string describing this date format.
 
   returns: a localized pattern string describing this date format. - `java.lang.String`"
-  (^java.lang.String [^java.text.SimpleDateFormat this]
+  (^java.lang.String [^SimpleDateFormat this]
     (-> this (.toLocalizedPattern))))
 

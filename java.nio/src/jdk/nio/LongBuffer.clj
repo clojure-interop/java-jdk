@@ -235,7 +235,7 @@
             of the first element of the buffer - `int`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  (^Integer [^java.nio.LongBuffer this]
+  (^Integer [^LongBuffer this]
     (-> this (.arrayOffset))))
 
 (defn compact
@@ -259,7 +259,7 @@
   returns: This buffer - `java.nio.LongBuffer`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is read-only"
-  (^java.nio.LongBuffer [^java.nio.LongBuffer this]
+  (^java.nio.LongBuffer [^LongBuffer this]
     (-> this (.compact))))
 
 (defn put
@@ -296,18 +296,18 @@
   returns: This buffer - `java.nio.LongBuffer`
 
   throws: java.nio.BufferOverflowException - If there is insufficient space in this buffer"
-  (^java.nio.LongBuffer [^java.nio.LongBuffer this src ^Integer offset ^Integer length]
+  (^java.nio.LongBuffer [^LongBuffer this src ^Integer offset ^Integer length]
     (-> this (.put src offset length)))
-  (^java.nio.LongBuffer [^java.nio.LongBuffer this ^Integer index ^Long l]
+  (^java.nio.LongBuffer [^LongBuffer this ^Integer index ^Long l]
     (-> this (.put index l)))
-  (^java.nio.LongBuffer [^java.nio.LongBuffer this ^Long l]
+  (^java.nio.LongBuffer [^LongBuffer this ^Long l]
     (-> this (.put l))))
 
 (defn to-string
   "Returns a string summarizing the state of this buffer.
 
   returns: A summary string - `java.lang.String`"
-  (^java.lang.String [^java.nio.LongBuffer this]
+  (^java.lang.String [^LongBuffer this]
     (-> this (.toString))))
 
 (defn duplicate
@@ -324,7 +324,7 @@
    only if, this buffer is read-only.
 
   returns: The new long buffer - `java.nio.LongBuffer`"
-  (^java.nio.LongBuffer [^java.nio.LongBuffer this]
+  (^java.nio.LongBuffer [^LongBuffer this]
     (-> this (.duplicate))))
 
 (defn has-array?
@@ -336,14 +336,14 @@
 
   returns: true if, and only if, this buffer
             is backed by an array and is not read-only - `boolean`"
-  (^Boolean [^java.nio.LongBuffer this]
+  (^Boolean [^LongBuffer this]
     (-> this (.hasArray))))
 
 (defn direct?
   "Tells whether or not this long buffer is direct.
 
   returns: true if, and only if, this buffer is direct - `boolean`"
-  (^Boolean [^java.nio.LongBuffer this]
+  (^Boolean [^LongBuffer this]
     (-> this (.isDirect))))
 
 (defn order
@@ -355,7 +355,7 @@
    byte buffer at the moment that the view is created.
 
   returns: This buffer's byte order - `java.nio.ByteOrder`"
-  (^java.nio.ByteOrder [^java.nio.LongBuffer this]
+  (^java.nio.ByteOrder [^LongBuffer this]
     (-> this (.order))))
 
 (defn slice
@@ -374,7 +374,7 @@
    is read-only.
 
   returns: The new long buffer - `java.nio.LongBuffer`"
-  (^java.nio.LongBuffer [^java.nio.LongBuffer this]
+  (^java.nio.LongBuffer [^LongBuffer this]
     (-> this (.slice))))
 
 (defn hash-code
@@ -389,7 +389,7 @@
    is known that their contents will not change.
 
   returns: The current hash code of this buffer - `int`"
-  (^Integer [^java.nio.LongBuffer this]
+  (^Integer [^LongBuffer this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -416,7 +416,7 @@
 
   returns: A negative integer, zero, or a positive integer as this buffer
             is less than, equal to, or greater than the given buffer - `int`"
-  (^Integer [^java.nio.LongBuffer this ^java.nio.LongBuffer that]
+  (^Integer [^LongBuffer this ^java.nio.LongBuffer that]
     (-> this (.compareTo that))))
 
 (defn get
@@ -453,11 +453,11 @@
   returns: This buffer - `java.nio.LongBuffer`
 
   throws: java.nio.BufferUnderflowException - If there are fewer than length longs remaining in this buffer"
-  (^java.nio.LongBuffer [^java.nio.LongBuffer this dst ^Integer offset ^Integer length]
+  (^java.nio.LongBuffer [^LongBuffer this dst ^Integer offset ^Integer length]
     (-> this (.get dst offset length)))
-  (^Long [^java.nio.LongBuffer this ^Integer index]
+  (^Long [^LongBuffer this ^Integer index]
     (-> this (.get index)))
-  (^Long [^java.nio.LongBuffer this]
+  (^Long [^LongBuffer this]
     (-> this (.get))))
 
 (defn equals
@@ -491,7 +491,7 @@
 
   returns: true if, and only if, this buffer is equal to the
              given object - `boolean`"
-  (^Boolean [^java.nio.LongBuffer this ^java.lang.Object ob]
+  (^Boolean [^LongBuffer this ^java.lang.Object ob]
     (-> this (.equals ob))))
 
 (defn array
@@ -508,7 +508,7 @@
   returns: The array that backs this buffer - `long[]`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  ([^java.nio.LongBuffer this]
+  ([^LongBuffer this]
     (-> this (.array))))
 
 (defn as-read-only-buffer
@@ -528,6 +528,6 @@
    exactly the same way as the duplicate method.
 
   returns: The new, read-only long buffer - `java.nio.LongBuffer`"
-  (^java.nio.LongBuffer [^java.nio.LongBuffer this]
+  (^java.nio.LongBuffer [^LongBuffer this]
     (-> this (.asReadOnlyBuffer))))
 

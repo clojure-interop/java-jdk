@@ -28,9 +28,9 @@
   returns: The number of bytes written to the output byte array - `int`
 
   throws: java.lang.IllegalArgumentException - if dst does not have enough space for encoding all input bytes."
-  (^Integer [^java.util.Base64$Encoder this src dst]
+  (^Integer [^Base64$Encoder this src dst]
     (-> this (.encode src dst)))
-  ([^java.util.Base64$Encoder this src]
+  ([^Base64$Encoder this src]
     (-> this (.encode src))))
 
 (defn encode-to-string
@@ -48,7 +48,7 @@
   src - the byte array to encode - `byte[]`
 
   returns: A String containing the resulting Base64 encoded characters - `java.lang.String`"
-  (^java.lang.String [^java.util.Base64$Encoder this src]
+  (^java.lang.String [^Base64$Encoder this src]
     (-> this (.encodeToString src))))
 
 (defn wrap
@@ -64,7 +64,7 @@
 
   returns: the output stream for encoding the byte data into the
             specified Base64 encoded format - `java.io.OutputStream`"
-  (^java.io.OutputStream [^java.util.Base64$Encoder this ^java.io.OutputStream os]
+  (^java.io.OutputStream [^Base64$Encoder this ^java.io.OutputStream os]
     (-> this (.wrap os))))
 
 (defn without-padding
@@ -77,7 +77,7 @@
    non-padding encoding operation.
 
   returns: an equivalent encoder that encodes without adding any
-           padding character at the end - `java.util.Base64.Encoder`"
-  (^java.util.Base64.Encoder [^java.util.Base64$Encoder this]
+           padding character at the end - `java.util.Base64$Encoder`"
+  (^java.util.Base64$Encoder [^Base64$Encoder this]
     (-> this (.withoutPadding))))
 

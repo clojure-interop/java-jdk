@@ -165,7 +165,7 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  (^java.time.temporal.ValueRange [^java.time.Year this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^Year this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn at-day
@@ -180,7 +180,7 @@
   returns: the local date formed from this year and the specified date of year, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the day of year is zero or less, 366 or greater or equal to 366 and this is not a leap year"
-  (^java.time.LocalDate [^java.time.Year this ^Integer day-of-year]
+  (^java.time.LocalDate [^Year this ^Integer day-of-year]
     (-> this (.atDay day-of-year))))
 
 (defn plus
@@ -230,9 +230,9 @@
   returns: a Year based on this year with the specified amount added, not null - `java.time.Year`
 
   throws: java.time.DateTimeException - if the addition cannot be made"
-  (^java.time.Year [^java.time.Year this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  (^java.time.Year [^Year this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  (^java.time.Year [^java.time.Year this ^java.time.temporal.TemporalAmount amount-to-add]
+  (^java.time.Year [^Year this ^java.time.temporal.TemporalAmount amount-to-add]
     (-> this (.plus amount-to-add))))
 
 (defn valid-month-day?
@@ -244,7 +244,7 @@
   month-day - the month-day to validate, null returns false - `java.time.MonthDay`
 
   returns: true if the month and day are valid for this year - `boolean`"
-  (^Boolean [^java.time.Year this ^java.time.MonthDay month-day]
+  (^Boolean [^Year this ^java.time.MonthDay month-day]
     (-> this (.isValidMonthDay month-day))))
 
 (defn query
@@ -259,12 +259,12 @@
    TemporalQuery.queryFrom(TemporalAccessor) method on the
    specified query passing this as the argument.
 
-  query - the query to invoke, not null - `java.time.temporal.TemporalQuery<R>`
+  query - the query to invoke, not null - `java.time.temporal.TemporalQuery`
 
   returns: the query result, null may be returned (defined by the query) - `<R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([^java.time.Year this ^java.time.temporal.TemporalQuery query]
+  ([^Year this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn leap?
@@ -284,14 +284,14 @@
    This is historically inaccurate, but is correct for the ISO-8601 standard.
 
   returns: true if the year is leap, false otherwise - `boolean`"
-  (^Boolean [^java.time.Year this]
+  (^Boolean [^Year this]
     (-> this (.isLeap))))
 
 (defn to-string
   "Outputs this year as a String.
 
   returns: a string representation of this year, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.Year this]
+  (^java.lang.String [^Year this]
     (-> this (.toString))))
 
 (defn before?
@@ -300,7 +300,7 @@
   other - the other year to compare to, not null - `java.time.Year`
 
   returns: true if this point is before the specified year - `boolean`"
-  (^Boolean [^java.time.Year this ^java.time.Year other]
+  (^Boolean [^Year this ^java.time.Year other]
     (-> this (.isBefore other))))
 
 (defn minus
@@ -321,9 +321,9 @@
   returns: a Year based on this year with the specified amount subtracted, not null - `java.time.Year`
 
   throws: java.time.DateTimeException - if the subtraction cannot be made"
-  (^java.time.Year [^java.time.Year this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
+  (^java.time.Year [^Year this ^Long amount-to-subtract ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-subtract unit)))
-  (^java.time.Year [^java.time.Year this ^java.time.temporal.TemporalAmount amount-to-subtract]
+  (^java.time.Year [^Year this ^java.time.temporal.TemporalAmount amount-to-subtract]
     (-> this (.minus amount-to-subtract))))
 
 (defn at-month-day
@@ -337,7 +337,7 @@
   month-day - the month-day to use, not null - `java.time.MonthDay`
 
   returns: the local date formed from this year and the specified month-day, not null - `java.time.LocalDate`"
-  (^java.time.LocalDate [^java.time.Year this ^java.time.MonthDay month-day]
+  (^java.time.LocalDate [^Year this ^java.time.MonthDay month-day]
     (-> this (.atMonthDay month-day))))
 
 (defn get-value
@@ -346,7 +346,7 @@
    The year returned by this method is proleptic as per get(YEAR).
 
   returns: the year, MIN_VALUE to MAX_VALUE - `int`"
-  (^Integer [^java.time.Year this]
+  (^Integer [^Year this]
     (-> this (.getValue))))
 
 (defn get-long
@@ -371,7 +371,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  (^Long [^java.time.Year this ^java.time.temporal.TemporalField field]
+  (^Long [^Year this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn at-month
@@ -388,7 +388,7 @@
   month - the month-of-year to use, not null - `java.time.Month`
 
   returns: the year-month formed from this year and the specified month, not null - `java.time.YearMonth`"
-  (^java.time.YearMonth [^java.time.Year this ^java.time.Month month]
+  (^java.time.YearMonth [^Year this ^java.time.Month month]
     (-> this (.atMonth month))))
 
 (defn until
@@ -436,14 +436,14 @@
   returns: the amount of time between this year and the end year - `long`
 
   throws: java.time.DateTimeException - if the amount cannot be calculated, or the end temporal cannot be converted to a Year"
-  (^Long [^java.time.Year this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
+  (^Long [^Year this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit))))
 
 (defn length
   "Gets the length of this year in days.
 
   returns: the length of this year in days, 365 or 366 - `int`"
-  (^Integer [^java.time.Year this]
+  (^Integer [^Year this]
     (-> this (.length))))
 
 (defn after?
@@ -452,7 +452,7 @@
   other - the other year to compare to, not null - `java.time.Year`
 
   returns: true if this is after the specified year - `boolean`"
-  (^Boolean [^java.time.Year this ^java.time.Year other]
+  (^Boolean [^Year this ^java.time.Year other]
     (-> this (.isAfter other))))
 
 (defn supported?
@@ -480,7 +480,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this year, false if not - `boolean`"
-  (^Boolean [^java.time.Year this ^java.time.temporal.TemporalField field]
+  (^Boolean [^Year this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn minus-years
@@ -493,14 +493,14 @@
   returns: a Year based on this year with the year subtracted, not null - `java.time.Year`
 
   throws: java.time.DateTimeException - if the result exceeds the supported range"
-  (^java.time.Year [^java.time.Year this ^Long years-to-subtract]
+  (^java.time.Year [^Year this ^Long years-to-subtract]
     (-> this (.minusYears years-to-subtract))))
 
 (defn hash-code
   "A hash code for this year.
 
   returns: a suitable hash code - `int`"
-  (^Integer [^java.time.Year this]
+  (^Integer [^Year this]
     (-> this (.hashCode))))
 
 (defn adjust-into
@@ -529,7 +529,7 @@
   returns: the adjusted object, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  (^java.time.temporal.Temporal [^java.time.Year this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^Year this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn with
@@ -572,9 +572,9 @@
   returns: a Year based on this with the specified field set, not null - `java.time.Year`
 
   throws: java.time.DateTimeException - if the field cannot be set"
-  (^java.time.Year [^java.time.Year this ^java.time.temporal.TemporalField field ^Long new-value]
+  (^java.time.Year [^Year this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  (^java.time.Year [^java.time.Year this ^java.time.temporal.TemporalAdjuster adjuster]
+  (^java.time.Year [^Year this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn compare-to
@@ -586,7 +586,7 @@
   other - the other year to compare to, not null - `java.time.Year`
 
   returns: the comparator value, negative if less, positive if greater - `int`"
-  (^Integer [^java.time.Year this ^java.time.Year other]
+  (^Integer [^Year this ^java.time.Year other]
     (-> this (.compareTo other))))
 
 (defn get
@@ -612,7 +612,7 @@
   returns: the value for the field - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  (^Integer [^java.time.Year this ^java.time.temporal.TemporalField field]
+  (^Integer [^Year this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn equals
@@ -623,7 +623,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other year - `boolean`"
-  (^Boolean [^java.time.Year this ^java.lang.Object obj]
+  (^Boolean [^Year this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -636,7 +636,7 @@
   returns: the formatted year string, not null - `java.lang.String`
 
   throws: java.time.DateTimeException - if an error occurs during printing"
-  (^java.lang.String [^java.time.Year this ^java.time.format.DateTimeFormatter formatter]
+  (^java.lang.String [^Year this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.format formatter))))
 
 (defn plus-years
@@ -649,6 +649,6 @@
   returns: a Year based on this year with the years added, not null - `java.time.Year`
 
   throws: java.time.DateTimeException - if the result exceeds the supported range"
-  (^java.time.Year [^java.time.Year this ^Long years-to-add]
+  (^java.time.Year [^Year this ^Long years-to-add]
     (-> this (.plusYears years-to-add))))
 

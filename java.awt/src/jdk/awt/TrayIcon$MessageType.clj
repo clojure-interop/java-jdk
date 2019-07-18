@@ -7,7 +7,7 @@
 
   An error message
 
-  type: java.awt.TrayIcon.MessageType"
+  type: java.awt.TrayIcon$MessageType"
   TrayIcon$MessageType/ERROR)
 
 (def WARNING
@@ -15,7 +15,7 @@
 
   A warning message
 
-  type: java.awt.TrayIcon.MessageType"
+  type: java.awt.TrayIcon$MessageType"
   TrayIcon$MessageType/WARNING)
 
 (def INFO
@@ -23,7 +23,7 @@
 
   An information message
 
-  type: java.awt.TrayIcon.MessageType"
+  type: java.awt.TrayIcon$MessageType"
   TrayIcon$MessageType/INFO)
 
 (def NONE
@@ -31,7 +31,7 @@
 
   Simple message
 
-  type: java.awt.TrayIcon.MessageType"
+  type: java.awt.TrayIcon$MessageType"
   TrayIcon$MessageType/NONE)
 
 (defn *values
@@ -43,7 +43,7 @@
   for (TrayIcon.MessageType c : TrayIcon.MessageType.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.TrayIcon.MessageType[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.TrayIcon$MessageType[]`"
   ([]
     (TrayIcon$MessageType/values )))
 
@@ -55,9 +55,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.awt.TrayIcon.MessageType`
+  returns: the enum constant with the specified name - `java.awt.TrayIcon$MessageType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.awt.TrayIcon.MessageType [^java.lang.String name]
+  (^java.awt.TrayIcon$MessageType [^java.lang.String name]
     (TrayIcon$MessageType/valueOf name)))
 

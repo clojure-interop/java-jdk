@@ -21,15 +21,15 @@
   message - a String containing the reason for the parsing failure. - `java.lang.String`
   cause - the Throwable (Error or Exception) that caused this exception to occur, or null. - `java.lang.Throwable`
   offending-node - the DOM Node that caused the exception, or null. - `org.w3c.dom.Node`"
-  ([^java.lang.String message ^java.lang.Throwable cause ^org.w3c.dom.Node offending-node]
+  (^IIOInvalidTreeException [^java.lang.String message ^java.lang.Throwable cause ^org.w3c.dom.Node offending-node]
     (new IIOInvalidTreeException message cause offending-node))
-  ([^java.lang.String message ^org.w3c.dom.Node offending-node]
+  (^IIOInvalidTreeException [^java.lang.String message ^org.w3c.dom.Node offending-node]
     (new IIOInvalidTreeException message offending-node)))
 
 (defn get-offending-node
   "Returns the Node that caused the error in parsing.
 
   returns: the offending Node. - `org.w3c.dom.Node`"
-  (^org.w3c.dom.Node [^javax.imageio.metadata.IIOInvalidTreeException this]
+  (^org.w3c.dom.Node [^IIOInvalidTreeException this]
     (-> this (.getOffendingNode))))
 

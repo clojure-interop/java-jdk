@@ -29,8 +29,8 @@
 
   msg - The message, or null if there is no message - `java.lang.String`
   cause - The cause, or null if the cause is nonexistent or unknown - `java.lang.Throwable`"
-  ([^java.lang.String msg ^java.lang.Throwable cause]
+  (^ServiceConfigurationError [^java.lang.String msg ^java.lang.Throwable cause]
     (new ServiceConfigurationError msg cause))
-  ([^java.lang.String msg]
+  (^ServiceConfigurationError [^java.lang.String msg]
     (new ServiceConfigurationError msg)))
 

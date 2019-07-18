@@ -68,7 +68,7 @@
    signature     BIT STRING
 
   returns: the signature. - `byte[]`"
-  ([^java.security.cert.X509CRL this]
+  ([^X509CRL this]
     (-> this (.getSignature))))
 
 (defn get-revoked-certificate
@@ -78,7 +78,7 @@
 
   returns: the entry with the given serial number, or null if no such entry
    exists in this CRL. - `java.security.cert.X509CRLEntry`"
-  (^java.security.cert.X509CRLEntry [^java.security.cert.X509CRL this ^java.math.BigInteger serial-number]
+  (^java.security.cert.X509CRLEntry [^X509CRL this ^java.math.BigInteger serial-number]
     (-> this (.getRevokedCertificate serial-number))))
 
 (defn get-tbs-cert-list
@@ -89,7 +89,7 @@
   returns: the DER-encoded CRL information. - `byte[]`
 
   throws: java.security.cert.CRLException - if an encoding error occurs."
-  ([^java.security.cert.X509CRL this]
+  ([^X509CRL this]
     (-> this (.getTBSCertList))))
 
 (defn get-next-update
@@ -97,7 +97,7 @@
 
   returns: the nextUpdate date from the CRL, or null if
    not present. - `java.util.Date`"
-  (^java.util.Date [^java.security.cert.X509CRL this]
+  (^java.util.Date [^X509CRL this]
     (-> this (.getNextUpdate))))
 
 (defn get-issuer-x-500-principal
@@ -108,7 +108,7 @@
 
   returns: an X500Principal representing the issuer
             distinguished name - `javax.security.auth.x500.X500Principal`"
-  (^javax.security.auth.x500.X500Principal [^java.security.cert.X509CRL this]
+  (^javax.security.auth.x500.X500Principal [^X509CRL this]
     (-> this (.getIssuerX500Principal))))
 
 (defn verify
@@ -121,9 +121,9 @@
   sig-provider - the name of the signature provider. - `java.lang.String`
 
   throws: java.security.NoSuchAlgorithmException - on unsupported signature algorithms."
-  ([^java.security.cert.X509CRL this ^java.security.PublicKey key ^java.lang.String sig-provider]
+  ([^X509CRL this ^java.security.PublicKey key ^java.lang.String sig-provider]
     (-> this (.verify key sig-provider)))
-  ([^java.security.cert.X509CRL this ^java.security.PublicKey key]
+  ([^X509CRL this ^java.security.PublicKey key]
     (-> this (.verify key))))
 
 (defn get-version
@@ -139,7 +139,7 @@
                -- with definition of Version for certs
 
   returns: the version number, i.e. 1 or 2. - `int`"
-  (^Integer [^java.security.cert.X509CRL this]
+  (^Integer [^X509CRL this]
     (-> this (.getVersion))))
 
 (defn get-issuer-dn
@@ -179,7 +179,7 @@
    TeletexString or UniversalString.
 
   returns: a Principal whose name is the issuer distinguished name. - `java.security.Principal`"
-  (^java.security.Principal [^java.security.cert.X509CRL this]
+  (^java.security.Principal [^X509CRL this]
     (-> this (.getIssuerDN))))
 
 (defn get-revoked-certificates
@@ -187,7 +187,7 @@
    This returns a Set of X509CRLEntry objects.
 
   returns: all the entries or null if there are none present. - `java.util.Set<? extends java.security.cert.X509CRLEntry>`"
-  ([^java.security.cert.X509CRL this]
+  ([^X509CRL this]
     (-> this (.getRevokedCertificates))))
 
 (defn get-encoded
@@ -196,7 +196,7 @@
   returns: the encoded form of this certificate - `byte[]`
 
   throws: java.security.cert.CRLException - if an encoding error occurs."
-  ([^java.security.cert.X509CRL this]
+  ([^X509CRL this]
     (-> this (.getEncoded))))
 
 (defn get-sig-alg-params
@@ -214,7 +214,7 @@
 
   returns: the DER-encoded signature algorithm parameters, or
            null if no parameters are present. - `byte[]`"
-  ([^java.security.cert.X509CRL this]
+  ([^X509CRL this]
     (-> this (.getSigAlgParams))))
 
 (defn hash-code
@@ -222,7 +222,7 @@
    encoded form.
 
   returns: the hashcode value. - `int`"
-  (^Integer [^java.security.cert.X509CRL this]
+  (^Integer [^X509CRL this]
     (-> this (.hashCode))))
 
 (defn get-sig-alg-name
@@ -244,7 +244,7 @@
    OID string.
 
   returns: the signature algorithm name. - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.X509CRL this]
+  (^java.lang.String [^X509CRL this]
     (-> this (.getSigAlgName))))
 
 (defn get-this-update
@@ -258,7 +258,7 @@
        generalTime    GeneralizedTime }
 
   returns: the thisUpdate date from the CRL. - `java.util.Date`"
-  (^java.util.Date [^java.security.cert.X509CRL this]
+  (^java.util.Date [^X509CRL this]
     (-> this (.getThisUpdate))))
 
 (defn equals
@@ -272,7 +272,7 @@
 
   returns: true iff the encoded forms of the two CRLs
    match, false otherwise. - `boolean`"
-  (^Boolean [^java.security.cert.X509CRL this ^java.lang.Object other]
+  (^Boolean [^X509CRL this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn get-sig-alg-oid
@@ -289,6 +289,6 @@
    relevant ASN.1 definitions.
 
   returns: the signature algorithm OID string. - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.X509CRL this]
+  (^java.lang.String [^X509CRL this]
     (-> this (.getSigAlgOID))))
 

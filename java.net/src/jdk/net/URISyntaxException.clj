@@ -15,23 +15,23 @@
   index - The index at which the parse error occurred, or -1 if the index is not known - `int`
 
   throws: java.lang.NullPointerException - If either the input or reason strings are null"
-  ([^java.lang.String input ^java.lang.String reason ^Integer index]
+  (^URISyntaxException [^java.lang.String input ^java.lang.String reason ^Integer index]
     (new URISyntaxException input reason index))
-  ([^java.lang.String input ^java.lang.String reason]
+  (^URISyntaxException [^java.lang.String input ^java.lang.String reason]
     (new URISyntaxException input reason)))
 
 (defn get-input
   "Returns the input string.
 
   returns: The input string - `java.lang.String`"
-  (^java.lang.String [^java.net.URISyntaxException this]
+  (^java.lang.String [^URISyntaxException this]
     (-> this (.getInput))))
 
 (defn get-reason
   "Returns a string explaining why the input string could not be parsed.
 
   returns: The reason string - `java.lang.String`"
-  (^java.lang.String [^java.net.URISyntaxException this]
+  (^java.lang.String [^URISyntaxException this]
     (-> this (.getReason))))
 
 (defn get-index
@@ -39,7 +39,7 @@
    parse error occurred, or -1 if this position is not known.
 
   returns: The error index - `int`"
-  (^Integer [^java.net.URISyntaxException this]
+  (^Integer [^URISyntaxException this]
     (-> this (.getIndex))))
 
 (defn get-message
@@ -51,6 +51,6 @@
    character.
 
   returns: A string describing the parse error - `java.lang.String`"
-  (^java.lang.String [^java.net.URISyntaxException this]
+  (^java.lang.String [^URISyntaxException this]
     (-> this (.getMessage))))
 

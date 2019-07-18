@@ -17,7 +17,7 @@
 
   returns: the preferredSize of a JViewport whose view
       is this Scrollable - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.Scrollable this]
+  (^java.awt.Dimension [^Scrollable this]
     (-> this (.getPreferredScrollableViewportSize))))
 
 (defn get-scrollable-unit-increment
@@ -36,7 +36,7 @@
 
   returns: The `unit` increment for scrolling in the specified direction.
            This value should always be positive. - `int`"
-  (^Integer [^javax.swing.Scrollable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^Scrollable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
 (defn get-scrollable-block-increment
@@ -53,7 +53,7 @@
 
   returns: The `block` increment for scrolling in the specified direction.
            This value should always be positive. - `int`"
-  (^Integer [^javax.swing.Scrollable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^Scrollable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableBlockIncrement visible-rect orientation direction))))
 
 (defn get-scrollable-tracks-viewport-width?
@@ -70,7 +70,7 @@
    time they are validated.
 
   returns: True if a viewport should force the Scrollables width to match its own. - `boolean`"
-  (^Boolean [^javax.swing.Scrollable this]
+  (^Boolean [^Scrollable this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn get-scrollable-tracks-viewport-height?
@@ -84,6 +84,6 @@
    time they are validated.
 
   returns: True if a viewport should force the Scrollables height to match its own. - `boolean`"
-  (^Boolean [^javax.swing.Scrollable this]
+  (^Boolean [^Scrollable this]
     (-> this (.getScrollableTracksViewportHeight))))
 

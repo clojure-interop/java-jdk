@@ -10,7 +10,7 @@
   The OrientationRequestedType instance to use for specifying a
    portrait orientation.
 
-  type: java.awt.PageAttributes.OrientationRequestedType"
+  type: java.awt.PageAttributes$OrientationRequestedType"
   PageAttributes$OrientationRequestedType/PORTRAIT)
 
 (def *-landscape
@@ -19,20 +19,20 @@
   The OrientationRequestedType instance to use for specifying a
    landscape orientation.
 
-  type: java.awt.PageAttributes.OrientationRequestedType"
+  type: java.awt.PageAttributes$OrientationRequestedType"
   PageAttributes$OrientationRequestedType/LANDSCAPE)
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.PageAttributes$OrientationRequestedType this]
+  (^Integer [^PageAttributes$OrientationRequestedType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.PageAttributes$OrientationRequestedType this]
+  (^java.lang.String [^PageAttributes$OrientationRequestedType this]
     (-> this (.toString))))
 

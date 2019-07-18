@@ -76,9 +76,9 @@
   upper-bound - Upper bound of the range. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if a null range is specified or if a non-null range is specified with lowerBound less than 1."
-  ([^Integer lower-bound ^Integer upper-bound]
+  (^PageRanges [^Integer lower-bound ^Integer upper-bound]
     (new PageRanges lower-bound upper-bound))
-  ([members]
+  (^PageRanges [members]
     (new PageRanges members)))
 
 (defn equals
@@ -98,7 +98,7 @@
 
   returns: True if object is equivalent to this page ranges
             attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.PageRanges this ^java.lang.Object object]
+  (^Boolean [^PageRanges this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -109,7 +109,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.PageRanges this]
+  ([^PageRanges this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -119,6 +119,6 @@
    For class PageRanges, the category name is `page-ranges`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.PageRanges this]
+  (^java.lang.String [^PageRanges this]
     (-> this (.getName))))
 

@@ -14,11 +14,11 @@
 
   e - The exception to be encapsulated in a TransformerFactoryConfigurationError - `java.lang.Exception`
   msg - The detail message. - `java.lang.String`"
-  ([^java.lang.Exception e ^java.lang.String msg]
+  (^TransformerFactoryConfigurationError [^java.lang.Exception e ^java.lang.String msg]
     (new TransformerFactoryConfigurationError e msg))
-  ([^java.lang.String msg]
+  (^TransformerFactoryConfigurationError [^java.lang.String msg]
     (new TransformerFactoryConfigurationError msg))
-  ([]
+  (^TransformerFactoryConfigurationError []
     (new TransformerFactoryConfigurationError )))
 
 (defn get-message
@@ -27,7 +27,7 @@
    exception then the message of that exception will be returned.
 
   returns: The error message. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.transform.TransformerFactoryConfigurationError this]
+  (^java.lang.String [^TransformerFactoryConfigurationError this]
     (-> this (.getMessage))))
 
 (defn get-exception
@@ -35,7 +35,7 @@
    be raised.
 
   returns: The encapsulated exception, or null if there is none. - `java.lang.Exception`"
-  (^java.lang.Exception [^javax.xml.transform.TransformerFactoryConfigurationError this]
+  (^java.lang.Exception [^TransformerFactoryConfigurationError this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -43,6 +43,6 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.xml.transform.TransformerFactoryConfigurationError this]
+  (^java.lang.Throwable [^TransformerFactoryConfigurationError this]
     (-> this (.getCause))))
 

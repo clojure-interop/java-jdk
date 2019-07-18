@@ -5,6 +5,6 @@
 
 (defn ->color-chooser-ui
   "Constructor."
-  ([]
+  (^ColorChooserUI []
     (new ColorChooserUI )))
 

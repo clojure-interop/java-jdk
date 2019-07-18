@@ -24,7 +24,7 @@
 
   returns: the Id attribute (may be null if
       not specified) - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.XMLSignature$SignatureValue this]
+  (^java.lang.String [^XMLSignature$SignatureValue this]
     (-> this (.getId))))
 
 (defn get-value
@@ -34,7 +34,7 @@
       XMLSignature has not been signed yet). Each
       invocation of this method returns a new clone of the array to
       prevent subsequent modification. - `byte[]`"
-  ([^javax.xml.crypto.dsig.XMLSignature$SignatureValue this]
+  ([^XMLSignature$SignatureValue this]
     (-> this (.getValue))))
 
 (defn validate
@@ -52,6 +52,6 @@
       validated successfully; false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if validateContext is null"
-  (^Boolean [^javax.xml.crypto.dsig.XMLSignature$SignatureValue this ^javax.xml.crypto.dsig.XMLValidateContext validate-context]
+  (^Boolean [^XMLSignature$SignatureValue this ^javax.xml.crypto.dsig.XMLValidateContext validate-context]
     (-> this (.validate validate-context))))
 

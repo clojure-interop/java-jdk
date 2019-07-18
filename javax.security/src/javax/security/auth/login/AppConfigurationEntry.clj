@@ -22,11 +22,11 @@
    method from the Configuration class.
 
   login-module-name - String representing the class name of the LoginModule configured for the specified application. - `java.lang.String`
-  control-flag - either REQUIRED, REQUISITE, SUFFICIENT, or OPTIONAL. - `javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag`
-  options - the options configured for this LoginModule. - `java.util.Map<java.lang.String,?>`
+  control-flag - either REQUIRED, REQUISITE, SUFFICIENT, or OPTIONAL. - `javax.security.auth.login.AppConfigurationEntry$LoginModuleControlFlag`
+  options - the options configured for this LoginModule. - `java.util.Map`
 
   throws: java.lang.IllegalArgumentException - if loginModuleName is null, if LoginModuleName has a length of 0, if controlFlag is not either REQUIRED, REQUISITE, SUFFICIENT or OPTIONAL, or if options is null."
-  ([^java.lang.String login-module-name ^javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag control-flag ^java.util.Map options]
+  (^AppConfigurationEntry [^java.lang.String login-module-name ^javax.security.auth.login.AppConfigurationEntry$LoginModuleControlFlag control-flag ^java.util.Map options]
     (new AppConfigurationEntry login-module-name control-flag options)))
 
 (defn get-login-module-name
@@ -34,7 +34,7 @@
 
   returns: the class name of the configured LoginModule as
             a String. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.login.AppConfigurationEntry this]
+  (^java.lang.String [^AppConfigurationEntry this]
     (-> this (.getLoginModuleName))))
 
 (defn get-control-flag
@@ -44,8 +44,8 @@
 
   returns: the controlFlag
             (either REQUIRED, REQUISITE, SUFFICIENT, or OPTIONAL)
-            for this LoginModule. - `javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag`"
-  (^javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag [^javax.security.auth.login.AppConfigurationEntry this]
+            for this LoginModule. - `javax.security.auth.login.AppConfigurationEntry$LoginModuleControlFlag`"
+  (^javax.security.auth.login.AppConfigurationEntry$LoginModuleControlFlag [^AppConfigurationEntry this]
     (-> this (.getControlFlag))))
 
 (defn get-options
@@ -53,6 +53,6 @@
 
   returns: the options configured for this LoginModule
             as an unmodifiable Map. - `java.util.Map<java.lang.String,?>`"
-  (^java.util.Map [^javax.security.auth.login.AppConfigurationEntry this]
+  (^java.util.Map [^AppConfigurationEntry this]
     (-> this (.getOptions))))
 

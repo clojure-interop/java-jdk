@@ -38,16 +38,16 @@
   local-port - the local port the socket is bound to, or zero for a system selected free port. - `int`
 
   throws: java.io.IOException - if an I/O error occurs when creating the socket."
-  ([^java.lang.String host ^Integer port ^java.net.InetAddress local-addr ^Integer local-port]
+  (^Socket [^java.lang.String host ^Integer port ^java.net.InetAddress local-addr ^Integer local-port]
     (new Socket host port local-addr local-port))
-  ([^java.lang.String host ^Integer port]
+  (^Socket [^java.lang.String host ^Integer port ^Boolean stream]
+    (new Socket host port stream))
+  (^Socket [^java.lang.String host ^Integer port]
     (new Socket host port))
-  ([^java.net.Proxy proxy]
+  (^Socket [^java.net.Proxy proxy]
     (new Socket proxy))
-  ([]
-    (new Socket ))
-  ([^java.lang.String host ^Integer port ^Boolean stream]
-    (new Socket host port stream)))
+  (^Socket []
+    (new Socket )))
 
 (defn *set-socket-impl-factory
   "Sets the client socket implementation factory for the
@@ -112,7 +112,7 @@
   tc - an int value for the bitset. - `int`
 
   throws: java.net.SocketException - if there is an error setting the traffic class or type-of-service"
-  ([^java.net.Socket this ^Integer tc]
+  ([^Socket this ^Integer tc]
     (-> this (.setTrafficClass tc))))
 
 (defn set-performance-preferences
@@ -142,7 +142,7 @@
   connection-time - An int expressing the relative importance of a short connection time - `int`
   latency - An int expressing the relative importance of low latency - `int`
   bandwidth - An int expressing the relative importance of high bandwidth - `int`"
-  ([^java.net.Socket this ^Integer connection-time ^Integer latency ^Integer bandwidth]
+  ([^Socket this ^Integer connection-time ^Integer latency ^Integer bandwidth]
     (-> this (.setPerformancePreferences connection-time latency bandwidth))))
 
 (defn get-send-buffer-size
@@ -154,7 +154,7 @@
            option for this Socket. - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  (^Integer [^java.net.Socket this]
+  (^Integer [^Socket this]
     (-> this (.getSendBufferSize))))
 
 (defn get-local-port
@@ -166,7 +166,7 @@
 
   returns: the local port number to which this socket is bound or -1
             if the socket is not bound yet. - `int`"
-  (^Integer [^java.net.Socket this]
+  (^Integer [^Socket this]
     (-> this (.getLocalPort))))
 
 (defn set-so-timeout
@@ -183,7 +183,7 @@
   timeout - the specified timeout, in milliseconds. - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.Socket this ^Integer timeout]
+  ([^Socket this ^Integer timeout]
     (-> this (.setSoTimeout timeout))))
 
 (defn send-urgent-data
@@ -195,7 +195,7 @@
   data - The byte of data to send - `int`
 
   throws: java.io.IOException - if there is an error sending the data."
-  ([^java.net.Socket this ^Integer data]
+  ([^Socket this ^Integer data]
     (-> this (.sendUrgentData data))))
 
 (defn shutdown-output
@@ -208,7 +208,7 @@
    an IOException.
 
   throws: java.io.IOException - if an I/O error occurs when shutting down this socket."
-  ([^java.net.Socket this]
+  ([^Socket this]
     (-> this (.shutdownOutput))))
 
 (defn bind
@@ -220,7 +220,7 @@
   bindpoint - the SocketAddress to bind to - `java.net.SocketAddress`
 
   throws: java.io.IOException - if the bind operation fails, or if the socket is already bound."
-  ([^java.net.Socket this ^java.net.SocketAddress bindpoint]
+  ([^Socket this ^java.net.SocketAddress bindpoint]
     (-> this (.bind bindpoint))))
 
 (defn set-reuse-address
@@ -251,14 +251,14 @@
   on - whether to enable or disable the socket option - `boolean`
 
   throws: java.net.SocketException - if an error occurs enabling or disabling the SO_REUSEADDR socket option, or the socket is closed."
-  ([^java.net.Socket this ^Boolean on]
+  ([^Socket this ^Boolean on]
     (-> this (.setReuseAddress on))))
 
 (defn output-shutdown?
   "Returns whether the write-half of the socket connection is closed.
 
   returns: true if the output of the socket has been shutdown - `boolean`"
-  (^Boolean [^java.net.Socket this]
+  (^Boolean [^Socket this]
     (-> this (.isOutputShutdown))))
 
 (defn connected?
@@ -270,7 +270,7 @@
    to being closed.
 
   returns: true if the socket was successfuly connected to a server - `boolean`"
-  (^Boolean [^java.net.Socket this]
+  (^Boolean [^Socket this]
     (-> this (.isConnected))))
 
 (defn get-tcp-no-delay?
@@ -280,14 +280,14 @@
            TCP_NODELAY is enabled. - `boolean`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  (^Boolean [^java.net.Socket this]
+  (^Boolean [^Socket this]
     (-> this (.getTcpNoDelay))))
 
 (defn to-string
   "Converts this socket to a String.
 
   returns: a string representation of this socket. - `java.lang.String`"
-  (^java.lang.String [^java.net.Socket this]
+  (^java.lang.String [^Socket this]
     (-> this (.toString))))
 
 (defn get-oob-inline?
@@ -297,7 +297,7 @@
            SO_OOBINLINEis enabled. - `boolean`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  (^Boolean [^java.net.Socket this]
+  (^Boolean [^Socket this]
     (-> this (.getOOBInline))))
 
 (defn get-so-timeout
@@ -307,7 +307,7 @@
   returns: the setting for SO_TIMEOUT - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  (^Integer [^java.net.Socket this]
+  (^Integer [^Socket this]
     (-> this (.getSoTimeout))))
 
 (defn get-remote-socket-address
@@ -320,14 +320,14 @@
 
   returns: a SocketAddress representing the remote endpoint of this
            socket, or null if it is not connected yet. - `java.net.SocketAddress`"
-  (^java.net.SocketAddress [^java.net.Socket this]
+  (^java.net.SocketAddress [^Socket this]
     (-> this (.getRemoteSocketAddress))))
 
 (defn input-shutdown?
   "Returns whether the read-half of the socket connection is closed.
 
   returns: true if the input of the socket has been shutdown - `boolean`"
-  (^Boolean [^java.net.Socket this]
+  (^Boolean [^Socket this]
     (-> this (.isInputShutdown))))
 
 (defn connect
@@ -339,16 +339,16 @@
   timeout - the timeout value to be used in milliseconds. - `int`
 
   throws: java.io.IOException - if an error occurs during the connection"
-  ([^java.net.Socket this ^java.net.SocketAddress endpoint ^Integer timeout]
+  ([^Socket this ^java.net.SocketAddress endpoint ^Integer timeout]
     (-> this (.connect endpoint timeout)))
-  ([^java.net.Socket this ^java.net.SocketAddress endpoint]
+  ([^Socket this ^java.net.SocketAddress endpoint]
     (-> this (.connect endpoint))))
 
 (defn closed?
   "Returns the closed state of the socket.
 
   returns: true if the socket has been closed - `boolean`"
-  (^Boolean [^java.net.Socket this]
+  (^Boolean [^Socket this]
     (-> this (.isClosed))))
 
 (defn set-so-linger
@@ -362,7 +362,7 @@
   linger - how long to linger for, if on is true. - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.Socket this ^Boolean on ^Integer linger]
+  ([^Socket this ^Boolean on ^Integer linger]
     (-> this (.setSoLinger on linger))))
 
 (defn get-reuse-address?
@@ -372,7 +372,7 @@
            SO_REUSEADDR is enabled. - `boolean`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  (^Boolean [^java.net.Socket this]
+  (^Boolean [^Socket this]
     (-> this (.getReuseAddress))))
 
 (defn set-send-buffer-size
@@ -389,7 +389,7 @@
   size - the size to which to set the send buffer size. This value must be greater than 0. - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.Socket this ^Integer size]
+  ([^Socket this ^Integer size]
     (-> this (.setSendBufferSize size))))
 
 (defn get-local-socket-address
@@ -414,7 +414,7 @@
            this socket, or a SocketAddress representing the
            loopback address if denied by the security manager, or
            null if the socket is not bound yet. - `java.net.SocketAddress`"
-  (^java.net.SocketAddress [^java.net.Socket this]
+  (^java.net.SocketAddress [^Socket this]
     (-> this (.getLocalSocketAddress))))
 
 (defn get-local-address
@@ -428,7 +428,7 @@
   returns: the local address to which the socket is bound,
            the loopback address if denied by the security manager, or
            the wildcard address if the socket is closed or not bound yet. - `java.net.InetAddress`"
-  (^java.net.InetAddress [^java.net.Socket this]
+  (^java.net.InetAddress [^Socket this]
     (-> this (.getLocalAddress))))
 
 (defn get-keep-alive?
@@ -438,7 +438,7 @@
            SO_KEEPALIVE is enabled. - `boolean`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  (^Boolean [^java.net.Socket this]
+  (^Boolean [^Socket this]
     (-> this (.getKeepAlive))))
 
 (defn close
@@ -459,7 +459,7 @@
    as well.
 
   throws: java.io.IOException - if an I/O error occurs when closing this socket."
-  ([^java.net.Socket this]
+  ([^Socket this]
     (-> this (.close))))
 
 (defn get-receive-buffer-size
@@ -471,7 +471,7 @@
            option for this Socket. - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  (^Integer [^java.net.Socket this]
+  (^Integer [^Socket this]
     (-> this (.getReceiveBufferSize))))
 
 (defn get-output-stream
@@ -488,7 +488,7 @@
   returns: an output stream for writing bytes to this socket. - `java.io.OutputStream`
 
   throws: java.io.IOException - if an I/O error occurs when creating the output stream or if the socket is not connected."
-  (^java.io.OutputStream [^java.net.Socket this]
+  (^java.io.OutputStream [^Socket this]
     (-> this (.getOutputStream))))
 
 (defn get-traffic-class
@@ -503,7 +503,7 @@
   returns: the traffic class or type-of-service already set - `int`
 
   throws: java.net.SocketException - if there is an error obtaining the traffic class or type-of-service value."
-  (^Integer [^java.net.Socket this]
+  (^Integer [^Socket this]
     (-> this (.getTrafficClass))))
 
 (defn set-receive-buffer-size
@@ -537,7 +537,7 @@
   size - the size to which to set the receive buffer size. This value must be greater than 0. - `int`
 
   throws: java.lang.IllegalArgumentException - if the value is 0 or is negative."
-  ([^java.net.Socket this ^Integer size]
+  ([^Socket this ^Integer size]
     (-> this (.setReceiveBufferSize size))))
 
 (defn get-port
@@ -549,7 +549,7 @@
 
   returns: the remote port number to which this socket is connected, or
             0 if the socket is not connected yet. - `int`"
-  (^Integer [^java.net.Socket this]
+  (^Integer [^Socket this]
     (-> this (.getPort))))
 
 (defn set-oob-inline
@@ -569,7 +569,7 @@
   on - true to enable SO_OOBINLINE, false to disable. - `boolean`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.Socket this ^Boolean on]
+  ([^Socket this ^Boolean on]
     (-> this (.setOOBInline on))))
 
 (defn set-tcp-no-delay
@@ -579,7 +579,7 @@
   on - true to enable TCP_NODELAY, false to disable. - `boolean`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.Socket this ^Boolean on]
+  ([^Socket this ^Boolean on]
     (-> this (.setTcpNoDelay on))))
 
 (defn get-input-stream
@@ -621,7 +621,7 @@
   returns: an input stream for reading bytes from this socket. - `java.io.InputStream`
 
   throws: java.io.IOException - if an I/O error occurs when creating the input stream, the socket is closed, the socket is not connected, or the socket input has been shutdown using shutdownInput()"
-  (^java.io.InputStream [^java.net.Socket this]
+  (^java.io.InputStream [^Socket this]
     (-> this (.getInputStream))))
 
 (defn bound?
@@ -633,7 +633,7 @@
    to being closed.
 
   returns: true if the socket was successfuly bound to an address - `boolean`"
-  (^Boolean [^java.net.Socket this]
+  (^Boolean [^Socket this]
     (-> this (.isBound))))
 
 (defn shutdown-input
@@ -646,7 +646,7 @@
    read methods will return -1 (end of stream).
 
   throws: java.io.IOException - if an I/O error occurs when shutting down this socket."
-  ([^java.net.Socket this]
+  ([^Socket this]
     (-> this (.shutdownInput))))
 
 (defn get-so-linger
@@ -659,7 +659,7 @@
   returns: the setting for SO_LINGER. - `int`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  (^Integer [^java.net.Socket this]
+  (^Integer [^Socket this]
     (-> this (.getSoLinger))))
 
 (defn get-channel
@@ -673,7 +673,7 @@
   returns: the socket channel associated with this socket,
             or null if this socket was not created
             for a channel - `java.nio.channels.SocketChannel`"
-  (^java.nio.channels.SocketChannel [^java.net.Socket this]
+  (^java.nio.channels.SocketChannel [^Socket this]
     (-> this (.getChannel))))
 
 (defn get-inet-address
@@ -685,7 +685,7 @@
 
   returns: the remote IP address to which this socket is connected,
             or null if the socket is not connected. - `java.net.InetAddress`"
-  (^java.net.InetAddress [^java.net.Socket this]
+  (^java.net.InetAddress [^Socket this]
     (-> this (.getInetAddress))))
 
 (defn set-keep-alive
@@ -694,6 +694,6 @@
   on - whether or not to have socket keep alive turned on. - `boolean`
 
   throws: java.net.SocketException - if there is an error in the underlying protocol, such as a TCP error."
-  ([^java.net.Socket this ^Boolean on]
+  ([^Socket this ^Boolean on]
     (-> this (.setKeepAlive on))))
 

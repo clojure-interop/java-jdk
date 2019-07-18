@@ -167,7 +167,7 @@
    This may result in throwing a SecurityException.
 
   throws: java.lang.SecurityException - if a security manager already exists and its checkPermission method doesn't allow creation of a new security manager."
-  ([]
+  (^SecurityManager []
     (new SecurityManager )))
 
 (defn check-read
@@ -193,9 +193,9 @@
   context - a system-dependent security context. - `java.lang.Object`
 
   throws: java.lang.SecurityException - if the specified security context is not an instance of AccessControlContext (e.g., is null), or does not have permission to read the specified file."
-  ([^java.lang.SecurityManager this ^java.lang.String file ^java.lang.Object context]
+  ([^SecurityManager this ^java.lang.String file ^java.lang.Object context]
     (-> this (.checkRead file context)))
-  ([^java.lang.SecurityManager this ^java.io.FileDescriptor fd]
+  ([^SecurityManager this ^java.io.FileDescriptor fd]
     (-> this (.checkRead fd))))
 
 (defn check-connect
@@ -229,9 +229,9 @@
   context - a system-dependent security context. - `java.lang.Object`
 
   throws: java.lang.SecurityException - if the specified security context is not an instance of AccessControlContext (e.g., is null), or does not have permission to open a socket connection to the specified host and port."
-  ([^java.lang.SecurityManager this ^java.lang.String host ^Integer port ^java.lang.Object context]
+  ([^SecurityManager this ^java.lang.String host ^Integer port ^java.lang.Object context]
     (-> this (.checkConnect host port context)))
-  ([^java.lang.SecurityManager this ^java.lang.String host ^Integer port]
+  ([^SecurityManager this ^java.lang.String host ^Integer port]
     (-> this (.checkConnect host port))))
 
 (defn check-permission
@@ -257,9 +257,9 @@
   context - a system-dependent security context. - `java.lang.Object`
 
   throws: java.lang.SecurityException - if the specified security context is not an instance of AccessControlContext (e.g., is null), or is denied access to the resource specified by the given permission."
-  ([^java.lang.SecurityManager this ^java.security.Permission perm ^java.lang.Object context]
+  ([^SecurityManager this ^java.security.Permission perm ^java.lang.Object context]
     (-> this (.checkPermission perm context)))
-  ([^java.lang.SecurityManager this ^java.security.Permission perm]
+  ([^SecurityManager this ^java.security.Permission perm]
     (-> this (.checkPermission perm))))
 
 (defn check-exit
@@ -283,7 +283,7 @@
   status - the exit status. - `int`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to halt the Java Virtual Machine with the specified status."
-  ([^java.lang.SecurityManager this ^Integer status]
+  ([^SecurityManager this ^Integer status]
     (-> this (.checkExit status))))
 
 (defn check-accept
@@ -306,7 +306,7 @@
   port - the port number of the socket connection. - `int`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to accept the connection."
-  ([^java.lang.SecurityManager this ^java.lang.String host ^Integer port]
+  ([^SecurityManager this ^java.lang.String host ^Integer port]
     (-> this (.checkAccept host port))))
 
 (defn get-thread-group
@@ -317,7 +317,7 @@
    manager to return the appropriate thread group.
 
   returns: ThreadGroup that new threads are instantiated into - `java.lang.ThreadGroup`"
-  (^java.lang.ThreadGroup [^java.lang.SecurityManager this]
+  (^java.lang.ThreadGroup [^SecurityManager this]
     (-> this (.getThreadGroup))))
 
 (defn check-system-clipboard-access
@@ -328,10 +328,8 @@
                This method will be changed in a future release to check
                the permission java.security.AllPermission.
 
-  returns: `java.lang.  void`
-
   throws: java.lang.SecurityException - if the calling thread does not have permission to access the system clipboard."
-  ([^java.lang.SecurityManager this]
+  ([^SecurityManager this]
     (-> this (.checkSystemClipboardAccess))))
 
 (defn check-top-level-window
@@ -345,10 +343,10 @@
   window - the new window that is being created. - `java.lang.Object`
 
   returns: true if the calling thread is trusted to put up
-               top-level windows; false otherwise. - `java.lang.  boolean`
+               top-level windows; false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if the window argument is null."
-  ([^java.lang.SecurityManager this ^java.lang.Object window]
+  (^Boolean [^SecurityManager this ^java.lang.Object window]
     (-> this (.checkTopLevelWindow window))))
 
 (defn check-print-job-access
@@ -365,7 +363,7 @@
    exception.
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to initiate a print job request."
-  ([^java.lang.SecurityManager this]
+  ([^SecurityManager this]
     (-> this (.checkPrintJobAccess))))
 
 (defn check-access
@@ -400,7 +398,7 @@
   t - the thread to be checked. - `java.lang.Thread`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to modify the thread."
-  ([^java.lang.SecurityManager this ^java.lang.Thread t]
+  ([^SecurityManager this ^java.lang.Thread t]
     (-> this (.checkAccess t))))
 
 (defn check-create-class-loader
@@ -417,7 +415,7 @@
    exception.
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to create a new class loader."
-  ([^java.lang.SecurityManager this]
+  ([^SecurityManager this]
     (-> this (.checkCreateClassLoader))))
 
 (defn get-security-context
@@ -436,7 +434,7 @@
   returns: an implementation-dependent object that encapsulates
             sufficient information about the current execution environment
             to perform some security checks later. - `java.lang.Object`"
-  (^java.lang.Object [^java.lang.SecurityManager this]
+  (^java.lang.Object [^SecurityManager this]
     (-> this (.getSecurityContext))))
 
 (defn check-package-definition
@@ -463,7 +461,7 @@
   pkg - the package name. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to define classes in the specified package."
-  ([^java.lang.SecurityManager this ^java.lang.String pkg]
+  ([^SecurityManager this ^java.lang.String pkg]
     (-> this (.checkPackageDefinition pkg))))
 
 (defn check-delete
@@ -484,7 +482,7 @@
   file - the system-dependent filename. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to delete the file."
-  ([^java.lang.SecurityManager this ^java.lang.String file]
+  ([^SecurityManager this ^java.lang.String file]
     (-> this (.checkDelete file))))
 
 (defn check-property-access
@@ -506,7 +504,7 @@
   key - a system property key. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to access the specified system property."
-  ([^java.lang.SecurityManager this ^java.lang.String key]
+  ([^SecurityManager this ^java.lang.String key]
     (-> this (.checkPropertyAccess key))))
 
 (defn check-properties-access
@@ -526,7 +524,7 @@
    exception.
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to access or modify the system properties."
-  ([^java.lang.SecurityManager this]
+  ([^SecurityManager this]
     (-> this (.checkPropertiesAccess))))
 
 (defn check-listen
@@ -545,7 +543,7 @@
   port - the local port. - `int`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to listen on the specified port."
-  ([^java.lang.SecurityManager this ^Integer port]
+  ([^SecurityManager this ^Integer port]
     (-> this (.checkListen port))))
 
 (defn check-security-access
@@ -571,30 +569,20 @@
   target - the target name of the SecurityPermission. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission for the requested access."
-  ([^java.lang.SecurityManager this ^java.lang.String target]
+  ([^SecurityManager this ^java.lang.String target]
     (-> this (.checkSecurityAccess target))))
 
 (defn check-multicast
-  "Throws a SecurityException if the
-   calling thread is not allowed to use
-   (join/leave/send/receive) IP multicast.
-
-   This method calls checkPermission with the
-   java.net.SocketPermission(maddr.getHostAddress(),
-   `accept,connect`) permission.
-
-   If you override this method, then you should make a call to
-   super.checkMulticast
-   at the point the overridden method would normally throw an
-   exception.
+  "Deprecated. Use #checkPermission(java.security.Permission) instead
 
   maddr - Internet group address to be used. - `java.net.InetAddress`
+  ttl - value in use, if it is multicast send. Note: this particular implementation does not use the ttl parameter. - `byte`
 
   throws: java.lang.SecurityException - if the calling thread is not allowed to use (join/leave/send/receive) IP multicast."
-  ([^java.lang.SecurityManager this ^java.net.InetAddress maddr]
-    (-> this (.checkMulticast maddr)))
-  ([^java.lang.SecurityManager this ^java.net.InetAddress maddr ^Byte ttl]
-    (-> this (.checkMulticast maddr ttl))))
+  ([^SecurityManager this ^java.net.InetAddress maddr ^Byte ttl]
+    (-> this (.checkMulticast maddr ttl)))
+  ([^SecurityManager this ^java.net.InetAddress maddr]
+    (-> this (.checkMulticast maddr))))
 
 (defn check-exec
   "Throws a SecurityException if the
@@ -617,7 +605,7 @@
   cmd - the specified system command. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to create a subprocess."
-  ([^java.lang.SecurityManager this ^java.lang.String cmd]
+  ([^SecurityManager this ^java.lang.String cmd]
     (-> this (.checkExec cmd))))
 
 (defn check-link
@@ -641,7 +629,7 @@
   lib - the name of the library. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to dynamically link the library."
-  ([^java.lang.SecurityManager this ^java.lang.String lib]
+  ([^SecurityManager this ^java.lang.String lib]
     (-> this (.checkLink lib))))
 
 (defn check-write
@@ -661,7 +649,7 @@
   fd - the system-dependent file descriptor. - `java.io.FileDescriptor`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to access the specified file descriptor."
-  ([^java.lang.SecurityManager this ^java.io.FileDescriptor fd]
+  ([^SecurityManager this ^java.io.FileDescriptor fd]
     (-> this (.checkWrite fd))))
 
 (defn check-package-access
@@ -689,10 +677,10 @@
   pkg - the package name. - `java.lang.String`
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to access the specified package."
-  ([^java.lang.SecurityManager this ^java.lang.String pkg]
+  ([^SecurityManager this ^java.lang.String pkg]
     (-> this (.checkPackageAccess pkg))))
 
-(defn get-in-check
+(defn get-in-check?
   "Deprecated. This type of security checking is not recommended.
     It is recommended that the checkPermission
     call be used instead.
@@ -700,8 +688,8 @@
   returns: the value of the inCheck field. This field
             should contain true if a security check is
             in progress,
-            false otherwise. - `java.lang.  boolean`"
-  ([^java.lang.SecurityManager this]
+            false otherwise. - `boolean`"
+  (^Boolean [^SecurityManager this]
     (-> this (.getInCheck))))
 
 (defn check-awt-event-queue-access
@@ -712,10 +700,8 @@
                This method will be changed in a future release to check
                the permission java.security.AllPermission.
 
-  returns: `java.lang.  void`
-
   throws: java.lang.SecurityException - if the calling thread does not have permission to access the AWT event queue."
-  ([^java.lang.SecurityManager this]
+  ([^SecurityManager this]
     (-> this (.checkAwtEventQueueAccess))))
 
 (defn check-member-access
@@ -725,13 +711,11 @@
                directly.  This method will be changed in a future release
                to check the permission java.security.AllPermission.
 
-  clazz - the class that reflection is to be performed on. - `java.lang.Class<?>`
+  clazz - the class that reflection is to be performed on. - `java.lang.Class`
   which - type of access, PUBLIC or DECLARED. - `int`
 
-  returns: `java.lang.  void`
-
   throws: java.lang.SecurityException - if the caller does not have permission to access members."
-  ([^java.lang.SecurityManager this ^java.lang.Class clazz ^Integer which]
+  ([^SecurityManager this ^java.lang.Class clazz ^Integer which]
     (-> this (.checkMemberAccess clazz which))))
 
 (defn check-set-factory
@@ -749,6 +733,6 @@
    exception.
 
   throws: java.lang.SecurityException - if the calling thread does not have permission to specify a socket factory or a stream handler factory."
-  ([^java.lang.SecurityManager this]
+  ([^SecurityManager this]
     (-> this (.checkSetFactory))))
 

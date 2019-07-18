@@ -43,17 +43,21 @@
 (defn ->timestamp
   "Constructor.
 
-  Constructs a Timestamp object
-   using a milliseconds time value. The
-   integral seconds are stored in the underlying date value; the
-   fractional seconds are stored in the nanos field of
-   the Timestamp object.
+  Deprecated. instead use the constructor Timestamp(long millis)
 
-  time - milliseconds since January 1, 1970, 00:00:00 GMT. A negative number is the number of milliseconds before January 1, 1970, 00:00:00 GMT. - `long`"
-  ([^Long time]
-    (new Timestamp time))
-  ([^Integer year ^Integer month ^Integer date ^Integer hour ^Integer minute ^Integer second ^Integer nano]
-    (new Timestamp year month date hour minute second nano)))
+  year - the year minus 1900 - `int`
+  month - 0 to 11 - `int`
+  date - 1 to 31 - `int`
+  hour - 0 to 23 - `int`
+  minute - 0 to 59 - `int`
+  second - 0 to 59 - `int`
+  nano - 0 to 999,999,999 - `int`
+
+  throws: java.lang.IllegalArgumentException - if the nano argument is out of bounds"
+  (^Timestamp [^Integer year ^Integer month ^Integer date ^Integer hour ^Integer minute ^Integer second ^Integer nano]
+    (new Timestamp year month date hour minute second nano))
+  (^Timestamp [^Long time]
+    (new Timestamp time)))
 
 (defn *value-of
   "Converts a String object in JDBC timestamp escape format to a
@@ -90,7 +94,7 @@
    point on the time-line as this Timestamp.
 
   returns: an instant representing the same point on the time-line - `java.time.Instant`"
-  (^java.time.Instant [^java.sql.Timestamp this]
+  (^java.time.Instant [^Timestamp this]
     (-> this (.toInstant))))
 
 (defn set-time
@@ -98,7 +102,7 @@
    time milliseconds after January 1, 1970 00:00:00 GMT.
 
   time - the number of milliseconds. - `long`"
-  ([^java.sql.Timestamp this ^Long time]
+  ([^Timestamp this ^Long time]
     (-> this (.setTime time))))
 
 (defn after
@@ -109,7 +113,7 @@
 
   returns: true if this Timestamp object is later;
           false otherwise - `boolean`"
-  (^Boolean [^java.sql.Timestamp this ^java.sql.Timestamp ts]
+  (^Boolean [^Timestamp this ^java.sql.Timestamp ts]
     (-> this (.after ts))))
 
 (defn set-nanos
@@ -119,14 +123,14 @@
   n - the new fractional seconds component - `int`
 
   throws: java.lang.IllegalArgumentException - if the given argument is greater than 999999999 or less than 0"
-  ([^java.sql.Timestamp this ^Integer n]
+  ([^Timestamp this ^Integer n]
     (-> this (.setNanos n))))
 
 (defn get-nanos
   "Gets this Timestamp object's nanos value.
 
   returns: this Timestamp object's fractional seconds component - `int`"
-  (^Integer [^java.sql.Timestamp this]
+  (^Integer [^Timestamp this]
     (-> this (.getNanos))))
 
 (defn to-string
@@ -136,7 +140,7 @@
 
   returns: a String object in
              yyyy-mm-dd hh:mm:ss.fffffffff format - `java.lang.String`"
-  (^java.lang.String [^java.sql.Timestamp this]
+  (^java.lang.String [^Timestamp this]
     (-> this (.toString))))
 
 (defn hash-code
@@ -152,7 +156,7 @@
    implementation and therefore does not include nanos in its computation.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.sql.Timestamp this]
+  (^Integer [^Timestamp this]
     (-> this (.hashCode))))
 
 (defn to-local-date-time
@@ -163,7 +167,7 @@
    date-time value as this Timestamp in the local time zone.
 
   returns: a LocalDateTime object representing the same date-time value - `java.time.LocalDateTime`"
-  (^java.time.LocalDateTime [^java.sql.Timestamp this]
+  (^java.time.LocalDateTime [^Timestamp this]
     (-> this (.toLocalDateTime))))
 
 (defn compare-to
@@ -177,7 +181,7 @@
             Timestamp object is before the given argument;
             and a value greater than 0 if this
             Timestamp object is after the given argument. - `int`"
-  (^Integer [^java.sql.Timestamp this ^java.sql.Timestamp ts]
+  (^Integer [^Timestamp this ^java.sql.Timestamp ts]
     (-> this (.compareTo ts))))
 
 (defn before
@@ -188,7 +192,7 @@
 
   returns: true if this Timestamp object is earlier;
           false otherwise - `boolean`"
-  (^Boolean [^java.sql.Timestamp this ^java.sql.Timestamp ts]
+  (^Boolean [^Timestamp this ^java.sql.Timestamp ts]
     (-> this (.before ts))))
 
 (defn get-time
@@ -197,7 +201,7 @@
 
   returns: the number of milliseconds since January 1, 1970, 00:00:00 GMT
             represented by this date. - `long`"
-  (^Long [^java.sql.Timestamp this]
+  (^Long [^Timestamp this]
     (-> this (.getTime))))
 
 (defn equals
@@ -209,6 +213,6 @@
   returns: true if the given Timestamp
            object is equal to this Timestamp object;
            false otherwise - `boolean`"
-  (^Boolean [^java.sql.Timestamp this ^java.sql.Timestamp ts]
+  (^Boolean [^Timestamp this ^java.sql.Timestamp ts]
     (-> this (.equals ts))))
 

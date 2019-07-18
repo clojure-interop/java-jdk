@@ -18,26 +18,26 @@
   Constructs a new event of the specified type, originating from the specified line.
 
   line - the source of this event - `javax.sound.sampled.Line`
-  type - the event type (OPEN, CLOSE, START, or STOP) - `javax.sound.sampled.LineEvent.Type`
+  type - the event type (OPEN, CLOSE, START, or STOP) - `javax.sound.sampled.LineEvent$Type`
   position - the number of sample frames that the line had already processed when the event occurred, or AudioSystem.NOT_SPECIFIED - `long`
 
   throws: java.lang.IllegalArgumentException - if line is null."
-  ([^javax.sound.sampled.Line line ^javax.sound.sampled.LineEvent.Type type ^Long position]
+  (^LineEvent [^javax.sound.sampled.Line line ^javax.sound.sampled.LineEvent$Type type ^Long position]
     (new LineEvent line type position)))
 
 (defn get-line
   "Obtains the audio line that is the source of this event.
 
   returns: the line responsible for this event - `javax.sound.sampled.Line`"
-  (^javax.sound.sampled.Line [^javax.sound.sampled.LineEvent this]
+  (^javax.sound.sampled.Line [^LineEvent this]
     (-> this (.getLine))))
 
 (defn get-type
   "Obtains the event's type.
 
   returns: this event's type (LineEvent.Type.OPEN, LineEvent.Type.CLOSE,
-   LineEvent.Type.START, or LineEvent.Type.STOP) - `javax.sound.sampled.LineEvent.Type`"
-  (^javax.sound.sampled.LineEvent.Type [^javax.sound.sampled.LineEvent this]
+   LineEvent.Type.START, or LineEvent.Type.STOP) - `javax.sound.sampled.LineEvent$Type`"
+  (^javax.sound.sampled.LineEvent$Type [^LineEvent this]
     (-> this (.getType))))
 
 (defn get-frame-position
@@ -53,7 +53,7 @@
    should be AudioSystem.NOT_SPECIFIED.
 
   returns: the line's position as a sample frame number - `long`"
-  (^Long [^javax.sound.sampled.LineEvent this]
+  (^Long [^LineEvent this]
     (-> this (.getFramePosition))))
 
 (defn to-string
@@ -61,6 +61,6 @@
    between implementations of Java Sound.
 
   returns: a string describing the event. - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.LineEvent this]
+  (^java.lang.String [^LineEvent this]
     (-> this (.toString))))
 

@@ -14,6 +14,6 @@
   returns: a DateFormatSymbols instance. - `java.text.DateFormatSymbols`
 
   throws: java.lang.NullPointerException - if locale is null"
-  (^java.text.DateFormatSymbols [^java.text.spi.DateFormatSymbolsProvider this ^java.util.Locale locale]
+  (^java.text.DateFormatSymbols [^DateFormatSymbolsProvider this ^java.util.Locale locale]
     (-> this (.getInstance locale))))
 

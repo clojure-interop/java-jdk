@@ -12,14 +12,14 @@
 
   width - the width of the source image - `int`
   height - the height of the source image - `int`"
-  ([^java.awt.image.ImageConsumer this ^Integer width ^Integer height]
+  ([^ImageConsumer this ^Integer width ^Integer height]
     (-> this (.setDimensions width height))))
 
 (defn set-properties
   "Sets the extensible list of properties associated with this image.
 
-  props - the list of properties to be associated with this image - `java.util.Hashtable<?,?>`"
-  ([^java.awt.image.ImageConsumer this ^java.util.Hashtable props]
+  props - the list of properties to be associated with this image - `java.util.Hashtable`"
+  ([^ImageConsumer this ^java.util.Hashtable props]
     (-> this (.setProperties props))))
 
 (defn set-color-model
@@ -37,7 +37,7 @@
    on using a ColorModel more convenient for the filtering process.
 
   model - the specified ColorModel - `java.awt.image.ColorModel`"
-  ([^java.awt.image.ImageConsumer this ^java.awt.image.ColorModel model]
+  ([^ImageConsumer this ^java.awt.image.ColorModel model]
     (-> this (.setColorModel model))))
 
 (defn set-hints
@@ -54,7 +54,7 @@
    indicated hint, the results are undefined.
 
   hintflags - a set of hints that the ImageConsumer uses to process the pixels - `int`"
-  ([^java.awt.image.ImageConsumer this ^Integer hintflags]
+  ([^ImageConsumer this ^Integer hintflags]
     (-> this (.setHints hintflags))))
 
 (defn set-pixels
@@ -75,7 +75,7 @@
   pixels - the array of pixels - `byte[]`
   off - the offset into the pixels array - `int`
   scansize - the distance from one row of pixels to the next in the pixels array - `int`"
-  ([^java.awt.image.ImageConsumer this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
+  ([^ImageConsumer this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
     (-> this (.setPixels x y w h model pixels off scansize))))
 
 (defn image-complete
@@ -88,6 +88,6 @@
    unless it is interested in successive frames.
 
   status - the status of image loading - `int`"
-  ([^java.awt.image.ImageConsumer this ^Integer status]
+  ([^ImageConsumer this ^Integer status]
     (-> this (.imageComplete status))))
 

@@ -17,7 +17,7 @@
   name - the attribute string name - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the attribute name was invalid"
-  ([^java.lang.String name]
+  (^Attributes$Name [^java.lang.String name]
     (new Attributes$Name name)))
 
 (def *-manifest-version
@@ -27,7 +27,7 @@
    manifest attribute. This attribute indicates the version number
    of the manifest standard to which a JAR file's manifest conforms.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/MANIFEST_VERSION)
 
 (def *-signature-version
@@ -36,7 +36,7 @@
   Name object for Signature-Version
    manifest attribute used when signing JAR files.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/SIGNATURE_VERSION)
 
 (def *-content-type
@@ -45,7 +45,7 @@
   Name object for Content-Type
    manifest attribute.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/CONTENT_TYPE)
 
 (def *-class-path
@@ -55,7 +55,7 @@
    manifest attribute. Bundled extensions can use this attribute
    to find other JAR files containing needed classes.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/CLASS_PATH)
 
 (def *-main-class
@@ -67,7 +67,7 @@
    with the -jar command-line option of the
    java application launcher.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/MAIN_CLASS)
 
 (def *-sealed
@@ -76,7 +76,7 @@
   Name object for Sealed manifest attribute
    used for sealing.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/SEALED)
 
 (def *-extension-list
@@ -85,7 +85,7 @@
   Name object for Extension-List manifest attribute
    used for declaring dependencies on installed extensions.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/EXTENSION_LIST)
 
 (def *-extension-name
@@ -94,7 +94,7 @@
   Name object for Extension-Name manifest attribute
    used for declaring dependencies on installed extensions.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/EXTENSION_NAME)
 
 (def *-extension-installation
@@ -103,7 +103,7 @@
   Deprecated. Extension mechanism will be removed in a future release.
                Use class path instead.
 
-  type: java.lang.    java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/EXTENSION_INSTALLATION)
 
 (def *-implementation-title
@@ -112,7 +112,7 @@
   Name object for Implementation-Title
    manifest attribute used for package versioning.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/IMPLEMENTATION_TITLE)
 
 (def *-implementation-version
@@ -121,7 +121,7 @@
   Name object for Implementation-Version
    manifest attribute used for package versioning.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/IMPLEMENTATION_VERSION)
 
 (def *-implementation-vendor
@@ -130,7 +130,7 @@
   Name object for Implementation-Vendor
    manifest attribute used for package versioning.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/IMPLEMENTATION_VENDOR)
 
 (def *-implementation-vendor-id
@@ -139,7 +139,7 @@
   Deprecated. Extension mechanism will be removed in a future release.
                Use class path instead.
 
-  type: java.lang.    java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/IMPLEMENTATION_VENDOR_ID)
 
 (def *-implementation-url
@@ -148,7 +148,7 @@
   Deprecated. Extension mechanism will be removed in a future release.
                Use class path instead.
 
-  type: java.lang.    java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/IMPLEMENTATION_URL)
 
 (def *-specification-title
@@ -157,7 +157,7 @@
   Name object for Specification-Title
    manifest attribute used for package versioning.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/SPECIFICATION_TITLE)
 
 (def *-specification-version
@@ -166,7 +166,7 @@
   Name object for Specification-Version
    manifest attribute used for package versioning.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/SPECIFICATION_VERSION)
 
 (def *-specification-vendor
@@ -175,7 +175,7 @@
   Name object for Specification-Vendor
    manifest attribute used for package versioning.
 
-  type: java.util.jar.Attributes.Name"
+  type: java.util.jar.Attributes$Name"
   Attributes$Name/SPECIFICATION_VENDOR)
 
 (defn equals
@@ -185,20 +185,20 @@
 
   returns: true if this attribute name is equal to the
            specified attribute object - `boolean`"
-  (^Boolean [^java.util.jar.Attributes$Name this ^java.lang.Object o]
+  (^Boolean [^Attributes$Name this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Computes the hash value for this attribute name.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.util.jar.Attributes$Name this]
+  (^Integer [^Attributes$Name this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns the attribute name as a String.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.util.jar.Attributes$Name this]
+  (^java.lang.String [^Attributes$Name this]
     (-> this (.toString))))
 

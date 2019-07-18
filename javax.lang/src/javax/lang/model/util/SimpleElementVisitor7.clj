@@ -44,9 +44,9 @@
   "This implementation calls defaultAction.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `SimpleElementVisitor7.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleElementVisitor7.R`"
-  (^SimpleElementVisitor7.R [^javax.lang.model.util.SimpleElementVisitor7 this ^javax.lang.model.element.VariableElement e ^SimpleElementVisitor7.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleElementVisitor7 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariable e p))))
 

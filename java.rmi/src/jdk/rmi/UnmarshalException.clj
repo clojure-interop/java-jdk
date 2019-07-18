@@ -25,8 +25,8 @@
 
   s - the detail message - `java.lang.String`
   ex - the nested exception - `java.lang.Exception`"
-  ([^java.lang.String s ^java.lang.Exception ex]
+  (^UnmarshalException [^java.lang.String s ^java.lang.Exception ex]
     (new UnmarshalException s ex))
-  ([^java.lang.String s]
+  (^UnmarshalException [^java.lang.String s]
     (new UnmarshalException s)))
 

@@ -5,6 +5,6 @@
 
 (defn ->tool-bar-ui
   "Constructor."
-  ([]
+  (^ToolBarUI []
     (new ToolBarUI )))
 

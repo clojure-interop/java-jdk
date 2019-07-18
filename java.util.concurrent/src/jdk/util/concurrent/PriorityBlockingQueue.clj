@@ -58,21 +58,21 @@
    comparator.
 
   initial-capacity - the initial capacity for this priority queue - `int`
-  comparator - the comparator that will be used to order this priority queue. If null, the java.lang.natural ordering of the elements will be used. - `PriorityBlockingQueue.E>`
+  comparator - the comparator that will be used to order this priority queue. If null, the java.lang.natural ordering of the elements will be used. - `java.util.Comparator`
 
   throws: java.lang.IllegalArgumentException - if initialCapacity is less than 1"
-  ([^Integer initial-capacity ^PriorityBlockingQueue.E> comparator]
+  (^PriorityBlockingQueue [^Integer initial-capacity ^java.util.Comparator comparator]
     (new PriorityBlockingQueue initial-capacity comparator))
-  ([^Integer initial-capacity]
+  (^PriorityBlockingQueue [^Integer initial-capacity]
     (new PriorityBlockingQueue initial-capacity))
-  ([]
+  (^PriorityBlockingQueue []
     (new PriorityBlockingQueue )))
 
 (defn peek
   "Description copied from interface: Queue
 
-  returns: the head of this queue, or null if this queue is empty - `PriorityBlockingQueue.E`"
-  (^PriorityBlockingQueue.E [^java.util.concurrent.PriorityBlockingQueue this]
+  returns: the head of this queue, or null if this queue is empty - `E`"
+  ([^PriorityBlockingQueue this]
     (-> this (.peek))))
 
 (defn spliterator
@@ -84,8 +84,8 @@
    The Spliterator reports Spliterator.SIZED and
    Spliterator.NONNULL.
 
-  returns: a Spliterator over the elements in this queue - `java.util.Spliterator<PriorityBlockingQueue.E>`"
-  (^java.util.Spliterator [^java.util.concurrent.PriorityBlockingQueue this]
+  returns: a Spliterator over the elements in this queue - `java.util.Spliterator<E>`"
+  (^java.util.Spliterator [^PriorityBlockingQueue this]
     (-> this (.spliterator))))
 
 (defn offer
@@ -93,7 +93,7 @@
    As the queue is unbounded, this method will never block or
    return false.
 
-  e - the element to add - `PriorityBlockingQueue.E`
+  e - the element to add - `E`
   timeout - This parameter is ignored as the method never blocks - `long`
   unit - This parameter is ignored as the method never blocks - `java.util.concurrent.TimeUnit`
 
@@ -101,19 +101,19 @@
     BlockingQueue.offer) - `boolean`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with elements currently in the priority queue according to the priority queue's ordering"
-  (^Boolean [^java.util.concurrent.PriorityBlockingQueue this ^PriorityBlockingQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^PriorityBlockingQueue this e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  (^Boolean [^java.util.concurrent.PriorityBlockingQueue this ^PriorityBlockingQueue.E e]
+  (^Boolean [^PriorityBlockingQueue this e]
     (-> this (.offer e))))
 
 (defn put
   "Inserts the specified element into this priority queue.
    As the queue is unbounded, this method will never block.
 
-  e - the element to add - `PriorityBlockingQueue.E`
+  e - the element to add - `E`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with elements currently in the priority queue according to the priority queue's ordering"
-  ([^java.util.concurrent.PriorityBlockingQueue this ^PriorityBlockingQueue.E e]
+  ([^PriorityBlockingQueue this e]
     (-> this (.put e))))
 
 (defn contains
@@ -124,23 +124,23 @@
   o - object to be checked for containment in this queue - `java.lang.Object`
 
   returns: true if this queue contains the specified element - `boolean`"
-  (^Boolean [^java.util.concurrent.PriorityBlockingQueue this ^java.lang.Object o]
+  (^Boolean [^PriorityBlockingQueue this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn to-string
   "Description copied from class: AbstractCollection
 
   returns: a string representation of this collection - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.PriorityBlockingQueue this]
+  (^java.lang.String [^PriorityBlockingQueue this]
     (-> this (.toString))))
 
 (defn take
   "Description copied from interface: BlockingQueue
 
-  returns: the head of this queue - `PriorityBlockingQueue.E`
+  returns: the head of this queue - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^PriorityBlockingQueue.E [^java.util.concurrent.PriorityBlockingQueue this]
+  ([^PriorityBlockingQueue this]
     (-> this (.take))))
 
 (defn iterator
@@ -150,8 +150,8 @@
    The returned iterator is
    weakly consistent.
 
-  returns: an iterator over the elements in this queue - `java.util.Iterator<PriorityBlockingQueue.E>`"
-  (^java.util.Iterator [^java.util.concurrent.PriorityBlockingQueue this]
+  returns: an iterator over the elements in this queue - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^PriorityBlockingQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -165,7 +165,7 @@
   o - element to be removed from this queue, if present - `java.lang.Object`
 
   returns: true if this queue changed as a result of the call - `boolean`"
-  (^Boolean [^java.util.concurrent.PriorityBlockingQueue this ^java.lang.Object o]
+  (^Boolean [^PriorityBlockingQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn comparator
@@ -174,22 +174,22 @@
 
   returns: the comparator used to order the elements in this queue,
            or null if this queue uses the natural
-           ordering of its elements - `java.util.Comparator<? super PriorityBlockingQueue.E>`"
-  ([^java.util.concurrent.PriorityBlockingQueue this]
+           ordering of its elements - `java.util.Comparator<? super E>`"
+  ([^PriorityBlockingQueue this]
     (-> this (.comparator))))
 
 (defn drain-to
   "Description copied from interface: BlockingQueue
 
-  c - the collection to transfer elements into - `PriorityBlockingQueue.E>`
+  c - the collection to transfer elements into - `java.util.Collection`
   max-elements - the maximum number of elements to transfer - `int`
 
   returns: the number of elements transferred - `int`
 
   throws: java.lang.UnsupportedOperationException - if addition of elements is not supported by the specified collection"
-  (^Integer [^java.util.concurrent.PriorityBlockingQueue this ^PriorityBlockingQueue.E> c ^Integer max-elements]
+  (^Integer [^PriorityBlockingQueue this ^java.util.Collection c ^Integer max-elements]
     (-> this (.drainTo c max-elements)))
-  (^Integer [^java.util.concurrent.PriorityBlockingQueue this ^PriorityBlockingQueue.E> c]
+  (^Integer [^PriorityBlockingQueue this ^java.util.Collection c]
     (-> this (.drainTo c))))
 
 (defn poll
@@ -199,12 +199,12 @@
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
   returns: the head of this queue, or null if the
-           specified waiting time elapses before an element is available - `PriorityBlockingQueue.E`
+           specified waiting time elapses before an element is available - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^PriorityBlockingQueue.E [^java.util.concurrent.PriorityBlockingQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^PriorityBlockingQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  (^PriorityBlockingQueue.E [^java.util.concurrent.PriorityBlockingQueue this]
+  ([^PriorityBlockingQueue this]
     (-> this (.poll))))
 
 (defn remaining-capacity
@@ -212,31 +212,31 @@
    a PriorityBlockingQueue is not capacity constrained.
 
   returns: Integer.MAX_VALUE always - `int`"
-  (^Integer [^java.util.concurrent.PriorityBlockingQueue this]
+  (^Integer [^PriorityBlockingQueue this]
     (-> this (.remainingCapacity))))
 
 (defn add
   "Inserts the specified element into this priority queue.
 
-  e - the element to add - `PriorityBlockingQueue.E`
+  e - the element to add - `E`
 
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with elements currently in the priority queue according to the priority queue's ordering"
-  (^Boolean [^java.util.concurrent.PriorityBlockingQueue this ^PriorityBlockingQueue.E e]
+  (^Boolean [^PriorityBlockingQueue this e]
     (-> this (.add e))))
 
 (defn size
   "Description copied from interface: Collection
 
   returns: the number of elements in this collection - `int`"
-  (^Integer [^java.util.concurrent.PriorityBlockingQueue this]
+  (^Integer [^PriorityBlockingQueue this]
     (-> this (.size))))
 
 (defn clear
   "Atomically removes all of the elements from this queue.
    The queue will be empty after this call returns."
-  ([^java.util.concurrent.PriorityBlockingQueue this]
+  ([^PriorityBlockingQueue this]
     (-> this (.clear))))
 
 (defn to-array
@@ -273,8 +273,8 @@
   returns: an array containing all of the elements in this queue - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this queue"
-  ([^java.util.concurrent.PriorityBlockingQueue this a]
+  ([^PriorityBlockingQueue this a]
     (-> this (.toArray a)))
-  ([^java.util.concurrent.PriorityBlockingQueue this]
+  ([^PriorityBlockingQueue this]
     (-> this (.toArray))))
 

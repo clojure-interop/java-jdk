@@ -17,6 +17,6 @@
 
   s - the detail message - `java.lang.String`
   err - the nested error - `java.lang.Error`"
-  ([^java.lang.String s ^java.lang.Error err]
+  (^ServerError [^java.lang.String s ^java.lang.Error err]
     (new ServerError s err)))
 

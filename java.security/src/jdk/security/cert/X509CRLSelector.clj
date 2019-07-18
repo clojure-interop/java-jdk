@@ -33,7 +33,7 @@
 
   Creates an X509CRLSelector. Initially, no criteria are set
    so any X509CRL will match."
-  ([]
+  (^X509CRLSelector []
     (new X509CRLSelector )))
 
 (defn get-date-and-time
@@ -48,7 +48,7 @@
    subsequent modifications.
 
   returns: the Date to match against (or null) - `java.util.Date`"
-  (^java.util.Date [^java.security.cert.X509CRLSelector this]
+  (^java.util.Date [^X509CRLSelector this]
     (-> this (.getDateAndTime))))
 
 (defn set-max-crl-number
@@ -58,7 +58,7 @@
    done.
 
   max-crl - the maximum CRL number accepted (or null) - `java.math.BigInteger`"
-  ([^java.security.cert.X509CRLSelector this ^java.math.BigInteger max-crl]
+  ([^X509CRLSelector this ^java.math.BigInteger max-crl]
     (-> this (.setMaxCRLNumber max-crl))))
 
 (defn get-max-crl
@@ -68,7 +68,7 @@
    done.
 
   returns: the maximum CRL number accepted (or null) - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.security.cert.X509CRLSelector this]
+  (^java.math.BigInteger [^X509CRLSelector this]
     (-> this (.getMaxCRL))))
 
 (defn get-certificate-checking
@@ -79,7 +79,7 @@
    no such optional information is provided.
 
   returns: the certificate being checked (or null) - `java.security.cert.X509Certificate`"
-  (^java.security.cert.X509Certificate [^java.security.cert.X509CRLSelector this]
+  (^java.security.cert.X509Certificate [^X509CRLSelector this]
     (-> this (.getCertificateChecking))))
 
 (defn set-issuer-names
@@ -140,10 +140,10 @@
    Note that a deep copy is performed on the Collection to
    protect against subsequent modifications.
 
-  names - a Collection of names (or null) - `java.util.Collection<?>`
+  names - a Collection of names (or null) - `java.util.Collection`
 
   throws: java.io.IOException - if a parsing error occurs"
-  ([^java.security.cert.X509CRLSelector this ^java.util.Collection names]
+  ([^X509CRLSelector this ^java.util.Collection names]
     (-> this (.setIssuerNames names))))
 
 (defn add-issuer
@@ -157,7 +157,7 @@
    If the specified name is a duplicate, it may be ignored.
 
   issuer - the issuer as X500Principal - `javax.security.auth.x500.X500Principal`"
-  ([^java.security.cert.X509CRLSelector this ^javax.security.auth.x500.X500Principal issuer]
+  ([^X509CRLSelector this ^javax.security.auth.x500.X500Principal issuer]
     (-> this (.addIssuer issuer))))
 
 (defn to-string
@@ -165,7 +165,7 @@
 
   returns: a String describing the contents of the
            X509CRLSelector. - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.X509CRLSelector this]
+  (^java.lang.String [^X509CRLSelector this]
     (-> this (.toString))))
 
 (defn set-date-and-time
@@ -180,7 +180,7 @@
    against subsequent modifications.
 
   date-and-time - the Date to match against (or null) - `java.util.Date`"
-  ([^java.security.cert.X509CRLSelector this ^java.util.Date date-and-time]
+  ([^X509CRLSelector this ^java.util.Date date-and-time]
     (-> this (.setDateAndTime date-and-time))))
 
 (defn set-issuers
@@ -205,8 +205,8 @@
    Note that a copy is performed on the Collection to
    protect against subsequent modifications.
 
-  issuers - a Collection of X500Principals (or null) - `java.util.Collection<javax.security.auth.x500.X500Principal>`"
-  ([^java.security.cert.X509CRLSelector this ^java.util.Collection issuers]
+  issuers - a Collection of X500Principals (or null) - `java.util.Collection`"
+  ([^X509CRLSelector this ^java.util.Collection issuers]
     (-> this (.setIssuers issuers))))
 
 (defn set-certificate-checking
@@ -217,7 +217,7 @@
    such optional information is provided.
 
   cert - the X509Certificate being checked (or null) - `java.security.cert.X509Certificate`"
-  ([^java.security.cert.X509CRLSelector this ^java.security.cert.X509Certificate cert]
+  ([^X509CRLSelector this ^java.security.cert.X509Certificate cert]
     (-> this (.setCertificateChecking cert))))
 
 (defn add-issuer-name
@@ -240,7 +240,7 @@
   name - the name in RFC 2253 form - `java.lang.String`
 
   throws: java.io.IOException - if a parsing error occurs"
-  ([^java.security.cert.X509CRLSelector this ^java.lang.String name]
+  ([^X509CRLSelector this ^java.lang.String name]
     (-> this (.addIssuerName name))))
 
 (defn get-min-crl
@@ -249,7 +249,7 @@
    specified value. If null, no minCRLNumber check will be done.
 
   returns: the minimum CRL number accepted (or null) - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.security.cert.X509CRLSelector this]
+  (^java.math.BigInteger [^X509CRLSelector this]
     (-> this (.getMinCRL))))
 
 (defn set-min-crl-number
@@ -259,7 +259,7 @@
    done.
 
   min-crl - the minimum CRL number accepted (or null) - `java.math.BigInteger`"
-  ([^java.security.cert.X509CRLSelector this ^java.math.BigInteger min-crl]
+  ([^X509CRLSelector this ^java.math.BigInteger min-crl]
     (-> this (.setMinCRLNumber min-crl))))
 
 (defn match
@@ -269,14 +269,14 @@
 
   returns: true if the CRL should be selected,
            false otherwise - `boolean`"
-  (^Boolean [^java.security.cert.X509CRLSelector this ^java.security.cert.CRL crl]
+  (^Boolean [^X509CRLSelector this ^java.security.cert.CRL crl]
     (-> this (.match crl))))
 
 (defn clone
   "Returns a copy of this object.
 
   returns: the copy - `java.lang.Object`"
-  (^java.lang.Object [^java.security.cert.X509CRLSelector this]
+  (^java.lang.Object [^X509CRLSelector this]
     (-> this (.clone))))
 
 (defn get-issuers
@@ -290,7 +290,7 @@
 
   returns: an unmodifiable Collection of names
      (or null) - `java.util.Collection<javax.security.auth.x500.X500Principal>`"
-  (^java.util.Collection [^java.security.cert.X509CRLSelector this]
+  (^java.util.Collection [^X509CRLSelector this]
     (-> this (.getIssuers))))
 
 (defn get-issuer-names
@@ -314,6 +314,6 @@
    protect against subsequent modifications.
 
   returns: a Collection of names (or null) - `java.util.Collection<java.lang.Object>`"
-  (^java.util.Collection [^java.security.cert.X509CRLSelector this]
+  (^java.util.Collection [^X509CRLSelector this]
     (-> this (.getIssuerNames))))
 

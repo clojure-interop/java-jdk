@@ -19,6 +19,6 @@
   Constructs a PopupMenuEvent object.
 
   source - the Object that originated the event (typically this) - `java.lang.Object`"
-  ([^java.lang.Object source]
+  (^PopupMenuEvent [^java.lang.Object source]
     (new PopupMenuEvent source)))
 

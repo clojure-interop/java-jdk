@@ -9,12 +9,12 @@
 
 (defn ->monitor
   "Constructor."
-  ([]
+  (^Monitor []
     (new Monitor )))
 
 (defn stop
   "Stops the monitor."
-  ([^javax.management.monitor.Monitor this]
+  ([^Monitor this]
     (-> this (.stop))))
 
 (defn set-observed-attribute
@@ -24,7 +24,7 @@
   attribute - The attribute to observe. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - The specified attribute is null."
-  ([^javax.management.monitor.Monitor this ^java.lang.String attribute]
+  ([^Monitor this ^java.lang.String attribute]
     (-> this (.setObservedAttribute attribute))))
 
 (defn active?
@@ -35,14 +35,14 @@
 
   returns: true if the monitor MBean is active,
    false otherwise. - `boolean`"
-  (^Boolean [^javax.management.monitor.Monitor this]
+  (^Boolean [^Monitor this]
     (-> this (.isActive))))
 
 (defn remove-observed-object
   "Removes the specified object from the set of observed MBeans.
 
   object - The object to remove. - `javax.management.ObjectName`"
-  ([^javax.management.monitor.Monitor this ^javax.management.ObjectName object]
+  ([^Monitor this ^javax.management.ObjectName object]
     (-> this (.removeObservedObject object))))
 
 (defn contains-observed-object
@@ -52,7 +52,7 @@
 
   returns: true if the specified object is present,
    false otherwise. - `boolean`"
-  (^Boolean [^javax.management.monitor.Monitor this ^javax.management.ObjectName object]
+  (^Boolean [^Monitor this ^javax.management.ObjectName object]
     (-> this (.containsObservedObject object))))
 
 (defn add-observed-object
@@ -62,7 +62,7 @@
   object - The object to observe. - `javax.management.ObjectName`
 
   throws: java.lang.IllegalArgumentException - The specified object is null."
-  ([^javax.management.monitor.Monitor this ^javax.management.ObjectName object]
+  ([^Monitor this ^javax.management.ObjectName object]
     (-> this (.addObservedObject object))))
 
 (defn post-deregister
@@ -70,14 +70,14 @@
    having been unregistered by the MBean server.
 
    Not used in this context."
-  ([^javax.management.monitor.Monitor this]
+  ([^Monitor this]
     (-> this (.postDeregister))))
 
 (defn get-observed-object
   "Deprecated. As of JMX 1.2, replaced by getObservedObjects()
 
-  returns: The object being observed. - `java.lang.  javax.management.ObjectName`"
-  ([^javax.management.monitor.Monitor this]
+  returns: The object being observed. - `javax.management.ObjectName`"
+  (^javax.management.ObjectName [^Monitor this]
     (-> this (.getObservedObject))))
 
 (defn pre-deregister
@@ -87,7 +87,7 @@
    Stops the monitor.
 
   throws: java.lang.Exception"
-  ([^javax.management.monitor.Monitor this]
+  ([^Monitor this]
     (-> this (.preDeregister))))
 
 (defn get-observed-attribute
@@ -95,7 +95,7 @@
    The observed attribute is not initialized by default (set to null).
 
   returns: The attribute being observed. - `java.lang.String`"
-  (^java.lang.String [^javax.management.monitor.Monitor this]
+  (^java.lang.String [^Monitor this]
     (-> this (.getObservedAttribute))))
 
 (defn set-observed-object
@@ -103,10 +103,8 @@
 
   object - The object to observe. - `javax.management.ObjectName`
 
-  returns: `java.lang.  void`
-
   throws: java.lang.IllegalArgumentException - The specified object is null."
-  ([^javax.management.monitor.Monitor this ^javax.management.ObjectName object]
+  ([^Monitor this ^javax.management.ObjectName object]
     (-> this (.setObservedObject object))))
 
 (defn post-register
@@ -117,19 +115,19 @@
    Not used in this context.
 
   registration-done - Indicates whether or not the MBean has been successfully registered in the MBean server. The value false means that the registration phase has failed. - `java.lang.Boolean`"
-  ([^javax.management.monitor.Monitor this ^java.lang.Boolean registration-done]
+  ([^Monitor this ^java.lang.Boolean registration-done]
     (-> this (.postRegister registration-done))))
 
 (defn start
   "Starts the monitor."
-  ([^javax.management.monitor.Monitor this]
+  ([^Monitor this]
     (-> this (.start))))
 
 (defn get-observed-objects
   "Returns an array containing the objects being observed.
 
   returns: The objects being observed. - `javax.management.ObjectName[]`"
-  ([^javax.management.monitor.Monitor this]
+  ([^Monitor this]
     (-> this (.getObservedObjects))))
 
 (defn get-granularity-period
@@ -137,7 +135,7 @@
    The default value of the granularity period is 10 seconds.
 
   returns: The granularity period value. - `long`"
-  (^Long [^javax.management.monitor.Monitor this]
+  (^Long [^Monitor this]
     (-> this (.getGranularityPeriod))))
 
 (defn pre-register
@@ -152,7 +150,7 @@
   returns: The name of the monitor MBean registered. - `javax.management.ObjectName`
 
   throws: java.lang.Exception"
-  (^javax.management.ObjectName [^javax.management.monitor.Monitor this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
+  (^javax.management.ObjectName [^Monitor this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 
 (defn set-granularity-period
@@ -162,6 +160,6 @@
   period - The granularity period value. - `long`
 
   throws: java.lang.IllegalArgumentException - The granularity period is less than or equal to zero."
-  ([^javax.management.monitor.Monitor this ^Long period]
+  ([^Monitor this ^Long period]
     (-> this (.setGranularityPeriod period))))
 

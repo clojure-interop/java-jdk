@@ -24,8 +24,8 @@
   actions - the actions for the permission. It must be null or ``. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^MBeanTrustPermission [^java.lang.String name ^java.lang.String actions]
     (new MBeanTrustPermission name actions))
-  ([^java.lang.String name]
+  (^MBeanTrustPermission [^java.lang.String name]
     (new MBeanTrustPermission name)))
 

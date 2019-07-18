@@ -22,8 +22,8 @@
    explanation. All other fields default to null.
 
   explanation - Possibly null additional detail about this exception. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^InsufficientResourcesException [^java.lang.String explanation]
     (new InsufficientResourcesException explanation))
-  ([]
+  (^InsufficientResourcesException []
     (new InsufficientResourcesException )))
 

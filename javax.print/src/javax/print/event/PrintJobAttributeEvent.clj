@@ -14,14 +14,14 @@
   attributes - the attribute changes being reported - `javax.print.attribute.PrintJobAttributeSet`
 
   throws: java.lang.IllegalArgumentException - if source is null."
-  ([^javax.print.DocPrintJob source ^javax.print.attribute.PrintJobAttributeSet attributes]
+  (^PrintJobAttributeEvent [^javax.print.DocPrintJob source ^javax.print.attribute.PrintJobAttributeSet attributes]
     (new PrintJobAttributeEvent source attributes)))
 
 (defn get-print-job
   "Determine the Print Job to which this print job event pertains.
 
   returns: Print Job object. - `javax.print.DocPrintJob`"
-  (^javax.print.DocPrintJob [^javax.print.event.PrintJobAttributeEvent this]
+  (^javax.print.DocPrintJob [^PrintJobAttributeEvent this]
     (-> this (.getPrintJob))))
 
 (defn get-attributes
@@ -29,6 +29,6 @@
 
   returns: Attributes containing the new values for the print job
    attributes that changed. The returned set may not be modifiable. - `javax.print.attribute.PrintJobAttributeSet`"
-  (^javax.print.attribute.PrintJobAttributeSet [^javax.print.event.PrintJobAttributeEvent this]
+  (^javax.print.attribute.PrintJobAttributeSet [^PrintJobAttributeEvent this]
     (-> this (.getAttributes))))
 

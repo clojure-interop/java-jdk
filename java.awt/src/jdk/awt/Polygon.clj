@@ -30,9 +30,9 @@
   npoints - the total number of points in the Polygon - `int`
 
   throws: java.lang.NegativeArraySizeException - if the value of npoints is negative."
-  ([xpoints ypoints ^Integer npoints]
+  (^Polygon [xpoints ypoints ^Integer npoints]
     (new Polygon xpoints ypoints npoints))
-  ([]
+  (^Polygon []
     (new Polygon )))
 
 (defn -npoints
@@ -91,9 +91,9 @@
 
   returns: a PathIterator object that provides access to the
             Shape object's geometry. - `java.awt.geom.PathIterator`"
-  (^java.awt.geom.PathIterator [^java.awt.Polygon this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^Polygon this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness)))
-  (^java.awt.geom.PathIterator [^java.awt.Polygon this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^Polygon this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn translate
@@ -103,7 +103,7 @@
 
   delta-x - the amount to translate along the X axis - `int`
   delta-y - the amount to translate along the Y axis - `int`"
-  ([^java.awt.Polygon this ^Integer delta-x ^Integer delta-y]
+  ([^Polygon this ^Integer delta-x ^Integer delta-y]
     (-> this (.translate delta-x delta-y))))
 
 (defn contains
@@ -143,11 +143,11 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  (^Boolean [^java.awt.Polygon this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^Polygon this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  (^Boolean [^java.awt.Polygon this ^Integer x ^Integer y]
+  (^Boolean [^Polygon this ^Integer x ^Integer y]
     (-> this (.contains x y)))
-  (^Boolean [^java.awt.Polygon this ^java.awt.Point p]
+  (^Boolean [^Polygon this ^java.awt.Point p]
     (-> this (.contains p))))
 
 (defn reset
@@ -164,7 +164,7 @@
    the number of vertices in the new polygon data is significantly
    smaller than the number of vertices in the data from before the
    reset."
-  ([^java.awt.Polygon this]
+  ([^Polygon this]
     (-> this (.reset))))
 
 (defn add-point
@@ -177,7 +177,7 @@
 
   x - the specified X coordinate - `int`
   y - the specified Y coordinate - `int`"
-  ([^java.awt.Polygon this ^Integer x ^Integer y]
+  ([^Polygon this ^Integer x ^Integer y]
     (-> this (.addPoint x y))))
 
 (defn invalidate
@@ -189,7 +189,7 @@
    from methods such as getBounds or contains
    that might cache data from earlier computations relating to
    the vertex coordinates."
-  ([^java.awt.Polygon this]
+  ([^Polygon this]
     (-> this (.invalidate))))
 
 (defn get-bounds-2-d
@@ -232,7 +232,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.Polygon this]
+  (^java.awt.geom.Rectangle2D [^Polygon this]
     (-> this (.getBounds2D))))
 
 (defn inside
@@ -244,8 +244,8 @@
 
   returns: true if this Polygon contains
            the specified coordinates (x,y);
-           false otherwise. - `java.lang.  boolean`"
-  ([^java.awt.Polygon this ^Integer x ^Integer y]
+           false otherwise. - `boolean`"
+  (^Boolean [^Polygon this ^Integer x ^Integer y]
     (-> this (.inside x y))))
 
 (defn get-bounds
@@ -256,15 +256,15 @@
 
   returns: a Rectangle that defines the bounds of this
    Polygon. - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^java.awt.Polygon this]
+  (^java.awt.Rectangle [^Polygon this]
     (-> this (.getBounds))))
 
 (defn get-bounding-box
   "Deprecated. As of JDK version 1.1,
    replaced by getBounds().
 
-  returns: the bounds of this Polygon. - `java.lang.  java.awt.Rectangle`"
-  ([^java.awt.Polygon this]
+  returns: the bounds of this Polygon. - `java.awt.Rectangle`"
+  (^java.awt.Rectangle [^Polygon this]
     (-> this (.getBoundingBox))))
 
 (defn intersects
@@ -301,8 +301,8 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Polygon this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^Polygon this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  (^Boolean [^java.awt.Polygon this ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^Polygon this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 

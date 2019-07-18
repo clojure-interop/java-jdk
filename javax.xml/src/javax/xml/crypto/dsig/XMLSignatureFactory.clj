@@ -123,7 +123,7 @@
   returns: a SignatureProperties - `javax.xml.crypto.dsig.SignatureProperties`
 
   throws: java.lang.NullPointerException - if properties is null"
-  (^javax.xml.crypto.dsig.SignatureProperties [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.util.List properties ^java.lang.String id]
+  (^javax.xml.crypto.dsig.SignatureProperties [^XMLSignatureFactory this ^java.util.List properties ^java.lang.String id]
     (-> this (.newSignatureProperties properties id))))
 
 (defn new-signed-info
@@ -137,9 +137,9 @@
   returns: a SignedInfo - `javax.xml.crypto.dsig.SignedInfo`
 
   throws: java.lang.ClassCastException - if any of the references are not of type Reference"
-  (^javax.xml.crypto.dsig.SignedInfo [^javax.xml.crypto.dsig.XMLSignatureFactory this ^javax.xml.crypto.dsig.CanonicalizationMethod cm ^javax.xml.crypto.dsig.SignatureMethod sm ^java.util.List references ^java.lang.String id]
+  (^javax.xml.crypto.dsig.SignedInfo [^XMLSignatureFactory this ^javax.xml.crypto.dsig.CanonicalizationMethod cm ^javax.xml.crypto.dsig.SignatureMethod sm ^java.util.List references ^java.lang.String id]
     (-> this (.newSignedInfo cm sm references id)))
-  (^javax.xml.crypto.dsig.SignedInfo [^javax.xml.crypto.dsig.XMLSignatureFactory this ^javax.xml.crypto.dsig.CanonicalizationMethod cm ^javax.xml.crypto.dsig.SignatureMethod sm ^java.util.List references]
+  (^javax.xml.crypto.dsig.SignedInfo [^XMLSignatureFactory this ^javax.xml.crypto.dsig.CanonicalizationMethod cm ^javax.xml.crypto.dsig.SignatureMethod sm ^java.util.List references]
     (-> this (.newSignedInfo cm sm references))))
 
 (defn get-uri-dereferencer
@@ -148,7 +148,7 @@
 
   returns: a reference to the default URIDereferencer (never
       null) - `javax.xml.crypto.URIDereferencer`"
-  (^javax.xml.crypto.URIDereferencer [^javax.xml.crypto.dsig.XMLSignatureFactory this]
+  (^javax.xml.crypto.URIDereferencer [^XMLSignatureFactory this]
     (-> this (.getURIDereferencer))))
 
 (defn new-signature-property
@@ -162,7 +162,7 @@
   returns: a SignatureProperty - `javax.xml.crypto.dsig.SignatureProperty`
 
   throws: java.lang.NullPointerException - if content or target is null"
-  (^javax.xml.crypto.dsig.SignatureProperty [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.util.List content ^java.lang.String target ^java.lang.String id]
+  (^javax.xml.crypto.dsig.SignatureProperty [^XMLSignatureFactory this ^java.util.List content ^java.lang.String target ^java.lang.String id]
     (-> this (.newSignatureProperty content target id))))
 
 (defn new-xml-object
@@ -176,7 +176,7 @@
   returns: an XMLObject - `javax.xml.crypto.dsig.XMLObject`
 
   throws: java.lang.ClassCastException - if content contains any entries that are not of type XMLStructure"
-  (^javax.xml.crypto.dsig.XMLObject [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.util.List content ^java.lang.String id ^java.lang.String mime-type ^java.lang.String encoding]
+  (^javax.xml.crypto.dsig.XMLObject [^XMLSignatureFactory this ^java.util.List content ^java.lang.String id ^java.lang.String mime-type ^java.lang.String encoding]
     (-> this (.newXMLObject content id mime-type encoding))))
 
 (defn new-xml-signature
@@ -192,16 +192,16 @@
   returns: an XMLSignature - `javax.xml.crypto.dsig.XMLSignature`
 
   throws: java.lang.NullPointerException - if si is null"
-  (^javax.xml.crypto.dsig.XMLSignature [^javax.xml.crypto.dsig.XMLSignatureFactory this ^javax.xml.crypto.dsig.SignedInfo si ^javax.xml.crypto.dsig.keyinfo.KeyInfo ki ^java.util.List objects ^java.lang.String id ^java.lang.String signature-value-id]
+  (^javax.xml.crypto.dsig.XMLSignature [^XMLSignatureFactory this ^javax.xml.crypto.dsig.SignedInfo si ^javax.xml.crypto.dsig.keyinfo.KeyInfo ki ^java.util.List objects ^java.lang.String id ^java.lang.String signature-value-id]
     (-> this (.newXMLSignature si ki objects id signature-value-id)))
-  (^javax.xml.crypto.dsig.XMLSignature [^javax.xml.crypto.dsig.XMLSignatureFactory this ^javax.xml.crypto.dsig.SignedInfo si ^javax.xml.crypto.dsig.keyinfo.KeyInfo ki]
+  (^javax.xml.crypto.dsig.XMLSignature [^XMLSignatureFactory this ^javax.xml.crypto.dsig.SignedInfo si ^javax.xml.crypto.dsig.keyinfo.KeyInfo ki]
     (-> this (.newXMLSignature si ki))))
 
 (defn get-provider
   "Returns the provider of this XMLSignatureFactory.
 
   returns: the provider of this XMLSignatureFactory - `java.security.Provider`"
-  (^java.security.Provider [^javax.xml.crypto.dsig.XMLSignatureFactory this]
+  (^java.security.Provider [^XMLSignatureFactory this]
     (-> this (.getProvider))))
 
 (defn get-key-info-factory
@@ -212,7 +212,7 @@
   returns: a KeyInfoFactory - `javax.xml.crypto.dsig.keyinfo.KeyInfoFactory`
 
   throws: javax.xml.crypto.NoSuchMechanismException - if a KeyFactory implementation with the same mechanism type and provider is not available"
-  (^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory [^javax.xml.crypto.dsig.XMLSignatureFactory this]
+  (^javax.xml.crypto.dsig.keyinfo.KeyInfoFactory [^XMLSignatureFactory this]
     (-> this (.getKeyInfoFactory))))
 
 (defn new-signature-method
@@ -225,7 +225,7 @@
   returns: the SignatureMethod - `javax.xml.crypto.dsig.SignatureMethod`
 
   throws: java.security.InvalidAlgorithmParameterException - if the specified parameters are inappropriate for the requested algorithm"
-  (^javax.xml.crypto.dsig.SignatureMethod [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.lang.String algorithm ^javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec params]
+  (^javax.xml.crypto.dsig.SignatureMethod [^XMLSignatureFactory this ^java.lang.String algorithm ^javax.xml.crypto.dsig.spec.SignatureMethodParameterSpec params]
     (-> this (.newSignatureMethod algorithm params))))
 
 (defn new-reference
@@ -255,13 +255,13 @@
   returns: a Reference - `javax.xml.crypto.dsig.Reference`
 
   throws: java.lang.ClassCastException - if any of the transforms (in either list) are not of type Transform"
-  (^javax.xml.crypto.dsig.Reference [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.lang.String uri ^javax.xml.crypto.dsig.DigestMethod dm ^java.util.List applied-transforms ^javax.xml.crypto.Data result ^java.util.List transforms ^java.lang.String type ^java.lang.String id]
+  (^javax.xml.crypto.dsig.Reference [^XMLSignatureFactory this ^java.lang.String uri ^javax.xml.crypto.dsig.DigestMethod dm ^java.util.List applied-transforms ^javax.xml.crypto.Data result ^java.util.List transforms ^java.lang.String type ^java.lang.String id]
     (-> this (.newReference uri dm applied-transforms result transforms type id)))
-  (^javax.xml.crypto.dsig.Reference [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.lang.String uri ^javax.xml.crypto.dsig.DigestMethod dm ^java.util.List transforms ^java.lang.String type ^java.lang.String id digest-value]
+  (^javax.xml.crypto.dsig.Reference [^XMLSignatureFactory this ^java.lang.String uri ^javax.xml.crypto.dsig.DigestMethod dm ^java.util.List transforms ^java.lang.String type ^java.lang.String id digest-value]
     (-> this (.newReference uri dm transforms type id digest-value)))
-  (^javax.xml.crypto.dsig.Reference [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.lang.String uri ^javax.xml.crypto.dsig.DigestMethod dm ^java.util.List transforms ^java.lang.String type ^java.lang.String id]
+  (^javax.xml.crypto.dsig.Reference [^XMLSignatureFactory this ^java.lang.String uri ^javax.xml.crypto.dsig.DigestMethod dm ^java.util.List transforms ^java.lang.String type ^java.lang.String id]
     (-> this (.newReference uri dm transforms type id)))
-  (^javax.xml.crypto.dsig.Reference [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.lang.String uri ^javax.xml.crypto.dsig.DigestMethod dm]
+  (^javax.xml.crypto.dsig.Reference [^XMLSignatureFactory this ^java.lang.String uri ^javax.xml.crypto.dsig.DigestMethod dm]
     (-> this (.newReference uri dm))))
 
 (defn feature-supported?
@@ -273,7 +273,7 @@
       false otherwise - `boolean`
 
   throws: java.lang.NullPointerException - if feature is null"
-  (^Boolean [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.lang.String feature]
+  (^Boolean [^XMLSignatureFactory this ^java.lang.String feature]
     (-> this (.isFeatureSupported feature))))
 
 (defn unmarshal-xml-signature
@@ -285,7 +285,7 @@
   returns: the XMLSignature - `javax.xml.crypto.dsig.XMLSignature`
 
   throws: java.lang.NullPointerException - if context is null"
-  (^javax.xml.crypto.dsig.XMLSignature [^javax.xml.crypto.dsig.XMLSignatureFactory this ^javax.xml.crypto.dsig.XMLValidateContext context]
+  (^javax.xml.crypto.dsig.XMLSignature [^XMLSignatureFactory this ^javax.xml.crypto.dsig.XMLValidateContext context]
     (-> this (.unmarshalXMLSignature context))))
 
 (defn get-mechanism-type
@@ -294,7 +294,7 @@
 
   returns: the XML processing mechanism type supported by this
       XMLSignatureFactory - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.XMLSignatureFactory this]
+  (^java.lang.String [^XMLSignatureFactory this]
     (-> this (.getMechanismType))))
 
 (defn new-transform
@@ -307,7 +307,7 @@
   returns: the Transform - `javax.xml.crypto.dsig.Transform`
 
   throws: java.security.InvalidAlgorithmParameterException - if the specified parameters are inappropriate for the requested algorithm"
-  (^javax.xml.crypto.dsig.Transform [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.lang.String algorithm ^javax.xml.crypto.dsig.spec.TransformParameterSpec params]
+  (^javax.xml.crypto.dsig.Transform [^XMLSignatureFactory this ^java.lang.String algorithm ^javax.xml.crypto.dsig.spec.TransformParameterSpec params]
     (-> this (.newTransform algorithm params))))
 
 (defn new-canonicalization-method
@@ -320,7 +320,7 @@
   returns: the CanonicalizationMethod - `javax.xml.crypto.dsig.CanonicalizationMethod`
 
   throws: java.security.InvalidAlgorithmParameterException - if the specified parameters are inappropriate for the requested algorithm"
-  (^javax.xml.crypto.dsig.CanonicalizationMethod [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.lang.String algorithm ^javax.xml.crypto.dsig.spec.C14NMethodParameterSpec params]
+  (^javax.xml.crypto.dsig.CanonicalizationMethod [^XMLSignatureFactory this ^java.lang.String algorithm ^javax.xml.crypto.dsig.spec.C14NMethodParameterSpec params]
     (-> this (.newCanonicalizationMethod algorithm params))))
 
 (defn new-manifest
@@ -333,9 +333,9 @@
   returns: a Manifest - `javax.xml.crypto.dsig.Manifest`
 
   throws: java.lang.NullPointerException - if references is null"
-  (^javax.xml.crypto.dsig.Manifest [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.util.List references ^java.lang.String id]
+  (^javax.xml.crypto.dsig.Manifest [^XMLSignatureFactory this ^java.util.List references ^java.lang.String id]
     (-> this (.newManifest references id)))
-  (^javax.xml.crypto.dsig.Manifest [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.util.List references]
+  (^javax.xml.crypto.dsig.Manifest [^XMLSignatureFactory this ^java.util.List references]
     (-> this (.newManifest references))))
 
 (defn new-digest-method
@@ -348,6 +348,6 @@
   returns: the DigestMethod - `javax.xml.crypto.dsig.DigestMethod`
 
   throws: java.security.InvalidAlgorithmParameterException - if the specified parameters are inappropriate for the requested algorithm"
-  (^javax.xml.crypto.dsig.DigestMethod [^javax.xml.crypto.dsig.XMLSignatureFactory this ^java.lang.String algorithm ^javax.xml.crypto.dsig.spec.DigestMethodParameterSpec params]
+  (^javax.xml.crypto.dsig.DigestMethod [^XMLSignatureFactory this ^java.lang.String algorithm ^javax.xml.crypto.dsig.spec.DigestMethodParameterSpec params]
     (-> this (.newDigestMethod algorithm params))))
 

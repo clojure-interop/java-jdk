@@ -13,13 +13,13 @@
    create the toString() value.
 
   val - the inappropriate value. - `java.lang.Object`"
-  ([^java.lang.Object val]
+  (^BadAttributeValueExpException [^java.lang.Object val]
     (new BadAttributeValueExpException val)))
 
 (defn to-string
   "Returns the string representing the object.
 
   returns: a string representation of this throwable. - `java.lang.String`"
-  (^java.lang.String [^javax.management.BadAttributeValueExpException this]
+  (^java.lang.String [^BadAttributeValueExpException this]
     (-> this (.toString))))
 

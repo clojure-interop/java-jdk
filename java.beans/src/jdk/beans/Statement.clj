@@ -28,7 +28,7 @@
   target - the target object of this statement - `java.lang.Object`
   method-name - the name of the method to invoke on the specified target - `java.lang.String`
   arguments - the array of arguments to invoke the specified method - `java.lang.Object[]`"
-  ([^java.lang.Object target ^java.lang.String method-name arguments]
+  (^Statement [^java.lang.Object target ^java.lang.String method-name arguments]
     (new Statement target method-name arguments)))
 
 (defn get-target
@@ -38,7 +38,7 @@
    throws a NullPointerException.
 
   returns: the target object of this statement - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.Statement this]
+  (^java.lang.Object [^Statement this]
     (-> this (.getTarget))))
 
 (defn get-method-name
@@ -48,7 +48,7 @@
    throws a NullPointerException.
 
   returns: the name of the method - `java.lang.String`"
-  (^java.lang.String [^java.beans.Statement this]
+  (^java.lang.String [^Statement this]
     (-> this (.getMethodName))))
 
 (defn get-arguments
@@ -58,7 +58,7 @@
    null can be used as a synonym of an empty array.
 
   returns: the array of arguments - `java.lang.Object[]`"
-  ([^java.beans.Statement this]
+  ([^Statement this]
     (-> this (.getArguments))))
 
 (defn execute
@@ -90,13 +90,13 @@
    the static methods of the same name in the Array class.
 
   throws: java.lang.NullPointerException - if the value of the target or methodName property is null"
-  ([^java.beans.Statement this]
+  ([^Statement this]
     (-> this (.execute))))
 
 (defn to-string
   "Prints the value of this statement using a Java-style syntax.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.beans.Statement this]
+  (^java.lang.String [^Statement this]
     (-> this (.toString))))
 

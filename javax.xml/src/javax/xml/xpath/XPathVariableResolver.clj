@@ -21,6 +21,6 @@
      exists.  The value returned must be of a type appropriate for the underlying object model. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - If variableName is null."
-  (^java.lang.Object [^javax.xml.xpath.XPathVariableResolver this ^javax.xml.namespace.QName variable-name]
+  (^java.lang.Object [^XPathVariableResolver this ^javax.xml.namespace.QName variable-name]
     (-> this (.resolveVariable variable-name))))
 

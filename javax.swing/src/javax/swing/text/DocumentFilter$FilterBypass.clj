@@ -9,14 +9,14 @@
 
 (defn ->filter-bypass
   "Constructor."
-  ([]
+  (^DocumentFilter$FilterBypass []
     (new DocumentFilter$FilterBypass )))
 
 (defn get-document
   "Returns the Document the mutation is occurring on.
 
   returns: Document that remove/insertString will operate on - `javax.swing.text.Document`"
-  (^javax.swing.text.Document [^javax.swing.text.DocumentFilter$FilterBypass this]
+  (^javax.swing.text.Document [^DocumentFilter$FilterBypass this]
     (-> this (.getDocument))))
 
 (defn remove
@@ -27,7 +27,7 @@
   length - the number of characters to remove >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - some portion of the removal range was not a valid part of the document. The location in the exception is the first bad position encountered."
-  ([^javax.swing.text.DocumentFilter$FilterBypass this ^Integer offset ^Integer length]
+  ([^DocumentFilter$FilterBypass this ^Integer offset ^Integer length]
     (-> this (.remove offset length))))
 
 (defn insert-string
@@ -39,7 +39,7 @@
   attr - the attributes to associate with the inserted content. This may be null if there are no attributes. - `javax.swing.text.AttributeSet`
 
   throws: javax.swing.text.BadLocationException - the given insert position is not a valid position within the document"
-  ([^javax.swing.text.DocumentFilter$FilterBypass this ^Integer offset ^java.lang.String string ^javax.swing.text.AttributeSet attr]
+  ([^DocumentFilter$FilterBypass this ^Integer offset ^java.lang.String string ^javax.swing.text.AttributeSet attr]
     (-> this (.insertString offset string attr))))
 
 (defn replace
@@ -53,6 +53,6 @@
   attrs - AttributeSet indicating attributes of inserted text, null is legal. - `javax.swing.text.AttributeSet`
 
   throws: javax.swing.text.BadLocationException - the given insert is not a valid position within the document"
-  ([^javax.swing.text.DocumentFilter$FilterBypass this ^Integer offset ^Integer length ^java.lang.String string ^javax.swing.text.AttributeSet attrs]
+  ([^DocumentFilter$FilterBypass this ^Integer offset ^Integer length ^java.lang.String string ^javax.swing.text.AttributeSet attrs]
     (-> this (.replace offset length string attrs))))
 

@@ -14,7 +14,7 @@
 
   Constant identifying the era field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/ERA)
 
 (def *-year
@@ -22,7 +22,7 @@
 
   Constant identifying the year field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/YEAR)
 
 (def *-month
@@ -30,7 +30,7 @@
 
   Constant identifying the month field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/MONTH)
 
 (def *-day-of-month
@@ -38,7 +38,7 @@
 
   Constant identifying the day of month field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/DAY_OF_MONTH)
 
 (def *-hour-of-day-1
@@ -47,7 +47,7 @@
   Constant identifying the hour of day field, where the legal values
    are 1 to 24.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/HOUR_OF_DAY1)
 
 (def *-hour-of-day-0
@@ -56,7 +56,7 @@
   Constant identifying the hour of day field, where the legal values
    are 0 to 23.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/HOUR_OF_DAY0)
 
 (def *-minute
@@ -64,7 +64,7 @@
 
   Constant identifying the minute field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/MINUTE)
 
 (def *-second
@@ -72,7 +72,7 @@
 
   Constant identifying the second field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/SECOND)
 
 (def *-millisecond
@@ -80,7 +80,7 @@
 
   Constant identifying the millisecond field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/MILLISECOND)
 
 (def *-day-of-week
@@ -88,7 +88,7 @@
 
   Constant identifying the day of week field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/DAY_OF_WEEK)
 
 (def *-day-of-year
@@ -96,7 +96,7 @@
 
   Constant identifying the day of year field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/DAY_OF_YEAR)
 
 (def *-day-of-week-in-month
@@ -104,7 +104,7 @@
 
   Constant identifying the day of week field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/DAY_OF_WEEK_IN_MONTH)
 
 (def *-week-of-year
@@ -112,7 +112,7 @@
 
   Constant identifying the week of year field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/WEEK_OF_YEAR)
 
 (def *-week-of-month
@@ -120,7 +120,7 @@
 
   Constant identifying the week of month field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/WEEK_OF_MONTH)
 
 (def *-am-pm
@@ -129,7 +129,7 @@
   Constant identifying the time of day indicator
    (e.g. `a.m.` or `p.m.`) field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/AM_PM)
 
 (def *-hour-1
@@ -138,7 +138,7 @@
   Constant identifying the hour field, where the legal values are
    1 to 12.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/HOUR1)
 
 (def *-hour-0
@@ -147,7 +147,7 @@
   Constant identifying the hour field, where the legal values are
    0 to 11.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/HOUR0)
 
 (def *-time-zone
@@ -155,7 +155,7 @@
 
   Constant identifying the time zone field.
 
-  type: java.text.DateFormat.Field"
+  type: java.text.DateFormat$Field"
   DateFormat$Field/TIME_ZONE)
 
 (defn *of-calendar-field
@@ -166,10 +166,10 @@
 
   calendar-field - Calendar field constant - `int`
 
-  returns: Field instance representing calendarField. - `java.text.DateFormat.Field`
+  returns: Field instance representing calendarField. - `java.text.DateFormat$Field`
 
   throws: java.lang.IllegalArgumentException - if calendarField is not the value of a Calendar field constant."
-  (^java.text.DateFormat.Field [^Integer calendar-field]
+  (^java.text.DateFormat$Field [^Integer calendar-field]
     (DateFormat$Field/ofCalendarField calendar-field)))
 
 (defn get-calendar-field
@@ -180,6 +180,6 @@
    Calendar constant, this will return -1.
 
   returns: Calendar constant for this field - `int`"
-  (^Integer [^java.text.DateFormat$Field this]
+  (^Integer [^DateFormat$Field this]
     (-> this (.getCalendarField))))
 

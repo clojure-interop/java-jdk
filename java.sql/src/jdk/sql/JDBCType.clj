@@ -349,7 +349,7 @@
   "Returns the SQLType name that represents a SQL data type.
 
   returns: The name of this SQLType. - `java.lang.String`"
-  (^java.lang.String [^java.sql.JDBCType this]
+  (^java.lang.String [^JDBCType this]
     (-> this (.getName))))
 
 (defn get-vendor
@@ -357,7 +357,7 @@
 
   returns: The name of the vendor for this data type which is
    java.sql for JDBCType. - `java.lang.String`"
-  (^java.lang.String [^java.sql.JDBCType this]
+  (^java.lang.String [^JDBCType this]
     (-> this (.getVendor))))
 
 (defn get-vendor-type-number
@@ -365,6 +365,6 @@
 
   returns: An Integer representing the data type. For JDBCType,
    the value will be the same value as in Types for the data type. - `java.lang.Integer`"
-  (^java.lang.Integer [^java.sql.JDBCType this]
+  (^java.lang.Integer [^JDBCType this]
     (-> this (.getVendorTypeNumber))))
 

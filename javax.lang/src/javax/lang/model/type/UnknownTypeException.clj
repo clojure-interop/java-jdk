@@ -16,7 +16,7 @@
 
   t - the unknown type, may be null - `javax.lang.model.type.TypeMirror`
   p - an additional parameter, may be null - `java.lang.Object`"
-  ([^javax.lang.model.type.TypeMirror t ^java.lang.Object p]
+  (^UnknownTypeException [^javax.lang.model.type.TypeMirror t ^java.lang.Object p]
     (new UnknownTypeException t p)))
 
 (defn get-unknown-type
@@ -25,13 +25,13 @@
    serialized and then read back in.
 
   returns: the unknown type, or null if unavailable - `javax.lang.model.type.TypeMirror`"
-  (^javax.lang.model.type.TypeMirror [^javax.lang.model.type.UnknownTypeException this]
+  (^javax.lang.model.type.TypeMirror [^UnknownTypeException this]
     (-> this (.getUnknownType))))
 
 (defn get-argument
   "Returns the additional argument.
 
   returns: the additional argument - `java.lang.Object`"
-  (^java.lang.Object [^javax.lang.model.type.UnknownTypeException this]
+  (^java.lang.Object [^UnknownTypeException this]
     (-> this (.getArgument))))
 

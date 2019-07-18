@@ -67,12 +67,12 @@
   obj - The possibly null object containing location or reference information that can be used in creating an object. - `java.lang.Object`
   name - The name of this object relative to nameCtx, or null if no name is specified. - `javax.naming.Name`
   name-ctx - The context relative to which the name parameter is specified, or null if name is relative to the default initial context. - `javax.naming.Context`
-  environment - The possibly null environment that is used in creating the object. - `java.util.Hashtable<?,?>`
+  environment - The possibly null environment that is used in creating the object. - `java.util.Hashtable`
   attrs - The possibly null attributes containing some of obj's attributes. attrs might not necessarily have all of obj's attributes. If the object factory requires more attributes, it needs to get it, either using obj, or name and nameCtx. The factory must not modify attrs. - `javax.naming.directory.Attributes`
 
   returns: The object created; null if an object cannot be created. - `java.lang.Object`
 
   throws: java.lang.Exception - If this object factory encountered an exception while attempting to create an object, and no other object factories are to be tried."
-  (^java.lang.Object [^javax.naming.spi.DirObjectFactory this ^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes attrs]
+  (^java.lang.Object [^DirObjectFactory this ^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes attrs]
     (-> this (.getObjectInstance obj name name-ctx environment attrs))))
 

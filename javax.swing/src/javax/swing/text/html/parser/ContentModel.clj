@@ -15,13 +15,13 @@
   type - `int`
   content - `java.lang.Object`
   next - `javax.swing.text.html.parser.ContentModel`"
-  ([^Integer type ^java.lang.Object content ^javax.swing.text.html.parser.ContentModel next]
+  (^ContentModel [^Integer type ^java.lang.Object content ^javax.swing.text.html.parser.ContentModel next]
     (new ContentModel type content next))
-  ([^Integer type ^javax.swing.text.html.parser.ContentModel content]
+  (^ContentModel [^Integer type ^javax.swing.text.html.parser.ContentModel content]
     (new ContentModel type content))
-  ([^javax.swing.text.html.parser.Element content]
+  (^ContentModel [^javax.swing.text.html.parser.Element content]
     (new ContentModel content))
-  ([]
+  (^ContentModel []
     (new ContentModel )))
 
 (defn -type
@@ -56,15 +56,15 @@
    match an empty input stream.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.text.html.parser.ContentModel this]
+  (^Boolean [^ContentModel this]
     (-> this (.empty))))
 
 (defn get-elements
   "Update elemVec with the list of elements that are
    part of the this contentModel.
 
-  elem-vec - `java.util.Vector<javax.swing.text.html.parser.Element>`"
-  ([^javax.swing.text.html.parser.ContentModel this ^java.util.Vector elem-vec]
+  elem-vec - `java.util.Vector`"
+  ([^ContentModel this ^java.util.Vector elem-vec]
     (-> this (.getElements elem-vec))))
 
 (defn first
@@ -74,15 +74,15 @@
   token - `java.lang.Object`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.text.html.parser.ContentModel this ^java.lang.Object token]
+  (^Boolean [^ContentModel this ^java.lang.Object token]
     (-> this (.first token)))
-  (^javax.swing.text.html.parser.Element [^javax.swing.text.html.parser.ContentModel this]
+  (^javax.swing.text.html.parser.Element [^ContentModel this]
     (-> this (.first))))
 
 (defn to-string
   "Convert to a string.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.html.parser.ContentModel this]
+  (^java.lang.String [^ContentModel this]
     (-> this (.toString))))
 

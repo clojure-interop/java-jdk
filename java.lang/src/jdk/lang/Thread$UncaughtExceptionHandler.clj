@@ -24,6 +24,6 @@
 
   t - the thread - `java.lang.Thread`
   e - the exception - `java.lang.Throwable`"
-  ([^java.lang.Thread$UncaughtExceptionHandler this ^java.lang.Thread t ^java.lang.Throwable e]
+  ([^Thread$UncaughtExceptionHandler this ^java.lang.Thread t ^java.lang.Throwable e]
     (-> this (.uncaughtException t e))))
 

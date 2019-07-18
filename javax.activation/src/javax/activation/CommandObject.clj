@@ -19,6 +19,6 @@
   dh - The DataHandler. - `javax.activation.DataHandler`
 
   throws: java.io.IOException"
-  ([^javax.activation.CommandObject this ^java.lang.String verb ^javax.activation.DataHandler dh]
+  ([^CommandObject this ^java.lang.String verb ^javax.activation.DataHandler dh]
     (-> this (.setCommandContext verb dh))))
 

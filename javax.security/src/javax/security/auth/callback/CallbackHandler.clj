@@ -109,6 +109,6 @@
   callbacks - an array of Callback objects provided by an underlying security service which contains the information requested to be retrieved or displayed. - `javax.security.auth.callback.Callback[]`
 
   throws: java.io.IOException - if an input or output error occurs."
-  ([^javax.security.auth.callback.CallbackHandler this callbacks]
+  ([^CallbackHandler this callbacks]
     (-> this (.handle callbacks))))
 

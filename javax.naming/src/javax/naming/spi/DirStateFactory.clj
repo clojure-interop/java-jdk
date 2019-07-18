@@ -87,14 +87,14 @@
   obj - A possibly null object whose state is to be retrieved. - `java.lang.Object`
   name - The name of this object relative to nameCtx, or null if no name is specified. - `javax.naming.Name`
   name-ctx - The context relative to which the name parameter is specified, or null if name is relative to the default initial context. - `javax.naming.Context`
-  environment - The possibly null environment to be used in the creation of the object's state. - `java.util.Hashtable<?,?>`
+  environment - The possibly null environment to be used in the creation of the object's state. - `java.util.Hashtable`
   in-attrs - The possibly null attributes to be bound with the object. The factory must not modify inAttrs. - `javax.naming.directory.Attributes`
 
   returns: A Result containing the object's state for binding
    and the corresponding
-   attributes to be bound; null if the object don't use this factory. - `javax.naming.spi.DirStateFactory.Result`
+   attributes to be bound; null if the object don't use this factory. - `javax.naming.spi.DirStateFactory$Result`
 
   throws: javax.naming.NamingException - If this factory encountered an exception while attempting to get the object's state, and no other factories are to be tried."
-  (^javax.naming.spi.DirStateFactory.Result [^javax.naming.spi.DirStateFactory this ^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes in-attrs]
+  (^javax.naming.spi.DirStateFactory$Result [^DirStateFactory this ^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes in-attrs]
     (-> this (.getStateToBind obj name name-ctx environment in-attrs))))
 

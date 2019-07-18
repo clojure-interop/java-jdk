@@ -10,7 +10,7 @@
   "Constructor.
 
   Creates a CallerRunsPolicy."
-  ([]
+  (^ThreadPoolExecutor$CallerRunsPolicy []
     (new ThreadPoolExecutor$CallerRunsPolicy )))
 
 (defn rejected-execution
@@ -19,6 +19,6 @@
 
   r - the runnable task requested to be executed - `java.lang.Runnable`
   e - the executor attempting to execute this task - `java.util.concurrent.ThreadPoolExecutor`"
-  ([^java.util.concurrent.ThreadPoolExecutor$CallerRunsPolicy this ^java.lang.Runnable r ^java.util.concurrent.ThreadPoolExecutor e]
+  ([^ThreadPoolExecutor$CallerRunsPolicy this ^java.lang.Runnable r ^java.util.concurrent.ThreadPoolExecutor e]
     (-> this (.rejectedExecution r e))))
 

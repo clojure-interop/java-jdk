@@ -53,8 +53,8 @@
   actions - (unused; should be null) - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^AudioPermission [^java.lang.String name ^java.lang.String actions]
     (new AudioPermission name actions))
-  ([^java.lang.String name]
+  (^AudioPermission [^java.lang.String name]
     (new AudioPermission name)))
 

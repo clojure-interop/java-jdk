@@ -10,7 +10,7 @@
   "Constructor.
 
   Constructs an RTFEditorKit."
-  ([]
+  (^RTFEditorKit []
     (new RTFEditorKit )))
 
 (defn get-content-type
@@ -19,7 +19,7 @@
    the type text/rtf.
 
   returns: the type - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.rtf.RTFEditorKit this]
+  (^java.lang.String [^RTFEditorKit this]
     (-> this (.getContentType))))
 
 (defn read
@@ -32,7 +32,7 @@
   pos - The location in the document to place the content. - `int`
 
   throws: java.io.IOException - on any I/O error"
-  ([^javax.swing.text.rtf.RTFEditorKit this ^java.io.InputStream in ^javax.swing.text.Document doc ^Integer pos]
+  ([^RTFEditorKit this ^java.io.InputStream in ^javax.swing.text.Document doc ^Integer pos]
     (-> this (.read in doc pos))))
 
 (defn write
@@ -45,6 +45,6 @@
   len - The amount to write out. - `int`
 
   throws: java.io.IOException - on any I/O error"
-  ([^javax.swing.text.rtf.RTFEditorKit this ^java.io.OutputStream out ^javax.swing.text.Document doc ^Integer pos ^Integer len]
+  ([^RTFEditorKit this ^java.io.OutputStream out ^javax.swing.text.Document doc ^Integer pos ^Integer len]
     (-> this (.write out doc pos len))))
 

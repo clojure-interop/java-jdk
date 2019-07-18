@@ -21,42 +21,42 @@
   Creates a new Option object.
 
   attr - the attributes associated with the option element. The attributes are copied to ensure they won't change. - `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.AttributeSet attr]
+  (^Option [^javax.swing.text.AttributeSet attr]
     (new Option attr)))
 
 (defn set-label
   "Sets the label to be used for the option.
 
   label - `java.lang.String`"
-  ([^javax.swing.text.html.Option this ^java.lang.String label]
+  ([^Option this ^java.lang.String label]
     (-> this (.setLabel label))))
 
 (defn get-label
   "Fetch the label associated with the option.
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.html.Option this]
+  (^java.lang.String [^Option this]
     (-> this (.getLabel))))
 
 (defn get-attributes
   "Fetch the attributes associated with this option.
 
   returns: `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.html.Option this]
+  (^javax.swing.text.AttributeSet [^Option this]
     (-> this (.getAttributes))))
 
 (defn to-string
   "String representation is the label.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.html.Option this]
+  (^java.lang.String [^Option this]
     (-> this (.toString))))
 
 (defn selected?
   "Fetches the selection state associated with this option.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.text.html.Option this]
+  (^Boolean [^Option this]
     (-> this (.isSelected))))
 
 (defn get-value
@@ -66,6 +66,6 @@
    returned.
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.html.Option this]
+  (^java.lang.String [^Option this]
     (-> this (.getValue))))
 

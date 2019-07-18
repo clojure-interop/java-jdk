@@ -19,14 +19,14 @@
   listener-id - The ID of the listener to which this notification is targeted. - `java.lang.Integer`
 
   throws: java.lang.IllegalArgumentException - if the listenerID or notification is null."
-  ([^javax.management.Notification notification ^java.lang.Integer listener-id]
+  (^TargetedNotification [^javax.management.Notification notification ^java.lang.Integer listener-id]
     (new TargetedNotification notification listener-id)))
 
 (defn get-notification
   "The emitted notification.
 
   returns: The notification. - `javax.management.Notification`"
-  (^javax.management.Notification [^javax.management.remote.TargetedNotification this]
+  (^javax.management.Notification [^TargetedNotification this]
     (-> this (.getNotification))))
 
 (defn get-listener-id
@@ -34,13 +34,13 @@
       targeted.
 
   returns: The listener ID. - `java.lang.Integer`"
-  (^java.lang.Integer [^javax.management.remote.TargetedNotification this]
+  (^java.lang.Integer [^TargetedNotification this]
     (-> this (.getListenerID))))
 
 (defn to-string
   "Returns a textual representation of this Targeted Notification.
 
   returns: a String representation of this Targeted Notification. - `java.lang.String`"
-  (^java.lang.String [^javax.management.remote.TargetedNotification this]
+  (^java.lang.String [^TargetedNotification this]
     (-> this (.toString))))
 

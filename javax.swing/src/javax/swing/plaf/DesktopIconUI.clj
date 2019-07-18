@@ -5,6 +5,6 @@
 
 (defn ->desktop-icon-ui
   "Constructor."
-  ([]
+  (^DesktopIconUI []
     (new DesktopIconUI )))
 

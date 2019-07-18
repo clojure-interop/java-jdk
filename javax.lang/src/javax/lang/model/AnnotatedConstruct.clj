@@ -84,7 +84,7 @@
 
   returns: the annotations directly present on this
    construct; an empty list if there are none - `java.util.List<? extends javax.lang.model.element.AnnotationMirror>`"
-  ([^javax.lang.model.AnnotatedConstruct this]
+  ([^AnnotatedConstruct this]
     (-> this (.getAnnotationMirrors))))
 
 (defn get-annotation
@@ -115,11 +115,11 @@
    callers that are written to operate on a known, fixed set of
    annotation types.
 
-  annotation-type - the Class object corresponding to the annotation type - `java.lang.Class<A>`
+  annotation-type - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: this construct's annotation for the specified
    annotation type if present, else null - `<A extends java.lang.annotation.Annotation> A`"
-  ([^javax.lang.model.AnnotatedConstruct this ^java.lang.Class annotation-type]
+  ([^AnnotatedConstruct this ^java.lang.Class annotation-type]
     (-> this (.getAnnotation annotation-type))))
 
 (defn get-annotations-by-type
@@ -163,10 +163,10 @@
    callers that are written to operate on a known, fixed set of
    annotation types.
 
-  annotation-type - the Class object corresponding to the annotation type - `java.lang.Class<A>`
+  annotation-type - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: this construct's annotations for the specified annotation
            type if present on this construct, else an empty array - `<A extends java.lang.annotation.Annotation> A[]`"
-  ([^javax.lang.model.AnnotatedConstruct this ^java.lang.Class annotation-type]
+  ([^AnnotatedConstruct this ^java.lang.Class annotation-type]
     (-> this (.getAnnotationsByType annotation-type))))
 

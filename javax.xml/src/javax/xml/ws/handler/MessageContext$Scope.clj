@@ -5,13 +5,13 @@
 (def APPLICATION
   "Enum Constant.
 
-  type: javax.xml.ws.handler.MessageContext.Scope"
+  type: javax.xml.ws.handler.MessageContext$Scope"
   MessageContext$Scope/APPLICATION)
 
 (def HANDLER
   "Enum Constant.
 
-  type: javax.xml.ws.handler.MessageContext.Scope"
+  type: javax.xml.ws.handler.MessageContext$Scope"
   MessageContext$Scope/HANDLER)
 
 (defn *values
@@ -23,7 +23,7 @@
   for (MessageContext.Scope c : MessageContext.Scope.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.xml.ws.handler.MessageContext.Scope[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.xml.ws.handler.MessageContext$Scope[]`"
   ([]
     (MessageContext$Scope/values )))
 
@@ -35,9 +35,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.xml.ws.handler.MessageContext.Scope`
+  returns: the enum constant with the specified name - `javax.xml.ws.handler.MessageContext$Scope`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.xml.ws.handler.MessageContext.Scope [^java.lang.String name]
+  (^javax.xml.ws.handler.MessageContext$Scope [^java.lang.String name]
     (MessageContext$Scope/valueOf name)))
 

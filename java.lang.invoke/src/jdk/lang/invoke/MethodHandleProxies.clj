@@ -75,7 +75,7 @@
    the original creator of the wrapper (the caller) will be visible
    to context checks requested by the security manager.
 
-  intfc - a class object representing T - `java.lang.Class<T>`
+  intfc - a class object representing T - `java.lang.Class`
   target - the method handle to invoke from the wrapper - `java.lang.invoke.MethodHandle`
 
   returns: a correctly-typed wrapper for the given target - `<T> T`

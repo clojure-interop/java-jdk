@@ -5,6 +5,6 @@
 
 (defn ->panel-ui
   "Constructor."
-  ([]
+  (^PanelUI []
     (new PanelUI )))
 

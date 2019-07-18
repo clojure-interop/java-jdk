@@ -10,8 +10,8 @@
   An OpenDataException with a detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^OpenDataException [^java.lang.String msg]
     (new OpenDataException msg))
-  ([]
+  (^OpenDataException []
     (new OpenDataException )))
 

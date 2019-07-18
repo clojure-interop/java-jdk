@@ -140,7 +140,7 @@
   "Inserts the specified element into this queue, waiting up to the
    specified wait time if necessary for space to become available.
 
-  e - the element to add - `BlockingQueue.E`
+  e - the element to add - `E`
   timeout - how long to wait before giving up, in units of unit - `long`
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
@@ -148,19 +148,19 @@
            the specified waiting time elapses before space is available - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^Boolean [^java.util.concurrent.BlockingQueue this ^BlockingQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^BlockingQueue this e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  (^Boolean [^java.util.concurrent.BlockingQueue this ^BlockingQueue.E e]
+  (^Boolean [^BlockingQueue this e]
     (-> this (.offer e))))
 
 (defn put
   "Inserts the specified element into this queue, waiting if necessary
    for space to become available.
 
-  e - the element to add - `BlockingQueue.E`
+  e - the element to add - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.BlockingQueue this ^BlockingQueue.E e]
+  ([^BlockingQueue this e]
     (-> this (.put e))))
 
 (defn contains
@@ -173,17 +173,17 @@
   returns: true if this queue contains the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element is incompatible with this queue (optional)"
-  (^Boolean [^java.util.concurrent.BlockingQueue this ^java.lang.Object o]
+  (^Boolean [^BlockingQueue this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn take
   "Retrieves and removes the head of this queue, waiting if necessary
    until an element becomes available.
 
-  returns: the head of this queue - `BlockingQueue.E`
+  returns: the head of this queue - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^BlockingQueue.E [^java.util.concurrent.BlockingQueue this]
+  ([^BlockingQueue this]
     (-> this (.take))))
 
 (defn remove
@@ -199,7 +199,7 @@
   returns: true if this queue changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element is incompatible with this queue (optional)"
-  (^Boolean [^java.util.concurrent.BlockingQueue this ^java.lang.Object o]
+  (^Boolean [^BlockingQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn drain-to
@@ -213,15 +213,15 @@
    this operation is undefined if the specified collection is
    modified while the operation is in progress.
 
-  c - the collection to transfer elements into - `BlockingQueue.E>`
+  c - the collection to transfer elements into - `java.util.Collection`
   max-elements - the maximum number of elements to transfer - `int`
 
   returns: the number of elements transferred - `int`
 
   throws: java.lang.UnsupportedOperationException - if addition of elements is not supported by the specified collection"
-  (^Integer [^java.util.concurrent.BlockingQueue this ^BlockingQueue.E> c ^Integer max-elements]
+  (^Integer [^BlockingQueue this ^java.util.Collection c ^Integer max-elements]
     (-> this (.drainTo c max-elements)))
-  (^Integer [^java.util.concurrent.BlockingQueue this ^BlockingQueue.E> c]
+  (^Integer [^BlockingQueue this ^java.util.Collection c]
     (-> this (.drainTo c))))
 
 (defn poll
@@ -232,10 +232,10 @@
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
   returns: the head of this queue, or null if the
-           specified waiting time elapses before an element is available - `BlockingQueue.E`
+           specified waiting time elapses before an element is available - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^BlockingQueue.E [^java.util.concurrent.BlockingQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^BlockingQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit))))
 
 (defn remaining-capacity
@@ -250,7 +250,7 @@
    insert or remove an element.
 
   returns: the remaining capacity - `int`"
-  (^Integer [^java.util.concurrent.BlockingQueue this]
+  (^Integer [^BlockingQueue this]
     (-> this (.remainingCapacity))))
 
 (defn add
@@ -261,11 +261,11 @@
    When using a capacity-restricted queue, it is generally preferable to
    use offer.
 
-  e - the element to add - `BlockingQueue.E`
+  e - the element to add - `E`
 
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.IllegalStateException - if the element cannot be added at this time due to capacity restrictions"
-  (^Boolean [^java.util.concurrent.BlockingQueue this ^BlockingQueue.E e]
+  (^Boolean [^BlockingQueue this e]
     (-> this (.add e))))
 

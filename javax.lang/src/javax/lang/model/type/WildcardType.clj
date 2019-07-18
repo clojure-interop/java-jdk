@@ -18,7 +18,7 @@
    null is returned.
 
   returns: the upper bound of this wildcard - `javax.lang.model.type.TypeMirror`"
-  (^javax.lang.model.type.TypeMirror [^javax.lang.model.type.WildcardType this]
+  (^javax.lang.model.type.TypeMirror [^WildcardType this]
     (-> this (.getExtendsBound))))
 
 (defn get-super-bound
@@ -27,6 +27,6 @@
    null is returned.
 
   returns: the lower bound of this wildcard - `javax.lang.model.type.TypeMirror`"
-  (^javax.lang.model.type.TypeMirror [^javax.lang.model.type.WildcardType this]
+  (^javax.lang.model.type.TypeMirror [^WildcardType this]
     (-> this (.getSuperBound))))
 

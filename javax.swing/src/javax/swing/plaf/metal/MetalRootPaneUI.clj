@@ -25,7 +25,7 @@
 
 (defn ->metal-root-pane-ui
   "Constructor."
-  ([]
+  (^MetalRootPaneUI []
     (new MetalRootPaneUI )))
 
 (defn *create-ui
@@ -50,7 +50,7 @@
    JRootPane.
 
   c - the JRootPane to install state onto - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalRootPaneUI this ^javax.swing.JComponent c]
+  ([^MetalRootPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
@@ -63,7 +63,7 @@
    was invoked.
 
   c - the JRootPane to uninstall state from - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalRootPaneUI this ^javax.swing.JComponent c]
+  ([^MetalRootPaneUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn property-change
@@ -82,6 +82,6 @@
    installUI was invoked.
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.plaf.metal.MetalRootPaneUI this ^java.beans.PropertyChangeEvent e]
+  ([^MetalRootPaneUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 

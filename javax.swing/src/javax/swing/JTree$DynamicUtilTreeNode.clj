@@ -27,7 +27,7 @@
 
   value - the Object that is the value for the new node - `java.lang.Object`
   children - an array of Objects, a Vector, or a Hashtable used to create the child nodes; if any other object is specified, or if the value is null, then the node is not allowed to have children - `java.lang.Object`"
-  ([^java.lang.Object value ^java.lang.Object children]
+  (^JTree$DynamicUtilTreeNode [^java.lang.Object value ^java.lang.Object children]
     (new JTree$DynamicUtilTreeNode value children)))
 
 (defn *create-children
@@ -47,14 +47,14 @@
    allows children depends on how it was created.
 
   returns: true if this node allows children, false otherwise - `boolean`"
-  (^Boolean [^javax.swing.JTree$DynamicUtilTreeNode this]
+  (^Boolean [^JTree$DynamicUtilTreeNode this]
     (-> this (.isLeaf))))
 
 (defn get-child-count
   "Returns the number of child nodes.
 
   returns: the number of child nodes - `int`"
-  (^Integer [^javax.swing.JTree$DynamicUtilTreeNode this]
+  (^Integer [^JTree$DynamicUtilTreeNode this]
     (-> this (.getChildCount))))
 
 (defn get-child-at
@@ -63,13 +63,13 @@
   index - an index into this node's child array - `int`
 
   returns: the TreeNode in this node's child array at  the specified index - `javax.swing.tree.TreeNode`"
-  (^javax.swing.tree.TreeNode [^javax.swing.JTree$DynamicUtilTreeNode this ^Integer index]
+  (^javax.swing.tree.TreeNode [^JTree$DynamicUtilTreeNode this ^Integer index]
     (-> this (.getChildAt index))))
 
 (defn children
   "Subclassed to load the children, if necessary.
 
   returns: an Enumeration of this node's children - `java.util.Enumeration`"
-  (^java.util.Enumeration [^javax.swing.JTree$DynamicUtilTreeNode this]
+  (^java.util.Enumeration [^JTree$DynamicUtilTreeNode this]
     (-> this (.children))))
 

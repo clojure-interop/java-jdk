@@ -49,23 +49,23 @@
   band-offsets - the band offsets of all bands - `int[]`
 
   throws: java.lang.IllegalArgumentException - if dataType is not one of the supported data types"
-  ([^Integer data-type ^Integer w ^Integer h ^Integer pixel-stride ^Integer scanline-stride bank-indices band-offsets]
+  (^ComponentSampleModel [^Integer data-type ^Integer w ^Integer h ^Integer pixel-stride ^Integer scanline-stride bank-indices band-offsets]
     (new ComponentSampleModel data-type w h pixel-stride scanline-stride bank-indices band-offsets))
-  ([^Integer data-type ^Integer w ^Integer h ^Integer pixel-stride ^Integer scanline-stride band-offsets]
+  (^ComponentSampleModel [^Integer data-type ^Integer w ^Integer h ^Integer pixel-stride ^Integer scanline-stride band-offsets]
     (new ComponentSampleModel data-type w h pixel-stride scanline-stride band-offsets)))
 
 (defn get-bank-indices
   "Returns the bank indices for all bands.
 
   returns: the bank indices for all bands. - `int[]`"
-  ([^java.awt.image.ComponentSampleModel this]
+  ([^ComponentSampleModel this]
     (-> this (.getBankIndices))))
 
 (defn get-band-offsets
   "Returns the band offset for all bands.
 
   returns: the band offsets for all bands. - `int[]`"
-  ([^java.awt.image.ComponentSampleModel this]
+  ([^ComponentSampleModel this]
     (-> this (.getBandOffsets))))
 
 (defn get-sample-float
@@ -81,7 +81,7 @@
 
   returns: a float value representing the sample in the specified
    band for the specified pixel. - `float`"
-  (^Float [^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Float [^ComponentSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSampleFloat x y b data))))
 
 (defn create-data-buffer
@@ -93,7 +93,7 @@
   returns: a DataBuffer whose data type, number of banks
            and size are consistent with this
            ComponentSampleModel. - `java.awt.image.DataBuffer`"
-  (^java.awt.image.DataBuffer [^java.awt.image.ComponentSampleModel this]
+  (^java.awt.image.DataBuffer [^ComponentSampleModel this]
     (-> this (.createDataBuffer))))
 
 (defn get-data-elements
@@ -140,7 +140,7 @@
   returns: the data of the specified pixel - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if data is null."
-  (^java.lang.Object [^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  (^java.lang.Object [^ComponentSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.getDataElements x y obj data))))
 
 (defn create-subset-sample-model
@@ -155,7 +155,7 @@
 
   returns: a ComponentSampleModel created with a subset
             of bands from this ComponentSampleModel. - `java.awt.image.SampleModel`"
-  (^java.awt.image.SampleModel [^java.awt.image.ComponentSampleModel this bands]
+  (^java.awt.image.SampleModel [^ComponentSampleModel this bands]
     (-> this (.createSubsetSampleModel bands))))
 
 (defn get-pixels
@@ -172,7 +172,7 @@
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`
 
   returns: the samples of the pixels within the specified region. - `int[]`"
-  ([^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
+  ([^ComponentSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
     (-> this (.getPixels x y w h i-array data))))
 
 (defn get-sample-double
@@ -188,7 +188,7 @@
 
   returns: a double value representing the sample in the specified
    band for the specified pixel. - `double`"
-  (^Double [^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Double [^ComponentSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSampleDouble x y b data))))
 
 (defn set-pixels
@@ -203,7 +203,7 @@
   h - The height of the pixel rectangle - `int`
   i-array - The input samples in an int array - `int[]`
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
+  ([^ComponentSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
     (-> this (.setPixels x y w h i-array data))))
 
 (defn get-num-data-elements
@@ -218,7 +218,7 @@
   returns: the number of data elements needed to transfer a pixel with
            the getDataElements and
            setDataElements methods. - `int`"
-  (^Integer [^java.awt.image.ComponentSampleModel this]
+  (^Integer [^ComponentSampleModel this]
     (-> this (.getNumDataElements))))
 
 (defn get-offset
@@ -235,23 +235,23 @@
   b - the specified band - `int`
 
   returns: the offset for the specified band of the specified pixel. - `int`"
-  (^Integer [^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^Integer b]
+  (^Integer [^ComponentSampleModel this ^Integer x ^Integer y ^Integer b]
     (-> this (.getOffset x y b)))
-  (^Integer [^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y]
+  (^Integer [^ComponentSampleModel this ^Integer x ^Integer y]
     (-> this (.getOffset x y))))
 
 (defn get-pixel-stride
   "Returns the pixel stride of this ComponentSampleModel.
 
   returns: the pixel stride of this ComponentSampleModel. - `int`"
-  (^Integer [^java.awt.image.ComponentSampleModel this]
+  (^Integer [^ComponentSampleModel this]
     (-> this (.getPixelStride))))
 
 (defn get-scanline-stride
   "Returns the scanline stride of this ComponentSampleModel.
 
   returns: the scanline stride of this ComponentSampleModel. - `int`"
-  (^Integer [^java.awt.image.ComponentSampleModel this]
+  (^Integer [^ComponentSampleModel this]
     (-> this (.getScanlineStride))))
 
 (defn get-sample
@@ -266,7 +266,7 @@
   data - the DataBuffer containing the image data - `java.awt.image.DataBuffer`
 
   returns: the sample in a specified band for the specified pixel - `int`"
-  (^Integer [^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Integer [^ComponentSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSample x y b data))))
 
 (defn set-sample
@@ -280,7 +280,7 @@
   b - the band to set - `int`
   s - the input sample as an int - `int`
   data - the DataBuffer containing the image data - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^Integer b ^Integer s ^java.awt.image.DataBuffer data]
+  ([^ComponentSampleModel this ^Integer x ^Integer y ^Integer b ^Integer s ^java.awt.image.DataBuffer data]
     (-> this (.setSample x y b s data))))
 
 (defn set-pixel
@@ -293,7 +293,7 @@
   y - The Y coordinate of the pixel location - `int`
   i-array - The input samples in an int array - `int[]`
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
+  ([^ComponentSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
     (-> this (.setPixel x y i-array data))))
 
 (defn get-pixel
@@ -310,7 +310,7 @@
   returns: the samples of the specified pixel. - `int[]`
 
   throws: java.lang.NullPointerException - if data is null."
-  ([^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
+  ([^ComponentSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
     (-> this (.getPixel x y i-array data))))
 
 (defn get-sample-size
@@ -319,9 +319,9 @@
   band - the specified band - `int`
 
   returns: the number of bits per sample for the specified band. - `int`"
-  (^Integer [^java.awt.image.ComponentSampleModel this ^Integer band]
+  (^Integer [^ComponentSampleModel this ^Integer band]
     (-> this (.getSampleSize band)))
-  ([^java.awt.image.ComponentSampleModel this]
+  ([^ComponentSampleModel this]
     (-> this (.getSampleSize))))
 
 (defn create-compatible-sample-model
@@ -336,14 +336,14 @@
   returns: a new ComponentSampleModel with the specified size - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if w or h is not greater than 0"
-  (^java.awt.image.SampleModel [^java.awt.image.ComponentSampleModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^ComponentSampleModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.image.ComponentSampleModel this]
+  (^Integer [^ComponentSampleModel this]
     (-> this (.hashCode))))
 
 (defn set-data-elements
@@ -382,7 +382,7 @@
   y - the Y coordinate of the pixel location - `int`
   obj - a primitive array containing pixel data - `java.lang.Object`
   data - the DataBuffer containing the image data - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  ([^ComponentSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.setDataElements x y obj data))))
 
 (defn set-samples
@@ -398,7 +398,7 @@
   b - The band to set - `int`
   i-array - The input samples in an int array - `int[]`
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
+  ([^ComponentSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
     (-> this (.setSamples x y w h b i-array data))))
 
 (defn equals
@@ -408,7 +408,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.image.ComponentSampleModel this ^java.lang.Object o]
+  (^Boolean [^ComponentSampleModel this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn get-samples
@@ -426,6 +426,6 @@
   data - the DataBuffer containing the image data - `java.awt.image.DataBuffer`
 
   returns: the samples in the specified band of the specified pixel - `int[]`"
-  ([^java.awt.image.ComponentSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
+  ([^ComponentSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
     (-> this (.getSamples x y w h b i-array data))))
 

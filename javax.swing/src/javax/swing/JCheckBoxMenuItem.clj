@@ -48,13 +48,13 @@
   text - the text of the check box menu item - `java.lang.String`
   icon - the icon of the check box menu item - `javax.swing.Icon`
   b - the selected state of the check box menu item - `boolean`"
-  ([^java.lang.String text ^javax.swing.Icon icon ^Boolean b]
+  (^JCheckBoxMenuItem [^java.lang.String text ^javax.swing.Icon icon ^Boolean b]
     (new JCheckBoxMenuItem text icon b))
-  ([^java.lang.String text ^javax.swing.Icon icon]
+  (^JCheckBoxMenuItem [^java.lang.String text ^javax.swing.Icon icon]
     (new JCheckBoxMenuItem text icon))
-  ([^javax.swing.Icon icon]
+  (^JCheckBoxMenuItem [^javax.swing.Icon icon]
     (new JCheckBoxMenuItem icon))
-  ([]
+  (^JCheckBoxMenuItem []
     (new JCheckBoxMenuItem )))
 
 (defn get-ui-class-id
@@ -62,7 +62,7 @@
    that renders this component.
 
   returns: `CheckBoxMenuItemUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JCheckBoxMenuItem this]
+  (^java.lang.String [^JCheckBoxMenuItem this]
     (-> this (.getUIClassID))))
 
 (defn get-state?
@@ -71,7 +71,7 @@
    use isSelected() instead.
 
   returns: true  if the item is selected - `boolean`"
-  (^Boolean [^javax.swing.JCheckBoxMenuItem this]
+  (^Boolean [^JCheckBoxMenuItem this]
     (-> this (.getState))))
 
 (defn set-state
@@ -80,7 +80,7 @@
    use setSelected() instead.
 
   b - a boolean value indicating the item's selected-state, where true=selected - `boolean`"
-  ([^javax.swing.JCheckBoxMenuItem this ^Boolean b]
+  ([^JCheckBoxMenuItem this ^Boolean b]
     (-> this (.setState b))))
 
 (defn get-selected-objects
@@ -89,7 +89,7 @@
 
   returns: an array containing one Object -- the text of the menu item
            -- if the item is selected; otherwise null - `java.lang.Object[]`"
-  ([^javax.swing.JCheckBoxMenuItem this]
+  ([^JCheckBoxMenuItem this]
     (-> this (.getSelectedObjects))))
 
 (defn get-accessible-context
@@ -100,6 +100,6 @@
 
   returns: an AccessibleJCheckBoxMenuItem that serves as the
            AccessibleContext of this AccessibleJCheckBoxMenuItem - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JCheckBoxMenuItem this]
+  (^javax.accessibility.AccessibleContext [^JCheckBoxMenuItem this]
     (-> this (.getAccessibleContext))))
 

@@ -30,6 +30,6 @@
    other Driver methods or throw a SQLException.
    Consult your JDBC driver's documentation for additional information
    on its behavior."
-  ([^java.sql.DriverAction this]
+  ([^DriverAction this]
     (-> this (.deregister))))
 

@@ -59,7 +59,7 @@
 
 (defn ->permission-collection
   "Constructor."
-  ([]
+  (^PermissionCollection []
     (new PermissionCollection )))
 
 (defn add
@@ -68,7 +68,7 @@
   permission - the Permission object to add. - `java.security.Permission`
 
   throws: java.lang.SecurityException - - if this PermissionCollection object has been marked readonly"
-  ([^java.security.PermissionCollection this ^java.security.Permission permission]
+  ([^PermissionCollection this ^java.security.Permission permission]
     (-> this (.add permission))))
 
 (defn implies
@@ -79,14 +79,14 @@
 
   returns: true if `permission` is implied by the  permissions in
    the collection, false if not. - `boolean`"
-  (^Boolean [^java.security.PermissionCollection this ^java.security.Permission permission]
+  (^Boolean [^PermissionCollection this ^java.security.Permission permission]
     (-> this (.implies permission))))
 
 (defn elements
   "Returns an enumeration of all the Permission objects in the collection.
 
   returns: an enumeration of all the Permissions. - `java.util.Enumeration<java.security.Permission>`"
-  (^java.util.Enumeration [^java.security.PermissionCollection this]
+  (^java.util.Enumeration [^PermissionCollection this]
     (-> this (.elements))))
 
 (defn set-read-only
@@ -94,7 +94,7 @@
    a PermissionCollection object
    is marked as readonly, no new Permission objects can be added to it
    using add."
-  ([^java.security.PermissionCollection this]
+  ([^PermissionCollection this]
     (-> this (.setReadOnly))))
 
 (defn read-only?
@@ -107,7 +107,7 @@
 
   returns: true if this PermissionCollection object is marked as readonly,
    false otherwise. - `boolean`"
-  (^Boolean [^java.security.PermissionCollection this]
+  (^Boolean [^PermissionCollection this]
     (-> this (.isReadOnly))))
 
 (defn to-string
@@ -131,6 +131,6 @@
 
   returns: information about this PermissionCollection object,
            as described above. - `java.lang.String`"
-  (^java.lang.String [^java.security.PermissionCollection this]
+  (^java.lang.String [^PermissionCollection this]
     (-> this (.toString))))
 

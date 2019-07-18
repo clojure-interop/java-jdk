@@ -5,7 +5,7 @@
 
 (defn ->basic-tree-ui
   "Constructor."
-  ([]
+  (^BasicTreeUI []
     (new BasicTreeUI )))
 
 (defn *create-ui
@@ -19,7 +19,7 @@
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JComponent c]
+  ([^BasicTreeUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn get-minimum-size
@@ -29,12 +29,12 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicTreeUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-right-child-indent
   "returns: `int`"
-  (^Integer [^javax.swing.plaf.basic.BasicTreeUI this]
+  (^Integer [^BasicTreeUI this]
     (-> this (.getRightChildIndent))))
 
 (defn get-row-for-path
@@ -46,7 +46,7 @@
   path - `javax.swing.tree.TreePath`
 
   returns: `int`"
-  (^Integer [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JTree tree ^javax.swing.tree.TreePath path]
+  (^Integer [^BasicTreeUI this ^javax.swing.JTree tree ^javax.swing.tree.TreePath path]
     (-> this (.getRowForPath tree path))))
 
 (defn get-maximum-size
@@ -56,12 +56,12 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicTreeUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn set-right-child-indent
   "new-amount - `int`"
-  ([^javax.swing.plaf.basic.BasicTreeUI this ^Integer new-amount]
+  ([^BasicTreeUI this ^Integer new-amount]
     (-> this (.setRightChildIndent new-amount))))
 
 (defn get-path-bounds
@@ -73,14 +73,14 @@
   path - `javax.swing.tree.TreePath`
 
   returns: `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JTree tree ^javax.swing.tree.TreePath path]
+  (^java.awt.Rectangle [^BasicTreeUI this ^javax.swing.JTree tree ^javax.swing.tree.TreePath path]
     (-> this (.getPathBounds tree path))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JComponent c]
+  ([^BasicTreeUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-row-count
@@ -89,12 +89,12 @@
   tree - `javax.swing.JTree`
 
   returns: `int`"
-  (^Integer [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JTree tree]
+  (^Integer [^BasicTreeUI this ^javax.swing.JTree tree]
     (-> this (.getRowCount tree))))
 
 (defn get-expanded-icon
   "returns: `javax.swing.Icon`"
-  (^javax.swing.Icon [^javax.swing.plaf.basic.BasicTreeUI this]
+  (^javax.swing.Icon [^BasicTreeUI this]
     (-> this (.getExpandedIcon))))
 
 (defn get-baseline-resize-behavior
@@ -104,10 +104,10 @@
   c - JComponent to return baseline resize behavior for - `javax.swing.JComponent`
 
   returns: an enum indicating how the baseline changes as the component
-           size changes - `java.awt.Component.BaselineResizeBehavior`
+           size changes - `java.awt.Component$BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JComponent c]
+  (^java.awt.Component$BaselineResizeBehavior [^BasicTreeUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn get-closest-path-for-location
@@ -122,19 +122,19 @@
   y - `int`
 
   returns: `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JTree tree ^Integer x ^Integer y]
+  (^javax.swing.tree.TreePath [^BasicTreeUI this ^javax.swing.JTree tree ^Integer x ^Integer y]
     (-> this (.getClosestPathForLocation tree x y))))
 
 (defn set-collapsed-icon
   "new-g - `javax.swing.Icon`"
-  ([^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.Icon new-g]
+  ([^BasicTreeUI this ^javax.swing.Icon new-g]
     (-> this (.setCollapsedIcon new-g))))
 
 (defn get-preferred-min-size
   "Returns the minimum preferred size.
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTreeUI this]
+  (^java.awt.Dimension [^BasicTreeUI this]
     (-> this (.getPreferredMinSize))))
 
 (defn paint
@@ -142,17 +142,17 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicTreeUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^BasicTreeUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn set-left-child-indent
   "new-amount - `int`"
-  ([^javax.swing.plaf.basic.BasicTreeUI this ^Integer new-amount]
+  ([^BasicTreeUI this ^Integer new-amount]
     (-> this (.setLeftChildIndent new-amount))))
 
 (defn set-expanded-icon
   "new-g - `javax.swing.Icon`"
-  ([^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.Icon new-g]
+  ([^BasicTreeUI this ^javax.swing.Icon new-g]
     (-> this (.setExpandedIcon new-g))))
 
 (defn get-path-for-row
@@ -163,7 +163,7 @@
   row - `int`
 
   returns: `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JTree tree ^Integer row]
+  (^javax.swing.tree.TreePath [^BasicTreeUI this ^javax.swing.JTree tree ^Integer row]
     (-> this (.getPathForRow tree row))))
 
 (defn get-editing-path
@@ -172,12 +172,12 @@
   tree - `javax.swing.JTree`
 
   returns: `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JTree tree]
+  (^javax.swing.tree.TreePath [^BasicTreeUI this ^javax.swing.JTree tree]
     (-> this (.getEditingPath tree))))
 
 (defn get-left-child-indent
   "returns: `int`"
-  (^Integer [^javax.swing.plaf.basic.BasicTreeUI this]
+  (^Integer [^BasicTreeUI this]
     (-> this (.getLeftChildIndent))))
 
 (defn editing?
@@ -187,7 +187,7 @@
   tree - `javax.swing.JTree`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JTree tree]
+  (^Boolean [^BasicTreeUI this ^javax.swing.JTree tree]
     (-> this (.isEditing tree))))
 
 (defn get-baseline
@@ -201,7 +201,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^Integer [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^BasicTreeUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn start-editing-at-path
@@ -210,12 +210,12 @@
 
   tree - `javax.swing.JTree`
   path - `javax.swing.tree.TreePath`"
-  ([^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JTree tree ^javax.swing.tree.TreePath path]
+  ([^BasicTreeUI this ^javax.swing.JTree tree ^javax.swing.tree.TreePath path]
     (-> this (.startEditingAtPath tree path))))
 
 (defn get-collapsed-icon
   "returns: `javax.swing.Icon`"
-  (^javax.swing.Icon [^javax.swing.plaf.basic.BasicTreeUI this]
+  (^javax.swing.Icon [^BasicTreeUI this]
     (-> this (.getCollapsedIcon))))
 
 (defn get-preferred-size
@@ -227,23 +227,23 @@
   check-consistency - `boolean`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JComponent c ^Boolean check-consistency]
+  (^java.awt.Dimension [^BasicTreeUI this ^javax.swing.JComponent c ^Boolean check-consistency]
     (-> this (.getPreferredSize c check-consistency)))
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicTreeUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn cancel-editing
   "Cancels the current editing session.
 
   tree - `javax.swing.JTree`"
-  ([^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JTree tree]
+  ([^BasicTreeUI this ^javax.swing.JTree tree]
     (-> this (.cancelEditing tree))))
 
 (defn set-preferred-min-size
   "Sets the preferred minimum size.
 
   new-size - `java.awt.Dimension`"
-  ([^javax.swing.plaf.basic.BasicTreeUI this ^java.awt.Dimension new-size]
+  ([^BasicTreeUI this ^java.awt.Dimension new-size]
     (-> this (.setPreferredMinSize new-size))))
 
 (defn stop-editing
@@ -254,6 +254,6 @@
   tree - `javax.swing.JTree`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.plaf.basic.BasicTreeUI this ^javax.swing.JTree tree]
+  (^Boolean [^BasicTreeUI this ^javax.swing.JTree tree]
     (-> this (.stopEditing tree))))
 

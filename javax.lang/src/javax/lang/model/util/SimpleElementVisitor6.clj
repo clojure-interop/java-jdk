@@ -45,20 +45,20 @@
   "Visits a package element. This implementation calls defaultAction.
 
   e - the element to visit - `javax.lang.model.element.PackageElement`
-  p - a visitor-specified parameter - `SimpleElementVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleElementVisitor6.R`"
-  (^SimpleElementVisitor6.R [^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.PackageElement e ^SimpleElementVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleElementVisitor6 this ^javax.lang.model.element.PackageElement e p]
     (-> this (.visitPackage e p))))
 
 (defn visit-type
   "Visits a type element. This implementation calls defaultAction.
 
   e - the element to visit - `javax.lang.model.element.TypeElement`
-  p - a visitor-specified parameter - `SimpleElementVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleElementVisitor6.R`"
-  (^SimpleElementVisitor6.R [^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.TypeElement e ^SimpleElementVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleElementVisitor6 this ^javax.lang.model.element.TypeElement e p]
     (-> this (.visitType e p))))
 
 (defn visit-variable
@@ -68,29 +68,29 @@
    element is a RESOURCE_VARIABLE in which case visitUnknown is called.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `SimpleElementVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction or visitUnknown - `SimpleElementVisitor6.R`"
-  (^SimpleElementVisitor6.R [^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.VariableElement e ^SimpleElementVisitor6.P p]
+  returns: the result of defaultAction or visitUnknown - `R`"
+  ([^SimpleElementVisitor6 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariable e p))))
 
 (defn visit-executable
   "Visits an executable element. This implementation calls defaultAction.
 
   e - the element to visit - `javax.lang.model.element.ExecutableElement`
-  p - a visitor-specified parameter - `SimpleElementVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleElementVisitor6.R`"
-  (^SimpleElementVisitor6.R [^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.ExecutableElement e ^SimpleElementVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleElementVisitor6 this ^javax.lang.model.element.ExecutableElement e p]
     (-> this (.visitExecutable e p))))
 
 (defn visit-type-parameter
   "Visits a type parameter element. This implementation calls defaultAction.
 
   e - the element to visit - `javax.lang.model.element.TypeParameterElement`
-  p - a visitor-specified parameter - `SimpleElementVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleElementVisitor6.R`"
-  (^SimpleElementVisitor6.R [^javax.lang.model.util.SimpleElementVisitor6 this ^javax.lang.model.element.TypeParameterElement e ^SimpleElementVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleElementVisitor6 this ^javax.lang.model.element.TypeParameterElement e p]
     (-> this (.visitTypeParameter e p))))
 

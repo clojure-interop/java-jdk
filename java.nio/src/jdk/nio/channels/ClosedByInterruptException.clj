@@ -10,6 +10,6 @@
   "Constructor.
 
   Constructs an instance of this class."
-  ([]
+  (^ClosedByInterruptException []
     (new ClosedByInterruptException )))
 

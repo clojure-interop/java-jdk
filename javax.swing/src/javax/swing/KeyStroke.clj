@@ -69,8 +69,8 @@
   returns: a KeyStroke object for that key - `javax.swing.KeyStroke`"
   (^javax.swing.KeyStroke [^Integer key-code ^Integer modifiers ^Boolean on-key-release]
     (KeyStroke/getKeyStroke key-code modifiers on-key-release))
-  (^javax.swing.KeyStroke [^java.lang.Character key-char ^Integer modifiers]
-    (KeyStroke/getKeyStroke key-char modifiers))
+  (^javax.swing.KeyStroke [^Character key-char ^Boolean on-key-release]
+    (KeyStroke/getKeyStroke key-char on-key-release))
   (^javax.swing.KeyStroke [^Character key-char]
     (KeyStroke/getKeyStroke key-char)))
 

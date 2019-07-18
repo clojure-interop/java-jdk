@@ -11,8 +11,8 @@
 (defn accept
   "Performs this operation on the given argument.
 
-  t - the input argument - `Consumer.T`"
-  ([^java.util.function.Consumer this ^Consumer.T t]
+  t - the input argument - `T`"
+  ([^Consumer this t]
     (-> this (.accept t))))
 
 (defn and-then
@@ -22,12 +22,12 @@
    composed operation.  If performing this operation throws an exception,
    the after operation will not be performed.
 
-  after - the operation to perform after this operation - `Consumer.T>`
+  after - the operation to perform after this operation - `java.util.function.Consumer`
 
   returns: a composed Consumer that performs in sequence this
-   operation followed by the after operation - `default java.util.function.Consumer<Consumer.T>`
+   operation followed by the after operation - `default java.util.function.Consumer<T>`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([^java.util.function.Consumer this ^Consumer.T> after]
+  ([^Consumer this ^java.util.function.Consumer after]
     (-> this (.andThen after))))
 

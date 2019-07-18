@@ -13,8 +13,8 @@
    the specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^StringIndexOutOfBoundsException [^java.lang.String s]
     (new StringIndexOutOfBoundsException s))
-  ([]
+  (^StringIndexOutOfBoundsException []
     (new StringIndexOutOfBoundsException )))
 

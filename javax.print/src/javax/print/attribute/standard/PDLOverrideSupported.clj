@@ -40,7 +40,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.PDLOverrideSupported this]
+  ([^PDLOverrideSupported this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -51,6 +51,6 @@
    category name is `pdl-override-supported`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.PDLOverrideSupported this]
+  (^java.lang.String [^PDLOverrideSupported this]
     (-> this (.getName))))
 

@@ -8,8 +8,8 @@
    should notify all registered ListDataListeners that the
    item has been added.
 
-  item - the item to be added - `MutableComboBoxModel.E`"
-  ([^javax.swing.MutableComboBoxModel this ^MutableComboBoxModel.E item]
+  item - the item to be added - `E`"
+  ([^MutableComboBoxModel this item]
     (-> this (.addElement item))))
 
 (defn remove-element
@@ -18,7 +18,7 @@
    item has been removed.
 
   obj - the Object to be removed - `java.lang.Object`"
-  ([^javax.swing.MutableComboBoxModel this ^java.lang.Object obj]
+  ([^MutableComboBoxModel this ^java.lang.Object obj]
     (-> this (.removeElement obj))))
 
 (defn insert-element-at
@@ -26,9 +26,9 @@
    should notify all registered ListDataListeners that the
    item has been added.
 
-  item - the item to be added - `MutableComboBoxModel.E`
+  item - the item to be added - `E`
   index - location to add the object - `int`"
-  ([^javax.swing.MutableComboBoxModel this ^MutableComboBoxModel.E item ^Integer index]
+  ([^MutableComboBoxModel this item ^Integer index]
     (-> this (.insertElementAt item index))))
 
 (defn remove-element-at
@@ -37,6 +37,6 @@
    item has been removed.
 
   index - location of the item to be removed - `int`"
-  ([^javax.swing.MutableComboBoxModel this ^Integer index]
+  ([^MutableComboBoxModel this ^Integer index]
     (-> this (.removeElementAt index))))
 

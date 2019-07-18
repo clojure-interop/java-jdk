@@ -44,28 +44,28 @@
   s - the instance of MenuShortcut associated with this menu item. - `java.awt.MenuShortcut`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([^java.lang.String label ^java.awt.MenuShortcut s]
+  (^MenuItem [^java.lang.String label ^java.awt.MenuShortcut s]
     (new MenuItem label s))
-  ([^java.lang.String label]
+  (^MenuItem [^java.lang.String label]
     (new MenuItem label))
-  ([]
+  (^MenuItem []
     (new MenuItem )))
 
 (defn delete-shortcut
   "Delete any MenuShortcut object associated
    with this menu item."
-  ([^java.awt.MenuItem this]
+  ([^MenuItem this]
     (-> this (.deleteShortcut))))
 
 (defn enable
   "Deprecated. As of JDK version 1.1,
    replaced by setEnabled(boolean).
 
-  returns: `java.lang.  void`"
-  ([^java.awt.MenuItem this]
-    (-> this (.enable)))
-  ([^java.awt.MenuItem this ^Boolean b]
-    (-> this (.enable b))))
+  b - `boolean`"
+  ([^MenuItem this ^Boolean b]
+    (-> this (.enable b)))
+  ([^MenuItem this]
+    (-> this (.enable))))
 
 (defn add-action-listener
   "Adds the specified action listener to receive action events
@@ -74,21 +74,19 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the action listener. - `java.awt.event.ActionListener`"
-  ([^java.awt.MenuItem this ^java.awt.event.ActionListener l]
+  ([^MenuItem this ^java.awt.event.ActionListener l]
     (-> this (.addActionListener l))))
 
 (defn add-notify
   "Creates the menu item's peer.  The peer allows us to modify the
    appearance of the menu item without changing its functionality."
-  ([^java.awt.MenuItem this]
+  ([^MenuItem this]
     (-> this (.addNotify))))
 
 (defn disable
   "Deprecated. As of JDK version 1.1,
-   replaced by setEnabled(boolean).
-
-  returns: `java.lang.  void`"
-  ([^java.awt.MenuItem this]
+   replaced by setEnabled(boolean)."
+  ([^MenuItem this]
     (-> this (.disable))))
 
 (defn get-action-listeners
@@ -98,7 +96,7 @@
   returns: all of this menu item's ActionListeners
            or an empty array if no action
            listeners are currently registered - `java.awt.event.ActionListener[]`"
-  ([^java.awt.MenuItem this]
+  ([^MenuItem this]
     (-> this (.getActionListeners))))
 
 (defn get-label
@@ -106,7 +104,7 @@
 
   returns: the label of this menu item, or null
                          if this menu item has no label. - `java.lang.String`"
-  (^java.lang.String [^java.awt.MenuItem this]
+  (^java.lang.String [^MenuItem this]
     (-> this (.getLabel))))
 
 (defn get-accessible-context
@@ -117,7 +115,7 @@
 
   returns: an AccessibleAWTMenuItem that serves as the
            AccessibleContext of this MenuItem - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^java.awt.MenuItem this]
+  (^javax.accessibility.AccessibleContext [^MenuItem this]
     (-> this (.getAccessibleContext))))
 
 (defn param-string
@@ -128,14 +126,14 @@
    null.
 
   returns: the parameter string of this menu item - `java.lang.String`"
-  (^java.lang.String [^java.awt.MenuItem this]
+  (^java.lang.String [^MenuItem this]
     (-> this (.paramString))))
 
 (defn set-enabled
   "Sets whether or not this menu item can be chosen.
 
   b - if true, enables this menu item; if false, disables it. - `boolean`"
-  ([^java.awt.MenuItem this ^Boolean b]
+  ([^MenuItem this ^Boolean b]
     (-> this (.setEnabled b))))
 
 (defn remove-action-listener
@@ -145,7 +143,7 @@
    Refer to AWT Threading Issues for details on AWT's threading model.
 
   l - the action listener. - `java.awt.event.ActionListener`"
-  ([^java.awt.MenuItem this ^java.awt.event.ActionListener l]
+  ([^MenuItem this ^java.awt.event.ActionListener l]
     (-> this (.removeActionListener l))))
 
 (defn set-shortcut
@@ -154,7 +152,7 @@
    this menu item, it is replaced.
 
   s - the menu shortcut to associate with this menu item. - `java.awt.MenuShortcut`"
-  ([^java.awt.MenuItem this ^java.awt.MenuShortcut s]
+  ([^MenuItem this ^java.awt.MenuShortcut s]
     (-> this (.setShortcut s))))
 
 (defn get-listeners
@@ -178,7 +176,7 @@
 
    If no such listeners exist, this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners on this menu item,
@@ -186,7 +184,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^java.awt.MenuItem this ^java.lang.Class listener-type]
+  ([^MenuItem this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn get-action-command
@@ -194,7 +192,7 @@
    by this menu item.
 
   returns: `java.lang.String`"
-  (^java.lang.String [^java.awt.MenuItem this]
+  (^java.lang.String [^MenuItem this]
     (-> this (.getActionCommand))))
 
 (defn set-action-command
@@ -205,21 +203,21 @@
    the menu item.
 
   command - the action command to be set for this menu item. - `java.lang.String`"
-  ([^java.awt.MenuItem this ^java.lang.String command]
+  ([^MenuItem this ^java.lang.String command]
     (-> this (.setActionCommand command))))
 
 (defn enabled?
   "Checks whether this menu item is enabled.
 
   returns: `boolean`"
-  (^Boolean [^java.awt.MenuItem this]
+  (^Boolean [^MenuItem this]
     (-> this (.isEnabled))))
 
 (defn set-label
   "Sets the label for this menu item to the specified label.
 
   label - the new label, or null for no label. - `java.lang.String`"
-  ([^java.awt.MenuItem this ^java.lang.String label]
+  ([^MenuItem this ^java.lang.String label]
     (-> this (.setLabel label))))
 
 (defn get-shortcut
@@ -228,6 +226,6 @@
 
   returns: the menu shortcut associated with this menu item,
                      or null if none has been specified. - `java.awt.MenuShortcut`"
-  (^java.awt.MenuShortcut [^java.awt.MenuItem this]
+  (^java.awt.MenuShortcut [^MenuItem this]
     (-> this (.getShortcut))))
 

@@ -11,8 +11,8 @@
    has been thrown.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^UnrecoverableKeyException [^java.lang.String msg]
     (new UnrecoverableKeyException msg))
-  ([]
+  (^UnrecoverableKeyException []
     (new UnrecoverableKeyException )))
 

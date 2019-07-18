@@ -13,7 +13,7 @@
   Constructs a new view wrapped on an element.
 
   elem - the element - `javax.swing.text.Element`"
-  ([^javax.swing.text.Element elem]
+  (^PasswordView [^javax.swing.text.Element elem]
     (new PasswordView elem)))
 
 (defn model-to-view
@@ -22,12 +22,12 @@
 
   pos - the position to convert >= 0 - `int`
   a - the allocated region to render into - `java.awt.Shape`
-  b - the bias toward the previous character or the next character represented by the offset, in case the position is a boundary of two views; b will have one of these values: Position.Bias.Forward Position.Bias.Backward - `javax.swing.text.Position.Bias`
+  b - the bias toward the previous character or the next character represented by the offset, in case the position is a boundary of two views; b will have one of these values: Position.Bias.Forward Position.Bias.Backward - `javax.swing.text.Position$Bias`
 
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  (^java.awt.Shape [^javax.swing.text.PasswordView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
+  (^java.awt.Shape [^PasswordView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position$Bias b]
     (-> this (.modelToView pos a b))))
 
 (defn view-to-model
@@ -37,11 +37,11 @@
   fx - the X coordinate >= 0.0f - `float`
   fy - the Y coordinate >= 0.0f - `float`
   a - the allocated region to render into - `java.awt.Shape`
-  bias - `javax.swing.text.Position.Bias[]`
+  bias - `javax.swing.text.Position$Bias[]`
 
   returns: the location within the model that best represents the
     given point in the view - `int`"
-  (^Integer [^javax.swing.text.PasswordView this ^Float fx ^Float fy ^java.awt.Shape a bias]
+  (^Integer [^PasswordView this ^Float fx ^Float fy ^java.awt.Shape a bias]
     (-> this (.viewToModel fx fy a bias))))
 
 (defn get-preferred-span
@@ -54,6 +54,6 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  (^Float [^javax.swing.text.PasswordView this ^Integer axis]
+  (^Float [^PasswordView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 

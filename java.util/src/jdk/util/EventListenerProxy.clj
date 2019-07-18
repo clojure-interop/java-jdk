@@ -28,14 +28,14 @@
 
   Creates a proxy for the specified listener.
 
-  listener - the listener object - `EventListenerProxy.T`"
-  ([^EventListenerProxy.T listener]
+  listener - the listener object - `T`"
+  (^EventListenerProxy [listener]
     (new EventListenerProxy listener)))
 
 (defn get-listener
   "Returns the listener associated with the proxy.
 
-  returns: the listener associated with the proxy - `EventListenerProxy.T`"
-  (^EventListenerProxy.T [^java.util.EventListenerProxy this]
+  returns: the listener associated with the proxy - `T`"
+  ([^EventListenerProxy this]
     (-> this (.getListener))))
 

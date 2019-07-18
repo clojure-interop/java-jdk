@@ -14,7 +14,7 @@
 
 (defn ->schema-output-resolver
   "Constructor."
-  ([]
+  (^SchemaOutputResolver []
     (new SchemaOutputResolver )))
 
 (defn create-output
@@ -44,6 +44,6 @@
         namespace URI will be skipped. - `javax.xml.transform.Result`
 
   throws: java.io.IOException"
-  (^javax.xml.transform.Result [^javax.xml.bind.SchemaOutputResolver this ^java.lang.String namespace-uri ^java.lang.String suggested-file-name]
+  (^javax.xml.transform.Result [^SchemaOutputResolver this ^java.lang.String namespace-uri ^java.lang.String suggested-file-name]
     (-> this (.createOutput namespace-uri suggested-file-name))))
 

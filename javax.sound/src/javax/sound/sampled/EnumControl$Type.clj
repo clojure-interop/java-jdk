@@ -14,6 +14,6 @@
    invoke EnumControl.getValues() on an
    enumerated control of type REVERB.)
 
-  type: javax.sound.sampled.EnumControl.Type"
+  type: javax.sound.sampled.EnumControl$Type"
   EnumControl$Type/REVERB)
 

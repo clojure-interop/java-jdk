@@ -10,8 +10,8 @@
   An InvalidKeyException with a detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^InvalidKeyException [^java.lang.String msg]
     (new InvalidKeyException msg))
-  ([]
+  (^InvalidKeyException []
     (new InvalidKeyException )))
 

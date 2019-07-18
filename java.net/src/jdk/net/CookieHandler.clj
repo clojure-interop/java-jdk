@@ -17,7 +17,7 @@
 
 (defn ->cookie-handler
   "Constructor."
-  ([]
+  (^CookieHandler []
     (new CookieHandler )))
 
 (defn *get-default
@@ -59,14 +59,14 @@
    are added, and before the request is sent.
 
   uri - a URI representing the intended use for the cookies - `java.net.URI`
-  request-headers - - a Map from request header field names to lists of field values representing the current request headers - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
+  request-headers - - a Map from request header field names to lists of field values representing the current request headers - `java.util.Map`
 
   returns: an immutable map from state management headers, with
               field names `Cookie` or `Cookie2` to a list of
               cookies containing state information - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.util.Map> [^java.net.CookieHandler this ^java.net.URI uri ^java.util.Map> request-headers]
+  (^java.util.Map [^CookieHandler this ^java.net.URI uri ^java.util.Map request-headers]
     (-> this (.get uri request-headers))))
 
 (defn put
@@ -75,9 +75,9 @@
    headers into a cookie cache.
 
   uri - a URI where the cookies come from - `java.net.URI`
-  response-headers - an immutable map from field names to lists of field values representing the response header fields returned - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
+  response-headers - an immutable map from field names to lists of field values representing the response header fields returned - `java.util.Map`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.net.CookieHandler this ^java.net.URI uri ^java.util.Map> response-headers]
+  ([^CookieHandler this ^java.net.URI uri ^java.util.Map response-headers]
     (-> this (.put uri response-headers))))
 

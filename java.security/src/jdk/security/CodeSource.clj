@@ -13,14 +13,14 @@
 
   url - the location (URL). - `java.net.URL`
   certs - the certificate(s). It may be null. The contents of the array are copied to protect against subsequent modification. - `java.security.cert.Certificate[]`"
-  ([^java.net.URL url certs]
+  (^CodeSource [^java.net.URL url certs]
     (new CodeSource url certs)))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.security.CodeSource this]
+  (^Integer [^CodeSource this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -33,14 +33,14 @@
   obj - the object to test for equality with this object. - `java.lang.Object`
 
   returns: true if the objects are considered equal, false otherwise. - `boolean`"
-  (^Boolean [^java.security.CodeSource this ^java.lang.Object obj]
+  (^Boolean [^CodeSource this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn get-location
   "Returns the location associated with this CodeSource.
 
   returns: the location (URL). - `java.net.URL`"
-  (^java.net.URL [^java.security.CodeSource this]
+  (^java.net.URL [^CodeSource this]
     (-> this (.getLocation))))
 
 (defn get-certificates
@@ -56,7 +56,7 @@
    certificate authority last).
 
   returns: A copy of the certificates array, or null if there is none. - `java.security.cert.Certificate[]`"
-  ([^java.security.CodeSource this]
+  ([^CodeSource this]
     (-> this (.getCertificates))))
 
 (defn get-code-signers
@@ -69,7 +69,7 @@
    are examined - all other certificate types are ignored.
 
   returns: A copy of the code signer array, or null if there is none. - `java.security.CodeSigner[]`"
-  ([^java.security.CodeSource this]
+  ([^CodeSource this]
     (-> this (.getCodeSigners))))
 
 (defn implies
@@ -140,7 +140,7 @@
 
   returns: true if the specified codesource is implied by this codesource,
    false if not. - `boolean`"
-  (^Boolean [^java.security.CodeSource this ^java.security.CodeSource codesource]
+  (^Boolean [^CodeSource this ^java.security.CodeSource codesource]
     (-> this (.implies codesource))))
 
 (defn to-string
@@ -148,6 +148,6 @@
    URL and certificates.
 
   returns: information about this CodeSource. - `java.lang.String`"
-  (^java.lang.String [^java.security.CodeSource this]
+  (^java.lang.String [^CodeSource this]
     (-> this (.toString))))
 

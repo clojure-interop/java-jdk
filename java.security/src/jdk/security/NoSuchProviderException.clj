@@ -12,8 +12,8 @@
    particular exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^NoSuchProviderException [^java.lang.String msg]
     (new NoSuchProviderException msg))
-  ([]
+  (^NoSuchProviderException []
     (new NoSuchProviderException )))
 

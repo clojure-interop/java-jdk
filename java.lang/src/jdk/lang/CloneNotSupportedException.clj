@@ -17,8 +17,8 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^CloneNotSupportedException [^java.lang.String s]
     (new CloneNotSupportedException s))
-  ([]
+  (^CloneNotSupportedException []
     (new CloneNotSupportedException )))
 

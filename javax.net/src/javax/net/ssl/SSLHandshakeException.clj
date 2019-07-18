@@ -11,6 +11,6 @@
    an SSL subsystem during handshaking.
 
   reason - describes the problem. - `java.lang.String`"
-  ([^java.lang.String reason]
+  (^SSLHandshakeException [^java.lang.String reason]
     (new SSLHandshakeException reason)))
 

@@ -68,15 +68,15 @@
   "Constructor.
 
   dtd - `javax.swing.text.html.parser.DTD`"
-  ([^javax.swing.text.html.parser.DTD dtd]
+  (^DocumentParser [^javax.swing.text.html.parser.DTD dtd]
     (new DocumentParser dtd)))
 
 (defn parse
   "in - `java.io.Reader`
-  callback - `javax.swing.text.html.HTMLEditorKit.ParserCallback`
+  callback - `javax.swing.text.html.HTMLEditorKit$ParserCallback`
   ignore-char-set - `boolean`
 
   throws: java.io.IOException"
-  ([^javax.swing.text.html.parser.DocumentParser this ^java.io.Reader in ^javax.swing.text.html.HTMLEditorKit.ParserCallback callback ^Boolean ignore-char-set]
+  ([^DocumentParser this ^java.io.Reader in ^javax.swing.text.html.HTMLEditorKit$ParserCallback callback ^Boolean ignore-char-set]
     (-> this (.parse in callback ignore-char-set))))
 

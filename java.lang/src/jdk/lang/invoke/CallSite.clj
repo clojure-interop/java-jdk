@@ -59,7 +59,7 @@
    not have the previous target's type.
 
   returns: the type of the current target, which is also the type of any future target - `java.lang.invoke.MethodType`"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.CallSite this]
+  (^java.lang.invoke.MethodType [^CallSite this]
     (-> this (.type))))
 
 (defn get-target
@@ -69,7 +69,7 @@
    class-specific behaviors of this method.
 
   returns: the current linkage state of the call site, its target method handle - `java.lang.invoke.MethodHandle`"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.CallSite this]
+  (^java.lang.invoke.MethodHandle [^CallSite this]
     (-> this (.getTarget))))
 
 (defn set-target
@@ -84,7 +84,7 @@
   new-target - the new target - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the proposed new target is null"
-  ([^java.lang.invoke.CallSite this ^java.lang.invoke.MethodHandle new-target]
+  ([^CallSite this ^java.lang.invoke.MethodHandle new-target]
     (-> this (.setTarget new-target))))
 
 (defn dynamic-invoker
@@ -100,6 +100,6 @@
    result = MethodHandles.foldArguments(invoker, getTarget)
 
   returns: a method handle which always invokes this call site's current target - `java.lang.invoke.MethodHandle`"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.CallSite this]
+  (^java.lang.invoke.MethodHandle [^CallSite this]
     (-> this (.dynamicInvoker))))
 

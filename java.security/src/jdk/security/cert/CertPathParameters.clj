@@ -12,6 +12,6 @@
    copy will not affect the original and vice versa.
 
   returns: a copy of this CertPathParameters - `java.lang.Object`"
-  (^java.lang.Object [^java.security.cert.CertPathParameters this]
+  (^java.lang.Object [^CertPathParameters this]
     (-> this (.clone))))
 

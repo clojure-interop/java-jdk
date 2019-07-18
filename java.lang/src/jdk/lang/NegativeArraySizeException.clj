@@ -10,8 +10,8 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^NegativeArraySizeException [^java.lang.String s]
     (new NegativeArraySizeException s))
-  ([]
+  (^NegativeArraySizeException []
     (new NegativeArraySizeException )))
 

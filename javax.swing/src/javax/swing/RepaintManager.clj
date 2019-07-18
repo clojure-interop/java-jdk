@@ -17,7 +17,7 @@
   Create a new RepaintManager instance. You rarely call this constructor.
    directly. To get the default RepaintManager, use
    RepaintManager.currentManager(JComponent) (normally `this`)."
-  ([]
+  (^RepaintManager []
     (new RepaintManager )))
 
 (defn *current-manager
@@ -43,19 +43,19 @@
    get painted during the next paintDirtyRegions() call.
 
   a-component - `javax.swing.JComponent`"
-  ([^javax.swing.RepaintManager this ^javax.swing.JComponent a-component]
+  ([^RepaintManager this ^javax.swing.JComponent a-component]
     (-> this (.markCompletelyClean a-component))))
 
 (defn set-double-buffer-maximum-size
   "Set the maximum double buffer size.
 
   d - `java.awt.Dimension`"
-  ([^javax.swing.RepaintManager this ^java.awt.Dimension d]
+  ([^RepaintManager this ^java.awt.Dimension d]
     (-> this (.setDoubleBufferMaximumSize d))))
 
 (defn validate-invalid-components
   "Validate all of the components that have been marked invalid."
-  ([^javax.swing.RepaintManager this]
+  ([^RepaintManager this]
     (-> this (.validateInvalidComponents))))
 
 (defn get-dirty-region
@@ -66,14 +66,14 @@
   a-component - `javax.swing.JComponent`
 
   returns: `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.RepaintManager this ^javax.swing.JComponent a-component]
+  (^java.awt.Rectangle [^RepaintManager this ^javax.swing.JComponent a-component]
     (-> this (.getDirtyRegion a-component))))
 
 (defn get-double-buffer-maximum-size
   "Returns the maximum double buffer size.
 
   returns: a Dimension object representing the maximum size - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.RepaintManager this]
+  (^java.awt.Dimension [^RepaintManager this]
     (-> this (.getDoubleBufferMaximumSize))))
 
 (defn to-string
@@ -81,7 +81,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  (^java.lang.String [^javax.swing.RepaintManager this]
+  (^java.lang.String [^RepaintManager this]
     (-> this (.toString))))
 
 (defn completely-dirty?
@@ -93,7 +93,7 @@
   a-component - `javax.swing.JComponent`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.RepaintManager this ^javax.swing.JComponent a-component]
+  (^Boolean [^RepaintManager this ^javax.swing.JComponent a-component]
     (-> this (.isCompletelyDirty a-component))))
 
 (defn mark-completely-dirty
@@ -101,7 +101,7 @@
    completely painted during the next paintDirtyRegions() call.
 
   a-component - `javax.swing.JComponent`"
-  ([^javax.swing.RepaintManager this ^javax.swing.JComponent a-component]
+  ([^RepaintManager this ^javax.swing.JComponent a-component]
     (-> this (.markCompletelyDirty a-component))))
 
 (defn get-offscreen-buffer
@@ -117,14 +117,14 @@
   proposed-height - `int`
 
   returns: `java.awt.Image`"
-  (^java.awt.Image [^javax.swing.RepaintManager this ^java.awt.Component c ^Integer proposed-width ^Integer proposed-height]
+  (^java.awt.Image [^RepaintManager this ^java.awt.Component c ^Integer proposed-width ^Integer proposed-height]
     (-> this (.getOffscreenBuffer c proposed-width proposed-height))))
 
 (defn remove-invalid-component
   "Remove a component from the list of invalid components.
 
   component - `javax.swing.JComponent`"
-  ([^javax.swing.RepaintManager this ^javax.swing.JComponent component]
+  ([^RepaintManager this ^javax.swing.JComponent component]
     (-> this (.removeInvalidComponent component))))
 
 (defn get-volatile-offscreen-buffer
@@ -141,12 +141,12 @@
   proposed-height - `int`
 
   returns: `java.awt.Image`"
-  (^java.awt.Image [^javax.swing.RepaintManager this ^java.awt.Component c ^Integer proposed-width ^Integer proposed-height]
+  (^java.awt.Image [^RepaintManager this ^java.awt.Component c ^Integer proposed-width ^Integer proposed-height]
     (-> this (.getVolatileOffscreenBuffer c proposed-width proposed-height))))
 
 (defn paint-dirty-regions
   "Paint all of the components that have been marked dirty."
-  ([^javax.swing.RepaintManager this]
+  ([^RepaintManager this]
     (-> this (.paintDirtyRegions))))
 
 (defn add-dirty-region
@@ -159,7 +159,7 @@
   y - Y coordinate of the region to repaint - `int`
   w - Width of the region to repaint - `int`
   h - Height of the region to repaint - `int`"
-  ([^javax.swing.RepaintManager this ^javax.swing.JComponent c ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^RepaintManager this ^javax.swing.JComponent c ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.addDirtyRegion c x y w h))))
 
 (defn add-invalid-component
@@ -168,7 +168,7 @@
    first isValidateRoot() ancestor.
 
   invalid-component - `javax.swing.JComponent`"
-  ([^javax.swing.RepaintManager this ^javax.swing.JComponent invalid-component]
+  ([^RepaintManager this ^javax.swing.JComponent invalid-component]
     (-> this (.addInvalidComponent invalid-component))))
 
 (defn set-double-buffering-enabled
@@ -178,7 +178,7 @@
    that programs modify this property directly.
 
   a-flag - true to activate double buffering - `boolean`"
-  ([^javax.swing.RepaintManager this ^Boolean a-flag]
+  ([^RepaintManager this ^Boolean a-flag]
     (-> this (.setDoubleBufferingEnabled a-flag))))
 
 (defn double-buffering-enabled?
@@ -191,6 +191,6 @@
    the default value will be true.
 
   returns: true if this object is double buffered - `boolean`"
-  (^Boolean [^javax.swing.RepaintManager this]
+  (^Boolean [^RepaintManager this]
     (-> this (.isDoubleBufferingEnabled))))
 

@@ -79,9 +79,9 @@
   returns: the current local date using the system clock, not null - `default java.time.chrono.ChronoLocalDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  ([^java.time.chrono.Chronology this ^java.time.ZoneId zone]
+  ([^Chronology this ^java.time.ZoneId zone]
     (-> this (.dateNow zone)))
-  ([^java.time.chrono.Chronology this]
+  ([^Chronology this]
     (-> this (.dateNow))))
 
 (defn range
@@ -101,7 +101,7 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  (^java.time.temporal.ValueRange [^java.time.chrono.Chronology this ^java.time.temporal.ChronoField field]
+  (^java.time.temporal.ValueRange [^Chronology this ^java.time.temporal.ChronoField field]
     (-> this (.range field))))
 
 (defn *of-locale
@@ -169,7 +169,7 @@
   returns: the local date-time in this chronology, not null - `default java.time.chrono.ChronoLocalDateTime<? extends java.time.chrono.ChronoLocalDate>`
 
   throws: java.time.DateTimeException - if unable to create the date-time"
-  ([^java.time.chrono.Chronology this ^java.time.temporal.TemporalAccessor temporal]
+  ([^Chronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.localDateTime temporal))))
 
 (defn *of
@@ -208,13 +208,13 @@
    The default implementation, which explains typical resolve behaviour,
    is provided in AbstractChronology.
 
-  field-values - the map of fields to values, which can be updated, not null - `java.util.Map<java.time.temporal.TemporalField,java.lang.Long>`
+  field-values - the map of fields to values, which can be updated, not null - `java.util.Map`
   resolver-style - the requested type of resolve, not null - `java.time.format.ResolverStyle`
 
   returns: the resolved date, null if insufficient information to create a date - `java.time.chrono.ChronoLocalDate`
 
   throws: java.time.DateTimeException - if the date cannot be resolved, typically because of a conflict in the input data"
-  (^java.time.chrono.ChronoLocalDate [^java.time.chrono.Chronology this ^java.util.Map field-values ^java.time.format.ResolverStyle resolver-style]
+  (^java.time.chrono.ChronoLocalDate [^Chronology this ^java.util.Map field-values ^java.time.format.ResolverStyle resolver-style]
     (-> this (.resolveDate field-values resolver-style))))
 
 (defn leap-year?
@@ -229,7 +229,7 @@
   proleptic-year - the proleptic-year to check, not validated for range - `long`
 
   returns: true if the year is a leap year - `boolean`"
-  (^Boolean [^java.time.chrono.Chronology this ^Long proleptic-year]
+  (^Boolean [^Chronology this ^Long proleptic-year]
     (-> this (.isLeapYear proleptic-year))))
 
 (defn date-year-day
@@ -243,9 +243,9 @@
   returns: the local date in this chronology, not null - `default java.time.chrono.ChronoLocalDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  ([^java.time.chrono.Chronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer day-of-year]
+  ([^Chronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer day-of-year]
     (-> this (.dateYearDay era year-of-era day-of-year)))
-  (^java.time.chrono.ChronoLocalDate [^java.time.chrono.Chronology this ^Integer proleptic-year ^Integer day-of-year]
+  (^java.time.chrono.ChronoLocalDate [^Chronology this ^Integer proleptic-year ^Integer day-of-year]
     (-> this (.dateYearDay proleptic-year day-of-year))))
 
 (defn to-string
@@ -254,7 +254,7 @@
    The format should include the entire state of the object.
 
   returns: a string representation of this chronology, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.chrono.Chronology this]
+  (^java.lang.String [^Chronology this]
     (-> this (.toString))))
 
 (defn date-epoch-day
@@ -268,7 +268,7 @@
   returns: the local date in this chronology, not null - `java.time.chrono.ChronoLocalDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  (^java.time.chrono.ChronoLocalDate [^java.time.chrono.Chronology this ^Long epoch-day]
+  (^java.time.chrono.ChronoLocalDate [^Chronology this ^Long epoch-day]
     (-> this (.dateEpochDay epoch-day))))
 
 (defn get-display-name
@@ -282,7 +282,7 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the text value of the chronology, not null - `default java.lang.String`"
-  ([^java.time.chrono.Chronology this ^java.time.format.TextStyle style ^java.util.Locale locale]
+  ([^Chronology this ^java.time.format.TextStyle style ^java.util.Locale locale]
     (-> this (.getDisplayName style locale))))
 
 (defn eras
@@ -293,7 +293,7 @@
    list must be returned.
 
   returns: the list of eras for the chronology, may be immutable, not null - `java.util.List<java.time.chrono.Era>`"
-  (^java.util.List [^java.time.chrono.Chronology this]
+  (^java.util.List [^Chronology this]
     (-> this (.eras))))
 
 (defn era-of
@@ -316,7 +316,7 @@
   returns: the calendar system era, not null - `java.time.chrono.Era`
 
   throws: java.time.DateTimeException - if unable to create the era"
-  (^java.time.chrono.Era [^java.time.chrono.Chronology this ^Integer era-value]
+  (^java.time.chrono.Era [^Chronology this ^Integer era-value]
     (-> this (.eraOf era-value))))
 
 (defn proleptic-year
@@ -334,7 +334,7 @@
   returns: the proleptic-year - `int`
 
   throws: java.time.DateTimeException - if unable to convert to a proleptic-year, such as if the year is invalid for the era"
-  (^Integer [^java.time.chrono.Chronology this ^java.time.chrono.Era era ^Integer year-of-era]
+  (^Integer [^Chronology this ^java.time.chrono.Era era ^Integer year-of-era]
     (-> this (.prolepticYear era year-of-era))))
 
 (defn get-calendar-type
@@ -348,7 +348,7 @@
    The calendar type is used to lookup the Chronology using of(String).
 
   returns: the calendar system type, null if the calendar is not defined by CLDR/LDML - `java.lang.String`"
-  (^java.lang.String [^java.time.chrono.Chronology this]
+  (^java.lang.String [^Chronology this]
     (-> this (.getCalendarType))))
 
 (defn get-id
@@ -358,7 +358,7 @@
    It can be used to lookup the Chronology using of(String).
 
   returns: the chronology ID, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.chrono.Chronology this]
+  (^java.lang.String [^Chronology this]
     (-> this (.getId))))
 
 (defn *get-available-chronologies
@@ -406,11 +406,11 @@
   returns: the local date in this chronology, not null - `default java.time.chrono.ChronoLocalDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  ([^java.time.chrono.Chronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer month ^Integer day-of-month]
+  ([^Chronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer month ^Integer day-of-month]
     (-> this (.date era year-of-era month day-of-month)))
-  (^java.time.chrono.ChronoLocalDate [^java.time.chrono.Chronology this ^Integer proleptic-year ^Integer month ^Integer day-of-month]
+  (^java.time.chrono.ChronoLocalDate [^Chronology this ^Integer proleptic-year ^Integer month ^Integer day-of-month]
     (-> this (.date proleptic-year month day-of-month)))
-  (^java.time.chrono.ChronoLocalDate [^java.time.chrono.Chronology this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.chrono.ChronoLocalDate [^Chronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.date temporal))))
 
 (defn hash-code
@@ -419,7 +419,7 @@
    The hash code should be based on the entire state of the object.
 
   returns: a suitable hash code - `int`"
-  (^Integer [^java.time.chrono.Chronology this]
+  (^Integer [^Chronology this]
     (-> this (.hashCode))))
 
 (defn period
@@ -435,7 +435,7 @@
   days - the number of years, may be negative - `int`
 
   returns: the period in terms of this chronology, not null - `default java.time.chrono.ChronoPeriod`"
-  ([^java.time.chrono.Chronology this ^Integer years ^Integer months ^Integer days]
+  ([^Chronology this ^Integer years ^Integer months ^Integer days]
     (-> this (.period years months days))))
 
 (defn compare-to
@@ -448,7 +448,7 @@
   other - the other chronology to compare to, not null - `java.time.chrono.Chronology`
 
   returns: the comparator value, negative if less, positive if greater - `int`"
-  (^Integer [^java.time.chrono.Chronology this ^java.time.chrono.Chronology other]
+  (^Integer [^Chronology this ^java.time.chrono.Chronology other]
     (-> this (.compareTo other))))
 
 (defn equals
@@ -459,7 +459,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other chronology - `boolean`"
-  (^Boolean [^java.time.chrono.Chronology this ^java.lang.Object obj]
+  (^Boolean [^Chronology this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn zoned-date-time
@@ -473,8 +473,8 @@
   returns: the zoned date-time, not null - `default java.time.chrono.ChronoZonedDateTime<? extends java.time.chrono.ChronoLocalDate>`
 
   throws: java.time.DateTimeException - if the result exceeds the supported range"
-  ([^java.time.chrono.Chronology this ^java.time.Instant instant ^java.time.ZoneId zone]
+  ([^Chronology this ^java.time.Instant instant ^java.time.ZoneId zone]
     (-> this (.zonedDateTime instant zone)))
-  ([^java.time.chrono.Chronology this ^java.time.temporal.TemporalAccessor temporal]
+  ([^Chronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.zonedDateTime temporal))))
 

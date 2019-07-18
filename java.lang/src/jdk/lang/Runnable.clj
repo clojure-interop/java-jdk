@@ -30,6 +30,6 @@
 
    The general contract of the method run is that it may
    take any action whatsoever."
-  ([^java.lang.Runnable this]
+  ([^Runnable this]
     (-> this (.run))))
 

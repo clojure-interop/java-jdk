@@ -61,11 +61,11 @@
   is-daemon - true if the associated thread should run as a daemon - `boolean`
 
   throws: java.lang.NullPointerException - if name is null"
-  ([^java.lang.String name ^Boolean is-daemon]
+  (^Timer [^java.lang.String name ^Boolean is-daemon]
     (new Timer name is-daemon))
-  ([^Boolean is-daemon]
+  (^Timer [^Boolean is-daemon]
     (new Timer is-daemon))
-  ([]
+  (^Timer []
     (new Timer )))
 
 (defn schedule
@@ -95,9 +95,9 @@
   period - time in milliseconds between successive task executions. - `long`
 
   throws: java.lang.IllegalArgumentException - if delay < 0, or delay System.currentTimeMillis() < 0, or period <= 0"
-  ([^java.util.Timer this ^java.util.TimerTask task ^Long delay ^Long period]
+  ([^Timer this ^java.util.TimerTask task ^Long delay ^Long period]
     (-> this (.schedule task delay period)))
-  ([^java.util.Timer this ^java.util.TimerTask task ^Long delay]
+  ([^Timer this ^java.util.TimerTask task ^Long delay]
     (-> this (.schedule task delay))))
 
 (defn schedule-at-fixed-rate
@@ -128,7 +128,7 @@
   period - time in milliseconds between successive task executions. - `long`
 
   throws: java.lang.IllegalArgumentException - if delay < 0, or delay System.currentTimeMillis() < 0, or period <= 0"
-  ([^java.util.Timer this ^java.util.TimerTask task ^Long delay ^Long period]
+  ([^Timer this ^java.util.TimerTask task ^Long delay ^Long period]
     (-> this (.scheduleAtFixedRate task delay period))))
 
 (defn cancel
@@ -144,7 +144,7 @@
 
    This method may be called repeatedly; the second and subsequent
    calls have no effect."
-  ([^java.util.Timer this]
+  ([^Timer this]
     (-> this (.cancel))))
 
 (defn purge
@@ -165,6 +165,6 @@
    a task scheduled on this timer.
 
   returns: the number of tasks removed from the queue. - `int`"
-  (^Integer [^java.util.Timer this]
+  (^Integer [^Timer this]
     (-> this (.purge))))
 

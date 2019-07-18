@@ -6,7 +6,7 @@
 
 (defn ->metal-tool-bar-ui
   "Constructor."
-  ([]
+  (^MetalToolBarUI []
     (new MetalToolBarUI )))
 
 (defn *create-ui
@@ -20,14 +20,14 @@
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalToolBarUI this ^javax.swing.JComponent c]
+  ([^MetalToolBarUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalToolBarUI this ^javax.swing.JComponent c]
+  ([^MetalToolBarUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn update
@@ -38,6 +38,6 @@
   c - JComponent painting on - `javax.swing.JComponent`
 
   throws: java.lang.NullPointerException - if g or c is null"
-  ([^javax.swing.plaf.metal.MetalToolBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^MetalToolBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 

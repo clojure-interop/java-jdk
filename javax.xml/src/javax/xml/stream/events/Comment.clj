@@ -8,6 +8,6 @@
    does not exist
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.events.Comment this]
+  (^java.lang.String [^Comment this]
     (-> this (.getText))))
 

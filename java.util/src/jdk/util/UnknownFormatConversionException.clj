@@ -12,14 +12,14 @@
   Constructs an instance of this class with the unknown conversion.
 
   s - Unknown conversion - `java.lang.String`"
-  ([^java.lang.String s]
+  (^UnknownFormatConversionException [^java.lang.String s]
     (new UnknownFormatConversionException s)))
 
 (defn get-conversion
   "Returns the unknown conversion.
 
   returns: The unknown conversion. - `java.lang.String`"
-  (^java.lang.String [^java.util.UnknownFormatConversionException this]
+  (^java.lang.String [^UnknownFormatConversionException this]
     (-> this (.getConversion))))
 
 (defn get-message
@@ -27,6 +27,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  (^java.lang.String [^java.util.UnknownFormatConversionException this]
+  (^java.lang.String [^UnknownFormatConversionException this]
     (-> this (.getMessage))))
 

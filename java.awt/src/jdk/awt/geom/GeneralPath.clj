@@ -30,10 +30,10 @@
 
   rule - the winding rule - `int`
   initial-capacity - the estimate for the number of path segments in the path - `int`"
-  ([^Integer rule ^Integer initial-capacity]
+  (^GeneralPath [^Integer rule ^Integer initial-capacity]
     (new GeneralPath rule initial-capacity))
-  ([^Integer rule]
+  (^GeneralPath [^Integer rule]
     (new GeneralPath rule))
-  ([]
+  (^GeneralPath []
     (new GeneralPath )))
 

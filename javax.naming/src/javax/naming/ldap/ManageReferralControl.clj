@@ -17,9 +17,9 @@
   Constructs a ManageReferral control.
 
   criticality - The control's criticality setting. - `boolean`"
-  ([^Boolean criticality]
+  (^ManageReferralControl [^Boolean criticality]
     (new ManageReferralControl criticality))
-  ([]
+  (^ManageReferralControl []
     (new ManageReferralControl )))
 
 (def *-oid

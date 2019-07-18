@@ -10,7 +10,7 @@
 
 (defn ->attribute-change-notification-filter
   "Constructor."
-  ([]
+  (^AttributeChangeNotificationFilter []
     (new AttributeChangeNotificationFilter )))
 
 (defn notification-enabled?
@@ -23,7 +23,7 @@
   notification - The attribute change notification to be sent. - `javax.management.Notification`
 
   returns: true if the notification has to be sent to the listener, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.AttributeChangeNotificationFilter this ^javax.management.Notification notification]
+  (^Boolean [^AttributeChangeNotificationFilter this ^javax.management.Notification notification]
     (-> this (.isNotificationEnabled notification))))
 
 (defn enable-attribute
@@ -35,7 +35,7 @@
   name - The attribute name. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - The attribute name parameter is null."
-  ([^javax.management.AttributeChangeNotificationFilter this ^java.lang.String name]
+  ([^AttributeChangeNotificationFilter this ^java.lang.String name]
     (-> this (.enableAttribute name))))
 
 (defn disable-attribute
@@ -45,18 +45,18 @@
    this method has no effect.
 
   name - The attribute name. - `java.lang.String`"
-  ([^javax.management.AttributeChangeNotificationFilter this ^java.lang.String name]
+  ([^AttributeChangeNotificationFilter this ^java.lang.String name]
     (-> this (.disableAttribute name))))
 
 (defn disable-all-attributes
   "Disables all the attribute names."
-  ([^javax.management.AttributeChangeNotificationFilter this]
+  ([^AttributeChangeNotificationFilter this]
     (-> this (.disableAllAttributes))))
 
 (defn get-enabled-attributes
   "Gets all the enabled attribute names for this filter.
 
   returns: The list containing all the enabled attribute names. - `java.util.Vector<java.lang.String>`"
-  (^java.util.Vector [^javax.management.AttributeChangeNotificationFilter this]
+  (^java.util.Vector [^AttributeChangeNotificationFilter this]
     (-> this (.getEnabledAttributes))))
 

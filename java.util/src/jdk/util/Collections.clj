@@ -67,13 +67,13 @@
 
        Collections.addAll(flavors, `Peaches 'n Plutonium`, `Rocky Racoon`);
 
-  c - the collection into which elements are to be inserted - `T>`
+  c - the collection into which elements are to be inserted - `java.util.Collection`
   elements - the elements to insert into c - `T`
 
-  returns: true if the collection changed as a result of the call - `java.lang.   <T> boolean`
+  returns: true if the collection changed as a result of the call - `<T> boolean`
 
   throws: java.lang.UnsupportedOperationException - if c does not support the add operation"
-  ([c elements]
+  ([^java.util.Collection c elements]
     (Collections/addAll c elements)))
 
 (defn *checked-sorted-map
@@ -102,9 +102,9 @@
    type, the returned map permits insertion of null keys or values
    whenever the backing map does.
 
-  m - the map for which a dynamically typesafe view is to be returned - `java.util.SortedMap<K,V>`
-  key-type - the type of key that m is permitted to hold - `java.lang.Class<K>`
-  value-type - the type of value that m is permitted to hold - `java.lang.Class<V>`
+  m - the map for which a dynamically typesafe view is to be returned - `java.util.SortedMap`
+  key-type - the type of key that m is permitted to hold - `java.lang.Class`
+  value-type - the type of value that m is permitted to hold - `java.lang.Class`
 
   returns: a dynamically typesafe view of the specified map - `<K,V> java.util.SortedMap<K,V>`"
   ([^java.util.SortedMap m ^java.lang.Class key-type ^java.lang.Class value-type]
@@ -144,7 +144,7 @@
    The returned sorted set will be serializable if the specified
    sorted set is serializable.
 
-  s - the sorted set to be `wrapped` in a synchronized sorted set. - `java.util.SortedSet<T>`
+  s - the sorted set to be `wrapped` in a synchronized sorted set. - `java.util.SortedSet`
 
   returns: a synchronized view of the specified sorted set. - `<T> java.util.SortedSet<T>`"
   ([^java.util.SortedSet s]
@@ -179,8 +179,8 @@
    type, the returned set permits insertion of null elements whenever
    the backing set does.
 
-  s - the set for which a dynamically typesafe view is to be returned - `java.util.Set<E>`
-  type - the type of element that s is permitted to hold - `java.lang.Class<E>`
+  s - the set for which a dynamically typesafe view is to be returned - `java.util.Set`
+  type - the type of element that s is permitted to hold - `java.lang.Class`
 
   returns: a dynamically typesafe view of the specified set - `<E> java.util.Set<E>`"
   ([^java.util.Set s ^java.lang.Class type]
@@ -197,16 +197,16 @@
    This method iterates over the entire collection, hence it requires
    time proportional to the size of the collection.
 
-  coll - the collection whose minimum element is to be determined. - `T>`
-  comp - the comparator with which to determine the minimum element. A null value indicates that the elements' natural ordering should be used. - `T>`
+  coll - the collection whose minimum element is to be determined. - `java.util.Collection`
+  comp - the comparator with which to determine the minimum element. A null value indicates that the elements' natural ordering should be used. - `java.util.Comparator`
 
   returns: the minimum element of the given collection, according
            to the specified comparator. - `<T> T`
 
   throws: java.lang.ClassCastException - if the collection contains elements that are not mutually comparable using the specified comparator."
-  ([coll comp]
+  ([^java.util.Collection coll ^java.util.Comparator comp]
     (Collections/min coll comp))
-  ([coll]
+  ([^java.util.Collection coll]
     (Collections/min coll)))
 
 (defn *list
@@ -216,7 +216,7 @@
    legacy APIs that return enumerations and new APIs that require
    collections.
 
-  e - enumeration providing elements for the returned array list - `java.util.Enumeration<T>`
+  e - enumeration providing elements for the returned array list - `java.util.Enumeration`
 
   returns: an array list containing the elements returned
            by the specified enumeration. - `<T> java.util.ArrayList<T>`"
@@ -235,10 +235,10 @@
    The returned navigable map will be serializable if the specified
    navigable map is serializable.
 
-  m - the navigable map for which an unmodifiable view is to be returned - `V>`
+  m - the navigable map for which an unmodifiable view is to be returned - `java.util.NavigableMap`
 
   returns: an unmodifiable view of the specified navigable map - `<K,V> java.util.NavigableMap<K,V>`"
-  ([m]
+  ([^java.util.NavigableMap m]
     (Collections/unmodifiableNavigableMap m)))
 
 (defn *replace-all
@@ -248,7 +248,7 @@
    (oldVal==null ? e==null : oldVal.equals(e)).
    (This method has no effect on the size of the list.)
 
-  list - the list in which replacement is to occur. - `java.util.List<T>`
+  list - the list in which replacement is to occur. - `java.util.List`
   old-val - the old value to be replaced. - `T`
   new-val - the new value with which oldVal is to be replaced. - `T`
 
@@ -269,13 +269,13 @@
 
    This method runs in linear time.
 
-  dest - The destination list. - `T>`
-  src - The source list. - `T>`
+  dest - The destination list. - `java.util.List`
+  src - The source list. - `java.util.List`
 
   returns: `<T> void`
 
   throws: java.lang.IndexOutOfBoundsException - if the destination list is too small to contain the entire source List."
-  ([dest src]
+  ([^java.util.List dest ^java.util.List src]
     (Collections/copy dest src)))
 
 (defn *as-lifo-queue
@@ -291,7 +291,7 @@
    implemented as a sequence of addFirst
    invocations on the backing deque.
 
-  deque - the deque - `java.util.Deque<T>`
+  deque - the deque - `java.util.Deque`
 
   returns: the queue - `<T> java.util.Queue<T>`"
   ([^java.util.Deque deque]
@@ -314,10 +314,10 @@
    The returned collection will be serializable if the specified collection
    is serializable.
 
-  c - the collection for which an unmodifiable view is to be returned. - `T>`
+  c - the collection for which an unmodifiable view is to be returned. - `java.util.Collection`
 
   returns: an unmodifiable view of the specified collection. - `<T> java.util.Collection<T>`"
-  ([c]
+  ([^java.util.Collection c]
     (Collections/unmodifiableCollection c)))
 
 (defn *checked-list
@@ -339,8 +339,8 @@
    type, the returned list permits insertion of null elements whenever
    the backing list does.
 
-  list - the list for which a dynamically typesafe view is to be returned - `java.util.List<E>`
-  type - the type of element that list is permitted to hold - `java.lang.Class<E>`
+  list - the list for which a dynamically typesafe view is to be returned - `java.util.List`
+  type - the type of element that list is permitted to hold - `java.lang.Class`
 
   returns: a dynamically typesafe view of the specified list - `<E> java.util.List<E>`"
   ([^java.util.List list ^java.lang.Class type]
@@ -351,7 +351,7 @@
 
    This method runs in linear time.
 
-  list - the list whose elements are to be reversed. - `java.util.List<?>`
+  list - the list whose elements are to be reversed. - `java.util.List`
 
   throws: java.lang.UnsupportedOperationException - if the specified list or its list-iterator does not support the set operation."
   ([^java.util.List list]
@@ -391,7 +391,7 @@
    The returned navigable set will be serializable if the specified
    navigable set is serializable.
 
-  s - the navigable set to be `wrapped` in a synchronized navigable set - `java.util.NavigableSet<T>`
+  s - the navigable set to be `wrapped` in a synchronized navigable set - `java.util.NavigableSet`
 
   returns: a synchronized view of the specified navigable set - `<T> java.util.NavigableSet<T>`"
   ([^java.util.NavigableSet s]
@@ -436,7 +436,7 @@
    The returned sorted map will be serializable if the specified
    sorted map is serializable.
 
-  m - the sorted map to be `wrapped` in a synchronized sorted map. - `java.util.SortedMap<K,V>`
+  m - the sorted map to be `wrapped` in a synchronized sorted map. - `java.util.SortedMap`
 
   returns: a synchronized view of the specified sorted map. - `<K,V> java.util.SortedMap<K,V>`"
   ([^java.util.SortedMap m]
@@ -453,16 +453,16 @@
    This method iterates over the entire collection, hence it requires
    time proportional to the size of the collection.
 
-  coll - the collection whose maximum element is to be determined. - `T>`
-  comp - the comparator with which to determine the maximum element. A null value indicates that the elements' natural ordering should be used. - `T>`
+  coll - the collection whose maximum element is to be determined. - `java.util.Collection`
+  comp - the comparator with which to determine the maximum element. A null value indicates that the elements' natural ordering should be used. - `java.util.Comparator`
 
   returns: the maximum element of the given collection, according
            to the specified comparator. - `<T> T`
 
   throws: java.lang.ClassCastException - if the collection contains elements that are not mutually comparable using the specified comparator."
-  ([coll comp]
+  ([^java.util.Collection coll ^java.util.Comparator comp]
     (Collections/max coll comp))
-  ([coll]
+  ([^java.util.Collection coll]
     (Collections/max coll)))
 
 (defn *index-of-sub-list
@@ -477,8 +477,8 @@
    over the source list, looking for a match with the target at each
    location in turn.
 
-  source - the list in which to search for the first occurrence of target. - `java.util.List<?>`
-  target - the list to search for as a subList of source. - `java.util.List<?>`
+  source - the list in which to search for the first occurrence of target. - `java.util.List`
+  target - the list to search for as a subList of source. - `java.util.List`
 
   returns: the starting position of the first occurrence of the specified
            target list within the specified source list, or -1 if there
@@ -498,7 +498,7 @@
    The returned sorted set will be serializable if the specified sorted set
    is serializable.
 
-  s - the sorted set for which an unmodifiable view is to be returned. - `java.util.SortedSet<T>`
+  s - the sorted set for which an unmodifiable view is to be returned. - `java.util.SortedSet`
 
   returns: an unmodifiable view of the specified sorted set. - `<T> java.util.SortedSet<T>`"
   ([^java.util.SortedSet s]
@@ -550,7 +550,7 @@
    The returned set will be serializable if the specified set is
    serializable.
 
-  s - the set to be `wrapped` in a synchronized set. - `java.util.Set<T>`
+  s - the set to be `wrapped` in a synchronized set. - `java.util.Set`
 
   returns: a synchronized view of the specified set. - `<T> java.util.Set<T>`"
   ([^java.util.Set s]
@@ -574,7 +574,7 @@
    quadratic behavior that would result from shuffling a `sequential
    access` list in place.
 
-  list - the list to be shuffled. - `java.util.List<?>`
+  list - the list to be shuffled. - `java.util.List`
   rnd - the source of randomness to use to shuffle the list. - `java.util.Random`
 
   throws: java.lang.UnsupportedOperationException - if the specified list or its list-iterator does not support the set operation."
@@ -608,13 +608,13 @@
 
    The specified list must be modifiable, but need not be resizable.
 
-  list - the list to be sorted. - `java.util.List<T>`
-  c - the comparator to determine the order of the list. A null value indicates that the elements' natural ordering should be used. - `T>`
+  list - the list to be sorted. - `java.util.List`
+  c - the comparator to determine the order of the list. A null value indicates that the elements' natural ordering should be used. - `java.util.Comparator`
 
   returns: `<T> void`
 
   throws: java.lang.ClassCastException - if the list contains elements that are not mutually comparable using the specified comparator."
-  ([^java.util.List list c]
+  ([^java.util.List list ^java.util.Comparator c]
     (Collections/sort list c))
   ([^java.util.List list]
     (Collections/sort list)))
@@ -647,9 +647,9 @@
    this method will do an iterator-based binary search that performs
    O(n) link traversals and O(log n) element comparisons.
 
-  list - the list to be searched. - `T>`
+  list - the list to be searched. - `java.util.List`
   key - the key to be searched for. - `T`
-  c - the comparator by which the list is ordered. A null value indicates that the elements' java.lang.natural ordering should be used. - `T>`
+  c - the comparator by which the list is ordered. A null value indicates that the elements' java.lang.natural ordering should be used. - `java.util.Comparator`
 
   returns: the index of the search key, if it is contained in the list;
            otherwise, (-(insertion point) - 1).  The
@@ -661,9 +661,9 @@
            and only if the key is found. - `<T> int`
 
   throws: java.lang.ClassCastException - if the list contains elements that are not mutually comparable using the specified comparator, or the search key is not mutually comparable with the elements of the list using this comparator."
-  ([list key c]
+  ([^java.util.List list key ^java.util.Comparator c]
     (Collections/binarySearch list key c))
-  ([list key]
+  ([^java.util.List list key]
     (Collections/binarySearch list key)))
 
 (defn *checked-navigable-set
@@ -686,8 +686,8 @@
    type, the returned navigable set permits insertion of null elements
    whenever the backing sorted set does.
 
-  s - the navigable set for which a dynamically typesafe view is to be returned - `java.util.NavigableSet<E>`
-  type - the type of element that s is permitted to hold - `java.lang.Class<E>`
+  s - the navigable set for which a dynamically typesafe view is to be returned - `java.util.NavigableSet`
+  type - the type of element that s is permitted to hold - `java.lang.Class`
 
   returns: a dynamically typesafe view of the specified navigable set - `<E> java.util.NavigableSet<E>`"
   ([^java.util.NavigableSet s ^java.lang.Class type]
@@ -732,7 +732,7 @@
    The returned navigable map will be serializable if the specified
    navigable map is serializable.
 
-  m - the navigable map to be `wrapped` in a synchronized navigable map - `java.util.NavigableMap<K,V>`
+  m - the navigable map to be `wrapped` in a synchronized navigable map - `java.util.NavigableMap`
 
   returns: a synchronized view of the specified navigable map. - `<K,V> java.util.NavigableMap<K,V>`"
   ([^java.util.NavigableMap m]
@@ -767,10 +767,10 @@
    is serializable. Similarly, the returned list will implement
    RandomAccess if the specified list does.
 
-  list - the list for which an unmodifiable view is to be returned. - `T>`
+  list - the list for which an unmodifiable view is to be returned. - `java.util.List`
 
   returns: an unmodifiable view of the specified list. - `<T> java.util.List<T>`"
-  ([list]
+  ([^java.util.List list]
     (Collections/unmodifiableList list)))
 
 (defn *singleton-list
@@ -809,9 +809,9 @@
    type, the returned map permits insertion of null keys or values
    whenever the backing map does.
 
-  m - the map for which a dynamically typesafe view is to be returned - `java.util.NavigableMap<K,V>`
-  key-type - the type of key that m is permitted to hold - `java.lang.Class<K>`
-  value-type - the type of value that m is permitted to hold - `java.lang.Class<V>`
+  m - the map for which a dynamically typesafe view is to be returned - `java.util.NavigableMap`
+  key-type - the type of key that m is permitted to hold - `java.lang.Class`
+  value-type - the type of value that m is permitted to hold - `java.lang.Class`
 
   returns: a dynamically typesafe view of the specified map - `<K,V> java.util.NavigableMap<K,V>`"
   ([^java.util.NavigableMap m ^java.lang.Class key-type ^java.lang.Class value-type]
@@ -840,7 +840,7 @@
    The returned comparator is serializable (assuming the specified
    comparator is also serializable or null).
 
-  cmp - a comparator who's ordering is to be reversed by the returned comparator or null - `java.util.Comparator<T>`
+  cmp - a comparator who's ordering is to be reversed by the returned comparator or null - `java.util.Comparator`
 
   returns: A comparator that imposes the reverse ordering of the
            specified comparator. - `<T> java.util.Comparator<T>`"
@@ -855,13 +855,13 @@
 
    This method runs in linear time.
 
-  list - the list to be filled with the specified element. - `T>`
+  list - the list to be filled with the specified element. - `java.util.List`
   obj - The element with which to fill the specified list. - `T`
 
   returns: `<T> void`
 
   throws: java.lang.UnsupportedOperationException - if the specified list or its list-iterator does not support the set operation."
-  ([list obj]
+  ([^java.util.List list obj]
     (Collections/fill list obj)))
 
 (defn *enumeration
@@ -869,7 +869,7 @@
    interoperability with legacy APIs that require an enumeration
    as input.
 
-  c - the collection for which an enumeration is to be returned. - `java.util.Collection<T>`
+  c - the collection for which an enumeration is to be returned. - `java.util.Collection`
 
   returns: an enumeration over the specified collection. - `<T> java.util.Enumeration<T>`"
   ([^java.util.Collection c]
@@ -907,10 +907,10 @@
    The returned map will be serializable if the specified map
    is serializable.
 
-  m - the map for which an unmodifiable view is to be returned. - `V>`
+  m - the map for which an unmodifiable view is to be returned. - `java.util.Map`
 
   returns: an unmodifiable view of the specified map. - `<K,V> java.util.Map<K,V>`"
-  ([m]
+  ([^java.util.Map m]
     (Collections/unmodifiableMap m)))
 
 (defn *checked-map
@@ -939,9 +939,9 @@
    type, the returned map permits insertion of null keys or values
    whenever the backing map does.
 
-  m - the map for which a dynamically typesafe view is to be returned - `java.util.Map<K,V>`
-  key-type - the type of key that m is permitted to hold - `java.lang.Class<K>`
-  value-type - the type of value that m is permitted to hold - `java.lang.Class<V>`
+  m - the map for which a dynamically typesafe view is to be returned - `java.util.Map`
+  key-type - the type of key that m is permitted to hold - `java.lang.Class`
+  value-type - the type of value that m is permitted to hold - `java.lang.Class`
 
   returns: a dynamically typesafe view of the specified map - `<K,V> java.util.Map<K,V>`"
   ([^java.util.Map m ^java.lang.Class key-type ^java.lang.Class value-type]
@@ -967,8 +967,8 @@
    type, the returned sorted set permits insertion of null elements
    whenever the backing sorted set does.
 
-  s - the sorted set for which a dynamically typesafe view is to be returned - `java.util.SortedSet<E>`
-  type - the type of element that s is permitted to hold - `java.lang.Class<E>`
+  s - the sorted set for which a dynamically typesafe view is to be returned - `java.util.SortedSet`
+  type - the type of element that s is permitted to hold - `java.lang.Class`
 
   returns: a dynamically typesafe view of the specified sorted set - `<E> java.util.SortedSet<E>`"
   ([^java.util.SortedSet s ^java.lang.Class type]
@@ -999,8 +999,8 @@
    parameters, in which case the method will return true if and
    only if the collection is empty.
 
-  c-1 - a collection - `java.util.Collection<?>`
-  c-2 - a collection - `java.util.Collection<?>`
+  c-1 - a collection - `java.util.Collection`
+  c-2 - a collection - `java.util.Collection`
 
   returns: true if the two specified collections have no
    elements in common. - `boolean`
@@ -1021,8 +1021,8 @@
    over the source list, looking for a match with the target at each
    location in turn.
 
-  source - the list in which to search for the last occurrence of target. - `java.util.List<?>`
-  target - the list to search for as a subList of source. - `java.util.List<?>`
+  source - the list in which to search for the last occurrence of target. - `java.util.List`
+  target - the list to search for as a subList of source. - `java.util.List`
 
   returns: the starting position of the last occurrence of the specified
            target list within the specified source list, or -1 if there
@@ -1052,7 +1052,7 @@
    The returned list will be serializable if the specified list is
    serializable.
 
-  list - the list to be `wrapped` in a synchronized list. - `java.util.List<T>`
+  list - the list to be `wrapped` in a synchronized list. - `java.util.List`
 
   returns: a synchronized view of the specified list. - `<T> java.util.List<T>`"
   ([^java.util.List list]
@@ -1109,7 +1109,7 @@
       Set<Object> weakHashSet = Collections.newSetFromMap(
           new WeakHashMap<Object, Boolean>());
 
-  map - the backing map - `java.util.Map<E,java.lang.Boolean>`
+  map - the backing map - `java.util.Map`
 
   returns: the set backed by the map - `<E> java.util.Set<E>`
 
@@ -1146,7 +1146,7 @@
    The returned collection will be serializable if the specified collection
    is serializable.
 
-  c - the collection to be `wrapped` in a synchronized collection. - `java.util.Collection<T>`
+  c - the collection to be `wrapped` in a synchronized collection. - `java.util.Collection`
 
   returns: a synchronized view of the specified collection. - `<T> java.util.Collection<T>`"
   ([^java.util.Collection c]
@@ -1206,8 +1206,8 @@
    type, the returned collection permits insertion of null elements
    whenever the backing collection does.
 
-  c - the collection for which a dynamically typesafe view is to be returned - `java.util.Collection<E>`
-  type - the type of element that c is permitted to hold - `java.lang.Class<E>`
+  c - the collection for which a dynamically typesafe view is to be returned - `java.util.Collection`
+  type - the type of element that c is permitted to hold - `java.lang.Class`
 
   returns: a dynamically typesafe view of the specified collection - `<E> java.util.Collection<E>`"
   ([^java.util.Collection c ^java.lang.Class type]
@@ -1225,10 +1225,10 @@
    The returned sorted map will be serializable if the specified sorted map
    is serializable.
 
-  m - the sorted map for which an unmodifiable view is to be returned. - `V>`
+  m - the sorted map for which an unmodifiable view is to be returned. - `java.util.SortedMap`
 
   returns: an unmodifiable view of the specified sorted map. - `<K,V> java.util.SortedMap<K,V>`"
-  ([m]
+  ([^java.util.SortedMap m]
     (Collections/unmodifiableSortedMap m)))
 
 (defn *unmodifiable-navigable-set
@@ -1243,7 +1243,7 @@
    The returned navigable set will be serializable if the specified
    navigable set is serializable.
 
-  s - the navigable set for which an unmodifiable view is to be returned - `java.util.NavigableSet<T>`
+  s - the navigable set for which an unmodifiable view is to be returned - `java.util.NavigableSet`
 
   returns: an unmodifiable view of the specified navigable set - `<T> java.util.NavigableSet<T>`"
   ([^java.util.NavigableSet s]
@@ -1312,7 +1312,7 @@
    description of both algorithms, see Section 2.3 of Jon Bentley's
    Programming Pearls (Addison-Wesley, 1986).
 
-  list - the list to be rotated. - `java.util.List<?>`
+  list - the list to be rotated. - `java.util.List`
   distance - the distance to rotate the list. There are no constraints on this value; it may be zero, negative, or greater than list.size(). - `int`
 
   throws: java.lang.UnsupportedOperationException - if the specified list or its list-iterator does not support the set operation."
@@ -1355,7 +1355,7 @@
    The returned map will be serializable if the specified map is
    serializable.
 
-  m - the map to be `wrapped` in a synchronized map. - `java.util.Map<K,V>`
+  m - the map to be `wrapped` in a synchronized map. - `java.util.Map`
 
   returns: a synchronized view of the specified map. - `<K,V> java.util.Map<K,V>`"
   ([^java.util.Map m]
@@ -1393,8 +1393,8 @@
    type, the returned queue permits insertion of null elements
    whenever the backing queue does.
 
-  queue - the queue for which a dynamically typesafe view is to be returned - `java.util.Queue<E>`
-  type - the type of element that queue is permitted to hold - `java.lang.Class<E>`
+  queue - the queue for which a dynamically typesafe view is to be returned - `java.util.Queue`
+  type - the type of element that queue is permitted to hold - `java.lang.Class`
 
   returns: a dynamically typesafe view of the specified queue - `<E> java.util.Queue<E>`"
   ([^java.util.Queue queue ^java.lang.Class type]
@@ -1410,10 +1410,10 @@
    The returned set will be serializable if the specified set
    is serializable.
 
-  s - the set for which an unmodifiable view is to be returned. - `T>`
+  s - the set for which an unmodifiable view is to be returned. - `java.util.Set`
 
   returns: an unmodifiable view of the specified set. - `<T> java.util.Set<T>`"
-  ([s]
+  ([^java.util.Set s]
     (Collections/unmodifiableSet s)))
 
 (defn *swap
@@ -1421,7 +1421,7 @@
    (If the specified positions are equal, invoking this method leaves
    the list unchanged.)
 
-  list - The list in which to swap elements. - `java.util.List<?>`
+  list - The list in which to swap elements. - `java.util.List`
   i - the index of one element to be swapped. - `int`
   j - the index of the other element to be swapped. - `int`
 
@@ -1435,7 +1435,7 @@
    e in the collection such that
    (o == null ? e == null : o.equals(e)).
 
-  c - the collection in which to determine the frequency of o - `java.util.Collection<?>`
+  c - the collection in which to determine the frequency of o - `java.util.Collection`
   o - the object whose frequency is to be determined - `java.lang.Object`
 
   returns: the number of elements in c equal to o - `int`

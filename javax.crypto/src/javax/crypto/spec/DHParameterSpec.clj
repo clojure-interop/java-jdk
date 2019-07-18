@@ -30,23 +30,23 @@
   p - the prime modulus - `java.math.BigInteger`
   g - the base generator - `java.math.BigInteger`
   l - the size in bits of the random exponent (private value) - `int`"
-  ([^java.math.BigInteger p ^java.math.BigInteger g ^Integer l]
+  (^DHParameterSpec [^java.math.BigInteger p ^java.math.BigInteger g ^Integer l]
     (new DHParameterSpec p g l))
-  ([^java.math.BigInteger p ^java.math.BigInteger g]
+  (^DHParameterSpec [^java.math.BigInteger p ^java.math.BigInteger g]
     (new DHParameterSpec p g)))
 
 (defn get-p
   "Returns the prime modulus p.
 
   returns: the prime modulus p - `java.math.BigInteger`"
-  (^java.math.BigInteger [^javax.crypto.spec.DHParameterSpec this]
+  (^java.math.BigInteger [^DHParameterSpec this]
     (-> this (.getP))))
 
 (defn get-g
   "Returns the base generator g.
 
   returns: the base generator g - `java.math.BigInteger`"
-  (^java.math.BigInteger [^javax.crypto.spec.DHParameterSpec this]
+  (^java.math.BigInteger [^DHParameterSpec this]
     (-> this (.getG))))
 
 (defn get-l
@@ -55,6 +55,6 @@
 
   returns: the size in bits, l, of the random exponent
    (private value), or 0 if this size has not been set - `int`"
-  (^Integer [^javax.crypto.spec.DHParameterSpec this]
+  (^Integer [^DHParameterSpec this]
     (-> this (.getL))))
 

@@ -11,6 +11,6 @@
 
   returns: true if, and only if, the path matches this
             matcher's pattern - `boolean`"
-  (^Boolean [^java.nio.file.PathMatcher this ^java.nio.file.Path path]
+  (^Boolean [^PathMatcher this ^java.nio.file.Path path]
     (-> this (.matches path))))
 

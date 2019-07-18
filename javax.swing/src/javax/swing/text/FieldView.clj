@@ -15,7 +15,7 @@
   Constructs a new FieldView wrapped on an element.
 
   elem - the element - `javax.swing.text.Element`"
-  ([^javax.swing.text.Element elem]
+  (^FieldView [^javax.swing.text.Element elem]
     (new FieldView elem)))
 
 (defn paint
@@ -25,7 +25,7 @@
 
   g - the rendering surface to use - `java.awt.Graphics`
   a - the allocated region to render into - `java.awt.Shape`"
-  ([^javax.swing.text.FieldView this ^java.awt.Graphics g ^java.awt.Shape a]
+  ([^FieldView this ^java.awt.Graphics g ^java.awt.Shape a]
     (-> this (.paint g a))))
 
 (defn get-preferred-span
@@ -38,7 +38,7 @@
              Typically the view is told to render into the span
              that is returned, although there is no guarantee.
              The parent may choose to resize or break the view. - `float`"
-  (^Float [^javax.swing.text.FieldView this ^Integer axis]
+  (^Float [^FieldView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn get-resize-weight
@@ -48,7 +48,7 @@
   axis - View.X_AXIS or View.Y_AXIS - `int`
 
   returns: the weight -> 1 for View.X_AXIS, else 0 - `int`"
-  (^Integer [^javax.swing.text.FieldView this ^Integer axis]
+  (^Integer [^FieldView this ^Integer axis]
     (-> this (.getResizeWeight axis))))
 
 (defn model-to-view
@@ -57,12 +57,12 @@
 
   pos - the position to convert >= 0 - `int`
   a - the allocated region to render into - `java.awt.Shape`
-  b - the bias toward the previous character or the next character represented by the offset, in case the position is a boundary of two views; b will have one of these values: Position.Bias.Forward Position.Bias.Backward - `javax.swing.text.Position.Bias`
+  b - the bias toward the previous character or the next character represented by the offset, in case the position is a boundary of two views; b will have one of these values: Position.Bias.Forward Position.Bias.Backward - `javax.swing.text.Position$Bias`
 
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  (^java.awt.Shape [^javax.swing.text.FieldView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
+  (^java.awt.Shape [^FieldView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position$Bias b]
     (-> this (.modelToView pos a b))))
 
 (defn view-to-model
@@ -72,11 +72,11 @@
   fx - the X coordinate >= 0.0f - `float`
   fy - the Y coordinate >= 0.0f - `float`
   a - the allocated region to render into - `java.awt.Shape`
-  bias - `javax.swing.text.Position.Bias[]`
+  bias - `javax.swing.text.Position$Bias[]`
 
   returns: the location within the model that best represents the
     given point in the view - `int`"
-  (^Integer [^javax.swing.text.FieldView this ^Float fx ^Float fy ^java.awt.Shape a bias]
+  (^Integer [^FieldView this ^Float fx ^Float fy ^java.awt.Shape a bias]
     (-> this (.viewToModel fx fy a bias))))
 
 (defn insert-update
@@ -86,7 +86,7 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.FieldView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
+  ([^FieldView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.insertUpdate changes a f))))
 
 (defn remove-update
@@ -96,6 +96,6 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.FieldView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
+  ([^FieldView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.removeUpdate changes a f))))
 

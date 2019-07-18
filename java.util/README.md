@@ -17,7 +17,7 @@ All namespaces starting with **java.** are renamed to **jdk.** (java compiler li
 ## Clojars
 
 ```
-[clojure-interop/java.util "1.0.3"]
+[clojure-interop/java.util "1.0.4"]
 ```
 
 ## Class Members Naming Conventions
@@ -61,8 +61,8 @@ All namespaces starting with **java.** are renamed to **jdk.** (java compiler li
 - class **java.util.DoubleSummaryStatistics**
 - class **java.util.DuplicateFormatFlagsException**
 - class **java.util.EmptyStackException**
-- class **java.util.EnumMap,V>**
-- class **java.util.EnumSet>**
+- class **java.util.EnumMap**
+- class **java.util.EnumSet**
 - interface **java.util.Enumeration**
 - interface **java.util.EventListener**
 - class **java.util.EventListenerProxy**
@@ -139,7 +139,7 @@ All namespaces starting with **java.** are renamed to **jdk.** (java compiler li
 - interface **java.util.Spliterator$OfDouble**
 - interface **java.util.Spliterator$OfInt**
 - interface **java.util.Spliterator$OfLong**
-- interface **java.util.Spliterator$OfPrimitive>**
+- interface **java.util.Spliterator$OfPrimitive**
 - interface **java.util.Spliterator**
 - class **java.util.Spliterators$AbstractDoubleSpliterator**
 - class **java.util.Spliterators$AbstractIntSpliterator**
@@ -346,7 +346,7 @@ All namespaces starting with **java.** are renamed to **jdk.** (java compiler li
 - class **java.util.spi.LocaleServiceProvider**
 - interface **java.util.spi.ResourceBundleControlProvider**
 - class **java.util.spi.TimeZoneNameProvider**
-- interface **java.util.stream.BaseStream>**
+- interface **java.util.stream.BaseStream**
 - enum **java.util.stream.Collector$Characteristics**
 - interface **java.util.stream.Collector**
 - class **java.util.stream.Collectors**

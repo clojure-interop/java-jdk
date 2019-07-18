@@ -17,7 +17,7 @@
    rooted at a Window
 
   event - `javax.swing.event.AncestorEvent`"
-  ([^javax.swing.event.AncestorListener this ^javax.swing.event.AncestorEvent event]
+  ([^AncestorListener this ^javax.swing.event.AncestorEvent event]
     (-> this (.ancestorAdded event))))
 
 (defn ancestor-removed
@@ -29,13 +29,13 @@
    a hierarchy rooted at a Window
 
   event - `javax.swing.event.AncestorEvent`"
-  ([^javax.swing.event.AncestorListener this ^javax.swing.event.AncestorEvent event]
+  ([^AncestorListener this ^javax.swing.event.AncestorEvent event]
     (-> this (.ancestorRemoved event))))
 
 (defn ancestor-moved
   "Called when either the source or one of its ancestors is moved.
 
   event - `javax.swing.event.AncestorEvent`"
-  ([^javax.swing.event.AncestorListener this ^javax.swing.event.AncestorEvent event]
+  ([^AncestorListener this ^javax.swing.event.AncestorEvent event]
     (-> this (.ancestorMoved event))))
 

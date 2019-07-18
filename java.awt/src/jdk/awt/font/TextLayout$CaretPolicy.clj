@@ -21,7 +21,7 @@
   "Constructor.
 
   Constructs a CaretPolicy."
-  ([]
+  (^TextLayout$CaretPolicy []
     (new TextLayout$CaretPolicy )))
 
 (defn get-strong-caret
@@ -35,6 +35,6 @@
   returns: hit1 or hit2
           (or an equivalent TextHitInfo), indicating the
           strong caret. - `java.awt.font.TextHitInfo`"
-  (^java.awt.font.TextHitInfo [^java.awt.font.TextLayout$CaretPolicy this ^java.awt.font.TextHitInfo hit-1 ^java.awt.font.TextHitInfo hit-2 ^java.awt.font.TextLayout layout]
+  (^java.awt.font.TextHitInfo [^TextLayout$CaretPolicy this ^java.awt.font.TextHitInfo hit-1 ^java.awt.font.TextHitInfo hit-2 ^java.awt.font.TextLayout layout]
     (-> this (.getStrongCaret hit-1 hit-2 layout))))
 

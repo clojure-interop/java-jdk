@@ -78,17 +78,17 @@
    the parameters used to protect keystore data.
 
   configuration - identifier for the domain configuration data. The name of the target domain should be specified in the java.net.URI fragment component when it is necessary to distinguish between several domain configurations at the same location. - `java.net.URI`
-  protection-params - the map from keystore name to the parameter used to protect keystore data. A java.util.Collections.EMPTY_MAP should be used when protection parameters are not required or when they have been specified by properties in the domain configuration data. It is cloned to prevent subsequent modification. - `java.util.Map<java.lang.String,java.security.KeyStore.ProtectionParameter>`
+  protection-params - the map from keystore name to the parameter used to protect keystore data. A java.util.Collections.EMPTY_MAP should be used when protection parameters are not required or when they have been specified by properties in the domain configuration data. It is cloned to prevent subsequent modification. - `java.util.Map`
 
   throws: java.lang.NullPointerException - if configuration or protectionParams is null"
-  ([^java.net.URI configuration ^java.util.Map protection-params]
+  (^DomainLoadStoreParameter [^java.net.URI configuration ^java.util.Map protection-params]
     (new DomainLoadStoreParameter configuration protection-params)))
 
 (defn get-configuration
   "Gets the identifier for the domain configuration data.
 
   returns: the identifier for the configuration data - `java.net.URI`"
-  (^java.net.URI [^java.security.DomainLoadStoreParameter this]
+  (^java.net.URI [^DomainLoadStoreParameter this]
     (-> this (.getConfiguration))))
 
 (defn get-protection-params
@@ -96,15 +96,15 @@
    domain.
 
   returns: an unmodifiable map of keystore names to protection
-       parameters - `java.util.Map<java.lang.String,java.security.KeyStore.ProtectionParameter>`"
-  (^java.util.Map [^java.security.DomainLoadStoreParameter this]
+       parameters - `java.util.Map<java.lang.String,java.security.KeyStore$ProtectionParameter>`"
+  (^java.util.Map [^DomainLoadStoreParameter this]
     (-> this (.getProtectionParams))))
 
 (defn get-protection-parameter
   "Gets the keystore protection parameters for this domain.
    Keystore domains do not support a protection parameter.
 
-  returns: always returns null - `java.security.KeyStore.ProtectionParameter`"
-  (^java.security.KeyStore.ProtectionParameter [^java.security.DomainLoadStoreParameter this]
+  returns: always returns null - `java.security.KeyStore$ProtectionParameter`"
+  (^java.security.KeyStore$ProtectionParameter [^DomainLoadStoreParameter this]
     (-> this (.getProtectionParameter))))
 

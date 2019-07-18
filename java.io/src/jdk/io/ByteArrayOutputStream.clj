@@ -20,9 +20,9 @@
   size - the initial size. - `int`
 
   throws: java.lang.IllegalArgumentException - if size is negative."
-  ([^Integer size]
+  (^ByteArrayOutputStream [^Integer size]
     (new ByteArrayOutputStream size))
-  ([]
+  (^ByteArrayOutputStream []
     (new ByteArrayOutputStream )))
 
 (defn write
@@ -32,9 +32,9 @@
   b - the data. - `byte[]`
   off - the start offset in the data. - `int`
   len - the number of bytes to write. - `int`"
-  ([^java.io.ByteArrayOutputStream this b ^Integer off ^Integer len]
+  ([^ByteArrayOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([^java.io.ByteArrayOutputStream this ^Integer b]
+  ([^ByteArrayOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn write-to
@@ -45,7 +45,7 @@
   out - the output stream to which to write the data. - `java.io.OutputStream`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.ByteArrayOutputStream this ^java.io.OutputStream out]
+  ([^ByteArrayOutputStream this ^java.io.OutputStream out]
     (-> this (.writeTo out))))
 
 (defn reset
@@ -53,7 +53,7 @@
    stream to zero, so that all currently accumulated output in the
    output stream is discarded. The output stream can be used again,
    reusing the already allocated buffer space."
-  ([^java.io.ByteArrayOutputStream this]
+  ([^ByteArrayOutputStream this]
     (-> this (.reset))))
 
 (defn to-byte-array
@@ -62,7 +62,7 @@
    have been copied into it.
 
   returns: the current contents of this output stream, as a byte array. - `byte[]`"
-  ([^java.io.ByteArrayOutputStream this]
+  ([^ByteArrayOutputStream this]
     (-> this (.toByteArray))))
 
 (defn size
@@ -70,7 +70,7 @@
 
   returns: the value of the count field, which is the number
             of valid bytes in this output stream. - `int`"
-  (^Integer [^java.io.ByteArrayOutputStream this]
+  (^Integer [^ByteArrayOutputStream this]
     (-> this (.size))))
 
 (defn to-string
@@ -88,9 +88,9 @@
   returns: String decoded from the buffer's contents. - `java.lang.String`
 
   throws: java.io.UnsupportedEncodingException - If the named charset is not supported"
-  (^java.lang.String [^java.io.ByteArrayOutputStream this ^java.lang.String charset-name]
+  (^java.lang.String [^ByteArrayOutputStream this ^java.lang.String charset-name]
     (-> this (.toString charset-name)))
-  (^java.lang.String [^java.io.ByteArrayOutputStream this]
+  (^java.lang.String [^ByteArrayOutputStream this]
     (-> this (.toString))))
 
 (defn close
@@ -99,6 +99,6 @@
    generating an IOException.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.ByteArrayOutputStream this]
+  ([^ByteArrayOutputStream this]
     (-> this (.close))))
 

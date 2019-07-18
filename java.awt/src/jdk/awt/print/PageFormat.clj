@@ -9,7 +9,7 @@
 
   Creates a default, portrait-oriented
    PageFormat."
-  ([]
+  (^PageFormat []
     (new PageFormat )))
 
 (def *-landscape
@@ -20,7 +20,7 @@
     Note that this is not the Macintosh landscape but
     is the Window's and PostScript landscape.
 
-  type: java.lang.annotation.    int"
+  type: int"
   PageFormat/LANDSCAPE)
 
 (def *-portrait
@@ -30,7 +30,7 @@
     x running to the right and y running down the
     paper.
 
-  type: java.lang.annotation.    int"
+  type: int"
   PageFormat/PORTRAIT)
 
 (def *-reverse-landscape
@@ -40,7 +40,7 @@
     running top to bottom and y running right to left.
     Note that this is the Macintosh landscape.
 
-  type: java.lang.annotation.    int"
+  type: int"
   PageFormat/REVERSE_LANDSCAPE)
 
 (defn set-paper
@@ -50,14 +50,14 @@
   paper - the Paper object to which to set the Paper object for this PageFormat. - `java.awt.print.Paper`
 
   throws: java.lang.NullPointerException - a null paper instance was passed as a parameter."
-  ([^java.awt.print.PageFormat this ^java.awt.print.Paper paper]
+  ([^PageFormat this ^java.awt.print.Paper paper]
     (-> this (.setPaper paper))))
 
 (defn get-orientation
   "Returns the orientation of this PageFormat.
 
   returns: this PageFormat object's orientation. - `int`"
-  (^Integer [^java.awt.print.PageFormat this]
+  (^Integer [^PageFormat this]
     (-> this (.getOrientation))))
 
 (defn get-width
@@ -66,7 +66,7 @@
    page when determining the width.
 
   returns: the width of the page. - `double`"
-  (^Double [^java.awt.print.PageFormat this]
+  (^Double [^PageFormat this]
     (-> this (.getWidth))))
 
 (defn get-paper
@@ -82,7 +82,7 @@
 
   returns: a copy of the Paper object associated
             with this PageFormat. - `java.awt.print.Paper`"
-  (^java.awt.print.Paper [^java.awt.print.PageFormat this]
+  (^java.awt.print.Paper [^PageFormat this]
     (-> this (.getPaper))))
 
 (defn get-imageable-width
@@ -91,7 +91,7 @@
    of the page.
 
   returns: the width of the page. - `double`"
-  (^Double [^java.awt.print.PageFormat this]
+  (^Double [^PageFormat this]
     (-> this (.getImageableWidth))))
 
 (defn get-imageable-height
@@ -100,7 +100,7 @@
    of the page.
 
   returns: the height of the page. - `double`"
-  (^Double [^java.awt.print.PageFormat this]
+  (^Double [^PageFormat this]
     (-> this (.getImageableHeight))))
 
 (defn get-height
@@ -109,7 +109,7 @@
    page when determining the height.
 
   returns: the height of the page. - `double`"
-  (^Double [^java.awt.print.PageFormat this]
+  (^Double [^PageFormat this]
     (-> this (.getHeight))))
 
 (defn set-orientation
@@ -120,7 +120,7 @@
   orientation - the new orientation for the page - `int`
 
   throws: java.lang.IllegalArgumentException - if an unknown orientation was requested"
-  ([^java.awt.print.PageFormat this ^Integer orientation]
+  ([^PageFormat this ^Integer orientation]
     (-> this (.setOrientation orientation))))
 
 (defn get-imageable-x
@@ -133,7 +133,7 @@
   returns: the x coordinate of the upper left point of the
    imageable area of the Paper object
    associated with this PageFormat. - `double`"
-  (^Double [^java.awt.print.PageFormat this]
+  (^Double [^PageFormat this]
     (-> this (.getImageableX))))
 
 (defn clone
@@ -141,7 +141,7 @@
    contents as this PageFormat.
 
   returns: a copy of this PageFormat. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.print.PageFormat this]
+  (^java.lang.Object [^PageFormat this]
     (-> this (.clone))))
 
 (defn get-imageable-y
@@ -154,7 +154,7 @@
   returns: the y coordinate of the upper left point of the
    imageable area of the Paper object
    associated with this PageFormat. - `double`"
-  (^Double [^java.awt.print.PageFormat this]
+  (^Double [^PageFormat this]
     (-> this (.getImageableY))))
 
 (defn get-matrix
@@ -168,6 +168,6 @@
 
   returns: the matrix used to translate user space rendering
    to the orientation of the page. - `double[]`"
-  ([^java.awt.print.PageFormat this]
+  ([^PageFormat this]
     (-> this (.getMatrix))))
 

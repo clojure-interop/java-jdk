@@ -16,8 +16,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^ArithmeticException [^java.lang.String s]
     (new ArithmeticException s))
-  ([]
+  (^ArithmeticException []
     (new ArithmeticException )))
 

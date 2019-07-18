@@ -10,6 +10,6 @@
   "Constructor.
 
   Constructs an instance of this class."
-  ([]
+  (^FormatterClosedException []
     (new FormatterClosedException )))
 

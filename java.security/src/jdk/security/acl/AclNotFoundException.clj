@@ -8,6 +8,6 @@
   "Constructor.
 
   Constructs an AclNotFoundException."
-  ([]
+  (^AclNotFoundException []
     (new AclNotFoundException )))
 

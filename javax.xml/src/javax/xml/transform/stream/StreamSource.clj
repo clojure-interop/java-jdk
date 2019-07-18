@@ -21,11 +21,11 @@
 
   input-stream - A valid InputStream reference to an XML stream. - `java.io.InputStream`
   system-id - Must be a String that conforms to the URI syntax. - `java.lang.String`"
-  ([^java.io.InputStream input-stream ^java.lang.String system-id]
+  (^StreamSource [^java.io.InputStream input-stream ^java.lang.String system-id]
     (new StreamSource input-stream system-id))
-  ([^java.io.InputStream input-stream]
+  (^StreamSource [^java.io.InputStream input-stream]
     (new StreamSource input-stream))
-  ([]
+  (^StreamSource []
     (new StreamSource )))
 
 (def *-feature
@@ -49,7 +49,7 @@
    can be resolved.
 
   input-stream - A valid InputStream reference to an XML stream. - `java.io.InputStream`"
-  ([^javax.xml.transform.stream.StreamSource this ^java.io.InputStream input-stream]
+  ([^StreamSource this ^java.io.InputStream input-stream]
     (-> this (.setInputStream input-stream))))
 
 (defn get-input-stream
@@ -57,7 +57,7 @@
 
   returns: The byte stream that was set with setByteStream, or null
    if setByteStream or the ByteStream constructor was not called. - `java.io.InputStream`"
-  (^java.io.InputStream [^javax.xml.transform.stream.StreamSource this]
+  (^java.io.InputStream [^StreamSource this]
     (-> this (.getInputStream))))
 
 (defn set-reader
@@ -69,7 +69,7 @@
    reading XML from a StringReader.
 
   reader - A valid Reader reference to an XML CharacterStream. - `java.io.Reader`"
-  ([^javax.xml.transform.stream.StreamSource this ^java.io.Reader reader]
+  ([^StreamSource this ^java.io.Reader reader]
     (-> this (.setReader reader))))
 
 (defn get-reader
@@ -77,7 +77,7 @@
 
   returns: The character stream that was set with setReader, or null
    if setReader or the Reader constructor was not called. - `java.io.Reader`"
-  (^java.io.Reader [^javax.xml.transform.stream.StreamSource this]
+  (^java.io.Reader [^StreamSource this]
     (-> this (.getReader))))
 
 (defn set-public-id
@@ -88,7 +88,7 @@
    location information.
 
   public-id - The public identifier as a string. - `java.lang.String`"
-  ([^javax.xml.transform.stream.StreamSource this ^java.lang.String public-id]
+  ([^StreamSource this ^java.lang.String public-id]
     (-> this (.setPublicId public-id))))
 
 (defn get-public-id
@@ -96,7 +96,7 @@
 
   returns: The public identifier that was set with setPublicId, or null
    if setPublicId was not called. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.transform.stream.StreamSource this]
+  (^java.lang.String [^StreamSource this]
     (-> this (.getPublicId))))
 
 (defn set-system-id
@@ -110,7 +110,7 @@
    there is no byte stream or character stream specified).
 
   system-id - The system identifier as a URL string. - `java.lang.String`"
-  ([^javax.xml.transform.stream.StreamSource this ^java.lang.String system-id]
+  ([^StreamSource this ^java.lang.String system-id]
     (-> this (.setSystemId system-id))))
 
 (defn get-system-id
@@ -118,6 +118,6 @@
 
   returns: The system identifier that was set with setSystemId, or null
    if setSystemId was not called. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.transform.stream.StreamSource this]
+  (^java.lang.String [^StreamSource this]
     (-> this (.getSystemId))))
 

@@ -15,8 +15,8 @@
 (defn kind
   "Returns the event kind.
 
-  returns: the event kind - `java.nio.file.WatchEvent.Kind<WatchEvent.T>`"
-  (^java.nio.file.WatchEvent.Kind [^java.nio.file.WatchEvent this]
+  returns: the event kind - `java.nio.file.WatchEvent$Kind<T>`"
+  (^java.nio.file.WatchEvent$Kind [^WatchEvent this]
     (-> this (.kind))))
 
 (defn count
@@ -24,7 +24,7 @@
    then this is a repeated event.
 
   returns: the event count - `int`"
-  (^Integer [^java.nio.file.WatchEvent this]
+  (^Integer [^WatchEvent this]
     (-> this (.count))))
 
 (defn context
@@ -36,7 +36,7 @@
    the directory registered with the watch service, and the entry that is
    created, deleted, or modified.
 
-  returns: the event context; may be null - `WatchEvent.T`"
-  (^WatchEvent.T [^java.nio.file.WatchEvent this]
+  returns: the event context; may be null - `T`"
+  ([^WatchEvent this]
     (-> this (.context))))
 

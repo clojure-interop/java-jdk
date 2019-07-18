@@ -7,6 +7,6 @@
   "Called when a hypertext link is updated.
 
   e - the event responsible for the update - `javax.swing.event.HyperlinkEvent`"
-  ([^javax.swing.event.HyperlinkListener this ^javax.swing.event.HyperlinkEvent e]
+  ([^HyperlinkListener this ^javax.swing.event.HyperlinkEvent e]
     (-> this (.hyperlinkUpdate e))))
 

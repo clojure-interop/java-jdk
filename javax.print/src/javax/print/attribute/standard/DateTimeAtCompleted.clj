@@ -24,7 +24,7 @@
   date-time - Date value. - `java.util.Date`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if dateTime is null."
-  ([^java.util.Date date-time]
+  (^DateTimeAtCompleted [^java.util.Date date-time]
     (new DateTimeAtCompleted date-time)))
 
 (defn equals
@@ -44,7 +44,7 @@
 
   returns: True if object is equivalent to this date-time
             at completed attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.DateTimeAtCompleted this ^java.lang.Object object]
+  (^Boolean [^DateTimeAtCompleted this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -56,7 +56,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.DateTimeAtCompleted this]
+  ([^DateTimeAtCompleted this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -67,6 +67,6 @@
    `date-time-at-completed`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.DateTimeAtCompleted this]
+  (^java.lang.String [^DateTimeAtCompleted this]
     (-> this (.getName))))
 

@@ -35,13 +35,13 @@
   data-2 - the second data byte - `int`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the command value, channel value or all data bytes belonging to the message do not specify a valid MIDI message"
-  ([^Integer command ^Integer channel ^Integer data-1 ^Integer data-2]
+  (^ShortMessage [^Integer command ^Integer channel ^Integer data-1 ^Integer data-2]
     (new ShortMessage command channel data-1 data-2))
-  ([^Integer status ^Integer data-1 ^Integer data-2]
+  (^ShortMessage [^Integer status ^Integer data-1 ^Integer data-2]
     (new ShortMessage status data-1 data-2))
-  ([^Integer status]
+  (^ShortMessage [^Integer status]
     (new ShortMessage status))
-  ([]
+  (^ShortMessage []
     (new ShortMessage )))
 
 (def *-midi-time-code
@@ -201,11 +201,11 @@
   data-2 - the second data byte - `int`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the status byte or all data bytes belonging to the message, do not specify a valid MIDI message"
-  ([^javax.sound.midi.ShortMessage this ^Integer command ^Integer channel ^Integer data-1 ^Integer data-2]
+  ([^ShortMessage this ^Integer command ^Integer channel ^Integer data-1 ^Integer data-2]
     (-> this (.setMessage command channel data-1 data-2)))
-  ([^javax.sound.midi.ShortMessage this ^Integer status ^Integer data-1 ^Integer data-2]
+  ([^ShortMessage this ^Integer status ^Integer data-1 ^Integer data-2]
     (-> this (.setMessage status data-1 data-2)))
-  ([^javax.sound.midi.ShortMessage this ^Integer status]
+  ([^ShortMessage this ^Integer status]
     (-> this (.setMessage status))))
 
 (defn get-channel
@@ -214,7 +214,7 @@
    value will not be meaningful.
 
   returns: MIDI channel associated with the message. - `int`"
-  (^Integer [^javax.sound.midi.ShortMessage this]
+  (^Integer [^ShortMessage this]
     (-> this (.getChannel))))
 
 (defn get-command
@@ -223,21 +223,21 @@
    value will not be meaningful.
 
   returns: the MIDI command associated with this event - `int`"
-  (^Integer [^javax.sound.midi.ShortMessage this]
+  (^Integer [^ShortMessage this]
     (-> this (.getCommand))))
 
 (defn get-data-1
   "Obtains the first data byte in the message.
 
   returns: the value of the data1 field - `int`"
-  (^Integer [^javax.sound.midi.ShortMessage this]
+  (^Integer [^ShortMessage this]
     (-> this (.getData1))))
 
 (defn get-data-2
   "Obtains the second data byte in the message.
 
   returns: the value of the data2 field - `int`"
-  (^Integer [^javax.sound.midi.ShortMessage this]
+  (^Integer [^ShortMessage this]
     (-> this (.getData2))))
 
 (defn clone
@@ -245,6 +245,6 @@
    as this object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^javax.sound.midi.ShortMessage this]
+  (^java.lang.Object [^ShortMessage this]
     (-> this (.clone))))
 

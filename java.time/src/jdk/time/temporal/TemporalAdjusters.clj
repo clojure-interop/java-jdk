@@ -137,7 +137,7 @@
     static TemporalAdjuster TWO_DAYS_LATER =
          TemporalAdjusters.ofDateAdjuster(date -> date.plusDays(2));
 
-  date-based-adjuster - the date-based adjuster, not null - `java.util.function.UnaryOperator<java.time.LocalDate>`
+  date-based-adjuster - the date-based adjuster, not null - `java.util.function.UnaryOperator`
 
   returns: the temporal adjuster wrapping on the date adjuster, not null - `java.time.temporal.TemporalAdjuster`"
   (^java.time.temporal.TemporalAdjuster [^java.util.function.UnaryOperator date-based-adjuster]

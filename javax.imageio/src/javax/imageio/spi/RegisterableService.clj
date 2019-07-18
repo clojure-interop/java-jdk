@@ -13,8 +13,8 @@
    under another category or categories.
 
   registry - a ServiceRegistry where this object has been registered. - `javax.imageio.spi.ServiceRegistry`
-  category - a Class object indicating the registry category under which this object has been registered. - `java.lang.Class<?>`"
-  ([^javax.imageio.spi.RegisterableService this ^javax.imageio.spi.ServiceRegistry registry ^java.lang.Class category]
+  category - a Class object indicating the registry category under which this object has been registered. - `java.lang.Class`"
+  ([^RegisterableService this ^javax.imageio.spi.ServiceRegistry registry ^java.lang.Class category]
     (-> this (.onRegistration registry category))))
 
 (defn on-deregistration
@@ -24,7 +24,7 @@
    under another category or categories.
 
   registry - a ServiceRegistry from which this object is being (wholly or partially) deregistered. - `javax.imageio.spi.ServiceRegistry`
-  category - a Class object indicating the registry category from which this object is being deregistered. - `java.lang.Class<?>`"
-  ([^javax.imageio.spi.RegisterableService this ^javax.imageio.spi.ServiceRegistry registry ^java.lang.Class category]
+  category - a Class object indicating the registry category from which this object is being deregistered. - `java.lang.Class`"
+  ([^RegisterableService this ^javax.imageio.spi.ServiceRegistry registry ^java.lang.Class category]
     (-> this (.onDeregistration registry category))))
 

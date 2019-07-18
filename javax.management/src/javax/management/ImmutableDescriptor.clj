@@ -12,9 +12,9 @@
   field-values - `java.lang.Object[]`
 
   throws: java.lang.IllegalArgumentException - if either array is null, or if the arrays have different sizes, or if a field name is null or empty, or if the same field name appears more than once."
-  ([field-names field-values]
+  (^ImmutableDescriptor [field-names field-values]
     (new ImmutableDescriptor field-names field-values))
-  ([^java.lang.String fields]
+  (^ImmutableDescriptor [^java.lang.String fields]
     (new ImmutableDescriptor fields)))
 
 (def *-empty-descriptor
@@ -66,7 +66,7 @@
   field-values - Object array of the corresponding field values. The array cannot be null. Elements of the array can be null. - `java.lang.Object[]`
 
   throws: javax.management.RuntimeOperationsException - if the change fails for any reason. Wrapped exception is IllegalArgumentException if fieldNames or fieldValues is null, or if the arrays are of different lengths, or if there is an illegal value in one of them. Wrapped exception is UnsupportedOperationException if the descriptor is immutable, and the call would change its contents."
-  ([^javax.management.ImmutableDescriptor this field-names field-values]
+  ([^ImmutableDescriptor this field-names field-values]
     (-> this (.setFields field-names field-values))))
 
 (defn remove-field
@@ -75,7 +75,7 @@
   field-name - String name of the field to be removed. If the field name is illegal or the field is not found, no exception is thrown. - `java.lang.String`
 
   throws: javax.management.RuntimeOperationsException - if a field of the given name exists and the descriptor is immutable. The wrapped exception will be an UnsupportedOperationException."
-  ([^javax.management.ImmutableDescriptor this ^java.lang.String field-name]
+  ([^ImmutableDescriptor this ^java.lang.String field-name]
     (-> this (.removeField field-name))))
 
 (defn get-field-names
@@ -83,14 +83,14 @@
 
   returns: String array of field names. If the descriptor is empty,
    you will get an empty array. - `java.lang.String[]`"
-  ([^javax.management.ImmutableDescriptor this]
+  ([^ImmutableDescriptor this]
     (-> this (.getFieldNames))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.management.ImmutableDescriptor this]
+  (^java.lang.String [^ImmutableDescriptor this]
     (-> this (.toString))))
 
 (defn get-field-value
@@ -99,7 +99,7 @@
   field-name - the field name. - `java.lang.String`
 
   returns: the corresponding value, or null if the field is not present. - `java.lang.Object`"
-  (^java.lang.Object [^javax.management.ImmutableDescriptor this ^java.lang.String field-name]
+  (^java.lang.Object [^ImmutableDescriptor this ^java.lang.String field-name]
     (-> this (.getFieldValue field-name))))
 
 (defn get-field-values
@@ -109,7 +109,7 @@
 
   returns: Object array of field values. If the list of fieldNames
    is empty, you will get an empty array. - `java.lang.Object[]`"
-  ([^javax.management.ImmutableDescriptor this ^java.lang.String field-names]
+  ([^ImmutableDescriptor this ^java.lang.String field-names]
     (-> this (.getFieldValues field-names))))
 
 (defn set-field
@@ -125,7 +125,7 @@
   field-value - The field value to be set for the field name. Can be null if that is a valid value for the field. - `java.lang.Object`
 
   throws: javax.management.RuntimeOperationsException - if the field name or field value is illegal (wrapped exception is IllegalArgumentException); or if the descriptor is immutable (wrapped exception is UnsupportedOperationException)."
-  ([^javax.management.ImmutableDescriptor this ^java.lang.String field-name ^java.lang.Object field-value]
+  ([^ImmutableDescriptor this ^java.lang.String field-name ^java.lang.Object field-value]
     (-> this (.setField field-name field-value))))
 
 (defn valid?
@@ -136,7 +136,7 @@
   returns: true if the values are legal. - `boolean`
 
   throws: javax.management.RuntimeOperationsException - if the validity checking fails. The method returns false if the descriptor is not valid, but throws this exception if the attempt to determine validity fails."
-  (^Boolean [^javax.management.ImmutableDescriptor this]
+  (^Boolean [^ImmutableDescriptor this]
     (-> this (.isValid))))
 
 (defn clone
@@ -151,7 +151,7 @@
   returns: a clone of this instance. - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - for illegal value for field Names or field Values. If the descriptor construction fails for any reason, this exception will be thrown."
-  (^javax.management.Descriptor [^javax.management.ImmutableDescriptor this]
+  (^javax.management.Descriptor [^ImmutableDescriptor this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -171,7 +171,7 @@
    Otherwise h is v.hashCode().
 
   returns: A hash code value for this object. - `int`"
-  (^Integer [^javax.management.ImmutableDescriptor this]
+  (^Integer [^ImmutableDescriptor this]
     (-> this (.hashCode))))
 
 (defn get-fields
@@ -184,7 +184,7 @@
    of a field is null, then the value of the field in the returned array
    will be empty.  If the descriptor is empty, you will get
    an empty array. - `java.lang.String[]`"
-  ([^javax.management.ImmutableDescriptor this]
+  ([^ImmutableDescriptor this]
     (-> this (.getFields))))
 
 (defn equals
@@ -206,6 +206,6 @@
 
   returns: true if the objects are the same; false
    otherwise. - `boolean`"
-  (^Boolean [^javax.management.ImmutableDescriptor this ^java.lang.Object o]
+  (^Boolean [^ImmutableDescriptor this ^java.lang.Object o]
     (-> this (.equals o))))
 

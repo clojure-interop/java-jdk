@@ -17,7 +17,7 @@
    set, the return value will be null.
 
   returns: value of the object - `java.lang.Number`"
-  (^java.lang.Number [^javax.accessibility.AccessibleValue this]
+  (^java.lang.Number [^AccessibleValue this]
     (-> this (.getCurrentAccessibleValue))))
 
 (defn set-current-accessible-value
@@ -26,7 +26,7 @@
   n - the number to use for the value - `java.lang.Number`
 
   returns: True if the value was set; else False - `boolean`"
-  (^Boolean [^javax.accessibility.AccessibleValue this ^java.lang.Number n]
+  (^Boolean [^AccessibleValue this ^java.lang.Number n]
     (-> this (.setCurrentAccessibleValue n))))
 
 (defn get-minimum-accessible-value
@@ -34,7 +34,7 @@
 
   returns: Minimum value of the object; null if this object does not
    have a minimum value - `java.lang.Number`"
-  (^java.lang.Number [^javax.accessibility.AccessibleValue this]
+  (^java.lang.Number [^AccessibleValue this]
     (-> this (.getMinimumAccessibleValue))))
 
 (defn get-maximum-accessible-value
@@ -42,6 +42,6 @@
 
   returns: Maximum value of the object; null if this object does not
    have a maximum value - `java.lang.Number`"
-  (^java.lang.Number [^javax.accessibility.AccessibleValue this]
+  (^java.lang.Number [^AccessibleValue this]
     (-> this (.getMaximumAccessibleValue))))
 

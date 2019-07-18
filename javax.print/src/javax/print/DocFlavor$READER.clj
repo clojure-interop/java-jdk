@@ -15,7 +15,7 @@
   mime-type - MIME media type string. If it is a text media type, it is assumed to contain a `charset=utf-16` parameter. - `java.lang.String`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if mimeType is null."
-  ([^java.lang.String mime-type]
+  (^DocFlavor$READER [^java.lang.String mime-type]
     (new DocFlavor$READER mime-type)))
 
 (def *-text-plain
@@ -25,7 +25,7 @@
    charset=utf-16`, print data representation class name =
    `java.io.Reader` (character stream).
 
-  type: javax.print.DocFlavor.READER"
+  type: javax.print.DocFlavor$READER"
   DocFlavor$READER/TEXT_PLAIN)
 
 (def *-text-html
@@ -35,6 +35,6 @@
    charset=utf-16`, print data representation class name =
    `java.io.Reader` (character stream).
 
-  type: javax.print.DocFlavor.READER"
+  type: javax.print.DocFlavor$READER"
   DocFlavor$READER/TEXT_HTML)
 

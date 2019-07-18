@@ -21,9 +21,9 @@
 
   name - ignored - `java.lang.String`
   actions - ignored. - `java.lang.String`"
-  ([^java.lang.String name ^java.lang.String actions]
+  (^AllPermission [^java.lang.String name ^java.lang.String actions]
     (new AllPermission name actions))
-  ([]
+  (^AllPermission []
     (new AllPermission )))
 
 (defn implies
@@ -33,7 +33,7 @@
   p - the permission to check against. - `java.security.Permission`
 
   returns: return - `boolean`"
-  (^Boolean [^java.security.AllPermission this ^java.security.Permission p]
+  (^Boolean [^AllPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -43,21 +43,21 @@
   obj - the object we are testing for equality with this object. - `java.lang.Object`
 
   returns: true if obj is an AllPermission, false otherwise. - `boolean`"
-  (^Boolean [^java.security.AllPermission this ^java.lang.Object obj]
+  (^Boolean [^AllPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.security.AllPermission this]
+  (^Integer [^AllPermission this]
     (-> this (.hashCode))))
 
 (defn get-actions
   "Returns the canonical string representation of the actions.
 
   returns: the actions. - `java.lang.String`"
-  (^java.lang.String [^java.security.AllPermission this]
+  (^java.lang.String [^AllPermission this]
     (-> this (.getActions))))
 
 (defn new-permission-collection
@@ -66,6 +66,6 @@
 
   returns: a new PermissionCollection object suitable for
    storing AllPermissions. - `java.security.PermissionCollection`"
-  (^java.security.PermissionCollection [^java.security.AllPermission this]
+  (^java.security.PermissionCollection [^AllPermission this]
     (-> this (.newPermissionCollection))))
 

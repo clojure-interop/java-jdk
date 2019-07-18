@@ -26,7 +26,7 @@
   value - the attribute value - `java.lang.Object`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.AbstractDocument$AttributeContext this ^javax.swing.text.AttributeSet old ^java.lang.Object name ^java.lang.Object value]
+  (^javax.swing.text.AttributeSet [^AbstractDocument$AttributeContext this ^javax.swing.text.AttributeSet old ^java.lang.Object name ^java.lang.Object value]
     (-> this (.addAttribute old name value))))
 
 (defn add-attributes
@@ -36,7 +36,7 @@
   attr - the attributes to add - `javax.swing.text.AttributeSet`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.AbstractDocument$AttributeContext this ^javax.swing.text.AttributeSet old ^javax.swing.text.AttributeSet attr]
+  (^javax.swing.text.AttributeSet [^AbstractDocument$AttributeContext this ^javax.swing.text.AttributeSet old ^javax.swing.text.AttributeSet attr]
     (-> this (.addAttributes old attr))))
 
 (defn remove-attribute
@@ -46,24 +46,24 @@
   name - the non-null attribute name - `java.lang.Object`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.AbstractDocument$AttributeContext this ^javax.swing.text.AttributeSet old ^java.lang.Object name]
+  (^javax.swing.text.AttributeSet [^AbstractDocument$AttributeContext this ^javax.swing.text.AttributeSet old ^java.lang.Object name]
     (-> this (.removeAttribute old name))))
 
 (defn remove-attributes
   "Removes a set of attributes for the element.
 
   old - the old attribute set - `javax.swing.text.AttributeSet`
-  names - the attribute names - `java.util.Enumeration<?>`
+  names - the attribute names - `java.util.Enumeration`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.AbstractDocument$AttributeContext this ^javax.swing.text.AttributeSet old ^java.util.Enumeration names]
+  (^javax.swing.text.AttributeSet [^AbstractDocument$AttributeContext this ^javax.swing.text.AttributeSet old ^java.util.Enumeration names]
     (-> this (.removeAttributes old names))))
 
 (defn get-empty-set
   "Fetches an empty AttributeSet.
 
   returns: the attribute set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.AbstractDocument$AttributeContext this]
+  (^javax.swing.text.AttributeSet [^AbstractDocument$AttributeContext this]
     (-> this (.getEmptySet))))
 
 (defn reclaim
@@ -74,6 +74,6 @@
    would call this in its finalize method.
 
   a - the attribute set to reclaim - `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.AbstractDocument$AttributeContext this ^javax.swing.text.AttributeSet a]
+  ([^AbstractDocument$AttributeContext this ^javax.swing.text.AttributeSet a]
     (-> this (.reclaim a))))
 

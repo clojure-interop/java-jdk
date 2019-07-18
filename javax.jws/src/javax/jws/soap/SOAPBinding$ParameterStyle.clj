@@ -5,13 +5,13 @@
 (def BARE
   "Enum Constant.
 
-  type: javax.jws.soap.SOAPBinding.ParameterStyle"
+  type: javax.jws.soap.SOAPBinding$ParameterStyle"
   SOAPBinding$ParameterStyle/BARE)
 
 (def WRAPPED
   "Enum Constant.
 
-  type: javax.jws.soap.SOAPBinding.ParameterStyle"
+  type: javax.jws.soap.SOAPBinding$ParameterStyle"
   SOAPBinding$ParameterStyle/WRAPPED)
 
 (defn *values
@@ -23,7 +23,7 @@
   for (SOAPBinding.ParameterStyle c : SOAPBinding.ParameterStyle.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.jws.soap.SOAPBinding.ParameterStyle[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.jws.soap.SOAPBinding$ParameterStyle[]`"
   ([]
     (SOAPBinding$ParameterStyle/values )))
 
@@ -35,9 +35,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.jws.soap.SOAPBinding.ParameterStyle`
+  returns: the enum constant with the specified name - `javax.jws.soap.SOAPBinding$ParameterStyle`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.jws.soap.SOAPBinding.ParameterStyle [^java.lang.String name]
+  (^javax.jws.soap.SOAPBinding$ParameterStyle [^java.lang.String name]
     (SOAPBinding$ParameterStyle/valueOf name)))
 

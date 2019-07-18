@@ -31,13 +31,13 @@
   "Constructor.
 
   Creates this object with the appropriate identifier."
-  ([]
+  (^DefaultEditorKit$DefaultKeyTypedAction []
     (new DefaultEditorKit$DefaultKeyTypedAction )))
 
 (defn action-performed
   "The operation to perform when this action is triggered.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([^javax.swing.text.DefaultEditorKit$DefaultKeyTypedAction this ^java.awt.event.ActionEvent e]
+  ([^DefaultEditorKit$DefaultKeyTypedAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

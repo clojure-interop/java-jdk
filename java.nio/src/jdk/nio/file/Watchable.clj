@@ -29,15 +29,15 @@
    support.
 
   watcher - the watch service to which this object is to be registered - `java.nio.file.WatchService`
-  events - the events for which this object should be registered - `java.nio.file.WatchEvent.Kind<?>[]`
-  modifiers - the modifiers, if any, that modify how the object is registered - `java.nio.file.WatchEvent.Modifier`
+  events - the events for which this object should be registered - `java.nio.file.WatchEvent$Kind[]`
+  modifiers - the modifiers, if any, that modify how the object is registered - `java.nio.file.WatchEvent$Modifier`
 
   returns: a key representing the registration of this object with the
             given watch service - `java.nio.file.WatchKey`
 
   throws: java.lang.UnsupportedOperationException - if unsupported events or modifiers are specified"
-  (^java.nio.file.WatchKey [^java.nio.file.Watchable this ^java.nio.file.WatchService watcher events ^java.nio.file.WatchEvent.Modifier modifiers]
+  (^java.nio.file.WatchKey [^Watchable this ^java.nio.file.WatchService watcher events ^java.nio.file.WatchEvent$Modifier modifiers]
     (-> this (.register watcher events modifiers)))
-  (^java.nio.file.WatchKey [^java.nio.file.Watchable this ^java.nio.file.WatchService watcher ^java.nio.file.WatchEvent.Kind events]
+  (^java.nio.file.WatchKey [^Watchable this ^java.nio.file.WatchService watcher ^java.nio.file.WatchEvent$Kind events]
     (-> this (.register watcher events))))
 

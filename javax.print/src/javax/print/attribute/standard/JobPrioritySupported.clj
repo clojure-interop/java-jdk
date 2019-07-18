@@ -25,7 +25,7 @@
   value - Number of different job priority levels supported. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if value is less than 1 or greater than 100."
-  ([^Integer value]
+  (^JobPrioritySupported [^Integer value]
     (new JobPrioritySupported value)))
 
 (defn equals
@@ -45,7 +45,7 @@
 
   returns: True if object is equivalent to this job
             priority supported attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.JobPrioritySupported this ^java.lang.Object object]
+  (^Boolean [^JobPrioritySupported this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -57,7 +57,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.JobPrioritySupported this]
+  ([^JobPrioritySupported this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -68,6 +68,6 @@
    category name is `job-priority-supported`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.JobPrioritySupported this]
+  (^java.lang.String [^JobPrioritySupported this]
     (-> this (.getName))))
 

@@ -24,7 +24,7 @@
    likely to yield significantly better space and time performance.
 
   value - the value of the Boolean. - `boolean`"
-  ([^Boolean value]
+  (^Boolean [^Boolean value]
     (new Boolean value)))
 
 (def *-true
@@ -179,7 +179,7 @@
    primitive.
 
   returns: the primitive boolean value of this object. - `boolean`"
-  (^Boolean [^java.lang.Boolean this]
+  (^Boolean [^Boolean this]
     (-> this (.booleanValue))))
 
 (defn to-string
@@ -189,7 +189,7 @@
    string equal to `false` is returned.
 
   returns: a string representation of this object. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Boolean this]
+  (^java.lang.String [^Boolean this]
     (-> this (.toString))))
 
 (defn hash-code
@@ -198,7 +198,7 @@
   returns: the integer 1231 if this object represents
    true; returns the integer 1237 if this
    object represents false. - `int`"
-  (^Integer [^java.lang.Boolean this]
+  (^Integer [^Boolean this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -210,7 +210,7 @@
 
   returns: true if the Boolean objects represent the
             same value; false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Boolean this ^java.lang.Object obj]
+  (^Boolean [^Boolean this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn compare-to
@@ -224,6 +224,6 @@
             this object represents false and the argument represents true - `int`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  (^Integer [^java.lang.Boolean this ^java.lang.Boolean b]
+  (^Integer [^Boolean this ^java.lang.Boolean b]
     (-> this (.compareTo b))))
 

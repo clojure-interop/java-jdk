@@ -19,11 +19,11 @@
                stream has been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Integer [^java.io.Reader this cbuf ^Integer off ^Integer len]
+  (^Integer [^Reader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  (^Integer [^java.io.Reader this ^java.nio.CharBuffer target]
+  (^Integer [^Reader this ^java.nio.CharBuffer target]
     (-> this (.read target)))
-  (^Integer [^java.io.Reader this]
+  (^Integer [^Reader this]
     (-> this (.read))))
 
 (defn skip
@@ -35,7 +35,7 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.lang.IllegalArgumentException - If n is negative."
-  (^Long [^java.io.Reader this ^Long n]
+  (^Long [^Reader this ^Long n]
     (-> this (.skip n))))
 
 (defn ready
@@ -46,7 +46,7 @@
    next read will block. - `boolean`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Boolean [^java.io.Reader this]
+  (^Boolean [^Reader this]
     (-> this (.ready))))
 
 (defn mark-supported
@@ -55,7 +55,7 @@
    method.
 
   returns: true if and only if this stream supports the mark operation. - `boolean`"
-  (^Boolean [^java.io.Reader this]
+  (^Boolean [^Reader this]
     (-> this (.markSupported))))
 
 (defn mark
@@ -66,7 +66,7 @@
   read-ahead-limit - Limit on the number of characters that may be read while still preserving the mark. After reading this many characters, attempting to reset the stream may fail. - `int`
 
   throws: java.io.IOException - If the stream does not support mark(), or if some other I/O error occurs"
-  ([^java.io.Reader this ^Integer read-ahead-limit]
+  ([^Reader this ^Integer read-ahead-limit]
     (-> this (.mark read-ahead-limit))))
 
 (defn reset
@@ -78,7 +78,7 @@
    reset() without supporting mark().
 
   throws: java.io.IOException - If the stream has not been marked, or if the mark has been invalidated, or if the stream does not support reset(), or if some other I/O error occurs"
-  ([^java.io.Reader this]
+  ([^Reader this]
     (-> this (.reset))))
 
 (defn close
@@ -88,6 +88,6 @@
    Closing a previously closed stream has no effect.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.Reader this]
+  ([^Reader this]
     (-> this (.close))))
 

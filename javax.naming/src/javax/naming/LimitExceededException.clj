@@ -22,8 +22,8 @@
    explanation. All other fields default to null.
 
   explanation - Possibly null detail about this exception. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^LimitExceededException [^java.lang.String explanation]
     (new LimitExceededException explanation))
-  ([]
+  (^LimitExceededException []
     (new LimitExceededException )))
 

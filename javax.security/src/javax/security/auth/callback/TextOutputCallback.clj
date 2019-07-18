@@ -16,7 +16,7 @@
   message - the message to be displayed. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if messageType is not either INFORMATION, WARNING or ERROR, if message is null, or if message has a length of 0."
-  ([^Integer message-type ^java.lang.String message]
+  (^TextOutputCallback [^Integer message-type ^java.lang.String message]
     (new TextOutputCallback message-type message)))
 
 (def *-information
@@ -48,13 +48,13 @@
 
   returns: the message type (INFORMATION,
                     WARNING or ERROR). - `int`"
-  (^Integer [^javax.security.auth.callback.TextOutputCallback this]
+  (^Integer [^TextOutputCallback this]
     (-> this (.getMessageType))))
 
 (defn get-message
   "Get the message to be displayed.
 
   returns: the message to be displayed. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.callback.TextOutputCallback this]
+  (^java.lang.String [^TextOutputCallback this]
     (-> this (.getMessage))))
 

@@ -6,7 +6,7 @@
 
 (defn ->accessible-hyperlink
   "Constructor."
-  ([]
+  (^AccessibleHyperlink []
     (new AccessibleHyperlink )))
 
 (defn valid?
@@ -16,7 +16,7 @@
 
   returns: a flag indicating whether this link is still valid with
            respect to the AccessibleHypertext it belongs to - `boolean`"
-  (^Boolean [^javax.accessibility.AccessibleHyperlink this]
+  (^Boolean [^AccessibleHyperlink this]
     (-> this (.isValid))))
 
 (defn get-accessible-action-count
@@ -26,7 +26,7 @@
    In general, links will have only one AccessibleAction in them.
 
   returns: the zero-based number of Actions in this object - `int`"
-  (^Integer [^javax.accessibility.AccessibleHyperlink this]
+  (^Integer [^AccessibleHyperlink this]
     (-> this (.getAccessibleActionCount))))
 
 (defn do-accessible-action
@@ -35,7 +35,7 @@
   i - zero-based index of actions - `int`
 
   returns: true if the action was performed; otherwise false. - `boolean`"
-  (^Boolean [^javax.accessibility.AccessibleHyperlink this ^Integer i]
+  (^Boolean [^AccessibleHyperlink this ^Integer i]
     (-> this (.doAccessibleAction i))))
 
 (defn get-accessible-action-description
@@ -53,7 +53,7 @@
   i - zero-based index of the actions - `int`
 
   returns: a String description of the action - `java.lang.String`"
-  (^java.lang.String [^javax.accessibility.AccessibleHyperlink this ^Integer i]
+  (^java.lang.String [^AccessibleHyperlink this ^Integer i]
     (-> this (.getAccessibleActionDescription i))))
 
 (defn get-accessible-action-object
@@ -66,7 +66,7 @@
   i - zero-based index of the actions - `int`
 
   returns: an Object representing the hypertext link itself - `java.lang.Object`"
-  (^java.lang.Object [^javax.accessibility.AccessibleHyperlink this ^Integer i]
+  (^java.lang.Object [^AccessibleHyperlink this ^Integer i]
     (-> this (.getAccessibleActionObject i))))
 
 (defn get-accessible-action-anchor
@@ -83,7 +83,7 @@
   i - zero-based index of the actions - `int`
 
   returns: an Object representing the hypertext anchor - `java.lang.Object`"
-  (^java.lang.Object [^javax.accessibility.AccessibleHyperlink this ^Integer i]
+  (^java.lang.Object [^AccessibleHyperlink this ^Integer i]
     (-> this (.getAccessibleActionAnchor i))))
 
 (defn get-start-index
@@ -91,7 +91,7 @@
    link begins
 
   returns: index of start of link - `int`"
-  (^Integer [^javax.accessibility.AccessibleHyperlink this]
+  (^Integer [^AccessibleHyperlink this]
     (-> this (.getStartIndex))))
 
 (defn get-end-index
@@ -99,6 +99,6 @@
    link ends
 
   returns: index of end of link - `int`"
-  (^Integer [^javax.accessibility.AccessibleHyperlink this]
+  (^Integer [^AccessibleHyperlink this]
     (-> this (.getEndIndex))))
 

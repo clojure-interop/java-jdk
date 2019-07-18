@@ -14,14 +14,14 @@
   params - the associated elliptic curve domain parameters. - `java.security.spec.ECParameterSpec`
 
   throws: java.lang.NullPointerException - if w or params is null."
-  ([^java.security.spec.ECPoint w ^java.security.spec.ECParameterSpec params]
+  (^ECPublicKeySpec [^java.security.spec.ECPoint w ^java.security.spec.ECParameterSpec params]
     (new ECPublicKeySpec w params)))
 
 (defn get-w
   "Returns the public point W.
 
   returns: the public point W. - `java.security.spec.ECPoint`"
-  (^java.security.spec.ECPoint [^java.security.spec.ECPublicKeySpec this]
+  (^java.security.spec.ECPoint [^ECPublicKeySpec this]
     (-> this (.getW))))
 
 (defn get-params
@@ -29,6 +29,6 @@
    parameters.
 
   returns: the EC domain parameters. - `java.security.spec.ECParameterSpec`"
-  (^java.security.spec.ECParameterSpec [^java.security.spec.ECPublicKeySpec this]
+  (^java.security.spec.ECParameterSpec [^ECPublicKeySpec this]
     (-> this (.getParams))))
 

@@ -6,7 +6,7 @@
 
 (defn ->utilities
   "Constructor."
-  ([]
+  (^Utilities []
     (new Utilities )))
 
 (defn *get-previous-word

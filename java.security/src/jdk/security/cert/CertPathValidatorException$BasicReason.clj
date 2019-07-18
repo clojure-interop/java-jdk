@@ -7,7 +7,7 @@
 
   Unspecified reason.
 
-  type: java.security.cert.CertPathValidatorException.BasicReason"
+  type: java.security.cert.CertPathValidatorException$BasicReason"
   CertPathValidatorException$BasicReason/UNSPECIFIED)
 
 (def EXPIRED
@@ -15,7 +15,7 @@
 
   The certificate is expired.
 
-  type: java.security.cert.CertPathValidatorException.BasicReason"
+  type: java.security.cert.CertPathValidatorException$BasicReason"
   CertPathValidatorException$BasicReason/EXPIRED)
 
 (def NOT_YET_VALID
@@ -23,7 +23,7 @@
 
   The certificate is not yet valid.
 
-  type: java.security.cert.CertPathValidatorException.BasicReason"
+  type: java.security.cert.CertPathValidatorException$BasicReason"
   CertPathValidatorException$BasicReason/NOT_YET_VALID)
 
 (def REVOKED
@@ -31,7 +31,7 @@
 
   The certificate is revoked.
 
-  type: java.security.cert.CertPathValidatorException.BasicReason"
+  type: java.security.cert.CertPathValidatorException$BasicReason"
   CertPathValidatorException$BasicReason/REVOKED)
 
 (def UNDETERMINED_REVOCATION_STATUS
@@ -39,7 +39,7 @@
 
   The revocation status of the certificate could not be determined.
 
-  type: java.security.cert.CertPathValidatorException.BasicReason"
+  type: java.security.cert.CertPathValidatorException$BasicReason"
   CertPathValidatorException$BasicReason/UNDETERMINED_REVOCATION_STATUS)
 
 (def INVALID_SIGNATURE
@@ -47,7 +47,7 @@
 
   The signature is invalid.
 
-  type: java.security.cert.CertPathValidatorException.BasicReason"
+  type: java.security.cert.CertPathValidatorException$BasicReason"
   CertPathValidatorException$BasicReason/INVALID_SIGNATURE)
 
 (def ALGORITHM_CONSTRAINED
@@ -55,7 +55,7 @@
 
   The public key or the signature algorithm has been constrained.
 
-  type: java.security.cert.CertPathValidatorException.BasicReason"
+  type: java.security.cert.CertPathValidatorException$BasicReason"
   CertPathValidatorException$BasicReason/ALGORITHM_CONSTRAINED)
 
 (defn *values
@@ -67,7 +67,7 @@
   for (CertPathValidatorException.BasicReason c : CertPathValidatorException.BasicReason.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.security.cert.CertPathValidatorException.BasicReason[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.security.cert.CertPathValidatorException$BasicReason[]`"
   ([]
     (CertPathValidatorException$BasicReason/values )))
 
@@ -79,9 +79,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.security.cert.CertPathValidatorException.BasicReason`
+  returns: the enum constant with the specified name - `java.security.cert.CertPathValidatorException$BasicReason`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.security.cert.CertPathValidatorException.BasicReason [^java.lang.String name]
+  (^java.security.cert.CertPathValidatorException$BasicReason [^java.lang.String name]
     (CertPathValidatorException$BasicReason/valueOf name)))
 

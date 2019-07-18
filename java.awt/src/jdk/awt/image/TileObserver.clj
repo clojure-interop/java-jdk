@@ -14,6 +14,6 @@
   tile-x - the X index of the tile that is being updated. - `int`
   tile-y - the Y index of the tile that is being updated. - `int`
   will-be-writable - If true, the tile will be grabbed for writing; otherwise it is being released. - `boolean`"
-  ([^java.awt.image.TileObserver this ^java.awt.image.WritableRenderedImage source ^Integer tile-x ^Integer tile-y ^Boolean will-be-writable]
+  ([^TileObserver this ^java.awt.image.WritableRenderedImage source ^Integer tile-x ^Integer tile-y ^Boolean will-be-writable]
     (-> this (.tileUpdate source tile-x tile-y will-be-writable))))
 

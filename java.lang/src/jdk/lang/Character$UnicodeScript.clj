@@ -7,7 +7,7 @@
 
   Unicode script `Common`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/COMMON)
 
 (def LATIN
@@ -15,7 +15,7 @@
 
   Unicode script `Latin`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LATIN)
 
 (def GREEK
@@ -23,7 +23,7 @@
 
   Unicode script `Greek`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GREEK)
 
 (def CYRILLIC
@@ -31,7 +31,7 @@
 
   Unicode script `Cyrillic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CYRILLIC)
 
 (def ARMENIAN
@@ -39,7 +39,7 @@
 
   Unicode script `Armenian`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/ARMENIAN)
 
 (def HEBREW
@@ -47,7 +47,7 @@
 
   Unicode script `Hebrew`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/HEBREW)
 
 (def ARABIC
@@ -55,7 +55,7 @@
 
   Unicode script `Arabic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/ARABIC)
 
 (def SYRIAC
@@ -63,7 +63,7 @@
 
   Unicode script `Syriac`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SYRIAC)
 
 (def THAANA
@@ -71,7 +71,7 @@
 
   Unicode script `Thaana`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/THAANA)
 
 (def DEVANAGARI
@@ -79,7 +79,7 @@
 
   Unicode script `Devanagari`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/DEVANAGARI)
 
 (def BENGALI
@@ -87,7 +87,7 @@
 
   Unicode script `Bengali`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BENGALI)
 
 (def GURMUKHI
@@ -95,7 +95,7 @@
 
   Unicode script `Gurmukhi`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GURMUKHI)
 
 (def GUJARATI
@@ -103,7 +103,7 @@
 
   Unicode script `Gujarati`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GUJARATI)
 
 (def ORIYA
@@ -111,7 +111,7 @@
 
   Unicode script `Oriya`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/ORIYA)
 
 (def TAMIL
@@ -119,7 +119,7 @@
 
   Unicode script `Tamil`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAMIL)
 
 (def TELUGU
@@ -127,7 +127,7 @@
 
   Unicode script `Telugu`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TELUGU)
 
 (def KANNADA
@@ -135,7 +135,7 @@
 
   Unicode script `Kannada`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KANNADA)
 
 (def MALAYALAM
@@ -143,7 +143,7 @@
 
   Unicode script `Malayalam`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MALAYALAM)
 
 (def SINHALA
@@ -151,7 +151,7 @@
 
   Unicode script `Sinhala`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SINHALA)
 
 (def THAI
@@ -159,7 +159,7 @@
 
   Unicode script `Thai`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/THAI)
 
 (def LAO
@@ -167,7 +167,7 @@
 
   Unicode script `Lao`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LAO)
 
 (def TIBETAN
@@ -175,7 +175,7 @@
 
   Unicode script `Tibetan`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TIBETAN)
 
 (def MYANMAR
@@ -183,7 +183,7 @@
 
   Unicode script `Myanmar`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MYANMAR)
 
 (def GEORGIAN
@@ -191,7 +191,7 @@
 
   Unicode script `Georgian`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GEORGIAN)
 
 (def HANGUL
@@ -199,7 +199,7 @@
 
   Unicode script `Hangul`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/HANGUL)
 
 (def ETHIOPIC
@@ -207,7 +207,7 @@
 
   Unicode script `Ethiopic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/ETHIOPIC)
 
 (def CHEROKEE
@@ -215,7 +215,7 @@
 
   Unicode script `Cherokee`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CHEROKEE)
 
 (def CANADIAN_ABORIGINAL
@@ -223,7 +223,7 @@
 
   Unicode script `Canadian_Aboriginal`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CANADIAN_ABORIGINAL)
 
 (def OGHAM
@@ -231,7 +231,7 @@
 
   Unicode script `Ogham`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OGHAM)
 
 (def RUNIC
@@ -239,7 +239,7 @@
 
   Unicode script `Runic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/RUNIC)
 
 (def KHMER
@@ -247,7 +247,7 @@
 
   Unicode script `Khmer`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KHMER)
 
 (def MONGOLIAN
@@ -255,7 +255,7 @@
 
   Unicode script `Mongolian`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MONGOLIAN)
 
 (def HIRAGANA
@@ -263,7 +263,7 @@
 
   Unicode script `Hiragana`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/HIRAGANA)
 
 (def KATAKANA
@@ -271,7 +271,7 @@
 
   Unicode script `Katakana`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KATAKANA)
 
 (def BOPOMOFO
@@ -279,7 +279,7 @@
 
   Unicode script `Bopomofo`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BOPOMOFO)
 
 (def HAN
@@ -287,7 +287,7 @@
 
   Unicode script `Han`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/HAN)
 
 (def YI
@@ -295,7 +295,7 @@
 
   Unicode script `Yi`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/YI)
 
 (def OLD_ITALIC
@@ -303,7 +303,7 @@
 
   Unicode script `Old_Italic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OLD_ITALIC)
 
 (def GOTHIC
@@ -311,7 +311,7 @@
 
   Unicode script `Gothic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GOTHIC)
 
 (def DESERET
@@ -319,7 +319,7 @@
 
   Unicode script `Deseret`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/DESERET)
 
 (def INHERITED
@@ -327,7 +327,7 @@
 
   Unicode script `Inherited`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/INHERITED)
 
 (def TAGALOG
@@ -335,7 +335,7 @@
 
   Unicode script `Tagalog`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAGALOG)
 
 (def HANUNOO
@@ -343,7 +343,7 @@
 
   Unicode script `Hanunoo`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/HANUNOO)
 
 (def BUHID
@@ -351,7 +351,7 @@
 
   Unicode script `Buhid`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BUHID)
 
 (def TAGBANWA
@@ -359,7 +359,7 @@
 
   Unicode script `Tagbanwa`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAGBANWA)
 
 (def LIMBU
@@ -367,7 +367,7 @@
 
   Unicode script `Limbu`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LIMBU)
 
 (def TAI_LE
@@ -375,7 +375,7 @@
 
   Unicode script `Tai_Le`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAI_LE)
 
 (def LINEAR_B
@@ -383,7 +383,7 @@
 
   Unicode script `Linear_B`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LINEAR_B)
 
 (def UGARITIC
@@ -391,7 +391,7 @@
 
   Unicode script `Ugaritic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/UGARITIC)
 
 (def SHAVIAN
@@ -399,7 +399,7 @@
 
   Unicode script `Shavian`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SHAVIAN)
 
 (def OSMANYA
@@ -407,7 +407,7 @@
 
   Unicode script `Osmanya`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OSMANYA)
 
 (def CYPRIOT
@@ -415,7 +415,7 @@
 
   Unicode script `Cypriot`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CYPRIOT)
 
 (def BRAILLE
@@ -423,7 +423,7 @@
 
   Unicode script `Braille`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BRAILLE)
 
 (def BUGINESE
@@ -431,7 +431,7 @@
 
   Unicode script `Buginese`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BUGINESE)
 
 (def COPTIC
@@ -439,7 +439,7 @@
 
   Unicode script `Coptic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/COPTIC)
 
 (def NEW_TAI_LUE
@@ -447,7 +447,7 @@
 
   Unicode script `New_Tai_Lue`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/NEW_TAI_LUE)
 
 (def GLAGOLITIC
@@ -455,7 +455,7 @@
 
   Unicode script `Glagolitic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GLAGOLITIC)
 
 (def TIFINAGH
@@ -463,7 +463,7 @@
 
   Unicode script `Tifinagh`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TIFINAGH)
 
 (def SYLOTI_NAGRI
@@ -471,7 +471,7 @@
 
   Unicode script `Syloti_Nagri`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SYLOTI_NAGRI)
 
 (def OLD_PERSIAN
@@ -479,7 +479,7 @@
 
   Unicode script `Old_Persian`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OLD_PERSIAN)
 
 (def KHAROSHTHI
@@ -487,7 +487,7 @@
 
   Unicode script `Kharoshthi`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KHAROSHTHI)
 
 (def BALINESE
@@ -495,7 +495,7 @@
 
   Unicode script `Balinese`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BALINESE)
 
 (def CUNEIFORM
@@ -503,7 +503,7 @@
 
   Unicode script `Cuneiform`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CUNEIFORM)
 
 (def PHOENICIAN
@@ -511,7 +511,7 @@
 
   Unicode script `Phoenician`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/PHOENICIAN)
 
 (def PHAGS_PA
@@ -519,7 +519,7 @@
 
   Unicode script `Phags_Pa`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/PHAGS_PA)
 
 (def NKO
@@ -527,7 +527,7 @@
 
   Unicode script `Nko`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/NKO)
 
 (def SUNDANESE
@@ -535,7 +535,7 @@
 
   Unicode script `Sundanese`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SUNDANESE)
 
 (def BATAK
@@ -543,7 +543,7 @@
 
   Unicode script `Batak`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BATAK)
 
 (def LEPCHA
@@ -551,7 +551,7 @@
 
   Unicode script `Lepcha`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LEPCHA)
 
 (def OL_CHIKI
@@ -559,7 +559,7 @@
 
   Unicode script `Ol_Chiki`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OL_CHIKI)
 
 (def VAI
@@ -567,7 +567,7 @@
 
   Unicode script `Vai`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/VAI)
 
 (def SAURASHTRA
@@ -575,7 +575,7 @@
 
   Unicode script `Saurashtra`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SAURASHTRA)
 
 (def KAYAH_LI
@@ -583,7 +583,7 @@
 
   Unicode script `Kayah_Li`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KAYAH_LI)
 
 (def REJANG
@@ -591,7 +591,7 @@
 
   Unicode script `Rejang`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/REJANG)
 
 (def LYCIAN
@@ -599,7 +599,7 @@
 
   Unicode script `Lycian`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LYCIAN)
 
 (def CARIAN
@@ -607,7 +607,7 @@
 
   Unicode script `Carian`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CARIAN)
 
 (def LYDIAN
@@ -615,7 +615,7 @@
 
   Unicode script `Lydian`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LYDIAN)
 
 (def CHAM
@@ -623,7 +623,7 @@
 
   Unicode script `Cham`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CHAM)
 
 (def TAI_THAM
@@ -631,7 +631,7 @@
 
   Unicode script `Tai_Tham`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAI_THAM)
 
 (def TAI_VIET
@@ -639,7 +639,7 @@
 
   Unicode script `Tai_Viet`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAI_VIET)
 
 (def AVESTAN
@@ -647,7 +647,7 @@
 
   Unicode script `Avestan`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/AVESTAN)
 
 (def EGYPTIAN_HIEROGLYPHS
@@ -655,7 +655,7 @@
 
   Unicode script `Egyptian_Hieroglyphs`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/EGYPTIAN_HIEROGLYPHS)
 
 (def SAMARITAN
@@ -663,7 +663,7 @@
 
   Unicode script `Samaritan`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SAMARITAN)
 
 (def MANDAIC
@@ -671,7 +671,7 @@
 
   Unicode script `Mandaic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MANDAIC)
 
 (def LISU
@@ -679,7 +679,7 @@
 
   Unicode script `Lisu`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LISU)
 
 (def BAMUM
@@ -687,7 +687,7 @@
 
   Unicode script `Bamum`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BAMUM)
 
 (def JAVANESE
@@ -695,7 +695,7 @@
 
   Unicode script `Javanese`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/JAVANESE)
 
 (def MEETEI_MAYEK
@@ -703,7 +703,7 @@
 
   Unicode script `Meetei_Mayek`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MEETEI_MAYEK)
 
 (def IMPERIAL_ARAMAIC
@@ -711,7 +711,7 @@
 
   Unicode script `Imperial_Aramaic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/IMPERIAL_ARAMAIC)
 
 (def OLD_SOUTH_ARABIAN
@@ -719,7 +719,7 @@
 
   Unicode script `Old_South_Arabian`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OLD_SOUTH_ARABIAN)
 
 (def INSCRIPTIONAL_PARTHIAN
@@ -727,7 +727,7 @@
 
   Unicode script `Inscriptional_Parthian`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/INSCRIPTIONAL_PARTHIAN)
 
 (def INSCRIPTIONAL_PAHLAVI
@@ -735,7 +735,7 @@
 
   Unicode script `Inscriptional_Pahlavi`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/INSCRIPTIONAL_PAHLAVI)
 
 (def OLD_TURKIC
@@ -743,7 +743,7 @@
 
   Unicode script `Old_Turkic`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OLD_TURKIC)
 
 (def BRAHMI
@@ -751,7 +751,7 @@
 
   Unicode script `Brahmi`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BRAHMI)
 
 (def KAITHI
@@ -759,7 +759,7 @@
 
   Unicode script `Kaithi`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KAITHI)
 
 (def MEROITIC_HIEROGLYPHS
@@ -767,7 +767,7 @@
 
   Unicode script `Meroitic Hieroglyphs`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MEROITIC_HIEROGLYPHS)
 
 (def MEROITIC_CURSIVE
@@ -775,7 +775,7 @@
 
   Unicode script `Meroitic Cursive`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MEROITIC_CURSIVE)
 
 (def SORA_SOMPENG
@@ -783,7 +783,7 @@
 
   Unicode script `Sora Sompeng`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SORA_SOMPENG)
 
 (def CHAKMA
@@ -791,7 +791,7 @@
 
   Unicode script `Chakma`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CHAKMA)
 
 (def SHARADA
@@ -799,7 +799,7 @@
 
   Unicode script `Sharada`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SHARADA)
 
 (def TAKRI
@@ -807,7 +807,7 @@
 
   Unicode script `Takri`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAKRI)
 
 (def MIAO
@@ -815,7 +815,7 @@
 
   Unicode script `Miao`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MIAO)
 
 (def UNKNOWN
@@ -823,7 +823,7 @@
 
   Unicode script `Unknown`.
 
-  type: java.lang.Character.UnicodeScript"
+  type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/UNKNOWN)
 
 (defn *values
@@ -835,7 +835,7 @@
   for (Character.UnicodeScript c : Character.UnicodeScript.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.lang.Character.UnicodeScript[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.lang.Character$UnicodeScript[]`"
   ([]
     (Character$UnicodeScript/values )))
 
@@ -847,10 +847,10 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.lang.Character.UnicodeScript`
+  returns: the enum constant with the specified name - `java.lang.Character$UnicodeScript`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.lang.Character.UnicodeScript [^java.lang.String name]
+  (^java.lang.Character$UnicodeScript [^java.lang.String name]
     (Character$UnicodeScript/valueOf name)))
 
 (defn *of
@@ -860,10 +860,10 @@
   code-point - the character (Unicode code point) in question. - `int`
 
   returns: The UnicodeScript constant representing the
-            Unicode script of which this character is assigned to. - `java.lang.Character.UnicodeScript`
+            Unicode script of which this character is assigned to. - `java.lang.Character$UnicodeScript`
 
   throws: java.lang.IllegalArgumentException - if the specified codePoint is an invalid Unicode code point."
-  (^java.lang.Character.UnicodeScript [^Integer code-point]
+  (^java.lang.Character$UnicodeScript [^Integer code-point]
     (Character$UnicodeScript/of code-point)))
 
 (defn *for-name
@@ -882,9 +882,9 @@
   script-name - A UnicodeScript name. - `java.lang.String`
 
   returns: The UnicodeScript constant identified
-           by scriptName - `java.lang.Character.UnicodeScript`
+           by scriptName - `java.lang.Character$UnicodeScript`
 
   throws: java.lang.IllegalArgumentException - if scriptName is an invalid name"
-  (^java.lang.Character.UnicodeScript [^java.lang.String script-name]
+  (^java.lang.Character$UnicodeScript [^java.lang.String script-name]
     (Character$UnicodeScript/forName script-name)))
 

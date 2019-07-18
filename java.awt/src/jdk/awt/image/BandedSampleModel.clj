@@ -43,9 +43,9 @@
   band-offsets - The band offset for each band. - `int[]`
 
   throws: java.lang.IllegalArgumentException - if dataType is not one of the supported data types"
-  ([^Integer data-type ^Integer w ^Integer h ^Integer scanline-stride bank-indices band-offsets]
+  (^BandedSampleModel [^Integer data-type ^Integer w ^Integer h ^Integer scanline-stride bank-indices band-offsets]
     (new BandedSampleModel data-type w h scanline-stride bank-indices band-offsets))
-  ([^Integer data-type ^Integer w ^Integer h ^Integer num-bands]
+  (^BandedSampleModel [^Integer data-type ^Integer w ^Integer h ^Integer num-bands]
     (new BandedSampleModel data-type w h num-bands)))
 
 (defn get-sample-float
@@ -61,7 +61,7 @@
 
   returns: a float value that represents the sample in the specified
    band for the specified pixel. - `float`"
-  (^Float [^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Float [^BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSampleFloat x y b data))))
 
 (defn create-data-buffer
@@ -74,7 +74,7 @@
            ComponentSampleModel. - `java.awt.image.DataBuffer`
 
   throws: java.lang.IllegalArgumentException - if dataType is not one of the supported types."
-  (^java.awt.image.DataBuffer [^java.awt.image.BandedSampleModel this]
+  (^java.awt.image.DataBuffer [^BandedSampleModel this]
     (-> this (.createDataBuffer))))
 
 (defn get-data-elements
@@ -115,7 +115,7 @@
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`
 
   returns: the data for the specified pixel. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  (^java.lang.Object [^BandedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.getDataElements x y obj data))))
 
 (defn create-subset-sample-model
@@ -132,7 +132,7 @@
             of bands from this ComponentSampleModel. - `java.awt.image.SampleModel`
 
   throws: java.awt.image.RasterFormatException - if the number of bands is greater than the number of banks in this sample model."
-  (^java.awt.image.SampleModel [^java.awt.image.BandedSampleModel this bands]
+  (^java.awt.image.SampleModel [^BandedSampleModel this bands]
     (-> this (.createSubsetSampleModel bands))))
 
 (defn get-pixels
@@ -149,7 +149,7 @@
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`
 
   returns: the samples for the pixels within the specified region. - `int[]`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
+  ([^BandedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
     (-> this (.getPixels x y w h i-array data))))
 
 (defn get-sample-double
@@ -165,7 +165,7 @@
 
   returns: a double value that represents the sample in the specified
    band for the specified pixel. - `double`"
-  (^Double [^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Double [^BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSampleDouble x y b data))))
 
 (defn set-pixels
@@ -180,7 +180,7 @@
   h - The height of the pixel rectangle - `int`
   i-array - The input samples in an int array - `int[]`
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
+  ([^BandedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
     (-> this (.setPixels x y w h i-array data))))
 
 (defn get-sample
@@ -195,7 +195,7 @@
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`
 
   returns: the sample in the specified band for the specified pixel. - `int`"
-  (^Integer [^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Integer [^BandedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSample x y b data))))
 
 (defn set-sample
@@ -209,7 +209,7 @@
   b - The band to set - `int`
   s - The input sample as an int - `int`
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer b ^Integer s ^java.awt.image.DataBuffer data]
+  ([^BandedSampleModel this ^Integer x ^Integer y ^Integer b ^Integer s ^java.awt.image.DataBuffer data]
     (-> this (.setSample x y b s data))))
 
 (defn set-pixel
@@ -221,7 +221,7 @@
   y - The Y coordinate of the pixel location - `int`
   i-array - The input samples in an int array - `int[]`
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
+  ([^BandedSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
     (-> this (.setPixel x y i-array data))))
 
 (defn get-pixel
@@ -235,7 +235,7 @@
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`
 
   returns: the samples for the specified pixel. - `int[]`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
+  ([^BandedSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
     (-> this (.getPixel x y i-array data))))
 
 (defn create-compatible-sample-model
@@ -253,14 +253,14 @@
            width and height. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if dataType is not one of the supported data types"
-  (^java.awt.image.SampleModel [^java.awt.image.BandedSampleModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^BandedSampleModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.image.BandedSampleModel this]
+  (^Integer [^BandedSampleModel this]
     (-> this (.hashCode))))
 
 (defn set-data-elements
@@ -296,7 +296,7 @@
   y - The Y coordinate of the pixel location - `int`
   obj - If non-null, returns the primitive array in this object - `java.lang.Object`
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  ([^BandedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.setDataElements x y obj data))))
 
 (defn set-samples
@@ -312,7 +312,7 @@
   b - The band to set - `int`
   i-array - The input sample array - `int[]`
   data - The DataBuffer containing the image data - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
+  ([^BandedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
     (-> this (.setSamples x y w h b i-array data))))
 
 (defn get-samples
@@ -331,6 +331,6 @@
 
   returns: the samples in the specified band for the pixels within
    the specified region. - `int[]`"
-  ([^java.awt.image.BandedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
+  ([^BandedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
     (-> this (.getSamples x y w h b i-array data))))
 

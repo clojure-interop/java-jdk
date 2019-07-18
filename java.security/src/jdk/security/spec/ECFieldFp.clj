@@ -13,7 +13,7 @@
   p - the prime. - `java.math.BigInteger`
 
   throws: java.lang.NullPointerException - if p is null."
-  ([^java.math.BigInteger p]
+  (^ECFieldFp [^java.math.BigInteger p]
     (new ECFieldFp p)))
 
 (defn get-field-size
@@ -21,14 +21,14 @@
    for this prime finite field.
 
   returns: the field size in bits. - `int`"
-  (^Integer [^java.security.spec.ECFieldFp this]
+  (^Integer [^ECFieldFp this]
     (-> this (.getFieldSize))))
 
 (defn get-p
   "Returns the prime p of this prime finite field.
 
   returns: the prime. - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.security.spec.ECFieldFp this]
+  (^java.math.BigInteger [^ECFieldFp this]
     (-> this (.getP))))
 
 (defn equals
@@ -39,13 +39,13 @@
 
   returns: true if obj is an instance
    of ECFieldFp and the prime value match, false otherwise. - `boolean`"
-  (^Boolean [^java.security.spec.ECFieldFp this ^java.lang.Object obj]
+  (^Boolean [^ECFieldFp this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hash code value for this prime finite field.
 
   returns: a hash code value. - `int`"
-  (^Integer [^java.security.spec.ECFieldFp this]
+  (^Integer [^ECFieldFp this]
     (-> this (.hashCode))))
 

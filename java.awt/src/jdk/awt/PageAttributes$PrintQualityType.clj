@@ -10,7 +10,7 @@
   The PrintQualityType instance to use for specifying a high print
    quality.
 
-  type: java.awt.PageAttributes.PrintQualityType"
+  type: java.awt.PageAttributes$PrintQualityType"
   PageAttributes$PrintQualityType/HIGH)
 
 (def *-normal
@@ -19,7 +19,7 @@
   The PrintQualityType instance to use for specifying a normal print
    quality.
 
-  type: java.awt.PageAttributes.PrintQualityType"
+  type: java.awt.PageAttributes$PrintQualityType"
   PageAttributes$PrintQualityType/NORMAL)
 
 (def *-draft
@@ -28,20 +28,20 @@
   The PrintQualityType instance to use for specifying a draft print
    quality.
 
-  type: java.awt.PageAttributes.PrintQualityType"
+  type: java.awt.PageAttributes$PrintQualityType"
   PageAttributes$PrintQualityType/DRAFT)
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.PageAttributes$PrintQualityType this]
+  (^Integer [^PageAttributes$PrintQualityType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.PageAttributes$PrintQualityType this]
+  (^java.lang.String [^PageAttributes$PrintQualityType this]
     (-> this (.toString))))
 

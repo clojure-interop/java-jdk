@@ -67,9 +67,9 @@
   pref - the preferred size >= 0 - `int`
   max - the maximum size >= 0 - `int`
   a - the alignment >= 0.0f && <= 1.0f - `float`"
-  ([^Integer min ^Integer pref ^Integer max ^Float a]
+  (^SizeRequirements [^Integer min ^Integer pref ^Integer max ^Float a]
     (new SizeRequirements min pref max a))
-  ([]
+  (^SizeRequirements []
     (new SizeRequirements )))
 
 (defn -minimum
@@ -223,6 +223,6 @@
    size requirements, along with the alignment.
 
   returns: the string - `java.lang.String`"
-  (^java.lang.String [^javax.swing.SizeRequirements this]
+  (^java.lang.String [^SizeRequirements this]
     (-> this (.toString))))
 

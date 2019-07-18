@@ -38,27 +38,27 @@
   "Constructor.
 
   Creates a new ButtonGroup."
-  ([]
+  (^ButtonGroup []
     (new ButtonGroup )))
 
 (defn add
   "Adds the button to the group.
 
   b - the button to be added - `javax.swing.AbstractButton`"
-  ([^javax.swing.ButtonGroup this ^javax.swing.AbstractButton b]
+  ([^ButtonGroup this ^javax.swing.AbstractButton b]
     (-> this (.add b))))
 
 (defn remove
   "Removes the button from the group.
 
   b - the button to be removed - `javax.swing.AbstractButton`"
-  ([^javax.swing.ButtonGroup this ^javax.swing.AbstractButton b]
+  ([^ButtonGroup this ^javax.swing.AbstractButton b]
     (-> this (.remove b))))
 
 (defn clear-selection
   "Clears the selection such that none of the buttons
    in the ButtonGroup are selected."
-  ([^javax.swing.ButtonGroup this]
+  ([^ButtonGroup this]
     (-> this (.clearSelection))))
 
 (defn get-elements
@@ -66,14 +66,14 @@
    this group.
 
   returns: an Enumeration of the buttons in this group - `java.util.Enumeration<javax.swing.AbstractButton>`"
-  (^java.util.Enumeration [^javax.swing.ButtonGroup this]
+  (^java.util.Enumeration [^ButtonGroup this]
     (-> this (.getElements))))
 
 (defn get-selection
   "Returns the model of the selected button.
 
   returns: the selected button model - `javax.swing.ButtonModel`"
-  (^javax.swing.ButtonModel [^javax.swing.ButtonGroup this]
+  (^javax.swing.ButtonModel [^ButtonGroup this]
     (-> this (.getSelection))))
 
 (defn set-selected
@@ -82,7 +82,7 @@
 
   m - the ButtonModel - `javax.swing.ButtonModel`
   b - true if this button is to be selected, otherwise false - `boolean`"
-  ([^javax.swing.ButtonGroup this ^javax.swing.ButtonModel m ^Boolean b]
+  ([^ButtonGroup this ^javax.swing.ButtonModel m ^Boolean b]
     (-> this (.setSelected m b))))
 
 (defn selected?
@@ -92,13 +92,13 @@
 
   returns: true if the button is selected,
      otherwise returns false - `boolean`"
-  (^Boolean [^javax.swing.ButtonGroup this ^javax.swing.ButtonModel m]
+  (^Boolean [^ButtonGroup this ^javax.swing.ButtonModel m]
     (-> this (.isSelected m))))
 
 (defn get-button-count
   "Returns the number of buttons in the group.
 
   returns: the button count - `int`"
-  (^Integer [^javax.swing.ButtonGroup this]
+  (^Integer [^ButtonGroup this]
     (-> this (.getButtonCount))))
 

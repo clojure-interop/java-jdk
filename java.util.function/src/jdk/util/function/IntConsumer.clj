@@ -13,7 +13,7 @@
   "Performs this operation on the given argument.
 
   value - the input argument - `int`"
-  ([^java.util.function.IntConsumer this ^Integer value]
+  ([^IntConsumer this ^Integer value]
     (-> this (.accept value))))
 
 (defn and-then
@@ -29,6 +29,6 @@
    operation followed by the after operation - `default java.util.function.IntConsumer`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([^java.util.function.IntConsumer this ^java.util.function.IntConsumer after]
+  ([^IntConsumer this ^java.util.function.IntConsumer after]
     (-> this (.andThen after))))
 

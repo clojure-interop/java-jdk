@@ -32,22 +32,22 @@
        bound(s) of this type variable - `java.lang.reflect.Type[]`
 
   throws: java.lang.TypeNotPresentException - if any of the bounds refers to a non-existent type declaration"
-  ([^java.lang.reflect.TypeVariable this]
+  ([^TypeVariable this]
     (-> this (.getBounds))))
 
 (defn get-generic-declaration
   "Returns the GenericDeclaration object representing the
    generic declaration declared this type variable.
 
-  returns: the generic declaration declared for this type variable. - `TypeVariable.D`"
-  (^TypeVariable.D [^java.lang.reflect.TypeVariable this]
+  returns: the generic declaration declared for this type variable. - `D`"
+  ([^TypeVariable this]
     (-> this (.getGenericDeclaration))))
 
 (defn get-name
   "Returns the name of this type variable, as it occurs in the source code.
 
   returns: the name of this type variable, as it appears in the source code - `java.lang.String`"
-  (^java.lang.String [^java.lang.reflect.TypeVariable this]
+  (^java.lang.String [^TypeVariable this]
     (-> this (.getName))))
 
 (defn get-annotated-bounds
@@ -59,6 +59,6 @@
    Returns an array of length 0 if the type parameter declares no bounds.
 
   returns: an array of objects representing the upper bounds of the type variable - `java.lang.reflect.AnnotatedType[]`"
-  ([^java.lang.reflect.TypeVariable this]
+  ([^TypeVariable this]
     (-> this (.getAnnotatedBounds))))
 

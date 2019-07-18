@@ -6,7 +6,7 @@
 
 (defn ->role-status
   "Constructor."
-  ([]
+  (^RoleStatus []
     (new RoleStatus )))
 
 (def *-no-role-with-name

@@ -14,7 +14,7 @@
   operand - the operand - `int`
 
   returns: the operator result - `int`"
-  (^Integer [^java.util.function.IntUnaryOperator this ^Integer operand]
+  (^Integer [^IntUnaryOperator this ^Integer operand]
     (-> this (.applyAsInt operand))))
 
 (defn compose
@@ -29,7 +29,7 @@
    operator and then applies this operator - `default java.util.function.IntUnaryOperator`
 
   throws: java.lang.NullPointerException - if before is null"
-  ([^java.util.function.IntUnaryOperator this ^java.util.function.IntUnaryOperator before]
+  ([^IntUnaryOperator this ^java.util.function.IntUnaryOperator before]
     (-> this (.compose before))))
 
 (defn and-then
@@ -44,7 +44,7 @@
    applies the after operator - `default java.util.function.IntUnaryOperator`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([^java.util.function.IntUnaryOperator this ^java.util.function.IntUnaryOperator after]
+  ([^IntUnaryOperator this ^java.util.function.IntUnaryOperator after]
     (-> this (.andThen after))))
 
 (defn *identity

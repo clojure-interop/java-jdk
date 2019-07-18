@@ -74,24 +74,24 @@
    from.
 
   src - The sequence of char values to normalize. - `java.lang.CharSequence`
-  form - The normalization form; one of Normalizer.Form.NFC, Normalizer.Form.NFD, Normalizer.Form.NFKC, Normalizer.Form.NFKD - `java.text.Normalizer.Form`
+  form - The normalization form; one of Normalizer.Form.NFC, Normalizer.Form.NFD, Normalizer.Form.NFKC, Normalizer.Form.NFKD - `java.text.Normalizer$Form`
 
   returns: The normalized String - `java.lang.String`
 
   throws: java.lang.NullPointerException - If src or form is null."
-  (^java.lang.String [^java.lang.CharSequence src ^java.text.Normalizer.Form form]
+  (^java.lang.String [^java.lang.CharSequence src ^java.text.Normalizer$Form form]
     (Normalizer/normalize src form)))
 
 (defn *normalized?
   "Determines if the given sequence of char values is normalized.
 
   src - The sequence of char values to be checked. - `java.lang.CharSequence`
-  form - The normalization form; one of Normalizer.Form.NFC, Normalizer.Form.NFD, Normalizer.Form.NFKC, Normalizer.Form.NFKD - `java.text.Normalizer.Form`
+  form - The normalization form; one of Normalizer.Form.NFC, Normalizer.Form.NFD, Normalizer.Form.NFKC, Normalizer.Form.NFKD - `java.text.Normalizer$Form`
 
   returns: true if the sequence of char values is normalized;
    false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - If src or form is null."
-  (^Boolean [^java.lang.CharSequence src ^java.text.Normalizer.Form form]
+  (^Boolean [^java.lang.CharSequence src ^java.text.Normalizer$Form form]
     (Normalizer/isNormalized src form)))
 

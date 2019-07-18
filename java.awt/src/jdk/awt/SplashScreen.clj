@@ -81,7 +81,7 @@
   image-url - the non-null URL for the new splash screen image - `java.net.URL`
 
   throws: java.lang.NullPointerException - if imageURL is null"
-  ([^java.awt.SplashScreen this ^java.net.URL image-url]
+  ([^SplashScreen this ^java.net.URL image-url]
     (-> this (.setImageURL image-url))))
 
 (defn get-image-url
@@ -90,7 +90,7 @@
   returns: URL for the current splash screen image file - `java.net.URL`
 
   throws: java.lang.IllegalStateException - if the splash screen has already been closed"
-  (^java.net.URL [^java.awt.SplashScreen this]
+  (^java.net.URL [^SplashScreen this]
     (-> this (.getImageURL))))
 
 (defn get-bounds
@@ -107,7 +107,7 @@
   returns: a Rectangle containing the splash screen bounds - `java.awt.Rectangle`
 
   throws: java.lang.IllegalStateException - if the splash screen has already been closed"
-  (^java.awt.Rectangle [^java.awt.SplashScreen this]
+  (^java.awt.Rectangle [^SplashScreen this]
     (-> this (.getBounds))))
 
 (defn get-size
@@ -124,7 +124,7 @@
   returns: a Dimension object indicating the splash screen size - `java.awt.Dimension`
 
   throws: java.lang.IllegalStateException - if the splash screen has already been closed"
-  (^java.awt.Dimension [^java.awt.SplashScreen this]
+  (^java.awt.Dimension [^SplashScreen this]
     (-> this (.getSize))))
 
 (defn create-graphics
@@ -144,14 +144,14 @@
   returns: graphics context for the splash screen overlay surface - `java.awt.Graphics2D`
 
   throws: java.lang.IllegalStateException - if the splash screen has already been closed"
-  (^java.awt.Graphics2D [^java.awt.SplashScreen this]
+  (^java.awt.Graphics2D [^SplashScreen this]
     (-> this (.createGraphics))))
 
 (defn update
   "Updates the splash window with current contents of the overlay image.
 
   throws: java.lang.IllegalStateException - if the overlay image does not exist; for example, if createGraphics has never been called, or if the splash screen has already been closed"
-  ([^java.awt.SplashScreen this]
+  ([^SplashScreen this]
     (-> this (.update))))
 
 (defn close
@@ -159,7 +159,7 @@
    resources.
 
   throws: java.lang.IllegalStateException - if the splash screen has already been closed"
-  ([^java.awt.SplashScreen this]
+  ([^SplashScreen this]
     (-> this (.close))))
 
 (defn visible?
@@ -174,6 +174,6 @@
 
   returns: true if the splash screen is visible (has not been closed yet),
            false otherwise - `boolean`"
-  (^Boolean [^java.awt.SplashScreen this]
+  (^Boolean [^SplashScreen this]
     (-> this (.isVisible))))
 

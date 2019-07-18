@@ -21,14 +21,14 @@
    by setting a value.
 
   value - desired new value. - `boolean`"
-  ([^javax.sound.sampled.BooleanControl this ^Boolean value]
+  ([^BooleanControl this ^Boolean value]
     (-> this (.setValue value))))
 
 (defn get-value?
   "Obtains this control's current value.
 
   returns: current value. - `boolean`"
-  (^Boolean [^javax.sound.sampled.BooleanControl this]
+  (^Boolean [^BooleanControl this]
     (-> this (.getValue))))
 
 (defn get-state-label
@@ -38,13 +38,13 @@
 
   returns: the label for the specified state, such as `true` or `on`
    for true, or `false` or `off` for false. - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.BooleanControl this ^Boolean state]
+  (^java.lang.String [^BooleanControl this ^Boolean state]
     (-> this (.getStateLabel state))))
 
 (defn to-string
   "Provides a string representation of the control
 
   returns: a string description - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.BooleanControl this]
+  (^java.lang.String [^BooleanControl this]
     (-> this (.toString))))
 

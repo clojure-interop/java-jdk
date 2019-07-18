@@ -14,7 +14,7 @@
 
 (defn ->default-list-selection-model
   "Constructor."
-  ([]
+  (^DefaultListSelectionModel []
     (new DefaultListSelectionModel )))
 
 (defn insert-index-interval
@@ -28,14 +28,14 @@
   index - `int`
   length - `int`
   before - `boolean`"
-  ([^javax.swing.DefaultListSelectionModel this ^Integer index ^Integer length ^Boolean before]
+  ([^DefaultListSelectionModel this ^Integer index ^Integer length ^Boolean before]
     (-> this (.insertIndexInterval index length before))))
 
 (defn get-value-is-adjusting?
   "Returns true if the selection is undergoing a series of changes.
 
   returns: true if the selection is undergoing a series of changes - `boolean`"
-  (^Boolean [^javax.swing.DefaultListSelectionModel this]
+  (^Boolean [^DefaultListSelectionModel this]
     (-> this (.getValueIsAdjusting))))
 
 (defn add-list-selection-listener
@@ -43,13 +43,13 @@
    to the selection occurs.
 
   l - the ListSelectionListener - `javax.swing.event.ListSelectionListener`"
-  ([^javax.swing.DefaultListSelectionModel this ^javax.swing.event.ListSelectionListener l]
+  ([^DefaultListSelectionModel this ^javax.swing.event.ListSelectionListener l]
     (-> this (.addListSelectionListener l))))
 
 (defn clear-selection
   "Change the selection to the empty set.  If this represents
    a change to the current selection then notify each ListSelectionListener."
-  ([^javax.swing.DefaultListSelectionModel this]
+  ([^DefaultListSelectionModel this]
     (-> this (.clearSelection))))
 
 (defn get-lead-selection-index
@@ -57,7 +57,7 @@
    setSelectionInterval(), addSelectionInterval() or removeSelectionInterval().
 
   returns: `int`"
-  (^Integer [^javax.swing.DefaultListSelectionModel this]
+  (^Integer [^DefaultListSelectionModel this]
     (-> this (.getLeadSelectionIndex))))
 
 (defn get-anchor-selection-index
@@ -69,7 +69,7 @@
    dotted yellow outline.
 
   returns: `int`"
-  (^Integer [^javax.swing.DefaultListSelectionModel this]
+  (^Integer [^DefaultListSelectionModel this]
     (-> this (.getAnchorSelectionIndex))))
 
 (defn selected-index?
@@ -78,7 +78,7 @@
   index - `int`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.DefaultListSelectionModel this ^Integer index]
+  (^Boolean [^DefaultListSelectionModel this ^Integer index]
     (-> this (.isSelectedIndex index))))
 
 (defn remove-index-interval
@@ -89,7 +89,7 @@
 
   index-0 - `int`
   index-1 - `int`"
-  ([^javax.swing.DefaultListSelectionModel this ^Integer index-0 ^Integer index-1]
+  ([^DefaultListSelectionModel this ^Integer index-0 ^Integer index-1]
     (-> this (.removeIndexInterval index-0 index-1))))
 
 (defn to-string
@@ -97,7 +97,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  (^java.lang.String [^javax.swing.DefaultListSelectionModel this]
+  (^java.lang.String [^DefaultListSelectionModel this]
     (-> this (.toString))))
 
 (defn set-selection-interval
@@ -119,7 +119,7 @@
   index-1 - other end of the interval - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if either index is less than -1 (and neither index is -1)"
-  ([^javax.swing.DefaultListSelectionModel this ^Integer index-0 ^Integer index-1]
+  ([^DefaultListSelectionModel this ^Integer index-0 ^Integer index-1]
     (-> this (.setSelectionInterval index-0 index-1))))
 
 (defn remove-selection-interval
@@ -144,7 +144,7 @@
   index-1 - other end of the interval - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if either index is less than -1 (and neither index is -1)"
-  ([^javax.swing.DefaultListSelectionModel this ^Integer index-0 ^Integer index-1]
+  ([^DefaultListSelectionModel this ^Integer index-0 ^Integer index-1]
     (-> this (.removeSelectionInterval index-0 index-1))))
 
 (defn add-selection-interval
@@ -170,7 +170,7 @@
   index-1 - other end of the interval - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if either index is less than -1 (and neither index is -1)"
-  ([^javax.swing.DefaultListSelectionModel this ^Integer index-0 ^Integer index-1]
+  ([^DefaultListSelectionModel this ^Integer index-0 ^Integer index-1]
     (-> this (.addSelectionInterval index-0 index-1))))
 
 (defn remove-list-selection-listener
@@ -178,21 +178,21 @@
    change to the selection occurs.
 
   l - the ListSelectionListener - `javax.swing.event.ListSelectionListener`"
-  ([^javax.swing.DefaultListSelectionModel this ^javax.swing.event.ListSelectionListener l]
+  ([^DefaultListSelectionModel this ^javax.swing.event.ListSelectionListener l]
     (-> this (.removeListSelectionListener l))))
 
 (defn set-lead-anchor-notification-enabled
   "Sets the value of the leadAnchorNotificationEnabled flag.
 
   flag - `boolean`"
-  ([^javax.swing.DefaultListSelectionModel this ^Boolean flag]
+  ([^DefaultListSelectionModel this ^Boolean flag]
     (-> this (.setLeadAnchorNotificationEnabled flag))))
 
 (defn get-max-selection-index
   "Returns the last selected index or -1 if the selection is empty.
 
   returns: `int`"
-  (^Integer [^javax.swing.DefaultListSelectionModel this]
+  (^Integer [^DefaultListSelectionModel this]
     (-> this (.getMaxSelectionIndex))))
 
 (defn lead-anchor-notification-enabled?
@@ -211,21 +211,21 @@
    the view. Therefore, caution is urged when changing the default value.
 
   returns: the value of the leadAnchorNotificationEnabled flag - `boolean`"
-  (^Boolean [^javax.swing.DefaultListSelectionModel this]
+  (^Boolean [^DefaultListSelectionModel this]
     (-> this (.isLeadAnchorNotificationEnabled))))
 
 (defn selection-empty?
   "Returns true if no indices are selected.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.DefaultListSelectionModel this]
+  (^Boolean [^DefaultListSelectionModel this]
     (-> this (.isSelectionEmpty))))
 
 (defn get-min-selection-index
   "Returns the first selected index or -1 if the selection is empty.
 
   returns: `int`"
-  (^Integer [^javax.swing.DefaultListSelectionModel this]
+  (^Integer [^DefaultListSelectionModel this]
     (-> this (.getMinSelectionIndex))))
 
 (defn set-value-is-adjusting
@@ -251,7 +251,7 @@
    valueIsAdjusting property set to false.
 
   is-adjusting - the new value of the property - `boolean`"
-  ([^javax.swing.DefaultListSelectionModel this ^Boolean is-adjusting]
+  ([^DefaultListSelectionModel this ^Boolean is-adjusting]
     (-> this (.setValueIsAdjusting is-adjusting))))
 
 (defn get-list-selection-listeners
@@ -261,7 +261,7 @@
   returns: all of this model's ListSelectionListeners
            or an empty
            array if no list selection listeners are currently registered - `javax.swing.event.ListSelectionListener[]`"
-  ([^javax.swing.DefaultListSelectionModel this]
+  ([^DefaultListSelectionModel this]
     (-> this (.getListSelectionListeners))))
 
 (defn move-lead-selection-index
@@ -270,7 +270,7 @@
    the old and new lead cells.
 
   lead-index - the new lead selection index - `int`"
-  ([^javax.swing.DefaultListSelectionModel this ^Integer lead-index]
+  ([^DefaultListSelectionModel this ^Integer lead-index]
     (-> this (.moveLeadSelectionIndex lead-index))))
 
 (defn set-anchor-selection-index
@@ -279,7 +279,7 @@
    the old and new anchor cells.
 
   anchor-index - `int`"
-  ([^javax.swing.DefaultListSelectionModel this ^Integer anchor-index]
+  ([^DefaultListSelectionModel this ^Integer anchor-index]
     (-> this (.setAnchorSelectionIndex anchor-index))))
 
 (defn clone
@@ -289,14 +289,14 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if the selection model does not both (a) implement the Cloneable interface and (b) define a clone method."
-  (^java.lang.Object [^javax.swing.DefaultListSelectionModel this]
+  (^java.lang.Object [^DefaultListSelectionModel this]
     (-> this (.clone))))
 
 (defn get-selection-mode
   "Returns the current selection mode.
 
   returns: the current selection mode - `int`"
-  (^Integer [^javax.swing.DefaultListSelectionModel this]
+  (^Integer [^DefaultListSelectionModel this]
     (-> this (.getSelectionMode))))
 
 (defn get-listeners
@@ -320,7 +320,7 @@
    If no such listeners exist,
    this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners
@@ -329,7 +329,7 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^javax.swing.DefaultListSelectionModel this ^java.lang.Class listener-type]
+  ([^DefaultListSelectionModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 
 (defn set-lead-selection-index
@@ -358,7 +358,7 @@
    of a UI class to extend a selection.
 
   lead-index - `int`"
-  ([^javax.swing.DefaultListSelectionModel this ^Integer lead-index]
+  ([^DefaultListSelectionModel this ^Integer lead-index]
     (-> this (.setLeadSelectionIndex lead-index))))
 
 (defn set-selection-mode
@@ -382,6 +382,6 @@
   selection-mode - `int`
 
   throws: java.lang.IllegalArgumentException - if the selection mode isn't one of those allowed"
-  ([^javax.swing.DefaultListSelectionModel this ^Integer selection-mode]
+  ([^DefaultListSelectionModel this ^Integer selection-mode]
     (-> this (.setSelectionMode selection-mode))))
 

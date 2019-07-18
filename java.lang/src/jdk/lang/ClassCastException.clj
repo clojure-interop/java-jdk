@@ -16,8 +16,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^ClassCastException [^java.lang.String s]
     (new ClassCastException s))
-  ([]
+  (^ClassCastException []
     (new ClassCastException )))
 

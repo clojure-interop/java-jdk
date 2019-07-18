@@ -49,21 +49,21 @@
       otherwise false - `boolean`
 
   throws: java.lang.ClassCastException - if the type of validateContext is not compatible with this XMLSignature"
-  (^Boolean [^javax.xml.crypto.dsig.XMLSignature this ^javax.xml.crypto.dsig.XMLValidateContext validate-context]
+  (^Boolean [^XMLSignature this ^javax.xml.crypto.dsig.XMLValidateContext validate-context]
     (-> this (.validate validate-context))))
 
 (defn get-key-info
   "Returns the key info of this XMLSignature.
 
   returns: the key info (may be null if not specified) - `javax.xml.crypto.dsig.keyinfo.KeyInfo`"
-  (^javax.xml.crypto.dsig.keyinfo.KeyInfo [^javax.xml.crypto.dsig.XMLSignature this]
+  (^javax.xml.crypto.dsig.keyinfo.KeyInfo [^XMLSignature this]
     (-> this (.getKeyInfo))))
 
 (defn get-signed-info
   "Returns the signed info of this XMLSignature.
 
   returns: the signed info (never null) - `javax.xml.crypto.dsig.SignedInfo`"
-  (^javax.xml.crypto.dsig.SignedInfo [^javax.xml.crypto.dsig.XMLSignature this]
+  (^javax.xml.crypto.dsig.SignedInfo [^XMLSignature this]
     (-> this (.getSignedInfo))))
 
 (defn get-objects
@@ -72,21 +72,21 @@
 
   returns: an unmodifiable list of XMLObjects (may be empty
       but never null) - `java.util.List`"
-  (^java.util.List [^javax.xml.crypto.dsig.XMLSignature this]
+  (^java.util.List [^XMLSignature this]
     (-> this (.getObjects))))
 
 (defn get-id
   "Returns the optional Id of this XMLSignature.
 
   returns: the Id (may be null if not specified) - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.XMLSignature this]
+  (^java.lang.String [^XMLSignature this]
     (-> this (.getId))))
 
 (defn get-signature-value
   "Returns the signature value of this XMLSignature.
 
-  returns: the signature value - `javax.xml.crypto.dsig.XMLSignature.SignatureValue`"
-  (^javax.xml.crypto.dsig.XMLSignature.SignatureValue [^javax.xml.crypto.dsig.XMLSignature this]
+  returns: the signature value - `javax.xml.crypto.dsig.XMLSignature$SignatureValue`"
+  (^javax.xml.crypto.dsig.XMLSignature$SignatureValue [^XMLSignature this]
     (-> this (.getSignatureValue))))
 
 (defn sign
@@ -99,7 +99,7 @@
   sign-context - the signing context - `javax.xml.crypto.dsig.XMLSignContext`
 
   throws: java.lang.ClassCastException - if the type of signContext is not compatible with this XMLSignature"
-  ([^javax.xml.crypto.dsig.XMLSignature this ^javax.xml.crypto.dsig.XMLSignContext sign-context]
+  ([^XMLSignature this ^javax.xml.crypto.dsig.XMLSignContext sign-context]
     (-> this (.sign sign-context))))
 
 (defn get-key-selector-result
@@ -109,6 +109,6 @@
   returns: the key selector result, or null if a key
       selector has not been specified or this XMLSignature
       has not been signed or validated - `javax.xml.crypto.KeySelectorResult`"
-  (^javax.xml.crypto.KeySelectorResult [^javax.xml.crypto.dsig.XMLSignature this]
+  (^javax.xml.crypto.KeySelectorResult [^XMLSignature this]
     (-> this (.getKeySelectorResult))))
 

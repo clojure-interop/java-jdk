@@ -10,6 +10,6 @@
 
 (defn ->socket-address
   "Constructor."
-  ([]
+  (^SocketAddress []
     (new SocketAddress )))
 

@@ -435,13 +435,13 @@
     MH_newProcessBuilder.invoke(`x`, `y`, `z`);
   assertEquals(`[x, y, z]`, pb.command().toString());
 
-  refc - the class or interface from which the method is accessed - `java.lang.Class<?>`
+  refc - the class or interface from which the method is accessed - `java.lang.Class`
   type - the type of the method, with the receiver argument omitted, and a void return type - `java.lang.invoke.MethodType`
 
   returns: the desired method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NoSuchMethodException - if the constructor does not exist"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.invoke.MethodType type]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.invoke.MethodType type]
     (-> this (.findConstructor refc type))))
 
 (defn lookup-modes
@@ -463,7 +463,7 @@
     lookup object, and also by the new lookup class.
 
   returns: the lookup modes, which limit the kinds of access performed by this lookup object - `int`"
-  (^Integer [^java.lang.invoke.MethodHandles$Lookup this]
+  (^Integer [^MethodHandles$Lookup this]
     (-> this (.lookupModes))))
 
 (defn unreflect-getter
@@ -485,7 +485,7 @@
   returns: a method handle which can load values from the reflected field - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalAccessException - if access checking fails"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.reflect.Field f]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.reflect.Field f]
     (-> this (.unreflectGetter f))))
 
 (defn bind
@@ -530,7 +530,7 @@
   returns: the desired method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NoSuchMethodException - if the method does not exist"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.Object receiver ^java.lang.String name ^java.lang.invoke.MethodType type]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.Object receiver ^java.lang.String name ^java.lang.invoke.MethodType type]
     (-> this (.bind receiver name type))))
 
 (defn find-virtual
@@ -591,14 +591,14 @@
     .findConstructor(String.class, MT_newString);
   assertEquals(``, (String) MH_newString.invokeExact());
 
-  refc - the class or interface from which the method is accessed - `java.lang.Class<?>`
+  refc - the class or interface from which the method is accessed - `java.lang.Class`
   name - the name of the method - `java.lang.String`
   type - the type of the method, with the receiver argument omitted - `java.lang.invoke.MethodType`
 
   returns: the desired method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NoSuchMethodException - if the method does not exist"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.invoke.MethodType type]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.invoke.MethodType type]
     (-> this (.findVirtual refc name type))))
 
 (defn to-string
@@ -629,7 +629,7 @@
    caller and callee.)
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.lang.invoke.MethodHandles$Lookup this]
+  (^java.lang.String [^MethodHandles$Lookup this]
     (-> this (.toString))))
 
 (defn unreflect-setter
@@ -651,7 +651,7 @@
   returns: a method handle which can store values into the reflected field - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalAccessException - if access checking fails"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.reflect.Field f]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.reflect.Field f]
     (-> this (.unreflectSetter f))))
 
 (defn find-static-getter
@@ -664,14 +664,14 @@
    If the returned method handle is invoked, the field's class will
    be initialized, if it has not already been initialized.
 
-  refc - the class or interface from which the method is accessed - `java.lang.Class<?>`
+  refc - the class or interface from which the method is accessed - `java.lang.Class`
   name - the field's name - `java.lang.String`
-  type - the field's type - `java.lang.Class<?>`
+  type - the field's type - `java.lang.Class`
 
   returns: a method handle which can load values from the field - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NoSuchFieldException - if the field does not exist"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.Class type]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.Class type]
     (-> this (.findStaticGetter refc name type))))
 
 (defn unreflect-special
@@ -697,12 +697,12 @@
    the method's variable arity modifier bit (0x0080) is set.
 
   m - the reflected method - `java.lang.reflect.Method`
-  special-caller - the class nominally calling the method - `java.lang.Class<?>`
+  special-caller - the class nominally calling the method - `java.lang.Class`
 
   returns: a method handle which can invoke the reflected method - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalAccessException - if access checking fails or if the method's variable arity modifier bit is set and asVarargsCollector fails"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.reflect.Method m ^java.lang.Class special-caller]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.reflect.Method m ^java.lang.Class special-caller]
     (-> this (.unreflectSpecial m special-caller))))
 
 (defn unreflect-constructor
@@ -723,12 +723,12 @@
    If the returned method handle is invoked, the constructor's class will
    be initialized, if it has not already been initialized.
 
-  c - the reflected constructor - `java.lang.reflect.Constructor<?>`
+  c - the reflected constructor - `java.lang.reflect.Constructor`
 
   returns: a method handle which can invoke the reflected constructor - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalAccessException - if access checking fails or if the method's variable arity modifier bit is set and asVarargsCollector fails"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.reflect.Constructor c]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.reflect.Constructor c]
     (-> this (.unreflectConstructor c))))
 
 (defn unreflect
@@ -756,7 +756,7 @@
   returns: a method handle which can invoke the reflected method - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalAccessException - if access checking fails or if the method's variable arity modifier bit is set and asVarargsCollector fails"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.reflect.Method m]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.reflect.Method m]
     (-> this (.unreflect m))))
 
 (defn reveal-direct
@@ -774,7 +774,7 @@
   returns: a symbolic reference which can be used to reconstruct this method handle from this lookup object - `java.lang.invoke.MethodHandleInfo`
 
   throws: java.lang.SecurityException - if a security manager is present and it refuses access"
-  (^java.lang.invoke.MethodHandleInfo [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.invoke.MethodHandle target]
+  (^java.lang.invoke.MethodHandleInfo [^MethodHandles$Lookup this ^java.lang.invoke.MethodHandle target]
     (-> this (.revealDirect target))))
 
 (defn find-special
@@ -836,15 +836,15 @@
   Listie subl = new Listie() { public String toString() { return `[subclass]`; } };
   assertEquals(``+l, (String) MH_this.invokeExact(subl)); // Listie method
 
-  refc - the class or interface from which the method is accessed - `java.lang.Class<?>`
+  refc - the class or interface from which the method is accessed - `java.lang.Class`
   name - the name of the method (which must not be `<init>`) - `java.lang.String`
   type - the type of the method, with the receiver argument omitted - `java.lang.invoke.MethodType`
-  special-caller - the proposed calling class to perform the invokespecial - `java.lang.Class<?>`
+  special-caller - the proposed calling class to perform the invokespecial - `java.lang.Class`
 
   returns: the desired method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NoSuchMethodException - if the method does not exist"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.invoke.MethodType type ^java.lang.Class special-caller]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.invoke.MethodType type ^java.lang.Class special-caller]
     (-> this (.findSpecial refc name type special-caller))))
 
 (defn find-getter
@@ -855,14 +855,14 @@
    the field.
    Access checking is performed immediately on behalf of the lookup class.
 
-  refc - the class or interface from which the method is accessed - `java.lang.Class<?>`
+  refc - the class or interface from which the method is accessed - `java.lang.Class`
   name - the field's name - `java.lang.String`
-  type - the field's type - `java.lang.Class<?>`
+  type - the field's type - `java.lang.Class`
 
   returns: a method handle which can load values from the field - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NoSuchFieldException - if the field does not exist"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.Class type]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.Class type]
     (-> this (.findGetter refc name type))))
 
 (defn find-static-setter
@@ -875,14 +875,14 @@
    If the returned method handle is invoked, the field's class will
    be initialized, if it has not already been initialized.
 
-  refc - the class or interface from which the method is accessed - `java.lang.Class<?>`
+  refc - the class or interface from which the method is accessed - `java.lang.Class`
   name - the field's name - `java.lang.String`
-  type - the field's type - `java.lang.Class<?>`
+  type - the field's type - `java.lang.Class`
 
   returns: a method handle which can store values into the field - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NoSuchFieldException - if the field does not exist"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.Class type]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.Class type]
     (-> this (.findStaticSetter refc name type))))
 
 (defn find-static
@@ -909,14 +909,14 @@
     `asList`, methodType(List.class, Object[].class));
   assertEquals(`[x, y]`, MH_asList.invoke(`x`, `y`).toString());
 
-  refc - the class from which the method is accessed - `java.lang.Class<?>`
+  refc - the class from which the method is accessed - `java.lang.Class`
   name - the name of the method - `java.lang.String`
   type - the type of the method - `java.lang.invoke.MethodType`
 
   returns: the desired method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NoSuchMethodException - if the method does not exist"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.invoke.MethodType type]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.invoke.MethodType type]
     (-> this (.findStatic refc name type))))
 
 (defn find-setter
@@ -927,14 +927,14 @@
    The second argument will be of the field's value type.
    Access checking is performed immediately on behalf of the lookup class.
 
-  refc - the class or interface from which the method is accessed - `java.lang.Class<?>`
+  refc - the class or interface from which the method is accessed - `java.lang.Class`
   name - the field's name - `java.lang.String`
-  type - the field's type - `java.lang.Class<?>`
+  type - the field's type - `java.lang.Class`
 
   returns: a method handle which can store values into the field - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NoSuchFieldException - if the field does not exist"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.Class type]
+  (^java.lang.invoke.MethodHandle [^MethodHandles$Lookup this ^java.lang.Class refc ^java.lang.String name ^java.lang.Class type]
     (-> this (.findSetter refc name type))))
 
 (defn lookup-class
@@ -947,7 +947,7 @@
     can be accessed.
 
   returns: the lookup class, on behalf of which this lookup object finds members - `java.lang.Class<?>`"
-  (^java.lang.Class [^java.lang.invoke.MethodHandles$Lookup this]
+  (^java.lang.Class [^MethodHandles$Lookup this]
     (-> this (.lookupClass))))
 
 (defn in
@@ -969,11 +969,11 @@
    then no members, not even public members, will be accessible.
    (In all other cases, public members will continue to be accessible.)
 
-  requested-lookup-class - the desired lookup class for the new lookup object - `java.lang.Class<?>`
+  requested-lookup-class - the desired lookup class for the new lookup object - `java.lang.Class`
 
-  returns: a lookup object which reports the desired lookup class - `java.lang.voke.MethodHandles.Lookup`
+  returns: a lookup object which reports the desired lookup class - `java.lang.voke.MethodHandles$Lookup`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  (^java.lang.voke.MethodHandles.Lookup [^java.lang.invoke.MethodHandles$Lookup this ^java.lang.Class requested-lookup-class]
+  (^java.lang.voke.MethodHandles$Lookup [^MethodHandles$Lookup this ^java.lang.Class requested-lookup-class]
     (-> this (.in requested-lookup-class))))
 

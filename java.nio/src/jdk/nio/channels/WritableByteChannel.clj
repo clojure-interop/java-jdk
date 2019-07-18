@@ -42,6 +42,6 @@
   returns: The number of bytes written, possibly zero - `int`
 
   throws: java.nio.channels.NonWritableChannelException - If this channel was not opened for writing"
-  (^Integer [^java.nio.channels.WritableByteChannel this ^java.nio.ByteBuffer src]
+  (^Integer [^WritableByteChannel this ^java.nio.ByteBuffer src]
     (-> this (.write src))))
 

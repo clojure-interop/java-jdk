@@ -9,33 +9,33 @@
 
   elem - `javax.swing.text.html.parser.Element`
   fictional - `boolean`"
-  ([^javax.swing.text.html.parser.Element elem ^Boolean fictional]
+  (^TagElement [^javax.swing.text.html.parser.Element elem ^Boolean fictional]
     (new TagElement elem fictional))
-  ([^javax.swing.text.html.parser.Element elem]
+  (^TagElement [^javax.swing.text.html.parser.Element elem]
     (new TagElement elem)))
 
 (defn breaks-flow
   "returns: `boolean`"
-  (^Boolean [^javax.swing.text.html.parser.TagElement this]
+  (^Boolean [^TagElement this]
     (-> this (.breaksFlow))))
 
 (defn preformatted?
   "returns: `boolean`"
-  (^Boolean [^javax.swing.text.html.parser.TagElement this]
+  (^Boolean [^TagElement this]
     (-> this (.isPreformatted))))
 
 (defn get-element
   "returns: `javax.swing.text.html.parser.Element`"
-  (^javax.swing.text.html.parser.Element [^javax.swing.text.html.parser.TagElement this]
+  (^javax.swing.text.html.parser.Element [^TagElement this]
     (-> this (.getElement))))
 
 (defn get-html-tag
-  "returns: `javax.swing.text.html.HTML.Tag`"
-  (^javax.swing.text.html.HTML.Tag [^javax.swing.text.html.parser.TagElement this]
+  "returns: `javax.swing.text.html.HTML$Tag`"
+  (^javax.swing.text.html.HTML$Tag [^TagElement this]
     (-> this (.getHTMLTag))))
 
 (defn fictional
   "returns: `boolean`"
-  (^Boolean [^javax.swing.text.html.parser.TagElement this]
+  (^Boolean [^TagElement this]
     (-> this (.fictional))))
 

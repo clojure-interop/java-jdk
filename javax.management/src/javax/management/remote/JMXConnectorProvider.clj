@@ -11,13 +11,13 @@
    JMXConnector object.
 
   service-url - the address of the connector server to connect to. - `javax.management.remote.JMXServiceURL`
-  environment - a read-only Map containing named attributes to determine how the connection is made. Keys in this map must be Strings. The appropriate type of each associated value depends on the attribute. - `java.util.Map<java.lang.String,?>`
+  environment - a read-only Map containing named attributes to determine how the connection is made. Keys in this map must be Strings. The appropriate type of each associated value depends on the attribute. - `java.util.Map`
 
   returns: a JMXConnector representing the new
    connector client.  Each successful call to this method produces
    a different object. - `javax.management.remote.JMXConnector`
 
   throws: java.lang.NullPointerException - if serviceURL or environment is null."
-  (^javax.management.remote.JMXConnector [^javax.management.remote.JMXConnectorProvider this ^javax.management.remote.JMXServiceURL service-url ^java.util.Map environment]
+  (^javax.management.remote.JMXConnector [^JMXConnectorProvider this ^javax.management.remote.JMXServiceURL service-url ^java.util.Map environment]
     (-> this (.newJMXConnector service-url environment))))
 

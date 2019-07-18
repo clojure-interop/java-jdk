@@ -14,6 +14,6 @@
 
   returns: The new DataContentHandler, or null
    if none are found. - `javax.activation.DataContentHandler`"
-  (^javax.activation.DataContentHandler [^javax.activation.DataContentHandlerFactory this ^java.lang.String mime-type]
+  (^javax.activation.DataContentHandler [^DataContentHandlerFactory this ^java.lang.String mime-type]
     (-> this (.createDataContentHandler mime-type))))
 

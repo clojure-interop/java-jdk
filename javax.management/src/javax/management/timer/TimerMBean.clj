@@ -5,7 +5,7 @@
 
 (defn stop
   "Stops the timer."
-  ([^javax.management.timer.TimerMBean this]
+  ([^TimerMBean this]
     (-> this (.stop))))
 
 (defn active?
@@ -14,7 +14,7 @@
    It becomes inactive when the stop method is called.
 
   returns: true if the timer MBean is active, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.timer.TimerMBean this]
+  (^Boolean [^TimerMBean this]
     (-> this (.isActive))))
 
 (defn get-notification-type
@@ -24,7 +24,7 @@
 
   returns: The timer notification type or null if the identifier is not mapped to any
    timer notification registered for this timer MBean. - `java.lang.String`"
-  (^java.lang.String [^javax.management.timer.TimerMBean this ^java.lang.Integer id]
+  (^java.lang.String [^TimerMBean this ^java.lang.Integer id]
     (-> this (.getNotificationType id))))
 
 (defn get-notification-i-ds
@@ -36,14 +36,14 @@
    timer notifications with the specified type.
    The vector is empty if there is no timer notifications registered for this timer MBean
    with the specified type. - `java.util.Vector<java.lang.Integer>`"
-  (^java.util.Vector [^javax.management.timer.TimerMBean this ^java.lang.String type]
+  (^java.util.Vector [^TimerMBean this ^java.lang.String type]
     (-> this (.getNotificationIDs type))))
 
 (defn set-send-past-notifications
   "Sets the flag indicating whether the timer sends past notifications or not.
 
   value - The past notifications sending on/off flag value. - `boolean`"
-  ([^javax.management.timer.TimerMBean this ^Boolean value]
+  ([^TimerMBean this ^Boolean value]
     (-> this (.setSendPastNotifications value))))
 
 (defn get-period
@@ -53,7 +53,7 @@
 
   returns: A copy of the period or null if the identifier is not mapped to any
    timer notification registered for this timer MBean. - `java.lang.Long`"
-  (^java.lang.Long [^javax.management.timer.TimerMBean this ^java.lang.Integer id]
+  (^java.lang.Long [^TimerMBean this ^java.lang.Integer id]
     (-> this (.getPeriod id))))
 
 (defn get-fixed-rate?
@@ -64,7 +64,7 @@
 
   returns: A copy of the flag indicating whether a periodic notification is
            executed at fixed-delay or at fixed-rate. - `java.lang.Boolean`"
-  (^java.lang.Boolean [^javax.management.timer.TimerMBean this ^java.lang.Integer id]
+  (^java.lang.Boolean [^TimerMBean this ^java.lang.Integer id]
     (-> this (.getFixedRate id))))
 
 (defn get-nb-occurences
@@ -74,7 +74,7 @@
 
   returns: A copy of the remaining number of occurrences or null if the identifier is not mapped to any
    timer notification registered for this timer MBean. - `java.lang.Long`"
-  (^java.lang.Long [^javax.management.timer.TimerMBean this ^java.lang.Integer id]
+  (^java.lang.Long [^TimerMBean this ^java.lang.Integer id]
     (-> this (.getNbOccurences id))))
 
 (defn get-all-notification-i-ds
@@ -82,7 +82,7 @@
 
   returns: A vector of Integer objects containing all the timer notification identifiers.
    The vector is empty if there is no timer notification registered for this timer MBean. - `java.util.Vector<java.lang.Integer>`"
-  (^java.util.Vector [^javax.management.timer.TimerMBean this]
+  (^java.util.Vector [^TimerMBean this]
     (-> this (.getAllNotificationIDs))))
 
 (defn get-notification-user-data
@@ -92,7 +92,7 @@
 
   returns: The timer notification user data object or null if the identifier is not mapped to any
    timer notification registered for this timer MBean. - `java.lang.Object`"
-  (^java.lang.Object [^javax.management.timer.TimerMBean this ^java.lang.Integer id]
+  (^java.lang.Object [^TimerMBean this ^java.lang.Integer id]
     (-> this (.getNotificationUserData id))))
 
 (defn get-date
@@ -102,7 +102,7 @@
 
   returns: A copy of the date or null if the identifier is not mapped to any
    timer notification registered for this timer MBean. - `java.util.Date`"
-  (^java.util.Date [^javax.management.timer.TimerMBean this ^java.lang.Integer id]
+  (^java.util.Date [^TimerMBean this ^java.lang.Integer id]
     (-> this (.getDate id))))
 
 (defn start
@@ -113,21 +113,21 @@
    according to its period and remaining number of occurrences.
    If the timer notification date remains earlier than the current date, this notification is just removed
    from the list of notifications."
-  ([^javax.management.timer.TimerMBean this]
+  ([^TimerMBean this]
     (-> this (.start))))
 
 (defn get-send-past-notifications?
   "Gets the flag indicating whether or not the timer sends past notifications.
 
   returns: The past notifications sending on/off flag value. - `boolean`"
-  (^Boolean [^javax.management.timer.TimerMBean this]
+  (^Boolean [^TimerMBean this]
     (-> this (.getSendPastNotifications))))
 
 (defn get-nb-notifications
   "Gets the number of timer notifications registered into the list of notifications.
 
   returns: The number of timer notifications. - `int`"
-  (^Integer [^javax.management.timer.TimerMBean this]
+  (^Integer [^TimerMBean this]
     (-> this (.getNbNotifications))))
 
 (defn get-notification-message
@@ -137,7 +137,7 @@
 
   returns: The timer notification detailed message or null if the identifier is not mapped to any
    timer notification registered for this timer MBean. - `java.lang.String`"
-  (^java.lang.String [^javax.management.timer.TimerMBean this ^java.lang.Integer id]
+  (^java.lang.String [^TimerMBean this ^java.lang.Integer id]
     (-> this (.getNotificationMessage id))))
 
 (defn add-notification
@@ -168,19 +168,19 @@
   returns: The identifier of the new created timer notification. - `java.lang.Integer`
 
   throws: java.lang.IllegalArgumentException - The date is null or the period or the number of occurrences is negative."
-  (^java.lang.Integer [^javax.management.timer.TimerMBean this ^java.lang.String type ^java.lang.String message ^java.lang.Object user-data ^java.util.Date date ^Long period ^Long nb-occurences ^Boolean fixed-rate]
+  (^java.lang.Integer [^TimerMBean this ^java.lang.String type ^java.lang.String message ^java.lang.Object user-data ^java.util.Date date ^Long period ^Long nb-occurences ^Boolean fixed-rate]
     (-> this (.addNotification type message user-data date period nb-occurences fixed-rate)))
-  (^java.lang.Integer [^javax.management.timer.TimerMBean this ^java.lang.String type ^java.lang.String message ^java.lang.Object user-data ^java.util.Date date ^Long period ^Long nb-occurences]
+  (^java.lang.Integer [^TimerMBean this ^java.lang.String type ^java.lang.String message ^java.lang.Object user-data ^java.util.Date date ^Long period ^Long nb-occurences]
     (-> this (.addNotification type message user-data date period nb-occurences)))
-  (^java.lang.Integer [^javax.management.timer.TimerMBean this ^java.lang.String type ^java.lang.String message ^java.lang.Object user-data ^java.util.Date date ^Long period]
+  (^java.lang.Integer [^TimerMBean this ^java.lang.String type ^java.lang.String message ^java.lang.Object user-data ^java.util.Date date ^Long period]
     (-> this (.addNotification type message user-data date period)))
-  (^java.lang.Integer [^javax.management.timer.TimerMBean this ^java.lang.String type ^java.lang.String message ^java.lang.Object user-data ^java.util.Date date]
+  (^java.lang.Integer [^TimerMBean this ^java.lang.String type ^java.lang.String message ^java.lang.Object user-data ^java.util.Date date]
     (-> this (.addNotification type message user-data date))))
 
 (defn remove-all-notifications
   "Removes all the timer notifications from the list of notifications
    and resets the counter used to update the timer notification identifiers."
-  ([^javax.management.timer.TimerMBean this]
+  ([^TimerMBean this]
     (-> this (.removeAllNotifications))))
 
 (defn remove-notification
@@ -189,14 +189,14 @@
   id - The timer notification identifier. - `java.lang.Integer`
 
   throws: javax.management.InstanceNotFoundException - The specified identifier does not correspond to any timer notification in the list of notifications of this timer MBean."
-  ([^javax.management.timer.TimerMBean this ^java.lang.Integer id]
+  ([^TimerMBean this ^java.lang.Integer id]
     (-> this (.removeNotification id))))
 
 (defn empty?
   "Tests whether the list of timer notifications is empty.
 
   returns: true if the list of timer notifications is empty, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.timer.TimerMBean this]
+  (^Boolean [^TimerMBean this]
     (-> this (.isEmpty))))
 
 (defn remove-notifications
@@ -205,6 +205,6 @@
   type - The timer notification type. - `java.lang.String`
 
   throws: javax.management.InstanceNotFoundException - The specified type does not correspond to any timer notification in the list of notifications of this timer MBean."
-  ([^javax.management.timer.TimerMBean this ^java.lang.String type]
+  ([^TimerMBean this ^java.lang.String type]
     (-> this (.removeNotifications type))))
 

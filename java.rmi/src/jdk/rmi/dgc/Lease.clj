@@ -13,20 +13,20 @@
 
   id - VMID associated with this lease - `java.rmi.dgc.VMID`
   duration - lease duration - `long`"
-  ([^java.rmi.dgc.VMID id ^Long duration]
+  (^Lease [^java.rmi.dgc.VMID id ^Long duration]
     (new Lease id duration)))
 
 (defn get-vmid
   "Returns the client VMID associated with the lease.
 
   returns: client VMID - `java.rmi.dgc.VMID`"
-  (^java.rmi.dgc.VMID [^java.rmi.dgc.Lease this]
+  (^java.rmi.dgc.VMID [^Lease this]
     (-> this (.getVMID))))
 
 (defn get-value
   "Returns the lease duration.
 
   returns: lease duration - `long`"
-  (^Long [^java.rmi.dgc.Lease this]
+  (^Long [^Lease this]
     (-> this (.getValue))))
 

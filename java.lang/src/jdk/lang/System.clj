@@ -234,8 +234,6 @@
 
   value - indicating enabling or disabling of finalization - `boolean`
 
-  returns: `java.lang.   void`
-
   throws: java.lang.SecurityException - if a security manager exists and its checkExit method doesn't allow the exit."
   ([^Boolean value]
     (System/runFinalizersOnExit value)))

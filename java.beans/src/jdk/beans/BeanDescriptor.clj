@@ -12,18 +12,18 @@
 
   Create a BeanDescriptor for a bean that has a customizer.
 
-  bean-class - The Class object of the Java class that implements the bean. For example sun.beans.OurButton.class. - `java.lang.Class<?>`
-  customizer-class - The Class object of the Java class that implements the bean's Customizer. For example sun.beans.OurButtonCustomizer.class. - `java.lang.Class<?>`"
-  ([^java.lang.Class bean-class ^java.lang.Class customizer-class]
+  bean-class - The Class object of the Java class that implements the bean. For example sun.beans.OurButton.class. - `java.lang.Class`
+  customizer-class - The Class object of the Java class that implements the bean's Customizer. For example sun.beans.OurButtonCustomizer.class. - `java.lang.Class`"
+  (^BeanDescriptor [^java.lang.Class bean-class ^java.lang.Class customizer-class]
     (new BeanDescriptor bean-class customizer-class))
-  ([^java.lang.Class bean-class]
+  (^BeanDescriptor [^java.lang.Class bean-class]
     (new BeanDescriptor bean-class)))
 
 (defn get-bean-class
   "Gets the bean's Class object.
 
   returns: The Class object for the bean. - `java.lang.Class<?>`"
-  (^java.lang.Class [^java.beans.BeanDescriptor this]
+  (^java.lang.Class [^BeanDescriptor this]
     (-> this (.getBeanClass))))
 
 (defn get-customizer-class
@@ -31,6 +31,6 @@
 
   returns: The Class object for the bean's customizer.  This may
    be null if the bean doesn't have a customizer. - `java.lang.Class<?>`"
-  (^java.lang.Class [^java.beans.BeanDescriptor this]
+  (^java.lang.Class [^BeanDescriptor this]
     (-> this (.getCustomizerClass))))
 

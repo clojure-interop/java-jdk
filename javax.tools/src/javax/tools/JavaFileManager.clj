@@ -68,15 +68,15 @@
    representing the specified class of the specified kind in the
    given location.
 
-  location - a location - `javax.tools.JavaFileManager.Location`
+  location - a location - `javax.tools.JavaFileManager$Location`
   class-name - the name of a class - `java.lang.String`
-  kind - the kind of file, must be one of SOURCE or CLASS - `javax.tools.JavaFileObject.Kind`
+  kind - the kind of file, must be one of SOURCE or CLASS - `javax.tools.JavaFileObject$Kind`
 
   returns: a file object, might return null if the
    file does not exist - `javax.tools.JavaFileObject`
 
   throws: java.lang.IllegalArgumentException - if the location is not known to this file manager and the file manager does not support unknown locations, or if the kind is not valid"
-  (^javax.tools.JavaFileObject [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String class-name ^javax.tools.JavaFileObject.Kind kind]
+  (^javax.tools.JavaFileObject [^JavaFileManager this ^javax.tools.JavaFileManager$Location location ^java.lang.String class-name ^javax.tools.JavaFileObject$Kind kind]
     (-> this (.getJavaFileForInput location class-name kind))))
 
 (defn list
@@ -88,15 +88,15 @@
    manager, it may not return null.  Also, an unknown
    location may not cause an exception.
 
-  location - a location - `javax.tools.JavaFileManager.Location`
+  location - a location - `javax.tools.JavaFileManager$Location`
   package-name - a package name - `java.lang.String`
-  kinds - return objects only of these kinds - `java.util.Set<javax.tools.JavaFileObject.Kind>`
+  kinds - return objects only of these kinds - `java.util.Set`
   recurse - if true include `subpackages` - `boolean`
 
   returns: an Iterable of file objects matching the given criteria - `java.lang.Iterable<javax.tools.JavaFileObject>`
 
   throws: java.io.IOException - if an I/O error occurred, or if close() has been called and this file manager cannot be reopened"
-  (^java.lang.Iterable [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String package-name ^java.util.Set kinds ^Boolean recurse]
+  (^java.lang.Iterable [^JavaFileManager this ^javax.tools.JavaFileManager$Location location ^java.lang.String package-name ^java.util.Set kinds ^Boolean recurse]
     (-> this (.list location package-name kinds recurse))))
 
 (defn handle-option
@@ -105,13 +105,13 @@
    remaining and return true, otherwise return false.
 
   current - current option - `java.lang.String`
-  remaining - remaining options - `java.util.Iterator<java.lang.String>`
+  remaining - remaining options - `java.util.Iterator`
 
   returns: true if this option was handled by this file manager,
    false otherwise - `boolean`
 
   throws: java.lang.IllegalArgumentException - if this option to this file manager is used incorrectly"
-  (^Boolean [^javax.tools.JavaFileManager this ^java.lang.String current ^java.util.Iterator remaining]
+  (^Boolean [^JavaFileManager this ^java.lang.String current ^java.util.Iterator remaining]
     (-> this (.handleOption current remaining))))
 
 (defn infer-binary-name
@@ -119,14 +119,14 @@
    binary name returned might not be a valid binary name according to
    The Java™ Language Specification.
 
-  location - a location - `javax.tools.JavaFileManager.Location`
+  location - a location - `javax.tools.JavaFileManager$Location`
   file - a file object - `javax.tools.JavaFileObject`
 
   returns: a binary name or null the file object is not
    found in the given location - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if close() has been called and this file manager cannot be reopened"
-  (^java.lang.String [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^javax.tools.JavaFileObject file]
+  (^java.lang.String [^JavaFileManager this ^javax.tools.JavaFileManager$Location location ^javax.tools.JavaFileObject file]
     (-> this (.inferBinaryName location file))))
 
 (defn flush
@@ -135,7 +135,7 @@
    effect.
 
   throws: java.io.IOException - if an I/O error occurred"
-  ([^javax.tools.JavaFileManager this]
+  ([^JavaFileManager this]
     (-> this (.flush))))
 
 (defn same-file?
@@ -149,7 +149,7 @@
    underlying object - `boolean`
 
   throws: java.lang.IllegalArgumentException - if either of the arguments were created with another file manager and this file manager does not support foreign file objects"
-  (^Boolean [^javax.tools.JavaFileManager this ^javax.tools.FileObject a ^javax.tools.FileObject b]
+  (^Boolean [^JavaFileManager this ^javax.tools.FileObject a ^javax.tools.FileObject b]
     (-> this (.isSameFile a b))))
 
 (defn get-class-loader
@@ -157,14 +157,14 @@
    location.  For example, to load annotation processors, a
    compiler will request a class loader for the ANNOTATION_PROCESSOR_PATH location.
 
-  location - a location - `javax.tools.JavaFileManager.Location`
+  location - a location - `javax.tools.JavaFileManager$Location`
 
   returns: a class loader for the given location; or null
    if loading plug-ins from the given location is disabled or if
    the location is not known - `java.lang.ClassLoader`
 
   throws: java.lang.SecurityException - if a class loader can not be created in the current security context"
-  (^java.lang.ClassLoader [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location]
+  (^java.lang.ClassLoader [^JavaFileManager this ^javax.tools.JavaFileManager$Location location]
     (-> this (.getClassLoader location))))
 
 (defn close
@@ -176,16 +176,16 @@
    already been closed has no effect.
 
   throws: java.io.IOException - if an I/O error occurred"
-  ([^javax.tools.JavaFileManager this]
+  ([^JavaFileManager this]
     (-> this (.close))))
 
 (defn has-location?
   "Determines if a location is known to this file manager.
 
-  location - a location - `javax.tools.JavaFileManager.Location`
+  location - a location - `javax.tools.JavaFileManager$Location`
 
   returns: true if the location is known - `boolean`"
-  (^Boolean [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location]
+  (^Boolean [^JavaFileManager this ^javax.tools.JavaFileManager$Location location]
     (-> this (.hasLocation location))))
 
 (defn get-file-for-input
@@ -212,7 +212,7 @@
    a valid result would be a file object representing the file
    `C:\Documents and Settings\UncleBob\src\share\classes\com\sun\tools\javac\resources\compiler.properties`.
 
-  location - a location - `javax.tools.JavaFileManager.Location`
+  location - a location - `javax.tools.JavaFileManager$Location`
   package-name - a package name - `java.lang.String`
   relative-name - a relative name - `java.lang.String`
 
@@ -220,7 +220,7 @@
    does not exist - `javax.tools.FileObject`
 
   throws: java.lang.IllegalArgumentException - if the location is not known to this file manager and the file manager does not support unknown locations, or if relativeName is not valid"
-  (^javax.tools.FileObject [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String package-name ^java.lang.String relative-name]
+  (^javax.tools.FileObject [^JavaFileManager this ^javax.tools.JavaFileManager$Location location ^java.lang.String package-name ^java.lang.String relative-name]
     (-> this (.getFileForInput location package-name relative-name))))
 
 (defn get-java-file-for-output
@@ -237,15 +237,15 @@
    the originating source file as sibling when calling this
    method.
 
-  location - a location - `javax.tools.JavaFileManager.Location`
+  location - a location - `javax.tools.JavaFileManager$Location`
   class-name - the name of a class - `java.lang.String`
-  kind - the kind of file, must be one of SOURCE or CLASS - `javax.tools.JavaFileObject.Kind`
+  kind - the kind of file, must be one of SOURCE or CLASS - `javax.tools.JavaFileObject$Kind`
   sibling - a file object to be used as hint for placement; might be null - `javax.tools.FileObject`
 
   returns: a file object for output - `javax.tools.JavaFileObject`
 
   throws: java.lang.IllegalArgumentException - if sibling is not known to this file manager, or if the location is not known to this file manager and the file manager does not support unknown locations, or if the kind is not valid"
-  (^javax.tools.JavaFileObject [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String class-name ^javax.tools.JavaFileObject.Kind kind ^javax.tools.FileObject sibling]
+  (^javax.tools.JavaFileObject [^JavaFileManager this ^javax.tools.JavaFileManager$Location location ^java.lang.String class-name ^javax.tools.JavaFileObject$Kind kind ^javax.tools.FileObject sibling]
     (-> this (.getJavaFileForOutput location class-name kind sibling))))
 
 (defn get-file-for-output
@@ -269,7 +269,7 @@
    located in the concatenation of the location, package name, and
    relative name or next to the sibling argument.  See getFileForInput for an example.
 
-  location - a location - `javax.tools.JavaFileManager.Location`
+  location - a location - `javax.tools.JavaFileManager$Location`
   package-name - a package name - `java.lang.String`
   relative-name - a relative name - `java.lang.String`
   sibling - a file object to be used as hint for placement; might be null - `javax.tools.FileObject`
@@ -277,6 +277,6 @@
   returns: a file object - `javax.tools.FileObject`
 
   throws: java.lang.IllegalArgumentException - if sibling is not known to this file manager, or if the location is not known to this file manager and the file manager does not support unknown locations, or if relativeName is not valid"
-  (^javax.tools.FileObject [^javax.tools.JavaFileManager this ^javax.tools.JavaFileManager.Location location ^java.lang.String package-name ^java.lang.String relative-name ^javax.tools.FileObject sibling]
+  (^javax.tools.FileObject [^JavaFileManager this ^javax.tools.JavaFileManager$Location location ^java.lang.String package-name ^java.lang.String relative-name ^javax.tools.FileObject sibling]
     (-> this (.getFileForOutput location package-name relative-name sibling))))
 

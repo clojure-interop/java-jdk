@@ -15,7 +15,7 @@
 
   returns: an array of DataFlavor objects for the MIME types
    this object supports. - `java.awt.datatransfer.DataFlavor[]`"
-  ([^javax.accessibility.AccessibleStreamable this]
+  ([^AccessibleStreamable this]
     (-> this (.getMimeTypes))))
 
 (defn get-stream
@@ -25,6 +25,6 @@
 
   returns: an ImputStream if an ImputStream for this DataFlavor exists.
    Otherwise, null is returned. - `java.io.InputStream`"
-  (^java.io.InputStream [^javax.accessibility.AccessibleStreamable this ^java.awt.datatransfer.DataFlavor flavor]
+  (^java.io.InputStream [^AccessibleStreamable this ^java.awt.datatransfer.DataFlavor flavor]
     (-> this (.getStream flavor))))
 

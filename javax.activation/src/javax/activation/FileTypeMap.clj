@@ -15,7 +15,7 @@
   "Constructor.
 
   The default constructor."
-  ([]
+  (^FileTypeMap []
     (new FileTypeMap )))
 
 (defn *set-default-file-type-map
@@ -45,6 +45,6 @@
   file - A file to be typed. - `java.io.File`
 
   returns: The content type. - `java.lang.String`"
-  (^java.lang.String [^javax.activation.FileTypeMap this ^java.io.File file]
+  (^java.lang.String [^FileTypeMap this ^java.io.File file]
     (-> this (.getContentType file))))
 

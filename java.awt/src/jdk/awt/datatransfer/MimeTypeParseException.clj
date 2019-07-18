@@ -9,8 +9,8 @@
   Constructs a MimeTypeParseException with the specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^MimeTypeParseException [^java.lang.String s]
     (new MimeTypeParseException s))
-  ([]
+  (^MimeTypeParseException []
     (new MimeTypeParseException )))
 

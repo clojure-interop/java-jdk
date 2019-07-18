@@ -24,39 +24,39 @@
   message - a description of the exception - `java.lang.String`
   error-code - a string specifying the vendor specific error code - `java.lang.String`
   exception - the linked exception - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.String error-code ^java.lang.Throwable exception]
+  (^TypeConstraintException [^java.lang.String message ^java.lang.String error-code ^java.lang.Throwable exception]
     (new TypeConstraintException message error-code exception))
-  ([^java.lang.String message ^java.lang.String error-code]
+  (^TypeConstraintException [^java.lang.String message ^java.lang.String error-code]
     (new TypeConstraintException message error-code))
-  ([^java.lang.String message]
+  (^TypeConstraintException [^java.lang.String message]
     (new TypeConstraintException message)))
 
 (defn get-error-code
   "Get the vendor specific error code
 
   returns: a string specifying the vendor specific error code - `java.lang.String`"
-  (^java.lang.String [^javax.xml.bind.TypeConstraintException this]
+  (^java.lang.String [^TypeConstraintException this]
     (-> this (.getErrorCode))))
 
 (defn get-linked-exception
   "Get the linked exception
 
   returns: the linked Exception, null if none exists - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.xml.bind.TypeConstraintException this]
+  (^java.lang.Throwable [^TypeConstraintException this]
     (-> this (.getLinkedException))))
 
 (defn set-linked-exception
   "Add a linked Exception.
 
   exception - the linked Exception (A null value is permitted and indicates that the linked exception does not exist or is unknown). - `java.lang.Throwable`"
-  ([^javax.xml.bind.TypeConstraintException this ^java.lang.Throwable exception]
+  ([^TypeConstraintException this ^java.lang.Throwable exception]
     (-> this (.setLinkedException exception))))
 
 (defn to-string
   "Returns a short description of this TypeConstraintException.
 
   returns: a string representation of this throwable. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.bind.TypeConstraintException this]
+  (^java.lang.String [^TypeConstraintException this]
     (-> this (.toString))))
 
 (defn print-stack-trace
@@ -64,8 +64,8 @@
    of the linkedException if it is non-null) to the PrintStream.
 
   s - PrintStream to use for output - `java.io.PrintStream`"
-  ([^javax.xml.bind.TypeConstraintException this ^java.io.PrintStream s]
+  ([^TypeConstraintException this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([^javax.xml.bind.TypeConstraintException this]
+  ([^TypeConstraintException this]
     (-> this (.printStackTrace))))
 

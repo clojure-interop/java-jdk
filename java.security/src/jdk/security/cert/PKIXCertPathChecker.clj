@@ -63,7 +63,7 @@
   forward - the order that certificates are presented to the check method. If true, certificates are presented from target to most-trusted CA (forward); if false, from most-trusted CA to target (reverse). - `boolean`
 
   throws: java.security.cert.CertPathValidatorException - if this PKIXCertPathChecker is unable to check certificates in the specified order; it should never be thrown if the forward flag is false since reverse checking must be supported"
-  ([^java.security.cert.PKIXCertPathChecker this ^Boolean forward]
+  ([^PKIXCertPathChecker this ^Boolean forward]
     (-> this (.init forward))))
 
 (defn forward-checking-supported?
@@ -74,7 +74,7 @@
 
   returns: true if forward checking is supported,
    false otherwise - `boolean`"
-  (^Boolean [^java.security.cert.PKIXCertPathChecker this]
+  (^Boolean [^PKIXCertPathChecker this]
     (-> this (.isForwardCheckingSupported))))
 
 (defn get-supported-extensions
@@ -94,7 +94,7 @@
    String format) supported by this
    PKIXCertPathChecker, or null if no
    extensions are supported - `java.util.Set<java.lang.String>`"
-  (^java.util.Set [^java.security.cert.PKIXCertPathChecker this]
+  (^java.util.Set [^PKIXCertPathChecker this]
     (-> this (.getSupportedExtensions))))
 
 (defn check
@@ -105,12 +105,12 @@
    specified by the init method.
 
   cert - the Certificate to be checked - `java.security.cert.Certificate`
-  unresolved-crit-exts - a Collection of OID strings representing the current set of unresolved critical extensions - `java.util.Collection<java.lang.String>`
+  unresolved-crit-exts - a Collection of OID strings representing the current set of unresolved critical extensions - `java.util.Collection`
 
   throws: java.security.cert.CertPathValidatorException - if the specified certificate does not pass the check"
-  ([^java.security.cert.PKIXCertPathChecker this ^java.security.cert.Certificate cert ^java.util.Collection unresolved-crit-exts]
+  ([^PKIXCertPathChecker this ^java.security.cert.Certificate cert ^java.util.Collection unresolved-crit-exts]
     (-> this (.check cert unresolved-crit-exts)))
-  ([^java.security.cert.PKIXCertPathChecker this ^java.security.cert.Certificate cert]
+  ([^PKIXCertPathChecker this ^java.security.cert.Certificate cert]
     (-> this (.check cert))))
 
 (defn clone
@@ -120,6 +120,6 @@
    override this method, if necessary.
 
   returns: a copy of this PKIXCertPathChecker - `java.lang.Object`"
-  (^java.lang.Object [^java.security.cert.PKIXCertPathChecker this]
+  (^java.lang.Object [^PKIXCertPathChecker this]
     (-> this (.clone))))
 

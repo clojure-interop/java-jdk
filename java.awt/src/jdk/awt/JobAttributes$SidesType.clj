@@ -11,7 +11,7 @@
    consecutive job pages should be printed upon the same side of
    consecutive media sheets.
 
-  type: java.awt.JobAttributes.SidesType"
+  type: java.awt.JobAttributes$SidesType"
   JobAttributes$SidesType/ONE_SIDED)
 
 (def *-two-sided-long-edge
@@ -23,7 +23,7 @@
    of pages on the medium would be correct for the reader as if for
    binding on the long edge.
 
-  type: java.awt.JobAttributes.SidesType"
+  type: java.awt.JobAttributes$SidesType"
   JobAttributes$SidesType/TWO_SIDED_LONG_EDGE)
 
 (def *-two-sided-short-edge
@@ -35,20 +35,20 @@
    of pages on the medium would be correct for the reader as if for
    binding on the short edge.
 
-  type: java.awt.JobAttributes.SidesType"
+  type: java.awt.JobAttributes$SidesType"
   JobAttributes$SidesType/TWO_SIDED_SHORT_EDGE)
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.JobAttributes$SidesType this]
+  (^Integer [^JobAttributes$SidesType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.JobAttributes$SidesType this]
+  (^java.lang.String [^JobAttributes$SidesType this]
     (-> this (.toString))))
 

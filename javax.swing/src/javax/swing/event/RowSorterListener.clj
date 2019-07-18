@@ -9,6 +9,6 @@
    describes the scope of the change.
 
   e - the event, will not be null - `javax.swing.event.RowSorterEvent`"
-  ([^javax.swing.event.RowSorterListener this ^javax.swing.event.RowSorterEvent e]
+  ([^RowSorterListener this ^javax.swing.event.RowSorterEvent e]
     (-> this (.sorterChanged e))))
 

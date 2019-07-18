@@ -58,8 +58,8 @@
   actions - Must be either null or the empty string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^ManagementPermission [^java.lang.String name ^java.lang.String actions]
     (new ManagementPermission name actions))
-  ([^java.lang.String name]
+  (^ManagementPermission [^java.lang.String name]
     (new ManagementPermission name)))
 

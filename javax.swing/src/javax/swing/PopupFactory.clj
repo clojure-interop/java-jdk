@@ -18,7 +18,7 @@
 
 (defn ->popup-factory
   "Constructor."
-  ([]
+  (^PopupFactory []
     (new PopupFactory )))
 
 (defn *set-shared-instance
@@ -61,6 +61,6 @@
   returns: Popup containing Contents - `javax.swing.Popup`
 
   throws: java.lang.IllegalArgumentException - if contents is null"
-  (^javax.swing.Popup [^javax.swing.PopupFactory this ^java.awt.Component owner ^java.awt.Component contents ^Integer x ^Integer y]
+  (^javax.swing.Popup [^PopupFactory this ^java.awt.Component owner ^java.awt.Component contents ^Integer x ^Integer y]
     (-> this (.getPopup owner contents x y))))
 

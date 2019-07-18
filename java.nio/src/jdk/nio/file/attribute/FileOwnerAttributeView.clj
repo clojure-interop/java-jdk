@@ -21,7 +21,7 @@
    have the name `owner`.
 
   returns: the name of the attribute view - `java.lang.String`"
-  (^java.lang.String [^java.nio.file.attribute.FileOwnerAttributeView this]
+  (^java.lang.String [^FileOwnerAttributeView this]
     (-> this (.name))))
 
 (defn get-owner
@@ -32,7 +32,7 @@
   returns: the file owner - `java.nio.file.attribute.UserPrincipal`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.nio.file.attribute.UserPrincipal [^java.nio.file.attribute.FileOwnerAttributeView this]
+  (^java.nio.file.attribute.UserPrincipal [^FileOwnerAttributeView this]
     (-> this (.getOwner))))
 
 (defn set-owner
@@ -45,6 +45,6 @@
   owner - the new file owner - `java.nio.file.attribute.UserPrincipal`
 
   throws: java.io.IOException - if an I/O error occurs, or the owner parameter is a group and this implementation does not support setting the owner to a group"
-  ([^java.nio.file.attribute.FileOwnerAttributeView this ^java.nio.file.attribute.UserPrincipal owner]
+  ([^FileOwnerAttributeView this ^java.nio.file.attribute.UserPrincipal owner]
     (-> this (.setOwner owner))))
 

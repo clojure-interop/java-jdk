@@ -12,8 +12,8 @@
    detail message.
 
   s - the detail message - `java.lang.String`"
-  ([^java.lang.String s]
+  (^AlreadyBoundException [^java.lang.String s]
     (new AlreadyBoundException s))
-  ([]
+  (^AlreadyBoundException []
     (new AlreadyBoundException )))
 

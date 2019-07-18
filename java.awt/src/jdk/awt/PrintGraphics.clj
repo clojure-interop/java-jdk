@@ -8,6 +8,6 @@
    object originated.
 
   returns: `java.awt.PrintJob`"
-  (^java.awt.PrintJob [^java.awt.PrintGraphics this]
+  (^java.awt.PrintJob [^PrintGraphics this]
     (-> this (.getPrintJob))))
 

@@ -9,11 +9,11 @@
 (defn test
   "Evaluates this predicate on the given argument.
 
-  t - the input argument - `Predicate.T`
+  t - the input argument - `T`
 
   returns: true if the input argument matches the predicate,
    otherwise false - `boolean`"
-  (^Boolean [^java.util.function.Predicate this ^Predicate.T t]
+  (^Boolean [^Predicate this t]
     (-> this (.test t))))
 
 (defn and
@@ -26,13 +26,13 @@
    to the caller; if evaluation of this predicate throws an exception, the
    other predicate will not be evaluated.
 
-  other - a predicate that will be logically-ANDed with this predicate - `Predicate.T>`
+  other - a predicate that will be logically-ANDed with this predicate - `java.util.function.Predicate`
 
   returns: a composed predicate that represents the short-circuiting logical
-   AND of this predicate and the other predicate - `default java.util.function.Predicate<Predicate.T>`
+   AND of this predicate and the other predicate - `default java.util.function.Predicate<T>`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^java.util.function.Predicate this ^Predicate.T> other]
+  ([^Predicate this ^java.util.function.Predicate other]
     (-> this (.and other))))
 
 (defn negate
@@ -40,8 +40,8 @@
    predicate.
 
   returns: a predicate that represents the logical negation of this
-   predicate - `default java.util.function.Predicate<Predicate.T>`"
-  ([^java.util.function.Predicate this]
+   predicate - `default java.util.function.Predicate<T>`"
+  ([^Predicate this]
     (-> this (.negate))))
 
 (defn or
@@ -54,13 +54,13 @@
    to the caller; if evaluation of this predicate throws an exception, the
    other predicate will not be evaluated.
 
-  other - a predicate that will be logically-ORed with this predicate - `Predicate.T>`
+  other - a predicate that will be logically-ORed with this predicate - `java.util.function.Predicate`
 
   returns: a composed predicate that represents the short-circuiting logical
-   OR of this predicate and the other predicate - `default java.util.function.Predicate<Predicate.T>`
+   OR of this predicate and the other predicate - `default java.util.function.Predicate<T>`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^java.util.function.Predicate this ^Predicate.T> other]
+  ([^Predicate this ^java.util.function.Predicate other]
     (-> this (.or other))))
 
 (defn *is-equal

@@ -7,7 +7,7 @@
 
   MODELESS dialog doesn't block any top-level windows.
 
-  type: java.awt.Dialog.ModalityType"
+  type: java.awt.Dialog$ModalityType"
   Dialog$ModalityType/MODELESS)
 
 (def DOCUMENT_MODAL
@@ -20,7 +20,7 @@
    solid document. Since every top-level window must belong to some
    document, its root can be found as the top-nearest window without an owner.
 
-  type: java.awt.Dialog.ModalityType"
+  type: java.awt.Dialog$ModalityType"
   Dialog$ModalityType/DOCUMENT_MODAL)
 
 (def APPLICATION_MODAL
@@ -32,7 +32,7 @@
    treated either as separate applications or a single one. This behavior
    is implementation-dependent.
 
-  type: java.awt.Dialog.ModalityType"
+  type: java.awt.Dialog$ModalityType"
   Dialog$ModalityType/APPLICATION_MODAL)
 
 (def TOOLKIT_MODAL
@@ -52,7 +52,7 @@
    SecurityException will be thrown, and the modality type will
    be left unchanged.
 
-  type: java.awt.Dialog.ModalityType"
+  type: java.awt.Dialog$ModalityType"
   Dialog$ModalityType/TOOLKIT_MODAL)
 
 (defn *values
@@ -64,7 +64,7 @@
   for (Dialog.ModalityType c : Dialog.ModalityType.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.Dialog.ModalityType[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.Dialog$ModalityType[]`"
   ([]
     (Dialog$ModalityType/values )))
 
@@ -76,9 +76,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.awt.Dialog.ModalityType`
+  returns: the enum constant with the specified name - `java.awt.Dialog$ModalityType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.awt.Dialog.ModalityType [^java.lang.String name]
+  (^java.awt.Dialog$ModalityType [^java.lang.String name]
     (Dialog$ModalityType/valueOf name)))
 

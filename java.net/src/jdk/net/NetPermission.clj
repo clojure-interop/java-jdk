@@ -132,8 +132,8 @@
   actions - should be null. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^NetPermission [^java.lang.String name ^java.lang.String actions]
     (new NetPermission name actions))
-  ([^java.lang.String name]
+  (^NetPermission [^java.lang.String name]
     (new NetPermission name)))
 

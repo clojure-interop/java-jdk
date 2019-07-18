@@ -63,7 +63,7 @@
   extra-image-metadata-format-class-names - an array of Strings, or null, to be used to instantiate a metadata format object to be returned from getImageMetadataFormat. An array of length 0 is normalized to null. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - if outputTypes is null or has length 0."
-  ([^java.lang.String vendor-name ^java.lang.String version names suffixes mime-types ^java.lang.String writer-class-name output-types reader-spi-names ^Boolean supports-standard-stream-metadata-format ^java.lang.String native-stream-metadata-format-name ^java.lang.String native-stream-metadata-format-class-name extra-stream-metadata-format-names extra-stream-metadata-format-class-names ^Boolean supports-standard-image-metadata-format ^java.lang.String native-image-metadata-format-name ^java.lang.String native-image-metadata-format-class-name extra-image-metadata-format-names extra-image-metadata-format-class-names]
+  (^ImageWriterSpi [^java.lang.String vendor-name ^java.lang.String version names suffixes mime-types ^java.lang.String writer-class-name output-types reader-spi-names ^Boolean supports-standard-stream-metadata-format ^java.lang.String native-stream-metadata-format-name ^java.lang.String native-stream-metadata-format-class-name extra-stream-metadata-format-names extra-stream-metadata-format-class-names ^Boolean supports-standard-image-metadata-format ^java.lang.String native-image-metadata-format-name ^java.lang.String native-image-metadata-format-class-name extra-image-metadata-format-names extra-image-metadata-format-class-names]
     (new ImageWriterSpi vendor-name version names suffixes mime-types writer-class-name output-types reader-spi-names supports-standard-stream-metadata-format native-stream-metadata-format-name native-stream-metadata-format-class-name extra-stream-metadata-format-names extra-stream-metadata-format-class-names supports-standard-image-metadata-format native-image-metadata-format-name native-image-metadata-format-class-name extra-image-metadata-format-names extra-image-metadata-format-class-names)))
 
 (def *-standard-output-type
@@ -72,7 +72,7 @@
   Deprecated. Instead of using this field, directly create
    the equivalent array { ImageOutputStream.class }.
 
-  type: java.lang.    java.lang.Class[]"
+  type: java.lang.Class[]"
   ImageWriterSpi/STANDARD_OUTPUT_TYPE)
 
 (defn format-lossless?
@@ -82,7 +82,7 @@
 
   returns: true if the format preserves full pixel
    accuracy. - `boolean`"
-  (^Boolean [^javax.imageio.spi.ImageWriterSpi this]
+  (^Boolean [^ImageWriterSpi this]
     (-> this (.isFormatLossless))))
 
 (defn get-output-types
@@ -97,7 +97,7 @@
 
   returns: a non-null array of
    Classobjects of length at least 1. - `java.lang.Class[]`"
-  ([^javax.imageio.spi.ImageWriterSpi this]
+  ([^ImageWriterSpi this]
     (-> this (.getOutputTypes))))
 
 (defn can-encode-image?
@@ -133,7 +133,7 @@
    to encode images with the given layout. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if type is null."
-  (^Boolean [^javax.imageio.spi.ImageWriterSpi this ^javax.imageio.ImageTypeSpecifier type]
+  (^Boolean [^ImageWriterSpi this ^javax.imageio.ImageTypeSpecifier type]
     (-> this (.canEncodeImage type))))
 
 (defn create-writer-instance
@@ -154,9 +154,9 @@
   returns: an ImageWriter instance. - `javax.imageio.ImageWriter`
 
   throws: java.io.IOException - if the attempt to instantiate the writer fails."
-  (^javax.imageio.ImageWriter [^javax.imageio.spi.ImageWriterSpi this ^java.lang.Object extension]
+  (^javax.imageio.ImageWriter [^ImageWriterSpi this ^java.lang.Object extension]
     (-> this (.createWriterInstance extension)))
-  (^javax.imageio.ImageWriter [^javax.imageio.spi.ImageWriterSpi this]
+  (^javax.imageio.ImageWriter [^ImageWriterSpi this]
     (-> this (.createWriterInstance))))
 
 (defn own-writer?
@@ -169,7 +169,7 @@
   returns: true if writer is recognized - `boolean`
 
   throws: java.lang.IllegalArgumentException - if writer is null."
-  (^Boolean [^javax.imageio.spi.ImageWriterSpi this ^javax.imageio.ImageWriter writer]
+  (^Boolean [^ImageWriterSpi this ^javax.imageio.ImageWriter writer]
     (-> this (.isOwnWriter writer))))
 
 (defn get-image-reader-spi-names
@@ -202,6 +202,6 @@
   returns: an array of Strings of length at least 1
    containing names of ImageReaderSpis, or
    null. - `java.lang.String[]`"
-  ([^javax.imageio.spi.ImageWriterSpi this]
+  ([^ImageWriterSpi this]
     (-> this (.getImageReaderSpiNames))))
 

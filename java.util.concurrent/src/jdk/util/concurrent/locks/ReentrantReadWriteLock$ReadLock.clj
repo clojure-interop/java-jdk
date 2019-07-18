@@ -12,7 +12,7 @@
    If the write lock is held by another thread then
    the current thread becomes disabled for thread scheduling
    purposes and lies dormant until the read lock has been acquired."
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
+  ([^ReentrantReadWriteLock$ReadLock this]
     (-> this (.lock))))
 
 (defn lock-interruptibly
@@ -55,7 +55,7 @@
    lock.
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
+  ([^ReentrantReadWriteLock$ReadLock this]
     (-> this (.lockInterruptibly))))
 
 (defn try-lock
@@ -125,9 +125,9 @@
   returns: true if the read lock was acquired - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted"
-  (^Boolean [^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^ReentrantReadWriteLock$ReadLock this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryLock timeout unit)))
-  (^Boolean [^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
+  (^Boolean [^ReentrantReadWriteLock$ReadLock this]
     (-> this (.tryLock))))
 
 (defn unlock
@@ -135,7 +135,7 @@
 
    If the number of readers is now zero then the lock
    is made available for write lock attempts."
-  ([^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
+  ([^ReentrantReadWriteLock$ReadLock this]
     (-> this (.unlock))))
 
 (defn new-condition
@@ -145,7 +145,7 @@
   returns: A new Condition instance for this Lock instance - `java.util.concurrent.locks.Condition`
 
   throws: java.lang.UnsupportedOperationException - always"
-  (^java.util.concurrent.locks.Condition [^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
+  (^java.util.concurrent.locks.Condition [^ReentrantReadWriteLock$ReadLock this]
     (-> this (.newCondition))))
 
 (defn to-string
@@ -154,6 +154,6 @@
    followed by the number of held read locks.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.locks.ReentrantReadWriteLock$ReadLock this]
+  (^java.lang.String [^ReentrantReadWriteLock$ReadLock this]
     (-> this (.toString))))
 

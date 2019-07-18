@@ -17,8 +17,8 @@
    java.lang.Throwable.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^EOFException [^java.lang.String s]
     (new EOFException s))
-  ([]
+  (^EOFException []
     (new EOFException )))
 

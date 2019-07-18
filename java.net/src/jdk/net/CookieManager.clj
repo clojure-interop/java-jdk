@@ -85,9 +85,9 @@
 
   store - a CookieStore to be used by cookie manager. if null, cookie manager will use a default one, which is an in-memory CookieStore implementation. - `java.net.CookieStore`
   cookie-policy - a CookiePolicy instance to be used by cookie manager as policy callback. if null, ACCEPT_ORIGINAL_SERVER will be used. - `java.net.CookiePolicy`"
-  ([^java.net.CookieStore store ^java.net.CookiePolicy cookie-policy]
+  (^CookieManager [^java.net.CookieStore store ^java.net.CookiePolicy cookie-policy]
     (new CookieManager store cookie-policy))
-  ([]
+  (^CookieManager []
     (new CookieManager )))
 
 (defn set-cookie-policy
@@ -98,37 +98,37 @@
    can call this method to set another cookie policy.
 
   cookie-policy - the cookie policy. Can be null, which has no effects on current cookie policy. - `java.net.CookiePolicy`"
-  ([^java.net.CookieManager this ^java.net.CookiePolicy cookie-policy]
+  ([^CookieManager this ^java.net.CookiePolicy cookie-policy]
     (-> this (.setCookiePolicy cookie-policy))))
 
 (defn get-cookie-store
   "To retrieve current cookie store.
 
   returns: the cookie store currently used by cookie manager. - `java.net.CookieStore`"
-  (^java.net.CookieStore [^java.net.CookieManager this]
+  (^java.net.CookieStore [^CookieManager this]
     (-> this (.getCookieStore))))
 
 (defn get
   "Description copied from class: CookieHandler
 
   uri - a URI representing the intended use for the cookies - `java.net.URI`
-  request-headers - - a Map from request header field names to lists of field values representing the current request headers - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
+  request-headers - - a Map from request header field names to lists of field values representing the current request headers - `java.util.Map`
 
   returns: an immutable map from state management headers, with
               field names `Cookie` or `Cookie2` to a list of
               cookies containing state information - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.util.Map> [^java.net.CookieManager this ^java.net.URI uri ^java.util.Map> request-headers]
+  (^java.util.Map [^CookieManager this ^java.net.URI uri ^java.util.Map request-headers]
     (-> this (.get uri request-headers))))
 
 (defn put
   "Description copied from class: CookieHandler
 
   uri - a URI where the cookies come from - `java.net.URI`
-  response-headers - an immutable map from field names to lists of field values representing the response header fields returned - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
+  response-headers - an immutable map from field names to lists of field values representing the response header fields returned - `java.util.Map`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.net.CookieManager this ^java.net.URI uri ^java.util.Map> response-headers]
+  ([^CookieManager this ^java.net.URI uri ^java.util.Map response-headers]
     (-> this (.put uri response-headers))))
 

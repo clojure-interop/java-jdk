@@ -31,7 +31,7 @@
 
 (defn ->document-filter
   "Constructor."
-  ([]
+  (^DocumentFilter []
     (new DocumentFilter )))
 
 (defn remove
@@ -41,12 +41,12 @@
    necessary, or call directly into the FilterBypass as
    necessary.
 
-  fb - FilterBypass that can be used to mutate Document - `javax.swing.text.DocumentFilter.FilterBypass`
+  fb - FilterBypass that can be used to mutate Document - `javax.swing.text.DocumentFilter$FilterBypass`
   offset - the offset from the beginning >= 0 - `int`
   length - the number of characters to remove >= 0 - `int`
 
   throws: javax.swing.text.BadLocationException - some portion of the removal range was not a valid part of the document. The location in the exception is the first bad position encountered."
-  ([^javax.swing.text.DocumentFilter this ^javax.swing.text.DocumentFilter.FilterBypass fb ^Integer offset ^Integer length]
+  ([^DocumentFilter this ^javax.swing.text.DocumentFilter$FilterBypass fb ^Integer offset ^Integer length]
     (-> this (.remove fb offset length))))
 
 (defn insert-string
@@ -55,13 +55,13 @@
    insertion should override this and only call supers implementation as
    necessary, or call directly into the FilterBypass.
 
-  fb - FilterBypass that can be used to mutate Document - `javax.swing.text.DocumentFilter.FilterBypass`
+  fb - FilterBypass that can be used to mutate Document - `javax.swing.text.DocumentFilter$FilterBypass`
   offset - the offset into the document to insert the content >= 0. All positions that track change at or after the given location will move. - `int`
   string - the string to insert - `java.lang.String`
   attr - the attributes to associate with the inserted content. This may be null if there are no attributes. - `javax.swing.text.AttributeSet`
 
   throws: javax.swing.text.BadLocationException - the given insert position is not a valid position within the document"
-  ([^javax.swing.text.DocumentFilter this ^javax.swing.text.DocumentFilter.FilterBypass fb ^Integer offset ^java.lang.String string ^javax.swing.text.AttributeSet attr]
+  ([^DocumentFilter this ^javax.swing.text.DocumentFilter$FilterBypass fb ^Integer offset ^java.lang.String string ^javax.swing.text.AttributeSet attr]
     (-> this (.insertString fb offset string attr))))
 
 (defn replace
@@ -70,13 +70,13 @@
    replace should override this and only call supers implementation as
    necessary, or call directly into the FilterBypass.
 
-  fb - FilterBypass that can be used to mutate Document - `javax.swing.text.DocumentFilter.FilterBypass`
+  fb - FilterBypass that can be used to mutate Document - `javax.swing.text.DocumentFilter$FilterBypass`
   offset - Location in Document - `int`
   length - Length of text to delete - `int`
   text - Text to insert, null indicates no text to insert - `java.lang.String`
   attrs - AttributeSet indicating attributes of inserted text, null is legal. - `javax.swing.text.AttributeSet`
 
   throws: javax.swing.text.BadLocationException - the given insert position is not a valid position within the document"
-  ([^javax.swing.text.DocumentFilter this ^javax.swing.text.DocumentFilter.FilterBypass fb ^Integer offset ^Integer length ^java.lang.String text ^javax.swing.text.AttributeSet attrs]
+  ([^DocumentFilter this ^javax.swing.text.DocumentFilter$FilterBypass fb ^Integer offset ^Integer length ^java.lang.String text ^javax.swing.text.AttributeSet attrs]
     (-> this (.replace fb offset length text attrs))))
 

@@ -7,7 +7,7 @@
 
   Initial SwingWorker state.
 
-  type: javax.swing.SwingWorker.StateValue"
+  type: javax.swing.SwingWorker$StateValue"
   SwingWorker$StateValue/PENDING)
 
 (def STARTED
@@ -16,7 +16,7 @@
   SwingWorker is STARTED
    before invoking doInBackground.
 
-  type: javax.swing.SwingWorker.StateValue"
+  type: javax.swing.SwingWorker$StateValue"
   SwingWorker$StateValue/STARTED)
 
 (def DONE
@@ -26,7 +26,7 @@
    after doInBackground method
    is finished.
 
-  type: javax.swing.SwingWorker.StateValue"
+  type: javax.swing.SwingWorker$StateValue"
   SwingWorker$StateValue/DONE)
 
 (defn *values
@@ -38,7 +38,7 @@
   for (SwingWorker.StateValue c : SwingWorker.StateValue.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.SwingWorker.StateValue[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.SwingWorker$StateValue[]`"
   ([]
     (SwingWorker$StateValue/values )))
 
@@ -50,9 +50,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.swing.SwingWorker.StateValue`
+  returns: the enum constant with the specified name - `javax.swing.SwingWorker$StateValue`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.swing.SwingWorker.StateValue [^java.lang.String name]
+  (^javax.swing.SwingWorker$StateValue [^java.lang.String name]
     (SwingWorker$StateValue/valueOf name)))
 

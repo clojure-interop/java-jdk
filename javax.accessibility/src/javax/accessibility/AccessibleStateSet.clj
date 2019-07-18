@@ -13,9 +13,9 @@
    the array of states passed in.  Duplicate entries are ignored.
 
   states - an array of AccessibleState describing the state set. - `javax.accessibility.AccessibleState[]`"
-  ([states]
+  (^AccessibleStateSet [states]
     (new AccessibleStateSet states))
-  ([]
+  (^AccessibleStateSet []
     (new AccessibleStateSet )))
 
 (defn add
@@ -29,7 +29,7 @@
 
   returns: true if state is added to the state set; false if the state set
    is unchanged - `boolean`"
-  (^Boolean [^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
+  (^Boolean [^AccessibleStateSet this ^javax.accessibility.AccessibleState state]
     (-> this (.add state))))
 
 (defn add-all
@@ -37,7 +37,7 @@
    are ignored.
 
   states - AccessibleState array describing the state set. - `javax.accessibility.AccessibleState[]`"
-  ([^javax.accessibility.AccessibleStateSet this states]
+  ([^AccessibleStateSet this states]
     (-> this (.addAll states))))
 
 (defn remove
@@ -50,12 +50,12 @@
 
   returns: true if the state is in the state set; false if the state set
    will be unchanged - `boolean`"
-  (^Boolean [^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
+  (^Boolean [^AccessibleStateSet this ^javax.accessibility.AccessibleState state]
     (-> this (.remove state))))
 
 (defn clear
   "Removes all the states from the current state set."
-  ([^javax.accessibility.AccessibleStateSet this]
+  ([^AccessibleStateSet this]
     (-> this (.clear))))
 
 (defn contains
@@ -64,14 +64,14 @@
   state - the state - `javax.accessibility.AccessibleState`
 
   returns: true if the state is in the state set; otherwise false - `boolean`"
-  (^Boolean [^javax.accessibility.AccessibleStateSet this ^javax.accessibility.AccessibleState state]
+  (^Boolean [^AccessibleStateSet this ^javax.accessibility.AccessibleState state]
     (-> this (.contains state))))
 
 (defn to-array
   "Returns the current state set as an array of AccessibleState
 
   returns: AccessibleState array containing the current state. - `javax.accessibility.AccessibleState[]`"
-  ([^javax.accessibility.AccessibleStateSet this]
+  ([^AccessibleStateSet this]
     (-> this (.toArray))))
 
 (defn to-string
@@ -79,6 +79,6 @@
    using the default locale.
 
   returns: comma separated localized String - `java.lang.String`"
-  (^java.lang.String [^javax.accessibility.AccessibleStateSet this]
+  (^java.lang.String [^AccessibleStateSet this]
     (-> this (.toString))))
 

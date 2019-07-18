@@ -42,9 +42,9 @@
   bit-masks - The bit masks for all bands. - `int[]`
 
   throws: java.lang.IllegalArgumentException - if dataType is not either DataBuffer.TYPE_BYTE, DataBuffer.TYPE_USHORT, or DataBuffer.TYPE_INT"
-  ([^Integer data-type ^Integer w ^Integer h ^Integer scanline-stride bit-masks]
+  (^SinglePixelPackedSampleModel [^Integer data-type ^Integer w ^Integer h ^Integer scanline-stride bit-masks]
     (new SinglePixelPackedSampleModel data-type w h scanline-stride bit-masks))
-  ([^Integer data-type ^Integer w ^Integer h bit-masks]
+  (^SinglePixelPackedSampleModel [^Integer data-type ^Integer w ^Integer h bit-masks]
     (new SinglePixelPackedSampleModel data-type w h bit-masks)))
 
 (defn create-data-buffer
@@ -55,7 +55,7 @@
 
   returns: a DataBuffer corresponding to this
            SampleModel. - `java.awt.image.DataBuffer`"
-  (^java.awt.image.DataBuffer [^java.awt.image.SinglePixelPackedSampleModel this]
+  (^java.awt.image.DataBuffer [^SinglePixelPackedSampleModel this]
     (-> this (.createDataBuffer))))
 
 (defn get-data-elements
@@ -96,7 +96,7 @@
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`
 
   returns: the data for the specified pixel. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  (^java.lang.Object [^SinglePixelPackedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.getDataElements x y obj data))))
 
 (defn create-subset-sample-model
@@ -114,7 +114,7 @@
            SampleModel. - `java.awt.image.SampleModel`
 
   throws: java.awt.image.RasterFormatException - if the length of the bands argument is greater than the number of bands in the sample model."
-  (^java.awt.image.SampleModel [^java.awt.image.SinglePixelPackedSampleModel this bands]
+  (^java.awt.image.SampleModel [^SinglePixelPackedSampleModel this bands]
     (-> this (.createSubsetSampleModel bands))))
 
 (defn get-pixels
@@ -131,7 +131,7 @@
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`
 
   returns: all samples for the specified region of pixels. - `int[]`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
+  ([^SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
     (-> this (.getPixels x y w h i-array data))))
 
 (defn set-pixels
@@ -146,7 +146,7 @@
   h - The height of the pixel rectangle. - `int`
   i-array - The input samples in an int array. - `int[]`
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
+  ([^SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h i-array ^java.awt.image.DataBuffer data]
     (-> this (.setPixels x y w h i-array data))))
 
 (defn get-num-data-elements
@@ -155,7 +155,7 @@
    For a SinglePixelPackedSampleModel, this is one.
 
   returns: the number of data elements. - `int`"
-  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this]
+  (^Integer [^SinglePixelPackedSampleModel this]
     (-> this (.getNumDataElements))))
 
 (defn get-offset
@@ -171,7 +171,7 @@
   y - the Y coordinate of the specified pixel - `int`
 
   returns: the offset of the specified pixel. - `int`"
-  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y]
+  (^Integer [^SinglePixelPackedSampleModel this ^Integer x ^Integer y]
     (-> this (.getOffset x y))))
 
 (defn get-scanline-stride
@@ -179,7 +179,7 @@
 
   returns: the scanline stride of this
             SinglePixelPackedSampleModel. - `int`"
-  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this]
+  (^Integer [^SinglePixelPackedSampleModel this]
     (-> this (.getScanlineStride))))
 
 (defn get-sample
@@ -195,7 +195,7 @@
 
   returns: the sample in a specified band for the specified
            pixel. - `int`"
-  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
+  (^Integer [^SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer b ^java.awt.image.DataBuffer data]
     (-> this (.getSample x y b data))))
 
 (defn set-sample
@@ -209,7 +209,7 @@
   b - The band to set. - `int`
   s - The input sample as an int. - `int`
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer b ^Integer s ^java.awt.image.DataBuffer data]
+  ([^SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer b ^Integer s ^java.awt.image.DataBuffer data]
     (-> this (.setSample x y b s data))))
 
 (defn set-pixel
@@ -221,7 +221,7 @@
   y - The Y coordinate of the pixel location. - `int`
   i-array - The input samples in an int array. - `int[]`
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
+  ([^SinglePixelPackedSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
     (-> this (.setPixel x y i-array data))))
 
 (defn get-pixel
@@ -235,7 +235,7 @@
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`
 
   returns: all samples for the specified pixel. - `int[]`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
+  ([^SinglePixelPackedSampleModel this ^Integer x ^Integer y i-array ^java.awt.image.DataBuffer data]
     (-> this (.getPixel x y i-array data))))
 
 (defn get-sample-size
@@ -244,16 +244,16 @@
   band - the specified band - `int`
 
   returns: the size of the samples of the specified band. - `int`"
-  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this ^Integer band]
+  (^Integer [^SinglePixelPackedSampleModel this ^Integer band]
     (-> this (.getSampleSize band)))
-  ([^java.awt.image.SinglePixelPackedSampleModel this]
+  ([^SinglePixelPackedSampleModel this]
     (-> this (.getSampleSize))))
 
 (defn get-bit-masks
   "Returns the bit masks for all bands.
 
   returns: the bit masks for all bands. - `int[]`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this]
+  ([^SinglePixelPackedSampleModel this]
     (-> this (.getBitMasks))))
 
 (defn create-compatible-sample-model
@@ -269,14 +269,14 @@
            specified width and height. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if w or h is not greater than 0"
-  (^java.awt.image.SampleModel [^java.awt.image.SinglePixelPackedSampleModel this ^Integer w ^Integer h]
+  (^java.awt.image.SampleModel [^SinglePixelPackedSampleModel this ^Integer w ^Integer h]
     (-> this (.createCompatibleSampleModel w h))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.image.SinglePixelPackedSampleModel this]
+  (^Integer [^SinglePixelPackedSampleModel this]
     (-> this (.hashCode))))
 
 (defn set-data-elements
@@ -313,7 +313,7 @@
   y - The Y coordinate of the pixel location. - `int`
   obj - A primitive array containing pixel data. - `java.lang.Object`
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
+  ([^SinglePixelPackedSampleModel this ^Integer x ^Integer y ^java.lang.Object obj ^java.awt.image.DataBuffer data]
     (-> this (.setDataElements x y obj data))))
 
 (defn set-samples
@@ -329,7 +329,7 @@
   b - The band to set. - `int`
   i-array - The input samples in an int array. - `int[]`
   data - The DataBuffer containing the image data. - `java.awt.image.DataBuffer`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
+  ([^SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
     (-> this (.setSamples x y w h b i-array data))))
 
 (defn get-bit-offsets
@@ -337,7 +337,7 @@
     a pixel for all bands.
 
   returns: the bit offsets representing a pixel for all bands. - `int[]`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this]
+  ([^SinglePixelPackedSampleModel this]
     (-> this (.getBitOffsets))))
 
 (defn equals
@@ -347,7 +347,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.image.SinglePixelPackedSampleModel this ^java.lang.Object o]
+  (^Boolean [^SinglePixelPackedSampleModel this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn get-samples
@@ -366,6 +366,6 @@
 
   returns: the samples for the specified band for the specified
            region of pixels. - `int[]`"
-  ([^java.awt.image.SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
+  ([^SinglePixelPackedSampleModel this ^Integer x ^Integer y ^Integer w ^Integer h ^Integer b i-array ^java.awt.image.DataBuffer data]
     (-> this (.getSamples x y w h b i-array data))))
 

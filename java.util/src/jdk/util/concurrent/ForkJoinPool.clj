@@ -110,16 +110,16 @@
   Creates a ForkJoinPool with the given parameters.
 
   parallelism - the parallelism level. For default value, use Runtime.availableProcessors(). - `int`
-  factory - the factory for creating new threads. For default value, use defaultForkJoinWorkerThreadFactory. - `java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory`
-  handler - the handler for internal worker threads that terminate due to unrecoverable errors encountered while executing tasks. For default value, use null. - `java.lang.Thread.UncaughtExceptionHandler`
+  factory - the factory for creating new threads. For default value, use defaultForkJoinWorkerThreadFactory. - `java.util.concurrent.ForkJoinPool$ForkJoinWorkerThreadFactory`
+  handler - the handler for internal worker threads that terminate due to unrecoverable errors encountered while executing tasks. For default value, use null. - `java.lang.Thread$UncaughtExceptionHandler`
   async-mode - if true, establishes local first-in-first-out scheduling mode for forked tasks that are never joined. This mode may be more appropriate than default locally stack-based mode in applications in which worker threads only process event-style asynchronous tasks. For default value, use false. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if parallelism less than or equal to zero, or greater than implementation limit"
-  ([^Integer parallelism ^java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory factory ^java.lang.Thread.UncaughtExceptionHandler handler ^Boolean async-mode]
+  (^ForkJoinPool [^Integer parallelism ^java.util.concurrent.ForkJoinPool$ForkJoinWorkerThreadFactory factory ^java.lang.Thread$UncaughtExceptionHandler handler ^Boolean async-mode]
     (new ForkJoinPool parallelism factory handler async-mode))
-  ([^Integer parallelism]
+  (^ForkJoinPool [^Integer parallelism]
     (new ForkJoinPool parallelism))
-  ([]
+  (^ForkJoinPool []
     (new ForkJoinPool )))
 
 (def *-default-fork-join-worker-thread-factory
@@ -128,7 +128,7 @@
   Creates a new ForkJoinWorkerThread. This factory is used unless
    overridden in ForkJoinPool constructors.
 
-  type: java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory"
+  type: java.util.concurrent.ForkJoinPool$ForkJoinWorkerThreadFactory"
   ForkJoinPool/defaultForkJoinWorkerThreadFactory)
 
 (defn *common-pool
@@ -174,10 +174,10 @@
    ensure sufficient parallelism available during the call to
    blocker.block().
 
-  blocker - the blocker task - `java.util.concurrent.ForkJoinPool.ManagedBlocker`
+  blocker - the blocker task - `java.util.concurrent.ForkJoinPool$ManagedBlocker`
 
   throws: java.lang.InterruptedException - if blocker.block() did so"
-  ([^java.util.concurrent.ForkJoinPool.ManagedBlocker blocker]
+  ([^java.util.concurrent.ForkJoinPool$ManagedBlocker blocker]
     (ForkJoinPool/managedBlock blocker)))
 
 (defn invoke
@@ -190,12 +190,12 @@
    as well as the thread actually encountering the exception;
    minimally only the latter.
 
-  task - the task - `java.util.concurrent.ForkJoinTask<T>`
+  task - the task - `java.util.concurrent.ForkJoinTask`
 
   returns: the task's result - `<T> T`
 
   throws: java.lang.NullPointerException - if the task is null"
-  ([^java.util.concurrent.ForkJoinPool this ^java.util.concurrent.ForkJoinTask task]
+  ([^ForkJoinPool this ^java.util.concurrent.ForkJoinTask task]
     (-> this (.invoke task))))
 
 (defn has-queued-submissions?
@@ -203,7 +203,7 @@
    pool that have not yet begun executing.
 
   returns: true if there are any queued submissions - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinPool this]
+  (^Boolean [^ForkJoinPool this]
     (-> this (.hasQueuedSubmissions))))
 
 (defn quiescent?
@@ -216,7 +216,7 @@
    threads remain inactive.
 
   returns: true if all threads are currently idle - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinPool this]
+  (^Boolean [^ForkJoinPool this]
     (-> this (.isQuiescent))))
 
 (defn get-queued-task-count
@@ -228,28 +228,28 @@
    granularities.
 
   returns: the number of queued tasks - `long`"
-  (^Long [^java.util.concurrent.ForkJoinPool this]
+  (^Long [^ForkJoinPool this]
     (-> this (.getQueuedTaskCount))))
 
 (defn invoke-all
   "Description copied from interface: ExecutorService
 
-  tasks - the collection of tasks - `java.util.concurrent.Callable<T>>`
+  tasks - the collection of tasks - `java.util.Collection`
 
   returns: a list of Futures representing the tasks, in the same
            sequential order as produced by the iterator for the
            given task list, each of which has completed - `<T> java.util.List<java.util.concurrent.Future<T>>`
 
   throws: java.lang.NullPointerException - if tasks or any of its elements are null"
-  ([^java.util.concurrent.ForkJoinPool this ^java.util.concurrent.Callable> tasks]
+  ([^ForkJoinPool this ^java.util.Collection tasks]
     (-> this (.invokeAll tasks))))
 
 (defn get-uncaught-exception-handler
   "Returns the handler for internal worker threads that terminate
    due to unrecoverable errors encountered while executing tasks.
 
-  returns: the handler, or null if none - `java.lang.Thread.UncaughtExceptionHandler`"
-  (^java.lang.Thread.UncaughtExceptionHandler [^java.util.concurrent.ForkJoinPool this]
+  returns: the handler, or null if none - `java.lang.Thread$UncaughtExceptionHandler`"
+  (^java.lang.Thread$UncaughtExceptionHandler [^ForkJoinPool this]
     (-> this (.getUncaughtExceptionHandler))))
 
 (defn to-string
@@ -258,7 +258,7 @@
    worker and task counts.
 
   returns: a string identifying this pool, as well as its state - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.ForkJoinPool this]
+  (^java.lang.String [^ForkJoinPool this]
     (-> this (.toString))))
 
 (defn get-queued-submission-count
@@ -267,14 +267,14 @@
    time proportional to the number of submissions.
 
   returns: the number of queued submissions - `int`"
-  (^Integer [^java.util.concurrent.ForkJoinPool this]
+  (^Integer [^ForkJoinPool this]
     (-> this (.getQueuedSubmissionCount))))
 
 (defn shutdown?
   "Returns true if this pool has been shut down.
 
   returns: true if this pool has been shut down - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinPool this]
+  (^Boolean [^ForkJoinPool this]
     (-> this (.isShutdown))))
 
 (defn await-termination
@@ -290,7 +290,7 @@
            false if the timeout elapsed before termination - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^Boolean [^java.util.concurrent.ForkJoinPool this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^ForkJoinPool this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.awaitTermination timeout unit))))
 
 (defn shutdown
@@ -303,7 +303,7 @@
    may not be rejected.
 
   throws: java.lang.SecurityException - if a security manager exists and the caller is not permitted to modify threads because it does not hold RuntimePermission(`modifyThread`)"
-  ([^java.util.concurrent.ForkJoinPool this]
+  ([^ForkJoinPool this]
     (-> this (.shutdown))))
 
 (defn get-steal-count
@@ -316,14 +316,14 @@
    overhead and contention across threads.
 
   returns: the number of steals - `long`"
-  (^Long [^java.util.concurrent.ForkJoinPool this]
+  (^Long [^ForkJoinPool this]
     (-> this (.getStealCount))))
 
 (defn get-factory
   "Returns the factory used for constructing new workers.
 
-  returns: the factory used for constructing new workers - `java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory`"
-  (^java.util.concurrent.ForkJoinPool.ForkJoinWorkerThreadFactory [^java.util.concurrent.ForkJoinPool this]
+  returns: the factory used for constructing new workers - `java.util.concurrent.ForkJoinPool$ForkJoinWorkerThreadFactory`"
+  (^java.util.concurrent.ForkJoinPool$ForkJoinWorkerThreadFactory [^ForkJoinPool this]
     (-> this (.getFactory))))
 
 (defn get-running-thread-count
@@ -333,7 +333,7 @@
    number of running threads.
 
   returns: the number of worker threads - `int`"
-  (^Integer [^java.util.concurrent.ForkJoinPool this]
+  (^Integer [^ForkJoinPool this]
     (-> this (.getRunningThreadCount))))
 
 (defn submit
@@ -345,9 +345,9 @@
   returns: a Future representing pending completion of the task - `<T> java.util.concurrent.ForkJoinTask<T>`
 
   throws: java.lang.NullPointerException - if the task is null"
-  ([^java.util.concurrent.ForkJoinPool this ^java.lang.Runnable task result]
+  ([^ForkJoinPool this ^java.lang.Runnable task result]
     (-> this (.submit task result)))
-  ([^java.util.concurrent.ForkJoinPool this ^java.util.concurrent.ForkJoinTask task]
+  ([^ForkJoinPool this ^java.util.concurrent.ForkJoinTask task]
     (-> this (.submit task))))
 
 (defn await-quiescence
@@ -361,16 +361,16 @@
 
   returns: true if quiescent; false if the
    timeout elapsed. - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinPool this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^ForkJoinPool this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.awaitQuiescence timeout unit))))
 
 (defn execute
   "Arranges for (asynchronous) execution of the given task.
 
-  task - the task - `java.util.concurrent.ForkJoinTask<?>`
+  task - the task - `java.util.concurrent.ForkJoinTask`
 
   throws: java.lang.NullPointerException - if the task is null"
-  ([^java.util.concurrent.ForkJoinPool this ^java.util.concurrent.ForkJoinTask task]
+  ([^ForkJoinPool this ^java.util.concurrent.ForkJoinTask task]
     (-> this (.execute task))))
 
 (defn terminating?
@@ -385,7 +385,7 @@
    they do, they must abort them on interrupt.)
 
   returns: true if terminating but not yet terminated - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinPool this]
+  (^Boolean [^ForkJoinPool this]
     (-> this (.isTerminating))))
 
 (defn get-active-thread-count
@@ -394,14 +394,14 @@
    number of active threads.
 
   returns: the number of active threads - `int`"
-  (^Integer [^java.util.concurrent.ForkJoinPool this]
+  (^Integer [^ForkJoinPool this]
     (-> this (.getActiveThreadCount))))
 
 (defn terminated?
   "Returns true if all tasks have completed following shut down.
 
   returns: true if all tasks have completed following shut down - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinPool this]
+  (^Boolean [^ForkJoinPool this]
     (-> this (.isTerminated))))
 
 (defn get-async-mode?
@@ -409,7 +409,7 @@
    scheduling mode for forked tasks that are never joined.
 
   returns: true if this pool uses async mode - `boolean`"
-  (^Boolean [^java.util.concurrent.ForkJoinPool this]
+  (^Boolean [^ForkJoinPool this]
     (-> this (.getAsyncMode))))
 
 (defn get-pool-size
@@ -419,14 +419,14 @@
    maintain parallelism when others are cooperatively blocked.
 
   returns: the number of worker threads - `int`"
-  (^Integer [^java.util.concurrent.ForkJoinPool this]
+  (^Integer [^ForkJoinPool this]
     (-> this (.getPoolSize))))
 
 (defn get-parallelism
   "Returns the targeted parallelism level of this pool.
 
   returns: the targeted parallelism level of this pool - `int`"
-  (^Integer [^java.util.concurrent.ForkJoinPool this]
+  (^Integer [^ForkJoinPool this]
     (-> this (.getParallelism))))
 
 (defn shutdown-now
@@ -444,6 +444,6 @@
   returns: an empty list - `java.util.List<java.lang.Runnable>`
 
   throws: java.lang.SecurityException - if a security manager exists and the caller is not permitted to modify threads because it does not hold RuntimePermission(`modifyThread`)"
-  (^java.util.List [^java.util.concurrent.ForkJoinPool this]
+  (^java.util.List [^ForkJoinPool this]
     (-> this (.shutdownNow))))
 

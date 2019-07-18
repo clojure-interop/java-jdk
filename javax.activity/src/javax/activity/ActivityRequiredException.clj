@@ -14,10 +14,10 @@
 
   message - the detail message. - `java.lang.String`
   cause - a chained exception of type Throwable. - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^ActivityRequiredException [^java.lang.String message ^java.lang.Throwable cause]
     (new ActivityRequiredException message cause))
-  ([^java.lang.String message]
+  (^ActivityRequiredException [^java.lang.String message]
     (new ActivityRequiredException message))
-  ([]
+  (^ActivityRequiredException []
     (new ActivityRequiredException )))
 

@@ -15,7 +15,7 @@
 
   b - a boolean -- true if the pixels should be brightened - `boolean`
   p - an int in the range 0..100 that determines the percentage of gray, where 100 is the darkest gray, and 0 is the lightest - `int`"
-  ([^Boolean b ^Integer p]
+  (^GrayFilter [^Boolean b ^Integer p]
     (new GrayFilter b p)))
 
 (defn *create-disabled-image
@@ -35,6 +35,6 @@
   rgb - the integer pixel representation in the default RGB color model - `int`
 
   returns: a filtered pixel in the default RGB color model. - `int`"
-  (^Integer [^javax.swing.GrayFilter this ^Integer x ^Integer y ^Integer rgb]
+  (^Integer [^GrayFilter this ^Integer x ^Integer y ^Integer rgb]
     (-> this (.filterRGB x y rgb))))
 

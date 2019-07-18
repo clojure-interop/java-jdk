@@ -10,14 +10,14 @@
   Constructs an instance of this class with the specified width.
 
   w - The width - `int`"
-  ([^Integer w]
+  (^IllegalFormatWidthException [^Integer w]
     (new IllegalFormatWidthException w)))
 
 (defn get-width
   "Returns the width
 
   returns: The width - `int`"
-  (^Integer [^java.util.IllegalFormatWidthException this]
+  (^Integer [^IllegalFormatWidthException this]
     (-> this (.getWidth))))
 
 (defn get-message
@@ -25,6 +25,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  (^java.lang.String [^java.util.IllegalFormatWidthException this]
+  (^java.lang.String [^IllegalFormatWidthException this]
     (-> this (.getMessage))))
 

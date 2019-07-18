@@ -13,9 +13,9 @@
   size - The size of the pushback buffer - `int`
 
   throws: java.lang.IllegalArgumentException - if size <= 0"
-  ([^java.io.Reader in ^Integer size]
+  (^PushbackReader [^java.io.Reader in ^Integer size]
     (new PushbackReader in size))
-  ([^java.io.Reader in]
+  (^PushbackReader [^java.io.Reader in]
     (new PushbackReader in)))
 
 (defn read
@@ -29,9 +29,9 @@
                stream has been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Integer [^java.io.PushbackReader this cbuf ^Integer off ^Integer len]
+  (^Integer [^PushbackReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  (^Integer [^java.io.PushbackReader this]
+  (^Integer [^PushbackReader this]
     (-> this (.read))))
 
 (defn unread
@@ -46,9 +46,9 @@
   len - Number of characters to push back - `int`
 
   throws: java.io.IOException - If there is insufficient room in the pushback buffer, or if some other I/O error occurs"
-  ([^java.io.PushbackReader this cbuf ^Integer off ^Integer len]
+  ([^PushbackReader this cbuf ^Integer off ^Integer len]
     (-> this (.unread cbuf off len)))
-  ([^java.io.PushbackReader this ^Integer c]
+  ([^PushbackReader this ^Integer c]
     (-> this (.unread c))))
 
 (defn ready
@@ -59,7 +59,7 @@
    next read will block. - `boolean`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Boolean [^java.io.PushbackReader this]
+  (^Boolean [^PushbackReader this]
     (-> this (.ready))))
 
 (defn mark
@@ -69,7 +69,7 @@
   read-ahead-limit - Limit on the number of characters that may be read while still preserving the mark. After reading this many characters, attempting to reset the stream may fail. - `int`
 
   throws: java.io.IOException - Always, since mark is not supported"
-  ([^java.io.PushbackReader this ^Integer read-ahead-limit]
+  ([^PushbackReader this ^Integer read-ahead-limit]
     (-> this (.mark read-ahead-limit))))
 
 (defn reset
@@ -77,7 +77,7 @@
    PushbackReader always throws an exception.
 
   throws: java.io.IOException - Always, since reset is not supported"
-  ([^java.io.PushbackReader this]
+  ([^PushbackReader this]
     (-> this (.reset))))
 
 (defn mark-supported
@@ -85,7 +85,7 @@
    not.
 
   returns: true if and only if this stream supports the mark operation. - `boolean`"
-  (^Boolean [^java.io.PushbackReader this]
+  (^Boolean [^PushbackReader this]
     (-> this (.markSupported))))
 
 (defn close
@@ -95,7 +95,7 @@
    Closing a previously closed stream has no effect.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.PushbackReader this]
+  ([^PushbackReader this]
     (-> this (.close))))
 
 (defn skip
@@ -107,6 +107,6 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.lang.IllegalArgumentException - If n is negative."
-  (^Long [^java.io.PushbackReader this ^Long n]
+  (^Long [^PushbackReader this ^Long n]
     (-> this (.skip n))))
 

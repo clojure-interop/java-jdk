@@ -20,7 +20,7 @@
    of 16-bit chars in the sequence.
 
   returns: the number of chars in this sequence - `int`"
-  (^Integer [^java.lang.CharSequence this]
+  (^Integer [^CharSequence this]
     (-> this (.length))))
 
 (defn char-at
@@ -38,7 +38,7 @@
   returns: the specified char value - `char`
 
   throws: java.lang.IndexOutOfBoundsException - if the index argument is negative or not less than length()"
-  (^Character [^java.lang.CharSequence this ^Integer index]
+  (^Character [^CharSequence this ^Integer index]
     (-> this (.charAt index))))
 
 (defn sub-sequence
@@ -55,7 +55,7 @@
   returns: the specified subsequence - `java.lang.CharSequence`
 
   throws: java.lang.IndexOutOfBoundsException - if start or end are negative, if end is greater than length(), or if start is greater than end"
-  (^java.lang.CharSequence [^java.lang.CharSequence this ^Integer start ^Integer end]
+  (^java.lang.CharSequence [^CharSequence this ^Integer start ^Integer end]
     (-> this (.subSequence start end))))
 
 (defn to-string
@@ -64,7 +64,7 @@
    this sequence.
 
   returns: a string consisting of exactly this sequence of characters - `java.lang.String`"
-  (^java.lang.String [^java.lang.CharSequence this]
+  (^java.lang.String [^CharSequence this]
     (-> this (.toString))))
 
 (defn chars
@@ -76,7 +76,7 @@
    result is undefined.
 
   returns: an IntStream of char values from this sequence - `default java.util.stream.IntStream`"
-  ([^java.lang.CharSequence this]
+  ([^CharSequence this]
     (-> this (.chars))))
 
 (defn code-points
@@ -90,6 +90,6 @@
    is undefined.
 
   returns: an IntStream of Unicode code points from this sequence - `default java.util.stream.IntStream`"
-  ([^java.lang.CharSequence this]
+  ([^CharSequence this]
     (-> this (.codePoints))))
 

@@ -17,13 +17,13 @@
   sync-flush - if true the flush() method of this instance flushes the compressor with flush mode Deflater.SYNC_FLUSH before flushing the output stream, otherwise only flushes the output stream - `boolean`
 
   throws: java.lang.IllegalArgumentException - if size <= 0"
-  ([^java.io.OutputStream out ^java.util.zip.Deflater def ^Integer size ^Boolean sync-flush]
+  (^DeflaterOutputStream [^java.io.OutputStream out ^java.util.zip.Deflater def ^Integer size ^Boolean sync-flush]
     (new DeflaterOutputStream out def size sync-flush))
-  ([^java.io.OutputStream out ^java.util.zip.Deflater def ^Integer size]
+  (^DeflaterOutputStream [^java.io.OutputStream out ^java.util.zip.Deflater def ^Integer size]
     (new DeflaterOutputStream out def size))
-  ([^java.io.OutputStream out ^java.util.zip.Deflater def]
+  (^DeflaterOutputStream [^java.io.OutputStream out ^java.util.zip.Deflater def]
     (new DeflaterOutputStream out def))
-  ([^java.io.OutputStream out]
+  (^DeflaterOutputStream [^java.io.OutputStream out]
     (new DeflaterOutputStream out)))
 
 (defn write
@@ -35,9 +35,9 @@
   len - the length of the data - `int`
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.DeflaterOutputStream this b ^Integer off ^Integer len]
+  ([^DeflaterOutputStream this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([^java.util.zip.DeflaterOutputStream this ^Integer b]
+  ([^DeflaterOutputStream this ^Integer b]
     (-> this (.write b))))
 
 (defn finish
@@ -46,7 +46,7 @@
    in succession to the same output stream.
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.DeflaterOutputStream this]
+  ([^DeflaterOutputStream this]
     (-> this (.finish))))
 
 (defn close
@@ -54,7 +54,7 @@
    underlying stream.
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.DeflaterOutputStream this]
+  ([^DeflaterOutputStream this]
     (-> this (.close))))
 
 (defn flush
@@ -68,6 +68,6 @@
    output stream without flushing the compressor.
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.DeflaterOutputStream this]
+  ([^DeflaterOutputStream this]
     (-> this (.flush))))
 

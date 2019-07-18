@@ -15,6 +15,6 @@
   right - the second operand - `long`
 
   returns: the operator result - `long`"
-  (^Long [^java.util.function.LongBinaryOperator this ^Long left ^Long right]
+  (^Long [^LongBinaryOperator this ^Long left ^Long right]
     (-> this (.applyAsLong left right))))
 

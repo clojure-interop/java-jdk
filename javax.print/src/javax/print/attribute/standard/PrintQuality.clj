@@ -42,7 +42,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.PrintQuality this]
+  ([^PrintQuality this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -53,6 +53,6 @@
    name is `print-quality`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.PrintQuality this]
+  (^java.lang.String [^PrintQuality this]
     (-> this (.getName))))
 

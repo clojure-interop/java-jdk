@@ -87,21 +87,21 @@
   "Returns the character for this AWTKeyStroke.
 
   returns: a char value - `char`"
-  (^Character [^java.awt.AWTKeyStroke this]
+  (^Character [^AWTKeyStroke this]
     (-> this (.getKeyChar))))
 
 (defn get-key-code
   "Returns the numeric key code for this AWTKeyStroke.
 
   returns: an int containing the key code value - `int`"
-  (^Integer [^java.awt.AWTKeyStroke this]
+  (^Integer [^AWTKeyStroke this]
     (-> this (.getKeyCode))))
 
 (defn get-modifiers
   "Returns the modifier keys for this AWTKeyStroke.
 
   returns: an int containing the modifiers - `int`"
-  (^Integer [^java.awt.AWTKeyStroke this]
+  (^Integer [^AWTKeyStroke this]
     (-> this (.getModifiers))))
 
 (defn on-key-release?
@@ -109,7 +109,7 @@
 
   returns: true if this AWTKeyStroke
             represents a key release; false otherwise - `boolean`"
-  (^Boolean [^java.awt.AWTKeyStroke this]
+  (^Boolean [^AWTKeyStroke this]
     (-> this (.isOnKeyRelease))))
 
 (defn get-key-event-type
@@ -119,7 +119,7 @@
   returns: KeyEvent.KEY_PRESSED,
            KeyEvent.KEY_TYPED,
            or KeyEvent.KEY_RELEASED - `int`"
-  (^Integer [^java.awt.AWTKeyStroke this]
+  (^Integer [^AWTKeyStroke this]
     (-> this (.getKeyEventType))))
 
 (defn hash-code
@@ -127,7 +127,7 @@
    making it a good choice as the index value in a hash table.
 
   returns: an int that represents this object - `int`"
-  (^Integer [^java.awt.AWTKeyStroke this]
+  (^Integer [^AWTKeyStroke this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -136,7 +136,7 @@
   an-object - the Object to compare this object to - `java.lang.Object`
 
   returns: true if the objects are identical - `boolean`"
-  (^Boolean [^java.awt.AWTKeyStroke this ^java.lang.Object an-object]
+  (^Boolean [^AWTKeyStroke this ^java.lang.Object an-object]
     (-> this (.equals an-object))))
 
 (defn to-string
@@ -146,6 +146,6 @@
    a key stroke equal to this key stroke.
 
   returns: a String representation of this object - `java.lang.String`"
-  (^java.lang.String [^java.awt.AWTKeyStroke this]
+  (^java.lang.String [^AWTKeyStroke this]
     (-> this (.toString))))
 

@@ -11,8 +11,8 @@
    this particular exception.)
 
   msg - the detailed message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^ExemptionMechanismException [^java.lang.String msg]
     (new ExemptionMechanismException msg))
-  ([]
+  (^ExemptionMechanismException []
     (new ExemptionMechanismException )))
 

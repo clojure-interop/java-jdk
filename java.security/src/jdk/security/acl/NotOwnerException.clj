@@ -9,6 +9,6 @@
   "Constructor.
 
   Constructs a NotOwnerException."
-  ([]
+  (^NotOwnerException []
     (new NotOwnerException )))
 

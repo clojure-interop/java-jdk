@@ -10,9 +10,9 @@
 (defn apply-as-int
   "Applies this function to the given argument.
 
-  value - the function argument - `ToIntFunction.T`
+  value - the function argument - `T`
 
   returns: the function result - `int`"
-  (^Integer [^java.util.function.ToIntFunction this ^ToIntFunction.T value]
+  (^Integer [^ToIntFunction this value]
     (-> this (.applyAsInt value))))
 

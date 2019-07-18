@@ -245,7 +245,7 @@
    SecurityPermission, then the action is performed
    with no permissions.
 
-  action - the action to be performed. - `java.security.PrivilegedAction<T>`
+  action - the action to be performed. - `java.security.PrivilegedAction`
   context - an access control context representing the restriction to be applied to the caller's domain's privileges before performing the specified action. If the context is null, then no additional restriction is applied. - `java.security.AccessControlContext`
   perms - the Permission arguments which limit the scope of the caller's privileges. The number of arguments is variable. - `java.security.Permission`
 
@@ -283,7 +283,7 @@
    SecurityPermission, then the action is performed
    with no permissions.
 
-  action - the action to be performed. - `java.security.PrivilegedAction<T>`
+  action - the action to be performed. - `java.security.PrivilegedAction`
   context - an access control context representing the restriction to be applied to the caller's domain's privileges before performing the specified action. If the context is null, then no additional restriction is applied. - `java.security.AccessControlContext`
   perms - the Permission arguments which limit the scope of the caller's privileges. The number of arguments is variable. - `java.security.Permission`
 

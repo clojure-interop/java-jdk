@@ -15,11 +15,11 @@
 
   message - the message - `java.lang.String`
   error-index - the index - `int`"
-  ([^java.lang.String message ^Integer error-index]
+  (^IllformedLocaleException [^java.lang.String message ^Integer error-index]
     (new IllformedLocaleException message error-index))
-  ([^java.lang.String message]
+  (^IllformedLocaleException [^java.lang.String message]
     (new IllformedLocaleException message))
-  ([]
+  (^IllformedLocaleException []
     (new IllformedLocaleException )))
 
 (defn get-error-index
@@ -27,6 +27,6 @@
    either the error index is not applicable or unknown.
 
   returns: the error index - `int`"
-  (^Integer [^java.util.IllformedLocaleException this]
+  (^Integer [^IllformedLocaleException this]
     (-> this (.getErrorIndex))))
 

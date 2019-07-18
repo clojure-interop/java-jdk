@@ -9,7 +9,7 @@
 
   highlight - `java.awt.Color`
   shadow - `java.awt.Color`"
-  ([^java.awt.Color highlight ^java.awt.Color shadow]
+  (^BasicBorders$SplitPaneBorder [^java.awt.Color highlight ^java.awt.Color shadow]
     (new BasicBorders$SplitPaneBorder highlight shadow)))
 
 (defn paint-border
@@ -21,7 +21,7 @@
   y - the y position of the painted border - `int`
   width - the width of the painted border - `int`
   height - the height of the painted border - `int`"
-  ([^javax.swing.plaf.basic.BasicBorders$SplitPaneBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
+  ([^BasicBorders$SplitPaneBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.paintBorder c g x y width height))))
 
 (defn get-border-insets
@@ -30,13 +30,13 @@
   c - the component for which this border insets value applies - `java.awt.Component`
 
   returns: `java.awt.Insets`"
-  (^java.awt.Insets [^javax.swing.plaf.basic.BasicBorders$SplitPaneBorder this ^java.awt.Component c]
+  (^java.awt.Insets [^BasicBorders$SplitPaneBorder this ^java.awt.Component c]
     (-> this (.getBorderInsets c))))
 
 (defn border-opaque?
   "Description copied from interface: Border
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.plaf.basic.BasicBorders$SplitPaneBorder this]
+  (^Boolean [^BasicBorders$SplitPaneBorder this]
     (-> this (.isBorderOpaque))))
 

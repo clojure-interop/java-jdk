@@ -19,14 +19,14 @@
 
   Sole constructor.  (For invocation by subclass constructors, typically
    implicit.)"
-  ([]
+  (^Dictionary []
     (new Dictionary )))
 
 (defn size
   "Returns the number of entries (distinct keys) in this dictionary.
 
   returns: the number of keys in this dictionary. - `int`"
-  (^Integer [^java.util.Dictionary this]
+  (^Integer [^Dictionary this]
     (-> this (.size))))
 
 (defn empty?
@@ -36,7 +36,7 @@
 
   returns: true if this dictionary maps no keys to values;
             false otherwise. - `boolean`"
-  (^Boolean [^java.util.Dictionary this]
+  (^Boolean [^Dictionary this]
     (-> this (.isEmpty))))
 
 (defn keys
@@ -45,8 +45,8 @@
    is returned that will generate all the keys for which this dictionary
    contains entries.
 
-  returns: an enumeration of the keys in this dictionary. - `java.util.Enumeration<Dictionary.K>`"
-  (^java.util.Enumeration [^java.util.Dictionary this]
+  returns: an enumeration of the keys in this dictionary. - `java.util.Enumeration<K>`"
+  (^java.util.Enumeration [^Dictionary this]
     (-> this (.keys))))
 
 (defn elements
@@ -55,8 +55,8 @@
    Enumeration is returned that will generate all the elements
    contained in entries in this dictionary.
 
-  returns: an enumeration of the values in this dictionary. - `java.util.Enumeration<Dictionary.V>`"
-  (^java.util.Enumeration [^java.util.Dictionary this]
+  returns: an enumeration of the values in this dictionary. - `java.util.Enumeration<V>`"
+  (^java.util.Enumeration [^Dictionary this]
     (-> this (.elements))))
 
 (defn get
@@ -67,10 +67,10 @@
 
   key - a key in this dictionary. null if the key is not mapped to any value in this dictionary. - `java.lang.Object`
 
-  returns: the value to which the key is mapped in this dictionary; - `Dictionary.V`
+  returns: the value to which the key is mapped in this dictionary; - `V`
 
   throws: java.lang.NullPointerException - if the key is null."
-  (^Dictionary.V [^java.util.Dictionary this ^java.lang.Object key]
+  ([^Dictionary this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn put
@@ -90,15 +90,15 @@
    get method with a key that is equal to
    the original key.
 
-  key - the hashtable key. - `Dictionary.K`
-  value - the value. - `Dictionary.V`
+  key - the hashtable key. - `K`
+  value - the value. - `V`
 
   returns: the previous value to which the key was mapped
                in this dictionary, or null if the key did not
-               have a previous mapping. - `Dictionary.V`
+               have a previous mapping. - `V`
 
   throws: java.lang.NullPointerException - if the key or value is null."
-  (^Dictionary.V [^java.util.Dictionary this ^Dictionary.K key ^Dictionary.V value]
+  ([^Dictionary this key value]
     (-> this (.put key value))))
 
 (defn remove
@@ -110,9 +110,9 @@
 
   returns: the value to which the key had been mapped in this
             dictionary, or null if the key did not have a
-            mapping. - `Dictionary.V`
+            mapping. - `V`
 
   throws: java.lang.NullPointerException - if key is null."
-  (^Dictionary.V [^java.util.Dictionary this ^java.lang.Object key]
+  ([^Dictionary this ^java.lang.Object key]
     (-> this (.remove key))))
 

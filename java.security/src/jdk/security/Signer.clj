@@ -16,9 +16,9 @@
   scope - the scope of the identity. - `java.security.IdentityScope`
 
   throws: java.security.KeyManagementException - if there is already an identity with the same name in the scope."
-  ([^java.lang.String name ^java.security.IdentityScope scope]
+  (^Signer [^java.lang.String name ^java.security.IdentityScope scope]
     (new Signer name scope))
-  ([^java.lang.String name]
+  (^Signer [^java.lang.String name]
     (new Signer name)))
 
 (defn get-private-key
@@ -28,7 +28,7 @@
    not yet been set. - `java.security.PrivateKey`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkSecurityAccess method doesn't allow returning the private key."
-  (^java.security.PrivateKey [^java.security.Signer this]
+  (^java.security.PrivateKey [^Signer this]
     (-> this (.getPrivateKey))))
 
 (defn set-key-pair
@@ -37,13 +37,13 @@
   pair - an initialized key pair. - `java.security.KeyPair`
 
   throws: java.security.InvalidParameterException - if the key pair is not properly initialized."
-  ([^java.security.Signer this ^java.security.KeyPair pair]
+  ([^Signer this ^java.security.KeyPair pair]
     (-> this (.setKeyPair pair))))
 
 (defn to-string
   "Deprecated.
 
   returns: a string of information about the signer. - `java.lang.String`"
-  (^java.lang.String [^java.security.Signer this]
+  (^java.lang.String [^Signer this]
     (-> this (.toString))))
 

@@ -15,14 +15,14 @@
 
   element - the Method object for the annotation element - `java.lang.reflect.Method`
   found-type - the (erroneous) type of data found in the annotation. This string may, but is not required to, contain the value as well. The exact format of the string is unspecified. - `java.lang.String`"
-  ([^java.lang.reflect.Method element ^java.lang.String found-type]
+  (^AnnotationTypeMismatchException [^java.lang.reflect.Method element ^java.lang.String found-type]
     (new AnnotationTypeMismatchException element found-type)))
 
 (defn element
   "Returns the Method object for the incorrectly typed element.
 
   returns: the Method object for the incorrectly typed element - `java.lang.reflect.Method`"
-  (^java.lang.reflect.Method [^java.lang.annotation.AnnotationTypeMismatchException this]
+  (^java.lang.reflect.Method [^AnnotationTypeMismatchException this]
     (-> this (.element))))
 
 (defn found-type
@@ -31,6 +31,6 @@
    as well.  The exact format of the string is unspecified.
 
   returns: the type of data found in the incorrectly typed element - `java.lang.String`"
-  (^java.lang.String [^java.lang.annotation.AnnotationTypeMismatchException this]
+  (^java.lang.String [^AnnotationTypeMismatchException this]
     (-> this (.foundType))))
 

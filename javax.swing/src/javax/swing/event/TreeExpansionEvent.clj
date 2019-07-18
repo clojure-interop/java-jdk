@@ -25,13 +25,13 @@
 
   source - the Object that originated the event (typically this) - `java.lang.Object`
   path - a TreePath object identifying the newly expanded node - `javax.swing.tree.TreePath`"
-  ([^java.lang.Object source ^javax.swing.tree.TreePath path]
+  (^TreeExpansionEvent [^java.lang.Object source ^javax.swing.tree.TreePath path]
     (new TreeExpansionEvent source path)))
 
 (defn get-path
   "Returns the path to the value that has been expanded/collapsed.
 
   returns: `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.event.TreeExpansionEvent this]
+  (^javax.swing.tree.TreePath [^TreeExpansionEvent this]
     (-> this (.getPath))))
 

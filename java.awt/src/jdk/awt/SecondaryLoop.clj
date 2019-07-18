@@ -82,7 +82,7 @@
   returns: true after termination of the secondary loop,
            if the secondary loop was started by this call,
            false otherwise - `boolean`"
-  (^Boolean [^java.awt.SecondaryLoop this]
+  (^Boolean [^SecondaryLoop this]
     (-> this (.enter))))
 
 (defn exit
@@ -102,6 +102,6 @@
   returns: true if this loop was previously started and
            has not yet been finished with the exit() method,
            false otherwise - `boolean`"
-  (^Boolean [^java.awt.SecondaryLoop this]
+  (^Boolean [^SecondaryLoop this]
     (-> this (.exit))))
 

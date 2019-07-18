@@ -16,27 +16,27 @@
   "Constructor.
 
   Creates a new ToggleButton Model"
-  ([]
+  (^JToggleButton$ToggleButtonModel []
     (new JToggleButton$ToggleButtonModel )))
 
 (defn selected?
   "Checks if the button is selected.
 
   returns: true if the button is selected - `boolean`"
-  (^Boolean [^javax.swing.JToggleButton$ToggleButtonModel this]
+  (^Boolean [^JToggleButton$ToggleButtonModel this]
     (-> this (.isSelected))))
 
 (defn set-selected
   "Sets the selected state of the button.
 
   b - true selects the toggle button, false deselects the toggle button. - `boolean`"
-  ([^javax.swing.JToggleButton$ToggleButtonModel this ^Boolean b]
+  ([^JToggleButton$ToggleButtonModel this ^Boolean b]
     (-> this (.setSelected b))))
 
 (defn set-pressed
   "Sets the pressed state of the toggle button.
 
   b - whether or not the button should be pressed - `boolean`"
-  ([^javax.swing.JToggleButton$ToggleButtonModel this ^Boolean b]
+  ([^JToggleButton$ToggleButtonModel this ^Boolean b]
     (-> this (.setPressed b))))
 

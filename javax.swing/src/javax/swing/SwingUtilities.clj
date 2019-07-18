@@ -184,7 +184,7 @@
   an-event - a MouseEvent object - `java.awt.event.MouseEvent`
 
   returns: true if the left mouse button was active - `boolean`"
-  (^Boolean [^java.awt.event.MouseEvent an-event]
+  (^Boolean [an-event]
     (SwingUtilities/isLeftMouseButton an-event)))
 
 (defn *find-focus-owner
@@ -195,8 +195,8 @@
 
   returns: the focus owner, or null if there is no focus
            owner, or if the focus owner is not comp, or a
-           descendant of comp - `java.lang.   java.awt.Component`"
-  ([^java.awt.Component c]
+           descendant of comp - `java.awt.Component`"
+  (^java.awt.Component [^java.awt.Component c]
     (SwingUtilities/findFocusOwner c)))
 
 (defn *middle-mouse-button?
@@ -205,7 +205,7 @@
   an-event - a MouseEvent object - `java.awt.event.MouseEvent`
 
   returns: true if the middle mouse button was active - `boolean`"
-  (^Boolean [^java.awt.event.MouseEvent an-event]
+  (^Boolean [an-event]
     (SwingUtilities/isMiddleMouseButton an-event)))
 
 (defn *get-ui-input-map
@@ -310,7 +310,7 @@
    component hierarchy and returns the first object of class c it
    finds. Can return null, if a class c cannot be found.
 
-  c - `java.lang.Class<?>`
+  c - `java.lang.Class`
   comp - `java.awt.Component`
 
   returns: `java.awt.Container`"
@@ -466,7 +466,7 @@
   destination - `java.awt.Component`
 
   returns: `java.awt.event.MouseEvent`"
-  (^java.awt.event.MouseEvent [^java.awt.Component source ^java.awt.event.MouseEvent source-event ^java.awt.Component destination]
+  ([^java.awt.Component source source-event ^java.awt.Component destination]
     (SwingUtilities/convertMouseEvent source source-event destination)))
 
 (defn *get-root
@@ -517,7 +517,7 @@
   an-event - a MouseEvent object - `java.awt.event.MouseEvent`
 
   returns: true if the right mouse button was active - `boolean`"
-  (^Boolean [^java.awt.event.MouseEvent an-event]
+  (^Boolean [an-event]
     (SwingUtilities/isRightMouseButton an-event)))
 
 (defn *notify-action

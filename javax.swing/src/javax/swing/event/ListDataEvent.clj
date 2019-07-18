@@ -23,7 +23,7 @@
   type - an int specifying CONTENTS_CHANGED, INTERVAL_ADDED, or INTERVAL_REMOVED - `int`
   index-0 - one end of the new interval - `int`
   index-1 - the other end of the new interval - `int`"
-  ([^java.lang.Object source ^Integer type ^Integer index-0 ^Integer index-1]
+  (^ListDataEvent [^java.lang.Object source ^Integer type ^Integer index-0 ^Integer index-1]
     (new ListDataEvent source type index-0 index-1)))
 
 (def *-contents-changed
@@ -58,7 +58,7 @@
     INTERVAL_REMOVED
 
   returns: an int representing the type value - `int`"
-  (^Integer [^javax.swing.event.ListDataEvent this]
+  (^Integer [^ListDataEvent this]
     (-> this (.getType))))
 
 (defn get-index-0
@@ -66,7 +66,7 @@
    element, this value is the same as that returned by getIndex1().
 
   returns: an int representing the lower index value - `int`"
-  (^Integer [^javax.swing.event.ListDataEvent this]
+  (^Integer [^ListDataEvent this]
     (-> this (.getIndex0))))
 
 (defn get-index-1
@@ -74,7 +74,7 @@
    element, this value is the same as that returned by getIndex0().
 
   returns: an int representing the upper index value - `int`"
-  (^Integer [^javax.swing.event.ListDataEvent this]
+  (^Integer [^ListDataEvent this]
     (-> this (.getIndex1))))
 
 (defn to-string
@@ -85,6 +85,6 @@
    be null.
 
   returns: a string representation of this ListDataEvent. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.event.ListDataEvent this]
+  (^java.lang.String [^ListDataEvent this]
     (-> this (.toString))))
 

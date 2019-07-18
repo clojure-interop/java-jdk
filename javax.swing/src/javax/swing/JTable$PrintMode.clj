@@ -8,7 +8,7 @@
   Printing mode that prints the table at its current size,
    spreading both columns and rows across multiple pages if necessary.
 
-  type: javax.swing.JTable.PrintMode"
+  type: javax.swing.JTable$PrintMode"
   JTable$PrintMode/NORMAL)
 
 (def FIT_WIDTH
@@ -18,7 +18,7 @@
    to fit the table's entire width (and thereby all columns) on each page;
    Rows are spread across multiple pages as necessary.
 
-  type: javax.swing.JTable.PrintMode"
+  type: javax.swing.JTable$PrintMode"
   JTable$PrintMode/FIT_WIDTH)
 
 (defn *values
@@ -30,7 +30,7 @@
   for (JTable.PrintMode c : JTable.PrintMode.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.JTable.PrintMode[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.JTable$PrintMode[]`"
   ([]
     (JTable$PrintMode/values )))
 
@@ -42,9 +42,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.swing.JTable.PrintMode`
+  returns: the enum constant with the specified name - `javax.swing.JTable$PrintMode`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.swing.JTable.PrintMode [^java.lang.String name]
+  (^javax.swing.JTable$PrintMode [^java.lang.String name]
     (JTable$PrintMode/valueOf name)))
 

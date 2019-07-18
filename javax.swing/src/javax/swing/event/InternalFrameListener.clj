@@ -12,7 +12,7 @@
   "Invoked when a internal frame has been opened.
 
   e - `javax.swing.event.InternalFrameEvent`"
-  ([^javax.swing.event.InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
+  ([^InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
     (-> this (.internalFrameOpened e))))
 
 (defn internal-frame-closing
@@ -20,41 +20,41 @@
    The close operation can be overridden at this point.
 
   e - `javax.swing.event.InternalFrameEvent`"
-  ([^javax.swing.event.InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
+  ([^InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
     (-> this (.internalFrameClosing e))))
 
 (defn internal-frame-closed
   "Invoked when an internal frame has been closed.
 
   e - `javax.swing.event.InternalFrameEvent`"
-  ([^javax.swing.event.InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
+  ([^InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
     (-> this (.internalFrameClosed e))))
 
 (defn internal-frame-iconified
   "Invoked when an internal frame is iconified.
 
   e - `javax.swing.event.InternalFrameEvent`"
-  ([^javax.swing.event.InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
+  ([^InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
     (-> this (.internalFrameIconified e))))
 
 (defn internal-frame-deiconified
   "Invoked when an internal frame is de-iconified.
 
   e - `javax.swing.event.InternalFrameEvent`"
-  ([^javax.swing.event.InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
+  ([^InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
     (-> this (.internalFrameDeiconified e))))
 
 (defn internal-frame-activated
   "Invoked when an internal frame is activated.
 
   e - `javax.swing.event.InternalFrameEvent`"
-  ([^javax.swing.event.InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
+  ([^InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
     (-> this (.internalFrameActivated e))))
 
 (defn internal-frame-deactivated
   "Invoked when an internal frame is de-activated.
 
   e - `javax.swing.event.InternalFrameEvent`"
-  ([^javax.swing.event.InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
+  ([^InternalFrameListener this ^javax.swing.event.InternalFrameEvent e]
     (-> this (.internalFrameDeactivated e))))
 

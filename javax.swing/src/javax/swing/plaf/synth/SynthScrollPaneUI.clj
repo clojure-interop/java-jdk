@@ -6,7 +6,7 @@
 
 (defn ->synth-scroll-pane-ui
   "Constructor."
-  ([]
+  (^SynthScrollPaneUI []
     (new SynthScrollPaneUI )))
 
 (defn *create-ui
@@ -28,7 +28,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthScrollPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthScrollPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint
@@ -38,7 +38,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthScrollPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthScrollPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn paint-border
@@ -50,7 +50,7 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^javax.swing.plaf.synth.SynthScrollPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthScrollPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn get-context
@@ -59,13 +59,13 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthScrollPaneUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^SynthScrollPaneUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn property-change
   "Description copied from interface: PropertyChangeListener
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.plaf.synth.SynthScrollPaneUI this ^java.beans.PropertyChangeEvent e]
+  ([^SynthScrollPaneUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 

@@ -35,7 +35,7 @@
   returns: the new stream - `java.util.stream.LongStream`
 
   throws: java.lang.IllegalArgumentException - if n is negative"
-  (^java.util.stream.LongStream [^java.util.stream.LongStream this ^Long n]
+  (^java.util.stream.LongStream [^LongStream this ^Long n]
     (-> this (.skip n))))
 
 (defn map
@@ -48,7 +48,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `java.util.function.LongUnaryOperator`
 
   returns: the new stream - `java.util.stream.LongStream`"
-  (^java.util.stream.LongStream [^java.util.stream.LongStream this ^java.util.function.LongUnaryOperator mapper]
+  (^java.util.stream.LongStream [^LongStream this ^java.util.function.LongUnaryOperator mapper]
     (-> this (.map mapper))))
 
 (defn *range
@@ -80,7 +80,7 @@
   action - a non-interfering action to perform on the elements as they are consumed from the stream - `java.util.function.LongConsumer`
 
   returns: the new stream - `java.util.stream.LongStream`"
-  (^java.util.stream.LongStream [^java.util.stream.LongStream this ^java.util.function.LongConsumer action]
+  (^java.util.stream.LongStream [^LongStream this ^java.util.function.LongConsumer action]
     (-> this (.peek action))))
 
 (defn min
@@ -96,14 +96,14 @@
 
   returns: an OptionalLong containing the minimum element of this
    stream, or an empty OptionalLong if the stream is empty - `java.util.OptionalLong`"
-  (^java.util.OptionalLong [^java.util.stream.LongStream this]
+  (^java.util.OptionalLong [^LongStream this]
     (-> this (.min))))
 
 (defn spliterator
   "Description copied from interface: BaseStream
 
-  returns: the element spliterator for this stream - `java.util.Spliterator.OfLong`"
-  (^java.util.Spliterator.OfLong [^java.util.stream.LongStream this]
+  returns: the element spliterator for this stream - `java.util.Spliterator$OfLong`"
+  (^java.util.Spliterator$OfLong [^LongStream this]
     (-> this (.spliterator))))
 
 (defn for-each
@@ -120,7 +120,7 @@
    responsible for providing the required synchronization.
 
   action - a non-interfering action to perform on the elements - `java.util.function.LongConsumer`"
-  ([^java.util.stream.LongStream this ^java.util.function.LongConsumer action]
+  ([^LongStream this ^java.util.function.LongConsumer action]
     (-> this (.forEach action))))
 
 (defn for-each-ordered
@@ -132,7 +132,7 @@
    operation.
 
   action - a non-interfering action to perform on the elements - `java.util.function.LongConsumer`"
-  ([^java.util.stream.LongStream this ^java.util.function.LongConsumer action]
+  ([^LongStream this ^java.util.function.LongConsumer action]
     (-> this (.forEachOrdered action))))
 
 (defn *of
@@ -148,7 +148,7 @@
   "Description copied from interface: BaseStream
 
   returns: a sequential stream - `java.util.stream.LongStream`"
-  (^java.util.stream.LongStream [^java.util.stream.LongStream this]
+  (^java.util.stream.LongStream [^LongStream this]
     (-> this (.sequential))))
 
 (defn find-first
@@ -161,7 +161,7 @@
 
   returns: an OptionalLong describing the first element of this
    stream, or an empty OptionalLong if the stream is empty - `java.util.OptionalLong`"
-  (^java.util.OptionalLong [^java.util.stream.LongStream this]
+  (^java.util.OptionalLong [^LongStream this]
     (-> this (.findFirst))))
 
 (defn average
@@ -175,7 +175,7 @@
 
   returns: an OptionalDouble containing the average element of this
    stream, or an empty optional if the stream is empty - `java.util.OptionalDouble`"
-  (^java.util.OptionalDouble [^java.util.stream.LongStream this]
+  (^java.util.OptionalDouble [^LongStream this]
     (-> this (.average))))
 
 (defn all-match
@@ -191,14 +191,14 @@
 
   returns: true if either all elements of the stream match the
    provided predicate or the stream is empty, otherwise false - `boolean`"
-  (^Boolean [^java.util.stream.LongStream this ^java.util.function.LongPredicate predicate]
+  (^Boolean [^LongStream this ^java.util.function.LongPredicate predicate]
     (-> this (.allMatch predicate))))
 
 (defn parallel
   "Description copied from interface: BaseStream
 
   returns: a parallel stream - `java.util.stream.LongStream`"
-  (^java.util.stream.LongStream [^java.util.stream.LongStream this]
+  (^java.util.stream.LongStream [^LongStream this]
     (-> this (.parallel))))
 
 (defn sum
@@ -213,7 +213,7 @@
    operation.
 
   returns: the sum of elements in this stream - `long`"
-  (^Long [^java.util.stream.LongStream this]
+  (^Long [^LongStream this]
     (-> this (.sum))))
 
 (defn sorted
@@ -224,7 +224,7 @@
    intermediate operation.
 
   returns: the new stream - `java.util.stream.LongStream`"
-  (^java.util.stream.LongStream [^java.util.stream.LongStream this]
+  (^java.util.stream.LongStream [^LongStream this]
     (-> this (.sorted))))
 
 (defn *iterate
@@ -259,7 +259,7 @@
 
   returns: an OptionalLong containing the maximum element of this
    stream, or an empty OptionalLong if the stream is empty - `java.util.OptionalLong`"
-  (^java.util.OptionalLong [^java.util.stream.LongStream this]
+  (^java.util.OptionalLong [^LongStream this]
     (-> this (.max))))
 
 (defn *generate
@@ -276,8 +276,8 @@
 (defn *builder
   "Returns a builder for a LongStream.
 
-  returns: a stream builder - `java.util.stream.LongStream.Builder`"
-  (^java.util.stream.LongStream.Builder []
+  returns: a stream builder - `java.util.stream.LongStream$Builder`"
+  (^java.util.stream.LongStream$Builder []
     (LongStream/builder )))
 
 (defn count
@@ -291,7 +291,7 @@
    This is a terminal operation.
 
   returns: the count of elements in this stream - `long`"
-  (^Long [^java.util.stream.LongStream this]
+  (^Long [^LongStream this]
     (-> this (.count))))
 
 (defn map-to-double
@@ -304,14 +304,14 @@
   mapper - a non-interfering, stateless function to apply to each element - `java.util.function.LongToDoubleFunction`
 
   returns: the new stream - `java.util.stream.DoubleStream`"
-  (^java.util.stream.DoubleStream [^java.util.stream.LongStream this ^java.util.function.LongToDoubleFunction mapper]
+  (^java.util.stream.DoubleStream [^LongStream this ^java.util.function.LongToDoubleFunction mapper]
     (-> this (.mapToDouble mapper))))
 
 (defn iterator
   "Description copied from interface: BaseStream
 
-  returns: the element iterator for this stream - `java.util.PrimitiveIterator.OfLong`"
-  (^java.util.PrimitiveIterator.OfLong [^java.util.stream.LongStream this]
+  returns: the element iterator for this stream - `java.util.PrimitiveIterator$OfLong`"
+  (^java.util.PrimitiveIterator$OfLong [^LongStream this]
     (-> this (.iterator))))
 
 (defn map-to-int
@@ -324,7 +324,7 @@
   mapper - a non-interfering, stateless function to apply to each element - `java.util.function.LongToIntFunction`
 
   returns: the new stream - `java.util.stream.IntStream`"
-  (^java.util.stream.IntStream [^java.util.stream.LongStream this ^java.util.function.LongToIntFunction mapper]
+  (^java.util.stream.IntStream [^LongStream this ^java.util.function.LongToIntFunction mapper]
     (-> this (.mapToInt mapper))))
 
 (defn distinct
@@ -334,7 +334,7 @@
    intermediate operation.
 
   returns: the new stream - `java.util.stream.LongStream`"
-  (^java.util.stream.LongStream [^java.util.stream.LongStream this]
+  (^java.util.stream.LongStream [^LongStream this]
     (-> this (.distinct))))
 
 (defn boxed
@@ -346,7 +346,7 @@
 
   returns: a Stream consistent of the elements of this stream,
    each boxed to Long - `java.util.stream.Stream<java.lang.Long>`"
-  (^java.util.stream.Stream [^java.util.stream.LongStream this]
+  (^java.util.stream.Stream [^LongStream this]
     (-> this (.boxed))))
 
 (defn limit
@@ -361,7 +361,7 @@
   returns: the new stream - `java.util.stream.LongStream`
 
   throws: java.lang.IllegalArgumentException - if maxSize is negative"
-  (^java.util.stream.LongStream [^java.util.stream.LongStream this ^Long max-size]
+  (^java.util.stream.LongStream [^LongStream this ^Long max-size]
     (-> this (.limit max-size))))
 
 (defn flat-map
@@ -375,10 +375,10 @@
    This is an intermediate
    operation.
 
-  mapper - a non-interfering, stateless function to apply to each element which produces a LongStream of new values - `java.util.stream.LongStream>`
+  mapper - a non-interfering, stateless function to apply to each element which produces a LongStream of new values - `java.util.function.LongFunction`
 
   returns: the new stream - `java.util.stream.LongStream`"
-  (^java.util.stream.LongStream [^java.util.stream.LongStream this ^java.util.stream.LongStream> mapper]
+  (^java.util.stream.LongStream [^LongStream this ^java.util.function.LongFunction mapper]
     (-> this (.flatMap mapper))))
 
 (defn *concat
@@ -406,7 +406,7 @@
   predicate - a non-interfering, stateless predicate to apply to each element to determine if it should be included - `java.util.function.LongPredicate`
 
   returns: the new stream - `java.util.stream.LongStream`"
-  (^java.util.stream.LongStream [^java.util.stream.LongStream this ^java.util.function.LongPredicate predicate]
+  (^java.util.stream.LongStream [^LongStream this ^java.util.function.LongPredicate predicate]
     (-> this (.filter predicate))))
 
 (defn *empty
@@ -423,10 +423,10 @@
    This is an
        intermediate operation.
 
-  mapper - a non-interfering, stateless function to apply to each element - `U>`
+  mapper - a non-interfering, stateless function to apply to each element - `java.util.function.LongFunction`
 
   returns: the new stream - `<U> java.util.stream.Stream<U>`"
-  ([^java.util.stream.LongStream this mapper]
+  ([^LongStream this ^java.util.function.LongFunction mapper]
     (-> this (.mapToObj mapper))))
 
 (defn find-any
@@ -444,7 +444,7 @@
 
   returns: an OptionalLong describing some element of this stream,
    or an empty OptionalLong if the stream is empty - `java.util.OptionalLong`"
-  (^java.util.OptionalLong [^java.util.stream.LongStream this]
+  (^java.util.OptionalLong [^LongStream this]
     (-> this (.findAny))))
 
 (defn summary-statistics
@@ -457,7 +457,7 @@
 
   returns: a LongSummaryStatistics describing various summary data
    about the elements of this stream - `java.util.LongSummaryStatistics`"
-  (^java.util.LongSummaryStatistics [^java.util.stream.LongStream this]
+  (^java.util.LongSummaryStatistics [^LongStream this]
     (-> this (.summaryStatistics))))
 
 (defn collect
@@ -480,12 +480,12 @@
    This is a terminal
    operation.
 
-  supplier - a function that creates a new result container. For a parallel execution, this function may be called multiple times and must return a fresh value each time. - `java.util.function.Supplier<R>`
-  accumulator - an associative, non-interfering, stateless function for incorporating an additional element into a result - `java.util.function.ObjLongConsumer<R>`
-  combiner - an associative, non-interfering, stateless function for combining two values, which must be compatible with the accumulator function - `java.util.function.BiConsumer<R,R>`
+  supplier - a function that creates a new result container. For a parallel execution, this function may be called multiple times and must return a fresh value each time. - `java.util.function.Supplier`
+  accumulator - an associative, non-interfering, stateless function for incorporating an additional element into a result - `java.util.function.ObjLongConsumer`
+  combiner - an associative, non-interfering, stateless function for combining two values, which must be compatible with the accumulator function - `java.util.function.BiConsumer`
 
   returns: the result of the reduction - `<R> R`"
-  ([^java.util.stream.LongStream this ^java.util.function.Supplier supplier ^java.util.function.ObjLongConsumer accumulator ^java.util.function.BiConsumer combiner]
+  ([^LongStream this ^java.util.function.Supplier supplier ^java.util.function.ObjLongConsumer accumulator ^java.util.function.BiConsumer combiner]
     (-> this (.collect supplier accumulator combiner))))
 
 (defn any-match
@@ -501,7 +501,7 @@
 
   returns: true if any elements of the stream match the provided
    predicate, otherwise false - `boolean`"
-  (^Boolean [^java.util.stream.LongStream this ^java.util.function.LongPredicate predicate]
+  (^Boolean [^LongStream this ^java.util.function.LongPredicate predicate]
     (-> this (.anyMatch predicate))))
 
 (defn none-match
@@ -517,7 +517,7 @@
 
   returns: true if either no elements of the stream match the
    provided predicate or the stream is empty, otherwise false - `boolean`"
-  (^Boolean [^java.util.stream.LongStream this ^java.util.function.LongPredicate predicate]
+  (^Boolean [^LongStream this ^java.util.function.LongPredicate predicate]
     (-> this (.noneMatch predicate))))
 
 (defn reduce
@@ -548,9 +548,9 @@
   op - an associative, non-interfering, stateless function for combining two values - `java.util.function.LongBinaryOperator`
 
   returns: the result of the reduction - `long`"
-  (^Long [^java.util.stream.LongStream this ^Long identity ^java.util.function.LongBinaryOperator op]
+  (^Long [^LongStream this ^Long identity ^java.util.function.LongBinaryOperator op]
     (-> this (.reduce identity op)))
-  (^java.util.OptionalLong [^java.util.stream.LongStream this ^java.util.function.LongBinaryOperator op]
+  (^java.util.OptionalLong [^LongStream this ^java.util.function.LongBinaryOperator op]
     (-> this (.reduce op))))
 
 (defn to-array
@@ -560,7 +560,7 @@
    operation.
 
   returns: an array containing the elements of this stream - `long[]`"
-  ([^java.util.stream.LongStream this]
+  ([^LongStream this]
     (-> this (.toArray))))
 
 (defn as-double-stream
@@ -572,7 +572,7 @@
 
   returns: a DoubleStream consisting of the elements of this stream,
    converted to double - `java.util.stream.DoubleStream`"
-  (^java.util.stream.DoubleStream [^java.util.stream.LongStream this]
+  (^java.util.stream.DoubleStream [^LongStream this]
     (-> this (.asDoubleStream))))
 
 (defn *range-closed

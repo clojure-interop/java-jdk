@@ -13,16 +13,14 @@
   opnum - operation number - `int`
   hash - stub/skeleton interface hash - `long`
 
-  returns: `java.lang. void`
-
   throws: java.lang.Exception - if a general exception occurs."
-  ([^java.rmi.server.Skeleton this ^java.rmi.Remote obj ^java.rmi.server.RemoteCall the-call ^Integer opnum ^Long hash]
+  ([^Skeleton this ^java.rmi.Remote obj ^java.rmi.server.RemoteCall the-call ^Integer opnum ^Long hash]
     (-> this (.dispatch obj the-call opnum hash))))
 
 (defn get-operations
   "Deprecated. no replacement
 
-  returns: operations supported by skeleton - `java.lang..rmi.server.Operation[]`"
-  ([^java.rmi.server.Skeleton this]
+  returns: operations supported by skeleton - `.rmi.server.Operation[]`"
+  ([^Skeleton this]
     (-> this (.getOperations))))
 

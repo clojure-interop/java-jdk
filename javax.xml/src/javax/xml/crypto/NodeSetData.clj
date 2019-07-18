@@ -16,6 +16,6 @@
 
   returns: an Iterator over the nodes in this
       NodeSetData in document order - `java.util.Iterator`"
-  (^java.util.Iterator [^javax.xml.crypto.NodeSetData this]
+  (^java.util.Iterator [^NodeSetData this]
     (-> this (.iterator))))
 

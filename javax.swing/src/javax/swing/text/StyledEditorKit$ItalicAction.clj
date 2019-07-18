@@ -16,13 +16,13 @@
   "Constructor.
 
   Constructs a new ItalicAction."
-  ([]
+  (^StyledEditorKit$ItalicAction []
     (new StyledEditorKit$ItalicAction )))
 
 (defn action-performed
   "Toggles the italic attribute.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([^javax.swing.text.StyledEditorKit$ItalicAction this ^java.awt.event.ActionEvent e]
+  ([^StyledEditorKit$ItalicAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

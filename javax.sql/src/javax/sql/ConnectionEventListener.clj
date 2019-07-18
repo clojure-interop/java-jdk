@@ -25,7 +25,7 @@
    representation of a pooled connection.
 
   event - an event object describing the source of the event - `javax.sql.ConnectionEvent`"
-  ([^javax.sql.ConnectionEventListener this ^javax.sql.ConnectionEvent event]
+  ([^ConnectionEventListener this ^javax.sql.ConnectionEvent event]
     (-> this (.connectionClosed event))))
 
 (defn connection-error-occurred
@@ -36,6 +36,6 @@
    contained in the given ConnectionEvent object.
 
   event - an event object describing the source of the event and containing the SQLException that the driver is about to throw - `javax.sql.ConnectionEvent`"
-  ([^javax.sql.ConnectionEventListener this ^javax.sql.ConnectionEvent event]
+  ([^ConnectionEventListener this ^javax.sql.ConnectionEvent event]
     (-> this (.connectionErrorOccurred event))))
 

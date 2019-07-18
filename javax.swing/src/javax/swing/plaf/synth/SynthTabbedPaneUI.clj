@@ -9,7 +9,7 @@
 
 (defn ->synth-tabbed-pane-ui
   "Constructor."
-  ([]
+  (^SynthTabbedPaneUI []
     (new SynthTabbedPaneUI )))
 
 (defn *create-ui
@@ -27,14 +27,14 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthTabbedPaneUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^SynthTabbedPaneUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn property-change
   "This method gets called when a bound property is changed.
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.plaf.synth.SynthTabbedPaneUI this ^java.beans.PropertyChangeEvent e]
+  ([^SynthTabbedPaneUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 
 (defn update
@@ -47,7 +47,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthTabbedPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthTabbedPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint-border
@@ -59,7 +59,7 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^javax.swing.plaf.synth.SynthTabbedPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthTabbedPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn paint
@@ -69,6 +69,6 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthTabbedPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthTabbedPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 

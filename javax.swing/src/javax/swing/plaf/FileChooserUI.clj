@@ -5,46 +5,46 @@
 
 (defn ->file-chooser-ui
   "Constructor."
-  ([]
+  (^FileChooserUI []
     (new FileChooserUI )))
 
 (defn get-accept-all-file-filter
   "fc - `javax.swing.JFileChooser`
 
   returns: `javax.swing.filechooser.FileFilter`"
-  (^javax.swing.filechooser.FileFilter [^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
+  (^javax.swing.filechooser.FileFilter [^FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getAcceptAllFileFilter fc))))
 
 (defn get-file-view
   "fc - `javax.swing.JFileChooser`
 
   returns: `javax.swing.filechooser.FileView`"
-  (^javax.swing.filechooser.FileView [^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
+  (^javax.swing.filechooser.FileView [^FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getFileView fc))))
 
 (defn get-approve-button-text
   "fc - `javax.swing.JFileChooser`
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
+  (^java.lang.String [^FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getApproveButtonText fc))))
 
 (defn get-dialog-title
   "fc - `javax.swing.JFileChooser`
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
+  (^java.lang.String [^FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getDialogTitle fc))))
 
 (defn rescan-current-directory
   "fc - `javax.swing.JFileChooser`"
-  ([^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
+  ([^FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.rescanCurrentDirectory fc))))
 
 (defn ensure-file-is-visible
   "fc - `javax.swing.JFileChooser`
   f - `java.io.File`"
-  ([^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc ^java.io.File f]
+  ([^FileChooserUI this ^javax.swing.JFileChooser fc ^java.io.File f]
     (-> this (.ensureFileIsVisible fc f))))
 
 (defn get-default-button
@@ -55,6 +55,6 @@
   fc - `javax.swing.JFileChooser`
 
   returns: `javax.swing.JButton`"
-  (^javax.swing.JButton [^javax.swing.plaf.FileChooserUI this ^javax.swing.JFileChooser fc]
+  (^javax.swing.JButton [^FileChooserUI this ^javax.swing.JFileChooser fc]
     (-> this (.getDefaultButton fc))))
 

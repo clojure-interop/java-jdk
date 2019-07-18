@@ -7,7 +7,7 @@
 
 (defn ->print-job
   "Constructor."
-  ([]
+  (^PrintJob []
     (new PrintJob )))
 
 (defn get-graphics
@@ -17,7 +17,7 @@
    the PrintGraphics interface.
 
   returns: `java.awt.Graphics`"
-  (^java.awt.Graphics [^java.awt.PrintJob this]
+  (^java.awt.Graphics [^PrintJob this]
     (-> this (.getGraphics))))
 
 (defn get-page-dimension
@@ -26,7 +26,7 @@
    is similar to the screen resolution.
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^java.awt.PrintJob this]
+  (^java.awt.Dimension [^PrintJob this]
     (-> this (.getPageDimension))))
 
 (defn get-page-resolution
@@ -35,23 +35,23 @@
    resolution of the printer.
 
   returns: `int`"
-  (^Integer [^java.awt.PrintJob this]
+  (^Integer [^PrintJob this]
     (-> this (.getPageResolution))))
 
 (defn last-page-first
   "Returns true if the last page will be printed first.
 
   returns: `boolean`"
-  (^Boolean [^java.awt.PrintJob this]
+  (^Boolean [^PrintJob this]
     (-> this (.lastPageFirst))))
 
 (defn end
   "Ends the print job and does any necessary cleanup."
-  ([^java.awt.PrintJob this]
+  ([^PrintJob this]
     (-> this (.end))))
 
 (defn finalize
   "Ends this print job once it is no longer referenced."
-  ([^java.awt.PrintJob this]
+  ([^PrintJob this]
     (-> this (.finalize))))
 

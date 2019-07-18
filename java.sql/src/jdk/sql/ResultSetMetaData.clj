@@ -22,7 +22,7 @@
   returns: table name or `` if not applicable - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.ResultSetMetaData this ^Integer column]
+  (^java.lang.String [^ResultSetMetaData this ^Integer column]
     (-> this (.getTableName column))))
 
 (defn get-column-label
@@ -37,7 +37,7 @@
   returns: the suggested column title - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.ResultSetMetaData this ^Integer column]
+  (^java.lang.String [^ResultSetMetaData this ^Integer column]
     (-> this (.getColumnLabel column))))
 
 (defn get-precision
@@ -53,7 +53,7 @@
   returns: precision - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Integer [^ResultSetMetaData this ^Integer column]
     (-> this (.getPrecision column))))
 
 (defn get-catalog-name
@@ -65,7 +65,7 @@
             appears or `` if not applicable - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.ResultSetMetaData this ^Integer column]
+  (^java.lang.String [^ResultSetMetaData this ^Integer column]
     (-> this (.getCatalogName column))))
 
 (defn definitely-writable?
@@ -76,7 +76,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Boolean [^ResultSetMetaData this ^Integer column]
     (-> this (.isDefinitelyWritable column))))
 
 (defn searchable?
@@ -87,7 +87,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Boolean [^ResultSetMetaData this ^Integer column]
     (-> this (.isSearchable column))))
 
 (defn get-column-count
@@ -96,7 +96,7 @@
   returns: the number of columns - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.ResultSetMetaData this]
+  (^Integer [^ResultSetMetaData this]
     (-> this (.getColumnCount))))
 
 (defn get-column-display-size
@@ -108,7 +108,7 @@
             of the designated column - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Integer [^ResultSetMetaData this ^Integer column]
     (-> this (.getColumnDisplaySize column))))
 
 (defn auto-increment?
@@ -119,7 +119,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Boolean [^ResultSetMetaData this ^Integer column]
     (-> this (.isAutoIncrement column))))
 
 (defn get-schema-name
@@ -130,7 +130,7 @@
   returns: schema name or `` if not applicable - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.ResultSetMetaData this ^Integer column]
+  (^java.lang.String [^ResultSetMetaData this ^Integer column]
     (-> this (.getSchemaName column))))
 
 (defn get-column-type
@@ -141,7 +141,7 @@
   returns: SQL type from java.sql.Types - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Integer [^ResultSetMetaData this ^Integer column]
     (-> this (.getColumnType column))))
 
 (defn get-column-type-name
@@ -153,7 +153,7 @@
    a user-defined type, then a fully-qualified type name is returned. - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.ResultSetMetaData this ^Integer column]
+  (^java.lang.String [^ResultSetMetaData this ^Integer column]
     (-> this (.getColumnTypeName column))))
 
 (defn currency?
@@ -164,7 +164,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Boolean [^ResultSetMetaData this ^Integer column]
     (-> this (.isCurrency column))))
 
 (defn get-scale
@@ -176,7 +176,7 @@
   returns: scale - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Integer [^ResultSetMetaData this ^Integer column]
     (-> this (.getScale column))))
 
 (defn get-column-name
@@ -187,7 +187,7 @@
   returns: column name - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.ResultSetMetaData this ^Integer column]
+  (^java.lang.String [^ResultSetMetaData this ^Integer column]
     (-> this (.getColumnName column))))
 
 (defn get-column-class-name
@@ -205,7 +205,7 @@
    column. This is the class name used for custom mapping. - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.ResultSetMetaData this ^Integer column]
+  (^java.lang.String [^ResultSetMetaData this ^Integer column]
     (-> this (.getColumnClassName column))))
 
 (defn signed?
@@ -216,7 +216,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Boolean [^ResultSetMetaData this ^Integer column]
     (-> this (.isSigned column))))
 
 (defn is-nullable
@@ -228,7 +228,7 @@
             columnNullable or columnNullableUnknown - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Integer [^ResultSetMetaData this ^Integer column]
     (-> this (.isNullable column))))
 
 (defn writable?
@@ -239,7 +239,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Boolean [^ResultSetMetaData this ^Integer column]
     (-> this (.isWritable column))))
 
 (defn read-only?
@@ -250,7 +250,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Boolean [^ResultSetMetaData this ^Integer column]
     (-> this (.isReadOnly column))))
 
 (defn case-sensitive?
@@ -261,6 +261,6 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.ResultSetMetaData this ^Integer column]
+  (^Boolean [^ResultSetMetaData this ^Integer column]
     (-> this (.isCaseSensitive column))))
 

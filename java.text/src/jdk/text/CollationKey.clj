@@ -63,14 +63,14 @@
   returns: Returns an integer value. Value is less than zero if this is less
    than target, value is zero if this and target are equal and value is greater than
    zero if this is greater than target. - `int`"
-  (^Integer [^java.text.CollationKey this ^java.text.CollationKey target]
+  (^Integer [^CollationKey this ^java.text.CollationKey target]
     (-> this (.compareTo target))))
 
 (defn get-source-string
   "Returns the String that this CollationKey represents.
 
   returns: the source string of this CollationKey - `java.lang.String`"
-  (^java.lang.String [^java.text.CollationKey this]
+  (^java.lang.String [^CollationKey this]
     (-> this (.getSourceString))))
 
 (defn to-byte-array
@@ -80,6 +80,6 @@
    organized most significant byte first.
 
   returns: a byte array representation of the CollationKey - `byte[]`"
-  ([^java.text.CollationKey this]
+  ([^CollationKey this]
     (-> this (.toByteArray))))
 

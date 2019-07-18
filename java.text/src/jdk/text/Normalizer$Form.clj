@@ -7,7 +7,7 @@
 
   Canonical decomposition.
 
-  type: java.text.Normalizer.Form"
+  type: java.text.Normalizer$Form"
   Normalizer$Form/NFD)
 
 (def NFC
@@ -15,7 +15,7 @@
 
   Canonical decomposition, followed by canonical composition.
 
-  type: java.text.Normalizer.Form"
+  type: java.text.Normalizer$Form"
   Normalizer$Form/NFC)
 
 (def NFKD
@@ -23,7 +23,7 @@
 
   Compatibility decomposition.
 
-  type: java.text.Normalizer.Form"
+  type: java.text.Normalizer$Form"
   Normalizer$Form/NFKD)
 
 (def NFKC
@@ -31,7 +31,7 @@
 
   Compatibility decomposition, followed by canonical composition.
 
-  type: java.text.Normalizer.Form"
+  type: java.text.Normalizer$Form"
   Normalizer$Form/NFKC)
 
 (defn *values
@@ -43,7 +43,7 @@
   for (Normalizer.Form c : Normalizer.Form.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.text.Normalizer.Form[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.text.Normalizer$Form[]`"
   ([]
     (Normalizer$Form/values )))
 
@@ -55,9 +55,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.text.Normalizer.Form`
+  returns: the enum constant with the specified name - `java.text.Normalizer$Form`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.text.Normalizer.Form [^java.lang.String name]
+  (^java.text.Normalizer$Form [^java.lang.String name]
     (Normalizer$Form/valueOf name)))
 

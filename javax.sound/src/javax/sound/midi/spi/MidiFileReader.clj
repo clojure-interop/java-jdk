@@ -8,7 +8,7 @@
 
 (defn ->midi-file-reader
   "Constructor."
-  ([]
+  (^MidiFileReader []
     (new MidiFileReader )))
 
 (defn get-midi-file-format
@@ -25,7 +25,7 @@
   returns: a MidiFileFormat object describing the MIDI file format - `javax.sound.midi.MidiFileFormat`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the stream does not point to valid MIDI file data recognized by the system"
-  (^javax.sound.midi.MidiFileFormat [^javax.sound.midi.spi.MidiFileReader this ^java.io.InputStream stream]
+  (^javax.sound.midi.MidiFileFormat [^MidiFileReader this ^java.io.InputStream stream]
     (-> this (.getMidiFileFormat stream))))
 
 (defn get-sequence
@@ -43,6 +43,6 @@
            in the input stream. - `javax.sound.midi.Sequence`
 
   throws: javax.sound.midi.InvalidMidiDataException - if the stream does not point to valid MIDI file data recognized by the system"
-  (^javax.sound.midi.Sequence [^javax.sound.midi.spi.MidiFileReader this ^java.io.InputStream stream]
+  (^javax.sound.midi.Sequence [^MidiFileReader this ^java.io.InputStream stream]
     (-> this (.getSequence stream))))
 

@@ -5,6 +5,6 @@
 
 (defn ->scroll-bar-ui
   "Constructor."
-  ([]
+  (^ScrollBarUI []
     (new ScrollBarUI )))
 

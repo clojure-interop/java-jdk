@@ -40,9 +40,9 @@
   Creates a color chooser pane with the specified initial color.
 
   initial-color - the initial color set in the chooser - `java.awt.Color`"
-  ([^java.awt.Color initial-color]
+  (^JColorChooser [^java.awt.Color initial-color]
     (new JColorChooser initial-color))
-  ([]
+  (^JColorChooser []
     (new JColorChooser )))
 
 (def *-selection-model-property
@@ -115,21 +115,21 @@
    named `previewPanel`.
 
   preview - the JComponent which displays the current color - `javax.swing.JComponent`"
-  ([^javax.swing.JColorChooser this ^javax.swing.JComponent preview]
+  ([^JColorChooser this ^javax.swing.JComponent preview]
     (-> this (.setPreviewPanel preview))))
 
 (defn add-chooser-panel
   "Adds a color chooser panel to the color chooser.
 
   panel - the AbstractColorChooserPanel to be added - `javax.swing.colorchooser.AbstractColorChooserPanel`"
-  ([^javax.swing.JColorChooser this ^javax.swing.colorchooser.AbstractColorChooserPanel panel]
+  ([^JColorChooser this ^javax.swing.colorchooser.AbstractColorChooserPanel panel]
     (-> this (.addChooserPanel panel))))
 
 (defn get-chooser-panels
   "Returns the specified color panels.
 
   returns: an array of AbstractColorChooserPanel objects - `javax.swing.colorchooser.AbstractColorChooserPanel[]`"
-  ([^javax.swing.JColorChooser this]
+  ([^JColorChooser this]
     (-> this (.getChooserPanels))))
 
 (defn remove-chooser-panel
@@ -140,42 +140,42 @@
   returns: the color panel - `javax.swing.colorchooser.AbstractColorChooserPanel`
 
   throws: java.lang.IllegalArgumentException - if panel is not in list of known chooser panels"
-  (^javax.swing.colorchooser.AbstractColorChooserPanel [^javax.swing.JColorChooser this ^javax.swing.colorchooser.AbstractColorChooserPanel panel]
+  (^javax.swing.colorchooser.AbstractColorChooserPanel [^JColorChooser this ^javax.swing.colorchooser.AbstractColorChooserPanel panel]
     (-> this (.removeChooserPanel panel))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `ColorChooserUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JColorChooser this]
+  (^java.lang.String [^JColorChooser this]
     (-> this (.getUIClassID))))
 
 (defn set-selection-model
   "Sets the model containing the selected color.
 
   new-model - the new ColorSelectionModel object - `javax.swing.colorchooser.ColorSelectionModel`"
-  ([^javax.swing.JColorChooser this ^javax.swing.colorchooser.ColorSelectionModel new-model]
+  ([^JColorChooser this ^javax.swing.colorchooser.ColorSelectionModel new-model]
     (-> this (.setSelectionModel new-model))))
 
 (defn get-preview-panel
   "Returns the preview panel that shows a chosen color.
 
   returns: a JComponent object -- the preview panel - `javax.swing.JComponent`"
-  (^javax.swing.JComponent [^javax.swing.JColorChooser this]
+  (^javax.swing.JComponent [^JColorChooser this]
     (-> this (.getPreviewPanel))))
 
 (defn get-selection-model
   "Returns the data model that handles color selections.
 
   returns: a ColorSelectionModel object - `javax.swing.colorchooser.ColorSelectionModel`"
-  (^javax.swing.colorchooser.ColorSelectionModel [^javax.swing.JColorChooser this]
+  (^javax.swing.colorchooser.ColorSelectionModel [^JColorChooser this]
     (-> this (.getSelectionModel))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the ColorChooserUI L&F object - `javax.swing.plaf.ColorChooserUI`"
-  ([^javax.swing.JColorChooser this ^javax.swing.plaf.ColorChooserUI ui]
+  ([^JColorChooser this ^javax.swing.plaf.ColorChooserUI ui]
     (-> this (.setUI ui))))
 
 (defn set-drag-enabled
@@ -203,7 +203,7 @@
   b - the value to set the dragEnabled property to - `boolean`
 
   throws: java.awt.HeadlessException - if b is true and GraphicsEnvironment.isHeadless() returns true"
-  ([^javax.swing.JColorChooser this ^Boolean b]
+  ([^JColorChooser this ^Boolean b]
     (-> this (.setDragEnabled b))))
 
 (defn get-ui
@@ -211,7 +211,7 @@
 
   returns: the ColorChooserUI object that renders
             this component - `javax.swing.plaf.ColorChooserUI`"
-  (^javax.swing.plaf.ColorChooserUI [^javax.swing.JColorChooser this]
+  (^javax.swing.plaf.ColorChooserUI [^JColorChooser this]
     (-> this (.getUI))))
 
 (defn set-color
@@ -224,16 +224,16 @@
   b - an int specifying the amount of Blue - `int`
 
   throws: java.lang.IllegalArgumentException - if r,g,b values are out of range"
-  ([^javax.swing.JColorChooser this ^Integer r ^Integer g ^Integer b]
+  ([^JColorChooser this ^Integer r ^Integer g ^Integer b]
     (-> this (.setColor r g b)))
-  ([^javax.swing.JColorChooser this ^java.awt.Color color]
+  ([^JColorChooser this ^java.awt.Color color]
     (-> this (.setColor color))))
 
 (defn set-chooser-panels
   "Specifies the Color Panels used to choose a color value.
 
   panels - an array of AbstractColorChooserPanel objects - `javax.swing.colorchooser.AbstractColorChooserPanel[]`"
-  ([^javax.swing.JColorChooser this panels]
+  ([^JColorChooser this panels]
     (-> this (.setChooserPanels panels))))
 
 (defn get-accessible-context
@@ -244,14 +244,14 @@
 
   returns: an AccessibleJColorChooser that serves as the
            AccessibleContext of this JColorChooser - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JColorChooser this]
+  (^javax.accessibility.AccessibleContext [^JColorChooser this]
     (-> this (.getAccessibleContext))))
 
 (defn get-drag-enabled?
   "Gets the value of the dragEnabled property.
 
   returns: the value of the dragEnabled property - `boolean`"
-  (^Boolean [^javax.swing.JColorChooser this]
+  (^Boolean [^JColorChooser this]
     (-> this (.getDragEnabled))))
 
 (defn get-color
@@ -259,13 +259,13 @@
    By default, this delegates to the model.
 
   returns: the current color value of the color chooser - `java.awt.Color`"
-  (^java.awt.Color [^javax.swing.JColorChooser this]
+  (^java.awt.Color [^JColorChooser this]
     (-> this (.getColor))))
 
 (defn update-ui
   "Notification from the UIManager that the L&F has changed.
    Replaces the current UI object with the latest version from the
    UIManager."
-  ([^javax.swing.JColorChooser this]
+  ([^JColorChooser this]
     (-> this (.updateUI))))
 

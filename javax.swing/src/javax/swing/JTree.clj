@@ -102,11 +102,11 @@
 
   root - a TreeNode object - `javax.swing.tree.TreeNode`
   asks-allows-children - if false, any node without children is a leaf node; if true, only nodes that do not allow children are leaf nodes - `boolean`"
-  ([^javax.swing.tree.TreeNode root ^Boolean asks-allows-children]
+  (^JTree [^javax.swing.tree.TreeNode root ^Boolean asks-allows-children]
     (new JTree root asks-allows-children))
-  ([value]
+  (^JTree [value]
     (new JTree value))
-  ([]
+  (^JTree []
     (new JTree )))
 
 (def *-cell-renderer-property
@@ -245,7 +245,7 @@
    will have no effect.
 
   row - an integer specifying a display row, where 0 is the first row in the display - `int`"
-  ([^javax.swing.JTree this ^Integer row]
+  ([^JTree this ^Integer row]
     (-> this (.expandRow row))))
 
 (defn collapsed?
@@ -257,7 +257,7 @@
 
   returns: true if any of the nodes in the node's path are collapsed,
                  false if all nodes in the path are expanded - `boolean`"
-  (^Boolean [^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  (^Boolean [^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.isCollapsed path))))
 
 (defn set-shows-root-handles
@@ -271,14 +271,14 @@
    This is a bound property.
 
   new-value - true if root handles should be displayed; otherwise, false - `boolean`"
-  ([^javax.swing.JTree this ^Boolean new-value]
+  ([^JTree this ^Boolean new-value]
     (-> this (.setShowsRootHandles new-value))))
 
 (defn get-lead-selection-path
   "Returns the path identified as the lead.
 
   returns: path identified as the lead - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.JTree this]
+  (^javax.swing.tree.TreePath [^JTree this]
     (-> this (.getLeadSelectionPath))))
 
 (defn get-max-selection-row
@@ -286,7 +286,7 @@
    none of the selected paths are viewable, -1 is returned.
 
   returns: the largest selected row - `int`"
-  (^Integer [^javax.swing.JTree this]
+  (^Integer [^JTree this]
     (-> this (.getMaxSelectionRow))))
 
 (defn path-editable?
@@ -298,21 +298,21 @@
   path - `javax.swing.tree.TreePath`
 
   returns: true if every parent node and the node itself is editable - `boolean`"
-  (^Boolean [^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  (^Boolean [^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.isPathEditable path))))
 
 (defn fixed-row-height?
   "Returns true if the height of each display row is a fixed size.
 
   returns: true if the height of each row is a fixed size - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.isFixedRowHeight))))
 
 (defn get-selection-count
   "Returns the number of nodes selected.
 
   returns: the number of nodes selected - `int`"
-  (^Integer [^javax.swing.JTree this]
+  (^Integer [^JTree this]
     (-> this (.getSelectionCount))))
 
 (defn get-row-for-path
@@ -324,7 +324,7 @@
   returns: an integer specifying the display row, where 0 is the first
            row in the display, or -1 if any of the elements in path
            are hidden under a collapsed parent. - `int`"
-  (^Integer [^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  (^Integer [^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.getRowForPath path))))
 
 (defn row-selected?
@@ -333,19 +333,19 @@
   row - an integer specifying a display row, where 0 is the first row in the display - `int`
 
   returns: true if the node is selected - `boolean`"
-  (^Boolean [^javax.swing.JTree this ^Integer row]
+  (^Boolean [^JTree this ^Integer row]
     (-> this (.isRowSelected row))))
 
 (defn clear-selection
   "Clears the selection."
-  ([^javax.swing.JTree this]
+  ([^JTree this]
     (-> this (.clearSelection))))
 
 (defn add-tree-selection-listener
   "Adds a listener for TreeSelection events.
 
   tsl - the TreeSelectionListener that will be notified when a node is selected or deselected (a `negative selection`) - `javax.swing.event.TreeSelectionListener`"
-  ([^javax.swing.JTree this ^javax.swing.event.TreeSelectionListener tsl]
+  ([^JTree this ^javax.swing.event.TreeSelectionListener tsl]
     (-> this (.addTreeSelectionListener tsl))))
 
 (defn set-cell-renderer
@@ -355,7 +355,7 @@
    This is a bound property.
 
   x - the TreeCellRenderer that is to render each cell - `javax.swing.tree.TreeCellRenderer`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreeCellRenderer x]
+  ([^JTree this ^javax.swing.tree.TreeCellRenderer x]
     (-> this (.setCellRenderer x))))
 
 (defn fire-tree-collapsed
@@ -364,7 +364,7 @@
    is lazily created using the path parameter.
 
   path - the TreePath indicating the node that was collapsed - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.fireTreeCollapsed path))))
 
 (defn set-visible-row-count
@@ -376,14 +376,14 @@
    This is a bound property.
 
   new-count - the number of rows to display - `int`"
-  ([^javax.swing.JTree this ^Integer new-count]
+  ([^JTree this ^Integer new-count]
     (-> this (.setVisibleRowCount new-count))))
 
 (defn get-shows-root-handles?
   "Returns the value of the showsRootHandles property.
 
   returns: the value of the showsRootHandles property - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.getShowsRootHandles))))
 
 (defn get-path-bounds
@@ -399,7 +399,7 @@
 
   returns: the Rectangle the node is drawn in,
             or null - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  (^java.awt.Rectangle [^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.getPathBounds path))))
 
 (defn set-selection-path
@@ -409,21 +409,21 @@
    exposed (made viewable).
 
   path - the TreePath specifying the node to select - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.setSelectionPath path))))
 
 (defn remove-tree-selection-listener
   "Removes a TreeSelection listener.
 
   tsl - the TreeSelectionListener to remove - `javax.swing.event.TreeSelectionListener`"
-  ([^javax.swing.JTree this ^javax.swing.event.TreeSelectionListener tsl]
+  ([^JTree this ^javax.swing.event.TreeSelectionListener tsl]
     (-> this (.removeTreeSelectionListener tsl))))
 
 (defn add-tree-expansion-listener
   "Adds a listener for TreeExpansion events.
 
   tel - a TreeExpansionListener that will be notified when a tree node is expanded or collapsed (a `negative expansion`) - `javax.swing.event.TreeExpansionListener`"
-  ([^javax.swing.JTree this ^javax.swing.event.TreeExpansionListener tel]
+  ([^JTree this ^javax.swing.event.TreeExpansionListener tel]
     (-> this (.addTreeExpansionListener tel))))
 
 (defn set-selection-rows
@@ -436,7 +436,7 @@
    was invoked.
 
   rows - an array of ints specifying the rows to select, where 0 indicates the first row in the display - `int[]`"
-  ([^javax.swing.JTree this rows]
+  ([^JTree this rows]
     (-> this (.setSelectionRows rows))))
 
 (defn get-row-bounds
@@ -446,7 +446,7 @@
   row - the row to be drawn, where 0 is the first row in the display - `int`
 
   returns: the Rectangle the node is drawn in - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.JTree this ^Integer row]
+  (^java.awt.Rectangle [^JTree this ^Integer row]
     (-> this (.getRowBounds row))))
 
 (defn get-expands-selected-paths?
@@ -454,7 +454,7 @@
 
   returns: true if selection changes result in the parent path being
            expanded - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.getExpandsSelectedPaths))))
 
 (defn collapse-row
@@ -464,14 +464,14 @@
    will have no effect.
 
   row - an integer specifying a display row, where 0 is the first row in the display - `int`"
-  ([^javax.swing.JTree this ^Integer row]
+  ([^JTree this ^Integer row]
     (-> this (.collapseRow row))))
 
 (defn get-drop-mode
   "Returns the drop mode for this component.
 
   returns: the drop mode for this component - `javax.swing.DropMode`"
-  (^javax.swing.DropMode [^javax.swing.JTree this]
+  (^javax.swing.DropMode [^JTree this]
     (-> this (.getDropMode))))
 
 (defn get-scrollable-block-increment
@@ -483,7 +483,7 @@
   direction - less than zero to scroll up/left, greater than zero for down/right. - `int`
 
   returns: the `block` increment for scrolling in the specified direction - `int`"
-  (^Integer [^javax.swing.JTree this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^JTree this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableBlockIncrement visible-rect orientation direction))))
 
 (defn set-drop-mode
@@ -508,7 +508,7 @@
   drop-mode - the drop mode to use - `javax.swing.DropMode`
 
   throws: java.lang.IllegalArgumentException - if the drop mode is unsupported or null"
-  ([^javax.swing.JTree this ^javax.swing.DropMode drop-mode]
+  ([^JTree this ^javax.swing.DropMode drop-mode]
     (-> this (.setDropMode drop-mode))))
 
 (defn set-large-model
@@ -519,7 +519,7 @@
    This is a bound property.
 
   new-value - true to suggest a large model to the UI - `boolean`"
-  ([^javax.swing.JTree this ^Boolean new-value]
+  ([^JTree this ^Boolean new-value]
     (-> this (.setLargeModel new-value))))
 
 (defn set-expands-selected-paths
@@ -537,14 +537,14 @@
    This is a bound property.
 
   new-value - the new value for expandsSelectedPaths - `boolean`"
-  ([^javax.swing.JTree this ^Boolean new-value]
+  ([^JTree this ^Boolean new-value]
     (-> this (.setExpandsSelectedPaths new-value))))
 
 (defn remove-tree-expansion-listener
   "Removes a listener for TreeExpansion events.
 
   tel - the TreeExpansionListener to remove - `javax.swing.event.TreeExpansionListener`"
-  ([^javax.swing.JTree this ^javax.swing.event.TreeExpansionListener tel]
+  ([^JTree this ^javax.swing.event.TreeExpansionListener tel]
     (-> this (.removeTreeExpansionListener tel))))
 
 (defn get-selection-paths
@@ -552,7 +552,7 @@
 
   returns: an array of TreePath objects indicating the selected
            nodes, or null if nothing is currently selected - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.JTree this]
+  ([^JTree this]
     (-> this (.getSelectionPaths))))
 
 (defn fire-tree-will-collapse
@@ -563,7 +563,7 @@
   path - the TreePath indicating the node that was expanded - `javax.swing.tree.TreePath`
 
   throws: javax.swing.tree.ExpandVetoException"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.fireTreeWillCollapse path))))
 
 (defn expanded?
@@ -573,7 +573,7 @@
 
   returns: false if any of the nodes in the node's path are collapsed,
                  true if all nodes in the path are expanded - `boolean`"
-  (^Boolean [^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  (^Boolean [^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.isExpanded path))))
 
 (defn get-row-count
@@ -583,7 +583,7 @@
    the UI has not been set.
 
   returns: the number of viewable nodes - `int`"
-  (^Integer [^javax.swing.JTree this]
+  (^Integer [^JTree this]
     (-> this (.getRowCount))))
 
 (defn get-lead-selection-row
@@ -592,7 +592,7 @@
   returns: an integer giving the row index of the lead path,
             where 0 is the first row in the display; or -1
             if leadPath is null - `int`"
-  (^Integer [^javax.swing.JTree this]
+  (^Integer [^JTree this]
     (-> this (.getLeadSelectionRow))))
 
 (defn get-closest-row-for-location
@@ -607,14 +607,14 @@
 
   returns: the row closest to the location, -1 if nothing is
            viewable or there is no model - `int`"
-  (^Integer [^javax.swing.JTree this ^Integer x ^Integer y]
+  (^Integer [^JTree this ^Integer x ^Integer y]
     (-> this (.getClosestRowForLocation x y))))
 
 (defn root-visible?
   "Returns true if the root node of the tree is displayed.
 
   returns: true if the root node of the tree is displayed - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.isRootVisible))))
 
 (defn set-scrolls-on-expand
@@ -631,7 +631,7 @@
    This is a bound property.
 
   new-value - false to disable scrolling on expansion; true to enable it - `boolean`"
-  ([^javax.swing.JTree this ^Boolean new-value]
+  ([^JTree this ^Boolean new-value]
     (-> this (.setScrollsOnExpand new-value))))
 
 (defn get-row-for-location
@@ -642,14 +642,14 @@
 
   returns: the row corresponding to the location, or -1 if the
            location is not within the bounds of a displayed cell - `int`"
-  (^Integer [^javax.swing.JTree this ^Integer x ^Integer y]
+  (^Integer [^JTree this ^Integer x ^Integer y]
     (-> this (.getRowForLocation x y))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `TreeUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JTree this]
+  (^java.lang.String [^JTree this]
     (-> this (.getUIClassID))))
 
 (defn tree-did-change
@@ -658,14 +658,14 @@
    expanded node set (e.g nodes were expanded or collapsed, or
    nodes were inserted into the tree). You should never have to
    invoke this, the UI will invoke this as it needs to."
-  ([^javax.swing.JTree this]
+  ([^JTree this]
     (-> this (.treeDidChange))))
 
 (defn remove-tree-will-expand-listener
   "Removes a listener for TreeWillExpand events.
 
   tel - the TreeWillExpandListener to remove - `javax.swing.event.TreeWillExpandListener`"
-  ([^javax.swing.JTree this ^javax.swing.event.TreeWillExpandListener tel]
+  ([^JTree this ^javax.swing.event.TreeWillExpandListener tel]
     (-> this (.removeTreeWillExpandListener tel))))
 
 (defn set-selection-model
@@ -676,7 +676,7 @@
    This is a bound property.
 
   selection-model - the TreeSelectionModel to use, or null to disable selections - `javax.swing.tree.TreeSelectionModel`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreeSelectionModel selection-model]
+  ([^JTree this ^javax.swing.tree.TreeSelectionModel selection-model]
     (-> this (.setSelectionModel selection-model))))
 
 (defn get-expanded-descendants
@@ -694,7 +694,7 @@
   returns: an Enumeration of the descendents of
             parent, or null if
             parent is not currently expanded - `java.util.Enumeration<javax.swing.tree.TreePath>`"
-  (^java.util.Enumeration [^javax.swing.JTree this ^javax.swing.tree.TreePath parent]
+  (^java.util.Enumeration [^JTree this ^javax.swing.tree.TreePath parent]
     (-> this (.getExpandedDescendants parent))))
 
 (defn get-selection-path
@@ -702,7 +702,7 @@
 
   returns: the TreePath for the first selected node,
             or null if nothing is currently selected - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.JTree this]
+  (^javax.swing.tree.TreePath [^JTree this]
     (-> this (.getSelectionPath))))
 
 (defn set-selection-interval
@@ -722,7 +722,7 @@
 
   index-0 - the first index in the range to select - `int`
   index-1 - the last index in the range to select - `int`"
-  ([^javax.swing.JTree this ^Integer index-0 ^Integer index-1]
+  ([^JTree this ^Integer index-0 ^Integer index-1]
     (-> this (.setSelectionInterval index-0 index-1))))
 
 (defn get-scrollable-unit-increment
@@ -736,7 +736,7 @@
   direction - less than zero to scroll up/left, greater than zero for down/right - `int`
 
   returns: the `unit` increment for scrolling in the specified direction - `int`"
-  (^Integer [^javax.swing.JTree this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
+  (^Integer [^JTree this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
 (defn get-cell-editor
@@ -744,7 +744,7 @@
 
   returns: the TreeCellEditor in use,
             or null if the tree cannot be edited - `javax.swing.tree.TreeCellEditor`"
-  (^javax.swing.tree.TreeCellEditor [^javax.swing.JTree this]
+  (^javax.swing.tree.TreeCellEditor [^JTree this]
     (-> this (.getCellEditor))))
 
 (defn get-tree-selection-listeners
@@ -753,14 +753,14 @@
 
   returns: all of the TreeSelectionListeners added or an empty
            array if no listeners have been added - `javax.swing.event.TreeSelectionListener[]`"
-  ([^javax.swing.JTree this]
+  ([^JTree this]
     (-> this (.getTreeSelectionListeners))))
 
 (defn get-anchor-selection-path
   "Returns the path identified as the anchor.
 
   returns: path identified as the anchor - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.JTree this]
+  (^javax.swing.tree.TreePath [^JTree this]
     (-> this (.getAnchorSelectionPath))))
 
 (defn get-tree-will-expand-listeners
@@ -769,14 +769,14 @@
 
   returns: all of the TreeWillExpandListeners added or an empty
            array if no listeners have been added - `javax.swing.event.TreeWillExpandListener[]`"
-  ([^javax.swing.JTree this]
+  ([^JTree this]
     (-> this (.getTreeWillExpandListeners))))
 
 (defn set-selection-row
   "Selects the node at the specified row in the display.
 
   row - the row to select, where 0 is the first row in the display - `int`"
-  ([^javax.swing.JTree this ^Integer row]
+  ([^JTree this ^Integer row]
     (-> this (.setSelectionRow row))))
 
 (defn set-root-visible
@@ -786,7 +786,7 @@
    This is a bound property.
 
   root-visible - true if the root node of the tree is to be displayed - `boolean`"
-  ([^javax.swing.JTree this ^Boolean root-visible]
+  ([^JTree this ^Boolean root-visible]
     (-> this (.setRootVisible root-visible))))
 
 (defn remove-selection-row
@@ -794,14 +794,14 @@
    selection.
 
   row - the row to remove - `int`"
-  ([^javax.swing.JTree this ^Integer row]
+  ([^JTree this ^Integer row]
     (-> this (.removeSelectionRow row))))
 
 (defn add-selection-row
   "Adds the path at the specified row to the current selection.
 
   row - an integer specifying the row of the node to add, where 0 is the first row in the display - `int`"
-  ([^javax.swing.JTree this ^Integer row]
+  ([^JTree this ^Integer row]
     (-> this (.addSelectionRow row))))
 
 (defn add-selection-paths
@@ -815,7 +815,7 @@
    a unique object.
 
   paths - an array of TreePath objects that specifies the nodes to add - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.JTree this paths]
+  ([^JTree this paths]
     (-> this (.addSelectionPaths paths))))
 
 (defn fire-tree-will-expand
@@ -826,7 +826,7 @@
   path - the TreePath indicating the node that was expanded - `javax.swing.tree.TreePath`
 
   throws: javax.swing.tree.ExpandVetoException"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.fireTreeWillExpand path))))
 
 (defn get-selection-model
@@ -837,7 +837,7 @@
    selection model to be used.
 
   returns: `javax.swing.tree.TreeSelectionModel`"
-  (^javax.swing.tree.TreeSelectionModel [^javax.swing.JTree this]
+  (^javax.swing.tree.TreeSelectionModel [^JTree this]
     (-> this (.getSelectionModel))))
 
 (defn convert-value-to-text
@@ -854,7 +854,7 @@
   has-focus - true if the node has the focus - `boolean`
 
   returns: the String representation of the node's value - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JTree this ^java.lang.Object value ^Boolean selected ^Boolean expanded ^Boolean leaf ^Integer row ^Boolean has-focus]
+  (^java.lang.String [^JTree this ^java.lang.Object value ^Boolean selected ^Boolean expanded ^Boolean leaf ^Integer row ^Boolean has-focus]
     (-> this (.convertValueToText value selected expanded leaf row has-focus))))
 
 (defn get-last-selected-path-component
@@ -865,7 +865,7 @@
 
   returns: the last path component of the selected path, or
            null if nothing is selected - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.JTree this]
+  (^java.lang.Object [^JTree this]
     (-> this (.getLastSelectedPathComponent))))
 
 (defn get-drop-location
@@ -881,8 +881,8 @@
    When this property changes, a property change event with
    name `dropLocation` is fired by the component.
 
-  returns: the drop location - `javax.swing.JTree.DropLocation`"
-  (^javax.swing.JTree.DropLocation [^javax.swing.JTree this]
+  returns: the drop location - `javax.swing.JTree$DropLocation`"
+  (^javax.swing.JTree$DropLocation [^JTree this]
     (-> this (.getDropLocation))))
 
 (defn remove-selection-interval
@@ -902,7 +902,7 @@
 
   index-0 - the first row to remove from the selection - `int`
   index-1 - the last row to remove from the selection - `int`"
-  ([^javax.swing.JTree this ^Integer index-0 ^Integer index-1]
+  ([^JTree this ^Integer index-0 ^Integer index-1]
     (-> this (.removeSelectionInterval index-0 index-1))))
 
 (defn get-preferred-scrollable-viewport-size
@@ -911,7 +911,7 @@
    is the current preferred width.
 
   returns: a Dimension object containing the preferred size - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.JTree this]
+  (^java.awt.Dimension [^JTree this]
     (-> this (.getPreferredScrollableViewportSize))))
 
 (defn set-toggle-click-count
@@ -921,7 +921,7 @@
    This is a bound property.
 
   click-count - `int`"
-  ([^javax.swing.JTree this ^Integer click-count]
+  ([^JTree this ^Integer click-count]
     (-> this (.setToggleClickCount click-count))))
 
 (defn get-cell-renderer
@@ -929,7 +929,7 @@
     that is rendering each cell.
 
   returns: the TreeCellRenderer that is rendering each cell - `javax.swing.tree.TreeCellRenderer`"
-  (^javax.swing.tree.TreeCellRenderer [^javax.swing.JTree this]
+  (^javax.swing.tree.TreeCellRenderer [^JTree this]
     (-> this (.getCellRenderer))))
 
 (defn add-selection-interval
@@ -951,7 +951,7 @@
 
   index-0 - the first index in the range to add to the selection - `int`
   index-1 - the last index in the range to add to the selection - `int`"
-  ([^javax.swing.JTree this ^Integer index-0 ^Integer index-1]
+  ([^JTree this ^Integer index-0 ^Integer index-1]
     (-> this (.addSelectionInterval index-0 index-1))))
 
 (defn set-ui
@@ -960,14 +960,14 @@
    This is a bound property.
 
   ui - the TreeUI L&F object - `javax.swing.plaf.TreeUI`"
-  ([^javax.swing.JTree this ^javax.swing.plaf.TreeUI ui]
+  ([^JTree this ^javax.swing.plaf.TreeUI ui]
     (-> this (.setUI ui))))
 
 (defn editable?
   "Returns true if the tree is editable.
 
   returns: true if the tree is editable - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.isEditable))))
 
 (defn collapse-path
@@ -975,7 +975,7 @@
    collapsed and viewable.
 
   path - the TreePath identifying a node - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.collapsePath path))))
 
 (defn get-tool-tip-text
@@ -993,7 +993,7 @@
 
   returns: a string containing the  tooltip or null
             if event is null - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JTree this ^java.awt.event.MouseEvent event]
+  (^java.lang.String [^JTree this event]
     (-> this (.getToolTipText event))))
 
 (defn scroll-path-to-visible
@@ -1003,7 +1003,7 @@
    JTree is contained in a JScrollPane.
 
   path - the TreePath identifying the node to bring into view - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.scrollPathToVisible path))))
 
 (defn set-invokes-stop-cell-editing
@@ -1015,14 +1015,14 @@
    Fires a property change for the INVOKES_STOP_CELL_EDITING_PROPERTY.
 
   new-value - true means that stopCellEditing is invoked when editing is interrupted, and data is saved; false means that cancelCellEditing is invoked, and changes are lost - `boolean`"
-  ([^javax.swing.JTree this ^Boolean new-value]
+  ([^JTree this ^Boolean new-value]
     (-> this (.setInvokesStopCellEditing new-value))))
 
 (defn add-tree-will-expand-listener
   "Adds a listener for TreeWillExpand events.
 
   tel - a TreeWillExpandListener that will be notified when a tree node will be expanded or collapsed (a `negative expansion`) - `javax.swing.event.TreeWillExpandListener`"
-  ([^javax.swing.JTree this ^javax.swing.event.TreeWillExpandListener tel]
+  ([^JTree this ^javax.swing.event.TreeWillExpandListener tel]
     (-> this (.addTreeWillExpandListener tel))))
 
 (defn remove-selection-rows
@@ -1030,7 +1030,7 @@
    rows.
 
   rows - an array of ints specifying display rows, where 0 is the first row in the display - `int[]`"
-  ([^javax.swing.JTree this rows]
+  ([^JTree this rows]
     (-> this (.removeSelectionRows rows))))
 
 (defn set-drag-enabled
@@ -1054,14 +1054,14 @@
   b - whether or not to enable automatic drag handling - `boolean`
 
   throws: java.awt.HeadlessException - if b is true and GraphicsEnvironment.isHeadless() returns true"
-  ([^javax.swing.JTree this ^Boolean b]
+  ([^JTree this ^Boolean b]
     (-> this (.setDragEnabled b))))
 
 (defn make-visible
   "Ensures that the node identified by path is currently viewable.
 
   path - the TreePath to make visible - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.makeVisible path))))
 
 (defn get-closest-path-for-location
@@ -1076,14 +1076,14 @@
 
   returns: the TreePath for the node closest to that location,
             null if nothing is viewable or there is no model - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.JTree this ^Integer x ^Integer y]
+  (^javax.swing.tree.TreePath [^JTree this ^Integer x ^Integer y]
     (-> this (.getClosestPathForLocation x y))))
 
 (defn get-ui
   "Returns the L&F object that renders this component.
 
   returns: the TreeUI object that renders this component - `javax.swing.plaf.TreeUI`"
-  (^javax.swing.plaf.TreeUI [^javax.swing.JTree this]
+  (^javax.swing.plaf.TreeUI [^JTree this]
     (-> this (.getUI))))
 
 (defn get-min-selection-row
@@ -1091,7 +1091,7 @@
    none of the selected paths are viewable, -1 is returned.
 
   returns: the smallest selected row - `int`"
-  (^Integer [^javax.swing.JTree this]
+  (^Integer [^JTree this]
     (-> this (.getMinSelectionRow))))
 
 (defn get-path-for-location
@@ -1101,21 +1101,21 @@
   y - an integer giving the number of pixels vertically from the top of the display area, minus any top margin - `int`
 
   returns: the TreePath for the node at that location - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.JTree this ^Integer x ^Integer y]
+  (^javax.swing.tree.TreePath [^JTree this ^Integer x ^Integer y]
     (-> this (.getPathForLocation x y))))
 
 (defn selection-empty?
   "Returns true if the selection is currently empty.
 
   returns: true if the selection is currently empty - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.isSelectionEmpty))))
 
 (defn add-selection-rows
   "Adds the paths at each of the specified rows to the current selection.
 
   rows - an array of ints specifying the rows to add, where 0 indicates the first row in the display - `int[]`"
-  ([^javax.swing.JTree this rows]
+  ([^JTree this rows]
     (-> this (.addSelectionRows rows))))
 
 (defn get-invokes-stop-cell-editing?
@@ -1124,7 +1124,7 @@
 
   returns: the indicator that tells what happens when editing is
            interrupted - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.getInvokesStopCellEditing))))
 
 (defn get-scrollable-tracks-viewport-width?
@@ -1134,7 +1134,7 @@
    ensure that the tree is never smaller than its viewport.
 
   returns: whether the tree should track the width of the viewport - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.getScrollableTracksViewportWidth))))
 
 (defn get-selection-rows
@@ -1146,7 +1146,7 @@
 
   returns: an array of integers that identifies all currently selected rows
            where 0 is the first row in the display - `int[]`"
-  ([^javax.swing.JTree this]
+  ([^JTree this]
     (-> this (.getSelectionRows))))
 
 (defn path-selected?
@@ -1155,14 +1155,14 @@
   path - a TreePath identifying a node - `javax.swing.tree.TreePath`
 
   returns: true if the node is selected - `boolean`"
-  (^Boolean [^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  (^Boolean [^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.isPathSelected path))))
 
 (defn get-visible-row-count
   "Returns the number of rows that are displayed in the display area.
 
   returns: the number of rows displayed - `int`"
-  (^Integer [^javax.swing.JTree this]
+  (^Integer [^JTree this]
     (-> this (.getVisibleRowCount))))
 
 (defn get-accessible-context
@@ -1173,7 +1173,7 @@
 
   returns: an AccessibleJTree that serves as the
            AccessibleContext of this JTree - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JTree this]
+  (^javax.accessibility.AccessibleContext [^JTree this]
     (-> this (.getAccessibleContext))))
 
 (defn fire-tree-expanded
@@ -1182,7 +1182,7 @@
    is lazily created using the path parameter.
 
   path - the TreePath indicating the node that was expanded - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.fireTreeExpanded path))))
 
 (defn visible?
@@ -1193,7 +1193,7 @@
   path - `javax.swing.tree.TreePath`
 
   returns: true if the node is viewable, otherwise false - `boolean`"
-  (^Boolean [^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  (^Boolean [^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.isVisible path))))
 
 (defn set-editable
@@ -1204,7 +1204,7 @@
    This is a bound property.
 
   flag - a boolean value, true if the tree is editable - `boolean`"
-  ([^javax.swing.JTree this ^Boolean flag]
+  ([^JTree this ^Boolean flag]
     (-> this (.setEditable flag))))
 
 (defn set-row-height
@@ -1215,7 +1215,7 @@
    This is a bound property.
 
   row-height - the height of each cell, in pixels - `int`"
-  ([^javax.swing.JTree this ^Integer row-height]
+  ([^JTree this ^Integer row-height]
     (-> this (.setRowHeight row-height))))
 
 (defn add-selection-path
@@ -1229,7 +1229,7 @@
    a unique object.
 
   path - the TreePath to add - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.addSelectionPath path))))
 
 (defn get-scrollable-tracks-viewport-height?
@@ -1239,21 +1239,21 @@
    ensure that the tree is never smaller than its viewport.
 
   returns: whether the tree should track the height of the viewport - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.getScrollableTracksViewportHeight))))
 
 (defn large-model?
   "Returns true if the tree is configured for a large model.
 
   returns: true if a large model is suggested - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.isLargeModel))))
 
 (defn get-drag-enabled?
   "Returns whether or not automatic drag handling is enabled.
 
   returns: the value of the dragEnabled property - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.getDragEnabled))))
 
 (defn get-path-for-row
@@ -1266,7 +1266,7 @@
   returns: the TreePath to the specified node,
             null if row < 0
             or row >= getRowCount() - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.JTree this ^Integer row]
+  (^javax.swing.tree.TreePath [^JTree this ^Integer row]
     (-> this (.getPathForRow row))))
 
 (defn set-lead-selection-path
@@ -1277,14 +1277,14 @@
    This is a bound property.
 
   new-path - the new lead path - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath new-path]
+  ([^JTree this ^javax.swing.tree.TreePath new-path]
     (-> this (.setLeadSelectionPath new-path))))
 
 (defn get-editing-path
   "Returns the path to the element that is currently being edited.
 
   returns: the TreePath for the node being edited - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.JTree this]
+  (^javax.swing.tree.TreePath [^JTree this]
     (-> this (.getEditingPath))))
 
 (defn remove-selection-path
@@ -1292,7 +1292,7 @@
    selection.
 
   path - the TreePath identifying a node - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.removeSelectionPath path))))
 
 (defn set-anchor-selection-path
@@ -1303,14 +1303,14 @@
    This is a bound property.
 
   new-path - the new anchor path - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath new-path]
+  ([^JTree this ^javax.swing.tree.TreePath new-path]
     (-> this (.setAnchorSelectionPath new-path))))
 
 (defn get-model
   "Returns the TreeModel that is providing the data.
 
   returns: the TreeModel that is providing the data - `javax.swing.tree.TreeModel`"
-  (^javax.swing.tree.TreeModel [^javax.swing.JTree this]
+  (^javax.swing.tree.TreeModel [^JTree this]
     (-> this (.getModel))))
 
 (defn editing?
@@ -1318,7 +1318,7 @@
    edited can be obtained using getSelectionPath.
 
   returns: true if the user is currently editing a node - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.isEditing))))
 
 (defn start-editing-at-path
@@ -1328,14 +1328,14 @@
    editing for the specified item.
 
   path - the TreePath identifying a node - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.startEditingAtPath path))))
 
 (defn get-toggle-click-count
   "Returns the number of mouse clicks needed to expand or close a node.
 
   returns: number of mouse clicks before node is expanded - `int`"
-  (^Integer [^javax.swing.JTree this]
+  (^Integer [^JTree this]
     (-> this (.getToggleClickCount))))
 
 (defn has-been-expanded?
@@ -1345,7 +1345,7 @@
   path - `javax.swing.tree.TreePath`
 
   returns: true if the path has ever been expanded - `boolean`"
-  (^Boolean [^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  (^Boolean [^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.hasBeenExpanded path))))
 
 (defn expand-path
@@ -1354,7 +1354,7 @@
    leaf, this will have no effect.
 
   path - the TreePath identifying a node - `javax.swing.tree.TreePath`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreePath path]
+  ([^JTree this ^javax.swing.tree.TreePath path]
     (-> this (.expandPath path))))
 
 (defn set-cell-editor
@@ -1366,7 +1366,7 @@
    This is a bound property.
 
   cell-editor - the TreeCellEditor to use - `javax.swing.tree.TreeCellEditor`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreeCellEditor cell-editor]
+  ([^JTree this ^javax.swing.tree.TreeCellEditor cell-editor]
     (-> this (.setCellEditor cell-editor))))
 
 (defn set-model
@@ -1375,7 +1375,7 @@
    This is a bound property.
 
   new-model - the TreeModel that is to provide the data - `javax.swing.tree.TreeModel`"
-  ([^javax.swing.JTree this ^javax.swing.tree.TreeModel new-model]
+  ([^JTree this ^javax.swing.tree.TreeModel new-model]
     (-> this (.setModel new-model))))
 
 (defn remove-selection-paths
@@ -1383,14 +1383,14 @@
    current selection.
 
   paths - an array of TreePath objects that specifies the nodes to remove - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.JTree this paths]
+  ([^JTree this paths]
     (-> this (.removeSelectionPaths paths))))
 
 (defn update-ui
   "Notification from the UIManager that the L&F has changed.
    Replaces the current UI object with the latest version from the
    UIManager."
-  ([^javax.swing.JTree this]
+  ([^JTree this]
     (-> this (.updateUI))))
 
 (defn get-row-height
@@ -1399,14 +1399,14 @@
    renderer.
 
   returns: `int`"
-  (^Integer [^javax.swing.JTree this]
+  (^Integer [^JTree this]
     (-> this (.getRowHeight))))
 
 (defn get-scrolls-on-expand?
   "Returns the value of the scrollsOnExpand property.
 
   returns: the value of the scrollsOnExpand property - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.getScrollsOnExpand))))
 
 (defn set-selection-paths
@@ -1416,7 +1416,7 @@
    it is exposed (made viewable).
 
   paths - an array of TreePath objects that specifies the nodes to select - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.JTree this paths]
+  ([^JTree this paths]
     (-> this (.setSelectionPaths paths))))
 
 (defn scroll-row-to-visible
@@ -1426,7 +1426,7 @@
    JScrollPane.
 
   row - an integer specifying the row to scroll, where 0 is the first row in the display - `int`"
-  ([^javax.swing.JTree this ^Integer row]
+  ([^JTree this ^Integer row]
     (-> this (.scrollRowToVisible row))))
 
 (defn get-tree-expansion-listeners
@@ -1435,7 +1435,7 @@
 
   returns: all of the TreeExpansionListeners added or an empty
            array if no listeners have been added - `javax.swing.event.TreeExpansionListener[]`"
-  ([^javax.swing.JTree this]
+  ([^JTree this]
     (-> this (.getTreeExpansionListeners))))
 
 (defn get-next-match
@@ -1446,19 +1446,19 @@
 
   prefix - the string to test for a match - `java.lang.String`
   starting-row - the row for starting the search - `int`
-  bias - the search direction, either Position.Bias.Forward or Position.Bias.Backward. - `javax.swing.text.Position.Bias`
+  bias - the search direction, either Position.Bias.Forward or Position.Bias.Backward. - `javax.swing.text.Position$Bias`
 
   returns: the TreePath of the next tree element that
    starts with the prefix; otherwise null - `javax.swing.tree.TreePath`
 
   throws: java.lang.IllegalArgumentException - if prefix is null or startingRow is out of bounds"
-  (^javax.swing.tree.TreePath [^javax.swing.JTree this ^java.lang.String prefix ^Integer starting-row ^javax.swing.text.Position.Bias bias]
+  (^javax.swing.tree.TreePath [^JTree this ^java.lang.String prefix ^Integer starting-row ^javax.swing.text.Position$Bias bias]
     (-> this (.getNextMatch prefix starting-row bias))))
 
 (defn cancel-editing
   "Cancels the current editing session. Has no effect if the
    tree isn't being edited."
-  ([^javax.swing.JTree this]
+  ([^JTree this]
     (-> this (.cancelEditing))))
 
 (defn stop-editing
@@ -1474,6 +1474,6 @@
 
   returns: true if editing was in progress and is now stopped,
                 false if editing was not in progress - `boolean`"
-  (^Boolean [^javax.swing.JTree this]
+  (^Boolean [^JTree this]
     (-> this (.stopEditing))))
 

@@ -30,6 +30,6 @@
   reader - the java.io.Reader object from which caller will be read - `java.io.Reader`
 
   throws: java.sql.SQLException - if a database access error occurs or this XmlReader object is not the reader for the given rowset"
-  ([^javax.sql.rowset.spi.XmlReader this ^javax.sql.rowset.WebRowSet caller ^java.io.Reader reader]
+  ([^XmlReader this ^javax.sql.rowset.WebRowSet caller ^java.io.Reader reader]
     (-> this (.readXML caller reader))))
 

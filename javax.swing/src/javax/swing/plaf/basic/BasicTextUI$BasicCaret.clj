@@ -4,6 +4,6 @@
 
 (defn ->basic-caret
   "Constructor."
-  ([]
+  (^BasicTextUI$BasicCaret []
     (new BasicTextUI$BasicCaret )))
 

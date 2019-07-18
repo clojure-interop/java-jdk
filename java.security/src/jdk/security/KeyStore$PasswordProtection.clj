@@ -17,9 +17,9 @@
   protection-parameters - the encryption algorithm parameter specification, which may be null - `java.security.spec.AlgorithmParameterSpec`
 
   throws: java.lang.NullPointerException - if protectionAlgorithm is null"
-  ([password ^java.lang.String protection-algorithm ^java.security.spec.AlgorithmParameterSpec protection-parameters]
+  (^KeyStore$PasswordProtection [password ^java.lang.String protection-algorithm ^java.security.spec.AlgorithmParameterSpec protection-parameters]
     (new KeyStore$PasswordProtection password protection-algorithm protection-parameters))
-  ([password]
+  (^KeyStore$PasswordProtection [password]
     (new KeyStore$PasswordProtection password)))
 
 (defn get-protection-algorithm
@@ -35,7 +35,7 @@
    implementation-specific algorithm will be used.
 
   returns: the algorithm name, or null if none was set - `java.lang.String`"
-  (^java.lang.String [^java.security.KeyStore$PasswordProtection this]
+  (^java.lang.String [^KeyStore$PasswordProtection this]
     (-> this (.getProtectionAlgorithm))))
 
 (defn get-protection-parameters
@@ -43,7 +43,7 @@
 
   returns: the algorithm parameter specification, or null,
        if none was set - `java.security.spec.AlgorithmParameterSpec`"
-  (^java.security.spec.AlgorithmParameterSpec [^java.security.KeyStore$PasswordProtection this]
+  (^java.security.spec.AlgorithmParameterSpec [^KeyStore$PasswordProtection this]
     (-> this (.getProtectionParameters))))
 
 (defn get-password
@@ -57,20 +57,20 @@
   returns: the password, which may be null - `char[]`
 
   throws: java.lang.IllegalStateException - if the password has been cleared (destroyed)"
-  ([^java.security.KeyStore$PasswordProtection this]
+  ([^KeyStore$PasswordProtection this]
     (-> this (.getPassword))))
 
 (defn destroy
   "Clears the password.
 
   throws: javax.security.auth.DestroyFailedException - if this method was unable to clear the password"
-  ([^java.security.KeyStore$PasswordProtection this]
+  ([^KeyStore$PasswordProtection this]
     (-> this (.destroy))))
 
 (defn destroyed?
   "Determines if password has been cleared.
 
   returns: true if the password has been cleared, false otherwise - `boolean`"
-  (^Boolean [^java.security.KeyStore$PasswordProtection this]
+  (^Boolean [^KeyStore$PasswordProtection this]
     (-> this (.isDestroyed))))
 

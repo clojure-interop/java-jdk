@@ -74,14 +74,14 @@
    AuthPermission(`modifyPrivateCredentials`).
 
   read-only - true if the Subject is to be read-only, and false otherwise. - `boolean`
-  principals - the Set of Principals to be associated with this Subject. - `java.security.Principal>`
-  pub-credentials - the Set of public credentials to be associated with this Subject. - `java.util.Set<?>`
-  priv-credentials - the Set of private credentials to be associated with this Subject. - `java.util.Set<?>`
+  principals - the Set of Principals to be associated with this Subject. - `java.util.Set`
+  pub-credentials - the Set of public credentials to be associated with this Subject. - `java.util.Set`
+  priv-credentials - the Set of private credentials to be associated with this Subject. - `java.util.Set`
 
   throws: java.lang.NullPointerException - if the specified principals, pubCredentials, or privCredentials are null."
-  ([^Boolean read-only ^java.security.Principal> principals ^java.util.Set pub-credentials ^java.util.Set priv-credentials]
+  (^Subject [^Boolean read-only ^java.util.Set principals ^java.util.Set pub-credentials ^java.util.Set priv-credentials]
     (new Subject read-only principals pub-credentials priv-credentials))
-  ([]
+  (^Subject []
     (new Subject )))
 
 (defn *get-subject
@@ -119,7 +119,7 @@
    as well as the newly constructed AccessControlContext.
 
   subject - the Subject that the specified action will run as. This parameter may be null. - `javax.security.auth.Subject`
-  action - the code to be run as the specified Subject. - `java.security.PrivilegedAction<T>`
+  action - the code to be run as the specified Subject. - `java.security.PrivilegedAction`
 
   returns: the value returned by the PrivilegedAction's
                     run method. - `<T> T`
@@ -140,7 +140,7 @@
    with an empty collection of ProtectionDomains.
 
   subject - the Subject that the specified action will run as. This parameter may be null. - `javax.security.auth.Subject`
-  action - the code to be run as the specified Subject. - `java.security.PrivilegedAction<T>`
+  action - the code to be run as the specified Subject. - `java.security.PrivilegedAction`
   acc - the AccessControlContext to be tied to the specified subject and action. - `java.security.AccessControlContext`
 
   returns: the value returned by the PrivilegedAction's
@@ -166,14 +166,14 @@
    it can not be reset to being writable again.
 
   throws: java.lang.SecurityException - if the caller does not have permission to set this Subject to be read-only."
-  ([^javax.security.auth.Subject this]
+  ([^Subject this]
     (-> this (.setReadOnly))))
 
 (defn read-only?
   "Query whether this Subject is read-only.
 
   returns: true if this Subject is read-only, false otherwise. - `boolean`"
-  (^Boolean [^javax.security.auth.Subject this]
+  (^Boolean [^Subject this]
     (-> this (.isReadOnly))))
 
 (defn get-principals
@@ -187,15 +187,15 @@
    Modifications to the returned Set
    will not affect the internal Principal Set.
 
-  c - the returned Set of Principals will all be instances of this class. - `java.lang.Class<T>`
+  c - the returned Set of Principals will all be instances of this class. - `java.lang.Class`
 
   returns: a Set of Principals that are instances of the
             specified Class. - `<T extends java.security.Principal> java.util.Set<T>`
 
   throws: java.lang.NullPointerException - if the specified Class is null."
-  ([^javax.security.auth.Subject this ^java.lang.Class c]
+  ([^Subject this ^java.lang.Class c]
     (-> this (.getPrincipals c)))
-  (^java.util.Set [^javax.security.auth.Subject this]
+  (^java.util.Set [^Subject this]
     (-> this (.getPrincipals))))
 
 (defn get-public-credentials
@@ -209,15 +209,15 @@
    Modifications to the returned Set
    will not affect the internal public Credential Set.
 
-  c - the returned Set of public credentials will all be instances of this class. - `java.lang.Class<T>`
+  c - the returned Set of public credentials will all be instances of this class. - `java.lang.Class`
 
   returns: a Set of public credentials that are instances
             of the  specified Class. - `<T> java.util.Set<T>`
 
   throws: java.lang.NullPointerException - if the specified Class is null."
-  ([^javax.security.auth.Subject this ^java.lang.Class c]
+  ([^Subject this ^java.lang.Class c]
     (-> this (.getPublicCredentials c)))
-  (^java.util.Set [^javax.security.auth.Subject this]
+  (^java.util.Set [^Subject this]
     (-> this (.getPublicCredentials))))
 
 (defn get-private-credentials
@@ -235,15 +235,15 @@
    Modifications to the returned Set
    will not affect the internal private Credential Set.
 
-  c - the returned Set of private credentials will all be instances of this class. - `java.lang.Class<T>`
+  c - the returned Set of private credentials will all be instances of this class. - `java.lang.Class`
 
   returns: a Set of private credentials that are instances
             of the  specified Class. - `<T> java.util.Set<T>`
 
   throws: java.lang.NullPointerException - if the specified Class is null."
-  ([^javax.security.auth.Subject this ^java.lang.Class c]
+  ([^Subject this ^java.lang.Class c]
     (-> this (.getPrivateCredentials c)))
-  (^java.util.Set [^javax.security.auth.Subject this]
+  (^java.util.Set [^Subject this]
     (-> this (.getPrivateCredentials))))
 
 (defn equals
@@ -260,14 +260,14 @@
             Subject. - `boolean`
 
   throws: java.lang.SecurityException - if the caller does not have permission to access the private credentials for this Subject, or if the caller does not have permission to access the private credentials for the provided Subject."
-  (^Boolean [^javax.security.auth.Subject this ^java.lang.Object o]
+  (^Boolean [^Subject this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn to-string
   "Return the String representation of this Subject.
 
   returns: the String representation of this Subject. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.Subject this]
+  (^java.lang.String [^Subject this]
     (-> this (.toString))))
 
 (defn hash-code
@@ -276,6 +276,6 @@
   returns: a hashcode for this Subject. - `int`
 
   throws: java.lang.SecurityException - if the caller does not have permission to access this Subject's private credentials."
-  (^Integer [^javax.security.auth.Subject this]
+  (^Integer [^Subject this]
     (-> this (.hashCode))))
 

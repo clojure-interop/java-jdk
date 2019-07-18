@@ -6,7 +6,7 @@
 
 (defn ->synth-radio-button-menu-item-ui
   "Constructor."
-  ([]
+  (^SynthRadioButtonMenuItemUI []
     (new SynthRadioButtonMenuItemUI )))
 
 (defn *create-ui
@@ -27,6 +27,6 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^javax.swing.plaf.synth.SynthRadioButtonMenuItemUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthRadioButtonMenuItemUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 

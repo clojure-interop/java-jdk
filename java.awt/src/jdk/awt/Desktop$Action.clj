@@ -7,7 +7,7 @@
 
   Represents an `open` action.
 
-  type: java.awt.Desktop.Action"
+  type: java.awt.Desktop$Action"
   Desktop$Action/OPEN)
 
 (def EDIT
@@ -15,7 +15,7 @@
 
   Represents an `edit` action.
 
-  type: java.awt.Desktop.Action"
+  type: java.awt.Desktop$Action"
   Desktop$Action/EDIT)
 
 (def PRINT
@@ -23,7 +23,7 @@
 
   Represents a `print` action.
 
-  type: java.awt.Desktop.Action"
+  type: java.awt.Desktop$Action"
   Desktop$Action/PRINT)
 
 (def MAIL
@@ -31,7 +31,7 @@
 
   Represents a `mail` action.
 
-  type: java.awt.Desktop.Action"
+  type: java.awt.Desktop$Action"
   Desktop$Action/MAIL)
 
 (def BROWSE
@@ -39,7 +39,7 @@
 
   Represents a `browse` action.
 
-  type: java.awt.Desktop.Action"
+  type: java.awt.Desktop$Action"
   Desktop$Action/BROWSE)
 
 (defn *values
@@ -51,7 +51,7 @@
   for (Desktop.Action c : Desktop.Action.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.Desktop.Action[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.Desktop$Action[]`"
   ([]
     (Desktop$Action/values )))
 
@@ -63,9 +63,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.awt.Desktop.Action`
+  returns: the enum constant with the specified name - `java.awt.Desktop$Action`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.awt.Desktop.Action [^java.lang.String name]
+  (^java.awt.Desktop$Action [^java.lang.String name]
     (Desktop$Action/valueOf name)))
 

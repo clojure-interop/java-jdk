@@ -22,9 +22,9 @@
 
   s - the detail message. - `java.lang.String`
   cause - the cause - `java.lang.Exception`"
-  ([^java.lang.String s ^java.lang.Exception cause]
+  (^ServerCloneException [^java.lang.String s ^java.lang.Exception cause]
     (new ServerCloneException s cause))
-  ([^java.lang.String s]
+  (^ServerCloneException [^java.lang.String s]
     (new ServerCloneException s)))
 
 (defn -detail
@@ -45,7 +45,7 @@
    any, of this exception.
 
   returns: the detail message - `java.lang.String`"
-  (^java.lang.String [^java.rmi.server.ServerCloneException this]
+  (^java.lang.String [^ServerCloneException this]
     (-> this (.getMessage))))
 
 (defn get-cause
@@ -53,6 +53,6 @@
    of the detail field.
 
   returns: the cause, which may be null. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^java.rmi.server.ServerCloneException this]
+  (^java.lang.Throwable [^ServerCloneException this]
     (-> this (.getCause))))
 

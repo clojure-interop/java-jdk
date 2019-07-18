@@ -15,8 +15,8 @@
    exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^DestroyFailedException [^java.lang.String msg]
     (new DestroyFailedException msg))
-  ([]
+  (^DestroyFailedException []
     (new DestroyFailedException )))
 

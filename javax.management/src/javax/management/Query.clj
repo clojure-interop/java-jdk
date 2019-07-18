@@ -27,7 +27,7 @@
   "Constructor.
 
   Basic constructor."
-  ([]
+  (^Query []
     (new Query )))
 
 (def *-gt
@@ -389,7 +389,7 @@
   "Returns a query expression that represents a matching constraint on
    a string argument. The matching syntax is consistent with file globbing:
    supports `?`, `*`, `[`,
-   each of which may be escaped with `\`;
+   each of which may be escaped with ``;
    character classes may use `!` for negation and
    `-` for range.
    (* for any character sequence,

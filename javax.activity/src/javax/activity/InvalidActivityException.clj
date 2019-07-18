@@ -18,10 +18,10 @@
 
   message - the detail message. - `java.lang.String`
   cause - a chained exception of type Throwable. - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^InvalidActivityException [^java.lang.String message ^java.lang.Throwable cause]
     (new InvalidActivityException message cause))
-  ([^java.lang.String message]
+  (^InvalidActivityException [^java.lang.String message]
     (new InvalidActivityException message))
-  ([]
+  (^InvalidActivityException []
     (new InvalidActivityException )))
 

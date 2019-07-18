@@ -13,8 +13,8 @@
    this particular exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^InvalidParameterException [^java.lang.String msg]
     (new InvalidParameterException msg))
-  ([]
+  (^InvalidParameterException []
     (new InvalidParameterException )))
 

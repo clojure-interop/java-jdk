@@ -12,6 +12,6 @@
   "Return the node where the event occurred.
 
   returns: The node that is the location for the event. - `org.w3c.dom.Node`"
-  (^org.w3c.dom.Node [^javax.xml.transform.dom.DOMLocator this]
+  (^org.w3c.dom.Node [^DOMLocator this]
     (-> this (.getOriginatingNode))))
 

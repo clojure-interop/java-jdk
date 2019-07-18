@@ -54,14 +54,14 @@
   "Constructor.
 
   Creates and returns an instance of DefaultMetalTheme."
-  ([]
+  (^DefaultMetalTheme []
     (new DefaultMetalTheme )))
 
 (defn get-name
   "Returns the name of this theme. This returns `Steel`.
 
   returns: the name of this theme. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.metal.DefaultMetalTheme this]
+  (^java.lang.String [^DefaultMetalTheme this]
     (-> this (.getName))))
 
 (defn get-control-text-font
@@ -71,21 +71,21 @@
    bold.
 
   returns: the control text font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.DefaultMetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^DefaultMetalTheme this]
     (-> this (.getControlTextFont))))
 
 (defn get-system-text-font
   "Returns the system text font. This returns Dialog, 12pt, plain.
 
   returns: the system text font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.DefaultMetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^DefaultMetalTheme this]
     (-> this (.getSystemTextFont))))
 
 (defn get-user-text-font
   "Returns the user text font. This returns Dialog, 12pt, plain.
 
   returns: the user text font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.DefaultMetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^DefaultMetalTheme this]
     (-> this (.getUserTextFont))))
 
 (defn get-menu-text-font
@@ -95,20 +95,20 @@
    bold.
 
   returns: the menu text font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.DefaultMetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^DefaultMetalTheme this]
     (-> this (.getMenuTextFont))))
 
 (defn get-window-title-font
   "Returns the window title font. This returns Dialog, 12pt, bold.
 
   returns: the window title font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.DefaultMetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^DefaultMetalTheme this]
     (-> this (.getWindowTitleFont))))
 
 (defn get-sub-text-font
   "Returns the sub-text font. This returns Dialog, 10pt, plain.
 
   returns: the sub-text font - `javax.swing.plaf.FontUIResource`"
-  (^javax.swing.plaf.FontUIResource [^javax.swing.plaf.metal.DefaultMetalTheme this]
+  (^javax.swing.plaf.FontUIResource [^DefaultMetalTheme this]
     (-> this (.getSubTextFont))))
 

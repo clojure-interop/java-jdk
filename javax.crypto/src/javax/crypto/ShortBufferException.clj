@@ -11,8 +11,8 @@
    detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^ShortBufferException [^java.lang.String msg]
     (new ShortBufferException msg))
-  ([]
+  (^ShortBufferException []
     (new ShortBufferException )))
 

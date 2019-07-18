@@ -59,11 +59,11 @@
   load-factor - the load factor of the hash map - `float`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is less than zero, or if the load factor is nonpositive"
-  ([^Integer initial-capacity ^Float load-factor]
+  (^HashSet [^Integer initial-capacity ^Float load-factor]
     (new HashSet initial-capacity load-factor))
-  ([^HashSet.E> c]
+  (^HashSet [^java.util.Collection c]
     (new HashSet c))
-  ([]
+  (^HashSet []
     (new HashSet )))
 
 (defn spliterator
@@ -75,8 +75,8 @@
    Spliterator.DISTINCT.  Overriding implementations should document
    the reporting of additional characteristic values.
 
-  returns: a Spliterator over the elements in this set - `java.util.Spliterator<HashSet.E>`"
-  (^java.util.Spliterator [^java.util.HashSet this]
+  returns: a Spliterator over the elements in this set - `java.util.Spliterator<E>`"
+  (^java.util.Spliterator [^HashSet this]
     (-> this (.spliterator))))
 
 (defn contains
@@ -88,15 +88,15 @@
   o - element whose presence in this set is to be tested - `java.lang.Object`
 
   returns: true if this set contains the specified element - `boolean`"
-  (^Boolean [^java.util.HashSet this ^java.lang.Object o]
+  (^Boolean [^HashSet this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
   "Returns an iterator over the elements in this set.  The elements
    are returned in no particular order.
 
-  returns: an Iterator over the elements in this set - `java.util.Iterator<HashSet.E>`"
-  (^java.util.Iterator [^java.util.HashSet this]
+  returns: an Iterator over the elements in this set - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^HashSet this]
     (-> this (.iterator))))
 
 (defn remove
@@ -111,7 +111,7 @@
   o - object to be removed from this set, if present - `java.lang.Object`
 
   returns: true if the set contained the specified element - `boolean`"
-  (^Boolean [^java.util.HashSet this ^java.lang.Object o]
+  (^Boolean [^HashSet this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn clone
@@ -119,7 +119,7 @@
    themselves are not cloned.
 
   returns: a shallow copy of this set - `java.lang.Object`"
-  (^java.lang.Object [^java.util.HashSet this]
+  (^java.lang.Object [^HashSet this]
     (-> this (.clone))))
 
 (defn add
@@ -130,30 +130,30 @@
    If this set already contains the element, the call leaves the set
    unchanged and returns false.
 
-  e - element to be added to this set - `HashSet.E`
+  e - element to be added to this set - `E`
 
   returns: true if this set did not already contain the specified
    element - `boolean`"
-  (^Boolean [^java.util.HashSet this ^HashSet.E e]
+  (^Boolean [^HashSet this e]
     (-> this (.add e))))
 
 (defn empty?
   "Returns true if this set contains no elements.
 
   returns: true if this set contains no elements - `boolean`"
-  (^Boolean [^java.util.HashSet this]
+  (^Boolean [^HashSet this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of elements in this set (its cardinality).
 
   returns: the number of elements in this set (its cardinality) - `int`"
-  (^Integer [^java.util.HashSet this]
+  (^Integer [^HashSet this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the elements from this set.
    The set will be empty after this call returns."
-  ([^java.util.HashSet this]
+  ([^HashSet this]
     (-> this (.clear))))
 

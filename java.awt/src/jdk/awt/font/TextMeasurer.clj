@@ -38,7 +38,7 @@
 
   text - the source paragraph. Cannot be null. - `java.text.AttributedCharacterIterator`
   frc - the information about a graphics device which is needed to measure the text correctly. Cannot be null. - `java.awt.font.FontRenderContext`"
-  ([^java.text.AttributedCharacterIterator text ^java.awt.font.FontRenderContext frc]
+  (^TextMeasurer [^java.text.AttributedCharacterIterator text ^java.awt.font.FontRenderContext frc]
     (new TextMeasurer text frc)))
 
 (defn get-line-break-index
@@ -54,7 +54,7 @@
     than maxAdvance in graphical width - `int`
 
   throws: java.lang.IllegalArgumentException - if start is less than the beginning of the paragraph."
-  (^Integer [^java.awt.font.TextMeasurer this ^Integer start ^Float max-advance]
+  (^Integer [^TextMeasurer this ^Integer start ^Float max-advance]
     (-> this (.getLineBreakIndex start max-advance))))
 
 (defn get-advance-between
@@ -70,7 +70,7 @@
      and including characters up to limit - `float`
 
   throws: java.lang.IndexOutOfBoundsException - if limit is less than start"
-  (^Float [^java.awt.font.TextMeasurer this ^Integer start ^Integer limit]
+  (^Float [^TextMeasurer this ^Integer start ^Integer limit]
     (-> this (.getAdvanceBetween start limit))))
 
 (defn get-layout
@@ -83,7 +83,7 @@
     start up to (but not including) limit - `java.awt.font.TextLayout`
 
   throws: java.lang.IndexOutOfBoundsException - if limit is less than start"
-  (^java.awt.font.TextLayout [^java.awt.font.TextMeasurer this ^Integer start ^Integer limit]
+  (^java.awt.font.TextLayout [^TextMeasurer this ^Integer start ^Integer limit]
     (-> this (.getLayout start limit))))
 
 (defn insert-char
@@ -100,7 +100,7 @@
   insert-pos - the position in the text where the character was inserted. Must not be less than the start of newParagraph, and must be less than the end of newParagraph. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if insertPos is less than the start of newParagraph or greater than or equal to the end of newParagraph"
-  ([^java.awt.font.TextMeasurer this ^java.text.AttributedCharacterIterator new-paragraph ^Integer insert-pos]
+  ([^TextMeasurer this ^java.text.AttributedCharacterIterator new-paragraph ^Integer insert-pos]
     (-> this (.insertChar new-paragraph insert-pos))))
 
 (defn delete-char
@@ -117,6 +117,6 @@
   delete-pos - the position in the text where the character was removed. Must not be less than the start of newParagraph, and must not be greater than the end of newParagraph. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if deletePos is less than the start of newParagraph or greater than the end of newParagraph"
-  ([^java.awt.font.TextMeasurer this ^java.text.AttributedCharacterIterator new-paragraph ^Integer delete-pos]
+  ([^TextMeasurer this ^java.text.AttributedCharacterIterator new-paragraph ^Integer delete-pos]
     (-> this (.deleteChar new-paragraph delete-pos))))
 

@@ -15,7 +15,7 @@
    1.0 is represented as 0x00010000.
 
   returns: the version of the OpenType font. - `int`"
-  (^Integer [^java.awt.font.OpenType this]
+  (^Integer [^OpenType this]
     (-> this (.getVersion))))
 
 (defn get-font-table
@@ -33,9 +33,9 @@
               sfntTag and containing the bytes
               starting at offset byte and including
               count bytes. - `byte[]`"
-  ([^java.awt.font.OpenType this ^Integer sfnt-tag ^Integer offset ^Integer count]
+  ([^OpenType this ^Integer sfnt-tag ^Integer offset ^Integer count]
     (-> this (.getFontTable sfnt-tag offset count)))
-  ([^java.awt.font.OpenType this ^Integer sfnt-tag]
+  ([^OpenType this ^Integer sfnt-tag]
     (-> this (.getFontTable sfnt-tag))))
 
 (defn get-font-table-size
@@ -46,6 +46,6 @@
 
   returns: the size of the table corresponding to the specified
    tag. - `int`"
-  (^Integer [^java.awt.font.OpenType this ^Integer sfnt-tag]
+  (^Integer [^OpenType this ^Integer sfnt-tag]
     (-> this (.getFontTableSize sfnt-tag))))
 

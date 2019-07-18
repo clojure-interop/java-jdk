@@ -17,10 +17,10 @@
 
   message - The detail message (which is saved for later retrieval by the Throwable.getMessage() method) - `java.lang.String`
   cause - The cause (which is saved for later retrieval by the Throwable.getCause() method). (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^IOException [^java.lang.String message ^java.lang.Throwable cause]
     (new IOException message cause))
-  ([^java.lang.String message]
+  (^IOException [^java.lang.String message]
     (new IOException message))
-  ([]
+  (^IOException []
     (new IOException )))
 

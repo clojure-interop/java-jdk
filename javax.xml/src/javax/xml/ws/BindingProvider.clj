@@ -14,7 +14,7 @@
    started.
 
   returns: The context that is used in processing request messages. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  (^java.util.Map [^javax.xml.ws.BindingProvider this]
+  (^java.util.Map [^BindingProvider this]
     (-> this (.getRequestContext))))
 
 (defn get-response-context
@@ -27,14 +27,14 @@
 
   returns: The context that resulted from processing the latest
    response messages. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  (^java.util.Map [^javax.xml.ws.BindingProvider this]
+  (^java.util.Map [^BindingProvider this]
     (-> this (.getResponseContext))))
 
 (defn get-binding
   "Get the Binding for this binding provider.
 
   returns: The Binding for this binding provider. - `javax.xml.ws.Binding`"
-  (^javax.xml.ws.Binding [^javax.xml.ws.BindingProvider this]
+  (^javax.xml.ws.Binding [^BindingProvider this]
     (-> this (.getBinding))))
 
 (defn get-endpoint-reference
@@ -42,15 +42,15 @@
    this BindingProvider instance.  The instance
    returned will be of type clazz.
 
-  clazz - Specifies the type of EndpointReference that MUST be returned. - `java.lang.Class<T>`
+  clazz - Specifies the type of EndpointReference that MUST be returned. - `java.lang.Class`
 
   returns: EndpointReference of the target endpoint associated with this
    BindingProvider instance. MUST be of type
    clazz. - `<T extends javax.xml.ws.EndpointReference> T`
 
   throws: javax.xml.ws.WebServiceException - If the Class clazz is not supported by this implementation."
-  ([^javax.xml.ws.BindingProvider this ^java.lang.Class clazz]
+  ([^BindingProvider this ^java.lang.Class clazz]
     (-> this (.getEndpointReference clazz)))
-  (^javax.xml.ws.EndpointReference [^javax.xml.ws.BindingProvider this]
+  (^javax.xml.ws.EndpointReference [^BindingProvider this]
     (-> this (.getEndpointReference))))
 

@@ -27,11 +27,11 @@
 
   s - the detail message - `java.lang.String`
   ex - the exception that was raised while loading the class - `java.lang.Throwable`"
-  ([^java.lang.String s ^java.lang.Throwable ex]
+  (^ClassNotFoundException [^java.lang.String s ^java.lang.Throwable ex]
     (new ClassNotFoundException s ex))
-  ([^java.lang.String s]
+  (^ClassNotFoundException [^java.lang.String s]
     (new ClassNotFoundException s))
-  ([]
+  (^ClassNotFoundException []
     (new ClassNotFoundException )))
 
 (defn get-exception
@@ -43,7 +43,7 @@
    obtaining this information.
 
   returns: the Exception that was raised while loading a class - `java.lang.Throwable`"
-  (^java.lang.Throwable [^java.lang.ClassNotFoundException this]
+  (^java.lang.Throwable [^ClassNotFoundException this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -52,6 +52,6 @@
    null).
 
   returns: the cause of this exception. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^java.lang.ClassNotFoundException this]
+  (^java.lang.Throwable [^ClassNotFoundException this]
     (-> this (.getCause))))
 

@@ -33,6 +33,6 @@
   caller - the RowSet object (1) that has implemented the RowSetInternal interface, (2) with which this reader is registered, and (3) whose execute method called this reader - `javax.sql.RowSetInternal`
 
   throws: java.sql.SQLException - if a database access error occurs or this method invokes the RowSet.execute method"
-  ([^javax.sql.RowSetReader this ^javax.sql.RowSetInternal caller]
+  ([^RowSetReader this ^javax.sql.RowSetInternal caller]
     (-> this (.readData caller))))
 

@@ -7,6 +7,6 @@
 
 (defn ->default
   "Constructor."
-  ([]
+  (^XmlJavaTypeAdapter$DEFAULT []
     (new XmlJavaTypeAdapter$DEFAULT )))
 

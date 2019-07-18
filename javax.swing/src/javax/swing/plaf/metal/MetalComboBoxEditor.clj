@@ -14,6 +14,6 @@
 
 (defn ->metal-combo-box-editor
   "Constructor."
-  ([]
+  (^MetalComboBoxEditor []
     (new MetalComboBoxEditor )))
 

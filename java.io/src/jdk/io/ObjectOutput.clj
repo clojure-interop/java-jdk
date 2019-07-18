@@ -13,7 +13,7 @@
   obj - the object to be written - `java.lang.Object`
 
   throws: java.io.IOException - Any of the usual Input/Output related exceptions."
-  ([^java.io.ObjectOutput this ^java.lang.Object obj]
+  ([^ObjectOutput this ^java.lang.Object obj]
     (-> this (.writeObject obj))))
 
 (defn write
@@ -24,9 +24,9 @@
   len - the number of bytes that are written - `int`
 
   throws: java.io.IOException - If an I/O error has occurred."
-  ([^java.io.ObjectOutput this b ^Integer off ^Integer len]
+  ([^ObjectOutput this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([^java.io.ObjectOutput this ^Integer b]
+  ([^ObjectOutput this ^Integer b]
     (-> this (.write b))))
 
 (defn flush
@@ -34,7 +34,7 @@
    output bytes.
 
   throws: java.io.IOException - If an I/O error has occurred."
-  ([^java.io.ObjectOutput this]
+  ([^ObjectOutput this]
     (-> this (.flush))))
 
 (defn close
@@ -43,6 +43,6 @@
    stream.
 
   throws: java.io.IOException - If an I/O error has occurred."
-  ([^java.io.ObjectOutput this]
+  ([^ObjectOutput this]
     (-> this (.close))))
 

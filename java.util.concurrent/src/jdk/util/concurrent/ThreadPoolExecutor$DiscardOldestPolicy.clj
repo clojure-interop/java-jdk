@@ -9,7 +9,7 @@
   "Constructor.
 
   Creates a DiscardOldestPolicy for the given executor."
-  ([]
+  (^ThreadPoolExecutor$DiscardOldestPolicy []
     (new ThreadPoolExecutor$DiscardOldestPolicy )))
 
 (defn rejected-execution
@@ -20,6 +20,6 @@
 
   r - the runnable task requested to be executed - `java.lang.Runnable`
   e - the executor attempting to execute this task - `java.util.concurrent.ThreadPoolExecutor`"
-  ([^java.util.concurrent.ThreadPoolExecutor$DiscardOldestPolicy this ^java.lang.Runnable r ^java.util.concurrent.ThreadPoolExecutor e]
+  ([^ThreadPoolExecutor$DiscardOldestPolicy this ^java.lang.Runnable r ^java.util.concurrent.ThreadPoolExecutor e]
     (-> this (.rejectedExecution r e))))
 

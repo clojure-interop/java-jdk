@@ -8,7 +8,7 @@
 
 (defn ->mixer-provider
   "Constructor."
-  ([]
+  (^MixerProvider []
     (new MixerProvider )))
 
 (defn mixer-supported?
@@ -19,11 +19,11 @@
    by this MixerProvider may be obtained
    through the getMixerInfo method.
 
-  info - an info object that describes the mixer for which support is queried - `javax.sound.sampled.Mixer.Info`
+  info - an info object that describes the mixer for which support is queried - `javax.sound.sampled.Mixer$Info`
 
   returns: true if the specified mixer is supported,
        otherwise false - `boolean`"
-  (^Boolean [^javax.sound.sampled.spi.MixerProvider this ^javax.sound.sampled.Mixer.Info info]
+  (^Boolean [^MixerProvider this ^javax.sound.sampled.Mixer$Info info]
     (-> this (.isMixerSupported info))))
 
 (defn get-mixer-info
@@ -35,8 +35,8 @@
    The corresponding mixer instances for the info objects
    are returned by the getMixer method.
 
-  returns: a set of mixer info objects - `javax.sound.sampled.Mixer.Info[]`"
-  ([^javax.sound.sampled.spi.MixerProvider this]
+  returns: a set of mixer info objects - `javax.sound.sampled.Mixer$Info[]`"
+  ([^MixerProvider this]
     (-> this (.getMixerInfo))))
 
 (defn get-mixer
@@ -48,11 +48,11 @@
    Use the isMixerSupported method to test whether
    this MixerProvider supports a particular mixer.
 
-  info - an info object that describes the desired mixer - `javax.sound.sampled.Mixer.Info`
+  info - an info object that describes the desired mixer - `javax.sound.sampled.Mixer$Info`
 
   returns: mixer instance - `javax.sound.sampled.Mixer`
 
   throws: java.lang.IllegalArgumentException - if the info object specified does not match the info object for a mixer supported by this MixerProvider."
-  (^javax.sound.sampled.Mixer [^javax.sound.sampled.spi.MixerProvider this ^javax.sound.sampled.Mixer.Info info]
+  (^javax.sound.sampled.Mixer [^MixerProvider this ^javax.sound.sampled.Mixer$Info info]
     (-> this (.getMixer info))))
 

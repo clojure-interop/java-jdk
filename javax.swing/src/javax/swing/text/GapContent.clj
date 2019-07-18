@@ -29,16 +29,16 @@
    the gap.
 
   initial-length - the initial size - `int`"
-  ([^Integer initial-length]
+  (^GapContent [^Integer initial-length]
     (new GapContent initial-length))
-  ([]
+  (^GapContent []
     (new GapContent )))
 
 (defn length
   "Returns the length of the content.
 
   returns: the length >= 1 - `int`"
-  (^Integer [^javax.swing.text.GapContent this]
+  (^Integer [^GapContent this]
     (-> this (.length))))
 
 (defn insert-string
@@ -50,7 +50,7 @@
   returns: an UndoableEdit object for undoing - `javax.swing.undo.UndoableEdit`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  (^javax.swing.undo.UndoableEdit [^javax.swing.text.GapContent this ^Integer where ^java.lang.String str]
+  (^javax.swing.undo.UndoableEdit [^GapContent this ^Integer where ^java.lang.String str]
     (-> this (.insertString where str))))
 
 (defn remove
@@ -62,7 +62,7 @@
   returns: an UndoableEdit object for undoing - `javax.swing.undo.UndoableEdit`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  (^javax.swing.undo.UndoableEdit [^javax.swing.text.GapContent this ^Integer where ^Integer nitems]
+  (^javax.swing.undo.UndoableEdit [^GapContent this ^Integer where ^Integer nitems]
     (-> this (.remove where nitems))))
 
 (defn get-string
@@ -74,7 +74,7 @@
   returns: a string representing the content - `java.lang.String`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  (^java.lang.String [^javax.swing.text.GapContent this ^Integer where ^Integer len]
+  (^java.lang.String [^GapContent this ^Integer where ^Integer len]
     (-> this (.getString where len))))
 
 (defn get-chars
@@ -88,7 +88,7 @@
   chars - the Segment object to return the characters in - `javax.swing.text.Segment`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  ([^javax.swing.text.GapContent this ^Integer where ^Integer len ^javax.swing.text.Segment chars]
+  ([^GapContent this ^Integer where ^Integer len ^javax.swing.text.Segment chars]
     (-> this (.getChars where len chars))))
 
 (defn create-position
@@ -100,6 +100,6 @@
   returns: the position - `javax.swing.text.Position`
 
   throws: javax.swing.text.BadLocationException - if the specified position is invalid"
-  (^javax.swing.text.Position [^javax.swing.text.GapContent this ^Integer offset]
+  (^javax.swing.text.Position [^GapContent this ^Integer offset]
     (-> this (.createPosition offset))))
 

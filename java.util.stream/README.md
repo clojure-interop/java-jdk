@@ -17,7 +17,7 @@ All namespaces starting with **java.** are renamed to **jdk.** (java compiler li
 ## Clojars
 
 ```
-[clojure-interop/java.util.stream "1.0.3"]
+[clojure-interop/java.util.stream "1.0.4"]
 ```
 
 ## Class Members Naming Conventions
@@ -33,7 +33,7 @@ All namespaces starting with **java.** are renamed to **jdk.** (java compiler li
 
 ## Classes
 
-- interface **java.util.stream.BaseStream>**
+- interface **java.util.stream.BaseStream**
 - enum **java.util.stream.Collector$Characteristics**
 - interface **java.util.stream.Collector**
 - class **java.util.stream.Collectors**

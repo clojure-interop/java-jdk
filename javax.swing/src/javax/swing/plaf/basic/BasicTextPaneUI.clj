@@ -16,7 +16,7 @@
   "Constructor.
 
   Creates a new BasicTextPaneUI."
-  ([]
+  (^BasicTextPaneUI []
     (new BasicTextPaneUI )))
 
 (defn *create-ui
@@ -32,6 +32,6 @@
   "Description copied from class: BasicEditorPaneUI
 
   c - the editor component - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicTextPaneUI this ^javax.swing.JComponent c]
+  ([^BasicTextPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 

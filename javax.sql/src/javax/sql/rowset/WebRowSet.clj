@@ -371,7 +371,7 @@
   reader - the java.io.Reader stream from which this WebRowSet object will be populated - `java.io.Reader`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.rowset.WebRowSet this ^java.io.Reader reader]
+  ([^WebRowSet this ^java.io.Reader reader]
     (-> this (.readXml reader))))
 
 (defn write-xml
@@ -388,8 +388,8 @@
   writer - the java.io.Writer object to write to. - `java.io.Writer`
 
   throws: java.sql.SQLException - if an error occurs writing out the rowset contents in XML format"
-  ([^javax.sql.rowset.WebRowSet this ^java.sql.ResultSet rs ^java.io.Writer writer]
+  ([^WebRowSet this ^java.sql.ResultSet rs ^java.io.Writer writer]
     (-> this (.writeXml rs writer)))
-  ([^javax.sql.rowset.WebRowSet this ^java.io.Writer writer]
+  ([^WebRowSet this ^java.io.Writer writer]
     (-> this (.writeXml writer))))
 

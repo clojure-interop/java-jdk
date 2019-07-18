@@ -36,7 +36,7 @@
    returning false if the specified wait time elapses
    before the element can be transferred.
 
-  e - the element to transfer - `TransferQueue.E`
+  e - the element to transfer - `E`
   timeout - how long to wait before giving up, in units of unit - `long`
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
@@ -45,9 +45,9 @@
            in which case the element is not left enqueued - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting, in which case the element is not left enqueued"
-  (^Boolean [^java.util.concurrent.TransferQueue this ^TransferQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^TransferQueue this e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryTransfer e timeout unit)))
-  (^Boolean [^java.util.concurrent.TransferQueue this ^TransferQueue.E e]
+  (^Boolean [^TransferQueue this e]
     (-> this (.tryTransfer e))))
 
 (defn transfer
@@ -58,10 +58,10 @@
    BlockingQueue.take() or timed poll),
    else waits until the element is received by a consumer.
 
-  e - the element to transfer - `TransferQueue.E`
+  e - the element to transfer - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting, in which case the element is not left enqueued"
-  ([^java.util.concurrent.TransferQueue this ^TransferQueue.E e]
+  ([^TransferQueue this e]
     (-> this (.transfer e))))
 
 (defn has-waiting-consumer?
@@ -71,7 +71,7 @@
    The return value represents a momentary state of affairs.
 
   returns: true if there is at least one waiting consumer - `boolean`"
-  (^Boolean [^java.util.concurrent.TransferQueue this]
+  (^Boolean [^TransferQueue this]
     (-> this (.hasWaitingConsumer))))
 
 (defn get-waiting-consumer-count
@@ -86,6 +86,6 @@
    hasWaitingConsumer().
 
   returns: the number of consumers waiting to receive elements - `int`"
-  (^Integer [^java.util.concurrent.TransferQueue this]
+  (^Integer [^TransferQueue this]
     (-> this (.getWaitingConsumerCount))))
 

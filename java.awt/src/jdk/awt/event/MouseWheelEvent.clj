@@ -91,11 +91,11 @@
   precise-wheel-rotation - the double number of `clicks` by which the mouse wheel was rotated - `double`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer x-abs ^Integer y-abs ^Integer click-count ^Boolean popup-trigger ^Integer scroll-type ^Integer scroll-amount ^Integer wheel-rotation ^Double precise-wheel-rotation]
+  (^MouseWheelEvent [^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer x-abs ^Integer y-abs ^Integer click-count ^Boolean popup-trigger ^Integer scroll-type ^Integer scroll-amount ^Integer wheel-rotation ^Double precise-wheel-rotation]
     (new MouseWheelEvent source id when modifiers x y x-abs y-abs click-count popup-trigger scroll-type scroll-amount wheel-rotation precise-wheel-rotation))
-  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer x-abs ^Integer y-abs ^Integer click-count ^Boolean popup-trigger ^Integer scroll-type ^Integer scroll-amount ^Integer wheel-rotation]
+  (^MouseWheelEvent [^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer x-abs ^Integer y-abs ^Integer click-count ^Boolean popup-trigger ^Integer scroll-type ^Integer scroll-amount ^Integer wheel-rotation]
     (new MouseWheelEvent source id when modifiers x y x-abs y-abs click-count popup-trigger scroll-type scroll-amount wheel-rotation))
-  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer click-count ^Boolean popup-trigger ^Integer scroll-type ^Integer scroll-amount ^Integer wheel-rotation]
+  (^MouseWheelEvent [^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer click-count ^Boolean popup-trigger ^Integer scroll-type ^Integer scroll-amount ^Integer wheel-rotation]
     (new MouseWheelEvent source id when modifiers x y click-count popup-trigger scroll-type scroll-amount wheel-rotation)))
 
 (def *-wheel-unit-scroll
@@ -104,7 +104,7 @@
   Constant representing scrolling by `units` (like scrolling with the
    arrow keys)
 
-  type: java.lang.annotation.    int"
+  type: int"
   MouseWheelEvent/WHEEL_UNIT_SCROLL)
 
 (def *-wheel-block-scroll
@@ -113,7 +113,7 @@
   Constant representing scrolling by a `block` (like scrolling
    with page-up, page-down keys)
 
-  type: java.lang.annotation.    int"
+  type: int"
   MouseWheelEvent/WHEEL_BLOCK_SCROLL)
 
 (defn get-scroll-type
@@ -126,7 +126,7 @@
   returns: either MouseWheelEvent.WHEEL_UNIT_SCROLL or
     MouseWheelEvent.WHEEL_BLOCK_SCROLL, depending on the configuration of
     the native platform. - `int`"
-  (^Integer [^java.awt.event.MouseWheelEvent this]
+  (^Integer [^MouseWheelEvent this]
     (-> this (.getScrollType))))
 
 (defn get-scroll-amount
@@ -138,7 +138,7 @@
   returns: number of units to scroll, or an undefined value if
     getScrollType returns
     MouseWheelEvent.WHEEL_BLOCK_SCROLL - `int`"
-  (^Integer [^java.awt.event.MouseWheelEvent this]
+  (^Integer [^MouseWheelEvent this]
     (-> this (.getScrollAmount))))
 
 (defn get-wheel-rotation
@@ -149,7 +149,7 @@
   returns: negative values if the mouse wheel was rotated up/away from
    the user, and positive values if the mouse wheel was rotated down/
    towards the user - `int`"
-  (^Integer [^java.awt.event.MouseWheelEvent this]
+  (^Integer [^MouseWheelEvent this]
     (-> this (.getWheelRotation))))
 
 (defn get-precise-wheel-rotation
@@ -160,7 +160,7 @@
   returns: negative values if the mouse wheel was rotated up or away from
    the user, and positive values if the mouse wheel was rotated down or
    towards the user - `double`"
-  (^Double [^java.awt.event.MouseWheelEvent this]
+  (^Double [^MouseWheelEvent this]
     (-> this (.getPreciseWheelRotation))))
 
 (defn get-units-to-scroll
@@ -198,7 +198,7 @@
   returns: the number of units to scroll based on the direction and amount
     of mouse wheel rotation, and on the wheel scrolling settings of the
     native platform - `int`"
-  (^Integer [^java.awt.event.MouseWheelEvent this]
+  (^Integer [^MouseWheelEvent this]
     (-> this (.getUnitsToScroll))))
 
 (defn param-string
@@ -206,6 +206,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.MouseWheelEvent this]
+  (^java.lang.String [^MouseWheelEvent this]
     (-> this (.paramString))))
 

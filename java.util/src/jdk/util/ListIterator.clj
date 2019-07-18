@@ -31,10 +31,10 @@
    (Note that alternating calls to next and previous
    will return the same element repeatedly.)
 
-  returns: the next element in the list - `ListIterator.E`
+  returns: the next element in the list - `E`
 
   throws: java.util.NoSuchElementException - if the iteration has no next element"
-  (^ListIterator.E [^java.util.ListIterator this]
+  ([^ListIterator this]
     (-> this (.next))))
 
 (defn has-previous?
@@ -45,7 +45,7 @@
 
   returns: true if the list iterator has more elements when
            traversing the list in the reverse direction - `boolean`"
-  (^Boolean [^java.util.ListIterator this]
+  (^Boolean [^ListIterator this]
     (-> this (.hasPrevious))))
 
 (defn previous-index
@@ -56,7 +56,7 @@
   returns: the index of the element that would be returned by a
            subsequent call to previous, or -1 if the list
            iterator is at the beginning of the list - `int`"
-  (^Integer [^java.util.ListIterator this]
+  (^Integer [^ListIterator this]
     (-> this (.previousIndex))))
 
 (defn previous
@@ -67,10 +67,10 @@
    to next and previous will return the same
    element repeatedly.)
 
-  returns: the previous element in the list - `ListIterator.E`
+  returns: the previous element in the list - `E`
 
   throws: java.util.NoSuchElementException - if the iteration has no previous element"
-  (^ListIterator.E [^java.util.ListIterator this]
+  ([^ListIterator this]
     (-> this (.previous))))
 
 (defn remove
@@ -80,7 +80,7 @@
    called after the last call to next or previous.
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this list iterator"
-  ([^java.util.ListIterator this]
+  ([^ListIterator this]
     (-> this (.remove))))
 
 (defn has-next?
@@ -91,7 +91,7 @@
 
   returns: true if the list iterator has more elements when
            traversing the list in the forward direction - `boolean`"
-  (^Boolean [^java.util.ListIterator this]
+  (^Boolean [^ListIterator this]
     (-> this (.hasNext))))
 
 (defn add
@@ -106,10 +106,10 @@
    (This call increases by one the value that would be returned by a
    call to nextIndex or previousIndex.)
 
-  e - the element to insert - `ListIterator.E`
+  e - the element to insert - `E`
 
   throws: java.lang.UnsupportedOperationException - if the add method is not supported by this list iterator"
-  ([^java.util.ListIterator this ^ListIterator.E e]
+  ([^ListIterator this e]
     (-> this (.add e))))
 
 (defn set
@@ -118,10 +118,10 @@
    This call can be made only if neither remove() nor add(E) have been called after the last call to next or
    previous.
 
-  e - the element with which to replace the last element returned by next or previous - `ListIterator.E`
+  e - the element with which to replace the last element returned by next or previous - `E`
 
   throws: java.lang.UnsupportedOperationException - if the set operation is not supported by this list iterator"
-  ([^java.util.ListIterator this ^ListIterator.E e]
+  ([^ListIterator this e]
     (-> this (.set e))))
 
 (defn next-index
@@ -132,6 +132,6 @@
   returns: the index of the element that would be returned by a
            subsequent call to next, or list size if the list
            iterator is at the end of the list - `int`"
-  (^Integer [^java.util.ListIterator this]
+  (^Integer [^ListIterator this]
     (-> this (.nextIndex))))
 

@@ -8,7 +8,7 @@
 
   The ColorType instance to use for specifying color printing.
 
-  type: java.awt.PageAttributes.ColorType"
+  type: java.awt.PageAttributes$ColorType"
   PageAttributes$ColorType/COLOR)
 
 (def *-monochrome
@@ -16,20 +16,20 @@
 
   The ColorType instance to use for specifying monochrome printing.
 
-  type: java.awt.PageAttributes.ColorType"
+  type: java.awt.PageAttributes$ColorType"
   PageAttributes$ColorType/MONOCHROME)
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.PageAttributes$ColorType this]
+  (^Integer [^PageAttributes$ColorType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.PageAttributes$ColorType this]
+  (^java.lang.String [^PageAttributes$ColorType this]
     (-> this (.toString))))
 

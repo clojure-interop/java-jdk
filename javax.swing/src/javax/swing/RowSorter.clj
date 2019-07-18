@@ -64,14 +64,14 @@
   "Constructor.
 
   Creates a RowSorter."
-  ([]
+  (^RowSorter []
     (new RowSorter )))
 
 (defn set-sort-keys
   "Sets the current sort keys.
 
-  keys - the new SortKeys; null is a shorthand for specifying an empty list, indicating that the view should be unsorted - `javax.swing.RowSorter.SortKey>`"
-  ([^javax.swing.RowSorter this ^javax.swing.RowSorter.SortKey> keys]
+  keys - the new SortKeys; null is a shorthand for specifying an empty list, indicating that the view should be unsorted - `java.util.List`"
+  ([^RowSorter this ^java.util.List keys]
     (-> this (.setSortKeys keys))))
 
 (defn all-rows-changed
@@ -83,7 +83,7 @@
 
    You normally do not call this method.  This method is public
    to allow view classes to call it."
-  ([^javax.swing.RowSorter this]
+  ([^RowSorter this]
     (-> this (.allRowsChanged))))
 
 (defn toggle-sort-order
@@ -103,7 +103,7 @@
   column - the column to toggle the sort ordering of, in terms of the underlying model - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if column is outside the range of the underlying model"
-  ([^javax.swing.RowSorter this ^Integer column]
+  ([^RowSorter this ^Integer column]
     (-> this (.toggleSortOrder column))))
 
 (defn rows-inserted
@@ -125,7 +125,7 @@
   end-row - the last row - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if either argument is invalid, or firstRow > endRow"
-  ([^javax.swing.RowSorter this ^Integer first-row ^Integer end-row]
+  ([^RowSorter this ^Integer first-row ^Integer end-row]
     (-> this (.rowsInserted first-row end-row))))
 
 (defn model-structure-changed
@@ -135,7 +135,7 @@
 
    You normally do not call this method.  This method is public
    to allow view classes to call it."
-  ([^javax.swing.RowSorter this]
+  ([^RowSorter this]
     (-> this (.modelStructureChanged))))
 
 (defn rows-updated
@@ -150,9 +150,9 @@
   column - the column that has changed, in terms of the underlying model - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if either argument is outside the range of the underlying model after the change, firstRow > endRow, or column is outside the range of the underlying model"
-  ([^javax.swing.RowSorter this ^Integer first-row ^Integer end-row ^Integer column]
+  ([^RowSorter this ^Integer first-row ^Integer end-row ^Integer column]
     (-> this (.rowsUpdated first-row end-row column)))
-  ([^javax.swing.RowSorter this ^Integer first-row ^Integer end-row]
+  ([^RowSorter this ^Integer first-row ^Integer end-row]
     (-> this (.rowsUpdated first-row end-row))))
 
 (defn convert-row-index-to-model
@@ -166,7 +166,7 @@
   returns: row index in terms of the view - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is outside the range of the view"
-  (^Integer [^javax.swing.RowSorter this ^Integer index]
+  (^Integer [^RowSorter this ^Integer index]
     (-> this (.convertRowIndexToModel index))))
 
 (defn get-sort-keys
@@ -175,8 +175,8 @@
    List, mutate the copy and invoke setSortKeys
    with the new list.
 
-  returns: the current sort order - `java.util.List<? extends javax.swing.RowSorter.SortKey>`"
-  ([^javax.swing.RowSorter this]
+  returns: the current sort order - `java.util.List<? extends javax.swing.RowSorter$SortKey>`"
+  ([^RowSorter this]
     (-> this (.getSortKeys))))
 
 (defn get-view-row-count
@@ -185,7 +185,7 @@
    underlying model.
 
   returns: number of rows in the view - `int`"
-  (^Integer [^javax.swing.RowSorter this]
+  (^Integer [^RowSorter this]
     (-> this (.getViewRowCount))))
 
 (defn add-row-sorter-listener
@@ -196,7 +196,7 @@
    is done.
 
   l - the RowSorterListener - `javax.swing.event.RowSorterListener`"
-  ([^javax.swing.RowSorter this ^javax.swing.event.RowSorterListener l]
+  ([^RowSorter this ^javax.swing.event.RowSorterListener l]
     (-> this (.addRowSorterListener l))))
 
 (defn remove-row-sorter-listener
@@ -204,7 +204,7 @@
    l is null nothing is done.
 
   l - the RowSorterListener - `javax.swing.event.RowSorterListener`"
-  ([^javax.swing.RowSorter this ^javax.swing.event.RowSorterListener l]
+  ([^RowSorter this ^javax.swing.event.RowSorterListener l]
     (-> this (.removeRowSorterListener l))))
 
 (defn convert-row-index-to-view
@@ -219,14 +219,14 @@
            filtered out of the view - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is outside the range of the model"
-  (^Integer [^javax.swing.RowSorter this ^Integer index]
+  (^Integer [^RowSorter this ^Integer index]
     (-> this (.convertRowIndexToView index))))
 
 (defn get-model
   "Returns the underlying model.
 
-  returns: the underlying model - `RowSorter.M`"
-  (^RowSorter.M [^javax.swing.RowSorter this]
+  returns: the underlying model - `M`"
+  ([^RowSorter this]
     (-> this (.getModel))))
 
 (defn rows-deleted
@@ -245,13 +245,13 @@
   end-row - the last row - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if either argument is outside the range of the model before the change, or firstRow > endRow"
-  ([^javax.swing.RowSorter this ^Integer first-row ^Integer end-row]
+  ([^RowSorter this ^Integer first-row ^Integer end-row]
     (-> this (.rowsDeleted first-row end-row))))
 
 (defn get-model-row-count
   "Returns the number of rows in the underlying model.
 
   returns: number of rows in the underlying model - `int`"
-  (^Integer [^javax.swing.RowSorter this]
+  (^Integer [^RowSorter this]
     (-> this (.getModelRowCount))))
 

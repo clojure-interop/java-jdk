@@ -36,11 +36,11 @@
   data-array - An array of floats to be used as the first and only bank of this DataBuffer. - `float[]`
   size - The number of elements of the array to be used. - `int`
   offset - The offset of the first element of the array that will be used. - `int`"
-  ([data-array ^Integer size ^Integer offset]
+  (^DataBufferFloat [data-array ^Integer size ^Integer offset]
     (new DataBufferFloat data-array size offset))
-  ([^Integer size ^Integer num-banks]
+  (^DataBufferFloat [^Integer size ^Integer num-banks]
     (new DataBufferFloat size num-banks))
-  ([^Integer size]
+  (^DataBufferFloat [^Integer size]
     (new DataBufferFloat size)))
 
 (defn get-data
@@ -54,9 +54,9 @@
   bank - the data array - `int`
 
   returns: the data array specified by bank. - `float[]`"
-  ([^java.awt.image.DataBufferFloat this ^Integer bank]
+  ([^DataBufferFloat this ^Integer bank]
     (-> this (.getData bank)))
-  ([^java.awt.image.DataBufferFloat this]
+  ([^DataBufferFloat this]
     (-> this (.getData))))
 
 (defn get-bank-data
@@ -68,7 +68,7 @@
    an associated image in video memory).
 
   returns: all data arrays for this data buffer. - `float[][]`"
-  ([^java.awt.image.DataBufferFloat this]
+  ([^DataBufferFloat this]
     (-> this (.getBankData))))
 
 (defn get-elem
@@ -79,9 +79,9 @@
   i - The desired data array element. - `int`
 
   returns: The data entry as an int. - `int`"
-  (^Integer [^java.awt.image.DataBufferFloat this ^Integer bank ^Integer i]
+  (^Integer [^DataBufferFloat this ^Integer bank ^Integer i]
     (-> this (.getElem bank i)))
-  (^Integer [^java.awt.image.DataBufferFloat this ^Integer i]
+  (^Integer [^DataBufferFloat this ^Integer i]
     (-> this (.getElem i))))
 
 (defn set-elem
@@ -91,9 +91,9 @@
   bank - The bank number. - `int`
   i - The desired data array element. - `int`
   val - The value to be set. - `int`"
-  ([^java.awt.image.DataBufferFloat this ^Integer bank ^Integer i ^Integer val]
+  ([^DataBufferFloat this ^Integer bank ^Integer i ^Integer val]
     (-> this (.setElem bank i val)))
-  ([^java.awt.image.DataBufferFloat this ^Integer i ^Integer val]
+  ([^DataBufferFloat this ^Integer i ^Integer val]
     (-> this (.setElem i val))))
 
 (defn get-elem-float
@@ -104,9 +104,9 @@
   i - The desired data array element. - `int`
 
   returns: The data entry as a float. - `float`"
-  (^Float [^java.awt.image.DataBufferFloat this ^Integer bank ^Integer i]
+  (^Float [^DataBufferFloat this ^Integer bank ^Integer i]
     (-> this (.getElemFloat bank i)))
-  (^Float [^java.awt.image.DataBufferFloat this ^Integer i]
+  (^Float [^DataBufferFloat this ^Integer i]
     (-> this (.getElemFloat i))))
 
 (defn set-elem-float
@@ -116,9 +116,9 @@
   bank - The bank number. - `int`
   i - The desired data array element. - `int`
   val - The value to be set. - `float`"
-  ([^java.awt.image.DataBufferFloat this ^Integer bank ^Integer i ^Float val]
+  ([^DataBufferFloat this ^Integer bank ^Integer i ^Float val]
     (-> this (.setElemFloat bank i val)))
-  ([^java.awt.image.DataBufferFloat this ^Integer i ^Float val]
+  ([^DataBufferFloat this ^Integer i ^Float val]
     (-> this (.setElemFloat i val))))
 
 (defn get-elem-double
@@ -129,9 +129,9 @@
   i - The desired data array element. - `int`
 
   returns: The data entry as a double. - `double`"
-  (^Double [^java.awt.image.DataBufferFloat this ^Integer bank ^Integer i]
+  (^Double [^DataBufferFloat this ^Integer bank ^Integer i]
     (-> this (.getElemDouble bank i)))
-  (^Double [^java.awt.image.DataBufferFloat this ^Integer i]
+  (^Double [^DataBufferFloat this ^Integer i]
     (-> this (.getElemDouble i))))
 
 (defn set-elem-double
@@ -141,8 +141,8 @@
   bank - The bank number. - `int`
   i - The desired data array element. - `int`
   val - The value to be set. - `double`"
-  ([^java.awt.image.DataBufferFloat this ^Integer bank ^Integer i ^Double val]
+  ([^DataBufferFloat this ^Integer bank ^Integer i ^Double val]
     (-> this (.setElemDouble bank i val)))
-  ([^java.awt.image.DataBufferFloat this ^Integer i ^Double val]
+  ([^DataBufferFloat this ^Integer i ^Double val]
     (-> this (.setElemDouble i val))))
 

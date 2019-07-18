@@ -17,9 +17,9 @@
   sample-model - a SampleModel. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if sampleModel is not compatible with colorModel."
-  ([^java.awt.image.ColorModel color-model ^java.awt.image.SampleModel sample-model]
+  (^ImageTypeSpecifier [^java.awt.image.ColorModel color-model ^java.awt.image.SampleModel sample-model]
     (new ImageTypeSpecifier color-model sample-model))
-  ([^java.awt.image.RenderedImage image]
+  (^ImageTypeSpecifier [^java.awt.image.RenderedImage image]
     (new ImageTypeSpecifier image)))
 
 (defn *create-packed
@@ -154,7 +154,7 @@
    SampleModel.getNumBands
 
   returns: the number of bands in the image. - `int`"
-  (^Integer [^javax.imageio.ImageTypeSpecifier this]
+  (^Integer [^ImageTypeSpecifier this]
     (-> this (.getNumBands))))
 
 (defn get-sample-model
@@ -168,9 +168,9 @@
   returns: a SampleModel with the given dimensions. - `java.awt.image.SampleModel`
 
   throws: java.lang.IllegalArgumentException - if the product of width and height is greater than Integer.MAX_VALUE"
-  (^java.awt.image.SampleModel [^javax.imageio.ImageTypeSpecifier this ^Integer width ^Integer height]
+  (^java.awt.image.SampleModel [^ImageTypeSpecifier this ^Integer width ^Integer height]
     (-> this (.getSampleModel width height)))
-  (^java.awt.image.SampleModel [^javax.imageio.ImageTypeSpecifier this]
+  (^java.awt.image.SampleModel [^ImageTypeSpecifier this]
     (-> this (.getSampleModel))))
 
 (defn create-buffered-image
@@ -183,7 +183,7 @@
   returns: a new BufferedImage - `java.awt.image.BufferedImage`
 
   throws: java.lang.IllegalArgumentException - if the product of width and height is greater than Integer.MAX_VALUE, or if the number of array elements needed to store the image is greater than Integer.MAX_VALUE."
-  (^java.awt.image.BufferedImage [^javax.imageio.ImageTypeSpecifier this ^Integer width ^Integer height]
+  (^java.awt.image.BufferedImage [^ImageTypeSpecifier this ^Integer width ^Integer height]
     (-> this (.createBufferedImage width height))))
 
 (defn get-num-components
@@ -192,14 +192,14 @@
    ColorModel.getNumComponents
 
   returns: the number of components in the image. - `int`"
-  (^Integer [^javax.imageio.ImageTypeSpecifier this]
+  (^Integer [^ImageTypeSpecifier this]
     (-> this (.getNumComponents))))
 
 (defn hash-code
   "Returns the hash code for this ImageTypeSpecifier.
 
   returns: a hash code for this ImageTypeSpecifier - `int`"
-  (^Integer [^javax.imageio.ImageTypeSpecifier this]
+  (^Integer [^ImageTypeSpecifier this]
     (-> this (.hashCode))))
 
 (defn get-bits-per-band
@@ -210,14 +210,14 @@
   returns: an int specifying a number of bits. - `int`
 
   throws: java.lang.IllegalArgumentException - if band is negative or greater than the largest band index."
-  (^Integer [^javax.imageio.ImageTypeSpecifier this ^Integer band]
+  (^Integer [^ImageTypeSpecifier this ^Integer band]
     (-> this (.getBitsPerBand band))))
 
 (defn get-color-model
   "Returns the ColorModel specified by this object.
 
   returns: a ColorModel. - `java.awt.image.ColorModel`"
-  (^java.awt.image.ColorModel [^javax.imageio.ImageTypeSpecifier this]
+  (^java.awt.image.ColorModel [^ImageTypeSpecifier this]
     (-> this (.getColorModel))))
 
 (defn equals
@@ -230,7 +230,7 @@
 
   returns: true if the given object is an equivalent
    ImageTypeSpecifier. - `boolean`"
-  (^Boolean [^javax.imageio.ImageTypeSpecifier this ^java.lang.Object o]
+  (^Boolean [^ImageTypeSpecifier this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn get-buffered-image-type
@@ -239,6 +239,6 @@
 
   returns: an int representing a
    BufferedImage type. - `int`"
-  (^Integer [^javax.imageio.ImageTypeSpecifier this]
+  (^Integer [^ImageTypeSpecifier this]
     (-> this (.getBufferedImageType))))
 

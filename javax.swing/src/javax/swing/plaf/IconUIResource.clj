@@ -24,7 +24,7 @@
    an existing Icon instance.
 
   delegate - the icon being wrapped - `javax.swing.Icon`"
-  ([^javax.swing.Icon delegate]
+  (^IconUIResource [^javax.swing.Icon delegate]
     (new IconUIResource delegate)))
 
 (defn paint-icon
@@ -34,20 +34,20 @@
   g - `java.awt.Graphics`
   x - `int`
   y - `int`"
-  ([^javax.swing.plaf.IconUIResource this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
+  ([^IconUIResource this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
     (-> this (.paintIcon c g x y))))
 
 (defn get-icon-width
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  (^Integer [^javax.swing.plaf.IconUIResource this]
+  (^Integer [^IconUIResource this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  (^Integer [^javax.swing.plaf.IconUIResource this]
+  (^Integer [^IconUIResource this]
     (-> this (.getIconHeight))))
 

@@ -41,10 +41,10 @@
 
   index - index of the element to return - `int`
 
-  returns: the element at the specified position in this list - `AbstractSequentialList.E`
+  returns: the element at the specified position in this list - `E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  (^AbstractSequentialList.E [^java.util.AbstractSequentialList this ^Integer index]
+  ([^AbstractSequentialList this ^Integer index]
     (-> this (.get index))))
 
 (defn set
@@ -61,12 +61,12 @@
    implement the set operation.
 
   index - index of the element to replace - `int`
-  element - element to be stored at the specified position - `AbstractSequentialList.E`
+  element - element to be stored at the specified position - `E`
 
-  returns: the element previously at the specified position - `AbstractSequentialList.E`
+  returns: the element previously at the specified position - `E`
 
   throws: java.lang.UnsupportedOperationException - if the set operation is not supported by this list"
-  (^AbstractSequentialList.E [^java.util.AbstractSequentialList this ^Integer index ^AbstractSequentialList.E element]
+  ([^AbstractSequentialList this ^Integer index element]
     (-> this (.set index element))))
 
 (defn add
@@ -84,10 +84,10 @@
    implement the add operation.
 
   index - index at which the specified element is to be inserted - `int`
-  element - element to be inserted - `AbstractSequentialList.E`
+  element - element to be inserted - `E`
 
   throws: java.lang.UnsupportedOperationException - if the add operation is not supported by this list"
-  ([^java.util.AbstractSequentialList this ^Integer index ^AbstractSequentialList.E element]
+  ([^AbstractSequentialList this ^Integer index element]
     (-> this (.add index element))))
 
 (defn remove
@@ -106,10 +106,10 @@
 
   index - the index of the element to be removed - `int`
 
-  returns: the element previously at the specified position - `AbstractSequentialList.E`
+  returns: the element previously at the specified position - `E`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this list"
-  (^AbstractSequentialList.E [^java.util.AbstractSequentialList this ^Integer index]
+  ([^AbstractSequentialList this ^Integer index]
     (-> this (.remove index))))
 
 (defn add-all
@@ -136,12 +136,12 @@
    operation.
 
   index - index at which to insert the first element from the specified collection - `int`
-  c - collection containing elements to be added to this list - `AbstractSequentialList.E>`
+  c - collection containing elements to be added to this list - `java.util.Collection`
 
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this list"
-  (^Boolean [^java.util.AbstractSequentialList this ^Integer index ^AbstractSequentialList.E> c]
+  (^Boolean [^AbstractSequentialList this ^Integer index ^java.util.Collection c]
     (-> this (.addAll index c))))
 
 (defn iterator
@@ -150,8 +150,8 @@
 
    This implementation merely returns a list iterator over the list.
 
-  returns: an iterator over the elements in this list (in proper sequence) - `java.util.Iterator<AbstractSequentialList.E>`"
-  (^java.util.Iterator [^java.util.AbstractSequentialList this]
+  returns: an iterator over the elements in this list (in proper sequence) - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^AbstractSequentialList this]
     (-> this (.iterator))))
 
 (defn list-iterator
@@ -161,9 +161,9 @@
   index - index of first element to be returned from the list iterator (by a call to the next method) - `int`
 
   returns: a list iterator over the elements in this list (in proper
-           sequence) - `java.util.ListIterator<AbstractSequentialList.E>`
+           sequence) - `java.util.ListIterator<E>`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  (^java.util.ListIterator [^java.util.AbstractSequentialList this ^Integer index]
+  (^java.util.ListIterator [^AbstractSequentialList this ^Integer index]
     (-> this (.listIterator index))))
 

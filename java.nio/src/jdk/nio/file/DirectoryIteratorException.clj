@@ -12,13 +12,13 @@
   cause - the IOException that caused the directory iteration to fail - `java.io.IOException`
 
   throws: java.lang.NullPointerException - if the cause is null"
-  ([^java.io.IOException cause]
+  (^DirectoryIteratorException [^java.io.IOException cause]
     (new DirectoryIteratorException cause)))
 
 (defn get-cause
   "Returns the cause of this exception.
 
   returns: the cause - `java.io.IOException`"
-  (^java.io.IOException [^java.nio.file.DirectoryIteratorException this]
+  (^java.io.IOException [^DirectoryIteratorException this]
     (-> this (.getCause))))
 

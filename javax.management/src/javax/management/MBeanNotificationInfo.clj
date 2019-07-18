@@ -34,9 +34,9 @@
   name - The fully qualified Java class name of the described notifications. - `java.lang.String`
   description - A human readable description of the data. - `java.lang.String`
   descriptor - The descriptor for the notifications. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`"
-  ([notif-types ^java.lang.String name ^java.lang.String description ^javax.management.Descriptor descriptor]
+  (^MBeanNotificationInfo [notif-types ^java.lang.String name ^java.lang.String description ^javax.management.Descriptor descriptor]
     (new MBeanNotificationInfo notif-types name description descriptor))
-  ([notif-types ^java.lang.String name ^java.lang.String description]
+  (^MBeanNotificationInfo [notif-types ^java.lang.String name ^java.lang.String description]
     (new MBeanNotificationInfo notif-types name description)))
 
 (defn clone
@@ -47,7 +47,7 @@
    No deeper cloning of any internal field is made.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^javax.management.MBeanNotificationInfo this]
+  (^java.lang.Object [^MBeanNotificationInfo this]
     (-> this (.clone))))
 
 (defn get-notif-types
@@ -56,14 +56,14 @@
 
   returns: the array of strings.  Changing the returned array has no
    effect on this MBeanNotificationInfo. - `java.lang.String[]`"
-  ([^javax.management.MBeanNotificationInfo this]
+  ([^MBeanNotificationInfo this]
     (-> this (.getNotifTypes))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanNotificationInfo this]
+  (^java.lang.String [^MBeanNotificationInfo this]
     (-> this (.toString))))
 
 (defn equals
@@ -79,13 +79,13 @@
    notification type arrays are equal if their corresponding
    elements are equal.  They are not equal if they have the same
    elements but in a different order. - `boolean`"
-  (^Boolean [^javax.management.MBeanNotificationInfo this ^java.lang.Object o]
+  (^Boolean [^MBeanNotificationInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.management.MBeanNotificationInfo this]
+  (^Integer [^MBeanNotificationInfo this]
     (-> this (.hashCode))))
 

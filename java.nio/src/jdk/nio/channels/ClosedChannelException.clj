@@ -11,6 +11,6 @@
   "Constructor.
 
   Constructs an instance of this class."
-  ([]
+  (^ClosedChannelException []
     (new ClosedChannelException )))
 

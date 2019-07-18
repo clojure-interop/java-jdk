@@ -14,10 +14,10 @@
   port - the port on which this object and the RMIConnectionImpl objects it creates will be exported. Can be zero, to indicate any available port. - `int`
   csf - the client socket factory for the created RMI objects. Can be null. - `java.rmi.server.RMIClientSocketFactory`
   ssf - the server socket factory for the created RMI objects. Can be null. - `java.rmi.server.RMIServerSocketFactory`
-  env - the environment map. Can be null. - `java.util.Map<java.lang.String,?>`
+  env - the environment map. Can be null. - `java.util.Map`
 
   throws: java.io.IOException - if the RMIServer object cannot be created."
-  ([^Integer port ^java.rmi.server.RMIClientSocketFactory csf ^java.rmi.server.RMIServerSocketFactory ssf ^java.util.Map env]
+  (^RMIJRMPServerImpl [^Integer port ^java.rmi.server.RMIClientSocketFactory csf ^java.rmi.server.RMIServerSocketFactory ssf ^java.util.Map env]
     (new RMIJRMPServerImpl port csf ssf env)))
 
 (defn to-stub
@@ -26,6 +26,6 @@
   returns: a serializable stub. - `java.rmi.Remote`
 
   throws: java.io.IOException - if the stub cannot be obtained - e.g the RMIJRMPServerImpl has not been exported yet."
-  (^java.rmi.Remote [^javax.management.remote.rmi.RMIJRMPServerImpl this]
+  (^java.rmi.Remote [^RMIJRMPServerImpl this]
     (-> this (.toStub))))
 

@@ -36,7 +36,7 @@
    milliseconds before the tooltip is shown again.
 
   milliseconds - time in milliseconds - `int`"
-  ([^javax.swing.ToolTipManager this ^Integer milliseconds]
+  ([^ToolTipManager this ^Integer milliseconds]
     (-> this (.setReshowDelay milliseconds))))
 
 (defn light-weight-popup-enabled?
@@ -45,21 +45,21 @@
    Tooltips are being used.
 
   returns: true if lightweight ToolTips are in use - `boolean`"
-  (^Boolean [^javax.swing.ToolTipManager this]
+  (^Boolean [^ToolTipManager this]
     (-> this (.isLightWeightPopupEnabled))))
 
 (defn set-dismiss-delay
   "Specifies the dismissal delay value.
 
   milliseconds - the number of milliseconds to delay before taking away the tooltip - `int`"
-  ([^javax.swing.ToolTipManager this ^Integer milliseconds]
+  ([^ToolTipManager this ^Integer milliseconds]
     (-> this (.setDismissDelay milliseconds))))
 
 (defn unregister-component
   "Removes a component from tooltip control.
 
   component - a JComponent object to remove - `javax.swing.JComponent`"
-  ([^javax.swing.ToolTipManager this ^javax.swing.JComponent component]
+  ([^ToolTipManager this ^javax.swing.JComponent component]
     (-> this (.unregisterComponent component))))
 
 (defn mouse-moved
@@ -67,14 +67,14 @@
     Determines whether the tool tip should be displayed.
 
   event - the event in question - `java.awt.event.MouseEvent`"
-  ([^javax.swing.ToolTipManager this ^java.awt.event.MouseEvent event]
+  ([^ToolTipManager this event]
     (-> this (.mouseMoved event))))
 
 (defn set-initial-delay
   "Specifies the initial delay value.
 
   milliseconds - the number of milliseconds to delay (after the cursor has paused) before displaying the tooltip - `int`"
-  ([^javax.swing.ToolTipManager this ^Integer milliseconds]
+  ([^ToolTipManager this ^Integer milliseconds]
     (-> this (.setInitialDelay milliseconds))))
 
 (defn register-component
@@ -87,7 +87,7 @@
    of invoking this method.
 
   component - a JComponent object to add - `javax.swing.JComponent`"
-  ([^javax.swing.ToolTipManager this ^javax.swing.JComponent component]
+  ([^ToolTipManager this ^javax.swing.JComponent component]
     (-> this (.registerComponent component))))
 
 (defn get-dismiss-delay
@@ -95,14 +95,14 @@
 
   returns: an integer representing the dismissal delay value,
             in milliseconds - `int`"
-  (^Integer [^javax.swing.ToolTipManager this]
+  (^Integer [^ToolTipManager this]
     (-> this (.getDismissDelay))))
 
 (defn get-reshow-delay
   "Returns the reshow delay property.
 
   returns: reshown delay property - `int`"
-  (^Integer [^javax.swing.ToolTipManager this]
+  (^Integer [^ToolTipManager this]
     (-> this (.getReshowDelay))))
 
 (defn mouse-pressed
@@ -110,7 +110,7 @@
     Any tool tip showing should be hidden.
 
   event - the event in question - `java.awt.event.MouseEvent`"
-  ([^javax.swing.ToolTipManager this ^java.awt.event.MouseEvent event]
+  ([^ToolTipManager this event]
     (-> this (.mousePressed event))))
 
 (defn get-initial-delay
@@ -118,7 +118,7 @@
 
   returns: an integer representing the initial delay value,
             in milliseconds - `int`"
-  (^Integer [^javax.swing.ToolTipManager this]
+  (^Integer [^ToolTipManager this]
     (-> this (.getInitialDelay))))
 
 (defn mouse-exited
@@ -126,14 +126,14 @@
     Any tool tip showing should be hidden.
 
   event - the event in question - `java.awt.event.MouseEvent`"
-  ([^javax.swing.ToolTipManager this ^java.awt.event.MouseEvent event]
+  ([^ToolTipManager this event]
     (-> this (.mouseExited event))))
 
 (defn set-enabled
   "Enables or disables the tooltip.
 
   flag - true to enable the tip, false otherwise - `boolean`"
-  ([^javax.swing.ToolTipManager this ^Boolean flag]
+  ([^ToolTipManager this ^Boolean flag]
     (-> this (.setEnabled flag))))
 
 (defn mouse-entered
@@ -141,7 +141,7 @@
     This determines whether the tool tip should be shown.
 
   event - the event in question - `java.awt.event.MouseEvent`"
-  ([^javax.swing.ToolTipManager this ^java.awt.event.MouseEvent event]
+  ([^ToolTipManager this event]
     (-> this (.mouseEntered event))))
 
 (defn set-light-weight-popup-enabled
@@ -152,7 +152,7 @@
    application mixes light weight and heavy weights components.
 
   a-flag - true if a lightweight panel is desired, false otherwise - `boolean`"
-  ([^javax.swing.ToolTipManager this ^Boolean a-flag]
+  ([^ToolTipManager this ^Boolean a-flag]
     (-> this (.setLightWeightPopupEnabled a-flag))))
 
 (defn mouse-dragged
@@ -160,13 +160,13 @@
     Does nothing.
 
   event - the event in question - `java.awt.event.MouseEvent`"
-  ([^javax.swing.ToolTipManager this ^java.awt.event.MouseEvent event]
+  ([^ToolTipManager this event]
     (-> this (.mouseDragged event))))
 
 (defn enabled?
   "Returns true if this object is enabled.
 
   returns: true if this object is enabled, false otherwise - `boolean`"
-  (^Boolean [^javax.swing.ToolTipManager this]
+  (^Boolean [^ToolTipManager this]
     (-> this (.isEnabled))))
 

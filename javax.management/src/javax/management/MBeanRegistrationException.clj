@@ -13,8 +13,8 @@
 
   e - the wrapped exception. - `java.lang.Exception`
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.Exception e ^java.lang.String message]
+  (^MBeanRegistrationException [^java.lang.Exception e ^java.lang.String message]
     (new MBeanRegistrationException e message))
-  ([^java.lang.Exception e]
+  (^MBeanRegistrationException [^java.lang.Exception e]
     (new MBeanRegistrationException e)))
 

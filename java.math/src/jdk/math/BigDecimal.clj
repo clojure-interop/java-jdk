@@ -192,13 +192,13 @@
   mc - the context to use. - `java.math.MathContext`
 
   throws: java.lang.ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY."
-  ([in ^Integer offset ^Integer len ^java.math.MathContext mc]
+  (^BigDecimal [in ^Integer offset ^Integer len ^java.math.MathContext mc]
     (new BigDecimal in offset len mc))
-  ([in ^Integer offset ^Integer len]
+  (^BigDecimal [in ^Integer offset ^Integer len]
     (new BigDecimal in offset len))
-  ([in ^java.math.MathContext mc]
+  (^BigDecimal [in ^java.math.MathContext mc]
     (new BigDecimal in mc))
-  ([in]
+  (^BigDecimal [in]
     (new BigDecimal in)))
 
 (def *-zero
@@ -349,7 +349,7 @@
    this.scale()].
 
   returns: the size of an ulp of this - `java.math.BigDecimal`"
-  (^java.math.BigDecimal [^java.math.BigDecimal this]
+  (^java.math.BigDecimal [^BigDecimal this]
     (-> this (.ulp))))
 
 (defn min
@@ -362,7 +362,7 @@
            BigDecimal and val.  If they are equal,
            as defined by the compareTo
            method, this is returned. - `java.math.BigDecimal`"
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal val]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal val]
     (-> this (.min val))))
 
 (defn precision
@@ -372,7 +372,7 @@
    The precision of a zero value is 1.
 
   returns: the precision of this BigDecimal. - `int`"
-  (^Integer [^java.math.BigDecimal this]
+  (^Integer [^BigDecimal this]
     (-> this (.precision))))
 
 (defn double-value
@@ -389,7 +389,7 @@
    value.
 
   returns: this BigDecimal converted to a double. - `double`"
-  (^Double [^java.math.BigDecimal this]
+  (^Double [^BigDecimal this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -407,7 +407,7 @@
    as return a result with the opposite sign.
 
   returns: this BigDecimal converted to a long. - `long`"
-  (^Long [^java.math.BigDecimal this]
+  (^Long [^BigDecimal this]
     (-> this (.longValue))))
 
 (defn multiply
@@ -420,9 +420,9 @@
   returns: this * multiplicand, rounded as necessary. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal multiplicand ^java.math.MathContext mc]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal multiplicand ^java.math.MathContext mc]
     (-> this (.multiply multiplicand mc)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal multiplicand]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal multiplicand]
     (-> this (.multiply multiplicand))))
 
 (defn scale
@@ -434,7 +434,7 @@
    value is multiplied by 1000.
 
   returns: the scale of this BigDecimal. - `int`"
-  (^Integer [^java.math.BigDecimal this]
+  (^Integer [^BigDecimal this]
     (-> this (.scale))))
 
 (defn move-point-right
@@ -453,7 +453,7 @@
            with the decimal point moved n places to the right. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if scale overflows."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^Integer n]
+  (^java.math.BigDecimal [^BigDecimal this ^Integer n]
     (-> this (.movePointRight n))))
 
 (defn negate
@@ -465,9 +465,9 @@
   returns: -this, rounded as necessary. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.MathContext mc]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.MathContext mc]
     (-> this (.negate mc)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this]
+  (^java.math.BigDecimal [^BigDecimal this]
     (-> this (.negate))))
 
 (defn plus
@@ -482,9 +482,9 @@
            have a scale of 0. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.MathContext mc]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.MathContext mc]
     (-> this (.plus mc)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this]
+  (^java.math.BigDecimal [^BigDecimal this]
     (-> this (.plus))))
 
 (defn to-big-integer
@@ -503,7 +503,7 @@
    toBigIntegerExact() method.
 
   returns: this BigDecimal converted to a BigInteger. - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.math.BigDecimal this]
+  (^java.math.BigInteger [^BigDecimal this]
     (-> this (.toBigInteger))))
 
 (defn long-value-exact
@@ -516,7 +516,7 @@
   returns: this BigDecimal converted to a long. - `long`
 
   throws: java.lang.ArithmeticException - if this has a nonzero fractional part, or will not fit in a long."
-  (^Long [^java.math.BigDecimal this]
+  (^Long [^BigDecimal this]
     (-> this (.longValueExact))))
 
 (defn max
@@ -528,7 +528,7 @@
            BigDecimal and val.  If they are equal,
            as defined by the compareTo
            method, this is returned. - `java.math.BigDecimal`"
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal val]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal val]
     (-> this (.max val))))
 
 (defn divide-and-remainder
@@ -550,9 +550,9 @@
            initial element and the remainder is the final element. - `java.math.BigDecimal[]`
 
   throws: java.lang.ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY, or mc.precision > 0 and the result of this.divideToIntgralValue(divisor) would require a precision of more than mc.precision digits."
-  ([^java.math.BigDecimal this ^java.math.BigDecimal divisor ^java.math.MathContext mc]
+  ([^BigDecimal this ^java.math.BigDecimal divisor ^java.math.MathContext mc]
     (-> this (.divideAndRemainder divisor mc)))
-  ([^java.math.BigDecimal this ^java.math.BigDecimal divisor]
+  ([^BigDecimal this ^java.math.BigDecimal divisor]
     (-> this (.divideAndRemainder divisor))))
 
 (defn pow
@@ -601,9 +601,9 @@
            algorithm - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY, or n is out of range."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^Integer n ^java.math.MathContext mc]
+  (^java.math.BigDecimal [^BigDecimal this ^Integer n ^java.math.MathContext mc]
     (-> this (.pow n mc)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^Integer n]
+  (^java.math.BigDecimal [^BigDecimal this ^Integer n]
     (-> this (.pow n))))
 
 (defn to-string
@@ -699,7 +699,7 @@
    Character.forDigit is used.
 
   returns: string representation of this BigDecimal. - `java.lang.String`"
-  (^java.lang.String [^java.math.BigDecimal this]
+  (^java.lang.String [^BigDecimal this]
     (-> this (.toString))))
 
 (defn to-engineering-string
@@ -723,7 +723,7 @@
 
   returns: string representation of this BigDecimal, using
            engineering notation if an exponent is needed. - `java.lang.String`"
-  (^java.lang.String [^java.math.BigDecimal this]
+  (^java.lang.String [^BigDecimal this]
     (-> this (.toEngineeringString))))
 
 (defn float-value
@@ -740,7 +740,7 @@
    value.
 
   returns: this BigDecimal converted to a float. - `float`"
-  (^Float [^java.math.BigDecimal this]
+  (^Float [^BigDecimal this]
     (-> this (.floatValue))))
 
 (defn unscaled-value
@@ -749,7 +749,7 @@
    10this.scale()).)
 
   returns: the unscaled value of this BigDecimal. - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.math.BigDecimal this]
+  (^java.math.BigInteger [^BigDecimal this]
     (-> this (.unscaledValue))))
 
 (defn to-plain-string
@@ -781,7 +781,7 @@
 
   returns: a string representation of this BigDecimal
    without an exponent field. - `java.lang.String`"
-  (^java.lang.String [^java.math.BigDecimal this]
+  (^java.lang.String [^BigDecimal this]
     (-> this (.toPlainString))))
 
 (defn scale-by-power-of-ten
@@ -795,7 +795,7 @@
    (this * 10n) - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if the scale would be outside the range of a 32-bit integer."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^Integer n]
+  (^java.math.BigDecimal [^BigDecimal this ^Integer n]
     (-> this (.scaleByPowerOfTen n))))
 
 (defn remainder
@@ -817,9 +817,9 @@
   returns: this % divisor, rounded as necessary. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY, or mc.precision > 0 and the result of this.divideToIntgralValue(divisor) would require a precision of more than mc.precision digits."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal divisor ^java.math.MathContext mc]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal divisor ^java.math.MathContext mc]
     (-> this (.remainder divisor mc)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal divisor]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal divisor]
     (-> this (.remainder divisor))))
 
 (defn subtract
@@ -835,9 +835,9 @@
   returns: this - subtrahend, rounded as necessary. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal subtrahend ^java.math.MathContext mc]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal subtrahend ^java.math.MathContext mc]
     (-> this (.subtract subtrahend mc)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal subtrahend]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal subtrahend]
     (-> this (.subtract subtrahend))))
 
 (defn byte-value-exact
@@ -850,7 +850,7 @@
   returns: this BigDecimal converted to a byte. - `byte`
 
   throws: java.lang.ArithmeticException - if this has a nonzero fractional part, or will not fit in a byte."
-  (^Byte [^java.math.BigDecimal this]
+  (^Byte [^BigDecimal this]
     (-> this (.byteValueExact))))
 
 (defn short-value-exact
@@ -863,7 +863,7 @@
   returns: this BigDecimal converted to a short. - `short`
 
   throws: java.lang.ArithmeticException - if this has a nonzero fractional part, or will not fit in a short."
-  (^Short [^java.math.BigDecimal this]
+  (^Short [^BigDecimal this]
     (-> this (.shortValueExact))))
 
 (defn to-big-integer-exact
@@ -874,7 +874,7 @@
   returns: this BigDecimal converted to a BigInteger. - `java.math.BigInteger`
 
   throws: java.lang.ArithmeticException - if this has a nonzero fractional part."
-  (^java.math.BigInteger [^java.math.BigDecimal this]
+  (^java.math.BigInteger [^BigDecimal this]
     (-> this (.toBigIntegerExact))))
 
 (defn move-point-left
@@ -893,7 +893,7 @@
            decimal point moved n places to the left. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if scale overflows."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^Integer n]
+  (^java.math.BigDecimal [^BigDecimal this ^Integer n]
     (-> this (.movePointLeft n))))
 
 (defn abs
@@ -906,9 +906,9 @@
   returns: abs(this), rounded as necessary. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.MathContext mc]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.MathContext mc]
     (-> this (.abs mc)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this]
+  (^java.math.BigDecimal [^BigDecimal this]
     (-> this (.abs))))
 
 (defn int-value
@@ -926,7 +926,7 @@
    value as well as return a result with the opposite sign.
 
   returns: this BigDecimal converted to an int. - `int`"
-  (^Integer [^java.math.BigDecimal this]
+  (^Integer [^BigDecimal this]
     (-> this (.intValue))))
 
 (defn divide
@@ -945,11 +945,11 @@
   returns: this / divisor - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if divisor is zero, roundingMode==ROUND_UNNECESSARY and the specified scale is insufficient to represent the result of the division exactly."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal divisor ^Integer scale ^Integer rounding-mode]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal divisor ^Integer scale ^Integer rounding-mode]
     (-> this (.divide divisor scale rounding-mode)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal divisor ^Integer rounding-mode]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal divisor ^Integer rounding-mode]
     (-> this (.divide divisor rounding-mode)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal divisor]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal divisor]
     (-> this (.divide divisor))))
 
 (defn hash-code
@@ -959,7 +959,7 @@
    have the same hash code.
 
   returns: hash code for this BigDecimal. - `int`"
-  (^Integer [^java.math.BigDecimal this]
+  (^Integer [^BigDecimal this]
     (-> this (.hashCode))))
 
 (defn add
@@ -975,9 +975,9 @@
   returns: this  augend, rounded as necessary. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if the result is inexact but the rounding mode is UNNECESSARY."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal augend ^java.math.MathContext mc]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal augend ^java.math.MathContext mc]
     (-> this (.add augend mc)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal augend]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal augend]
     (-> this (.add augend))))
 
 (defn divide-to-integral-value
@@ -997,9 +997,9 @@
   returns: The integer part of this / divisor. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if mc.precision > 0 and the result requires a precision of more than mc.precision digits."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal divisor ^java.math.MathContext mc]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal divisor ^java.math.MathContext mc]
     (-> this (.divideToIntegralValue divisor mc)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.BigDecimal divisor]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.BigDecimal divisor]
     (-> this (.divideToIntegralValue divisor))))
 
 (defn strip-trailing-zeros
@@ -1015,7 +1015,7 @@
 
   returns: a numerically equal BigDecimal with any
    trailing zeros removed. - `java.math.BigDecimal`"
-  (^java.math.BigDecimal [^java.math.BigDecimal this]
+  (^java.math.BigDecimal [^BigDecimal this]
     (-> this (.stripTrailingZeros))))
 
 (defn int-value-exact
@@ -1028,7 +1028,7 @@
   returns: this BigDecimal converted to an int. - `int`
 
   throws: java.lang.ArithmeticException - if this has a nonzero fractional part, or will not fit in an int."
-  (^Integer [^java.math.BigDecimal this]
+  (^Integer [^BigDecimal this]
     (-> this (.intValueExact))))
 
 (defn compare-to
@@ -1047,7 +1047,7 @@
 
   returns: -1, 0, or 1 as this BigDecimal is numerically
             less than, equal to, or greater than val. - `int`"
-  (^Integer [^java.math.BigDecimal this ^java.math.BigDecimal val]
+  (^Integer [^BigDecimal this ^java.math.BigDecimal val]
     (-> this (.compareTo val))))
 
 (defn set-scale
@@ -1076,9 +1076,9 @@
            appropriate power of ten to maintain its overall value. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if roundingMode==UNNECESSARY and the specified scaling operation would require rounding."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^Integer new-scale ^java.math.RoundingMode rounding-mode]
+  (^java.math.BigDecimal [^BigDecimal this ^Integer new-scale ^java.math.RoundingMode rounding-mode]
     (-> this (.setScale new-scale rounding-mode)))
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^Integer new-scale]
+  (^java.math.BigDecimal [^BigDecimal this ^Integer new-scale]
     (-> this (.setScale new-scale))))
 
 (defn round
@@ -1095,7 +1095,7 @@
            MathContext settings. - `java.math.BigDecimal`
 
   throws: java.lang.ArithmeticException - if the rounding mode is UNNECESSARY and the BigDecimal operation would require rounding."
-  (^java.math.BigDecimal [^java.math.BigDecimal this ^java.math.MathContext mc]
+  (^java.math.BigDecimal [^BigDecimal this ^java.math.MathContext mc]
     (-> this (.round mc))))
 
 (defn equals
@@ -1110,7 +1110,7 @@
   returns: true if and only if the specified Object is a
            BigDecimal whose value and scale are equal to this
            BigDecimal's. - `boolean`"
-  (^Boolean [^java.math.BigDecimal this ^java.lang.Object x]
+  (^Boolean [^BigDecimal this ^java.lang.Object x]
     (-> this (.equals x))))
 
 (defn signum
@@ -1118,6 +1118,6 @@
 
   returns: -1, 0, or 1 as the value of this BigDecimal
            is negative, zero, or positive. - `int`"
-  (^Integer [^java.math.BigDecimal this]
+  (^Integer [^BigDecimal this]
     (-> this (.signum))))
 

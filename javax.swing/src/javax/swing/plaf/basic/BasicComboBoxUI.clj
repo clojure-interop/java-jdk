@@ -20,7 +20,7 @@
 
 (defn ->basic-combo-box-ui
   "Constructor."
-  ([]
+  (^BasicComboBoxUI []
     (new BasicComboBoxUI )))
 
 (defn *create-ui
@@ -34,7 +34,7 @@
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComponent c]
+  ([^BasicComboBoxUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn get-minimum-size
@@ -43,13 +43,13 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicComboBoxUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn unconfigure-arrow-button
   "This public method is implementation specific and should be private. Do
    not call or override."
-  ([^javax.swing.plaf.basic.BasicComboBoxUI this]
+  ([^BasicComboBoxUI this]
     (-> this (.unconfigureArrowButton))))
 
 (defn get-maximum-size
@@ -58,7 +58,7 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: a Dimension object or null - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicComboBoxUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn get-accessible-child
@@ -68,7 +68,7 @@
   i - `int`
 
   returns: the ith Accessible child of the object - `javax.accessibility.Accessible`"
-  (^javax.accessibility.Accessible [^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComponent c ^Integer i]
+  (^javax.accessibility.Accessible [^BasicComboBoxUI this ^javax.swing.JComponent c ^Integer i]
     (-> this (.getAccessibleChild c i))))
 
 (defn paint-current-value
@@ -77,27 +77,27 @@
   g - `java.awt.Graphics`
   bounds - `java.awt.Rectangle`
   has-focus - `boolean`"
-  ([^javax.swing.plaf.basic.BasicComboBoxUI this ^java.awt.Graphics g ^java.awt.Rectangle bounds ^Boolean has-focus]
+  ([^BasicComboBoxUI this ^java.awt.Graphics g ^java.awt.Rectangle bounds ^Boolean has-focus]
     (-> this (.paintCurrentValue g bounds has-focus))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComponent c]
+  ([^BasicComboBoxUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn add-editor
   "This public method is implementation specific and should be private.
    do not call or override. To implement a specific editor create a
    custom ComboBoxEditor"
-  ([^javax.swing.plaf.basic.BasicComboBoxUI this]
+  ([^BasicComboBoxUI this]
     (-> this (.addEditor))))
 
 (defn configure-arrow-button
   "This public method is implementation specific and should be private. Do
    not call or override."
-  ([^javax.swing.plaf.basic.BasicComboBoxUI this]
+  ([^BasicComboBoxUI this]
     (-> this (.configureArrowButton))))
 
 (defn get-baseline-resize-behavior
@@ -107,16 +107,16 @@
   c - JComponent to return baseline resize behavior for - `javax.swing.JComponent`
 
   returns: an enum indicating how the baseline changes as the component
-           size changes - `java.awt.Component.BaselineResizeBehavior`
+           size changes - `java.awt.Component$BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComponent c]
+  (^java.awt.Component$BaselineResizeBehavior [^BasicComboBoxUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn remove-editor
   "This public method is implementation specific and should be private.
    do not call or override."
-  ([^javax.swing.plaf.basic.BasicComboBoxUI this]
+  ([^BasicComboBoxUI this]
     (-> this (.removeEditor))))
 
 (defn focus-traversable?
@@ -126,7 +126,7 @@
   c - `javax.swing.JComboBox`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComboBox c]
+  (^Boolean [^BasicComboBoxUI this ^javax.swing.JComboBox c]
     (-> this (.isFocusTraversable c))))
 
 (defn get-accessible-children-count
@@ -135,7 +135,7 @@
   c - `javax.swing.JComponent`
 
   returns: the number of accessible children in the object - `int`"
-  (^Integer [^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComponent c]
+  (^Integer [^BasicComboBoxUI this ^javax.swing.JComponent c]
     (-> this (.getAccessibleChildrenCount c))))
 
 (defn paint
@@ -143,7 +143,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicComboBoxUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^BasicComboBoxUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn set-popup-visible
@@ -151,7 +151,7 @@
 
   c - `javax.swing.JComboBox`
   v - `boolean`"
-  ([^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComboBox c ^Boolean v]
+  ([^BasicComboBoxUI this ^javax.swing.JComboBox c ^Boolean v]
     (-> this (.setPopupVisible c v))))
 
 (defn get-baseline
@@ -165,7 +165,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^Integer [^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^BasicComboBoxUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn paint-current-value-background
@@ -174,7 +174,7 @@
   g - `java.awt.Graphics`
   bounds - `java.awt.Rectangle`
   has-focus - `boolean`"
-  ([^javax.swing.plaf.basic.BasicComboBoxUI this ^java.awt.Graphics g ^java.awt.Rectangle bounds ^Boolean has-focus]
+  ([^BasicComboBoxUI this ^java.awt.Graphics g ^java.awt.Rectangle bounds ^Boolean has-focus]
     (-> this (.paintCurrentValueBackground g bounds has-focus))))
 
 (defn popup-visible?
@@ -183,7 +183,7 @@
   c - `javax.swing.JComboBox`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComboBox c]
+  (^Boolean [^BasicComboBoxUI this ^javax.swing.JComboBox c]
     (-> this (.isPopupVisible c))))
 
 (defn get-preferred-size
@@ -192,6 +192,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicComboBoxUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicComboBoxUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

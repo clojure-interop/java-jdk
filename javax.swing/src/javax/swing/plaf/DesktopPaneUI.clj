@@ -5,6 +5,6 @@
 
 (defn ->desktop-pane-ui
   "Constructor."
-  ([]
+  (^DesktopPaneUI []
     (new DesktopPaneUI )))
 

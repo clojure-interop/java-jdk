@@ -311,12 +311,12 @@
 (defn *get-midi-device
   "Obtains the requested MIDI device.
 
-  info - a device information object representing the desired device. - `javax.sound.midi.MidiDevice.Info`
+  info - a device information object representing the desired device. - `javax.sound.midi.MidiDevice$Info`
 
   returns: the requested device - `javax.sound.midi.MidiDevice`
 
   throws: javax.sound.midi.MidiUnavailableException - if the requested device is not available due to resource restrictions"
-  (^javax.sound.midi.MidiDevice [^javax.sound.midi.MidiDevice.Info info]
+  (^javax.sound.midi.MidiDevice [^javax.sound.midi.MidiDevice$Info info]
     (MidiSystem/getMidiDevice info)))
 
 (defn *get-soundbank
@@ -347,7 +347,7 @@
 
   returns: an array of MidiDevice.Info objects, one
    for each installed MIDI device.  If no such devices are installed,
-   an array of length 0 is returned. - `javax.sound.midi.MidiDevice.Info[]`"
+   an array of length 0 is returned. - `javax.sound.midi.MidiDevice$Info[]`"
   ([]
     (MidiSystem/getMidiDeviceInfo )))
 

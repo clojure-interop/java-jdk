@@ -123,7 +123,7 @@
   returns: the local date formed from this month-day and the specified year, not null - `java.time.LocalDate`
 
   throws: java.time.DateTimeException - if the year is outside the valid range of years"
-  (^java.time.LocalDate [^java.time.MonthDay this ^Integer year]
+  (^java.time.LocalDate [^MonthDay this ^Integer year]
     (-> this (.atYear year))))
 
 (defn range
@@ -149,7 +149,7 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  (^java.time.temporal.ValueRange [^java.time.MonthDay this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^MonthDay this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn with-month
@@ -166,7 +166,7 @@
   returns: a MonthDay based on this month-day with the requested month, not null - `java.time.MonthDay`
 
   throws: java.time.DateTimeException - if the month-of-year value is invalid"
-  (^java.time.MonthDay [^java.time.MonthDay this ^Integer month]
+  (^java.time.MonthDay [^MonthDay this ^Integer month]
     (-> this (.withMonth month))))
 
 (defn query
@@ -181,12 +181,12 @@
    TemporalQuery.queryFrom(TemporalAccessor) method on the
    specified query passing this as the argument.
 
-  query - the query to invoke, not null - `java.time.temporal.TemporalQuery<R>`
+  query - the query to invoke, not null - `java.time.temporal.TemporalQuery`
 
   returns: the query result, null may be returned (defined by the query) - `<R> R`
 
   throws: java.time.DateTimeException - if unable to query (defined by the query)"
-  ([^java.time.MonthDay this ^java.time.temporal.TemporalQuery query]
+  ([^MonthDay this ^java.time.temporal.TemporalQuery query]
     (-> this (.query query))))
 
 (defn to-string
@@ -195,7 +195,7 @@
    The output will be in the format --MM-dd:
 
   returns: a string representation of this month-day, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.MonthDay this]
+  (^java.lang.String [^MonthDay this]
     (-> this (.toString))))
 
 (defn before?
@@ -204,7 +204,7 @@
   other - the other month-day to compare to, not null - `java.time.MonthDay`
 
   returns: true if this point is before the specified month-day - `boolean`"
-  (^Boolean [^java.time.MonthDay this ^java.time.MonthDay other]
+  (^Boolean [^MonthDay this ^java.time.MonthDay other]
     (-> this (.isBefore other))))
 
 (defn get-long
@@ -229,7 +229,7 @@
   returns: the value for the field - `long`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained"
-  (^Long [^java.time.MonthDay this ^java.time.temporal.TemporalField field]
+  (^Long [^MonthDay this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn with-day-of-month
@@ -245,7 +245,7 @@
   returns: a MonthDay based on this month-day with the requested day, not null - `java.time.MonthDay`
 
   throws: java.time.DateTimeException - if the day-of-month value is invalid, or if the day-of-month is invalid for the month"
-  (^java.time.MonthDay [^java.time.MonthDay this ^Integer day-of-month]
+  (^java.time.MonthDay [^MonthDay this ^Integer day-of-month]
     (-> this (.withDayOfMonth day-of-month))))
 
 (defn get-day-of-month
@@ -254,7 +254,7 @@
    This method returns the primitive int value for the day-of-month.
 
   returns: the day-of-month, from 1 to 31 - `int`"
-  (^Integer [^java.time.MonthDay this]
+  (^Integer [^MonthDay this]
     (-> this (.getDayOfMonth))))
 
 (defn after?
@@ -263,7 +263,7 @@
   other - the other month-day to compare to, not null - `java.time.MonthDay`
 
   returns: true if this is after the specified month-day - `boolean`"
-  (^Boolean [^java.time.MonthDay this ^java.time.MonthDay other]
+  (^Boolean [^MonthDay this ^java.time.MonthDay other]
     (-> this (.isAfter other))))
 
 (defn supported?
@@ -289,7 +289,7 @@
   field - the field to check, null returns false - `java.time.temporal.TemporalField`
 
   returns: true if the field is supported on this month-day, false if not - `boolean`"
-  (^Boolean [^java.time.MonthDay this ^java.time.temporal.TemporalField field]
+  (^Boolean [^MonthDay this ^java.time.temporal.TemporalField field]
     (-> this (.isSupported field))))
 
 (defn valid-year?
@@ -301,14 +301,14 @@
   year - the year to validate - `int`
 
   returns: true if the year is valid for this month-day - `boolean`"
-  (^Boolean [^java.time.MonthDay this ^Integer year]
+  (^Boolean [^MonthDay this ^Integer year]
     (-> this (.isValidYear year))))
 
 (defn hash-code
   "A hash code for this month-day.
 
   returns: a suitable hash code - `int`"
-  (^Integer [^java.time.MonthDay this]
+  (^Integer [^MonthDay this]
     (-> this (.hashCode))))
 
 (defn adjust-into
@@ -338,7 +338,7 @@
   returns: the adjusted object, not null - `java.time.temporal.Temporal`
 
   throws: java.time.DateTimeException - if unable to make the adjustment"
-  (^java.time.temporal.Temporal [^java.time.MonthDay this ^java.time.temporal.Temporal temporal]
+  (^java.time.temporal.Temporal [^MonthDay this ^java.time.temporal.Temporal temporal]
     (-> this (.adjustInto temporal))))
 
 (defn with
@@ -353,7 +353,7 @@
   month - the month-of-year to set in the returned month-day, not null - `java.time.Month`
 
   returns: a MonthDay based on this month-day with the requested month, not null - `java.time.MonthDay`"
-  (^java.time.MonthDay [^java.time.MonthDay this ^java.time.Month month]
+  (^java.time.MonthDay [^MonthDay this ^java.time.Month month]
     (-> this (.with month))))
 
 (defn get-month-value
@@ -364,7 +364,7 @@
    is used by calling getMonth().
 
   returns: the month-of-year, from 1 to 12 - `int`"
-  (^Integer [^java.time.MonthDay this]
+  (^Integer [^MonthDay this]
     (-> this (.getMonthValue))))
 
 (defn compare-to
@@ -376,7 +376,7 @@
   other - the other month-day to compare to, not null - `java.time.MonthDay`
 
   returns: the comparator value, negative if less, positive if greater - `int`"
-  (^Integer [^java.time.MonthDay this ^java.time.MonthDay other]
+  (^Integer [^MonthDay this ^java.time.MonthDay other]
     (-> this (.compareTo other))))
 
 (defn get-month
@@ -388,7 +388,7 @@
    provides the int value.
 
   returns: the month-of-year, not null - `java.time.Month`"
-  (^java.time.Month [^java.time.MonthDay this]
+  (^java.time.Month [^MonthDay this]
     (-> this (.getMonth))))
 
 (defn get
@@ -414,7 +414,7 @@
   returns: the value for the field - `int`
 
   throws: java.time.DateTimeException - if a value for the field cannot be obtained or the value is outside the range of valid values for the field"
-  (^Integer [^java.time.MonthDay this ^java.time.temporal.TemporalField field]
+  (^Integer [^MonthDay this ^java.time.temporal.TemporalField field]
     (-> this (.get field))))
 
 (defn equals
@@ -425,7 +425,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other month-day - `boolean`"
-  (^Boolean [^java.time.MonthDay this ^java.lang.Object obj]
+  (^Boolean [^MonthDay this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -438,6 +438,6 @@
   returns: the formatted month-day string, not null - `java.lang.String`
 
   throws: java.time.DateTimeException - if an error occurs during printing"
-  (^java.lang.String [^java.time.MonthDay this ^java.time.format.DateTimeFormatter formatter]
+  (^java.lang.String [^MonthDay this ^java.time.format.DateTimeFormatter formatter]
     (-> this (.format formatter))))
 

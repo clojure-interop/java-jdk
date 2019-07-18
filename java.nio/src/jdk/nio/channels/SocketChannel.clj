@@ -101,7 +101,7 @@
   returns: The channel - `java.nio.channels.SocketChannel`
 
   throws: java.nio.channels.NotYetConnectedException - If this channel is not yet connected"
-  (^java.nio.channels.SocketChannel [^java.nio.channels.SocketChannel this]
+  (^java.nio.channels.SocketChannel [^SocketChannel this]
     (-> this (.shutdownOutput))))
 
 (defn bind
@@ -112,7 +112,7 @@
   returns: This channel - `java.nio.channels.SocketChannel`
 
   throws: java.nio.channels.ConnectionPendingException - If a non-blocking connect operation is already in progress on this channel"
-  (^java.nio.channels.SocketChannel [^java.nio.channels.SocketChannel this ^java.net.SocketAddress local]
+  (^java.nio.channels.SocketChannel [^SocketChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn get-remote-address
@@ -125,7 +125,7 @@
             connected - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  (^java.net.SocketAddress [^java.nio.channels.SocketChannel this]
+  (^java.net.SocketAddress [^SocketChannel this]
     (-> this (.getRemoteAddress))))
 
 (defn connected?
@@ -133,7 +133,7 @@
 
   returns: true if, and only if, this channel's network socket
             is open and connected - `boolean`"
-  (^Boolean [^java.nio.channels.SocketChannel this]
+  (^Boolean [^SocketChannel this]
     (-> this (.isConnected))))
 
 (defn read
@@ -147,9 +147,9 @@
            or -1 if the channel has reached end-of-stream - `long`
 
   throws: java.nio.channels.NotYetConnectedException - If this channel is not yet connected"
-  (^Long [^java.nio.channels.SocketChannel this dsts ^Integer offset ^Integer length]
+  (^Long [^SocketChannel this dsts ^Integer offset ^Integer length]
     (-> this (.read dsts offset length)))
-  (^Integer [^java.nio.channels.SocketChannel this ^java.nio.ByteBuffer dst]
+  (^Integer [^SocketChannel this ^java.nio.ByteBuffer dst]
     (-> this (.read dst))))
 
 (defn connect
@@ -184,7 +184,7 @@
             and the connection operation is in progress - `boolean`
 
   throws: java.nio.channels.UnresolvedAddressException - If the given remote address is not fully resolved"
-  (^Boolean [^java.nio.channels.SocketChannel this ^java.net.SocketAddress remote]
+  (^Boolean [^SocketChannel this ^java.net.SocketAddress remote]
     (-> this (.connect remote))))
 
 (defn get-local-address
@@ -206,7 +206,7 @@
             channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  (^java.net.SocketAddress [^java.nio.channels.SocketChannel this]
+  (^java.net.SocketAddress [^SocketChannel this]
     (-> this (.getLocalAddress))))
 
 (defn finish-connect
@@ -238,7 +238,7 @@
             connected - `boolean`
 
   throws: java.nio.channels.NoConnectionPendingException - If this channel is not connected and a connection operation has not been initiated"
-  (^Boolean [^java.nio.channels.SocketChannel this]
+  (^Boolean [^SocketChannel this]
     (-> this (.finishConnect))))
 
 (defn valid-ops
@@ -250,19 +250,19 @@
    | SelectionKey.OP_READ | SelectionKey.OP_WRITE).
 
   returns: The valid-operation set - `int`"
-  (^Integer [^java.nio.channels.SocketChannel this]
+  (^Integer [^SocketChannel this]
     (-> this (.validOps))))
 
 (defn set-option
   "Description copied from interface: NetworkChannel
 
-  name - The socket option - `java.net.SocketOption<T>`
+  name - The socket option - `java.net.SocketOption`
   value - The value of the socket option. A value of null may be a valid value for some socket options. - `T`
 
   returns: This channel - `<T> java.nio.channels.SocketChannel`
 
   throws: java.lang.UnsupportedOperationException - If the socket option is not supported by this channel"
-  ([^java.nio.channels.SocketChannel this ^java.net.SocketOption name value]
+  ([^SocketChannel this ^java.net.SocketOption name value]
     (-> this (.setOption name value))))
 
 (defn socket
@@ -272,7 +272,7 @@
    declared in the Socket class.
 
   returns: A socket associated with this channel - `java.net.Socket`"
-  (^java.net.Socket [^java.nio.channels.SocketChannel this]
+  (^java.net.Socket [^SocketChannel this]
     (-> this (.socket))))
 
 (defn shutdown-input
@@ -285,7 +285,7 @@
   returns: The channel - `java.nio.channels.SocketChannel`
 
   throws: java.nio.channels.NotYetConnectedException - If this channel is not yet connected"
-  (^java.nio.channels.SocketChannel [^java.nio.channels.SocketChannel this]
+  (^java.nio.channels.SocketChannel [^SocketChannel this]
     (-> this (.shutdownInput))))
 
 (defn write
@@ -298,9 +298,9 @@
   returns: The number of bytes written, possibly zero - `long`
 
   throws: java.nio.channels.NotYetConnectedException - If this channel is not yet connected"
-  (^Long [^java.nio.channels.SocketChannel this srcs ^Integer offset ^Integer length]
+  (^Long [^SocketChannel this srcs ^Integer offset ^Integer length]
     (-> this (.write srcs offset length)))
-  (^Integer [^java.nio.channels.SocketChannel this ^java.nio.ByteBuffer src]
+  (^Integer [^SocketChannel this ^java.nio.ByteBuffer src]
     (-> this (.write src))))
 
 (defn connection-pending?
@@ -310,6 +310,6 @@
   returns: true if, and only if, a connection operation has been
             initiated on this channel but not yet completed by invoking the
             finishConnect method - `boolean`"
-  (^Boolean [^java.nio.channels.SocketChannel this]
+  (^Boolean [^SocketChannel this]
     (-> this (.isConnectionPending))))
 

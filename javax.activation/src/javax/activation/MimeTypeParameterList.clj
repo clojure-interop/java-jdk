@@ -13,23 +13,23 @@
   parameter-list - an RFC 2045, 2046 compliant parameter list. - `java.lang.String`
 
   throws: javax.activation.MimeTypeParseException"
-  ([^java.lang.String parameter-list]
+  (^MimeTypeParameterList [^java.lang.String parameter-list]
     (new MimeTypeParameterList parameter-list))
-  ([]
+  (^MimeTypeParameterList []
     (new MimeTypeParameterList )))
 
 (defn size
   "Return the number of name-value pairs in this list.
 
   returns: the number of parameters - `int`"
-  (^Integer [^javax.activation.MimeTypeParameterList this]
+  (^Integer [^MimeTypeParameterList this]
     (-> this (.size))))
 
 (defn empty?
   "Determine whether or not this list is empty.
 
   returns: true if there are no parameters - `boolean`"
-  (^Boolean [^javax.activation.MimeTypeParameterList this]
+  (^Boolean [^MimeTypeParameterList this]
     (-> this (.isEmpty))))
 
 (defn get
@@ -39,7 +39,7 @@
   name - the parameter name - `java.lang.String`
 
   returns: the parameter's value - `java.lang.String`"
-  (^java.lang.String [^javax.activation.MimeTypeParameterList this ^java.lang.String name]
+  (^java.lang.String [^MimeTypeParameterList this ^java.lang.String name]
     (-> this (.get name))))
 
 (defn set
@@ -48,27 +48,27 @@
 
   name - the parameter name - `java.lang.String`
   value - the parameter's value - `java.lang.String`"
-  ([^javax.activation.MimeTypeParameterList this ^java.lang.String name ^java.lang.String value]
+  ([^MimeTypeParameterList this ^java.lang.String name ^java.lang.String value]
     (-> this (.set name value))))
 
 (defn remove
   "Remove any value associated with the given name.
 
   name - the parameter name - `java.lang.String`"
-  ([^javax.activation.MimeTypeParameterList this ^java.lang.String name]
+  ([^MimeTypeParameterList this ^java.lang.String name]
     (-> this (.remove name))))
 
 (defn get-names
   "Retrieve an enumeration of all the names in this list.
 
   returns: an enumeration of all parameter names - `java.util.Enumeration`"
-  (^java.util.Enumeration [^javax.activation.MimeTypeParameterList this]
+  (^java.util.Enumeration [^MimeTypeParameterList this]
     (-> this (.getNames))))
 
 (defn to-string
   "Return a string representation of this object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.activation.MimeTypeParameterList this]
+  (^java.lang.String [^MimeTypeParameterList this]
     (-> this (.toString))))
 

@@ -5,14 +5,14 @@
 
 (defn ->popup-menu-ui
   "Constructor."
-  ([]
+  (^PopupMenuUI []
     (new PopupMenuUI )))
 
 (defn popup-trigger?
   "e - `java.awt.event.MouseEvent`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.plaf.PopupMenuUI this ^java.awt.event.MouseEvent e]
+  (^Boolean [^PopupMenuUI this e]
     (-> this (.isPopupTrigger e))))
 
 (defn get-popup
@@ -24,6 +24,6 @@
   y - Screen y location Popup is to be shown at. - `int`
 
   returns: Popup that will show the JPopupMenu - `javax.swing.Popup`"
-  (^javax.swing.Popup [^javax.swing.plaf.PopupMenuUI this ^javax.swing.JPopupMenu popup ^Integer x ^Integer y]
+  (^javax.swing.Popup [^PopupMenuUI this ^javax.swing.JPopupMenu popup ^Integer x ^Integer y]
     (-> this (.getPopup popup x y))))
 

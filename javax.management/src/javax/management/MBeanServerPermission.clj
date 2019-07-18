@@ -39,16 +39,16 @@
   actions - the associated actions. This parameter is not currently used and must be null or the empty string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^MBeanServerPermission [^java.lang.String name ^java.lang.String actions]
     (new MBeanServerPermission name actions))
-  ([^java.lang.String name]
+  (^MBeanServerPermission [^java.lang.String name]
     (new MBeanServerPermission name)))
 
 (defn hash-code
   "Description copied from class: BasicPermission
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.management.MBeanServerPermission this]
+  (^Integer [^MBeanServerPermission this]
     (-> this (.hashCode))))
 
 (defn implies
@@ -70,7 +70,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  (^Boolean [^javax.management.MBeanServerPermission this ^java.security.Permission p]
+  (^Boolean [^MBeanServerPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -81,7 +81,7 @@
   obj - the object we are testing for equality with this object. - `java.lang.Object`
 
   returns: true if the objects are equal. - `boolean`"
-  (^Boolean [^javax.management.MBeanServerPermission this ^java.lang.Object obj]
+  (^Boolean [^MBeanServerPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn new-permission-collection
@@ -89,6 +89,6 @@
 
   returns: a new PermissionCollection object suitable for
    storing BasicPermissions. - `java.security.PermissionCollection`"
-  (^java.security.PermissionCollection [^javax.management.MBeanServerPermission this]
+  (^java.security.PermissionCollection [^MBeanServerPermission this]
     (-> this (.newPermissionCollection))))
 

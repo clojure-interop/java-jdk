@@ -7,7 +7,7 @@
 
 (defn ->metal-label-ui
   "Constructor."
-  ([]
+  (^MetalLabelUI []
     (new MetalLabelUI )))
 
 (defn *create-ui

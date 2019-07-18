@@ -14,6 +14,6 @@
 
 (defn ->policy-spi
   "Constructor."
-  ([]
+  (^PolicySpi []
     (new PolicySpi )))
 

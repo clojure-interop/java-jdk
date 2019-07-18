@@ -12,7 +12,7 @@
 
 (defn ->folder-icon-16
   "Constructor."
-  ([]
+  (^MetalIconFactory$FolderIcon16 []
     (new MetalIconFactory$FolderIcon16 )))
 
 (defn paint-icon
@@ -22,30 +22,30 @@
   g - `java.awt.Graphics`
   x - `int`
   y - `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$FolderIcon16 this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
+  ([^MetalIconFactory$FolderIcon16 this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
     (-> this (.paintIcon c g x y))))
 
 (defn get-shift
   "returns: `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$FolderIcon16 this]
+  (^Integer [^MetalIconFactory$FolderIcon16 this]
     (-> this (.getShift))))
 
 (defn get-additional-height
   "returns: `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$FolderIcon16 this]
+  (^Integer [^MetalIconFactory$FolderIcon16 this]
     (-> this (.getAdditionalHeight))))
 
 (defn get-icon-width
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$FolderIcon16 this]
+  (^Integer [^MetalIconFactory$FolderIcon16 this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$FolderIcon16 this]
+  (^Integer [^MetalIconFactory$FolderIcon16 this]
     (-> this (.getIconHeight))))
 

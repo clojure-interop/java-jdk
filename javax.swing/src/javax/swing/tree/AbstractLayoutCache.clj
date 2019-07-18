@@ -12,7 +12,7 @@
 
 (defn ->abstract-layout-cache
   "Constructor."
-  ([]
+  (^AbstractLayoutCache []
     (new AbstractLayoutCache )))
 
 (defn get-row-for-path
@@ -24,7 +24,7 @@
 
   returns: the row where the last item in path is visible or -1
            if any elements in path aren't currently visible - `int`"
-  (^Integer [^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Integer [^AbstractLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getRowForPath path))))
 
 (defn tree-nodes-inserted
@@ -35,15 +35,15 @@
    ascending order.
 
   e - the TreeModelEvent - `javax.swing.event.TreeModelEvent`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^javax.swing.event.TreeModelEvent e]
+  ([^AbstractLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesInserted e))))
 
 (defn get-node-dimensions
   "Returns the object that renders nodes in the tree, and which is
    responsible for calculating the dimensions of individual nodes.
 
-  returns: the NodeDimensions object - `javax.swing.tree.AbstractLayoutCache.NodeDimensions`"
-  (^javax.swing.tree.AbstractLayoutCache.NodeDimensions [^javax.swing.tree.AbstractLayoutCache this]
+  returns: the NodeDimensions object - `javax.swing.tree.AbstractLayoutCache$NodeDimensions`"
+  (^javax.swing.tree.AbstractLayoutCache$NodeDimensions [^AbstractLayoutCache this]
     (-> this (.getNodeDimensions))))
 
 (defn tree-nodes-removed
@@ -57,7 +57,7 @@
    e.childIndices() returns the indices the nodes had before they were deleted in ascending order.
 
   e - the TreeModelEvent - `javax.swing.event.TreeModelEvent`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^javax.swing.event.TreeModelEvent e]
+  ([^AbstractLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesRemoved e))))
 
 (defn expanded?
@@ -66,21 +66,21 @@
   path - `javax.swing.tree.TreePath`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Boolean [^AbstractLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.isExpanded path))))
 
 (defn get-row-count
   "Number of rows being displayed.
 
   returns: the number of rows being displayed - `int`"
-  (^Integer [^javax.swing.tree.AbstractLayoutCache this]
+  (^Integer [^AbstractLayoutCache this]
     (-> this (.getRowCount))))
 
 (defn root-visible?
   "Returns true if the root node of the tree is displayed.
 
   returns: true if the root node of the tree is displayed - `boolean`"
-  (^Boolean [^javax.swing.tree.AbstractLayoutCache this]
+  (^Boolean [^AbstractLayoutCache this]
     (-> this (.isRootVisible))))
 
 (defn set-selection-model
@@ -88,7 +88,7 @@
    selection to new LSM.
 
   new-lsm - the new TreeSelectionModel - `javax.swing.tree.TreeSelectionModel`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.TreeSelectionModel new-lsm]
+  ([^AbstractLayoutCache this ^javax.swing.tree.TreeSelectionModel new-lsm]
     (-> this (.setSelectionModel new-lsm))))
 
 (defn set-root-visible
@@ -96,7 +96,7 @@
    the TreeModel is visible.
 
   root-visible - true if the root node of the tree is to be displayed - `boolean`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^Boolean root-visible]
+  ([^AbstractLayoutCache this ^Boolean root-visible]
     (-> this (.setRootVisible root-visible))))
 
 (defn set-node-dimensions
@@ -104,15 +104,15 @@
    and which is therefore responsible for calculating the dimensions of
    individual nodes.
 
-  nd - a NodeDimensions object - `javax.swing.tree.AbstractLayoutCache.NodeDimensions`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.AbstractLayoutCache.NodeDimensions nd]
+  nd - a NodeDimensions object - `javax.swing.tree.AbstractLayoutCache$NodeDimensions`"
+  ([^AbstractLayoutCache this ^javax.swing.tree.AbstractLayoutCache$NodeDimensions nd]
     (-> this (.setNodeDimensions nd))))
 
 (defn get-selection-model
   "Returns the model used to maintain the selection.
 
   returns: the treeSelectionModel - `javax.swing.tree.TreeSelectionModel`"
-  (^javax.swing.tree.TreeSelectionModel [^javax.swing.tree.AbstractLayoutCache this]
+  (^javax.swing.tree.TreeSelectionModel [^AbstractLayoutCache this]
     (-> this (.getSelectionModel))))
 
 (defn get-visible-child-count
@@ -121,7 +121,7 @@
   path - the path being queried - `javax.swing.tree.TreePath`
 
   returns: the number of visible children for the specified path - `int`"
-  (^Integer [^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Integer [^AbstractLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getVisibleChildCount path))))
 
 (defn tree-nodes-changed
@@ -137,7 +137,7 @@
    e.childIndices() returns the index(es) of the changed node(s).
 
   e - the TreeModelEvent - `javax.swing.event.TreeModelEvent`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^javax.swing.event.TreeModelEvent e]
+  ([^AbstractLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesChanged e))))
 
 (defn invalidate-path-bounds
@@ -145,7 +145,7 @@
    path are invalid, and need to be updated.
 
   path - the path being updated - `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.TreePath path]
+  ([^AbstractLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.invalidatePathBounds path))))
 
 (defn get-visible-paths-from
@@ -159,7 +159,7 @@
   path - the starting location for the enumeration - `javax.swing.tree.TreePath`
 
   returns: the Enumerator starting at the desired location - `java.util.Enumeration<javax.swing.tree.TreePath>`"
-  (^java.util.Enumeration [^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.TreePath path]
+  (^java.util.Enumeration [^AbstractLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getVisiblePathsFrom path))))
 
 (defn get-rows-for-paths
@@ -176,7 +176,7 @@
             the rows that each corresponding where each
             TreePath is displayed; if paths
             is null, null is returned - `int[]`"
-  ([^javax.swing.tree.AbstractLayoutCache this paths]
+  ([^AbstractLayoutCache this paths]
     (-> this (.getRowsForPaths paths))))
 
 (defn tree-structure-changed
@@ -190,7 +190,7 @@
    e.childIndices() returns null.
 
   e - the TreeModelEvent - `javax.swing.event.TreeModelEvent`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^javax.swing.event.TreeModelEvent e]
+  ([^AbstractLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeStructureChanged e))))
 
 (defn get-expanded-state?
@@ -199,7 +199,7 @@
   path - the path being queried - `javax.swing.tree.TreePath`
 
   returns: true if the path is expanded and visible, false otherwise - `boolean`"
-  (^Boolean [^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Boolean [^AbstractLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getExpandedState path))))
 
 (defn set-row-height
@@ -208,7 +208,7 @@
    queried for each row's height.
 
   row-height - the height of each cell, in pixels - `int`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^Integer row-height]
+  ([^AbstractLayoutCache this ^Integer row-height]
     (-> this (.setRowHeight row-height))))
 
 (defn get-path-for-row
@@ -218,7 +218,7 @@
   row - the row being queried - `int`
 
   returns: the TreePath for the given row - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.tree.AbstractLayoutCache this ^Integer row]
+  (^javax.swing.tree.TreePath [^AbstractLayoutCache this ^Integer row]
     (-> this (.getPathForRow row))))
 
 (defn get-bounds
@@ -228,7 +228,7 @@
   place-in - a Rectangle object giving the available space - `java.awt.Rectangle`
 
   returns: a Rectangle object specifying the space to be used - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.TreePath path ^java.awt.Rectangle place-in]
+  (^java.awt.Rectangle [^AbstractLayoutCache this ^javax.swing.tree.TreePath path ^java.awt.Rectangle place-in]
     (-> this (.getBounds path place-in))))
 
 (defn set-expanded-state
@@ -237,34 +237,34 @@
 
   path - the path being expanded or collapsed - `javax.swing.tree.TreePath`
   is-expanded - true if the path should be expanded, false otherwise - `boolean`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.TreePath path ^Boolean is-expanded]
+  ([^AbstractLayoutCache this ^javax.swing.tree.TreePath path ^Boolean is-expanded]
     (-> this (.setExpandedState path is-expanded))))
 
 (defn get-model
   "Returns the TreeModel that is providing the data.
 
   returns: the TreeModel that is providing the data - `javax.swing.tree.TreeModel`"
-  (^javax.swing.tree.TreeModel [^javax.swing.tree.AbstractLayoutCache this]
+  (^javax.swing.tree.TreeModel [^AbstractLayoutCache this]
     (-> this (.getModel))))
 
 (defn get-preferred-height
   "Returns the preferred height.
 
   returns: the preferred height - `int`"
-  (^Integer [^javax.swing.tree.AbstractLayoutCache this]
+  (^Integer [^AbstractLayoutCache this]
     (-> this (.getPreferredHeight))))
 
 (defn set-model
   "Sets the TreeModel that will provide the data.
 
   new-model - the TreeModel that is to provide the data - `javax.swing.tree.TreeModel`"
-  ([^javax.swing.tree.AbstractLayoutCache this ^javax.swing.tree.TreeModel new-model]
+  ([^AbstractLayoutCache this ^javax.swing.tree.TreeModel new-model]
     (-> this (.setModel new-model))))
 
 (defn invalidate-sizes
   "Informs the TreeState that it needs to recalculate
    all the sizes it is referencing."
-  ([^javax.swing.tree.AbstractLayoutCache this]
+  ([^AbstractLayoutCache this]
     (-> this (.invalidateSizes))))
 
 (defn get-path-closest-to
@@ -279,7 +279,7 @@
   y - the vertical component of the desired location - `int`
 
   returns: the TreePath closest to the specified point - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.tree.AbstractLayoutCache this ^Integer x ^Integer y]
+  (^javax.swing.tree.TreePath [^AbstractLayoutCache this ^Integer x ^Integer y]
     (-> this (.getPathClosestTo x y))))
 
 (defn get-row-height
@@ -288,7 +288,7 @@
    renderer.
 
   returns: `int`"
-  (^Integer [^javax.swing.tree.AbstractLayoutCache this]
+  (^Integer [^AbstractLayoutCache this]
     (-> this (.getRowHeight))))
 
 (defn get-preferred-width
@@ -304,6 +304,6 @@
   bounds - the region being queried - `java.awt.Rectangle`
 
   returns: the preferred width for the passed in region - `int`"
-  (^Integer [^javax.swing.tree.AbstractLayoutCache this ^java.awt.Rectangle bounds]
+  (^Integer [^AbstractLayoutCache this ^java.awt.Rectangle bounds]
     (-> this (.getPreferredWidth bounds))))
 

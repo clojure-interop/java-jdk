@@ -6,6 +6,6 @@
 
 (defn ->action-map-ui-resource
   "Constructor."
-  ([]
+  (^ActionMapUIResource []
     (new ActionMapUIResource )))
 

@@ -11,7 +11,7 @@
   Represents a control for the mute status of a line.
    Note that mute status does not affect gain.
 
-  type: javax.sound.sampled.BooleanControl.Type"
+  type: javax.sound.sampled.BooleanControl$Type"
   BooleanControl$Type/MUTE)
 
 (def *-apply-reverb
@@ -22,6 +22,6 @@
    the reverberation settings for a line, but does affect whether
    these settings are used.
 
-  type: javax.sound.sampled.BooleanControl.Type"
+  type: javax.sound.sampled.BooleanControl$Type"
   BooleanControl$Type/APPLY_REVERB)
 

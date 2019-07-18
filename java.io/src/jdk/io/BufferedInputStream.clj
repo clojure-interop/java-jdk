@@ -32,9 +32,9 @@
   size - the buffer size. - `int`
 
   throws: java.lang.IllegalArgumentException - if size <= 0."
-  ([^java.io.InputStream in ^Integer size]
+  (^BufferedInputStream [^java.io.InputStream in ^Integer size]
     (new BufferedInputStream in size))
-  ([^java.io.InputStream in]
+  (^BufferedInputStream [^java.io.InputStream in]
     (new BufferedInputStream in)))
 
 (defn read
@@ -73,9 +73,9 @@
                the stream has been reached. - `int`
 
   throws: java.io.IOException - if this input stream has been closed by invoking its close() method, or an I/O error occurs."
-  (^Integer [^java.io.BufferedInputStream this b ^Integer off ^Integer len]
+  (^Integer [^BufferedInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^java.io.BufferedInputStream this]
+  (^Integer [^BufferedInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -87,7 +87,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if the stream does not support seek, or if this input stream has been closed by invoking its close() method, or an I/O error occurs."
-  (^Long [^java.io.BufferedInputStream this ^Long n]
+  (^Long [^BufferedInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -105,7 +105,7 @@
                over) from this input stream without blocking. - `int`
 
   throws: java.io.IOException - if this input stream has been closed by invoking its close() method, or an I/O error occurs."
-  (^Integer [^java.io.BufferedInputStream this]
+  (^Integer [^BufferedInputStream this]
     (-> this (.available))))
 
 (defn mark
@@ -113,7 +113,7 @@
    method of InputStream.
 
   readlimit - the maximum limit of bytes that can be read before the mark position becomes invalid. - `int`"
-  ([^java.io.BufferedInputStream this ^Integer readlimit]
+  ([^BufferedInputStream this ^Integer readlimit]
     (-> this (.mark readlimit))))
 
 (defn reset
@@ -127,7 +127,7 @@
    set equal to markpos.
 
   throws: java.io.IOException - if this stream has not been marked or, if the mark has been invalidated, or the stream has been closed by invoking its close() method, or an I/O error occurs."
-  ([^java.io.BufferedInputStream this]
+  ([^BufferedInputStream this]
     (-> this (.reset))))
 
 (defn mark-supported
@@ -138,7 +138,7 @@
 
   returns: a boolean indicating if this stream type supports
             the mark and reset methods. - `boolean`"
-  (^Boolean [^java.io.BufferedInputStream this]
+  (^Boolean [^BufferedInputStream this]
     (-> this (.markSupported))))
 
 (defn close
@@ -149,6 +149,6 @@
    Closing a previously closed stream has no effect.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.BufferedInputStream this]
+  ([^BufferedInputStream this]
     (-> this (.close))))
 

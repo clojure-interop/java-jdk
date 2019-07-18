@@ -66,7 +66,7 @@
   name - This is a non-null distinguished name formatted according to the rules defined in RFC 2253. - `java.lang.String`
 
   throws: javax.naming.InvalidNameException - if a syntax violation is detected."
-  ([^java.lang.String name]
+  (^LdapName [^java.lang.String name]
     (new LdapName name)))
 
 (defn add-all
@@ -81,9 +81,9 @@
   returns: The updated name (not a new instance). - `javax.naming.Name`
 
   throws: javax.naming.InvalidNameException - if suffix is not a valid LDAP name, or if the addition of the components would violate the syntax rules of this LDAP name."
-  (^javax.naming.Name [^javax.naming.ldap.LdapName this ^Integer posn ^javax.naming.Name suffix]
+  (^javax.naming.Name [^LdapName this ^Integer posn ^javax.naming.Name suffix]
     (-> this (.addAll posn suffix)))
-  (^javax.naming.Name [^javax.naming.ldap.LdapName this ^javax.naming.Name suffix]
+  (^javax.naming.Name [^LdapName this ^javax.naming.Name suffix]
     (-> this (.addAll suffix))))
 
 (defn get-rdn
@@ -94,7 +94,7 @@
   returns: The non-null RDN at index posn. - `javax.naming.ldap.Rdn`
 
   throws: java.lang.IndexOutOfBoundsException - if posn is outside the specified range."
-  (^javax.naming.ldap.Rdn [^javax.naming.ldap.LdapName this ^Integer posn]
+  (^javax.naming.ldap.Rdn [^LdapName this ^Integer posn]
     (-> this (.getRdn posn))))
 
 (defn ends-with
@@ -108,7 +108,7 @@
   n - The LDAP name to check. - `javax.naming.Name`
 
   returns: true if n is a suffix of this name, false otherwise. - `boolean`"
-  (^Boolean [^javax.naming.ldap.LdapName this ^javax.naming.Name n]
+  (^Boolean [^LdapName this ^javax.naming.Name n]
     (-> this (.endsWith n))))
 
 (defn get-suffix
@@ -125,7 +125,7 @@
             returned. - `javax.naming.Name`
 
   throws: java.lang.IndexOutOfBoundsException - If posn is outside the specified range."
-  (^javax.naming.Name [^javax.naming.ldap.LdapName this ^Integer posn]
+  (^javax.naming.Name [^LdapName this ^Integer posn]
     (-> this (.getSuffix posn))))
 
 (defn get-all
@@ -139,7 +139,7 @@
 
   returns: A non-null enumeration of the components of this LDAP name.
    Each element of the enumeration is of class String. - `java.util.Enumeration<java.lang.String>`"
-  (^java.util.Enumeration [^javax.naming.ldap.LdapName this]
+  (^java.util.Enumeration [^LdapName this]
     (-> this (.getAll))))
 
 (defn to-string
@@ -149,7 +149,7 @@
    components an empty string is returned.
 
   returns: The string representation of the LdapName. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.ldap.LdapName this]
+  (^java.lang.String [^LdapName this]
     (-> this (.toString))))
 
 (defn get-rdns
@@ -161,7 +161,7 @@
 
   returns: The name as a list of RDNs which are instances of
             the class Rdn. - `java.util.List<javax.naming.ldap.Rdn>`"
-  (^java.util.List [^javax.naming.ldap.LdapName this]
+  (^java.util.List [^LdapName this]
     (-> this (.getRdns))))
 
 (defn remove
@@ -175,7 +175,7 @@
   returns: The component removed (a String). - `java.lang.Object`
 
   throws: java.lang.IndexOutOfBoundsException - if posn is outside the specified range."
-  (^java.lang.Object [^javax.naming.ldap.LdapName this ^Integer posn]
+  (^java.lang.Object [^LdapName this ^Integer posn]
     (-> this (.remove posn))))
 
 (defn starts-with
@@ -190,7 +190,7 @@
 
   returns: true if n is a prefix of this LDAP name,
    false otherwise. - `boolean`"
-  (^Boolean [^javax.naming.ldap.LdapName this ^javax.naming.Name n]
+  (^Boolean [^LdapName this ^javax.naming.Name n]
     (-> this (.startsWith n))))
 
 (defn clone
@@ -199,7 +199,7 @@
    affect the new copy, and vice versa.
 
   returns: A copy of the this LDAP name. - `java.lang.Object`"
-  (^java.lang.Object [^javax.naming.ldap.LdapName this]
+  (^java.lang.Object [^LdapName this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -208,7 +208,7 @@
    of this  name.
 
   returns: An int representing the hash code of this name. - `int`"
-  (^Integer [^javax.naming.ldap.LdapName this]
+  (^Integer [^LdapName this]
     (-> this (.hashCode))))
 
 (defn add
@@ -225,9 +225,9 @@
                     Cannot be null. - `javax.naming.Name`
 
   throws: java.lang.IndexOutOfBoundsException - If posn is outside the specified range."
-  (^javax.naming.Name [^javax.naming.ldap.LdapName this ^Integer posn ^java.lang.String comp]
+  (^javax.naming.Name [^LdapName this ^Integer posn ^java.lang.String comp]
     (-> this (.add posn comp)))
-  (^javax.naming.Name [^javax.naming.ldap.LdapName this ^java.lang.String comp]
+  (^javax.naming.Name [^LdapName this ^java.lang.String comp]
     (-> this (.add comp))))
 
 (defn empty?
@@ -235,14 +235,14 @@
    An empty name is one with zero components.
 
   returns: true if this LDAP name is empty, false otherwise. - `boolean`"
-  (^Boolean [^javax.naming.ldap.LdapName this]
+  (^Boolean [^LdapName this]
     (-> this (.isEmpty))))
 
 (defn size
   "Retrieves the number of components in this LDAP name.
 
   returns: The non-negative number of components in this LDAP name. - `int`"
-  (^Integer [^javax.naming.ldap.LdapName this]
+  (^Integer [^LdapName this]
     (-> this (.size))))
 
 (defn compare-to
@@ -271,7 +271,7 @@
             is less than, equal to, or greater than the given obj. - `int`
 
   throws: java.lang.ClassCastException - if obj is null or not a LdapName."
-  (^Integer [^javax.naming.ldap.LdapName this ^java.lang.Object obj]
+  (^Integer [^LdapName this ^java.lang.Object obj]
     (-> this (.compareTo obj))))
 
 (defn get-prefix
@@ -287,7 +287,7 @@
             If posn is zero, an empty LDAP name is returned. - `javax.naming.Name`
 
   throws: java.lang.IndexOutOfBoundsException - If posn is outside the specified range."
-  (^javax.naming.Name [^javax.naming.ldap.LdapName this ^Integer posn]
+  (^javax.naming.Name [^LdapName this ^Integer posn]
     (-> this (.getPrefix posn))))
 
 (defn get
@@ -298,7 +298,7 @@
   returns: The non-null component at index posn. - `java.lang.String`
 
   throws: java.lang.IndexOutOfBoundsException - if posn is outside the specified range."
-  (^java.lang.String [^javax.naming.ldap.LdapName this ^Integer posn]
+  (^java.lang.String [^LdapName this ^Integer posn]
     (-> this (.get posn))))
 
 (defn equals
@@ -316,6 +316,6 @@
 
   returns: true if obj is equal to this LDAP name,
                     false otherwise. - `boolean`"
-  (^Boolean [^javax.naming.ldap.LdapName this ^java.lang.Object obj]
+  (^Boolean [^LdapName this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

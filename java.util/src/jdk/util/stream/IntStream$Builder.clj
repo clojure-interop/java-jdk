@@ -16,7 +16,7 @@
   t - the input argument - `int`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^java.util.stream.IntStream$Builder this ^Integer t]
+  ([^IntStream$Builder this ^Integer t]
     (-> this (.accept t))))
 
 (defn add
@@ -24,10 +24,10 @@
 
   t - the element to add - `int`
 
-  returns: this builder - `default java.util.stream.IntStream.Builder`
+  returns: this builder - `default java.util.stream.IntStream$Builder`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  ([^java.util.stream.IntStream$Builder this ^Integer t]
+  ([^IntStream$Builder this ^Integer t]
     (-> this (.add t))))
 
 (defn build
@@ -39,6 +39,6 @@
   returns: the built stream - `java.util.stream.IntStream`
 
   throws: java.lang.IllegalStateException - if the builder has already transitioned to the built state"
-  (^java.util.stream.IntStream [^java.util.stream.IntStream$Builder this]
+  (^java.util.stream.IntStream [^IntStream$Builder this]
     (-> this (.build))))
 

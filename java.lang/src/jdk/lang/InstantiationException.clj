@@ -19,8 +19,8 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^InstantiationException [^java.lang.String s]
     (new InstantiationException s))
-  ([]
+  (^InstantiationException []
     (new InstantiationException )))
 

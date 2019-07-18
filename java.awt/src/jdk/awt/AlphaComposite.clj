@@ -333,7 +333,7 @@
     Ar = 0
     Cr = 0
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/CLEAR)
 
 (def *-src
@@ -349,7 +349,7 @@
     Ar = As
     Cr = Cs
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/SRC)
 
 (def *-dst
@@ -364,7 +364,7 @@
     Ar = Ad
     Cr = Cd
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/DST)
 
 (def *-src-over
@@ -379,7 +379,7 @@
     Ar = As  Ad*(1-As)
     Cr = Cs  Cd*(1-As)
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/SRC_OVER)
 
 (def *-dst-over
@@ -395,7 +395,7 @@
     Ar = As*(1-Ad)  Ad
     Cr = Cs*(1-Ad)  Cd
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/DST_OVER)
 
 (def *-src-in
@@ -411,7 +411,7 @@
     Ar = As*Ad
     Cr = Cs*Ad
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/SRC_IN)
 
 (def *-dst-in
@@ -427,7 +427,7 @@
     Ar = Ad*As
     Cr = Cd*As
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/DST_IN)
 
 (def *-src-out
@@ -443,7 +443,7 @@
     Ar = As*(1-Ad)
     Cr = Cs*(1-Ad)
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/SRC_OUT)
 
 (def *-dst-out
@@ -459,7 +459,7 @@
     Ar = Ad*(1-As)
     Cr = Cd*(1-As)
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/DST_OUT)
 
 (def *-src-atop
@@ -475,7 +475,7 @@
     Ar = As*Ad  Ad*(1-As) = Ad
     Cr = Cs*Ad  Cd*(1-As)
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/SRC_ATOP)
 
 (def *-dst-atop
@@ -491,7 +491,7 @@
     Ar = As*(1-Ad)  Ad*As = As
     Cr = Cs*(1-Ad)  Cd*As
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/DST_ATOP)
 
 (def *-xor
@@ -508,7 +508,7 @@
     Ar = As*(1-Ad)  Ad*(1-As)
     Cr = Cs*(1-Ad)  Cd*(1-As)
 
-  type: java.lang.annotation.    int"
+  type: int"
   AlphaComposite/XOR)
 
 (def *-clear
@@ -647,7 +647,7 @@
 
   returns: the CompositeContext object to be used to perform
    compositing operations. - `java.awt.CompositeContext`"
-  (^java.awt.CompositeContext [^java.awt.AlphaComposite this ^java.awt.image.ColorModel src-color-model ^java.awt.image.ColorModel dst-color-model ^java.awt.RenderingHints hints]
+  (^java.awt.CompositeContext [^AlphaComposite this ^java.awt.image.ColorModel src-color-model ^java.awt.image.ColorModel dst-color-model ^java.awt.RenderingHints hints]
     (-> this (.createContext src-color-model dst-color-model hints))))
 
 (defn get-alpha
@@ -655,14 +655,14 @@
    AlphaComposite does not have an alpha value, 1.0 is returned.
 
   returns: the alpha value of this AlphaComposite. - `float`"
-  (^Float [^java.awt.AlphaComposite this]
+  (^Float [^AlphaComposite this]
     (-> this (.getAlpha))))
 
 (defn get-rule
   "Returns the compositing rule of this AlphaComposite.
 
   returns: the compositing rule of this AlphaComposite. - `int`"
-  (^Integer [^java.awt.AlphaComposite this]
+  (^Integer [^AlphaComposite this]
     (-> this (.getRule))))
 
 (defn derive
@@ -677,14 +677,14 @@
    this object that uses the specified compositing rule. - `java.awt.AlphaComposite`
 
   throws: java.lang.IllegalArgumentException - if rule is not one of the following: CLEAR, SRC, DST, SRC_OVER, DST_OVER, SRC_IN, DST_IN, SRC_OUT, DST_OUT, SRC_ATOP, DST_ATOP, or XOR"
-  (^java.awt.AlphaComposite [^java.awt.AlphaComposite this ^Integer rule]
+  (^java.awt.AlphaComposite [^AlphaComposite this ^Integer rule]
     (-> this (.derive rule))))
 
 (defn hash-code
   "Returns the hashcode for this composite.
 
   returns: a hash code for this composite. - `int`"
-  (^Integer [^java.awt.AlphaComposite this]
+  (^Integer [^AlphaComposite this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -700,6 +700,6 @@
 
   returns: true if obj equals this
    AlphaComposite; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.AlphaComposite this ^java.lang.Object obj]
+  (^Boolean [^AlphaComposite this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

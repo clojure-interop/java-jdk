@@ -26,9 +26,9 @@
   insets - The initial insets value. - `java.awt.Insets`
   ipadx - The initial ipadx value. - `int`
   ipady - The initial ipady value. - `int`"
-  ([^Integer gridx ^Integer gridy ^Integer gridwidth ^Integer gridheight ^Double weightx ^Double weighty ^Integer anchor ^Integer fill ^java.awt.Insets insets ^Integer ipadx ^Integer ipady]
+  (^GridBagConstraints [^Integer gridx ^Integer gridy ^Integer gridwidth ^Integer gridheight ^Double weightx ^Double weighty ^Integer anchor ^Integer fill ^java.awt.Insets insets ^Integer ipadx ^Integer ipady]
     (new GridBagConstraints gridx gridy gridwidth gridheight weightx weighty anchor fill insets ipadx ipady))
-  ([]
+  (^GridBagConstraints []
     (new GridBagConstraints )))
 
 (def *-relative
@@ -600,6 +600,6 @@
   "Creates a copy of this grid bag constraint.
 
   returns: a copy of this grid bag constraint - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.GridBagConstraints this]
+  (^java.lang.Object [^GridBagConstraints this]
     (-> this (.clone))))
 

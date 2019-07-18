@@ -14,47 +14,47 @@
 
 (defn ->default-single-selection-model
   "Constructor."
-  ([]
+  (^DefaultSingleSelectionModel []
     (new DefaultSingleSelectionModel )))
 
 (defn get-selected-index
   "Description copied from interface: SingleSelectionModel
 
   returns: the model's selection, or -1 if there is no selection - `int`"
-  (^Integer [^javax.swing.DefaultSingleSelectionModel this]
+  (^Integer [^DefaultSingleSelectionModel this]
     (-> this (.getSelectedIndex))))
 
 (defn set-selected-index
   "Description copied from interface: SingleSelectionModel
 
   index - an int specifying the model selection - `int`"
-  ([^javax.swing.DefaultSingleSelectionModel this ^Integer index]
+  ([^DefaultSingleSelectionModel this ^Integer index]
     (-> this (.setSelectedIndex index))))
 
 (defn clear-selection
   "Description copied from interface: SingleSelectionModel"
-  ([^javax.swing.DefaultSingleSelectionModel this]
+  ([^DefaultSingleSelectionModel this]
     (-> this (.clearSelection))))
 
 (defn selected?
   "Description copied from interface: SingleSelectionModel
 
   returns: true if a value is currently selected - `boolean`"
-  (^Boolean [^javax.swing.DefaultSingleSelectionModel this]
+  (^Boolean [^DefaultSingleSelectionModel this]
     (-> this (.isSelected))))
 
 (defn add-change-listener
   "Adds a ChangeListener to the button.
 
   l - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.DefaultSingleSelectionModel this ^javax.swing.event.ChangeListener l]
+  ([^DefaultSingleSelectionModel this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from the button.
 
   l - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.DefaultSingleSelectionModel this ^javax.swing.event.ChangeListener l]
+  ([^DefaultSingleSelectionModel this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -64,7 +64,7 @@
   returns: all of this model's ChangeListeners
            or an empty
            array if no change listeners are currently registered - `javax.swing.event.ChangeListener[]`"
-  ([^javax.swing.DefaultSingleSelectionModel this]
+  ([^DefaultSingleSelectionModel this]
     (-> this (.getChangeListeners))))
 
 (defn get-listeners
@@ -88,7 +88,7 @@
    If no such listeners exist,
    this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners
@@ -97,6 +97,6 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^javax.swing.DefaultSingleSelectionModel this ^java.lang.Class listener-type]
+  ([^DefaultSingleSelectionModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 

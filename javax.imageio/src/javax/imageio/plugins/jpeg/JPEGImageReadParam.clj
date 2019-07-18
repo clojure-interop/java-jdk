@@ -51,14 +51,14 @@
   "Constructor.
 
   Constructs a JPEGImageReadParam."
-  ([]
+  (^JPEGImageReadParam []
     (new JPEGImageReadParam )))
 
 (defn are-tables-set
   "Returns true if tables are currently set.
 
   returns: true if tables are present. - `boolean`"
-  (^Boolean [^javax.imageio.plugins.jpeg.JPEGImageReadParam this]
+  (^Boolean [^JPEGImageReadParam this]
     (-> this (.areTablesSet))))
 
 (defn set-decode-tables
@@ -77,13 +77,13 @@
   ac-huffman-tables - an array of Huffman table objects. - `javax.imageio.plugins.jpeg.JPEGHuffmanTable[]`
 
   throws: java.lang.IllegalArgumentException - if any of the arguments is null, has more than 4 elements, or if the numbers of DC and AC tables differ."
-  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this q-tables dc-huffman-tables ac-huffman-tables]
+  ([^JPEGImageReadParam this q-tables dc-huffman-tables ac-huffman-tables]
     (-> this (.setDecodeTables q-tables dc-huffman-tables ac-huffman-tables))))
 
 (defn unset-decode-tables
   "Removes any quantization and Huffman tables that are currently
    set."
-  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this]
+  ([^JPEGImageReadParam this]
     (-> this (.unsetDecodeTables))))
 
 (defn get-q-tables
@@ -93,7 +93,7 @@
 
   returns: an array of JPEGQTable objects, or
    null. - `javax.imageio.plugins.jpeg.JPEGQTable[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this]
+  ([^JPEGImageReadParam this]
     (-> this (.getQTables))))
 
 (defn get-dc-huffman-tables
@@ -103,7 +103,7 @@
 
   returns: an array of JPEGHuffmanTable objects, or
    null. - `javax.imageio.plugins.jpeg.JPEGHuffmanTable[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this]
+  ([^JPEGImageReadParam this]
     (-> this (.getDCHuffmanTables))))
 
 (defn get-ac-huffman-tables
@@ -113,6 +113,6 @@
 
   returns: an array of JPEGHuffmanTable objects, or
    null. - `javax.imageio.plugins.jpeg.JPEGHuffmanTable[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageReadParam this]
+  ([^JPEGImageReadParam this]
     (-> this (.getACHuffmanTables))))
 

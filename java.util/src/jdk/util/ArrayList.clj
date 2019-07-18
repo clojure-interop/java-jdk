@@ -74,9 +74,9 @@
   initial-capacity - the initial capacity of the list - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified initial capacity is negative"
-  ([^Integer initial-capacity]
+  (^ArrayList [^Integer initial-capacity]
     (new ArrayList initial-capacity))
-  ([]
+  (^ArrayList []
     (new ArrayList )))
 
 (defn add-all
@@ -88,14 +88,14 @@
    specified collection's iterator.
 
   index - index at which to insert the first element from the specified collection - `int`
-  c - collection containing elements to be added to this list - `ArrayList.E>`
+  c - collection containing elements to be added to this list - `java.util.Collection`
 
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  (^Boolean [^java.util.ArrayList this ^Integer index ^ArrayList.E> c]
+  (^Boolean [^ArrayList this ^Integer index ^java.util.Collection c]
     (-> this (.addAll index c)))
-  (^Boolean [^java.util.ArrayList this ^ArrayList.E> c]
+  (^Boolean [^ArrayList this ^java.util.Collection c]
     (-> this (.addAll c))))
 
 (defn spliterator
@@ -108,31 +108,31 @@
    Overriding implementations should document the reporting of additional
    characteristic values.
 
-  returns: a Spliterator over the elements in this list - `java.util.Spliterator<ArrayList.E>`"
-  (^java.util.Spliterator [^java.util.ArrayList this]
+  returns: a Spliterator over the elements in this list - `java.util.Spliterator<E>`"
+  (^java.util.Spliterator [^ArrayList this]
     (-> this (.spliterator))))
 
 (defn for-each
   "Description copied from interface: Iterable
 
-  action - The action to be performed for each element - `ArrayList.E>`"
-  ([^java.util.ArrayList this ^ArrayList.E> action]
+  action - The action to be performed for each element - `java.util.function.Consumer`"
+  ([^ArrayList this ^java.util.function.Consumer action]
     (-> this (.forEach action))))
 
 (defn replace-all
   "Description copied from interface: List
 
-  operator - the operator to apply to each element - `java.util.function.UnaryOperator<ArrayList.E>`"
-  ([^java.util.ArrayList this ^java.util.function.UnaryOperator operator]
+  operator - the operator to apply to each element - `java.util.function.UnaryOperator`"
+  ([^ArrayList this ^java.util.function.UnaryOperator operator]
     (-> this (.replaceAll operator))))
 
 (defn remove-if
   "Description copied from interface: Collection
 
-  filter - a predicate which returns true for elements to be removed - `ArrayList.E>`
+  filter - a predicate which returns true for elements to be removed - `java.util.function.Predicate`
 
   returns: true if any elements were removed - `boolean`"
-  (^Boolean [^java.util.ArrayList this ^ArrayList.E> filter]
+  (^Boolean [^ArrayList this ^java.util.function.Predicate filter]
     (-> this (.removeIf filter))))
 
 (defn contains
@@ -144,7 +144,7 @@
   o - element whose presence in this list is to be tested - `java.lang.Object`
 
   returns: true if this list contains the specified element - `boolean`"
-  (^Boolean [^java.util.ArrayList this ^java.lang.Object o]
+  (^Boolean [^ArrayList this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn list-iterator
@@ -160,19 +160,19 @@
   index - index of the first element to be returned from the list iterator (by a call to next) - `int`
 
   returns: a list iterator over the elements in this list (in proper
-           sequence), starting at the specified position in the list - `java.util.ListIterator<ArrayList.E>`
+           sequence), starting at the specified position in the list - `java.util.ListIterator<E>`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  (^java.util.ListIterator [^java.util.ArrayList this ^Integer index]
+  (^java.util.ListIterator [^ArrayList this ^Integer index]
     (-> this (.listIterator index)))
-  (^java.util.ListIterator [^java.util.ArrayList this]
+  (^java.util.ListIterator [^ArrayList this]
     (-> this (.listIterator))))
 
 (defn sort
   "Description copied from interface: List
 
-  c - the Comparator used to compare list elements. A null value indicates that the elements' java.lang.natural ordering should be used - `ArrayList.E>`"
-  ([^java.util.ArrayList this ^ArrayList.E> c]
+  c - the Comparator used to compare list elements. A null value indicates that the elements' java.lang.natural ordering should be used - `java.util.Comparator`"
+  ([^ArrayList this ^java.util.Comparator c]
     (-> this (.sort c))))
 
 (defn iterator
@@ -180,8 +180,8 @@
 
    The returned iterator is fail-fast.
 
-  returns: an iterator over the elements in this list in proper sequence - `java.util.Iterator<ArrayList.E>`"
-  (^java.util.Iterator [^java.util.ArrayList this]
+  returns: an iterator over the elements in this list in proper sequence - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^ArrayList this]
     (-> this (.iterator))))
 
 (defn sub-list
@@ -213,10 +213,10 @@
   from-index - low endpoint (inclusive) of the subList - `int`
   to-index - high endpoint (exclusive) of the subList - `int`
 
-  returns: a view of the specified range within this list - `java.util.List<ArrayList.E>`
+  returns: a view of the specified range within this list - `java.util.List<E>`
 
   throws: java.lang.IndexOutOfBoundsException - if an endpoint index value is out of range (fromIndex < 0 || toIndex > size)"
-  (^java.util.List [^java.util.ArrayList this ^Integer from-index ^Integer to-index]
+  (^java.util.List [^ArrayList this ^Integer from-index ^Integer to-index]
     (-> this (.subList from-index to-index))))
 
 (defn last-index-of
@@ -230,7 +230,7 @@
 
   returns: the index of the last occurrence of the specified element in
            this list, or -1 if this list does not contain the element - `int`"
-  (^Integer [^java.util.ArrayList this ^java.lang.Object o]
+  (^Integer [^ArrayList this ^java.lang.Object o]
     (-> this (.lastIndexOf o))))
 
 (defn remove
@@ -240,10 +240,10 @@
 
   index - the index of the element to be removed - `int`
 
-  returns: the element that was removed from the list - `ArrayList.E`
+  returns: the element that was removed from the list - `E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  (^ArrayList.E [^java.util.ArrayList this ^Integer index]
+  ([^ArrayList this ^Integer index]
     (-> this (.remove index))))
 
 (defn ensure-capacity
@@ -252,7 +252,7 @@
    specified by the minimum capacity argument.
 
   min-capacity - the desired minimum capacity - `int`"
-  ([^java.util.ArrayList this ^Integer min-capacity]
+  ([^ArrayList this ^Integer min-capacity]
     (-> this (.ensureCapacity min-capacity))))
 
 (defn clone
@@ -260,7 +260,7 @@
    elements themselves are not copied.)
 
   returns: a clone of this ArrayList instance - `java.lang.Object`"
-  (^java.lang.Object [^java.util.ArrayList this]
+  (^java.lang.Object [^ArrayList this]
     (-> this (.clone))))
 
 (defn add
@@ -269,12 +269,12 @@
    any subsequent elements to the right (adds one to their indices).
 
   index - index at which the specified element is to be inserted - `int`
-  element - element to be inserted - `ArrayList.E`
+  element - element to be inserted - `E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  ([^java.util.ArrayList this ^Integer index ^ArrayList.E element]
+  ([^ArrayList this ^Integer index element]
     (-> this (.add index element)))
-  (^Boolean [^java.util.ArrayList this ^ArrayList.E e]
+  (^Boolean [^ArrayList this e]
     (-> this (.add e))))
 
 (defn set
@@ -282,26 +282,26 @@
    the specified element.
 
   index - index of the element to replace - `int`
-  element - element to be stored at the specified position - `ArrayList.E`
+  element - element to be stored at the specified position - `E`
 
-  returns: the element previously at the specified position - `ArrayList.E`
+  returns: the element previously at the specified position - `E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  (^ArrayList.E [^java.util.ArrayList this ^Integer index ^ArrayList.E element]
+  ([^ArrayList this ^Integer index element]
     (-> this (.set index element))))
 
 (defn empty?
   "Returns true if this list contains no elements.
 
   returns: true if this list contains no elements - `boolean`"
-  (^Boolean [^java.util.ArrayList this]
+  (^Boolean [^ArrayList this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of elements in this list.
 
   returns: the number of elements in this list - `int`"
-  (^Integer [^java.util.ArrayList this]
+  (^Integer [^ArrayList this]
     (-> this (.size))))
 
 (defn retain-all
@@ -309,18 +309,18 @@
    specified collection.  In other words, removes from this list all
    of its elements that are not contained in the specified collection.
 
-  c - collection containing elements to be retained in this list - `java.util.Collection<?>`
+  c - collection containing elements to be retained in this list - `java.util.Collection`
 
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of an element of this list is incompatible with the specified collection (optional)"
-  (^Boolean [^java.util.ArrayList this ^java.util.Collection c]
+  (^Boolean [^ArrayList this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
   "Removes all of the elements from this list.  The list will
    be empty after this call returns."
-  ([^java.util.ArrayList this]
+  ([^ArrayList this]
     (-> this (.clear))))
 
 (defn index-of
@@ -334,7 +334,7 @@
 
   returns: the index of the first occurrence of the specified element in
            this list, or -1 if this list does not contain the element - `int`"
-  (^Integer [^java.util.ArrayList this ^java.lang.Object o]
+  (^Integer [^ArrayList this ^java.lang.Object o]
     (-> this (.indexOf o))))
 
 (defn to-array
@@ -357,21 +357,21 @@
   returns: an array containing the elements of the list - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this list"
-  ([^java.util.ArrayList this a]
+  ([^ArrayList this a]
     (-> this (.toArray a)))
-  ([^java.util.ArrayList this]
+  ([^ArrayList this]
     (-> this (.toArray))))
 
 (defn remove-all
   "Removes from this list all of its elements that are contained in the
    specified collection.
 
-  c - collection containing elements to be removed from this list - `java.util.Collection<?>`
+  c - collection containing elements to be removed from this list - `java.util.Collection`
 
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of an element of this list is incompatible with the specified collection (optional)"
-  (^Boolean [^java.util.ArrayList this ^java.util.Collection c]
+  (^Boolean [^ArrayList this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn get
@@ -379,16 +379,16 @@
 
   index - index of the element to return - `int`
 
-  returns: the element at the specified position in this list - `ArrayList.E`
+  returns: the element at the specified position in this list - `E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  (^ArrayList.E [^java.util.ArrayList this ^Integer index]
+  ([^ArrayList this ^Integer index]
     (-> this (.get index))))
 
 (defn trim-to-size
   "Trims the capacity of this ArrayList instance to be the
    list's current size.  An application can use this operation to minimize
    the storage of an ArrayList instance."
-  ([^java.util.ArrayList this]
+  ([^ArrayList this]
     (-> this (.trimToSize))))
 

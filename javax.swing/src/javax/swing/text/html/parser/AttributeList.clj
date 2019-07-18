@@ -19,11 +19,11 @@
   type - `int`
   modifier - `int`
   value - `java.lang.String`
-  values - `java.util.Vector<?>`
+  values - `java.util.Vector`
   next - `javax.swing.text.html.parser.AttributeList`"
-  ([^java.lang.String name ^Integer type ^Integer modifier ^java.lang.String value ^java.util.Vector values ^javax.swing.text.html.parser.AttributeList next]
+  (^AttributeList [^java.lang.String name ^Integer type ^Integer modifier ^java.lang.String value ^java.util.Vector values ^javax.swing.text.html.parser.AttributeList next]
     (new AttributeList name type modifier value values next))
-  ([^java.lang.String name]
+  (^AttributeList [^java.lang.String name]
     (new AttributeList name)))
 
 (defn -name
@@ -84,38 +84,38 @@
 
 (defn get-name
   "returns: attribute name - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.html.parser.AttributeList this]
+  (^java.lang.String [^AttributeList this]
     (-> this (.getName))))
 
 (defn get-type
   "returns: attribute type - `int`"
-  (^Integer [^javax.swing.text.html.parser.AttributeList this]
+  (^Integer [^AttributeList this]
     (-> this (.getType))))
 
 (defn get-modifier
   "returns: attribute modifier - `int`"
-  (^Integer [^javax.swing.text.html.parser.AttributeList this]
+  (^Integer [^AttributeList this]
     (-> this (.getModifier))))
 
 (defn get-values
   "returns: possible attribute values - `java.util.Enumeration<?>`"
-  (^java.util.Enumeration [^javax.swing.text.html.parser.AttributeList this]
+  (^java.util.Enumeration [^AttributeList this]
     (-> this (.getValues))))
 
 (defn get-value
   "returns: default attribute value - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.html.parser.AttributeList this]
+  (^java.lang.String [^AttributeList this]
     (-> this (.getValue))))
 
 (defn get-next
   "returns: the next attribute in the list - `javax.swing.text.html.parser.AttributeList`"
-  (^javax.swing.text.html.parser.AttributeList [^javax.swing.text.html.parser.AttributeList this]
+  (^javax.swing.text.html.parser.AttributeList [^AttributeList this]
     (-> this (.getNext))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: string representation - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.html.parser.AttributeList this]
+  (^java.lang.String [^AttributeList this]
     (-> this (.toString))))
 

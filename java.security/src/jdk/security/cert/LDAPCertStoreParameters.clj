@@ -25,25 +25,25 @@
   port - the port number of the LDAP server - `int`
 
   throws: java.lang.NullPointerException - if serverName is null"
-  ([^java.lang.String server-name ^Integer port]
+  (^LDAPCertStoreParameters [^java.lang.String server-name ^Integer port]
     (new LDAPCertStoreParameters server-name port))
-  ([^java.lang.String server-name]
+  (^LDAPCertStoreParameters [^java.lang.String server-name]
     (new LDAPCertStoreParameters server-name))
-  ([]
+  (^LDAPCertStoreParameters []
     (new LDAPCertStoreParameters )))
 
 (defn get-server-name
   "Returns the DNS name of the LDAP server.
 
   returns: the name (not null) - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.LDAPCertStoreParameters this]
+  (^java.lang.String [^LDAPCertStoreParameters this]
     (-> this (.getServerName))))
 
 (defn get-port
   "Returns the port number of the LDAP server.
 
   returns: the port number - `int`"
-  (^Integer [^java.security.cert.LDAPCertStoreParameters this]
+  (^Integer [^LDAPCertStoreParameters this]
     (-> this (.getPort))))
 
 (defn clone
@@ -56,13 +56,13 @@
    that should not be shared.
 
   returns: the copy - `java.lang.Object`"
-  (^java.lang.Object [^java.security.cert.LDAPCertStoreParameters this]
+  (^java.lang.Object [^LDAPCertStoreParameters this]
     (-> this (.clone))))
 
 (defn to-string
   "Returns a formatted string describing the parameters.
 
   returns: a formatted string describing the parameters - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.LDAPCertStoreParameters this]
+  (^java.lang.String [^LDAPCertStoreParameters this]
     (-> this (.toString))))
 

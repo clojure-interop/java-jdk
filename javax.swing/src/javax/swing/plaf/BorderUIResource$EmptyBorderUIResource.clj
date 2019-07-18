@@ -9,8 +9,8 @@
   left - `int`
   bottom - `int`
   right - `int`"
-  ([^Integer top ^Integer left ^Integer bottom ^Integer right]
+  (^BorderUIResource$EmptyBorderUIResource [^Integer top ^Integer left ^Integer bottom ^Integer right]
     (new BorderUIResource$EmptyBorderUIResource top left bottom right))
-  ([^java.awt.Insets insets]
+  (^BorderUIResource$EmptyBorderUIResource [^java.awt.Insets insets]
     (new BorderUIResource$EmptyBorderUIResource insets)))
 

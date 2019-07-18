@@ -44,7 +44,7 @@
   end-time - the time after which the ticket will no longer be valid - `java.util.Date`
   renew-till - an absolute expiration time for the ticket, including all renewal that might be possible. This field may be null for tickets that are not renewable. - `java.util.Date`
   client-addresses - the addresses from where the ticket may be used by the client. This field may be null when the ticket is usable from any address. - `java.net.InetAddress[]`"
-  ([asn-1-encoding ^javax.security.auth.kerberos.KerberosPrincipal client ^javax.security.auth.kerberos.KerberosPrincipal server session-key ^Integer key-type flags ^java.util.Date auth-time ^java.util.Date start-time ^java.util.Date end-time ^java.util.Date renew-till client-addresses]
+  (^KerberosTicket [asn-1-encoding ^javax.security.auth.kerberos.KerberosPrincipal client ^javax.security.auth.kerberos.KerberosPrincipal server session-key ^Integer key-type flags ^java.util.Date auth-time ^java.util.Date start-time ^java.util.Date end-time ^java.util.Date renew-till client-addresses]
     (new KerberosTicket asn-1-encoding client server session-key key-type flags auth-time start-time end-time renew-till client-addresses)))
 
 (defn initial?
@@ -53,7 +53,7 @@
 
   returns: true if this ticket was issued using the Kerberos AS-Exchange
    protocol, false if not. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Boolean [^KerberosTicket this]
     (-> this (.isInitial))))
 
 (defn renewable?
@@ -61,7 +61,7 @@
    renewing is not already over.
 
   returns: true if this ticket is renewable, false if not. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Boolean [^KerberosTicket this]
     (-> this (.isRenewable))))
 
 (defn get-session-key-type
@@ -70,14 +70,14 @@
 
   returns: the key type of the session key associated with this
    ticket. - `int`"
-  (^Integer [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Integer [^KerberosTicket this]
     (-> this (.getSessionKeyType))))
 
 (defn get-client
   "Returns the client principal associated with this ticket.
 
   returns: the client principal. - `javax.security.auth.kerberos.KerberosPrincipal`"
-  (^javax.security.auth.kerberos.KerberosPrincipal [^javax.security.auth.kerberos.KerberosTicket this]
+  (^javax.security.auth.kerberos.KerberosPrincipal [^KerberosTicket this]
     (-> this (.getClient))))
 
 (defn get-client-addresses
@@ -85,7 +85,7 @@
 
   returns: ths list of addresses or null, if the field was not
    provided. - `java.net.InetAddress[]`"
-  ([^javax.security.auth.kerberos.KerberosTicket this]
+  ([^KerberosTicket this]
     (-> this (.getClientAddresses))))
 
 (defn get-start-time
@@ -93,14 +93,14 @@
 
   returns: the start time for this ticket's validity period
            or null if not set. - `java.util.Date`"
-  (^java.util.Date [^javax.security.auth.kerberos.KerberosTicket this]
+  (^java.util.Date [^KerberosTicket this]
     (-> this (.getStartTime))))
 
 (defn get-server
   "Returns the service principal associated with this ticket.
 
   returns: the service principal. - `javax.security.auth.kerberos.KerberosPrincipal`"
-  (^javax.security.auth.kerberos.KerberosPrincipal [^javax.security.auth.kerberos.KerberosTicket this]
+  (^javax.security.auth.kerberos.KerberosPrincipal [^KerberosTicket this]
     (-> this (.getServer))))
 
 (defn current?
@@ -108,7 +108,7 @@
 
   returns: true if this Object is currently current,
             false otherwise. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Boolean [^KerberosTicket this]
     (-> this (.isCurrent))))
 
 (defn forwarded?
@@ -118,14 +118,14 @@
   returns: true if this ticket had been forwarded or was issued based on
    authentication involving a forwarded ticket-granting ticket,
    false otherwise. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Boolean [^KerberosTicket this]
     (-> this (.isForwarded))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.kerberos.KerberosTicket this]
+  (^java.lang.String [^KerberosTicket this]
     (-> this (.toString))))
 
 (defn refresh
@@ -141,14 +141,14 @@
    time.
 
   throws: javax.security.auth.RefreshFailedException - if the ticket is not renewable, or the latest allowable renew time has passed, or the KDC returns some error."
-  ([^javax.security.auth.kerberos.KerberosTicket this]
+  ([^KerberosTicket this]
     (-> this (.refresh))))
 
 (defn postdated?
   "Determines is this ticket is post-dated.
 
   returns: true if this ticket is post-dated, false if not. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Boolean [^KerberosTicket this]
     (-> this (.isPostdated))))
 
 (defn get-flags
@@ -157,7 +157,7 @@
    ASN.1 BitString that represents the ticket flags.
 
   returns: the flags associated with this ticket. - `boolean[]`"
-  ([^javax.security.auth.kerberos.KerberosTicket this]
+  ([^KerberosTicket this]
     (-> this (.getFlags))))
 
 (defn get-auth-time
@@ -165,7 +165,7 @@
 
   returns: the time that the client was authenticated
            or null if not set. - `java.util.Date`"
-  (^java.util.Date [^javax.security.auth.kerberos.KerberosTicket this]
+  (^java.util.Date [^KerberosTicket this]
     (-> this (.getAuthTime))))
 
 (defn destroy
@@ -173,49 +173,49 @@
    it.
 
   throws: javax.security.auth.DestroyFailedException - if the destroy operation fails."
-  ([^javax.security.auth.kerberos.KerberosTicket this]
+  ([^KerberosTicket this]
     (-> this (.destroy))))
 
 (defn get-session-key
   "Returns the session key associated with this ticket.
 
   returns: the session key. - `javax.crypto.SecretKey`"
-  (^javax.crypto.SecretKey [^javax.security.auth.kerberos.KerberosTicket this]
+  (^javax.crypto.SecretKey [^KerberosTicket this]
     (-> this (.getSessionKey))))
 
 (defn get-end-time
   "Returns the expiration time for this ticket's validity period.
 
   returns: the expiration time for this ticket's validity period. - `java.util.Date`"
-  (^java.util.Date [^javax.security.auth.kerberos.KerberosTicket this]
+  (^java.util.Date [^KerberosTicket this]
     (-> this (.getEndTime))))
 
 (defn forwardable?
   "Determines if this ticket is forwardable.
 
   returns: true if this ticket is forwardable, false if not. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Boolean [^KerberosTicket this]
     (-> this (.isForwardable))))
 
 (defn get-encoded
   "Returns an ASN.1 encoding of the entire ticket.
 
   returns: an ASN.1 encoding of the entire ticket. - `byte[]`"
-  ([^javax.security.auth.kerberos.KerberosTicket this]
+  ([^KerberosTicket this]
     (-> this (.getEncoded))))
 
 (defn hash-code
   "Returns a hashcode for this KerberosTicket.
 
   returns: a hashCode() for the KerberosTicket - `int`"
-  (^Integer [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Integer [^KerberosTicket this]
     (-> this (.hashCode))))
 
 (defn proxiable?
   "Determines if this ticket is proxiable.
 
   returns: true if this ticket is proxiable, false if not. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Boolean [^KerberosTicket this]
     (-> this (.isProxiable))))
 
 (defn destroyed?
@@ -223,7 +223,7 @@
 
   returns: true if this Object has been destroyed,
             false otherwise. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Boolean [^KerberosTicket this]
     (-> this (.isDestroyed))))
 
 (defn equals
@@ -237,14 +237,14 @@
   returns: true if the specified object is equal to this KerberosTicket,
    false otherwise. NOTE: Returns false if either of the KerberosTicket
    objects has been destroyed. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosTicket this ^java.lang.Object other]
+  (^Boolean [^KerberosTicket this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn proxy?
   "Determines is this ticket is a proxy-ticket.
 
   returns: true if this ticket is a proxy-ticket, false if not. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosTicket this]
+  (^Boolean [^KerberosTicket this]
     (-> this (.isProxy))))
 
 (defn get-renew-till
@@ -252,6 +252,6 @@
    renewals. This will return a null value for non-renewable tickets.
 
   returns: the latest expiration time for this ticket. - `java.util.Date`"
-  (^java.util.Date [^javax.security.auth.kerberos.KerberosTicket this]
+  (^java.util.Date [^KerberosTicket this]
     (-> this (.getRenewTill))))
 

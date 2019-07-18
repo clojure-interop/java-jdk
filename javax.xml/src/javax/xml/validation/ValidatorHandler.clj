@@ -122,7 +122,7 @@
    This method can be called even during a middle of a validation.
 
   receiver - A ContentHandler or a null value. - `org.xml.sax.ContentHandler`"
-  ([^javax.xml.validation.ValidatorHandler this ^org.xml.sax.ContentHandler receiver]
+  ([^ValidatorHandler this ^org.xml.sax.ContentHandler receiver]
     (-> this (.setContentHandler receiver))))
 
 (defn get-feature?
@@ -142,7 +142,7 @@
   returns: The current value of the feature (true or false). - `boolean`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the feature value can't be assigned or retrieved."
-  (^Boolean [^javax.xml.validation.ValidatorHandler this ^java.lang.String name]
+  (^Boolean [^ValidatorHandler this ^java.lang.String name]
     (-> this (.getFeature name))))
 
 (defn get-resource-resolver
@@ -152,7 +152,7 @@
         the setResourceResolver(LSResourceResolver) method, or null
         if that method has never been called since this ValidatorHandler
         has created. - `org.w3c.dom.ls.LSResourceResolver`"
-  (^org.w3c.dom.ls.LSResourceResolver [^javax.xml.validation.ValidatorHandler this]
+  (^org.w3c.dom.ls.LSResourceResolver [^ValidatorHandler this]
     (-> this (.getResourceResolver))))
 
 (defn set-resource-resolver
@@ -190,7 +190,7 @@
    this field is set to null.
 
   resource-resolver - A new resource resolver to be set. This parameter can be null. - `org.w3c.dom.ls.LSResourceResolver`"
-  ([^javax.xml.validation.ValidatorHandler this ^org.w3c.dom.ls.LSResourceResolver resource-resolver]
+  ([^ValidatorHandler this ^org.w3c.dom.ls.LSResourceResolver resource-resolver]
     (-> this (.setResourceResolver resource-resolver))))
 
 (defn get-type-info-provider
@@ -210,7 +210,7 @@
   returns: null if the validator / schema language does not support
         the notion of TypeInfo.
         Otherwise a non-null valid TypeInfoProvider. - `javax.xml.validation.TypeInfoProvider`"
-  (^javax.xml.validation.TypeInfoProvider [^javax.xml.validation.ValidatorHandler this]
+  (^javax.xml.validation.TypeInfoProvider [^ValidatorHandler this]
     (-> this (.getTypeInfoProvider))))
 
 (defn get-error-handler
@@ -220,7 +220,7 @@
         the setErrorHandler(ErrorHandler) method, or null
         if that method has never been called since this ValidatorHandler
         has created. - `org.xml.sax.ErrorHandler`"
-  (^org.xml.sax.ErrorHandler [^javax.xml.validation.ValidatorHandler this]
+  (^org.xml.sax.ErrorHandler [^ValidatorHandler this]
     (-> this (.getErrorHandler))))
 
 (defn set-error-handler
@@ -271,7 +271,7 @@
    this field is set to null.
 
   error-handler - A new error handler to be set. This parameter can be null. - `org.xml.sax.ErrorHandler`"
-  ([^javax.xml.validation.ValidatorHandler this ^org.xml.sax.ErrorHandler error-handler]
+  ([^ValidatorHandler this ^org.xml.sax.ErrorHandler error-handler]
     (-> this (.setErrorHandler error-handler))))
 
 (defn get-property
@@ -294,7 +294,7 @@
   returns: The current value of the property. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the property value can't be assigned or retrieved."
-  (^java.lang.Object [^javax.xml.validation.ValidatorHandler this ^java.lang.String name]
+  (^java.lang.Object [^ValidatorHandler this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn set-feature
@@ -327,7 +327,7 @@
   value - The requested value of the feature (true or false). - `boolean`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the feature value can't be assigned or retrieved."
-  ([^javax.xml.validation.ValidatorHandler this ^java.lang.String name ^Boolean value]
+  ([^ValidatorHandler this ^java.lang.String name ^Boolean value]
     (-> this (.setFeature name value))))
 
 (defn set-property
@@ -347,7 +347,7 @@
   object - The requested value for the property. - `java.lang.Object`
 
   throws: org.xml.sax.SAXNotRecognizedException - If the property value can't be assigned or retrieved."
-  ([^javax.xml.validation.ValidatorHandler this ^java.lang.String name ^java.lang.Object object]
+  ([^ValidatorHandler this ^java.lang.String name ^java.lang.Object object]
     (-> this (.setProperty name object))))
 
 (defn get-content-handler
@@ -358,6 +358,6 @@
         the getContentHandler() method, or null
         if that method has never been called since this ValidatorHandler
         has created. - `org.xml.sax.ContentHandler`"
-  (^org.xml.sax.ContentHandler [^javax.xml.validation.ValidatorHandler this]
+  (^org.xml.sax.ContentHandler [^ValidatorHandler this]
     (-> this (.getContentHandler))))
 

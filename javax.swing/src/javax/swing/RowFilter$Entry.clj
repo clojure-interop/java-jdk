@@ -11,14 +11,14 @@
   "Constructor.
 
   Creates an Entry."
-  ([]
+  (^RowFilter$Entry []
     (new RowFilter$Entry )))
 
 (defn get-model
   "Returns the underlying model.
 
-  returns: the model containing the data that this entry represents - `RowFilter.Entry.M`"
-  (^RowFilter.Entry.M [^javax.swing.RowFilter$Entry this]
+  returns: the model containing the data that this entry represents - `M`"
+  ([^RowFilter$Entry this]
     (-> this (.getModel))))
 
 (defn get-value-count
@@ -27,7 +27,7 @@
    number of columns.
 
   returns: number of values in the object being filtered - `int`"
-  (^Integer [^javax.swing.RowFilter$Entry this]
+  (^Integer [^RowFilter$Entry this]
     (-> this (.getValueCount))))
 
 (defn get-value
@@ -40,7 +40,7 @@
   returns: value at the specified index - `java.lang.Object`
 
   throws: java.lang.IndexOutOfBoundsException - if index < 0 or >= getValueCount"
-  (^java.lang.Object [^javax.swing.RowFilter$Entry this ^Integer index]
+  (^java.lang.Object [^RowFilter$Entry this ^Integer index]
     (-> this (.getValue index))))
 
 (defn get-string-value
@@ -60,7 +60,7 @@
   returns: non-null string at the specified index - `java.lang.String`
 
   throws: java.lang.IndexOutOfBoundsException - if index < 0 || >= getValueCount"
-  (^java.lang.String [^javax.swing.RowFilter$Entry this ^Integer index]
+  (^java.lang.String [^RowFilter$Entry this ^Integer index]
     (-> this (.getStringValue index))))
 
 (defn get-identifier
@@ -69,7 +69,7 @@
    expressed as an Integer.
 
   returns: a model-based (not view-based) identifier for
-           this entry - `RowFilter.Entry.I`"
-  (^RowFilter.Entry.I [^javax.swing.RowFilter$Entry this]
+           this entry - `I`"
+  ([^RowFilter$Entry this]
     (-> this (.getIdentifier))))
 

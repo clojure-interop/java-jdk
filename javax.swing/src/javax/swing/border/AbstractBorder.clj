@@ -16,7 +16,7 @@
 
 (defn ->abstract-border
   "Constructor."
-  ([]
+  (^AbstractBorder []
     (new AbstractBorder )))
 
 (defn *get-interior-rectangle
@@ -44,7 +44,7 @@
   y - the y position of the painted border - `int`
   width - the width of the painted border - `int`
   height - the height of the painted border - `int`"
-  ([^javax.swing.border.AbstractBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
+  ([^AbstractBorder this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.paintBorder c g x y width height))))
 
 (defn get-border-insets
@@ -54,16 +54,16 @@
   insets - the object to be reinitialized - `java.awt.Insets`
 
   returns: the insets object - `java.awt.Insets`"
-  (^java.awt.Insets [^javax.swing.border.AbstractBorder this ^java.awt.Component c ^java.awt.Insets insets]
+  (^java.awt.Insets [^AbstractBorder this ^java.awt.Component c ^java.awt.Insets insets]
     (-> this (.getBorderInsets c insets)))
-  (^java.awt.Insets [^javax.swing.border.AbstractBorder this ^java.awt.Component c]
+  (^java.awt.Insets [^AbstractBorder this ^java.awt.Component c]
     (-> this (.getBorderInsets c))))
 
 (defn border-opaque?
   "This default implementation returns false.
 
   returns: false - `boolean`"
-  (^Boolean [^javax.swing.border.AbstractBorder this]
+  (^Boolean [^AbstractBorder this]
     (-> this (.isBorderOpaque))))
 
 (defn get-interior-rectangle
@@ -76,7 +76,7 @@
   height - the height of the border - `int`
 
   returns: a Rectangle containing the interior coordinates - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.border.AbstractBorder this ^java.awt.Component c ^Integer x ^Integer y ^Integer width ^Integer height]
+  (^java.awt.Rectangle [^AbstractBorder this ^java.awt.Component c ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.getInteriorRectangle c x y width height))))
 
 (defn get-baseline
@@ -97,7 +97,7 @@
            baseline - `int`
 
   throws: java.lang.IllegalArgumentException - if width or height is < 0"
-  (^Integer [^javax.swing.border.AbstractBorder this ^java.awt.Component c ^Integer width ^Integer height]
+  (^Integer [^AbstractBorder this ^java.awt.Component c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-baseline-resize-behavior
@@ -119,7 +119,7 @@
   c - Component to return baseline resize behavior for - `java.awt.Component`
 
   returns: an enum indicating how the baseline changes as the border is
-           resized - `java.awt.Component.BaselineResizeBehavior`"
-  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.border.AbstractBorder this ^java.awt.Component c]
+           resized - `java.awt.Component$BaselineResizeBehavior`"
+  (^java.awt.Component$BaselineResizeBehavior [^AbstractBorder this ^java.awt.Component c]
     (-> this (.getBaselineResizeBehavior c))))
 

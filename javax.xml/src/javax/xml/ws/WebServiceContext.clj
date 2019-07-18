@@ -18,7 +18,7 @@
   returns: MessageContext The message context. - `javax.xml.ws.handler.MessageContext`
 
   throws: java.lang.IllegalStateException - This exception is thrown if the method is called while no request is being serviced."
-  (^javax.xml.ws.handler.MessageContext [^javax.xml.ws.WebServiceContext this]
+  (^javax.xml.ws.handler.MessageContext [^WebServiceContext this]
     (-> this (.getMessageContext))))
 
 (defn get-user-principal
@@ -30,7 +30,7 @@
   returns: Principal The principal object. - `java.security.Principal`
 
   throws: java.lang.IllegalStateException - This exception is thrown if the method is called while no request is being serviced."
-  (^java.security.Principal [^javax.xml.ws.WebServiceContext this]
+  (^java.security.Principal [^WebServiceContext this]
     (-> this (.getUserPrincipal))))
 
 (defn user-in-role?
@@ -45,14 +45,14 @@
    the sender of the request belongs to a given role - `boolean`
 
   throws: java.lang.IllegalStateException - This exception is thrown if the method is called while no request is being serviced."
-  (^Boolean [^javax.xml.ws.WebServiceContext this ^java.lang.String role]
+  (^Boolean [^WebServiceContext this ^java.lang.String role]
     (-> this (.isUserInRole role))))
 
 (defn get-endpoint-reference
   "Returns the EndpointReference associated with
    this endpoint.
 
-  clazz - The type of EndpointReference that MUST be returned. - `java.lang.Class<T>`
+  clazz - The type of EndpointReference that MUST be returned. - `java.lang.Class`
   reference-parameters - Reference parameters to be associated with the returned EndpointReference instance. - `org.w3c.dom.Element`
 
   returns: EndpointReference of type clazz of the endpoint
@@ -62,8 +62,8 @@
    the specified referenceParameters. - `<T extends javax.xml.ws.EndpointReference> T`
 
   throws: java.lang.IllegalStateException - This exception is thrown if the method is called while no request is being serviced."
-  ([^javax.xml.ws.WebServiceContext this ^java.lang.Class clazz ^org.w3c.dom.Element reference-parameters]
+  ([^WebServiceContext this ^java.lang.Class clazz ^org.w3c.dom.Element reference-parameters]
     (-> this (.getEndpointReference clazz reference-parameters)))
-  (^javax.xml.ws.EndpointReference [^javax.xml.ws.WebServiceContext this ^org.w3c.dom.Element reference-parameters]
+  (^javax.xml.ws.EndpointReference [^WebServiceContext this ^org.w3c.dom.Element reference-parameters]
     (-> this (.getEndpointReference reference-parameters))))
 

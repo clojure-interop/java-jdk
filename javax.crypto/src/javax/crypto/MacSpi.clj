@@ -11,7 +11,7 @@
 
 (defn ->mac-spi
   "Constructor."
-  ([]
+  (^MacSpi []
     (new MacSpi )))
 
 (defn clone
@@ -20,6 +20,6 @@
   returns: a clone if the implementation is cloneable. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if this is called on an implementation that does not support Cloneable."
-  (^java.lang.Object [^javax.crypto.MacSpi this]
+  (^java.lang.Object [^MacSpi this]
     (-> this (.clone))))
 

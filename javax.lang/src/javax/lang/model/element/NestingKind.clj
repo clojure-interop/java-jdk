@@ -68,6 +68,6 @@
    is not static.
 
   returns: whether or not the constant is nested - `boolean`"
-  (^Boolean [^javax.lang.model.element.NestingKind this]
+  (^Boolean [^NestingKind this]
     (-> this (.isNested))))
 

@@ -12,6 +12,6 @@
   source - a string identifying the source file or null if not known - `java.lang.String`
   target - a string identifying the target file or null if not known - `java.lang.String`
   reason - a reason message with additional information - `java.lang.String`"
-  ([^java.lang.String source ^java.lang.String target ^java.lang.String reason]
+  (^AtomicMoveNotSupportedException [^java.lang.String source ^java.lang.String target ^java.lang.String reason]
     (new AtomicMoveNotSupportedException source target reason)))
 

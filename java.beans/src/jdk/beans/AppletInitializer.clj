@@ -29,7 +29,7 @@
 
   new-applet-bean - The newly instantiated JavaBean - `java.applet.Applet`
   b-ctxt - The BeanContext intended for this Applet, or null. - `java.beans.beancontext.BeanContext`"
-  ([^java.beans.AppletInitializer this ^java.applet.Applet new-applet-bean ^java.beans.beancontext.BeanContext b-ctxt]
+  ([^AppletInitializer this ^java.applet.Applet new-applet-bean ^java.beans.beancontext.BeanContext b-ctxt]
     (-> this (.initialize new-applet-bean b-ctxt))))
 
 (defn activate
@@ -38,6 +38,6 @@
    method.
 
   new-applet - The newly instantiated JavaBean - `java.applet.Applet`"
-  ([^java.beans.AppletInitializer this ^java.applet.Applet new-applet]
+  ([^AppletInitializer this ^java.applet.Applet new-applet]
     (-> this (.activate new-applet))))
 

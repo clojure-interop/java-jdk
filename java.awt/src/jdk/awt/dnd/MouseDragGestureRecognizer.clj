@@ -28,7 +28,7 @@
   "Invoked when the mouse has been clicked on a component.
 
   e - the MouseEvent - `java.awt.event.MouseEvent`"
-  ([^java.awt.dnd.MouseDragGestureRecognizer this ^java.awt.event.MouseEvent e]
+  ([^MouseDragGestureRecognizer this e]
     (-> this (.mouseClicked e))))
 
 (defn mouse-pressed
@@ -36,35 +36,35 @@
    pressed on a Component.
 
   e - the MouseEvent - `java.awt.event.MouseEvent`"
-  ([^java.awt.dnd.MouseDragGestureRecognizer this ^java.awt.event.MouseEvent e]
+  ([^MouseDragGestureRecognizer this e]
     (-> this (.mousePressed e))))
 
 (defn mouse-released
   "Invoked when a mouse button has been released on a component.
 
   e - the MouseEvent - `java.awt.event.MouseEvent`"
-  ([^java.awt.dnd.MouseDragGestureRecognizer this ^java.awt.event.MouseEvent e]
+  ([^MouseDragGestureRecognizer this e]
     (-> this (.mouseReleased e))))
 
 (defn mouse-entered
   "Invoked when the mouse enters a component.
 
   e - the MouseEvent - `java.awt.event.MouseEvent`"
-  ([^java.awt.dnd.MouseDragGestureRecognizer this ^java.awt.event.MouseEvent e]
+  ([^MouseDragGestureRecognizer this e]
     (-> this (.mouseEntered e))))
 
 (defn mouse-exited
   "Invoked when the mouse exits a component.
 
   e - the MouseEvent - `java.awt.event.MouseEvent`"
-  ([^java.awt.dnd.MouseDragGestureRecognizer this ^java.awt.event.MouseEvent e]
+  ([^MouseDragGestureRecognizer this e]
     (-> this (.mouseExited e))))
 
 (defn mouse-dragged
   "Invoked when a mouse button is pressed on a component.
 
   e - the MouseEvent - `java.awt.event.MouseEvent`"
-  ([^java.awt.dnd.MouseDragGestureRecognizer this ^java.awt.event.MouseEvent e]
+  ([^MouseDragGestureRecognizer this e]
     (-> this (.mouseDragged e))))
 
 (defn mouse-moved
@@ -72,6 +72,6 @@
    (with no buttons no down).
 
   e - the MouseEvent - `java.awt.event.MouseEvent`"
-  ([^java.awt.dnd.MouseDragGestureRecognizer this ^java.awt.event.MouseEvent e]
+  ([^MouseDragGestureRecognizer this e]
     (-> this (.mouseMoved e))))
 

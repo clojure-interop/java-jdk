@@ -34,6 +34,6 @@
    invocation on the proxy instance. - `java.lang.Object`
 
   throws: java.lang.Throwable - the exception to throw from the method invocation on the proxy instance. The exception's type must be assignable either to any of the exception types declared in the throws clause of the interface method or to the unchecked exception types java.lang.RuntimeException or java.lang.Error. If a checked exception is thrown by this method that is not assignable to any of the exception types declared in the throws clause of the interface method, then an UndeclaredThrowableException containing the exception that was thrown by this method will be thrown by the method invocation on the proxy instance."
-  (^java.lang.Object [^java.lang.reflect.InvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method args]
+  (^java.lang.Object [^InvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method args]
     (-> this (.invoke proxy method args))))
 

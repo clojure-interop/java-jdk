@@ -117,7 +117,7 @@
   locale - the locale to use, not null - `java.util.Locale`
 
   returns: the text value of the era, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.chrono.JapaneseEra this ^java.time.format.TextStyle style ^java.util.Locale locale]
+  (^java.lang.String [^JapaneseEra this ^java.time.format.TextStyle style ^java.util.Locale locale]
     (-> this (.getDisplayName style locale))))
 
 (defn get-value
@@ -128,7 +128,7 @@
    Earlier eras are numbered 0 (TAISHO), -1 (MEIJI)).
 
   returns: the era value - `int`"
-  (^Integer [^java.time.chrono.JapaneseEra this]
+  (^Integer [^JapaneseEra this]
     (-> this (.getValue))))
 
 (defn range
@@ -156,13 +156,13 @@
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`
 
   throws: java.time.DateTimeException - if the range for the field cannot be obtained"
-  (^java.time.temporal.ValueRange [^java.time.chrono.JapaneseEra this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^JapaneseEra this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.time.chrono.JapaneseEra this]
+  (^java.lang.String [^JapaneseEra this]
     (-> this (.toString))))
 

@@ -23,12 +23,12 @@
   "Constructor.
 
   Default constructor."
-  ([]
+  (^StringMonitor []
     (new StringMonitor )))
 
 (defn stop
   "Stops the string monitor."
-  ([^javax.management.monitor.StringMonitor this]
+  ([^StringMonitor this]
     (-> this (.stop))))
 
 (defn set-notify-differ
@@ -36,7 +36,7 @@
    all observed MBeans.
 
   value - The differing notification's on/off switch value. - `boolean`"
-  ([^javax.management.monitor.StringMonitor this ^Boolean value]
+  ([^StringMonitor this ^Boolean value]
     (-> this (.setNotifyDiffer value))))
 
 (defn get-derived-gauge-time-stamp
@@ -47,9 +47,9 @@
   object - the name of the object whose derived gauge timestamp is to be returned. - `javax.management.ObjectName`
 
   returns: The derived gauge timestamp of the specified object. - `long`"
-  (^Long [^javax.management.monitor.StringMonitor this ^javax.management.ObjectName object]
+  (^Long [^StringMonitor this ^javax.management.ObjectName object]
     (-> this (.getDerivedGaugeTimeStamp object)))
-  ([^javax.management.monitor.StringMonitor this]
+  (^Long [^StringMonitor this]
     (-> this (.getDerivedGaugeTimeStamp))))
 
 (defn get-notification-info
@@ -58,7 +58,7 @@
    the string monitor.
 
   returns: the array of possible notifications. - `javax.management.MBeanNotificationInfo[]`"
-  ([^javax.management.monitor.StringMonitor this]
+  ([^StringMonitor this]
     (-> this (.getNotificationInfo))))
 
 (defn get-notify-match?
@@ -67,7 +67,7 @@
 
   returns: true if the string monitor notifies when
    matching the string to compare, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.monitor.StringMonitor this]
+  (^Boolean [^StringMonitor this]
     (-> this (.getNotifyMatch))))
 
 (defn get-notify-differ?
@@ -76,7 +76,7 @@
 
   returns: true if the string monitor notifies when
    differing from the string to compare, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.monitor.StringMonitor this]
+  (^Boolean [^StringMonitor this]
     (-> this (.getNotifyDiffer))))
 
 (defn set-notify-match
@@ -84,12 +84,12 @@
    all observed MBeans.
 
   value - The matching notification's on/off switch value. - `boolean`"
-  ([^javax.management.monitor.StringMonitor this ^Boolean value]
+  ([^StringMonitor this ^Boolean value]
     (-> this (.setNotifyMatch value))))
 
 (defn start
   "Starts the string monitor."
-  ([^javax.management.monitor.StringMonitor this]
+  ([^StringMonitor this]
     (-> this (.start))))
 
 (defn set-string-to-compare
@@ -99,7 +99,7 @@
   value - The string value. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - The specified string to compare is null."
-  ([^javax.management.monitor.StringMonitor this ^java.lang.String value]
+  ([^StringMonitor this ^java.lang.String value]
     (-> this (.setStringToCompare value))))
 
 (defn get-string-to-compare
@@ -107,7 +107,7 @@
    to all observed MBeans.
 
   returns: The string value. - `java.lang.String`"
-  (^java.lang.String [^javax.management.monitor.StringMonitor this]
+  (^java.lang.String [^StringMonitor this]
     (-> this (.getStringToCompare))))
 
 (defn get-derived-gauge
@@ -117,8 +117,8 @@
   object - the name of the MBean whose derived gauge is required. - `javax.management.ObjectName`
 
   returns: The derived gauge of the specified object. - `java.lang.String`"
-  (^java.lang.String [^javax.management.monitor.StringMonitor this ^javax.management.ObjectName object]
+  (^java.lang.String [^StringMonitor this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
-  ([^javax.management.monitor.StringMonitor this]
+  (^java.lang.String [^StringMonitor this]
     (-> this (.getDerivedGauge))))
 

@@ -22,9 +22,9 @@
   default-option - the default option from the provided optionType (YES, NO, CANCEL or OK). - `int`
 
   throws: java.lang.IllegalArgumentException - if prompt is null, if prompt has a length of 0, if messageType is not either INFORMATION, WARNING, or ERROR, if optionType is not either YES_NO_OPTION, YES_NO_CANCEL_OPTION, or OK_CANCEL_OPTION, or if defaultOption does not correspond to one of the options in optionType."
-  ([^java.lang.String prompt ^Integer message-type ^Integer option-type ^Integer default-option]
+  (^ConfirmationCallback [^java.lang.String prompt ^Integer message-type ^Integer option-type ^Integer default-option]
     (new ConfirmationCallback prompt message-type option-type default-option))
-  ([^Integer message-type ^Integer option-type ^Integer default-option]
+  (^ConfirmationCallback [^Integer message-type ^Integer option-type ^Integer default-option]
     (new ConfirmationCallback message-type option-type default-option)))
 
 (def *-unspecified-option
@@ -155,7 +155,7 @@
 
   returns: the prompt, or null if this ConfirmationCallback
             was instantiated without a prompt. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.callback.ConfirmationCallback this]
+  (^java.lang.String [^ConfirmationCallback this]
     (-> this (.getPrompt))))
 
 (defn get-message-type
@@ -163,7 +163,7 @@
 
   returns: the message type (INFORMATION,
             WARNING or ERROR). - `int`"
-  (^Integer [^javax.security.auth.callback.ConfirmationCallback this]
+  (^Integer [^ConfirmationCallback this]
     (-> this (.getMessageType))))
 
 (defn get-option-type
@@ -181,7 +181,7 @@
             UNSPECIFIED_OPTION if this
             ConfirmationCallback was instantiated with
             options instead of an optionType. - `int`"
-  (^Integer [^javax.security.auth.callback.ConfirmationCallback this]
+  (^Integer [^ConfirmationCallback this]
     (-> this (.getOptionType))))
 
 (defn get-options
@@ -190,7 +190,7 @@
   returns: the list of confirmation options, or null if this
             ConfirmationCallback was instantiated with
             an optionType instead of options. - `java.lang.String[]`"
-  ([^javax.security.auth.callback.ConfirmationCallback this]
+  ([^ConfirmationCallback this]
     (-> this (.getOptions))))
 
 (defn get-default-option
@@ -205,14 +205,14 @@
             an index into the
             options array specified to the constructor
             of this ConfirmationCallback. - `int`"
-  (^Integer [^javax.security.auth.callback.ConfirmationCallback this]
+  (^Integer [^ConfirmationCallback this]
     (-> this (.getDefaultOption))))
 
 (defn set-selected-index
   "Set the selected confirmation option.
 
   selection - the selection represented as YES, NO, OK or CANCEL if an optionType was specified to the constructor of this ConfirmationCallback. Otherwise, the selection represents the index into the options array specified to the constructor of this ConfirmationCallback. - `int`"
-  ([^javax.security.auth.callback.ConfirmationCallback this ^Integer selection]
+  ([^ConfirmationCallback this ^Integer selection]
     (-> this (.setSelectedIndex selection))))
 
 (defn get-selected-index
@@ -227,6 +227,6 @@
             option as an index into the
             options array specified to the constructor
             of this ConfirmationCallback. - `int`"
-  (^Integer [^javax.security.auth.callback.ConfirmationCallback this]
+  (^Integer [^ConfirmationCallback this]
     (-> this (.getSelectedIndex))))
 

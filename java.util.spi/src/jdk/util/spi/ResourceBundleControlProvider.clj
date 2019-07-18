@@ -18,9 +18,9 @@
 
   returns: a ResourceBundle.Control instance,
            or null if the given baseName is not
-           applicable to this provider. - `java.util.ResourceBundle.Control`
+           applicable to this provider. - `java.util.ResourceBundle$Control`
 
   throws: java.lang.NullPointerException - if baseName is null"
-  (^java.util.ResourceBundle.Control [^java.util.spi.ResourceBundleControlProvider this ^java.lang.String base-name]
+  (^java.util.ResourceBundle$Control [^ResourceBundleControlProvider this ^java.lang.String base-name]
     (-> this (.getControl base-name))))
 

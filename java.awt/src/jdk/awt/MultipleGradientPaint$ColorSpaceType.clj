@@ -7,7 +7,7 @@
 
   Indicates that the color interpolation should occur in sRGB space.
 
-  type: java.awt.MultipleGradientPaint.ColorSpaceType"
+  type: java.awt.MultipleGradientPaint$ColorSpaceType"
   MultipleGradientPaint$ColorSpaceType/SRGB)
 
 (def LINEAR_RGB
@@ -16,7 +16,7 @@
   Indicates that the color interpolation should occur in linearized
    RGB space.
 
-  type: java.awt.MultipleGradientPaint.ColorSpaceType"
+  type: java.awt.MultipleGradientPaint$ColorSpaceType"
   MultipleGradientPaint$ColorSpaceType/LINEAR_RGB)
 
 (defn *values
@@ -28,7 +28,7 @@
   for (MultipleGradientPaint.ColorSpaceType c : MultipleGradientPaint.ColorSpaceType.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.MultipleGradientPaint.ColorSpaceType[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.MultipleGradientPaint$ColorSpaceType[]`"
   ([]
     (MultipleGradientPaint$ColorSpaceType/values )))
 
@@ -40,9 +40,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.awt.MultipleGradientPaint.ColorSpaceType`
+  returns: the enum constant with the specified name - `java.awt.MultipleGradientPaint$ColorSpaceType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.awt.MultipleGradientPaint.ColorSpaceType [^java.lang.String name]
+  (^java.awt.MultipleGradientPaint$ColorSpaceType [^java.lang.String name]
     (MultipleGradientPaint$ColorSpaceType/valueOf name)))
 

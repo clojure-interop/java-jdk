@@ -24,14 +24,14 @@
   "Returns the name representing this buffer pool.
 
   returns: The name of this buffer pool. - `java.lang.String`"
-  (^java.lang.String [^java.lang.management.BufferPoolMXBean this]
+  (^java.lang.String [^BufferPoolMXBean this]
     (-> this (.getName))))
 
 (defn get-count
   "Returns an estimate of the number of buffers in the pool.
 
   returns: An estimate of the number of buffers in this pool - `long`"
-  (^Long [^java.lang.management.BufferPoolMXBean this]
+  (^Long [^BufferPoolMXBean this]
     (-> this (.getCount))))
 
 (defn get-total-capacity
@@ -42,7 +42,7 @@
 
   returns: An estimate of the total capacity of the buffers in this pool
             in bytes - `long`"
-  (^Long [^java.lang.management.BufferPoolMXBean this]
+  (^Long [^BufferPoolMXBean this]
     (-> this (.getTotalCapacity))))
 
 (defn get-memory-used
@@ -55,6 +55,6 @@
   returns: An estimate of the memory that the Java virtual machine is using
             for this buffer pool in bytes, or -1L if an estimate of
             the memory usage is not available - `long`"
-  (^Long [^java.lang.management.BufferPoolMXBean this]
+  (^Long [^BufferPoolMXBean this]
     (-> this (.getMemoryUsed))))
 

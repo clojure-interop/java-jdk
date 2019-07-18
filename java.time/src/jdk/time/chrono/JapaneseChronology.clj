@@ -38,9 +38,9 @@
   zone - the zone ID to use, not null - `java.time.ZoneId`
 
   returns: the current local date using the system clock, not null - `java.time.chrono.JapaneseDate`"
-  (^java.time.chrono.JapaneseDate [^java.time.chrono.JapaneseChronology this ^java.time.ZoneId zone]
+  (^java.time.chrono.JapaneseDate [^JapaneseChronology this ^java.time.ZoneId zone]
     (-> this (.dateNow zone)))
-  (^java.time.chrono.JapaneseDate [^java.time.chrono.JapaneseChronology this]
+  (^java.time.chrono.JapaneseDate [^JapaneseChronology this]
     (-> this (.dateNow))))
 
 (defn range
@@ -49,7 +49,7 @@
   field - the field to get the range for, not null - `java.time.temporal.ChronoField`
 
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`"
-  (^java.time.temporal.ValueRange [^java.time.chrono.JapaneseChronology this ^java.time.temporal.ChronoField field]
+  (^java.time.temporal.ValueRange [^JapaneseChronology this ^java.time.temporal.ChronoField field]
     (-> this (.range field))))
 
 (defn local-date-time
@@ -58,17 +58,17 @@
   temporal - the temporal object to convert, not null - `java.time.temporal.TemporalAccessor`
 
   returns: the local date-time in this chronology, not null - `java.time.chrono.ChronoLocalDateTime<java.time.chrono.JapaneseDate>`"
-  (^java.time.chrono.ChronoLocalDateTime [^java.time.chrono.JapaneseChronology this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.chrono.ChronoLocalDateTime [^JapaneseChronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.localDateTime temporal))))
 
 (defn resolve-date
   "Description copied from class: AbstractChronology
 
-  field-values - the map of fields to values, which can be updated, not null - `java.util.Map<java.time.temporal.TemporalField,java.lang.Long>`
+  field-values - the map of fields to values, which can be updated, not null - `java.util.Map`
   resolver-style - the requested type of resolve, not null - `java.time.format.ResolverStyle`
 
   returns: the resolved date, null if insufficient information to create a date - `java.time.chrono.JapaneseDate`"
-  (^java.time.chrono.JapaneseDate [^java.time.chrono.JapaneseChronology this ^java.util.Map field-values ^java.time.format.ResolverStyle resolver-style]
+  (^java.time.chrono.JapaneseDate [^JapaneseChronology this ^java.util.Map field-values ^java.time.format.ResolverStyle resolver-style]
     (-> this (.resolveDate field-values resolver-style))))
 
 (defn leap-year?
@@ -81,7 +81,7 @@
   proleptic-year - the proleptic-year to check, not validated for range - `long`
 
   returns: true if the year is a leap year - `boolean`"
-  (^Boolean [^java.time.chrono.JapaneseChronology this ^Long proleptic-year]
+  (^Boolean [^JapaneseChronology this ^Long proleptic-year]
     (-> this (.isLeapYear proleptic-year))))
 
 (defn date-year-day
@@ -106,9 +106,9 @@
   returns: the Japanese local date, not null - `java.time.chrono.JapaneseDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  (^java.time.chrono.JapaneseDate [^java.time.chrono.JapaneseChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer day-of-year]
+  (^java.time.chrono.JapaneseDate [^JapaneseChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer day-of-year]
     (-> this (.dateYearDay era year-of-era day-of-year)))
-  (^java.time.chrono.JapaneseDate [^java.time.chrono.JapaneseChronology this ^Integer proleptic-year ^Integer day-of-year]
+  (^java.time.chrono.JapaneseDate [^JapaneseChronology this ^Integer proleptic-year ^Integer day-of-year]
     (-> this (.dateYearDay proleptic-year day-of-year))))
 
 (defn date-epoch-day
@@ -119,14 +119,14 @@
   returns: the Japanese local date, not null - `java.time.chrono.JapaneseDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  (^java.time.chrono.JapaneseDate [^java.time.chrono.JapaneseChronology this ^Long epoch-day]
+  (^java.time.chrono.JapaneseDate [^JapaneseChronology this ^Long epoch-day]
     (-> this (.dateEpochDay epoch-day))))
 
 (defn eras
   "Description copied from interface: Chronology
 
   returns: the list of eras for the chronology, may be immutable, not null - `java.util.List<java.time.chrono.Era>`"
-  (^java.util.List [^java.time.chrono.JapaneseChronology this]
+  (^java.util.List [^JapaneseChronology this]
     (-> this (.eras))))
 
 (defn era-of
@@ -141,7 +141,7 @@
   returns: the Japanese Era for the given numeric era value - `java.time.chrono.JapaneseEra`
 
   throws: java.time.DateTimeException - if eraValue is invalid"
-  (^java.time.chrono.JapaneseEra [^java.time.chrono.JapaneseChronology this ^Integer era-value]
+  (^java.time.chrono.JapaneseEra [^JapaneseChronology this ^Integer era-value]
     (-> this (.eraOf era-value))))
 
 (defn proleptic-year
@@ -151,7 +151,7 @@
   year-of-era - the chronology year-of-era - `int`
 
   returns: the proleptic-year - `int`"
-  (^Integer [^java.time.chrono.JapaneseChronology this ^java.time.chrono.Era era ^Integer year-of-era]
+  (^Integer [^JapaneseChronology this ^java.time.chrono.Era era ^Integer year-of-era]
     (-> this (.prolepticYear era year-of-era))))
 
 (defn get-calendar-type
@@ -164,7 +164,7 @@
    Locale.getUnicodeLocaleType(String) with the key 'ca'.
 
   returns: the calendar system type - 'japanese' - `java.lang.String`"
-  (^java.lang.String [^java.time.chrono.JapaneseChronology this]
+  (^java.lang.String [^JapaneseChronology this]
     (-> this (.getCalendarType))))
 
 (defn get-id
@@ -174,7 +174,7 @@
    It can be used to lookup the Chronology using Chronology.of(String).
 
   returns: the chronology ID - 'Japanese' - `java.lang.String`"
-  (^java.lang.String [^java.time.chrono.JapaneseChronology this]
+  (^java.lang.String [^JapaneseChronology this]
     (-> this (.getId))))
 
 (defn date
@@ -199,11 +199,11 @@
   returns: the Japanese local date, not null - `java.time.chrono.JapaneseDate`
 
   throws: java.time.DateTimeException - if unable to create the date"
-  (^java.time.chrono.JapaneseDate [^java.time.chrono.JapaneseChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer month ^Integer day-of-month]
+  (^java.time.chrono.JapaneseDate [^JapaneseChronology this ^java.time.chrono.Era era ^Integer year-of-era ^Integer month ^Integer day-of-month]
     (-> this (.date era year-of-era month day-of-month)))
-  (^java.time.chrono.JapaneseDate [^java.time.chrono.JapaneseChronology this ^Integer proleptic-year ^Integer month ^Integer day-of-month]
+  (^java.time.chrono.JapaneseDate [^JapaneseChronology this ^Integer proleptic-year ^Integer month ^Integer day-of-month]
     (-> this (.date proleptic-year month day-of-month)))
-  (^java.time.chrono.JapaneseDate [^java.time.chrono.JapaneseChronology this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.chrono.JapaneseDate [^JapaneseChronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.date temporal))))
 
 (defn zoned-date-time
@@ -213,8 +213,8 @@
   zone - the time-zone, not null - `java.time.ZoneId`
 
   returns: the zoned date-time, not null - `java.time.chrono.ChronoZonedDateTime<java.time.chrono.JapaneseDate>`"
-  (^java.time.chrono.ChronoZonedDateTime [^java.time.chrono.JapaneseChronology this ^java.time.Instant instant ^java.time.ZoneId zone]
+  (^java.time.chrono.ChronoZonedDateTime [^JapaneseChronology this ^java.time.Instant instant ^java.time.ZoneId zone]
     (-> this (.zonedDateTime instant zone)))
-  (^java.time.chrono.ChronoZonedDateTime [^java.time.chrono.JapaneseChronology this ^java.time.temporal.TemporalAccessor temporal]
+  (^java.time.chrono.ChronoZonedDateTime [^JapaneseChronology this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.zonedDateTime temporal))))
 

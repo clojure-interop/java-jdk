@@ -27,6 +27,6 @@
 
 (defn ->key-agreement-spi
   "Constructor."
-  ([]
+  (^KeyAgreementSpi []
     (new KeyAgreementSpi )))
 

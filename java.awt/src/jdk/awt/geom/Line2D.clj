@@ -153,7 +153,7 @@
 
   returns: the X coordinate of the start point of this
            Line2D object. - `double`"
-  (^Double [^java.awt.geom.Line2D this]
+  (^Double [^Line2D this]
     (-> this (.getX1))))
 
 (defn get-path-iterator
@@ -170,16 +170,16 @@
 
   returns: a PathIterator that defines the boundary of the
                     flattened Line2D - `java.awt.geom.PathIterator`"
-  (^java.awt.geom.PathIterator [^java.awt.geom.Line2D this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^Line2D this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness)))
-  (^java.awt.geom.PathIterator [^java.awt.geom.Line2D this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^Line2D this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn get-p-1
   "Returns the start Point2D of this Line2D.
 
   returns: the start Point2D of this Line2D. - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.geom.Line2D this]
+  (^java.awt.geom.Point2D [^Line2D this]
     (-> this (.getP1))))
 
 (defn intersects-line
@@ -193,9 +193,9 @@
 
   returns: <true> if this line segment and the specified line segment
                     intersect each other; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.geom.Line2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
+  (^Boolean [^Line2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
     (-> this (.intersectsLine x-1 y-1 x-2 y-2)))
-  (^Boolean [^java.awt.geom.Line2D this ^java.awt.geom.Line2D l]
+  (^Boolean [^Line2D this ^java.awt.geom.Line2D l]
     (-> this (.intersectsLine l))))
 
 (defn contains
@@ -212,11 +212,11 @@
 
   returns: false because a Line2D contains
    no area. - `boolean`"
-  (^Boolean [^java.awt.geom.Line2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^Line2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  (^Boolean [^java.awt.geom.Line2D this ^Double x ^Double y]
+  (^Boolean [^Line2D this ^Double x ^Double y]
     (-> this (.contains x y)))
-  (^Boolean [^java.awt.geom.Line2D this ^java.awt.geom.Point2D p]
+  (^Boolean [^Line2D this ^java.awt.geom.Point2D p]
     (-> this (.contains p))))
 
 (defn pt-line-dist
@@ -231,9 +231,9 @@
 
   returns: a double value that is the distance from a specified point
                     to the current line. - `double`"
-  (^Double [^java.awt.geom.Line2D this ^Double px ^Double py]
+  (^Double [^Line2D this ^Double px ^Double py]
     (-> this (.ptLineDist px py)))
-  (^Double [^java.awt.geom.Line2D this ^java.awt.geom.Point2D pt]
+  (^Double [^Line2D this ^java.awt.geom.Point2D pt]
     (-> this (.ptLineDist pt))))
 
 (defn pt-line-dist-sq
@@ -248,9 +248,9 @@
 
   returns: a double value that is the square of the distance from a
                     specified point to the current line. - `double`"
-  (^Double [^java.awt.geom.Line2D this ^Double px ^Double py]
+  (^Double [^Line2D this ^Double px ^Double py]
     (-> this (.ptLineDistSq px py)))
-  (^Double [^java.awt.geom.Line2D this ^java.awt.geom.Point2D pt]
+  (^Double [^Line2D this ^java.awt.geom.Point2D pt]
     (-> this (.ptLineDistSq pt))))
 
 (defn pt-seg-dist-sq
@@ -265,9 +265,9 @@
 
   returns: a double value that is the square of the distance from the
                     specified point to the current line segment. - `double`"
-  (^Double [^java.awt.geom.Line2D this ^Double px ^Double py]
+  (^Double [^Line2D this ^Double px ^Double py]
     (-> this (.ptSegDistSq px py)))
-  (^Double [^java.awt.geom.Line2D this ^java.awt.geom.Point2D pt]
+  (^Double [^Line2D this ^java.awt.geom.Point2D pt]
     (-> this (.ptSegDistSq pt))))
 
 (defn pt-seg-dist
@@ -282,9 +282,9 @@
 
   returns: a double value that is the distance from the specified
                     point to the current line segment. - `double`"
-  (^Double [^java.awt.geom.Line2D this ^Double px ^Double py]
+  (^Double [^Line2D this ^Double px ^Double py]
     (-> this (.ptSegDist px py)))
-  (^Double [^java.awt.geom.Line2D this ^java.awt.geom.Point2D pt]
+  (^Double [^Line2D this ^java.awt.geom.Point2D pt]
     (-> this (.ptSegDist pt))))
 
 (defn set-line
@@ -295,11 +295,11 @@
   y-1 - the Y coordinate of the start point - `double`
   x-2 - the X coordinate of the end point - `double`
   y-2 - the Y coordinate of the end point - `double`"
-  ([^java.awt.geom.Line2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
+  ([^Line2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
     (-> this (.setLine x-1 y-1 x-2 y-2)))
-  ([^java.awt.geom.Line2D this ^java.awt.geom.Point2D p-1 ^java.awt.geom.Point2D p-2]
+  ([^Line2D this ^java.awt.geom.Point2D p-1 ^java.awt.geom.Point2D p-2]
     (-> this (.setLine p-1 p-2)))
-  ([^java.awt.geom.Line2D this ^java.awt.geom.Line2D l]
+  ([^Line2D this ^java.awt.geom.Line2D l]
     (-> this (.setLine l))))
 
 (defn relative-ccw
@@ -314,9 +314,9 @@
 
   returns: an integer that indicates the position of the specified
            coordinates with respect to this Line2D - `int`"
-  (^Integer [^java.awt.geom.Line2D this ^Double px ^Double py]
+  (^Integer [^Line2D this ^Double px ^Double py]
     (-> this (.relativeCCW px py)))
-  (^Integer [^java.awt.geom.Line2D this ^java.awt.geom.Point2D p]
+  (^Integer [^Line2D this ^java.awt.geom.Point2D p]
     (-> this (.relativeCCW p))))
 
 (defn get-y-2
@@ -324,7 +324,7 @@
 
   returns: the Y coordinate of the end point of this
            Line2D object. - `double`"
-  (^Double [^java.awt.geom.Line2D this]
+  (^Double [^Line2D this]
     (-> this (.getY2))))
 
 (defn get-x-2
@@ -332,7 +332,7 @@
 
   returns: the X coordinate of the end point of this
            Line2D object. - `double`"
-  (^Double [^java.awt.geom.Line2D this]
+  (^Double [^Line2D this]
     (-> this (.getX2))))
 
 (defn clone
@@ -341,7 +341,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.OutOfMemoryError - if there is not enough memory."
-  (^java.lang.Object [^java.awt.geom.Line2D this]
+  (^java.lang.Object [^Line2D this]
     (-> this (.clone))))
 
 (defn get-bounds
@@ -384,7 +384,7 @@
 
   returns: an integer Rectangle that completely encloses
                    the Shape. - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^java.awt.geom.Line2D this]
+  (^java.awt.Rectangle [^Line2D this]
     (-> this (.getBounds))))
 
 (defn get-y-1
@@ -392,7 +392,7 @@
 
   returns: the Y coordinate of the start point of this
            Line2D object. - `double`"
-  (^Double [^java.awt.geom.Line2D this]
+  (^Double [^Line2D this]
     (-> this (.getY1))))
 
 (defn intersects
@@ -429,15 +429,15 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.geom.Line2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^Line2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  (^Boolean [^java.awt.geom.Line2D this ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^Line2D this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 
 (defn get-p-2
   "Returns the end Point2D of this Line2D.
 
   returns: the end Point2D of this Line2D. - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.geom.Line2D this]
+  (^java.awt.geom.Point2D [^Line2D this]
     (-> this (.getP2))))
 

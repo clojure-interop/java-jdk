@@ -19,10 +19,10 @@
   message - a description of the exception - `java.lang.String`
   error-code - a string specifying the vendor specific error code - `java.lang.String`
   exception - the linked exception - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.String error-code ^java.lang.Throwable exception]
+  (^UnmarshalException [^java.lang.String message ^java.lang.String error-code ^java.lang.Throwable exception]
     (new UnmarshalException message error-code exception))
-  ([^java.lang.String message ^java.lang.String error-code]
+  (^UnmarshalException [^java.lang.String message ^java.lang.String error-code]
     (new UnmarshalException message error-code))
-  ([^java.lang.String message]
+  (^UnmarshalException [^java.lang.String message]
     (new UnmarshalException message)))
 

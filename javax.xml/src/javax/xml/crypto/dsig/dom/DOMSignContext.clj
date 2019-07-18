@@ -28,9 +28,9 @@
   next-sibling - the next sibling node - `org.w3c.dom.Node`
 
   throws: java.lang.NullPointerException - if signingKey, parent or nextSibling is null"
-  ([^java.security.Key signing-key ^org.w3c.dom.Node parent ^org.w3c.dom.Node next-sibling]
+  (^DOMSignContext [^java.security.Key signing-key ^org.w3c.dom.Node parent ^org.w3c.dom.Node next-sibling]
     (new DOMSignContext signing-key parent next-sibling))
-  ([^java.security.Key signing-key ^org.w3c.dom.Node parent]
+  (^DOMSignContext [^java.security.Key signing-key ^org.w3c.dom.Node parent]
     (new DOMSignContext signing-key parent)))
 
 (defn set-parent
@@ -39,27 +39,27 @@
   parent - the parent node. The marshalled XMLSignature will be added as a child element of this node. - `org.w3c.dom.Node`
 
   throws: java.lang.NullPointerException - if parent is null"
-  ([^javax.xml.crypto.dsig.dom.DOMSignContext this ^org.w3c.dom.Node parent]
+  ([^DOMSignContext this ^org.w3c.dom.Node parent]
     (-> this (.setParent parent))))
 
 (defn set-next-sibling
   "Sets the next sibling node.
 
   next-sibling - the next sibling node. The marshalled XMLSignature will be inserted immediately before this node. Specify null to remove the current setting. - `org.w3c.dom.Node`"
-  ([^javax.xml.crypto.dsig.dom.DOMSignContext this ^org.w3c.dom.Node next-sibling]
+  ([^DOMSignContext this ^org.w3c.dom.Node next-sibling]
     (-> this (.setNextSibling next-sibling))))
 
 (defn get-parent
   "Returns the parent node.
 
   returns: the parent node (never null) - `org.w3c.dom.Node`"
-  (^org.w3c.dom.Node [^javax.xml.crypto.dsig.dom.DOMSignContext this]
+  (^org.w3c.dom.Node [^DOMSignContext this]
     (-> this (.getParent))))
 
 (defn get-next-sibling
   "Returns the nextSibling node.
 
   returns: the nextSibling node, or null if not specified. - `org.w3c.dom.Node`"
-  (^org.w3c.dom.Node [^javax.xml.crypto.dsig.dom.DOMSignContext this]
+  (^org.w3c.dom.Node [^DOMSignContext this]
     (-> this (.getNextSibling))))
 

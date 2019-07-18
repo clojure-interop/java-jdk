@@ -102,7 +102,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.ReferenceUriSchemesSupported this]
+  ([^ReferenceUriSchemesSupported this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -114,6 +114,6 @@
    `reference-uri-schemes-supported`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.ReferenceUriSchemesSupported this]
+  (^java.lang.String [^ReferenceUriSchemesSupported this]
     (-> this (.getName))))
 

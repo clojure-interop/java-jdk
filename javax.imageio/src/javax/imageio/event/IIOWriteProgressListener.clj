@@ -12,7 +12,7 @@
 
   source - the ImageWriter object calling this method. - `javax.imageio.ImageWriter`
   image-index - the index of the image being written within its containing input file or stream. - `int`"
-  ([^javax.imageio.event.IIOWriteProgressListener this ^javax.imageio.ImageWriter source ^Integer image-index]
+  ([^IIOWriteProgressListener this ^javax.imageio.ImageWriter source ^Integer image-index]
     (-> this (.imageStarted source image-index))))
 
 (defn image-progress
@@ -40,7 +40,7 @@
 
   source - the ImageWriter object calling this method. - `javax.imageio.ImageWriter`
   percentage-done - the approximate percentage of decoding that has been completed. - `float`"
-  ([^javax.imageio.event.IIOWriteProgressListener this ^javax.imageio.ImageWriter source ^Float percentage-done]
+  ([^IIOWriteProgressListener this ^javax.imageio.ImageWriter source ^Float percentage-done]
     (-> this (.imageProgress source percentage-done))))
 
 (defn image-complete
@@ -50,7 +50,7 @@
    operation.
 
   source - the ImageWriter object calling this method. - `javax.imageio.ImageWriter`"
-  ([^javax.imageio.event.IIOWriteProgressListener this ^javax.imageio.ImageWriter source]
+  ([^IIOWriteProgressListener this ^javax.imageio.ImageWriter source]
     (-> this (.imageComplete source))))
 
 (defn thumbnail-started
@@ -62,7 +62,7 @@
   source - the ImageWrite object calling this method. - `javax.imageio.ImageWriter`
   image-index - the index of the image being written within its containing input file or stream. - `int`
   thumbnail-index - the index of the thumbnail being written. - `int`"
-  ([^javax.imageio.event.IIOWriteProgressListener this ^javax.imageio.ImageWriter source ^Integer image-index ^Integer thumbnail-index]
+  ([^IIOWriteProgressListener this ^javax.imageio.ImageWriter source ^Integer image-index ^Integer thumbnail-index]
     (-> this (.thumbnailStarted source image-index thumbnail-index))))
 
 (defn thumbnail-progress
@@ -73,7 +73,7 @@
 
   source - the ImageWriter object calling this method. - `javax.imageio.ImageWriter`
   percentage-done - the approximate percentage of decoding that has been completed. - `float`"
-  ([^javax.imageio.event.IIOWriteProgressListener this ^javax.imageio.ImageWriter source ^Float percentage-done]
+  ([^IIOWriteProgressListener this ^javax.imageio.ImageWriter source ^Float percentage-done]
     (-> this (.thumbnailProgress source percentage-done))))
 
 (defn thumbnail-complete
@@ -83,7 +83,7 @@
    write operation.
 
   source - the ImageWriter object calling this method. - `javax.imageio.ImageWriter`"
-  ([^javax.imageio.event.IIOWriteProgressListener this ^javax.imageio.ImageWriter source]
+  ([^IIOWriteProgressListener this ^javax.imageio.ImageWriter source]
     (-> this (.thumbnailComplete source))))
 
 (defn write-aborted
@@ -92,6 +92,6 @@
    given.
 
   source - the ImageWriter object calling this method. - `javax.imageio.ImageWriter`"
-  ([^javax.imageio.event.IIOWriteProgressListener this ^javax.imageio.ImageWriter source]
+  ([^IIOWriteProgressListener this ^javax.imageio.ImageWriter source]
     (-> this (.writeAborted source))))
 

@@ -12,14 +12,14 @@
   Constructs an instance of this class with the specified flags.
 
   f - The set of format flags which contain an unknown flag - `java.lang.String`"
-  ([^java.lang.String f]
+  (^UnknownFormatFlagsException [^java.lang.String f]
     (new UnknownFormatFlagsException f)))
 
 (defn get-flags
   "Returns the set of flags which contains an unknown flag.
 
   returns: The flags - `java.lang.String`"
-  (^java.lang.String [^java.util.UnknownFormatFlagsException this]
+  (^java.lang.String [^UnknownFormatFlagsException this]
     (-> this (.getFlags))))
 
 (defn get-message
@@ -27,6 +27,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  (^java.lang.String [^java.util.UnknownFormatFlagsException this]
+  (^java.lang.String [^UnknownFormatFlagsException this]
     (-> this (.getMessage))))
 

@@ -19,10 +19,10 @@
 
   message - the detail message (which is saved for later retrieval by the Throwable.getMessage() method). - `java.lang.String`
   cause - the cause (which is saved for later retrieval by the Throwable.getCause() method). (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^UnsupportedOperationException [^java.lang.String message ^java.lang.Throwable cause]
     (new UnsupportedOperationException message cause))
-  ([^java.lang.String message]
+  (^UnsupportedOperationException [^java.lang.String message]
     (new UnsupportedOperationException message))
-  ([]
+  (^UnsupportedOperationException []
     (new UnsupportedOperationException )))
 

@@ -6,13 +6,13 @@
 
 (defn ->compound-edit
   "Constructor."
-  ([]
+  (^CompoundEdit []
     (new CompoundEdit )))
 
 (defn die
   "Sends die to each subedit,
    in the reverse of the order that they were added."
-  ([^javax.swing.undo.CompoundEdit this]
+  ([^CompoundEdit this]
     (-> this (.die))))
 
 (defn redo
@@ -21,7 +21,7 @@
    which they were added.
 
   throws: javax.swing.undo.CannotRedoException - if canRedo returns false"
-  ([^javax.swing.undo.CompoundEdit this]
+  ([^CompoundEdit this]
     (-> this (.redo))))
 
 (defn significant?
@@ -30,7 +30,7 @@
    Returns false if they all return false.
 
   returns: true - `boolean`"
-  (^Boolean [^javax.swing.undo.CompoundEdit this]
+  (^Boolean [^CompoundEdit this]
     (-> this (.isSignificant))))
 
 (defn add-edit
@@ -48,7 +48,7 @@
 
   returns: true if the edit is inProgress;
     otherwise returns false - `boolean`"
-  (^Boolean [^javax.swing.undo.CompoundEdit this ^javax.swing.undo.UndoableEdit an-edit]
+  (^Boolean [^CompoundEdit this ^javax.swing.undo.UndoableEdit an-edit]
     (-> this (.addEdit an-edit))))
 
 (defn to-string
@@ -56,7 +56,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  (^java.lang.String [^javax.swing.undo.CompoundEdit this]
+  (^java.lang.String [^CompoundEdit this]
     (-> this (.toString))))
 
 (defn get-undo-presentation-name
@@ -70,7 +70,7 @@
       by a space, followed by getPresentationName
       unless getPresentationName is `` in which
       case, the defaults value is returned alone. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.undo.CompoundEdit this]
+  (^java.lang.String [^CompoundEdit this]
     (-> this (.getUndoPresentationName))))
 
 (defn undo
@@ -79,7 +79,7 @@
    the order in which they were added.
 
   throws: javax.swing.undo.CannotUndoException - if canUndo returns false"
-  ([^javax.swing.undo.CompoundEdit this]
+  ([^CompoundEdit this]
     (-> this (.undo))))
 
 (defn in-progress?
@@ -88,7 +88,7 @@
    added to it.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.undo.CompoundEdit this]
+  (^Boolean [^CompoundEdit this]
     (-> this (.isInProgress))))
 
 (defn can-redo?
@@ -97,7 +97,7 @@
 
   returns: true if this edit is alive
      and hasBeenDone is false - `boolean`"
-  (^Boolean [^javax.swing.undo.CompoundEdit this]
+  (^Boolean [^CompoundEdit this]
     (-> this (.canRedo))))
 
 (defn get-presentation-name
@@ -107,12 +107,12 @@
    calls super.
 
   returns: the empty string `` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.undo.CompoundEdit this]
+  (^java.lang.String [^CompoundEdit this]
     (-> this (.getPresentationName))))
 
 (defn end
   "Sets inProgress to false."
-  ([^javax.swing.undo.CompoundEdit this]
+  ([^CompoundEdit this]
     (-> this (.end))))
 
 (defn get-redo-presentation-name
@@ -126,7 +126,7 @@
       by a space, followed by getPresentationName
       unless getPresentationName is `` in which
       case, the defaults value is returned alone. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.undo.CompoundEdit this]
+  (^java.lang.String [^CompoundEdit this]
     (-> this (.getRedoPresentationName))))
 
 (defn can-undo?
@@ -135,6 +135,6 @@
 
   returns: true if this edit is alive
       and hasBeenDone is true - `boolean`"
-  (^Boolean [^javax.swing.undo.CompoundEdit this]
+  (^Boolean [^CompoundEdit this]
     (-> this (.canUndo))))
 

@@ -22,9 +22,9 @@
 
   s-1 - the first input stream to read. - `java.io.InputStream`
   s-2 - the second input stream to read. - `java.io.InputStream`"
-  ([^java.io.InputStream s-1 ^java.io.InputStream s-2]
+  (^SequenceInputStream [^java.io.InputStream s-1 ^java.io.InputStream s-2]
     (new SequenceInputStream s-1 s-2))
-  ([^java.io.InputStream> e]
+  (^SequenceInputStream [^java.util.Enumeration e]
     (new SequenceInputStream e)))
 
 (defn available
@@ -44,7 +44,7 @@
            has been closed by invoking its close() method - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Integer [^java.io.SequenceInputStream this]
+  (^Integer [^SequenceInputStream this]
     (-> this (.available))))
 
 (defn read
@@ -66,9 +66,9 @@
   returns: int   the number of bytes read. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  (^Integer [^java.io.SequenceInputStream this b ^Integer off ^Integer len]
+  (^Integer [^SequenceInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^java.io.SequenceInputStream this]
+  (^Integer [^SequenceInputStream this]
     (-> this (.read))))
 
 (defn close
@@ -84,6 +84,6 @@
    before the close method returns.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.SequenceInputStream this]
+  ([^SequenceInputStream this]
     (-> this (.close))))
 

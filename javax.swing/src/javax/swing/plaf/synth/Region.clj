@@ -564,20 +564,20 @@
    returns false.
 
   returns: true if the Region is a subregion of a Component. - `boolean`"
-  (^Boolean [^javax.swing.plaf.synth.Region this]
+  (^Boolean [^Region this]
     (-> this (.isSubregion))))
 
 (defn get-name
   "Returns the name of the region.
 
   returns: name of the Region. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.synth.Region this]
+  (^java.lang.String [^Region this]
     (-> this (.getName))))
 
 (defn to-string
   "Returns the name of the Region.
 
   returns: name of the Region. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.synth.Region this]
+  (^java.lang.String [^Region this]
     (-> this (.toString))))
 

@@ -46,7 +46,7 @@
    for too long, input or output samples might be dropped.)  If desired, the retained data can be
    discarded by invoking the flush method.
    When audio capture or playback stops, a STOP event is generated."
-  ([^javax.sound.sampled.DataLine this]
+  ([^DataLine this]
     (-> this (.stop))))
 
 (defn drain
@@ -59,7 +59,7 @@
    drain() is invoked by one thread, and another continues to
    fill the data queue, the operation will not complete.
    This method always returns when the data line is closed."
-  ([^javax.sound.sampled.DataLine this]
+  ([^DataLine this]
     (-> this (.drain))))
 
 (defn get-microsecond-position
@@ -72,7 +72,7 @@
    then be limited to the number of microseconds per sample frame.
 
   returns: the number of microseconds of data processed since the line was opened - `long`"
-  (^Long [^javax.sound.sampled.DataLine this]
+  (^Long [^DataLine this]
     (-> this (.getMicrosecondPosition))))
 
 (defn get-long-frame-position
@@ -81,7 +81,7 @@
    frames captured by, or rendered from, the line since it was opened.
 
   returns: the number of frames already processed since the line was opened - `long`"
-  (^Long [^javax.sound.sampled.DataLine this]
+  (^Long [^DataLine this]
     (-> this (.getLongFramePosition))))
 
 (defn active?
@@ -93,7 +93,7 @@
 
   returns: true if the line is actively capturing or rendering
    sound, otherwise false - `boolean`"
-  (^Boolean [^javax.sound.sampled.DataLine this]
+  (^Boolean [^DataLine this]
     (-> this (.isActive))))
 
 (defn flush
@@ -106,7 +106,7 @@
    playback or capture. (It is legal to flush a line that is not stopped,
    but doing so on an active line is likely to cause a discontinuity in the
    data, resulting in a perceptible click.)"
-  ([^javax.sound.sampled.DataLine this]
+  ([^DataLine this]
     (-> this (.flush))))
 
 (defn get-buffer-size
@@ -118,7 +118,7 @@
    number of sample frames of audio data.
 
   returns: the size of the buffer in bytes - `int`"
-  (^Integer [^javax.sound.sampled.DataLine this]
+  (^Integer [^DataLine this]
     (-> this (.getBufferSize))))
 
 (defn start
@@ -128,7 +128,7 @@
    with the first frame that was unprocessed at the time the line was
    stopped. When audio capture or playback starts, a
    START event is generated."
-  ([^javax.sound.sampled.DataLine this]
+  ([^DataLine this]
     (-> this (.start))))
 
 (defn get-frame-position
@@ -139,7 +139,7 @@
    to use getLongFramePosition instead.
 
   returns: the number of frames already processed since the line was opened - `int`"
-  (^Integer [^javax.sound.sampled.DataLine this]
+  (^Integer [^DataLine this]
     (-> this (.getFramePosition))))
 
 (defn get-level
@@ -151,7 +151,7 @@
 
   returns: the current amplitude of the signal in this line, or
    AudioSystem.NOT_SPECIFIED - `float`"
-  (^Float [^javax.sound.sampled.DataLine this]
+  (^Float [^DataLine this]
     (-> this (.getLevel))))
 
 (defn get-format
@@ -169,7 +169,7 @@
    default format.
 
   returns: current audio data format - `javax.sound.sampled.AudioFormat`"
-  (^javax.sound.sampled.AudioFormat [^javax.sound.sampled.DataLine this]
+  (^javax.sound.sampled.AudioFormat [^DataLine this]
     (-> this (.getFormat))))
 
 (defn running?
@@ -180,7 +180,7 @@
    because playback completes.
 
   returns: true if the line is running, otherwise false - `boolean`"
-  (^Boolean [^javax.sound.sampled.DataLine this]
+  (^Boolean [^DataLine this]
     (-> this (.isRunning))))
 
 (defn available
@@ -201,6 +201,6 @@
    that attempts to read or write more data will block.
 
   returns: the amount of data available, in bytes - `int`"
-  (^Integer [^javax.sound.sampled.DataLine this]
+  (^Integer [^DataLine this]
     (-> this (.available))))
 

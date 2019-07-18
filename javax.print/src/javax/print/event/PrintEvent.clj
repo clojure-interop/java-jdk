@@ -11,13 +11,13 @@
   source - is the source of the event - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if source is null."
-  ([^java.lang.Object source]
+  (^PrintEvent [^java.lang.Object source]
     (new PrintEvent source)))
 
 (defn to-string
   "Description copied from class: EventObject
 
   returns: a message describing the event - `java.lang.String`"
-  (^java.lang.String [^javax.print.event.PrintEvent this]
+  (^java.lang.String [^PrintEvent this]
     (-> this (.toString))))
 

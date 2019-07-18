@@ -17,7 +17,7 @@
    action of the object.
 
   returns: the zero-based number of Actions in this object - `int`"
-  (^Integer [^javax.accessibility.AccessibleAction this]
+  (^Integer [^AccessibleAction this]
     (-> this (.getAccessibleActionCount))))
 
 (defn get-accessible-action-description
@@ -26,7 +26,7 @@
   i - zero-based index of the actions - `int`
 
   returns: a String description of the action - `java.lang.String`"
-  (^java.lang.String [^javax.accessibility.AccessibleAction this ^Integer i]
+  (^java.lang.String [^AccessibleAction this ^Integer i]
     (-> this (.getAccessibleActionDescription i))))
 
 (defn do-accessible-action
@@ -35,6 +35,6 @@
   i - zero-based index of actions - `int`
 
   returns: true if the action was performed; otherwise false. - `boolean`"
-  (^Boolean [^javax.accessibility.AccessibleAction this ^Integer i]
+  (^Boolean [^AccessibleAction this ^Integer i]
     (-> this (.doAccessibleAction i))))
 

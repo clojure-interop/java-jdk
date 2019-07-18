@@ -36,9 +36,9 @@
   sz - Input-buffer size - `int`
 
   throws: java.lang.IllegalArgumentException - If sz <= 0"
-  ([^java.io.Reader in ^Integer sz]
+  (^BufferedReader [^java.io.Reader in ^Integer sz]
     (new BufferedReader in sz))
-  ([^java.io.Reader in]
+  (^BufferedReader [^java.io.Reader in]
     (new BufferedReader in)))
 
 (defn skip
@@ -49,7 +49,7 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.lang.IllegalArgumentException - If n is negative."
-  (^Long [^java.io.BufferedReader this ^Long n]
+  (^Long [^BufferedReader this ^Long n]
     (-> this (.skip n))))
 
 (defn ready
@@ -62,7 +62,7 @@
    next read will block. - `boolean`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Boolean [^java.io.BufferedReader this]
+  (^Boolean [^BufferedReader this]
     (-> this (.ready))))
 
 (defn lines
@@ -89,7 +89,7 @@
 
   returns: a Stream<String> providing the lines of text
            described by this BufferedReader - `java.util.stream.Stream<java.lang.String>`"
-  (^java.util.stream.Stream [^java.io.BufferedReader this]
+  (^java.util.stream.Stream [^BufferedReader this]
     (-> this (.lines))))
 
 (defn read
@@ -136,30 +136,30 @@
                stream has been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Integer [^java.io.BufferedReader this cbuf ^Integer off ^Integer len]
+  (^Integer [^BufferedReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  (^Integer [^java.io.BufferedReader this]
+  (^Integer [^BufferedReader this]
     (-> this (.read))))
 
 (defn reset
   "Resets the stream to the most recent mark.
 
   throws: java.io.IOException - If the stream has never been marked, or if the mark has been invalidated"
-  ([^java.io.BufferedReader this]
+  ([^BufferedReader this]
     (-> this (.reset))))
 
 (defn mark-supported
   "Tells whether this stream supports the mark() operation, which it does.
 
   returns: true if and only if this stream supports the mark operation. - `boolean`"
-  (^Boolean [^java.io.BufferedReader this]
+  (^Boolean [^BufferedReader this]
     (-> this (.markSupported))))
 
 (defn close
   "Description copied from class: Reader
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.BufferedReader this]
+  ([^BufferedReader this]
     (-> this (.close))))
 
 (defn mark
@@ -169,7 +169,7 @@
   read-ahead-limit - Limit on the number of characters that may be read while still preserving the mark. An attempt to reset the stream after reading characters up to this limit or beyond may fail. A limit value larger than the size of the input buffer will cause a new buffer to be allocated whose size is no smaller than limit. Therefore large values should be used with care. - `int`
 
   throws: java.lang.IllegalArgumentException - If readAheadLimit < 0"
-  ([^java.io.BufferedReader this ^Integer read-ahead-limit]
+  ([^BufferedReader this ^Integer read-ahead-limit]
     (-> this (.mark read-ahead-limit))))
 
 (defn read-line
@@ -182,6 +182,6 @@
                stream has been reached - `java.lang.String`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^java.lang.String [^java.io.BufferedReader this]
+  (^java.lang.String [^BufferedReader this]
     (-> this (.readLine))))
 

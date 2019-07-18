@@ -38,35 +38,35 @@
   orientation - an integer specifying SwingConstants.HORIZONTAL or SwingConstants.VERTICAL - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is neither SwingConstants.HORIZONTAL nor SwingConstants.VERTICAL"
-  ([^Integer orientation]
+  (^JSeparator [^Integer orientation]
     (new JSeparator orientation))
-  ([]
+  (^JSeparator []
     (new JSeparator )))
 
 (defn get-ui
   "Returns the L&F object that renders this component.
 
   returns: the SeparatorUI object that renders this component - `javax.swing.plaf.SeparatorUI`"
-  (^javax.swing.plaf.SeparatorUI [^javax.swing.JSeparator this]
+  (^javax.swing.plaf.SeparatorUI [^JSeparator this]
     (-> this (.getUI))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the SeparatorUI L&F object - `javax.swing.plaf.SeparatorUI`"
-  ([^javax.swing.JSeparator this ^javax.swing.plaf.SeparatorUI ui]
+  ([^JSeparator this ^javax.swing.plaf.SeparatorUI ui]
     (-> this (.setUI ui))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([^javax.swing.JSeparator this]
+  ([^JSeparator this]
     (-> this (.updateUI))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `SeparatorUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JSeparator this]
+  (^java.lang.String [^JSeparator this]
     (-> this (.getUIClassID))))
 
 (defn get-orientation
@@ -76,7 +76,7 @@
              following constants defined in SwingConstants:
              VERTICAL, or
              HORIZONTAL. - `int`"
-  (^Integer [^javax.swing.JSeparator this]
+  (^Integer [^JSeparator this]
     (-> this (.getOrientation))))
 
 (defn set-orientation
@@ -86,7 +86,7 @@
   orientation - either SwingConstants.HORIZONTAL or SwingConstants.VERTICAL - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is neither SwingConstants.HORIZONTAL nor SwingConstants.VERTICAL"
-  ([^javax.swing.JSeparator this ^Integer orientation]
+  ([^JSeparator this ^Integer orientation]
     (-> this (.setOrientation orientation))))
 
 (defn get-accessible-context
@@ -97,6 +97,6 @@
 
   returns: an AccessibleJSeparator that serves as the
            AccessibleContext of this JSeparator - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JSeparator this]
+  (^javax.accessibility.AccessibleContext [^JSeparator this]
     (-> this (.getAccessibleContext))))
 

@@ -10,7 +10,7 @@
 
   Creates an AbstractUndoableEdit which defaults
    hasBeenDone and alive to true."
-  ([]
+  (^AbstractUndoableEdit []
     (new AbstractUndoableEdit )))
 
 (defn die
@@ -22,7 +22,7 @@
    Typically an edit is killed when it is consolidated by
    another edit's addEdit or replaceEdit
    method, or when it is dequeued from an UndoManager."
-  ([^javax.swing.undo.AbstractUndoableEdit this]
+  ([^AbstractUndoableEdit this]
     (-> this (.die))))
 
 (defn redo
@@ -32,14 +32,14 @@
    this edit. Override should begin with a call to super.
 
   throws: javax.swing.undo.CannotRedoException - if canRedo returns false"
-  ([^javax.swing.undo.AbstractUndoableEdit this]
+  ([^AbstractUndoableEdit this]
     (-> this (.redo))))
 
 (defn significant?
   "This default implementation returns true.
 
   returns: true - `boolean`"
-  (^Boolean [^javax.swing.undo.AbstractUndoableEdit this]
+  (^Boolean [^AbstractUndoableEdit this]
     (-> this (.isSignificant))))
 
 (defn add-edit
@@ -48,7 +48,7 @@
   an-edit - the edit to be added - `javax.swing.undo.UndoableEdit`
 
   returns: false - `boolean`"
-  (^Boolean [^javax.swing.undo.AbstractUndoableEdit this ^javax.swing.undo.UndoableEdit an-edit]
+  (^Boolean [^AbstractUndoableEdit this ^javax.swing.undo.UndoableEdit an-edit]
     (-> this (.addEdit an-edit))))
 
 (defn to-string
@@ -56,7 +56,7 @@
    object's properties.
 
   returns: a String representation of this object - `java.lang.String`"
-  (^java.lang.String [^javax.swing.undo.AbstractUndoableEdit this]
+  (^java.lang.String [^AbstractUndoableEdit this]
     (-> this (.toString))))
 
 (defn get-undo-presentation-name
@@ -72,7 +72,7 @@
       by a space, followed by getPresentationName
       unless getPresentationName is `` in which
       case, the defaults value is returned alone. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.undo.AbstractUndoableEdit this]
+  (^java.lang.String [^AbstractUndoableEdit this]
     (-> this (.getUndoPresentationName))))
 
 (defn undo
@@ -83,7 +83,7 @@
    a call to super.
 
   throws: javax.swing.undo.CannotUndoException - if canUndo returns false"
-  ([^javax.swing.undo.AbstractUndoableEdit this]
+  ([^AbstractUndoableEdit this]
     (-> this (.undo))))
 
 (defn can-redo?
@@ -92,7 +92,7 @@
 
   returns: true if this edit is alive
      and hasBeenDone is false - `boolean`"
-  (^Boolean [^javax.swing.undo.AbstractUndoableEdit this]
+  (^Boolean [^AbstractUndoableEdit this]
     (-> this (.canRedo))))
 
 (defn get-presentation-name
@@ -104,7 +104,7 @@
    represents.
 
   returns: the empty string `` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.undo.AbstractUndoableEdit this]
+  (^java.lang.String [^AbstractUndoableEdit this]
     (-> this (.getPresentationName))))
 
 (defn replace-edit
@@ -113,7 +113,7 @@
   an-edit - the edit to replace - `javax.swing.undo.UndoableEdit`
 
   returns: false - `boolean`"
-  (^Boolean [^javax.swing.undo.AbstractUndoableEdit this ^javax.swing.undo.UndoableEdit an-edit]
+  (^Boolean [^AbstractUndoableEdit this ^javax.swing.undo.UndoableEdit an-edit]
     (-> this (.replaceEdit an-edit))))
 
 (defn get-redo-presentation-name
@@ -129,7 +129,7 @@
       by a space, followed by getPresentationName
       unless getPresentationName is `` in which
       case, the defaults value is returned alone. - `java.lang.String`"
-  (^java.lang.String [^javax.swing.undo.AbstractUndoableEdit this]
+  (^java.lang.String [^AbstractUndoableEdit this]
     (-> this (.getRedoPresentationName))))
 
 (defn can-undo?
@@ -138,6 +138,6 @@
 
   returns: true if this edit is alive
       and hasBeenDone is true - `boolean`"
-  (^Boolean [^javax.swing.undo.AbstractUndoableEdit this]
+  (^Boolean [^AbstractUndoableEdit this]
     (-> this (.canUndo))))
 

@@ -47,7 +47,7 @@
   axis - can be BoxLayout.X_AXIS, BoxLayout.Y_AXIS, BoxLayout.LINE_AXIS or BoxLayout.PAGE_AXIS. - `int`
 
   throws: java.awt.AWTError - if the axis is invalid"
-  ([^Integer axis]
+  (^Box [^Integer axis]
     (new Box axis)))
 
 (defn *create-horizontal-box
@@ -190,7 +190,7 @@
   "Throws an AWTError, since a Box can use only a BoxLayout.
 
   l - the layout manager to use - `java.awt.LayoutManager`"
-  ([^javax.swing.Box this ^java.awt.LayoutManager l]
+  ([^Box this ^java.awt.LayoutManager l]
     (-> this (.setLayout l))))
 
 (defn get-accessible-context
@@ -201,6 +201,6 @@
 
   returns: an AccessibleBox that serves as the
            AccessibleContext of this Box - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.Box this]
+  (^javax.accessibility.AccessibleContext [^Box this]
     (-> this (.getAccessibleContext))))
 

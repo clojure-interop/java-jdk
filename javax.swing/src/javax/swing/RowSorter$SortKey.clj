@@ -15,28 +15,28 @@
   sort-order - the sorter order - `javax.swing.SortOrder`
 
   throws: java.lang.IllegalArgumentException - if sortOrder is null"
-  ([^Integer column ^javax.swing.SortOrder sort-order]
+  (^RowSorter$SortKey [^Integer column ^javax.swing.SortOrder sort-order]
     (new RowSorter$SortKey column sort-order)))
 
 (defn get-column
   "Returns the index of the column.
 
   returns: index of column - `int`"
-  (^Integer [^javax.swing.RowSorter$SortKey this]
+  (^Integer [^RowSorter$SortKey this]
     (-> this (.getColumn))))
 
 (defn get-sort-order
   "Returns the sort order of the column.
 
   returns: the sort order of the column - `javax.swing.SortOrder`"
-  (^javax.swing.SortOrder [^javax.swing.RowSorter$SortKey this]
+  (^javax.swing.SortOrder [^RowSorter$SortKey this]
     (-> this (.getSortOrder))))
 
 (defn hash-code
   "Returns the hash code for this SortKey.
 
   returns: hash code - `int`"
-  (^Integer [^javax.swing.RowSorter$SortKey this]
+  (^Integer [^RowSorter$SortKey this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -48,6 +48,6 @@
   o - the object to compare to - `java.lang.Object`
 
   returns: true if o is equal to this SortKey - `boolean`"
-  (^Boolean [^javax.swing.RowSorter$SortKey this ^java.lang.Object o]
+  (^Boolean [^RowSorter$SortKey this ^java.lang.Object o]
     (-> this (.equals o))))
 

@@ -33,11 +33,11 @@
   threshold - the size in bytes that binary data SHOULD be before being sent as an attachment. - `int`
 
   throws: javax.xml.ws.WebServiceException - if threshold is < 0"
-  ([^Boolean enabled ^Integer threshold]
+  (^MTOMFeature [^Boolean enabled ^Integer threshold]
     (new MTOMFeature enabled threshold))
-  ([^Boolean enabled]
+  (^MTOMFeature [^Boolean enabled]
     (new MTOMFeature enabled))
-  ([]
+  (^MTOMFeature []
     (new MTOMFeature )))
 
 (def *-id
@@ -52,7 +52,7 @@
   "Get the unique identifier for this WebServiceFeature.
 
   returns: the unique identifier for this feature. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.ws.soap.MTOMFeature this]
+  (^java.lang.String [^MTOMFeature this]
     (-> this (.getID))))
 
 (defn get-threshold
@@ -60,6 +60,6 @@
    should be sent as an attachment.
 
   returns: the current threshold size in bytes - `int`"
-  (^Integer [^javax.xml.ws.soap.MTOMFeature this]
+  (^Integer [^MTOMFeature this]
     (-> this (.getThreshold))))
 

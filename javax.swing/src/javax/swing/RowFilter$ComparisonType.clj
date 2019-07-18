@@ -8,7 +8,7 @@
   Indicates that entries with a value before the supplied
    value should be included.
 
-  type: javax.swing.RowFilter.ComparisonType"
+  type: javax.swing.RowFilter$ComparisonType"
   RowFilter$ComparisonType/BEFORE)
 
 (def AFTER
@@ -17,7 +17,7 @@
   Indicates that entries with a value after the supplied
    value should be included.
 
-  type: javax.swing.RowFilter.ComparisonType"
+  type: javax.swing.RowFilter$ComparisonType"
   RowFilter$ComparisonType/AFTER)
 
 (def EQUAL
@@ -26,7 +26,7 @@
   Indicates that entries with a value equal to the supplied
    value should be included.
 
-  type: javax.swing.RowFilter.ComparisonType"
+  type: javax.swing.RowFilter$ComparisonType"
   RowFilter$ComparisonType/EQUAL)
 
 (def NOT_EQUAL
@@ -35,7 +35,7 @@
   Indicates that entries with a value not equal to the supplied
    value should be included.
 
-  type: javax.swing.RowFilter.ComparisonType"
+  type: javax.swing.RowFilter$ComparisonType"
   RowFilter$ComparisonType/NOT_EQUAL)
 
 (defn *values
@@ -47,7 +47,7 @@
   for (RowFilter.ComparisonType c : RowFilter.ComparisonType.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.RowFilter.ComparisonType[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.RowFilter$ComparisonType[]`"
   ([]
     (RowFilter$ComparisonType/values )))
 
@@ -59,9 +59,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.swing.RowFilter.ComparisonType`
+  returns: the enum constant with the specified name - `javax.swing.RowFilter$ComparisonType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.swing.RowFilter.ComparisonType [^java.lang.String name]
+  (^javax.swing.RowFilter$ComparisonType [^java.lang.String name]
     (RowFilter$ComparisonType/valueOf name)))
 

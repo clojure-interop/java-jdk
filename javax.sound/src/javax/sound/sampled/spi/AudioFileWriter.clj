@@ -7,7 +7,7 @@
 
 (defn ->audio-file-writer
   "Constructor."
-  ([]
+  (^AudioFileWriter []
     (new AudioFileWriter )))
 
 (defn get-audio-file-types
@@ -17,24 +17,24 @@
   stream - the audio input stream for which audio file type support is queried - `javax.sound.sampled.AudioInputStream`
 
   returns: array of file types.  If no file types are supported,
-   an array of length 0 is returned. - `javax.sound.sampled.AudioFileFormat.Type[]`"
-  ([^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioInputStream stream]
+   an array of length 0 is returned. - `javax.sound.sampled.AudioFileFormat$Type[]`"
+  ([^AudioFileWriter this ^javax.sound.sampled.AudioInputStream stream]
     (-> this (.getAudioFileTypes stream)))
-  ([^javax.sound.sampled.spi.AudioFileWriter this]
+  ([^AudioFileWriter this]
     (-> this (.getAudioFileTypes))))
 
 (defn file-type-supported?
   "Indicates whether an audio file of the type specified can be written
    from the audio input stream indicated.
 
-  file-type - file type for which write capabilities are queried - `javax.sound.sampled.AudioFileFormat.Type`
+  file-type - file type for which write capabilities are queried - `javax.sound.sampled.AudioFileFormat$Type`
   stream - for which file writing support is queried - `javax.sound.sampled.AudioInputStream`
 
   returns: true if the file type is supported for this audio input stream,
    otherwise false - `boolean`"
-  (^Boolean [^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioFileFormat.Type file-type ^javax.sound.sampled.AudioInputStream stream]
+  (^Boolean [^AudioFileWriter this ^javax.sound.sampled.AudioFileFormat$Type file-type ^javax.sound.sampled.AudioInputStream stream]
     (-> this (.isFileTypeSupported file-type stream)))
-  (^Boolean [^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioFileFormat.Type file-type]
+  (^Boolean [^AudioFileWriter this ^javax.sound.sampled.AudioFileFormat$Type file-type]
     (-> this (.isFileTypeSupported file-type))))
 
 (defn write
@@ -47,12 +47,12 @@
    AudioSystem.NOT_SPECIFIED.
 
   stream - the audio input stream containing audio data to be written to the output stream - `javax.sound.sampled.AudioInputStream`
-  file-type - file type to be written to the output stream - `javax.sound.sampled.AudioFileFormat.Type`
+  file-type - file type to be written to the output stream - `javax.sound.sampled.AudioFileFormat$Type`
   out - stream to which the file data should be written - `java.io.OutputStream`
 
   returns: the number of bytes written to the output stream - `int`
 
   throws: java.io.IOException - if an I/O exception occurs"
-  (^Integer [^javax.sound.sampled.spi.AudioFileWriter this ^javax.sound.sampled.AudioInputStream stream ^javax.sound.sampled.AudioFileFormat.Type file-type ^java.io.OutputStream out]
+  (^Integer [^AudioFileWriter this ^javax.sound.sampled.AudioInputStream stream ^javax.sound.sampled.AudioFileFormat$Type file-type ^java.io.OutputStream out]
     (-> this (.write stream file-type out))))
 

@@ -9,6 +9,6 @@
 
 (defn ->secure-random-spi
   "Constructor."
-  ([]
+  (^SecureRandomSpi []
     (new SecureRandomSpi )))
 

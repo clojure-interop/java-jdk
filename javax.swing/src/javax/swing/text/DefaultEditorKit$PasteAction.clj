@@ -18,13 +18,13 @@
   "Constructor.
 
   Create this object with the appropriate identifier."
-  ([]
+  (^DefaultEditorKit$PasteAction []
     (new DefaultEditorKit$PasteAction )))
 
 (defn action-performed
   "The operation to perform when this action is triggered.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([^javax.swing.text.DefaultEditorKit$PasteAction this ^java.awt.event.ActionEvent e]
+  ([^DefaultEditorKit$PasteAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

@@ -129,6 +129,6 @@
   "Returns this modifier's name in lowercase.
 
   returns: the name of this enum constant - `java.lang.String`"
-  (^java.lang.String [^javax.lang.model.element.Modifier this]
+  (^java.lang.String [^Modifier this]
     (-> this (.toString))))
 

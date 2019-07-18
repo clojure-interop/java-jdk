@@ -14,6 +14,6 @@
    indicating the index in the arguments array of the
    argument from which the text was generated.
 
-  type: java.text.MessageFormat.Field"
+  type: java.text.MessageFormat$Field"
   MessageFormat$Field/ARGUMENT)
 

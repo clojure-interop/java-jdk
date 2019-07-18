@@ -94,10 +94,10 @@
   Creates a TableRowSorter using model
    as the underlying TableModel.
 
-  model - the underlying TableModel to use, null is treated as an empty model - `TableRowSorter.M`"
-  ([^TableRowSorter.M model]
+  model - the underlying TableModel to use, null is treated as an empty model - `M`"
+  (^TableRowSorter [model]
     (new TableRowSorter model))
-  ([]
+  (^TableRowSorter []
     (new TableRowSorter )))
 
 (defn set-model
@@ -105,8 +105,8 @@
    for this TableRowSorter.  A value of null
    can be used to set an empty model.
 
-  model - the underlying model to use, or null - `TableRowSorter.M`"
-  ([^javax.swing.table.TableRowSorter this ^TableRowSorter.M model]
+  model - the underlying model to use, or null - `M`"
+  ([^TableRowSorter this model]
     (-> this (.setModel model))))
 
 (defn set-string-converter
@@ -116,7 +116,7 @@
    registered Comparator, to strings.
 
   string-converter - the object responsible for converting values from the model to strings - `javax.swing.table.TableStringConverter`"
-  ([^javax.swing.table.TableRowSorter this ^javax.swing.table.TableStringConverter string-converter]
+  ([^TableRowSorter this ^javax.swing.table.TableStringConverter string-converter]
     (-> this (.setStringConverter string-converter))))
 
 (defn get-string-converter
@@ -124,7 +124,7 @@
    model to strings.
 
   returns: object responsible for converting values to strings. - `javax.swing.table.TableStringConverter`"
-  (^javax.swing.table.TableStringConverter [^javax.swing.table.TableRowSorter this]
+  (^javax.swing.table.TableStringConverter [^TableRowSorter this]
     (-> this (.getStringConverter))))
 
 (defn get-comparator
@@ -145,6 +145,6 @@
   returns: the Comparator for the specified column - `java.util.Comparator<?>`
 
   throws: java.lang.IndexOutOfBoundsException - if column is outside the range of the underlying model"
-  (^java.util.Comparator [^javax.swing.table.TableRowSorter this ^Integer column]
+  (^java.util.Comparator [^TableRowSorter this ^Integer column]
     (-> this (.getComparator column))))
 

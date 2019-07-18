@@ -15,7 +15,7 @@
 
 (defn ->endpoint-context
   "Constructor."
-  ([]
+  (^EndpointContext []
     (new EndpointContext )))
 
 (defn get-endpoints
@@ -25,6 +25,6 @@
    server.
 
   returns: list of all endpoints in an application - `java.util.Set<javax.xml.ws.Endpoint>`"
-  (^java.util.Set [^javax.xml.ws.EndpointContext this]
+  (^java.util.Set [^EndpointContext this]
     (-> this (.getEndpoints))))
 

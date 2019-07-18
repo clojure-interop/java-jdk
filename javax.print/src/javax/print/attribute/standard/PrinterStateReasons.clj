@@ -48,11 +48,11 @@
   load-factor - Load factor. - `float`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is less than zero."
-  ([^Integer initial-capacity ^Float load-factor]
+  (^PrinterStateReasons [^Integer initial-capacity ^Float load-factor]
     (new PrinterStateReasons initial-capacity load-factor))
-  ([^Integer initial-capacity]
+  (^PrinterStateReasons [^Integer initial-capacity]
     (new PrinterStateReasons initial-capacity))
-  ([]
+  (^PrinterStateReasons []
     (new PrinterStateReasons )))
 
 (defn put
@@ -69,7 +69,7 @@
             not present. - `javax.print.attribute.standard.Severity`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if reason is null or severity is null."
-  (^javax.print.attribute.standard.Severity [^javax.print.attribute.standard.PrinterStateReasons this ^javax.print.attribute.standard.PrinterStateReason reason ^javax.print.attribute.standard.Severity severity]
+  (^javax.print.attribute.standard.Severity [^PrinterStateReasons this ^javax.print.attribute.standard.PrinterStateReason reason ^javax.print.attribute.standard.Severity severity]
     (-> this (.put reason severity))))
 
 (defn get-category
@@ -81,7 +81,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.PrinterStateReasons this]
+  ([^PrinterStateReasons this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -92,7 +92,7 @@
    category name is `printer-state-reasons`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.PrinterStateReasons this]
+  (^java.lang.String [^PrinterStateReasons this]
     (-> this (.getName))))
 
 (defn printer-state-reason-set
@@ -111,6 +111,6 @@
   returns: Set view of the individual PrinterStateReason attributes at the given Severity level. - `java.util.Set<javax.print.attribute.standard.PrinterStateReason>`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if severity is null."
-  (^java.util.Set [^javax.print.attribute.standard.PrinterStateReasons this ^javax.print.attribute.standard.Severity severity]
+  (^java.util.Set [^PrinterStateReasons this ^javax.print.attribute.standard.Severity severity]
     (-> this (.printerStateReasonSet severity))))
 

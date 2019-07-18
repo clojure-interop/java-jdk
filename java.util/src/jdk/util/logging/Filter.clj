@@ -15,6 +15,6 @@
   record - a LogRecord - `java.util.logging.LogRecord`
 
   returns: true if the log record should be published. - `boolean`"
-  (^Boolean [^java.util.logging.Filter this ^java.util.logging.LogRecord record]
+  (^Boolean [^Filter this ^java.util.logging.LogRecord record]
     (-> this (.isLoggable record))))
 

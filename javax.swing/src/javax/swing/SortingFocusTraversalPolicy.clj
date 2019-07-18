@@ -26,8 +26,8 @@
 
   Constructs a SortingFocusTraversalPolicy with the specified Comparator.
 
-  comparator - `java.awt.Component>`"
-  ([^java.awt.Component> comparator]
+  comparator - `java.util.Comparator`"
+  (^SortingFocusTraversalPolicy [^java.util.Comparator comparator]
     (new SortingFocusTraversalPolicy comparator)))
 
 (defn get-component-after
@@ -50,7 +50,7 @@
            null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is not a focus cycle root of aComponent or a focus traversal policy provider, or if either aContainer or aComponent is null"
-  (^java.awt.Component [^javax.swing.SortingFocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
+  (^java.awt.Component [^SortingFocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentAfter a-container a-component))))
 
 (defn get-component-before
@@ -73,7 +73,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is not a focus cycle root of aComponent or a focus traversal policy provider, or if either aContainer or aComponent is null"
-  (^java.awt.Component [^javax.swing.SortingFocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
+  (^java.awt.Component [^SortingFocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentBefore a-container a-component))))
 
 (defn get-first-component
@@ -87,7 +87,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  (^java.awt.Component [^javax.swing.SortingFocusTraversalPolicy this ^java.awt.Container a-container]
+  (^java.awt.Component [^SortingFocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getFirstComponent a-container))))
 
 (defn get-last-component
@@ -101,7 +101,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  (^java.awt.Component [^javax.swing.SortingFocusTraversalPolicy this ^java.awt.Container a-container]
+  (^java.awt.Component [^SortingFocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getLastComponent a-container))))
 
 (defn get-default-component
@@ -116,7 +116,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  (^java.awt.Component [^javax.swing.SortingFocusTraversalPolicy this ^java.awt.Container a-container]
+  (^java.awt.Component [^SortingFocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getDefaultComponent a-container))))
 
 (defn set-implicit-down-cycle-traversal
@@ -129,7 +129,7 @@
    property is true.
 
   implicit-down-cycle-traversal - whether this SortingFocusTraversalPolicy transfers focus down-cycle implicitly - `boolean`"
-  ([^javax.swing.SortingFocusTraversalPolicy this ^Boolean implicit-down-cycle-traversal]
+  ([^SortingFocusTraversalPolicy this ^Boolean implicit-down-cycle-traversal]
     (-> this (.setImplicitDownCycleTraversal implicit-down-cycle-traversal))))
 
 (defn get-implicit-down-cycle-traversal?
@@ -142,6 +142,6 @@
 
   returns: whether this SortingFocusTraversalPolicy transfers focus down-
            cycle implicitly - `boolean`"
-  (^Boolean [^javax.swing.SortingFocusTraversalPolicy this]
+  (^Boolean [^SortingFocusTraversalPolicy this]
     (-> this (.getImplicitDownCycleTraversal))))
 

@@ -96,7 +96,7 @@
 
 (defn ->buffer-strategy
   "Constructor."
-  ([]
+  (^BufferStrategy []
     (new BufferStrategy )))
 
 (defn get-capabilities
@@ -104,7 +104,7 @@
    BufferStrategy.
 
   returns: the buffering capabilities of this strategy - `java.awt.BufferCapabilities`"
-  (^java.awt.BufferCapabilities [^java.awt.image.BufferStrategy this]
+  (^java.awt.BufferCapabilities [^BufferStrategy this]
     (-> this (.getCapabilities))))
 
 (defn get-draw-graphics
@@ -114,7 +114,7 @@
    graphics object obtained must be handled by the application.
 
   returns: a graphics context for the drawing buffer - `java.awt.Graphics`"
-  (^java.awt.Graphics [^java.awt.image.BufferStrategy this]
+  (^java.awt.Graphics [^BufferStrategy this]
     (-> this (.getDrawGraphics))))
 
 (defn contents-lost
@@ -125,7 +125,7 @@
 
   returns: Whether or not the drawing buffer was lost since the last call
    to getDrawGraphics. - `boolean`"
-  (^Boolean [^java.awt.image.BufferStrategy this]
+  (^Boolean [^BufferStrategy this]
     (-> this (.contentsLost))))
 
 (defn contents-restored
@@ -139,13 +139,13 @@
 
   returns: Whether or not the drawing buffer was restored since the last
            call to getDrawGraphics. - `boolean`"
-  (^Boolean [^java.awt.image.BufferStrategy this]
+  (^Boolean [^BufferStrategy this]
     (-> this (.contentsRestored))))
 
 (defn show
   "Makes the next available buffer visible by either copying the memory
    (blitting) or changing the display pointer (flipping)."
-  ([^java.awt.image.BufferStrategy this]
+  ([^BufferStrategy this]
     (-> this (.show))))
 
 (defn dispose
@@ -155,6 +155,6 @@
    method, getBufferStrategy will return null.  Trying
    to use a BufferStrategy after it has been disposed will
    result in undefined behavior."
-  ([^java.awt.image.BufferStrategy this]
+  ([^BufferStrategy this]
     (-> this (.dispose))))
 

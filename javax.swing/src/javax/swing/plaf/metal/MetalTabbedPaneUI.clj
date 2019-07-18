@@ -14,7 +14,7 @@
 
 (defn ->metal-tabbed-pane-ui
   "Constructor."
-  ([]
+  (^MetalTabbedPaneUI []
     (new MetalTabbedPaneUI )))
 
 (defn *create-ui
@@ -29,7 +29,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalTabbedPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^MetalTabbedPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint
@@ -37,6 +37,6 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalTabbedPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^MetalTabbedPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 

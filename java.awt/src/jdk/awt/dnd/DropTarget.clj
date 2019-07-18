@@ -31,15 +31,15 @@
   fm - The FlavorMap to use, or null for the default FlavorMap - `java.awt.datatransfer.FlavorMap`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
-  ([^java.awt.Component c ^Integer ops ^java.awt.dnd.DropTargetListener dtl ^Boolean act ^java.awt.datatransfer.FlavorMap fm]
+  (^DropTarget [^java.awt.Component c ^Integer ops ^java.awt.dnd.DropTargetListener dtl ^Boolean act ^java.awt.datatransfer.FlavorMap fm]
     (new DropTarget c ops dtl act fm))
-  ([^java.awt.Component c ^Integer ops ^java.awt.dnd.DropTargetListener dtl ^Boolean act]
+  (^DropTarget [^java.awt.Component c ^Integer ops ^java.awt.dnd.DropTargetListener dtl ^Boolean act]
     (new DropTarget c ops dtl act))
-  ([^java.awt.Component c ^Integer ops ^java.awt.dnd.DropTargetListener dtl]
+  (^DropTarget [^java.awt.Component c ^Integer ops ^java.awt.dnd.DropTargetListener dtl]
     (new DropTarget c ops dtl))
-  ([^java.awt.Component c ^java.awt.dnd.DropTargetListener dtl]
+  (^DropTarget [^java.awt.Component c ^java.awt.dnd.DropTargetListener dtl]
     (new DropTarget c dtl))
-  ([]
+  (^DropTarget []
     (new DropTarget )))
 
 (defn get-component
@@ -47,7 +47,7 @@
    with this DropTarget.
 
   returns: the current Component - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.dnd.DropTarget this]
+  (^java.awt.Component [^DropTarget this]
     (-> this (.getComponent))))
 
 (defn active?
@@ -56,7 +56,7 @@
    is currently active (ready to accept drops).
 
   returns: true if active, false if not - `boolean`"
-  (^Boolean [^java.awt.dnd.DropTarget this]
+  (^Boolean [^DropTarget this]
     (-> this (.isActive))))
 
 (defn get-drop-target-context
@@ -64,7 +64,7 @@
    with this DropTarget.
 
   returns: the DropTargetContext associated with this DropTarget. - `java.awt.dnd.DropTargetContext`"
-  (^java.awt.dnd.DropTargetContext [^java.awt.dnd.DropTarget this]
+  (^java.awt.dnd.DropTargetContext [^DropTarget this]
     (-> this (.getDropTargetContext))))
 
 (defn get-flavor-map
@@ -75,14 +75,14 @@
    FlavorMap.
 
   returns: the FlavorMap for this DropTarget - `java.awt.datatransfer.FlavorMap`"
-  (^java.awt.datatransfer.FlavorMap [^java.awt.dnd.DropTarget this]
+  (^java.awt.datatransfer.FlavorMap [^DropTarget this]
     (-> this (.getFlavorMap))))
 
 (defn set-default-actions
   "Sets the default acceptable actions for this DropTarget
 
   ops - the default actions - `int`"
-  ([^java.awt.dnd.DropTarget this ^Integer ops]
+  ([^DropTarget this ^Integer ops]
     (-> this (.setDefaultActions ops))))
 
 (defn drag-exit
@@ -97,7 +97,7 @@
    the respective method of the listener.
 
   dte - the DropTargetEvent - `java.awt.dnd.DropTargetEvent`"
-  ([^java.awt.dnd.DropTarget this ^java.awt.dnd.DropTargetEvent dte]
+  ([^DropTarget this ^java.awt.dnd.DropTargetEvent dte]
     (-> this (.dragExit dte))))
 
 (defn add-notify
@@ -113,7 +113,7 @@
    a malfunction of the DnD system.
 
   peer - The Peer of the Component we are associated with! - `java.awt.peer.ComponentPeer`"
-  ([^java.awt.dnd.DropTarget this ^java.awt.peer.ComponentPeer peer]
+  ([^DropTarget this ^java.awt.peer.ComponentPeer peer]
     (-> this (.addNotify peer))))
 
 (defn drop
@@ -125,7 +125,7 @@
   dtde - the DropTargetDropEvent - `java.awt.dnd.DropTargetDropEvent`
 
   throws: java.lang.NullPointerException - if dtde is null and at least one of the following is true: this DropTarget is not active, or there is no a DropTargetListener registered."
-  ([^java.awt.dnd.DropTarget this ^java.awt.dnd.DropTargetDropEvent dtde]
+  ([^DropTarget this ^java.awt.dnd.DropTargetDropEvent dtde]
     (-> this (.drop dtde))))
 
 (defn get-default-actions
@@ -133,7 +133,7 @@
    current action(s) supported by this DropTarget.
 
   returns: the current default actions - `int`"
-  (^Integer [^java.awt.dnd.DropTarget this]
+  (^Integer [^DropTarget this]
     (-> this (.getDefaultActions))))
 
 (defn remove-notify
@@ -149,7 +149,7 @@
    a malfunction of the DnD system.
 
   peer - The Peer of the Component we are being disassociated from! - `java.awt.peer.ComponentPeer`"
-  ([^java.awt.dnd.DropTarget this ^java.awt.peer.ComponentPeer peer]
+  ([^DropTarget this ^java.awt.peer.ComponentPeer peer]
     (-> this (.removeNotify peer))))
 
 (defn set-flavor-map
@@ -157,7 +157,7 @@
    with this DropTarget.
 
   fm - the new FlavorMap, or null to associate the default FlavorMap with this DropTarget. - `java.awt.datatransfer.FlavorMap`"
-  ([^java.awt.dnd.DropTarget this ^java.awt.datatransfer.FlavorMap fm]
+  ([^DropTarget this ^java.awt.datatransfer.FlavorMap fm]
     (-> this (.setFlavorMap fm))))
 
 (defn set-component
@@ -169,7 +169,7 @@
    The Component will receive drops only if it is enabled.
 
   c - The new Component this DropTarget is to be associated with. - `java.awt.Component`"
-  ([^java.awt.dnd.DropTarget this ^java.awt.Component c]
+  ([^DropTarget this ^java.awt.Component c]
     (-> this (.setComponent c))))
 
 (defn drop-action-changed
@@ -182,7 +182,7 @@
   dtde - the DropTargetDragEvent - `java.awt.dnd.DropTargetDragEvent`
 
   throws: java.lang.NullPointerException - if this DropTarget is active and dtde is null"
-  ([^java.awt.dnd.DropTarget this ^java.awt.dnd.DropTargetDragEvent dtde]
+  ([^DropTarget this ^java.awt.dnd.DropTargetDragEvent dtde]
     (-> this (.dropActionChanged dtde))))
 
 (defn drag-enter
@@ -195,7 +195,7 @@
   dtde - the DropTargetDragEvent - `java.awt.dnd.DropTargetDragEvent`
 
   throws: java.lang.NullPointerException - if this DropTarget is active and dtde is null"
-  ([^java.awt.dnd.DropTarget this ^java.awt.dnd.DropTargetDragEvent dtde]
+  ([^DropTarget this ^java.awt.dnd.DropTargetDragEvent dtde]
     (-> this (.dragEnter dtde))))
 
 (defn add-drop-target-listener
@@ -204,7 +204,7 @@
   dtl - The new DropTargetListener - `java.awt.dnd.DropTargetListener`
 
   throws: java.util.TooManyListenersException - if a DropTargetListener is already added to this DropTarget."
-  ([^java.awt.dnd.DropTarget this ^java.awt.dnd.DropTargetListener dtl]
+  ([^DropTarget this ^java.awt.dnd.DropTargetListener dtl]
     (-> this (.addDropTargetListener dtl))))
 
 (defn set-active
@@ -212,7 +212,7 @@
    inactive if false.
 
   is-active - sets the DropTarget (in)active. - `boolean`"
-  ([^java.awt.dnd.DropTarget this ^Boolean is-active]
+  ([^DropTarget this ^Boolean is-active]
     (-> this (.setActive is-active))))
 
 (defn drag-over
@@ -225,13 +225,13 @@
   dtde - the DropTargetDragEvent - `java.awt.dnd.DropTargetDragEvent`
 
   throws: java.lang.NullPointerException - if this DropTarget is active and dtde is null"
-  ([^java.awt.dnd.DropTarget this ^java.awt.dnd.DropTargetDragEvent dtde]
+  ([^DropTarget this ^java.awt.dnd.DropTargetDragEvent dtde]
     (-> this (.dragOver dtde))))
 
 (defn remove-drop-target-listener
   "Removes the current DropTargetListener (UNICAST SOURCE).
 
   dtl - the DropTargetListener to deregister. - `java.awt.dnd.DropTargetListener`"
-  ([^java.awt.dnd.DropTarget this ^java.awt.dnd.DropTargetListener dtl]
+  ([^DropTarget this ^java.awt.dnd.DropTargetListener dtl]
     (-> this (.removeDropTargetListener dtl))))
 

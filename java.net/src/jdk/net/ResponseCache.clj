@@ -26,7 +26,7 @@
 
 (defn ->response-cache
   "Constructor."
-  ([]
+  (^ResponseCache []
     (new ResponseCache )))
 
 (defn *get-default
@@ -58,13 +58,13 @@
 
   uri - a URI used to reference the requested network resource - `java.net.URI`
   rqst-method - a String representing the request method - `java.lang.String`
-  rqst-headers - - a Map from request header field names to lists of field values representing the current request headers - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
+  rqst-headers - - a Map from request header field names to lists of field values representing the current request headers - `java.util.Map`
 
   returns: a CacheResponse instance if available
             from cache, or null otherwise - `java.net.CacheResponse`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.net.CacheResponse [^java.net.ResponseCache this ^java.net.URI uri ^java.lang.String rqst-method ^java.util.Map> rqst-headers]
+  (^java.net.CacheResponse [^ResponseCache this ^java.net.URI uri ^java.lang.String rqst-method ^java.util.Map rqst-headers]
     (-> this (.get uri rqst-method rqst-headers))))
 
 (defn put
@@ -84,6 +84,6 @@
               the caller does not intend to cache the response. - `java.net.CacheRequest`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.net.CacheRequest [^java.net.ResponseCache this ^java.net.URI uri ^java.net.URLConnection conn]
+  (^java.net.CacheRequest [^ResponseCache this ^java.net.URI uri ^java.net.URLConnection conn]
     (-> this (.put uri conn))))
 

@@ -13,7 +13,7 @@
 
   returns: the MBeanServer object to which requests will be forwarded,
    or null if there is none. - `javax.management.MBeanServer`"
-  (^javax.management.MBeanServer [^javax.management.remote.MBeanServerForwarder this]
+  (^javax.management.MBeanServer [^MBeanServerForwarder this]
     (-> this (.getMBeanServer))))
 
 (defn set-m-bean-server
@@ -23,6 +23,6 @@
   mbs - the MBeanServer object to which requests will be forwarded. - `javax.management.MBeanServer`
 
   throws: java.lang.IllegalArgumentException - if this object is already forwarding to an MBeanServer object or if mbs is null or if mbs is identical to this object."
-  ([^javax.management.remote.MBeanServerForwarder this ^javax.management.MBeanServer mbs]
+  ([^MBeanServerForwarder this ^javax.management.MBeanServer mbs]
     (-> this (.setMBeanServer mbs))))
 

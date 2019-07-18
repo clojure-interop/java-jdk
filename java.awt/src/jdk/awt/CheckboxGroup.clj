@@ -26,7 +26,7 @@
   "Constructor.
 
   Creates a new instance of CheckboxGroup."
-  ([]
+  (^CheckboxGroup []
     (new CheckboxGroup )))
 
 (defn get-selected-checkbox
@@ -38,15 +38,15 @@
 
   returns: the check box that is currently in the
                    `on` state, or null. - `java.awt.Checkbox`"
-  (^java.awt.Checkbox [^java.awt.CheckboxGroup this]
+  (^java.awt.Checkbox [^CheckboxGroup this]
     (-> this (.getSelectedCheckbox))))
 
 (defn get-current
   "Deprecated. As of JDK version 1.1,
    replaced by getSelectedCheckbox().
 
-  returns: `java.lang.  java.awt.Checkbox`"
-  ([^java.awt.CheckboxGroup this]
+  returns: `java.awt.Checkbox`"
+  (^java.awt.Checkbox [^CheckboxGroup this]
     (-> this (.getCurrent))))
 
 (defn set-selected-checkbox
@@ -61,17 +61,15 @@
    nothing.
 
   box - the Checkbox to set as the current selection. - `java.awt.Checkbox`"
-  ([^java.awt.CheckboxGroup this ^java.awt.Checkbox box]
+  ([^CheckboxGroup this ^java.awt.Checkbox box]
     (-> this (.setSelectedCheckbox box))))
 
 (defn set-current
   "Deprecated. As of JDK version 1.1,
    replaced by setSelectedCheckbox(Checkbox).
 
-  box - `java.awt.Checkbox`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.CheckboxGroup this ^java.awt.Checkbox box]
+  box - `java.awt.Checkbox`"
+  ([^CheckboxGroup this ^java.awt.Checkbox box]
     (-> this (.setCurrent box))))
 
 (defn to-string
@@ -79,6 +77,6 @@
    including the value of its current selection.
 
   returns: a string representation of this check box group. - `java.lang.String`"
-  (^java.lang.String [^java.awt.CheckboxGroup this]
+  (^java.lang.String [^CheckboxGroup this]
     (-> this (.toString))))
 

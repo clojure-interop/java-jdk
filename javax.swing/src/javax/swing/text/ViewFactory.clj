@@ -12,6 +12,6 @@
   elem - the piece of the document to build a view of - `javax.swing.text.Element`
 
   returns: the view - `javax.swing.text.View`"
-  (^javax.swing.text.View [^javax.swing.text.ViewFactory this ^javax.swing.text.Element elem]
+  (^javax.swing.text.View [^ViewFactory this ^javax.swing.text.Element elem]
     (-> this (.create elem))))
 

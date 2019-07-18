@@ -42,12 +42,12 @@
    UnsupportedOperationException unless add is
    overridden (assuming the specified collection is non-empty).
 
-  c - collection containing elements to be added to this collection - `AbstractCollection.E>`
+  c - collection containing elements to be added to this collection - `java.util.Collection`
 
   returns: true if this collection changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this collection"
-  (^Boolean [^java.util.AbstractCollection this ^AbstractCollection.E> c]
+  (^Boolean [^AbstractCollection this ^java.util.Collection c]
     (-> this (.addAll c))))
 
 (defn contains
@@ -65,7 +65,7 @@
            element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this collection (optional)"
-  (^Boolean [^java.util.AbstractCollection this ^java.lang.Object o]
+  (^Boolean [^AbstractCollection this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn to-string
@@ -77,14 +77,14 @@
    by String.valueOf(Object).
 
   returns: a string representation of this collection - `java.lang.String`"
-  (^java.lang.String [^java.util.AbstractCollection this]
+  (^java.lang.String [^AbstractCollection this]
     (-> this (.toString))))
 
 (defn iterator
   "Returns an iterator over the elements contained in this collection.
 
-  returns: an iterator over the elements contained in this collection - `java.util.Iterator<AbstractCollection.E>`"
-  (^java.util.Iterator [^java.util.AbstractCollection this]
+  returns: an iterator over the elements contained in this collection - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^AbstractCollection this]
     (-> this (.iterator))))
 
 (defn remove
@@ -110,7 +110,7 @@
   returns: true if an element was removed as a result of this call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this collection"
-  (^Boolean [^java.util.AbstractCollection this ^java.lang.Object o]
+  (^Boolean [^AbstractCollection this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn add
@@ -135,13 +135,13 @@
    This implementation always throws an
    UnsupportedOperationException.
 
-  e - element whose presence in this collection is to be ensured - `AbstractCollection.E`
+  e - element whose presence in this collection is to be ensured - `E`
 
   returns: true if this collection changed as a result of the
            call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the add operation is not supported by this collection"
-  (^Boolean [^java.util.AbstractCollection this ^AbstractCollection.E e]
+  (^Boolean [^AbstractCollection this e]
     (-> this (.add e))))
 
 (defn empty?
@@ -150,14 +150,14 @@
    This implementation returns size() == 0.
 
   returns: true if this collection contains no elements - `boolean`"
-  (^Boolean [^java.util.AbstractCollection this]
+  (^Boolean [^AbstractCollection this]
     (-> this (.isEmpty))))
 
 (defn size
   "Description copied from interface: Collection
 
   returns: the number of elements in this collection - `int`"
-  (^Integer [^java.util.AbstractCollection this]
+  (^Integer [^AbstractCollection this]
     (-> this (.size))))
 
 (defn retain-all
@@ -177,12 +177,12 @@
    and this collection contains one or more elements not present in the
    specified collection.
 
-  c - collection containing elements to be retained in this collection - `java.util.Collection<?>`
+  c - collection containing elements to be retained in this collection - `java.util.Collection`
 
   returns: true if this collection changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the retainAll operation is not supported by this collection"
-  (^Boolean [^java.util.AbstractCollection this ^java.util.Collection c]
+  (^Boolean [^AbstractCollection this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -200,7 +200,7 @@
    remove method and this collection is non-empty.
 
   throws: java.lang.UnsupportedOperationException - if the clear operation is not supported by this collection"
-  ([^java.util.AbstractCollection this]
+  ([^AbstractCollection this]
     (-> this (.clear))))
 
 (defn to-array
@@ -263,9 +263,9 @@
   returns: an array containing all of the elements in this collection - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this collection"
-  ([^java.util.AbstractCollection this a]
+  ([^AbstractCollection this a]
     (-> this (.toArray a)))
-  ([^java.util.AbstractCollection this]
+  ([^AbstractCollection this]
     (-> this (.toArray))))
 
 (defn remove-all
@@ -285,13 +285,13 @@
    and this collection contains one or more elements in common with the
    specified collection.
 
-  c - collection containing elements to be removed from this collection - `java.util.Collection<?>`
+  c - collection containing elements to be removed from this collection - `java.util.Collection`
 
   returns: true if this collection changed as a result of the
            call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the removeAll method is not supported by this collection"
-  (^Boolean [^java.util.AbstractCollection this ^java.util.Collection c]
+  (^Boolean [^AbstractCollection this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn contains-all
@@ -303,12 +303,12 @@
    if it's contained in this collection.  If all elements are so
    contained true is returned, otherwise false.
 
-  c - collection to be checked for containment in this collection - `java.util.Collection<?>`
+  c - collection to be checked for containment in this collection - `java.util.Collection`
 
   returns: true if this collection contains all of the elements
            in the specified collection - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in the specified collection are incompatible with this collection (optional)"
-  (^Boolean [^java.util.AbstractCollection this ^java.util.Collection c]
+  (^Boolean [^AbstractCollection this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

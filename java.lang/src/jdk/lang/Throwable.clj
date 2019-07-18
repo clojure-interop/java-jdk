@@ -89,11 +89,11 @@
 
   message - the detail message (which is saved for later retrieval by the getMessage() method). - `java.lang.String`
   cause - the cause (which is saved for later retrieval by the getCause() method). (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^Throwable [^java.lang.String message ^java.lang.Throwable cause]
     (new Throwable message cause))
-  ([^java.lang.String message]
+  (^Throwable [^java.lang.String message]
     (new Throwable message))
-  ([]
+  (^Throwable []
     (new Throwable )))
 
 (defn get-stack-trace
@@ -118,7 +118,7 @@
 
   returns: an array of stack trace elements representing the stack trace
            pertaining to this throwable. - `java.lang.StackTraceElement[]`"
-  ([^java.lang.Throwable this]
+  ([^Throwable this]
     (-> this (.getStackTrace))))
 
 (defn add-suppressed
@@ -166,7 +166,7 @@
   exception - the exception to be added to the list of suppressed exceptions - `java.lang.Throwable`
 
   throws: java.lang.IllegalArgumentException - if exception is this throwable; a throwable cannot suppress itself."
-  ([^java.lang.Throwable this ^java.lang.Throwable exception]
+  ([^Throwable this ^java.lang.Throwable exception]
     (-> this (.addSuppressed exception))))
 
 (defn init-cause
@@ -197,7 +197,7 @@
   returns: a reference to this Throwable instance. - `java.lang.Throwable`
 
   throws: java.lang.IllegalArgumentException - if cause is this throwable. (A throwable cannot be its own cause.)"
-  (^java.lang.Throwable [^java.lang.Throwable this ^java.lang.Throwable cause]
+  (^java.lang.Throwable [^Throwable this ^java.lang.Throwable cause]
     (-> this (.initCause cause))))
 
 (defn to-string
@@ -213,7 +213,7 @@
    the class name is returned.
 
   returns: a string representation of this throwable. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Throwable this]
+  (^java.lang.String [^Throwable this]
     (-> this (.toString))))
 
 (defn get-suppressed
@@ -228,16 +228,16 @@
 
   returns: an array containing all of the exceptions that were
            suppressed to deliver this exception. - `java.lang.Throwable[]`"
-  ([^java.lang.Throwable this]
+  ([^Throwable this]
     (-> this (.getSuppressed))))
 
 (defn print-stack-trace
   "Prints this throwable and its backtrace to the specified print stream.
 
   s - PrintStream to use for output - `java.io.PrintStream`"
-  ([^java.lang.Throwable this ^java.io.PrintStream s]
+  ([^Throwable this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([^java.lang.Throwable this]
+  ([^Throwable this]
     (-> this (.printStackTrace))))
 
 (defn get-localized-message
@@ -248,7 +248,7 @@
    getMessage().
 
   returns: The localized description of this throwable. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Throwable this]
+  (^java.lang.String [^Throwable this]
     (-> this (.getLocalizedMessage))))
 
 (defn get-message
@@ -256,7 +256,7 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  (^java.lang.String [^java.lang.Throwable this]
+  (^java.lang.String [^Throwable this]
     (-> this (.getMessage))))
 
 (defn fill-in-stack-trace
@@ -268,7 +268,7 @@
    writable, calling this method has no effect.
 
   returns: a reference to this Throwable instance. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^java.lang.Throwable this]
+  (^java.lang.Throwable [^Throwable this]
     (-> this (.fillInStackTrace))))
 
 (defn set-stack-trace
@@ -289,7 +289,7 @@
   stack-trace - the stack trace elements to be associated with this Throwable. The specified array is copied by this call; changes in the specified array after the method invocation returns will have no affect on this Throwable's stack trace. - `java.lang.StackTraceElement[]`
 
   throws: java.lang.NullPointerException - if stackTrace is null or if any of the elements of stackTrace are null"
-  ([^java.lang.Throwable this stack-trace]
+  ([^Throwable this stack-trace]
     (-> this (.setStackTrace stack-trace))))
 
 (defn get-cause
@@ -310,6 +310,6 @@
 
   returns: the cause of this throwable or null if the
             cause is nonexistent or unknown. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^java.lang.Throwable this]
+  (^java.lang.Throwable [^Throwable this]
     (-> this (.getCause))))
 

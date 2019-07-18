@@ -34,7 +34,7 @@
    Redirect.PIPE.file() == null &&
    Redirect.PIPE.type() == Redirect.Type.PIPE
 
-  type: java.lang.ProcessBuilder.Redirect"
+  type: java.lang.ProcessBuilder$Redirect"
   ProcessBuilder$Redirect/PIPE)
 
 (def *-inherit
@@ -50,7 +50,7 @@
    Redirect.INHERIT.file() == null &&
    Redirect.INHERIT.type() == Redirect.Type.INHERIT
 
-  type: java.lang.ProcessBuilder.Redirect"
+  type: java.lang.ProcessBuilder$Redirect"
   ProcessBuilder$Redirect/INHERIT)
 
 (defn *from
@@ -64,10 +64,10 @@
 
   file - The File for the Redirect. - `java.io.File`
 
-  returns: a redirect to read from the specified file - `java.lang.ProcessBuilder.Redirect`
+  returns: a redirect to read from the specified file - `java.lang.ProcessBuilder$Redirect`
 
   throws: java.lang.NullPointerException - if the specified file is null"
-  (^java.lang.ProcessBuilder.Redirect [^java.io.File file]
+  (^java.lang.ProcessBuilder$Redirect [^java.io.File file]
     (ProcessBuilder$Redirect/from file)))
 
 (defn *to
@@ -83,10 +83,10 @@
 
   file - The File for the Redirect. - `java.io.File`
 
-  returns: a redirect to write to the specified file - `java.lang.ProcessBuilder.Redirect`
+  returns: a redirect to write to the specified file - `java.lang.ProcessBuilder$Redirect`
 
   throws: java.lang.NullPointerException - if the specified file is null"
-  (^java.lang.ProcessBuilder.Redirect [^java.io.File file]
+  (^java.lang.ProcessBuilder$Redirect [^java.io.File file]
     (ProcessBuilder$Redirect/to file)))
 
 (defn *append-to
@@ -105,17 +105,17 @@
 
   file - The File for the Redirect. - `java.io.File`
 
-  returns: a redirect to append to the specified file - `java.lang.ProcessBuilder.Redirect`
+  returns: a redirect to append to the specified file - `java.lang.ProcessBuilder$Redirect`
 
   throws: java.lang.NullPointerException - if the specified file is null"
-  (^java.lang.ProcessBuilder.Redirect [^java.io.File file]
+  (^java.lang.ProcessBuilder$Redirect [^java.io.File file]
     (ProcessBuilder$Redirect/appendTo file)))
 
 (defn type
   "Returns the type of this Redirect.
 
-  returns: the type of this Redirect - `java.lang.ProcessBuilder.Redirect.Type`"
-  (^java.lang.ProcessBuilder.Redirect.Type [^java.lang.ProcessBuilder$Redirect this]
+  returns: the type of this Redirect - `java.lang.ProcessBuilder$Redirect$Type`"
+  (^java.lang.ProcessBuilder$Redirect$Type [^ProcessBuilder$Redirect this]
     (-> this (.type))))
 
 (defn file
@@ -124,7 +124,7 @@
 
   returns: the file associated with this redirect,
            or null if there is no such file - `java.io.File`"
-  (^java.io.File [^java.lang.ProcessBuilder$Redirect this]
+  (^java.io.File [^ProcessBuilder$Redirect this]
     (-> this (.file))))
 
 (defn equals
@@ -138,13 +138,13 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.lang.ProcessBuilder$Redirect this ^java.lang.Object obj]
+  (^Boolean [^ProcessBuilder$Redirect this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hash code value for this Redirect.
 
   returns: a hash code value for this Redirect - `int`"
-  (^Integer [^java.lang.ProcessBuilder$Redirect this]
+  (^Integer [^ProcessBuilder$Redirect this]
     (-> this (.hashCode))))
 

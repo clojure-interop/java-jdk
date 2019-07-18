@@ -5,6 +5,6 @@
 
 (defn ->table-header-ui
   "Constructor."
-  ([]
+  (^TableHeaderUI []
     (new TableHeaderUI )))
 

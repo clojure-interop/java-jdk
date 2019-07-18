@@ -9,7 +9,7 @@
     of inbound and outbound messages. Refer to the description of the handler
     framework in the JAX-WS specification for full details.
 
-  context - the message context. - `Handler.C`
+  context - the message context. - `C`
 
   returns: An indication of whether handler processing should continue for
     the current message
@@ -20,7 +20,7 @@
                        processing. - `boolean`
 
   throws: java.lang.RuntimeException - Causes the JAX-WS runtime to cease handler processing and generate a fault."
-  (^Boolean [^javax.xml.ws.handler.Handler this ^Handler.C context]
+  (^Boolean [^Handler this context]
     (-> this (.handleMessage context))))
 
 (defn handle-fault
@@ -28,7 +28,7 @@
     processing.  Refer to the description of the handler
     framework in the JAX-WS specification for full details.
 
-  context - the message context - `Handler.C`
+  context - the message context - `C`
 
   returns: An indication of whether handler fault processing should continue
     for the current message
@@ -39,7 +39,7 @@
                        processing. - `boolean`
 
   throws: java.lang.RuntimeException - Causes the JAX-WS runtime to cease handler fault processing and dispatch the fault."
-  (^Boolean [^javax.xml.ws.handler.Handler this ^Handler.C context]
+  (^Boolean [^Handler this context]
     (-> this (.handleFault context))))
 
 (defn close
@@ -49,6 +49,6 @@
    framework in the JAX-WS specification for full details.
 
   context - the message context - `javax.xml.ws.handler.MessageContext`"
-  ([^javax.xml.ws.handler.Handler this ^javax.xml.ws.handler.MessageContext context]
+  ([^Handler this ^javax.xml.ws.handler.MessageContext context]
     (-> this (.close context))))
 

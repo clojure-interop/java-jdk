@@ -67,6 +67,6 @@
    The era BEFORE_BE has the value 0, while the era BE has the value 1.
 
   returns: the era value, from 0 (BEFORE_BE) to 1 (BE) - `int`"
-  (^Integer [^java.time.chrono.ThaiBuddhistEra this]
+  (^Integer [^ThaiBuddhistEra this]
     (-> this (.getValue))))
 

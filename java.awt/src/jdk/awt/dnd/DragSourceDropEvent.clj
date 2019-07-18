@@ -30,11 +30,11 @@
   y - the vertical coordinate for the cursor location - `int`
 
   throws: java.lang.IllegalArgumentException - if dsc is null."
-  ([^java.awt.dnd.DragSourceContext dsc ^Integer action ^Boolean success ^Integer x ^Integer y]
+  (^DragSourceDropEvent [^java.awt.dnd.DragSourceContext dsc ^Integer action ^Boolean success ^Integer x ^Integer y]
     (new DragSourceDropEvent dsc action success x y))
-  ([^java.awt.dnd.DragSourceContext dsc ^Integer action ^Boolean success]
+  (^DragSourceDropEvent [^java.awt.dnd.DragSourceContext dsc ^Integer action ^Boolean success]
     (new DragSourceDropEvent dsc action success))
-  ([^java.awt.dnd.DragSourceContext dsc]
+  (^DragSourceDropEvent [^java.awt.dnd.DragSourceContext dsc]
     (new DragSourceDropEvent dsc)))
 
 (defn get-drop-success?
@@ -46,7 +46,7 @@
            false if the drop target rejected the drop or
            if the drop target accepted the drop, but failed to perform
            a drop action. - `boolean`"
-  (^Boolean [^java.awt.dnd.DragSourceDropEvent this]
+  (^Boolean [^DragSourceDropEvent this]
     (-> this (.getDropSuccess))))
 
 (defn get-drop-action
@@ -57,6 +57,6 @@
            if the drop target accepted the drop and the target drop action
            is supported by the drag source; otherwise,
            DnDConstants.ACTION_NONE. - `int`"
-  (^Integer [^java.awt.dnd.DragSourceDropEvent this]
+  (^Integer [^DragSourceDropEvent this]
     (-> this (.getDropAction))))
 

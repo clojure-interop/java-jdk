@@ -102,7 +102,7 @@
    represents the specified char value.
 
   value - the value to be represented by the Character object. - `char`"
-  ([^Character value]
+  (^Character [^Character value]
     (new Character value)))
 
 (def *-min-radix
@@ -837,14 +837,14 @@
   (^Boolean [^Character ch]
     (Character/isSpaceChar ch)))
 
-(defn *is-space
+(defn *space?
   "Deprecated. Replaced by isWhitespace(char).
 
   ch - the character to be tested. - `char`
 
   returns: true if the character is ISO-LATIN-1 white
-               space; false otherwise. - `java.lang.   boolean`"
-  ([^Character ch]
+               space; false otherwise. - `boolean`"
+  (^Boolean [^Character ch]
     (Character/isSpace ch)))
 
 (defn *get-type
@@ -913,14 +913,14 @@
   (^Boolean [^Character ch]
     (Character/isUnicodeIdentifierStart ch)))
 
-(defn *is-java-letter-or-digit
+(defn *java-letter-or-digit?
   "Deprecated. Replaced by isJavaIdentifierPart(char).
 
   ch - the character to be tested. - `char`
 
   returns: true if the character may be part of a
-            Java identifier; false otherwise. - `java.lang.   boolean`"
-  ([^Character ch]
+            Java identifier; false otherwise. - `boolean`"
+  (^Boolean [^Character ch]
     (Character/isJavaLetterOrDigit ch)))
 
 (defn *to-string
@@ -1502,14 +1502,14 @@
   (^Boolean [^Character ch]
     (Character/isDefined ch)))
 
-(defn *is-java-letter
+(defn *java-letter?
   "Deprecated. Replaced by isJavaIdentifierStart(char).
 
   ch - the character to be tested. - `char`
 
   returns: true if the character may start a Java
-            identifier; false otherwise. - `java.lang.   boolean`"
-  ([^Character ch]
+            identifier; false otherwise. - `boolean`"
+  (^Boolean [^Character ch]
     (Character/isJavaLetter ch)))
 
 (defn *digit?
@@ -1792,7 +1792,7 @@
 
   returns: the primitive char value represented by
             this object. - `char`"
-  (^Character [^java.lang.Character this]
+  (^Character [^Character this]
     (-> this (.charValue))))
 
 (defn hash-code
@@ -1800,7 +1800,7 @@
    of invoking charValue().
 
   returns: a hash code value for this Character - `int`"
-  (^Integer [^java.lang.Character this]
+  (^Integer [^Character this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -1813,7 +1813,7 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Character this ^java.lang.Object obj]
+  (^Boolean [^Character this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -1824,7 +1824,7 @@
    Character object.
 
   returns: a string representation of this object. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Character this]
+  (^java.lang.String [^Character this]
     (-> this (.toString))))
 
 (defn compare-to
@@ -1840,6 +1840,6 @@
             than the Character argument (unsigned comparison).
             Note that this is strictly a numerical comparison; it is not
             locale-dependent. - `int`"
-  (^Integer [^java.lang.Character this ^java.lang.Character another-character]
+  (^Integer [^Character this ^java.lang.Character another-character]
     (-> this (.compareTo another-character))))
 

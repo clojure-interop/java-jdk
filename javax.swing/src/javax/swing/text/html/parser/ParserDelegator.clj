@@ -7,17 +7,17 @@
 
 (defn ->parser-delegator
   "Constructor."
-  ([]
+  (^ParserDelegator []
     (new ParserDelegator )))
 
 (defn parse
   "Description copied from class: HTMLEditorKit.Parser
 
   r - `java.io.Reader`
-  cb - `javax.swing.text.html.HTMLEditorKit.ParserCallback`
+  cb - `javax.swing.text.html.HTMLEditorKit$ParserCallback`
   ignore-char-set - `boolean`
 
   throws: java.io.IOException"
-  ([^javax.swing.text.html.parser.ParserDelegator this ^java.io.Reader r ^javax.swing.text.html.HTMLEditorKit.ParserCallback cb ^Boolean ignore-char-set]
+  ([^ParserDelegator this ^java.io.Reader r ^javax.swing.text.html.HTMLEditorKit$ParserCallback cb ^Boolean ignore-char-set]
     (-> this (.parse r cb ignore-char-set))))
 

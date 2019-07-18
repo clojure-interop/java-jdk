@@ -26,8 +26,8 @@
   Create a MalformedParametersException.
 
   reason - The reason for the exception. - `java.lang.String`"
-  ([^java.lang.String reason]
+  (^MalformedParametersException [^java.lang.String reason]
     (new MalformedParametersException reason))
-  ([]
+  (^MalformedParametersException []
     (new MalformedParametersException )))
 

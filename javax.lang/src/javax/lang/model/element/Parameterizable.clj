@@ -9,6 +9,6 @@
 
   returns: the formal type parameters, or an empty list
    if there are none - `java.util.List<? extends javax.lang.model.element.TypeParameterElement>`"
-  ([^javax.lang.model.element.Parameterizable this]
+  ([^Parameterizable this]
     (-> this (.getTypeParameters))))
 

@@ -10,7 +10,7 @@
   Attribute key for the language of some text.
     Values are instances of Locale.
 
-  type: java.text.AttributedCharacterIterator.Attribute"
+  type: java.text.AttributedCharacterIterator$Attribute"
   AttributedCharacterIterator$Attribute/LANGUAGE)
 
 (def *-reading
@@ -22,7 +22,7 @@
    written form.
    Values are instances of Annotation holding instances of String.
 
-  type: java.text.AttributedCharacterIterator.Attribute"
+  type: java.text.AttributedCharacterIterator$Attribute"
   AttributedCharacterIterator$Attribute/READING)
 
 (def *-input-method-segment
@@ -32,7 +32,7 @@
    up text into segments, which usually correspond to words.
    Values are instances of Annotation holding a null reference.
 
-  type: java.text.AttributedCharacterIterator.Attribute"
+  type: java.text.AttributedCharacterIterator$Attribute"
   AttributedCharacterIterator$Attribute/INPUT_METHOD_SEGMENT)
 
 (defn equals
@@ -44,7 +44,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.text.AttributedCharacterIterator$Attribute this ^java.lang.Object obj]
+  (^Boolean [^AttributedCharacterIterator$Attribute this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -52,7 +52,7 @@
    the one in Object, but is also final.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.text.AttributedCharacterIterator$Attribute this]
+  (^Integer [^AttributedCharacterIterator$Attribute this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -61,6 +61,6 @@
    and `)`.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.text.AttributedCharacterIterator$Attribute this]
+  (^java.lang.String [^AttributedCharacterIterator$Attribute this]
     (-> this (.toString))))
 

@@ -18,11 +18,11 @@
 
   message - the detail message - `java.lang.String`
   cause - the cause (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^TransformException [^java.lang.String message ^java.lang.Throwable cause]
     (new TransformException message cause))
-  ([^java.lang.String message]
+  (^TransformException [^java.lang.String message]
     (new TransformException message))
-  ([]
+  (^TransformException []
     (new TransformException )))
 
 (defn get-cause
@@ -33,7 +33,7 @@
 
   returns: the cause of this TransformException or
            null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.xml.crypto.dsig.TransformException this]
+  (^java.lang.Throwable [^TransformException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace
@@ -41,8 +41,8 @@
    the cause's backtrace to the specified print stream.
 
   s - PrintStream to use for output - `java.io.PrintStream`"
-  ([^javax.xml.crypto.dsig.TransformException this ^java.io.PrintStream s]
+  ([^TransformException this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([^javax.xml.crypto.dsig.TransformException this]
+  ([^TransformException this]
     (-> this (.printStackTrace))))
 

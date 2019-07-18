@@ -34,7 +34,7 @@
 
 (defn ->content-handler
   "Constructor."
-  ([]
+  (^ContentHandler []
     (new ContentHandler )))
 
 (defn get-content
@@ -53,8 +53,8 @@
                    null if none of the requested  are supported. - `java.lang.Object`
 
   throws: java.io.IOException - if an I/O error occurs while reading the object."
-  (^java.lang.Object [^java.net.ContentHandler this ^java.net.URLConnection urlc classes]
+  (^java.lang.Object [^ContentHandler this ^java.net.URLConnection urlc classes]
     (-> this (.getContent urlc classes)))
-  (^java.lang.Object [^java.net.ContentHandler this ^java.net.URLConnection urlc]
+  (^java.lang.Object [^ContentHandler this ^java.net.URLConnection urlc]
     (-> this (.getContent urlc))))
 

@@ -70,9 +70,9 @@
   change-flags - A bitmask which indicates the type(s) of the HIERARCHY_CHANGED events represented in this event object. For information on allowable values, see the class description for HierarchyEvent - `long`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.awt.Component source ^Integer id ^java.awt.Component changed ^java.awt.Container changed-parent ^Long change-flags]
+  (^HierarchyEvent [^java.awt.Component source ^Integer id ^java.awt.Component changed ^java.awt.Container changed-parent ^Long change-flags]
     (new HierarchyEvent source id changed changed-parent change-flags))
-  ([^java.awt.Component source ^Integer id ^java.awt.Component changed ^java.awt.Container changed-parent]
+  (^HierarchyEvent [^java.awt.Component source ^Integer id ^java.awt.Component changed ^java.awt.Container changed-parent]
     (new HierarchyEvent source id changed changed-parent)))
 
 (def *-hierarchy-first
@@ -162,7 +162,7 @@
   returns: the Component object that originated
    the event, or null if the object is not a
    Component. - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.event.HierarchyEvent this]
+  (^java.awt.Component [^HierarchyEvent this]
     (-> this (.getComponent))))
 
 (defn get-changed
@@ -170,7 +170,7 @@
    changed.
 
   returns: the changed Component - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.event.HierarchyEvent this]
+  (^java.awt.Component [^HierarchyEvent this]
     (-> this (.getChanged))))
 
 (defn get-changed-parent
@@ -185,7 +185,7 @@
    the parent returned is the parent during the operation.
 
   returns: the parent of the changed Component - `java.awt.Container`"
-  (^java.awt.Container [^java.awt.event.HierarchyEvent this]
+  (^java.awt.Container [^HierarchyEvent this]
     (-> this (.getChangedParent))))
 
 (defn get-change-flags
@@ -195,7 +195,7 @@
 
   returns: the bitmask, or 0 if this is not an HIERARCHY_CHANGED
    event - `long`"
-  (^Long [^java.awt.event.HierarchyEvent this]
+  (^Long [^HierarchyEvent this]
     (-> this (.getChangeFlags))))
 
 (defn param-string
@@ -203,6 +203,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.HierarchyEvent this]
+  (^java.lang.String [^HierarchyEvent this]
     (-> this (.paramString))))
 

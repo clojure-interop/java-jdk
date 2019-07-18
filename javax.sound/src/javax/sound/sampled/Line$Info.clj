@@ -22,15 +22,15 @@
    This constructor is typically used by an application to
    describe a desired line.
 
-  line-class - the class of the line that the new Line.Info object describes - `java.lang.Class<?>`"
-  ([^java.lang.Class line-class]
+  line-class - the class of the line that the new Line.Info object describes - `java.lang.Class`"
+  (^Line$Info [^java.lang.Class line-class]
     (new Line$Info line-class)))
 
 (defn get-line-class
   "Obtains the class of the line that this Line.Info object describes.
 
   returns: the described line's class - `java.lang.Class<?>`"
-  (^java.lang.Class [^javax.sound.sampled.Line$Info this]
+  (^java.lang.Class [^Line$Info this]
     (-> this (.getLineClass))))
 
 (defn matches
@@ -46,17 +46,17 @@
    Subclasses may add other criteria to determine whether the two objects
    match.
 
-  info - the info object which is being compared to this one - `javax.sound.sampled.Line.Info`
+  info - the info object which is being compared to this one - `javax.sound.sampled.Line$Info`
 
   returns: true if the specified object matches this one,
    false otherwise - `boolean`"
-  (^Boolean [^javax.sound.sampled.Line$Info this ^javax.sound.sampled.Line.Info info]
+  (^Boolean [^Line$Info this ^javax.sound.sampled.Line$Info info]
     (-> this (.matches info))))
 
 (defn to-string
   "Obtains a textual description of the line info.
 
   returns: a string description - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.Line$Info this]
+  (^java.lang.String [^Line$Info this]
     (-> this (.toString))))
 

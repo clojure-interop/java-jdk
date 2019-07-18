@@ -45,12 +45,12 @@
    the given collection, added in traversal order of the
    collection's iterator.
 
-  c - the collection of elements to initially contain - `ConcurrentLinkedDeque.E>`
+  c - the collection of elements to initially contain - `java.util.Collection`
 
   throws: java.lang.NullPointerException - if the specified collection or any of its elements are null"
-  ([^ConcurrentLinkedDeque.E> c]
+  (^ConcurrentLinkedDeque [^java.util.Collection c]
     (new ConcurrentLinkedDeque c))
-  ([]
+  (^ConcurrentLinkedDeque []
     (new ConcurrentLinkedDeque )))
 
 (defn add-all
@@ -59,41 +59,41 @@
    collection's iterator.  Attempts to addAll of a deque to
    itself result in IllegalArgumentException.
 
-  c - the elements to be inserted into this deque - `ConcurrentLinkedDeque.E>`
+  c - the elements to be inserted into this deque - `java.util.Collection`
 
   returns: true if this deque changed as a result of the call - `boolean`
 
   throws: java.lang.NullPointerException - if the specified collection or any of its elements are null"
-  (^Boolean [^java.util.concurrent.ConcurrentLinkedDeque this ^ConcurrentLinkedDeque.E> c]
+  (^Boolean [^ConcurrentLinkedDeque this ^java.util.Collection c]
     (-> this (.addAll c))))
 
 (defn peek
   "Description copied from interface: Deque
 
   returns: the head of the queue represented by this deque, or
-           null if this deque is empty - `ConcurrentLinkedDeque.E`"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+           null if this deque is empty - `E`"
+  ([^ConcurrentLinkedDeque this]
     (-> this (.peek))))
 
 (defn offer-first
   "Inserts the specified element at the front of this deque.
    As the deque is unbounded, this method will never return false.
 
-  e - the element to add - `ConcurrentLinkedDeque.E`
+  e - the element to add - `E`
 
   returns: true (as specified by Deque.offerFirst(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  (^Boolean [^java.util.concurrent.ConcurrentLinkedDeque this ^ConcurrentLinkedDeque.E e]
+  (^Boolean [^ConcurrentLinkedDeque this e]
     (-> this (.offerFirst e))))
 
 (defn get-first
   "Description copied from interface: Deque
 
-  returns: the head of this deque - `ConcurrentLinkedDeque.E`
+  returns: the head of this deque - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  ([^ConcurrentLinkedDeque this]
     (-> this (.getFirst))))
 
 (defn spliterator
@@ -105,15 +105,15 @@
    The Spliterator reports Spliterator.CONCURRENT,
    Spliterator.ORDERED, and Spliterator.NONNULL.
 
-  returns: a Spliterator over the elements in this deque - `java.util.Spliterator<ConcurrentLinkedDeque.E>`"
-  (^java.util.Spliterator [^java.util.concurrent.ConcurrentLinkedDeque this]
+  returns: a Spliterator over the elements in this deque - `java.util.Spliterator<E>`"
+  (^java.util.Spliterator [^ConcurrentLinkedDeque this]
     (-> this (.spliterator))))
 
 (defn peek-first
   "Description copied from interface: Deque
 
-  returns: the head of this deque, or null if this deque is empty - `ConcurrentLinkedDeque.E`"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  returns: the head of this deque, or null if this deque is empty - `E`"
+  ([^ConcurrentLinkedDeque this]
     (-> this (.peekFirst))))
 
 (defn remove-first-occurrence
@@ -126,36 +126,36 @@
   returns: true if the deque contained the specified element - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  (^Boolean [^java.util.concurrent.ConcurrentLinkedDeque this ^java.lang.Object o]
+  (^Boolean [^ConcurrentLinkedDeque this ^java.lang.Object o]
     (-> this (.removeFirstOccurrence o))))
 
 (defn offer
   "Inserts the specified element at the tail of this deque.
    As the deque is unbounded, this method will never return false.
 
-  e - the element to add - `ConcurrentLinkedDeque.E`
+  e - the element to add - `E`
 
   returns: true (as specified by Queue.offer(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  (^Boolean [^java.util.concurrent.ConcurrentLinkedDeque this ^ConcurrentLinkedDeque.E e]
+  (^Boolean [^ConcurrentLinkedDeque this e]
     (-> this (.offer e))))
 
 (defn peek-last
   "Description copied from interface: Deque
 
-  returns: the tail of this deque, or null if this deque is empty - `ConcurrentLinkedDeque.E`"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  returns: the tail of this deque, or null if this deque is empty - `E`"
+  ([^ConcurrentLinkedDeque this]
     (-> this (.peekLast))))
 
 (defn pop
   "Description copied from interface: Deque
 
   returns: the element at the front of this deque (which is the top
-           of the stack represented by this deque) - `ConcurrentLinkedDeque.E`
+           of the stack represented by this deque) - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  ([^ConcurrentLinkedDeque this]
     (-> this (.pop))))
 
 (defn contains
@@ -165,25 +165,25 @@
   o - element whose presence in this deque is to be tested - `java.lang.Object`
 
   returns: true if this deque contains the specified element - `boolean`"
-  (^Boolean [^java.util.concurrent.ConcurrentLinkedDeque this ^java.lang.Object o]
+  (^Boolean [^ConcurrentLinkedDeque this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn push
   "Description copied from interface: Deque
 
-  e - the element to push - `ConcurrentLinkedDeque.E`
+  e - the element to push - `E`
 
   throws: java.lang.NullPointerException - if the specified element is null and this deque does not permit null elements"
-  ([^java.util.concurrent.ConcurrentLinkedDeque this ^ConcurrentLinkedDeque.E e]
+  ([^ConcurrentLinkedDeque this e]
     (-> this (.push e))))
 
 (defn get-last
   "Description copied from interface: Deque
 
-  returns: the tail of this deque - `ConcurrentLinkedDeque.E`
+  returns: the tail of this deque - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  ([^ConcurrentLinkedDeque this]
     (-> this (.getLast))))
 
 (defn iterator
@@ -193,26 +193,26 @@
    The returned iterator is
    weakly consistent.
 
-  returns: an iterator over the elements in this deque in proper sequence - `java.util.Iterator<ConcurrentLinkedDeque.E>`"
-  (^java.util.Iterator [^java.util.concurrent.ConcurrentLinkedDeque this]
+  returns: an iterator over the elements in this deque in proper sequence - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^ConcurrentLinkedDeque this]
     (-> this (.iterator))))
 
 (defn element
   "Description copied from interface: Deque
 
-  returns: the head of the queue represented by this deque - `ConcurrentLinkedDeque.E`
+  returns: the head of the queue represented by this deque - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  ([^ConcurrentLinkedDeque this]
     (-> this (.element))))
 
 (defn remove-first
   "Description copied from interface: Deque
 
-  returns: the head of this deque - `ConcurrentLinkedDeque.E`
+  returns: the head of this deque - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  ([^ConcurrentLinkedDeque this]
     (-> this (.removeFirst))))
 
 (defn remove
@@ -225,24 +225,24 @@
   returns: true if the deque contained the specified element - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  (^Boolean [^java.util.concurrent.ConcurrentLinkedDeque this ^java.lang.Object o]
+  (^Boolean [^ConcurrentLinkedDeque this ^java.lang.Object o]
     (-> this (.remove o)))
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  ([^ConcurrentLinkedDeque this]
     (-> this (.remove))))
 
 (defn poll-last
   "Description copied from interface: Deque
 
-  returns: the tail of this deque, or null if this deque is empty - `ConcurrentLinkedDeque.E`"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  returns: the tail of this deque, or null if this deque is empty - `E`"
+  ([^ConcurrentLinkedDeque this]
     (-> this (.pollLast))))
 
 (defn poll
   "Description copied from interface: Deque
 
   returns: the first element of this deque, or null if
-           this deque is empty - `ConcurrentLinkedDeque.E`"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+           this deque is empty - `E`"
+  ([^ConcurrentLinkedDeque this]
     (-> this (.poll))))
 
 (defn offer-last
@@ -251,19 +251,19 @@
 
    This method is equivalent to add(E).
 
-  e - the element to add - `ConcurrentLinkedDeque.E`
+  e - the element to add - `E`
 
   returns: true (as specified by Deque.offerLast(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  (^Boolean [^java.util.concurrent.ConcurrentLinkedDeque this ^ConcurrentLinkedDeque.E e]
+  (^Boolean [^ConcurrentLinkedDeque this e]
     (-> this (.offerLast e))))
 
 (defn poll-first
   "Description copied from interface: Deque
 
-  returns: the head of this deque, or null if this deque is empty - `ConcurrentLinkedDeque.E`"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  returns: the head of this deque, or null if this deque is empty - `E`"
+  ([^ConcurrentLinkedDeque this]
     (-> this (.pollFirst))))
 
 (defn add-last
@@ -273,10 +273,10 @@
 
    This method is equivalent to add(E).
 
-  e - the element to add - `ConcurrentLinkedDeque.E`
+  e - the element to add - `E`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([^java.util.concurrent.ConcurrentLinkedDeque this ^ConcurrentLinkedDeque.E e]
+  ([^ConcurrentLinkedDeque this e]
     (-> this (.addLast e))))
 
 (defn remove-last-occurrence
@@ -289,7 +289,7 @@
   returns: true if the deque contained the specified element - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  (^Boolean [^java.util.concurrent.ConcurrentLinkedDeque this ^java.lang.Object o]
+  (^Boolean [^ConcurrentLinkedDeque this ^java.lang.Object o]
     (-> this (.removeLastOccurrence o))))
 
 (defn add
@@ -297,12 +297,12 @@
    As the deque is unbounded, this method will never throw
    IllegalStateException or return false.
 
-  e - element whose presence in this collection is to be ensured - `ConcurrentLinkedDeque.E`
+  e - element whose presence in this collection is to be ensured - `E`
 
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  (^Boolean [^java.util.concurrent.ConcurrentLinkedDeque this ^ConcurrentLinkedDeque.E e]
+  (^Boolean [^ConcurrentLinkedDeque this e]
     (-> this (.add e))))
 
 (defn descending-iterator
@@ -313,15 +313,15 @@
    The returned iterator is
    weakly consistent.
 
-  returns: an iterator over the elements in this deque in reverse order - `java.util.Iterator<ConcurrentLinkedDeque.E>`"
-  (^java.util.Iterator [^java.util.concurrent.ConcurrentLinkedDeque this]
+  returns: an iterator over the elements in this deque in reverse order - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^ConcurrentLinkedDeque this]
     (-> this (.descendingIterator))))
 
 (defn empty?
   "Returns true if this collection contains no elements.
 
   returns: true if this collection contains no elements - `boolean`"
-  (^Boolean [^java.util.concurrent.ConcurrentLinkedDeque this]
+  (^Boolean [^ConcurrentLinkedDeque this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -339,21 +339,21 @@
    useful in concurrent applications.
 
   returns: the number of elements in this deque - `int`"
-  (^Integer [^java.util.concurrent.ConcurrentLinkedDeque this]
+  (^Integer [^ConcurrentLinkedDeque this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the elements from this deque."
-  ([^java.util.concurrent.ConcurrentLinkedDeque this]
+  ([^ConcurrentLinkedDeque this]
     (-> this (.clear))))
 
 (defn remove-last
   "Description copied from interface: Deque
 
-  returns: the tail of this deque - `ConcurrentLinkedDeque.E`
+  returns: the tail of this deque - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^ConcurrentLinkedDeque.E [^java.util.concurrent.ConcurrentLinkedDeque this]
+  ([^ConcurrentLinkedDeque this]
     (-> this (.removeLast))))
 
 (defn add-first
@@ -361,10 +361,10 @@
    As the deque is unbounded, this method will never throw
    IllegalStateException.
 
-  e - the element to add - `ConcurrentLinkedDeque.E`
+  e - the element to add - `E`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([^java.util.concurrent.ConcurrentLinkedDeque this ^ConcurrentLinkedDeque.E e]
+  ([^ConcurrentLinkedDeque this e]
     (-> this (.addFirst e))))
 
 (defn to-array
@@ -402,8 +402,8 @@
   returns: an array containing all of the elements in this deque - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this deque"
-  ([^java.util.concurrent.ConcurrentLinkedDeque this a]
+  ([^ConcurrentLinkedDeque this a]
     (-> this (.toArray a)))
-  ([^java.util.concurrent.ConcurrentLinkedDeque this]
+  ([^ConcurrentLinkedDeque this]
     (-> this (.toArray))))
 

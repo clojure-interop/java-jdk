@@ -8,7 +8,7 @@
   "Constructor.
 
   Creates an AbortPolicy."
-  ([]
+  (^ThreadPoolExecutor$AbortPolicy []
     (new ThreadPoolExecutor$AbortPolicy )))
 
 (defn rejected-execution
@@ -18,6 +18,6 @@
   e - the executor attempting to execute this task - `java.util.concurrent.ThreadPoolExecutor`
 
   throws: java.util.concurrent.RejectedExecutionException - always"
-  ([^java.util.concurrent.ThreadPoolExecutor$AbortPolicy this ^java.lang.Runnable r ^java.util.concurrent.ThreadPoolExecutor e]
+  ([^ThreadPoolExecutor$AbortPolicy this ^java.lang.Runnable r ^java.util.concurrent.ThreadPoolExecutor e]
     (-> this (.rejectedExecution r e))))
 

@@ -13,6 +13,6 @@
    copy will not affect the original and vice versa.
 
   returns: a copy of this CertPathValidatorResult - `java.lang.Object`"
-  (^java.lang.Object [^java.security.cert.CertPathValidatorResult this]
+  (^java.lang.Object [^CertPathValidatorResult this]
     (-> this (.clone))))
 

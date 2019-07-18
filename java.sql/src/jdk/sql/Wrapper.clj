@@ -23,12 +23,12 @@
    or a proxy for that result. If the receiver is not a
    wrapper and does not implement the interface, then an SQLException is thrown.
 
-  iface - A Class defining an interface that the result must implement. - `java.lang.Class<T>`
+  iface - A Class defining an interface that the result must implement. - `java.lang.Class`
 
   returns: an object that implements the interface. May be a proxy for the actual implementing object. - `<T> T`
 
   throws: java.sql.SQLException - If no object found that implements the interface"
-  ([^java.sql.Wrapper this ^java.lang.Class iface]
+  ([^Wrapper this ^java.lang.Class iface]
     (-> this (.unwrap iface))))
 
 (defn wrapper-for?
@@ -40,11 +40,11 @@
    callers can use this method to avoid expensive unwrap calls that may fail. If this method
    returns true then calling unwrap with the same argument should succeed.
 
-  iface - a Class defining an interface. - `java.lang.Class<?>`
+  iface - a Class defining an interface. - `java.lang.Class`
 
   returns: true if this implements the interface or directly or indirectly wraps an object that does. - `boolean`
 
   throws: java.sql.SQLException - if an error occurs while determining whether this is a wrapper for an object with the given interface."
-  (^Boolean [^java.sql.Wrapper this ^java.lang.Class iface]
+  (^Boolean [^Wrapper this ^java.lang.Class iface]
     (-> this (.isWrapperFor iface))))
 

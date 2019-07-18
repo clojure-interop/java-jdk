@@ -20,8 +20,8 @@
    exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^CredentialExpiredException [^java.lang.String msg]
     (new CredentialExpiredException msg))
-  ([]
+  (^CredentialExpiredException []
     (new CredentialExpiredException )))
 

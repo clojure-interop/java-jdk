@@ -16,10 +16,10 @@
 
   a - an object - `T`
   b - an object to be compared with a - `T`
-  c - the Comparator to compare the first two arguments - `T>`
+  c - the Comparator to compare the first two arguments - `java.util.Comparator`
 
   returns: 0 if the arguments are identical and c.compare(a, b) otherwise. - `<T> int`"
-  ([a b c]
+  ([a b ^java.util.Comparator c]
     (Objects/compare a b c)))
 
 (defn *null?

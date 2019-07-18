@@ -13,13 +13,13 @@
 
   s - the detail message - `java.lang.String`
   error-offset - the position where the error is found while parsing. - `int`"
-  ([^java.lang.String s ^Integer error-offset]
+  (^ParseException [^java.lang.String s ^Integer error-offset]
     (new ParseException s error-offset)))
 
 (defn get-error-offset
   "Returns the position where the error was found.
 
   returns: the position where the error was found - `int`"
-  (^Integer [^java.text.ParseException this]
+  (^Integer [^ParseException this]
     (-> this (.getErrorOffset))))
 

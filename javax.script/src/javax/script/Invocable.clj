@@ -16,7 +16,7 @@
    variable returned by the script method to a Java Object are implementation-specific. - `java.lang.Object`
 
   throws: javax.script.ScriptException - if an error occurs during invocation of the method."
-  (^java.lang.Object [^javax.script.Invocable this ^java.lang.Object thiz ^java.lang.String name ^java.lang.Object args]
+  (^java.lang.Object [^Invocable this ^java.lang.Object thiz ^java.lang.String name ^java.lang.Object args]
     (-> this (.invokeMethod thiz name args))))
 
 (defn invoke-function
@@ -28,7 +28,7 @@
   returns: The value returned by the procedure or function - `java.lang.Object`
 
   throws: javax.script.ScriptException - if an error occurs during invocation of the method."
-  (^java.lang.Object [^javax.script.Invocable this ^java.lang.String name ^java.lang.Object args]
+  (^java.lang.Object [^Invocable this ^java.lang.String name ^java.lang.Object args]
     (-> this (.invokeFunction name args))))
 
 (defn get-interface
@@ -37,15 +37,15 @@
    interface may be implemented using the invokeMethod method.
 
   thiz - The scripting object whose member functions are used to implement the methods of the interface. - `java.lang.Object`
-  clasz - The Class object of the interface to return. - `java.lang.Class<T>`
+  clasz - The Class object of the interface to return. - `java.lang.Class`
 
   returns: An instance of requested interface - null if the requested interface is unavailable,
    i. e. if compiled methods in the ScriptEngine cannot be found matching
    the ones in the requested interface. - `<T> T`
 
   throws: java.lang.IllegalArgumentException - if the specified Class object is null or is not an interface, or if the specified Object is null or does not represent a scripting object."
-  ([^javax.script.Invocable this ^java.lang.Object thiz ^java.lang.Class clasz]
+  ([^Invocable this ^java.lang.Object thiz ^java.lang.Class clasz]
     (-> this (.getInterface thiz clasz)))
-  ([^javax.script.Invocable this ^java.lang.Class clasz]
+  ([^Invocable this ^java.lang.Class clasz]
     (-> this (.getInterface clasz))))
 

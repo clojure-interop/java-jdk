@@ -9,8 +9,8 @@
   "Constructor.
 
   msg - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^InvalidTransactionException [^java.lang.String msg]
     (new InvalidTransactionException msg))
-  ([]
+  (^InvalidTransactionException []
     (new InvalidTransactionException )))
 

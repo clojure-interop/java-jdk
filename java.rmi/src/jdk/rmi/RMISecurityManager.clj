@@ -8,6 +8,6 @@
   "Constructor.
 
   Deprecated."
-  ([]
+  (^RMISecurityManager []
     (new RMISecurityManager )))
 

@@ -233,13 +233,13 @@
    storage implementation and the given style/attribute
    storage mechanism.
 
-  c - the container for the content - `javax.swing.text.AbstractDocument.Content`
+  c - the container for the content - `javax.swing.text.AbstractDocument$Content`
   styles - the styles - `javax.swing.text.html.StyleSheet`"
-  ([^javax.swing.text.AbstractDocument.Content c ^javax.swing.text.html.StyleSheet styles]
+  (^HTMLDocument [^javax.swing.text.AbstractDocument$Content c ^javax.swing.text.html.StyleSheet styles]
     (new HTMLDocument c styles))
-  ([^javax.swing.text.html.StyleSheet styles]
+  (^HTMLDocument [^javax.swing.text.html.StyleSheet styles]
     (new HTMLDocument styles))
-  ([]
+  (^HTMLDocument []
     (new HTMLDocument )))
 
 (def *-additional-comments
@@ -295,7 +295,7 @@
   html-text - the string to be parsed and inserted before elem - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if an HTMLEditorKit.Parser has not been set on the document"
-  ([^javax.swing.text.html.HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
+  ([^HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
     (-> this (.insertBeforeStart elem html-text))))
 
 (defn set-base
@@ -307,7 +307,7 @@
    to be u as well as the base of the document.
 
   u - the desired base URL - `java.net.URL`"
-  ([^javax.swing.text.html.HTMLDocument this ^java.net.URL u]
+  ([^HTMLDocument this ^java.net.URL u]
     (-> this (.setBase u))))
 
 (defn get-style-sheet
@@ -315,7 +315,7 @@
    rules (CSS) that were specified in the HTML document itself.
 
   returns: the StyleSheet - `javax.swing.text.html.StyleSheet`"
-  (^javax.swing.text.html.StyleSheet [^javax.swing.text.html.HTMLDocument this]
+  (^javax.swing.text.html.StyleSheet [^HTMLDocument this]
     (-> this (.getStyleSheet))))
 
 (defn set-outer-html
@@ -373,7 +373,7 @@
   html-text - the string to be parsed and inserted in place of elem - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if an HTMLEditorKit.Parser has not been set"
-  ([^javax.swing.text.html.HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
+  ([^HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
     (-> this (.setOuterHTML elem html-text))))
 
 (defn get-element
@@ -388,9 +388,9 @@
   returns: the element with the specified Attribute
             and the specified value, or null
             if it can't be found - `javax.swing.text.Element`"
-  (^javax.swing.text.Element [^javax.swing.text.html.HTMLDocument this ^javax.swing.text.Element e ^java.lang.Object attribute ^java.lang.Object value]
+  (^javax.swing.text.Element [^HTMLDocument this ^javax.swing.text.Element e ^java.lang.Object attribute ^java.lang.Object value]
     (-> this (.getElement e attribute value)))
-  (^javax.swing.text.Element [^javax.swing.text.html.HTMLDocument this ^java.lang.String id]
+  (^javax.swing.text.Element [^HTMLDocument this ^java.lang.String id]
     (-> this (.getElement id))))
 
 (defn set-paragraph-attributes
@@ -405,15 +405,15 @@
   length - the number of characters affected (must be at least 0) - `int`
   s - the attributes - `javax.swing.text.AttributeSet`
   replace - whether to replace existing attributes, or merge them - `boolean`"
-  ([^javax.swing.text.html.HTMLDocument this ^Integer offset ^Integer length ^javax.swing.text.AttributeSet s ^Boolean replace]
+  ([^HTMLDocument this ^Integer offset ^Integer length ^javax.swing.text.AttributeSet s ^Boolean replace]
     (-> this (.setParagraphAttributes offset length s replace))))
 
 (defn get-parser
   "Returns the parser that is used when inserting HTML into the existing
    document.
 
-  returns: the parser used for text insertion - `javax.swing.text.html.HTMLEditorKit.Parser`"
-  (^javax.swing.text.html.HTMLEditorKit.Parser [^javax.swing.text.html.HTMLDocument this]
+  returns: the parser used for text insertion - `javax.swing.text.html.HTMLEditorKit$Parser`"
+  (^javax.swing.text.html.HTMLEditorKit$Parser [^HTMLDocument this]
     (-> this (.getParser))))
 
 (defn get-iterator
@@ -422,10 +422,10 @@
    set of anchors contained, or iterating over the input
    elements.
 
-  t - the requested HTML.Tag - `javax.swing.text.html.HTML.Tag`
+  t - the requested HTML.Tag - `javax.swing.text.html.HTML$Tag`
 
-  returns: the Iterator for the given HTML tag - `javax.swing.text.html.HTMLDocument.Iterator`"
-  (^javax.swing.text.html.HTMLDocument.Iterator [^javax.swing.text.html.HTMLDocument this ^javax.swing.text.html.HTML.Tag t]
+  returns: the Iterator for the given HTML tag - `javax.swing.text.html.HTMLDocument$Iterator`"
+  (^javax.swing.text.html.HTMLDocument$Iterator [^HTMLDocument this ^javax.swing.text.html.HTML$Tag t]
     (-> this (.getIterator t))))
 
 (defn get-reader
@@ -442,12 +442,12 @@
   pos - `int`
   pop-depth - the number of ElementSpec.EndTagTypes to generate before inserting - `int`
   push-depth - the number of ElementSpec.StartTagTypes with a direction of ElementSpec.JoinNextDirection that should be generated before inserting, but after the end tags have been generated - `int`
-  insert-tag - the first tag to start inserting into document - `javax.swing.text.html.HTML.Tag`
+  insert-tag - the first tag to start inserting into document - `javax.swing.text.html.HTML$Tag`
 
-  returns: the reader used by the parser to load the document - `javax.swing.text.html.HTMLEditorKit.ParserCallback`"
-  (^javax.swing.text.html.HTMLEditorKit.ParserCallback [^javax.swing.text.html.HTMLDocument this ^Integer pos ^Integer pop-depth ^Integer push-depth ^javax.swing.text.html.HTML.Tag insert-tag]
+  returns: the reader used by the parser to load the document - `javax.swing.text.html.HTMLEditorKit$ParserCallback`"
+  (^javax.swing.text.html.HTMLEditorKit$ParserCallback [^HTMLDocument this ^Integer pos ^Integer pop-depth ^Integer push-depth ^javax.swing.text.html.HTML$Tag insert-tag]
     (-> this (.getReader pos pop-depth push-depth insert-tag)))
-  (^javax.swing.text.html.HTMLEditorKit.ParserCallback [^javax.swing.text.html.HTMLDocument this ^Integer pos]
+  (^javax.swing.text.html.HTMLEditorKit$ParserCallback [^HTMLDocument this ^Integer pos]
     (-> this (.getReader pos))))
 
 (defn get-token-threshold
@@ -456,7 +456,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of tokens to buffer - `int`"
-  (^Integer [^javax.swing.text.html.HTMLDocument this]
+  (^Integer [^HTMLDocument this]
     (-> this (.getTokenThreshold))))
 
 (defn set-token-threshold
@@ -464,7 +464,7 @@
    the documents element structure.
 
   n - the number of tokens to buffer - `int`"
-  ([^javax.swing.text.html.HTMLDocument this ^Integer n]
+  ([^HTMLDocument this ^Integer n]
     (-> this (.setTokenThreshold n))))
 
 (defn process-html-frame-hyperlink-event
@@ -506,7 +506,7 @@
    ChangedUpdate event is fired.
 
   e - the event - `javax.swing.text.html.HTMLFrameHyperlinkEvent`"
-  ([^javax.swing.text.html.HTMLDocument this ^javax.swing.text.html.HTMLFrameHyperlinkEvent e]
+  ([^HTMLDocument this ^javax.swing.text.html.HTMLFrameHyperlinkEvent e]
     (-> this (.processHTMLFrameHyperlinkEvent e))))
 
 (defn get-base
@@ -516,7 +516,7 @@
    can be parsed, it will be used as the base location.
 
   returns: the base location - `java.net.URL`"
-  (^java.net.URL [^javax.swing.text.html.HTMLDocument this]
+  (^java.net.URL [^HTMLDocument this]
     (-> this (.getBase))))
 
 (defn insert-after-end
@@ -562,7 +562,7 @@
   html-text - the string to be parsed and inserted after elem - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if an HTMLEditorKit.Parser has not been set on the document"
-  ([^javax.swing.text.html.HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
+  ([^HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
     (-> this (.insertAfterEnd elem html-text))))
 
 (defn set-preserves-unknown-tags
@@ -571,7 +571,7 @@
    tags are put in the model, otherwise they are dropped.
 
   preserves-tags - true if unknown tags should be saved in the model, otherwise tags are dropped - `boolean`"
-  ([^javax.swing.text.html.HTMLDocument this ^Boolean preserves-tags]
+  ([^HTMLDocument this ^Boolean preserves-tags]
     (-> this (.setPreservesUnknownTags preserves-tags))))
 
 (defn set-parser
@@ -583,8 +583,8 @@
    for you. If you create an HTMLDocument by hand,
    be sure and set the parser accordingly.
 
-  parser - the parser to be used for text insertion - `javax.swing.text.html.HTMLEditorKit.Parser`"
-  ([^javax.swing.text.html.HTMLDocument this ^javax.swing.text.html.HTMLEditorKit.Parser parser]
+  parser - the parser to be used for text insertion - `javax.swing.text.html.HTMLEditorKit$Parser`"
+  ([^HTMLDocument this ^javax.swing.text.html.HTMLEditorKit$Parser parser]
     (-> this (.setParser parser))))
 
 (defn insert-after-start
@@ -634,7 +634,7 @@
   html-text - the string to be parsed and assigned to elem - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if elem is a leaf"
-  ([^javax.swing.text.html.HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
+  ([^HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
     (-> this (.insertAfterStart elem html-text))))
 
 (defn get-preserves-unknown-tags?
@@ -642,7 +642,7 @@
    unknown tags.
 
   returns: true if unknown tags are to be preserved when parsing - `boolean`"
-  (^Boolean [^javax.swing.text.html.HTMLDocument this]
+  (^Boolean [^HTMLDocument this]
     (-> this (.getPreservesUnknownTags))))
 
 (defn insert-before-end
@@ -696,7 +696,7 @@
   html-text - the string to be parsed and assigned to elem - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if elem is a leaf"
-  ([^javax.swing.text.html.HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
+  ([^HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
     (-> this (.insertBeforeEnd elem html-text))))
 
 (defn set-inner-html
@@ -744,6 +744,6 @@
   html-text - the string to be parsed and assigned to elem - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if elem is a leaf"
-  ([^javax.swing.text.html.HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
+  ([^HTMLDocument this ^javax.swing.text.Element elem ^java.lang.String html-text]
     (-> this (.setInnerHTML elem html-text))))
 

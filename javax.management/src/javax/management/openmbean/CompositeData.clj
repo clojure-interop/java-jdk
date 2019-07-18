@@ -10,7 +10,7 @@
    item names.
 
   returns: the values. - `java.util.Collection<?>`"
-  (^java.util.Collection [^javax.management.openmbean.CompositeData this]
+  (^java.util.Collection [^CompositeData this]
     (-> this (.values))))
 
 (defn get-all
@@ -21,7 +21,7 @@
   returns: the values corresponding to the keys. - `java.lang.Object[]`
 
   throws: java.lang.IllegalArgumentException - if an element in keys is a null or empty String."
-  ([^javax.management.openmbean.CompositeData this keys]
+  ([^CompositeData this keys]
     (-> this (.getAll keys))))
 
 (defn to-string
@@ -32,7 +32,7 @@
    (ie list the itemName=itemValue mappings).
 
   returns: a string representation of this CompositeData instance - `java.lang.String`"
-  (^java.lang.String [^javax.management.openmbean.CompositeData this]
+  (^java.lang.String [^CompositeData this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -42,7 +42,7 @@
   value - the value to be tested. - `java.lang.Object`
 
   returns: true if this CompositeData contains the value. - `boolean`"
-  (^Boolean [^javax.management.openmbean.CompositeData this ^java.lang.Object value]
+  (^Boolean [^CompositeData this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn hash-code
@@ -65,7 +65,7 @@
    of Arrays.hashCode(e) for arrays of primitive types.
 
   returns: the hash code value for this CompositeData instance - `int`"
-  (^Integer [^javax.management.openmbean.CompositeData this]
+  (^Integer [^CompositeData this]
     (-> this (.hashCode))))
 
 (defn contains-key
@@ -76,7 +76,7 @@
   key - the key to be tested. - `java.lang.String`
 
   returns: true if this CompositeData contains the key. - `boolean`"
-  (^Boolean [^javax.management.openmbean.CompositeData this ^java.lang.String key]
+  (^Boolean [^CompositeData this ^java.lang.String key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -87,14 +87,14 @@
   returns: the value associated with this key. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if key is a null or empty String."
-  (^java.lang.Object [^javax.management.openmbean.CompositeData this ^java.lang.String key]
+  (^java.lang.Object [^CompositeData this ^java.lang.String key]
     (-> this (.get key))))
 
 (defn get-composite-type
   "Returns the composite type  of this composite data instance.
 
   returns: the type of this CompositeData. - `javax.management.openmbean.CompositeType`"
-  (^javax.management.openmbean.CompositeType [^javax.management.openmbean.CompositeData this]
+  (^javax.management.openmbean.CompositeType [^CompositeData this]
     (-> this (.getCompositeType))))
 
 (defn equals
@@ -123,6 +123,6 @@
 
   returns: true if the specified object is equal to this
    CompositeData instance. - `boolean`"
-  (^Boolean [^javax.management.openmbean.CompositeData this ^java.lang.Object obj]
+  (^Boolean [^CompositeData this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

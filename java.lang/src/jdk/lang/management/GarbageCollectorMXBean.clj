@@ -33,7 +33,7 @@
    this collector.
 
   returns: the total number of collections that have occurred. - `long`"
-  (^Long [^java.lang.management.GarbageCollectorMXBean this]
+  (^Long [^GarbageCollectorMXBean this]
     (-> this (.getCollectionCount))))
 
 (defn get-collection-time
@@ -48,6 +48,6 @@
 
   returns: the approximate accumulated collection elapsed time
    in milliseconds. - `long`"
-  (^Long [^java.lang.management.GarbageCollectorMXBean this]
+  (^Long [^GarbageCollectorMXBean this]
     (-> this (.getCollectionTime))))
 

@@ -14,7 +14,7 @@
 
 (defn ->metal-check-box-icon
   "Constructor."
-  ([]
+  (^MetalCheckBoxIcon []
     (new MetalCheckBoxIcon )))
 
 (defn paint-icon
@@ -24,20 +24,20 @@
   g - `java.awt.Graphics`
   x - `int`
   y - `int`"
-  ([^javax.swing.plaf.metal.MetalCheckBoxIcon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
+  ([^MetalCheckBoxIcon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
     (-> this (.paintIcon c g x y))))
 
 (defn get-icon-width
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalCheckBoxIcon this]
+  (^Integer [^MetalCheckBoxIcon this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalCheckBoxIcon this]
+  (^Integer [^MetalCheckBoxIcon this]
     (-> this (.getIconHeight))))
 

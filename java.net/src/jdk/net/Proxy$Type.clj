@@ -7,7 +7,7 @@
 
   Represents a direct connection, or the absence of a proxy.
 
-  type: java.net.Proxy.Type"
+  type: java.net.Proxy$Type"
   Proxy$Type/DIRECT)
 
 (def HTTP
@@ -15,7 +15,7 @@
 
   Represents proxy for high level protocols such as HTTP or FTP.
 
-  type: java.net.Proxy.Type"
+  type: java.net.Proxy$Type"
   Proxy$Type/HTTP)
 
 (def SOCKS
@@ -23,7 +23,7 @@
 
   Represents a SOCKS (V4 or V5) proxy.
 
-  type: java.net.Proxy.Type"
+  type: java.net.Proxy$Type"
   Proxy$Type/SOCKS)
 
 (defn *values
@@ -35,7 +35,7 @@
   for (Proxy.Type c : Proxy.Type.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.net.Proxy.Type[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.net.Proxy$Type[]`"
   ([]
     (Proxy$Type/values )))
 
@@ -47,9 +47,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.net.Proxy.Type`
+  returns: the enum constant with the specified name - `java.net.Proxy$Type`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.net.Proxy.Type [^java.lang.String name]
+  (^java.net.Proxy$Type [^java.lang.String name]
     (Proxy$Type/valueOf name)))
 

@@ -7,7 +7,7 @@
 
 (defn ->multi-text-ui
   "Constructor."
-  ([]
+  (^MultiTextUI []
     (new MultiTextUI )))
 
 (defn *create-ui
@@ -25,7 +25,7 @@
   "Invokes the installUI method on each UI handled by this object.
 
   a - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.JComponent a]
+  ([^MultiTextUI this ^javax.swing.JComponent a]
     (-> this (.installUI a))))
 
 (defn get-minimum-size
@@ -35,7 +35,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiTextUI this ^javax.swing.JComponent a]
     (-> this (.getMinimumSize a))))
 
 (defn get-maximum-size
@@ -45,7 +45,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiTextUI this ^javax.swing.JComponent a]
     (-> this (.getMaximumSize a))))
 
 (defn get-accessible-child
@@ -56,7 +56,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.accessibility.Accessible`"
-  (^javax.accessibility.Accessible [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.JComponent a ^Integer b]
+  (^javax.accessibility.Accessible [^MultiTextUI this ^javax.swing.JComponent a ^Integer b]
     (-> this (.getAccessibleChild a b))))
 
 (defn get-u-is
@@ -65,14 +65,14 @@
    UIs on components.
 
   returns: `javax.swing.plaf.ComponentUI[]`"
-  ([^javax.swing.plaf.multi.MultiTextUI this]
+  ([^MultiTextUI this]
     (-> this (.getUIs))))
 
 (defn uninstall-ui
   "Invokes the uninstallUI method on each UI handled by this object.
 
   a - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.JComponent a]
+  ([^MultiTextUI this ^javax.swing.JComponent a]
     (-> this (.uninstallUI a))))
 
 (defn contains
@@ -84,7 +84,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  (^Boolean [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
+  (^Boolean [^MultiTextUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
     (-> this (.contains a b c))))
 
 (defn update
@@ -92,7 +92,7 @@
 
   a - the Graphics context in which to paint - `java.awt.Graphics`
   b - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiTextUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
+  ([^MultiTextUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
     (-> this (.update a b))))
 
 (defn get-tool-tip-text
@@ -103,7 +103,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.text.JTextComponent a ^java.awt.Point b]
+  (^java.lang.String [^MultiTextUI this ^javax.swing.text.JTextComponent a ^java.awt.Point b]
     (-> this (.getToolTipText a b))))
 
 (defn get-accessible-children-count
@@ -113,7 +113,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  (^Integer [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.JComponent a]
+  (^Integer [^MultiTextUI this ^javax.swing.JComponent a]
     (-> this (.getAccessibleChildrenCount a))))
 
 (defn paint
@@ -121,7 +121,7 @@
 
   a - the Graphics context in which to paint - `java.awt.Graphics`
   b - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiTextUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
+  ([^MultiTextUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
     (-> this (.paint a b))))
 
 (defn damage-range
@@ -130,11 +130,11 @@
   a - `javax.swing.text.JTextComponent`
   b - `int`
   c - `int`
-  d - `javax.swing.text.Position.Bias`
-  e - `javax.swing.text.Position.Bias`"
-  ([^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.text.JTextComponent a ^Integer b ^Integer c ^javax.swing.text.Position.Bias d ^javax.swing.text.Position.Bias e]
+  d - `javax.swing.text.Position$Bias`
+  e - `javax.swing.text.Position$Bias`"
+  ([^MultiTextUI this ^javax.swing.text.JTextComponent a ^Integer b ^Integer c ^javax.swing.text.Position$Bias d ^javax.swing.text.Position$Bias e]
     (-> this (.damageRange a b c d e)))
-  ([^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.text.JTextComponent a ^Integer b ^Integer c]
+  ([^MultiTextUI this ^javax.swing.text.JTextComponent a ^Integer b ^Integer c]
     (-> this (.damageRange a b c))))
 
 (defn view-to-model
@@ -142,13 +142,13 @@
 
   a - `javax.swing.text.JTextComponent`
   b - `java.awt.Point`
-  c - `javax.swing.text.Position.Bias[]`
+  c - `javax.swing.text.Position$Bias[]`
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  (^Integer [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.text.JTextComponent a ^java.awt.Point b c]
+  (^Integer [^MultiTextUI this ^javax.swing.text.JTextComponent a ^java.awt.Point b c]
     (-> this (.viewToModel a b c)))
-  (^Integer [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.text.JTextComponent a ^java.awt.Point b]
+  (^Integer [^MultiTextUI this ^javax.swing.text.JTextComponent a ^java.awt.Point b]
     (-> this (.viewToModel a b))))
 
 (defn get-editor-kit
@@ -158,7 +158,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.swing.text.EditorKit`"
-  (^javax.swing.text.EditorKit [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.text.JTextComponent a]
+  (^javax.swing.text.EditorKit [^MultiTextUI this ^javax.swing.text.JTextComponent a]
     (-> this (.getEditorKit a))))
 
 (defn model-to-view
@@ -166,15 +166,15 @@
 
   a - `javax.swing.text.JTextComponent`
   b - `int`
-  c - `javax.swing.text.Position.Bias`
+  c - `javax.swing.text.Position$Bias`
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Rectangle`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  (^java.awt.Rectangle [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.text.JTextComponent a ^Integer b ^javax.swing.text.Position.Bias c]
+  (^java.awt.Rectangle [^MultiTextUI this ^javax.swing.text.JTextComponent a ^Integer b ^javax.swing.text.Position$Bias c]
     (-> this (.modelToView a b c)))
-  (^java.awt.Rectangle [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.text.JTextComponent a ^Integer b]
+  (^java.awt.Rectangle [^MultiTextUI this ^javax.swing.text.JTextComponent a ^Integer b]
     (-> this (.modelToView a b))))
 
 (defn get-preferred-size
@@ -184,7 +184,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiTextUI this ^javax.swing.JComponent a]
     (-> this (.getPreferredSize a))))
 
 (defn get-root-view
@@ -194,7 +194,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.swing.text.View`"
-  (^javax.swing.text.View [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.text.JTextComponent a]
+  (^javax.swing.text.View [^MultiTextUI this ^javax.swing.text.JTextComponent a]
     (-> this (.getRootView a))))
 
 (defn get-next-visual-position-from
@@ -202,14 +202,14 @@
 
   a - the text component for which this UI is installed - `javax.swing.text.JTextComponent`
   b - the position to convert >= 0 - `int`
-  c - the bias for the position - `javax.swing.text.Position.Bias`
+  c - the bias for the position - `javax.swing.text.Position$Bias`
   d - the direction from the current position that can be thought of as the arrow keys typically found on a keyboard. This may be SwingConstants.WEST, SwingConstants.EAST, SwingConstants.NORTH, or SwingConstants.SOUTH - `int`
-  e - an array to contain the bias for the returned position - `javax.swing.text.Position.Bias[]`
+  e - an array to contain the bias for the returned position - `javax.swing.text.Position$Bias[]`
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`
 
   throws: javax.swing.text.BadLocationException"
-  (^Integer [^javax.swing.plaf.multi.MultiTextUI this ^javax.swing.text.JTextComponent a ^Integer b ^javax.swing.text.Position.Bias c ^Integer d e]
+  (^Integer [^MultiTextUI this ^javax.swing.text.JTextComponent a ^Integer b ^javax.swing.text.Position$Bias c ^Integer d e]
     (-> this (.getNextVisualPositionFrom a b c d e))))
 

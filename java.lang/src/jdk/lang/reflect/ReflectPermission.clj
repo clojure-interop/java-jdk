@@ -42,8 +42,8 @@
   actions - should be null - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^ReflectPermission [^java.lang.String name ^java.lang.String actions]
     (new ReflectPermission name actions))
-  ([^java.lang.String name]
+  (^ReflectPermission [^java.lang.String name]
     (new ReflectPermission name)))
 

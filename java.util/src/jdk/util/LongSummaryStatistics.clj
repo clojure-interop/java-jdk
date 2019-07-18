@@ -31,14 +31,14 @@
   Construct an empty instance with zero count, zero sum,
    Long.MAX_VALUE min, Long.MIN_VALUE max and zero
    average."
-  ([]
+  (^LongSummaryStatistics []
     (new LongSummaryStatistics )))
 
 (defn accept
   "Records a new int value into the summary information.
 
   value - the input value - `int`"
-  ([^java.util.LongSummaryStatistics this ^Integer value]
+  ([^LongSummaryStatistics this ^Integer value]
     (-> this (.accept value))))
 
 (defn combine
@@ -48,14 +48,14 @@
   other - another LongSummaryStatistics - `java.util.LongSummaryStatistics`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^java.util.LongSummaryStatistics this ^java.util.LongSummaryStatistics other]
+  ([^LongSummaryStatistics this ^java.util.LongSummaryStatistics other]
     (-> this (.combine other))))
 
 (defn get-count
   "Returns the count of values recorded.
 
   returns: the count of values - `long`"
-  (^Long [^java.util.LongSummaryStatistics this]
+  (^Long [^LongSummaryStatistics this]
     (-> this (.getCount))))
 
 (defn get-sum
@@ -63,7 +63,7 @@
    recorded.
 
   returns: the sum of values, or zero if none - `long`"
-  (^Long [^java.util.LongSummaryStatistics this]
+  (^Long [^LongSummaryStatistics this]
     (-> this (.getSum))))
 
 (defn get-min
@@ -71,7 +71,7 @@
    values have been recorded.
 
   returns: the minimum value, or Long.MAX_VALUE if none - `long`"
-  (^Long [^java.util.LongSummaryStatistics this]
+  (^Long [^LongSummaryStatistics this]
     (-> this (.getMin))))
 
 (defn get-max
@@ -79,7 +79,7 @@
    values have been recorded
 
   returns: the maximum value, or Long.MIN_VALUE if none - `long`"
-  (^Long [^java.util.LongSummaryStatistics this]
+  (^Long [^LongSummaryStatistics this]
     (-> this (.getMax))))
 
 (defn get-average
@@ -87,13 +87,13 @@
    recorded.
 
   returns: The arithmetic mean of values, or zero if none - `double`"
-  (^Double [^java.util.LongSummaryStatistics this]
+  (^Double [^LongSummaryStatistics this]
     (-> this (.getAverage))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.util.LongSummaryStatistics this]
+  (^java.lang.String [^LongSummaryStatistics this]
     (-> this (.toString))))
 

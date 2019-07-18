@@ -26,13 +26,13 @@
 
   addr-type - A non-null string describing the type of the address. - `java.lang.String`
   addr - The possibly null contents of the address in the form of a string. - `java.lang.String`"
-  ([^java.lang.String addr-type ^java.lang.String addr]
+  (^StringRefAddr [^java.lang.String addr-type ^java.lang.String addr]
     (new StringRefAddr addr-type addr)))
 
 (defn get-content
   "Retrieves the contents of this address. The result is a string.
 
   returns: The possibly null address contents. - `java.lang.Object`"
-  (^java.lang.Object [^javax.naming.StringRefAddr this]
+  (^java.lang.Object [^StringRefAddr this]
     (-> this (.getContent))))
 

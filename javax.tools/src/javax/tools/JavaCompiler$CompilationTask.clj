@@ -13,10 +13,10 @@
   "Sets processors (for annotation processing).  This will
    bypass the normal discovery mechanism.
 
-  processors - processors (for annotation processing) - `javax.annotation.processing.Processor>`
+  processors - processors (for annotation processing) - `java.lang.Iterable`
 
   throws: java.lang.IllegalStateException - if the task has started"
-  ([^javax.tools.JavaCompiler$CompilationTask this ^javax.annotation.processing.Processor> processors]
+  ([^JavaCompiler$CompilationTask this ^java.lang.Iterable processors]
     (-> this (.setProcessors processors))))
 
 (defn set-locale
@@ -26,7 +26,7 @@
   locale - the locale to apply; null means apply no locale - `java.util.Locale`
 
   throws: java.lang.IllegalStateException - if the task has started"
-  ([^javax.tools.JavaCompiler$CompilationTask this ^java.util.Locale locale]
+  ([^JavaCompiler$CompilationTask this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn call
@@ -38,6 +38,6 @@
    false otherwise - `java.lang.Boolean`
 
   throws: java.lang.RuntimeException - if an unrecoverable error occurred in a user-supplied component. The cause will be the error in user code."
-  (^java.lang.Boolean [^javax.tools.JavaCompiler$CompilationTask this]
+  (^java.lang.Boolean [^JavaCompiler$CompilationTask this]
     (-> this (.call))))
 

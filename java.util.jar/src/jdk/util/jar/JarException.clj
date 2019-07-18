@@ -10,8 +10,8 @@
   Constructs a JarException with the specified detail message.
 
   s - the detail message - `java.lang.String`"
-  ([^java.lang.String s]
+  (^JarException [^java.lang.String s]
     (new JarException s))
-  ([]
+  (^JarException []
     (new JarException )))
 

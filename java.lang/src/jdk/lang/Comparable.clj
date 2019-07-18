@@ -93,12 +93,12 @@
    0, or 1 according to whether the value of
    expression is negative, zero or positive.
 
-  o - the object to be compared. - `Comparable.T`
+  o - the object to be compared. - `T`
 
   returns: a negative integer, zero, or a positive integer as this object
             is less than, equal to, or greater than the specified object. - `int`
 
   throws: java.lang.NullPointerException - if the specified object is null"
-  (^Integer [^java.lang.Comparable this ^Comparable.T o]
+  (^Integer [^Comparable this o]
     (-> this (.compareTo o))))
 

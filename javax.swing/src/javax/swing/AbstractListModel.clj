@@ -15,7 +15,7 @@
 
 (defn ->abstract-list-model
   "Constructor."
-  ([]
+  (^AbstractListModel []
     (new AbstractListModel )))
 
 (defn add-list-data-listener
@@ -23,7 +23,7 @@
    to the data model occurs.
 
   l - the ListDataListener to be added - `javax.swing.event.ListDataListener`"
-  ([^javax.swing.AbstractListModel this ^javax.swing.event.ListDataListener l]
+  ([^AbstractListModel this ^javax.swing.event.ListDataListener l]
     (-> this (.addListDataListener l))))
 
 (defn remove-list-data-listener
@@ -31,7 +31,7 @@
    change to the data model occurs.
 
   l - the ListDataListener to be removed - `javax.swing.event.ListDataListener`"
-  ([^javax.swing.AbstractListModel this ^javax.swing.event.ListDataListener l]
+  ([^AbstractListModel this ^javax.swing.event.ListDataListener l]
     (-> this (.removeListDataListener l))))
 
 (defn get-list-data-listeners
@@ -41,7 +41,7 @@
   returns: all of this model's ListDataListeners,
            or an empty array if no list data listeners
            are currently registered - `javax.swing.event.ListDataListener[]`"
-  ([^javax.swing.AbstractListModel this]
+  ([^AbstractListModel this]
     (-> this (.getListDataListeners))))
 
 (defn get-listeners
@@ -65,7 +65,7 @@
    If no such listeners exist,
    this method returns an empty array.
 
-  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class<T>`
+  listener-type - the type of listeners requested; this parameter should specify an interface that descends from java.util.EventListener - `java.lang.Class`
 
   returns: an array of all objects registered as
             FooListeners
@@ -74,6 +74,6 @@
             listeners have been added - `<T extends java.util.EventListener> T[]`
 
   throws: java.lang.ClassCastException - if listenerType doesn't specify a class or interface that implements java.util.EventListener"
-  ([^javax.swing.AbstractListModel this ^java.lang.Class listener-type]
+  ([^AbstractListModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 

@@ -26,7 +26,7 @@
   cookie - the cookie to store - `java.net.HttpCookie`
 
   throws: java.lang.NullPointerException - if cookie is null"
-  ([^java.net.CookieStore this ^java.net.URI uri ^java.net.HttpCookie cookie]
+  ([^CookieStore this ^java.net.URI uri ^java.net.HttpCookie cookie]
     (-> this (.add uri cookie))))
 
 (defn get
@@ -40,7 +40,7 @@
                     return empty list if no cookies match the given URI - `java.util.List<java.net.HttpCookie>`
 
   throws: java.lang.NullPointerException - if uri is null"
-  (^java.util.List [^java.net.CookieStore this ^java.net.URI uri]
+  (^java.util.List [^CookieStore this ^java.net.URI uri]
     (-> this (.get uri))))
 
 (defn get-cookies
@@ -48,7 +48,7 @@
 
   returns: an immutable list of http cookies;
                     return empty list if there's no http cookie in store - `java.util.List<java.net.HttpCookie>`"
-  (^java.util.List [^java.net.CookieStore this]
+  (^java.util.List [^CookieStore this]
     (-> this (.getCookies))))
 
 (defn get-ur-is
@@ -57,7 +57,7 @@
   returns: an immutable list of URIs;
                     return empty list if no cookie in this cookie store
                     is associated with an URI - `java.util.List<java.net.URI>`"
-  (^java.util.List [^java.net.CookieStore this]
+  (^java.util.List [^CookieStore this]
     (-> this (.getURIs))))
 
 (defn remove
@@ -69,13 +69,13 @@
   returns: true if this store contained the specified cookie - `boolean`
 
   throws: java.lang.NullPointerException - if cookie is null"
-  (^Boolean [^java.net.CookieStore this ^java.net.URI uri ^java.net.HttpCookie cookie]
+  (^Boolean [^CookieStore this ^java.net.URI uri ^java.net.HttpCookie cookie]
     (-> this (.remove uri cookie))))
 
 (defn remove-all
   "Remove all cookies in this cookie store.
 
   returns: true if this store changed as a result of the call - `boolean`"
-  (^Boolean [^java.net.CookieStore this]
+  (^Boolean [^CookieStore this]
     (-> this (.removeAll))))
 

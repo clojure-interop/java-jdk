@@ -19,7 +19,7 @@
    represents the primitive double argument.
 
   value - the value to be represented by the Double. - `double`"
-  ([^Double value]
+  (^Double [^Double value]
     (new Double value)))
 
 (def *-positive-infinity
@@ -689,14 +689,14 @@
 
   returns: the double value represented by this object
             converted to type short - `short`"
-  (^Short [^java.lang.Double this]
+  (^Short [^Double this]
     (-> this (.shortValue))))
 
 (defn double-value
   "Returns the double value of this Double object.
 
   returns: the double value represented by this object - `double`"
-  (^Double [^java.lang.Double this]
+  (^Double [^Double this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -705,7 +705,7 @@
 
   returns: the double value represented by this object
             converted to type long - `long`"
-  (^Long [^java.lang.Double this]
+  (^Long [^Double this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -714,7 +714,7 @@
 
   returns: the double value represented by this object
             converted to type byte - `byte`"
-  (^Byte [^java.lang.Double this]
+  (^Byte [^Double this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -724,7 +724,7 @@
    toString of one argument.
 
   returns: a String representation of this object. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Double this]
+  (^java.lang.String [^Double this]
     (-> this (.toString))))
 
 (defn infinite?
@@ -734,7 +734,7 @@
   returns: true if the value represented by this object is
             positive infinity or negative infinity;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Double this]
+  (^Boolean [^Double this]
     (-> this (.isInfinite))))
 
 (defn float-value
@@ -743,7 +743,7 @@
 
   returns: the double value represented by this object
             converted to type float - `float`"
-  (^Float [^java.lang.Double this]
+  (^Float [^Double this]
     (-> this (.floatValue))))
 
 (defn na-n?
@@ -752,7 +752,7 @@
 
   returns: true if the value represented by this object is
             NaN; false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Double this]
+  (^Boolean [^Double this]
     (-> this (.isNaN))))
 
 (defn int-value
@@ -761,7 +761,7 @@
 
   returns: the double value represented by this object
             converted to type int - `int`"
-  (^Integer [^java.lang.Double this]
+  (^Integer [^Double this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -783,7 +783,7 @@
     long v = Double.doubleToLongBits(this.doubleValue());
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.lang.Double this]
+  (^Integer [^Double this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -814,7 +814,7 @@
             and a value greater than 0 if this
             Double is numerically greater than
             anotherDouble. - `int`"
-  (^Integer [^java.lang.Double this ^java.lang.Double another-double]
+  (^Integer [^Double this ^java.lang.Double another-double]
     (-> this (.compareTo another-double))))
 
 (defn equals
@@ -855,6 +855,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Double this ^java.lang.Object obj]
+  (^Boolean [^Double this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

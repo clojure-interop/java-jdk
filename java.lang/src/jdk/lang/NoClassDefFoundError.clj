@@ -17,8 +17,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^NoClassDefFoundError [^java.lang.String s]
     (new NoClassDefFoundError s))
-  ([]
+  (^NoClassDefFoundError []
     (new NoClassDefFoundError )))
 

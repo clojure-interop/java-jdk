@@ -43,7 +43,7 @@
 
    The ConsoleHandler is configured based on
    LogManager properties (or their default values)."
-  ([]
+  (^ConsoleHandler []
     (new ConsoleHandler )))
 
 (defn publish
@@ -53,13 +53,13 @@
    which initialized the LogRecord and forwarded it here.
 
   record - description of the log event. A null record is silently ignored and is not published - `java.util.logging.LogRecord`"
-  ([^java.util.logging.ConsoleHandler this ^java.util.logging.LogRecord record]
+  ([^ConsoleHandler this ^java.util.logging.LogRecord record]
     (-> this (.publish record))))
 
 (defn close
   "Override StreamHandler.close to do a flush but not
    to close the output stream.  That is, we do not
    close System.err."
-  ([^java.util.logging.ConsoleHandler this]
+  ([^ConsoleHandler this]
     (-> this (.close))))
 

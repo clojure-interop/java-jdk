@@ -9,6 +9,6 @@
 
 (defn ->mouse-input-adapter
   "Constructor."
-  ([]
+  (^MouseInputAdapter []
     (new MouseInputAdapter )))
 

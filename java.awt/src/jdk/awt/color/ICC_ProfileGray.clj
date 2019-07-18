@@ -29,7 +29,7 @@
 
   returns: an array containing the components of the
    mediaWhitePointTag in the ICC profile. - `float[]`"
-  ([^java.awt.color.ICC_ProfileGray this]
+  ([^ICC_ProfileGray this]
     (-> this (.getMediaWhitePoint))))
 
 (defn get-gamma
@@ -46,7 +46,7 @@
   returns: the gamma value as a float. - `float`
 
   throws: java.awt.color.ProfileDataException - if the profile does not specify the TRC as a single gamma value."
-  (^Float [^java.awt.color.ICC_ProfileGray this]
+  (^Float [^ICC_ProfileGray this]
     (-> this (.getGamma))))
 
 (defn get-trc
@@ -67,6 +67,6 @@
   returns: a short array representing the TRC. - `short[]`
 
   throws: java.awt.color.ProfileDataException - if the profile does not specify the TRC as a table."
-  ([^java.awt.color.ICC_ProfileGray this]
+  ([^ICC_ProfileGray this]
     (-> this (.getTRC))))
 

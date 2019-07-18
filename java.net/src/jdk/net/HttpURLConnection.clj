@@ -270,7 +270,7 @@
 
   Deprecated. it is misplaced and shouldn't have existed.
 
-  type: java.lang.    int"
+  type: int"
   HttpURLConnection/HTTP_SERVER_ERROR)
 
 (def *-http-internal-error
@@ -361,7 +361,7 @@
 
   returns: the value of the nth header field,
             or null if the value does not exist. - `java.lang.String`"
-  (^java.lang.String [^java.net.HttpURLConnection this ^Integer n]
+  (^java.lang.String [^HttpURLConnection this ^Integer n]
     (-> this (.getHeaderField n))))
 
 (defn using-proxy
@@ -369,7 +369,7 @@
 
   returns: a boolean indicating if the connection is
    using a proxy. - `boolean`"
-  (^Boolean [^java.net.HttpURLConnection this]
+  (^Boolean [^HttpURLConnection this]
     (-> this (.usingProxy))))
 
 (defn get-header-field-key
@@ -383,7 +383,7 @@
 
   returns: the key for the nth header field,
             or null if the key does not exist. - `java.lang.String`"
-  (^java.lang.String [^java.net.HttpURLConnection this ^Integer n]
+  (^java.lang.String [^HttpURLConnection this ^Integer n]
     (-> this (.getHeaderFieldKey n))))
 
 (defn disconnect
@@ -391,7 +391,7 @@
    are unlikely in the near future. Calling disconnect()
    should not imply that this HttpURLConnection
    instance can be reused for other requests."
-  ([^java.net.HttpURLConnection this]
+  ([^HttpURLConnection this]
     (-> this (.disconnect))))
 
 (defn get-response-code
@@ -408,7 +408,7 @@
   returns: the HTTP Status-Code, or -1 - `int`
 
   throws: java.io.IOException - if an error occurred connecting to the server."
-  (^Integer [^java.net.HttpURLConnection this]
+  (^Integer [^HttpURLConnection this]
     (-> this (.getResponseCode))))
 
 (defn set-fixed-length-streaming-mode
@@ -435,7 +435,7 @@
   content-length - The number of bytes which will be written to the OutputStream. - `int`
 
   throws: java.lang.IllegalStateException - if URLConnection is already connected or if a different streaming mode is already enabled."
-  ([^java.net.HttpURLConnection this ^Integer content-length]
+  ([^HttpURLConnection this ^Integer content-length]
     (-> this (.setFixedLengthStreamingMode content-length))))
 
 (defn get-header-field-date
@@ -447,7 +447,7 @@
   returns: the value of the field, parsed as a date. The value of the
             Default argument is returned if the field is
             missing or malformed. - `long`"
-  (^Long [^java.net.HttpURLConnection this ^java.lang.String name ^Long default]
+  (^Long [^HttpURLConnection this ^java.lang.String name ^Long default]
     (-> this (.getHeaderFieldDate name default))))
 
 (defn set-instance-follow-redirects
@@ -459,7 +459,7 @@
    true.
 
   follow-redirects - a boolean indicating whether or not to follow HTTP redirects. - `boolean`"
-  ([^java.net.HttpURLConnection this ^Boolean follow-redirects]
+  ([^HttpURLConnection this ^Boolean follow-redirects]
     (-> this (.setInstanceFollowRedirects follow-redirects))))
 
 (defn set-chunked-streaming-mode
@@ -480,7 +480,7 @@
   chunklen - The number of bytes to write in each chunk. If chunklen is less than or equal to zero, a default value will be used. - `int`
 
   throws: java.lang.IllegalStateException - if URLConnection is already connected or if a different streaming mode is already enabled."
-  ([^java.net.HttpURLConnection this ^Integer chunklen]
+  ([^HttpURLConnection this ^Integer chunklen]
     (-> this (.setChunkedStreamingMode chunklen))))
 
 (defn get-error-stream
@@ -500,7 +500,7 @@
   returns: an error stream if any, null if there have been no
    errors, the connection is not connected or the server sent no
    useful data. - `java.io.InputStream`"
-  (^java.io.InputStream [^java.net.HttpURLConnection this]
+  (^java.io.InputStream [^HttpURLConnection this]
     (-> this (.getErrorStream))))
 
 (defn set-request-method
@@ -519,14 +519,14 @@
   method - the HTTP method - `java.lang.String`
 
   throws: java.net.ProtocolException - if the method cannot be reset or if the requested method isn't valid for HTTP."
-  ([^java.net.HttpURLConnection this ^java.lang.String method]
+  ([^HttpURLConnection this ^java.lang.String method]
     (-> this (.setRequestMethod method))))
 
 (defn get-request-method
   "Get the request method.
 
   returns: the HTTP request method - `java.lang.String`"
-  (^java.lang.String [^java.net.HttpURLConnection this]
+  (^java.lang.String [^HttpURLConnection this]
     (-> this (.getRequestMethod))))
 
 (defn get-permission
@@ -538,7 +538,7 @@
            host and port. - `java.security.Permission`
 
   throws: java.io.IOException - if an error occurs while computing the permission."
-  (^java.security.Permission [^java.net.HttpURLConnection this]
+  (^java.security.Permission [^HttpURLConnection this]
     (-> this (.getPermission))))
 
 (defn get-instance-follow-redirects?
@@ -547,7 +547,7 @@
 
   returns: the value of this HttpURLConnection's
             instanceFollowRedirects field. - `boolean`"
-  (^Boolean [^java.net.HttpURLConnection this]
+  (^Boolean [^HttpURLConnection this]
     (-> this (.getInstanceFollowRedirects))))
 
 (defn get-response-message
@@ -564,6 +564,6 @@
   returns: the HTTP response message, or null - `java.lang.String`
 
   throws: java.io.IOException - if an error occurred connecting to the server."
-  (^java.lang.String [^java.net.HttpURLConnection this]
+  (^java.lang.String [^HttpURLConnection this]
     (-> this (.getResponseMessage))))
 

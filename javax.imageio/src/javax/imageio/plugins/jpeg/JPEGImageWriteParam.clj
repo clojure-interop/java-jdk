@@ -68,7 +68,7 @@
    0.75.
 
   locale - a Locale to be used by the superclass to localize compression type names and quality descriptions, or null. - `java.util.Locale`"
-  ([^java.util.Locale locale]
+  (^JPEGImageWriteParam [^java.util.Locale locale]
     (new JPEGImageWriteParam locale)))
 
 (defn compression-lossless?
@@ -78,14 +78,14 @@
   returns: false. - `boolean`
 
   throws: java.lang.IllegalStateException - if the compression mode is not MODE_EXPLICIT."
-  (^Boolean [^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  (^Boolean [^JPEGImageWriteParam this]
     (-> this (.isCompressionLossless))))
 
 (defn are-tables-set
   "Returns true if tables are currently set.
 
   returns: true if tables are present. - `boolean`"
-  (^Boolean [^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  (^Boolean [^JPEGImageWriteParam this]
     (-> this (.areTablesSet))))
 
 (defn set-optimize-huffman-tables
@@ -98,13 +98,13 @@
    always contain Huffman tables.
 
   optimize - A boolean indicating whether to generate optimized Huffman tables when writing. - `boolean`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this ^Boolean optimize]
+  ([^JPEGImageWriteParam this ^Boolean optimize]
     (-> this (.setOptimizeHuffmanTables optimize))))
 
 (defn unset-encode-tables
   "Removes any quantization and Huffman tables that are currently
    set."
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  ([^JPEGImageWriteParam this]
     (-> this (.unsetEncodeTables))))
 
 (defn unset-compression
@@ -114,7 +114,7 @@
    to 0.75F.
 
   throws: java.lang.IllegalStateException - if the compression mode is not MODE_EXPLICIT."
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  ([^JPEGImageWriteParam this]
     (-> this (.unsetCompression))))
 
 (defn get-optimize-huffman-tables?
@@ -125,7 +125,7 @@
 
   returns: true if the writer will generate optimized
    Huffman tables. - `boolean`"
-  (^Boolean [^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  (^Boolean [^JPEGImageWriteParam this]
     (-> this (.getOptimizeHuffmanTables))))
 
 (defn get-compression-quality-descriptions
@@ -133,7 +133,7 @@
 
   returns: an array of Strings containing localized
    descriptions of the compression quality levels. - `java.lang.String[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  ([^JPEGImageWriteParam this]
     (-> this (.getCompressionQualityDescriptions))))
 
 (defn get-dc-huffman-tables
@@ -143,7 +143,7 @@
 
   returns: an array of JPEGHuffmanTable objects, or
    null. - `javax.imageio.plugins.jpeg.JPEGHuffmanTable[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  ([^JPEGImageWriteParam this]
     (-> this (.getDCHuffmanTables))))
 
 (defn get-ac-huffman-tables
@@ -153,7 +153,7 @@
 
   returns: an array of JPEGHuffmanTable objects, or
    null. - `javax.imageio.plugins.jpeg.JPEGHuffmanTable[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  ([^JPEGImageWriteParam this]
     (-> this (.getACHuffmanTables))))
 
 (defn set-encode-tables
@@ -171,7 +171,7 @@
   ac-huffman-tables - An array of Huffman table objects. - `javax.imageio.plugins.jpeg.JPEGHuffmanTable[]`
 
   throws: java.lang.IllegalArgumentException - if any of the arguments is null or has more than 4 elements, or if the numbers of DC and AC tables differ."
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this q-tables dc-huffman-tables ac-huffman-tables]
+  ([^JPEGImageWriteParam this q-tables dc-huffman-tables ac-huffman-tables]
     (-> this (.setEncodeTables q-tables dc-huffman-tables ac-huffman-tables))))
 
 (defn get-compression-quality-values
@@ -181,7 +181,7 @@
    boundaries between the compression quality levels as described
    by the Strings from
    getCompressionQualityDescriptions. - `float[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  ([^JPEGImageWriteParam this]
     (-> this (.getCompressionQualityValues))))
 
 (defn get-q-tables
@@ -191,6 +191,6 @@
 
   returns: an array of JPEGQTable objects, or
    null. - `javax.imageio.plugins.jpeg.JPEGQTable[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGImageWriteParam this]
+  ([^JPEGImageWriteParam this]
     (-> this (.getQTables))))
 

@@ -13,8 +13,8 @@
 (defn accept
   "Performs this operation on the given arguments.
 
-  t - the first input argument - `ObjDoubleConsumer.T`
+  t - the first input argument - `T`
   value - the second input argument - `double`"
-  ([^java.util.function.ObjDoubleConsumer this ^ObjDoubleConsumer.T t ^Double value]
+  ([^ObjDoubleConsumer this t ^Double value]
     (-> this (.accept t value))))
 

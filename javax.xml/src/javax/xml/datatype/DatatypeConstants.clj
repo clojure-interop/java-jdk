@@ -144,7 +144,7 @@
 
   A constant that represents the years field.
 
-  type: javax.xml.datatype.DatatypeConstants.Field"
+  type: javax.xml.datatype.DatatypeConstants$Field"
   DatatypeConstants/YEARS)
 
 (def *-months
@@ -152,7 +152,7 @@
 
   A constant that represents the months field.
 
-  type: javax.xml.datatype.DatatypeConstants.Field"
+  type: javax.xml.datatype.DatatypeConstants$Field"
   DatatypeConstants/MONTHS)
 
 (def *-days
@@ -160,7 +160,7 @@
 
   A constant that represents the days field.
 
-  type: javax.xml.datatype.DatatypeConstants.Field"
+  type: javax.xml.datatype.DatatypeConstants$Field"
   DatatypeConstants/DAYS)
 
 (def *-hours
@@ -168,7 +168,7 @@
 
   A constant that represents the hours field.
 
-  type: javax.xml.datatype.DatatypeConstants.Field"
+  type: javax.xml.datatype.DatatypeConstants$Field"
   DatatypeConstants/HOURS)
 
 (def *-minutes
@@ -176,7 +176,7 @@
 
   A constant that represents the minutes field.
 
-  type: javax.xml.datatype.DatatypeConstants.Field"
+  type: javax.xml.datatype.DatatypeConstants$Field"
   DatatypeConstants/MINUTES)
 
 (def *-seconds
@@ -184,7 +184,7 @@
 
   A constant that represents the seconds field.
 
-  type: javax.xml.datatype.DatatypeConstants.Field"
+  type: javax.xml.datatype.DatatypeConstants$Field"
   DatatypeConstants/SECONDS)
 
 (def *-datetime

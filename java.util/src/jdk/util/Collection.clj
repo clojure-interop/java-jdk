@@ -94,12 +94,12 @@
    specified collection is this collection, and this collection is
    nonempty.)
 
-  c - collection containing elements to be added to this collection - `Collection.E>`
+  c - collection containing elements to be added to this collection - `java.util.Collection`
 
   returns: true if this collection changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this collection"
-  (^Boolean [^java.util.Collection this ^Collection.E> c]
+  (^Boolean [^Collection this ^java.util.Collection c]
     (-> this (.addAll c))))
 
 (defn stream
@@ -110,8 +110,8 @@
    CONCURRENT, or late-binding. (See spliterator()
    for details.)
 
-  returns: a sequential Stream over the elements in this collection - `default java.util..Stream<Collection.E>`"
-  ([^java.util.Collection this]
+  returns: a sequential Stream over the elements in this collection - `default java.util..Stream<E>`"
+  ([^Collection this]
     (-> this (.stream))))
 
 (defn spliterator
@@ -141,8 +141,8 @@
    contents of the collection as of initiation of the terminal stream
    operation.
 
-  returns: a Spliterator over the elements in this collection - `default java.util.Spliterator<Collection.E>`"
-  ([^java.util.Collection this]
+  returns: a Spliterator over the elements in this collection - `default java.util.Spliterator<E>`"
+  ([^Collection this]
     (-> this (.spliterator))))
 
 (defn remove-if
@@ -150,12 +150,12 @@
    predicate.  Errors or runtime exceptions thrown during iteration or by
    the predicate are relayed to the caller.
 
-  filter - a predicate which returns true for elements to be removed - `Collection.E>`
+  filter - a predicate which returns true for elements to be removed - `java.util.function.Predicate`
 
   returns: true if any elements were removed - `default boolean`
 
   throws: java.lang.NullPointerException - if the specified filter is null"
-  ([^java.util.Collection this ^Collection.E> filter]
+  ([^Collection this ^java.util.function.Predicate filter]
     (-> this (.removeIf filter))))
 
 (defn parallel-stream
@@ -168,8 +168,8 @@
    for details.)
 
   returns: a possibly parallel Stream over the elements in this
-   collection - `default java.util.stream.Stream<Collection.E>`"
-  ([^java.util.Collection this]
+   collection - `default java.util.stream.Stream<E>`"
+  ([^Collection this]
     (-> this (.parallelStream))))
 
 (defn contains
@@ -184,7 +184,7 @@
            element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this collection (optional)"
-  (^Boolean [^java.util.Collection this ^java.lang.Object o]
+  (^Boolean [^Collection this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
@@ -193,8 +193,8 @@
    (unless this collection is an instance of some class that provides a
    guarantee).
 
-  returns: an Iterator over the elements in this collection - `java.util.Iterator<Collection.E>`"
-  (^java.util.Iterator [^java.util.Collection this]
+  returns: an Iterator over the elements in this collection - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^Collection this]
     (-> this (.iterator))))
 
 (defn remove
@@ -211,7 +211,7 @@
   returns: true if an element was removed as a result of this call - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this collection (optional)"
-  (^Boolean [^java.util.Collection this ^java.lang.Object o]
+  (^Boolean [^Collection this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn hash-code
@@ -225,7 +225,7 @@
    c1.hashCode()==c2.hashCode().
 
   returns: the hash code value for this collection - `int`"
-  (^Integer [^java.util.Collection this]
+  (^Integer [^Collection this]
     (-> this (.hashCode))))
 
 (defn add
@@ -247,20 +247,20 @@
    the invariant that a collection always contains the specified element
    after this call returns.
 
-  e - element whose presence in this collection is to be ensured - `Collection.E`
+  e - element whose presence in this collection is to be ensured - `E`
 
   returns: true if this collection changed as a result of the
            call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the add operation is not supported by this collection"
-  (^Boolean [^java.util.Collection this ^Collection.E e]
+  (^Boolean [^Collection this e]
     (-> this (.add e))))
 
 (defn empty?
   "Returns true if this collection contains no elements.
 
   returns: true if this collection contains no elements - `boolean`"
-  (^Boolean [^java.util.Collection this]
+  (^Boolean [^Collection this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -269,7 +269,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of elements in this collection - `int`"
-  (^Integer [^java.util.Collection this]
+  (^Integer [^Collection this]
     (-> this (.size))))
 
 (defn retain-all
@@ -278,12 +278,12 @@
    this collection all of its elements that are not contained in the
    specified collection.
 
-  c - collection containing elements to be retained in this collection - `java.util.Collection<?>`
+  c - collection containing elements to be retained in this collection - `java.util.Collection`
 
   returns: true if this collection changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the retainAll operation is not supported by this collection"
-  (^Boolean [^java.util.Collection this ^java.util.Collection c]
+  (^Boolean [^Collection this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -291,7 +291,7 @@
    The collection will be empty after this method returns.
 
   throws: java.lang.UnsupportedOperationException - if the clear operation is not supported by this collection"
-  ([^java.util.Collection this]
+  ([^Collection this]
     (-> this (.clear))))
 
 (defn to-array
@@ -333,9 +333,9 @@
   returns: an array containing all of the elements in this collection - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this collection"
-  ([^java.util.Collection this a]
+  ([^Collection this a]
     (-> this (.toArray a)))
-  ([^java.util.Collection this]
+  ([^Collection this]
     (-> this (.toArray))))
 
 (defn remove-all
@@ -344,13 +344,13 @@
    this collection will contain no elements in common with the specified
    collection.
 
-  c - collection containing elements to be removed from this collection - `java.util.Collection<?>`
+  c - collection containing elements to be removed from this collection - `java.util.Collection`
 
   returns: true if this collection changed as a result of the
            call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the removeAll method is not supported by this collection"
-  (^Boolean [^java.util.Collection this ^java.util.Collection c]
+  (^Boolean [^Collection this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn equals
@@ -382,19 +382,19 @@
 
   returns: true if the specified object is equal to this
    collection - `boolean`"
-  (^Boolean [^java.util.Collection this ^java.lang.Object o]
+  (^Boolean [^Collection this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn contains-all
   "Returns true if this collection contains all of the elements
    in the specified collection.
 
-  c - collection to be checked for containment in this collection - `java.util.Collection<?>`
+  c - collection to be checked for containment in this collection - `java.util.Collection`
 
   returns: true if this collection contains all of the elements
            in the specified collection - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in the specified collection are incompatible with this collection (optional)"
-  (^Boolean [^java.util.Collection this ^java.util.Collection c]
+  (^Boolean [^Collection this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

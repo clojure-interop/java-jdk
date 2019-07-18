@@ -25,11 +25,11 @@
 
   width - the specified width - `int`
   height - the specified height - `int`"
-  ([^Integer width ^Integer height]
+  (^Dimension [^Integer width ^Integer height]
     (new Dimension width height))
-  ([^java.awt.Dimension d]
+  (^Dimension [^java.awt.Dimension d]
     (new Dimension d))
-  ([]
+  (^Dimension []
     (new Dimension )))
 
 (defn -width
@@ -55,7 +55,7 @@
    precision.
 
   returns: the width of this Dimension. - `double`"
-  (^Double [^java.awt.Dimension this]
+  (^Double [^Dimension this]
     (-> this (.getWidth))))
 
 (defn get-height
@@ -63,7 +63,7 @@
    precision.
 
   returns: the height of this Dimension. - `double`"
-  (^Double [^java.awt.Dimension this]
+  (^Double [^Dimension this]
     (-> this (.getHeight))))
 
 (defn set-size
@@ -75,9 +75,9 @@
 
   width - the new width for the Dimension object - `double`
   height - the new height for the Dimension object - `double`"
-  ([^java.awt.Dimension this ^Double width ^Double height]
+  ([^Dimension this ^Double width ^Double height]
     (-> this (.setSize width height)))
-  ([^java.awt.Dimension this ^java.awt.Dimension d]
+  ([^Dimension this ^java.awt.Dimension d]
     (-> this (.setSize d))))
 
 (defn get-size
@@ -87,7 +87,7 @@
 
   returns: the size of this dimension, a new instance of
              Dimension with the same width and height - `java.awt.Dimension`"
-  (^java.awt.Dimension [^java.awt.Dimension this]
+  (^java.awt.Dimension [^Dimension this]
     (-> this (.getSize))))
 
 (defn equals
@@ -97,14 +97,14 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Dimension this ^java.lang.Object obj]
+  (^Boolean [^Dimension this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code for this Dimension.
 
   returns: a hash code for this Dimension - `int`"
-  (^Integer [^java.awt.Dimension this]
+  (^Integer [^Dimension this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -117,6 +117,6 @@
 
   returns: a string representation of this Dimension
             object - `java.lang.String`"
-  (^java.lang.String [^java.awt.Dimension this]
+  (^java.lang.String [^Dimension this]
     (-> this (.toString))))
 

@@ -32,7 +32,7 @@
    be unportable.
 
   returns: remote reference for the remote object - `java.rmi.server.RemoteRef`"
-  (^java.rmi.server.RemoteRef [^java.rmi.server.RemoteObject this]
+  (^java.rmi.server.RemoteRef [^RemoteObject this]
     (-> this (.getRef))))
 
 (defn hash-code
@@ -41,7 +41,7 @@
    (in order to support remote objects as keys in hash tables).
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.rmi.server.RemoteObject this]
+  (^Integer [^RemoteObject this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -57,13 +57,13 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  (^Boolean [^java.rmi.server.RemoteObject this ^java.lang.Object obj]
+  (^Boolean [^RemoteObject this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
   "Returns a String that represents the value of this remote object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.rmi.server.RemoteObject this]
+  (^java.lang.String [^RemoteObject this]
     (-> this (.toString))))
 

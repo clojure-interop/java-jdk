@@ -142,7 +142,7 @@
   "Creates a new service loader for the given service type and class
    loader.
 
-  service - The interface or abstract class representing the service - `java.lang.Class<S>`
+  service - The interface or abstract class representing the service - `java.lang.Class`
   loader - The class loader to be used to load provider-configuration files and provider classes, or null if the system class loader (or, failing that, the bootstrap class loader) is to be used - `java.lang.ClassLoader`
 
   returns: A new service loader - `<S> java.util.ServiceLoader<S>`"
@@ -171,7 +171,7 @@
    have been installed into the current Java virtual machine; providers on
    the application's class path will be ignored.
 
-  service - The interface or abstract class representing the service - `java.lang.Class<S>`
+  service - The interface or abstract class representing the service - `java.lang.Class`
 
   returns: A new service loader - `<S> java.util.ServiceLoader<S>`"
   ([^java.lang.Class service]
@@ -186,7 +186,7 @@
 
     This method is intended for use in situations in which new providers
    can be installed into a running Java virtual machine."
-  ([^java.util.ServiceLoader this]
+  ([^ServiceLoader this]
     (-> this (.reload))))
 
 (defn iterator
@@ -225,14 +225,14 @@
    cause an UnsupportedOperationException to be thrown.
 
   returns: An iterator that lazily loads providers for this loader's
-            service - `java.util.Iterator<ServiceLoader.S>`"
-  (^java.util.Iterator [^java.util.ServiceLoader this]
+            service - `java.util.Iterator<S>`"
+  (^java.util.Iterator [^ServiceLoader this]
     (-> this (.iterator))))
 
 (defn to-string
   "Returns a string describing this service.
 
   returns: A descriptive string - `java.lang.String`"
-  (^java.lang.String [^java.util.ServiceLoader this]
+  (^java.lang.String [^ServiceLoader this]
     (-> this (.toString))))
 

@@ -24,7 +24,7 @@
 (defn show
   "Makes the Popup visible. If the Popup is
    currently visible, this has no effect."
-  ([^javax.swing.Popup this]
+  ([^Popup this]
     (-> this (.show))))
 
 (defn hide
@@ -34,6 +34,6 @@
    based on the PopupFactory. As such, if you invoke methods
    on a disposed Popup, indeterminate
    behavior will result."
-  ([^javax.swing.Popup this]
+  ([^Popup this]
     (-> this (.hide))))
 

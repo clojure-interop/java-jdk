@@ -11,7 +11,7 @@
 
   A PrinterJob object should be created using the
    static getPrinterJob method."
-  ([]
+  (^PrinterJob []
     (new PrinterJob )))
 
 (defn *get-printer-job
@@ -83,7 +83,7 @@
   "Sets the number of copies to be printed.
 
   copies - the number of copies to be printed - `int`"
-  ([^java.awt.print.PrinterJob this ^Integer copies]
+  ([^PrinterJob this ^Integer copies]
     (-> this (.setCopies copies))))
 
 (defn page-dialog
@@ -106,7 +106,7 @@
               dialog is acknowledged. - `java.awt.print.PageFormat`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  (^java.awt.print.PageFormat [^java.awt.print.PrinterJob this ^java.awt.print.PageFormat page]
+  (^java.awt.print.PageFormat [^PrinterJob this ^java.awt.print.PageFormat page]
     (-> this (.pageDialog page))))
 
 (defn cancel
@@ -116,7 +116,7 @@
    that the job should be cancelled at the next
    chance. If there is no print job in progress then
    this call does nothing."
-  ([^java.awt.print.PrinterJob this]
+  ([^PrinterJob this]
     (-> this (.cancel))))
 
 (defn cancelled?
@@ -127,7 +127,7 @@
 
   returns: true if the job in progress
    is going to be cancelled; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.print.PrinterJob this]
+  (^Boolean [^PrinterJob this]
     (-> this (.isCancelled))))
 
 (defn get-print-service
@@ -137,14 +137,14 @@
    available.
 
   returns: the service for this printer job. - `javax.print.PrintService`"
-  (^javax.print.PrintService [^java.awt.print.PrinterJob this]
+  (^javax.print.PrintService [^PrinterJob this]
     (-> this (.getPrintService))))
 
 (defn get-user-name
   "Gets the name of the printing user.
 
   returns: the name of the printing user - `java.lang.String`"
-  (^java.lang.String [^java.awt.print.PrinterJob this]
+  (^java.lang.String [^PrinterJob this]
     (-> this (.getUserName))))
 
 (defn set-job-name
@@ -152,7 +152,7 @@
    The document name can not be null.
 
   job-name - the name of the document to be printed - `java.lang.String`"
-  ([^java.awt.print.PrinterJob this ^java.lang.String job-name]
+  ([^PrinterJob this ^java.lang.String job-name]
     (-> this (.setJobName job-name))))
 
 (defn print-dialog
@@ -195,16 +195,16 @@
    false otherwise. - `boolean`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  (^Boolean [^java.awt.print.PrinterJob this ^javax.print.attribute.PrintRequestAttributeSet attributes]
+  (^Boolean [^PrinterJob this ^javax.print.attribute.PrintRequestAttributeSet attributes]
     (-> this (.printDialog attributes)))
-  (^Boolean [^java.awt.print.PrinterJob this]
+  (^Boolean [^PrinterJob this]
     (-> this (.printDialog))))
 
 (defn get-copies
   "Gets the number of copies to be printed.
 
   returns: the number of copies to be printed. - `int`"
-  (^Integer [^java.awt.print.PrinterJob this]
+  (^Integer [^PrinterJob this]
     (-> this (.getCopies))))
 
 (defn validate-page
@@ -220,7 +220,7 @@
   returns: a PageFormat that is cloned from
             page and whose settings are changed
             to conform with this PrinterJob. - `java.awt.print.PageFormat`"
-  (^java.awt.print.PageFormat [^java.awt.print.PrinterJob this ^java.awt.print.PageFormat page]
+  (^java.awt.print.PageFormat [^PrinterJob this ^java.awt.print.PageFormat page]
     (-> this (.validatePage page))))
 
 (defn default-page
@@ -231,9 +231,9 @@
 
   returns: clone of page, altered to describe a default
                         PageFormat. - `java.awt.print.PageFormat`"
-  (^java.awt.print.PageFormat [^java.awt.print.PrinterJob this ^java.awt.print.PageFormat page]
+  (^java.awt.print.PageFormat [^PrinterJob this ^java.awt.print.PageFormat page]
     (-> this (.defaultPage page)))
-  (^java.awt.print.PageFormat [^java.awt.print.PrinterJob this]
+  (^java.awt.print.PageFormat [^PrinterJob this]
     (-> this (.defaultPage))))
 
 (defn set-print-service
@@ -248,14 +248,14 @@
   service - a print service that supports 2D printing - `javax.print.PrintService`
 
   throws: java.awt.print.PrinterException - if the specified service does not support 2D printing, or this PrinterJob class does not support setting a 2D print service, or the specified service is otherwise not a valid print service."
-  ([^java.awt.print.PrinterJob this ^javax.print.PrintService service]
+  ([^PrinterJob this ^javax.print.PrintService service]
     (-> this (.setPrintService service))))
 
 (defn get-job-name
   "Gets the name of the document to be printed.
 
   returns: the name of the document to be printed. - `java.lang.String`"
-  (^java.lang.String [^java.awt.print.PrinterJob this]
+  (^java.lang.String [^PrinterJob this]
     (-> this (.getJobName))))
 
 (defn get-page-format
@@ -273,7 +273,7 @@
 
   returns: a PageFormat whose settings conform with
    those of the current service and the specified attributes. - `java.awt.print.PageFormat`"
-  (^java.awt.print.PageFormat [^java.awt.print.PrinterJob this ^javax.print.attribute.PrintRequestAttributeSet attributes]
+  (^java.awt.print.PageFormat [^PrinterJob this ^javax.print.attribute.PrintRequestAttributeSet attributes]
     (-> this (.getPageFormat attributes))))
 
 (defn print
@@ -308,9 +308,9 @@
   attributes - a set of attributes for the job - `javax.print.attribute.PrintRequestAttributeSet`
 
   throws: java.awt.print.PrinterException - an error in the print system caused the job to be aborted."
-  ([^java.awt.print.PrinterJob this ^javax.print.attribute.PrintRequestAttributeSet attributes]
+  ([^PrinterJob this ^javax.print.attribute.PrintRequestAttributeSet attributes]
     (-> this (.print attributes)))
-  ([^java.awt.print.PrinterJob this]
+  ([^PrinterJob this]
     (-> this (.print))))
 
 (defn set-pageable
@@ -322,7 +322,7 @@
   document - the pages to be printed. It can not be null. - `java.awt.print.Pageable`
 
   throws: java.lang.NullPointerException - the Pageable passed in was null."
-  ([^java.awt.print.PrinterJob this ^java.awt.print.Pageable document]
+  ([^PrinterJob this ^java.awt.print.Pageable document]
     (-> this (.setPageable document))))
 
 (defn set-printable
@@ -334,8 +334,8 @@
 
   painter - the Printable called to render each page of the document - `java.awt.print.Printable`
   format - the size and orientation of each page to be printed - `java.awt.print.PageFormat`"
-  ([^java.awt.print.PrinterJob this ^java.awt.print.Printable painter ^java.awt.print.PageFormat format]
+  ([^PrinterJob this ^java.awt.print.Printable painter ^java.awt.print.PageFormat format]
     (-> this (.setPrintable painter format)))
-  ([^java.awt.print.PrinterJob this ^java.awt.print.Printable painter]
+  ([^PrinterJob this ^java.awt.print.Printable painter]
     (-> this (.setPrintable painter))))
 

@@ -5,7 +5,7 @@
 
 (defn ->option-pane-ui
   "Constructor."
-  ([]
+  (^OptionPaneUI []
     (new OptionPaneUI )))
 
 (defn select-initial-value
@@ -13,7 +13,7 @@
    focus.
 
   op - `javax.swing.JOptionPane`"
-  ([^javax.swing.plaf.OptionPaneUI this ^javax.swing.JOptionPane op]
+  ([^OptionPaneUI this ^javax.swing.JOptionPane op]
     (-> this (.selectInitialValue op))))
 
 (defn contains-custom-components
@@ -23,6 +23,6 @@
   op - `javax.swing.JOptionPane`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.plaf.OptionPaneUI this ^javax.swing.JOptionPane op]
+  (^Boolean [^OptionPaneUI this ^javax.swing.JOptionPane op]
     (-> this (.containsCustomComponents op))))
 

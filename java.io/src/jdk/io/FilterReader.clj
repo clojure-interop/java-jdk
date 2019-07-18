@@ -19,9 +19,9 @@
                stream has been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Integer [^java.io.FilterReader this cbuf ^Integer off ^Integer len]
+  (^Integer [^FilterReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  (^Integer [^java.io.FilterReader this]
+  (^Integer [^FilterReader this]
     (-> this (.read))))
 
 (defn skip
@@ -32,7 +32,7 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Long [^java.io.FilterReader this ^Long n]
+  (^Long [^FilterReader this ^Long n]
     (-> this (.skip n))))
 
 (defn ready
@@ -43,14 +43,14 @@
    next read will block. - `boolean`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Boolean [^java.io.FilterReader this]
+  (^Boolean [^FilterReader this]
     (-> this (.ready))))
 
 (defn mark-supported
   "Tells whether this stream supports the mark() operation.
 
   returns: true if and only if this stream supports the mark operation. - `boolean`"
-  (^Boolean [^java.io.FilterReader this]
+  (^Boolean [^FilterReader this]
     (-> this (.markSupported))))
 
 (defn mark
@@ -59,20 +59,20 @@
   read-ahead-limit - Limit on the number of characters that may be read while still preserving the mark. After reading this many characters, attempting to reset the stream may fail. - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.FilterReader this ^Integer read-ahead-limit]
+  ([^FilterReader this ^Integer read-ahead-limit]
     (-> this (.mark read-ahead-limit))))
 
 (defn reset
   "Resets the stream.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.FilterReader this]
+  ([^FilterReader this]
     (-> this (.reset))))
 
 (defn close
   "Description copied from class: Reader
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.FilterReader this]
+  ([^FilterReader this]
     (-> this (.close))))
 

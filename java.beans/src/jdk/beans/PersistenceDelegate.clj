@@ -56,7 +56,7 @@
 
 (defn ->persistence-delegate
   "Constructor."
-  ([]
+  (^PersistenceDelegate []
     (new PersistenceDelegate )))
 
 (defn write-object
@@ -79,6 +79,6 @@
   out - The stream to which this expression will be written. - `java.beans.Encoder`
 
   throws: java.lang.NullPointerException - if out is null"
-  ([^java.beans.PersistenceDelegate this ^java.lang.Object old-instance ^java.beans.Encoder out]
+  ([^PersistenceDelegate this ^java.lang.Object old-instance ^java.beans.Encoder out]
     (-> this (.writeObject old-instance out))))
 

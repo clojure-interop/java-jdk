@@ -35,11 +35,11 @@
   need-client-auth - true to require client authentication on SSL connections accepted by server sockets created by this factory; false to not require client authentication - `boolean`
 
   throws: java.lang.IllegalArgumentException - when one or more of the cipher suites named by the enabledCipherSuites parameter is not supported, when one or more of the protocols named by the enabledProtocols parameter is not supported or when a problem is encountered while trying to check if the supplied cipher suites and protocols to be enabled are supported."
-  ([^javax.net.ssl.SSLContext context enabled-cipher-suites enabled-protocols ^Boolean need-client-auth]
+  (^SslRMIServerSocketFactory [^javax.net.ssl.SSLContext context enabled-cipher-suites enabled-protocols ^Boolean need-client-auth]
     (new SslRMIServerSocketFactory context enabled-cipher-suites enabled-protocols need-client-auth))
-  ([enabled-cipher-suites enabled-protocols ^Boolean need-client-auth]
+  (^SslRMIServerSocketFactory [enabled-cipher-suites enabled-protocols ^Boolean need-client-auth]
     (new SslRMIServerSocketFactory enabled-cipher-suites enabled-protocols need-client-auth))
-  ([]
+  (^SslRMIServerSocketFactory []
     (new SslRMIServerSocketFactory )))
 
 (defn get-enabled-cipher-suites
@@ -49,7 +49,7 @@
    that are enabled by default.
 
   returns: an array of cipher suites enabled, or null - `java.lang.String[]`"
-  ([^javax.rmi.ssl.SslRMIServerSocketFactory this]
+  ([^SslRMIServerSocketFactory this]
     (-> this (.getEnabledCipherSuites))))
 
 (defn get-enabled-protocols
@@ -60,7 +60,7 @@
 
   returns: an array of protocol versions enabled, or
    null - `java.lang.String[]`"
-  ([^javax.rmi.ssl.SslRMIServerSocketFactory this]
+  ([^SslRMIServerSocketFactory this]
     (-> this (.getEnabledProtocols))))
 
 (defn get-need-client-auth?
@@ -69,7 +69,7 @@
    by this factory.
 
   returns: true if client authentication is required - `boolean`"
-  (^Boolean [^javax.rmi.ssl.SslRMIServerSocketFactory this]
+  (^Boolean [^SslRMIServerSocketFactory this]
     (-> this (.getNeedClientAuth))))
 
 (defn create-server-socket
@@ -82,7 +82,7 @@
   returns: the server socket on the specified port - `java.net.ServerSocket`
 
   throws: java.io.IOException - if an I/O error occurs during server socket creation"
-  (^java.net.ServerSocket [^javax.rmi.ssl.SslRMIServerSocketFactory this ^Integer port]
+  (^java.net.ServerSocket [^SslRMIServerSocketFactory this ^Integer port]
     (-> this (.createServerSocket port))))
 
 (defn equals
@@ -100,7 +100,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^javax.rmi.ssl.SslRMIServerSocketFactory this ^java.lang.Object obj]
+  (^Boolean [^SslRMIServerSocketFactory this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -109,6 +109,6 @@
 
   returns: a hash code value for this
    SslRMIServerSocketFactory. - `int`"
-  (^Integer [^javax.rmi.ssl.SslRMIServerSocketFactory this]
+  (^Integer [^SslRMIServerSocketFactory this]
     (-> this (.hashCode))))
 

@@ -9,8 +9,8 @@
   Constructor that allows a specific error message to be specified.
 
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^InstanceAlreadyExistsException [^java.lang.String message]
     (new InstanceAlreadyExistsException message))
-  ([]
+  (^InstanceAlreadyExistsException []
     (new InstanceAlreadyExistsException )))
 

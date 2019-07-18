@@ -18,15 +18,15 @@
 
   out - a Writer for additional output from the tool; use System.err if null - `java.io.Writer`
   file-manager - a file manager; if null use the tool's standard filemanager - `javax.tools.JavaFileManager`
-  diagnostic-listener - a diagnostic listener; if null use the tool's default method for reporting diagnostics - `javax.tools.JavaFileObject>`
-  doclet-class - a class providing the necessary methods required of a doclet - `java.lang.Class<?>`
-  options - documentation tool options and doclet options, null means no options - `java.lang.Iterable<java.lang.String>`
-  compilation-units - the compilation units to compile, null means no compilation units - `javax.tools.JavaFileObject>`
+  diagnostic-listener - a diagnostic listener; if null use the tool's default method for reporting diagnostics - `javax.tools.DiagnosticListener`
+  doclet-class - a class providing the necessary methods required of a doclet - `java.lang.Class`
+  options - documentation tool options and doclet options, null means no options - `java.lang.Iterable`
+  compilation-units - the compilation units to compile, null means no compilation units - `java.lang.Iterable`
 
-  returns: an object representing the compilation - `javax.tools.DocumentationTool.DocumentationTask`
+  returns: an object representing the compilation - `javax.tools.DocumentationTool$DocumentationTask`
 
   throws: java.lang.RuntimeException - if an unrecoverable error occurred in a user supplied component. The cause will be the error in user code."
-  (^javax.tools.DocumentationTool.DocumentationTask [^javax.tools.DocumentationTool this ^java.io.Writer out ^javax.tools.JavaFileManager file-manager ^javax.tools.JavaFileObject> diagnostic-listener ^java.lang.Class doclet-class ^java.lang.Iterable options ^javax.tools.JavaFileObject> compilation-units]
+  (^javax.tools.DocumentationTool$DocumentationTask [^DocumentationTool this ^java.io.Writer out ^javax.tools.JavaFileManager file-manager ^javax.tools.DiagnosticListener diagnostic-listener ^java.lang.Class doclet-class ^java.lang.Iterable options ^java.lang.Iterable compilation-units]
     (-> this (.getTask out file-manager diagnostic-listener doclet-class options compilation-units))))
 
 (defn get-standard-file-manager
@@ -39,11 +39,11 @@
    it is accessed after calls to flush or close.
    The standard file manager must be usable with other tools.
 
-  diagnostic-listener - a diagnostic listener for non-fatal diagnostics; if null use the compiler's default method for reporting diagnostics - `javax.tools.JavaFileObject>`
+  diagnostic-listener - a diagnostic listener for non-fatal diagnostics; if null use the compiler's default method for reporting diagnostics - `javax.tools.DiagnosticListener`
   locale - the locale to apply when formatting diagnostics; null means the default locale. - `java.util.Locale`
   charset - the character set used for decoding bytes; if null use the platform default - `java.nio.charset.Charset`
 
   returns: the standard file manager - `javax.tools.StandardJavaFileManager`"
-  (^javax.tools.StandardJavaFileManager [^javax.tools.DocumentationTool this ^javax.tools.JavaFileObject> diagnostic-listener ^java.util.Locale locale ^java.nio.charset.Charset charset]
+  (^javax.tools.StandardJavaFileManager [^DocumentationTool this ^javax.tools.DiagnosticListener diagnostic-listener ^java.util.Locale locale ^java.nio.charset.Charset charset]
     (-> this (.getStandardFileManager diagnostic-listener locale charset))))
 

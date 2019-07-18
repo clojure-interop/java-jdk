@@ -11,13 +11,13 @@
 
     Unless overridden, this method returns CONTINUE.
 
-  dir - a reference to the directory - `SimpleFileVisitor.T`
+  dir - a reference to the directory - `T`
   attrs - the directory's basic attributes - `java.nio.file.attribute.BasicFileAttributes`
 
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.nio.file.FileVisitResult [^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T dir ^java.nio.file.attribute.BasicFileAttributes attrs]
+  (^java.nio.file.FileVisitResult [^SimpleFileVisitor this dir ^java.nio.file.attribute.BasicFileAttributes attrs]
     (-> this (.preVisitDirectory dir attrs))))
 
 (defn visit-file
@@ -25,13 +25,13 @@
 
     Unless overridden, this method returns CONTINUE.
 
-  file - a reference to the file - `SimpleFileVisitor.T`
+  file - a reference to the file - `T`
   attrs - the file's basic attributes - `java.nio.file.attribute.BasicFileAttributes`
 
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.nio.file.FileVisitResult [^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T file ^java.nio.file.attribute.BasicFileAttributes attrs]
+  (^java.nio.file.FileVisitResult [^SimpleFileVisitor this file ^java.nio.file.attribute.BasicFileAttributes attrs]
     (-> this (.visitFile file attrs))))
 
 (defn visit-file-failed
@@ -40,13 +40,13 @@
     Unless overridden, this method re-throws the I/O exception that prevented
    the file from being visited.
 
-  file - a reference to the file - `SimpleFileVisitor.T`
+  file - a reference to the file - `T`
   exc - the I/O exception that prevented the file from being visited - `java.io.IOException`
 
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.nio.file.FileVisitResult [^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T file ^java.io.IOException exc]
+  (^java.nio.file.FileVisitResult [^SimpleFileVisitor this file ^java.io.IOException exc]
     (-> this (.visitFileFailed file exc))))
 
 (defn post-visit-directory
@@ -57,12 +57,12 @@
    otherwise this method re-throws the I/O exception that caused the iteration
    of the directory to terminate prematurely.
 
-  dir - a reference to the directory - `SimpleFileVisitor.T`
+  dir - a reference to the directory - `T`
   exc - null if the iteration of the directory completes without an error; otherwise the I/O exception that caused the iteration of the directory to complete prematurely - `java.io.IOException`
 
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.nio.file.FileVisitResult [^java.nio.file.SimpleFileVisitor this ^SimpleFileVisitor.T dir ^java.io.IOException exc]
+  (^java.nio.file.FileVisitResult [^SimpleFileVisitor this dir ^java.io.IOException exc]
     (-> this (.postVisitDirectory dir exc))))
 

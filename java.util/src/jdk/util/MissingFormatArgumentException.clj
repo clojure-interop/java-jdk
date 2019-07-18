@@ -15,14 +15,14 @@
    specifier.
 
   s - Format specifier which does not have a corresponding argument - `java.lang.String`"
-  ([^java.lang.String s]
+  (^MissingFormatArgumentException [^java.lang.String s]
     (new MissingFormatArgumentException s)))
 
 (defn get-format-specifier
   "Returns the unmatched format specifier.
 
   returns: The unmatched format specifier - `java.lang.String`"
-  (^java.lang.String [^java.util.MissingFormatArgumentException this]
+  (^java.lang.String [^MissingFormatArgumentException this]
     (-> this (.getFormatSpecifier))))
 
 (defn get-message
@@ -30,6 +30,6 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  (^java.lang.String [^java.util.MissingFormatArgumentException this]
+  (^java.lang.String [^MissingFormatArgumentException this]
     (-> this (.getMessage))))
 

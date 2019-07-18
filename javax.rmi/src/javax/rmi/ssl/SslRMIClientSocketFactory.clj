@@ -32,7 +32,7 @@
   "Constructor.
 
   Creates a new SslRMIClientSocketFactory."
-  ([]
+  (^SslRMIClientSocketFactory []
     (new SslRMIClientSocketFactory )))
 
 (defn create-socket
@@ -58,7 +58,7 @@
   returns: a socket connected to the specified host and port. - `java.net.Socket`
 
   throws: java.io.IOException - if an I/O error occurs during socket creation"
-  (^java.net.Socket [^javax.rmi.ssl.SslRMIClientSocketFactory this ^java.lang.String host ^Integer port]
+  (^java.net.Socket [^SslRMIClientSocketFactory this ^java.lang.String host ^Integer port]
     (-> this (.createSocket host port))))
 
 (defn equals
@@ -77,7 +77,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^javax.rmi.ssl.SslRMIClientSocketFactory this ^java.lang.Object obj]
+  (^Boolean [^SslRMIClientSocketFactory this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -86,6 +86,6 @@
 
   returns: a hash code value for this
    SslRMIClientSocketFactory. - `int`"
-  (^Integer [^javax.rmi.ssl.SslRMIClientSocketFactory this]
+  (^Integer [^SslRMIClientSocketFactory this]
     (-> this (.hashCode))))
 

@@ -17,8 +17,8 @@
    specified detail message.
 
   message - the string to display as an error detail message - `java.lang.String`"
-  ([^java.lang.String message]
+  (^InvalidMidiDataException [^java.lang.String message]
     (new InvalidMidiDataException message))
-  ([]
+  (^InvalidMidiDataException []
     (new InvalidMidiDataException )))
 

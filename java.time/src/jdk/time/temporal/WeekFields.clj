@@ -171,7 +171,7 @@
    Other fields in this class build dates using the standardized day-of-week.
 
   returns: a field providing access to the day-of-week with localized numbering, not null - `java.time.temporal.TemporalField`"
-  (^java.time.temporal.TemporalField [^java.time.temporal.WeekFields this]
+  (^java.time.temporal.TemporalField [^WeekFields this]
     (-> this (.dayOfWeek))))
 
 (defn get-first-day-of-week
@@ -182,14 +182,14 @@
    This method returns the first day using the standard DayOfWeek enum.
 
   returns: the first day-of-week, not null - `java.time.DayOfWeek`"
-  (^java.time.DayOfWeek [^java.time.temporal.WeekFields this]
+  (^java.time.DayOfWeek [^WeekFields this]
     (-> this (.getFirstDayOfWeek))))
 
 (defn to-string
   "A string representation of this WeekFields instance.
 
   returns: the string representation, not null - `java.lang.String`"
-  (^java.lang.String [^java.time.temporal.WeekFields this]
+  (^java.lang.String [^WeekFields this]
     (-> this (.toString))))
 
 (defn week-based-year
@@ -229,7 +229,7 @@
    Finally, adjust to the correct day-of-week within the localized week.
 
   returns: a field providing access to the week-based-year, not null - `java.time.temporal.TemporalField`"
-  (^java.time.temporal.TemporalField [^java.time.temporal.WeekFields this]
+  (^java.time.temporal.TemporalField [^WeekFields this]
     (-> this (.weekBasedYear))))
 
 (defn week-of-year
@@ -272,7 +272,7 @@
    Finally, adjust to the correct day-of-week within the localized week.
 
   returns: a field providing access to the week-of-year, not null - `java.time.temporal.TemporalField`"
-  (^java.time.temporal.TemporalField [^java.time.temporal.WeekFields this]
+  (^java.time.temporal.TemporalField [^WeekFields this]
     (-> this (.weekOfYear))))
 
 (defn week-of-week-based-year
@@ -320,7 +320,7 @@
    Finally, adjust to the correct day-of-week within the localized week.
 
   returns: a field providing access to the week-of-week-based-year, not null - `java.time.temporal.TemporalField`"
-  (^java.time.temporal.TemporalField [^java.time.temporal.WeekFields this]
+  (^java.time.temporal.TemporalField [^WeekFields this]
     (-> this (.weekOfWeekBasedYear))))
 
 (defn week-of-month
@@ -364,14 +364,14 @@
    Finally, adjust to the correct day-of-week within the localized week.
 
   returns: a field providing access to the week-of-month, not null - `java.time.temporal.TemporalField`"
-  (^java.time.temporal.TemporalField [^java.time.temporal.WeekFields this]
+  (^java.time.temporal.TemporalField [^WeekFields this]
     (-> this (.weekOfMonth))))
 
 (defn hash-code
   "A hash code for this WeekFields.
 
   returns: a suitable hash code - `int`"
-  (^Integer [^java.time.temporal.WeekFields this]
+  (^Integer [^WeekFields this]
     (-> this (.hashCode))))
 
 (defn get-minimal-days-in-first-week
@@ -383,7 +383,7 @@
    be present before counting the first week.
 
   returns: the minimal number of days in the first week of a month or year, from 1 to 7 - `int`"
-  (^Integer [^java.time.temporal.WeekFields this]
+  (^Integer [^WeekFields this]
     (-> this (.getMinimalDaysInFirstWeek))))
 
 (defn equals
@@ -395,6 +395,6 @@
   object - the other rules to compare to, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the specified rules - `boolean`"
-  (^Boolean [^java.time.temporal.WeekFields this ^java.lang.Object object]
+  (^Boolean [^WeekFields this ^java.lang.Object object]
     (-> this (.equals object))))
 

@@ -12,8 +12,8 @@
    class with an argument indicating the illegal index.
 
   index - the illegal index. - `int`"
-  ([^Integer index]
+  (^ArrayIndexOutOfBoundsException [^Integer index]
     (new ArrayIndexOutOfBoundsException index))
-  ([]
+  (^ArrayIndexOutOfBoundsException []
     (new ArrayIndexOutOfBoundsException )))
 

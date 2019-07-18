@@ -8,7 +8,7 @@
 
   Mode for a read-only mapping.
 
-  type: java.nio.channels.FileChannel.MapMode"
+  type: java.nio.channels.FileChannel$MapMode"
   FileChannel$MapMode/READ_ONLY)
 
 (def *-read-write
@@ -16,7 +16,7 @@
 
   Mode for a read/write mapping.
 
-  type: java.nio.channels.FileChannel.MapMode"
+  type: java.nio.channels.FileChannel$MapMode"
   FileChannel$MapMode/READ_WRITE)
 
 (def *-private
@@ -24,13 +24,13 @@
 
   Mode for a private (copy-on-write) mapping.
 
-  type: java.nio.channels.FileChannel.MapMode"
+  type: java.nio.channels.FileChannel$MapMode"
   FileChannel$MapMode/PRIVATE)
 
 (defn to-string
   "Returns a string describing this file-mapping mode.
 
   returns: A descriptive string - `java.lang.String`"
-  (^java.lang.String [^java.nio.channels.FileChannel$MapMode this]
+  (^java.lang.String [^FileChannel$MapMode this]
     (-> this (.toString))))
 

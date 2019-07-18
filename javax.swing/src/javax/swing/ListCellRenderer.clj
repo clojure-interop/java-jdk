@@ -57,13 +57,13 @@
    is called to generate a component on which getPreferredSize
    can be invoked.
 
-  list - The JList we're painting. - `ListCellRenderer.E>`
-  value - The value returned by list.getModel().getElementAt(index). - `ListCellRenderer.E`
+  list - The JList we're painting. - `javax.swing.JList`
+  value - The value returned by list.getModel().getElementAt(index). - `E`
   index - The cells index. - `int`
   is-selected - True if the specified cell was selected. - `boolean`
   cell-has-focus - True if the specified cell has the focus. - `boolean`
 
   returns: A component whose paint() method will render the specified value. - `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.ListCellRenderer this ^ListCellRenderer.E> list ^ListCellRenderer.E value ^Integer index ^Boolean is-selected ^Boolean cell-has-focus]
+  (^java.awt.Component [^ListCellRenderer this ^javax.swing.JList list value ^Integer index ^Boolean is-selected ^Boolean cell-has-focus]
     (-> this (.getListCellRendererComponent list value index is-selected cell-has-focus))))
 

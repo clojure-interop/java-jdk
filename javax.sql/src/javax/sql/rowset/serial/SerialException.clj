@@ -12,8 +12,8 @@
    specified message.
 
   msg - the detail message - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^SerialException [^java.lang.String msg]
     (new SerialException msg))
-  ([]
+  (^SerialException []
     (new SerialException )))
 

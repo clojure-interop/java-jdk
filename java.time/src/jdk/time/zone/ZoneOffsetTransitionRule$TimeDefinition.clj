@@ -7,7 +7,7 @@
 
   The local date-time is expressed in terms of the UTC offset.
 
-  type: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition"
+  type: java.time.zone.ZoneOffsetTransitionRule$TimeDefinition"
   ZoneOffsetTransitionRule$TimeDefinition/UTC)
 
 (def WALL
@@ -15,7 +15,7 @@
 
   The local date-time is expressed in terms of the wall offset.
 
-  type: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition"
+  type: java.time.zone.ZoneOffsetTransitionRule$TimeDefinition"
   ZoneOffsetTransitionRule$TimeDefinition/WALL)
 
 (def STANDARD
@@ -23,7 +23,7 @@
 
   The local date-time is expressed in terms of the standard offset.
 
-  type: java.time.zone.ZoneOffsetTransitionRule.TimeDefinition"
+  type: java.time.zone.ZoneOffsetTransitionRule$TimeDefinition"
   ZoneOffsetTransitionRule$TimeDefinition/STANDARD)
 
 (defn *values
@@ -35,7 +35,7 @@
   for (ZoneOffsetTransitionRule.TimeDefinition c : ZoneOffsetTransitionRule.TimeDefinition.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.time.zone.ZoneOffsetTransitionRule.TimeDefinition[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.time.zone.ZoneOffsetTransitionRule$TimeDefinition[]`"
   ([]
     (ZoneOffsetTransitionRule$TimeDefinition/values )))
 
@@ -47,10 +47,10 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.time.zone.ZoneOffsetTransitionRule.TimeDefinition`
+  returns: the enum constant with the specified name - `java.time.zone.ZoneOffsetTransitionRule$TimeDefinition`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.time.zone.ZoneOffsetTransitionRule.TimeDefinition [^java.lang.String name]
+  (^java.time.zone.ZoneOffsetTransitionRule$TimeDefinition [^java.lang.String name]
     (ZoneOffsetTransitionRule$TimeDefinition/valueOf name)))
 
 (defn create-date-time
@@ -70,6 +70,6 @@
   wall-offset - the wall offset, not null - `java.time.ZoneOffset`
 
   returns: the date-time relative to the wall/before offset, not null - `java.time.LocalDateTime`"
-  (^java.time.LocalDateTime [^java.time.zone.ZoneOffsetTransitionRule$TimeDefinition this ^java.time.LocalDateTime date-time ^java.time.ZoneOffset standard-offset ^java.time.ZoneOffset wall-offset]
+  (^java.time.LocalDateTime [^ZoneOffsetTransitionRule$TimeDefinition this ^java.time.LocalDateTime date-time ^java.time.ZoneOffset standard-offset ^java.time.ZoneOffset wall-offset]
     (-> this (.createDateTime date-time standard-offset wall-offset))))
 

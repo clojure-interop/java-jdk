@@ -11,6 +11,6 @@
    run only once.
 
   returns: true if this task is periodic - `boolean`"
-  (^Boolean [^java.util.concurrent.RunnableScheduledFuture this]
+  (^Boolean [^RunnableScheduledFuture this]
     (-> this (.isPeriodic))))
 

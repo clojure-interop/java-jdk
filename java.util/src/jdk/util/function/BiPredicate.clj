@@ -10,12 +10,12 @@
 (defn test
   "Evaluates this predicate on the given arguments.
 
-  t - the first input argument - `BiPredicate.T`
-  u - the second input argument - `BiPredicate.U`
+  t - the first input argument - `T`
+  u - the second input argument - `U`
 
   returns: true if the input arguments match the predicate,
    otherwise false - `boolean`"
-  (^Boolean [^java.util.function.BiPredicate this ^BiPredicate.T t ^BiPredicate.U u]
+  (^Boolean [^BiPredicate this t u]
     (-> this (.test t u))))
 
 (defn and
@@ -28,13 +28,13 @@
    to the caller; if evaluation of this predicate throws an exception, the
    other predicate will not be evaluated.
 
-  other - a predicate that will be logically-ANDed with this predicate - `BiPredicate.U>`
+  other - a predicate that will be logically-ANDed with this predicate - `java.util.function.BiPredicate`
 
   returns: a composed predicate that represents the short-circuiting logical
-   AND of this predicate and the other predicate - `default java.util.function.BiPredicate<BiPredicate.T,BiPredicate.U>`
+   AND of this predicate and the other predicate - `default java.util.function.BiPredicate<T,U>`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^java.util.function.BiPredicate this ^BiPredicate.U> other]
+  ([^BiPredicate this ^java.util.function.BiPredicate other]
     (-> this (.and other))))
 
 (defn negate
@@ -42,8 +42,8 @@
    predicate.
 
   returns: a predicate that represents the logical negation of this
-   predicate - `default java.util.function.BiPredicate<BiPredicate.T,BiPredicate.U>`"
-  ([^java.util.function.BiPredicate this]
+   predicate - `default java.util.function.BiPredicate<T,U>`"
+  ([^BiPredicate this]
     (-> this (.negate))))
 
 (defn or
@@ -56,12 +56,12 @@
    to the caller; if evaluation of this predicate throws an exception, the
    other predicate will not be evaluated.
 
-  other - a predicate that will be logically-ORed with this predicate - `BiPredicate.U>`
+  other - a predicate that will be logically-ORed with this predicate - `java.util.function.BiPredicate`
 
   returns: a composed predicate that represents the short-circuiting logical
-   OR of this predicate and the other predicate - `default java.util.function.BiPredicate<BiPredicate.T,BiPredicate.U>`
+   OR of this predicate and the other predicate - `default java.util.function.BiPredicate<T,U>`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^java.util.function.BiPredicate this ^BiPredicate.U> other]
+  ([^BiPredicate this ^java.util.function.BiPredicate other]
     (-> this (.or other))))
 

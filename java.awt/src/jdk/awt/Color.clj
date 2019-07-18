@@ -32,13 +32,13 @@
   a - the alpha component - `int`
 
   throws: java.lang.IllegalArgumentException - if r, g, b or a are outside of the range 0 to 255, inclusive"
-  ([^Integer r ^Integer g ^Integer b ^Integer a]
+  (^Color [^Integer r ^Integer g ^Integer b ^Integer a]
     (new Color r g b a))
-  ([^Integer r ^Integer g ^Integer b]
+  (^Color [^Integer r ^Integer g ^Integer b]
     (new Color r g b))
-  ([^Integer rgba ^Boolean hasalpha]
+  (^Color [^Integer rgba ^Boolean hasalpha]
     (new Color rgba hasalpha))
-  ([^Integer rgb]
+  (^Color [^Integer rgb]
     (new Color rgb)))
 
 (def *-white
@@ -358,7 +358,7 @@
    required to implement the Paint interface.
 
   returns: this Color object's transparency mode. - `int`"
-  (^Integer [^java.awt.Color this]
+  (^Integer [^Color this]
     (-> this (.getTransparency))))
 
 (defn get-rgb
@@ -369,7 +369,7 @@
 
   returns: the RGB value of the color in the default sRGB
            ColorModel. - `int`"
-  (^Integer [^java.awt.Color this]
+  (^Integer [^Color this]
     (-> this (.getRGB))))
 
 (defn to-string
@@ -380,14 +380,14 @@
    be null.
 
   returns: a string representation of this Color. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Color this]
+  (^java.lang.String [^Color this]
     (-> this (.toString))))
 
 (defn get-alpha
   "Returns the alpha component in the range 0-255.
 
   returns: the alpha component. - `int`"
-  (^Integer [^java.awt.Color this]
+  (^Integer [^Color this]
     (-> this (.getAlpha))))
 
 (defn get-red
@@ -395,7 +395,7 @@
    space.
 
   returns: the red component. - `int`"
-  (^Integer [^java.awt.Color this]
+  (^Integer [^Color this]
     (-> this (.getRed))))
 
 (defn get-green
@@ -403,14 +403,14 @@
    space.
 
   returns: the green component. - `int`"
-  (^Integer [^java.awt.Color this]
+  (^Integer [^Color this]
     (-> this (.getGreen))))
 
 (defn get-color-space
   "Returns the ColorSpace of this Color.
 
   returns: this Color object's ColorSpace. - `java.awt.color.ColorSpace`"
-  (^java.awt.color.ColorSpace [^java.awt.Color this]
+  (^java.awt.color.ColorSpace [^Color this]
     (-> this (.getColorSpace))))
 
 (defn get-components
@@ -428,9 +428,9 @@
 
   returns: the color and alpha components in a float
             array. - `float[]`"
-  ([^java.awt.Color this ^java.awt.color.ColorSpace cspace comp-array]
+  ([^Color this ^java.awt.color.ColorSpace cspace comp-array]
     (-> this (.getComponents cspace comp-array)))
-  ([^java.awt.Color this comp-array]
+  ([^Color this comp-array]
     (-> this (.getComponents comp-array))))
 
 (defn create-context
@@ -448,7 +448,7 @@
 
   returns: the PaintContext for
            generating color patterns. - `java.awt.PaintContext`"
-  (^java.awt.PaintContext [^java.awt.Color this ^java.awt.image.ColorModel cm ^java.awt.Rectangle r ^java.awt.geom.Rectangle2D r-2d ^java.awt.geom.AffineTransform xform ^java.awt.RenderingHints hints]
+  (^java.awt.PaintContext [^Color this ^java.awt.image.ColorModel cm ^java.awt.Rectangle r ^java.awt.geom.Rectangle2D r-2d ^java.awt.geom.AffineTransform xform ^java.awt.RenderingHints hints]
     (-> this (.createContext cm r r-2d xform hints))))
 
 (defn darker
@@ -467,7 +467,7 @@
   returns: a new Color object that is
                       a darker version of this Color
                       with the same alpha value. - `java.awt.Color`"
-  (^java.awt.Color [^java.awt.Color this]
+  (^java.awt.Color [^Color this]
     (-> this (.darker))))
 
 (defn get-color-components
@@ -484,16 +484,16 @@
   comp-array - an array that this method fills with the color components of this Color in the specified ColorSpace - `float[]`
 
   returns: the color components in a float array. - `float[]`"
-  ([^java.awt.Color this ^java.awt.color.ColorSpace cspace comp-array]
+  ([^Color this ^java.awt.color.ColorSpace cspace comp-array]
     (-> this (.getColorComponents cspace comp-array)))
-  ([^java.awt.Color this comp-array]
+  ([^Color this comp-array]
     (-> this (.getColorComponents comp-array))))
 
 (defn hash-code
   "Computes the hash code for this Color.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.Color this]
+  (^Integer [^Color this]
     (-> this (.hashCode))))
 
 (defn get-blue
@@ -501,7 +501,7 @@
    space.
 
   returns: the blue component. - `int`"
-  (^Integer [^java.awt.Color this]
+  (^Integer [^Color this]
     (-> this (.getBlue))))
 
 (defn get-rgb-color-components
@@ -515,7 +515,7 @@
   comp-array - an array that this method fills with color components and returns - `float[]`
 
   returns: the RGB components in a float array. - `float[]`"
-  ([^java.awt.Color this comp-array]
+  ([^Color this comp-array]
     (-> this (.getRGBColorComponents comp-array))))
 
 (defn get-rgb-components
@@ -530,7 +530,7 @@
   comp-array - an array that this method fills with color and alpha components and returns - `float[]`
 
   returns: the RGBA components in a float array. - `float[]`"
-  ([^java.awt.Color this comp-array]
+  ([^Color this comp-array]
     (-> this (.getRGBComponents comp-array))))
 
 (defn equals
@@ -545,7 +545,7 @@
 
   returns: true if the objects are the same;
                                false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Color this ^java.lang.Object obj]
+  (^Boolean [^Color this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn brighter
@@ -564,6 +564,6 @@
   returns: a new Color object that is
                    a brighter version of this Color
                    with the same alpha value. - `java.awt.Color`"
-  (^java.awt.Color [^java.awt.Color this]
+  (^java.awt.Color [^Color this]
     (-> this (.brighter))))
 

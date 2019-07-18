@@ -9,6 +9,6 @@
 
   returns: true if this Text object is a
            comment; false otherwise - `boolean`"
-  (^Boolean [^javax.xml.soap.Text this]
+  (^Boolean [^Text this]
     (-> this (.isComment))))
 

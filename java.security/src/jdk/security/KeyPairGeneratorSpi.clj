@@ -17,7 +17,7 @@
 
 (defn ->key-pair-generator-spi
   "Constructor."
-  ([]
+  (^KeyPairGeneratorSpi []
     (new KeyPairGeneratorSpi )))
 
 (defn initialize
@@ -28,7 +28,7 @@
   random - the source of randomness for this generator. - `java.security.SecureRandom`
 
   throws: java.security.InvalidParameterException - if the keysize is not supported by this KeyPairGeneratorSpi object."
-  ([^java.security.KeyPairGeneratorSpi this ^Integer keysize ^java.security.SecureRandom random]
+  ([^KeyPairGeneratorSpi this ^Integer keysize ^java.security.SecureRandom random]
     (-> this (.initialize keysize random))))
 
 (defn generate-key-pair
@@ -38,6 +38,6 @@
    is called.
 
   returns: the newly generated KeyPair - `java.security.KeyPair`"
-  (^java.security.KeyPair [^java.security.KeyPairGeneratorSpi this]
+  (^java.security.KeyPair [^KeyPairGeneratorSpi this]
     (-> this (.generateKeyPair))))
 

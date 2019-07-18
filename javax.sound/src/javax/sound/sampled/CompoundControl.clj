@@ -9,13 +9,13 @@
   "Returns the set of member controls that comprise the compound control.
 
   returns: the set of member controls. - `javax.sound.sampled.Control[]`"
-  ([^javax.sound.sampled.CompoundControl this]
+  ([^CompoundControl this]
     (-> this (.getMemberControls))))
 
 (defn to-string
   "Provides a string representation of the control
 
   returns: a string description - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.CompoundControl this]
+  (^java.lang.String [^CompoundControl this]
     (-> this (.toString))))
 

@@ -17,34 +17,34 @@
   initial-size - an int specifying the initial buffer size. - `int`
 
   throws: java.lang.IllegalArgumentException - if initialSize is negative"
-  ([^Integer initial-size]
+  (^CharArrayWriter [^Integer initial-size]
     (new CharArrayWriter initial-size))
-  ([]
+  (^CharArrayWriter []
     (new CharArrayWriter )))
 
 (defn flush
   "Flush the stream."
-  ([^java.io.CharArrayWriter this]
+  ([^CharArrayWriter this]
     (-> this (.flush))))
 
 (defn to-string
   "Converts input data to a string.
 
   returns: the string. - `java.lang.String`"
-  (^java.lang.String [^java.io.CharArrayWriter this]
+  (^java.lang.String [^CharArrayWriter this]
     (-> this (.toString))))
 
 (defn reset
   "Resets the buffer so that you can use it again without
    throwing away the already allocated buffer."
-  ([^java.io.CharArrayWriter this]
+  ([^CharArrayWriter this]
     (-> this (.reset))))
 
 (defn to-char-array
   "Returns a copy of the input data.
 
   returns: an array of chars copied from the input data. - `char[]`"
-  ([^java.io.CharArrayWriter this]
+  ([^CharArrayWriter this]
     (-> this (.toCharArray))))
 
 (defn write-to
@@ -53,14 +53,14 @@
   out - the output stream to write to - `java.io.Writer`
 
   throws: java.io.IOException - If an I/O error occurs."
-  ([^java.io.CharArrayWriter this ^java.io.Writer out]
+  ([^CharArrayWriter this ^java.io.Writer out]
     (-> this (.writeTo out))))
 
 (defn close
   "Close the stream.  This method does not release the buffer, since its
    contents might still be required. Note: Invoking this method in this class
    will have no effect."
-  ([^java.io.CharArrayWriter this]
+  ([^CharArrayWriter this]
     (-> this (.close))))
 
 (defn append
@@ -81,16 +81,16 @@
   returns: This writer - `java.io.CharArrayWriter`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  (^java.io.CharArrayWriter [^java.io.CharArrayWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
+  (^java.io.CharArrayWriter [^CharArrayWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  (^java.io.CharArrayWriter [^java.io.CharArrayWriter this ^java.lang.CharSequence csq]
+  (^java.io.CharArrayWriter [^CharArrayWriter this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn size
   "Returns the current size of the buffer.
 
   returns: an int representing the current size of the buffer. - `int`"
-  (^Integer [^java.io.CharArrayWriter this]
+  (^Integer [^CharArrayWriter this]
     (-> this (.size))))
 
 (defn write
@@ -99,8 +99,8 @@
   c - the data to be written - `char[]`
   off - the start offset in the data - `int`
   len - the number of chars that are written - `int`"
-  ([^java.io.CharArrayWriter this c ^Integer off ^Integer len]
+  ([^CharArrayWriter this c ^Integer off ^Integer len]
     (-> this (.write c off len)))
-  ([^java.io.CharArrayWriter this ^Integer c]
+  ([^CharArrayWriter this ^Integer c]
     (-> this (.write c))))
 

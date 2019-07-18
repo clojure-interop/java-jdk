@@ -15,8 +15,8 @@
    description of this error.
 
   msg - the detail message - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^ConnectException [^java.lang.String msg]
     (new ConnectException msg))
-  ([]
+  (^ConnectException []
     (new ConnectException )))
 

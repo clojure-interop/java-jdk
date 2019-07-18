@@ -10,7 +10,7 @@
 
 (defn ->iterator
   "Constructor."
-  ([]
+  (^HTMLDocument$Iterator []
     (new HTMLDocument$Iterator )))
 
 (defn get-attributes
@@ -18,7 +18,7 @@
 
   returns: the AttributeSet for this tag, or
         null if none can be found - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.html.HTMLDocument$Iterator this]
+  (^javax.swing.text.AttributeSet [^HTMLDocument$Iterator this]
     (-> this (.getAttributes))))
 
 (defn get-start-offset
@@ -26,7 +26,7 @@
    the tag is defined and has the same attributes.
 
   returns: the start of the range, or -1 if it can't be found - `int`"
-  (^Integer [^javax.swing.text.html.HTMLDocument$Iterator this]
+  (^Integer [^HTMLDocument$Iterator this]
     (-> this (.getStartOffset))))
 
 (defn get-end-offset
@@ -34,13 +34,13 @@
    the tag is defined and has the same attributes.
 
   returns: the end of the range - `int`"
-  (^Integer [^javax.swing.text.html.HTMLDocument$Iterator this]
+  (^Integer [^HTMLDocument$Iterator this]
     (-> this (.getEndOffset))))
 
 (defn next
   "Move the iterator forward to the next occurrence
    of the tag it represents."
-  ([^javax.swing.text.html.HTMLDocument$Iterator this]
+  ([^HTMLDocument$Iterator this]
     (-> this (.next))))
 
 (defn valid?
@@ -50,13 +50,13 @@
 
   returns: true if the iterator is currently representing an
                 occurrence of a tag, otherwise returns false - `boolean`"
-  (^Boolean [^javax.swing.text.html.HTMLDocument$Iterator this]
+  (^Boolean [^HTMLDocument$Iterator this]
     (-> this (.isValid))))
 
 (defn get-tag
   "Type of tag this iterator represents.
 
-  returns: `javax.swing.text.html.HTML.Tag`"
-  (^javax.swing.text.html.HTML.Tag [^javax.swing.text.html.HTMLDocument$Iterator this]
+  returns: `javax.swing.text.html.HTML$Tag`"
+  (^javax.swing.text.html.HTML$Tag [^HTMLDocument$Iterator this]
     (-> this (.getTag))))
 

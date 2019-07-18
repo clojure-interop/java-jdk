@@ -8,7 +8,7 @@
 
 (defn ->basic-html
   "Constructor."
-  ([]
+  (^BasicHTML []
     (new BasicHTML )))
 
 (def *-property-key

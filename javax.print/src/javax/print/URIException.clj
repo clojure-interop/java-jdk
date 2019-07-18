@@ -10,13 +10,13 @@
   "Return the URI.
 
   returns: the URI that is the cause of this exception. - `java.net.URI`"
-  (^java.net.URI [^javax.print.URIException this]
+  (^java.net.URI [^URIException this]
     (-> this (.getUnsupportedURI))))
 
 (defn get-reason
   "Return the reason for the event.
 
   returns: one of the predefined reasons enumerated in this interface. - `int`"
-  (^Integer [^javax.print.URIException this]
+  (^Integer [^URIException this]
     (-> this (.getReason))))
 

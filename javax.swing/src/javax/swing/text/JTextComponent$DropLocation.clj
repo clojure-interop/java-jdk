@@ -9,14 +9,14 @@
    characters, as would be interpreted by a caret.
 
   returns: the drop index - `int`"
-  (^Integer [^javax.swing.text.JTextComponent$DropLocation this]
+  (^Integer [^JTextComponent$DropLocation this]
     (-> this (.getIndex))))
 
 (defn get-bias
   "Returns the bias for the drop index.
 
-  returns: the drop bias - `javax.swing.text.Position.Bias`"
-  (^javax.swing.text.Position.Bias [^javax.swing.text.JTextComponent$DropLocation this]
+  returns: the drop bias - `javax.swing.text.Position$Bias`"
+  (^javax.swing.text.Position$Bias [^JTextComponent$DropLocation this]
     (-> this (.getBias))))
 
 (defn to-string
@@ -26,6 +26,6 @@
    between implementations.
 
   returns: a string representation of this drop location - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.JTextComponent$DropLocation this]
+  (^java.lang.String [^JTextComponent$DropLocation this]
     (-> this (.toString))))
 

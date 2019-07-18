@@ -13,8 +13,8 @@
 
   message - the detail message - `java.lang.String`
   cause - the cause (which is saved for later retrieval by the Throwable.getCause() method) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^ExecutionException [^java.lang.String message ^java.lang.Throwable cause]
     (new ExecutionException message cause))
-  ([^java.lang.Throwable cause]
+  (^ExecutionException [^java.lang.Throwable cause]
     (new ExecutionException cause)))
 

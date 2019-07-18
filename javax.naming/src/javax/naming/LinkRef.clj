@@ -38,7 +38,7 @@
   Constructs a LinkRef for a name.
 
   link-name - The non-null name for which to create this link. - `javax.naming.Name`"
-  ([^javax.naming.Name link-name]
+  (^LinkRef [^javax.naming.Name link-name]
     (new LinkRef link-name)))
 
 (defn get-link-name
@@ -47,6 +47,6 @@
   returns: The non-null name of this link. - `java.lang.String`
 
   throws: javax.naming.MalformedLinkException - If a link name could not be extracted"
-  (^java.lang.String [^javax.naming.LinkRef this]
+  (^java.lang.String [^LinkRef this]
     (-> this (.getLinkName))))
 

@@ -17,6 +17,6 @@
    cause.
 
   cause - the cause (which is saved for later retrieval by the Throwable.getCause() method). - `java.lang.Throwable`"
-  ([^java.lang.Throwable cause]
+  (^InvalidPropertiesFormatException [^java.lang.Throwable cause]
     (new InvalidPropertiesFormatException cause)))
 

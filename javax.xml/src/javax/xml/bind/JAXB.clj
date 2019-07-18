@@ -50,7 +50,7 @@
   "Reads in a Java object tree from the given XML input.
 
   xml - Reads the entire file as XML. - `java.io.File`
-  type - `java.lang.Class<T>`
+  type - `java.lang.Class`
 
   returns: `<T> T`"
   ([^java.io.File xml ^java.lang.Class type]

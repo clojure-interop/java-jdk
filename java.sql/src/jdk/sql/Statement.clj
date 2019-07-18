@@ -22,7 +22,7 @@
   rows - the number of rows to fetch - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement or the condition rows >= 0 is not satisfied."
-  ([^java.sql.Statement this ^Integer rows]
+  ([^Statement this ^Integer rows]
     (-> this (.setFetchSize rows))))
 
 (defn execute-large-update
@@ -49,9 +49,9 @@
            or (2) 0 for SQL statements that return nothing - `default long`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement, the given SQL statement returns a ResultSet object, the given constant is not one of those allowed, the method is called on a PreparedStatement or CallableStatement"
-  ([^java.sql.Statement this ^java.lang.String sql ^Integer auto-generated-keys]
+  ([^Statement this ^java.lang.String sql ^Integer auto-generated-keys]
     (-> this (.executeLargeUpdate sql auto-generated-keys)))
-  ([^java.sql.Statement this ^java.lang.String sql]
+  ([^Statement this ^java.lang.String sql]
     (-> this (.executeLargeUpdate sql))))
 
 (defn get-result-set-concurrency
@@ -62,7 +62,7 @@
    ResultSet.CONCUR_UPDATABLE - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^Integer [^java.sql.Statement this]
+  (^Integer [^Statement this]
     (-> this (.getResultSetConcurrency))))
 
 (defn execute-large-batch
@@ -108,7 +108,7 @@
    to the order in which commands were added to the batch. - `default long[]`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement or the driver does not support batch statements. Throws BatchUpdateException (a subclass of SQLException) if one of the commands sent to the database fails to execute properly or attempts to return a result set."
-  ([^java.sql.Statement this]
+  ([^Statement this]
     (-> this (.executeLargeBatch))))
 
 (defn poolable?
@@ -119,7 +119,7 @@
    is poolable; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if this method is called on a closed Statement"
-  (^Boolean [^java.sql.Statement this]
+  (^Boolean [^Statement this]
     (-> this (.isPoolable))))
 
 (defn close-on-completion?
@@ -130,7 +130,7 @@
    of its dependent result sets are closed; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if this method is called on a closed Statement"
-  (^Boolean [^java.sql.Statement this]
+  (^Boolean [^Statement this]
     (-> this (.isCloseOnCompletion))))
 
 (defn cancel
@@ -140,7 +140,7 @@
    is being executed by another thread.
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  ([^java.sql.Statement this]
+  ([^Statement this]
     (-> this (.cancel))))
 
 (defn clear-batch
@@ -148,7 +148,7 @@
    SQL commands.
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement or the driver does not support batch updates"
-  ([^java.sql.Statement this]
+  ([^Statement this]
     (-> this (.clearBatch))))
 
 (defn set-query-timeout
@@ -173,7 +173,7 @@
   seconds - the new query timeout limit in seconds; zero means there is no limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement or the condition seconds >= 0 is not satisfied"
-  ([^java.sql.Statement this ^Integer seconds]
+  ([^Statement this ^Integer seconds]
     (-> this (.setQueryTimeout seconds))))
 
 (defn execute-batch
@@ -219,7 +219,7 @@
    to the order in which commands were added to the batch. - `int[]`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement or the driver does not support batch statements. Throws BatchUpdateException (a subclass of SQLException) if one of the commands sent to the database fails to execute properly or attempts to return a result set."
-  ([^java.sql.Statement this]
+  ([^Statement this]
     (-> this (.executeBatch))))
 
 (defn set-large-max-rows
@@ -239,7 +239,7 @@
   returns: `default void`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement or the condition max >= 0 is not satisfied"
-  ([^java.sql.Statement this ^Long max]
+  ([^Statement this ^Long max]
     (-> this (.setLargeMaxRows max))))
 
 (defn add-batch
@@ -253,7 +253,7 @@
   sql - typically this is a SQL INSERT or UPDATE statement - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement, the driver does not support batch updates, the method is called on a PreparedStatement or CallableStatement"
-  ([^java.sql.Statement this ^java.lang.String sql]
+  ([^Statement this ^java.lang.String sql]
     (-> this (.addBatch sql))))
 
 (defn set-escape-processing
@@ -276,7 +276,7 @@
   enable - true to enable escape processing; false to disable it - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  ([^java.sql.Statement this ^Boolean enable]
+  ([^Statement this ^Boolean enable]
     (-> this (.setEscapeProcessing enable))))
 
 (defn set-max-rows
@@ -289,7 +289,7 @@
   max - the new max rows limit; zero means there is no limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement or the condition max >= 0 is not satisfied"
-  ([^java.sql.Statement this ^Integer max]
+  ([^Statement this ^Integer max]
     (-> this (.setMaxRows max))))
 
 (defn clear-warnings
@@ -300,7 +300,7 @@
    Statement object.
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  ([^java.sql.Statement this]
+  ([^Statement this]
     (-> this (.clearWarnings))))
 
 (defn get-warnings
@@ -322,7 +322,7 @@
            if there are no warnings - `java.sql.SQLWarning`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^java.sql.SQLWarning [^java.sql.Statement this]
+  (^java.sql.SQLWarning [^Statement this]
     (-> this (.getWarnings))))
 
 (defn get-large-max-rows
@@ -341,7 +341,7 @@
            zero means there is no limit - `default long`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  ([^java.sql.Statement this]
+  ([^Statement this]
     (-> this (.getLargeMaxRows))))
 
 (defn get-fetch-direction
@@ -356,7 +356,7 @@
             from this Statement object - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^Integer [^java.sql.Statement this]
+  (^Integer [^Statement this]
     (-> this (.getFetchDirection))))
 
 (defn get-result-set-holdability
@@ -367,7 +367,7 @@
            ResultSet.CLOSE_CURSORS_AT_COMMIT - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^Integer [^java.sql.Statement this]
+  (^Integer [^Statement this]
     (-> this (.getResultSetHoldability))))
 
 (defn get-max-field-size
@@ -384,7 +384,7 @@
            binary values; zero means there is no limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^Integer [^java.sql.Statement this]
+  (^Integer [^Statement this]
     (-> this (.getMaxFieldSize))))
 
 (defn get-generated-keys
@@ -400,7 +400,7 @@
            generated by the execution of this Statement object - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^java.sql.ResultSet [^java.sql.Statement this]
+  (^java.sql.ResultSet [^Statement this]
     (-> this (.getGeneratedKeys))))
 
 (defn close-on-completion
@@ -415,7 +415,7 @@
    result sets.
 
   throws: java.sql.SQLException - if this method is called on a closed Statement"
-  ([^java.sql.Statement this]
+  ([^Statement this]
     (-> this (.closeOnCompletion))))
 
 (defn closed?
@@ -425,7 +425,7 @@
   returns: true if this Statement object is closed; false if it is still open - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.Statement this]
+  (^Boolean [^Statement this]
     (-> this (.isClosed))))
 
 (defn set-cursor-name
@@ -448,7 +448,7 @@
   name - the new cursor name, which must be unique within a connection - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  ([^java.sql.Statement this ^java.lang.String name]
+  ([^Statement this ^java.lang.String name]
     (-> this (.setCursorName name))))
 
 (defn set-max-field-size
@@ -467,7 +467,7 @@
   max - the new column size limit in bytes; zero means there is no limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement or the condition max >= 0 is not satisfied"
-  ([^java.sql.Statement this ^Integer max]
+  ([^Statement this ^Integer max]
     (-> this (.setMaxFieldSize max))))
 
 (defn get-result-set-type
@@ -479,7 +479,7 @@
    ResultSet.TYPE_SCROLL_SENSITIVE - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^Integer [^java.sql.Statement this]
+  (^Integer [^Statement this]
     (-> this (.getResultSetType))))
 
 (defn close
@@ -498,7 +498,7 @@
    also closed.
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^java.sql.Statement this]
+  ([^Statement this]
     (-> this (.close))))
 
 (defn get-more-results?
@@ -520,9 +520,9 @@
            more results - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement or the argument supplied is not one of the following: Statement.CLOSE_CURRENT_RESULT, Statement.KEEP_CURRENT_RESULT or Statement.CLOSE_ALL_RESULTS"
-  (^Boolean [^java.sql.Statement this ^Integer current]
+  (^Boolean [^Statement this ^Integer current]
     (-> this (.getMoreResults current)))
-  (^Boolean [^java.sql.Statement this]
+  (^Boolean [^Statement this]
     (-> this (.getMoreResults))))
 
 (defn set-poolable
@@ -542,7 +542,7 @@
   poolable - requests that the statement be pooled if true and that the statement not be pooled if false - `boolean`
 
   throws: java.sql.SQLException - if this method is called on a closed Statement"
-  ([^java.sql.Statement this ^Boolean poolable]
+  ([^Statement this ^Boolean poolable]
     (-> this (.setPoolable poolable))))
 
 (defn get-large-update-count
@@ -559,7 +559,7 @@
    is a ResultSet object or there are no more results - `default long`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  ([^java.sql.Statement this]
+  ([^Statement this]
     (-> this (.getLargeUpdateCount))))
 
 (defn get-max-rows
@@ -573,7 +573,7 @@
            zero means there is no limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^Integer [^java.sql.Statement this]
+  (^Integer [^Statement this]
     (-> this (.getMaxRows))))
 
 (defn get-connection
@@ -583,7 +583,7 @@
   returns: the connection that produced this statement - `java.sql.Connection`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^java.sql.Connection [^java.sql.Statement this]
+  (^java.sql.Connection [^Statement this]
     (-> this (.getConnection))))
 
 (defn get-query-timeout
@@ -596,7 +596,7 @@
            no limit - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^Integer [^java.sql.Statement this]
+  (^Integer [^Statement this]
     (-> this (.getQueryTimeout))))
 
 (defn execute
@@ -630,9 +630,9 @@
            no results - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement, the second parameter supplied to this method is not Statement.RETURN_GENERATED_KEYS or Statement.NO_GENERATED_KEYS, the method is called on a PreparedStatement or CallableStatement"
-  (^Boolean [^java.sql.Statement this ^java.lang.String sql ^Integer auto-generated-keys]
+  (^Boolean [^Statement this ^java.lang.String sql ^Integer auto-generated-keys]
     (-> this (.execute sql auto-generated-keys)))
-  (^Boolean [^java.sql.Statement this ^java.lang.String sql]
+  (^Boolean [^Statement this ^java.lang.String sql]
     (-> this (.execute sql))))
 
 (defn get-fetch-size
@@ -647,7 +647,7 @@
             from this Statement object - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^Integer [^java.sql.Statement this]
+  (^Integer [^Statement this]
     (-> this (.getFetchSize))))
 
 (defn get-update-count
@@ -659,7 +659,7 @@
    ResultSet object or there are no more results - `int`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^Integer [^java.sql.Statement this]
+  (^Integer [^Statement this]
     (-> this (.getUpdateCount))))
 
 (defn execute-update
@@ -681,9 +681,9 @@
            or (2) 0 for SQL statements that return nothing - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement, the given SQL statement returns a ResultSet object, the given constant is not one of those allowed, the method is called on a PreparedStatement or CallableStatement"
-  (^Integer [^java.sql.Statement this ^java.lang.String sql ^Integer auto-generated-keys]
+  (^Integer [^Statement this ^java.lang.String sql ^Integer auto-generated-keys]
     (-> this (.executeUpdate sql auto-generated-keys)))
-  (^Integer [^java.sql.Statement this ^java.lang.String sql]
+  (^Integer [^Statement this ^java.lang.String sql]
     (-> this (.executeUpdate sql))))
 
 (defn execute-query
@@ -699,7 +699,7 @@
            by the given query; never null - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement, the given SQL statement produces anything other than a single ResultSet object, the method is called on a PreparedStatement or CallableStatement"
-  (^java.sql.ResultSet [^java.sql.Statement this ^java.lang.String sql]
+  (^java.sql.ResultSet [^Statement this ^java.lang.String sql]
     (-> this (.executeQuery sql))))
 
 (defn set-fetch-direction
@@ -716,7 +716,7 @@
   direction - the initial direction for processing rows - `int`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed Statement or the given direction is not one of ResultSet.FETCH_FORWARD, ResultSet.FETCH_REVERSE, or ResultSet.FETCH_UNKNOWN"
-  ([^java.sql.Statement this ^Integer direction]
+  ([^Statement this ^Integer direction]
     (-> this (.setFetchDirection direction))))
 
 (defn get-result-set
@@ -727,6 +727,6 @@
    null if the result is an update count or there are no more results - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed Statement"
-  (^java.sql.ResultSet [^java.sql.Statement this]
+  (^java.sql.ResultSet [^Statement this]
     (-> this (.getResultSet))))
 

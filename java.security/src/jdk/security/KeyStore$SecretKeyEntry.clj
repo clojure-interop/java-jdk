@@ -13,32 +13,32 @@
    in the new SecretKeyEntry object.
 
   secret-key - the SecretKey - `javax.crypto.SecretKey`
-  attributes - the attributes - `java.util.Set<java.security.KeyStore.Entry.Attribute>`
+  attributes - the attributes - `java.util.Set`
 
   throws: java.lang.NullPointerException - if secretKey or attributes is null"
-  ([^javax.crypto.SecretKey secret-key ^java.util.Set attributes]
+  (^KeyStore$SecretKeyEntry [^javax.crypto.SecretKey secret-key ^java.util.Set attributes]
     (new KeyStore$SecretKeyEntry secret-key attributes))
-  ([^javax.crypto.SecretKey secret-key]
+  (^KeyStore$SecretKeyEntry [^javax.crypto.SecretKey secret-key]
     (new KeyStore$SecretKeyEntry secret-key)))
 
 (defn get-secret-key
   "Gets the SecretKey from this entry.
 
   returns: the SecretKey from this entry - `javax.crypto.SecretKey`"
-  (^javax.crypto.SecretKey [^java.security.KeyStore$SecretKeyEntry this]
+  (^javax.crypto.SecretKey [^KeyStore$SecretKeyEntry this]
     (-> this (.getSecretKey))))
 
 (defn get-attributes
   "Retrieves the attributes associated with an entry.
 
-  returns: an unmodifiable Set of attributes, possibly empty - `java.util.Set<java.security.KeyStore.Entry.Attribute>`"
-  (^java.util.Set [^java.security.KeyStore$SecretKeyEntry this]
+  returns: an unmodifiable Set of attributes, possibly empty - `java.util.Set<java.security.KeyStore$Entry$Attribute>`"
+  (^java.util.Set [^KeyStore$SecretKeyEntry this]
     (-> this (.getAttributes))))
 
 (defn to-string
   "Returns a string representation of this SecretKeyEntry.
 
   returns: a string representation of this SecretKeyEntry. - `java.lang.String`"
-  (^java.lang.String [^java.security.KeyStore$SecretKeyEntry this]
+  (^java.lang.String [^KeyStore$SecretKeyEntry this]
     (-> this (.toString))))
 

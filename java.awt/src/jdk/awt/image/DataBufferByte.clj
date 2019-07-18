@@ -36,11 +36,11 @@
   data-array - The byte array for the DataBuffer. - `byte[]`
   size - The size of the DataBuffer bank. - `int`
   offset - The offset into the dataArray. dataArray must have at least offset size elements. - `int`"
-  ([data-array ^Integer size ^Integer offset]
+  (^DataBufferByte [data-array ^Integer size ^Integer offset]
     (new DataBufferByte data-array size offset))
-  ([^Integer size ^Integer num-banks]
+  (^DataBufferByte [^Integer size ^Integer num-banks]
     (new DataBufferByte size num-banks))
-  ([^Integer size]
+  (^DataBufferByte [^Integer size]
     (new DataBufferByte size)))
 
 (defn get-data
@@ -54,9 +54,9 @@
   bank - The bank whose data array you want to get. - `int`
 
   returns: The data array for the specified bank. - `byte[]`"
-  ([^java.awt.image.DataBufferByte this ^Integer bank]
+  ([^DataBufferByte this ^Integer bank]
     (-> this (.getData bank)))
-  ([^java.awt.image.DataBufferByte this]
+  ([^DataBufferByte this]
     (-> this (.getData))))
 
 (defn get-bank-data
@@ -68,7 +68,7 @@
    an associated image in video memory).
 
   returns: All of the data arrays. - `byte[][]`"
-  ([^java.awt.image.DataBufferByte this]
+  ([^DataBufferByte this]
     (-> this (.getBankData))))
 
 (defn get-elem
@@ -78,9 +78,9 @@
   i - The data array element you want to get. - `int`
 
   returns: The requested data array element as an integer. - `int`"
-  (^Integer [^java.awt.image.DataBufferByte this ^Integer bank ^Integer i]
+  (^Integer [^DataBufferByte this ^Integer bank ^Integer i]
     (-> this (.getElem bank i)))
-  (^Integer [^java.awt.image.DataBufferByte this ^Integer i]
+  (^Integer [^DataBufferByte this ^Integer i]
     (-> this (.getElem i))))
 
 (defn set-elem
@@ -90,8 +90,8 @@
   bank - The bank in which you want to set the data array element. - `int`
   i - The data array element you want to set. - `int`
   val - The integer value to which you want to set the specified data array element. - `int`"
-  ([^java.awt.image.DataBufferByte this ^Integer bank ^Integer i ^Integer val]
+  ([^DataBufferByte this ^Integer bank ^Integer i ^Integer val]
     (-> this (.setElem bank i val)))
-  ([^java.awt.image.DataBufferByte this ^Integer i ^Integer val]
+  ([^DataBufferByte this ^Integer i ^Integer val]
     (-> this (.setElem i val))))
 

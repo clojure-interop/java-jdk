@@ -6,7 +6,7 @@
 
 (defn ->extended-ssl-session
   "Constructor."
-  ([]
+  (^ExtendedSSLSession []
     (new ExtendedSSLSession )))
 
 (defn get-local-supported-signature-algorithms
@@ -31,7 +31,7 @@
   returns: An array of supported signature algorithms, in descending
        order of preference.  The return value is an empty array if
        no signature algorithm is supported. - `java.lang.String[]`"
-  ([^javax.net.ssl.ExtendedSSLSession this]
+  ([^ExtendedSSLSession this]
     (-> this (.getLocalSupportedSignatureAlgorithms))))
 
 (defn get-peer-supported-signature-algorithms
@@ -51,7 +51,7 @@
   returns: An array of supported signature algorithms, in descending
        order of preference.  The return value is an empty array if
        the peer has not sent the supported signature algorithms. - `java.lang.String[]`"
-  ([^javax.net.ssl.ExtendedSSLSession this]
+  ([^ExtendedSSLSession this]
     (-> this (.getPeerSupportedSignatureAlgorithms))))
 
 (defn get-requested-server-names
@@ -73,6 +73,6 @@
            empty if no server name indications were requested. - `java.util.List<javax.net.ssl.SNIServerName>`
 
   throws: java.lang.UnsupportedOperationException - if the underlying provider does not implement the operation"
-  (^java.util.List [^javax.net.ssl.ExtendedSSLSession this]
+  (^java.util.List [^ExtendedSSLSession this]
     (-> this (.getRequestedServerNames))))
 

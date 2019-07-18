@@ -19,7 +19,7 @@
 
 (defn ->key-adapter
   "Constructor."
-  ([]
+  (^KeyAdapter []
     (new KeyAdapter )))
 
 (defn key-typed
@@ -27,20 +27,20 @@
    This event occurs when a key press is followed by a key release.
 
   e - `java.awt.event.KeyEvent`"
-  ([^java.awt.event.KeyAdapter this ^java.awt.event.KeyEvent e]
+  ([^KeyAdapter this ^java.awt.event.KeyEvent e]
     (-> this (.keyTyped e))))
 
 (defn key-pressed
   "Invoked when a key has been pressed.
 
   e - `java.awt.event.KeyEvent`"
-  ([^java.awt.event.KeyAdapter this ^java.awt.event.KeyEvent e]
+  ([^KeyAdapter this ^java.awt.event.KeyEvent e]
     (-> this (.keyPressed e))))
 
 (defn key-released
   "Invoked when a key has been released.
 
   e - `java.awt.event.KeyEvent`"
-  ([^java.awt.event.KeyAdapter this ^java.awt.event.KeyEvent e]
+  ([^KeyAdapter this ^java.awt.event.KeyEvent e]
     (-> this (.keyReleased e))))
 

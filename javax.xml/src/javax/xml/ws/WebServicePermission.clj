@@ -32,8 +32,8 @@
 
   name - the name of the WebServicePermission - `java.lang.String`
   actions - should be null - `java.lang.String`"
-  ([^java.lang.String name ^java.lang.String actions]
+  (^WebServicePermission [^java.lang.String name ^java.lang.String actions]
     (new WebServicePermission name actions))
-  ([^java.lang.String name]
+  (^WebServicePermission [^java.lang.String name]
     (new WebServicePermission name)))
 

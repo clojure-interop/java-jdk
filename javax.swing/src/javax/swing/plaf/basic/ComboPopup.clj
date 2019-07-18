@@ -15,19 +15,19 @@
 
 (defn show
   "Shows the popup"
-  ([^javax.swing.plaf.basic.ComboPopup this]
+  ([^ComboPopup this]
     (-> this (.show))))
 
 (defn hide
   "Hides the popup"
-  ([^javax.swing.plaf.basic.ComboPopup this]
+  ([^ComboPopup this]
     (-> this (.hide))))
 
 (defn visible?
   "Returns true if the popup is visible (currently being displayed).
 
   returns: true if the component is visible; false otherwise. - `boolean`"
-  (^Boolean [^javax.swing.plaf.basic.ComboPopup this]
+  (^Boolean [^ComboPopup this]
     (-> this (.isVisible))))
 
 (defn get-list
@@ -36,7 +36,7 @@
    for general list manipulation.
 
   returns: `javax.swing.JList`"
-  (^javax.swing.JList [^javax.swing.plaf.basic.ComboPopup this]
+  (^javax.swing.JList [^ComboPopup this]
     (-> this (.getList))))
 
 (defn get-mouse-listener
@@ -44,7 +44,7 @@
    If this method returns null then it will not be added to the combo box.
 
   returns: a MouseListener or null - `java.awt.event.MouseListener`"
-  (^java.awt.event.MouseListener [^javax.swing.plaf.basic.ComboPopup this]
+  (^java.awt.event.MouseListener [^ComboPopup this]
     (-> this (.getMouseListener))))
 
 (defn get-mouse-motion-listener
@@ -52,7 +52,7 @@
    If this method returns null then it will not be added to the combo box.
 
   returns: a MouseMotionListener or null - `java.awt.event.MouseMotionListener`"
-  (^java.awt.event.MouseMotionListener [^javax.swing.plaf.basic.ComboPopup this]
+  (^java.awt.event.MouseMotionListener [^ComboPopup this]
     (-> this (.getMouseMotionListener))))
 
 (defn get-key-listener
@@ -60,12 +60,12 @@
    If this method returns null then it will not be added to the combo box.
 
   returns: `java.awt.event.KeyListener`"
-  (^java.awt.event.KeyListener [^javax.swing.plaf.basic.ComboPopup this]
+  (^java.awt.event.KeyListener [^ComboPopup this]
     (-> this (.getKeyListener))))
 
 (defn uninstalling-ui
   "Called to inform the ComboPopup that the UI is uninstalling.
    If the ComboPopup added any listeners in the component, it should remove them here."
-  ([^javax.swing.plaf.basic.ComboPopup this]
+  ([^ComboPopup this]
     (-> this (.uninstallingUI))))
 

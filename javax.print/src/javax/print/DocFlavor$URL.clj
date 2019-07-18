@@ -15,7 +15,7 @@
   mime-type - MIME media type string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if mimeType is null."
-  ([^java.lang.String mime-type]
+  (^DocFlavor$URL [^java.lang.String mime-type]
     (new DocFlavor$URL mime-type)))
 
 (def *-text-plain-host
@@ -27,7 +27,7 @@
    Print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_PLAIN_HOST)
 
 (def *-text-plain-utf-8
@@ -38,7 +38,7 @@
    print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_PLAIN_UTF_8)
 
 (def *-text-plain-utf-16
@@ -49,7 +49,7 @@
    print data representation class name =
    java.net.URL`` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_PLAIN_UTF_16)
 
 (def *-text-plain-utf-16-be
@@ -61,7 +61,7 @@
    print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_PLAIN_UTF_16BE)
 
 (def *-text-plain-utf-16-le
@@ -73,7 +73,7 @@
    print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_PLAIN_UTF_16LE)
 
 (def *-text-plain-us-ascii
@@ -84,7 +84,7 @@
    print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_PLAIN_US_ASCII)
 
 (def *-text-html-host
@@ -96,7 +96,7 @@
    Print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_HTML_HOST)
 
 (def *-text-html-utf-8
@@ -107,7 +107,7 @@
    print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_HTML_UTF_8)
 
 (def *-text-html-utf-16
@@ -118,7 +118,7 @@
    print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_HTML_UTF_16)
 
 (def *-text-html-utf-16-be
@@ -130,7 +130,7 @@
    print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_HTML_UTF_16BE)
 
 (def *-text-html-utf-16-le
@@ -142,7 +142,7 @@
    print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_HTML_UTF_16LE)
 
 (def *-text-html-us-ascii
@@ -153,7 +153,7 @@
    print data representation class name =
    `java.net.URL` (byte stream).
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/TEXT_HTML_US_ASCII)
 
 (def *-pdf
@@ -162,7 +162,7 @@
   Doc flavor with MIME type = `application/pdf`, print
    data representation class name = `java.net.URL`.
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/PDF)
 
 (def *-postscript
@@ -171,7 +171,7 @@
   Doc flavor with MIME type = `application/postscript`,
    print data representation class name = `java.net.URL`.
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/POSTSCRIPT)
 
 (def *-pcl
@@ -180,7 +180,7 @@
   Doc flavor with MIME type = `application/vnd.hp-PCL`,
    print data representation class name = `java.net.URL`.
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/PCL)
 
 (def *-gif
@@ -189,7 +189,7 @@
   Doc flavor with MIME type = `image/gif`, print data
    representation class name = `java.net.URL`.
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/GIF)
 
 (def *-jpeg
@@ -198,7 +198,7 @@
   Doc flavor with MIME type = `image/jpeg`, print data
    representation class name = `java.net.URL`.
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/JPEG)
 
 (def *-png
@@ -207,7 +207,7 @@
   Doc flavor with MIME type = `image/png`, print data
    representation class name = `java.net.URL`.
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/PNG)
 
 (def *-autosense
@@ -219,6 +219,6 @@
     The client must determine that data described
    using this DocFlavor is valid for the printer.
 
-  type: javax.print.DocFlavor.URL"
+  type: javax.print.DocFlavor$URL"
   DocFlavor$URL/AUTOSENSE)
 

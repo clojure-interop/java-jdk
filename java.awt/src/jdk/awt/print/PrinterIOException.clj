@@ -21,7 +21,7 @@
    IOException.
 
   exception - the specified IOException - `java.io.IOException`"
-  ([^java.io.IOException exception]
+  (^PrinterIOException [^java.io.IOException exception]
     (new PrinterIOException exception)))
 
 (defn get-io-exception
@@ -34,7 +34,7 @@
 
   returns: the IOException that terminated
    the print job. - `java.io.IOException`"
-  (^java.io.IOException [^java.awt.print.PrinterIOException this]
+  (^java.io.IOException [^PrinterIOException this]
     (-> this (.getIOException))))
 
 (defn get-cause
@@ -42,6 +42,6 @@
    that terminated the print job).
 
   returns: the cause of this exception. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^java.awt.print.PrinterIOException this]
+  (^java.lang.Throwable [^PrinterIOException this]
     (-> this (.getCause))))
 

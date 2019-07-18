@@ -28,7 +28,7 @@
 
 (defn ->rmi-class-loader-spi
   "Constructor."
-  ([]
+  (^RMIClassLoaderSpi []
     (new RMIClassLoaderSpi )))
 
 (defn load-class
@@ -55,7 +55,7 @@
   returns: the Class object representing the loaded class - `java.lang.Class<?>`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to load classes is invalid"
-  (^java.lang.Class [^java.rmi.server.RMIClassLoaderSpi this ^java.lang.String codebase ^java.lang.String name ^java.lang.ClassLoader default-loader]
+  (^java.lang.Class [^RMIClassLoaderSpi this ^java.lang.String codebase ^java.lang.String name ^java.lang.ClassLoader default-loader]
     (-> this (.loadClass codebase name default-loader))))
 
 (defn load-proxy-class
@@ -76,7 +76,7 @@
   returns: a dynamic proxy class that implements the named interfaces - `java.lang.Class<?>`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to load classes is invalid"
-  (^java.lang.Class [^java.rmi.server.RMIClassLoaderSpi this ^java.lang.String codebase interfaces ^java.lang.ClassLoader default-loader]
+  (^java.lang.Class [^RMIClassLoaderSpi this ^java.lang.String codebase interfaces ^java.lang.ClassLoader default-loader]
     (-> this (.loadProxyClass codebase interfaces default-loader))))
 
 (defn get-class-loader
@@ -100,7 +100,7 @@
    path - `java.lang.ClassLoader`
 
   throws: java.net.MalformedURLException - if codebase is non-null and contains an invalid URL, or if codebase is null and a provider-specific URL used to identify the class loader is invalid"
-  (^java.lang.ClassLoader [^java.rmi.server.RMIClassLoaderSpi this ^java.lang.String codebase]
+  (^java.lang.ClassLoader [^RMIClassLoaderSpi this ^java.lang.String codebase]
     (-> this (.getClassLoader codebase))))
 
 (defn get-class-annotation
@@ -111,12 +111,12 @@
    the class definition) that RMI will use to annotate the class
    descriptor when marshalling objects of the given class.
 
-  cl - the class to obtain the annotation for - `java.lang.Class<?>`
+  cl - the class to obtain the annotation for - `java.lang.Class`
 
   returns: a string to be used to annotate the given class when
    it gets marshalled, or null - `java.lang.String`
 
   throws: java.lang.NullPointerException - if cl is null"
-  (^java.lang.String [^java.rmi.server.RMIClassLoaderSpi this ^java.lang.Class cl]
+  (^java.lang.String [^RMIClassLoaderSpi this ^java.lang.Class cl]
     (-> this (.getClassAnnotation cl))))
 

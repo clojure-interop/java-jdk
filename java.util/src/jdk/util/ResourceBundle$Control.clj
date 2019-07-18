@@ -192,13 +192,13 @@
    instantiating the ResourceBundle.Control class,
    except that this method returns a singleton.
 
-  formats - the formats to be returned by the ResourceBundle.Control.getFormats method - `java.util.List<java.lang.String>`
+  formats - the formats to be returned by the ResourceBundle.Control.getFormats method - `java.util.List`
 
   returns: a ResourceBundle.Control supporting the
-          specified formats - `java.util.ResourceBundle.Control`
+          specified formats - `java.util.ResourceBundle$Control`
 
   throws: java.lang.NullPointerException - if formats is null"
-  (^java.util.ResourceBundle.Control [^java.util.List formats]
+  (^java.util.ResourceBundle$Control [^java.util.List formats]
     (ResourceBundle$Control/getControl formats)))
 
 (defn *get-no-fallback-control
@@ -209,14 +209,14 @@
    ResourceBundle.Control instances returned by this
    method are singletons and thread-safe.
 
-  formats - the formats to be returned by the ResourceBundle.Control.getFormats method - `java.util.List<java.lang.String>`
+  formats - the formats to be returned by the ResourceBundle.Control.getFormats method - `java.util.List`
 
   returns: a ResourceBundle.Control supporting the
           specified formats with no fallback
-          Locale support - `java.util.ResourceBundle.Control`
+          Locale support - `java.util.ResourceBundle$Control`
 
   throws: java.lang.NullPointerException - if formats is null"
-  (^java.util.ResourceBundle.Control [^java.util.List formats]
+  (^java.util.ResourceBundle$Control [^java.util.List formats]
     (ResourceBundle$Control/getNoFallbackControl formats)))
 
 (defn get-formats
@@ -247,7 +247,7 @@
           formats for loading resource bundles. - `java.util.List<java.lang.String>`
 
   throws: java.lang.NullPointerException - if baseName is null"
-  (^java.util.List [^java.util.ResourceBundle$Control this ^java.lang.String base-name]
+  (^java.util.List [^ResourceBundle$Control this ^java.lang.String base-name]
     (-> this (.getFormats base-name))))
 
 (defn get-candidate-locales
@@ -424,7 +424,7 @@
           Locales for the given locale - `java.util.List<java.util.Locale>`
 
   throws: java.lang.NullPointerException - if baseName or locale is null"
-  (^java.util.List [^java.util.ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale]
+  (^java.util.List [^ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale]
     (-> this (.getCandidateLocales base-name locale))))
 
 (defn get-fallback-locale
@@ -452,7 +452,7 @@
           is desired. - `java.util.Locale`
 
   throws: java.lang.NullPointerException - if baseName or locale is null"
-  (^java.util.Locale [^java.util.ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale]
+  (^java.util.Locale [^ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale]
     (-> this (.getFallbackLocale base-name locale))))
 
 (defn new-bundle
@@ -510,7 +510,7 @@
           or null if none could be found. - `java.util.ResourceBundle`
 
   throws: java.lang.NullPointerException - if bundleName, locale, format, or loader is null, or if null is returned by toBundleName"
-  (^java.util.ResourceBundle [^java.util.ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale ^java.lang.String format ^java.lang.ClassLoader loader ^Boolean reload]
+  (^java.util.ResourceBundle [^ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale ^java.lang.String format ^java.lang.ClassLoader loader ^Boolean reload]
     (-> this (.newBundle base-name locale format loader reload))))
 
 (defn get-time-to-live
@@ -551,7 +551,7 @@
           caching. - `long`
 
   throws: java.lang.NullPointerException - if baseName or locale is null"
-  (^Long [^java.util.ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale]
+  (^Long [^ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale]
     (-> this (.getTimeToLive base-name locale))))
 
 (defn needs-reload
@@ -590,7 +590,7 @@
           reloaded; false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if baseName, locale, format, loader, or bundle is null"
-  (^Boolean [^java.util.ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale ^java.lang.String format ^java.lang.ClassLoader loader ^java.util.ResourceBundle bundle ^Long load-time]
+  (^Boolean [^ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale ^java.lang.String format ^java.lang.ClassLoader loader ^java.util.ResourceBundle bundle ^Long load-time]
     (-> this (.needsReload base-name locale format loader bundle load-time))))
 
 (defn to-bundle-name
@@ -628,7 +628,7 @@
   returns: the bundle name for the resource bundle - `java.lang.String`
 
   throws: java.lang.NullPointerException - if baseName or locale is null"
-  (^java.lang.String [^java.util.ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale]
+  (^java.lang.String [^ResourceBundle$Control this ^java.lang.String base-name ^java.util.Locale locale]
     (-> this (.toBundleName base-name locale))))
 
 (defn to-resource-name
@@ -648,6 +648,6 @@
   returns: the converted resource name - `java.lang.String`
 
   throws: java.lang.NullPointerException - if bundleName or suffix is null"
-  (^java.lang.String [^java.util.ResourceBundle$Control this ^java.lang.String bundle-name ^java.lang.String suffix]
+  (^java.lang.String [^ResourceBundle$Control this ^java.lang.String bundle-name ^java.lang.String suffix]
     (-> this (.toResourceName bundle-name suffix))))
 

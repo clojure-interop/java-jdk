@@ -6,7 +6,7 @@
 
 (defn ->html
   "Constructor."
-  ([]
+  (^HTML []
     (new HTML )))
 
 (def *-null-attribute-value
@@ -21,7 +21,7 @@
    This set does not include tags that are
    manufactured by the reader.
 
-  returns: `javax.swing.text.html.HTML.Tag[]`"
+  returns: `javax.swing.text.html.HTML$Tag[]`"
   ([]
     (HTML/getAllTags )))
 
@@ -43,8 +43,8 @@
   tag-name - the String name requested - `java.lang.String`
 
   returns: a tag constant corresponding to the tagName,
-      or null if not found - `javax.swing.text.html.HTML.Tag`"
-  (^javax.swing.text.html.HTML.Tag [^java.lang.String tag-name]
+      or null if not found - `javax.swing.text.html.HTML$Tag`"
+  (^javax.swing.text.html.HTML$Tag [^java.lang.String tag-name]
     (HTML/getTag tag-name)))
 
 (defn *get-integer-attribute-value
@@ -53,17 +53,17 @@
    to convert to an actual integer.
 
   attr - the set of attributes to use to try to fetch a value - `javax.swing.text.AttributeSet`
-  key - the key to use to fetch the value - `javax.swing.text.html.HTML.Attribute`
+  key - the key to use to fetch the value - `javax.swing.text.html.HTML$Attribute`
   def - the default value to use if the attribute isn't defined or there is an error converting to an integer - `int`
 
   returns: `int`"
-  (^Integer [^javax.swing.text.AttributeSet attr ^javax.swing.text.html.HTML.Attribute key ^Integer def]
+  (^Integer [^javax.swing.text.AttributeSet attr ^javax.swing.text.html.HTML$Attribute key ^Integer def]
     (HTML/getIntegerAttributeValue attr key def)))
 
 (defn *get-all-attribute-keys
   "Returns the set of HTML attributes recognized.
 
-  returns: the set of HTML attributes recognized - `javax.swing.text.html.HTML.Attribute[]`"
+  returns: the set of HTML attributes recognized - `javax.swing.text.html.HTML$Attribute[]`"
   ([]
     (HTML/getAllAttributeKeys )))
 
@@ -86,7 +86,7 @@
 
   att-name - the String requested - `java.lang.String`
 
-  returns: the Attribute corresponding to attName - `javax.swing.text.html.HTML.Attribute`"
-  (^javax.swing.text.html.HTML.Attribute [^java.lang.String att-name]
+  returns: the Attribute corresponding to attName - `javax.swing.text.html.HTML$Attribute`"
+  (^javax.swing.text.html.HTML$Attribute [^java.lang.String att-name]
     (HTML/getAttributeKey att-name)))
 

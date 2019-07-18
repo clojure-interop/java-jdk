@@ -9,6 +9,6 @@
 
 (defn ->key-generator-spi
   "Constructor."
-  ([]
+  (^KeyGeneratorSpi []
     (new KeyGeneratorSpi )))
 

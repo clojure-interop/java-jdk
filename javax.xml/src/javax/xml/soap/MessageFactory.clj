@@ -36,7 +36,7 @@
 
 (defn ->message-factory
   "Constructor."
-  ([]
+  (^MessageFactory []
     (new MessageFactory )))
 
 (defn *new-instance
@@ -71,8 +71,8 @@
            the given InputStream object - `javax.xml.soap.SOAPMessage`
 
   throws: java.io.IOException - if there is a problem in reading data from the input stream"
-  (^javax.xml.soap.SOAPMessage [^javax.xml.soap.MessageFactory this ^javax.xml.soap.MimeHeaders headers ^java.io.InputStream in]
+  (^javax.xml.soap.SOAPMessage [^MessageFactory this ^javax.xml.soap.MimeHeaders headers ^java.io.InputStream in]
     (-> this (.createMessage headers in)))
-  (^javax.xml.soap.SOAPMessage [^javax.xml.soap.MessageFactory this]
+  (^javax.xml.soap.SOAPMessage [^MessageFactory this]
     (-> this (.createMessage))))
 

@@ -50,11 +50,11 @@
 
   Constructs a new object with the specified key/value pair.
 
-  key - the key of the particular hint property - `java.awt.RenderingHints.Key`
+  key - the key of the particular hint property - `java.awt.RenderingHints$Key`
   value - the value of the hint property specified with key - `java.lang.Object`"
-  ([^java.awt.RenderingHints.Key key ^java.lang.Object value]
+  (^RenderingHints [^java.awt.RenderingHints$Key key ^java.lang.Object value]
     (new RenderingHints key value))
-  ([^java.util.Map init]
+  (^RenderingHints [^java.util.Map init]
     (new RenderingHints init)))
 
 (def *-key-antialiasing
@@ -77,7 +77,7 @@
    VALUE_ANTIALIAS_OFF
    VALUE_ANTIALIAS_DEFAULT
 
-  type: java.awt.RenderingHints.Key"
+  type: java.awt.RenderingHints$Key"
   RenderingHints/KEY_ANTIALIASING)
 
 (def *-value-antialias-on
@@ -122,7 +122,7 @@
    VALUE_RENDER_QUALITY
    VALUE_RENDER_DEFAULT
 
-  type: java.awt.RenderingHints.Key"
+  type: java.awt.RenderingHints$Key"
   RenderingHints/KEY_RENDERING)
 
 (def *-value-render-speed
@@ -177,7 +177,7 @@
    VALUE_DITHER_ENABLE
    VALUE_DITHER_DEFAULT
 
-  type: java.awt.RenderingHints.Key"
+  type: java.awt.RenderingHints$Key"
   RenderingHints/KEY_DITHERING)
 
 (def *-value-dither-disable
@@ -234,7 +234,7 @@
    VALUE_TEXT_ANTIALIAS_LCD_VRGB
    VALUE_TEXT_ANTIALIAS_LCD_VBGR
 
-  type: java.awt.RenderingHints.Key"
+  type: java.awt.RenderingHints$Key"
   RenderingHints/KEY_TEXT_ANTIALIASING)
 
 (def *-value-text-antialias-on
@@ -414,7 +414,7 @@
    for non-linear perceptual luminance response of display systems, but
    does not indicate a full correction for this.
 
-  type: java.awt.RenderingHints.Key"
+  type: java.awt.RenderingHints$Key"
   RenderingHints/KEY_TEXT_LCD_CONTRAST)
 
 (def *-key-fractionalmetrics
@@ -503,7 +503,7 @@
    VALUE_FRACTIONALMETRICS_ON
    VALUE_FRACTIONALMETRICS_DEFAULT
 
-  type: java.awt.RenderingHints.Key"
+  type: java.awt.RenderingHints$Key"
   RenderingHints/KEY_FRACTIONALMETRICS)
 
 (def *-value-fractionalmetrics-off
@@ -564,7 +564,7 @@
    VALUE_INTERPOLATION_BILINEAR
    VALUE_INTERPOLATION_BICUBIC
 
-  type: java.awt.RenderingHints.Key"
+  type: java.awt.RenderingHints$Key"
   RenderingHints/KEY_INTERPOLATION)
 
 (def *-value-interpolation-nearest-neighbor
@@ -657,7 +657,7 @@
    VALUE_ALPHA_INTERPOLATION_QUALITY
    VALUE_ALPHA_INTERPOLATION_DEFAULT
 
-  type: java.awt.RenderingHints.Key"
+  type: java.awt.RenderingHints$Key"
   RenderingHints/KEY_ALPHA_INTERPOLATION)
 
 (def *-value-alpha-interpolation-speed
@@ -737,7 +737,7 @@
    VALUE_COLOR_RENDER_QUALITY
    VALUE_COLOR_RENDER_DEFAULT
 
-  type: java.awt.RenderingHints.Key"
+  type: java.awt.RenderingHints$Key"
   RenderingHints/KEY_COLOR_RENDERING)
 
 (def *-value-color-render-speed
@@ -795,7 +795,7 @@
    VALUE_STROKE_PURE
    VALUE_STROKE_DEFAULT
 
-  type: java.awt.RenderingHints.Key"
+  type: java.awt.RenderingHints$Key"
   RenderingHints/KEY_STROKE_CONTROL)
 
 (def *-value-stroke-default
@@ -854,7 +854,7 @@
 
   returns: a Collection view of the values
             contained in this RenderingHints. - `java.util.Collection<java.lang.Object>`"
-  (^java.util.Collection [^java.awt.RenderingHints this]
+  (^java.util.Collection [^RenderingHints this]
     (-> this (.values))))
 
 (defn put-all
@@ -863,10 +863,10 @@
    any mappings that this RenderingHints had for any
    of the keys currently in the specified Map.
 
-  m - the specified Map - `java.util.Map<?,?>`
+  m - the specified Map - `java.util.Map`
 
   throws: java.lang.ClassCastException - class of a key or value in the specified Map prevents it from being stored in this RenderingHints."
-  ([^java.awt.RenderingHints this ^java.util.Map m]
+  ([^RenderingHints this ^java.util.Map m]
     (-> this (.putAll m))))
 
 (defn put
@@ -883,7 +883,7 @@
                or null if it did not have one. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if the key is null."
-  (^java.lang.Object [^java.awt.RenderingHints this ^java.lang.Object key ^java.lang.Object value]
+  (^java.lang.Object [^RenderingHints this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -901,8 +901,8 @@
    is not modifiable.
 
   returns: a Set view of the mappings contained in
-   this RenderingHints. - `java.util.Set<java.util.Map.Entry<java.lang.Object,java.lang.Object>>`"
-  (^java.util.Set> [^java.awt.RenderingHints this]
+   this RenderingHints. - `java.util.Set<java.util.Map$Entry<java.lang.Object,java.lang.Object>>`"
+  (^java.util.Set [^RenderingHints this]
     (-> this (.entrySet))))
 
 (defn to-string
@@ -911,7 +911,7 @@
    RenderingHints object.
 
   returns: a string representation of this object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.RenderingHints this]
+  (^java.lang.String [^RenderingHints this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -931,7 +931,7 @@
 
   returns: true if this RenderingHints
              maps one or more keys to the specified value. - `boolean`"
-  (^Boolean [^java.awt.RenderingHints this ^java.lang.Object value]
+  (^Boolean [^RenderingHints this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn remove
@@ -946,7 +946,7 @@
             if the key did not have a mapping. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if the key can not be cast to RenderingHints.Key"
-  (^java.lang.Object [^java.awt.RenderingHints this ^java.lang.Object key]
+  (^java.lang.Object [^RenderingHints this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -966,7 +966,7 @@
 
   returns: a Set view of the keys contained
    in this RenderingHints. - `java.util.Set<java.lang.Object>`"
-  (^java.util.Set [^java.awt.RenderingHints this]
+  (^java.util.Set [^RenderingHints this]
     (-> this (.keySet))))
 
 (defn clone
@@ -975,7 +975,7 @@
    object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.RenderingHints this]
+  (^java.lang.Object [^RenderingHints this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -989,7 +989,7 @@
    contract of Object.hashCode.
 
   returns: the hash code value for this RenderingHints. - `int`"
-  (^Integer [^java.awt.RenderingHints this]
+  (^Integer [^RenderingHints this]
     (-> this (.hashCode))))
 
 (defn add
@@ -1000,7 +1000,7 @@
    RenderingHints object are not affected.
 
   hints - the set of key/value pairs to be added to this RenderingHints object - `java.awt.RenderingHints`"
-  ([^java.awt.RenderingHints this ^java.awt.RenderingHints hints]
+  ([^RenderingHints this ^java.awt.RenderingHints hints]
     (-> this (.add hints))))
 
 (defn empty?
@@ -1009,7 +1009,7 @@
 
   returns: true if this
    RenderingHints contains no key-value mappings. - `boolean`"
-  (^Boolean [^java.awt.RenderingHints this]
+  (^Boolean [^RenderingHints this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -1018,13 +1018,13 @@
 
   returns: the number of key-value mappings in this
    RenderingHints. - `int`"
-  (^Integer [^java.awt.RenderingHints this]
+  (^Integer [^RenderingHints this]
     (-> this (.size))))
 
 (defn clear
   "Clears this RenderingHints object of all key/value
    pairs."
-  ([^java.awt.RenderingHints this]
+  ([^RenderingHints this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -1037,7 +1037,7 @@
             contains a mapping for the specified key. - `boolean`
 
   throws: java.lang.ClassCastException - if the key can not be cast to RenderingHints.Key"
-  (^Boolean [^java.awt.RenderingHints this ^java.lang.Object key]
+  (^Boolean [^RenderingHints this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -1050,7 +1050,7 @@
             this object. - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if the key can not be cast to RenderingHints.Key"
-  (^java.lang.Object [^java.awt.RenderingHints this ^java.lang.Object key]
+  (^java.lang.Object [^RenderingHints this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn equals
@@ -1072,6 +1072,6 @@
 
   returns: true if the specified Object
    is equal to this RenderingHints. - `boolean`"
-  (^Boolean [^java.awt.RenderingHints this ^java.lang.Object o]
+  (^Boolean [^RenderingHints this ^java.lang.Object o]
     (-> this (.equals o))))
 

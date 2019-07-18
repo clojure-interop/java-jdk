@@ -29,26 +29,26 @@
    taken or polled.
 
   task - the task to submit - `java.lang.Runnable`
-  result - the result to return upon successful completion - `CompletionService.V`
+  result - the result to return upon successful completion - `V`
 
   returns: a Future representing pending completion of the task,
            and whose get() method will return the given
-           result value upon completion - `java.util.concurrent.Future<CompletionService.V>`
+           result value upon completion - `java.util.concurrent.Future<V>`
 
   throws: java.util.concurrent.RejectedExecutionException - if the task cannot be scheduled for execution"
-  (^java.util.concurrent.Future [^java.util.concurrent.CompletionService this ^java.lang.Runnable task ^CompletionService.V result]
+  (^java.util.concurrent.Future [^CompletionService this ^java.lang.Runnable task result]
     (-> this (.submit task result)))
-  (^java.util.concurrent.Future [^java.util.concurrent.CompletionService this ^java.util.concurrent.Callable task]
+  (^java.util.concurrent.Future [^CompletionService this ^java.util.concurrent.Callable task]
     (-> this (.submit task))))
 
 (defn take
   "Retrieves and removes the Future representing the next
    completed task, waiting if none are yet present.
 
-  returns: the Future representing the next completed task - `java.util.concurrent.Future<CompletionService.V>`
+  returns: the Future representing the next completed task - `java.util.concurrent.Future<V>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^java.util.concurrent.Future [^java.util.concurrent.CompletionService this]
+  (^java.util.concurrent.Future [^CompletionService this]
     (-> this (.take))))
 
 (defn poll
@@ -61,11 +61,11 @@
 
   returns: the Future representing the next completed task or
            null if the specified waiting time elapses
-           before one is present - `java.util.concurrent.Future<CompletionService.V>`
+           before one is present - `java.util.concurrent.Future<V>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^java.util.concurrent.Future [^java.util.concurrent.CompletionService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^java.util.concurrent.Future [^CompletionService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  (^java.util.concurrent.Future [^java.util.concurrent.CompletionService this]
+  (^java.util.concurrent.Future [^CompletionService this]
     (-> this (.poll))))
 

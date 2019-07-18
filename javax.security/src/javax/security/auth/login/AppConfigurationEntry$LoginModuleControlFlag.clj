@@ -9,7 +9,7 @@
 
   Required LoginModule.
 
-  type: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag"
+  type: javax.security.auth.login.AppConfigurationEntry$LoginModuleControlFlag"
   AppConfigurationEntry$LoginModuleControlFlag/REQUIRED)
 
 (def *-requisite
@@ -17,7 +17,7 @@
 
   Requisite LoginModule.
 
-  type: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag"
+  type: javax.security.auth.login.AppConfigurationEntry$LoginModuleControlFlag"
   AppConfigurationEntry$LoginModuleControlFlag/REQUISITE)
 
 (def *-sufficient
@@ -25,7 +25,7 @@
 
   Sufficient LoginModule.
 
-  type: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag"
+  type: javax.security.auth.login.AppConfigurationEntry$LoginModuleControlFlag"
   AppConfigurationEntry$LoginModuleControlFlag/SUFFICIENT)
 
 (def *-optional
@@ -33,7 +33,7 @@
 
   Optional LoginModule.
 
-  type: javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag"
+  type: javax.security.auth.login.AppConfigurationEntry$LoginModuleControlFlag"
   AppConfigurationEntry$LoginModuleControlFlag/OPTIONAL)
 
 (defn to-string
@@ -44,6 +44,6 @@
    sufficient, or optional.
 
   returns: a String representation of this controlFlag. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.login.AppConfigurationEntry$LoginModuleControlFlag this]
+  (^java.lang.String [^AppConfigurationEntry$LoginModuleControlFlag this]
     (-> this (.toString))))
 

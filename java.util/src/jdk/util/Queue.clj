@@ -99,12 +99,12 @@
    true upon success and throwing an IllegalStateException
    if no space is currently available.
 
-  e - the element to add - `Queue.E`
+  e - the element to add - `E`
 
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.IllegalStateException - if the element cannot be added at this time due to capacity restrictions"
-  (^Boolean [^java.util.Queue this ^Queue.E e]
+  (^Boolean [^Queue this e]
     (-> this (.add e))))
 
 (defn offer
@@ -114,13 +114,13 @@
    preferable to add(E), which can fail to insert an element only
    by throwing an exception.
 
-  e - the element to add - `Queue.E`
+  e - the element to add - `E`
 
   returns: true if the element was added to this queue, else
            false - `boolean`
 
   throws: java.lang.ClassCastException - if the class of the specified element prevents it from being added to this queue"
-  (^Boolean [^java.util.Queue this ^Queue.E e]
+  (^Boolean [^Queue this e]
     (-> this (.offer e))))
 
 (defn remove
@@ -128,18 +128,18 @@
    from poll only in that it throws an exception if this
    queue is empty.
 
-  returns: the head of this queue - `Queue.E`
+  returns: the head of this queue - `E`
 
   throws: java.util.NoSuchElementException - if this queue is empty"
-  (^Queue.E [^java.util.Queue this]
+  ([^Queue this]
     (-> this (.remove))))
 
 (defn poll
   "Retrieves and removes the head of this queue,
    or returns null if this queue is empty.
 
-  returns: the head of this queue, or null if this queue is empty - `Queue.E`"
-  (^Queue.E [^java.util.Queue this]
+  returns: the head of this queue, or null if this queue is empty - `E`"
+  ([^Queue this]
     (-> this (.poll))))
 
 (defn element
@@ -147,17 +147,17 @@
    differs from peek only in that it throws an exception
    if this queue is empty.
 
-  returns: the head of this queue - `Queue.E`
+  returns: the head of this queue - `E`
 
   throws: java.util.NoSuchElementException - if this queue is empty"
-  (^Queue.E [^java.util.Queue this]
+  ([^Queue this]
     (-> this (.element))))
 
 (defn peek
   "Retrieves, but does not remove, the head of this queue,
    or returns null if this queue is empty.
 
-  returns: the head of this queue, or null if this queue is empty - `Queue.E`"
-  (^Queue.E [^java.util.Queue this]
+  returns: the head of this queue, or null if this queue is empty - `E`"
+  ([^Queue this]
     (-> this (.peek))))
 

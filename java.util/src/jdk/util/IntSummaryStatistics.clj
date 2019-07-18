@@ -31,14 +31,14 @@
   Construct an empty instance with zero count, zero sum,
    Integer.MAX_VALUE min, Integer.MIN_VALUE max and zero
    average."
-  ([]
+  (^IntSummaryStatistics []
     (new IntSummaryStatistics )))
 
 (defn accept
   "Records a new value into the summary information
 
   value - the input value - `int`"
-  ([^java.util.IntSummaryStatistics this ^Integer value]
+  ([^IntSummaryStatistics this ^Integer value]
     (-> this (.accept value))))
 
 (defn combine
@@ -47,14 +47,14 @@
   other - another IntSummaryStatistics - `java.util.IntSummaryStatistics`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^java.util.IntSummaryStatistics this ^java.util.IntSummaryStatistics other]
+  ([^IntSummaryStatistics this ^java.util.IntSummaryStatistics other]
     (-> this (.combine other))))
 
 (defn get-count
   "Returns the count of values recorded.
 
   returns: the count of values - `long`"
-  (^Long [^java.util.IntSummaryStatistics this]
+  (^Long [^IntSummaryStatistics this]
     (-> this (.getCount))))
 
 (defn get-sum
@@ -62,7 +62,7 @@
    recorded.
 
   returns: the sum of values, or zero if none - `long`"
-  (^Long [^java.util.IntSummaryStatistics this]
+  (^Long [^IntSummaryStatistics this]
     (-> this (.getSum))))
 
 (defn get-min
@@ -70,7 +70,7 @@
    values have been recorded.
 
   returns: the minimum value, or Integer.MAX_VALUE if none - `int`"
-  (^Integer [^java.util.IntSummaryStatistics this]
+  (^Integer [^IntSummaryStatistics this]
     (-> this (.getMin))))
 
 (defn get-max
@@ -78,7 +78,7 @@
    values have been recorded.
 
   returns: the maximum value, or Integer.MIN_VALUE if none - `int`"
-  (^Integer [^java.util.IntSummaryStatistics this]
+  (^Integer [^IntSummaryStatistics this]
     (-> this (.getMax))))
 
 (defn get-average
@@ -86,13 +86,13 @@
    recorded.
 
   returns: the arithmetic mean of values, or zero if none - `double`"
-  (^Double [^java.util.IntSummaryStatistics this]
+  (^Double [^IntSummaryStatistics this]
     (-> this (.getAverage))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.util.IntSummaryStatistics this]
+  (^java.lang.String [^IntSummaryStatistics this]
     (-> this (.toString))))
 

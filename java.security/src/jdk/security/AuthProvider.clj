@@ -27,14 +27,14 @@
   handler - the CallbackHandler used by this provider to obtain authentication information from the caller, which may be null - `javax.security.auth.callback.CallbackHandler`
 
   throws: javax.security.auth.login.LoginException - if the login operation fails"
-  ([^java.security.AuthProvider this ^javax.security.auth.Subject subject ^javax.security.auth.callback.CallbackHandler handler]
+  ([^AuthProvider this ^javax.security.auth.Subject subject ^javax.security.auth.callback.CallbackHandler handler]
     (-> this (.login subject handler))))
 
 (defn logout
   "Log out from this provider.
 
   throws: javax.security.auth.login.LoginException - if the logout operation fails"
-  ([^java.security.AuthProvider this]
+  ([^AuthProvider this]
     (-> this (.logout))))
 
 (defn set-callback-handler
@@ -54,6 +54,6 @@
   handler - a CallbackHandler for obtaining authentication information, which may be null - `javax.security.auth.callback.CallbackHandler`
 
   throws: java.lang.SecurityException - if the caller does not pass a security check for SecurityPermission(`authProvider.name`), where name is the value returned by this provider's getName method"
-  ([^java.security.AuthProvider this ^javax.security.auth.callback.CallbackHandler handler]
+  ([^AuthProvider this ^javax.security.auth.callback.CallbackHandler handler]
     (-> this (.setCallbackHandler handler))))
 

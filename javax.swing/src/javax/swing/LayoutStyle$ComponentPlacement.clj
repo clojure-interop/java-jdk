@@ -12,7 +12,7 @@
    with the JTextField; the constant RELATED
    is used for this.
 
-  type: javax.swing.LayoutStyle.ComponentPlacement"
+  type: javax.swing.LayoutStyle$ComponentPlacement"
   LayoutStyle$ComponentPlacement/RELATED)
 
 (def UNRELATED
@@ -23,7 +23,7 @@
    For example, groupings of components are usually visually
    separated; the constant UNRELATED is used for this.
 
-  type: javax.swing.LayoutStyle.ComponentPlacement"
+  type: javax.swing.LayoutStyle$ComponentPlacement"
   LayoutStyle$ComponentPlacement/UNRELATED)
 
 (def INDENT
@@ -38,7 +38,7 @@
    This value is typically only useful with a direction of
    EAST or WEST.
 
-  type: javax.swing.LayoutStyle.ComponentPlacement"
+  type: javax.swing.LayoutStyle$ComponentPlacement"
   LayoutStyle$ComponentPlacement/INDENT)
 
 (defn *values
@@ -50,7 +50,7 @@
   for (LayoutStyle.ComponentPlacement c : LayoutStyle.ComponentPlacement.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.LayoutStyle.ComponentPlacement[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.LayoutStyle$ComponentPlacement[]`"
   ([]
     (LayoutStyle$ComponentPlacement/values )))
 
@@ -62,9 +62,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.swing.LayoutStyle.ComponentPlacement`
+  returns: the enum constant with the specified name - `javax.swing.LayoutStyle$ComponentPlacement`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.swing.LayoutStyle.ComponentPlacement [^java.lang.String name]
+  (^javax.swing.LayoutStyle$ComponentPlacement [^java.lang.String name]
     (LayoutStyle$ComponentPlacement/valueOf name)))
 

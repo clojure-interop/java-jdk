@@ -63,7 +63,7 @@
   "Returns the provider of this SecretKeyFactory object.
 
   returns: the provider of this SecretKeyFactory object - `java.security.Provider`"
-  (^java.security.Provider [^javax.crypto.SecretKeyFactory this]
+  (^java.security.Provider [^SecretKeyFactory this]
     (-> this (.getProvider))))
 
 (defn get-algorithm
@@ -75,7 +75,7 @@
 
   returns: the algorithm name of this SecretKeyFactory
    object. - `java.lang.String`"
-  (^java.lang.String [^javax.crypto.SecretKeyFactory this]
+  (^java.lang.String [^SecretKeyFactory this]
     (-> this (.getAlgorithm))))
 
 (defn generate-secret
@@ -87,7 +87,7 @@
   returns: the secret key - `javax.crypto.SecretKey`
 
   throws: java.security.spec.InvalidKeySpecException - if the given key specification is inappropriate for this secret-key factory to produce a secret key."
-  (^javax.crypto.SecretKey [^javax.crypto.SecretKeyFactory this ^java.security.spec.KeySpec key-spec]
+  (^javax.crypto.SecretKey [^SecretKeyFactory this ^java.security.spec.KeySpec key-spec]
     (-> this (.generateSecret key-spec))))
 
 (defn get-key-spec
@@ -95,13 +95,13 @@
    in the requested format.
 
   key - the key - `javax.crypto.SecretKey`
-  key-spec - the requested format in which the key material shall be returned - `java.lang.Class<?>`
+  key-spec - the requested format in which the key material shall be returned - `java.lang.Class`
 
   returns: the underlying key specification (key material) in the
    requested format - `java.security.spec.KeySpec`
 
   throws: java.security.spec.InvalidKeySpecException - if the requested key specification is inappropriate for the given key (e.g., the algorithms associated with key and keySpec do not match, or key references a key on a cryptographic hardware device whereas keySpec is the specification of a software-based key), or the given key cannot be dealt with (e.g., the given key has an algorithm or format not supported by this secret-key factory)."
-  (^java.security.spec.KeySpec [^javax.crypto.SecretKeyFactory this ^javax.crypto.SecretKey key ^java.lang.Class key-spec]
+  (^java.security.spec.KeySpec [^SecretKeyFactory this ^javax.crypto.SecretKey key ^java.lang.Class key-spec]
     (-> this (.getKeySpec key key-spec))))
 
 (defn translate-key
@@ -113,6 +113,6 @@
   returns: the translated key - `javax.crypto.SecretKey`
 
   throws: java.security.InvalidKeyException - if the given key cannot be processed by this secret-key factory."
-  (^javax.crypto.SecretKey [^javax.crypto.SecretKeyFactory this ^javax.crypto.SecretKey key]
+  (^javax.crypto.SecretKey [^SecretKeyFactory this ^javax.crypto.SecretKey key]
     (-> this (.translateKey key))))
 

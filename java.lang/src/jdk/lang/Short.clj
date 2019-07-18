@@ -16,7 +16,7 @@
    represents the specified short value.
 
   value - the value to be represented by the Short. - `short`"
-  ([^Short value]
+  (^Short [^Short value]
     (new Short value)))
 
 (def *-min-value
@@ -263,7 +263,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type short. - `short`"
-  (^Short [^java.lang.Short this]
+  (^Short [^Short this]
     (-> this (.shortValue))))
 
 (defn double-value
@@ -272,7 +272,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  (^Double [^java.lang.Short this]
+  (^Double [^Short this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -281,7 +281,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  (^Long [^java.lang.Short this]
+  (^Long [^Short this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -290,7 +290,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type byte. - `byte`"
-  (^Byte [^java.lang.Short this]
+  (^Byte [^Short this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -302,7 +302,7 @@
 
   returns: a string representation of the value of this object in
             base 10. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Short this]
+  (^java.lang.String [^Short this]
     (-> this (.toString))))
 
 (defn float-value
@@ -311,7 +311,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  (^Float [^java.lang.Short this]
+  (^Float [^Short this]
     (-> this (.floatValue))))
 
 (defn int-value
@@ -320,7 +320,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  (^Integer [^java.lang.Short this]
+  (^Integer [^Short this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -328,7 +328,7 @@
    of invoking intValue().
 
   returns: a hash code value for this Short - `int`"
-  (^Integer [^java.lang.Short this]
+  (^Integer [^Short this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -343,7 +343,7 @@
              0 if this Short is numerically
              greater than the argument Short (signed
              comparison). - `int`"
-  (^Integer [^java.lang.Short this ^java.lang.Short another-short]
+  (^Integer [^Short this ^java.lang.Short another-short]
     (-> this (.compareTo another-short))))
 
 (defn equals
@@ -356,6 +356,6 @@
 
   returns: true if the objects are the same;
                     false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Short this ^java.lang.Object obj]
+  (^Boolean [^Short this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

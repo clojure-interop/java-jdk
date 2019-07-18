@@ -12,8 +12,8 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^IncompatibleClassChangeError [^java.lang.String s]
     (new IncompatibleClassChangeError s))
-  ([]
+  (^IncompatibleClassChangeError []
     (new IncompatibleClassChangeError )))
 

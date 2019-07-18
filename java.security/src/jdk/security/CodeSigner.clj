@@ -13,21 +13,21 @@
   timestamp - A signature timestamp. If null then no timestamp was generated for the signature. - `java.security.Timestamp`
 
   throws: java.lang.NullPointerException - if signerCertPath is null."
-  ([^java.security.cert.CertPath signer-cert-path ^java.security.Timestamp timestamp]
+  (^CodeSigner [^java.security.cert.CertPath signer-cert-path ^java.security.Timestamp timestamp]
     (new CodeSigner signer-cert-path timestamp)))
 
 (defn get-signer-cert-path
   "Returns the signer's certificate path.
 
   returns: A certificate path. - `java.security.cert.CertPath`"
-  (^java.security.cert.CertPath [^java.security.CodeSigner this]
+  (^java.security.cert.CertPath [^CodeSigner this]
     (-> this (.getSignerCertPath))))
 
 (defn get-timestamp
   "Returns the signature timestamp.
 
   returns: The timestamp or null if none is present. - `java.security.Timestamp`"
-  (^java.security.Timestamp [^java.security.CodeSigner this]
+  (^java.security.Timestamp [^CodeSigner this]
     (-> this (.getTimestamp))))
 
 (defn hash-code
@@ -36,7 +36,7 @@
    timestamp, if present.
 
   returns: a hash code value for this code signer. - `int`"
-  (^Integer [^java.security.CodeSigner this]
+  (^Integer [^CodeSigner this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -48,7 +48,7 @@
   obj - the object to test for equality with this object. - `java.lang.Object`
 
   returns: true if the objects are considered equal, false otherwise. - `boolean`"
-  (^Boolean [^java.security.CodeSigner this ^java.lang.Object obj]
+  (^Boolean [^CodeSigner this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -56,6 +56,6 @@
 
   returns: A string comprising the signer's certificate and a timestamp,
            if present. - `java.lang.String`"
-  (^java.lang.String [^java.security.CodeSigner this]
+  (^java.lang.String [^CodeSigner this]
     (-> this (.toString))))
 

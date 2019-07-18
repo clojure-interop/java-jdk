@@ -23,7 +23,7 @@
    represents the specified int value.
 
   value - the value to be represented by the Integer object. - `int`"
-  ([^Integer value]
+  (^Integer [^Integer value]
     (new Integer value)))
 
 (def *-min-value
@@ -32,7 +32,7 @@
   A constant holding the minimum value an int can
    have, -231.
 
-  type: java.lang.annotation.    int"
+  type: int"
   Integer/MIN_VALUE)
 
 (def *-max-value
@@ -41,7 +41,7 @@
   A constant holding the maximum value an int can
    have, 231-1.
 
-  type: java.lang.annotation.    int"
+  type: int"
   Integer/MAX_VALUE)
 
 (def *-type
@@ -59,7 +59,7 @@
   The number of bits used to represent an int value in two's
    complement binary form.
 
-  type: java.lang.annotation.    int"
+  type: int"
   Integer/SIZE)
 
 (def *-bytes
@@ -743,7 +743,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type short. - `short`"
-  (^Short [^java.lang.Integer this]
+  (^Short [^Integer this]
     (-> this (.shortValue))))
 
 (defn double-value
@@ -752,7 +752,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  (^Double [^java.lang.Integer this]
+  (^Double [^Integer this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -761,7 +761,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  (^Long [^java.lang.Integer this]
+  (^Long [^Integer this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -770,7 +770,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type byte. - `byte`"
-  (^Byte [^java.lang.Integer this]
+  (^Byte [^Integer this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -781,7 +781,7 @@
 
   returns: a string representation of the value of this object in
             base 10. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Integer this]
+  (^java.lang.String [^Integer this]
     (-> this (.toString))))
 
 (defn float-value
@@ -790,7 +790,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  (^Float [^java.lang.Integer this]
+  (^Float [^Integer this]
     (-> this (.floatValue))))
 
 (defn int-value
@@ -799,7 +799,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  (^Integer [^java.lang.Integer this]
+  (^Integer [^Integer this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -808,7 +808,7 @@
   returns: a hash code value for this object, equal to the
             primitive int value represented by this
             Integer object. - `int`"
-  (^Integer [^java.lang.Integer this]
+  (^Integer [^Integer this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -823,7 +823,7 @@
             than 0 if this Integer is numerically
              greater than the argument Integer (signed
              comparison). - `int`"
-  (^Integer [^java.lang.Integer this ^java.lang.Integer another-integer]
+  (^Integer [^Integer this ^java.lang.Integer another-integer]
     (-> this (.compareTo another-integer))))
 
 (defn equals
@@ -836,6 +836,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Integer this ^java.lang.Object obj]
+  (^Boolean [^Integer this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

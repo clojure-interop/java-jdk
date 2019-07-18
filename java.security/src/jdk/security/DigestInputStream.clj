@@ -30,21 +30,21 @@
 
   stream - the input stream. - `java.io.InputStream`
   digest - the message digest to associate with this stream. - `java.security.MessageDigest`"
-  ([^java.io.InputStream stream ^java.security.MessageDigest digest]
+  (^DigestInputStream [^java.io.InputStream stream ^java.security.MessageDigest digest]
     (new DigestInputStream stream digest)))
 
 (defn get-message-digest
   "Returns the message digest associated with this stream.
 
   returns: the message digest associated with this stream. - `java.security.MessageDigest`"
-  (^java.security.MessageDigest [^java.security.DigestInputStream this]
+  (^java.security.MessageDigest [^DigestInputStream this]
     (-> this (.getMessageDigest))))
 
 (defn set-message-digest
   "Associates the specified message digest with this stream.
 
   digest - the message digest to be associated with this stream. - `java.security.MessageDigest`"
-  ([^java.security.DigestInputStream this ^java.security.MessageDigest digest]
+  ([^DigestInputStream this ^java.security.MessageDigest digest]
     (-> this (.setMessageDigest digest))))
 
 (defn read
@@ -69,9 +69,9 @@
    the call was made. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Integer [^java.security.DigestInputStream this b ^Integer off ^Integer len]
+  (^Integer [^DigestInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^java.security.DigestInputStream this]
+  (^Integer [^DigestInputStream this]
     (-> this (.read))))
 
 (defn on
@@ -81,7 +81,7 @@
    digest is not updated.
 
   on - true to turn the digest function on, false to turn it off. - `boolean`"
-  ([^java.security.DigestInputStream this ^Boolean on]
+  ([^DigestInputStream this ^Boolean on]
     (-> this (.on on))))
 
 (defn to-string
@@ -89,6 +89,6 @@
    its associated message digest object.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.security.DigestInputStream this]
+  (^java.lang.String [^DigestInputStream this]
     (-> this (.toString))))
 

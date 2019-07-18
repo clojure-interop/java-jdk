@@ -35,9 +35,9 @@
   returns: the updated name (not a new one) - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if posn is outside the specified range"
-  (^javax.naming.Name [^javax.naming.Name this ^Integer posn ^javax.naming.Name n]
+  (^javax.naming.Name [^Name this ^Integer posn ^javax.naming.Name n]
     (-> this (.addAll posn n)))
-  (^javax.naming.Name [^javax.naming.Name this ^javax.naming.Name suffix]
+  (^javax.naming.Name [^Name this ^javax.naming.Name suffix]
     (-> this (.addAll suffix))))
 
 (defn ends-with
@@ -48,7 +48,7 @@
   n - the name to check - `javax.naming.Name`
 
   returns: true if n is a suffix of this name, false otherwise - `boolean`"
-  (^Boolean [^javax.naming.Name this ^javax.naming.Name n]
+  (^Boolean [^Name this ^javax.naming.Name n]
     (-> this (.endsWith n))))
 
 (defn get-suffix
@@ -63,7 +63,7 @@
             size(), an empty name is returned. - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if posn is outside the specified range"
-  (^javax.naming.Name [^javax.naming.Name this ^Integer posn]
+  (^javax.naming.Name [^Name this ^Integer posn]
     (-> this (.getSuffix posn))))
 
 (defn get-all
@@ -73,7 +73,7 @@
    an empty (non-null) enumeration is returned.
 
   returns: an enumeration of the components of this name, each a string - `java.util.Enumeration<java.lang.String>`"
-  (^java.util.Enumeration [^javax.naming.Name this]
+  (^java.util.Enumeration [^Name this]
     (-> this (.getAll))))
 
 (defn remove
@@ -87,7 +87,7 @@
   returns: the component removed (a String) - `java.lang.Object`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if posn is outside the specified range"
-  (^java.lang.Object [^javax.naming.Name this ^Integer posn]
+  (^java.lang.Object [^Name this ^Integer posn]
     (-> this (.remove posn))))
 
 (defn starts-with
@@ -98,7 +98,7 @@
   n - the name to check - `javax.naming.Name`
 
   returns: true if n is a prefix of this name, false otherwise - `boolean`"
-  (^Boolean [^javax.naming.Name this ^javax.naming.Name n]
+  (^Boolean [^Name this ^javax.naming.Name n]
     (-> this (.startsWith n))))
 
 (defn clone
@@ -107,7 +107,7 @@
    affect the new copy, and vice versa.
 
   returns: a copy of this name - `java.lang.Object`"
-  (^java.lang.Object [^javax.naming.Name this]
+  (^java.lang.Object [^Name this]
     (-> this (.clone))))
 
 (defn add
@@ -122,9 +122,9 @@
   returns: the updated name (not a new one) - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if posn is outside the specified range"
-  (^javax.naming.Name [^javax.naming.Name this ^Integer posn ^java.lang.String comp]
+  (^javax.naming.Name [^Name this ^Integer posn ^java.lang.String comp]
     (-> this (.add posn comp)))
-  (^javax.naming.Name [^javax.naming.Name this ^java.lang.String comp]
+  (^javax.naming.Name [^Name this ^java.lang.String comp]
     (-> this (.add comp))))
 
 (defn empty?
@@ -132,14 +132,14 @@
    An empty name is one with zero components.
 
   returns: true if this name is empty, false otherwise - `boolean`"
-  (^Boolean [^javax.naming.Name this]
+  (^Boolean [^Name this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of components in this name.
 
   returns: the number of components in this name - `int`"
-  (^Integer [^javax.naming.Name this]
+  (^Integer [^Name this]
     (-> this (.size))))
 
 (defn compare-to
@@ -161,7 +161,7 @@
             is less than, equal to, or greater than the given name - `int`
 
   throws: java.lang.ClassCastException - if obj is not a Name of a type that may be compared with this name"
-  (^Integer [^javax.naming.Name this ^java.lang.Object obj]
+  (^Integer [^Name this ^java.lang.Object obj]
     (-> this (.compareTo obj))))
 
 (defn get-prefix
@@ -175,7 +175,7 @@
             the range [0,posn). - `javax.naming.Name`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if posn is outside the specified range"
-  (^javax.naming.Name [^javax.naming.Name this ^Integer posn]
+  (^javax.naming.Name [^Name this ^Integer posn]
     (-> this (.getPrefix posn))))
 
 (defn get
@@ -186,6 +186,6 @@
   returns: the component at index posn - `java.lang.String`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if posn is outside the specified range"
-  (^java.lang.String [^javax.naming.Name this ^Integer posn]
+  (^java.lang.String [^Name this ^Integer posn]
     (-> this (.get posn))))
 

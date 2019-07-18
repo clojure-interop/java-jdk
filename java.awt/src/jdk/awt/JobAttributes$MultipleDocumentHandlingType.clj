@@ -11,7 +11,7 @@
   The MultipleDocumentHandlingType instance to use for specifying
    that the job should be divided into separate, collated copies.
 
-  type: java.awt.JobAttributes.MultipleDocumentHandlingType"
+  type: java.awt.JobAttributes$MultipleDocumentHandlingType"
   JobAttributes$MultipleDocumentHandlingType/SEPARATE_DOCUMENTS_COLLATED_COPIES)
 
 (def *-separate-documents-uncollated-copies
@@ -20,20 +20,20 @@
   The MultipleDocumentHandlingType instance to use for specifying
    that the job should be divided into separate, uncollated copies.
 
-  type: java.awt.JobAttributes.MultipleDocumentHandlingType"
+  type: java.awt.JobAttributes$MultipleDocumentHandlingType"
   JobAttributes$MultipleDocumentHandlingType/SEPARATE_DOCUMENTS_UNCOLLATED_COPIES)
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.JobAttributes$MultipleDocumentHandlingType this]
+  (^Integer [^JobAttributes$MultipleDocumentHandlingType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.JobAttributes$MultipleDocumentHandlingType this]
+  (^java.lang.String [^JobAttributes$MultipleDocumentHandlingType this]
     (-> this (.toString))))
 

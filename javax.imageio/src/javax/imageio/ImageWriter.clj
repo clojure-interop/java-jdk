@@ -18,7 +18,7 @@
     The default implementation sets the
    warningListeners and warningLocales
    instance variables to null."
-  ([^javax.imageio.ImageWriter this]
+  ([^ImageWriter this]
     (-> this (.removeAllIIOWriteWarningListeners))))
 
 (defn replace-stream-metadata
@@ -41,7 +41,7 @@
   stream-metadata - an IIOMetadata object representing stream metadata, or null to use default values. - `javax.imageio.metadata.IIOMetadata`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  ([^javax.imageio.ImageWriter this ^javax.imageio.metadata.IIOMetadata stream-metadata]
+  ([^ImageWriter this ^javax.imageio.metadata.IIOMetadata stream-metadata]
     (-> this (.replaceStreamMetadata stream-metadata))))
 
 (defn prepare-write-sequence
@@ -75,7 +75,7 @@
   stream-metadata - A stream metadata object, or null. - `javax.imageio.metadata.IIOMetadata`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  ([^javax.imageio.ImageWriter this ^javax.imageio.metadata.IIOMetadata stream-metadata]
+  ([^ImageWriter this ^javax.imageio.metadata.IIOMetadata stream-metadata]
     (-> this (.prepareWriteSequence stream-metadata))))
 
 (defn can-insert-empty?
@@ -103,7 +103,7 @@
    the given index. - `boolean`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  (^Boolean [^javax.imageio.ImageWriter this ^Integer image-index]
+  (^Boolean [^ImageWriter this ^Integer image-index]
     (-> this (.canInsertEmpty image-index))))
 
 (defn can-write-rasters?
@@ -119,7 +119,7 @@
 
   returns: true if Raster sources are
    supported. - `boolean`"
-  (^Boolean [^javax.imageio.ImageWriter this]
+  (^Boolean [^ImageWriter this]
     (-> this (.canWriteRasters))))
 
 (defn get-default-image-metadata
@@ -145,7 +145,7 @@
   param - an ImageWriteParam that will be used to encode the image, or null. - `javax.imageio.ImageWriteParam`
 
   returns: an IIOMetadata object. - `javax.imageio.metadata.IIOMetadata`"
-  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.ImageWriter this ^javax.imageio.ImageTypeSpecifier image-type ^javax.imageio.ImageWriteParam param]
+  (^javax.imageio.metadata.IIOMetadata [^ImageWriter this ^javax.imageio.ImageTypeSpecifier image-type ^javax.imageio.ImageWriteParam param]
     (-> this (.getDefaultImageMetadata image-type param))))
 
 (defn add-iio-write-warning-listener
@@ -158,7 +158,7 @@
    warning messages may be localized as the writer sees fit.
 
   listener - an IIOWriteWarningListener to be registered. - `javax.imageio.event.IIOWriteWarningListener`"
-  ([^javax.imageio.ImageWriter this ^javax.imageio.event.IIOWriteWarningListener listener]
+  ([^ImageWriter this ^javax.imageio.event.IIOWriteWarningListener listener]
     (-> this (.addIIOWriteWarningListener listener))))
 
 (defn remove-iio-write-progress-listener
@@ -169,7 +169,7 @@
    will be taken.
 
   listener - an IIOWriteProgressListener to be deregistered. - `javax.imageio.event.IIOWriteProgressListener`"
-  ([^javax.imageio.ImageWriter this ^javax.imageio.event.IIOWriteProgressListener listener]
+  ([^ImageWriter this ^javax.imageio.event.IIOWriteProgressListener listener]
     (-> this (.removeIIOWriteProgressListener listener))))
 
 (defn set-output
@@ -211,7 +211,7 @@
   output - the ImageOutputStream or other Object to use for future writing. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if output is not an instance of one of the classes returned by the originating service provider's getOutputTypes method."
-  ([^javax.imageio.ImageWriter this ^java.lang.Object output]
+  ([^ImageWriter this ^java.lang.Object output]
     (-> this (.setOutput output))))
 
 (defn prepare-write-empty
@@ -254,11 +254,11 @@
   width - the width of the image. - `int`
   height - the height of the image. - `int`
   image-metadata - an IIOMetadata object representing image metadata, or null. - `javax.imageio.metadata.IIOMetadata`
-  thumbnails - a List of BufferedImage thumbnails for this image, or null. - `java.awt.image.BufferedImage>`
+  thumbnails - a List of BufferedImage thumbnails for this image, or null. - `java.util.List`
   param - an ImageWriteParam, or null to use a default ImageWriteParam. - `javax.imageio.ImageWriteParam`
 
   throws: java.lang.IllegalStateException - if a previous call to prepareInsertEmpty has been made without a corresponding call to endInsertEmpty."
-  ([^javax.imageio.ImageWriter this ^javax.imageio.metadata.IIOMetadata stream-metadata ^javax.imageio.ImageTypeSpecifier image-type ^Integer width ^Integer height ^javax.imageio.metadata.IIOMetadata image-metadata ^java.awt.image.BufferedImage> thumbnails ^javax.imageio.ImageWriteParam param]
+  ([^ImageWriter this ^javax.imageio.metadata.IIOMetadata stream-metadata ^javax.imageio.ImageTypeSpecifier image-type ^Integer width ^Integer height ^javax.imageio.metadata.IIOMetadata image-metadata ^java.util.List thumbnails ^javax.imageio.ImageWriteParam param]
     (-> this (.prepareWriteEmpty stream-metadata image-type width height image-metadata thumbnails param))))
 
 (defn dispose
@@ -275,7 +275,7 @@
    The default implementation of this method in the superclass does
    nothing.  Subclass implementations should ensure that all resources,
    especially native resources, are released."
-  ([^javax.imageio.ImageWriter this]
+  ([^ImageWriter this]
     (-> this (.dispose))))
 
 (defn get-default-stream-metadata
@@ -304,7 +304,7 @@
   param - an ImageWriteParam that will be used to encode the image, or null. - `javax.imageio.ImageWriteParam`
 
   returns: an IIOMetadata object. - `javax.imageio.metadata.IIOMetadata`"
-  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.ImageWriter this ^javax.imageio.ImageWriteParam param]
+  (^javax.imageio.metadata.IIOMetadata [^ImageWriter this ^javax.imageio.ImageWriteParam param]
     (-> this (.getDefaultStreamMetadata param))))
 
 (defn end-write-sequence
@@ -327,7 +327,7 @@
    UnsupportedOperationException.
 
   throws: java.lang.IllegalStateException - if the output has not been set, or prepareWriteSequence has not been called."
-  ([^javax.imageio.ImageWriter this]
+  ([^ImageWriter this]
     (-> this (.endWriteSequence))))
 
 (defn get-locale
@@ -338,7 +338,7 @@
    locale instance variable.
 
   returns: the current Locale, or null. - `java.util.Locale`"
-  (^java.util.Locale [^javax.imageio.ImageWriter this]
+  (^java.util.Locale [^ImageWriter this]
     (-> this (.getLocale))))
 
 (defn prepare-insert-empty
@@ -387,11 +387,11 @@
   width - the width of the image. - `int`
   height - the height of the image. - `int`
   image-metadata - an IIOMetadata object representing image metadata, or null. - `javax.imageio.metadata.IIOMetadata`
-  thumbnails - a List of BufferedImage thumbnails for this image, or null. - `java.awt.image.BufferedImage>`
+  thumbnails - a List of BufferedImage thumbnails for this image, or null. - `java.util.List`
   param - an ImageWriteParam, or null to use a default ImageWriteParam. - `javax.imageio.ImageWriteParam`
 
   throws: java.lang.IllegalStateException - if a previous call to prepareWriteEmpty has been made without a corresponding call to endWriteEmpty."
-  ([^javax.imageio.ImageWriter this ^Integer image-index ^javax.imageio.ImageTypeSpecifier image-type ^Integer width ^Integer height ^javax.imageio.metadata.IIOMetadata image-metadata ^java.awt.image.BufferedImage> thumbnails ^javax.imageio.ImageWriteParam param]
+  ([^ImageWriter this ^Integer image-index ^javax.imageio.ImageTypeSpecifier image-type ^Integer width ^Integer height ^javax.imageio.metadata.IIOMetadata image-metadata ^java.util.List thumbnails ^javax.imageio.ImageWriteParam param]
     (-> this (.prepareInsertEmpty image-index image-type width height image-metadata thumbnails param))))
 
 (defn reset
@@ -402,7 +402,7 @@
    removeAllIIOWriteWarningListeners(),
    removeAllIIOWriteProgressListeners(), and
    clearAbortRequest."
-  ([^javax.imageio.ImageWriter this]
+  ([^ImageWriter this]
     (-> this (.reset))))
 
 (defn add-iio-write-progress-listener
@@ -412,7 +412,7 @@
    will be taken.
 
   listener - an IIOWriteProgressListener to be registered. - `javax.imageio.event.IIOWriteProgressListener`"
-  ([^javax.imageio.ImageWriter this ^javax.imageio.event.IIOWriteProgressListener listener]
+  ([^ImageWriter this ^javax.imageio.event.IIOWriteProgressListener listener]
     (-> this (.addIIOWriteProgressListener listener))))
 
 (defn can-write-empty?
@@ -433,7 +433,7 @@
    stream with contents to be defined later is supported. - `boolean`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  (^Boolean [^javax.imageio.ImageWriter this]
+  (^Boolean [^ImageWriter this]
     (-> this (.canWriteEmpty))))
 
 (defn can-replace-stream-metadata?
@@ -448,7 +448,7 @@
    allowed. - `boolean`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  (^Boolean [^javax.imageio.ImageWriter this]
+  (^Boolean [^ImageWriter this]
     (-> this (.canReplaceStreamMetadata))))
 
 (defn remove-image
@@ -468,7 +468,7 @@
   image-index - the index of the image to be removed. - `int`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  ([^javax.imageio.ImageWriter this ^Integer image-index]
+  ([^ImageWriter this ^Integer image-index]
     (-> this (.removeImage image-index))))
 
 (defn can-replace-pixels?
@@ -491,7 +491,7 @@
    image can be replaced. - `boolean`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  (^Boolean [^javax.imageio.ImageWriter this ^Integer image-index]
+  (^Boolean [^ImageWriter this ^Integer image-index]
     (-> this (.canReplacePixels image-index))))
 
 (defn remove-all-iio-write-progress-listeners
@@ -501,7 +501,7 @@
     The default implementation sets the
    progressListeners instance variable to
    null."
-  ([^javax.imageio.ImageWriter this]
+  ([^ImageWriter this]
     (-> this (.removeAllIIOWriteProgressListeners))))
 
 (defn convert-stream-metadata
@@ -513,7 +513,7 @@
   returns: an IIOMetadata object, or
    null if the plug-in does not provide metadata
    encoding capabilities. - `javax.imageio.metadata.IIOMetadata`"
-  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.ImageWriter this ^javax.imageio.metadata.IIOMetadata in-data ^javax.imageio.ImageWriteParam param]
+  (^javax.imageio.metadata.IIOMetadata [^ImageWriter this ^javax.imageio.metadata.IIOMetadata in-data ^javax.imageio.ImageWriteParam param]
     (-> this (.convertStreamMetadata in-data param))))
 
 (defn get-originating-provider
@@ -525,7 +525,7 @@
    originatingProvider instance variable.
 
   returns: an ImageWriterSpi, or null. - `javax.imageio.spi.ImageWriterSpi`"
-  (^javax.imageio.spi.ImageWriterSpi [^javax.imageio.ImageWriter this]
+  (^javax.imageio.spi.ImageWriterSpi [^ImageWriter this]
     (-> this (.getOriginatingProvider))))
 
 (defn get-default-write-param
@@ -550,7 +550,7 @@
 
   returns: a new ImageWriteParam object containing
    default values. - `javax.imageio.ImageWriteParam`"
-  (^javax.imageio.ImageWriteParam [^javax.imageio.ImageWriter this]
+  (^javax.imageio.ImageWriteParam [^ImageWriter this]
     (-> this (.getDefaultWriteParam))))
 
 (defn end-replace-pixels
@@ -566,7 +566,7 @@
    UnsupportedOperationException.
 
   throws: java.lang.IllegalStateException - if there is no previous call to prepareReplacePixels without a matching call to endReplacePixels."
-  ([^javax.imageio.ImageWriter this]
+  ([^ImageWriter this]
     (-> this (.endReplacePixels))))
 
 (defn end-insert-empty
@@ -579,7 +579,7 @@
    UnsupportedOperationException.
 
   throws: java.lang.IllegalStateException - if a call to prepareReplacePixels has been made without a matching call to endReplacePixels."
-  ([^javax.imageio.ImageWriter this]
+  ([^ImageWriter this]
     (-> this (.endInsertEmpty))))
 
 (defn can-remove-image?
@@ -603,7 +603,7 @@
    image. - `boolean`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  (^Boolean [^javax.imageio.ImageWriter this ^Integer image-index]
+  (^Boolean [^ImageWriter this ^Integer image-index]
     (-> this (.canRemoveImage image-index))))
 
 (defn prepare-replace-pixels
@@ -624,7 +624,7 @@
   region - a Rectangle that will be used to clip future pixel regions. - `java.awt.Rectangle`
 
   throws: java.lang.IllegalStateException - if there is a previous call to prepareReplacePixels without a matching call to endReplacePixels (i.e., nesting is not allowed)."
-  ([^javax.imageio.ImageWriter this ^Integer image-index ^java.awt.Rectangle region]
+  ([^ImageWriter this ^Integer image-index ^java.awt.Rectangle region]
     (-> this (.prepareReplacePixels image-index region))))
 
 (defn can-insert-image?
@@ -650,7 +650,7 @@
    given index. - `boolean`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  (^Boolean [^javax.imageio.ImageWriter this ^Integer image-index]
+  (^Boolean [^ImageWriter this ^Integer image-index]
     (-> this (.canInsertImage image-index))))
 
 (defn get-available-locales
@@ -665,7 +665,7 @@
 
   returns: an array of Locales that may be used as
    arguments to setLocale, or null. - `java.util.Locale[]`"
-  ([^javax.imageio.ImageWriter this]
+  ([^ImageWriter this]
     (-> this (.getAvailableLocales))))
 
 (defn set-locale
@@ -684,7 +684,7 @@
   locale - the desired Locale, or null. - `java.util.Locale`
 
   throws: java.lang.IllegalArgumentException - if locale is non-null but is not one of the values returned by getAvailableLocales."
-  ([^javax.imageio.ImageWriter this ^java.util.Locale locale]
+  ([^ImageWriter this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn get-num-thumbnails-supported
@@ -712,7 +712,7 @@
   returns: the number of thumbnails that may be written given the
    supplied parameters, or -1 if insufficient
    information is available. - `int`"
-  (^Integer [^javax.imageio.ImageWriter this ^javax.imageio.ImageTypeSpecifier image-type ^javax.imageio.ImageWriteParam param ^javax.imageio.metadata.IIOMetadata stream-metadata ^javax.imageio.metadata.IIOMetadata image-metadata]
+  (^Integer [^ImageWriter this ^javax.imageio.ImageTypeSpecifier image-type ^javax.imageio.ImageWriteParam param ^javax.imageio.metadata.IIOMetadata stream-metadata ^javax.imageio.metadata.IIOMetadata image-metadata]
     (-> this (.getNumThumbnailsSupported image-type param stream-metadata image-metadata))))
 
 (defn convert-image-metadata
@@ -725,7 +725,7 @@
   returns: an IIOMetadata object,
    or null if the plug-in does not provide
    metadata encoding capabilities. - `javax.imageio.metadata.IIOMetadata`"
-  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.ImageWriter this ^javax.imageio.metadata.IIOMetadata in-data ^javax.imageio.ImageTypeSpecifier image-type ^javax.imageio.ImageWriteParam param]
+  (^javax.imageio.metadata.IIOMetadata [^ImageWriter this ^javax.imageio.metadata.IIOMetadata in-data ^javax.imageio.ImageTypeSpecifier image-type ^javax.imageio.ImageWriteParam param]
     (-> this (.convertImageMetadata in-data image-type param))))
 
 (defn write-insert
@@ -761,7 +761,7 @@
   param - an ImageWriteParam, or null to use a default ImageWriteParam. - `javax.imageio.ImageWriteParam`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  ([^javax.imageio.ImageWriter this ^Integer image-index ^javax.imageio.IIOImage image ^javax.imageio.ImageWriteParam param]
+  ([^ImageWriter this ^Integer image-index ^javax.imageio.IIOImage image ^javax.imageio.ImageWriteParam param]
     (-> this (.writeInsert image-index image param))))
 
 (defn get-preferred-thumbnail-sizes
@@ -796,7 +796,7 @@
 
   returns: an array of Dimensions with an even length
    of at least two, or null. - `java.awt.Dimension[]`"
-  ([^javax.imageio.ImageWriter this ^javax.imageio.ImageTypeSpecifier image-type ^javax.imageio.ImageWriteParam param ^javax.imageio.metadata.IIOMetadata stream-metadata ^javax.imageio.metadata.IIOMetadata image-metadata]
+  ([^ImageWriter this ^javax.imageio.ImageTypeSpecifier image-type ^javax.imageio.ImageWriteParam param ^javax.imageio.metadata.IIOMetadata stream-metadata ^javax.imageio.metadata.IIOMetadata image-metadata]
     (-> this (.getPreferredThumbnailSizes image-type param stream-metadata image-metadata))))
 
 (defn end-write-empty
@@ -812,7 +812,7 @@
    UnsupportedOperationException.
 
   throws: java.lang.IllegalStateException - if a call to prepareReiplacePixels has been made without a matching call to endReplacePixels."
-  ([^javax.imageio.ImageWriter this]
+  ([^ImageWriter this]
     (-> this (.endWriteEmpty))))
 
 (defn replace-image-metadata
@@ -831,7 +831,7 @@
   image-metadata - an IIOMetadata object representing image metadata, or null. - `javax.imageio.metadata.IIOMetadata`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  ([^javax.imageio.ImageWriter this ^Integer image-index ^javax.imageio.metadata.IIOMetadata image-metadata]
+  ([^ImageWriter this ^Integer image-index ^javax.imageio.metadata.IIOMetadata image-metadata]
     (-> this (.replaceImageMetadata image-index image-metadata))))
 
 (defn can-write-sequence?
@@ -846,7 +846,7 @@
     The default implementation returns false.
 
   returns: true if images may be appended sequentially. - `boolean`"
-  (^Boolean [^javax.imageio.ImageWriter this]
+  (^Boolean [^ImageWriter this]
     (-> this (.canWriteSequence))))
 
 (defn abort
@@ -856,7 +856,7 @@
     Writers should call clearAbortRequest at the
    beginning of each write operation, and poll the value of
    abortRequested regularly during the write."
-  ([^javax.imageio.ImageWriter this]
+  ([^ImageWriter this]
     (-> this (.abort))))
 
 (defn get-output
@@ -870,7 +870,7 @@
 
   returns: the Object that was specified using
    setOutput, or null. - `java.lang.Object`"
-  (^java.lang.Object [^javax.imageio.ImageWriter this]
+  (^java.lang.Object [^ImageWriter this]
     (-> this (.getOutput))))
 
 (defn replace-pixels
@@ -906,7 +906,7 @@
   param - an ImageWriteParam, or null to use a default ImageWriteParam. - `javax.imageio.ImageWriteParam`
 
   throws: java.lang.IllegalStateException - if there is no previous call to prepareReplacePixels without a matching call to endReplacePixels."
-  ([^javax.imageio.ImageWriter this ^java.awt.image.RenderedImage image ^javax.imageio.ImageWriteParam param]
+  ([^ImageWriter this ^java.awt.image.RenderedImage image ^javax.imageio.ImageWriteParam param]
     (-> this (.replacePixels image param))))
 
 (defn write
@@ -948,9 +948,9 @@
   param - an ImageWriteParam, or null to use a default ImageWriteParam. - `javax.imageio.ImageWriteParam`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  ([^javax.imageio.ImageWriter this ^javax.imageio.metadata.IIOMetadata stream-metadata ^javax.imageio.IIOImage image ^javax.imageio.ImageWriteParam param]
+  ([^ImageWriter this ^javax.imageio.metadata.IIOMetadata stream-metadata ^javax.imageio.IIOImage image ^javax.imageio.ImageWriteParam param]
     (-> this (.write stream-metadata image param)))
-  ([^javax.imageio.ImageWriter this ^javax.imageio.IIOImage image]
+  ([^ImageWriter this ^javax.imageio.IIOImage image]
     (-> this (.write image))))
 
 (defn remove-iio-write-warning-listener
@@ -961,7 +961,7 @@
    will be taken.
 
   listener - an IIOWriteWarningListener to be deregistered. - `javax.imageio.event.IIOWriteWarningListener`"
-  ([^javax.imageio.ImageWriter this ^javax.imageio.event.IIOWriteWarningListener listener]
+  ([^ImageWriter this ^javax.imageio.event.IIOWriteWarningListener listener]
     (-> this (.removeIIOWriteWarningListener listener))))
 
 (defn can-replace-image-metadata?
@@ -987,7 +987,7 @@
    image can be replaced. - `boolean`
 
   throws: java.lang.IllegalStateException - if the output has not been set."
-  (^Boolean [^javax.imageio.ImageWriter this ^Integer image-index]
+  (^Boolean [^ImageWriter this ^Integer image-index]
     (-> this (.canReplaceImageMetadata image-index))))
 
 (defn write-to-sequence
@@ -1037,6 +1037,6 @@
   param - an ImageWriteParam, or null to use a default ImageWriteParam. - `javax.imageio.ImageWriteParam`
 
   throws: java.lang.IllegalStateException - if the output has not been set, or prepareWriteSequence has not been called."
-  ([^javax.imageio.ImageWriter this ^javax.imageio.IIOImage image ^javax.imageio.ImageWriteParam param]
+  ([^ImageWriter this ^javax.imageio.IIOImage image ^javax.imageio.ImageWriteParam param]
     (-> this (.writeToSequence image param))))
 

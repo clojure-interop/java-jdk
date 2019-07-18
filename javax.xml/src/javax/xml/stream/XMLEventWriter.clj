@@ -10,14 +10,14 @@
   "Writes any cached events to the underlying output mechanism
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLEventWriter this]
+  ([^XMLEventWriter this]
     (-> this (.flush))))
 
 (defn close
   "Frees any resources associated with this stream
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLEventWriter this]
+  ([^XMLEventWriter this]
     (-> this (.close))))
 
 (defn add
@@ -144,7 +144,7 @@
   event - the event to be added - `javax.xml.stream.events.XMLEvent`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLEventWriter this ^javax.xml.stream.events.XMLEvent event]
+  ([^XMLEventWriter this ^javax.xml.stream.events.XMLEvent event]
     (-> this (.add event))))
 
 (defn get-prefix
@@ -155,7 +155,7 @@
   returns: `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  (^java.lang.String [^javax.xml.stream.XMLEventWriter this ^java.lang.String uri]
+  (^java.lang.String [^XMLEventWriter this ^java.lang.String uri]
     (-> this (.getPrefix uri))))
 
 (defn set-prefix
@@ -168,7 +168,7 @@
   uri - the uri to bind to the prefix - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLEventWriter this ^java.lang.String prefix ^java.lang.String uri]
+  ([^XMLEventWriter this ^java.lang.String prefix ^java.lang.String uri]
     (-> this (.setPrefix prefix uri))))
 
 (defn set-default-namespace
@@ -181,7 +181,7 @@
   uri - the uri to bind to the default namespace - `java.lang.String`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLEventWriter this ^java.lang.String uri]
+  ([^XMLEventWriter this ^java.lang.String uri]
     (-> this (.setDefaultNamespace uri))))
 
 (defn set-namespace-context
@@ -195,13 +195,13 @@
   context - the namespace context to use for this writer - `javax.xml.namespace.NamespaceContext`
 
   throws: javax.xml.stream.XMLStreamException"
-  ([^javax.xml.stream.XMLEventWriter this ^javax.xml.namespace.NamespaceContext context]
+  ([^XMLEventWriter this ^javax.xml.namespace.NamespaceContext context]
     (-> this (.setNamespaceContext context))))
 
 (defn get-namespace-context
   "Returns the current namespace context.
 
   returns: the current namespace context - `javax.xml.namespace.NamespaceContext`"
-  (^javax.xml.namespace.NamespaceContext [^javax.xml.stream.XMLEventWriter this]
+  (^javax.xml.namespace.NamespaceContext [^XMLEventWriter this]
     (-> this (.getNamespaceContext))))
 

@@ -19,34 +19,34 @@
 
 (defn ->component-adapter
   "Constructor."
-  ([]
+  (^ComponentAdapter []
     (new ComponentAdapter )))
 
 (defn component-resized
   "Invoked when the component's size changes.
 
   e - `java.awt.event.ComponentEvent`"
-  ([^java.awt.event.ComponentAdapter this ^java.awt.event.ComponentEvent e]
+  ([^ComponentAdapter this ^java.awt.event.ComponentEvent e]
     (-> this (.componentResized e))))
 
 (defn component-moved
   "Invoked when the component's position changes.
 
   e - `java.awt.event.ComponentEvent`"
-  ([^java.awt.event.ComponentAdapter this ^java.awt.event.ComponentEvent e]
+  ([^ComponentAdapter this ^java.awt.event.ComponentEvent e]
     (-> this (.componentMoved e))))
 
 (defn component-shown
   "Invoked when the component has been made visible.
 
   e - `java.awt.event.ComponentEvent`"
-  ([^java.awt.event.ComponentAdapter this ^java.awt.event.ComponentEvent e]
+  ([^ComponentAdapter this ^java.awt.event.ComponentEvent e]
     (-> this (.componentShown e))))
 
 (defn component-hidden
   "Invoked when the component has been made invisible.
 
   e - `java.awt.event.ComponentEvent`"
-  ([^java.awt.event.ComponentAdapter this ^java.awt.event.ComponentEvent e]
+  ([^ComponentAdapter this ^java.awt.event.ComponentEvent e]
     (-> this (.componentHidden e))))
 

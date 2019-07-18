@@ -48,13 +48,13 @@
    complete the close operation.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.nio.channels.spi.AbstractInterruptibleChannel this]
+  ([^AbstractInterruptibleChannel this]
     (-> this (.close))))
 
 (defn open?
   "Description copied from interface: Channel
 
   returns: true if, and only if, this channel is open - `boolean`"
-  (^Boolean [^java.nio.channels.spi.AbstractInterruptibleChannel this]
+  (^Boolean [^AbstractInterruptibleChannel this]
     (-> this (.isOpen))))
 

@@ -9,7 +9,7 @@
   "Constructor.
 
   Deprecated."
-  ([]
+  (^AccessibleResourceBundle []
     (new AccessibleResourceBundle )))
 
 (defn get-contents
@@ -17,6 +17,6 @@
 
   returns: an array of an Object array representing a
    key-value pair. - `java.lang.Object[][]`"
-  ([^javax.accessibility.AccessibleResourceBundle this]
+  ([^AccessibleResourceBundle this]
     (-> this (.getContents))))
 

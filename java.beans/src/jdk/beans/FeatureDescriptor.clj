@@ -14,7 +14,7 @@
   "Constructor.
 
   Constructs a FeatureDescriptor."
-  ([]
+  (^FeatureDescriptor []
     (new FeatureDescriptor )))
 
 (defn expert?
@@ -22,7 +22,7 @@
    intended for expert users from those that are intended for normal users.
 
   returns: True if this feature is intended for use by experts only. - `boolean`"
-  (^Boolean [^java.beans.FeatureDescriptor this]
+  (^Boolean [^FeatureDescriptor this]
     (-> this (.isExpert))))
 
 (defn attribute-names
@@ -31,7 +31,7 @@
 
   returns: An enumeration of the locale-independent names of any
       attributes that have been registered with setValue. - `java.util.Enumeration<java.lang.String>`"
-  (^java.util.Enumeration [^java.beans.FeatureDescriptor this]
+  (^java.util.Enumeration [^FeatureDescriptor this]
     (-> this (.attributeNames))))
 
 (defn set-preferred
@@ -39,28 +39,28 @@
    important for presenting to humans.
 
   preferred - True if this feature should be preferentially shown to human users. - `boolean`"
-  ([^java.beans.FeatureDescriptor this ^Boolean preferred]
+  ([^FeatureDescriptor this ^Boolean preferred]
     (-> this (.setPreferred preferred))))
 
 (defn set-display-name
   "Sets the localized display name of this feature.
 
   display-name - The localized display name for the property/method/event. - `java.lang.String`"
-  ([^java.beans.FeatureDescriptor this ^java.lang.String display-name]
+  ([^FeatureDescriptor this ^java.lang.String display-name]
     (-> this (.setDisplayName display-name))))
 
 (defn set-name
   "Sets the programmatic name of this feature.
 
   name - The programmatic name of the property/method/event - `java.lang.String`"
-  ([^java.beans.FeatureDescriptor this ^java.lang.String name]
+  ([^FeatureDescriptor this ^java.lang.String name]
     (-> this (.setName name))))
 
 (defn to-string
   "Returns a string representation of the object.
 
   returns: a string representation of the object - `java.lang.String`"
-  (^java.lang.String [^java.beans.FeatureDescriptor this]
+  (^java.lang.String [^FeatureDescriptor this]
     (-> this (.toString))))
 
 (defn get-display-name
@@ -68,7 +68,7 @@
 
   returns: The localized display name for the property/method/event.
     This defaults to the same as its programmatic name from getName. - `java.lang.String`"
-  (^java.lang.String [^java.beans.FeatureDescriptor this]
+  (^java.lang.String [^FeatureDescriptor this]
     (-> this (.getDisplayName))))
 
 (defn get-value
@@ -78,7 +78,7 @@
 
   returns: The value of the attribute.  May be null if
        the attribute is unknown. - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.FeatureDescriptor this ^java.lang.String attribute-name]
+  (^java.lang.Object [^FeatureDescriptor this ^java.lang.String attribute-name]
     (-> this (.getValue attribute-name))))
 
 (defn set-expert
@@ -86,7 +86,7 @@
    intended for expert users from those that are intended for normal users.
 
   expert - True if this feature is intended for use by experts only. - `boolean`"
-  ([^java.beans.FeatureDescriptor this ^Boolean expert]
+  ([^FeatureDescriptor this ^Boolean expert]
     (-> this (.setExpert expert))))
 
 (defn get-short-description
@@ -94,14 +94,14 @@
 
   returns: A localized short description associated with this
      property/method/event.  This defaults to be the display name. - `java.lang.String`"
-  (^java.lang.String [^java.beans.FeatureDescriptor this]
+  (^java.lang.String [^FeatureDescriptor this]
     (-> this (.getShortDescription))))
 
 (defn get-name
   "Gets the programmatic name of this feature.
 
   returns: The programmatic name of the property/method/event - `java.lang.String`"
-  (^java.lang.String [^java.beans.FeatureDescriptor this]
+  (^java.lang.String [^FeatureDescriptor this]
     (-> this (.getName))))
 
 (defn set-hidden
@@ -109,7 +109,7 @@
    for tool use, and which should not be exposed to humans.
 
   hidden - True if this feature should be hidden from human users. - `boolean`"
-  ([^java.beans.FeatureDescriptor this ^Boolean hidden]
+  ([^FeatureDescriptor this ^Boolean hidden]
     (-> this (.setHidden hidden))))
 
 (defn hidden?
@@ -117,7 +117,7 @@
    for tool use, and which should not be exposed to humans.
 
   returns: True if this feature should be hidden from human users. - `boolean`"
-  (^Boolean [^java.beans.FeatureDescriptor this]
+  (^Boolean [^FeatureDescriptor this]
     (-> this (.isHidden))))
 
 (defn set-value
@@ -125,7 +125,7 @@
 
   attribute-name - The locale-independent name of the attribute - `java.lang.String`
   value - The value. - `java.lang.Object`"
-  ([^java.beans.FeatureDescriptor this ^java.lang.String attribute-name ^java.lang.Object value]
+  ([^FeatureDescriptor this ^java.lang.String attribute-name ^java.lang.Object value]
     (-> this (.setValue attribute-name value))))
 
 (defn preferred?
@@ -133,7 +133,7 @@
    important for presenting to humans.
 
   returns: True if this feature should be preferentially shown to human users. - `boolean`"
-  (^Boolean [^java.beans.FeatureDescriptor this]
+  (^Boolean [^FeatureDescriptor this]
     (-> this (.isPreferred))))
 
 (defn set-short-description
@@ -141,6 +141,6 @@
    these descriptive strings should be less than about 40 characters.
 
   text - A (localized) short description to be associated with this property/method/event. - `java.lang.String`"
-  ([^java.beans.FeatureDescriptor this ^java.lang.String text]
+  ([^FeatureDescriptor this ^java.lang.String text]
     (-> this (.setShortDescription text))))
 

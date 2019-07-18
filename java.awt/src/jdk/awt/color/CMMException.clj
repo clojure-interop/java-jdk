@@ -9,6 +9,6 @@
   Constructs a CMMException with the specified detail message.
 
   s - the specified detail message - `java.lang.String`"
-  ([^java.lang.String s]
+  (^CMMException [^java.lang.String s]
     (new CMMException s)))
 

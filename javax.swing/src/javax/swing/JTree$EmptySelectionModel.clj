@@ -16,8 +16,8 @@
 (defn *shared-instance
   "Returns the single instance of EmptySelectionModel.
 
-  returns: single instance of EmptySelectionModel - `javax.swing.JTree.EmptySelectionModel`"
-  (^javax.swing.JTree.EmptySelectionModel []
+  returns: single instance of EmptySelectionModel - `javax.swing.JTree$EmptySelectionModel`"
+  (^javax.swing.JTree$EmptySelectionModel []
     (JTree$EmptySelectionModel/sharedInstance )))
 
 (defn add-tree-selection-listener
@@ -25,7 +25,7 @@
    does not allow a selection.
 
   listener - the listener to add; this is ignored - `javax.swing.event.TreeSelectionListener`"
-  ([^javax.swing.JTree$EmptySelectionModel this ^javax.swing.event.TreeSelectionListener listener]
+  ([^JTree$EmptySelectionModel this ^javax.swing.event.TreeSelectionListener listener]
     (-> this (.addTreeSelectionListener listener))))
 
 (defn remove-tree-selection-listener
@@ -33,7 +33,7 @@
    does not allow a selection.
 
   listener - the listener to remove; this is ignored - `javax.swing.event.TreeSelectionListener`"
-  ([^javax.swing.JTree$EmptySelectionModel this ^javax.swing.event.TreeSelectionListener listener]
+  ([^JTree$EmptySelectionModel this ^javax.swing.event.TreeSelectionListener listener]
     (-> this (.removeTreeSelectionListener listener))))
 
 (defn add-selection-paths
@@ -41,7 +41,7 @@
    does not allow a selection.
 
   paths - the paths to add to the selection; this is ignored - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.JTree$EmptySelectionModel this paths]
+  ([^JTree$EmptySelectionModel this paths]
     (-> this (.addSelectionPaths paths))))
 
 (defn remove-property-change-listener
@@ -49,7 +49,7 @@
    does not allow a selection.
 
   listener - the listener to remove; this is ignored - `java.beans.PropertyChangeListener`"
-  ([^javax.swing.JTree$EmptySelectionModel this ^java.beans.PropertyChangeListener listener]
+  ([^JTree$EmptySelectionModel this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn add-property-change-listener
@@ -57,7 +57,7 @@
    does not allow a selection.
 
   listener - the listener to add; this is ignored - `java.beans.PropertyChangeListener`"
-  ([^javax.swing.JTree$EmptySelectionModel this ^java.beans.PropertyChangeListener listener]
+  ([^JTree$EmptySelectionModel this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn remove-selection-paths
@@ -65,7 +65,7 @@
    does not allow a selection.
 
   paths - the paths to remove; this is ignored - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.JTree$EmptySelectionModel this paths]
+  ([^JTree$EmptySelectionModel this paths]
     (-> this (.removeSelectionPaths paths))))
 
 (defn set-selection-mode
@@ -73,7 +73,7 @@
    does not allow a selection.
 
   mode - the selection mode; this is ignored - `int`"
-  ([^javax.swing.JTree$EmptySelectionModel this ^Integer mode]
+  ([^JTree$EmptySelectionModel this ^Integer mode]
     (-> this (.setSelectionMode mode))))
 
 (defn set-row-mapper
@@ -81,7 +81,7 @@
    does not allow a selection.
 
   mapper - the RowMapper instance; this is ignored - `javax.swing.tree.RowMapper`"
-  ([^javax.swing.JTree$EmptySelectionModel this ^javax.swing.tree.RowMapper mapper]
+  ([^JTree$EmptySelectionModel this ^javax.swing.tree.RowMapper mapper]
     (-> this (.setRowMapper mapper))))
 
 (defn set-selection-paths
@@ -89,6 +89,6 @@
    does not allow a selection.
 
   paths - the paths to select; this is ignored - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.JTree$EmptySelectionModel this paths]
+  ([^JTree$EmptySelectionModel this paths]
     (-> this (.setSelectionPaths paths))))
 

@@ -4,7 +4,7 @@
 
 (defn ->layered-highlighter
   "Constructor."
-  ([]
+  (^LayeredHighlighter []
     (new LayeredHighlighter )))
 
 (defn paint-layered-highlights
@@ -18,6 +18,6 @@
   view-bounds - Bounds of View - `java.awt.Shape`
   editor - JTextComponent - `javax.swing.text.JTextComponent`
   view - View instance being rendered - `javax.swing.text.View`"
-  ([^javax.swing.text.LayeredHighlighter this ^java.awt.Graphics g ^Integer p-0 ^Integer p-1 ^java.awt.Shape view-bounds ^javax.swing.text.JTextComponent editor ^javax.swing.text.View view]
+  ([^LayeredHighlighter this ^java.awt.Graphics g ^Integer p-0 ^Integer p-1 ^java.awt.Shape view-bounds ^javax.swing.text.JTextComponent editor ^javax.swing.text.View view]
     (-> this (.paintLayeredHighlights g p-0 p-1 view-bounds editor view))))
 

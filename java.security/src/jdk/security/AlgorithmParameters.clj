@@ -62,14 +62,14 @@
   "Returns the name of the algorithm associated with this parameter object.
 
   returns: the algorithm name. - `java.lang.String`"
-  (^java.lang.String [^java.security.AlgorithmParameters this]
+  (^java.lang.String [^AlgorithmParameters this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this parameter object.
 
   returns: the provider of this parameter object - `java.security.Provider`"
-  (^java.security.Provider [^java.security.AlgorithmParameters this]
+  (^java.security.Provider [^AlgorithmParameters this]
     (-> this (.getProvider))))
 
 (defn init
@@ -84,9 +84,9 @@
   format - the name of the decoding scheme. - `java.lang.String`
 
   throws: java.io.IOException - on decoding errors, or if this parameter object has already been initialized."
-  ([^java.security.AlgorithmParameters this params ^java.lang.String format]
+  ([^AlgorithmParameters this params ^java.lang.String format]
     (-> this (.init params format)))
-  ([^java.security.AlgorithmParameters this ^java.security.spec.AlgorithmParameterSpec param-spec]
+  ([^AlgorithmParameters this ^java.security.spec.AlgorithmParameterSpec param-spec]
     (-> this (.init param-spec))))
 
 (defn get-parameter-spec
@@ -97,12 +97,12 @@
    parameters should be returned in an instance of the
    DSAParameterSpec class.
 
-  param-spec - the specification class in which the parameters should be returned. - `java.lang.Class<T>`
+  param-spec - the specification class in which the parameters should be returned. - `java.lang.Class`
 
   returns: the parameter specification. - `<T extends java.security.spec.AlgorithmParameterSpec> T`
 
   throws: java.security.spec.InvalidParameterSpecException - if the requested parameter specification is inappropriate for this parameter object, or if this parameter object has not been initialized."
-  ([^java.security.AlgorithmParameters this ^java.lang.Class param-spec]
+  ([^AlgorithmParameters this ^java.lang.Class param-spec]
     (-> this (.getParameterSpec param-spec))))
 
 (defn get-encoded
@@ -117,9 +117,9 @@
   returns: the parameters encoded using the specified encoding scheme. - `byte[]`
 
   throws: java.io.IOException - on encoding errors, or if this parameter object has not been initialized."
-  ([^java.security.AlgorithmParameters this ^java.lang.String format]
+  ([^AlgorithmParameters this ^java.lang.String format]
     (-> this (.getEncoded format)))
-  ([^java.security.AlgorithmParameters this]
+  ([^AlgorithmParameters this]
     (-> this (.getEncoded))))
 
 (defn to-string
@@ -127,6 +127,6 @@
 
   returns: a formatted string describing the parameters, or null if this
    parameter object has not been initialized. - `java.lang.String`"
-  (^java.lang.String [^java.security.AlgorithmParameters this]
+  (^java.lang.String [^AlgorithmParameters this]
     (-> this (.toString))))
 

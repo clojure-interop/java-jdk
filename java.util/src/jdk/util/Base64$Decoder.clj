@@ -43,9 +43,9 @@
   returns: The number of bytes written to the output byte array - `int`
 
   throws: java.lang.IllegalArgumentException - if src is not in valid Base64 scheme, or dst does not have enough space for decoding all input bytes."
-  (^Integer [^java.util.Base64$Decoder this src dst]
+  (^Integer [^Base64$Decoder this src dst]
     (-> this (.decode src dst)))
-  ([^java.util.Base64$Decoder this src]
+  ([^Base64$Decoder this src]
     (-> this (.decode src))))
 
 (defn wrap
@@ -61,6 +61,6 @@
 
   returns: the input stream for decoding the specified Base64 encoded
             byte stream - `java.io.InputStream`"
-  (^java.io.InputStream [^java.util.Base64$Decoder this ^java.io.InputStream is]
+  (^java.io.InputStream [^Base64$Decoder this ^java.io.InputStream is]
     (-> this (.wrap is))))
 

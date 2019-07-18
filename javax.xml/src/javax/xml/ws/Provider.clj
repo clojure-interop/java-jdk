@@ -17,12 +17,12 @@
   "Invokes an operation occording to the contents of the request
     message.
 
-  request - The request message or message payload. - `Provider.T`
+  request - The request message or message payload. - `T`
 
   returns: The response message or message payload. May be null if
-                there is no response. - `Provider.T`
+                there is no response. - `T`
 
   throws: javax.xml.ws.WebServiceException - If there is an error processing request. The cause of the WebServiceException may be set to a subclass of ProtocolException to control the protocol level representation of the exception."
-  (^Provider.T [^javax.xml.ws.Provider this ^Provider.T request]
+  ([^Provider this request]
     (-> this (.invoke request))))
 

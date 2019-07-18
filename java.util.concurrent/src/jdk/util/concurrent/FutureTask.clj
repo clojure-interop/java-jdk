@@ -28,26 +28,26 @@
    given result on successful completion.
 
   runnable - the runnable task - `java.lang.Runnable`
-  result - the result to return on successful completion. If you don't need a particular result, consider using constructions of the form: Future<?> f = new FutureTask<Void>(runnable, null) - `FutureTask.V`
+  result - the result to return on successful completion. If you don't need a particular result, consider using constructions of the form: Future<?> f = new FutureTask<Void>(runnable, null) - `V`
 
   throws: java.lang.NullPointerException - if the runnable is null"
-  ([^java.lang.Runnable runnable ^FutureTask.V result]
+  (^FutureTask [^java.lang.Runnable runnable result]
     (new FutureTask runnable result))
-  ([^java.util.concurrent.Callable callable]
+  (^FutureTask [^java.util.concurrent.Callable callable]
     (new FutureTask callable)))
 
 (defn cancelled?
   "Description copied from interface: Future
 
   returns: true if this task was cancelled before it completed - `boolean`"
-  (^Boolean [^java.util.concurrent.FutureTask this]
+  (^Boolean [^FutureTask this]
     (-> this (.isCancelled))))
 
 (defn done?
   "Description copied from interface: Future
 
   returns: true if this task completed - `boolean`"
-  (^Boolean [^java.util.concurrent.FutureTask this]
+  (^Boolean [^FutureTask this]
     (-> this (.isDone))))
 
 (defn cancel
@@ -58,7 +58,7 @@
   returns: false if the task could not be cancelled,
    typically because it has already completed normally;
    true otherwise - `boolean`"
-  (^Boolean [^java.util.concurrent.FutureTask this ^Boolean may-interrupt-if-running]
+  (^Boolean [^FutureTask this ^Boolean may-interrupt-if-running]
     (-> this (.cancel may-interrupt-if-running))))
 
 (defn get
@@ -67,16 +67,16 @@
   timeout - the maximum time to wait - `long`
   unit - the time unit of the timeout argument - `java.util.concurrent.TimeUnit`
 
-  returns: the computed result - `FutureTask.V`
+  returns: the computed result - `V`
 
   throws: java.util.concurrent.CancellationException - if the computation was cancelled"
-  (^FutureTask.V [^java.util.concurrent.FutureTask this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^FutureTask this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.get timeout unit)))
-  (^FutureTask.V [^java.util.concurrent.FutureTask this]
+  ([^FutureTask this]
     (-> this (.get))))
 
 (defn run
   "Description copied from interface: RunnableFuture"
-  ([^java.util.concurrent.FutureTask this]
+  ([^FutureTask this]
     (-> this (.run))))
 

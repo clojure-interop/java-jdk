@@ -7,8 +7,8 @@
   "Description copied from interface: Spliterator
 
   returns: a Spliterator covering some portion of the
-   elements, or null if this spliterator cannot be split - `java.util.Spliterator.OfLong`"
-  (^java.util.Spliterator.OfLong [^java.util.Spliterator$OfLong this]
+   elements, or null if this spliterator cannot be split - `java.util.Spliterator$OfLong`"
+  (^java.util.Spliterator$OfLong [^Spliterator$OfLong this]
     (-> this (.trySplit))))
 
 (defn try-advance
@@ -18,7 +18,7 @@
 
   returns: false if no remaining elements existed
    upon entry to this method, else true. - `boolean`"
-  (^Boolean [^java.util.Spliterator$OfLong this ^java.util.function.LongConsumer action]
+  (^Boolean [^Spliterator$OfLong this ^java.util.function.LongConsumer action]
     (-> this (.tryAdvance action))))
 
 (defn for-each-remaining
@@ -27,6 +27,6 @@
   action - The action - `java.util.function.LongConsumer`
 
   returns: `default void`"
-  ([^java.util.Spliterator$OfLong this ^java.util.function.LongConsumer action]
+  ([^Spliterator$OfLong this ^java.util.function.LongConsumer action]
     (-> this (.forEachRemaining action))))
 

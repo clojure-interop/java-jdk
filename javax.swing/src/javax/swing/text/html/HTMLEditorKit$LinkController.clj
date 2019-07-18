@@ -6,7 +6,7 @@
 
 (defn ->link-controller
   "Constructor."
-  ([]
+  (^HTMLEditorKit$LinkController []
     (new HTMLEditorKit$LinkController )))
 
 (defn mouse-clicked
@@ -16,20 +16,20 @@
    follow the reference specified by a link.
 
   e - the mouse event - `java.awt.event.MouseEvent`"
-  ([^javax.swing.text.html.HTMLEditorKit$LinkController this ^java.awt.event.MouseEvent e]
+  ([^HTMLEditorKit$LinkController this e]
     (-> this (.mouseClicked e))))
 
 (defn mouse-dragged
   "Description copied from class: MouseAdapter
 
   e - `java.awt.event.MouseEvent`"
-  ([^javax.swing.text.html.HTMLEditorKit$LinkController this ^java.awt.event.MouseEvent e]
+  ([^HTMLEditorKit$LinkController this e]
     (-> this (.mouseDragged e))))
 
 (defn mouse-moved
   "Description copied from class: MouseAdapter
 
   e - `java.awt.event.MouseEvent`"
-  ([^javax.swing.text.html.HTMLEditorKit$LinkController this ^java.awt.event.MouseEvent e]
+  ([^HTMLEditorKit$LinkController this e]
     (-> this (.mouseMoved e))))
 

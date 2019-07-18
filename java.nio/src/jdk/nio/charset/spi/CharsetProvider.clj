@@ -38,7 +38,7 @@
    method.
 
   returns: The new iterator - `java.util.Iterator<java.nio.charset.Charset>`"
-  (^java.util.Iterator [^java.nio.charset.spi.CharsetProvider this]
+  (^java.util.Iterator [^CharsetProvider this]
     (-> this (.charsets))))
 
 (defn charset-for-name
@@ -49,6 +49,6 @@
   returns: A charset object for the named charset,
             or null if the named charset
             is not supported by this provider - `java.nio.charset.Charset`"
-  (^java.nio.charset.Charset [^java.nio.charset.spi.CharsetProvider this ^java.lang.String charset-name]
+  (^java.nio.charset.Charset [^CharsetProvider this ^java.lang.String charset-name]
     (-> this (.charsetForName charset-name))))
 

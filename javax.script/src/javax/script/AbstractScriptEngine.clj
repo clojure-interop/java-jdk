@@ -25,9 +25,9 @@
   n - The specified Bindings. - `javax.script.Bindings`
 
   throws: java.lang.NullPointerException - if n is null."
-  ([^javax.script.Bindings n]
+  (^AbstractScriptEngine [^javax.script.Bindings n]
     (new AbstractScriptEngine n))
-  ([]
+  (^AbstractScriptEngine []
     (new AbstractScriptEngine )))
 
 (defn set-context
@@ -37,14 +37,14 @@
   ctxt - The specified ScriptContext. - `javax.script.ScriptContext`
 
   throws: java.lang.NullPointerException - if ctxt is null."
-  ([^javax.script.AbstractScriptEngine this ^javax.script.ScriptContext ctxt]
+  ([^AbstractScriptEngine this ^javax.script.ScriptContext ctxt]
     (-> this (.setContext ctxt))))
 
 (defn get-context
   "Returns the value of the protected context field.
 
   returns: The value of the protected context field. - `javax.script.ScriptContext`"
-  (^javax.script.ScriptContext [^javax.script.AbstractScriptEngine this]
+  (^javax.script.ScriptContext [^AbstractScriptEngine this]
     (-> this (.getContext))))
 
 (defn get-bindings
@@ -56,7 +56,7 @@
   returns: The corresponding Bindings. - `javax.script.Bindings`
 
   throws: java.lang.IllegalArgumentException - if the value of scope is invalid for the type the protected context field."
-  (^javax.script.Bindings [^javax.script.AbstractScriptEngine this ^Integer scope]
+  (^javax.script.Bindings [^AbstractScriptEngine this ^Integer scope]
     (-> this (.getBindings scope))))
 
 (defn set-bindings
@@ -67,7 +67,7 @@
   scope - The specified scope. - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of scope is invalid for the type the context field."
-  ([^javax.script.AbstractScriptEngine this ^javax.script.Bindings bindings ^Integer scope]
+  ([^AbstractScriptEngine this ^javax.script.Bindings bindings ^Integer scope]
     (-> this (.setBindings bindings scope))))
 
 (defn put
@@ -78,7 +78,7 @@
   value - The specified value. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null."
-  ([^javax.script.AbstractScriptEngine this ^java.lang.String key ^java.lang.Object value]
+  ([^AbstractScriptEngine this ^java.lang.String key ^java.lang.Object value]
     (-> this (.put key value))))
 
 (defn get
@@ -90,7 +90,7 @@
   returns: The value for the specified key. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if key is null."
-  (^java.lang.Object [^javax.script.AbstractScriptEngine this ^java.lang.String key]
+  (^java.lang.Object [^AbstractScriptEngine this ^java.lang.String key]
     (-> this (.get key))))
 
 (defn eval
@@ -108,8 +108,8 @@
   returns: The return value from eval(Reader, ScriptContext) - `java.lang.Object`
 
   throws: javax.script.ScriptException - if an error occurs in script."
-  (^java.lang.Object [^javax.script.AbstractScriptEngine this ^java.io.Reader reader ^javax.script.Bindings bindings]
+  (^java.lang.Object [^AbstractScriptEngine this ^java.io.Reader reader ^javax.script.Bindings bindings]
     (-> this (.eval reader bindings)))
-  (^java.lang.Object [^javax.script.AbstractScriptEngine this ^java.io.Reader reader]
+  (^java.lang.Object [^AbstractScriptEngine this ^java.io.Reader reader]
     (-> this (.eval reader))))
 

@@ -117,7 +117,7 @@
     (UnicastRemoteObject/exportObject obj port csf ssf))
   (^java.rmi.Remote [^java.rmi.Remote obj ^Integer port]
     (UnicastRemoteObject/exportObject obj port))
-  ([^java.rmi.Remote obj]
+  (^java.rmi.server.RemoteStub [^java.rmi.Remote obj]
     (UnicastRemoteObject/exportObject obj)))
 
 (defn *unexport-object
@@ -145,6 +145,6 @@
   returns: the new remote object - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if clone failed due to a RemoteException."
-  (^java.lang.Object [^java.rmi.server.UnicastRemoteObject this]
+  (^java.lang.Object [^UnicastRemoteObject this]
     (-> this (.clone))))
 

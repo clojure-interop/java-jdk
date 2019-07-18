@@ -10,8 +10,8 @@
    message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^ZipException [^java.lang.String s]
     (new ZipException s))
-  ([]
+  (^ZipException []
     (new ZipException )))
 

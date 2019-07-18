@@ -9,6 +9,6 @@
   "Constructor.
 
   Constructs an instance of this class."
-  ([]
+  (^ShutdownChannelGroupException []
     (new ShutdownChannelGroupException )))
 

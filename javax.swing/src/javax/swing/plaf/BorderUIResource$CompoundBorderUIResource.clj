@@ -7,6 +7,6 @@
 
   outside-border - `javax.swing.border.Border`
   inside-border - `javax.swing.border.Border`"
-  ([^javax.swing.border.Border outside-border ^javax.swing.border.Border inside-border]
+  (^BorderUIResource$CompoundBorderUIResource [^javax.swing.border.Border outside-border ^javax.swing.border.Border inside-border]
     (new BorderUIResource$CompoundBorderUIResource outside-border inside-border)))
 

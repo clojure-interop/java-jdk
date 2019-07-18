@@ -16,7 +16,7 @@
    method will return the same object reference.)
 
   returns: the system root preference node - `java.util.prefs.Preferences`"
-  (^java.util.prefs.Preferences [^java.util.prefs.PreferencesFactory this]
+  (^java.util.prefs.Preferences [^PreferencesFactory this]
     (-> this (.systemRoot))))
 
 (defn user-root
@@ -26,6 +26,6 @@
 
   returns: the user root preference node corresponding to the calling
    user - `java.util.prefs.Preferences`"
-  (^java.util.prefs.Preferences [^java.util.prefs.PreferencesFactory this]
+  (^java.util.prefs.Preferences [^PreferencesFactory this]
     (-> this (.userRoot))))
 

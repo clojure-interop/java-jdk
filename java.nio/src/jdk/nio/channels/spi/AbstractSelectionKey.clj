@@ -9,7 +9,7 @@
   "Description copied from class: SelectionKey
 
   returns: true if, and only if, this key is valid - `boolean`"
-  (^Boolean [^java.nio.channels.spi.AbstractSelectionKey this]
+  (^Boolean [^AbstractSelectionKey this]
     (-> this (.isValid))))
 
 (defn cancel
@@ -17,6 +17,6 @@
 
     If this key has not yet been cancelled then it is added to its
    selector's cancelled-key set while synchronized on that set."
-  ([^java.nio.channels.spi.AbstractSelectionKey this]
+  ([^AbstractSelectionKey this]
     (-> this (.cancel))))
 

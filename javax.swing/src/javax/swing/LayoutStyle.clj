@@ -16,7 +16,7 @@
    create a LayoutStyle.  Instead use the method
    getInstance to obtain the current
    LayoutStyle."
-  ([]
+  (^LayoutStyle []
     (new LayoutStyle )))
 
 (defn *set-instance
@@ -68,14 +68,14 @@
 
   component-1 - the JComponent component2 is being placed relative to - `javax.swing.JComponent`
   component-2 - the JComponent being placed - `javax.swing.JComponent`
-  type - how the two components are being placed - `javax.swing.LayoutStyle.ComponentPlacement`
+  type - how the two components are being placed - `javax.swing.LayoutStyle$ComponentPlacement`
   position - the position component2 is being placed relative to component1; one of SwingConstants.NORTH, SwingConstants.SOUTH, SwingConstants.EAST or SwingConstants.WEST - `int`
   parent - the parent of component2; this may differ from the actual parent and it may be null - `java.awt.Container`
 
   returns: the amount of space to place between the two components - `int`
 
   throws: java.lang.NullPointerException - if component1, component2 or type is null"
-  (^Integer [^javax.swing.LayoutStyle this ^javax.swing.JComponent component-1 ^javax.swing.JComponent component-2 ^javax.swing.LayoutStyle.ComponentPlacement type ^Integer position ^java.awt.Container parent]
+  (^Integer [^LayoutStyle this ^javax.swing.JComponent component-1 ^javax.swing.JComponent component-2 ^javax.swing.LayoutStyle$ComponentPlacement type ^Integer position ^java.awt.Container parent]
     (-> this (.getPreferredGap component-1 component-2 type position parent))))
 
 (defn get-container-gap
@@ -90,6 +90,6 @@
            edge - `int`
 
   throws: java.lang.IllegalArgumentException - if position is not one of SwingConstants.NORTH, SwingConstants.SOUTH, SwingConstants.EAST or SwingConstants.WEST"
-  (^Integer [^javax.swing.LayoutStyle this ^javax.swing.JComponent component ^Integer position ^java.awt.Container parent]
+  (^Integer [^LayoutStyle this ^javax.swing.JComponent component ^Integer position ^java.awt.Container parent]
     (-> this (.getContainerGap component position parent))))
 

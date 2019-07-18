@@ -331,11 +331,11 @@
   symbols - the set of symbols to be used - `java.text.DecimalFormatSymbols`
 
   throws: java.lang.NullPointerException - if any of the given arguments is null"
-  ([^java.lang.String pattern ^java.text.DecimalFormatSymbols symbols]
+  (^DecimalFormat [^java.lang.String pattern ^java.text.DecimalFormatSymbols symbols]
     (new DecimalFormat pattern symbols))
-  ([^java.lang.String pattern]
+  (^DecimalFormat [^java.lang.String pattern]
     (new DecimalFormat pattern))
-  ([]
+  (^DecimalFormat []
     (new DecimalFormat )))
 
 (defn set-grouping-size
@@ -346,7 +346,7 @@
    The value passed in is converted to a byte, which may lose information.
 
   new-value - the new grouping size - `int`"
-  ([^java.text.DecimalFormat this ^Integer new-value]
+  ([^DecimalFormat this ^Integer new-value]
     (-> this (.setGroupingSize new-value))))
 
 (defn set-rounding-mode
@@ -355,7 +355,7 @@
   rounding-mode - The RoundingMode to be used - `java.math.RoundingMode`
 
   throws: java.lang.NullPointerException - if roundingMode is null."
-  ([^java.text.DecimalFormat this ^java.math.RoundingMode rounding-mode]
+  ([^DecimalFormat this ^java.math.RoundingMode rounding-mode]
     (-> this (.setRoundingMode rounding-mode))))
 
 (defn set-minimum-integer-digits
@@ -366,7 +366,7 @@
    309 is used. Negative input values are replaced with 0.
 
   new-value - the minimum number of integer digits to be shown; if less than zero, then zero is used. The concrete subclass may enforce an upper limit to this value appropriate to the numeric type being formatted. - `int`"
-  ([^java.text.DecimalFormat this ^Integer new-value]
+  ([^DecimalFormat this ^Integer new-value]
     (-> this (.setMinimumIntegerDigits new-value))))
 
 (defn set-decimal-format-symbols
@@ -374,7 +374,7 @@
    by the programmer or user.
 
   new-symbols - desired DecimalFormatSymbols - `java.text.DecimalFormatSymbols`"
-  ([^java.text.DecimalFormat this ^java.text.DecimalFormatSymbols new-symbols]
+  ([^DecimalFormat this ^java.text.DecimalFormatSymbols new-symbols]
     (-> this (.setDecimalFormatSymbols new-symbols))))
 
 (defn get-minimum-integer-digits
@@ -385,7 +385,7 @@
    309 is used.
 
   returns: the minimum number of digits - `int`"
-  (^Integer [^java.text.DecimalFormat this]
+  (^Integer [^DecimalFormat this]
     (-> this (.getMinimumIntegerDigits))))
 
 (defn get-negative-suffix
@@ -393,7 +393,7 @@
    Examples: -123%, ($123) (with positive suffixes)
 
   returns: the negative suffix - `java.lang.String`"
-  (^java.lang.String [^java.text.DecimalFormat this]
+  (^java.lang.String [^DecimalFormat this]
     (-> this (.getNegativeSuffix))))
 
 (defn set-negative-suffix
@@ -401,7 +401,7 @@
    Examples: 123%
 
   new-value - the new negative suffix - `java.lang.String`"
-  ([^java.text.DecimalFormat this ^java.lang.String new-value]
+  ([^DecimalFormat this ^java.lang.String new-value]
     (-> this (.setNegativeSuffix new-value))))
 
 (defn set-currency
@@ -415,7 +415,7 @@
   currency - the new currency to be used by this decimal format - `java.util.Currency`
 
   throws: java.lang.NullPointerException - if currency is null"
-  ([^java.text.DecimalFormat this ^java.util.Currency currency]
+  ([^DecimalFormat this ^java.util.Currency currency]
     (-> this (.setCurrency currency))))
 
 (defn set-decimal-separator-always-shown
@@ -424,7 +424,7 @@
    Example: Decimal ON: 12345 → 12345.; OFF: 12345 → 12345
 
   new-value - true if the decimal separator is always shown; false otherwise - `boolean`"
-  ([^java.text.DecimalFormat this ^Boolean new-value]
+  ([^DecimalFormat this ^Boolean new-value]
     (-> this (.setDecimalSeparatorAlwaysShown new-value))))
 
 (defn parse-big-decimal?
@@ -433,7 +433,7 @@
 
   returns: true if the parse method returns BigDecimal;
            false otherwise - `boolean`"
-  (^Boolean [^java.text.DecimalFormat this]
+  (^Boolean [^DecimalFormat this]
     (-> this (.isParseBigDecimal))))
 
 (defn set-negative-prefix
@@ -441,7 +441,7 @@
    Examples: -123, ($123) (with negative suffix), sFr-123
 
   new-value - the new negative prefix - `java.lang.String`"
-  ([^java.text.DecimalFormat this ^java.lang.String new-value]
+  ([^DecimalFormat this ^java.lang.String new-value]
     (-> this (.setNegativePrefix new-value))))
 
 (defn get-grouping-size
@@ -450,7 +450,7 @@
    in the number `123,456.78`, the grouping size is 3.
 
   returns: the grouping size - `int`"
-  (^Integer [^java.text.DecimalFormat this]
+  (^Integer [^DecimalFormat this]
     (-> this (.getGroupingSize))))
 
 (defn to-pattern
@@ -458,7 +458,7 @@
    of this Format object.
 
   returns: a pattern string - `java.lang.String`"
-  (^java.lang.String [^java.text.DecimalFormat this]
+  (^java.lang.String [^DecimalFormat this]
     (-> this (.toPattern))))
 
 (defn set-parse-big-decimal
@@ -466,7 +466,7 @@
    method returns BigDecimal.
 
   new-value - true if the parse method returns BigDecimal; false otherwise - `boolean`"
-  ([^java.text.DecimalFormat this ^Boolean new-value]
+  ([^DecimalFormat this ^Boolean new-value]
     (-> this (.setParseBigDecimal new-value))))
 
 (defn set-multiplier
@@ -481,7 +481,7 @@
    `123` is parsed into 1.23.
 
   new-value - the new multiplier - `int`"
-  ([^java.text.DecimalFormat this ^Integer new-value]
+  ([^DecimalFormat this ^Integer new-value]
     (-> this (.setMultiplier new-value))))
 
 (defn get-positive-prefix
@@ -489,7 +489,7 @@
    Examples: 123, $123, sFr123
 
   returns: the positive prefix - `java.lang.String`"
-  (^java.lang.String [^java.text.DecimalFormat this]
+  (^java.lang.String [^DecimalFormat this]
     (-> this (.getPositivePrefix))))
 
 (defn get-multiplier
@@ -497,7 +497,7 @@
    formats.
 
   returns: the multiplier - `int`"
-  (^Integer [^java.text.DecimalFormat this]
+  (^Integer [^DecimalFormat this]
     (-> this (.getMultiplier))))
 
 (defn format-to-character-iterator
@@ -515,7 +515,7 @@
   returns: AttributedCharacterIterator describing the formatted value. - `java.text.AttributedCharacterIterator`
 
   throws: java.lang.NullPointerException - if obj is null."
-  (^java.text.AttributedCharacterIterator [^java.text.DecimalFormat this ^java.lang.Object obj]
+  (^java.text.AttributedCharacterIterator [^DecimalFormat this ^java.lang.Object obj]
     (-> this (.formatToCharacterIterator obj))))
 
 (defn set-maximum-integer-digits
@@ -526,7 +526,7 @@
    309 is used. Negative input values are replaced with 0.
 
   new-value - the maximum number of integer digits to be shown; if less than zero, then zero is used. The concrete subclass may enforce an upper limit to this value appropriate to the numeric type being formatted. - `int`"
-  ([^java.text.DecimalFormat this ^Integer new-value]
+  ([^DecimalFormat this ^Integer new-value]
     (-> this (.setMaximumIntegerDigits new-value))))
 
 (defn decimal-separator-always-shown?
@@ -536,7 +536,7 @@
 
   returns: true if the decimal separator is always shown;
            false otherwise - `boolean`"
-  (^Boolean [^java.text.DecimalFormat this]
+  (^Boolean [^DecimalFormat this]
     (-> this (.isDecimalSeparatorAlwaysShown))))
 
 (defn get-negative-prefix
@@ -544,7 +544,7 @@
    Examples: -123, ($123) (with negative suffix), sFr-123
 
   returns: the negative prefix - `java.lang.String`"
-  (^java.lang.String [^java.text.DecimalFormat this]
+  (^java.lang.String [^DecimalFormat this]
     (-> this (.getNegativePrefix))))
 
 (defn get-minimum-fraction-digits
@@ -555,7 +555,7 @@
    340 is used.
 
   returns: the minimum number of digits - `int`"
-  (^Integer [^java.text.DecimalFormat this]
+  (^Integer [^DecimalFormat this]
     (-> this (.getMinimumFractionDigits))))
 
 (defn apply-localized-pattern
@@ -580,7 +580,7 @@
   pattern - a new pattern - `java.lang.String`
 
   throws: java.lang.NullPointerException - if pattern is null"
-  ([^java.text.DecimalFormat this ^java.lang.String pattern]
+  ([^DecimalFormat this ^java.lang.String pattern]
     (-> this (.applyLocalizedPattern pattern))))
 
 (defn get-maximum-fraction-digits
@@ -591,7 +591,7 @@
    340 is used.
 
   returns: the maximum number of digits. - `int`"
-  (^Integer [^java.text.DecimalFormat this]
+  (^Integer [^DecimalFormat this]
     (-> this (.getMaximumFractionDigits))))
 
 (defn get-maximum-integer-digits
@@ -602,7 +602,7 @@
    309 is used.
 
   returns: the maximum number of digits - `int`"
-  (^Integer [^java.text.DecimalFormat this]
+  (^Integer [^DecimalFormat this]
     (-> this (.getMaximumIntegerDigits))))
 
 (defn set-positive-prefix
@@ -610,7 +610,7 @@
    Examples: 123, $123, sFr123
 
   new-value - the new positive prefix - `java.lang.String`"
-  ([^java.text.DecimalFormat this ^java.lang.String new-value]
+  ([^DecimalFormat this ^java.lang.String new-value]
     (-> this (.setPositivePrefix new-value))))
 
 (defn set-maximum-fraction-digits
@@ -621,14 +621,14 @@
    340 is used. Negative input values are replaced with 0.
 
   new-value - the maximum number of fraction digits to be shown; if less than zero, then zero is used. The concrete subclass may enforce an upper limit to this value appropriate to the numeric type being formatted. - `int`"
-  ([^java.text.DecimalFormat this ^Integer new-value]
+  ([^DecimalFormat this ^Integer new-value]
     (-> this (.setMaximumFractionDigits new-value))))
 
 (defn clone
   "Standard override; no change in semantics.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^java.text.DecimalFormat this]
+  (^java.lang.Object [^DecimalFormat this]
     (-> this (.clone))))
 
 (defn parse
@@ -686,7 +686,7 @@
   returns: the parsed value, or null if the parse fails - `java.lang.Number`
 
   throws: java.lang.NullPointerException - if text or pos is null."
-  (^java.lang.Number [^java.text.DecimalFormat this ^java.lang.String text ^java.text.ParsePosition pos]
+  (^java.lang.Number [^DecimalFormat this ^java.lang.String text ^java.text.ParsePosition pos]
     (-> this (.parse text pos))))
 
 (defn set-minimum-fraction-digits
@@ -697,14 +697,14 @@
    340 is used. Negative input values are replaced with 0.
 
   new-value - the minimum number of fraction digits to be shown; if less than zero, then zero is used. The concrete subclass may enforce an upper limit to this value appropriate to the numeric type being formatted. - `int`"
-  ([^java.text.DecimalFormat this ^Integer new-value]
+  ([^DecimalFormat this ^Integer new-value]
     (-> this (.setMinimumFractionDigits new-value))))
 
 (defn hash-code
   "Overrides hashCode
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.text.DecimalFormat this]
+  (^Integer [^DecimalFormat this]
     (-> this (.hashCode))))
 
 (defn get-decimal-format-symbols
@@ -712,7 +712,7 @@
    changed by the programmer or user.
 
   returns: a copy of the desired DecimalFormatSymbols - `java.text.DecimalFormatSymbols`"
-  (^java.text.DecimalFormatSymbols [^java.text.DecimalFormat this]
+  (^java.text.DecimalFormatSymbols [^DecimalFormat this]
     (-> this (.getDecimalFormatSymbols))))
 
 (defn get-positive-suffix
@@ -720,14 +720,14 @@
    Example: 123%
 
   returns: the positive suffix - `java.lang.String`"
-  (^java.lang.String [^java.text.DecimalFormat this]
+  (^java.lang.String [^DecimalFormat this]
     (-> this (.getPositiveSuffix))))
 
 (defn get-rounding-mode
   "Gets the RoundingMode used in this DecimalFormat.
 
   returns: The RoundingMode used for this DecimalFormat. - `java.math.RoundingMode`"
-  (^java.math.RoundingMode [^java.text.DecimalFormat this]
+  (^java.math.RoundingMode [^DecimalFormat this]
     (-> this (.getRoundingMode))))
 
 (defn apply-pattern
@@ -751,14 +751,14 @@
   pattern - a new pattern - `java.lang.String`
 
   throws: java.lang.NullPointerException - if pattern is null"
-  ([^java.text.DecimalFormat this ^java.lang.String pattern]
+  ([^DecimalFormat this ^java.lang.String pattern]
     (-> this (.applyPattern pattern))))
 
 (defn set-grouping-used
   "Set whether or not grouping will be used in this format.
 
   new-value - true if grouping is used; false otherwise - `boolean`"
-  ([^java.text.DecimalFormat this ^Boolean new-value]
+  ([^DecimalFormat this ^Boolean new-value]
     (-> this (.setGroupingUsed new-value))))
 
 (defn get-currency
@@ -769,7 +769,7 @@
    on this number format's symbols.
 
   returns: the currency used by this decimal format, or null - `java.util.Currency`"
-  (^java.util.Currency [^java.text.DecimalFormat this]
+  (^java.util.Currency [^DecimalFormat this]
     (-> this (.getCurrency))))
 
 (defn equals
@@ -779,7 +779,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.text.DecimalFormat this ^java.lang.Object obj]
+  (^Boolean [^DecimalFormat this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn set-positive-suffix
@@ -787,7 +787,7 @@
    Example: 123%
 
   new-value - the new positive suffix - `java.lang.String`"
-  ([^java.text.DecimalFormat this ^java.lang.String new-value]
+  ([^DecimalFormat this ^java.lang.String new-value]
     (-> this (.setPositiveSuffix new-value))))
 
 (defn format
@@ -804,7 +804,7 @@
   returns: the value passed in as toAppendTo - `java.lang.StringBuffer`
 
   throws: java.lang.IllegalArgumentException - if number is null or not an instance of Number."
-  (^java.lang.StringBuffer [^java.text.DecimalFormat this ^java.lang.Object number ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
+  (^java.lang.StringBuffer [^DecimalFormat this ^java.lang.Object number ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
     (-> this (.format number to-append-to pos))))
 
 (defn to-localized-pattern
@@ -812,6 +812,6 @@
    state of this Format object.
 
   returns: a localized pattern string - `java.lang.String`"
-  (^java.lang.String [^java.text.DecimalFormat this]
+  (^java.lang.String [^DecimalFormat this]
     (-> this (.toLocalizedPattern))))
 

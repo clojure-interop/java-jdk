@@ -52,21 +52,21 @@
    that orders its elements according to the specified comparator.
 
   initial-capacity - the initial capacity for this priority queue - `int`
-  comparator - the comparator that will be used to order this priority queue. If null, the java.lang.natural ordering of the elements will be used. - `PriorityQueue.E>`
+  comparator - the comparator that will be used to order this priority queue. If null, the java.lang.natural ordering of the elements will be used. - `java.util.Comparator`
 
   throws: java.lang.IllegalArgumentException - if initialCapacity is less than 1"
-  ([^Integer initial-capacity ^PriorityQueue.E> comparator]
+  (^PriorityQueue [^Integer initial-capacity ^java.util.Comparator comparator]
     (new PriorityQueue initial-capacity comparator))
-  ([^Integer initial-capacity]
+  (^PriorityQueue [^Integer initial-capacity]
     (new PriorityQueue initial-capacity))
-  ([]
+  (^PriorityQueue []
     (new PriorityQueue )))
 
 (defn peek
   "Description copied from interface: Queue
 
-  returns: the head of this queue, or null if this queue is empty - `PriorityQueue.E`"
-  (^PriorityQueue.E [^java.util.PriorityQueue this]
+  returns: the head of this queue, or null if this queue is empty - `E`"
+  ([^PriorityQueue this]
     (-> this (.peek))))
 
 (defn spliterator
@@ -79,19 +79,19 @@
    Overriding implementations should document the reporting of additional
    characteristic values.
 
-  returns: a Spliterator over the elements in this queue - `java.util.Spliterator<PriorityQueue.E>`"
-  (^java.util.Spliterator [^java.util.PriorityQueue this]
+  returns: a Spliterator over the elements in this queue - `java.util.Spliterator<E>`"
+  (^java.util.Spliterator [^PriorityQueue this]
     (-> this (.spliterator))))
 
 (defn offer
   "Inserts the specified element into this priority queue.
 
-  e - the element to add - `PriorityQueue.E`
+  e - the element to add - `E`
 
   returns: true (as specified by Queue.offer(E)) - `boolean`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with elements currently in this priority queue according to the priority queue's ordering"
-  (^Boolean [^java.util.PriorityQueue this ^PriorityQueue.E e]
+  (^Boolean [^PriorityQueue this e]
     (-> this (.offer e))))
 
 (defn contains
@@ -102,15 +102,15 @@
   o - object to be checked for containment in this queue - `java.lang.Object`
 
   returns: true if this queue contains the specified element - `boolean`"
-  (^Boolean [^java.util.PriorityQueue this ^java.lang.Object o]
+  (^Boolean [^PriorityQueue this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
   "Returns an iterator over the elements in this queue. The iterator
    does not return the elements in any particular order.
 
-  returns: an iterator over the elements in this queue - `java.util.Iterator<PriorityQueue.E>`"
-  (^java.util.Iterator [^java.util.PriorityQueue this]
+  returns: an iterator over the elements in this queue - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^PriorityQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -124,7 +124,7 @@
   o - element to be removed from this queue, if present - `java.lang.Object`
 
   returns: true if this queue changed as a result of the call - `boolean`"
-  (^Boolean [^java.util.PriorityQueue this ^java.lang.Object o]
+  (^Boolean [^PriorityQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn comparator
@@ -134,39 +134,39 @@
 
   returns: the comparator used to order this queue, or
            null if this queue is sorted according to the
-           natural ordering of its elements - `java.util.Comparator<? super PriorityQueue.E>`"
-  ([^java.util.PriorityQueue this]
+           natural ordering of its elements - `java.util.Comparator<? super E>`"
+  ([^PriorityQueue this]
     (-> this (.comparator))))
 
 (defn poll
   "Description copied from interface: Queue
 
-  returns: the head of this queue, or null if this queue is empty - `PriorityQueue.E`"
-  (^PriorityQueue.E [^java.util.PriorityQueue this]
+  returns: the head of this queue, or null if this queue is empty - `E`"
+  ([^PriorityQueue this]
     (-> this (.poll))))
 
 (defn add
   "Inserts the specified element into this priority queue.
 
-  e - the element to add - `PriorityQueue.E`
+  e - the element to add - `E`
 
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.ClassCastException - if the specified element cannot be compared with elements currently in this priority queue according to the priority queue's ordering"
-  (^Boolean [^java.util.PriorityQueue this ^PriorityQueue.E e]
+  (^Boolean [^PriorityQueue this e]
     (-> this (.add e))))
 
 (defn size
   "Description copied from interface: Collection
 
   returns: the number of elements in this collection - `int`"
-  (^Integer [^java.util.PriorityQueue this]
+  (^Integer [^PriorityQueue this]
     (-> this (.size))))
 
 (defn clear
   "Removes all of the elements from this priority queue.
    The queue will be empty after this call returns."
-  ([^java.util.PriorityQueue this]
+  ([^PriorityQueue this]
     (-> this (.clear))))
 
 (defn to-array
@@ -203,8 +203,8 @@
   returns: an array containing all of the elements in this queue - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this queue"
-  ([^java.util.PriorityQueue this a]
+  ([^PriorityQueue this a]
     (-> this (.toArray a)))
-  ([^java.util.PriorityQueue this]
+  ([^PriorityQueue this]
     (-> this (.toArray))))
 

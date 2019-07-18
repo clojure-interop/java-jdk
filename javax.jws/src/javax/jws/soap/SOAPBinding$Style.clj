@@ -5,13 +5,13 @@
 (def DOCUMENT
   "Enum Constant.
 
-  type: javax.jws.soap.SOAPBinding.Style"
+  type: javax.jws.soap.SOAPBinding$Style"
   SOAPBinding$Style/DOCUMENT)
 
 (def RPC
   "Enum Constant.
 
-  type: javax.jws.soap.SOAPBinding.Style"
+  type: javax.jws.soap.SOAPBinding$Style"
   SOAPBinding$Style/RPC)
 
 (defn *values
@@ -23,7 +23,7 @@
   for (SOAPBinding.Style c : SOAPBinding.Style.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.jws.soap.SOAPBinding.Style[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.jws.soap.SOAPBinding$Style[]`"
   ([]
     (SOAPBinding$Style/values )))
 
@@ -35,9 +35,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.jws.soap.SOAPBinding.Style`
+  returns: the enum constant with the specified name - `javax.jws.soap.SOAPBinding$Style`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.jws.soap.SOAPBinding.Style [^java.lang.String name]
+  (^javax.jws.soap.SOAPBinding$Style [^java.lang.String name]
     (SOAPBinding$Style/valueOf name)))
 

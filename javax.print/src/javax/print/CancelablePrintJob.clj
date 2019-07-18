@@ -44,6 +44,6 @@
    application execution.
 
   throws: javax.print.PrintException - if the job could not be successfully cancelled."
-  ([^javax.print.CancelablePrintJob this]
+  ([^CancelablePrintJob this]
     (-> this (.cancel))))
 

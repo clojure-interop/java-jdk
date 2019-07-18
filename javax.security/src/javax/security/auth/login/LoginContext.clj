@@ -156,13 +156,13 @@
   config - the Configuration that lists the login modules to be called to perform the authentication, or null. - `javax.security.auth.login.Configuration`
 
   throws: javax.security.auth.login.LoginException - if the caller-specified name does not appear in the Configuration and there is no Configuration entry for `other`."
-  ([^java.lang.String name ^javax.security.auth.Subject subject ^javax.security.auth.callback.CallbackHandler callback-handler ^javax.security.auth.login.Configuration config]
+  (^LoginContext [^java.lang.String name ^javax.security.auth.Subject subject ^javax.security.auth.callback.CallbackHandler callback-handler ^javax.security.auth.login.Configuration config]
     (new LoginContext name subject callback-handler config))
-  ([^java.lang.String name ^javax.security.auth.Subject subject ^javax.security.auth.callback.CallbackHandler callback-handler]
+  (^LoginContext [^java.lang.String name ^javax.security.auth.Subject subject ^javax.security.auth.callback.CallbackHandler callback-handler]
     (new LoginContext name subject callback-handler))
-  ([^java.lang.String name ^javax.security.auth.Subject subject]
+  (^LoginContext [^java.lang.String name ^javax.security.auth.Subject subject]
     (new LoginContext name subject))
-  ([^java.lang.String name]
+  (^LoginContext [^java.lang.String name]
     (new LoginContext name)))
 
 (defn login
@@ -211,7 +211,7 @@
    and state restoration can take place.
 
   throws: javax.security.auth.login.LoginException - if the authentication fails."
-  ([^javax.security.auth.login.LoginContext this]
+  ([^LoginContext this]
     (-> this (.login))))
 
 (defn logout
@@ -232,7 +232,7 @@
    and state restoration can take place.
 
   throws: javax.security.auth.login.LoginException - if the logout fails."
-  ([^javax.security.auth.login.LoginContext this]
+  ([^LoginContext this]
     (-> this (.logout))))
 
 (defn get-subject
@@ -246,6 +246,6 @@
             authentication by this LoginContext.
             If a Subject was not specified, and authentication fails or
             has not been attempted, this method returns null. - `javax.security.auth.Subject`"
-  (^javax.security.auth.Subject [^javax.security.auth.login.LoginContext this]
+  (^javax.security.auth.Subject [^LoginContext this]
     (-> this (.getSubject))))
 

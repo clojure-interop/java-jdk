@@ -8,7 +8,7 @@
 
   The OriginType instance to use for specifying a physical origin.
 
-  type: java.awt.PageAttributes.OriginType"
+  type: java.awt.PageAttributes$OriginType"
   PageAttributes$OriginType/PHYSICAL)
 
 (def *-printable
@@ -16,20 +16,20 @@
 
   The OriginType instance to use for specifying a printable origin.
 
-  type: java.awt.PageAttributes.OriginType"
+  type: java.awt.PageAttributes$OriginType"
   PageAttributes$OriginType/PRINTABLE)
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.PageAttributes$OriginType this]
+  (^Integer [^PageAttributes$OriginType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.PageAttributes$OriginType this]
+  (^java.lang.String [^PageAttributes$OriginType this]
     (-> this (.toString))))
 

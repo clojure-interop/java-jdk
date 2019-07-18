@@ -20,12 +20,12 @@
    Context.
 
   name - the name to resolve - `javax.naming.Name`
-  context-type - the type of object to resolve. This should be a subtype of Context. - `javax.naming.Context>`
+  context-type - the type of object to resolve. This should be a subtype of Context. - `java.lang.Class`
 
   returns: the object that was found, along with the unresolved
             suffix of name.  Cannot be null. - `javax.naming.spi.ResolveResult`
 
   throws: javax.naming.NotContextException - if no context of the appropriate type is found"
-  (^javax.naming.spi.ResolveResult [^javax.naming.spi.Resolver this ^javax.naming.Name name ^javax.naming.Context> context-type]
+  (^javax.naming.spi.ResolveResult [^Resolver this ^javax.naming.Name name ^java.lang.Class context-type]
     (-> this (.resolveToClass name context-type))))
 

@@ -56,10 +56,10 @@
   returns: The possibly null element in the enumeration.
        null is only valid for enumerations that can return
        null (e.g. Attribute.getAll() returns an enumeration of
-       attribute values, and an attribute value can be null). - `NamingEnumeration.T`
+       attribute values, and an attribute value can be null). - `T`
 
   throws: javax.naming.NamingException - If a naming exception is encountered while attempting to retrieve the next element. See NamingException and its subclasses for the possible naming exceptions."
-  (^NamingEnumeration.T [^javax.naming.NamingEnumeration this]
+  ([^NamingEnumeration this]
     (-> this (.next))))
 
 (defn has-more?
@@ -71,7 +71,7 @@
   returns: true if there is more in the enumeration ; false otherwise. - `boolean`
 
   throws: javax.naming.NamingException - If a naming exception is encountered while attempting to determine whether there is another element in the enumeration. See NamingException and its subclasses for the possible naming exceptions."
-  (^Boolean [^javax.naming.NamingEnumeration this]
+  (^Boolean [^NamingEnumeration this]
     (-> this (.hasMore))))
 
 (defn close
@@ -94,6 +94,6 @@
    manage their resources when client omits the close() calls.
 
   throws: javax.naming.NamingException - If a naming exception is encountered while closing the enumeration."
-  ([^javax.naming.NamingEnumeration this]
+  ([^NamingEnumeration this]
     (-> this (.close))))
 

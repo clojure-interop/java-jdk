@@ -182,6 +182,6 @@
 
 (defn ->cipher-spi
   "Constructor."
-  ([]
+  (^CipherSpi []
     (new CipherSpi )))
 

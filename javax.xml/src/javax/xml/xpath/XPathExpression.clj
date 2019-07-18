@@ -81,8 +81,8 @@
      returnType. - `java.lang.Object`
 
   throws: javax.xml.xpath.XPathExpressionException - If the expression cannot be evaluated."
-  (^java.lang.Object [^javax.xml.xpath.XPathExpression this ^java.lang.Object item ^javax.xml.namespace.QName return-type]
+  (^java.lang.Object [^XPathExpression this ^java.lang.Object item ^javax.xml.namespace.QName return-type]
     (-> this (.evaluate item return-type)))
-  (^java.lang.String [^javax.xml.xpath.XPathExpression this ^java.lang.Object item]
+  (^java.lang.String [^XPathExpression this ^java.lang.Object item]
     (-> this (.evaluate item))))
 

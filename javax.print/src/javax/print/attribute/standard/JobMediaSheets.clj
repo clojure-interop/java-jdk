@@ -36,7 +36,7 @@
   value - Integer value. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if value is less than 0."
-  ([^Integer value]
+  (^JobMediaSheets [^Integer value]
     (new JobMediaSheets value)))
 
 (defn equals
@@ -56,7 +56,7 @@
 
   returns: True if object is equivalent to this job media
             sheets attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.JobMediaSheets this ^java.lang.Object object]
+  (^Boolean [^JobMediaSheets this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -68,7 +68,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.JobMediaSheets this]
+  ([^JobMediaSheets this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -79,6 +79,6 @@
    category name is `job-media-sheets`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.JobMediaSheets this]
+  (^java.lang.String [^JobMediaSheets this]
     (-> this (.getName))))
 

@@ -11,10 +11,10 @@
 
   message - The detail message. - `java.lang.String`
   cause - The cause. A null value is permitted, and indicates that the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^DatatypeConfigurationException [^java.lang.String message ^java.lang.Throwable cause]
     (new DatatypeConfigurationException message cause))
-  ([^java.lang.String message]
+  (^DatatypeConfigurationException [^java.lang.String message]
     (new DatatypeConfigurationException message))
-  ([]
+  (^DatatypeConfigurationException []
     (new DatatypeConfigurationException )))
 

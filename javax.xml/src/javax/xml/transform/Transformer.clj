@@ -42,7 +42,7 @@
   oformat - A set of output properties that will be used to override any of the same properties in affect for the transformation. - `java.util.Properties`
 
   throws: java.lang.IllegalArgumentException - When keys are not recognized and are not namespace qualified."
-  ([^javax.xml.transform.Transformer this ^java.util.Properties oformat]
+  ([^Transformer this ^java.util.Properties oformat]
     (-> this (.setOutputProperties oformat))))
 
 (defn set-error-listener
@@ -51,7 +51,7 @@
   listener - The new error listener. - `javax.xml.transform.ErrorListener`
 
   throws: java.lang.IllegalArgumentException - if listener is null."
-  ([^javax.xml.transform.Transformer this ^javax.xml.transform.ErrorListener listener]
+  ([^Transformer this ^javax.xml.transform.ErrorListener listener]
     (-> this (.setErrorListener listener))))
 
 (defn get-error-listener
@@ -59,7 +59,7 @@
    Implementations must provide a default error listener.
 
   returns: The current error handler, which should never be null. - `javax.xml.transform.ErrorListener`"
-  (^javax.xml.transform.ErrorListener [^javax.xml.transform.Transformer this]
+  (^javax.xml.transform.ErrorListener [^Transformer this]
     (-> this (.getErrorListener))))
 
 (defn set-output-property
@@ -84,7 +84,7 @@
   value - The non-null string value of the output property. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - If the property is not supported, and is not qualified with a namespace."
-  ([^javax.xml.transform.Transformer this ^java.lang.String name ^java.lang.String value]
+  ([^Transformer this ^java.lang.String name ^java.lang.String value]
     (-> this (.setOutputProperty name value))))
 
 (defn get-output-property
@@ -104,7 +104,7 @@
    if no property was found. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - If the property is not supported."
-  (^java.lang.String [^javax.xml.transform.Transformer this ^java.lang.String name]
+  (^java.lang.String [^Transformer this ^java.lang.String name]
     (-> this (.getOutputProperty name))))
 
 (defn transform
@@ -124,7 +124,7 @@
   output-target - The Result of transforming the xmlSource. - `javax.xml.transform.Result`
 
   throws: javax.xml.transform.TransformerException - If an unrecoverable error occurs during the course of the transformation."
-  ([^javax.xml.transform.Transformer this ^javax.xml.transform.Source xml-source ^javax.xml.transform.Result output-target]
+  ([^Transformer this ^javax.xml.transform.Source xml-source ^javax.xml.transform.Result output-target]
     (-> this (.transform xml-source output-target))))
 
 (defn reset
@@ -143,12 +143,12 @@
    and ErrorListener.
 
   throws: java.lang.UnsupportedOperationException - When implementation does not override this method."
-  ([^javax.xml.transform.Transformer this]
+  ([^Transformer this]
     (-> this (.reset))))
 
 (defn clear-parameters
   "Clear all parameters set with setParameter."
-  ([^javax.xml.transform.Transformer this]
+  ([^Transformer this]
     (-> this (.clearParameters))))
 
 (defn get-uri-resolver
@@ -157,7 +157,7 @@
 
   returns: An object that implements the URIResolver interface,
    or null. - `javax.xml.transform.URIResolver`"
-  (^javax.xml.transform.URIResolver [^javax.xml.transform.Transformer this]
+  (^javax.xml.transform.URIResolver [^Transformer this]
     (-> this (.getURIResolver))))
 
 (defn get-parameter
@@ -170,7 +170,7 @@
   name - of Object to get - `java.lang.String`
 
   returns: A parameter that has been set with setParameter. - `java.lang.Object`"
-  (^java.lang.Object [^javax.xml.transform.Transformer this ^java.lang.String name]
+  (^java.lang.Object [^Transformer this ^java.lang.String name]
     (-> this (.getParameter name))))
 
 (defn set-uri-resolver
@@ -181,7 +181,7 @@
    be cleared and the transformer will no longer have a resolver.
 
   resolver - An object that implements the URIResolver interface, or null. - `javax.xml.transform.URIResolver`"
-  ([^javax.xml.transform.Transformer this ^javax.xml.transform.URIResolver resolver]
+  ([^Transformer this ^javax.xml.transform.URIResolver resolver]
     (-> this (.setURIResolver resolver))))
 
 (defn set-parameter
@@ -202,7 +202,7 @@
   value - The value object. This can be any valid Java object. It is up to the processor to provide the proper object coersion or to simply pass the object on for use in an extension. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - If value is null."
-  ([^javax.xml.transform.Transformer this ^java.lang.String name ^java.lang.Object value]
+  ([^Transformer this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setParameter name value))))
 
 (defn get-output-properties
@@ -234,6 +234,6 @@
 
   returns: A copy of the set of output properties in effect for
      the next transformation. - `java.util.Properties`"
-  (^java.util.Properties [^javax.xml.transform.Transformer this]
+  (^java.util.Properties [^Transformer this]
     (-> this (.getOutputProperties))))
 

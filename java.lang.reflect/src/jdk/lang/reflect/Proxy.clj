@@ -242,7 +242,7 @@
    proxy classes.
 
   loader - the class loader to define the proxy class - `java.lang.ClassLoader`
-  interfaces - the list of interfaces for the proxy class to implement - `java.lang.Class<?>`
+  interfaces - the list of interfaces for the proxy class to implement - `java.lang.Class`
 
   returns: a proxy class that is defined in the specified class loader
             and that implements the specified interfaces - `java.lang.Class<?>`
@@ -261,7 +261,7 @@
    Proxy.getProxyClass does.
 
   loader - the class loader to define the proxy class - `java.lang.ClassLoader`
-  interfaces - the list of interfaces for the proxy class to implement - `java.lang.Class<?>[]`
+  interfaces - the list of interfaces for the proxy class to implement - `java.lang.Class[]`
   h - the invocation handler to dispatch method invocations to - `java.lang.reflect.InvocationHandler`
 
   returns: a proxy instance with the specified invocation handler of a
@@ -281,7 +281,7 @@
    to use it to make security decisions, so its implementation should
    not just test if the class in question extends Proxy.
 
-  cl - the class to test - `java.lang.Class<?>`
+  cl - the class to test - `java.lang.Class`
 
   returns: true if the class is a proxy class and
             false otherwise - `boolean`

@@ -10,6 +10,6 @@
 
 (defn ->key-manager-factory-spi
   "Constructor."
-  ([]
+  (^KeyManagerFactorySpi []
     (new KeyManagerFactorySpi )))
 

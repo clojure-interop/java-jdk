@@ -50,14 +50,14 @@
 
   elem - the element this view is responsible for - `javax.swing.text.Element`
   axis - either View.X_AXIS or View.Y_AXIS - `int`"
-  ([^javax.swing.text.Element elem ^Integer axis]
+  (^ZoneView [^javax.swing.text.Element elem ^Integer axis]
     (new ZoneView elem axis)))
 
 (defn get-maximum-zone-size
   "Get the current maximum zone size.
 
   returns: `int`"
-  (^Integer [^javax.swing.text.ZoneView this]
+  (^Integer [^ZoneView this]
     (-> this (.getMaximumZoneSize))))
 
 (defn set-maximum-zone-size
@@ -68,7 +68,7 @@
    boundaries.
 
   size - the number of characters the zone may represent before attempting to break the zone into a smaller size. - `int`"
-  ([^javax.swing.text.ZoneView this ^Integer size]
+  ([^ZoneView this ^Integer size]
     (-> this (.setMaximumZoneSize size))))
 
 (defn get-max-zones-loaded
@@ -76,7 +76,7 @@
    allowed to be loaded at the same time.
 
   returns: `int`"
-  (^Integer [^javax.swing.text.ZoneView this]
+  (^Integer [^ZoneView this]
     (-> this (.getMaxZonesLoaded))))
 
 (defn set-max-zones-loaded
@@ -88,7 +88,7 @@
   mzl - the desired maximum number of zones to be actively loaded, must be greater than 0 - `int`
 
   throws: java.lang.IllegalArgumentException - if mzl is < 1"
-  ([^javax.swing.text.ZoneView this ^Integer mzl]
+  ([^ZoneView this ^Integer mzl]
     (-> this (.setMaxZonesLoaded mzl))))
 
 (defn insert-update
@@ -101,7 +101,7 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.ZoneView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
+  ([^ZoneView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.insertUpdate changes a f))))
 
 (defn remove-update
@@ -114,6 +114,6 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.ZoneView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
+  ([^ZoneView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.removeUpdate changes a f))))
 

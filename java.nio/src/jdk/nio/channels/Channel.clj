@@ -22,7 +22,7 @@
   "Tells whether or not this channel is open.
 
   returns: true if, and only if, this channel is open - `boolean`"
-  (^Boolean [^java.nio.channels.Channel this]
+  (^Boolean [^Channel this]
     (-> this (.isOpen))))
 
 (defn close
@@ -41,6 +41,6 @@
    effect.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.nio.channels.Channel this]
+  ([^Channel this]
     (-> this (.close))))
 

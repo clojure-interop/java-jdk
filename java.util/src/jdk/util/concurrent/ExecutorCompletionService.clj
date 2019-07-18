@@ -79,35 +79,35 @@
    completion queue.
 
   executor - the executor to use - `java.util.concurrent.Executor`
-  completion-queue - the queue to use as the completion queue normally one dedicated for use by this service. This queue is treated as unbounded -- failed attempted Queue.add operations for completed tasks cause them not to be retrievable. - `java.util.concurrent.BlockingQueue<java.util.concurrent.Future<ExecutorCompletionService.V>>`
+  completion-queue - the queue to use as the completion queue normally one dedicated for use by this service. This queue is treated as unbounded -- failed attempted Queue.add operations for completed tasks cause them not to be retrievable. - `java.util.concurrent.BlockingQueue`
 
   throws: java.lang.NullPointerException - if executor or completionQueue are null"
-  ([^java.util.concurrent.Executor executor ^java.util.concurrent.BlockingQueue> completion-queue]
+  (^ExecutorCompletionService [^java.util.concurrent.Executor executor ^java.util.concurrent.BlockingQueue completion-queue]
     (new ExecutorCompletionService executor completion-queue))
-  ([^java.util.concurrent.Executor executor]
+  (^ExecutorCompletionService [^java.util.concurrent.Executor executor]
     (new ExecutorCompletionService executor)))
 
 (defn submit
   "Description copied from interface: CompletionService
 
   task - the task to submit - `java.lang.Runnable`
-  result - the result to return upon successful completion - `ExecutorCompletionService.V`
+  result - the result to return upon successful completion - `V`
 
   returns: a Future representing pending completion of the task,
            and whose get() method will return the given
-           result value upon completion - `java.util.concurrent.Future<ExecutorCompletionService.V>`"
-  (^java.util.concurrent.Future [^java.util.concurrent.ExecutorCompletionService this ^java.lang.Runnable task ^ExecutorCompletionService.V result]
+           result value upon completion - `java.util.concurrent.Future<V>`"
+  (^java.util.concurrent.Future [^ExecutorCompletionService this ^java.lang.Runnable task result]
     (-> this (.submit task result)))
-  (^java.util.concurrent.Future [^java.util.concurrent.ExecutorCompletionService this ^java.util.concurrent.Callable task]
+  (^java.util.concurrent.Future [^ExecutorCompletionService this ^java.util.concurrent.Callable task]
     (-> this (.submit task))))
 
 (defn take
   "Description copied from interface: CompletionService
 
-  returns: the Future representing the next completed task - `java.util.concurrent.Future<ExecutorCompletionService.V>`
+  returns: the Future representing the next completed task - `java.util.concurrent.Future<V>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^java.util.concurrent.Future [^java.util.concurrent.ExecutorCompletionService this]
+  (^java.util.concurrent.Future [^ExecutorCompletionService this]
     (-> this (.take))))
 
 (defn poll
@@ -118,11 +118,11 @@
 
   returns: the Future representing the next completed task or
            null if the specified waiting time elapses
-           before one is present - `java.util.concurrent.Future<ExecutorCompletionService.V>`
+           before one is present - `java.util.concurrent.Future<V>`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^java.util.concurrent.Future [^java.util.concurrent.ExecutorCompletionService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^java.util.concurrent.Future [^ExecutorCompletionService this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  (^java.util.concurrent.Future [^java.util.concurrent.ExecutorCompletionService this]
+  (^java.util.concurrent.Future [^ExecutorCompletionService this]
     (-> this (.poll))))
 

@@ -36,7 +36,7 @@
    The number of dimensions of the new array must not
    exceed 255.
 
-  component-type - the Class object representing the component type of the new array - `java.lang.Class<?>`
+  component-type - the Class object representing the component type of the new array - `java.lang.Class`
   length - the length of the new array - `int`
 
   returns: the new array - `java.lang.Object`

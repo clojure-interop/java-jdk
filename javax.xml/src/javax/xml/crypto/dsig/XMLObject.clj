@@ -46,14 +46,14 @@
 
   returns: an unmodifiable list of XMLStructures (may be empty
       but never null) - `java.util.List`"
-  (^java.util.List [^javax.xml.crypto.dsig.XMLObject this]
+  (^java.util.List [^XMLObject this]
     (-> this (.getContent))))
 
 (defn get-id
   "Returns the Id of this XMLObject.
 
   returns: the Id (or null if not specified) - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.XMLObject this]
+  (^java.lang.String [^XMLObject this]
     (-> this (.getId))))
 
 (defn get-mime-type
@@ -62,7 +62,7 @@
    XMLObject (independent of its encoding).
 
   returns: the mime type (or null if not specified) - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.XMLObject this]
+  (^java.lang.String [^XMLObject this]
     (-> this (.getMimeType))))
 
 (defn get-encoding
@@ -70,6 +70,6 @@
    URI identifies the method by which the object is encoded.
 
   returns: the encoding URI (or null if not specified) - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.XMLObject this]
+  (^java.lang.String [^XMLObject this]
     (-> this (.getEncoding))))
 

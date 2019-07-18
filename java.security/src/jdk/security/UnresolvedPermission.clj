@@ -68,7 +68,7 @@
   name - the name of the permission. - `java.lang.String`
   actions - the actions of the permission. - `java.lang.String`
   certs - the certificates the permission's class was signed with. This is a list of certificate chains, where each chain is composed of a signer certificate and optionally its supporting certificate chain. Each chain is ordered bottom-to-top (i.e., with the signer certificate first and the (root) certificate authority last). The signer certificates are copied from the array. Subsequent changes to the array will not affect this UnsolvedPermission. - `java.security.cert.Certificate[]`"
-  ([^java.lang.String type ^java.lang.String name ^java.lang.String actions certs]
+  (^UnresolvedPermission [^java.lang.String type ^java.lang.String name ^java.lang.String actions certs]
     (new UnresolvedPermission type name actions certs)))
 
 (defn get-unresolved-type
@@ -77,7 +77,7 @@
 
   returns: the type (class name) of the underlying permission that
     has not been resolved - `java.lang.String`"
-  (^java.lang.String [^java.security.UnresolvedPermission this]
+  (^java.lang.String [^UnresolvedPermission this]
     (-> this (.getUnresolvedType))))
 
 (defn get-unresolved-name
@@ -87,7 +87,7 @@
   returns: the target name of the underlying permission that
             has not been resolved, or null,
             if there is no target name - `java.lang.String`"
-  (^java.lang.String [^java.security.UnresolvedPermission this]
+  (^java.lang.String [^UnresolvedPermission this]
     (-> this (.getUnresolvedName))))
 
 (defn implies
@@ -98,7 +98,7 @@
   p - the permission to check against. - `java.security.Permission`
 
   returns: false. - `boolean`"
-  (^Boolean [^java.security.UnresolvedPermission this ^java.security.Permission p]
+  (^Boolean [^UnresolvedPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn to-string
@@ -107,7 +107,7 @@
    the following format: '(unresolved `ClassName` `name` `actions`)'.
 
   returns: information about this UnresolvedPermission. - `java.lang.String`"
-  (^java.lang.String [^java.security.UnresolvedPermission this]
+  (^java.lang.String [^UnresolvedPermission this]
     (-> this (.toString))))
 
 (defn get-actions
@@ -119,7 +119,7 @@
    itself is never considered to have any actions.
 
   returns: the empty string ``. - `java.lang.String`"
-  (^java.lang.String [^java.security.UnresolvedPermission this]
+  (^java.lang.String [^UnresolvedPermission this]
     (-> this (.getActions))))
 
 (defn get-unresolved-certs
@@ -129,14 +129,14 @@
   returns: the signer certificates for the underlying permission that
    has not been resolved, or null, if there are no signer certificates.
    Returns a new array each time this method is called. - `java.security.cert.Certificate[]`"
-  ([^java.security.UnresolvedPermission this]
+  ([^UnresolvedPermission this]
     (-> this (.getUnresolvedCerts))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.security.UnresolvedPermission this]
+  (^Integer [^UnresolvedPermission this]
     (-> this (.hashCode))))
 
 (defn get-unresolved-actions
@@ -146,7 +146,7 @@
   returns: the actions for the underlying permission that
             has not been resolved, or null
             if there are no actions - `java.lang.String`"
-  (^java.lang.String [^java.security.UnresolvedPermission this]
+  (^java.lang.String [^UnresolvedPermission this]
     (-> this (.getUnresolvedActions))))
 
 (defn new-permission-collection
@@ -155,7 +155,7 @@
 
   returns: a new PermissionCollection object suitable for
    storing UnresolvedPermissions. - `java.security.PermissionCollection`"
-  (^java.security.PermissionCollection [^java.security.UnresolvedPermission this]
+  (^java.security.PermissionCollection [^UnresolvedPermission this]
     (-> this (.newPermissionCollection))))
 
 (defn equals
@@ -173,6 +173,6 @@
   returns: true if obj is an UnresolvedPermission, and has the same
    type (class) name, permission name, actions, and
    certificates as this object. - `boolean`"
-  (^Boolean [^java.security.UnresolvedPermission this ^java.lang.Object obj]
+  (^Boolean [^UnresolvedPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

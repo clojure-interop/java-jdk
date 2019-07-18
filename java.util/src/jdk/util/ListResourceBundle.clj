@@ -30,7 +30,7 @@
       protected Object[][] getContents() {
           return new Object[][] {
           // LOCALIZE THIS
-              {`s1`, `The disk \`{1}\` contains {0}.`},  // MessageFormat pattern
+              {`s1`, `The disk `{1}` contains {0}.`},  // MessageFormat pattern
               {`s2`, `1`},                               // location of {0} in pattern
               {`s3`, `My Disk`},                         // sample disk name
               {`s4`, `no files`},                        // first ChoiceFormat choice
@@ -47,7 +47,7 @@
       protected Object[][] getContents() {
           return new Object[][] {
           // LOCALIZE THIS
-              {`s1`, `Le disque \`{1}\` {0}.`},          // MessageFormat pattern
+              {`s1`, `Le disque `{1}` {0}.`},          // MessageFormat pattern
               {`s2`, `1`},                               // location of {0} in pattern
               {`s3`, `Mon disque`},                      // sample disk name
               {`s4`, `ne contient pas de fichiers`},     // first ChoiceFormat choice
@@ -73,7 +73,7 @@
 
   Sole constructor.  (For invocation by subclass constructors, typically
    implicit.)"
-  ([]
+  (^ListResourceBundle []
     (new ListResourceBundle )))
 
 (defn handle-get-object
@@ -82,7 +82,7 @@
   key - the key for the desired object - `java.lang.String`
 
   returns: the object for the given key, or null - `java.lang.Object`"
-  (^java.lang.Object [^java.util.ListResourceBundle this ^java.lang.String key]
+  (^java.lang.Object [^ListResourceBundle this ^java.lang.String key]
     (-> this (.handleGetObject key))))
 
 (defn get-keys
@@ -91,6 +91,6 @@
 
   returns: an Enumeration of the keys contained in
            this ResourceBundle and its parent bundles. - `java.util.Enumeration<java.lang.String>`"
-  (^java.util.Enumeration [^java.util.ListResourceBundle this]
+  (^java.util.Enumeration [^ListResourceBundle this]
     (-> this (.getKeys))))
 

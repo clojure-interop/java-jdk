@@ -235,34 +235,34 @@
   "Returns the minimum value of this Spring.
 
   returns: the minimumValue property of this Spring - `int`"
-  (^Integer [^javax.swing.Spring this]
+  (^Integer [^Spring this]
     (-> this (.getMinimumValue))))
 
 (defn get-preferred-value
   "Returns the preferred value of this Spring.
 
   returns: the preferredValue of this Spring - `int`"
-  (^Integer [^javax.swing.Spring this]
+  (^Integer [^Spring this]
     (-> this (.getPreferredValue))))
 
 (defn get-maximum-value
   "Returns the maximum value of this Spring.
 
   returns: the maximumValue property of this Spring - `int`"
-  (^Integer [^javax.swing.Spring this]
+  (^Integer [^Spring this]
     (-> this (.getMaximumValue))))
 
 (defn get-value
   "Returns the current value of this Spring.
 
   returns: the value property of this Spring - `int`"
-  (^Integer [^javax.swing.Spring this]
+  (^Integer [^Spring this]
     (-> this (.getValue))))
 
 (defn set-value
   "Sets the current value of this Spring to value.
 
   value - the new setting of the value property - `int`"
-  ([^javax.swing.Spring this ^Integer value]
+  ([^Spring this ^Integer value]
     (-> this (.setValue value))))
 

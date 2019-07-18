@@ -69,41 +69,41 @@
    properties of a requested audio file. The properties map
    will be copied to prevent any changes to it.
 
-  type - the type of the audio file - `javax.sound.sampled.AudioFileFormat.Type`
+  type - the type of the audio file - `javax.sound.sampled.AudioFileFormat$Type`
   format - the format of the audio data contained in the file - `javax.sound.sampled.AudioFormat`
   frame-length - the audio data length in sample frames, or AudioSystem.NOT_SPECIFIED - `int`
-  properties - a Map<String,Object> object with properties - `java.util.Map<java.lang.String,java.lang.Object>`"
-  ([^javax.sound.sampled.AudioFileFormat.Type type ^javax.sound.sampled.AudioFormat format ^Integer frame-length ^java.util.Map properties]
+  properties - a Map<String,Object> object with properties - `java.util.Map`"
+  (^AudioFileFormat [^javax.sound.sampled.AudioFileFormat$Type type ^javax.sound.sampled.AudioFormat format ^Integer frame-length ^java.util.Map properties]
     (new AudioFileFormat type format frame-length properties))
-  ([^javax.sound.sampled.AudioFileFormat.Type type ^javax.sound.sampled.AudioFormat format ^Integer frame-length]
+  (^AudioFileFormat [^javax.sound.sampled.AudioFileFormat$Type type ^javax.sound.sampled.AudioFormat format ^Integer frame-length]
     (new AudioFileFormat type format frame-length)))
 
 (defn get-type
   "Obtains the audio file type, such as WAVE or AU.
 
-  returns: the audio file type - `javax.sound.sampled.AudioFileFormat.Type`"
-  (^javax.sound.sampled.AudioFileFormat.Type [^javax.sound.sampled.AudioFileFormat this]
+  returns: the audio file type - `javax.sound.sampled.AudioFileFormat$Type`"
+  (^javax.sound.sampled.AudioFileFormat$Type [^AudioFileFormat this]
     (-> this (.getType))))
 
 (defn get-byte-length
   "Obtains the size in bytes of the entire audio file (not just its audio data).
 
   returns: the audio file length in bytes - `int`"
-  (^Integer [^javax.sound.sampled.AudioFileFormat this]
+  (^Integer [^AudioFileFormat this]
     (-> this (.getByteLength))))
 
 (defn get-format
   "Obtains the format of the audio data contained in the audio file.
 
   returns: the audio data format - `javax.sound.sampled.AudioFormat`"
-  (^javax.sound.sampled.AudioFormat [^javax.sound.sampled.AudioFileFormat this]
+  (^javax.sound.sampled.AudioFormat [^AudioFileFormat this]
     (-> this (.getFormat))))
 
 (defn get-frame-length
   "Obtains the length of the audio data contained in the file, expressed in sample frames.
 
   returns: the number of sample frames of audio data in the file - `int`"
-  (^Integer [^javax.sound.sampled.AudioFileFormat this]
+  (^Integer [^AudioFileFormat this]
     (-> this (.getFrameLength))))
 
 (defn properties
@@ -114,7 +114,7 @@
   returns: a Map<String,Object> object containing
            all properties. If no properties are recognized, an empty map is
            returned. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  (^java.util.Map [^javax.sound.sampled.AudioFileFormat this]
+  (^java.util.Map [^AudioFileFormat this]
     (-> this (.properties))))
 
 (defn get-property
@@ -130,13 +130,13 @@
 
   returns: the value of the property with the specified key,
            or null if the property does not exist. - `java.lang.Object`"
-  (^java.lang.Object [^javax.sound.sampled.AudioFileFormat this ^java.lang.String key]
+  (^java.lang.Object [^AudioFileFormat this ^java.lang.String key]
     (-> this (.getProperty key))))
 
 (defn to-string
   "Provides a string representation of the file format.
 
   returns: the file format as a string - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.AudioFileFormat this]
+  (^java.lang.String [^AudioFileFormat this]
     (-> this (.toString))))
 

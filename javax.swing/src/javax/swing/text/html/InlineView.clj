@@ -10,7 +10,7 @@
   Constructs a new view wrapped on an element.
 
   elem - the element - `javax.swing.text.Element`"
-  ([^javax.swing.text.Element elem]
+  (^InlineView [^javax.swing.text.Element elem]
     (new InlineView elem)))
 
 (defn insert-update
@@ -22,7 +22,7 @@
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.html.InlineView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
+  ([^InlineView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.insertUpdate e a f))))
 
 (defn remove-update
@@ -34,7 +34,7 @@
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.html.InlineView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
+  ([^InlineView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.removeUpdate e a f))))
 
 (defn changed-update
@@ -44,7 +44,7 @@
   e - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.html.InlineView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
+  ([^InlineView this ^javax.swing.event.DocumentEvent e ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.changedUpdate e a f))))
 
 (defn get-attributes
@@ -53,7 +53,7 @@
    model with a StyleSheet.
 
   returns: `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.html.InlineView this]
+  (^javax.swing.text.AttributeSet [^InlineView this]
     (-> this (.getAttributes))))
 
 (defn get-break-weight
@@ -85,7 +85,7 @@
 
   returns: the weight, which should be a value between
      ForcedBreakWeight and BadBreakWeight. - `int`"
-  (^Integer [^javax.swing.text.html.InlineView this ^Integer axis ^Float pos ^Float len]
+  (^Integer [^InlineView this ^Integer axis ^Float pos ^Float len]
     (-> this (.getBreakWeight axis pos len))))
 
 (defn break-view
@@ -104,6 +104,6 @@
 
   returns: the fragment of the view that represents the
     given span. - `javax.swing.text.View`"
-  (^javax.swing.text.View [^javax.swing.text.html.InlineView this ^Integer axis ^Integer offset ^Float pos ^Float len]
+  (^javax.swing.text.View [^InlineView this ^Integer axis ^Integer offset ^Float pos ^Float len]
     (-> this (.breakView axis offset pos len))))
 

@@ -37,7 +37,7 @@
   "Constructor.
 
   Initializes a KeyboardFocusManager."
-  ([]
+  (^KeyboardFocusManager []
     (new KeyboardFocusManager )))
 
 (def *-forward-traversal-keys
@@ -108,7 +108,7 @@
 
   returns: the permanent focus owner, or null if the permanent focus owner
            is not a member of the calling thread's context - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.KeyboardFocusManager this]
+  (^java.awt.Component [^KeyboardFocusManager this]
     (-> this (.getPermanentFocusOwner))))
 
 (defn clear-focus-owner
@@ -122,7 +122,7 @@
    receive focus, or a Component is given focus explicitly via a call to
    requestFocus(). This operation does not change the focused or
    active Windows."
-  ([^java.awt.KeyboardFocusManager this]
+  ([^KeyboardFocusManager this]
     (-> this (.clearFocusOwner))))
 
 (defn remove-key-event-dispatcher
@@ -141,7 +141,7 @@
    AWT Threading Issues for more details.
 
   dispatcher - the KeyEventDispatcher to remove from the dispatcher chain - `java.awt.KeyEventDispatcher`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.KeyEventDispatcher dispatcher]
+  ([^KeyboardFocusManager this ^java.awt.KeyEventDispatcher dispatcher]
     (-> this (.removeKeyEventDispatcher dispatcher))))
 
 (defn get-default-focus-traversal-keys
@@ -161,7 +161,7 @@
            will never be returned - `java.util.Set<java.awt.AWTKeyStroke>`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS"
-  (^java.util.Set [^java.awt.KeyboardFocusManager this ^Integer id]
+  (^java.util.Set [^KeyboardFocusManager this ^Integer id]
     (-> this (.getDefaultFocusTraversalKeys id))))
 
 (defn get-current-focus-cycle-root
@@ -177,7 +177,7 @@
 
   returns: the current focus cycle root, or null if the current focus cycle
            root is not a member of the calling thread's context - `java.awt.Container`"
-  (^java.awt.Container [^java.awt.KeyboardFocusManager this]
+  (^java.awt.Container [^KeyboardFocusManager this]
     (-> this (.getCurrentFocusCycleRoot))))
 
 (defn focus-next-component
@@ -185,9 +185,9 @@
    FocusTraversalPolicy.
 
   a-component - the Component that is the basis for the focus traversal operation - `java.awt.Component`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.Component a-component]
+  ([^KeyboardFocusManager this ^java.awt.Component a-component]
     (-> this (.focusNextComponent a-component)))
-  ([^java.awt.KeyboardFocusManager this]
+  ([^KeyboardFocusManager this]
     (-> this (.focusNextComponent))))
 
 (defn get-active-window
@@ -200,7 +200,7 @@
 
   returns: the active Window, or null if the active Window is not a member
            of the calling thread's context - `java.awt.Window`"
-  (^java.awt.Window [^java.awt.KeyboardFocusManager this]
+  (^java.awt.Window [^KeyboardFocusManager this]
     (-> this (.getActiveWindow))))
 
 (defn get-focus-owner
@@ -214,7 +214,7 @@
 
   returns: the focus owner, or null if the focus owner is not a member of
            the calling thread's context - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.KeyboardFocusManager this]
+  (^java.awt.Component [^KeyboardFocusManager this]
     (-> this (.getFocusOwner))))
 
 (defn get-focused-window
@@ -224,7 +224,7 @@
 
   returns: the focused Window, or null if the focused Window is not a
            member of the calling thread's context - `java.awt.Window`"
-  (^java.awt.Window [^java.awt.KeyboardFocusManager this]
+  (^java.awt.Window [^KeyboardFocusManager this]
     (-> this (.getFocusedWindow))))
 
 (defn down-focus-cycle
@@ -235,9 +235,9 @@
    no focus traversal operation occurs.
 
   a-container - the Container that is the basis for the focus traversal operation - `java.awt.Container`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.Container a-container]
+  ([^KeyboardFocusManager this ^java.awt.Container a-container]
     (-> this (.downFocusCycle a-container)))
-  ([^java.awt.KeyboardFocusManager this]
+  ([^KeyboardFocusManager this]
     (-> this (.downFocusCycle))))
 
 (defn remove-key-event-post-processor
@@ -257,7 +257,7 @@
    AWT Threading Issues for more details.
 
   processor - the KeyEventPostProcessor to remove from the post- processor chain - `java.awt.KeyEventPostProcessor`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.KeyEventPostProcessor processor]
+  ([^KeyboardFocusManager this ^java.awt.KeyEventPostProcessor processor]
     (-> this (.removeKeyEventPostProcessor processor))))
 
 (defn remove-property-change-listener
@@ -269,9 +269,9 @@
 
   property-name - a valid property name - `java.lang.String`
   listener - the PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([^java.awt.KeyboardFocusManager this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
+  ([^KeyboardFocusManager this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener property-name listener)))
-  ([^java.awt.KeyboardFocusManager this ^java.beans.PropertyChangeListener listener]
+  ([^KeyboardFocusManager this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn add-key-event-dispatcher
@@ -293,7 +293,7 @@
    AWT Threading Issues for more details.
 
   dispatcher - the KeyEventDispatcher to add to the dispatcher chain - `java.awt.KeyEventDispatcher`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.KeyEventDispatcher dispatcher]
+  ([^KeyboardFocusManager this ^java.awt.KeyEventDispatcher dispatcher]
     (-> this (.addKeyEventDispatcher dispatcher))))
 
 (defn get-default-focus-traversal-policy
@@ -302,7 +302,7 @@
    policy by explicit call to Container.setFocusTraversalPolicy.
 
   returns: the default FocusTraversalPolicy. null will never be returned. - `java.awt.FocusTraversalPolicy`"
-  (^java.awt.FocusTraversalPolicy [^java.awt.KeyboardFocusManager this]
+  (^java.awt.FocusTraversalPolicy [^KeyboardFocusManager this]
     (-> this (.getDefaultFocusTraversalPolicy))))
 
 (defn dispatch-key-event
@@ -318,7 +318,7 @@
 
   returns: true if the KeyEvent was dispatched;
            false otherwise - `boolean`"
-  (^Boolean [^java.awt.KeyboardFocusManager this ^java.awt.event.KeyEvent e]
+  (^Boolean [^KeyboardFocusManager this ^java.awt.event.KeyEvent e]
     (-> this (.dispatchKeyEvent e))))
 
 (defn clear-global-focus-owner
@@ -340,7 +340,7 @@
    for general client use.
 
   throws: java.lang.SecurityException - if the calling thread does not have `replaceKeyboardFocusManager` permission"
-  ([^java.awt.KeyboardFocusManager this]
+  ([^KeyboardFocusManager this]
     (-> this (.clearGlobalFocusOwner))))
 
 (defn get-property-change-listeners
@@ -352,9 +352,9 @@
   returns: all of the PropertyChangeListeners associated with
            the named property or an empty array if no such listeners have
            been added. - `java.beans.PropertyChangeListener[]`"
-  ([^java.awt.KeyboardFocusManager this ^java.lang.String property-name]
+  ([^KeyboardFocusManager this ^java.lang.String property-name]
     (-> this (.getPropertyChangeListeners property-name)))
-  ([^java.awt.KeyboardFocusManager this]
+  ([^KeyboardFocusManager this]
     (-> this (.getPropertyChangeListeners))))
 
 (defn get-vetoable-change-listeners
@@ -366,9 +366,9 @@
   returns: all of the VetoableChangeListeners associated with
            the named property or an empty array if no such listeners have
            been added. - `java.beans.VetoableChangeListener[]`"
-  ([^java.awt.KeyboardFocusManager this ^java.lang.String property-name]
+  ([^KeyboardFocusManager this ^java.lang.String property-name]
     (-> this (.getVetoableChangeListeners property-name)))
-  ([^java.awt.KeyboardFocusManager this]
+  ([^KeyboardFocusManager this]
     (-> this (.getVetoableChangeListeners))))
 
 (defn add-key-event-post-processor
@@ -393,7 +393,7 @@
    AWT Threading Issues for more details.
 
   processor - the KeyEventPostProcessor to add to the post-processor chain - `java.awt.KeyEventPostProcessor`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.KeyEventPostProcessor processor]
+  ([^KeyboardFocusManager this ^java.awt.KeyEventPostProcessor processor]
     (-> this (.addKeyEventPostProcessor processor))))
 
 (defn post-process-key-event
@@ -406,7 +406,7 @@
 
   returns: true to indicate that no other
            KeyEventPostProcessor will be notified of the KeyEvent. - `boolean`"
-  (^Boolean [^java.awt.KeyboardFocusManager this ^java.awt.event.KeyEvent e]
+  (^Boolean [^KeyboardFocusManager this ^java.awt.event.KeyEvent e]
     (-> this (.postProcessKeyEvent e))))
 
 (defn process-key-event
@@ -419,7 +419,7 @@
 
   focused-component - the Component that will be the basis for a focus traversal operation if the specified event represents a focus traversal key for the Component - `java.awt.Component`
   e - the event that may represent a focus traversal key - `java.awt.event.KeyEvent`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.Component focused-component ^java.awt.event.KeyEvent e]
+  ([^KeyboardFocusManager this ^java.awt.Component focused-component ^java.awt.event.KeyEvent e]
     (-> this (.processKeyEvent focused-component e))))
 
 (defn set-default-focus-traversal-policy
@@ -433,7 +433,7 @@
   default-policy - the new, default FocusTraversalPolicy - `java.awt.FocusTraversalPolicy`
 
   throws: java.lang.IllegalArgumentException - if defaultPolicy is null"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.FocusTraversalPolicy default-policy]
+  ([^KeyboardFocusManager this ^java.awt.FocusTraversalPolicy default-policy]
     (-> this (.setDefaultFocusTraversalPolicy default-policy))))
 
 (defn dispatch-event
@@ -453,7 +453,7 @@
 
   returns: true if this method dispatched the event;
            false otherwise - `boolean`"
-  (^Boolean [^java.awt.KeyboardFocusManager this ^java.awt.AWTEvent e]
+  (^Boolean [^KeyboardFocusManager this ^java.awt.AWTEvent e]
     (-> this (.dispatchEvent e))))
 
 (defn set-default-focus-traversal-keys
@@ -521,10 +521,10 @@
    in keystrokes is not an AWTKeyStroke.
 
   id - one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS - `int`
-  keystrokes - the Set of AWTKeyStrokes for the specified operation - `java.awt.AWTKeyStroke>`
+  keystrokes - the Set of AWTKeyStrokes for the specified operation - `java.util.Set`
 
   throws: java.lang.IllegalArgumentException - if id is not one of KeyboardFocusManager.FORWARD_TRAVERSAL_KEYS, KeyboardFocusManager.BACKWARD_TRAVERSAL_KEYS, KeyboardFocusManager.UP_CYCLE_TRAVERSAL_KEYS, or KeyboardFocusManager.DOWN_CYCLE_TRAVERSAL_KEYS, or if keystrokes is null, or if keystrokes contains null, or if any keystroke represents a KEY_TYPED event, or if any keystroke already maps to another default focus traversal operation"
-  ([^java.awt.KeyboardFocusManager this ^Integer id ^java.awt.AWTKeyStroke> keystrokes]
+  ([^KeyboardFocusManager this ^Integer id ^java.util.Set keystrokes]
     (-> this (.setDefaultFocusTraversalKeys id keystrokes))))
 
 (defn remove-vetoable-change-listener
@@ -536,9 +536,9 @@
 
   property-name - a valid property name - `java.lang.String`
   listener - the VetoableChangeListener to be removed - `java.beans.VetoableChangeListener`"
-  ([^java.awt.KeyboardFocusManager this ^java.lang.String property-name ^java.beans.VetoableChangeListener listener]
+  ([^KeyboardFocusManager this ^java.lang.String property-name ^java.beans.VetoableChangeListener listener]
     (-> this (.removeVetoableChangeListener property-name listener)))
-  ([^java.awt.KeyboardFocusManager this ^java.beans.VetoableChangeListener listener]
+  ([^KeyboardFocusManager this ^java.beans.VetoableChangeListener listener]
     (-> this (.removeVetoableChangeListener listener))))
 
 (defn redispatch-event
@@ -554,7 +554,7 @@
 
   target - the Component to which the event should be dispatched - `java.awt.Component`
   e - the event to dispatch - `java.awt.AWTEvent`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.Component target ^java.awt.AWTEvent e]
+  ([^KeyboardFocusManager this ^java.awt.Component target ^java.awt.AWTEvent e]
     (-> this (.redispatchEvent target e))))
 
 (defn add-property-change-listener
@@ -585,9 +585,9 @@
 
   property-name - one of the property names listed above - `java.lang.String`
   listener - the PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([^java.awt.KeyboardFocusManager this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
+  ([^KeyboardFocusManager this ^java.lang.String property-name ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener property-name listener)))
-  ([^java.awt.KeyboardFocusManager this ^java.beans.PropertyChangeListener listener]
+  ([^KeyboardFocusManager this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn set-global-current-focus-cycle-root
@@ -608,7 +608,7 @@
   new-focus-cycle-root - the new focus cycle root - `java.awt.Container`
 
   throws: java.lang.SecurityException - if the calling thread does not have `replaceKeyboardFocusManager` permission"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.Container new-focus-cycle-root]
+  ([^KeyboardFocusManager this ^java.awt.Container new-focus-cycle-root]
     (-> this (.setGlobalCurrentFocusCycleRoot new-focus-cycle-root))))
 
 (defn focus-previous-component
@@ -616,9 +616,9 @@
    FocusTraversalPolicy.
 
   a-component - the Component that is the basis for the focus traversal operation - `java.awt.Component`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.Component a-component]
+  ([^KeyboardFocusManager this ^java.awt.Component a-component]
     (-> this (.focusPreviousComponent a-component)))
-  ([^java.awt.KeyboardFocusManager this]
+  ([^KeyboardFocusManager this]
     (-> this (.focusPreviousComponent))))
 
 (defn up-focus-cycle
@@ -630,9 +630,9 @@
    focus cycle root is unchanged.
 
   a-component - the Component that is the basis for the focus traversal operation - `java.awt.Component`"
-  ([^java.awt.KeyboardFocusManager this ^java.awt.Component a-component]
+  ([^KeyboardFocusManager this ^java.awt.Component a-component]
     (-> this (.upFocusCycle a-component)))
-  ([^java.awt.KeyboardFocusManager this]
+  ([^KeyboardFocusManager this]
     (-> this (.upFocusCycle))))
 
 (defn add-vetoable-change-listener
@@ -649,8 +649,8 @@
 
   property-name - one of the property names listed above - `java.lang.String`
   listener - the VetoableChangeListener to be added - `java.beans.VetoableChangeListener`"
-  ([^java.awt.KeyboardFocusManager this ^java.lang.String property-name ^java.beans.VetoableChangeListener listener]
+  ([^KeyboardFocusManager this ^java.lang.String property-name ^java.beans.VetoableChangeListener listener]
     (-> this (.addVetoableChangeListener property-name listener)))
-  ([^java.awt.KeyboardFocusManager this ^java.beans.VetoableChangeListener listener]
+  ([^KeyboardFocusManager this ^java.beans.VetoableChangeListener listener]
     (-> this (.addVetoableChangeListener listener))))
 

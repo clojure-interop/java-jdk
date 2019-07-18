@@ -76,14 +76,14 @@
    collection is this list, and it's nonempty.)
 
   index - index at which to insert the first element from the specified collection - `int`
-  c - collection containing elements to be added to this list - `List.E>`
+  c - collection containing elements to be added to this list - `java.util.Collection`
 
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this list"
-  (^Boolean [^java.util.List this ^Integer index ^List.E> c]
+  (^Boolean [^List this ^Integer index ^java.util.Collection c]
     (-> this (.addAll index c)))
-  (^Boolean [^java.util.List this ^List.E> c]
+  (^Boolean [^List this ^java.util.Collection c]
     (-> this (.addAll c))))
 
 (defn spliterator
@@ -93,8 +93,8 @@
    Spliterator.ORDERED.  Implementations should document the
    reporting of additional characteristic values.
 
-  returns: a Spliterator over the elements in this list - `default java.util.Spliterator<List.E>`"
-  ([^java.util.List this]
+  returns: a Spliterator over the elements in this list - `default java.util.Spliterator<E>`"
+  ([^List this]
     (-> this (.spliterator))))
 
 (defn replace-all
@@ -102,12 +102,12 @@
    operator to that element.  Errors or runtime exceptions thrown by
    the operator are relayed to the caller.
 
-  operator - the operator to apply to each element - `java.util.function.UnaryOperator<List.E>`
+  operator - the operator to apply to each element - `java.util.function.UnaryOperator`
 
   returns: `default void`
 
   throws: java.lang.UnsupportedOperationException - if this list is unmodifiable. Implementations may throw this exception if an element cannot be replaced or if, in general, modification is not supported"
-  ([^java.util.List this ^java.util.function.UnaryOperator operator]
+  ([^List this ^java.util.function.UnaryOperator operator]
     (-> this (.replaceAll operator))))
 
 (defn contains
@@ -121,7 +121,7 @@
   returns: true if this list contains the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this list (optional)"
-  (^Boolean [^java.util.List this ^java.lang.Object o]
+  (^Boolean [^List this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn list-iterator
@@ -135,12 +135,12 @@
   index - index of the first element to be returned from the list iterator (by a call to next) - `int`
 
   returns: a list iterator over the elements in this list (in proper
-           sequence), starting at the specified position in the list - `java.util.ListIterator<List.E>`
+           sequence), starting at the specified position in the list - `java.util.ListIterator<E>`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index > size())"
-  (^java.util.ListIterator [^java.util.List this ^Integer index]
+  (^java.util.ListIterator [^List this ^Integer index]
     (-> this (.listIterator index)))
-  (^java.util.ListIterator [^java.util.List this]
+  (^java.util.ListIterator [^List this]
     (-> this (.listIterator))))
 
 (defn sort
@@ -158,19 +158,19 @@
 
    This list must be modifiable, but need not be resizable.
 
-  c - the Comparator used to compare list elements. A null value indicates that the elements' java.lang.natural ordering should be used - `List.E>`
+  c - the Comparator used to compare list elements. A null value indicates that the elements' java.lang.natural ordering should be used - `java.util.Comparator`
 
   returns: `default void`
 
   throws: java.lang.ClassCastException - if the list contains elements that are not mutually comparable using the specified comparator"
-  ([^java.util.List this ^List.E> c]
+  ([^List this ^java.util.Comparator c]
     (-> this (.sort c))))
 
 (defn iterator
   "Returns an iterator over the elements in this list in proper sequence.
 
-  returns: an iterator over the elements in this list in proper sequence - `java.util.Iterator<List.E>`"
-  (^java.util.Iterator [^java.util.List this]
+  returns: an iterator over the elements in this list in proper sequence - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^List this]
     (-> this (.iterator))))
 
 (defn sub-list
@@ -203,10 +203,10 @@
   from-index - low endpoint (inclusive) of the subList - `int`
   to-index - high endpoint (exclusive) of the subList - `int`
 
-  returns: a view of the specified range within this list - `java.util.List<List.E>`
+  returns: a view of the specified range within this list - `java.util.List<E>`
 
   throws: java.lang.IndexOutOfBoundsException - for an illegal endpoint index value (fromIndex < 0 || toIndex > size || fromIndex > toIndex)"
-  (^java.util.List [^java.util.List this ^Integer from-index ^Integer to-index]
+  (^java.util.List [^List this ^Integer from-index ^Integer to-index]
     (-> this (.subList from-index to-index))))
 
 (defn last-index-of
@@ -222,7 +222,7 @@
            this list, or -1 if this list does not contain the element - `int`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this list (optional)"
-  (^Integer [^java.util.List this ^java.lang.Object o]
+  (^Integer [^List this ^java.lang.Object o]
     (-> this (.lastIndexOf o))))
 
 (defn remove
@@ -240,7 +240,7 @@
   returns: true if this list contained the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this list (optional)"
-  (^Boolean [^java.util.List this ^java.lang.Object o]
+  (^Boolean [^List this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn hash-code
@@ -257,7 +257,7 @@
    contract of Object.hashCode().
 
   returns: the hash code value for this list - `int`"
-  (^Integer [^java.util.List this]
+  (^Integer [^List this]
     (-> this (.hashCode))))
 
 (defn add
@@ -267,12 +267,12 @@
    indices).
 
   index - index at which the specified element is to be inserted - `int`
-  element - element to be inserted - `List.E`
+  element - element to be inserted - `E`
 
   throws: java.lang.UnsupportedOperationException - if the add operation is not supported by this list"
-  ([^java.util.List this ^Integer index ^List.E element]
+  ([^List this ^Integer index element]
     (-> this (.add index element)))
-  (^Boolean [^java.util.List this ^List.E e]
+  (^Boolean [^List this e]
     (-> this (.add e))))
 
 (defn set
@@ -280,19 +280,19 @@
    specified element (optional operation).
 
   index - index of the element to replace - `int`
-  element - element to be stored at the specified position - `List.E`
+  element - element to be stored at the specified position - `E`
 
-  returns: the element previously at the specified position - `List.E`
+  returns: the element previously at the specified position - `E`
 
   throws: java.lang.UnsupportedOperationException - if the set operation is not supported by this list"
-  (^List.E [^java.util.List this ^Integer index ^List.E element]
+  ([^List this ^Integer index element]
     (-> this (.set index element))))
 
 (defn empty?
   "Returns true if this list contains no elements.
 
   returns: true if this list contains no elements - `boolean`"
-  (^Boolean [^java.util.List this]
+  (^Boolean [^List this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -301,7 +301,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of elements in this list - `int`"
-  (^Integer [^java.util.List this]
+  (^Integer [^List this]
     (-> this (.size))))
 
 (defn retain-all
@@ -310,12 +310,12 @@
    from this list all of its elements that are not contained in the
    specified collection.
 
-  c - collection containing elements to be retained in this list - `java.util.Collection<?>`
+  c - collection containing elements to be retained in this list - `java.util.Collection`
 
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the retainAll operation is not supported by this list"
-  (^Boolean [^java.util.List this ^java.util.Collection c]
+  (^Boolean [^List this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -323,7 +323,7 @@
    The list will be empty after this call returns.
 
   throws: java.lang.UnsupportedOperationException - if the clear operation is not supported by this list"
-  ([^java.util.List this]
+  ([^List this]
     (-> this (.clear))))
 
 (defn index-of
@@ -339,7 +339,7 @@
            this list, or -1 if this list does not contain the element - `int`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this list (optional)"
-  (^Integer [^java.util.List this ^java.lang.Object o]
+  (^Integer [^List this ^java.lang.Object o]
     (-> this (.indexOf o))))
 
 (defn to-array
@@ -377,21 +377,21 @@
   returns: an array containing the elements of this list - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this list"
-  ([^java.util.List this a]
+  ([^List this a]
     (-> this (.toArray a)))
-  ([^java.util.List this]
+  ([^List this]
     (-> this (.toArray))))
 
 (defn remove-all
   "Removes from this list all of its elements that are contained in the
    specified collection (optional operation).
 
-  c - collection containing elements to be removed from this list - `java.util.Collection<?>`
+  c - collection containing elements to be removed from this list - `java.util.Collection`
 
   returns: true if this list changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the removeAll operation is not supported by this list"
-  (^Boolean [^java.util.List this ^java.util.Collection c]
+  (^Boolean [^List this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn get
@@ -399,10 +399,10 @@
 
   index - index of the element to return - `int`
 
-  returns: the element at the specified position in this list - `List.E`
+  returns: the element at the specified position in this list - `E`
 
   throws: java.lang.IndexOutOfBoundsException - if the index is out of range (index < 0 || index >= size())"
-  (^List.E [^java.util.List this ^Integer index]
+  ([^List this ^Integer index]
     (-> this (.get index))))
 
 (defn equals
@@ -419,19 +419,19 @@
   o - the object to be compared for equality with this list - `java.lang.Object`
 
   returns: true if the specified object is equal to this list - `boolean`"
-  (^Boolean [^java.util.List this ^java.lang.Object o]
+  (^Boolean [^List this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn contains-all
   "Returns true if this list contains all of the elements of the
    specified collection.
 
-  c - collection to be checked for containment in this list - `java.util.Collection<?>`
+  c - collection to be checked for containment in this list - `java.util.Collection`
 
   returns: true if this list contains all of the elements of the
            specified collection - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in the specified collection are incompatible with this list (optional)"
-  (^Boolean [^java.util.List this ^java.util.Collection c]
+  (^Boolean [^List this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

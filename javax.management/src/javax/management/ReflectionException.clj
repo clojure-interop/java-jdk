@@ -13,22 +13,22 @@
 
   e - the wrapped exception. - `java.lang.Exception`
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.Exception e ^java.lang.String message]
+  (^ReflectionException [^java.lang.Exception e ^java.lang.String message]
     (new ReflectionException e message))
-  ([^java.lang.Exception e]
+  (^ReflectionException [^java.lang.Exception e]
     (new ReflectionException e)))
 
 (defn get-target-exception
   "Returns the actual Exception thrown.
 
   returns: the wrapped Exception. - `java.lang.Exception`"
-  (^java.lang.Exception [^javax.management.ReflectionException this]
+  (^java.lang.Exception [^ReflectionException this]
     (-> this (.getTargetException))))
 
 (defn get-cause
   "Returns the actual Exception thrown.
 
   returns: the wrapped Exception. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.management.ReflectionException this]
+  (^java.lang.Throwable [^ReflectionException this]
     (-> this (.getCause))))
 

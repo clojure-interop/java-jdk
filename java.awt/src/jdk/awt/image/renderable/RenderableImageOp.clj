@@ -15,7 +15,7 @@
 
   crif - a ContextualRenderedImageFactory object - `java.awt.image.renderable.ContextualRenderedImageFactory`
   param-block - a ParameterBlock containing this operation's source images and other parameters necessary for the operation to run. - `java.awt.image.renderable.ParameterBlock`"
-  ([^java.awt.image.renderable.ContextualRenderedImageFactory crif ^java.awt.image.renderable.ParameterBlock param-block]
+  (^RenderableImageOp [^java.awt.image.renderable.ContextualRenderedImageFactory crif ^java.awt.image.renderable.ParameterBlock param-block]
     (new RenderableImageOp crif param-block)))
 
 (defn get-width
@@ -24,7 +24,7 @@
    ratio (width divided by height).
 
   returns: the width of the image in user coordinates. - `float`"
-  (^Float [^java.awt.image.renderable.RenderableImageOp this]
+  (^Float [^RenderableImageOp this]
     (-> this (.getWidth))))
 
 (defn create-default-rendering
@@ -36,7 +36,7 @@
    sure that there is a defined default width and height.
 
   returns: a RenderedImage containing the rendered data. - `java.awt.image.RenderedImage`"
-  (^java.awt.image.RenderedImage [^java.awt.image.renderable.RenderableImageOp this]
+  (^java.awt.image.RenderedImage [^RenderableImageOp this]
     (-> this (.createDefaultRendering))))
 
 (defn set-parameter-block
@@ -48,7 +48,7 @@
   param-block - the new ParameterBlock. - `java.awt.image.renderable.ParameterBlock`
 
   returns: the old ParameterBlock. - `java.awt.image.renderable.ParameterBlock`"
-  (^java.awt.image.renderable.ParameterBlock [^java.awt.image.renderable.RenderableImageOp this ^java.awt.image.renderable.ParameterBlock param-block]
+  (^java.awt.image.renderable.ParameterBlock [^RenderableImageOp this ^java.awt.image.renderable.ParameterBlock param-block]
     (-> this (.setParameterBlock param-block))))
 
 (defn get-parameter-block
@@ -56,7 +56,7 @@
 
   returns: the ParameterBlock of this
            RenderableImageOp. - `java.awt.image.renderable.ParameterBlock`"
-  (^java.awt.image.renderable.ParameterBlock [^java.awt.image.renderable.RenderableImageOp this]
+  (^java.awt.image.renderable.ParameterBlock [^RenderableImageOp this]
     (-> this (.getParameterBlock))))
 
 (defn dynamic?
@@ -69,7 +69,7 @@
   returns: true if successive renderings with the
            same arguments might produce different results;
            false otherwise. - `boolean`"
-  (^Boolean [^java.awt.image.renderable.RenderableImageOp this]
+  (^Boolean [^RenderableImageOp this]
     (-> this (.isDynamic))))
 
 (defn get-min-y
@@ -77,14 +77,14 @@
 
   returns: the minimum Y coordinate of the rendering-independent image
    data. - `float`"
-  (^Float [^java.awt.image.renderable.RenderableImageOp this]
+  (^Float [^RenderableImageOp this]
     (-> this (.getMinY))))
 
 (defn get-property-names
   "Return a list of names recognized by getProperty.
 
   returns: a list of property names. - `java.lang.String[]`"
-  ([^java.awt.image.renderable.RenderableImageOp this]
+  ([^RenderableImageOp this]
     (-> this (.getPropertyNames))))
 
 (defn get-height
@@ -92,7 +92,7 @@
    usual height of a RenderedImage is equal to 1.0F.
 
   returns: the height of the image in user coordinates. - `float`"
-  (^Float [^java.awt.image.renderable.RenderableImageOp this]
+  (^Float [^RenderableImageOp this]
     (-> this (.getHeight))))
 
 (defn get-property
@@ -104,7 +104,7 @@
 
   returns: a reference to the property Object, or the value
            java.awt.Image.UndefinedProperty. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.image.renderable.RenderableImageOp this ^java.lang.String name]
+  (^java.lang.Object [^RenderableImageOp this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn create-rendering
@@ -145,7 +145,7 @@
   render-context - The RenderContext to use to perform the rendering. - `java.awt.image.renderable.RenderContext`
 
   returns: a RenderedImage containing the desired output image. - `java.awt.image.RenderedImage`"
-  (^java.awt.image.RenderedImage [^java.awt.image.renderable.RenderableImageOp this ^java.awt.image.renderable.RenderContext render-context]
+  (^java.awt.image.RenderedImage [^RenderableImageOp this ^java.awt.image.renderable.RenderContext render-context]
     (-> this (.createRendering render-context))))
 
 (defn get-min-x
@@ -153,7 +153,7 @@
 
   returns: the minimum X coordinate of the rendering-independent image
    data. - `float`"
-  (^Float [^java.awt.image.renderable.RenderableImageOp this]
+  (^Float [^RenderableImageOp this]
     (-> this (.getMinX))))
 
 (defn create-scaled-rendering
@@ -181,7 +181,7 @@
   hints - a RenderingHints object containing hints. - `java.awt.RenderingHints`
 
   returns: a RenderedImage containing the rendered data. - `java.awt.image.RenderedImage`"
-  (^java.awt.image.RenderedImage [^java.awt.image.renderable.RenderableImageOp this ^Integer w ^Integer h ^java.awt.RenderingHints hints]
+  (^java.awt.image.RenderedImage [^RenderableImageOp this ^Integer w ^Integer h ^java.awt.RenderingHints hints]
     (-> this (.createScaledRendering w h hints))))
 
 (defn get-sources
@@ -191,6 +191,6 @@
    or null, to indicate that no information is available.
 
   returns: a (possibly empty) Vector of RenderableImages, or null. - `java.util.Vector<java.awt.image.renderable.RenderableImage>`"
-  (^java.util.Vector [^java.awt.image.renderable.RenderableImageOp this]
+  (^java.util.Vector [^RenderableImageOp this]
     (-> this (.getSources))))
 

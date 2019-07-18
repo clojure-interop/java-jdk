@@ -11,10 +11,10 @@
 (defn apply-as-int
   "Applies this function to the given arguments.
 
-  t - the first function argument - `ToIntBiFunction.T`
-  u - the second function argument - `ToIntBiFunction.U`
+  t - the first function argument - `T`
+  u - the second function argument - `U`
 
   returns: the function result - `int`"
-  (^Integer [^java.util.function.ToIntBiFunction this ^ToIntBiFunction.T t ^ToIntBiFunction.U u]
+  (^Integer [^ToIntBiFunction this t u]
     (-> this (.applyAsInt t u))))
 

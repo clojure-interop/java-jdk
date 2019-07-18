@@ -14,8 +14,8 @@
   attribute - Attribute value to add to the set. - `javax.print.attribute.PrintJobAttribute`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if attribute is null."
-  ([^javax.print.attribute.PrintJobAttribute attribute]
+  (^HashPrintJobAttributeSet [^javax.print.attribute.PrintJobAttribute attribute]
     (new HashPrintJobAttributeSet attribute))
-  ([]
+  (^HashPrintJobAttributeSet []
     (new HashPrintJobAttributeSet )))
 

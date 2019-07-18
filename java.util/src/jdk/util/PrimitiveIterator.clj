@@ -27,9 +27,9 @@
    or the action throws an exception.  Errors or runtime exceptions
    thrown by the action are relayed to the caller.
 
-  action - The action to be performed for each element - `PrimitiveIterator.T_CONS`
+  action - The action to be performed for each element - `T_CONS`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^java.util.PrimitiveIterator this ^PrimitiveIterator.T_CONS action]
+  ([^PrimitiveIterator this action]
     (-> this (.forEachRemaining action))))
 

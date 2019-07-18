@@ -46,13 +46,13 @@
   doc - the text storage to use - `javax.swing.text.Document`
   txt - the text to be displayed, null if none - `java.lang.String`
   columns - the number of columns to use to calculate the preferred width >= 0; if columns is set to zero, the preferred width will be whatever naturally results from the component implementation - `int`"
-  ([^javax.swing.text.Document doc ^java.lang.String txt ^Integer columns]
+  (^JPasswordField [^javax.swing.text.Document doc ^java.lang.String txt ^Integer columns]
     (new JPasswordField doc txt columns))
-  ([^java.lang.String text ^Integer columns]
+  (^JPasswordField [^java.lang.String text ^Integer columns]
     (new JPasswordField text columns))
-  ([^java.lang.String text]
+  (^JPasswordField [^java.lang.String text]
     (new JPasswordField text))
-  ([]
+  (^JPasswordField []
     (new JPasswordField )))
 
 (defn get-echo-char
@@ -61,7 +61,7 @@
    and Feel. For example, Metal/Ocean's default is a bullet character.
 
   returns: the echo character, 0 if unset - `char`"
-  (^Character [^javax.swing.JPasswordField this]
+  (^Character [^JPasswordField this]
     (-> this (.getEchoChar))))
 
 (defn copy
@@ -71,24 +71,29 @@
    currently selected range in the associated text model
    to the system clipboard, and leaving the contents from
    the model, is not acceptable for a password field."
-  ([^javax.swing.JPasswordField this]
+  ([^JPasswordField this]
     (-> this (.copy))))
 
 (defn get-text
   "Deprecated. As of Java 2 platform v1.2,
    replaced by getPassword.
 
-  returns: the text - `java.lang.  java.lang.String`"
-  ([^javax.swing.JPasswordField this]
-    (-> this (.getText)))
-  ([^javax.swing.JPasswordField this ^Integer offs ^Integer len]
-    (-> this (.getText offs len))))
+  offs - the offset >= 0 - `int`
+  len - the length >= 0 - `int`
+
+  returns: the text - `java.lang.String`
+
+  throws: javax.swing.text.BadLocationException - if the offset or length are invalid"
+  (^java.lang.String [^JPasswordField this ^Integer offs ^Integer len]
+    (-> this (.getText offs len)))
+  (^java.lang.String [^JPasswordField this]
+    (-> this (.getText))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `PasswordFieldUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JPasswordField this]
+  (^java.lang.String [^JPasswordField this]
     (-> this (.getUIClassID))))
 
 (defn set-echo-char
@@ -100,7 +105,7 @@
    the behavior of a standard JTextField.
 
   c - the echo character to display - `char`"
-  ([^javax.swing.JPasswordField this ^Character c]
+  ([^JPasswordField this ^Character c]
     (-> this (.setEchoChar c))))
 
 (defn get-accessible-context
@@ -114,7 +119,7 @@
   returns: an AccessibleJPasswordField that serves as the
            AccessibleContext of this
            JPasswordField - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JPasswordField this]
+  (^javax.accessibility.AccessibleContext [^JPasswordField this]
     (-> this (.getAccessibleContext))))
 
 (defn echo-char-is-set
@@ -123,7 +128,7 @@
    character is not 0.
 
   returns: true if a character is set for echoing - `boolean`"
-  (^Boolean [^javax.swing.JPasswordField this]
+  (^Boolean [^JPasswordField this]
     (-> this (.echoCharIsSet))))
 
 (defn cut
@@ -133,7 +138,7 @@
    currently selected range in the associated text model
    to the system clipboard, and removing the contents from
    the model, is not acceptable for a password field."
-  ([^javax.swing.JPasswordField this]
+  ([^JPasswordField this]
     (-> this (.cut))))
 
 (defn update-ui
@@ -141,7 +146,7 @@
    new interface is getUIClassID().  The type of
    the UI is TextUI.  invalidate
    is called after setting the UI."
-  ([^javax.swing.JPasswordField this]
+  ([^JPasswordField this]
     (-> this (.updateUI))))
 
 (defn get-password
@@ -152,6 +157,6 @@
    cleared after use by setting each character to zero.
 
   returns: the text - `char[]`"
-  ([^javax.swing.JPasswordField this]
+  ([^JPasswordField this]
     (-> this (.getPassword))))
 

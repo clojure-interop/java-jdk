@@ -9,6 +9,6 @@
 
   returns: the field type of this Transparency, which is
             either OPAQUE, BITMASK or TRANSLUCENT. - `int`"
-  (^Integer [^java.awt.Transparency this]
+  (^Integer [^Transparency this]
     (-> this (.getTransparency))))
 

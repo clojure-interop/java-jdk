@@ -5,6 +5,6 @@
 
 (defn ->class-desc
   "Constructor."
-  ([]
+  (^ClassDesc []
     (new ClassDesc )))
 

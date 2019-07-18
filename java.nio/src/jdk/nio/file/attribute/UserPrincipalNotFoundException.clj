@@ -10,7 +10,7 @@
   Constructs an instance of this class.
 
   name - the principal name; may be null - `java.lang.String`"
-  ([^java.lang.String name]
+  (^UserPrincipalNotFoundException [^java.lang.String name]
     (new UserPrincipalNotFoundException name)))
 
 (defn get-name
@@ -18,6 +18,6 @@
    user principal name that was not found, otherwise null.
 
   returns: the user principal name or null - `java.lang.String`"
-  (^java.lang.String [^java.nio.file.attribute.UserPrincipalNotFoundException this]
+  (^java.lang.String [^UserPrincipalNotFoundException this]
     (-> this (.getName))))
 

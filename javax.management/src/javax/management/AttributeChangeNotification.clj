@@ -34,7 +34,7 @@
   attribute-type - A String containing the type of the attribute. - `java.lang.String`
   old-value - An object representing value of the attribute before the change. - `java.lang.Object`
   new-value - An object representing value of the attribute after the change. - `java.lang.Object`"
-  ([^java.lang.Object source ^Long sequence-number ^Long time-stamp ^java.lang.String msg ^java.lang.String attribute-name ^java.lang.String attribute-type ^java.lang.Object old-value ^java.lang.Object new-value]
+  (^AttributeChangeNotification [^java.lang.Object source ^Long sequence-number ^Long time-stamp ^java.lang.String msg ^java.lang.String attribute-name ^java.lang.String attribute-type ^java.lang.Object old-value ^java.lang.Object new-value]
     (new AttributeChangeNotification source sequence-number time-stamp msg attribute-name attribute-type old-value new-value)))
 
 (def *-attribute-change
@@ -50,27 +50,27 @@
   "Gets the name of the attribute which has changed.
 
   returns: A String containing the name of the attribute. - `java.lang.String`"
-  (^java.lang.String [^javax.management.AttributeChangeNotification this]
+  (^java.lang.String [^AttributeChangeNotification this]
     (-> this (.getAttributeName))))
 
 (defn get-attribute-type
   "Gets the type of the attribute which has changed.
 
   returns: A String containing the type of the attribute. - `java.lang.String`"
-  (^java.lang.String [^javax.management.AttributeChangeNotification this]
+  (^java.lang.String [^AttributeChangeNotification this]
     (-> this (.getAttributeType))))
 
 (defn get-old-value
   "Gets the old value of the attribute which has changed.
 
   returns: An Object containing the old value of the attribute. - `java.lang.Object`"
-  (^java.lang.Object [^javax.management.AttributeChangeNotification this]
+  (^java.lang.Object [^AttributeChangeNotification this]
     (-> this (.getOldValue))))
 
 (defn get-new-value
   "Gets the new value of the attribute which has changed.
 
   returns: An Object containing the new value of the attribute. - `java.lang.Object`"
-  (^java.lang.Object [^javax.management.AttributeChangeNotification this]
+  (^java.lang.Object [^AttributeChangeNotification this]
     (-> this (.getNewValue))))
 

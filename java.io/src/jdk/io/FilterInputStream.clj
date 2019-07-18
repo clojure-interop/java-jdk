@@ -32,11 +32,11 @@
                the stream has been reached. - `int`
 
   throws: java.lang.NullPointerException - If b is null."
-  (^Integer [^java.io.FilterInputStream this b ^Integer off ^Integer len]
+  (^Integer [^FilterInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^java.io.FilterInputStream this b]
+  (^Integer [^FilterInputStream this b]
     (-> this (.read b)))
-  (^Integer [^java.io.FilterInputStream this]
+  (^Integer [^FilterInputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -53,7 +53,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if the stream does not support seek, or if some other I/O error occurs."
-  (^Long [^java.io.FilterInputStream this ^Long n]
+  (^Long [^FilterInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -69,7 +69,7 @@
                over) from this input stream without blocking. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Integer [^java.io.FilterInputStream this]
+  (^Integer [^FilterInputStream this]
     (-> this (.available))))
 
 (defn close
@@ -79,7 +79,7 @@
    method simply performs in.close().
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.FilterInputStream this]
+  ([^FilterInputStream this]
     (-> this (.close))))
 
 (defn mark
@@ -94,7 +94,7 @@
    This method simply performs in.mark(readlimit).
 
   readlimit - the maximum limit of bytes that can be read before the mark position becomes invalid. - `int`"
-  ([^java.io.FilterInputStream this ^Integer readlimit]
+  ([^FilterInputStream this ^Integer readlimit]
     (-> this (.mark readlimit))))
 
 (defn reset
@@ -114,7 +114,7 @@
    code to reset the stream and try another parser.
 
   throws: java.io.IOException - if the stream has not been marked or if the mark has been invalidated."
-  ([^java.io.FilterInputStream this]
+  ([^FilterInputStream this]
     (-> this (.reset))))
 
 (defn mark-supported
@@ -126,6 +126,6 @@
   returns: true if this stream type supports the
             mark and reset method;
             false otherwise. - `boolean`"
-  (^Boolean [^java.io.FilterInputStream this]
+  (^Boolean [^FilterInputStream this]
     (-> this (.markSupported))))
 

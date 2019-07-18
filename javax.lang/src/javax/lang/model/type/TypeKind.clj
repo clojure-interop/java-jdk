@@ -203,6 +203,6 @@
    type and false otherwise.
 
   returns: true if this kind corresponds to a primitive type - `boolean`"
-  (^Boolean [^javax.lang.model.type.TypeKind this]
+  (^Boolean [^TypeKind this]
     (-> this (.isPrimitive))))
 

@@ -22,7 +22,7 @@
 
 (defn ->number
   "Constructor."
-  ([]
+  (^Number []
     (new Number )))
 
 (defn int-value
@@ -31,7 +31,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  (^Integer [^java.lang.Number this]
+  (^Integer [^Number this]
     (-> this (.intValue))))
 
 (defn long-value
@@ -40,7 +40,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  (^Long [^java.lang.Number this]
+  (^Long [^Number this]
     (-> this (.longValue))))
 
 (defn float-value
@@ -49,7 +49,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  (^Float [^java.lang.Number this]
+  (^Float [^Number this]
     (-> this (.floatValue))))
 
 (defn double-value
@@ -58,7 +58,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type double. - `double`"
-  (^Double [^java.lang.Number this]
+  (^Double [^Number this]
     (-> this (.doubleValue))))
 
 (defn byte-value
@@ -70,7 +70,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type byte. - `byte`"
-  (^Byte [^java.lang.Number this]
+  (^Byte [^Number this]
     (-> this (.byteValue))))
 
 (defn short-value
@@ -82,6 +82,6 @@
 
   returns: the numeric value represented by this object after conversion
             to type short. - `short`"
-  (^Short [^java.lang.Number this]
+  (^Short [^Number this]
     (-> this (.shortValue))))
 

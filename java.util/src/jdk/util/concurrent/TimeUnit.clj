@@ -94,7 +94,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^TimeUnit this ^Long duration]
     (-> this (.toMicros duration))))
 
 (defn to-nanos
@@ -106,7 +106,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^TimeUnit this ^Long duration]
     (-> this (.toNanos duration))))
 
 (defn to-minutes
@@ -118,7 +118,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^TimeUnit this ^Long duration]
     (-> this (.toMinutes duration))))
 
 (defn convert
@@ -139,7 +139,7 @@
   returns: the converted duration in this unit,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  (^Long [^java.util.concurrent.TimeUnit this ^Long source-duration ^java.util.concurrent.TimeUnit source-unit]
+  (^Long [^TimeUnit this ^Long source-duration ^java.util.concurrent.TimeUnit source-unit]
     (-> this (.convert source-duration source-unit))))
 
 (defn timed-join
@@ -152,7 +152,7 @@
   timeout - the maximum time to wait. If less than or equal to zero, do not wait at all. - `long`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.TimeUnit this ^java.lang.Thread thread ^Long timeout]
+  ([^TimeUnit this ^java.lang.Thread thread ^Long timeout]
     (-> this (.timedJoin thread timeout))))
 
 (defn sleep
@@ -164,7 +164,7 @@
   timeout - the minimum time to sleep. If less than or equal to zero, do not sleep at all. - `long`
 
   throws: java.lang.InterruptedException - if interrupted while sleeping"
-  ([^java.util.concurrent.TimeUnit this ^Long timeout]
+  ([^TimeUnit this ^Long timeout]
     (-> this (.sleep timeout))))
 
 (defn to-millis
@@ -176,7 +176,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^TimeUnit this ^Long duration]
     (-> this (.toMillis duration))))
 
 (defn to-hours
@@ -188,7 +188,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^TimeUnit this ^Long duration]
     (-> this (.toHours duration))))
 
 (defn timed-wait
@@ -215,7 +215,7 @@
   timeout - the maximum time to wait. If less than or equal to zero, do not wait at all. - `long`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.TimeUnit this ^java.lang.Object obj ^Long timeout]
+  ([^TimeUnit this ^java.lang.Object obj ^Long timeout]
     (-> this (.timedWait obj timeout))))
 
 (defn to-seconds
@@ -227,7 +227,7 @@
   returns: the converted duration,
    or Long.MIN_VALUE if conversion would negatively
    overflow, or Long.MAX_VALUE if it would positively overflow. - `long`"
-  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^TimeUnit this ^Long duration]
     (-> this (.toSeconds duration))))
 
 (defn to-days
@@ -237,6 +237,6 @@
   duration - the duration - `long`
 
   returns: the converted duration - `long`"
-  (^Long [^java.util.concurrent.TimeUnit this ^Long duration]
+  (^Long [^TimeUnit this ^Long duration]
     (-> this (.toDays duration))))
 

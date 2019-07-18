@@ -30,13 +30,13 @@
 
 (defn ->recursive-task
   "Constructor."
-  ([]
+  (^RecursiveTask []
     (new RecursiveTask )))
 
 (defn get-raw-result
   "Description copied from class: ForkJoinTask
 
-  returns: the result, or null if not completed - `RecursiveTask.V`"
-  (^RecursiveTask.V [^java.util.concurrent.RecursiveTask this]
+  returns: the result, or null if not completed - `V`"
+  ([^RecursiveTask this]
     (-> this (.getRawResult))))
 

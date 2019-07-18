@@ -54,7 +54,7 @@
   ref-info - The possibly null object for which to create an object. - `java.lang.Object`
   name - The name of this object relative to nameCtx. Specifying a name is optional; if it is omitted, name should be null. - `javax.naming.Name`
   name-ctx - The context relative to which the name parameter is specified. If null, name is relative to the default initial context. - `javax.naming.Context`
-  environment - The possibly null environment to be used in the creation of the object factory and the object. - `java.util.Hashtable<?,?>`
+  environment - The possibly null environment to be used in the creation of the object factory and the object. - `java.util.Hashtable`
   attrs - The possibly null attributes associated with refInfo. This might not be the complete set of attributes for refInfo; you might be able to read more attributes from the directory. - `javax.naming.directory.Attributes`
 
   returns: An object created using refInfo and attrs; or
@@ -100,15 +100,15 @@
   obj - The non-null object for which to get state to bind. - `java.lang.Object`
   name - The name of this object relative to nameCtx, or null if no name is specified. - `javax.naming.Name`
   name-ctx - The context relative to which the name parameter is specified, or null if name is relative to the default initial context. - `javax.naming.Context`
-  environment - The possibly null environment to be used in the creation of the state factory and the object's state. - `java.util.Hashtable<?,?>`
+  environment - The possibly null environment to be used in the creation of the state factory and the object's state. - `java.util.Hashtable`
   attrs - The possibly null Attributes that is to be bound with the object. - `javax.naming.directory.Attributes`
 
   returns: A non-null DirStateFactory.Result containing
     the object and attributes to be bound.
     If no state factory returns a non-null answer, the result will contain
-    the object (obj) itself with the original attributes. - `javax.naming.spi.DirStateFactory.Result`
+    the object (obj) itself with the original attributes. - `javax.naming.spi.DirStateFactory$Result`
 
   throws: javax.naming.NamingException - If a naming exception was encountered while using the factories. A factory should only throw an exception if it does not want other factories to be used in an attempt to create an object. See DirStateFactory.getStateToBind()."
-  (^javax.naming.spi.DirStateFactory.Result [^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes attrs]
+  (^javax.naming.spi.DirStateFactory$Result [^java.lang.Object obj ^javax.naming.Name name ^javax.naming.Context name-ctx ^java.util.Hashtable environment ^javax.naming.directory.Attributes attrs]
     (DirectoryManager/getStateToBind obj name name-ctx environment attrs)))
 

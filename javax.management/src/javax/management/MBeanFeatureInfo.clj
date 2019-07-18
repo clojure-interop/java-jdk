@@ -15,23 +15,23 @@
   name - The name of the feature. - `java.lang.String`
   description - A human readable description of the feature. - `java.lang.String`
   descriptor - The descriptor for the feature. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`"
-  ([^java.lang.String name ^java.lang.String description ^javax.management.Descriptor descriptor]
+  (^MBeanFeatureInfo [^java.lang.String name ^java.lang.String description ^javax.management.Descriptor descriptor]
     (new MBeanFeatureInfo name description descriptor))
-  ([^java.lang.String name ^java.lang.String description]
+  (^MBeanFeatureInfo [^java.lang.String name ^java.lang.String description]
     (new MBeanFeatureInfo name description)))
 
 (defn get-name
   "Returns the name of the feature.
 
   returns: the name of the feature. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanFeatureInfo this]
+  (^java.lang.String [^MBeanFeatureInfo this]
     (-> this (.getName))))
 
 (defn get-description
   "Returns the human-readable description of the feature.
 
   returns: the human-readable description of the feature. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanFeatureInfo this]
+  (^java.lang.String [^MBeanFeatureInfo this]
     (-> this (.getDescription))))
 
 (defn get-descriptor
@@ -39,7 +39,7 @@
    will have no affect on the original descriptor.
 
   returns: a descriptor that is either immutable or a copy of the original. - `javax.management.Descriptor`"
-  (^javax.management.Descriptor [^javax.management.MBeanFeatureInfo this]
+  (^javax.management.Descriptor [^MBeanFeatureInfo this]
     (-> this (.getDescriptor))))
 
 (defn equals
@@ -52,13 +52,13 @@
    getDescriptor()
    values are equal (not necessarily identical) to those of this
    MBeanFeatureInfo. - `boolean`"
-  (^Boolean [^javax.management.MBeanFeatureInfo this ^java.lang.Object o]
+  (^Boolean [^MBeanFeatureInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.management.MBeanFeatureInfo this]
+  (^Integer [^MBeanFeatureInfo this]
     (-> this (.hashCode))))
 

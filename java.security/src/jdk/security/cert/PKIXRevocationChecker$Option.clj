@@ -7,7 +7,7 @@
 
   Only check the revocation status of end-entity certificates.
 
-  type: java.security.cert.PKIXRevocationChecker.Option"
+  type: java.security.cert.PKIXRevocationChecker$Option"
   PKIXRevocationChecker$Option/ONLY_END_ENTITY)
 
 (def PREFER_CRLS
@@ -17,7 +17,7 @@
    PKIX implementation should document further details of their
    specific preference rules and fallback policies.
 
-  type: java.security.cert.PKIXRevocationChecker.Option"
+  type: java.security.cert.PKIXRevocationChecker$Option"
   PKIXRevocationChecker$Option/PREFER_CRLS)
 
 (def NO_FALLBACK
@@ -25,7 +25,7 @@
 
   Disable the fallback mechanism.
 
-  type: java.security.cert.PKIXRevocationChecker.Option"
+  type: java.security.cert.PKIXRevocationChecker$Option"
   PKIXRevocationChecker$Option/NO_FALLBACK)
 
 (def SOFT_FAIL
@@ -47,7 +47,7 @@
    later retrieved by calling the
    getSoftFailExceptions method.
 
-  type: java.security.cert.PKIXRevocationChecker.Option"
+  type: java.security.cert.PKIXRevocationChecker$Option"
   PKIXRevocationChecker$Option/SOFT_FAIL)
 
 (defn *values
@@ -59,7 +59,7 @@
   for (PKIXRevocationChecker.Option c : PKIXRevocationChecker.Option.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.security.cert.PKIXRevocationChecker.Option[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.security.cert.PKIXRevocationChecker$Option[]`"
   ([]
     (PKIXRevocationChecker$Option/values )))
 
@@ -71,9 +71,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.security.cert.PKIXRevocationChecker.Option`
+  returns: the enum constant with the specified name - `java.security.cert.PKIXRevocationChecker$Option`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.security.cert.PKIXRevocationChecker.Option [^java.lang.String name]
+  (^java.security.cert.PKIXRevocationChecker$Option [^java.lang.String name]
     (PKIXRevocationChecker$Option/valueOf name)))
 

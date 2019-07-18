@@ -17,7 +17,7 @@
 
 (defn ->default-validation-event-handler
   "Constructor."
-  ([]
+  (^DefaultValidationEventHandler []
     (new DefaultValidationEventHandler )))
 
 (defn handle-event
@@ -30,6 +30,6 @@
            warning/error, false if the provider should terminate the current
            operation with the appropriate UnmarshalException,
            ValidationException, or MarshalException. - `boolean`"
-  (^Boolean [^javax.xml.bind.helpers.DefaultValidationEventHandler this ^javax.xml.bind.ValidationEvent event]
+  (^Boolean [^DefaultValidationEventHandler this ^javax.xml.bind.ValidationEvent event]
     (-> this (.handleEvent event))))
 

@@ -30,10 +30,10 @@
   dgr - The DragGestureRecognizer firing this event - `java.awt.dnd.DragGestureRecognizer`
   act - The user's preferred action. For information on allowable values, see the class description for DragGestureEvent - `int`
   ori - The origin of the drag - `java.awt.Point`
-  evs - The List of events that comprise the gesture - `java.awt.event.InputEvent>`
+  evs - The List of events that comprise the gesture - `java.util.List`
 
   throws: java.lang.IllegalArgumentException - if the act parameter does not comply with the values given in the class description for DragGestureEvent"
-  ([^java.awt.dnd.DragGestureRecognizer dgr ^Integer act ^java.awt.Point ori ^java.awt.event.InputEvent> evs]
+  (^DragGestureEvent [^java.awt.dnd.DragGestureRecognizer dgr ^Integer act ^java.awt.Point ori ^java.util.List evs]
     (new DragGestureEvent dgr act ori evs)))
 
 (defn get-component
@@ -41,7 +41,7 @@
    with this DragGestureEvent.
 
   returns: the Component - `java.awt.Component`"
-  (^java.awt.Component [^java.awt.dnd.DragGestureEvent this]
+  (^java.awt.Component [^DragGestureEvent this]
     (-> this (.getComponent))))
 
 (defn iterator
@@ -49,28 +49,28 @@
    comprising the gesture.
 
   returns: an Iterator for the events comprising the gesture - `java.util.Iterator<java.awt.event.InputEvent>`"
-  (^java.util.Iterator [^java.awt.dnd.DragGestureEvent this]
+  (^java.util.Iterator [^DragGestureEvent this]
     (-> this (.iterator))))
 
 (defn get-source-as-drag-gesture-recognizer
   "Returns the source as a DragGestureRecognizer.
 
   returns: the source as a DragGestureRecognizer - `java.awt.dnd.DragGestureRecognizer`"
-  (^java.awt.dnd.DragGestureRecognizer [^java.awt.dnd.DragGestureEvent this]
+  (^java.awt.dnd.DragGestureRecognizer [^DragGestureEvent this]
     (-> this (.getSourceAsDragGestureRecognizer))))
 
 (defn get-drag-source
   "Returns the DragSource.
 
   returns: the DragSource - `java.awt.dnd.DragSource`"
-  (^java.awt.dnd.DragSource [^java.awt.dnd.DragGestureEvent this]
+  (^java.awt.dnd.DragSource [^DragGestureEvent this]
     (-> this (.getDragSource))))
 
 (defn get-trigger-event
   "Returns the initial event that triggered the gesture.
 
   returns: the first `triggering` event in the sequence of the gesture - `java.awt.event.InputEvent`"
-  (^java.awt.event.InputEvent [^java.awt.dnd.DragGestureEvent this]
+  (^java.awt.event.InputEvent [^DragGestureEvent this]
     (-> this (.getTriggerEvent))))
 
 (defn get-drag-action
@@ -78,7 +78,7 @@
    action selected by the user.
 
   returns: the action selected by the user - `int`"
-  (^Integer [^java.awt.dnd.DragGestureEvent this]
+  (^Integer [^DragGestureEvent this]
     (-> this (.getDragAction))))
 
 (defn get-drag-origin
@@ -86,7 +86,7 @@
    of the Component over which the drag originated.
 
   returns: the Point where the drag originated in Component coords. - `java.awt.Point`"
-  (^java.awt.Point [^java.awt.dnd.DragGestureEvent this]
+  (^java.awt.Point [^DragGestureEvent this]
     (-> this (.getDragOrigin))))
 
 (defn start-drag
@@ -103,11 +103,11 @@
   dsl - The source's DragSourceListener - `java.awt.dnd.DragSourceListener`
 
   throws: java.awt.dnd.InvalidDnDOperationException - if the Drag and Drop system is unable to initiate a drag operation, or if the user attempts to start a drag while an existing drag operation is still executing."
-  ([^java.awt.dnd.DragGestureEvent this ^java.awt.Cursor drag-cursor ^java.awt.Image drag-image ^java.awt.Point image-offset ^java.awt.datatransfer.Transferable transferable ^java.awt.dnd.DragSourceListener dsl]
+  ([^DragGestureEvent this ^java.awt.Cursor drag-cursor ^java.awt.Image drag-image ^java.awt.Point image-offset ^java.awt.datatransfer.Transferable transferable ^java.awt.dnd.DragSourceListener dsl]
     (-> this (.startDrag drag-cursor drag-image image-offset transferable dsl)))
-  ([^java.awt.dnd.DragGestureEvent this ^java.awt.Cursor drag-cursor ^java.awt.datatransfer.Transferable transferable ^java.awt.dnd.DragSourceListener dsl]
+  ([^DragGestureEvent this ^java.awt.Cursor drag-cursor ^java.awt.datatransfer.Transferable transferable ^java.awt.dnd.DragSourceListener dsl]
     (-> this (.startDrag drag-cursor transferable dsl)))
-  ([^java.awt.dnd.DragGestureEvent this ^java.awt.Cursor drag-cursor ^java.awt.datatransfer.Transferable transferable]
+  ([^DragGestureEvent this ^java.awt.Cursor drag-cursor ^java.awt.datatransfer.Transferable transferable]
     (-> this (.startDrag drag-cursor transferable))))
 
 (defn to-array
@@ -116,8 +116,8 @@
   array - the array of EventObject sub(types) - `java.lang.Object[]`
 
   returns: an array of the events comprising the gesture - `java.lang.Object[]`"
-  ([^java.awt.dnd.DragGestureEvent this array]
+  ([^DragGestureEvent this array]
     (-> this (.toArray array)))
-  ([^java.awt.dnd.DragGestureEvent this]
+  ([^DragGestureEvent this]
     (-> this (.toArray))))
 

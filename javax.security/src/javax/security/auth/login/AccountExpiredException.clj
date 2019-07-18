@@ -18,8 +18,8 @@
    exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^AccountExpiredException [^java.lang.String msg]
     (new AccountExpiredException msg))
-  ([]
+  (^AccountExpiredException []
     (new AccountExpiredException )))
 

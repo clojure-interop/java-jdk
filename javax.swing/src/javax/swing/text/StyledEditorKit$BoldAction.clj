@@ -16,13 +16,13 @@
   "Constructor.
 
   Constructs a new BoldAction."
-  ([]
+  (^StyledEditorKit$BoldAction []
     (new StyledEditorKit$BoldAction )))
 
 (defn action-performed
   "Toggles the bold attribute.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([^javax.swing.text.StyledEditorKit$BoldAction this ^java.awt.event.ActionEvent e]
+  ([^StyledEditorKit$BoldAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

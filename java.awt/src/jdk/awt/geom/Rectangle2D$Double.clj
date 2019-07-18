@@ -14,9 +14,9 @@
   y - the Y coordinate of the upper-left corner of the newly constructed Rectangle2D - `double`
   w - the width of the newly constructed Rectangle2D - `double`
   h - the height of the newly constructed Rectangle2D - `double`"
-  ([^Double x ^Double y ^Double w ^Double h]
+  (^Rectangle2D$Double [^Double x ^Double y ^Double w ^Double h]
     (new Rectangle2D$Double x y w h))
-  ([]
+  (^Rectangle2D$Double []
     (new Rectangle2D$Double )))
 
 (defn -x
@@ -63,9 +63,9 @@
   y - the Y coordinate of the upper-left corner of this Rectangle2D - `double`
   w - the width of this Rectangle2D - `double`
   h - the height of this Rectangle2D - `double`"
-  ([^java.awt.geom.Rectangle2D$Double this ^Double x ^Double y ^Double w ^Double h]
+  ([^Rectangle2D$Double this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.setRect x y w h)))
-  ([^java.awt.geom.Rectangle2D$Double this ^java.awt.geom.Rectangle2D r]
+  ([^Rectangle2D$Double this ^java.awt.geom.Rectangle2D r]
     (-> this (.setRect r))))
 
 (defn get-width
@@ -73,7 +73,7 @@
    double precision.
 
   returns: the width of the framing rectangle. - `double`"
-  (^Double [^java.awt.geom.Rectangle2D$Double this]
+  (^Double [^Rectangle2D$Double this]
     (-> this (.getWidth))))
 
 (defn to-string
@@ -82,7 +82,7 @@
 
   returns: a String representing this
    Rectangle2D. - `java.lang.String`"
-  (^java.lang.String [^java.awt.geom.Rectangle2D$Double this]
+  (^java.lang.String [^Rectangle2D$Double this]
     (-> this (.toString))))
 
 (defn create-intersection
@@ -95,7 +95,7 @@
   returns: the largest Rectangle2D contained in both
             the specified Rectangle2D and in this
             Rectangle2D. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.geom.Rectangle2D$Double this ^java.awt.geom.Rectangle2D r]
+  (^java.awt.geom.Rectangle2D [^Rectangle2D$Double this ^java.awt.geom.Rectangle2D r]
     (-> this (.createIntersection r))))
 
 (defn get-y
@@ -104,7 +104,7 @@
 
   returns: the Y coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  (^Double [^java.awt.geom.Rectangle2D$Double this]
+  (^Double [^Rectangle2D$Double this]
     (-> this (.getY))))
 
 (defn create-union
@@ -117,7 +117,7 @@
   returns: the smallest Rectangle2D containing both
    the specified Rectangle2D and this
    Rectangle2D. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.geom.Rectangle2D$Double this ^java.awt.geom.Rectangle2D r]
+  (^java.awt.geom.Rectangle2D [^Rectangle2D$Double this ^java.awt.geom.Rectangle2D r]
     (-> this (.createUnion r))))
 
 (defn get-x
@@ -126,7 +126,7 @@
 
   returns: the X coordinate of the upper-left corner of
    the framing rectangle. - `double`"
-  (^Double [^java.awt.geom.Rectangle2D$Double this]
+  (^Double [^Rectangle2D$Double this]
     (-> this (.getX))))
 
 (defn get-height
@@ -134,7 +134,7 @@
    in double precision.
 
   returns: the height of the framing rectangle. - `double`"
-  (^Double [^java.awt.geom.Rectangle2D$Double this]
+  (^Double [^Rectangle2D$Double this]
     (-> this (.getHeight))))
 
 (defn outcode
@@ -149,7 +149,7 @@
   y - the specified Y coordinate - `double`
 
   returns: the logical OR of all appropriate out codes. - `int`"
-  (^Integer [^java.awt.geom.Rectangle2D$Double this ^Double x ^Double y]
+  (^Integer [^Rectangle2D$Double this ^Double x ^Double y]
     (-> this (.outcode x y))))
 
 (defn get-bounds-2-d
@@ -192,7 +192,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.geom.Rectangle2D$Double this]
+  (^java.awt.geom.Rectangle2D [^Rectangle2D$Double this]
     (-> this (.getBounds2D))))
 
 (defn empty?
@@ -202,6 +202,6 @@
 
   returns: true if the RectangularShape is empty;
             false otherwise. - `boolean`"
-  (^Boolean [^java.awt.geom.Rectangle2D$Double this]
+  (^Boolean [^Rectangle2D$Double this]
     (-> this (.isEmpty))))
 

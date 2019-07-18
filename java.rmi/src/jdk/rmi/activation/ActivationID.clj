@@ -33,7 +33,7 @@
   activator - reference to the activator responsible for activating the object - `java.rmi.activation.Activator`
 
   throws: java.lang.UnsupportedOperationException - if and only if activation is not supported by this implementation"
-  ([^java.rmi.activation.Activator activator]
+  (^ActivationID [^java.rmi.activation.Activator activator]
     (new ActivationID activator)))
 
 (defn activate
@@ -44,7 +44,7 @@
   returns: the reference to the active remote object - `java.rmi.Remote`
 
   throws: java.rmi.activation.ActivationException - if activation fails"
-  (^java.rmi.Remote [^java.rmi.activation.ActivationID this ^Boolean force]
+  (^java.rmi.Remote [^ActivationID this ^Boolean force]
     (-> this (.activate force))))
 
 (defn hash-code
@@ -52,7 +52,7 @@
    refer to the same remote object will have the same hash code.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.rmi.activation.ActivationID this]
+  (^Integer [^ActivationID this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -65,6 +65,6 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  (^Boolean [^java.rmi.activation.ActivationID this ^java.lang.Object obj]
+  (^Boolean [^ActivationID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

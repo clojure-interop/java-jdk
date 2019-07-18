@@ -19,7 +19,7 @@
   uri - URI of the printer - `java.net.URI`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if uri is null."
-  ([^java.net.URI uri]
+  (^PrinterURI [^java.net.URI uri]
     (new PrinterURI uri)))
 
 (defn equals
@@ -39,7 +39,7 @@
 
   returns: True if object is equivalent to this PrinterURI
             attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.PrinterURI this ^java.lang.Object object]
+  (^Boolean [^PrinterURI this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -51,7 +51,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.PrinterURI this]
+  ([^PrinterURI this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -62,6 +62,6 @@
    name is `printer-uri`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.PrinterURI this]
+  (^java.lang.String [^PrinterURI this]
     (-> this (.getName))))
 

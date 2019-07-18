@@ -77,7 +77,7 @@
    encoding capabilities. - `javax.imageio.metadata.IIOMetadata`
 
   throws: java.lang.IllegalArgumentException - if inData is null."
-  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.ImageTranscoder this ^javax.imageio.metadata.IIOMetadata in-data ^javax.imageio.ImageWriteParam param]
+  (^javax.imageio.metadata.IIOMetadata [^ImageTranscoder this ^javax.imageio.metadata.IIOMetadata in-data ^javax.imageio.ImageWriteParam param]
     (-> this (.convertStreamMetadata in-data param))))
 
 (defn convert-image-metadata
@@ -103,6 +103,6 @@
    metadata encoding capabilities. - `javax.imageio.metadata.IIOMetadata`
 
   throws: java.lang.IllegalArgumentException - if either of inData or imageType is null."
-  (^javax.imageio.metadata.IIOMetadata [^javax.imageio.ImageTranscoder this ^javax.imageio.metadata.IIOMetadata in-data ^javax.imageio.ImageTypeSpecifier image-type ^javax.imageio.ImageWriteParam param]
+  (^javax.imageio.metadata.IIOMetadata [^ImageTranscoder this ^javax.imageio.metadata.IIOMetadata in-data ^javax.imageio.ImageTypeSpecifier image-type ^javax.imageio.ImageWriteParam param]
     (-> this (.convertImageMetadata in-data image-type param))))
 

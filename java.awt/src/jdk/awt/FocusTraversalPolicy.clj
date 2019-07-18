@@ -32,7 +32,7 @@
 
 (defn ->focus-traversal-policy
   "Constructor."
-  ([]
+  (^FocusTraversalPolicy []
     (new FocusTraversalPolicy )))
 
 (defn get-component-after
@@ -47,7 +47,7 @@
            null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is not a focus cycle root of aComponent or a focus traversal policy provider, or if either aContainer or aComponent is null"
-  (^java.awt.Component [^java.awt.FocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
+  (^java.awt.Component [^FocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentAfter a-container a-component))))
 
 (defn get-component-before
@@ -62,7 +62,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is not a focus cycle root of aComponent or a focus traversal policy provider, or if either aContainer or aComponent is null"
-  (^java.awt.Component [^java.awt.FocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
+  (^java.awt.Component [^FocusTraversalPolicy this ^java.awt.Container a-container ^java.awt.Component a-component]
     (-> this (.getComponentBefore a-container a-component))))
 
 (defn get-first-component
@@ -76,7 +76,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  (^java.awt.Component [^java.awt.FocusTraversalPolicy this ^java.awt.Container a-container]
+  (^java.awt.Component [^FocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getFirstComponent a-container))))
 
 (defn get-last-component
@@ -90,7 +90,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  (^java.awt.Component [^java.awt.FocusTraversalPolicy this ^java.awt.Container a-container]
+  (^java.awt.Component [^FocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getLastComponent a-container))))
 
 (defn get-default-component
@@ -104,7 +104,7 @@
            or null if no suitable Component can be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if aContainer is null"
-  (^java.awt.Component [^java.awt.FocusTraversalPolicy this ^java.awt.Container a-container]
+  (^java.awt.Component [^FocusTraversalPolicy this ^java.awt.Container a-container]
     (-> this (.getDefaultComponent a-container))))
 
 (defn get-initial-component
@@ -124,6 +124,6 @@
            be found - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if window is null"
-  (^java.awt.Component [^java.awt.FocusTraversalPolicy this ^java.awt.Window window]
+  (^java.awt.Component [^FocusTraversalPolicy this ^java.awt.Window window]
     (-> this (.getInitialComponent window))))
 

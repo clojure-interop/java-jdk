@@ -163,8 +163,8 @@
   actions - should be null - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^AWTPermission [^java.lang.String name ^java.lang.String actions]
     (new AWTPermission name actions))
-  ([^java.lang.String name]
+  (^AWTPermission [^java.lang.String name]
     (new AWTPermission name)))
 

@@ -35,13 +35,13 @@
    directory stream used to create it. Closing this directory stream has no
    effect upon newly created directory stream.
 
-  path - the path to the directory to open - `SecureDirectoryStream.T`
+  path - the path to the directory to open - `T`
   options - options indicating how symbolic links are handled - `java.nio.file.LinkOption`
 
-  returns: a new and open SecureDirectoryStream object - `java.nio.file.SecureDirectoryStream<SecureDirectoryStream.T>`
+  returns: a new and open SecureDirectoryStream object - `java.nio.file.SecureDirectoryStream<T>`
 
   throws: java.nio.file.ClosedDirectoryStreamException - if the directory stream is closed"
-  (^java.nio.file.SecureDirectoryStream [^java.nio.file.SecureDirectoryStream this ^SecureDirectoryStream.T path ^java.nio.file.LinkOption options]
+  (^java.nio.file.SecureDirectoryStream [^SecureDirectoryStream this path ^java.nio.file.LinkOption options]
     (-> this (.newDirectoryStream path options))))
 
 (defn new-byte-channel
@@ -59,14 +59,14 @@
    used to create it. Closing this directory stream has no effect upon the
    channel.
 
-  path - the path of the file to open open or create - `SecureDirectoryStream.T`
-  options - options specifying how the file is opened - `java.nio.file.OpenOption>`
-  attrs - an optional list of attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute<?>`
+  path - the path of the file to open open or create - `T`
+  options - options specifying how the file is opened - `java.util.Set`
+  attrs - an optional list of attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute`
 
   returns: the seekable byte channel - `java.nio.channels.SeekableByteChannel`
 
   throws: java.nio.file.ClosedDirectoryStreamException - if the directory stream is closed"
-  (^java.nio.channels.SeekableByteChannel [^java.nio.file.SecureDirectoryStream this ^SecureDirectoryStream.T path ^java.nio.file.OpenOption> options ^java.nio.file.attribute.FileAttribute attrs]
+  (^java.nio.channels.SeekableByteChannel [^SecureDirectoryStream this path ^java.util.Set options ^java.nio.file.attribute.FileAttribute attrs]
     (-> this (.newByteChannel path options attrs))))
 
 (defn delete-file
@@ -80,10 +80,10 @@
    parameter is a relative path then the file to delete is relative to
    this open directory.
 
-  path - the path of the file to delete - `SecureDirectoryStream.T`
+  path - the path of the file to delete - `T`
 
   throws: java.nio.file.ClosedDirectoryStreamException - if the directory stream is closed"
-  ([^java.nio.file.SecureDirectoryStream this ^SecureDirectoryStream.T path]
+  ([^SecureDirectoryStream this path]
     (-> this (.deleteFile path))))
 
 (defn delete-directory
@@ -95,10 +95,10 @@
    therefore not specified. When the parameter is a relative path then the
    directory to delete is relative to this open directory.
 
-  path - the path of the directory to delete - `SecureDirectoryStream.T`
+  path - the path of the directory to delete - `T`
 
   throws: java.nio.file.ClosedDirectoryStreamException - if the directory stream is closed"
-  ([^java.nio.file.SecureDirectoryStream this ^SecureDirectoryStream.T path]
+  ([^SecureDirectoryStream this path]
     (-> this (.deleteDirectory path))))
 
 (defn move
@@ -116,12 +116,12 @@
    exists then it is implementation specific if it is replaced or this
    method fails.
 
-  srcpath - the name of the file to move - `SecureDirectoryStream.T`
-  targetdir - the destination directory - `java.nio.file.SecureDirectoryStream<SecureDirectoryStream.T>`
-  targetpath - the name to give the file in the destination directory - `SecureDirectoryStream.T`
+  srcpath - the name of the file to move - `T`
+  targetdir - the destination directory - `java.nio.file.SecureDirectoryStream`
+  targetpath - the name to give the file in the destination directory - `T`
 
   throws: java.nio.file.ClosedDirectoryStreamException - if this or the target directory stream is closed"
-  ([^java.nio.file.SecureDirectoryStream this ^SecureDirectoryStream.T srcpath ^java.nio.file.SecureDirectoryStream targetdir ^SecureDirectoryStream.T targetpath]
+  ([^SecureDirectoryStream this srcpath ^java.nio.file.SecureDirectoryStream targetdir targetpath]
     (-> this (.move srcpath targetdir targetpath))))
 
 (defn get-file-attribute-view
@@ -141,15 +141,15 @@
    is created but methods to read or update attributes of the file will
    fail when invoked and the file does not exist.
 
-  path - the path of the file - `SecureDirectoryStream.T`
-  type - the Class object corresponding to the file attribute view - `java.lang.Class<V>`
+  path - the path of the file - `T`
+  type - the Class object corresponding to the file attribute view - `java.lang.Class`
   options - options indicating how symbolic links are handled - `java.nio.file.LinkOption`
 
   returns: a new file attribute view of the specified type bound to a
             this directory stream, or null if the attribute view
             type is not available - `<V extends java.nio.file.attribute.FileAttributeView> V`"
-  ([^java.nio.file.SecureDirectoryStream this ^SecureDirectoryStream.T path ^java.lang.Class type ^java.nio.file.LinkOption options]
+  ([^SecureDirectoryStream this path ^java.lang.Class type ^java.nio.file.LinkOption options]
     (-> this (.getFileAttributeView path type options)))
-  ([^java.nio.file.SecureDirectoryStream this ^java.lang.Class type]
+  ([^SecureDirectoryStream this ^java.lang.Class type]
     (-> this (.getFileAttributeView type))))
 

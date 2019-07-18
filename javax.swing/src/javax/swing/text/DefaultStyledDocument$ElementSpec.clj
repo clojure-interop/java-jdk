@@ -23,11 +23,11 @@
   txt - the text for the element - `char[]`
   offs - the offset into the text >= 0 - `int`
   len - the length of the text >= 0 - `int`"
-  ([^javax.swing.text.AttributeSet a ^Short type txt ^Integer offs ^Integer len]
+  (^DefaultStyledDocument$ElementSpec [^javax.swing.text.AttributeSet a ^Short type txt ^Integer offs ^Integer len]
     (new DefaultStyledDocument$ElementSpec a type txt offs len))
-  ([^javax.swing.text.AttributeSet a ^Short type ^Integer len]
+  (^DefaultStyledDocument$ElementSpec [^javax.swing.text.AttributeSet a ^Short type ^Integer len]
     (new DefaultStyledDocument$ElementSpec a type len))
-  ([^javax.swing.text.AttributeSet a ^Short type]
+  (^DefaultStyledDocument$ElementSpec [^javax.swing.text.AttributeSet a ^Short type]
     (new DefaultStyledDocument$ElementSpec a type)))
 
 (def *-start-tag-type
@@ -106,7 +106,7 @@
   "Sets the direction.
 
   direction - the direction (JoinPreviousDirection, JoinNextDirection) - `short`"
-  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this ^Short direction]
+  ([^DefaultStyledDocument$ElementSpec this ^Short direction]
     (-> this (.setDirection direction))))
 
 (defn get-type
@@ -114,55 +114,55 @@
 
   returns: the type of the element (StartTagType, EndTagType,
     ContentType) - `short`"
-  (^Short [^javax.swing.text.DefaultStyledDocument$ElementSpec this]
+  (^Short [^DefaultStyledDocument$ElementSpec this]
     (-> this (.getType))))
 
 (defn set-type
   "Sets the element type.
 
   type - the type of the element (StartTagType, EndTagType, ContentType) - `short`"
-  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this ^Short type]
+  ([^DefaultStyledDocument$ElementSpec this ^Short type]
     (-> this (.setType type))))
 
 (defn to-string
   "Converts the element to a string.
 
   returns: the string - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.DefaultStyledDocument$ElementSpec this]
+  (^java.lang.String [^DefaultStyledDocument$ElementSpec this]
     (-> this (.toString))))
 
 (defn get-direction
   "Gets the direction.
 
   returns: the direction (JoinPreviousDirection, JoinNextDirection) - `short`"
-  (^Short [^javax.swing.text.DefaultStyledDocument$ElementSpec this]
+  (^Short [^DefaultStyledDocument$ElementSpec this]
     (-> this (.getDirection))))
 
 (defn get-offset
   "Gets the starting offset.
 
   returns: the offset >= 0 - `int`"
-  (^Integer [^javax.swing.text.DefaultStyledDocument$ElementSpec this]
+  (^Integer [^DefaultStyledDocument$ElementSpec this]
     (-> this (.getOffset))))
 
 (defn get-array
   "Gets the array of characters.
 
   returns: the array - `char[]`"
-  ([^javax.swing.text.DefaultStyledDocument$ElementSpec this]
+  ([^DefaultStyledDocument$ElementSpec this]
     (-> this (.getArray))))
 
 (defn get-length
   "Gets the length.
 
   returns: the length >= 0 - `int`"
-  (^Integer [^javax.swing.text.DefaultStyledDocument$ElementSpec this]
+  (^Integer [^DefaultStyledDocument$ElementSpec this]
     (-> this (.getLength))))
 
 (defn get-attributes
   "Gets the element attributes.
 
   returns: the attribute set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.DefaultStyledDocument$ElementSpec this]
+  (^javax.swing.text.AttributeSet [^DefaultStyledDocument$ElementSpec this]
     (-> this (.getAttributes))))
 

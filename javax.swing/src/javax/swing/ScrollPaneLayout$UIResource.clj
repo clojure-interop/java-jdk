@@ -5,6 +5,6 @@
 
 (defn ->ui-resource
   "Constructor."
-  ([]
+  (^ScrollPaneLayout$UIResource []
     (new ScrollPaneLayout$UIResource )))
 

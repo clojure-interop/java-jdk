@@ -19,11 +19,11 @@
 
   message - the detail message - `java.lang.String`
   cause - the cause (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^NoSuchMechanismException [^java.lang.String message ^java.lang.Throwable cause]
     (new NoSuchMechanismException message cause))
-  ([^java.lang.String message]
+  (^NoSuchMechanismException [^java.lang.String message]
     (new NoSuchMechanismException message))
-  ([]
+  (^NoSuchMechanismException []
     (new NoSuchMechanismException )))
 
 (defn get-cause
@@ -34,7 +34,7 @@
 
   returns: the cause of this NoSuchMechanismException or
            null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.xml.crypto.NoSuchMechanismException this]
+  (^java.lang.Throwable [^NoSuchMechanismException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace
@@ -42,8 +42,8 @@
    the cause's backtrace to the specified print stream.
 
   s - PrintStream to use for output - `java.io.PrintStream`"
-  ([^javax.xml.crypto.NoSuchMechanismException this ^java.io.PrintStream s]
+  ([^NoSuchMechanismException this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([^javax.xml.crypto.NoSuchMechanismException this]
+  ([^NoSuchMechanismException this]
     (-> this (.printStackTrace))))
 

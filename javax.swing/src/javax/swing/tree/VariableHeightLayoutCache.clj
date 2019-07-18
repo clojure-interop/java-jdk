@@ -14,7 +14,7 @@
 
 (defn ->variable-height-layout-cache
   "Constructor."
-  ([]
+  (^VariableHeightLayoutCache []
     (new VariableHeightLayoutCache )))
 
 (defn get-row-for-path
@@ -25,7 +25,7 @@
   path - the TreePath of interest - `javax.swing.tree.TreePath`
 
   returns: the row where the last item in path is visible - `int`"
-  (^Integer [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Integer [^VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getRowForPath path))))
 
 (defn tree-nodes-inserted
@@ -36,7 +36,7 @@
    ascending order.
 
   e - the TreeModelEvent of interest - `javax.swing.event.TreeModelEvent`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
+  ([^VariableHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesInserted e))))
 
 (defn tree-nodes-removed
@@ -51,7 +51,7 @@
    before they were deleted in ascending order.
 
   e - the TreeModelEvent of interest - `javax.swing.event.TreeModelEvent`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
+  ([^VariableHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesRemoved e))))
 
 (defn expanded?
@@ -62,14 +62,14 @@
 
   returns: true if the value identified by path is
       currently expanded - `boolean`"
-  (^Boolean [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Boolean [^VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.isExpanded path))))
 
 (defn get-row-count
   "Returns the number of visible rows.
 
   returns: the number of visible rows - `int`"
-  (^Integer [^javax.swing.tree.VariableHeightLayoutCache this]
+  (^Integer [^VariableHeightLayoutCache this]
     (-> this (.getRowCount))))
 
 (defn set-root-visible
@@ -77,14 +77,14 @@
    the TreeModel is visible.
 
   root-visible - true if the root node of the tree is to be displayed - `boolean`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^Boolean root-visible]
+  ([^VariableHeightLayoutCache this ^Boolean root-visible]
     (-> this (.setRootVisible root-visible))))
 
 (defn set-node-dimensions
   "Sets the renderer that is responsible for drawing nodes in the tree.
 
-  nd - the renderer - `javax.swing.tree.AbstractLayoutCache.NodeDimensions`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.AbstractLayoutCache.NodeDimensions nd]
+  nd - the renderer - `javax.swing.tree.AbstractLayoutCache$NodeDimensions`"
+  ([^VariableHeightLayoutCache this ^javax.swing.tree.AbstractLayoutCache$NodeDimensions nd]
     (-> this (.setNodeDimensions nd))))
 
 (defn get-visible-child-count
@@ -93,7 +93,7 @@
   path - the path being queried - `javax.swing.tree.TreePath`
 
   returns: the number of visible children for path - `int`"
-  (^Integer [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Integer [^VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getVisibleChildCount path))))
 
 (defn tree-nodes-changed
@@ -111,7 +111,7 @@
    changed node(s).
 
   e - the TreeModelEvent of interest - `javax.swing.event.TreeModelEvent`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
+  ([^VariableHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeNodesChanged e))))
 
 (defn invalidate-path-bounds
@@ -119,7 +119,7 @@
    path are invalid, and need to be updated.
 
   path - the TreePath which is now invalid - `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  ([^VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.invalidatePathBounds path))))
 
 (defn get-visible-paths-from
@@ -131,7 +131,7 @@
 
   returns: an Enumerator that increments over the visible
        paths - `java.util.Enumeration<javax.swing.tree.TreePath>`"
-  (^java.util.Enumeration [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^java.util.Enumeration [^VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getVisiblePathsFrom path))))
 
 (defn tree-structure-changed
@@ -145,7 +145,7 @@
    e.childIndices returns null.
 
   e - the TreeModelEvent of interest - `javax.swing.event.TreeModelEvent`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
+  ([^VariableHeightLayoutCache this ^javax.swing.event.TreeModelEvent e]
     (-> this (.treeStructureChanged e))))
 
 (defn get-expanded-state?
@@ -154,7 +154,7 @@
   path - the path being queried - `javax.swing.tree.TreePath`
 
   returns: true if the path is expanded and visible, otherwise false - `boolean`"
-  (^Boolean [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
+  (^Boolean [^VariableHeightLayoutCache this ^javax.swing.tree.TreePath path]
     (-> this (.getExpandedState path))))
 
 (defn set-row-height
@@ -163,7 +163,7 @@
    queried for each row's height.
 
   row-height - the height of each cell, in pixels - `int`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^Integer row-height]
+  ([^VariableHeightLayoutCache this ^Integer row-height]
     (-> this (.setRowHeight row-height))))
 
 (defn get-path-for-row
@@ -174,7 +174,7 @@
 
   returns: the path for row, or null
    if row is not visible - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.tree.VariableHeightLayoutCache this ^Integer row]
+  (^javax.swing.tree.TreePath [^VariableHeightLayoutCache this ^Integer row]
     (-> this (.getPathForRow row))))
 
 (defn get-bounds
@@ -186,7 +186,7 @@
 
   returns: the bounds of the enclosing rectangle or null
       if the node could not be ascertained - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path ^java.awt.Rectangle place-in]
+  (^java.awt.Rectangle [^VariableHeightLayoutCache this ^javax.swing.tree.TreePath path ^java.awt.Rectangle place-in]
     (-> this (.getBounds path place-in))))
 
 (defn set-expanded-state
@@ -195,27 +195,27 @@
 
   path - the TreePath of interest - `javax.swing.tree.TreePath`
   is-expanded - true if the path should be expanded, otherwise false - `boolean`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreePath path ^Boolean is-expanded]
+  ([^VariableHeightLayoutCache this ^javax.swing.tree.TreePath path ^Boolean is-expanded]
     (-> this (.setExpandedState path is-expanded))))
 
 (defn get-preferred-height
   "Returns the preferred height.
 
   returns: the preferred height - `int`"
-  (^Integer [^javax.swing.tree.VariableHeightLayoutCache this]
+  (^Integer [^VariableHeightLayoutCache this]
     (-> this (.getPreferredHeight))))
 
 (defn set-model
   "Sets the TreeModel that will provide the data.
 
   new-model - the TreeModel that is to provide the data - `javax.swing.tree.TreeModel`"
-  ([^javax.swing.tree.VariableHeightLayoutCache this ^javax.swing.tree.TreeModel new-model]
+  ([^VariableHeightLayoutCache this ^javax.swing.tree.TreeModel new-model]
     (-> this (.setModel new-model))))
 
 (defn invalidate-sizes
   "Informs the TreeState that it needs to recalculate
    all the sizes it is referencing."
-  ([^javax.swing.tree.VariableHeightLayoutCache this]
+  ([^VariableHeightLayoutCache this]
     (-> this (.invalidateSizes))))
 
 (defn get-path-closest-to
@@ -230,7 +230,7 @@
   y - the y-coordinate - `int`
 
   returns: the path to the node that is closest to x, y - `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.tree.VariableHeightLayoutCache this ^Integer x ^Integer y]
+  (^javax.swing.tree.TreePath [^VariableHeightLayoutCache this ^Integer x ^Integer y]
     (-> this (.getPathClosestTo x y))))
 
 (defn get-preferred-width
@@ -240,6 +240,6 @@
   bounds - the region being queried - `java.awt.Rectangle`
 
   returns: the preferred width for the passed in region - `int`"
-  (^Integer [^javax.swing.tree.VariableHeightLayoutCache this ^java.awt.Rectangle bounds]
+  (^Integer [^VariableHeightLayoutCache this ^java.awt.Rectangle bounds]
     (-> this (.getPreferredWidth bounds))))
 

@@ -101,7 +101,7 @@
    have the name `acl`.
 
   returns: the name of the attribute view - `java.lang.String`"
-  (^java.lang.String [^java.nio.file.attribute.AclFileAttributeView this]
+  (^java.lang.String [^AclFileAttributeView this]
     (-> this (.name))))
 
 (defn get-acl
@@ -119,7 +119,7 @@
             ACL - `java.util.List<java.nio.file.attribute.AclEntry>`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.util.List [^java.nio.file.attribute.AclFileAttributeView this]
+  (^java.util.List [^AclFileAttributeView this]
     (-> this (.getAcl))))
 
 (defn set-acl
@@ -143,9 +143,9 @@
    (such as a file access-permissions for example), the updating the access control list
    may also cause these security related attributes to be updated.
 
-  acl - the new access control list - `java.util.List<java.nio.file.attribute.AclEntry>`
+  acl - the new access control list - `java.util.List`
 
   throws: java.io.IOException - if an I/O error occurs or the ACL is invalid"
-  ([^java.nio.file.attribute.AclFileAttributeView this ^java.util.List acl]
+  ([^AclFileAttributeView this ^java.util.List acl]
     (-> this (.setAcl acl))))
 

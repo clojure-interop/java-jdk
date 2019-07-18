@@ -15,7 +15,7 @@
 
   Constructs an (invalid) FileDescriptor
    object."
-  ([]
+  (^FileDescriptor []
     (new FileDescriptor )))
 
 (def *-in
@@ -54,7 +54,7 @@
   returns: true if the file descriptor object represents a
             valid, open file, socket, or other active I/O connection;
             false otherwise. - `boolean`"
-  (^Boolean [^java.io.FileDescriptor this]
+  (^Boolean [^FileDescriptor this]
     (-> this (.valid))))
 
 (defn sync
@@ -80,6 +80,6 @@
    OutputStream.flush) before that data will be affected by sync.
 
   throws: java.io.SyncFailedException - Thrown when the buffers cannot be flushed, or because the system cannot guarantee that all the buffers have been synchronized with physical media."
-  ([^java.io.FileDescriptor this]
+  ([^FileDescriptor this]
     (-> this (.sync))))
 

@@ -13,9 +13,9 @@
   size - the input buffer size - `int`
 
   throws: java.util.zip.ZipException - if a GZIP format error has occurred or the compression method used is unsupported"
-  ([^java.io.InputStream in ^Integer size]
+  (^GZIPInputStream [^java.io.InputStream in ^Integer size]
     (new GZIPInputStream in size))
-  ([^java.io.InputStream in]
+  (^GZIPInputStream [^java.io.InputStream in]
     (new GZIPInputStream in)))
 
 (def *-gzip-magic
@@ -39,7 +39,7 @@
             compressed input stream is reached - `int`
 
   throws: java.lang.NullPointerException - If buf is null."
-  (^Integer [^java.util.zip.GZIPInputStream this buf ^Integer off ^Integer len]
+  (^Integer [^GZIPInputStream this buf ^Integer off ^Integer len]
     (-> this (.read buf off len))))
 
 (defn close
@@ -47,6 +47,6 @@
    with the stream.
 
   throws: java.io.IOException - if an I/O error has occurred"
-  ([^java.util.zip.GZIPInputStream this]
+  ([^GZIPInputStream this]
     (-> this (.close))))
 

@@ -15,8 +15,8 @@
    exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^RefreshFailedException [^java.lang.String msg]
     (new RefreshFailedException msg))
-  ([]
+  (^RefreshFailedException []
     (new RefreshFailedException )))
 

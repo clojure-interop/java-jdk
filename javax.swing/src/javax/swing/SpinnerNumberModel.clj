@@ -71,9 +71,9 @@
   step-size - the difference between elements of the sequence - `java.lang.Number`
 
   throws: java.lang.IllegalArgumentException - if stepSize or value is null or if the following expression is false: minimum <= value <= maximum"
-  ([^java.lang.Number value ^java.lang.Comparable minimum ^java.lang.Comparable maximum ^java.lang.Number step-size]
+  (^SpinnerNumberModel [^java.lang.Number value ^java.lang.Comparable minimum ^java.lang.Comparable maximum ^java.lang.Number step-size]
     (new SpinnerNumberModel value minimum maximum step-size))
-  ([]
+  (^SpinnerNumberModel []
     (new SpinnerNumberModel )))
 
 (defn get-previous-value
@@ -82,7 +82,7 @@
   returns: value - stepSize, or
        null if the sum is less
        than minimum. - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Object [^SpinnerNumberModel this]
     (-> this (.getPreviousValue))))
 
 (defn get-step-size
@@ -91,28 +91,28 @@
    and getPreviousValue methods.
 
   returns: the value of the stepSize property - `java.lang.Number`"
-  (^java.lang.Number [^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Number [^SpinnerNumberModel this]
     (-> this (.getStepSize))))
 
 (defn get-minimum
   "Returns the first number in this sequence.
 
   returns: the value of the minimum property - `java.lang.Comparable`"
-  (^java.lang.Comparable [^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Comparable [^SpinnerNumberModel this]
     (-> this (.getMinimum))))
 
 (defn get-number
   "Returns the value of the current element of the sequence.
 
   returns: the value property - `java.lang.Number`"
-  (^java.lang.Number [^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Number [^SpinnerNumberModel this]
     (-> this (.getNumber))))
 
 (defn get-value
   "Returns the value of the current element of the sequence.
 
   returns: the value property - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Object [^SpinnerNumberModel this]
     (-> this (.getValue))))
 
 (defn set-step-size
@@ -125,7 +125,7 @@
    stepSize has changed.
 
   step-size - the size of the value change computed by the getNextValue and getPreviousValue methods - `java.lang.Number`"
-  ([^javax.swing.SpinnerNumberModel this ^java.lang.Number step-size]
+  ([^SpinnerNumberModel this ^java.lang.Number step-size]
     (-> this (.setStepSize step-size))))
 
 (defn set-maximum
@@ -150,7 +150,7 @@
    maximum has changed.
 
   maximum - a Comparable that has a compareTo method for Numbers with the same type as value - `java.lang.Comparable`"
-  ([^javax.swing.SpinnerNumberModel this ^java.lang.Comparable maximum]
+  ([^SpinnerNumberModel this ^java.lang.Comparable maximum]
     (-> this (.setMaximum maximum))))
 
 (defn set-value
@@ -174,7 +174,7 @@
   value - the current (non null) Number for this sequence - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if value is null or not a Number"
-  ([^javax.swing.SpinnerNumberModel this ^java.lang.Object value]
+  ([^SpinnerNumberModel this ^java.lang.Object value]
     (-> this (.setValue value))))
 
 (defn set-minimum
@@ -207,7 +207,7 @@
    if the minimum has changed.
 
   minimum - a Comparable that has a compareTo method for Numbers with the same type as value - `java.lang.Comparable`"
-  ([^javax.swing.SpinnerNumberModel this ^java.lang.Comparable minimum]
+  ([^SpinnerNumberModel this ^java.lang.Comparable minimum]
     (-> this (.setMinimum minimum))))
 
 (defn get-next-value
@@ -215,13 +215,13 @@
 
   returns: value  stepSize or null if the sum
        exceeds maximum. - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Object [^SpinnerNumberModel this]
     (-> this (.getNextValue))))
 
 (defn get-maximum
   "Returns the last number in the sequence.
 
   returns: the value of the maximum property - `java.lang.Comparable`"
-  (^java.lang.Comparable [^javax.swing.SpinnerNumberModel this]
+  (^java.lang.Comparable [^SpinnerNumberModel this]
     (-> this (.getMaximum))))
 

@@ -178,30 +178,30 @@
   indentation - the number of space characters to indent the entire XML document by - `int`
 
   throws: java.lang.IllegalArgumentException - if out or charset is null, or if indentation is less than 0"
-  ([^java.io.OutputStream out ^java.lang.String charset ^Boolean declaration ^Integer indentation]
+  (^XMLEncoder [^java.io.OutputStream out ^java.lang.String charset ^Boolean declaration ^Integer indentation]
     (new XMLEncoder out charset declaration indentation))
-  ([^java.io.OutputStream out]
+  (^XMLEncoder [^java.io.OutputStream out]
     (new XMLEncoder out)))
 
 (defn set-owner
   "Sets the owner of this encoder to owner.
 
   owner - The owner of this encoder. - `java.lang.Object`"
-  ([^java.beans.XMLEncoder this ^java.lang.Object owner]
+  ([^XMLEncoder this ^java.lang.Object owner]
     (-> this (.setOwner owner))))
 
 (defn get-owner
   "Gets the owner of this encoder.
 
   returns: The owner of this encoder. - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.XMLEncoder this]
+  (^java.lang.Object [^XMLEncoder this]
     (-> this (.getOwner))))
 
 (defn write-object
   "Write an XML representation of the specified object to the output.
 
   o - The object to be written to the stream. - `java.lang.Object`"
-  ([^java.beans.XMLEncoder this ^java.lang.Object o]
+  ([^XMLEncoder this ^java.lang.Object o]
     (-> this (.writeObject o))))
 
 (defn write-statement
@@ -212,7 +212,7 @@
    of initializing a persistence delegate.
 
   old-stm - The statement that will be written to the stream. - `java.beans.Statement`"
-  ([^java.beans.XMLEncoder this ^java.beans.Statement old-stm]
+  ([^XMLEncoder this ^java.beans.Statement old-stm]
     (-> this (.writeStatement old-stm))))
 
 (defn write-expression
@@ -228,7 +228,7 @@
    http://java.sun.com/products/jfc/tsc/articles/persistence4/#i18n
 
   old-exp - The expression that will be written to the stream. - `java.beans.Expression`"
-  ([^java.beans.XMLEncoder this ^java.beans.Expression old-exp]
+  ([^XMLEncoder this ^java.beans.Expression old-exp]
     (-> this (.writeExpression old-exp))))
 
 (defn flush
@@ -238,13 +238,13 @@
    written to the stream since the last time flush
    was called. After flushing, all internal references to the
    values that were written to this stream are cleared."
-  ([^java.beans.XMLEncoder this]
+  ([^XMLEncoder this]
     (-> this (.flush))))
 
 (defn close
   "This method calls flush, writes the closing
    postamble and then closes the output stream associated
    with this stream."
-  ([^java.beans.XMLEncoder this]
+  ([^XMLEncoder this]
     (-> this (.close))))
 

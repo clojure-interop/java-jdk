@@ -40,7 +40,7 @@
   returns: the loaded class. - `java.lang.Class<?>`
 
   throws: java.lang.ClassNotFoundException - The specified class could not be found."
-  (^java.lang.Class [^javax.management.loading.ClassLoaderRepository this ^java.lang.String class-name]
+  (^java.lang.Class [^ClassLoaderRepository this ^java.lang.String class-name]
     (-> this (.loadClass class-name))))
 
 (defn load-class-without
@@ -66,7 +66,7 @@
   returns: the loaded class. - `java.lang.Class<?>`
 
   throws: java.lang.ClassNotFoundException - The specified class could not be found."
-  (^java.lang.Class [^javax.management.loading.ClassLoaderRepository this ^java.lang.ClassLoader exclude ^java.lang.String class-name]
+  (^java.lang.Class [^ClassLoaderRepository this ^java.lang.ClassLoader exclude ^java.lang.String class-name]
     (-> this (.loadClassWithout exclude class-name))))
 
 (defn load-class-before
@@ -92,6 +92,6 @@
   returns: the loaded class. - `java.lang.Class<?>`
 
   throws: java.lang.ClassNotFoundException - The specified class could not be found."
-  (^java.lang.Class [^javax.management.loading.ClassLoaderRepository this ^java.lang.ClassLoader stop ^java.lang.String class-name]
+  (^java.lang.Class [^ClassLoaderRepository this ^java.lang.ClassLoader stop ^java.lang.String class-name]
     (-> this (.loadClassBefore stop class-name))))
 

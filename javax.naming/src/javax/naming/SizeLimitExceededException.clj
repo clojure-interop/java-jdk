@@ -17,8 +17,8 @@
    explanation. All other fields default to null.
 
   explanation - Possibly null detail about this exception. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^SizeLimitExceededException [^java.lang.String explanation]
     (new SizeLimitExceededException explanation))
-  ([]
+  (^SizeLimitExceededException []
     (new SizeLimitExceededException )))
 

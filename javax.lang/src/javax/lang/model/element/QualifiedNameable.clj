@@ -7,6 +7,6 @@
   "Returns the fully qualified name of an element.
 
   returns: the fully qualified name of an element - `javax.lang.model.element.Name`"
-  (^javax.lang.model.element.Name [^javax.lang.model.element.QualifiedNameable this]
+  (^javax.lang.model.element.Name [^QualifiedNameable this]
     (-> this (.getQualifiedName))))
 

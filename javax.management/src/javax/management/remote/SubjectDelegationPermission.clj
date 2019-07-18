@@ -38,8 +38,8 @@
   actions - must be null. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^SubjectDelegationPermission [^java.lang.String name ^java.lang.String actions]
     (new SubjectDelegationPermission name actions))
-  ([^java.lang.String name]
+  (^SubjectDelegationPermission [^java.lang.String name]
     (new SubjectDelegationPermission name)))
 

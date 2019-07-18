@@ -49,9 +49,9 @@
 
   temporal - the temporal object to query, not null - `java.time.temporal.TemporalAccessor`
 
-  returns: the queried value, may return null to indicate not found - `TemporalQuery.R`
+  returns: the queried value, may return null to indicate not found - `R`
 
   throws: java.time.DateTimeException - if unable to query"
-  (^TemporalQuery.R [^java.time.temporal.TemporalQuery this ^java.time.temporal.TemporalAccessor temporal]
+  ([^TemporalQuery this ^java.time.temporal.TemporalAccessor temporal]
     (-> this (.queryFrom temporal))))
 

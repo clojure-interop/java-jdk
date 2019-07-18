@@ -76,9 +76,9 @@
   Creates an empty property list with the specified defaults.
 
   defaults - the defaults. - `java.util.Properties`"
-  ([^java.util.Properties defaults]
+  (^Properties [^java.util.Properties defaults]
     (new Properties defaults))
-  ([]
+  (^Properties []
     (new Properties )))
 
 (defn save
@@ -91,10 +91,8 @@
   out - an output stream. - `java.io.OutputStream`
   comments - a description of the property list. - `java.lang.String`
 
-  returns: `java.lang.  void`
-
   throws: java.lang.ClassCastException - if this Properties object contains any keys or values that are not Strings."
-  ([^java.util.Properties this ^java.io.OutputStream out ^java.lang.String comments]
+  ([^Properties this ^java.io.OutputStream out ^java.lang.String comments]
     (-> this (.save out comments))))
 
 (defn list
@@ -104,7 +102,7 @@
   out - an output stream. - `java.io.PrintStream`
 
   throws: java.lang.ClassCastException - if any key in this property list is not a string."
-  ([^java.util.Properties this ^java.io.PrintStream out]
+  ([^Properties this ^java.io.PrintStream out]
     (-> this (.list out))))
 
 (defn load
@@ -252,7 +250,7 @@
   reader - the input character stream. - `java.io.Reader`
 
   throws: java.io.IOException - if an error occurred when reading from the input stream."
-  ([^java.util.Properties this ^java.io.Reader reader]
+  ([^Properties this ^java.io.Reader reader]
     (-> this (.load reader))))
 
 (defn load-from-xml
@@ -275,7 +273,7 @@
   in - the input stream from which to read the XML document. - `java.io.InputStream`
 
   throws: java.io.IOException - if reading from the specified input stream results in an IOException."
-  ([^java.util.Properties this ^java.io.InputStream in]
+  ([^Properties this ^java.io.InputStream in]
     (-> this (.loadFromXML in))))
 
 (defn property-names
@@ -288,7 +286,7 @@
             the keys in the default property list. - `java.util.Enumeration<?>`
 
   throws: java.lang.ClassCastException - if any key in this property list is not a string."
-  (^java.util.Enumeration [^java.util.Properties this]
+  (^java.util.Enumeration [^Properties this]
     (-> this (.propertyNames))))
 
 (defn get-property
@@ -301,9 +299,9 @@
   default-value - a default value. - `java.lang.String`
 
   returns: the value in this property list with the specified key value. - `java.lang.String`"
-  (^java.lang.String [^java.util.Properties this ^java.lang.String key ^java.lang.String default-value]
+  (^java.lang.String [^Properties this ^java.lang.String key ^java.lang.String default-value]
     (-> this (.getProperty key default-value)))
-  (^java.lang.String [^java.util.Properties this ^java.lang.String key]
+  (^java.lang.String [^Properties this ^java.lang.String key]
     (-> this (.getProperty key))))
 
 (defn store-to-xml
@@ -329,9 +327,9 @@
   encoding - the name of a supported character encoding - `java.lang.String`
 
   throws: java.io.IOException - if writing to the specified output stream results in an IOException."
-  ([^java.util.Properties this ^java.io.OutputStream os ^java.lang.String comment ^java.lang.String encoding]
+  ([^Properties this ^java.io.OutputStream os ^java.lang.String comment ^java.lang.String encoding]
     (-> this (.storeToXML os comment encoding)))
-  ([^java.util.Properties this ^java.io.OutputStream os ^java.lang.String comment]
+  ([^Properties this ^java.io.OutputStream os ^java.lang.String comment]
     (-> this (.storeToXML os comment))))
 
 (defn set-property
@@ -345,7 +343,7 @@
 
   returns: the previous value of the specified key in this property
                list, or null if it did not have one. - `java.lang.Object`"
-  (^java.lang.Object [^java.util.Properties this ^java.lang.String key ^java.lang.String value]
+  (^java.lang.Object [^Properties this ^java.lang.String key ^java.lang.String value]
     (-> this (.setProperty key value))))
 
 (defn string-property-names
@@ -363,7 +361,7 @@
   returns: a set of keys in this property list where
             the key and its corresponding value are strings,
             including the keys in the default property list. - `java.util.Set<java.lang.String>`"
-  (^java.util.Set [^java.util.Properties this]
+  (^java.util.Set [^Properties this]
     (-> this (.stringPropertyNames))))
 
 (defn store
@@ -408,6 +406,6 @@
   comments - a description of the property list. - `java.lang.String`
 
   throws: java.io.IOException - if writing this property list to the specified output stream throws an IOException."
-  ([^java.util.Properties this ^java.io.Writer writer ^java.lang.String comments]
+  ([^Properties this ^java.io.Writer writer ^java.lang.String comments]
     (-> this (.store writer comments))))
 

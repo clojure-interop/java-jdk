@@ -30,22 +30,22 @@
   capacity - the capacity of this deque - `int`
 
   throws: java.lang.IllegalArgumentException - if capacity is less than 1"
-  ([^Integer capacity]
+  (^LinkedBlockingDeque [^Integer capacity]
     (new LinkedBlockingDeque capacity))
-  ([]
+  (^LinkedBlockingDeque []
     (new LinkedBlockingDeque )))
 
 (defn peek
   "Description copied from interface: BlockingDeque
 
-  returns: the head of this deque, or null if this deque is empty - `LinkedBlockingDeque.E`"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  returns: the head of this deque, or null if this deque is empty - `E`"
+  ([^LinkedBlockingDeque this]
     (-> this (.peek))))
 
 (defn offer-first
   "Description copied from interface: BlockingDeque
 
-  e - the element to add - `LinkedBlockingDeque.E`
+  e - the element to add - `E`
   timeout - how long to wait before giving up, in units of unit - `long`
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
@@ -53,18 +53,18 @@
            the specified waiting time elapses before space is available - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^LinkedBlockingDeque this e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offerFirst e timeout unit)))
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e]
+  (^Boolean [^LinkedBlockingDeque this e]
     (-> this (.offerFirst e))))
 
 (defn get-first
   "Description copied from interface: Deque
 
-  returns: the head of this deque - `LinkedBlockingDeque.E`
+  returns: the head of this deque - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.getFirst))))
 
 (defn spliterator
@@ -76,15 +76,15 @@
    The Spliterator reports Spliterator.CONCURRENT,
    Spliterator.ORDERED, and Spliterator.NONNULL.
 
-  returns: a Spliterator over the elements in this deque - `java.util.Spliterator<LinkedBlockingDeque.E>`"
-  (^java.util.Spliterator [^java.util.concurrent.LinkedBlockingDeque this]
+  returns: a Spliterator over the elements in this deque - `java.util.Spliterator<E>`"
+  (^java.util.Spliterator [^LinkedBlockingDeque this]
     (-> this (.spliterator))))
 
 (defn peek-first
   "Description copied from interface: Deque
 
-  returns: the head of this deque, or null if this deque is empty - `LinkedBlockingDeque.E`"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  returns: the head of this deque, or null if this deque is empty - `E`"
+  ([^LinkedBlockingDeque this]
     (-> this (.peekFirst))))
 
 (defn remove-first-occurrence
@@ -93,13 +93,13 @@
   o - element to be removed from this deque, if present - `java.lang.Object`
 
   returns: true if an element was removed as a result of this call - `boolean`"
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^java.lang.Object o]
+  (^Boolean [^LinkedBlockingDeque this ^java.lang.Object o]
     (-> this (.removeFirstOccurrence o))))
 
 (defn offer
   "Description copied from interface: BlockingDeque
 
-  e - the element to add - `LinkedBlockingDeque.E`
+  e - the element to add - `E`
   timeout - how long to wait before giving up, in units of unit - `long`
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
@@ -107,35 +107,35 @@
            false - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^LinkedBlockingDeque this e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e]
+  (^Boolean [^LinkedBlockingDeque this e]
     (-> this (.offer e))))
 
 (defn put
   "Description copied from interface: BlockingDeque
 
-  e - the element to add - `LinkedBlockingDeque.E`
+  e - the element to add - `E`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e]
+  ([^LinkedBlockingDeque this e]
     (-> this (.put e))))
 
 (defn peek-last
   "Description copied from interface: Deque
 
-  returns: the tail of this deque, or null if this deque is empty - `LinkedBlockingDeque.E`"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  returns: the tail of this deque, or null if this deque is empty - `E`"
+  ([^LinkedBlockingDeque this]
     (-> this (.peekLast))))
 
 (defn pop
   "Description copied from interface: Deque
 
   returns: the element at the front of this deque (which is the top
-           of the stack represented by this deque) - `LinkedBlockingDeque.E`
+           of the stack represented by this deque) - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.pop))))
 
 (defn contains
@@ -146,59 +146,59 @@
   o - object to be checked for containment in this deque - `java.lang.Object`
 
   returns: true if this deque contains the specified element - `boolean`"
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^java.lang.Object o]
+  (^Boolean [^LinkedBlockingDeque this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn take-last
   "Description copied from interface: BlockingDeque
 
-  returns: the tail of this deque - `LinkedBlockingDeque.E`
+  returns: the tail of this deque - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.takeLast))))
 
 (defn take-first
   "Description copied from interface: BlockingDeque
 
-  returns: the head of this deque - `LinkedBlockingDeque.E`
+  returns: the head of this deque - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.takeFirst))))
 
 (defn to-string
   "Description copied from class: AbstractCollection
 
   returns: a string representation of this collection - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.LinkedBlockingDeque this]
+  (^java.lang.String [^LinkedBlockingDeque this]
     (-> this (.toString))))
 
 (defn push
   "Description copied from interface: BlockingDeque
 
-  e - the element to push - `LinkedBlockingDeque.E`
+  e - the element to push - `E`
 
   throws: java.lang.IllegalStateException - if this deque is full"
-  ([^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e]
+  ([^LinkedBlockingDeque this e]
     (-> this (.push e))))
 
 (defn get-last
   "Description copied from interface: Deque
 
-  returns: the tail of this deque - `LinkedBlockingDeque.E`
+  returns: the tail of this deque - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.getLast))))
 
 (defn take
   "Description copied from interface: BlockingDeque
 
-  returns: the head of this deque - `LinkedBlockingDeque.E`
+  returns: the head of this deque - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.take))))
 
 (defn iterator
@@ -208,8 +208,8 @@
    The returned iterator is
    weakly consistent.
 
-  returns: an iterator over the elements in this deque in proper sequence - `java.util.Iterator<LinkedBlockingDeque.E>`"
-  (^java.util.Iterator [^java.util.concurrent.LinkedBlockingDeque this]
+  returns: an iterator over the elements in this deque in proper sequence - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^LinkedBlockingDeque this]
     (-> this (.iterator))))
 
 (defn element
@@ -219,28 +219,28 @@
 
    This method is equivalent to getFirst.
 
-  returns: the head of the queue represented by this deque - `LinkedBlockingDeque.E`
+  returns: the head of the queue represented by this deque - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.element))))
 
 (defn put-first
   "Description copied from interface: BlockingDeque
 
-  e - the element to add - `LinkedBlockingDeque.E`
+  e - the element to add - `E`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e]
+  ([^LinkedBlockingDeque this e]
     (-> this (.putFirst e))))
 
 (defn remove-first
   "Description copied from interface: Deque
 
-  returns: the head of this deque - `LinkedBlockingDeque.E`
+  returns: the head of this deque - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.removeFirst))))
 
 (defn remove
@@ -257,9 +257,9 @@
   o - element to be removed from this deque, if present - `java.lang.Object`
 
   returns: true if this deque changed as a result of the call - `boolean`"
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^java.lang.Object o]
+  (^Boolean [^LinkedBlockingDeque this ^java.lang.Object o]
     (-> this (.remove o)))
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.remove))))
 
 (defn poll-last
@@ -269,26 +269,26 @@
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
   returns: the tail of this deque, or null if the specified
-           waiting time elapses before an element is available - `LinkedBlockingDeque.E`
+           waiting time elapses before an element is available - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^LinkedBlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.pollLast timeout unit)))
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.pollLast))))
 
 (defn drain-to
   "Description copied from interface: BlockingQueue
 
-  c - the collection to transfer elements into - `LinkedBlockingDeque.E>`
+  c - the collection to transfer elements into - `java.util.Collection`
   max-elements - the maximum number of elements to transfer - `int`
 
   returns: the number of elements transferred - `int`
 
   throws: java.lang.UnsupportedOperationException - if addition of elements is not supported by the specified collection"
-  (^Integer [^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E> c ^Integer max-elements]
+  (^Integer [^LinkedBlockingDeque this ^java.util.Collection c ^Integer max-elements]
     (-> this (.drainTo c max-elements)))
-  (^Integer [^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E> c]
+  (^Integer [^LinkedBlockingDeque this ^java.util.Collection c]
     (-> this (.drainTo c))))
 
 (defn poll
@@ -298,18 +298,18 @@
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
   returns: the head of this deque, or null if the
-           specified waiting time elapses before an element is available - `LinkedBlockingDeque.E`
+           specified waiting time elapses before an element is available - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^LinkedBlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.poll))))
 
 (defn offer-last
   "Description copied from interface: BlockingDeque
 
-  e - the element to add - `LinkedBlockingDeque.E`
+  e - the element to add - `E`
   timeout - how long to wait before giving up, in units of unit - `long`
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
@@ -317,9 +317,9 @@
            the specified waiting time elapses before space is available - `boolean`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^LinkedBlockingDeque this e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offerLast e timeout unit)))
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e]
+  (^Boolean [^LinkedBlockingDeque this e]
     (-> this (.offerLast e))))
 
 (defn poll-first
@@ -329,21 +329,21 @@
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
   returns: the head of this deque, or null if the specified
-           waiting time elapses before an element is available - `LinkedBlockingDeque.E`
+           waiting time elapses before an element is available - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^LinkedBlockingDeque this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.pollFirst timeout unit)))
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.pollFirst))))
 
 (defn add-last
   "Description copied from interface: BlockingDeque
 
-  e - the element to add - `LinkedBlockingDeque.E`
+  e - the element to add - `E`
 
   throws: java.lang.IllegalStateException - if this deque is full"
-  ([^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e]
+  ([^LinkedBlockingDeque this e]
     (-> this (.addLast e))))
 
 (defn remove-last-occurrence
@@ -352,7 +352,7 @@
   o - element to be removed from this deque, if present - `java.lang.Object`
 
   returns: true if an element was removed as a result of this call - `boolean`"
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^java.lang.Object o]
+  (^Boolean [^LinkedBlockingDeque this ^java.lang.Object o]
     (-> this (.removeLastOccurrence o))))
 
 (defn remaining-capacity
@@ -367,7 +367,7 @@
    insert or remove an element.
 
   returns: the remaining capacity - `int`"
-  (^Integer [^java.util.concurrent.LinkedBlockingDeque this]
+  (^Integer [^LinkedBlockingDeque this]
     (-> this (.remainingCapacity))))
 
 (defn add
@@ -377,12 +377,12 @@
 
    This method is equivalent to addLast(E).
 
-  e - the element to add - `LinkedBlockingDeque.E`
+  e - the element to add - `E`
 
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.IllegalStateException - if this deque is full"
-  (^Boolean [^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e]
+  (^Boolean [^LinkedBlockingDeque this e]
     (-> this (.add e))))
 
 (defn descending-iterator
@@ -393,39 +393,39 @@
    The returned iterator is
    weakly consistent.
 
-  returns: an iterator over the elements in this deque in reverse order - `java.util.Iterator<LinkedBlockingDeque.E>`"
-  (^java.util.Iterator [^java.util.concurrent.LinkedBlockingDeque this]
+  returns: an iterator over the elements in this deque in reverse order - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^LinkedBlockingDeque this]
     (-> this (.descendingIterator))))
 
 (defn size
   "Returns the number of elements in this deque.
 
   returns: the number of elements in this deque - `int`"
-  (^Integer [^java.util.concurrent.LinkedBlockingDeque this]
+  (^Integer [^LinkedBlockingDeque this]
     (-> this (.size))))
 
 (defn clear
   "Atomically removes all of the elements from this deque.
    The deque will be empty after this call returns."
-  ([^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.clear))))
 
 (defn remove-last
   "Description copied from interface: Deque
 
-  returns: the tail of this deque - `LinkedBlockingDeque.E`
+  returns: the tail of this deque - `E`
 
   throws: java.util.NoSuchElementException - if this deque is empty"
-  (^LinkedBlockingDeque.E [^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.removeLast))))
 
 (defn add-first
   "Description copied from interface: BlockingDeque
 
-  e - the element to add - `LinkedBlockingDeque.E`
+  e - the element to add - `E`
 
   throws: java.lang.IllegalStateException - if this deque is full"
-  ([^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e]
+  ([^LinkedBlockingDeque this e]
     (-> this (.addFirst e))))
 
 (defn to-array
@@ -461,17 +461,17 @@
   returns: an array containing all of the elements in this deque - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this deque"
-  ([^java.util.concurrent.LinkedBlockingDeque this a]
+  ([^LinkedBlockingDeque this a]
     (-> this (.toArray a)))
-  ([^java.util.concurrent.LinkedBlockingDeque this]
+  ([^LinkedBlockingDeque this]
     (-> this (.toArray))))
 
 (defn put-last
   "Description copied from interface: BlockingDeque
 
-  e - the element to add - `LinkedBlockingDeque.E`
+  e - the element to add - `E`
 
   throws: java.lang.NullPointerException - if the specified element is null"
-  ([^java.util.concurrent.LinkedBlockingDeque this ^LinkedBlockingDeque.E e]
+  ([^LinkedBlockingDeque this e]
     (-> this (.putLast e))))
 

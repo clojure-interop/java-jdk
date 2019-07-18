@@ -9,8 +9,8 @@
 (defn iterator
   "Returns an iterator over elements of type T.
 
-  returns: an Iterator. - `java.util.Iterator<Iterable.T>`"
-  (^java.util.Iterator [^java.lang.Iterable this]
+  returns: an Iterator. - `java.util.Iterator<T>`"
+  (^java.util.Iterator [^Iterable this]
     (-> this (.iterator))))
 
 (defn for-each
@@ -21,12 +21,12 @@
    is specified).  Exceptions thrown by the action are relayed to the
    caller.
 
-  action - The action to be performed for each element - `Iterable.T>`
+  action - The action to be performed for each element - `java.util.function.Consumer`
 
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^java.lang.Iterable this ^Iterable.T> action]
+  ([^Iterable this ^java.util.function.Consumer action]
     (-> this (.forEach action))))
 
 (defn spliterator
@@ -34,7 +34,7 @@
    Iterable.
 
   returns: a Spliterator over the elements described by this
-   Iterable. - `default java.util.Spliterator<Iterable.T>`"
-  ([^java.lang.Iterable this]
+   Iterable. - `default java.util.Spliterator<T>`"
+  ([^Iterable this]
     (-> this (.spliterator))))
 

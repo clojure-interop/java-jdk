@@ -7,7 +7,7 @@
 
   Problem which prevents the tool's normal completion.
 
-  type: javax.tools.Diagnostic.Kind"
+  type: javax.tools.Diagnostic$Kind"
   Diagnostic$Kind/ERROR)
 
 (def WARNING
@@ -16,7 +16,7 @@
   Problem which does not usually prevent the tool from
    completing normally.
 
-  type: javax.tools.Diagnostic.Kind"
+  type: javax.tools.Diagnostic$Kind"
   Diagnostic$Kind/WARNING)
 
 (def MANDATORY_WARNING
@@ -27,7 +27,7 @@
    Specification mandates warnings on certain
    unchecked operations and the use of deprecated methods.
 
-  type: javax.tools.Diagnostic.Kind"
+  type: javax.tools.Diagnostic$Kind"
   Diagnostic$Kind/MANDATORY_WARNING)
 
 (def NOTE
@@ -35,7 +35,7 @@
 
   Informative message from the tool.
 
-  type: javax.tools.Diagnostic.Kind"
+  type: javax.tools.Diagnostic$Kind"
   Diagnostic$Kind/NOTE)
 
 (def OTHER
@@ -43,7 +43,7 @@
 
   Diagnostic which does not fit within the other kinds.
 
-  type: javax.tools.Diagnostic.Kind"
+  type: javax.tools.Diagnostic$Kind"
   Diagnostic$Kind/OTHER)
 
 (defn *values
@@ -55,7 +55,7 @@
   for (Diagnostic.Kind c : Diagnostic.Kind.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.tools.Diagnostic.Kind[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.tools.Diagnostic$Kind[]`"
   ([]
     (Diagnostic$Kind/values )))
 
@@ -67,9 +67,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.tools.Diagnostic.Kind`
+  returns: the enum constant with the specified name - `javax.tools.Diagnostic$Kind`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.tools.Diagnostic.Kind [^java.lang.String name]
+  (^javax.tools.Diagnostic$Kind [^java.lang.String name]
     (Diagnostic$Kind/valueOf name)))
 

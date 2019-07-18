@@ -15,8 +15,8 @@
    this particular exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^AccountLockedException [^java.lang.String msg]
     (new AccountLockedException msg))
-  ([]
+  (^AccountLockedException []
     (new AccountLockedException )))
 

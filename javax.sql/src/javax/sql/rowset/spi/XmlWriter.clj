@@ -28,6 +28,6 @@
   writer - the java.io.Writer object that serves as the output stream for writing caller as an XML document - `java.io.Writer`
 
   throws: java.sql.SQLException - if a database access error occurs or this XmlWriter object is not the writer for the given WebRowSet object"
-  ([^javax.sql.rowset.spi.XmlWriter this ^javax.sql.rowset.WebRowSet caller ^java.io.Writer writer]
+  ([^XmlWriter this ^javax.sql.rowset.WebRowSet caller ^java.io.Writer writer]
     (-> this (.writeXML caller writer))))
 

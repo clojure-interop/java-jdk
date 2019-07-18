@@ -79,7 +79,7 @@
   criticality - If true then the server must honor the control and return the search results sorted as requested or refuse to perform the search. If false, then the server need not honor the control. - `boolean`
 
   throws: java.io.IOException - If an error was encountered while encoding the supplied arguments into a control."
-  ([^java.lang.String sort-by ^Boolean criticality]
+  (^SortControl [^java.lang.String sort-by ^Boolean criticality]
     (new SortControl sort-by criticality)))
 
 (def *-oid

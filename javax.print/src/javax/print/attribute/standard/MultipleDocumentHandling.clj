@@ -166,7 +166,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.MultipleDocumentHandling this]
+  ([^MultipleDocumentHandling this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -177,6 +177,6 @@
    the category name is `multiple-document-handling`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.MultipleDocumentHandling this]
+  (^java.lang.String [^MultipleDocumentHandling this]
     (-> this (.getName))))
 

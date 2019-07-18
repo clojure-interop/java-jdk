@@ -23,7 +23,7 @@
 
   s - String describing the exception. - `java.lang.String`
   ex - Exception causing the abort. - `java.lang.Exception`"
-  ([^java.lang.String s ^java.lang.Exception ex]
+  (^WriteAbortedException [^java.lang.String s ^java.lang.Exception ex]
     (new WriteAbortedException s ex)))
 
 (defn -detail
@@ -45,7 +45,7 @@
 
   returns: the detail message string of this Throwable instance
             (which may be null). - `java.lang.String`"
-  (^java.lang.String [^java.io.WriteAbortedException this]
+  (^java.lang.String [^WriteAbortedException this]
     (-> this (.getMessage))))
 
 (defn get-cause
@@ -53,6 +53,6 @@
 
   returns: the exception that terminated the operation (the cause),
             which may be null. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^java.io.WriteAbortedException this]
+  (^java.lang.Throwable [^WriteAbortedException this]
     (-> this (.getCause))))
 

@@ -18,7 +18,7 @@
    by a call to the startProduction method.
 
   ic - the specified ImageConsumer - `java.awt.image.ImageConsumer`"
-  ([^java.awt.image.ImageProducer this ^java.awt.image.ImageConsumer ic]
+  ([^ImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.addConsumer ic))))
 
 (defn consumer?
@@ -32,7 +32,7 @@
            ImageConsumer is registered with
            this ImageProducer;
            false otherwise. - `boolean`"
-  (^Boolean [^java.awt.image.ImageProducer this ^java.awt.image.ImageConsumer ic]
+  (^Boolean [^ImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.isConsumer ic))))
 
 (defn remove-consumer
@@ -44,7 +44,7 @@
    to this consumer as soon as is feasible.
 
   ic - the specified ImageConsumer - `java.awt.image.ImageConsumer`"
-  ([^java.awt.image.ImageProducer this ^java.awt.image.ImageConsumer ic]
+  ([^ImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.removeConsumer ic))))
 
 (defn start-production
@@ -57,7 +57,7 @@
    the image data should be triggered as soon as possible.
 
   ic - the specified ImageConsumer - `java.awt.image.ImageConsumer`"
-  ([^java.awt.image.ImageProducer this ^java.awt.image.ImageConsumer ic]
+  ([^ImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.startProduction ic))))
 
 (defn request-top-down-left-right-resend
@@ -80,6 +80,6 @@
     ic.imageComplete();
 
   ic - the specified ImageConsumer - `java.awt.image.ImageConsumer`"
-  ([^java.awt.image.ImageProducer this ^java.awt.image.ImageConsumer ic]
+  ([^ImageProducer this ^java.awt.image.ImageConsumer ic]
     (-> this (.requestTopDownLeftRightResend ic))))
 

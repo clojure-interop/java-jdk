@@ -18,14 +18,14 @@
   op - the specified BufferedImageOp to use to filter a BufferedImage - `java.awt.image.BufferedImageOp`
 
   throws: java.lang.NullPointerException - if op is null"
-  ([^java.awt.image.BufferedImageOp op]
+  (^BufferedImageFilter [^java.awt.image.BufferedImageOp op]
     (new BufferedImageFilter op)))
 
 (defn get-buffered-image-op
   "Returns the BufferedImageOp.
 
   returns: the operator of this BufferedImageFilter. - `java.awt.image.BufferedImageOp`"
-  (^java.awt.image.BufferedImageOp [^java.awt.image.BufferedImageFilter this]
+  (^java.awt.image.BufferedImageOp [^BufferedImageFilter this]
     (-> this (.getBufferedImageOp))))
 
 (defn set-dimensions
@@ -42,7 +42,7 @@
 
   width - the width to which to set the width of this BufferedImageFilter - `int`
   height - the height to which to set the height of this BufferedImageFilter - `int`"
-  ([^java.awt.image.BufferedImageFilter this ^Integer width ^Integer height]
+  ([^BufferedImageFilter this ^Integer width ^Integer height]
     (-> this (.setDimensions width height))))
 
 (defn set-color-model
@@ -63,7 +63,7 @@
    requested pixels.
 
   model - the ColorModel to which to set the ColorModel of this BufferedImageFilter - `java.awt.image.ColorModel`"
-  ([^java.awt.image.BufferedImageFilter this ^java.awt.image.ColorModel model]
+  ([^BufferedImageFilter this ^java.awt.image.ColorModel model]
     (-> this (.setColorModel model))))
 
 (defn set-pixels
@@ -88,7 +88,7 @@
   scansize - the distance from one row of pixels to the next in the pixels array - `int`
 
   throws: java.lang.IllegalArgumentException - if width or height are less than zero."
-  ([^java.awt.image.BufferedImageFilter this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
+  ([^BufferedImageFilter this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
     (-> this (.setPixels x y w h model pixels off scansize))))
 
 (defn image-complete
@@ -105,6 +105,6 @@
   status - the status of image loading - `int`
 
   throws: java.awt.image.ImagingOpException - if there was a problem calling the filter method of the BufferedImageOp associated with this instance."
-  ([^java.awt.image.BufferedImageFilter this ^Integer status]
+  ([^BufferedImageFilter this ^Integer status]
     (-> this (.imageComplete status))))
 

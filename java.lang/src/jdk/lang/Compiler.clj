@@ -17,7 +17,7 @@
 (defn *compile-class
   "Compiles the specified class.
 
-  clazz - A class - `java.lang.Class<?>`
+  clazz - A class - `java.lang.Class`
 
   returns: true if the compilation succeeded; false if the
             compilation failed or no compiler is available - `boolean`

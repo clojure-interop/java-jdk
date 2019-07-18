@@ -21,11 +21,11 @@
    of JavaFileObject is obeyed.
 
   simple-name - a simple name of a class - `java.lang.String`
-  kind - a kind - `javax.tools.JavaFileObject.Kind`
+  kind - a kind - `javax.tools.JavaFileObject$Kind`
 
   returns: true if this file object is compatible; false
    otherwise - `boolean`"
-  (^Boolean [^javax.tools.SimpleJavaFileObject this ^java.lang.String simple-name ^javax.tools.JavaFileObject.Kind kind]
+  (^Boolean [^SimpleJavaFileObject this ^java.lang.String simple-name ^javax.tools.JavaFileObject$Kind kind]
     (-> this (.isNameCompatible simple-name kind))))
 
 (defn open-writer
@@ -35,14 +35,14 @@
   returns: a Writer wrapping the result of openOutputStream - `java.io.Writer`
 
   throws: java.lang.IllegalStateException - if this file object was opened for reading and does not support writing"
-  (^java.io.Writer [^javax.tools.SimpleJavaFileObject this]
+  (^java.io.Writer [^SimpleJavaFileObject this]
     (-> this (.openWriter))))
 
 (defn get-kind
   "Description copied from interface: JavaFileObject
 
-  returns: this.kind - `javax.tools.JavaFileObject.Kind`"
-  (^javax.tools.JavaFileObject.Kind [^javax.tools.SimpleJavaFileObject this]
+  returns: this.kind - `javax.tools.JavaFileObject$Kind`"
+  (^javax.tools.JavaFileObject$Kind [^SimpleJavaFileObject this]
     (-> this (.getKind))))
 
 (defn delete
@@ -51,7 +51,7 @@
    obeyed.
 
   returns: false - `boolean`"
-  (^Boolean [^javax.tools.SimpleJavaFileObject this]
+  (^Boolean [^SimpleJavaFileObject this]
     (-> this (.delete))))
 
 (defn get-access-level
@@ -60,7 +60,7 @@
    JavaFileObject is obeyed.
 
   returns: the access level - `javax.lang.model.element.Modifier`"
-  (^javax.lang.model.element.Modifier [^javax.tools.SimpleJavaFileObject this]
+  (^javax.lang.model.element.Modifier [^SimpleJavaFileObject this]
     (-> this (.getAccessLevel))))
 
 (defn open-input-stream
@@ -71,14 +71,14 @@
   returns: an InputStream - `java.io.InputStream`
 
   throws: java.io.IOException - if an I/O error occurred"
-  (^java.io.InputStream [^javax.tools.SimpleJavaFileObject this]
+  (^java.io.InputStream [^SimpleJavaFileObject this]
     (-> this (.openInputStream))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.tools.SimpleJavaFileObject this]
+  (^java.lang.String [^SimpleJavaFileObject this]
     (-> this (.toString))))
 
 (defn open-output-stream
@@ -89,7 +89,7 @@
   returns: an OutputStream - `java.io.OutputStream`
 
   throws: java.io.IOException - if an I/O error occurred"
-  (^java.io.OutputStream [^javax.tools.SimpleJavaFileObject this]
+  (^java.io.OutputStream [^SimpleJavaFileObject this]
     (-> this (.openOutputStream))))
 
 (defn get-last-modified
@@ -98,21 +98,21 @@
    obeyed.
 
   returns: 0L - `long`"
-  (^Long [^javax.tools.SimpleJavaFileObject this]
+  (^Long [^SimpleJavaFileObject this]
     (-> this (.getLastModified))))
 
 (defn to-uri
   "Description copied from interface: FileObject
 
   returns: a URI - `java.net.URI`"
-  (^java.net.URI [^javax.tools.SimpleJavaFileObject this]
+  (^java.net.URI [^SimpleJavaFileObject this]
     (-> this (.toUri))))
 
 (defn get-name
   "Description copied from interface: FileObject
 
   returns: a user-friendly name - `java.lang.String`"
-  (^java.lang.String [^javax.tools.SimpleJavaFileObject this]
+  (^java.lang.String [^SimpleJavaFileObject this]
     (-> this (.getName))))
 
 (defn open-reader
@@ -125,7 +125,7 @@
   returns: a Reader wrapping the result of getCharContent - `java.io.Reader`
 
   throws: java.lang.IllegalStateException - if this file object was opened for writing and does not support reading"
-  (^java.io.Reader [^javax.tools.SimpleJavaFileObject this ^Boolean ignore-encoding-errors]
+  (^java.io.Reader [^SimpleJavaFileObject this ^Boolean ignore-encoding-errors]
     (-> this (.openReader ignore-encoding-errors))))
 
 (defn get-char-content
@@ -138,7 +138,7 @@
   returns: a CharSequence if available; null otherwise - `java.lang.CharSequence`
 
   throws: java.io.IOException - if an I/O error occurred"
-  (^java.lang.CharSequence [^javax.tools.SimpleJavaFileObject this ^Boolean ignore-encoding-errors]
+  (^java.lang.CharSequence [^SimpleJavaFileObject this ^Boolean ignore-encoding-errors]
     (-> this (.getCharContent ignore-encoding-errors))))
 
 (defn get-nesting-kind
@@ -148,6 +148,6 @@
 
   returns: the nesting kind, or null if the nesting kind
    is not known - `javax.lang.model.element.NestingKind`"
-  (^javax.lang.model.element.NestingKind [^javax.tools.SimpleJavaFileObject this]
+  (^javax.lang.model.element.NestingKind [^SimpleJavaFileObject this]
     (-> this (.getNestingKind))))
 

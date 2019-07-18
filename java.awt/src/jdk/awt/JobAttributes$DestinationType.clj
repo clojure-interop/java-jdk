@@ -9,7 +9,7 @@
   The DestinationType instance to use for
    specifying print to file.
 
-  type: java.awt.JobAttributes.DestinationType"
+  type: java.awt.JobAttributes$DestinationType"
   JobAttributes$DestinationType/FILE)
 
 (def *-printer
@@ -18,20 +18,20 @@
   The DestinationType instance to use for
    specifying print to printer.
 
-  type: java.awt.JobAttributes.DestinationType"
+  type: java.awt.JobAttributes$DestinationType"
   JobAttributes$DestinationType/PRINTER)
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.JobAttributes$DestinationType this]
+  (^Integer [^JobAttributes$DestinationType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.JobAttributes$DestinationType this]
+  (^java.lang.String [^JobAttributes$DestinationType this]
     (-> this (.toString))))
 

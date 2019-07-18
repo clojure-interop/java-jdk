@@ -89,8 +89,8 @@
    support the add or addAll operations.
 
   returns: a collection view of the values contained in this map,
-           sorted in ascending key order - `java.util.Collection<SortedMap.V>`"
-  (^java.util.Collection [^java.util.SortedMap this]
+           sorted in ascending key order - `java.util.Collection<V>`"
+  (^java.util.Collection [^SortedMap this]
     (-> this (.values))))
 
 (defn head-map
@@ -103,13 +103,13 @@
    The returned map will throw an IllegalArgumentException
    on an attempt to insert a key outside its range.
 
-  to-key - high endpoint (exclusive) of the keys in the returned map - `SortedMap.K`
+  to-key - high endpoint (exclusive) of the keys in the returned map - `K`
 
   returns: a view of the portion of this map whose keys are strictly
-           less than toKey - `java.util.SortedMap<SortedMap.K,SortedMap.V>`
+           less than toKey - `java.util.SortedMap<K,V>`
 
   throws: java.lang.ClassCastException - if toKey is not compatible with this map's comparator (or, if the map has no comparator, if toKey does not implement Comparable). Implementations may, but are not required to, throw this exception if toKey cannot be compared to keys currently in the map."
-  (^java.util.SortedMap [^java.util.SortedMap this ^SortedMap.K to-key]
+  (^java.util.SortedMap [^SortedMap this to-key]
     (-> this (.headMap to-key))))
 
 (defn entry-set
@@ -128,26 +128,26 @@
    add or addAll operations.
 
   returns: a set view of the mappings contained in this map,
-           sorted in ascending key order - `java.util.Set<java.util.Map.Entry<SortedMap.K,SortedMap.V>>`"
-  (^java.util.Set> [^java.util.SortedMap this]
+           sorted in ascending key order - `java.util.Set<java.util.Map$Entry<K,V>>`"
+  (^java.util.Set [^SortedMap this]
     (-> this (.entrySet))))
 
 (defn first-key
   "Returns the first (lowest) key currently in this map.
 
-  returns: the first (lowest) key currently in this map - `SortedMap.K`
+  returns: the first (lowest) key currently in this map - `K`
 
   throws: java.util.NoSuchElementException - if this map is empty"
-  (^SortedMap.K [^java.util.SortedMap this]
+  ([^SortedMap this]
     (-> this (.firstKey))))
 
 (defn last-key
   "Returns the last (highest) key currently in this map.
 
-  returns: the last (highest) key currently in this map - `SortedMap.K`
+  returns: the last (highest) key currently in this map - `K`
 
   throws: java.util.NoSuchElementException - if this map is empty"
-  (^SortedMap.K [^java.util.SortedMap this]
+  ([^SortedMap this]
     (-> this (.lastKey))))
 
 (defn key-set
@@ -165,8 +165,8 @@
    operations.
 
   returns: a set view of the keys contained in this map, sorted in
-           ascending order - `java.util.Set<SortedMap.K>`"
-  (^java.util.Set [^java.util.SortedMap this]
+           ascending order - `java.util.Set<K>`"
+  (^java.util.Set [^SortedMap this]
     (-> this (.keySet))))
 
 (defn comparator
@@ -175,8 +175,8 @@
 
   returns: the comparator used to order the keys in this map,
            or null if this map uses the natural ordering
-           of its keys - `java.util.Comparator<? super SortedMap.K>`"
-  ([^java.util.SortedMap this]
+           of its keys - `java.util.Comparator<? super K>`"
+  ([^SortedMap this]
     (-> this (.comparator))))
 
 (defn sub-map
@@ -191,14 +191,14 @@
    The returned map will throw an IllegalArgumentException
    on an attempt to insert a key outside its range.
 
-  from-key - low endpoint (inclusive) of the keys in the returned map - `SortedMap.K`
-  to-key - high endpoint (exclusive) of the keys in the returned map - `SortedMap.K`
+  from-key - low endpoint (inclusive) of the keys in the returned map - `K`
+  to-key - high endpoint (exclusive) of the keys in the returned map - `K`
 
   returns: a view of the portion of this map whose keys range from
-           fromKey, inclusive, to toKey, exclusive - `java.util.SortedMap<SortedMap.K,SortedMap.V>`
+           fromKey, inclusive, to toKey, exclusive - `java.util.SortedMap<K,V>`
 
   throws: java.lang.ClassCastException - if fromKey and toKey cannot be compared to one another using this map's comparator (or, if the map has no comparator, using natural ordering). Implementations may, but are not required to, throw this exception if fromKey or toKey cannot be compared to keys currently in the map."
-  (^java.util.SortedMap [^java.util.SortedMap this ^SortedMap.K from-key ^SortedMap.K to-key]
+  (^java.util.SortedMap [^SortedMap this from-key to-key]
     (-> this (.subMap from-key to-key))))
 
 (defn tail-map
@@ -211,12 +211,12 @@
    The returned map will throw an IllegalArgumentException
    on an attempt to insert a key outside its range.
 
-  from-key - low endpoint (inclusive) of the keys in the returned map - `SortedMap.K`
+  from-key - low endpoint (inclusive) of the keys in the returned map - `K`
 
   returns: a view of the portion of this map whose keys are greater
-           than or equal to fromKey - `java.util.SortedMap<SortedMap.K,SortedMap.V>`
+           than or equal to fromKey - `java.util.SortedMap<K,V>`
 
   throws: java.lang.ClassCastException - if fromKey is not compatible with this map's comparator (or, if the map has no comparator, if fromKey does not implement Comparable). Implementations may, but are not required to, throw this exception if fromKey cannot be compared to keys currently in the map."
-  (^java.util.SortedMap [^java.util.SortedMap this ^SortedMap.K from-key]
+  (^java.util.SortedMap [^SortedMap this from-key]
     (-> this (.tailMap from-key))))
 

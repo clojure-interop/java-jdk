@@ -93,15 +93,15 @@
    this fact.  The recommended language is `Note: this comparator
    imposes orderings that are inconsistent with equals.`
 
-  o-1 - the first object to be compared. - `Comparator.T`
-  o-2 - the second object to be compared. - `Comparator.T`
+  o-1 - the first object to be compared. - `T`
+  o-2 - the second object to be compared. - `T`
 
   returns: a negative integer, zero, or a positive integer as the
            first argument is less than, equal to, or greater than the
            second. - `int`
 
   throws: java.lang.NullPointerException - if an argument is null and this comparator does not permit null arguments"
-  (^Integer [^java.util.Comparator this ^Comparator.T o-1 ^Comparator.T o-2]
+  (^Integer [^Comparator this o-1 o-2]
     (-> this (.compare o-1 o-2))))
 
 (defn reversed
@@ -109,8 +109,8 @@
    comparator.
 
   returns: a comparator that imposes the reverse ordering of this
-           comparator. - `default java.util.Comparator<Comparator.T>`"
-  ([^java.util.Comparator this]
+           comparator. - `default java.util.Comparator<T>`"
+  ([^Comparator this]
     (-> this (.reversed))))
 
 (defn *nulls-first
@@ -123,38 +123,38 @@
    The returned comparator is serializable if the specified comparator
    is serializable.
 
-  comparator - a Comparator for comparing non-null values - `T>`
+  comparator - a Comparator for comparing non-null values - `java.util.Comparator`
 
   returns: a comparator that considers null to be less than
            non-null, and compares non-null objects with the supplied
            Comparator. - `<T> java.util.Comparator<T>`"
-  ([comparator]
+  ([^java.util.Comparator comparator]
     (Comparator/nullsFirst comparator)))
 
 (defn then-comparing-long
   "Returns a lexicographic-order comparator with a function that
    extracts a long sort key.
 
-  key-extractor - the function used to extract the long sort key - `Comparator.T>`
+  key-extractor - the function used to extract the long sort key - `java.util.function.ToLongFunction`
 
   returns: a lexicographic-order comparator composed of this and then the
-           long sort key - `default java.util.Comparator<Comparator.T>`
+           long sort key - `default java.util.Comparator<T>`
 
   throws: java.lang.NullPointerException - if the argument is null."
-  ([^java.util.Comparator this ^Comparator.T> key-extractor]
+  ([^Comparator this ^java.util.function.ToLongFunction key-extractor]
     (-> this (.thenComparingLong key-extractor))))
 
 (defn then-comparing-int
   "Returns a lexicographic-order comparator with a function that
    extracts a int sort key.
 
-  key-extractor - the function used to extract the integer sort key - `Comparator.T>`
+  key-extractor - the function used to extract the integer sort key - `java.util.function.ToIntFunction`
 
   returns: a lexicographic-order comparator composed of this and then the
-           int sort key - `default java.util.Comparator<Comparator.T>`
+           int sort key - `default java.util.Comparator<T>`
 
   throws: java.lang.NullPointerException - if the argument is null."
-  ([^java.util.Comparator this ^Comparator.T> key-extractor]
+  ([^Comparator this ^java.util.function.ToIntFunction key-extractor]
     (-> this (.thenComparingInt key-extractor))))
 
 (defn *comparing-double
@@ -165,28 +165,28 @@
    The returned comparator is serializable if the specified function
    is also serializable.
 
-  key-extractor - the function used to extract the double sort key - `T>`
+  key-extractor - the function used to extract the double sort key - `java.util.function.ToDoubleFunction`
 
   returns: a comparator that compares by an extracted key - `<T> java.util.Comparator<T>`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([key-extractor]
+  ([^java.util.function.ToDoubleFunction key-extractor]
     (Comparator/comparingDouble key-extractor)))
 
 (defn then-comparing
   "Returns a lexicographic-order comparator with a function that
    extracts a key to be compared with the given Comparator.
 
-  key-extractor - the function used to extract the sort key - `U>`
-  key-comparator - the Comparator used to compare the sort key - `U>`
+  key-extractor - the function used to extract the sort key - `java.util.function.Function`
+  key-comparator - the Comparator used to compare the sort key - `java.util.Comparator`
 
   returns: a lexicographic-order comparator composed of this comparator
-           and then comparing on the key extracted by the keyExtractor function - `default <U> java.util.Comparator<Comparator.T>`
+           and then comparing on the key extracted by the keyExtractor function - `default <U> java.util.Comparator<T>`
 
   throws: java.lang.NullPointerException - if either argument is null."
-  ([^java.util.Comparator this key-extractor key-comparator]
+  ([^Comparator this ^java.util.function.Function key-extractor ^java.util.Comparator key-comparator]
     (-> this (.thenComparing key-extractor key-comparator)))
-  ([^java.util.Comparator this ^Comparator.T> other]
+  ([^Comparator this ^java.util.Comparator other]
     (-> this (.thenComparing other))))
 
 (defn *natural-order
@@ -203,13 +203,13 @@
   "Returns a lexicographic-order comparator with a function that
    extracts a double sort key.
 
-  key-extractor - the function used to extract the double sort key - `Comparator.T>`
+  key-extractor - the function used to extract the double sort key - `java.util.function.ToDoubleFunction`
 
   returns: a lexicographic-order comparator composed of this and then the
-           double sort key - `default java.util.Comparator<Comparator.T>`
+           double sort key - `default java.util.Comparator<T>`
 
   throws: java.lang.NullPointerException - if the argument is null."
-  ([^java.util.Comparator this ^Comparator.T> key-extractor]
+  ([^Comparator this ^java.util.function.ToDoubleFunction key-extractor]
     (-> this (.thenComparingDouble key-extractor))))
 
 (defn *reverse-order
@@ -231,12 +231,12 @@
    The returned comparator is serializable if the specified function is
    also serializable.
 
-  key-extractor - the function used to extract the long sort key - `T>`
+  key-extractor - the function used to extract the long sort key - `java.util.function.ToLongFunction`
 
   returns: a comparator that compares by an extracted key - `<T> java.util.Comparator<T>`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([key-extractor]
+  ([^java.util.function.ToLongFunction key-extractor]
     (Comparator/comparingLong key-extractor)))
 
 (defn *comparing
@@ -247,16 +247,16 @@
    The returned comparator is serializable if the specified function
    and comparator are both serializable.
 
-  key-extractor - the function used to extract the sort key - `U>`
-  key-comparator - the Comparator used to compare the sort key - `U>`
+  key-extractor - the function used to extract the sort key - `java.util.function.Function`
+  key-comparator - the Comparator used to compare the sort key - `java.util.Comparator`
 
   returns: a comparator that compares by an extracted key using the
            specified Comparator - `<T,U> java.util.Comparator<T>`
 
   throws: java.lang.NullPointerException - if either argument is null"
-  ([key-extractor key-comparator]
+  ([^java.util.function.Function key-extractor ^java.util.Comparator key-comparator]
     (Comparator/comparing key-extractor key-comparator))
-  ([key-extractor]
+  ([^java.util.function.Function key-extractor]
     (Comparator/comparing key-extractor)))
 
 (defn *comparing-int
@@ -267,12 +267,12 @@
    The returned comparator is serializable if the specified function
    is also serializable.
 
-  key-extractor - the function used to extract the integer sort key - `T>`
+  key-extractor - the function used to extract the integer sort key - `java.util.function.ToIntFunction`
 
   returns: a comparator that compares by an extracted key - `<T> java.util.Comparator<T>`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([key-extractor]
+  ([^java.util.function.ToIntFunction key-extractor]
     (Comparator/comparingInt key-extractor)))
 
 (defn equals
@@ -295,7 +295,7 @@
   returns: true only if the specified object is also
             a comparator and it imposes the same ordering as this
             comparator. - `boolean`"
-  (^Boolean [^java.util.Comparator this ^java.lang.Object obj]
+  (^Boolean [^Comparator this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn *nulls-last
@@ -308,11 +308,11 @@
    The returned comparator is serializable if the specified comparator
    is serializable.
 
-  comparator - a Comparator for comparing non-null values - `T>`
+  comparator - a Comparator for comparing non-null values - `java.util.Comparator`
 
   returns: a comparator that considers null to be greater than
            non-null, and compares non-null objects with the supplied
            Comparator. - `<T> java.util.Comparator<T>`"
-  ([comparator]
+  ([^java.util.Comparator comparator]
     (Comparator/nullsLast comparator)))
 

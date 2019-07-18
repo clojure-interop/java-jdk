@@ -75,7 +75,7 @@
   composite-data - the CompositeData that will supply information to getters. - `javax.management.openmbean.CompositeData`
 
   throws: java.lang.IllegalArgumentException - if compositeData is null."
-  ([^javax.management.openmbean.CompositeData composite-data]
+  (^CompositeDataInvocationHandler [^javax.management.openmbean.CompositeData composite-data]
     (new CompositeDataInvocationHandler composite-data)))
 
 (defn get-composite-data
@@ -84,7 +84,7 @@
 
   returns: the CompositeData that this handler is backed
          by.  This is never null. - `javax.management.openmbean.CompositeData`"
-  (^javax.management.openmbean.CompositeData [^javax.management.openmbean.CompositeDataInvocationHandler this]
+  (^javax.management.openmbean.CompositeData [^CompositeDataInvocationHandler this]
     (-> this (.getCompositeData))))
 
 (defn invoke
@@ -109,6 +109,6 @@
    invocation on the proxy instance. - `java.lang.Object`
 
   throws: java.lang.Throwable - the exception to throw from the method invocation on the proxy instance. The exception's type must be assignable either to any of the exception types declared in the throws clause of the interface method or to the unchecked exception types java.lang.RuntimeException or java.lang.Error. If a checked exception is thrown by this method that is not assignable to any of the exception types declared in the throws clause of the interface method, then an UndeclaredThrowableException containing the exception that was thrown by this method will be thrown by the method invocation on the proxy instance."
-  (^java.lang.Object [^javax.management.openmbean.CompositeDataInvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method args]
+  (^java.lang.Object [^CompositeDataInvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method args]
     (-> this (.invoke proxy method args))))
 

@@ -54,7 +54,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.Compression this]
+  ([^Compression this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -65,6 +65,6 @@
    name is `compression`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.Compression this]
+  (^java.lang.String [^Compression this]
     (-> this (.getName))))
 

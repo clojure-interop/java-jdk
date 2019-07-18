@@ -11,8 +11,8 @@
 
   message - the message to use for this exception, may be null - `java.lang.String`
   cause - the cause of the exception, may be null - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^UnsupportedTemporalTypeException [^java.lang.String message ^java.lang.Throwable cause]
     (new UnsupportedTemporalTypeException message cause))
-  ([^java.lang.String message]
+  (^UnsupportedTemporalTypeException [^java.lang.String message]
     (new UnsupportedTemporalTypeException message)))
 

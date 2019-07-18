@@ -20,7 +20,7 @@
   stream - an InputStream to read from. - `java.io.InputStream`
 
   throws: java.lang.IllegalArgumentException - if stream is null."
-  ([^java.io.InputStream stream]
+  (^MemoryCacheImageInputStream [^java.io.InputStream stream]
     (new MemoryCacheImageInputStream stream)))
 
 (defn read
@@ -34,9 +34,9 @@
    to indicate EOF. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Integer [^javax.imageio.stream.MemoryCacheImageInputStream this b ^Integer off ^Integer len]
+  (^Integer [^MemoryCacheImageInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^javax.imageio.stream.MemoryCacheImageInputStream this]
+  (^Integer [^MemoryCacheImageInputStream this]
     (-> this (.read))))
 
 (defn flush-before
@@ -45,7 +45,7 @@
   pos - a long containing the length of the stream prefix that may be flushed. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^javax.imageio.stream.MemoryCacheImageInputStream this ^Long pos]
+  ([^MemoryCacheImageInputStream this ^Long pos]
     (-> this (.flushBefore pos))))
 
 (defn cached?
@@ -54,7 +54,7 @@
    seeking backwards.
 
   returns: true. - `boolean`"
-  (^Boolean [^javax.imageio.stream.MemoryCacheImageInputStream this]
+  (^Boolean [^MemoryCacheImageInputStream this]
     (-> this (.isCached))))
 
 (defn cached-file?
@@ -62,7 +62,7 @@
    ImageInputStream does not maintain a file cache.
 
   returns: false. - `boolean`"
-  (^Boolean [^javax.imageio.stream.MemoryCacheImageInputStream this]
+  (^Boolean [^MemoryCacheImageInputStream this]
     (-> this (.isCachedFile))))
 
 (defn cached-memory?
@@ -70,7 +70,7 @@
    ImageInputStream maintains a main memory cache.
 
   returns: true. - `boolean`"
-  (^Boolean [^javax.imageio.stream.MemoryCacheImageInputStream this]
+  (^Boolean [^MemoryCacheImageInputStream this]
     (-> this (.isCachedMemory))))
 
 (defn close
@@ -78,6 +78,6 @@
    the cache.  The source InputStream is not closed.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^javax.imageio.stream.MemoryCacheImageInputStream this]
+  ([^MemoryCacheImageInputStream this]
     (-> this (.close))))
 

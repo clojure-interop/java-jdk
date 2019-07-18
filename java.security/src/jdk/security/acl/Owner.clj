@@ -19,7 +19,7 @@
   returns: true if successful, false if owner is already an owner. - `boolean`
 
   throws: java.security.acl.NotOwnerException - if the caller principal is not an owner of the ACL."
-  (^Boolean [^java.security.acl.Owner this ^java.security.Principal caller ^java.security.Principal owner]
+  (^Boolean [^Owner this ^java.security.Principal caller ^java.security.Principal owner]
     (-> this (.addOwner caller owner))))
 
 (defn delete-owner
@@ -36,7 +36,7 @@
    of the list of owners. - `boolean`
 
   throws: java.security.acl.NotOwnerException - if the caller principal is not an owner of the ACL."
-  (^Boolean [^java.security.acl.Owner this ^java.security.Principal caller ^java.security.Principal owner]
+  (^Boolean [^Owner this ^java.security.Principal caller ^java.security.Principal owner]
     (-> this (.deleteOwner caller owner))))
 
 (defn owner?
@@ -46,6 +46,6 @@
 
   returns: true if the passed principal is in the list of owners, false
    if not. - `boolean`"
-  (^Boolean [^java.security.acl.Owner this ^java.security.Principal owner]
+  (^Boolean [^Owner this ^java.security.Principal owner]
     (-> this (.isOwner owner))))
 

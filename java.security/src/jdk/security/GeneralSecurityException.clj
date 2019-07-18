@@ -13,10 +13,10 @@
 
   message - the detail message (which is saved for later retrieval by the Throwable.getMessage() method). - `java.lang.String`
   cause - the cause (which is saved for later retrieval by the Throwable.getCause() method). (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^GeneralSecurityException [^java.lang.String message ^java.lang.Throwable cause]
     (new GeneralSecurityException message cause))
-  ([^java.lang.String msg]
+  (^GeneralSecurityException [^java.lang.String msg]
     (new GeneralSecurityException msg))
-  ([]
+  (^GeneralSecurityException []
     (new GeneralSecurityException )))
 

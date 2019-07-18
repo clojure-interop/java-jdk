@@ -42,6 +42,6 @@
   Creates a new JAXBPermission with the specified name.
 
   name - The name of the JAXBPermission. As of 2.2 only `setDatatypeConverter` is defined. - `java.lang.String`"
-  ([^java.lang.String name]
+  (^JAXBPermission [^java.lang.String name]
     (new JAXBPermission name)))
 

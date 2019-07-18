@@ -5,6 +5,6 @@
 
 (defn ->spinner-ui
   "Constructor."
-  ([]
+  (^SpinnerUI []
     (new SpinnerUI )))
 

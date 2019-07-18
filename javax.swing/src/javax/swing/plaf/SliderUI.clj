@@ -5,6 +5,6 @@
 
 (defn ->slider-ui
   "Constructor."
-  ([]
+  (^SliderUI []
     (new SliderUI )))
 

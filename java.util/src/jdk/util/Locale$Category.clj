@@ -8,7 +8,7 @@
   Category used to represent the default locale for
    displaying user interfaces.
 
-  type: java.util.Locale.Category"
+  type: java.util.Locale$Category"
   Locale$Category/DISPLAY)
 
 (def FORMAT
@@ -17,7 +17,7 @@
   Category used to represent the default locale for
    formatting dates, numbers, and/or currencies.
 
-  type: java.util.Locale.Category"
+  type: java.util.Locale$Category"
   Locale$Category/FORMAT)
 
 (defn *values
@@ -29,7 +29,7 @@
   for (Locale.Category c : Locale.Category.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.util.Locale.Category[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.util.Locale$Category[]`"
   ([]
     (Locale$Category/values )))
 
@@ -41,9 +41,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.util.Locale.Category`
+  returns: the enum constant with the specified name - `java.util.Locale$Category`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.util.Locale.Category [^java.lang.String name]
+  (^java.util.Locale$Category [^java.lang.String name]
     (Locale$Category/valueOf name)))
 

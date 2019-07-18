@@ -24,23 +24,23 @@
 
   in - A Reader object to provide the underlying stream - `java.io.Reader`
   sz - An int specifying the size of the buffer - `int`"
-  ([^java.io.Reader in ^Integer sz]
+  (^LineNumberReader [^java.io.Reader in ^Integer sz]
     (new LineNumberReader in sz))
-  ([^java.io.Reader in]
+  (^LineNumberReader [^java.io.Reader in]
     (new LineNumberReader in)))
 
 (defn set-line-number
   "Set the current line number.
 
   line-number - An int specifying the line number - `int`"
-  ([^java.io.LineNumberReader this ^Integer line-number]
+  ([^LineNumberReader this ^Integer line-number]
     (-> this (.setLineNumber line-number))))
 
 (defn get-line-number
   "Get the current line number.
 
   returns: The current line number - `int`"
-  (^Integer [^java.io.LineNumberReader this]
+  (^Integer [^LineNumberReader this]
     (-> this (.getLineNumber))))
 
 (defn read
@@ -55,9 +55,9 @@
             already been reached - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Integer [^java.io.LineNumberReader this cbuf ^Integer off ^Integer len]
+  (^Integer [^LineNumberReader this cbuf ^Integer off ^Integer len]
     (-> this (.read cbuf off len)))
-  (^Integer [^java.io.LineNumberReader this]
+  (^Integer [^LineNumberReader this]
     (-> this (.read))))
 
 (defn read-line
@@ -69,7 +69,7 @@
             null if the end of the stream has been reached - `java.lang.String`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^java.lang.String [^java.io.LineNumberReader this]
+  (^java.lang.String [^LineNumberReader this]
     (-> this (.readLine))))
 
 (defn skip
@@ -80,7 +80,7 @@
   returns: The number of characters actually skipped - `long`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^Long [^java.io.LineNumberReader this ^Long n]
+  (^Long [^LineNumberReader this ^Long n]
     (-> this (.skip n))))
 
 (defn mark
@@ -91,13 +91,13 @@
   read-ahead-limit - Limit on the number of characters that may be read while still preserving the mark. After reading this many characters, attempting to reset the stream may fail. - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.LineNumberReader this ^Integer read-ahead-limit]
+  ([^LineNumberReader this ^Integer read-ahead-limit]
     (-> this (.mark read-ahead-limit))))
 
 (defn reset
   "Reset the stream to the most recent mark.
 
   throws: java.io.IOException - If the stream has not been marked, or if the mark has been invalidated"
-  ([^java.io.LineNumberReader this]
+  ([^LineNumberReader this]
     (-> this (.reset))))
 

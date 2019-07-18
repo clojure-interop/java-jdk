@@ -38,16 +38,16 @@
   mime-type-file-name - the file name - `java.lang.String`
 
   throws: java.io.IOException"
-  ([^java.lang.String mime-type-file-name]
+  (^MimetypesFileTypeMap [^java.lang.String mime-type-file-name]
     (new MimetypesFileTypeMap mime-type-file-name))
-  ([]
+  (^MimetypesFileTypeMap []
     (new MimetypesFileTypeMap )))
 
 (defn add-mime-types
   "Prepend the MIME type values to the registry.
 
   mime-types - A .mime.types formatted string of entries. - `java.lang.String`"
-  ([^javax.activation.MimetypesFileTypeMap this ^java.lang.String mime-types]
+  ([^MimetypesFileTypeMap this ^java.lang.String mime-types]
     (-> this (.addMimeTypes mime-types))))
 
 (defn get-content-type
@@ -58,6 +58,6 @@
   f - the file - `java.io.File`
 
   returns: the file's MIME type - `java.lang.String`"
-  (^java.lang.String [^javax.activation.MimetypesFileTypeMap this ^java.io.File f]
+  (^java.lang.String [^MimetypesFileTypeMap this ^java.io.File f]
     (-> this (.getContentType f))))
 

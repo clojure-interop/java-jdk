@@ -12,8 +12,8 @@
 
   s - the detail message - `java.lang.String`
   ex - the nested exception - `java.lang.Exception`"
-  ([^java.lang.String s ^java.lang.Exception ex]
+  (^ConnectException [^java.lang.String s ^java.lang.Exception ex]
     (new ConnectException s ex))
-  ([^java.lang.String s]
+  (^ConnectException [^java.lang.String s]
     (new ConnectException s)))
 

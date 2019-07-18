@@ -13,7 +13,7 @@
 
   value - the function argument - `int`
 
-  returns: the function result - `IntFunction.R`"
-  (^IntFunction.R [^java.util.function.IntFunction this ^Integer value]
+  returns: the function result - `R`"
+  ([^IntFunction this ^Integer value]
     (-> this (.apply value))))
 

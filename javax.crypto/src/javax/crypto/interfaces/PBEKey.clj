@@ -11,7 +11,7 @@
    it is no longer needed.
 
   returns: the password. - `char[]`"
-  ([^javax.crypto.interfaces.PBEKey this]
+  ([^PBEKey this]
     (-> this (.getPassword))))
 
 (defn get-salt
@@ -22,13 +22,13 @@
    it is no longer needed.
 
   returns: the salt. - `byte[]`"
-  ([^javax.crypto.interfaces.PBEKey this]
+  ([^PBEKey this]
     (-> this (.getSalt))))
 
 (defn get-iteration-count
   "Returns the iteration count or 0 if not specified.
 
   returns: the iteration count. - `int`"
-  (^Integer [^javax.crypto.interfaces.PBEKey this]
+  (^Integer [^PBEKey this]
     (-> this (.getIterationCount))))
 

@@ -33,7 +33,7 @@
   note - a short note describing the state of the operation. As the operation progresses, you can call setNote to change the note displayed. This is used, for example, in operations that iterate through a list of files to show the name of the file being processes. If note is initially null, there will be no note line in the dialog box and setNote will be ineffective - `java.lang.String`
   min - the lower bound of the range - `int`
   max - the upper bound of the range - `int`"
-  ([^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String note ^Integer min ^Integer max]
+  (^ProgressMonitor [^java.awt.Component parent-component ^java.lang.Object message ^java.lang.String note ^Integer min ^Integer max]
     (new ProgressMonitor parent-component message note min max)))
 
 (defn set-progress
@@ -42,21 +42,21 @@
    monitor is closed.
 
   nv - an int specifying the current value, between the maximum and minimum specified for this component - `int`"
-  ([^javax.swing.ProgressMonitor this ^Integer nv]
+  ([^ProgressMonitor this ^Integer nv]
     (-> this (.setProgress nv))))
 
 (defn canceled?
   "Returns true if the user hits the Cancel button in the progress dialog.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.ProgressMonitor this]
+  (^Boolean [^ProgressMonitor this]
     (-> this (.isCanceled))))
 
 (defn get-minimum
   "Returns the minimum value -- the lower end of the progress value.
 
   returns: an int representing the minimum value - `int`"
-  (^Integer [^javax.swing.ProgressMonitor this]
+  (^Integer [^ProgressMonitor this]
     (-> this (.getMinimum))))
 
 (defn get-note
@@ -64,14 +64,14 @@
    progress message.
 
   returns: a String specifying the note to display - `java.lang.String`"
-  (^java.lang.String [^javax.swing.ProgressMonitor this]
+  (^java.lang.String [^ProgressMonitor this]
     (-> this (.getNote))))
 
 (defn get-millis-to-popup
   "Returns the amount of time it will take for the popup to appear.
 
   returns: `int`"
-  (^Integer [^javax.swing.ProgressMonitor this]
+  (^Integer [^ProgressMonitor this]
     (-> this (.getMillisToPopup))))
 
 (defn get-millis-to-decide-to-popup
@@ -79,14 +79,14 @@
    or not to popup a progress monitor.
 
   returns: `int`"
-  (^Integer [^javax.swing.ProgressMonitor this]
+  (^Integer [^ProgressMonitor this]
     (-> this (.getMillisToDecideToPopup))))
 
 (defn set-maximum
   "Specifies the maximum value.
 
   m - an int specifying the maximum value - `int`"
-  ([^javax.swing.ProgressMonitor this ^Integer m]
+  ([^ProgressMonitor this ^Integer m]
     (-> this (.setMaximum m))))
 
 (defn set-millis-to-popup
@@ -95,7 +95,7 @@
    won't be displayed.)
 
   millis-to-popup - an int specifying the time in milliseconds - `int`"
-  ([^javax.swing.ProgressMonitor this ^Integer millis-to-popup]
+  ([^ProgressMonitor this ^Integer millis-to-popup]
     (-> this (.setMillisToPopup millis-to-popup))))
 
 (defn get-accessible-context
@@ -104,14 +104,14 @@
 
   returns: the AccessibleContext for the
    ProgressMonitor - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.ProgressMonitor this]
+  (^javax.accessibility.AccessibleContext [^ProgressMonitor this]
     (-> this (.getAccessibleContext))))
 
 (defn close
   "Indicate that the operation is complete.  This happens automatically
    when the value set by setProgress is >= max, but it may be called
    earlier if the operation ends early."
-  ([^javax.swing.ProgressMonitor this]
+  ([^ProgressMonitor this]
     (-> this (.close))))
 
 (defn set-note
@@ -120,21 +120,21 @@
    is currently being copied during a multiple-file copy.
 
   note - a String specifying the note to display - `java.lang.String`"
-  ([^javax.swing.ProgressMonitor this ^java.lang.String note]
+  ([^ProgressMonitor this ^java.lang.String note]
     (-> this (.setNote note))))
 
 (defn set-minimum
   "Specifies the minimum value.
 
   m - an int specifying the minimum value - `int`"
-  ([^javax.swing.ProgressMonitor this ^Integer m]
+  ([^ProgressMonitor this ^Integer m]
     (-> this (.setMinimum m))))
 
 (defn get-maximum
   "Returns the maximum value -- the higher end of the progress value.
 
   returns: an int representing the maximum value - `int`"
-  (^Integer [^javax.swing.ProgressMonitor this]
+  (^Integer [^ProgressMonitor this]
     (-> this (.getMaximum))))
 
 (defn set-millis-to-decide-to-popup
@@ -142,6 +142,6 @@
    not to popup a progress monitor.
 
   millis-to-decide-to-popup - an int specifying the time to wait, in milliseconds - `int`"
-  ([^javax.swing.ProgressMonitor this ^Integer millis-to-decide-to-popup]
+  ([^ProgressMonitor this ^Integer millis-to-decide-to-popup]
     (-> this (.setMillisToDecideToPopup millis-to-decide-to-popup))))
 

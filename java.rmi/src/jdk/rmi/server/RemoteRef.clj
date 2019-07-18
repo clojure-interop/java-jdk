@@ -25,9 +25,9 @@
   returns: result of remote method invocation - `java.lang.Object`
 
   throws: java.lang.Exception - if any exception occurs during remote method invocation"
-  (^java.lang.Object [^java.rmi.server.RemoteRef this ^java.rmi.Remote obj ^java.lang.reflect.Method method params ^Long opnum]
+  (^java.lang.Object [^RemoteRef this ^java.rmi.Remote obj ^java.lang.reflect.Method method params ^Long opnum]
     (-> this (.invoke obj method params opnum)))
-  ([^java.rmi.server.RemoteRef this ^java.rmi.server.RemoteCall call]
+  ([^RemoteRef this ^java.rmi.server.RemoteCall call]
     (-> this (.invoke call))))
 
 (defn new-call
@@ -44,10 +44,10 @@
   opnum - operation number - `int`
   hash - stub/skeleton interface hash - `long`
 
-  returns: call object representing remote call - `java.lang..rmi.server.RemoteCall`
+  returns: call object representing remote call - `.rmi.server.RemoteCall`
 
   throws: java.rmi.RemoteException - if failed to initiate new remote call"
-  (^java.lang..rmi.server.RemoteCall [^java.rmi.server.RemoteRef this ^java.rmi.server.RemoteObject obj op ^Integer opnum ^Long hash]
+  (^.rmi.server.RemoteCall [^RemoteRef this ^java.rmi.server.RemoteObject obj op ^Integer opnum ^Long hash]
     (-> this (.newCall obj op opnum hash))))
 
 (defn done
@@ -61,10 +61,8 @@
 
   call - object representing remote call - `java.rmi.server.RemoteCall`
 
-  returns: `java.lang. void`
-
   throws: java.rmi.RemoteException - if remote error occurs during call cleanup"
-  ([^java.rmi.server.RemoteRef this ^java.rmi.server.RemoteCall call]
+  ([^RemoteRef this ^java.rmi.server.RemoteCall call]
     (-> this (.done call))))
 
 (defn get-ref-class
@@ -75,7 +73,7 @@
 
   returns: the class name (without package qualification) of the reference
    type - `java.lang.String`"
-  (^java.lang.String [^java.rmi.server.RemoteRef this ^java.io.ObjectOutput out]
+  (^java.lang.String [^RemoteRef this ^java.io.ObjectOutput out]
     (-> this (.getRefClass out))))
 
 (defn remote-hash-code
@@ -84,7 +82,7 @@
    (in order to support remote objects as keys in hash tables).
 
   returns: remote object hashcode - `int`"
-  (^Integer [^java.rmi.server.RemoteRef this]
+  (^Integer [^RemoteRef this]
     (-> this (.remoteHashCode))))
 
 (defn remote-equals
@@ -96,7 +94,7 @@
   obj - the Object to compare with - `java.rmi.server.RemoteRef`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  (^Boolean [^java.rmi.server.RemoteRef this ^java.rmi.server.RemoteRef obj]
+  (^Boolean [^RemoteRef this ^java.rmi.server.RemoteRef obj]
     (-> this (.remoteEquals obj))))
 
 (defn remote-to-string
@@ -104,6 +102,6 @@
    object.
 
   returns: string representing remote object reference - `java.lang.String`"
-  (^java.lang.String [^java.rmi.server.RemoteRef this]
+  (^java.lang.String [^RemoteRef this]
     (-> this (.remoteToString))))
 

@@ -5,12 +5,12 @@
 
 (defn get-font
   "returns: `java.awt.Font`"
-  (^java.awt.Font [^java.awt.MenuContainer this]
+  (^java.awt.Font [^MenuContainer this]
     (-> this (.getFont))))
 
 (defn remove
   "comp - `java.awt.MenuComponent`"
-  ([^java.awt.MenuContainer this ^java.awt.MenuComponent comp]
+  ([^MenuContainer this ^java.awt.MenuComponent comp]
     (-> this (.remove comp))))
 
 (defn post-event
@@ -19,7 +19,7 @@
 
   evt - `java.awt.Event`
 
-  returns: `java.lang. boolean`"
-  ([^java.awt.MenuContainer this ^java.awt.Event evt]
+  returns: `boolean`"
+  (^Boolean [^MenuContainer this ^java.awt.Event evt]
     (-> this (.postEvent evt))))
 

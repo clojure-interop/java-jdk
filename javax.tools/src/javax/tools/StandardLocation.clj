@@ -95,21 +95,21 @@
 
   name - a name - `java.lang.String`
 
-  returns: a location - `javax.tools.JavaFileManager.Location`"
-  (^javax.tools.JavaFileManager.Location [^java.lang.String name]
+  returns: a location - `javax.tools.JavaFileManager$Location`"
+  (^javax.tools.JavaFileManager$Location [^java.lang.String name]
     (StandardLocation/locationFor name)))
 
 (defn get-name
   "Description copied from interface: JavaFileManager.Location
 
   returns: a name - `java.lang.String`"
-  (^java.lang.String [^javax.tools.StandardLocation this]
+  (^java.lang.String [^StandardLocation this]
     (-> this (.getName))))
 
 (defn output-location?
   "Description copied from interface: JavaFileManager.Location
 
   returns: true if this is an output location, false otherwise - `boolean`"
-  (^Boolean [^javax.tools.StandardLocation this]
+  (^Boolean [^StandardLocation this]
     (-> this (.isOutputLocation))))
 

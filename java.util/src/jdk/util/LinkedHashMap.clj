@@ -124,13 +124,13 @@
   access-order - the ordering mode - true for access-order, false for insertion-order - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is negative or the load factor is nonpositive"
-  ([^Integer initial-capacity ^Float load-factor ^Boolean access-order]
+  (^LinkedHashMap [^Integer initial-capacity ^Float load-factor ^Boolean access-order]
     (new LinkedHashMap initial-capacity load-factor access-order))
-  ([^Integer initial-capacity ^Float load-factor]
+  (^LinkedHashMap [^Integer initial-capacity ^Float load-factor]
     (new LinkedHashMap initial-capacity load-factor))
-  ([^Integer initial-capacity]
+  (^LinkedHashMap [^Integer initial-capacity]
     (new LinkedHashMap initial-capacity))
-  ([]
+  (^LinkedHashMap []
     (new LinkedHashMap )))
 
 (defn values
@@ -149,22 +149,22 @@
    performance but much poorer parallel performance than that of
    HashMap.
 
-  returns: a view of the values contained in this map - `java.util.Collection<LinkedHashMap.V>`"
-  (^java.util.Collection [^java.util.LinkedHashMap this]
+  returns: a view of the values contained in this map - `java.util.Collection<V>`"
+  (^java.util.Collection [^LinkedHashMap this]
     (-> this (.values))))
 
 (defn for-each
   "Description copied from interface: Map
 
-  action - The action to be performed for each entry - `LinkedHashMap.V>`"
-  ([^java.util.LinkedHashMap this ^LinkedHashMap.V> action]
+  action - The action to be performed for each entry - `java.util.function.BiConsumer`"
+  ([^LinkedHashMap this ^java.util.function.BiConsumer action]
     (-> this (.forEach action))))
 
 (defn replace-all
   "Description copied from interface: Map
 
-  function - the function to apply to each entry - `LinkedHashMap.V>`"
-  ([^java.util.LinkedHashMap this ^LinkedHashMap.V> function]
+  function - the function to apply to each entry - `java.util.function.BiFunction`"
+  ([^LinkedHashMap this ^java.util.function.BiFunction function]
     (-> this (.replaceAll function))))
 
 (defn entry-set
@@ -184,8 +184,8 @@
    performance but much poorer parallel performance than that of
    HashMap.
 
-  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<LinkedHashMap.K,LinkedHashMap.V>>`"
-  (^java.util.Set> [^java.util.LinkedHashMap this]
+  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map$Entry<K,V>>`"
+  (^java.util.Set [^LinkedHashMap this]
     (-> this (.entrySet))))
 
 (defn contains-value
@@ -196,7 +196,7 @@
 
   returns: true if this map maps one or more keys to the
            specified value - `boolean`"
-  (^Boolean [^java.util.LinkedHashMap this ^java.lang.Object value]
+  (^Boolean [^LinkedHashMap this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn get-or-default
@@ -204,11 +204,11 @@
    defaultValue if this map contains no mapping for the key.
 
   key - the key whose associated value is to be returned - `java.lang.Object`
-  default-value - the default mapping of the key - `LinkedHashMap.V`
+  default-value - the default mapping of the key - `V`
 
   returns: the value to which the specified key is mapped, or
-   defaultValue if this map contains no mapping for the key - `LinkedHashMap.V`"
-  (^LinkedHashMap.V [^java.util.LinkedHashMap this ^java.lang.Object key ^LinkedHashMap.V default-value]
+   defaultValue if this map contains no mapping for the key - `V`"
+  ([^LinkedHashMap this ^java.lang.Object key default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn key-set
@@ -227,14 +227,14 @@
    performance but much poorer parallel performance than that of
    HashMap.
 
-  returns: a set view of the keys contained in this map - `java.util.Set<LinkedHashMap.K>`"
-  (^java.util.Set [^java.util.LinkedHashMap this]
+  returns: a set view of the keys contained in this map - `java.util.Set<K>`"
+  (^java.util.Set [^LinkedHashMap this]
     (-> this (.keySet))))
 
 (defn clear
   "Removes all of the mappings from this map.
    The map will be empty after this call returns."
-  ([^java.util.LinkedHashMap this]
+  ([^LinkedHashMap this]
     (-> this (.clear))))
 
 (defn get
@@ -255,7 +255,7 @@
   key - the key whose associated value is to be returned - `java.lang.Object`
 
   returns: the value to which the specified key is mapped, or
-           null if this map contains no mapping for the key - `LinkedHashMap.V`"
-  (^LinkedHashMap.V [^java.util.LinkedHashMap this ^java.lang.Object key]
+           null if this map contains no mapping for the key - `V`"
+  ([^LinkedHashMap this ^java.lang.Object key]
     (-> this (.get key))))
 

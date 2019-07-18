@@ -16,7 +16,7 @@
 
   returns: an array of objects representing the declared
    exceptions of the method or constructor represented by this Executable - `java.lang.reflect.AnnotatedType[]`"
-  ([^java.lang.reflect.Executable this]
+  ([^Executable this]
     (-> this (.getAnnotatedExceptionTypes))))
 
 (defn var-args?
@@ -25,7 +25,7 @@
 
   returns: true if an only if this executable was declared
    to take a variable number of arguments. - `boolean`"
-  (^Boolean [^java.lang.reflect.Executable this]
+  (^Boolean [^Executable this]
     (-> this (.isVarArgs))))
 
 (defn to-generic-string
@@ -34,7 +34,7 @@
 
   returns: a string describing this Executable, including
    any type parameters - `java.lang.String`"
-  (^java.lang.String [^java.lang.reflect.Executable this]
+  (^java.lang.String [^Executable this]
     (-> this (.toGenericString))))
 
 (defn get-modifiers
@@ -42,7 +42,7 @@
    the executable represented by this object.
 
   returns: the Java language modifiers for the underlying member - `int`"
-  (^Integer [^java.lang.reflect.Executable this]
+  (^Integer [^Executable this]
     (-> this (.getModifiers))))
 
 (defn get-parameter-count
@@ -52,7 +52,7 @@
 
   returns: The number of formal parameters for the executable this
    object represents - `int`"
-  (^Integer [^java.lang.reflect.Executable this]
+  (^Integer [^Executable this]
     (-> this (.getParameterCount))))
 
 (defn get-exception-types
@@ -63,7 +63,7 @@
 
   returns: the exception types declared as being thrown by the
    executable this object represents - `java.lang.Class<?>[]`"
-  ([^java.lang.reflect.Executable this]
+  ([^Executable this]
     (-> this (.getExceptionTypes))))
 
 (defn synthetic?
@@ -73,7 +73,7 @@
   returns: true if and only if this executable is a synthetic
    construct as defined by
    The Java™ Language Specification. - `boolean`"
-  (^Boolean [^java.lang.reflect.Executable this]
+  (^Boolean [^Executable this]
     (-> this (.isSynthetic))))
 
 (defn get-generic-parameter-types
@@ -93,20 +93,20 @@
        parameter types of the underlying executable, in declaration order - `java.lang.reflect.Type[]`
 
   throws: java.lang.reflect.GenericSignatureFormatError - if the generic method signature does not conform to the format specified in The Java™ Virtual Machine Specification"
-  ([^java.lang.reflect.Executable this]
+  ([^Executable this]
     (-> this (.getGenericParameterTypes))))
 
 (defn get-annotation
   "Returns this element's annotation for the specified type if
    such an annotation is present, else null.
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class<T>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: this element's annotation for the specified annotation type if
        present on this element, else null - `<T extends java.lang.annotation.Annotation> T`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.Executable this ^java.lang.Class annotation-class]
+  ([^Executable this ^java.lang.Class annotation-class]
     (-> this (.getAnnotation annotation-class))))
 
 (defn get-parameters
@@ -123,7 +123,7 @@
    the parameters to the executable this object represents. - `java.lang.reflect.Parameter[]`
 
   throws: java.lang.reflect.MalformedParametersException - if the class file contains a MethodParameters attribute that is improperly formatted."
-  ([^java.lang.reflect.Executable this]
+  ([^Executable this]
     (-> this (.getParameters))))
 
 (defn get-declared-annotations
@@ -137,14 +137,14 @@
    have no effect on the arrays returned to other callers.
 
   returns: annotations directly present on this element - `java.lang.annotation.Annotation[]`"
-  ([^java.lang.reflect.Executable this]
+  ([^Executable this]
     (-> this (.getDeclaredAnnotations))))
 
 (defn get-name
   "Returns the name of the executable represented by this object.
 
   returns: the simple name of the underlying member - `java.lang.String`"
-  (^java.lang.String [^java.lang.reflect.Executable this]
+  (^java.lang.String [^Executable this]
     (-> this (.getName))))
 
 (defn get-generic-exception-types
@@ -160,7 +160,7 @@
        thrown by the underlying executable - `java.lang.reflect.Type[]`
 
   throws: java.lang.reflect.GenericSignatureFormatError - if the generic method signature does not conform to the format specified in The Java™ Virtual Machine Specification"
-  ([^java.lang.reflect.Executable this]
+  ([^Executable this]
     (-> this (.getGenericExceptionTypes))))
 
 (defn get-type-parameters
@@ -174,7 +174,7 @@
        the type variables declared by this generic declaration - `java.lang.reflect.TypeVariable<?>[]`
 
   throws: java.lang.reflect.GenericSignatureFormatError - if the generic signature of this generic declaration does not conform to the format specified in The Java™ Virtual Machine Specification"
-  ([^java.lang.reflect.Executable this]
+  ([^Executable this]
     (-> this (.getTypeParameters))))
 
 (defn get-parameter-types
@@ -185,7 +185,7 @@
 
   returns: the parameter types for the executable this object
    represents - `java.lang.Class<?>[]`"
-  ([^java.lang.reflect.Executable this]
+  ([^Executable this]
     (-> this (.getParameterTypes))))
 
 (defn get-annotated-parameter-types
@@ -201,7 +201,7 @@
   returns: an array of objects representing the types of the
    formal parameters of the method or constructor represented by this
    Executable - `java.lang.reflect.AnnotatedType[]`"
-  ([^java.lang.reflect.Executable this]
+  ([^Executable this]
     (-> this (.getAnnotatedParameterTypes))))
 
 (defn get-annotated-receiver-type
@@ -222,7 +222,7 @@
 
   returns: an object representing the receiver type of the method or
    constructor represented by this Executable - `java.lang.reflect.AnnotatedType`"
-  (^java.lang.reflect.AnnotatedType [^java.lang.reflect.Executable this]
+  (^java.lang.reflect.AnnotatedType [^Executable this]
     (-> this (.getAnnotatedReceiverType))))
 
 (defn get-annotated-return-type
@@ -237,7 +237,7 @@
 
   returns: an object representing the return type of the method
    or constructor represented by this Executable - `java.lang.reflect.AnnotatedType`"
-  (^java.lang.reflect.AnnotatedType [^java.lang.reflect.Executable this]
+  (^java.lang.reflect.AnnotatedType [^Executable this]
     (-> this (.getAnnotatedReturnType))))
 
 (defn get-annotations-by-type
@@ -255,13 +255,13 @@
    The caller of this method is free to modify the returned array; it will
    have no effect on the arrays returned to other callers.
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class<T>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: all this element's annotations for the specified annotation type if
        associated with this element, else an array of length zero - `<T extends java.lang.annotation.Annotation> T[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.Executable this ^java.lang.Class annotation-class]
+  ([^Executable this ^java.lang.Class annotation-class]
     (-> this (.getAnnotationsByType annotation-class))))
 
 (defn get-declaring-class
@@ -270,7 +270,7 @@
 
   returns: an object representing the declaring class of the
    underlying member - `java.lang.Class<?>`"
-  (^java.lang.Class [^java.lang.reflect.Executable this]
+  (^java.lang.Class [^Executable this]
     (-> this (.getDeclaringClass))))
 
 (defn get-parameter-annotations
@@ -297,6 +297,6 @@
   returns: an array of arrays that represent the annotations on
       the formal and implicit parameters, in declaration order, of
       the executable represented by this object - `java.lang.annotation.Annotation[][]`"
-  ([^java.lang.reflect.Executable this]
+  ([^Executable this]
     (-> this (.getParameterAnnotations))))
 

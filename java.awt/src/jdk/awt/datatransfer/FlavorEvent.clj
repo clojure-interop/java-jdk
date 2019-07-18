@@ -13,6 +13,6 @@
   source - the Clipboard that is the source of the event - `java.awt.datatransfer.Clipboard`
 
   throws: java.lang.IllegalArgumentException - if the source is null"
-  ([^java.awt.datatransfer.Clipboard source]
+  (^FlavorEvent [^java.awt.datatransfer.Clipboard source]
     (new FlavorEvent source)))
 

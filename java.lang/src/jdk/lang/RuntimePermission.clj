@@ -311,8 +311,8 @@
   actions - should be null. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^RuntimePermission [^java.lang.String name ^java.lang.String actions]
     (new RuntimePermission name actions))
-  ([^java.lang.String name]
+  (^RuntimePermission [^java.lang.String name]
     (new RuntimePermission name)))
 

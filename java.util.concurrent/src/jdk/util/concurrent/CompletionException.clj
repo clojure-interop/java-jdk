@@ -12,8 +12,8 @@
 
   message - the detail message - `java.lang.String`
   cause - the cause (which is saved for later retrieval by the Throwable.getCause() method) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^CompletionException [^java.lang.String message ^java.lang.Throwable cause]
     (new CompletionException message cause))
-  ([^java.lang.Throwable cause]
+  (^CompletionException [^java.lang.Throwable cause]
     (new CompletionException cause)))
 

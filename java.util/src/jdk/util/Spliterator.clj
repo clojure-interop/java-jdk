@@ -100,13 +100,13 @@
    next element in encounter order.  Exceptions thrown by the
    action are relayed to the caller.
 
-  action - The action - `Spliterator.T>`
+  action - The action - `java.util.function.Consumer`
 
   returns: false if no remaining elements existed
    upon entry to this method, else true. - `boolean`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  (^Boolean [^java.util.Spliterator this ^Spliterator.T> action]
+  (^Boolean [^Spliterator this ^java.util.function.Consumer action]
     (-> this (.tryAdvance action))))
 
 (defn for-each-remaining
@@ -116,12 +116,12 @@
    are performed in encounter order.  Exceptions thrown by the action
    are relayed to the caller.
 
-  action - The action - `Spliterator.T>`
+  action - The action - `java.util.function.Consumer`
 
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^java.util.Spliterator this ^Spliterator.T> action]
+  ([^Spliterator this ^java.util.function.Consumer action]
     (-> this (.forEachRemaining action))))
 
 (defn try-split
@@ -151,8 +151,8 @@
    considerations.
 
   returns: a Spliterator covering some portion of the
-   elements, or null if this spliterator cannot be split - `java.util.Spliterator<Spliterator.T>`"
-  (^java.util.Spliterator [^java.util.Spliterator this]
+   elements, or null if this spliterator cannot be split - `java.util.Spliterator<T>`"
+  (^java.util.Spliterator [^Spliterator this]
     (-> this (.trySplit))))
 
 (defn estimate-size
@@ -168,7 +168,7 @@
 
   returns: the estimated size, or Long.MAX_VALUE if infinite,
            unknown, or too expensive to compute. - `long`"
-  (^Long [^java.util.Spliterator this]
+  (^Long [^Spliterator this]
     (-> this (.estimateSize))))
 
 (defn get-exact-size-if-known
@@ -176,7 +176,7 @@
    Spliterator is SIZED, else -1.
 
   returns: the exact size, if known, else -1. - `default long`"
-  ([^java.util.Spliterator this]
+  ([^Spliterator this]
     (-> this (.getExactSizeIfKnown))))
 
 (defn characteristics
@@ -193,7 +193,7 @@
    about any computation using this Spliterator.
 
   returns: a representation of characteristics - `int`"
-  (^Integer [^java.util.Spliterator this]
+  (^Integer [^Spliterator this]
     (-> this (.characteristics))))
 
 (defn has-characteristics
@@ -203,7 +203,7 @@
 
   returns: true if all the specified characteristics are present,
    else false - `default boolean`"
-  ([^java.util.Spliterator this ^Integer characteristics]
+  ([^Spliterator this ^Integer characteristics]
     (-> this (.hasCharacteristics characteristics))))
 
 (defn get-comparator
@@ -213,9 +213,9 @@
    if the source is not SORTED, throws IllegalStateException.
 
   returns: a Comparator, or null if the elements are sorted in the
-   natural order. - `default java.util.Comparator<? super Spliterator.T>`
+   natural order. - `default java.util.Comparator<? super T>`
 
   throws: java.lang.IllegalStateException - if the spliterator does not report a characteristic of SORTED."
-  ([^java.util.Spliterator this]
+  ([^Spliterator this]
     (-> this (.getComparator))))
 

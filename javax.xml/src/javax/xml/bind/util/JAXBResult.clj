@@ -47,7 +47,7 @@
   context - The JAXBContext that will be used to create the necessary Unmarshaller. This parameter must not be null. - `javax.xml.bind.JAXBContext`
 
   throws: javax.xml.bind.JAXBException - if an error is encountered while creating the JAXBResult or if the context parameter is null."
-  ([^javax.xml.bind.JAXBContext context]
+  (^JAXBResult [^javax.xml.bind.JAXBContext context]
     (new JAXBResult context)))
 
 (defn get-result
@@ -56,6 +56,6 @@
   returns: Always return a non-null object. - `java.lang.Object`
 
   throws: java.lang.IllegalStateException - if this method is called before an object is unmarshalled."
-  (^java.lang.Object [^javax.xml.bind.util.JAXBResult this]
+  (^java.lang.Object [^JAXBResult this]
     (-> this (.getResult))))
 

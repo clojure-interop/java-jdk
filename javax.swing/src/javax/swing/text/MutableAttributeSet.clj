@@ -14,7 +14,7 @@
 
   name - the name - `java.lang.Object`
   value - the value - `java.lang.Object`"
-  ([^javax.swing.text.MutableAttributeSet this ^java.lang.Object name ^java.lang.Object value]
+  ([^MutableAttributeSet this ^java.lang.Object name ^java.lang.Object value]
     (-> this (.addAttribute name value))))
 
 (defn add-attributes
@@ -22,21 +22,21 @@
    the given attributes and values.
 
   attributes - the set of attributes - `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.MutableAttributeSet this ^javax.swing.text.AttributeSet attributes]
+  ([^MutableAttributeSet this ^javax.swing.text.AttributeSet attributes]
     (-> this (.addAttributes attributes))))
 
 (defn remove-attribute
   "Removes an attribute with the given name.
 
   name - the attribute name - `java.lang.Object`"
-  ([^javax.swing.text.MutableAttributeSet this ^java.lang.Object name]
+  ([^MutableAttributeSet this ^java.lang.Object name]
     (-> this (.removeAttribute name))))
 
 (defn remove-attributes
   "Removes an attribute set with the given names.
 
-  names - the set of names - `java.util.Enumeration<?>`"
-  ([^javax.swing.text.MutableAttributeSet this ^java.util.Enumeration names]
+  names - the set of names - `java.util.Enumeration`"
+  ([^MutableAttributeSet this ^java.util.Enumeration names]
     (-> this (.removeAttributes names))))
 
 (defn set-resolve-parent
@@ -45,6 +45,6 @@
    isn't defined locally.
 
   parent - the parent - `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.MutableAttributeSet this ^javax.swing.text.AttributeSet parent]
+  ([^MutableAttributeSet this ^javax.swing.text.AttributeSet parent]
     (-> this (.setResolveParent parent))))
 

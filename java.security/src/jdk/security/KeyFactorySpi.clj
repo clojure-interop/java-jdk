@@ -27,6 +27,6 @@
 
 (defn ->key-factory-spi
   "Constructor."
-  ([]
+  (^KeyFactorySpi []
     (new KeyFactorySpi )))
 

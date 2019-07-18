@@ -47,7 +47,7 @@
   returns: the maximum bounds for centered Windows - `java.awt.Rectangle`
 
   throws: java.awt.HeadlessException - if isHeadless() returns true"
-  (^java.awt.Rectangle [^java.awt.GraphicsEnvironment this]
+  (^java.awt.Rectangle [^GraphicsEnvironment this]
     (-> this (.getMaximumWindowBounds))))
 
 (defn get-default-screen-device
@@ -57,7 +57,7 @@
    default screen device - `java.awt.GraphicsDevice`
 
   throws: java.awt.HeadlessException - if isHeadless() returns true"
-  (^java.awt.GraphicsDevice [^java.awt.GraphicsEnvironment this]
+  (^java.awt.GraphicsDevice [^GraphicsEnvironment this]
     (-> this (.getDefaultScreenDevice))))
 
 (defn prefer-proportional-fonts
@@ -74,7 +74,7 @@
    different font, clients should expect different metrics, and may need
    to recalculate window sizes and layout. Therefore this method should
    be called before user interface initialisation."
-  ([^java.awt.GraphicsEnvironment this]
+  ([^GraphicsEnvironment this]
     (-> this (.preferProportionalFonts))))
 
 (defn headless-instance?
@@ -87,7 +87,7 @@
   returns: true if a display, keyboard, and mouse
    can be supported in this environment; false
    otherwise - `boolean`"
-  (^Boolean [^java.awt.GraphicsEnvironment this]
+  (^Boolean [^GraphicsEnvironment this]
     (-> this (.isHeadlessInstance))))
 
 (defn get-available-font-family-names
@@ -105,9 +105,9 @@
   returns: an array of String containing font family names
    localized for the specified Locale, or a
    suitable alternative name if no name exists for the specified locale. - `java.lang.String[]`"
-  ([^java.awt.GraphicsEnvironment this ^java.util.Locale l]
+  ([^GraphicsEnvironment this ^java.util.Locale l]
     (-> this (.getAvailableFontFamilyNames l)))
-  ([^java.awt.GraphicsEnvironment this]
+  ([^GraphicsEnvironment this]
     (-> this (.getAvailableFontFamilyNames))))
 
 (defn register-font
@@ -142,7 +142,7 @@
    registered in this GraphicsEnvironment. - `boolean`
 
   throws: java.lang.NullPointerException - if font is null"
-  (^Boolean [^java.awt.GraphicsEnvironment this ^java.awt.Font font]
+  (^Boolean [^GraphicsEnvironment this ^java.awt.Font font]
     (-> this (.registerFont font))))
 
 (defn get-all-fonts
@@ -165,7 +165,7 @@
    must be derived by the application.
 
   returns: an array of Font objects - `java.awt.Font[]`"
-  ([^java.awt.GraphicsEnvironment this]
+  ([^GraphicsEnvironment this]
     (-> this (.getAllFonts))))
 
 (defn prefer-locale-fonts
@@ -186,7 +186,7 @@
    different font, clients should expect different metrics, and may need
    to recalculate window sizes and layout. Therefore this method should
    be called before user interface initialisation."
-  ([^java.awt.GraphicsEnvironment this]
+  ([^GraphicsEnvironment this]
     (-> this (.preferLocaleFonts))))
 
 (defn get-screen-devices
@@ -197,7 +197,7 @@
    objects that represent screen devices - `java.awt.GraphicsDevice[]`
 
   throws: java.awt.HeadlessException - if isHeadless() returns true"
-  ([^java.awt.GraphicsEnvironment this]
+  ([^GraphicsEnvironment this]
     (-> this (.getScreenDevices))))
 
 (defn create-graphics
@@ -210,7 +210,7 @@
    the specified BufferedImage - `java.awt.Graphics2D`
 
   throws: java.lang.NullPointerException - if img is null"
-  (^java.awt.Graphics2D [^java.awt.GraphicsEnvironment this ^java.awt.image.BufferedImage img]
+  (^java.awt.Graphics2D [^GraphicsEnvironment this ^java.awt.image.BufferedImage img]
     (-> this (.createGraphics img))))
 
 (defn get-center-point
@@ -221,6 +221,6 @@
   returns: the point where Windows should be centered - `java.awt.Point`
 
   throws: java.awt.HeadlessException - if isHeadless() returns true"
-  (^java.awt.Point [^java.awt.GraphicsEnvironment this]
+  (^java.awt.Point [^GraphicsEnvironment this]
     (-> this (.getCenterPoint))))
 

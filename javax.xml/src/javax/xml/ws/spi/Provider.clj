@@ -49,13 +49,13 @@
 
   wsdl-document-location - A URL pointing to the WSDL document for the service, or null if there isn't one. - `java.net.URL`
   service-name - The qualified name of the service. - `javax.xml.namespace.QName`
-  service-class - The service class, which MUST be either javax.xml.ws.Service or a subclass thereof. - `javax.xml.ws.Service>`
+  service-class - The service class, which MUST be either javax.xml.ws.Service or a subclass thereof. - `java.lang.Class`
   features - Web Service features that must be configured on the service. If the provider doesn't understand a feature, it must throw a WebServiceException. - `javax.xml.ws.WebServiceFeature`
 
   returns: The newly created service delegate. - `javax.xml.ws.spi.ServiceDelegate`"
-  (^javax.xml.ws.spi.ServiceDelegate [^javax.xml.ws.spi.Provider this ^java.net.URL wsdl-document-location ^javax.xml.namespace.QName service-name ^javax.xml.ws.Service> service-class ^javax.xml.ws.WebServiceFeature features]
+  (^javax.xml.ws.spi.ServiceDelegate [^Provider this ^java.net.URL wsdl-document-location ^javax.xml.namespace.QName service-name ^java.lang.Class service-class ^javax.xml.ws.WebServiceFeature features]
     (-> this (.createServiceDelegate wsdl-document-location service-name service-class features)))
-  (^javax.xml.ws.spi.ServiceDelegate [^javax.xml.ws.spi.Provider this ^java.net.URL wsdl-document-location ^javax.xml.namespace.QName service-name ^javax.xml.ws.Service> service-class]
+  (^javax.xml.ws.spi.ServiceDelegate [^Provider this ^java.net.URL wsdl-document-location ^javax.xml.namespace.QName service-name ^java.lang.Class service-class]
     (-> this (.createServiceDelegate wsdl-document-location service-name service-class))))
 
 (defn create-endpoint
@@ -65,16 +65,16 @@
    implementations must override the default implementation.
 
   binding-id - A URI specifying the desired binding (e.g. SOAP/HTTP). Can be null. - `java.lang.String`
-  implementor-class - A service implementation class that MUST be annotated with all the necessary Web service annotations. - `java.lang.Class<?>`
+  implementor-class - A service implementation class that MUST be annotated with all the necessary Web service annotations. - `java.lang.Class`
   invoker - that does the actual invocation on the service instance. - `javax.xml.ws.spi.Invoker`
   features - A list of WebServiceFeatures to configure on the endpoint. Supported features not in the features parameter will have their default values. - `javax.xml.ws.WebServiceFeature`
 
   returns: The newly created endpoint. - `javax.xml.ws.Endpoint`"
-  (^javax.xml.ws.Endpoint [^javax.xml.ws.spi.Provider this ^java.lang.String binding-id ^java.lang.Class implementor-class ^javax.xml.ws.spi.Invoker invoker ^javax.xml.ws.WebServiceFeature features]
+  (^javax.xml.ws.Endpoint [^Provider this ^java.lang.String binding-id ^java.lang.Class implementor-class ^javax.xml.ws.spi.Invoker invoker ^javax.xml.ws.WebServiceFeature features]
     (-> this (.createEndpoint binding-id implementor-class invoker features)))
-  (^javax.xml.ws.Endpoint [^javax.xml.ws.spi.Provider this ^java.lang.String binding-id ^java.lang.Object implementor ^javax.xml.ws.WebServiceFeature features]
+  (^javax.xml.ws.Endpoint [^Provider this ^java.lang.String binding-id ^java.lang.Object implementor ^javax.xml.ws.WebServiceFeature features]
     (-> this (.createEndpoint binding-id implementor features)))
-  (^javax.xml.ws.Endpoint [^javax.xml.ws.spi.Provider this ^java.lang.String binding-id ^java.lang.Object implementor]
+  (^javax.xml.ws.Endpoint [^Provider this ^java.lang.String binding-id ^java.lang.Object implementor]
     (-> this (.createEndpoint binding-id implementor))))
 
 (defn create-and-publish-endpoint
@@ -88,9 +88,9 @@
   features - A list of WebServiceFeatures to configure on the endpoint. Supported features not in the features parameter will have their default values. - `javax.xml.ws.WebServiceFeature`
 
   returns: The newly created endpoint. - `javax.xml.ws.Endpoint`"
-  (^javax.xml.ws.Endpoint [^javax.xml.ws.spi.Provider this ^java.lang.String address ^java.lang.Object implementor ^javax.xml.ws.WebServiceFeature features]
+  (^javax.xml.ws.Endpoint [^Provider this ^java.lang.String address ^java.lang.Object implementor ^javax.xml.ws.WebServiceFeature features]
     (-> this (.createAndPublishEndpoint address implementor features)))
-  (^javax.xml.ws.Endpoint [^javax.xml.ws.spi.Provider this ^java.lang.String address ^java.lang.Object implementor]
+  (^javax.xml.ws.Endpoint [^Provider this ^java.lang.String address ^java.lang.Object implementor]
     (-> this (.createAndPublishEndpoint address implementor))))
 
 (defn read-endpoint-reference
@@ -103,7 +103,7 @@
    eprInfoset.  This method never returns null. - `javax.xml.ws.EndpointReference`
 
   throws: javax.xml.ws.WebServiceException - If there is an error creating the EndpointReference from the specified eprInfoset."
-  (^javax.xml.ws.EndpointReference [^javax.xml.ws.spi.Provider this ^javax.xml.transform.Source epr-infoset]
+  (^javax.xml.ws.EndpointReference [^Provider this ^javax.xml.transform.Source epr-infoset]
     (-> this (.readEndpointReference epr-infoset))))
 
 (defn get-port
@@ -128,14 +128,14 @@
    serviceName metadata.
 
   endpoint-reference - the EndpointReference that will be invoked by the returned proxy. - `javax.xml.ws.EndpointReference`
-  service-endpoint-interface - Service endpoint interface - `java.lang.Class<T>`
+  service-endpoint-interface - Service endpoint interface - `java.lang.Class`
   features - A list of WebServiceFeatures to configure on the proxy. Supported features not in the features parameter will have their default values. - `javax.xml.ws.WebServiceFeature`
 
   returns: Object Proxy instance that supports the
                     specified service endpoint interface - `<T> T`
 
   throws: javax.xml.ws.WebServiceException - If there is an error during creation of the proxy If there is any missing WSDL metadata as required by this method} If this endpointReference is illegal If an illegal serviceEndpointInterface is specified If a feature is enabled that is not compatible with this port or is unsupported."
-  ([^javax.xml.ws.spi.Provider this ^javax.xml.ws.EndpointReference endpoint-reference ^java.lang.Class service-endpoint-interface ^javax.xml.ws.WebServiceFeature features]
+  ([^Provider this ^javax.xml.ws.EndpointReference endpoint-reference ^java.lang.Class service-endpoint-interface ^javax.xml.ws.WebServiceFeature features]
     (-> this (.getPort endpoint-reference service-endpoint-interface features))))
 
 (defn create-w-3-c-endpoint-reference
@@ -165,11 +165,11 @@
   interface-name - the wsam:InterfaceName element in the wsa:Metadata element. - `javax.xml.namespace.QName`
   service-name - Qualified name of the service in the WSDL. - `javax.xml.namespace.QName`
   port-name - Qualified name of the endpoint in the WSDL. - `javax.xml.namespace.QName`
-  metadata - A list of elements that should be added to the W3CEndpointReference instances wsa:metadata element. - `java.util.List<org.w3c.dom.Element>`
+  metadata - A list of elements that should be added to the W3CEndpointReference instances wsa:metadata element. - `java.util.List`
   wsdl-document-location - URL for the WSDL document location for the service. - `java.lang.String`
-  reference-parameters - Reference parameters to be associated with the returned EndpointReference instance. - `java.util.List<org.w3c.dom.Element>`
-  elements - extension elements to be associated with the returned EndpointReference instance. - `java.util.List<org.w3c.dom.Element>`
-  attributes - extension attributes to be associated with the returned EndpointReference instance. - `java.util.Map<javax.xml.namespace.QName,java.lang.String>`
+  reference-parameters - Reference parameters to be associated with the returned EndpointReference instance. - `java.util.List`
+  elements - extension elements to be associated with the returned EndpointReference instance. - `java.util.List`
+  attributes - extension attributes to be associated with the returned EndpointReference instance. - `java.util.Map`
 
   returns: the W3CEndpointReference created from
             serviceName, portName,
@@ -178,8 +178,8 @@
             never returns null. - `javax.xml.ws.wsaddressing.W3CEndpointReference`
 
   throws: java.lang.IllegalStateException - If the address, serviceName and portName are all null. If the serviceName service is null and the portName is NOT null. If the address property is null and the serviceName and portName do not specify a valid endpoint published by the same Java EE application. If the serviceNameis NOT null and is not present in the specified WSDL. If the portName port is not null and it is not present in serviceName service in the WSDL. If the wsdlDocumentLocation is NOT null and does not represent a valid WSDL. If the wsdlDocumentLocation is NOT null but wsdli:wsdlLocation's namespace name cannot be got from the available metadata."
-  (^javax.xml.ws.wsaddressing.W3CEndpointReference [^javax.xml.ws.spi.Provider this ^java.lang.String address ^javax.xml.namespace.QName interface-name ^javax.xml.namespace.QName service-name ^javax.xml.namespace.QName port-name ^java.util.List metadata ^java.lang.String wsdl-document-location ^java.util.List reference-parameters ^java.util.List elements ^java.util.Map attributes]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReference [^Provider this ^java.lang.String address ^javax.xml.namespace.QName interface-name ^javax.xml.namespace.QName service-name ^javax.xml.namespace.QName port-name ^java.util.List metadata ^java.lang.String wsdl-document-location ^java.util.List reference-parameters ^java.util.List elements ^java.util.Map attributes]
     (-> this (.createW3CEndpointReference address interface-name service-name port-name metadata wsdl-document-location reference-parameters elements attributes)))
-  (^javax.xml.ws.wsaddressing.W3CEndpointReference [^javax.xml.ws.spi.Provider this ^java.lang.String address ^javax.xml.namespace.QName service-name ^javax.xml.namespace.QName port-name ^java.util.List metadata ^java.lang.String wsdl-document-location ^java.util.List reference-parameters]
+  (^javax.xml.ws.wsaddressing.W3CEndpointReference [^Provider this ^java.lang.String address ^javax.xml.namespace.QName service-name ^javax.xml.namespace.QName port-name ^java.util.List metadata ^java.lang.String wsdl-document-location ^java.util.List reference-parameters]
     (-> this (.createW3CEndpointReference address service-name port-name metadata wsdl-document-location reference-parameters))))
 

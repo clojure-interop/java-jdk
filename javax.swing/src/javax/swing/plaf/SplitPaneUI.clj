@@ -5,7 +5,7 @@
 
 (defn ->split-pane-ui
   "Constructor."
-  ([]
+  (^SplitPaneUI []
     (new SplitPaneUI )))
 
 (defn reset-to-preferred-sizes
@@ -13,7 +13,7 @@
    of the children components.
 
   jc - `javax.swing.JSplitPane`"
-  ([^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc]
+  ([^SplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.resetToPreferredSizes jc))))
 
 (defn set-divider-location
@@ -21,7 +21,7 @@
 
   jc - `javax.swing.JSplitPane`
   location - `int`"
-  ([^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc ^Integer location]
+  ([^SplitPaneUI this ^javax.swing.JSplitPane jc ^Integer location]
     (-> this (.setDividerLocation jc location))))
 
 (defn get-divider-location
@@ -30,7 +30,7 @@
   jc - `javax.swing.JSplitPane`
 
   returns: `int`"
-  (^Integer [^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc]
+  (^Integer [^SplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.getDividerLocation jc))))
 
 (defn get-minimum-divider-location
@@ -39,7 +39,7 @@
   jc - `javax.swing.JSplitPane`
 
   returns: `int`"
-  (^Integer [^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc]
+  (^Integer [^SplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.getMinimumDividerLocation jc))))
 
 (defn get-maximum-divider-location
@@ -48,7 +48,7 @@
   jc - `javax.swing.JSplitPane`
 
   returns: `int`"
-  (^Integer [^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc]
+  (^Integer [^SplitPaneUI this ^javax.swing.JSplitPane jc]
     (-> this (.getMaximumDividerLocation jc))))
 
 (defn finished-painting-children
@@ -57,6 +57,6 @@
 
   jc - `javax.swing.JSplitPane`
   g - `java.awt.Graphics`"
-  ([^javax.swing.plaf.SplitPaneUI this ^javax.swing.JSplitPane jc ^java.awt.Graphics g]
+  ([^SplitPaneUI this ^javax.swing.JSplitPane jc ^java.awt.Graphics g]
     (-> this (.finishedPaintingChildren jc g))))
 

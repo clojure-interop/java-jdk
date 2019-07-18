@@ -9,7 +9,7 @@
 
   Entered type.
 
-  type: javax.swing.event.HyperlinkEvent.EventType"
+  type: javax.swing.event.HyperlinkEvent$EventType"
   HyperlinkEvent$EventType/ENTERED)
 
 (def *-exited
@@ -17,7 +17,7 @@
 
   Exited type.
 
-  type: javax.swing.event.HyperlinkEvent.EventType"
+  type: javax.swing.event.HyperlinkEvent$EventType"
   HyperlinkEvent$EventType/EXITED)
 
 (def *-activated
@@ -25,13 +25,13 @@
 
   Activated type.
 
-  type: javax.swing.event.HyperlinkEvent.EventType"
+  type: javax.swing.event.HyperlinkEvent$EventType"
   HyperlinkEvent$EventType/ACTIVATED)
 
 (defn to-string
   "Converts the type to a string.
 
   returns: the string - `java.lang.String`"
-  (^java.lang.String [^javax.swing.event.HyperlinkEvent$EventType this]
+  (^java.lang.String [^HyperlinkEvent$EventType this]
     (-> this (.toString))))
 

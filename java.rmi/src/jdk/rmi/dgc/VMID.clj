@@ -14,21 +14,21 @@
    the class java.rmi.server.UID are satisfied, and b) an
    address can be obtained for this host that is unique and constant
    for the lifetime of this object."
-  ([]
+  (^VMID []
     (new VMID )))
 
-(defn *is-unique
+(defn *unique?
   "Deprecated.
 
-  returns: true if host address can be determined, false otherwise - `java.lang.   boolean`"
-  ([]
+  returns: true if host address can be determined, false otherwise - `boolean`"
+  (^Boolean []
     (VMID/isUnique )))
 
 (defn hash-code
   "Compute hash code for this VMID.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.rmi.dgc.VMID this]
+  (^Integer [^VMID this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -39,13 +39,13 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.rmi.dgc.VMID this ^java.lang.Object obj]
+  (^Boolean [^VMID this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
   "Return string representation of this VMID.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.rmi.dgc.VMID this]
+  (^java.lang.String [^VMID this]
     (-> this (.toString))))
 

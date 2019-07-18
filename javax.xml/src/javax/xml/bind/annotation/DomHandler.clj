@@ -32,8 +32,8 @@
   error-handler - if any error happens between the invocation of this method and the invocation of getElement(Result), they must be reported to this handler. The caller must provide a non-null error handler. The Result object created from this method may hold a reference to this error handler. - `javax.xml.bind.ValidationEventHandler`
 
   returns: null if the operation fails. The error must have been reported
-        to the error handler. - `DomHandler.ResultT`"
-  (^DomHandler.ResultT [^javax.xml.bind.annotation.DomHandler this ^javax.xml.bind.ValidationEventHandler error-handler]
+        to the error handler. - `ResultT`"
+  ([^DomHandler this ^javax.xml.bind.ValidationEventHandler error-handler]
     (-> this (.createUnmarshaller error-handler))))
 
 (defn get-element
@@ -45,11 +45,11 @@
    This method can be invoked only when the whole sub-tree are fed
    to the Result object.
 
-  rt - The Result object created by createUnmarshaller(ValidationEventHandler). - `DomHandler.ResultT`
+  rt - The Result object created by createUnmarshaller(ValidationEventHandler). - `ResultT`
 
   returns: null if the operation fails. The error must have been reported
-        to the error handler. - `DomHandler.ElementT`"
-  (^DomHandler.ElementT [^javax.xml.bind.annotation.DomHandler this ^DomHandler.ResultT rt]
+        to the error handler. - `ElementT`"
+  ([^DomHandler this rt]
     (-> this (.getElement rt))))
 
 (defn marshal
@@ -61,11 +61,11 @@
    rooted at one element, which will then be weaved into a bigger document
    that the JAXB provider is marshalling.
 
-  n - `DomHandler.ElementT`
+  n - `ElementT`
   error-handler - Receives any errors happened during the process of converting an element into a Source. The caller must provide a non-null error handler. - `javax.xml.bind.ValidationEventHandler`
 
   returns: null if there was an error. The error should have been reported
         to the handler. - `javax.xml.transform.Source`"
-  (^javax.xml.transform.Source [^javax.xml.bind.annotation.DomHandler this ^DomHandler.ElementT n ^javax.xml.bind.ValidationEventHandler error-handler]
+  (^javax.xml.transform.Source [^DomHandler this n ^javax.xml.bind.ValidationEventHandler error-handler]
     (-> this (.marshal n error-handler))))
 

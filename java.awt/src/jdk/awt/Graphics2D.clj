@@ -379,7 +379,7 @@
   y - the y position in User Space where the glyphs should be rendered - `float`
 
   throws: java.lang.NullPointerException - if g is null."
-  ([^java.awt.Graphics2D this ^java.awt.font.GlyphVector g ^Float x ^Float y]
+  ([^Graphics2D this ^java.awt.font.GlyphVector g ^Float x ^Float y]
     (-> this (.drawGlyphVector g x y))))
 
 (defn add-rendering-hints
@@ -394,8 +394,8 @@
    Refer to the RenderingHints class for definitions of
    some common keys and values.
 
-  hints - the rendering hints to be set - `java.util.Map<?,?>`"
-  ([^java.awt.Graphics2D this ^java.util.Map hints]
+  hints - the rendering hints to be set - `java.util.Map`"
+  ([^Graphics2D this ^java.util.Map hints]
     (-> this (.addRenderingHints hints))))
 
 (defn draw-image
@@ -414,9 +414,9 @@
   op - the filter to be applied to the image before rendering - `java.awt.image.BufferedImageOp`
   x - the x coordinate of the location in user space where the upper left corner of the image is rendered - `int`
   y - the y coordinate of the location in user space where the upper left corner of the image is rendered - `int`"
-  ([^java.awt.Graphics2D this ^java.awt.image.BufferedImage img ^java.awt.image.BufferedImageOp op ^Integer x ^Integer y]
+  ([^Graphics2D this ^java.awt.image.BufferedImage img ^java.awt.image.BufferedImageOp op ^Integer x ^Integer y]
     (-> this (.drawImage img op x y)))
-  (^Boolean [^java.awt.Graphics2D this ^java.awt.Image img ^java.awt.geom.AffineTransform xform ^java.awt.image.ImageObserver obs]
+  (^Boolean [^Graphics2D this ^java.awt.Image img ^java.awt.geom.AffineTransform xform ^java.awt.image.ImageObserver obs]
     (-> this (.drawImage img xform obs))))
 
 (defn get-rendering-hints
@@ -430,7 +430,7 @@
 
   returns: a reference to an instance of RenderingHints
    that contains the current preferences. - `java.awt.RenderingHints`"
-  (^java.awt.RenderingHints [^java.awt.Graphics2D this]
+  (^java.awt.RenderingHints [^Graphics2D this]
     (-> this (.getRenderingHints))))
 
 (defn get-composite
@@ -439,7 +439,7 @@
 
   returns: the current Graphics2D Composite,
                 which defines a compositing style. - `java.awt.Composite`"
-  (^java.awt.Composite [^java.awt.Graphics2D this]
+  (^java.awt.Composite [^Graphics2D this]
     (-> this (.getComposite))))
 
 (defn translate
@@ -453,7 +453,7 @@
 
   x - the specified x coordinate - `int`
   y - the specified y coordinate - `int`"
-  ([^java.awt.Graphics2D this ^Integer x ^Integer y]
+  ([^Graphics2D this ^Integer x ^Integer y]
     (-> this (.translate x y))))
 
 (defn scale
@@ -471,7 +471,7 @@
 
   sx - the amount by which X coordinates in subsequent rendering operations are multiplied relative to previous rendering operations. - `double`
   sy - the amount by which Y coordinates in subsequent rendering operations are multiplied relative to previous rendering operations. - `double`"
-  ([^java.awt.Graphics2D this ^Double sx ^Double sy]
+  ([^Graphics2D this ^Double sx ^Double sy]
     (-> this (.scale sx sy))))
 
 (defn clip
@@ -491,7 +491,7 @@
    user clip.
 
   s - the Shape to be intersected with the current Clip. If s is null, this method clears the current Clip. - `java.awt.Shape`"
-  ([^java.awt.Graphics2D this ^java.awt.Shape s]
+  ([^Graphics2D this ^java.awt.Shape s]
     (-> this (.clip s))))
 
 (defn set-paint
@@ -502,7 +502,7 @@
    of this Graphics2D.
 
   paint - the Paint object to be used to generate color during the rendering process, or null - `java.awt.Paint`"
-  ([^java.awt.Graphics2D this ^java.awt.Paint paint]
+  ([^Graphics2D this ^java.awt.Paint paint]
     (-> this (.setPaint paint))))
 
 (defn get-paint
@@ -511,7 +511,7 @@
 
   returns: the current Graphics2D Paint,
    which defines a color or pattern. - `java.awt.Paint`"
-  (^java.awt.Paint [^java.awt.Graphics2D this]
+  (^java.awt.Paint [^Graphics2D this]
     (-> this (.getPaint))))
 
 (defn transform
@@ -528,7 +528,7 @@
    so further modifications to Tx do not affect rendering.
 
   tx - the AffineTransform object to be composed with the current Transform - `java.awt.geom.AffineTransform`"
-  ([^java.awt.Graphics2D this ^java.awt.geom.AffineTransform tx]
+  ([^Graphics2D this ^java.awt.geom.AffineTransform tx]
     (-> this (.transform tx))))
 
 (defn fill-3-d-rect
@@ -545,7 +545,7 @@
   width - the width of the rectangle to be filled. - `int`
   height - the height of the rectangle to be filled. - `int`
   raised - a boolean value that determines whether the rectangle appears to be raised above the surface or etched into the surface. - `boolean`"
-  ([^java.awt.Graphics2D this ^Integer x ^Integer y ^Integer width ^Integer height ^Boolean raised]
+  ([^Graphics2D this ^Integer x ^Integer y ^Integer width ^Integer height ^Boolean raised]
     (-> this (.fill3DRect x y width height raised))))
 
 (defn get-rendering-hint
@@ -555,12 +555,12 @@
    RenderingHints class for definitions of some common
    keys and values.
 
-  hint-key - the key corresponding to the hint to get. - `java.awt.RenderingHints.Key`
+  hint-key - the key corresponding to the hint to get. - `java.awt.RenderingHints$Key`
 
   returns: an object representing the value for the specified hint key.
    Some of the keys and their associated values are defined in the
    RenderingHints class. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.Graphics2D this ^java.awt.RenderingHints.Key hint-key]
+  (^java.lang.Object [^Graphics2D this ^java.awt.RenderingHints$Key hint-key]
     (-> this (.getRenderingHint hint-key))))
 
 (defn get-stroke
@@ -569,7 +569,7 @@
 
   returns: the current Graphics2D Stroke,
                    which defines the line style. - `java.awt.Stroke`"
-  (^java.awt.Stroke [^java.awt.Graphics2D this]
+  (^java.awt.Stroke [^Graphics2D this]
     (-> this (.getStroke))))
 
 (defn set-rendering-hint
@@ -579,9 +579,9 @@
    RenderingHints class for definitions of some common
    keys and values.
 
-  hint-key - the key of the hint to be set. - `java.awt.RenderingHints.Key`
+  hint-key - the key of the hint to be set. - `java.awt.RenderingHints$Key`
   hint-value - the value indicating preferences for the specified hint category. - `java.lang.Object`"
-  ([^java.awt.Graphics2D this ^java.awt.RenderingHints.Key hint-key ^java.lang.Object hint-value]
+  ([^Graphics2D this ^java.awt.RenderingHints$Key hint-key ^java.lang.Object hint-value]
     (-> this (.setRenderingHint hint-key hint-value))))
 
 (defn set-background
@@ -597,7 +597,7 @@
    the Component.
 
   color - the background color that is used in subsequent calls to clearRect - `java.awt.Color`"
-  ([^java.awt.Graphics2D this ^java.awt.Color color]
+  ([^Graphics2D this ^java.awt.Color color]
     (-> this (.setBackground color))))
 
 (defn draw-rendered-image
@@ -615,14 +615,14 @@
 
   img - the image to be rendered. This method does nothing if img is null. - `java.awt.image.RenderedImage`
   xform - the transformation from image space into user space - `java.awt.geom.AffineTransform`"
-  ([^java.awt.Graphics2D this ^java.awt.image.RenderedImage img ^java.awt.geom.AffineTransform xform]
+  ([^Graphics2D this ^java.awt.image.RenderedImage img ^java.awt.geom.AffineTransform xform]
     (-> this (.drawRenderedImage img xform))))
 
 (defn set-stroke
   "Sets the Stroke for the Graphics2D context.
 
   s - the Stroke object to be used to stroke a Shape during the rendering process - `java.awt.Stroke`"
-  ([^java.awt.Graphics2D this ^java.awt.Stroke s]
+  ([^Graphics2D this ^java.awt.Stroke s]
     (-> this (.setStroke s))))
 
 (defn set-composite
@@ -643,7 +643,7 @@
   comp - the Composite object to be used for rendering - `java.awt.Composite`
 
   throws: java.lang.SecurityException - if a custom Composite object is being used to render to the screen and a security manager is set and its checkPermission method does not allow the operation."
-  ([^java.awt.Graphics2D this ^java.awt.Composite comp]
+  ([^Graphics2D this ^java.awt.Composite comp]
     (-> this (.setComposite comp))))
 
 (defn draw-string
@@ -664,7 +664,7 @@
   y - the y coordinate of the location where the String should be rendered - `int`
 
   throws: java.lang.NullPointerException - if str is null"
-  ([^java.awt.Graphics2D this ^java.lang.String str ^Integer x ^Integer y]
+  ([^Graphics2D this ^java.lang.String str ^Integer x ^Integer y]
     (-> this (.drawString str x y))))
 
 (defn fill
@@ -674,7 +674,7 @@
    Paint, and Composite.
 
   s - the Shape to be filled - `java.awt.Shape`"
-  ([^java.awt.Graphics2D this ^java.awt.Shape s]
+  ([^Graphics2D this ^java.awt.Shape s]
     (-> this (.fill s))))
 
 (defn get-device-configuration
@@ -682,7 +682,7 @@
    Graphics2D.
 
   returns: the device configuration of this Graphics2D. - `java.awt.GraphicsConfiguration`"
-  (^java.awt.GraphicsConfiguration [^java.awt.Graphics2D this]
+  (^java.awt.GraphicsConfiguration [^Graphics2D this]
     (-> this (.getDeviceConfiguration))))
 
 (defn draw-3-d-rect
@@ -703,7 +703,7 @@
   width - the width of the rectangle to be drawn. - `int`
   height - the height of the rectangle to be drawn. - `int`
   raised - a boolean that determines whether the rectangle appears to be raised above the surface or sunk into the surface. - `boolean`"
-  ([^java.awt.Graphics2D this ^Integer x ^Integer y ^Integer width ^Integer height ^Boolean raised]
+  ([^Graphics2D this ^Integer x ^Integer y ^Integer width ^Integer height ^Boolean raised]
     (-> this (.draw3DRect x y width height raised))))
 
 (defn draw
@@ -714,7 +714,7 @@
    Stroke attributes.
 
   s - the Shape to be rendered - `java.awt.Shape`"
-  ([^java.awt.Graphics2D this ^java.awt.Shape s]
+  ([^Graphics2D this ^java.awt.Shape s]
     (-> this (.draw s))))
 
 (defn get-font-render-context
@@ -733,7 +733,7 @@
    the text rendering.
 
   returns: a reference to an instance of FontRenderContext. - `java.awt.font.FontRenderContext`"
-  (^java.awt.font.FontRenderContext [^java.awt.Graphics2D this]
+  (^java.awt.font.FontRenderContext [^Graphics2D this]
     (-> this (.getFontRenderContext))))
 
 (defn hit
@@ -756,7 +756,7 @@
 
   returns: true if there is a hit; false
    otherwise. - `boolean`"
-  (^Boolean [^java.awt.Graphics2D this ^java.awt.Rectangle rect ^java.awt.Shape s ^Boolean on-stroke]
+  (^Boolean [^Graphics2D this ^java.awt.Rectangle rect ^java.awt.Shape s ^Boolean on-stroke]
     (-> this (.hit rect s on-stroke))))
 
 (defn shear
@@ -775,7 +775,7 @@
 
   shx - the multiplier by which coordinates are shifted in the positive X axis direction as a function of their Y coordinate - `double`
   shy - the multiplier by which coordinates are shifted in the positive Y axis direction as a function of their X coordinate - `double`"
-  ([^java.awt.Graphics2D this ^Double shx ^Double shy]
+  ([^Graphics2D this ^Double shx ^Double shy]
     (-> this (.shear shx shy))))
 
 (defn get-background
@@ -783,7 +783,7 @@
 
   returns: the current Graphics2D Color,
    which defines the background color. - `java.awt.Color`"
-  (^java.awt.Color [^java.awt.Graphics2D this]
+  (^java.awt.Color [^Graphics2D this]
     (-> this (.getBackground))))
 
 (defn draw-renderable-image
@@ -810,7 +810,7 @@
 
   img - the image to be rendered. This method does nothing if img is null. - `java.awt.image.renderable.RenderableImage`
   xform - the transformation from image space into user space - `java.awt.geom.AffineTransform`"
-  ([^java.awt.Graphics2D this ^java.awt.image.renderable.RenderableImage img ^java.awt.geom.AffineTransform xform]
+  ([^Graphics2D this ^java.awt.image.renderable.RenderableImage img ^java.awt.geom.AffineTransform xform]
     (-> this (.drawRenderableImage img xform))))
 
 (defn set-transform
@@ -839,7 +839,7 @@
    g2d.setTransform(saveAT);
 
   tx - the AffineTransform that was retrieved from the getTransform method - `java.awt.geom.AffineTransform`"
-  ([^java.awt.Graphics2D this ^java.awt.geom.AffineTransform tx]
+  ([^Graphics2D this ^java.awt.geom.AffineTransform tx]
     (-> this (.setTransform tx))))
 
 (defn get-transform
@@ -848,7 +848,7 @@
 
   returns: the current AffineTransform in the
                Graphics2D context. - `java.awt.geom.AffineTransform`"
-  (^java.awt.geom.AffineTransform [^java.awt.Graphics2D this]
+  (^java.awt.geom.AffineTransform [^Graphics2D this]
     (-> this (.getTransform))))
 
 (defn rotate
@@ -870,9 +870,9 @@
   theta - the angle of rotation in radians - `double`
   x - the x coordinate of the origin of the rotation - `double`
   y - the y coordinate of the origin of the rotation - `double`"
-  ([^java.awt.Graphics2D this ^Double theta ^Double x ^Double y]
+  ([^Graphics2D this ^Double theta ^Double x ^Double y]
     (-> this (.rotate theta x y)))
-  ([^java.awt.Graphics2D this ^Double theta]
+  ([^Graphics2D this ^Double theta]
     (-> this (.rotate theta))))
 
 (defn set-rendering-hints
@@ -886,7 +886,7 @@
    Refer to the RenderingHints class for definitions of
    some common keys and values.
 
-  hints - the rendering hints to be set - `java.util.Map<?,?>`"
-  ([^java.awt.Graphics2D this ^java.util.Map hints]
+  hints - the rendering hints to be set - `java.util.Map`"
+  ([^Graphics2D this ^java.util.Map hints]
     (-> this (.setRenderingHints hints))))
 

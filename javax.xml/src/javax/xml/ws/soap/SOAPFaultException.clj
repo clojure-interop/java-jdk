@@ -24,7 +24,7 @@
   Constructor for SOAPFaultException
 
   fault - SOAPFault representing the fault - `javax.xml.soap.SOAPFault`"
-  ([^javax.xml.soap.SOAPFault fault]
+  (^SOAPFaultException [^javax.xml.soap.SOAPFault fault]
     (new SOAPFaultException fault)))
 
 (defn get-fault
@@ -32,6 +32,6 @@
 
   returns: javax.xml.soap.SOAPFault SOAP
             fault element - `javax.xml.soap.SOAPFault`"
-  (^javax.xml.soap.SOAPFault [^javax.xml.ws.soap.SOAPFaultException this]
+  (^javax.xml.soap.SOAPFault [^SOAPFaultException this]
     (-> this (.getFault))))
 

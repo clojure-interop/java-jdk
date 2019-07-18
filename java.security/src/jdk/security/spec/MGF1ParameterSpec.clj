@@ -32,7 +32,7 @@
   md-name - the algorithm name for the message digest used in this mask generation function MGF1. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if mdName is null."
-  ([^java.lang.String md-name]
+  (^MGF1ParameterSpec [^java.lang.String md-name]
     (new MGF1ParameterSpec md-name)))
 
 (def *-sha-1
@@ -80,6 +80,6 @@
    generation function.
 
   returns: the algorithm name of the message digest. - `java.lang.String`"
-  (^java.lang.String [^java.security.spec.MGF1ParameterSpec this]
+  (^java.lang.String [^MGF1ParameterSpec this]
     (-> this (.getDigestAlgorithm))))
 

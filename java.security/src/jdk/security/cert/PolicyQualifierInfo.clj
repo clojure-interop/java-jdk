@@ -56,7 +56,7 @@
   encoded - a byte array containing the qualifier in DER encoding - `byte[]`
 
   throws: java.io.IOException - thrown if the byte array does not represent a valid and parsable policy qualifier"
-  ([encoded]
+  (^PolicyQualifierInfo [encoded]
     (new PolicyQualifierInfo encoded)))
 
 (defn get-policy-qualifier-id
@@ -66,7 +66,7 @@
    integers separated by periods.
 
   returns: the OID (never null) - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.PolicyQualifierInfo this]
+  (^java.lang.String [^PolicyQualifierInfo this]
     (-> this (.getPolicyQualifierId))))
 
 (defn get-encoded
@@ -76,7 +76,7 @@
   returns: the ASN.1 DER encoded bytes (never null).
    Note that a copy is returned, so the data is cloned each time
    this method is called. - `byte[]`"
-  ([^java.security.cert.PolicyQualifierInfo this]
+  ([^PolicyQualifierInfo this]
     (-> this (.getEncoded))))
 
 (defn get-policy-qualifier
@@ -86,7 +86,7 @@
   returns: the ASN.1 DER encoded bytes of the qualifier
    field. Note that a copy is returned, so the data is cloned each
    time this method is called. - `byte[]`"
-  ([^java.security.cert.PolicyQualifierInfo this]
+  ([^PolicyQualifierInfo this]
     (-> this (.getPolicyQualifier))))
 
 (defn to-string
@@ -95,6 +95,6 @@
 
   returns: a String describing the contents of this
            PolicyQualifierInfo - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.PolicyQualifierInfo this]
+  (^java.lang.String [^PolicyQualifierInfo this]
     (-> this (.toString))))
 

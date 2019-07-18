@@ -305,9 +305,9 @@
   context - the context to which to convert the characters, such as NumericShaper.EUROPEAN - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if start or start count is out of bounds"
-  ([^java.awt.font.NumericShaper this text ^Integer start ^Integer count ^Integer context]
+  ([^NumericShaper this text ^Integer start ^Integer count ^Integer context]
     (-> this (.shape text start count context)))
-  ([^java.awt.font.NumericShaper this text ^Integer start ^Integer count]
+  ([^NumericShaper this text ^Integer start ^Integer count]
     (-> this (.shape text start count))))
 
 (defn contextual?
@@ -316,7 +316,7 @@
 
   returns: true if this shaper is contextual;
            false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.NumericShaper this]
+  (^Boolean [^NumericShaper this]
     (-> this (.isContextual))))
 
 (defn get-ranges
@@ -333,22 +333,22 @@
    ranges. Call getRangeSet() for the enum-based ranges.
 
   returns: the values for all the ranges to be shaped. - `int`"
-  (^Integer [^java.awt.font.NumericShaper this]
+  (^Integer [^NumericShaper this]
     (-> this (.getRanges))))
 
 (defn get-range-set
   "Returns a Set representing all the Unicode ranges in
    this NumericShaper that will be shaped.
 
-  returns: all the Unicode ranges to be shaped. - `java.util.Set<java.awt.font.NumericShaper.Range>`"
-  (^java.util.Set [^java.awt.font.NumericShaper this]
+  returns: all the Unicode ranges to be shaped. - `java.util.Set<java.awt.font.NumericShaper$Range>`"
+  (^java.util.Set [^NumericShaper this]
     (-> this (.getRangeSet))))
 
 (defn hash-code
   "Returns a hash code for this shaper.
 
   returns: this shaper's hash code. - `int`"
-  (^Integer [^java.awt.font.NumericShaper this]
+  (^Integer [^NumericShaper this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -367,7 +367,7 @@
   returns: true if o is an instance
            of NumericShaper and shapes in the same way;
            false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.NumericShaper this ^java.lang.Object o]
+  (^Boolean [^NumericShaper this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn to-string
@@ -375,6 +375,6 @@
    is used for debugging purposes only.
 
   returns: a String describing this shaper. - `java.lang.String`"
-  (^java.lang.String [^java.awt.font.NumericShaper this]
+  (^java.lang.String [^NumericShaper this]
     (-> this (.toString))))
 

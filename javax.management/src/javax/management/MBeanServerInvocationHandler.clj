@@ -55,9 +55,9 @@
   connection - the MBean server connection through which all methods of a proxy using this handler will be forwarded. - `javax.management.MBeanServerConnection`
   object-name - the name of the MBean within the MBean server to which methods will be forwarded. - `javax.management.ObjectName`
   is-mx-bean - if true, the proxy is for an MXBean, and appropriate mappings will be applied to method parameters and return values. - `boolean`"
-  ([^javax.management.MBeanServerConnection connection ^javax.management.ObjectName object-name ^Boolean is-mx-bean]
+  (^MBeanServerInvocationHandler [^javax.management.MBeanServerConnection connection ^javax.management.ObjectName object-name ^Boolean is-mx-bean]
     (new MBeanServerInvocationHandler connection object-name is-mx-bean))
-  ([^javax.management.MBeanServerConnection connection ^javax.management.ObjectName object-name]
+  (^MBeanServerInvocationHandler [^javax.management.MBeanServerConnection connection ^javax.management.ObjectName object-name]
     (new MBeanServerInvocationHandler connection object-name)))
 
 (defn *new-proxy-instance
@@ -79,7 +79,7 @@
 
   connection - the MBean server to forward to. - `javax.management.MBeanServerConnection`
   object-name - the name of the MBean within connection to forward to. - `javax.management.ObjectName`
-  interface-class - the management interface that the MBean exports, which will also be implemented by the returned proxy. - `java.lang.Class<T>`
+  interface-class - the management interface that the MBean exports, which will also be implemented by the returned proxy. - `java.lang.Class`
   notification-broadcaster - make the returned proxy implement NotificationEmitter by forwarding its methods via connection. A call to NotificationBroadcaster.addNotificationListener(javax.management.NotificationListener, javax.management.NotificationFilter, java.lang.Object) on the proxy will result in a call to MBeanServerConnection.addNotificationListener(ObjectName, NotificationListener, NotificationFilter, Object), and likewise for the other methods of NotificationBroadcaster and NotificationEmitter. - `boolean`
 
   returns: the new proxy instance. - `<T> T`"
@@ -91,7 +91,7 @@
    a proxy using this handler are forwarded.
 
   returns: the MBean server connection. - `javax.management.MBeanServerConnection`"
-  (^javax.management.MBeanServerConnection [^javax.management.MBeanServerInvocationHandler this]
+  (^javax.management.MBeanServerConnection [^MBeanServerInvocationHandler this]
     (-> this (.getMBeanServerConnection))))
 
 (defn get-object-name
@@ -99,7 +99,7 @@
    are forwarded.
 
   returns: the object name. - `javax.management.ObjectName`"
-  (^javax.management.ObjectName [^javax.management.MBeanServerInvocationHandler this]
+  (^javax.management.ObjectName [^MBeanServerInvocationHandler this]
     (-> this (.getObjectName))))
 
 (defn mx-bean?
@@ -107,7 +107,7 @@
    are applied to method parameters and return values.
 
   returns: whether the proxy is for an MXBean. - `boolean`"
-  (^Boolean [^javax.management.MBeanServerInvocationHandler this]
+  (^Boolean [^MBeanServerInvocationHandler this]
     (-> this (.isMXBean))))
 
 (defn invoke
@@ -132,6 +132,6 @@
    invocation on the proxy instance. - `java.lang.Object`
 
   throws: java.lang.Throwable - the exception to throw from the method invocation on the proxy instance. The exception's type must be assignable either to any of the exception types declared in the throws clause of the interface method or to the unchecked exception types java.lang.RuntimeException or java.lang.Error. If a checked exception is thrown by this method that is not assignable to any of the exception types declared in the throws clause of the interface method, then an UndeclaredThrowableException containing the exception that was thrown by this method will be thrown by the method invocation on the proxy instance."
-  (^java.lang.Object [^javax.management.MBeanServerInvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method args]
+  (^java.lang.Object [^MBeanServerInvocationHandler this ^java.lang.Object proxy ^java.lang.reflect.Method method args]
     (-> this (.invoke proxy method args))))
 

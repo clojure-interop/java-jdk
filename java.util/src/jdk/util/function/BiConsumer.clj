@@ -12,9 +12,9 @@
 (defn accept
   "Performs this operation on the given arguments.
 
-  t - the first input argument - `BiConsumer.T`
-  u - the second input argument - `BiConsumer.U`"
-  ([^java.util.function.BiConsumer this ^BiConsumer.T t ^BiConsumer.U u]
+  t - the first input argument - `T`
+  u - the second input argument - `U`"
+  ([^BiConsumer this t u]
     (-> this (.accept t u))))
 
 (defn and-then
@@ -24,12 +24,12 @@
    composed operation.  If performing this operation throws an exception,
    the after operation will not be performed.
 
-  after - the operation to perform after this operation - `BiConsumer.U>`
+  after - the operation to perform after this operation - `java.util.function.BiConsumer`
 
   returns: a composed BiConsumer that performs in sequence this
-   operation followed by the after operation - `default java.util.function.BiConsumer<BiConsumer.T,BiConsumer.U>`
+   operation followed by the after operation - `default java.util.function.BiConsumer<T,U>`
 
   throws: java.lang.NullPointerException - if after is null"
-  ([^java.util.function.BiConsumer this ^BiConsumer.U> after]
+  ([^BiConsumer this ^java.util.function.BiConsumer after]
     (-> this (.andThen after))))
 

@@ -20,9 +20,9 @@
    Format instance.
 
   format - Format used to dictate legal values - `java.text.DateFormat`"
-  ([^java.text.DateFormat format]
+  (^DateFormatter [^java.text.DateFormat format]
     (new DateFormatter format))
-  ([]
+  (^DateFormatter []
     (new DateFormatter )))
 
 (defn set-format
@@ -34,6 +34,6 @@
    Dateformat.getDateInstance() method.
 
   format - DateFormat instance used for converting from/to Strings - `java.text.DateFormat`"
-  ([^javax.swing.text.DateFormatter this ^java.text.DateFormat format]
+  ([^DateFormatter this ^java.text.DateFormat format]
     (-> this (.setFormat format))))
 

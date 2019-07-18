@@ -66,7 +66,7 @@
    The constructor on this class cannot be guaranteed to
    produce an object with a consistent state and may be
    removed in the future."
-  ([]
+  (^Duration []
     (new Duration )))
 
 (defn compare
@@ -90,7 +90,7 @@
      or DatatypeConstants.INDETERMINATE. - `int`
 
   throws: java.lang.UnsupportedOperationException - If the underlying implementation cannot reasonably process the request, e.g. W3C XML Schema allows for arbitrarily large/small/precise values, the request may be beyond the implementations capability."
-  (^Integer [^javax.xml.datatype.Duration this ^javax.xml.datatype.Duration duration]
+  (^Integer [^Duration this ^javax.xml.datatype.Duration duration]
     (-> this (.compare duration))))
 
 (defn get-months
@@ -101,7 +101,7 @@
    that this method works on the MONTHS field.
 
   returns: Months of this Duration. - `int`"
-  (^Integer [^javax.xml.datatype.Duration this]
+  (^Integer [^Duration this]
     (-> this (.getMonths))))
 
 (defn multiply
@@ -117,7 +117,7 @@
   factor - Factor times longer of new Duration to create. - `int`
 
   returns: New Duration that is factortimes longer than this Duration. - `javax.xml.datatype.Duration`"
-  (^javax.xml.datatype.Duration [^javax.xml.datatype.Duration this ^Integer factor]
+  (^javax.xml.datatype.Duration [^Duration this ^Integer factor]
     (-> this (.multiply factor))))
 
 (defn negate
@@ -130,7 +130,7 @@
    a new Duration object and returns it.
 
   returns: always return a non-null valid Duration object. - `javax.xml.datatype.Duration`"
-  (^javax.xml.datatype.Duration [^javax.xml.datatype.Duration this]
+  (^javax.xml.datatype.Duration [^Duration this]
     (-> this (.negate))))
 
 (defn get-hours
@@ -141,7 +141,7 @@
    that this method works on the HOURS field.
 
   returns: Hours of this Duration. - `int`"
-  (^Integer [^javax.xml.datatype.Duration this]
+  (^Integer [^Duration this]
     (-> this (.getHours))))
 
 (defn to-string
@@ -157,7 +157,7 @@
    new Duration(x.toString()).equals(x)
 
   returns: A non-null valid String representation of this Duration. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.datatype.Duration this]
+  (^java.lang.String [^Duration this]
     (-> this (.toString))))
 
 (defn normalize-with
@@ -189,7 +189,7 @@
   returns: Duration of years and months of this Duration as days. - `javax.xml.datatype.Duration`
 
   throws: java.lang.NullPointerException - If the startTimeInstant parameter is null."
-  (^javax.xml.datatype.Duration [^javax.xml.datatype.Duration this ^java.util.Calendar start-time-instant]
+  (^javax.xml.datatype.Duration [^Duration this ^java.util.Calendar start-time-instant]
     (-> this (.normalizeWith start-time-instant))))
 
 (defn add-to
@@ -229,7 +229,7 @@
   calendar - A calendar object whose value will be modified. - `java.util.Calendar`
 
   throws: java.lang.NullPointerException - if the calendar parameter is null."
-  ([^javax.xml.datatype.Duration this ^java.util.Calendar calendar]
+  ([^Duration this ^java.util.Calendar calendar]
     (-> this (.addTo calendar))))
 
 (defn longer-than?
@@ -249,7 +249,7 @@
         is longer than the given duration. false otherwise. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - If the underlying implementation cannot reasonably process the request, e.g. W3C XML Schema allows for arbitrarily large/small/precise values, the request may be beyond the implementations capability."
-  (^Boolean [^javax.xml.datatype.Duration this ^javax.xml.datatype.Duration duration]
+  (^Boolean [^Duration this ^javax.xml.datatype.Duration duration]
     (-> this (.isLongerThan duration))))
 
 (defn set?
@@ -258,12 +258,12 @@
    A field of a duration object may or may not be present.
    This method can be used to test if a field is present.
 
-  field - one of the six Field constants (YEARS,MONTHS,DAYS,HOURS, MINUTES, or SECONDS.) - `javax.xml.datatype.DatatypeConstants.Field`
+  field - one of the six Field constants (YEARS,MONTHS,DAYS,HOURS, MINUTES, or SECONDS.) - `javax.xml.datatype.DatatypeConstants$Field`
 
   returns: true if the field is present. false if not. - `boolean`
 
   throws: java.lang.NullPointerException - If the field parameter is null."
-  (^Boolean [^javax.xml.datatype.Duration this ^javax.xml.datatype.DatatypeConstants.Field field]
+  (^Boolean [^Duration this ^javax.xml.datatype.DatatypeConstants$Field field]
     (-> this (.isSet field))))
 
 (defn subtract
@@ -306,7 +306,7 @@
   returns: New Duration created from subtracting rhs from this Duration. - `javax.xml.datatype.Duration`
 
   throws: java.lang.IllegalStateException - If two durations cannot be meaningfully subtracted. For example, subtracting one day from one month causes this exception."
-  (^javax.xml.datatype.Duration [^javax.xml.datatype.Duration this ^javax.xml.datatype.Duration rhs]
+  (^javax.xml.datatype.Duration [^Duration this ^javax.xml.datatype.Duration rhs]
     (-> this (.subtract rhs))))
 
 (defn get-field
@@ -319,7 +319,7 @@
    number will be a non-negative integer. In case of seconds,
    the returned number may be a non-negative decimal value.
 
-  field - one of the six Field constants (YEARS,MONTHS,DAYS,HOURS, MINUTES, or SECONDS.) - `javax.xml.datatype.DatatypeConstants.Field`
+  field - one of the six Field constants (YEARS,MONTHS,DAYS,HOURS, MINUTES, or SECONDS.) - `javax.xml.datatype.DatatypeConstants$Field`
 
   returns: If the specified field is present, this method returns
         a non-null non-negative Number object that
@@ -329,7 +329,7 @@
         method returns a BigDecimal. - `java.lang.Number`
 
   throws: java.lang.NullPointerException - If the field is null."
-  (^java.lang.Number [^javax.xml.datatype.Duration this ^javax.xml.datatype.DatatypeConstants.Field field]
+  (^java.lang.Number [^Duration this ^javax.xml.datatype.DatatypeConstants$Field field]
     (-> this (.getField field))))
 
 (defn get-days
@@ -340,7 +340,7 @@
    that this method works on the DAYS field.
 
   returns: Days of this Duration. - `int`"
-  (^Integer [^javax.xml.datatype.Duration this]
+  (^Integer [^Duration this]
     (-> this (.getDays))))
 
 (defn get-years
@@ -354,7 +354,7 @@
    Use getField(DatatypeConstants.YEARS) to avoid possible loss of precision.
 
   returns: If the years field is present, return its value as an int, else return 0. - `int`"
-  (^Integer [^javax.xml.datatype.Duration this]
+  (^Integer [^Duration this]
     (-> this (.getYears))))
 
 (defn get-time-in-millis
@@ -380,7 +380,7 @@
      startInstant plus this Duration - `long`
 
   throws: java.lang.NullPointerException - if startInstant parameter is null."
-  (^Long [^javax.xml.datatype.Duration this ^java.util.Calendar start-instant]
+  (^Long [^Duration this ^java.util.Calendar start-instant]
     (-> this (.getTimeInMillis start-instant))))
 
 (defn get-seconds
@@ -393,7 +393,7 @@
   returns: seconds in the integer value. The fraction of seconds
      will be discarded (for example, if the actual value is 2.5,
      this method returns 2) - `int`"
-  (^Integer [^javax.xml.datatype.Duration this]
+  (^Integer [^Duration this]
     (-> this (.getSeconds))))
 
 (defn shorter-than?
@@ -406,14 +406,14 @@
      else false. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - If the underlying implementation cannot reasonably process the request, e.g. W3C XML Schema allows for arbitrarily large/small/precise values, the request may be beyond the implementations capability."
-  (^Boolean [^javax.xml.datatype.Duration this ^javax.xml.datatype.Duration duration]
+  (^Boolean [^Duration this ^javax.xml.datatype.Duration duration]
     (-> this (.isShorterThan duration))))
 
 (defn hash-code
   "Returns a hash code consistent with the definition of the equals method.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.xml.datatype.Duration this]
+  (^Integer [^Duration this]
     (-> this (.hashCode))))
 
 (defn add
@@ -456,7 +456,7 @@
   returns: non-null valid Duration object. - `javax.xml.datatype.Duration`
 
   throws: java.lang.NullPointerException - If the rhs parameter is null."
-  (^javax.xml.datatype.Duration [^javax.xml.datatype.Duration this ^javax.xml.datatype.Duration rhs]
+  (^javax.xml.datatype.Duration [^Duration this ^javax.xml.datatype.Duration rhs]
     (-> this (.add rhs))))
 
 (defn get-sign
@@ -464,7 +464,7 @@
 
   returns: -1 if this duration is negative, 0 if the duration is zero,
         and 1 if the duration is positive. - `int`"
-  (^Integer [^javax.xml.datatype.Duration this]
+  (^Integer [^Duration this]
     (-> this (.getSign))))
 
 (defn get-xml-schema-type
@@ -520,7 +520,7 @@
      DatatypeConstants.DURATION_YEARMONTH. - `javax.xml.namespace.QName`
 
   throws: java.lang.IllegalStateException - If the combination of set fields does not match one of the XML Schema date/time datatypes."
-  (^javax.xml.namespace.QName [^javax.xml.datatype.Duration this]
+  (^javax.xml.namespace.QName [^Duration this]
     (-> this (.getXMLSchemaType))))
 
 (defn get-minutes
@@ -531,7 +531,7 @@
    that this method works on the MINUTES field.
 
   returns: Minutes of this Duration. - `int`"
-  (^Integer [^javax.xml.datatype.Duration this]
+  (^Integer [^Duration this]
     (-> this (.getMinutes))))
 
 (defn equals
@@ -564,6 +564,6 @@
            or its length is different from this duration. - `boolean`
 
   throws: java.lang.UnsupportedOperationException - If the underlying implementation cannot reasonably process the request, e.g. W3C XML Schema allows for arbitrarily large/small/precise values, the request may be beyond the implementations capability."
-  (^Boolean [^javax.xml.datatype.Duration this ^java.lang.Object duration]
+  (^Boolean [^Duration this ^java.lang.Object duration]
     (-> this (.equals duration))))
 

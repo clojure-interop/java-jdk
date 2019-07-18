@@ -5,6 +5,6 @@
 
 (defn ->scroll-pane-ui
   "Constructor."
-  ([]
+  (^ScrollPaneUI []
     (new ScrollPaneUI )))
 

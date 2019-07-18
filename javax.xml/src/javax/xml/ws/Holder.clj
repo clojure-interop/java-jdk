@@ -8,10 +8,10 @@
 
   Create a new holder with the specified value.
 
-  value - The value to be stored in the holder. - `Holder.T`"
-  ([^Holder.T value]
+  value - The value to be stored in the holder. - `T`"
+  (^Holder [value]
     (new Holder value))
-  ([]
+  (^Holder []
     (new Holder )))
 
 (defn -value
@@ -19,7 +19,7 @@
 
   The value contained in the holder.
 
-  type: Holder.T"
+  type: T"
   [this]
   (-> this .-value))
 

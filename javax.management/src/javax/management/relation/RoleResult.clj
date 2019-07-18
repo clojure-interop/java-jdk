@@ -13,34 +13,34 @@
 
   list - list of roles successfully accessed. - `javax.management.relation.RoleList`
   unresolved-list - list of roles not accessed (with problem descriptions). - `javax.management.relation.RoleUnresolvedList`"
-  ([^javax.management.relation.RoleList list ^javax.management.relation.RoleUnresolvedList unresolved-list]
+  (^RoleResult [^javax.management.relation.RoleList list ^javax.management.relation.RoleUnresolvedList unresolved-list]
     (new RoleResult list unresolved-list)))
 
 (defn get-roles
   "Retrieves list of roles successfully accessed.
 
   returns: a RoleList - `javax.management.relation.RoleList`"
-  (^javax.management.relation.RoleList [^javax.management.relation.RoleResult this]
+  (^javax.management.relation.RoleList [^RoleResult this]
     (-> this (.getRoles))))
 
 (defn get-roles-unresolved
   "Retrieves list of roles unsuccessfully accessed.
 
   returns: a RoleUnresolvedList. - `javax.management.relation.RoleUnresolvedList`"
-  (^javax.management.relation.RoleUnresolvedList [^javax.management.relation.RoleResult this]
+  (^javax.management.relation.RoleUnresolvedList [^RoleResult this]
     (-> this (.getRolesUnresolved))))
 
 (defn set-roles
   "Sets list of roles successfully accessed.
 
   list - list of roles successfully accessed - `javax.management.relation.RoleList`"
-  ([^javax.management.relation.RoleResult this ^javax.management.relation.RoleList list]
+  ([^RoleResult this ^javax.management.relation.RoleList list]
     (-> this (.setRoles list))))
 
 (defn set-roles-unresolved
   "Sets list of roles unsuccessfully accessed.
 
   unresolved-list - list of roles unsuccessfully accessed - `javax.management.relation.RoleUnresolvedList`"
-  ([^javax.management.relation.RoleResult this ^javax.management.relation.RoleUnresolvedList unresolved-list]
+  ([^RoleResult this ^javax.management.relation.RoleUnresolvedList unresolved-list]
     (-> this (.setRolesUnresolved unresolved-list))))
 

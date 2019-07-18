@@ -17,6 +17,6 @@
 
 (defn ->secret-key-factory-spi
   "Constructor."
-  ([]
+  (^SecretKeyFactorySpi []
     (new SecretKeyFactorySpi )))
 

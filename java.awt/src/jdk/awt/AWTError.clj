@@ -10,6 +10,6 @@
    detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^AWTError [^java.lang.String msg]
     (new AWTError msg)))
 

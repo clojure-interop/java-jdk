@@ -15,17 +15,15 @@
 (defn ->date
   "Constructor.
 
-  Constructs a Date object using the given milliseconds
-   time value.  If the given milliseconds value contains time
-   information, the driver will set the time components to the
-   time in the default time zone (the time zone of the Java virtual
-   machine running the application) that corresponds to zero GMT.
+  Deprecated. instead use the constructor Date(long date)
 
-  date - milliseconds since January 1, 1970, 00:00:00 GMT not to exceed the milliseconds representation for the year 8099. A negative number indicates the number of milliseconds before January 1, 1970, 00:00:00 GMT. - `long`"
-  ([^Long date]
-    (new Date date))
-  ([^Integer year ^Integer month ^Integer day]
-    (new Date year month day)))
+  year - the year minus 1900; must be 0 to 8099. (Note that 8099 is 9999 minus 1900.) - `int`
+  month - 0 to 11 - `int`
+  day - 1 to 31 - `int`"
+  (^Date [^Integer year ^Integer month ^Integer day]
+    (new Date year month day))
+  (^Date [^Long date]
+    (new Date date)))
 
 (defn *value-of
   "Converts a string in JDBC date escape format to
@@ -49,7 +47,7 @@
     this Date object - `java.time.Instant`
 
   throws: java.lang.UnsupportedOperationException - if this method is invoked"
-  (^java.time.Instant [^java.sql.Date this]
+  (^java.time.Instant [^Date this]
     (-> this (.toInstant))))
 
 (defn set-seconds
@@ -57,10 +55,8 @@
 
   i - the seconds value. - `int`
 
-  returns: `java.lang.  void`
-
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([^java.sql.Date this ^Integer i]
+  ([^Date this ^Integer i]
     (-> this (.setSeconds i))))
 
 (defn set-time
@@ -72,16 +68,16 @@
    machine running the application) that corresponds to zero GMT.
 
   date - milliseconds since January 1, 1970, 00:00:00 GMT not to exceed the milliseconds representation for the year 8099. A negative number indicates the number of milliseconds before January 1, 1970, 00:00:00 GMT. - `long`"
-  ([^java.sql.Date this ^Long date]
+  ([^Date this ^Long date]
     (-> this (.setTime date))))
 
 (defn get-hours
   "Deprecated.
 
-  returns: the hour represented by this date. - `java.lang.  int`
+  returns: the hour represented by this date. - `int`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([^java.sql.Date this]
+  (^Integer [^Date this]
     (-> this (.getHours))))
 
 (defn set-hours
@@ -89,17 +85,15 @@
 
   i - the hour value. - `int`
 
-  returns: `java.lang.  void`
-
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([^java.sql.Date this ^Integer i]
+  ([^Date this ^Integer i]
     (-> this (.setHours i))))
 
 (defn to-string
   "Formats a date in the date escape format yyyy-mm-dd.
 
   returns: a String in yyyy-mm-dd format - `java.lang.String`"
-  (^java.lang.String [^java.sql.Date this]
+  (^java.lang.String [^Date this]
     (-> this (.toString))))
 
 (defn set-minutes
@@ -107,19 +101,17 @@
 
   i - the value of the minutes. - `int`
 
-  returns: `java.lang.  void`
-
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([^java.sql.Date this ^Integer i]
+  ([^Date this ^Integer i]
     (-> this (.setMinutes i))))
 
 (defn get-seconds
   "Deprecated.
 
-  returns: the number of seconds past the minute represented by this date. - `java.lang.  int`
+  returns: the number of seconds past the minute represented by this date. - `int`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([^java.sql.Date this]
+  (^Integer [^Date this]
     (-> this (.getSeconds))))
 
 (defn to-local-date
@@ -129,15 +121,15 @@
    date value as this Date in local time zone
 
   returns: a LocalDate object representing the same date value - `java.time.LocalDate`"
-  (^java.time.LocalDate [^java.sql.Date this]
+  (^java.time.LocalDate [^Date this]
     (-> this (.toLocalDate))))
 
 (defn get-minutes
   "Deprecated.
 
-  returns: the number of minutes past the hour represented by this date. - `java.lang.  int`
+  returns: the number of minutes past the hour represented by this date. - `int`
 
   throws: java.lang.IllegalArgumentException - if this method is invoked"
-  ([^java.sql.Date this]
+  (^Integer [^Date this]
     (-> this (.getMinutes))))
 

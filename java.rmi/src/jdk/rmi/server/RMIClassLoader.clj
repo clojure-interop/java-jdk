@@ -94,7 +94,7 @@
     (RMIClassLoader/loadClass codebase name default-loader))
   (^java.lang.Class [^java.net.URL codebase ^java.lang.String name]
     (RMIClassLoader/loadClass codebase name))
-  ([^java.lang.String name]
+  (^java.lang.Class [^java.lang.String name]
     (RMIClassLoader/loadClass name)))
 
 (defn *load-proxy-class
@@ -160,7 +160,7 @@
    RMIClassLoaderSpi.getClassAnnotation(Class) method
    of the provider instance, passing cl as the argument.
 
-  cl - the class to obtain the annotation for - `java.lang.Class<?>`
+  cl - the class to obtain the annotation for - `java.lang.Class`
 
   returns: a string to be used to annotate the given class when
    it gets marshalled, or null - `java.lang.String`
@@ -380,7 +380,7 @@
 
   loader - a class loader from which to get the security context - `java.lang.ClassLoader`
 
-  returns: the security context - `java.lang.   java.lang.Object`"
-  ([^java.lang.ClassLoader loader]
+  returns: the security context - `java.lang.Object`"
+  (^java.lang.Object [^java.lang.ClassLoader loader]
     (RMIClassLoader/getSecurityContext loader)))
 

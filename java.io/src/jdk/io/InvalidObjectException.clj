@@ -10,6 +10,6 @@
   Constructs an InvalidObjectException.
 
   reason - Detailed message explaining the reason for the failure. - `java.lang.String`"
-  ([^java.lang.String reason]
+  (^InvalidObjectException [^java.lang.String reason]
     (new InvalidObjectException reason)))
 

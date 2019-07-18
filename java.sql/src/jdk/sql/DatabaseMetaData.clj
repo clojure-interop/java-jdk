@@ -54,7 +54,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.nullsAreSortedHigh))))
 
 (defn auto-commit-failure-closes-all-result-sets
@@ -67,7 +67,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.autoCommitFailureClosesAllResultSets))))
 
 (defn get-database-product-version
@@ -76,7 +76,7 @@
   returns: database version number - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getDatabaseProductVersion))))
 
 (defn supports-stored-procedures
@@ -86,7 +86,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsStoredProcedures))))
 
 (defn get-max-columns-in-table
@@ -97,7 +97,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxColumnsInTable))))
 
 (defn get-functions
@@ -140,7 +140,7 @@
   returns: ResultSet - each row is a function description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String function-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String function-name-pattern]
     (-> this (.getFunctions catalog schema-pattern function-name-pattern))))
 
 (defn get-max-statement-length
@@ -152,7 +152,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxStatementLength))))
 
 (defn supports-statement-pooling
@@ -161,7 +161,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsStatementPooling))))
 
 (defn others-deletes-are-visible
@@ -174,7 +174,7 @@
           false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type]
+  (^Boolean [^DatabaseMetaData this ^Integer type]
     (-> this (.othersDeletesAreVisible type))))
 
 (defn get-exported-keys
@@ -244,7 +244,7 @@
            foreign key column description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table]
     (-> this (.getExportedKeys catalog schema table))))
 
 (defn stores-lower-case-quoted-identifiers
@@ -254,7 +254,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.storesLowerCaseQuotedIdentifiers))))
 
 (defn supports-ansi-92-entry-level-sql
@@ -264,7 +264,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsANSI92EntryLevelSQL))))
 
 (defn stores-upper-case-quoted-identifiers
@@ -274,7 +274,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.storesUpperCaseQuotedIdentifiers))))
 
 (defn others-updates-are-visible
@@ -287,7 +287,7 @@
           false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type]
+  (^Boolean [^DatabaseMetaData this ^Integer type]
     (-> this (.othersUpdatesAreVisible type))))
 
 (defn get-max-columns-in-group-by
@@ -299,7 +299,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxColumnsInGroupBy))))
 
 (defn updates-are-detected
@@ -312,7 +312,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type]
+  (^Boolean [^DatabaseMetaData this ^Integer type]
     (-> this (.updatesAreDetected type))))
 
 (defn own-updates-are-visible
@@ -325,7 +325,7 @@
           false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type]
+  (^Boolean [^DatabaseMetaData this ^Integer type]
     (-> this (.ownUpdatesAreVisible type))))
 
 (defn uses-local-files
@@ -334,7 +334,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.usesLocalFiles))))
 
 (defn supports-batch-updates
@@ -344,7 +344,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsBatchUpdates))))
 
 (defn get-extra-name-characters
@@ -354,7 +354,7 @@
   returns: the string containing the extra characters - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getExtraNameCharacters))))
 
 (defn get-database-minor-version
@@ -363,7 +363,7 @@
   returns: underlying database's minor version - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getDatabaseMinorVersion))))
 
 (defn get-max-index-length
@@ -376,7 +376,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxIndexLength))))
 
 (defn get-type-info
@@ -443,7 +443,7 @@
            type description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this]
+  (^java.sql.ResultSet [^DatabaseMetaData this]
     (-> this (.getTypeInfo))))
 
 (defn supports-limited-outer-joins
@@ -454,7 +454,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsLimitedOuterJoins))))
 
 (defn supports-convert
@@ -469,9 +469,9 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer from-type ^Integer to-type]
+  (^Boolean [^DatabaseMetaData this ^Integer from-type ^Integer to-type]
     (-> this (.supportsConvert from-type to-type)))
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsConvert))))
 
 (defn supports-column-aliasing
@@ -484,7 +484,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsColumnAliasing))))
 
 (defn supports-schemas-in-table-definitions
@@ -493,7 +493,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSchemasInTableDefinitions))))
 
 (defn get-max-connections
@@ -505,7 +505,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxConnections))))
 
 (defn stores-mixed-case-identifiers
@@ -515,7 +515,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.storesMixedCaseIdentifiers))))
 
 (defn get-procedure-term
@@ -524,7 +524,7 @@
   returns: the vendor term for `procedure` - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getProcedureTerm))))
 
 (defn supports-positioned-delete
@@ -534,7 +534,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsPositionedDelete))))
 
 (defn get-primary-keys
@@ -559,7 +559,7 @@
   returns: ResultSet - each row is a primary key column description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table]
     (-> this (.getPrimaryKeys catalog schema table))))
 
 (defn stores-mixed-case-quoted-identifiers
@@ -569,7 +569,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.storesMixedCaseQuotedIdentifiers))))
 
 (defn supports-select-for-update
@@ -579,7 +579,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSelectForUpdate))))
 
 (defn get-max-logical-lob-size
@@ -592,7 +592,7 @@
    means that there is no limit or the limit is not known - `default long`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^java.sql.DatabaseMetaData this]
+  ([^DatabaseMetaData this]
     (-> this (.getMaxLogicalLobSize))))
 
 (defn get-identifier-quote-string
@@ -602,7 +602,7 @@
   returns: the quoting string or a space if quoting is not supported - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getIdentifierQuoteString))))
 
 (defn supports-schemas-in-index-definitions
@@ -611,7 +611,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSchemasInIndexDefinitions))))
 
 (defn get-max-procedure-name-length
@@ -623,7 +623,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxProcedureNameLength))))
 
 (defn get-max-columns-in-index
@@ -634,7 +634,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxColumnsInIndex))))
 
 (defn get-schemas
@@ -654,9 +654,9 @@
            schema description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern]
     (-> this (.getSchemas catalog schema-pattern)))
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this]
+  (^java.sql.ResultSet [^DatabaseMetaData this]
     (-> this (.getSchemas))))
 
 (defn supports-subqueries-in-comparisons
@@ -666,7 +666,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSubqueriesInComparisons))))
 
 (defn data-definition-causes-transaction-commit
@@ -676,7 +676,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.dataDefinitionCausesTransactionCommit))))
 
 (defn supports-savepoints
@@ -686,7 +686,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSavepoints))))
 
 (defn supports-integrity-enhancement-facility
@@ -696,7 +696,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsIntegrityEnhancementFacility))))
 
 (defn get-columns
@@ -781,7 +781,7 @@
   returns: ResultSet - each row is a column description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String table-name-pattern ^java.lang.String column-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String table-name-pattern ^java.lang.String column-name-pattern]
     (-> this (.getColumns catalog schema-pattern table-name-pattern column-name-pattern))))
 
 (defn supports-schemas-in-procedure-calls
@@ -790,7 +790,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSchemasInProcedureCalls))))
 
 (defn get-jdbc-minor-version
@@ -800,7 +800,7 @@
   returns: JDBC version minor number - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getJDBCMinorVersion))))
 
 (defn get-table-types
@@ -817,7 +817,7 @@
            single String column that is a table type - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this]
+  (^java.sql.ResultSet [^DatabaseMetaData this]
     (-> this (.getTableTypes))))
 
 (defn get-tables
@@ -857,7 +857,7 @@
   returns: ResultSet - each row is a table description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String table-name-pattern types]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String table-name-pattern types]
     (-> this (.getTables catalog schema-pattern table-name-pattern types))))
 
 (defn get-row-id-lifetime
@@ -879,7 +879,7 @@
   returns: the status indicating the lifetime of a RowId - `java.sql.RowIdLifetime`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.RowIdLifetime [^java.sql.DatabaseMetaData this]
+  (^java.sql.RowIdLifetime [^DatabaseMetaData this]
     (-> this (.getRowIdLifetime))))
 
 (defn supports-data-definition-and-data-manipulation-transactions
@@ -889,7 +889,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsDataDefinitionAndDataManipulationTransactions))))
 
 (defn supports-ansi-92-intermediate-sql
@@ -898,7 +898,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsANSI92IntermediateSQL))))
 
 (defn get-version-columns
@@ -940,7 +940,7 @@
            column description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table]
     (-> this (.getVersionColumns catalog schema table))))
 
 (defn supports-ref-cursors
@@ -952,7 +952,7 @@
            false otherwise - `default boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^java.sql.DatabaseMetaData this]
+  ([^DatabaseMetaData this]
     (-> this (.supportsRefCursors))))
 
 (defn supports-schemas-in-data-manipulation
@@ -961,7 +961,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSchemasInDataManipulation))))
 
 (defn get-user-name
@@ -970,7 +970,7 @@
   returns: the database user name - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getUserName))))
 
 (defn supports-like-escape-clause
@@ -980,7 +980,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsLikeEscapeClause))))
 
 (defn supports-catalogs-in-privilege-definitions
@@ -989,14 +989,14 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsCatalogsInPrivilegeDefinitions))))
 
 (defn get-driver-minor-version
   "Retrieves this JDBC driver's minor version number.
 
   returns: JDBC driver minor version number - `int`"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getDriverMinorVersion))))
 
 (defn get-time-date-functions
@@ -1006,7 +1006,7 @@
   returns: the list of time and date functions supported by this database - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getTimeDateFunctions))))
 
 (defn get-column-privileges
@@ -1036,7 +1036,7 @@
   returns: ResultSet - each row is a column privilege description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table ^java.lang.String column-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table ^java.lang.String column-name-pattern]
     (-> this (.getColumnPrivileges catalog schema table column-name-pattern))))
 
 (defn get-imported-keys
@@ -1105,7 +1105,7 @@
   returns: ResultSet - each row is a primary key column description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table]
     (-> this (.getImportedKeys catalog schema table))))
 
 (defn get-search-string-escape
@@ -1121,7 +1121,7 @@
   returns: the string used to escape wildcard characters - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getSearchStringEscape))))
 
 (defn supports-core-sql-grammar
@@ -1130,7 +1130,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsCoreSQLGrammar))))
 
 (defn get-driver-name
@@ -1139,7 +1139,7 @@
   returns: JDBC driver name - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getDriverName))))
 
 (defn supports-subqueries-in-quantifieds
@@ -1149,7 +1149,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSubqueriesInQuantifieds))))
 
 (defn supports-get-generated-keys
@@ -1162,7 +1162,7 @@
    returning of auto-generated keys for at least SQL INSERT statements - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsGetGeneratedKeys))))
 
 (defn supports-positioned-update
@@ -1172,7 +1172,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsPositionedUpdate))))
 
 (defn supports-expressions-in-order-by
@@ -1182,7 +1182,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsExpressionsInOrderBy))))
 
 (defn get-max-binary-literal-length
@@ -1194,7 +1194,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxBinaryLiteralLength))))
 
 (defn get-result-set-holdability
@@ -1206,7 +1206,7 @@
            ResultSet.CLOSE_CURSORS_AT_COMMIT - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getResultSetHoldability))))
 
 (defn get-client-info-properties
@@ -1228,7 +1228,7 @@
    property - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this]
+  (^java.sql.ResultSet [^DatabaseMetaData this]
     (-> this (.getClientInfoProperties))))
 
 (defn get-schema-term
@@ -1237,7 +1237,7 @@
   returns: the vendor term for `schema` - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getSchemaTerm))))
 
 (defn supports-subqueries-in-ins
@@ -1247,7 +1247,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSubqueriesInIns))))
 
 (defn get-best-row-identifier
@@ -1295,7 +1295,7 @@
   returns: ResultSet - each row is a column description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table ^Integer scope ^Boolean nullable]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table ^Integer scope ^Boolean nullable]
     (-> this (.getBestRowIdentifier catalog schema table scope nullable))))
 
 (defn get-catalogs
@@ -1310,7 +1310,7 @@
            single String column that is a catalog name - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this]
+  (^java.sql.ResultSet [^DatabaseMetaData this]
     (-> this (.getCatalogs))))
 
 (defn supports-transactions
@@ -1322,7 +1322,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsTransactions))))
 
 (defn supports-subqueries-in-exists
@@ -1332,7 +1332,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSubqueriesInExists))))
 
 (defn supports-catalogs-in-procedure-calls
@@ -1341,7 +1341,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsCatalogsInProcedureCalls))))
 
 (defn null-plus-non-null-is-null
@@ -1352,7 +1352,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.nullPlusNonNullIsNull))))
 
 (defn get-max-column-name-length
@@ -1364,7 +1364,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxColumnNameLength))))
 
 (defn supports-different-table-correlation-names
@@ -1374,7 +1374,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsDifferentTableCorrelationNames))))
 
 (defn get-max-tables-in-select
@@ -1386,7 +1386,7 @@
            the limit is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxTablesInSelect))))
 
 (defn generated-key-always-returned
@@ -1399,7 +1399,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.generatedKeyAlwaysReturned))))
 
 (defn get-max-columns-in-select
@@ -1411,7 +1411,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxColumnsInSelect))))
 
 (defn get-sql-keywords
@@ -1422,7 +1422,7 @@
            SQL:2003 keywords - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getSQLKeywords))))
 
 (defn own-inserts-are-visible
@@ -1434,7 +1434,7 @@
           false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type]
+  (^Boolean [^DatabaseMetaData this ^Integer type]
     (-> this (.ownInsertsAreVisible type))))
 
 (defn others-inserts-are-visible
@@ -1447,7 +1447,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type]
+  (^Boolean [^DatabaseMetaData this ^Integer type]
     (-> this (.othersInsertsAreVisible type))))
 
 (defn get-system-functions
@@ -1458,7 +1458,7 @@
   returns: a list of system functions supported by this database - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getSystemFunctions))))
 
 (defn get-super-tables
@@ -1491,7 +1491,7 @@
   returns: a ResultSet object in which each row is a type description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String table-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String table-name-pattern]
     (-> this (.getSuperTables catalog schema-pattern table-name-pattern))))
 
 (defn supports-table-correlation-names
@@ -1500,7 +1500,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsTableCorrelationNames))))
 
 (defn all-procedures-are-callable
@@ -1510,7 +1510,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.allProceduresAreCallable))))
 
 (defn get-procedures
@@ -1552,7 +1552,7 @@
   returns: ResultSet - each row is a procedure description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String procedure-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String procedure-name-pattern]
     (-> this (.getProcedures catalog schema-pattern procedure-name-pattern))))
 
 (defn supports-transaction-isolation-level
@@ -1563,7 +1563,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer level]
+  (^Boolean [^DatabaseMetaData this ^Integer level]
     (-> this (.supportsTransactionIsolationLevel level))))
 
 (defn get-max-user-name-length
@@ -1575,7 +1575,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxUserNameLength))))
 
 (defn supports-named-parameters
@@ -1586,7 +1586,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsNamedParameters))))
 
 (defn get-max-char-literal-length
@@ -1598,7 +1598,7 @@
         not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxCharLiteralLength))))
 
 (defn supports-open-cursors-across-rollback
@@ -1609,7 +1609,7 @@
          false if they might not remain open - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsOpenCursorsAcrossRollback))))
 
 (defn get-index-info
@@ -1660,7 +1660,7 @@
   returns: ResultSet - each row is an index column description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table ^Boolean unique ^Boolean approximate]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema ^java.lang.String table ^Boolean unique ^Boolean approximate]
     (-> this (.getIndexInfo catalog schema table unique approximate))))
 
 (defn inserts-are-detected
@@ -1673,7 +1673,7 @@
            set type; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type]
+  (^Boolean [^DatabaseMetaData this ^Integer type]
     (-> this (.insertsAreDetected type))))
 
 (defn all-tables-are-selectable
@@ -1684,7 +1684,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.allTablesAreSelectable))))
 
 (defn supports-result-set-holdability
@@ -1695,7 +1695,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer holdability]
+  (^Boolean [^DatabaseMetaData this ^Integer holdability]
     (-> this (.supportsResultSetHoldability holdability))))
 
 (defn get-max-row-size
@@ -1706,7 +1706,7 @@
            zero means that there is no limit or the limit is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxRowSize))))
 
 (defn get-string-functions
@@ -1717,7 +1717,7 @@
   returns: the list of string functions supported by this database - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getStringFunctions))))
 
 (defn get-ud-ts
@@ -1760,7 +1760,7 @@
   returns: ResultSet object in which each row describes a UDT - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String type-name-pattern types]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String type-name-pattern types]
     (-> this (.getUDTs catalog schema-pattern type-name-pattern types))))
 
 (defn get-database-product-name
@@ -1769,7 +1769,7 @@
   returns: database product name - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getDatabaseProductName))))
 
 (defn supports-union-all
@@ -1778,7 +1778,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsUnionAll))))
 
 (defn supports-full-outer-joins
@@ -1787,7 +1787,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsFullOuterJoins))))
 
 (defn get-numeric-functions
@@ -1798,7 +1798,7 @@
   returns: the list of math functions supported by this database - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getNumericFunctions))))
 
 (defn supports-multiple-transactions
@@ -1808,7 +1808,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsMultipleTransactions))))
 
 (defn supports-catalogs-in-table-definitions
@@ -1817,7 +1817,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsCatalogsInTableDefinitions))))
 
 (defn supports-order-by-unrelated
@@ -1828,7 +1828,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsOrderByUnrelated))))
 
 (defn supports-minimum-sql-grammar
@@ -1837,7 +1837,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsMinimumSQLGrammar))))
 
 (defn get-sql-state-type
@@ -1849,7 +1849,7 @@
           sqlStateSQL - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getSQLStateType))))
 
 (defn locators-update-copy
@@ -1860,7 +1860,7 @@
            false if updates are made directly to the LOB - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.locatorsUpdateCopy))))
 
 (defn get-max-schema-name-length
@@ -1872,7 +1872,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxSchemaNameLength))))
 
 (defn supports-union
@@ -1881,7 +1881,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsUnion))))
 
 (defn does-max-row-size-include-blobs
@@ -1892,7 +1892,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.doesMaxRowSizeIncludeBlobs))))
 
 (defn get-default-transaction-isolation
@@ -1902,7 +1902,7 @@
   returns: the default isolation level - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getDefaultTransactionIsolation))))
 
 (defn supports-group-by-unrelated
@@ -1913,7 +1913,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsGroupByUnrelated))))
 
 (defn supports-data-manipulation-transactions-only
@@ -1923,7 +1923,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsDataManipulationTransactionsOnly))))
 
 (defn get-catalog-separator
@@ -1933,7 +1933,7 @@
   returns: the separator string - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getCatalogSeparator))))
 
 (defn supports-group-by
@@ -1943,7 +1943,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsGroupBy))))
 
 (defn get-max-cursor-name-length
@@ -1955,7 +1955,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxCursorNameLength))))
 
 (defn get-connection
@@ -1964,7 +1964,7 @@
   returns: the connection that produced this metadata object - `java.sql.Connection`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.Connection [^java.sql.DatabaseMetaData this]
+  (^java.sql.Connection [^DatabaseMetaData this]
     (-> this (.getConnection))))
 
 (defn supports-catalogs-in-data-manipulation
@@ -1973,7 +1973,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsCatalogsInDataManipulation))))
 
 (defn get-pseudo-columns
@@ -2029,7 +2029,7 @@
   returns: ResultSet - each row is a column description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String table-name-pattern ^java.lang.String column-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String table-name-pattern ^java.lang.String column-name-pattern]
     (-> this (.getPseudoColumns catalog schema-pattern table-name-pattern column-name-pattern))))
 
 (defn supports-correlated-subqueries
@@ -2038,7 +2038,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsCorrelatedSubqueries))))
 
 (defn supports-stored-functions-using-call-syntax
@@ -2048,7 +2048,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsStoredFunctionsUsingCallSyntax))))
 
 (defn nulls-are-sorted-at-end
@@ -2058,7 +2058,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.nullsAreSortedAtEnd))))
 
 (defn get-catalog-term
@@ -2067,7 +2067,7 @@
   returns: the vendor term for `catalog` - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getCatalogTerm))))
 
 (defn supports-alter-table-with-drop-column
@@ -2077,7 +2077,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsAlterTableWithDropColumn))))
 
 (defn get-procedure-columns
@@ -2165,7 +2165,7 @@
         column - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String procedure-name-pattern ^java.lang.String column-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String procedure-name-pattern ^java.lang.String column-name-pattern]
     (-> this (.getProcedureColumns catalog schema-pattern procedure-name-pattern column-name-pattern))))
 
 (defn supports-multiple-result-sets
@@ -2176,7 +2176,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsMultipleResultSets))))
 
 (defn stores-upper-case-identifiers
@@ -2186,7 +2186,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.storesUpperCaseIdentifiers))))
 
 (defn supports-alter-table-with-add-column
@@ -2196,7 +2196,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsAlterTableWithAddColumn))))
 
 (defn get-url
@@ -2206,7 +2206,7 @@
             generated - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getURL))))
 
 (defn own-deletes-are-visible
@@ -2218,14 +2218,14 @@
           false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type]
+  (^Boolean [^DatabaseMetaData this ^Integer type]
     (-> this (.ownDeletesAreVisible type))))
 
 (defn get-driver-major-version
   "Retrieves this JDBC driver's major version number.
 
   returns: JDBC driver major version - `int`"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getDriverMajorVersion))))
 
 (defn data-definition-ignored-in-transactions
@@ -2235,7 +2235,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.dataDefinitionIgnoredInTransactions))))
 
 (defn get-cross-reference
@@ -2309,7 +2309,7 @@
   returns: ResultSet - each row is a foreign key column description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String parent-catalog ^java.lang.String parent-schema ^java.lang.String parent-table ^java.lang.String foreign-catalog ^java.lang.String foreign-schema ^java.lang.String foreign-table]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String parent-catalog ^java.lang.String parent-schema ^java.lang.String parent-table ^java.lang.String foreign-catalog ^java.lang.String foreign-schema ^java.lang.String foreign-table]
     (-> this (.getCrossReference parent-catalog parent-schema parent-table foreign-catalog foreign-schema foreign-table))))
 
 (defn supports-outer-joins
@@ -2318,7 +2318,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsOuterJoins))))
 
 (defn get-driver-version
@@ -2327,7 +2327,7 @@
   returns: JDBC driver version - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.DatabaseMetaData this]
+  (^java.lang.String [^DatabaseMetaData this]
     (-> this (.getDriverVersion))))
 
 (defn supports-group-by-beyond-select
@@ -2339,7 +2339,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsGroupByBeyondSelect))))
 
 (defn read-only?
@@ -2348,7 +2348,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.isReadOnly))))
 
 (defn supports-open-statements-across-commit
@@ -2359,7 +2359,7 @@
          false if they might not remain open - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsOpenStatementsAcrossCommit))))
 
 (defn supports-extended-sql-grammar
@@ -2368,7 +2368,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsExtendedSQLGrammar))))
 
 (defn supports-mixed-case-quoted-identifiers
@@ -2378,7 +2378,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsMixedCaseQuotedIdentifiers))))
 
 (defn supports-mixed-case-identifiers
@@ -2388,7 +2388,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsMixedCaseIdentifiers))))
 
 (defn get-max-catalog-name-length
@@ -2400,7 +2400,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxCatalogNameLength))))
 
 (defn stores-lower-case-identifiers
@@ -2410,7 +2410,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.storesLowerCaseIdentifiers))))
 
 (defn supports-result-set-concurrency
@@ -2423,7 +2423,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type ^Integer concurrency]
+  (^Boolean [^DatabaseMetaData this ^Integer type ^Integer concurrency]
     (-> this (.supportsResultSetConcurrency type concurrency))))
 
 (defn nulls-are-sorted-low
@@ -2438,7 +2438,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.nullsAreSortedLow))))
 
 (defn supports-catalogs-in-index-definitions
@@ -2447,7 +2447,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsCatalogsInIndexDefinitions))))
 
 (defn supports-non-nullable-columns
@@ -2456,7 +2456,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsNonNullableColumns))))
 
 (defn get-jdbc-major-version
@@ -2466,7 +2466,7 @@
   returns: JDBC version major number - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getJDBCMajorVersion))))
 
 (defn get-max-columns-in-order-by
@@ -2478,7 +2478,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxColumnsInOrderBy))))
 
 (defn uses-local-file-per-table
@@ -2488,7 +2488,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.usesLocalFilePerTable))))
 
 (defn supports-open-cursors-across-commit
@@ -2499,7 +2499,7 @@
          false if they might not remain open - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsOpenCursorsAcrossCommit))))
 
 (defn nulls-are-sorted-at-start
@@ -2509,7 +2509,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.nullsAreSortedAtStart))))
 
 (defn get-attributes
@@ -2581,7 +2581,7 @@
            attribute description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String type-name-pattern ^java.lang.String attribute-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String type-name-pattern ^java.lang.String attribute-name-pattern]
     (-> this (.getAttributes catalog schema-pattern type-name-pattern attribute-name-pattern))))
 
 (defn get-table-privileges
@@ -2616,7 +2616,7 @@
   returns: ResultSet - each row is a table privilege description - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String table-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String table-name-pattern]
     (-> this (.getTablePrivileges catalog schema-pattern table-name-pattern))))
 
 (defn catalog-at-start?
@@ -2627,7 +2627,7 @@
            of a fully qualified table name; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.isCatalogAtStart))))
 
 (defn supports-open-statements-across-rollback
@@ -2638,7 +2638,7 @@
          false if they might not remain open - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsOpenStatementsAcrossRollback))))
 
 (defn supports-ansi-92-full-sql
@@ -2647,7 +2647,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsANSI92FullSQL))))
 
 (defn supports-multiple-open-results
@@ -2660,7 +2660,7 @@
            simultaneously; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a datanase access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsMultipleOpenResults))))
 
 (defn get-max-statements
@@ -2672,7 +2672,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxStatements))))
 
 (defn get-database-major-version
@@ -2681,7 +2681,7 @@
   returns: the underlying database's major version - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getDatabaseMajorVersion))))
 
 (defn supports-result-set-type
@@ -2692,7 +2692,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type]
+  (^Boolean [^DatabaseMetaData this ^Integer type]
     (-> this (.supportsResultSetType type))))
 
 (defn deletes-are-detected
@@ -2707,7 +2707,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this ^Integer type]
+  (^Boolean [^DatabaseMetaData this ^Integer type]
     (-> this (.deletesAreDetected type))))
 
 (defn get-max-table-name-length
@@ -2719,7 +2719,7 @@
         is not known - `int`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Integer [^java.sql.DatabaseMetaData this]
+  (^Integer [^DatabaseMetaData this]
     (-> this (.getMaxTableNameLength))))
 
 (defn get-function-columns
@@ -2807,7 +2807,7 @@
    user function parameter, column  or return type - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String function-name-pattern ^java.lang.String column-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String function-name-pattern ^java.lang.String column-name-pattern]
     (-> this (.getFunctionColumns catalog schema-pattern function-name-pattern column-name-pattern))))
 
 (defn supports-schemas-in-privilege-definitions
@@ -2816,7 +2816,7 @@
   returns: true if so; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^Boolean [^java.sql.DatabaseMetaData this]
+  (^Boolean [^DatabaseMetaData this]
     (-> this (.supportsSchemasInPrivilegeDefinitions))))
 
 (defn get-super-types
@@ -2856,6 +2856,6 @@
            about the designated UDT - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.sql.ResultSet [^java.sql.DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String type-name-pattern]
+  (^java.sql.ResultSet [^DatabaseMetaData this ^java.lang.String catalog ^java.lang.String schema-pattern ^java.lang.String type-name-pattern]
     (-> this (.getSuperTypes catalog schema-pattern type-name-pattern))))
 

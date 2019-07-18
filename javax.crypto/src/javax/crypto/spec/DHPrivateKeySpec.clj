@@ -17,27 +17,27 @@
   x - private value x - `java.math.BigInteger`
   p - prime modulus p - `java.math.BigInteger`
   g - base generator g - `java.math.BigInteger`"
-  ([^java.math.BigInteger x ^java.math.BigInteger p ^java.math.BigInteger g]
+  (^DHPrivateKeySpec [^java.math.BigInteger x ^java.math.BigInteger p ^java.math.BigInteger g]
     (new DHPrivateKeySpec x p g)))
 
 (defn get-x
   "Returns the private value x.
 
   returns: the private value x - `java.math.BigInteger`"
-  (^java.math.BigInteger [^javax.crypto.spec.DHPrivateKeySpec this]
+  (^java.math.BigInteger [^DHPrivateKeySpec this]
     (-> this (.getX))))
 
 (defn get-p
   "Returns the prime modulus p.
 
   returns: the prime modulus p - `java.math.BigInteger`"
-  (^java.math.BigInteger [^javax.crypto.spec.DHPrivateKeySpec this]
+  (^java.math.BigInteger [^DHPrivateKeySpec this]
     (-> this (.getP))))
 
 (defn get-g
   "Returns the base generator g.
 
   returns: the base generator g - `java.math.BigInteger`"
-  (^java.math.BigInteger [^javax.crypto.spec.DHPrivateKeySpec this]
+  (^java.math.BigInteger [^DHPrivateKeySpec this]
     (-> this (.getG))))
 

@@ -36,20 +36,20 @@
    complete the close operation.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.nio.channels.spi.AbstractSelector this]
+  ([^AbstractSelector this]
     (-> this (.close))))
 
 (defn open?
   "Description copied from class: Selector
 
   returns: true if, and only if, this selector is open - `boolean`"
-  (^Boolean [^java.nio.channels.spi.AbstractSelector this]
+  (^Boolean [^AbstractSelector this]
     (-> this (.isOpen))))
 
 (defn provider
   "Returns the provider that created this channel.
 
   returns: The provider that created this channel - `java.nio.channels.spi.SelectorProvider`"
-  (^java.nio.channels.spi.SelectorProvider [^java.nio.channels.spi.AbstractSelector this]
+  (^java.nio.channels.spi.SelectorProvider [^AbstractSelector this]
     (-> this (.provider))))
 

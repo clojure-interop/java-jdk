@@ -22,12 +22,12 @@
    the order of entry set iteration (if an iteration order is specified.)
    Exceptions thrown by the action are relayed to the caller.
 
-  action - The action to be performed for each entry - `ConcurrentMap.V>`
+  action - The action to be performed for each entry - `java.util.function.BiConsumer`
 
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.V> action]
+  ([^ConcurrentMap this ^java.util.function.BiConsumer action]
     (-> this (.forEach action))))
 
 (defn replace-all
@@ -36,12 +36,12 @@
    function throws an exception.  Exceptions thrown by the function are
    relayed to the caller.
 
-  function - the function to apply to each entry - `ConcurrentMap.V>`
+  function - the function to apply to each entry - `java.util.function.BiFunction`
 
   returns: `default void`
 
   throws: java.lang.UnsupportedOperationException - if the set operation is not supported by this map's entry set iterator."
-  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.V> function]
+  ([^ConcurrentMap this ^java.util.function.BiFunction function]
     (-> this (.replaceAll function))))
 
 (defn put-if-absent
@@ -57,17 +57,17 @@
 
    except that the action is performed atomically.
 
-  key - key with which the specified value is to be associated - `ConcurrentMap.K`
-  value - value to be associated with the specified key - `ConcurrentMap.V`
+  key - key with which the specified value is to be associated - `K`
+  value - value to be associated with the specified key - `V`
 
   returns: the previous value associated with the specified key, or
            null if there was no mapping for the key.
            (A null return can also indicate that the map
            previously associated null with the key,
-           if the implementation supports null values.) - `ConcurrentMap.V`
+           if the implementation supports null values.) - `V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map"
-  (^ConcurrentMap.V [^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V value]
+  ([^ConcurrentMap this key value]
     (-> this (.putIfAbsent key value))))
 
 (defn get-or-default
@@ -75,13 +75,13 @@
    defaultValue if this map contains no mapping for the key.
 
   key - the key whose associated value is to be returned - `java.lang.Object`
-  default-value - the default mapping of the key - `ConcurrentMap.V`
+  default-value - the default mapping of the key - `V`
 
   returns: the value to which the specified key is mapped, or
-   defaultValue if this map contains no mapping for the key - `default ConcurrentMap.V`
+   defaultValue if this map contains no mapping for the key - `default V`
 
   throws: java.lang.ClassCastException - if the key is of an inappropriate type for this map (optional)"
-  ([^java.util.concurrent.ConcurrentMap this ^java.lang.Object key ^ConcurrentMap.V default-value]
+  ([^ConcurrentMap this ^java.lang.Object key default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn replace
@@ -97,16 +97,16 @@
 
    except that the action is performed atomically.
 
-  key - key with which the specified value is associated - `ConcurrentMap.K`
-  old-value - value expected to be associated with the specified key - `ConcurrentMap.V`
-  new-value - value to be associated with the specified key - `ConcurrentMap.V`
+  key - key with which the specified value is associated - `K`
+  old-value - value expected to be associated with the specified key - `V`
+  new-value - value to be associated with the specified key - `V`
 
   returns: true if the value was replaced - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map"
-  (^Boolean [^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V old-value ^ConcurrentMap.V new-value]
+  (^Boolean [^ConcurrentMap this key old-value new-value]
     (-> this (.replace key old-value new-value)))
-  (^ConcurrentMap.V [^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V value]
+  ([^ConcurrentMap this key value]
     (-> this (.replace key value))))
 
 (defn remove
@@ -128,7 +128,7 @@
   returns: true if the value was removed - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the remove operation is not supported by this map"
-  (^Boolean [^java.util.concurrent.ConcurrentMap this ^java.lang.Object key ^java.lang.Object value]
+  (^Boolean [^ConcurrentMap this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value))))
 
 (defn compute-if-present
@@ -139,13 +139,13 @@
    function itself throws an (unchecked) exception, the exception is
    rethrown, and the current mapping is left unchanged.
 
-  key - key with which the specified value is to be associated - `ConcurrentMap.K`
-  remapping-function - the function to compute a value - `ConcurrentMap.V>`
+  key - key with which the specified value is to be associated - `K`
+  remapping-function - the function to compute a value - `java.util.function.BiFunction`
 
-  returns: the new value associated with the specified key, or null if none - `default ConcurrentMap.V`
+  returns: the new value associated with the specified key, or null if none - `default V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V> remapping-function]
+  ([^ConcurrentMap this key ^java.util.function.BiFunction remapping-function]
     (-> this (.computeIfPresent key remapping-function))))
 
 (defn merge
@@ -165,15 +165,15 @@
    function itself throws an (unchecked) exception, the exception is
    rethrown, and the current mapping is left unchanged.
 
-  key - key with which the resulting value is to be associated - `ConcurrentMap.K`
-  value - the non-null value to be merged with the existing value associated with the key or, if no existing value or a null value is associated with the key, to be associated with the key - `ConcurrentMap.V`
-  remapping-function - the function to recompute a value if present - `ConcurrentMap.V>`
+  key - key with which the resulting value is to be associated - `K`
+  value - the non-null value to be merged with the existing value associated with the key or, if no existing value or a null value is associated with the key, to be associated with the key - `V`
+  remapping-function - the function to recompute a value if present - `java.util.function.BiFunction`
 
   returns: the new value associated with the specified key, or null if no
-           value is associated with the key - `default ConcurrentMap.V`
+           value is associated with the key - `default V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V value ^ConcurrentMap.V> remapping-function]
+  ([^ConcurrentMap this key value ^java.util.function.BiFunction remapping-function]
     (-> this (.merge key value remapping-function))))
 
 (defn compute
@@ -192,13 +192,13 @@
    (unchecked) exception, the exception is rethrown, and the current mapping
    is left unchanged.
 
-  key - key with which the specified value is to be associated - `ConcurrentMap.K`
-  remapping-function - the function to compute a value - `ConcurrentMap.V>`
+  key - key with which the specified value is to be associated - `K`
+  remapping-function - the function to compute a value - `java.util.function.BiFunction`
 
-  returns: the new value associated with the specified key, or null if none - `default ConcurrentMap.V`
+  returns: the new value associated with the specified key, or null if none - `default V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V> remapping-function]
+  ([^ConcurrentMap this key ^java.util.function.BiFunction remapping-function]
     (-> this (.compute key remapping-function))))
 
 (defn compute-if-absent
@@ -223,13 +223,13 @@
 
    map.computeIfAbsent(key, k -> new HashSet<V>()).add(v);
 
-  key - key with which the specified value is to be associated - `ConcurrentMap.K`
-  mapping-function - the function to compute a value - `ConcurrentMap.V>`
+  key - key with which the specified value is to be associated - `K`
+  mapping-function - the function to compute a value - `java.util.function.Function`
 
   returns: the current (existing or computed) value associated with
-           the specified key, or null if the computed value is null - `default ConcurrentMap.V`
+           the specified key, or null if the computed value is null - `default V`
 
   throws: java.lang.UnsupportedOperationException - if the put operation is not supported by this map (optional)"
-  ([^java.util.concurrent.ConcurrentMap this ^ConcurrentMap.K key ^ConcurrentMap.V> mapping-function]
+  ([^ConcurrentMap this key ^java.util.function.Function mapping-function]
     (-> this (.computeIfAbsent key mapping-function))))
 

@@ -45,10 +45,10 @@
    defaultAction.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariableAsLocalVariable e p))))
 
 (defn visit-type-as-interface
@@ -56,20 +56,20 @@
   .
 
   e - the element to visit - `javax.lang.model.element.TypeElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.TypeElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.TypeElement e p]
     (-> this (.visitTypeAsInterface e p))))
 
 (defn visit-type-as-enum
   "Visits an ENUM type element by calling defaultAction.
 
   e - the element to visit - `javax.lang.model.element.TypeElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.TypeElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.TypeElement e p]
     (-> this (.visitTypeAsEnum e p))))
 
 (defn visit-executable-as-constructor
@@ -77,10 +77,10 @@
    defaultAction.
 
   e - the element to visit - `javax.lang.model.element.ExecutableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.ExecutableElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.ExecutableElement e p]
     (-> this (.visitExecutableAsConstructor e p))))
 
 (defn visit-variable-as-field
@@ -88,10 +88,10 @@
    defaultAction.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariableAsField e p))))
 
 (defn visit-package
@@ -100,10 +100,10 @@
    The element argument has kind PACKAGE.
 
   e - the element to visit - `javax.lang.model.element.PackageElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.PackageElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.PackageElement e p]
     (-> this (.visitPackage e p))))
 
 (defn visit-variable-as-resource-variable
@@ -111,10 +111,10 @@
    visitUnknown.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of visitUnknown - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e ^ElementKindVisitor6.P p]
+  returns: the result of visitUnknown - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariableAsResourceVariable e p))))
 
 (defn visit-variable-as-enum-constant
@@ -122,10 +122,10 @@
    defaultAction.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariableAsEnumConstant e p))))
 
 (defn visit-type-as-annotation-type
@@ -133,10 +133,10 @@
    defaultAction.
 
   e - the element to visit - `javax.lang.model.element.TypeElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.TypeElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.TypeElement e p]
     (-> this (.visitTypeAsAnnotationType e p))))
 
 (defn visit-executable
@@ -146,10 +146,10 @@
    STATIC_INIT.
 
   e - the element to visit - `javax.lang.model.element.ExecutableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the kind-specific visit method - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.ExecutableElement e ^ElementKindVisitor6.P p]
+  returns: the result of the kind-specific visit method - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.ExecutableElement e p]
     (-> this (.visitExecutable e p))))
 
 (defn visit-executable-as-method
@@ -157,10 +157,10 @@
    defaultAction.
 
   e - the element to visit - `javax.lang.model.element.ExecutableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.ExecutableElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.ExecutableElement e p]
     (-> this (.visitExecutableAsMethod e p))))
 
 (defn visit-executable-as-static-init
@@ -168,10 +168,10 @@
    defaultAction.
 
   e - the element to visit - `javax.lang.model.element.ExecutableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.ExecutableElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.ExecutableElement e p]
     (-> this (.visitExecutableAsStaticInit e p))))
 
 (defn visit-type
@@ -179,10 +179,10 @@
    specific javax.lang.model.element.kind of type, ANNOTATION_TYPE, CLASS, ENUM, or INTERFACE.
 
   e - the element to visit - `javax.lang.model.element.TypeElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the kind-specific visit method - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.TypeElement e ^ElementKindVisitor6.P p]
+  returns: the result of the kind-specific visit method - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.TypeElement e p]
     (-> this (.visitType e p))))
 
 (defn visit-variable-as-exception-parameter
@@ -190,10 +190,10 @@
    defaultAction.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariableAsExceptionParameter e p))))
 
 (defn visit-type-parameter
@@ -202,10 +202,10 @@
    The element argument has kind TYPE_PARAMETER.
 
   e - the element to visit - `javax.lang.model.element.TypeParameterElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.TypeParameterElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.TypeParameterElement e p]
     (-> this (.visitTypeParameter e p))))
 
 (defn visit-variable-as-parameter
@@ -213,20 +213,20 @@
    defaultAction.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariableAsParameter e p))))
 
 (defn visit-type-as-class
   "Visits a CLASS type element by calling defaultAction.
 
   e - the element to visit - `javax.lang.model.element.TypeElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.TypeElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.TypeElement e p]
     (-> this (.visitTypeAsClass e p))))
 
 (defn visit-variable
@@ -235,10 +235,10 @@
    LOCAL_VARIABLE, PARAMETER, or RESOURCE_VARIABLE.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the kind-specific visit method - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e ^ElementKindVisitor6.P p]
+  returns: the result of the kind-specific visit method - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariable e p))))
 
 (defn visit-executable-as-instance-init
@@ -246,9 +246,9 @@
    defaultAction.
 
   e - the element to visit - `javax.lang.model.element.ExecutableElement`
-  p - a visitor-specified parameter - `ElementKindVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `ElementKindVisitor6.R`"
-  (^ElementKindVisitor6.R [^javax.lang.model.util.ElementKindVisitor6 this ^javax.lang.model.element.ExecutableElement e ^ElementKindVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^ElementKindVisitor6 this ^javax.lang.model.element.ExecutableElement e p]
     (-> this (.visitExecutableAsInstanceInit e p))))
 

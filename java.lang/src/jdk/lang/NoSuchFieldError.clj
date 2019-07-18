@@ -15,8 +15,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^NoSuchFieldError [^java.lang.String s]
     (new NoSuchFieldError s))
-  ([]
+  (^NoSuchFieldError []
     (new NoSuchFieldError )))
 

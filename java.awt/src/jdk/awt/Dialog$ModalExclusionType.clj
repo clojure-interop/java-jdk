@@ -7,7 +7,7 @@
 
   No modal exclusion.
 
-  type: java.awt.Dialog.ModalExclusionType"
+  type: java.awt.Dialog$ModalExclusionType"
   Dialog$ModalExclusionType/NO_EXCLUDE)
 
 (def APPLICATION_EXCLUDE
@@ -17,7 +17,7 @@
    won't be blocked by any application-modal dialogs. Also, it isn't
    blocked by document-modal dialogs from outside of its child hierarchy.
 
-  type: java.awt.Dialog.ModalExclusionType"
+  type: java.awt.Dialog$ModalExclusionType"
   Dialog$ModalExclusionType/APPLICATION_EXCLUDE)
 
 (def TOOLKIT_EXCLUDE
@@ -33,7 +33,7 @@
    SecurityEcxeption will be thrown, and the exclusion
    property will be left unchanged.
 
-  type: java.awt.Dialog.ModalExclusionType"
+  type: java.awt.Dialog$ModalExclusionType"
   Dialog$ModalExclusionType/TOOLKIT_EXCLUDE)
 
 (defn *values
@@ -45,7 +45,7 @@
   for (Dialog.ModalExclusionType c : Dialog.ModalExclusionType.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.Dialog.ModalExclusionType[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.Dialog$ModalExclusionType[]`"
   ([]
     (Dialog$ModalExclusionType/values )))
 
@@ -57,9 +57,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.awt.Dialog.ModalExclusionType`
+  returns: the enum constant with the specified name - `java.awt.Dialog$ModalExclusionType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.awt.Dialog.ModalExclusionType [^java.lang.String name]
+  (^java.awt.Dialog$ModalExclusionType [^java.lang.String name]
     (Dialog$ModalExclusionType/valueOf name)))
 

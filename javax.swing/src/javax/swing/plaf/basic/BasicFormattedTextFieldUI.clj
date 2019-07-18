@@ -6,7 +6,7 @@
 
 (defn ->basic-formatted-text-field-ui
   "Constructor."
-  ([]
+  (^BasicFormattedTextFieldUI []
     (new BasicFormattedTextFieldUI )))
 
 (defn *create-ui

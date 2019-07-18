@@ -89,11 +89,11 @@
   load-factor - the load factor of the linked hash set - `float`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is less than zero, or if the load factor is nonpositive"
-  ([^Integer initial-capacity ^Float load-factor]
+  (^LinkedHashSet [^Integer initial-capacity ^Float load-factor]
     (new LinkedHashSet initial-capacity load-factor))
-  ([^Integer initial-capacity]
+  (^LinkedHashSet [^Integer initial-capacity]
     (new LinkedHashSet initial-capacity))
-  ([]
+  (^LinkedHashSet []
     (new LinkedHashSet )))
 
 (defn spliterator
@@ -104,7 +104,7 @@
    Spliterator.DISTINCT, and ORDERED.  Implementations
    should document the reporting of additional characteristic values.
 
-  returns: a Spliterator over the elements in this set - `java.util.Spliterator<LinkedHashSet.E>`"
-  (^java.util.Spliterator [^java.util.LinkedHashSet this]
+  returns: a Spliterator over the elements in this set - `java.util.Spliterator<E>`"
+  (^java.util.Spliterator [^LinkedHashSet this]
     (-> this (.spliterator))))
 

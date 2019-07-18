@@ -15,6 +15,6 @@
 
   returns: true if this cookie should be accepted;
                     otherwise, false - `boolean`"
-  (^Boolean [^java.net.CookiePolicy this ^java.net.URI uri ^java.net.HttpCookie cookie]
+  (^Boolean [^CookiePolicy this ^java.net.URI uri ^java.net.HttpCookie cookie]
     (-> this (.shouldAccept uri cookie))))
 

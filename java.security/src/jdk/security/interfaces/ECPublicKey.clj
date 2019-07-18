@@ -7,6 +7,6 @@
   "Returns the public point W.
 
   returns: the public point W. - `java.security.spec.ECPoint`"
-  (^java.security.spec.ECPoint [^java.security.interfaces.ECPublicKey this]
+  (^java.security.spec.ECPoint [^ECPublicKey this]
     (-> this (.getW))))
 

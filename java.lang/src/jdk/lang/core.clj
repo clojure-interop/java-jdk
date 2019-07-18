@@ -30,7 +30,7 @@
 (require '[jdk.lang.Compiler])
 (require '[jdk.lang.Deprecated])
 (require '[jdk.lang.Double])
-(require '[jdk.lang.Enum>])
+(require '[jdk.lang.Enum])
 (require '[jdk.lang.EnumConstantNotPresentException])
 (require '[jdk.lang.Error])
 (require '[jdk.lang.Exception])

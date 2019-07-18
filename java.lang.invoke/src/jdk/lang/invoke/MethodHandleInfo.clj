@@ -109,13 +109,13 @@
    getDeclaredMethod, getDeclaredConstructor, or getDeclaredField.
    The underlying member must be accessible to the given lookup object.
 
-  expected - a class object representing the desired result type T - `java.lang.Class<T>`
-  lookup - the lookup object that created this MethodHandleInfo, or one with equivalent access privileges - `java.lang.invoke.MethodHandles.Lookup`
+  expected - a class object representing the desired result type T - `java.lang.Class`
+  lookup - the lookup object that created this MethodHandleInfo, or one with equivalent access privileges - `java.lang.invoke.MethodHandles$Lookup`
 
   returns: a reference to the method, constructor, or field object - `<T extends java.lang.reflect.Member> T`
 
   throws: java.lang.ClassCastException - if the member is not of the expected type"
-  ([^java.lang.invoke.MethodHandleInfo this ^java.lang.Class expected ^java.lang.invoke.MethodHandles.Lookup lookup]
+  ([^MethodHandleInfo this ^java.lang.Class expected ^java.lang.invoke.MethodHandles$Lookup lookup]
     (-> this (.reflectAs expected lookup))))
 
 (defn is-var-args
@@ -123,7 +123,7 @@
    Such members are represented by method handles that are varargs collectors.
 
   returns: true if and only if the underlying member was declared with variable arity. - `default boolean`"
-  ([^java.lang.invoke.MethodHandleInfo this]
+  ([^MethodHandleInfo this]
     (-> this (.isVarArgs))))
 
 (defn get-modifiers
@@ -131,7 +131,7 @@
 
   returns: the Java language modifiers for underlying member,
            or -1 if the member cannot be accessed - `int`"
-  (^Integer [^java.lang.invoke.MethodHandleInfo this]
+  (^Integer [^MethodHandleInfo this]
     (-> this (.getModifiers))))
 
 (defn *to-string
@@ -150,7 +150,7 @@
    of a MethodHandleInfo object.
 
   kind - the reference kind part of the symbolic reference - `int`
-  defc - the declaring class part of the symbolic reference - `java.lang.Class<?>`
+  defc - the declaring class part of the symbolic reference - `java.lang.Class`
   name - the member name part of the symbolic reference - `java.lang.String`
   type - the method type part of the symbolic reference - `java.lang.invoke.MethodType`
 
@@ -166,7 +166,7 @@
    else it is a simple method name or field name.
 
   returns: the simple name of the underlying member - `java.lang.String`"
-  (^java.lang.String [^java.lang.invoke.MethodHandleInfo this]
+  (^java.lang.String [^MethodHandleInfo this]
     (-> this (.getName))))
 
 (defn get-method-type
@@ -185,7 +185,7 @@
    and (in the case of a constructor) will return void.
 
   returns: the type of the underlying member, expressed as a method type - `java.lang.invoke.MethodType`"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodHandleInfo this]
+  (^java.lang.invoke.MethodType [^MethodHandleInfo this]
     (-> this (.getMethodType))))
 
 (defn get-reference-kind
@@ -194,13 +194,13 @@
    See the table above for definitions.
 
   returns: the integer code for the kind of reference used to access the underlying member - `int`"
-  (^Integer [^java.lang.invoke.MethodHandleInfo this]
+  (^Integer [^MethodHandleInfo this]
     (-> this (.getReferenceKind))))
 
 (defn get-declaring-class
   "Returns the class in which the cracked method handle's underlying member was defined.
 
   returns: the declaring class of the underlying member - `java.lang.Class<?>`"
-  (^java.lang.Class [^java.lang.invoke.MethodHandleInfo this]
+  (^java.lang.Class [^MethodHandleInfo this]
     (-> this (.getDeclaringClass))))
 

@@ -12,6 +12,6 @@
    exception.
 
   msg - the detail message - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^AWTException [^java.lang.String msg]
     (new AWTException msg)))
 

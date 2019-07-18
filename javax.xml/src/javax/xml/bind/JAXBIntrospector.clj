@@ -16,7 +16,7 @@
 
 (defn ->jaxb-introspector
   "Constructor."
-  ([]
+  (^JAXBIntrospector []
     (new JAXBIntrospector )))
 
 (defn *get-value
@@ -43,7 +43,7 @@
   object - `java.lang.Object`
 
   returns: `boolean`"
-  (^Boolean [^javax.xml.bind.JAXBIntrospector this ^java.lang.Object object]
+  (^Boolean [^JAXBIntrospector this ^java.lang.Object object]
     (-> this (.isElement object))))
 
 (defn get-element-name
@@ -53,6 +53,6 @@
 
   returns: xml element qname associated with jaxbElement;
            null if jaxbElement is not a JAXB Element. - `javax.xml.namespace.QName`"
-  (^javax.xml.namespace.QName [^javax.xml.bind.JAXBIntrospector this ^java.lang.Object jaxb-element]
+  (^javax.xml.namespace.QName [^JAXBIntrospector this ^java.lang.Object jaxb-element]
     (-> this (.getElementName jaxb-element))))
 

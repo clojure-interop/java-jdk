@@ -83,7 +83,7 @@
             call. - `boolean`
 
   throws: javax.print.attribute.UnmodifiableSetException - (Unchecked exception) Thrown if this attribute set does not support the addAll(AttributeSet) method."
-  (^Boolean [^javax.print.attribute.AttributeSet this ^javax.print.attribute.AttributeSet attributes]
+  (^Boolean [^AttributeSet this ^javax.print.attribute.AttributeSet attributes]
     (-> this (.addAll attributes))))
 
 (defn contains-value
@@ -94,7 +94,7 @@
 
   returns: true if this attribute set contains the given
         attribute  value. - `boolean`"
-  (^Boolean [^javax.print.attribute.AttributeSet this ^javax.print.attribute.Attribute attribute]
+  (^Boolean [^AttributeSet this ^javax.print.attribute.Attribute attribute]
     (-> this (.containsValue attribute))))
 
 (defn remove
@@ -102,14 +102,14 @@
    present. If category is null, then
    remove() does nothing and returns false.
 
-  category - Attribute category to be removed from this attribute set. - `java.lang.Class<?>`
+  category - Attribute category to be removed from this attribute set. - `java.lang.Class`
 
   returns: true if this attribute set changed as a result of the
            call, i.e., the given attribute value had been a member of this
             attribute set. - `boolean`
 
   throws: javax.print.attribute.UnmodifiableSetException - (unchecked exception) Thrown if this attribute set does not support the remove() operation."
-  (^Boolean [^javax.print.attribute.AttributeSet this ^java.lang.Class category]
+  (^Boolean [^AttributeSet this ^java.lang.Class category]
     (-> this (.remove category))))
 
 (defn hash-code
@@ -122,7 +122,7 @@
    Object.hashCode().
 
   returns: The hash code value for this attribute set. - `int`"
-  (^Integer [^javax.print.attribute.AttributeSet this]
+  (^Integer [^AttributeSet this]
     (-> this (.hashCode))))
 
 (defn add
@@ -137,14 +137,14 @@
             of this attribute set. - `boolean`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if the attribute is null."
-  (^Boolean [^javax.print.attribute.AttributeSet this ^javax.print.attribute.Attribute attribute]
+  (^Boolean [^AttributeSet this ^javax.print.attribute.Attribute attribute]
     (-> this (.add attribute))))
 
 (defn empty?
   "Returns true if this attribute set contains no attributes.
 
   returns: true if this attribute set contains no attributes. - `boolean`"
-  (^Boolean [^javax.print.attribute.AttributeSet this]
+  (^Boolean [^AttributeSet this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -153,14 +153,14 @@
    returns  Integer.MAX_VALUE.
 
   returns: The number of attributes in this attribute set. - `int`"
-  (^Integer [^javax.print.attribute.AttributeSet this]
+  (^Integer [^AttributeSet this]
     (-> this (.size))))
 
 (defn clear
   "Removes all attributes from this attribute set.
 
   throws: javax.print.attribute.UnmodifiableSetException - (unchecked exception) Thrown if this attribute set does not support the clear() operation."
-  ([^javax.print.attribute.AttributeSet this]
+  ([^AttributeSet this]
     (-> this (.clear))))
 
 (defn to-array
@@ -168,18 +168,18 @@
 
   returns: the Attributes contained in this set as an array, zero length
    if the AttributeSet is empty. - `javax.print.attribute.Attribute[]`"
-  ([^javax.print.attribute.AttributeSet this]
+  ([^AttributeSet this]
     (-> this (.toArray))))
 
 (defn contains-key
   "Returns true if this attribute set contains an
    attribute for the specified category.
 
-  category - whose presence in this attribute set is to be tested. - `java.lang.Class<?>`
+  category - whose presence in this attribute set is to be tested. - `java.lang.Class`
 
   returns: true if this attribute set contains an attribute
            value for the specified category. - `boolean`"
-  (^Boolean [^javax.print.attribute.AttributeSet this ^java.lang.Class category]
+  (^Boolean [^AttributeSet this ^java.lang.Class category]
     (-> this (.containsKey category))))
 
 (defn get
@@ -187,7 +187,7 @@
    given attribute category. Returns null if this attribute set
    does not contain any attribute value in the given attribute category.
 
-  category - Attribute category whose associated attribute value is to be returned. It must be a Class that implements interface Attribute. - `java.lang.Class<?>`
+  category - Attribute category whose associated attribute value is to be returned. It must be a Class that implements interface Attribute. - `java.lang.Class`
 
   returns: The attribute value in the given attribute category contained
             in this attribute set, or null if this attribute set
@@ -195,7 +195,7 @@
             category. - `javax.print.attribute.Attribute`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if the category is null."
-  (^javax.print.attribute.Attribute [^javax.print.attribute.AttributeSet this ^java.lang.Class category]
+  (^javax.print.attribute.Attribute [^AttributeSet this ^java.lang.Class category]
     (-> this (.get category))))
 
 (defn equals
@@ -210,6 +210,6 @@
 
   returns: true if the specified object is equal to this
          attribute   set. - `boolean`"
-  (^Boolean [^javax.print.attribute.AttributeSet this ^java.lang.Object object]
+  (^Boolean [^AttributeSet this ^java.lang.Object object]
     (-> this (.equals object))))
 

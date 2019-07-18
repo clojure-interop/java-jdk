@@ -46,7 +46,7 @@
   units - Unit conversion factor, e.g. ResolutionSyntax.DPI or ResolutionSyntax.DPCM. - `int`
 
   throws: java.lang.IllegalArgumentException - (unchecked exception) Thrown if crossFeedResolution < 1 or feedResolution < 1 or units < 1."
-  ([^Integer cross-feed-resolution ^Integer feed-resolution ^Integer units]
+  (^PrinterResolution [^Integer cross-feed-resolution ^Integer feed-resolution ^Integer units]
     (new PrinterResolution cross-feed-resolution feed-resolution units)))
 
 (defn equals
@@ -69,7 +69,7 @@
 
   returns: True if object is equivalent to this printer
             resolution attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.PrinterResolution this ^java.lang.Object object]
+  (^Boolean [^PrinterResolution this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -80,7 +80,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.PrinterResolution this]
+  ([^PrinterResolution this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -91,6 +91,6 @@
    category name is `printer-resolution`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.PrinterResolution this]
+  (^java.lang.String [^PrinterResolution this]
     (-> this (.getName))))
 

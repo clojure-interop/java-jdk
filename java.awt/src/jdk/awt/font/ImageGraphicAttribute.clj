@@ -18,9 +18,9 @@
   alignment - one of the alignments from this ImageGraphicAttribute - `int`
   origin-x - the X coordinate of the point within the Image that appears at the origin of the ImageGraphicAttribute in the text line. - `float`
   origin-y - the Y coordinate of the point within the Image that appears at the origin of the ImageGraphicAttribute in the text line. - `float`"
-  ([^java.awt.Image image ^Integer alignment ^Float origin-x ^Float origin-y]
+  (^ImageGraphicAttribute [^java.awt.Image image ^Integer alignment ^Float origin-x ^Float origin-y]
     (new ImageGraphicAttribute image alignment origin-x origin-y))
-  ([^java.awt.Image image ^Integer alignment]
+  (^ImageGraphicAttribute [^java.awt.Image image ^Integer alignment]
     (new ImageGraphicAttribute image alignment)))
 
 (defn get-ascent
@@ -29,7 +29,7 @@
    from the top of the image to the origin.
 
   returns: the ascent of this ImageGraphicAttribute. - `float`"
-  (^Float [^java.awt.font.ImageGraphicAttribute this]
+  (^Float [^ImageGraphicAttribute this]
     (-> this (.getAscent))))
 
 (defn get-descent
@@ -38,7 +38,7 @@
    distance from the origin to the bottom of the image.
 
   returns: the descent of this ImageGraphicAttribute. - `float`"
-  (^Float [^java.awt.font.ImageGraphicAttribute this]
+  (^Float [^ImageGraphicAttribute this]
     (-> this (.getDescent))))
 
 (defn get-advance
@@ -47,7 +47,7 @@
    distance from the origin to the right edge of the image.
 
   returns: the advance of this ImageGraphicAttribute. - `float`"
-  (^Float [^java.awt.font.ImageGraphicAttribute this]
+  (^Float [^ImageGraphicAttribute this]
     (-> this (.getAdvance))))
 
 (defn get-bounds
@@ -59,7 +59,7 @@
 
   returns: a Rectangle2D that encloses all of the bits
    rendered by this ImageGraphicAttribute. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.font.ImageGraphicAttribute this]
+  (^java.awt.geom.Rectangle2D [^ImageGraphicAttribute this]
     (-> this (.getBounds))))
 
 (defn draw
@@ -69,14 +69,14 @@
   graphics - the Graphics2D into which to render the graphic - `java.awt.Graphics2D`
   x - the user-space X coordinate where the graphic is rendered - `float`
   y - the user-space Y coordinate where the graphic is rendered - `float`"
-  ([^java.awt.font.ImageGraphicAttribute this ^java.awt.Graphics2D graphics ^Float x ^Float y]
+  ([^ImageGraphicAttribute this ^java.awt.Graphics2D graphics ^Float x ^Float y]
     (-> this (.draw graphics x y))))
 
 (defn hash-code
   "Returns a hashcode for this ImageGraphicAttribute.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.font.ImageGraphicAttribute this]
+  (^Integer [^ImageGraphicAttribute this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -88,6 +88,6 @@
   returns: true if this
    ImageGraphicAttribute equals rhs;
    false otherwise. - `boolean`"
-  (^Boolean [^java.awt.font.ImageGraphicAttribute this ^java.lang.Object rhs]
+  (^Boolean [^ImageGraphicAttribute this ^java.lang.Object rhs]
     (-> this (.equals rhs))))
 

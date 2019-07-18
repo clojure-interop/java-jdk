@@ -14,7 +14,7 @@
   "Constructor.
 
   is-collapsed - `boolean`"
-  ([^Boolean is-collapsed]
+  (^MetalIconFactory$TreeControlIcon [^Boolean is-collapsed]
     (new MetalIconFactory$TreeControlIcon is-collapsed)))
 
 (defn paint-icon
@@ -24,7 +24,7 @@
   g - `java.awt.Graphics`
   x - `int`
   y - `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$TreeControlIcon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
+  ([^MetalIconFactory$TreeControlIcon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
     (-> this (.paintIcon c g x y))))
 
 (defn paint-me
@@ -32,20 +32,20 @@
   g - `java.awt.Graphics`
   x - `int`
   y - `int`"
-  ([^javax.swing.plaf.metal.MetalIconFactory$TreeControlIcon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
+  ([^MetalIconFactory$TreeControlIcon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
     (-> this (.paintMe c g x y))))
 
 (defn get-icon-width
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$TreeControlIcon this]
+  (^Integer [^MetalIconFactory$TreeControlIcon this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Description copied from interface: Icon
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$TreeControlIcon this]
+  (^Integer [^MetalIconFactory$TreeControlIcon this]
     (-> this (.getIconHeight))))
 

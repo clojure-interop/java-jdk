@@ -37,7 +37,7 @@
   returns: `javax.xml.soap.DetailEntry`
 
   throws: javax.xml.soap.SOAPException - thrown when there is a problem in adding a DetailEntry object to this Detail object."
-  (^javax.xml.soap.DetailEntry [^javax.xml.soap.Detail this ^javax.xml.soap.Name name]
+  (^javax.xml.soap.DetailEntry [^Detail this ^javax.xml.soap.Name name]
     (-> this (.addDetailEntry name))))
 
 (defn get-detail-entries
@@ -45,6 +45,6 @@
 
   returns: an Iterator object over the DetailEntry
                objects in this Detail object - `java.util.Iterator`"
-  (^java.util.Iterator [^javax.xml.soap.Detail this]
+  (^java.util.Iterator [^Detail this]
     (-> this (.getDetailEntries))))
 

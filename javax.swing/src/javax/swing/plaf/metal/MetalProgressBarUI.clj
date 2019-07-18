@@ -14,7 +14,7 @@
 
 (defn ->metal-progress-bar-ui
   "Constructor."
-  ([]
+  (^MetalProgressBarUI []
     (new MetalProgressBarUI )))
 
 (defn *create-ui
@@ -31,7 +31,7 @@
 
   g - `java.awt.Graphics`
   c - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalProgressBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^MetalProgressBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paintDeterminate g c))))
 
 (defn paint-indeterminate
@@ -42,6 +42,6 @@
 
   g - `java.awt.Graphics`
   c - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.metal.MetalProgressBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^MetalProgressBarUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paintIndeterminate g c))))
 

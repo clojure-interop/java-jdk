@@ -52,7 +52,7 @@
    name for a base type that is a UDT - `java.lang.String`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the type name"
-  (^java.lang.String [^java.sql.Array this]
+  (^java.lang.String [^Array this]
     (-> this (.getBaseTypeName))))
 
 (defn get-base-type
@@ -64,7 +64,7 @@
    Array object - `int`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the base type"
-  (^Integer [^java.sql.Array this]
+  (^Integer [^Array this]
     (-> this (.getBaseType))))
 
 (defn get-array
@@ -88,7 +88,7 @@
 
   index - the array index of the first element to retrieve; the first element is at index 1 - `long`
   count - the number of successive SQL array elements to retrieve - `int`
-  map - a java.util.Map object that contains SQL type names and the classes in the Java programming language to which they are mapped - `java.util.Map<java.lang.String,java.lang.Class<?>>`
+  map - a java.util.Map object that contains SQL type names and the classes in the Java programming language to which they are mapped - `java.util.Map`
 
   returns: an array containing up to count
    consecutive elements of the SQL ARRAY value designated by this
@@ -96,13 +96,13 @@
    index - `java.lang.Object`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the array"
-  (^java.lang.Object [^java.sql.Array this ^Long index ^Integer count ^java.util.Map> map]
+  (^java.lang.Object [^Array this ^Long index ^Integer count ^java.util.Map map]
     (-> this (.getArray index count map)))
-  (^java.lang.Object [^java.sql.Array this ^Long index ^Integer count]
+  (^java.lang.Object [^Array this ^Long index ^Integer count]
     (-> this (.getArray index count)))
-  (^java.lang.Object [^java.sql.Array this ^java.util.Map> map]
+  (^java.lang.Object [^Array this ^java.util.Map map]
     (-> this (.getArray map)))
-  (^java.lang.Object [^java.sql.Array this]
+  (^java.lang.Object [^Array this]
     (-> this (.getArray))))
 
 (defn get-result-set
@@ -127,7 +127,7 @@
 
   index - the array index of the first element to retrieve; the first element is at index 1 - `long`
   count - the number of successive SQL array elements to retrieve - `int`
-  map - the Map object that contains the mapping of SQL type names to classes in the Java(tm) programming language - `java.util.Map<java.lang.String,java.lang.Class<?>>`
+  map - the Map object that contains the mapping of SQL type names to classes in the Java(tm) programming language - `java.util.Map`
 
   returns: a ResultSet object containing up to
    count consecutive elements of the SQL array
@@ -135,13 +135,13 @@
    index index. - `java.sql.ResultSet`
 
   throws: java.sql.SQLException - if an error occurs while attempting to access the array"
-  (^java.sql.ResultSet [^java.sql.Array this ^Long index ^Integer count ^java.util.Map> map]
+  (^java.sql.ResultSet [^Array this ^Long index ^Integer count ^java.util.Map map]
     (-> this (.getResultSet index count map)))
-  (^java.sql.ResultSet [^java.sql.Array this ^Long index ^Integer count]
+  (^java.sql.ResultSet [^Array this ^Long index ^Integer count]
     (-> this (.getResultSet index count)))
-  (^java.sql.ResultSet [^java.sql.Array this ^java.util.Map> map]
+  (^java.sql.ResultSet [^Array this ^java.util.Map map]
     (-> this (.getResultSet map)))
-  (^java.sql.ResultSet [^java.sql.Array this]
+  (^java.sql.ResultSet [^Array this]
     (-> this (.getResultSet))))
 
 (defn free
@@ -155,6 +155,6 @@
    calls to free are treated as a no-op.
 
   throws: java.sql.SQLException - if an error occurs releasing the Array's resources"
-  ([^java.sql.Array this]
+  ([^Array this]
     (-> this (.free))))
 

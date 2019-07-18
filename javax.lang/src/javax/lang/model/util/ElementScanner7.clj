@@ -50,9 +50,9 @@
   "This implementation scans the enclosed elements.
 
   e - the element to visit - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `ElementScanner7.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of scanning - `ElementScanner7.R`"
-  (^ElementScanner7.R [^javax.lang.model.util.ElementScanner7 this ^javax.lang.model.element.VariableElement e ^ElementScanner7.P p]
+  returns: the result of scanning - `R`"
+  ([^ElementScanner7 this ^javax.lang.model.element.VariableElement e p]
     (-> this (.visitVariable e p))))
 

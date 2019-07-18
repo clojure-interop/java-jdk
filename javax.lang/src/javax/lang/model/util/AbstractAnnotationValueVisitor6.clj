@@ -36,12 +36,12 @@
    v.visit(av) is equivalent to av.accept(v, p).
 
   av - the value to visit - `javax.lang.model.element.AnnotationValue`
-  p - a visitor-specified parameter - `AbstractAnnotationValueVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: a visitor-specified result - `AbstractAnnotationValueVisitor6.R`"
-  (^AbstractAnnotationValueVisitor6.R [^javax.lang.model.util.AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av ^AbstractAnnotationValueVisitor6.P p]
+  returns: a visitor-specified result - `R`"
+  ([^AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av p]
     (-> this (.visit av p)))
-  (^AbstractAnnotationValueVisitor6.R [^javax.lang.model.util.AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av]
+  ([^AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av]
     (-> this (.visit av))))
 
 (defn visit-unknown
@@ -53,9 +53,9 @@
    required of a subclass.
 
   av - the unknown value being visited - `javax.lang.model.element.AnnotationValue`
-  p - a visitor-specified parameter - `AbstractAnnotationValueVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AbstractAnnotationValueVisitor6.R`"
-  (^AbstractAnnotationValueVisitor6.R [^javax.lang.model.util.AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av ^AbstractAnnotationValueVisitor6.P p]
+  returns: the result of the visit - `R`"
+  ([^AbstractAnnotationValueVisitor6 this ^javax.lang.model.element.AnnotationValue av p]
     (-> this (.visitUnknown av p))))
 

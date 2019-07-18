@@ -14,6 +14,6 @@
 
 (defn ->cannot-undo-exception
   "Constructor."
-  ([]
+  (^CannotUndoException []
     (new CannotUndoException )))
 

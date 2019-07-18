@@ -12,7 +12,7 @@
    vertical alignment of TOP should have a
    baseline type of CONSTANT_ASCENT.
 
-  type: java.awt.Component.BaselineResizeBehavior"
+  type: java.awt.Component$BaselineResizeBehavior"
   Component$BaselineResizeBehavior/CONSTANT_ASCENT)
 
 (def CONSTANT_DESCENT
@@ -26,7 +26,7 @@
    vertical alignment of BOTTOM should have a
    baseline type of CONSTANT_DESCENT.
 
-  type: java.awt.Component.BaselineResizeBehavior"
+  type: java.awt.Component$BaselineResizeBehavior"
   Component$BaselineResizeBehavior/CONSTANT_DESCENT)
 
 (def CENTER_OFFSET
@@ -68,7 +68,7 @@
      // the height z:
      int calculatedBaseline = (z  padding) / 2  baselineOffset;
 
-  type: java.awt.Component.BaselineResizeBehavior"
+  type: java.awt.Component$BaselineResizeBehavior"
   Component$BaselineResizeBehavior/CENTER_OFFSET)
 
 (def OTHER
@@ -79,7 +79,7 @@
    varies with the width of the component.  This is also returned
    by components that do not have a baseline.
 
-  type: java.awt.Component.BaselineResizeBehavior"
+  type: java.awt.Component$BaselineResizeBehavior"
   Component$BaselineResizeBehavior/OTHER)
 
 (defn *values
@@ -91,7 +91,7 @@
   for (Component.BaselineResizeBehavior c : Component.BaselineResizeBehavior.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.Component.BaselineResizeBehavior[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.awt.Component$BaselineResizeBehavior[]`"
   ([]
     (Component$BaselineResizeBehavior/values )))
 
@@ -103,9 +103,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.awt.Component.BaselineResizeBehavior`
+  returns: the enum constant with the specified name - `java.awt.Component$BaselineResizeBehavior`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.awt.Component.BaselineResizeBehavior [^java.lang.String name]
+  (^java.awt.Component$BaselineResizeBehavior [^java.lang.String name]
     (Component$BaselineResizeBehavior/valueOf name)))
 

@@ -41,14 +41,14 @@
 
   accumulator-function - a side-effect-free function of two arguments - `java.util.function.DoubleBinaryOperator`
   identity - identity (initial value) for the accumulator function - `double`"
-  ([^java.util.function.DoubleBinaryOperator accumulator-function ^Double identity]
+  (^DoubleAccumulator [^java.util.function.DoubleBinaryOperator accumulator-function ^Double identity]
     (new DoubleAccumulator accumulator-function identity)))
 
 (defn double-value
   "Equivalent to get().
 
   returns: the current value - `double`"
-  (^Double [^java.util.concurrent.atomic.DoubleAccumulator this]
+  (^Double [^DoubleAccumulator this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -57,14 +57,14 @@
 
   returns: the numeric value represented by this object after conversion
             to type long. - `long`"
-  (^Long [^java.util.concurrent.atomic.DoubleAccumulator this]
+  (^Long [^DoubleAccumulator this]
     (-> this (.longValue))))
 
 (defn to-string
   "Returns the String representation of the current value.
 
   returns: the String representation of the current value - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.atomic.DoubleAccumulator this]
+  (^java.lang.String [^DoubleAccumulator this]
     (-> this (.toString))))
 
 (defn reset
@@ -74,7 +74,7 @@
    updates.  Because this method is intrinsically racy, it should
    only be used when it is known that no threads are concurrently
    updating."
-  ([^java.util.concurrent.atomic.DoubleAccumulator this]
+  ([^DoubleAccumulator this]
     (-> this (.reset))))
 
 (defn float-value
@@ -83,7 +83,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type float. - `float`"
-  (^Float [^java.util.concurrent.atomic.DoubleAccumulator this]
+  (^Float [^DoubleAccumulator this]
     (-> this (.floatValue))))
 
 (defn get-then-reset
@@ -94,14 +94,14 @@
    the reset.
 
   returns: the value before reset - `double`"
-  (^Double [^java.util.concurrent.atomic.DoubleAccumulator this]
+  (^Double [^DoubleAccumulator this]
     (-> this (.getThenReset))))
 
 (defn accumulate
   "Updates with the given value.
 
   x - the value - `double`"
-  ([^java.util.concurrent.atomic.DoubleAccumulator this ^Double x]
+  ([^DoubleAccumulator this ^Double x]
     (-> this (.accumulate x))))
 
 (defn int-value
@@ -110,7 +110,7 @@
 
   returns: the numeric value represented by this object after conversion
             to type int. - `int`"
-  (^Integer [^java.util.concurrent.atomic.DoubleAccumulator this]
+  (^Integer [^DoubleAccumulator this]
     (-> this (.intValue))))
 
 (defn get
@@ -121,6 +121,6 @@
    incorporated.
 
   returns: the current value - `double`"
-  (^Double [^java.util.concurrent.atomic.DoubleAccumulator this]
+  (^Double [^DoubleAccumulator this]
     (-> this (.get))))
 

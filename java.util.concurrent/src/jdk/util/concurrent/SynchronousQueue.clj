@@ -41,9 +41,9 @@
   Creates a SynchronousQueue with the specified fairness policy.
 
   fair - if true, waiting threads contend in FIFO order for access; otherwise the order is unspecified. - `boolean`"
-  ([^Boolean fair]
+  (^SynchronousQueue [^Boolean fair]
     (new SynchronousQueue fair))
-  ([]
+  (^SynchronousQueue []
     (new SynchronousQueue )))
 
 (defn peek
@@ -51,23 +51,23 @@
    A SynchronousQueue does not return elements
    unless actively waited on.
 
-  returns: null - `SynchronousQueue.E`"
-  (^SynchronousQueue.E [^java.util.concurrent.SynchronousQueue this]
+  returns: null - `E`"
+  ([^SynchronousQueue this]
     (-> this (.peek))))
 
 (defn spliterator
   "Returns an empty spliterator in which calls to
    Spliterator.trySplit() always return null.
 
-  returns: an empty spliterator - `java.util.Spliterator<SynchronousQueue.E>`"
-  (^java.util.Spliterator [^java.util.concurrent.SynchronousQueue this]
+  returns: an empty spliterator - `java.util.Spliterator<E>`"
+  (^java.util.Spliterator [^SynchronousQueue this]
     (-> this (.spliterator))))
 
 (defn offer
   "Inserts the specified element into this queue, waiting if necessary
    up to the specified wait time for another thread to receive it.
 
-  e - the element to add - `SynchronousQueue.E`
+  e - the element to add - `E`
   timeout - how long to wait before giving up, in units of unit - `long`
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
@@ -75,19 +75,19 @@
            specified waiting time elapses before a consumer appears - `boolean`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^Boolean [^java.util.concurrent.SynchronousQueue this ^SynchronousQueue.E e ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^SynchronousQueue this e ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.offer e timeout unit)))
-  (^Boolean [^java.util.concurrent.SynchronousQueue this ^SynchronousQueue.E e]
+  (^Boolean [^SynchronousQueue this e]
     (-> this (.offer e))))
 
 (defn put
   "Adds the specified element to this queue, waiting if necessary for
    another thread to receive it.
 
-  e - the element to add - `SynchronousQueue.E`
+  e - the element to add - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  ([^java.util.concurrent.SynchronousQueue this ^SynchronousQueue.E e]
+  ([^SynchronousQueue this e]
     (-> this (.put e))))
 
 (defn contains
@@ -97,25 +97,25 @@
   o - the element - `java.lang.Object`
 
   returns: false - `boolean`"
-  (^Boolean [^java.util.concurrent.SynchronousQueue this ^java.lang.Object o]
+  (^Boolean [^SynchronousQueue this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn take
   "Retrieves and removes the head of this queue, waiting if necessary
    for another thread to insert it.
 
-  returns: the head of this queue - `SynchronousQueue.E`
+  returns: the head of this queue - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^SynchronousQueue.E [^java.util.concurrent.SynchronousQueue this]
+  ([^SynchronousQueue this]
     (-> this (.take))))
 
 (defn iterator
   "Returns an empty iterator in which hasNext always returns
    false.
 
-  returns: an empty iterator - `java.util.Iterator<SynchronousQueue.E>`"
-  (^java.util.Iterator [^java.util.concurrent.SynchronousQueue this]
+  returns: an empty iterator - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^SynchronousQueue this]
     (-> this (.iterator))))
 
 (defn remove
@@ -125,21 +125,21 @@
   o - the element to remove - `java.lang.Object`
 
   returns: false - `boolean`"
-  (^Boolean [^java.util.concurrent.SynchronousQueue this ^java.lang.Object o]
+  (^Boolean [^SynchronousQueue this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn drain-to
   "Description copied from interface: BlockingQueue
 
-  c - the collection to transfer elements into - `SynchronousQueue.E>`
+  c - the collection to transfer elements into - `java.util.Collection`
   max-elements - the maximum number of elements to transfer - `int`
 
   returns: the number of elements transferred - `int`
 
   throws: java.lang.UnsupportedOperationException - if addition of elements is not supported by the specified collection"
-  (^Integer [^java.util.concurrent.SynchronousQueue this ^SynchronousQueue.E> c ^Integer max-elements]
+  (^Integer [^SynchronousQueue this ^java.util.Collection c ^Integer max-elements]
     (-> this (.drainTo c max-elements)))
-  (^Integer [^java.util.concurrent.SynchronousQueue this ^SynchronousQueue.E> c]
+  (^Integer [^SynchronousQueue this ^java.util.Collection c]
     (-> this (.drainTo c))))
 
 (defn poll
@@ -151,12 +151,12 @@
   unit - a TimeUnit determining how to interpret the timeout parameter - `java.util.concurrent.TimeUnit`
 
   returns: the head of this queue, or null if the
-           specified waiting time elapses before an element is present - `SynchronousQueue.E`
+           specified waiting time elapses before an element is present - `E`
 
   throws: java.lang.InterruptedException - if interrupted while waiting"
-  (^SynchronousQueue.E [^java.util.concurrent.SynchronousQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^SynchronousQueue this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.poll timeout unit)))
-  (^SynchronousQueue.E [^java.util.concurrent.SynchronousQueue this]
+  ([^SynchronousQueue this]
     (-> this (.poll))))
 
 (defn remaining-capacity
@@ -164,7 +164,7 @@
    A SynchronousQueue has no internal capacity.
 
   returns: zero - `int`"
-  (^Integer [^java.util.concurrent.SynchronousQueue this]
+  (^Integer [^SynchronousQueue this]
     (-> this (.remainingCapacity))))
 
 (defn empty?
@@ -172,7 +172,7 @@
    A SynchronousQueue has no internal capacity.
 
   returns: true - `boolean`"
-  (^Boolean [^java.util.concurrent.SynchronousQueue this]
+  (^Boolean [^SynchronousQueue this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -180,23 +180,23 @@
    A SynchronousQueue has no internal capacity.
 
   returns: zero - `int`"
-  (^Integer [^java.util.concurrent.SynchronousQueue this]
+  (^Integer [^SynchronousQueue this]
     (-> this (.size))))
 
 (defn retain-all
   "Always returns false.
    A SynchronousQueue has no internal capacity.
 
-  c - the collection - `java.util.Collection<?>`
+  c - the collection - `java.util.Collection`
 
   returns: false - `boolean`"
-  (^Boolean [^java.util.concurrent.SynchronousQueue this ^java.util.Collection c]
+  (^Boolean [^SynchronousQueue this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
   "Does nothing.
    A SynchronousQueue has no internal capacity."
-  ([^java.util.concurrent.SynchronousQueue this]
+  ([^SynchronousQueue this]
     (-> this (.clear))))
 
 (defn to-array
@@ -208,28 +208,28 @@
   returns: the specified array - `<T> T[]`
 
   throws: java.lang.NullPointerException - if the specified array is null"
-  ([^java.util.concurrent.SynchronousQueue this a]
+  ([^SynchronousQueue this a]
     (-> this (.toArray a)))
-  ([^java.util.concurrent.SynchronousQueue this]
+  ([^SynchronousQueue this]
     (-> this (.toArray))))
 
 (defn remove-all
   "Always returns false.
    A SynchronousQueue has no internal capacity.
 
-  c - the collection - `java.util.Collection<?>`
+  c - the collection - `java.util.Collection`
 
   returns: false - `boolean`"
-  (^Boolean [^java.util.concurrent.SynchronousQueue this ^java.util.Collection c]
+  (^Boolean [^SynchronousQueue this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn contains-all
   "Returns false unless the given collection is empty.
    A SynchronousQueue has no internal capacity.
 
-  c - the collection - `java.util.Collection<?>`
+  c - the collection - `java.util.Collection`
 
   returns: false unless given collection is empty - `boolean`"
-  (^Boolean [^java.util.concurrent.SynchronousQueue this ^java.util.Collection c]
+  (^Boolean [^SynchronousQueue this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

@@ -193,26 +193,26 @@
    The body of the default method is specified to be the code
    above.
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.annotation.Annotation>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: true if an annotation for the specified annotation
        type is present on this element, else false - `default boolean`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.AnnotatedElement this ^java.lang.annotation.Annotation> annotation-class]
+  ([^AnnotatedElement this ^java.lang.Class annotation-class]
     (-> this (.isAnnotationPresent annotation-class))))
 
 (defn get-annotation
   "Returns this element's annotation for the specified type if
    such an annotation is present, else null.
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class<T>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: this element's annotation for the specified annotation type if
        present on this element, else null - `<T extends java.lang.annotation.Annotation> T`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.AnnotatedElement this ^java.lang.Class annotation-class]
+  ([^AnnotatedElement this ^java.lang.Class annotation-class]
     (-> this (.getAnnotation annotation-class))))
 
 (defn get-annotations
@@ -225,7 +225,7 @@
    have no effect on the arrays returned to other callers.
 
   returns: annotations present on this element - `java.lang.annotation.Annotation[]`"
-  ([^java.lang.reflect.AnnotatedElement this]
+  ([^AnnotatedElement this]
     (-> this (.getAnnotations))))
 
 (defn get-annotations-by-type
@@ -243,13 +243,13 @@
    The caller of this method is free to modify the returned array; it will
    have no effect on the arrays returned to other callers.
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class<T>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: all this element's annotations for the specified annotation type if
        associated with this element, else an array of length zero - `default <T extends java.lang.annotation.Annotation> T[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.AnnotatedElement this ^java.lang.Class annotation-class]
+  ([^AnnotatedElement this ^java.lang.Class annotation-class]
     (-> this (.getAnnotationsByType annotation-class))))
 
 (defn get-declared-annotation
@@ -259,13 +259,13 @@
    This method ignores inherited annotations. (Returns null if no
    annotations are directly present on this element.)
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class<T>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: this element's annotation for the specified annotation type if
        directly present on this element, else null - `default <T extends java.lang.annotation.Annotation> T`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.AnnotatedElement this ^java.lang.Class annotation-class]
+  ([^AnnotatedElement this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotation annotation-class))))
 
 (defn get-declared-annotations-by-type
@@ -286,13 +286,13 @@
    The caller of this method is free to modify the returned array; it will
    have no effect on the arrays returned to other callers.
 
-  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class<T>`
+  annotation-class - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: all this element's annotations for the specified annotation type if
        directly or indirectly present on this element, else an array of length zero - `default <T extends java.lang.annotation.Annotation> T[]`
 
   throws: java.lang.NullPointerException - if the given annotation class is null"
-  ([^java.lang.reflect.AnnotatedElement this ^java.lang.Class annotation-class]
+  ([^AnnotatedElement this ^java.lang.Class annotation-class]
     (-> this (.getDeclaredAnnotationsByType annotation-class))))
 
 (defn get-declared-annotations
@@ -306,6 +306,6 @@
    have no effect on the arrays returned to other callers.
 
   returns: annotations directly present on this element - `java.lang.annotation.Annotation[]`"
-  ([^java.lang.reflect.AnnotatedElement this]
+  ([^AnnotatedElement this]
     (-> this (.getDeclaredAnnotations))))
 

@@ -45,7 +45,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.JobSheets this]
+  ([^JobSheets this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -56,6 +56,6 @@
    name is `job-sheets`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.JobSheets this]
+  (^java.lang.String [^JobSheets this]
     (-> this (.getName))))
 

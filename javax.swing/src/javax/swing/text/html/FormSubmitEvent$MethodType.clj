@@ -5,13 +5,13 @@
 (def GET
   "Enum Constant.
 
-  type: javax.swing.text.html.FormSubmitEvent.MethodType"
+  type: javax.swing.text.html.FormSubmitEvent$MethodType"
   FormSubmitEvent$MethodType/GET)
 
 (def POST
   "Enum Constant.
 
-  type: javax.swing.text.html.FormSubmitEvent.MethodType"
+  type: javax.swing.text.html.FormSubmitEvent$MethodType"
   FormSubmitEvent$MethodType/POST)
 
 (defn *values
@@ -23,7 +23,7 @@
   for (FormSubmitEvent.MethodType c : FormSubmitEvent.MethodType.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.text.html.FormSubmitEvent.MethodType[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.text.html.FormSubmitEvent$MethodType[]`"
   ([]
     (FormSubmitEvent$MethodType/values )))
 
@@ -35,9 +35,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.swing.text.html.FormSubmitEvent.MethodType`
+  returns: the enum constant with the specified name - `javax.swing.text.html.FormSubmitEvent$MethodType`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.swing.text.html.FormSubmitEvent.MethodType [^java.lang.String name]
+  (^javax.swing.text.html.FormSubmitEvent$MethodType [^java.lang.String name]
     (FormSubmitEvent$MethodType/valueOf name)))
 

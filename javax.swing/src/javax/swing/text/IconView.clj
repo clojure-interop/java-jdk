@@ -15,7 +15,7 @@
   Creates a new icon view that represents an element.
 
   elem - the element to create a view for - `javax.swing.text.Element`"
-  ([^javax.swing.text.Element elem]
+  (^IconView [^javax.swing.text.Element elem]
     (new IconView elem)))
 
 (defn paint
@@ -29,7 +29,7 @@
 
   g - the rendering surface to use - `java.awt.Graphics`
   a - the allocated region to render into - `java.awt.Shape`"
-  ([^javax.swing.text.IconView this ^java.awt.Graphics g ^java.awt.Shape a]
+  ([^IconView this ^java.awt.Graphics g ^java.awt.Shape a]
     (-> this (.paint g a))))
 
 (defn get-preferred-span
@@ -44,7 +44,7 @@
              The parent may choose to resize or break the view. - `float`
 
   throws: java.lang.IllegalArgumentException - for an invalid axis"
-  (^Float [^javax.swing.text.IconView this ^Integer axis]
+  (^Float [^IconView this ^Integer axis]
     (-> this (.getPreferredSpan axis))))
 
 (defn get-alignment
@@ -60,7 +60,7 @@
      origin and 1.0 indicates alignment to the full span
      away from the origin.  An alignment of 0.5 would be the
      center of the view. - `float`"
-  (^Float [^javax.swing.text.IconView this ^Integer axis]
+  (^Float [^IconView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn model-to-view
@@ -69,12 +69,12 @@
 
   pos - the position to convert >= 0 - `int`
   a - the allocated region to render into - `java.awt.Shape`
-  b - the bias toward the previous character or the next character represented by the offset, in case the position is a boundary of two views; b will have one of these values: Position.Bias.Forward Position.Bias.Backward - `javax.swing.text.Position.Bias`
+  b - the bias toward the previous character or the next character represented by the offset, in case the position is a boundary of two views; b will have one of these values: Position.Bias.Forward Position.Bias.Backward - `javax.swing.text.Position$Bias`
 
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  (^java.awt.Shape [^javax.swing.text.IconView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
+  (^java.awt.Shape [^IconView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position$Bias b]
     (-> this (.modelToView pos a b))))
 
 (defn view-to-model
@@ -84,10 +84,10 @@
   x - the X coordinate >= 0 - `float`
   y - the Y coordinate >= 0 - `float`
   a - the allocated region to render into - `java.awt.Shape`
-  bias - `javax.swing.text.Position.Bias[]`
+  bias - `javax.swing.text.Position$Bias[]`
 
   returns: the location within the model that best represents the
     given point of view >= 0 - `int`"
-  (^Integer [^javax.swing.text.IconView this ^Float x ^Float y ^java.awt.Shape a bias]
+  (^Integer [^IconView this ^Float x ^Float y ^java.awt.Shape a bias]
     (-> this (.viewToModel x y a bias))))
 

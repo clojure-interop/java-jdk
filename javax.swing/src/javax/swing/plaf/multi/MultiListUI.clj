@@ -7,7 +7,7 @@
 
 (defn ->multi-list-ui
   "Constructor."
-  ([]
+  (^MultiListUI []
     (new MultiListUI )))
 
 (defn *create-ui
@@ -25,7 +25,7 @@
   "Invokes the installUI method on each UI handled by this object.
 
   a - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
+  ([^MultiListUI this ^javax.swing.JComponent a]
     (-> this (.installUI a))))
 
 (defn get-minimum-size
@@ -35,7 +35,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiListUI this ^javax.swing.JComponent a]
     (-> this (.getMinimumSize a))))
 
 (defn get-maximum-size
@@ -45,7 +45,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiListUI this ^javax.swing.JComponent a]
     (-> this (.getMaximumSize a))))
 
 (defn get-accessible-child
@@ -56,7 +56,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.accessibility.Accessible`"
-  (^javax.accessibility.Accessible [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a ^Integer b]
+  (^javax.accessibility.Accessible [^MultiListUI this ^javax.swing.JComponent a ^Integer b]
     (-> this (.getAccessibleChild a b))))
 
 (defn get-u-is
@@ -65,14 +65,14 @@
    UIs on components.
 
   returns: `javax.swing.plaf.ComponentUI[]`"
-  ([^javax.swing.plaf.multi.MultiListUI this]
+  ([^MultiListUI this]
     (-> this (.getUIs))))
 
 (defn uninstall-ui
   "Invokes the uninstallUI method on each UI handled by this object.
 
   a - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
+  ([^MultiListUI this ^javax.swing.JComponent a]
     (-> this (.uninstallUI a))))
 
 (defn contains
@@ -84,7 +84,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  (^Boolean [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
+  (^Boolean [^MultiListUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
     (-> this (.contains a b c))))
 
 (defn update
@@ -92,7 +92,7 @@
 
   a - the Graphics context in which to paint - `java.awt.Graphics`
   b - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
+  ([^MultiListUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
     (-> this (.update a b))))
 
 (defn location-to-index
@@ -103,7 +103,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  (^Integer [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JList a ^java.awt.Point b]
+  (^Integer [^MultiListUI this ^javax.swing.JList a ^java.awt.Point b]
     (-> this (.locationToIndex a b))))
 
 (defn get-accessible-children-count
@@ -113,7 +113,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  (^Integer [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
+  (^Integer [^MultiListUI this ^javax.swing.JComponent a]
     (-> this (.getAccessibleChildrenCount a))))
 
 (defn paint
@@ -121,7 +121,7 @@
 
   a - the Graphics context in which to paint - `java.awt.Graphics`
   b - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiListUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
+  ([^MultiListUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
     (-> this (.paint a b))))
 
 (defn index-to-location
@@ -132,7 +132,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Point`"
-  (^java.awt.Point [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JList a ^Integer b]
+  (^java.awt.Point [^MultiListUI this ^javax.swing.JList a ^Integer b]
     (-> this (.indexToLocation a b))))
 
 (defn get-cell-bounds
@@ -144,7 +144,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JList a ^Integer b ^Integer c]
+  (^java.awt.Rectangle [^MultiListUI this ^javax.swing.JList a ^Integer b ^Integer c]
     (-> this (.getCellBounds a b c))))
 
 (defn get-preferred-size
@@ -154,6 +154,6 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiListUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiListUI this ^javax.swing.JComponent a]
     (-> this (.getPreferredSize a))))
 

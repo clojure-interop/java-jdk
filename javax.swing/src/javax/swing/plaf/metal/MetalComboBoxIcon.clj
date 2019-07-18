@@ -5,7 +5,7 @@
 
 (defn ->metal-combo-box-icon
   "Constructor."
-  ([]
+  (^MetalComboBoxIcon []
     (new MetalComboBoxIcon )))
 
 (defn paint-icon
@@ -15,20 +15,20 @@
   g - `java.awt.Graphics`
   x - `int`
   y - `int`"
-  ([^javax.swing.plaf.metal.MetalComboBoxIcon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
+  ([^MetalComboBoxIcon this ^java.awt.Component c ^java.awt.Graphics g ^Integer x ^Integer y]
     (-> this (.paintIcon c g x y))))
 
 (defn get-icon-width
   "Created a stub to satisfy the interface.
 
   returns: an int specifying the fixed width of the icon. - `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalComboBoxIcon this]
+  (^Integer [^MetalComboBoxIcon this]
     (-> this (.getIconWidth))))
 
 (defn get-icon-height
   "Created a stub to satisfy the interface.
 
   returns: an int specifying the fixed height of the icon. - `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalComboBoxIcon this]
+  (^Integer [^MetalComboBoxIcon this]
     (-> this (.getIconHeight))))
 

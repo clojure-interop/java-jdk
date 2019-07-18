@@ -95,11 +95,11 @@
   load-factor - the load factor of the hashtable. - `float`
 
   throws: java.lang.IllegalArgumentException - if the initial capacity is less than zero, or if the load factor is nonpositive."
-  ([^Integer initial-capacity ^Float load-factor]
+  (^Hashtable [^Integer initial-capacity ^Float load-factor]
     (new Hashtable initial-capacity load-factor))
-  ([^Integer initial-capacity]
+  (^Hashtable [^Integer initial-capacity]
     (new Hashtable initial-capacity))
-  ([]
+  (^Hashtable []
     (new Hashtable )))
 
 (defn values
@@ -115,29 +115,29 @@
    retainAll and clear operations.  It does not
    support the add or addAll operations.
 
-  returns: a collection view of the values contained in this map - `java.util.Collection<Hashtable.V>`"
-  (^java.util.Collection [^java.util.Hashtable this]
+  returns: a collection view of the values contained in this map - `java.util.Collection<V>`"
+  (^java.util.Collection [^Hashtable this]
     (-> this (.values))))
 
 (defn for-each
   "Description copied from interface: Map
 
-  action - The action to be performed for each entry - `Hashtable.V>`"
-  ([^java.util.Hashtable this ^Hashtable.V> action]
+  action - The action to be performed for each entry - `java.util.function.BiConsumer`"
+  ([^Hashtable this ^java.util.function.BiConsumer action]
     (-> this (.forEach action))))
 
 (defn keys
   "Returns an enumeration of the keys in this hashtable.
 
-  returns: an enumeration of the keys in this hashtable. - `java.util.Enumeration<Hashtable.K>`"
-  (^java.util.Enumeration [^java.util.Hashtable this]
+  returns: an enumeration of the keys in this hashtable. - `java.util.Enumeration<K>`"
+  (^java.util.Enumeration [^Hashtable this]
     (-> this (.keys))))
 
 (defn replace-all
   "Description copied from interface: Map
 
-  function - the function to apply to each entry - `Hashtable.V>`"
-  ([^java.util.Hashtable this ^Hashtable.V> function]
+  function - the function to apply to each entry - `java.util.function.BiFunction`"
+  ([^Hashtable this ^java.util.function.BiFunction function]
     (-> this (.replaceAll function))))
 
 (defn put-all
@@ -145,24 +145,24 @@
    These mappings will replace any mappings that this hashtable had for any
    of the keys currently in the specified map.
 
-  t - mappings to be stored in this map - `Hashtable.V>`
+  t - mappings to be stored in this map - `java.util.Map`
 
   throws: java.lang.NullPointerException - if the specified map is null"
-  ([^java.util.Hashtable this ^Hashtable.V> t]
+  ([^Hashtable this ^java.util.Map t]
     (-> this (.putAll t))))
 
 (defn put-if-absent
   "Description copied from interface: Map
 
-  key - key with which the specified value is to be associated - `Hashtable.K`
-  value - value to be associated with the specified key - `Hashtable.V`
+  key - key with which the specified value is to be associated - `K`
+  value - value to be associated with the specified key - `V`
 
   returns: the previous value associated with the specified key, or
            null if there was no mapping for the key.
            (A null return can also indicate that the map
            previously associated null with the key,
-           if the implementation supports null values.) - `Hashtable.V`"
-  (^Hashtable.V [^java.util.Hashtable this ^Hashtable.K key ^Hashtable.V value]
+           if the implementation supports null values.) - `V`"
+  ([^Hashtable this key value]
     (-> this (.putIfAbsent key value))))
 
 (defn put
@@ -173,14 +173,14 @@
    The value can be retrieved by calling the get method
    with a key that is equal to the original key.
 
-  key - the hashtable key - `Hashtable.K`
-  value - the value - `Hashtable.V`
+  key - the hashtable key - `K`
+  value - the value - `V`
 
   returns: the previous value of the specified key in this hashtable,
-               or null if it did not have one - `Hashtable.V`
+               or null if it did not have one - `V`
 
   throws: java.lang.NullPointerException - if the key or value is null"
-  (^Hashtable.V [^java.util.Hashtable this ^Hashtable.K key ^Hashtable.V value]
+  ([^Hashtable this key value]
     (-> this (.put key value))))
 
 (defn entry-set
@@ -197,8 +197,8 @@
    clear operations.  It does not support the
    add or addAll operations.
 
-  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map.Entry<Hashtable.K,Hashtable.V>>`"
-  (^java.util.Set> [^java.util.Hashtable this]
+  returns: a set view of the mappings contained in this map - `java.util.Set<java.util.Map$Entry<K,V>>`"
+  (^java.util.Set [^Hashtable this]
     (-> this (.entrySet))))
 
 (defn contains
@@ -217,7 +217,7 @@
                false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if the value is null"
-  (^Boolean [^java.util.Hashtable this ^java.lang.Object value]
+  (^Boolean [^Hashtable this ^java.lang.Object value]
     (-> this (.contains value))))
 
 (defn to-string
@@ -229,7 +229,7 @@
    convert the key and element to strings.
 
   returns: a string representation of this hashtable - `java.lang.String`"
-  (^java.lang.String [^java.util.Hashtable this]
+  (^java.lang.String [^Hashtable this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -243,31 +243,31 @@
            specified value - `boolean`
 
   throws: java.lang.NullPointerException - if the value is null"
-  (^Boolean [^java.util.Hashtable this ^java.lang.Object value]
+  (^Boolean [^Hashtable this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn get-or-default
   "Description copied from interface: Map
 
   key - the key whose associated value is to be returned - `java.lang.Object`
-  default-value - the default mapping of the key - `Hashtable.V`
+  default-value - the default mapping of the key - `V`
 
   returns: the value to which the specified key is mapped, or
-   defaultValue if this map contains no mapping for the key - `Hashtable.V`"
-  (^Hashtable.V [^java.util.Hashtable this ^java.lang.Object key ^Hashtable.V default-value]
+   defaultValue if this map contains no mapping for the key - `V`"
+  ([^Hashtable this ^java.lang.Object key default-value]
     (-> this (.getOrDefault key default-value))))
 
 (defn replace
   "Description copied from interface: Map
 
-  key - key with which the specified value is associated - `Hashtable.K`
-  old-value - value expected to be associated with the specified key - `Hashtable.V`
-  new-value - value to be associated with the specified key - `Hashtable.V`
+  key - key with which the specified value is associated - `K`
+  old-value - value expected to be associated with the specified key - `V`
+  new-value - value to be associated with the specified key - `V`
 
   returns: true if the value was replaced - `boolean`"
-  (^Boolean [^java.util.Hashtable this ^Hashtable.K key ^Hashtable.V old-value ^Hashtable.V new-value]
+  (^Boolean [^Hashtable this key old-value new-value]
     (-> this (.replace key old-value new-value)))
-  (^Hashtable.V [^java.util.Hashtable this ^Hashtable.K key ^Hashtable.V value]
+  ([^Hashtable this key value]
     (-> this (.replace key value))))
 
 (defn remove
@@ -277,9 +277,9 @@
   value - value expected to be associated with the specified key - `java.lang.Object`
 
   returns: true if the value was removed - `boolean`"
-  (^Boolean [^java.util.Hashtable this ^java.lang.Object key ^java.lang.Object value]
+  (^Boolean [^Hashtable this ^java.lang.Object key ^java.lang.Object value]
     (-> this (.remove key value)))
-  (^Hashtable.V [^java.util.Hashtable this ^java.lang.Object key]
+  ([^Hashtable this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn key-set
@@ -295,8 +295,8 @@
    operations.  It does not support the add or addAll
    operations.
 
-  returns: a set view of the keys contained in this map - `java.util.Set<Hashtable.K>`"
-  (^java.util.Set [^java.util.Hashtable this]
+  returns: a set view of the keys contained in this map - `java.util.Set<K>`"
+  (^java.util.Set [^Hashtable this]
     (-> this (.keySet))))
 
 (defn clone
@@ -305,17 +305,17 @@
    This is a relatively expensive operation.
 
   returns: a clone of the hashtable - `java.lang.Object`"
-  (^java.lang.Object [^java.util.Hashtable this]
+  (^java.lang.Object [^Hashtable this]
     (-> this (.clone))))
 
 (defn compute-if-present
   "Description copied from interface: Map
 
-  key - key with which the specified value is to be associated - `Hashtable.K`
-  remapping-function - the function to compute a value - `Hashtable.V>`
+  key - key with which the specified value is to be associated - `K`
+  remapping-function - the function to compute a value - `java.util.function.BiFunction`
 
-  returns: the new value associated with the specified key, or null if none - `Hashtable.V`"
-  (^Hashtable.V [^java.util.Hashtable this ^Hashtable.K key ^Hashtable.V> remapping-function]
+  returns: the new value associated with the specified key, or null if none - `V`"
+  ([^Hashtable this key ^java.util.function.BiFunction remapping-function]
     (-> this (.computeIfPresent key remapping-function))))
 
 (defn hash-code
@@ -323,7 +323,7 @@
    Map interface.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.util.Hashtable this]
+  (^Integer [^Hashtable this]
     (-> this (.hashCode))))
 
 (defn empty?
@@ -331,19 +331,19 @@
 
   returns: true if this hashtable maps no keys to values;
             false otherwise. - `boolean`"
-  (^Boolean [^java.util.Hashtable this]
+  (^Boolean [^Hashtable this]
     (-> this (.isEmpty))))
 
 (defn size
   "Returns the number of keys in this hashtable.
 
   returns: the number of keys in this hashtable. - `int`"
-  (^Integer [^java.util.Hashtable this]
+  (^Integer [^Hashtable this]
     (-> this (.size))))
 
 (defn clear
   "Clears this hashtable so that it contains no keys."
-  ([^java.util.Hashtable this]
+  ([^Hashtable this]
     (-> this (.clear))))
 
 (defn contains-key
@@ -356,7 +356,7 @@
             equals method; false otherwise. - `boolean`
 
   throws: java.lang.NullPointerException - if the key is null"
-  (^Boolean [^java.util.Hashtable this ^java.lang.Object key]
+  (^Boolean [^Hashtable this ^java.lang.Object key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -371,22 +371,22 @@
   key - the key whose associated value is to be returned - `java.lang.Object`
 
   returns: the value to which the specified key is mapped, or
-           null if this map contains no mapping for the key - `Hashtable.V`
+           null if this map contains no mapping for the key - `V`
 
   throws: java.lang.NullPointerException - if the specified key is null"
-  (^Hashtable.V [^java.util.Hashtable this ^java.lang.Object key]
+  ([^Hashtable this ^java.lang.Object key]
     (-> this (.get key))))
 
 (defn merge
   "Description copied from interface: Map
 
-  key - key with which the resulting value is to be associated - `Hashtable.K`
-  value - the non-null value to be merged with the existing value associated with the key or, if no existing value or a null value is associated with the key, to be associated with the key - `Hashtable.V`
-  remapping-function - the function to recompute a value if present - `Hashtable.V>`
+  key - key with which the resulting value is to be associated - `K`
+  value - the non-null value to be merged with the existing value associated with the key or, if no existing value or a null value is associated with the key, to be associated with the key - `V`
+  remapping-function - the function to recompute a value if present - `java.util.function.BiFunction`
 
   returns: the new value associated with the specified key, or null if no
-           value is associated with the key - `Hashtable.V`"
-  (^Hashtable.V [^java.util.Hashtable this ^Hashtable.K key ^Hashtable.V value ^Hashtable.V> remapping-function]
+           value is associated with the key - `V`"
+  ([^Hashtable this key value ^java.util.function.BiFunction remapping-function]
     (-> this (.merge key value remapping-function))))
 
 (defn equals
@@ -396,17 +396,17 @@
   o - object to be compared for equality with this hashtable - `java.lang.Object`
 
   returns: true if the specified Object is equal to this Map - `boolean`"
-  (^Boolean [^java.util.Hashtable this ^java.lang.Object o]
+  (^Boolean [^Hashtable this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn compute
   "Description copied from interface: Map
 
-  key - key with which the specified value is to be associated - `Hashtable.K`
-  remapping-function - the function to compute a value - `Hashtable.V>`
+  key - key with which the specified value is to be associated - `K`
+  remapping-function - the function to compute a value - `java.util.function.BiFunction`
 
-  returns: the new value associated with the specified key, or null if none - `Hashtable.V`"
-  (^Hashtable.V [^java.util.Hashtable this ^Hashtable.K key ^Hashtable.V> remapping-function]
+  returns: the new value associated with the specified key, or null if none - `V`"
+  ([^Hashtable this key ^java.util.function.BiFunction remapping-function]
     (-> this (.compute key remapping-function))))
 
 (defn elements
@@ -414,18 +414,18 @@
    Use the Enumeration methods on the returned object to fetch the elements
    sequentially.
 
-  returns: an enumeration of the values in this hashtable. - `java.util.Enumeration<Hashtable.V>`"
-  (^java.util.Enumeration [^java.util.Hashtable this]
+  returns: an enumeration of the values in this hashtable. - `java.util.Enumeration<V>`"
+  (^java.util.Enumeration [^Hashtable this]
     (-> this (.elements))))
 
 (defn compute-if-absent
   "Description copied from interface: Map
 
-  key - key with which the specified value is to be associated - `Hashtable.K`
-  mapping-function - the function to compute a value - `Hashtable.V>`
+  key - key with which the specified value is to be associated - `K`
+  mapping-function - the function to compute a value - `java.util.function.Function`
 
   returns: the current (existing or computed) value associated with
-           the specified key, or null if the computed value is null - `Hashtable.V`"
-  (^Hashtable.V [^java.util.Hashtable this ^Hashtable.K key ^Hashtable.V> mapping-function]
+           the specified key, or null if the computed value is null - `V`"
+  ([^Hashtable this key ^java.util.function.Function mapping-function]
     (-> this (.computeIfAbsent key mapping-function))))
 

@@ -13,6 +13,6 @@
   Constructs an exception with the specified detail message.
 
   s - the detail message, which should include the name of the file attempting to be opened; may be null - `java.lang.String`"
-  ([^java.lang.String s]
+  (^FilerException [^java.lang.String s]
     (new FilerException s)))
 

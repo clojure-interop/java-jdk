@@ -53,14 +53,14 @@
    getNotificationInfo().
 
   implementation - the implementation of the MBean interface. - `T`
-  mbean-interface - a Standard MBean interface. - `java.lang.Class<T>`
+  mbean-interface - a Standard MBean interface. - `java.lang.Class`
   is-mx-bean - If true, the mbeanInterface parameter names an MXBean interface and the resultant MBean is an MXBean. - `boolean`
   emitter - the object that will handle notifications. - `javax.management.NotificationEmitter`
 
   throws: java.lang.IllegalArgumentException - if the mbeanInterface does not follow JMX design patterns for Management Interfaces, or if the given implementation does not implement the specified interface, or if emitter is null."
-  ([implementation ^java.lang.Class mbean-interface ^Boolean is-mx-bean ^javax.management.NotificationEmitter emitter]
+  (^StandardEmitterMBean [implementation ^java.lang.Class mbean-interface ^Boolean is-mx-bean ^javax.management.NotificationEmitter emitter]
     (new StandardEmitterMBean implementation mbean-interface is-mx-bean emitter))
-  ([implementation ^java.lang.Class mbean-interface ^javax.management.NotificationEmitter emitter]
+  (^StandardEmitterMBean [implementation ^java.lang.Class mbean-interface ^javax.management.NotificationEmitter emitter]
     (new StandardEmitterMBean implementation mbean-interface emitter)))
 
 (defn remove-notification-listener
@@ -71,9 +71,9 @@
   handback - The handback that was specified when the listener was added. - `java.lang.Object`
 
   throws: javax.management.ListenerNotFoundException - The listener is not registered with the MBean, or it is not registered with the given filter and handback."
-  ([^javax.management.StandardEmitterMBean this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
+  ([^StandardEmitterMBean this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
     (-> this (.removeNotificationListener listener filter handback)))
-  ([^javax.management.StandardEmitterMBean this ^javax.management.NotificationListener listener]
+  ([^StandardEmitterMBean this ^javax.management.NotificationListener listener]
     (-> this (.removeNotificationListener listener))))
 
 (defn add-notification-listener
@@ -82,14 +82,14 @@
   listener - The listener object which will handle the notifications emitted by the broadcaster. - `javax.management.NotificationListener`
   filter - The filter object. If filter is null, no filtering will be performed before handling notifications. - `javax.management.NotificationFilter`
   handback - An opaque object to be sent back to the listener when a notification is emitted. This object cannot be used by the Notification broadcaster object. It should be resent unchanged with the notification to the listener. - `java.lang.Object`"
-  ([^javax.management.StandardEmitterMBean this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
+  ([^StandardEmitterMBean this ^javax.management.NotificationListener listener ^javax.management.NotificationFilter filter ^java.lang.Object handback]
     (-> this (.addNotificationListener listener filter handback))))
 
 (defn get-notification-info
   "Description copied from interface: NotificationBroadcaster
 
   returns: the array of possible notifications. - `javax.management.MBeanNotificationInfo[]`"
-  ([^javax.management.StandardEmitterMBean this]
+  ([^StandardEmitterMBean this]
     (-> this (.getNotificationInfo))))
 
 (defn send-notification
@@ -102,6 +102,6 @@
   n - the notification to send. - `javax.management.Notification`
 
   throws: java.lang.ClassCastException - if the emitter parameter to the constructor was not a NotificationBroadcasterSupport."
-  ([^javax.management.StandardEmitterMBean this ^javax.management.Notification n]
+  ([^StandardEmitterMBean this ^javax.management.Notification n]
     (-> this (.sendNotification n))))
 

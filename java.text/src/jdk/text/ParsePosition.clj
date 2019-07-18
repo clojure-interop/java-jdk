@@ -17,7 +17,7 @@
   Create a new ParsePosition with the given initial index.
 
   index - initial index - `int`"
-  ([^Integer index]
+  (^ParsePosition [^Integer index]
     (new ParsePosition index)))
 
 (defn get-index
@@ -26,14 +26,14 @@
    is the index of the character following the last character parsed.
 
   returns: the current parse position - `int`"
-  (^Integer [^java.text.ParsePosition this]
+  (^Integer [^ParsePosition this]
     (-> this (.getIndex))))
 
 (defn set-index
   "Set the current parse position.
 
   index - the current parse position - `int`"
-  ([^java.text.ParsePosition this ^Integer index]
+  ([^ParsePosition this ^Integer index]
     (-> this (.setIndex index))))
 
 (defn set-error-index
@@ -42,7 +42,7 @@
    parseObject method.  The default value is -1 if this is not set.
 
   ei - the index at which an error occurred - `int`"
-  ([^java.text.ParsePosition this ^Integer ei]
+  ([^ParsePosition this ^Integer ei]
     (-> this (.setErrorIndex ei))))
 
 (defn get-error-index
@@ -50,7 +50,7 @@
    error index has not been set.
 
   returns: the index at which an error occurred - `int`"
-  (^Integer [^java.text.ParsePosition this]
+  (^Integer [^ParsePosition this]
     (-> this (.getErrorIndex))))
 
 (defn equals
@@ -60,20 +60,20 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.text.ParsePosition this ^java.lang.Object obj]
+  (^Boolean [^ParsePosition this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns a hash code for this ParsePosition.
 
   returns: a hash code value for this object - `int`"
-  (^Integer [^java.text.ParsePosition this]
+  (^Integer [^ParsePosition this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Return a string representation of this ParsePosition.
 
   returns: a string representation of this object - `java.lang.String`"
-  (^java.lang.String [^java.text.ParsePosition this]
+  (^java.lang.String [^ParsePosition this]
     (-> this (.toString))))
 

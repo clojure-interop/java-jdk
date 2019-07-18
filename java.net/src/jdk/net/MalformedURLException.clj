@@ -12,8 +12,8 @@
    specified detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^MalformedURLException [^java.lang.String msg]
     (new MalformedURLException msg))
-  ([]
+  (^MalformedURLException []
     (new MalformedURLException )))
 

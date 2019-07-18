@@ -14,11 +14,11 @@
   Constructs an IncompleteAnnotationException to indicate that
    the named element was missing from the specified annotation type.
 
-  annotation-type - the Class object for the annotation type - `java.lang.annotation.Annotation>`
+  annotation-type - the Class object for the annotation type - `java.lang.Class`
   element-name - the name of the missing element - `java.lang.String`
 
   throws: java.lang.NullPointerException - if either parameter is null"
-  ([^java.lang.annotation.Annotation> annotation-type ^java.lang.String element-name]
+  (^IncompleteAnnotationException [^java.lang.Class annotation-type ^java.lang.String element-name]
     (new IncompleteAnnotationException annotation-type element-name)))
 
 (defn annotation-type
@@ -27,13 +27,13 @@
 
   returns: the Class object for the annotation type with the
        missing element - `java.lang.Class<? extends java.lang.annotation.Annotation>`"
-  ([^java.lang.annotation.IncompleteAnnotationException this]
+  ([^IncompleteAnnotationException this]
     (-> this (.annotationType))))
 
 (defn element-name
   "Returns the name of the missing element.
 
   returns: the name of the missing element - `java.lang.String`"
-  (^java.lang.String [^java.lang.annotation.IncompleteAnnotationException this]
+  (^java.lang.String [^IncompleteAnnotationException this]
     (-> this (.elementName))))
 

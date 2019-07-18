@@ -8,12 +8,12 @@
   etch-type - `int`
   highlight - `java.awt.Color`
   shadow - `java.awt.Color`"
-  ([^Integer etch-type ^java.awt.Color highlight ^java.awt.Color shadow]
+  (^BorderUIResource$EtchedBorderUIResource [^Integer etch-type ^java.awt.Color highlight ^java.awt.Color shadow]
     (new BorderUIResource$EtchedBorderUIResource etch-type highlight shadow))
-  ([^java.awt.Color highlight ^java.awt.Color shadow]
+  (^BorderUIResource$EtchedBorderUIResource [^java.awt.Color highlight ^java.awt.Color shadow]
     (new BorderUIResource$EtchedBorderUIResource highlight shadow))
-  ([^Integer etch-type]
+  (^BorderUIResource$EtchedBorderUIResource [^Integer etch-type]
     (new BorderUIResource$EtchedBorderUIResource etch-type))
-  ([]
+  (^BorderUIResource$EtchedBorderUIResource []
     (new BorderUIResource$EtchedBorderUIResource )))
 

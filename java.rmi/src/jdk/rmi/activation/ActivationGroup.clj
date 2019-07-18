@@ -196,7 +196,7 @@
            returns false. - `boolean`
 
   throws: java.rmi.activation.UnknownObjectException - if object is unknown (may already be inactive)"
-  (^Boolean [^java.rmi.activation.ActivationGroup this ^java.rmi.activation.ActivationID id]
+  (^Boolean [^ActivationGroup this ^java.rmi.activation.ActivationID id]
     (-> this (.inactiveObject id))))
 
 (defn active-object
@@ -212,6 +212,6 @@
   obj - the remote object implementation - `java.rmi.Remote`
 
   throws: java.rmi.activation.UnknownObjectException - if object is not registered"
-  ([^java.rmi.activation.ActivationGroup this ^java.rmi.activation.ActivationID id ^java.rmi.Remote obj]
+  ([^ActivationGroup this ^java.rmi.activation.ActivationID id ^java.rmi.Remote obj]
     (-> this (.activeObject id obj))))
 

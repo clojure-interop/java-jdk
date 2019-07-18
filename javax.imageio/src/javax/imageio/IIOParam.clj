@@ -24,7 +24,7 @@
    return null.
 
   returns: true if a controller is installed. - `boolean`"
-  (^Boolean [^javax.imageio.IIOParam this]
+  (^Boolean [^IIOParam this]
     (-> this (.hasController))))
 
 (defn get-subsampling-x-offset
@@ -34,7 +34,7 @@
    is returned (which is the correct value).
 
   returns: the source subsampling grid X offset. - `int`"
-  (^Integer [^javax.imageio.IIOParam this]
+  (^Integer [^IIOParam this]
     (-> this (.getSubsamplingXOffset))))
 
 (defn get-destination-type
@@ -46,7 +46,7 @@
 
   returns: an ImageTypeSpecifier describing the
    destination type, or null. - `javax.imageio.ImageTypeSpecifier`"
-  (^javax.imageio.ImageTypeSpecifier [^javax.imageio.IIOParam this]
+  (^javax.imageio.ImageTypeSpecifier [^IIOParam this]
     (-> this (.getDestinationType))))
 
 (defn activate-controller
@@ -65,7 +65,7 @@
   returns: true if the controller completed normally. - `boolean`
 
   throws: java.lang.IllegalStateException - if there is no controller currently installed."
-  (^Boolean [^javax.imageio.IIOParam this]
+  (^Boolean [^IIOParam this]
     (-> this (.activateController))))
 
 (defn get-destination-offset
@@ -77,7 +77,7 @@
    (which is the correct value).
 
   returns: the destination offset as a Point. - `java.awt.Point`"
-  (^java.awt.Point [^javax.imageio.IIOParam this]
+  (^java.awt.Point [^IIOParam this]
     (-> this (.getDestinationOffset))))
 
 (defn get-source-y-subsampling
@@ -87,7 +87,7 @@
    is returned (which is the correct value).
 
   returns: the source subsampling Y period. - `int`"
-  (^Integer [^javax.imageio.IIOParam this]
+  (^Integer [^IIOParam this]
     (-> this (.getSourceYSubsampling))))
 
 (defn set-source-region
@@ -111,7 +111,7 @@
   source-region - a Rectangle specifying the source region of interest, or null. - `java.awt.Rectangle`
 
   throws: java.lang.IllegalArgumentException - if sourceRegion is non-null and either sourceRegion.width or sourceRegion.height is negative or 0."
-  ([^javax.imageio.IIOParam this ^java.awt.Rectangle source-region]
+  ([^IIOParam this ^java.awt.Rectangle source-region]
     (-> this (.setSourceRegion source-region))))
 
 (defn set-destination-type
@@ -141,7 +141,7 @@
    than to the subset of bands being written.
 
   destination-type - the ImageTypeSpecifier to be used to determine the destination layout and color type. - `javax.imageio.ImageTypeSpecifier`"
-  ([^javax.imageio.IIOParam this ^javax.imageio.ImageTypeSpecifier destination-type]
+  ([^IIOParam this ^javax.imageio.ImageTypeSpecifier destination-type]
     (-> this (.setDestinationType destination-type))))
 
 (defn set-source-subsampling
@@ -204,7 +204,7 @@
   subsampling-y-offset - the horizontal offset of the first subsample within the region, or within the image if no region is set. - `int`
 
   throws: java.lang.IllegalArgumentException - if either period is negative or 0, or if either grid offset is negative or greater than the corresponding period."
-  ([^javax.imageio.IIOParam this ^Integer source-x-subsampling ^Integer source-y-subsampling ^Integer subsampling-x-offset ^Integer subsampling-y-offset]
+  ([^IIOParam this ^Integer source-x-subsampling ^Integer source-y-subsampling ^Integer subsampling-x-offset ^Integer subsampling-y-offset]
     (-> this (.setSourceSubsampling source-x-subsampling source-y-subsampling subsampling-x-offset subsampling-y-offset))))
 
 (defn set-source-bands
@@ -229,7 +229,7 @@
   source-bands - an array of integer band indices to be used. - `int[]`
 
   throws: java.lang.IllegalArgumentException - if sourceBands contains a negative or duplicate value."
-  ([^javax.imageio.IIOParam this source-bands]
+  ([^IIOParam this source-bands]
     (-> this (.setSourceBands source-bands))))
 
 (defn get-source-x-subsampling
@@ -239,7 +239,7 @@
    is returned (which is the correct value).
 
   returns: the source subsampling X period. - `int`"
-  (^Integer [^javax.imageio.IIOParam this]
+  (^Integer [^IIOParam this]
     (-> this (.getSourceXSubsampling))))
 
 (defn set-controller
@@ -252,7 +252,7 @@
    setController(getDefaultController()).
 
   controller - An appropriate IIOParamController, or null. - `javax.imageio.IIOParamController`"
-  ([^javax.imageio.IIOParam this ^javax.imageio.IIOParamController controller]
+  ([^IIOParam this ^javax.imageio.IIOParamController controller]
     (-> this (.setController controller))))
 
 (defn get-source-region
@@ -263,7 +263,7 @@
 
   returns: the source region of interest as a
    Rectangle, or null. - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.imageio.IIOParam this]
+  (^java.awt.Rectangle [^IIOParam this]
     (-> this (.getSourceRegion))))
 
 (defn get-subsampling-y-offset
@@ -273,7 +273,7 @@
    is returned (which is the correct value).
 
   returns: the source subsampling grid Y offset. - `int`"
-  (^Integer [^javax.imageio.IIOParam this]
+  (^Integer [^IIOParam this]
     (-> this (.getSubsamplingYOffset))))
 
 (defn get-default-controller
@@ -283,7 +283,7 @@
 
   returns: the default IIOParamController, or
    null. - `javax.imageio.IIOParamController`"
-  (^javax.imageio.IIOParamController [^javax.imageio.IIOParam this]
+  (^javax.imageio.IIOParamController [^IIOParam this]
     (-> this (.getDefaultController))))
 
 (defn set-destination-offset
@@ -309,7 +309,7 @@
   destination-offset - the offset in the destination, as a Point. - `java.awt.Point`
 
   throws: java.lang.IllegalArgumentException - if destinationOffset is null."
-  ([^javax.imageio.IIOParam this ^java.awt.Point destination-offset]
+  ([^IIOParam this ^java.awt.Point destination-offset]
     (-> this (.setDestinationOffset destination-offset))))
 
 (defn get-source-bands
@@ -324,7 +324,7 @@
 
   returns: the set of source bands to be used, or
    null. - `int[]`"
-  ([^javax.imageio.IIOParam this]
+  ([^IIOParam this]
     (-> this (.getSourceBands))))
 
 (defn get-controller
@@ -335,6 +335,6 @@
 
   returns: the currently installed
    IIOParamController, or null. - `javax.imageio.IIOParamController`"
-  (^javax.imageio.IIOParamController [^javax.imageio.IIOParam this]
+  (^javax.imageio.IIOParamController [^IIOParam this]
     (-> this (.getController))))
 

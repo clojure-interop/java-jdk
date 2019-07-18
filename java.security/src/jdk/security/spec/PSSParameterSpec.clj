@@ -53,9 +53,9 @@
   trailer-field - the value of the trailer field. - `int`
 
   throws: java.lang.NullPointerException - if mdName, or mgfName is null."
-  ([^java.lang.String md-name ^java.lang.String mgf-name ^java.security.spec.AlgorithmParameterSpec mgf-spec ^Integer salt-len ^Integer trailer-field]
+  (^PSSParameterSpec [^java.lang.String md-name ^java.lang.String mgf-name ^java.security.spec.AlgorithmParameterSpec mgf-spec ^Integer salt-len ^Integer trailer-field]
     (new PSSParameterSpec md-name mgf-name mgf-spec salt-len trailer-field))
-  ([^Integer salt-len]
+  (^PSSParameterSpec [^Integer salt-len]
     (new PSSParameterSpec salt-len)))
 
 (def *-default
@@ -70,34 +70,34 @@
   "Returns the message digest algorithm name.
 
   returns: the message digest algorithm name. - `java.lang.String`"
-  (^java.lang.String [^java.security.spec.PSSParameterSpec this]
+  (^java.lang.String [^PSSParameterSpec this]
     (-> this (.getDigestAlgorithm))))
 
 (defn get-mgf-algorithm
   "Returns the mask generation function algorithm name.
 
   returns: the mask generation function algorithm name. - `java.lang.String`"
-  (^java.lang.String [^java.security.spec.PSSParameterSpec this]
+  (^java.lang.String [^PSSParameterSpec this]
     (-> this (.getMGFAlgorithm))))
 
 (defn get-mgf-parameters
   "Returns the parameters for the mask generation function.
 
   returns: the parameters for the mask generation function. - `java.security.spec.AlgorithmParameterSpec`"
-  (^java.security.spec.AlgorithmParameterSpec [^java.security.spec.PSSParameterSpec this]
+  (^java.security.spec.AlgorithmParameterSpec [^PSSParameterSpec this]
     (-> this (.getMGFParameters))))
 
 (defn get-salt-length
   "Returns the salt length in bits.
 
   returns: the salt length. - `int`"
-  (^Integer [^java.security.spec.PSSParameterSpec this]
+  (^Integer [^PSSParameterSpec this]
     (-> this (.getSaltLength))))
 
 (defn get-trailer-field
   "Returns the value for the trailer field, i.e. bc in PKCS#1 v2.1.
 
   returns: the value for the trailer field, i.e. bc in PKCS#1 v2.1. - `int`"
-  (^Integer [^java.security.spec.PSSParameterSpec this]
+  (^Integer [^PSSParameterSpec this]
     (-> this (.getTrailerField))))
 

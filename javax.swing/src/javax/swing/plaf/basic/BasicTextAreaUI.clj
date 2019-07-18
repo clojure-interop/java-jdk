@@ -18,7 +18,7 @@
   "Constructor.
 
   Constructs a new BasicTextAreaUI object."
-  ([]
+  (^BasicTextAreaUI []
     (new BasicTextAreaUI )))
 
 (defn *create-ui
@@ -38,7 +38,7 @@
   returns: the preferred size - `java.awt.Dimension`
 
   throws: java.lang.IllegalArgumentException - if invalid value is passed"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTextAreaUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicTextAreaUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn get-minimum-size
@@ -49,7 +49,7 @@
   returns: the minimum size - `java.awt.Dimension`
 
   throws: java.lang.IllegalArgumentException - if invalid value is passed"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicTextAreaUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicTextAreaUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn create
@@ -59,7 +59,7 @@
   elem - the element - `javax.swing.text.Element`
 
   returns: the view - `javax.swing.text.View`"
-  (^javax.swing.text.View [^javax.swing.plaf.basic.BasicTextAreaUI this ^javax.swing.text.Element elem]
+  (^javax.swing.text.View [^BasicTextAreaUI this ^javax.swing.text.Element elem]
     (-> this (.create elem))))
 
 (defn get-baseline
@@ -73,7 +73,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^Integer [^javax.swing.plaf.basic.BasicTextAreaUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^BasicTextAreaUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-baseline-resize-behavior
@@ -83,9 +83,9 @@
   c - JComponent to return baseline resize behavior for - `javax.swing.JComponent`
 
   returns: an enum indicating how the baseline changes as the component
-           size changes - `java.awt.Component.BaselineResizeBehavior`
+           size changes - `java.awt.Component$BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.basic.BasicTextAreaUI this ^javax.swing.JComponent c]
+  (^java.awt.Component$BaselineResizeBehavior [^BasicTextAreaUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 

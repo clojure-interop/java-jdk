@@ -7,7 +7,7 @@
 
 (defn ->multi-tabbed-pane-ui
   "Constructor."
-  ([]
+  (^MultiTabbedPaneUI []
     (new MultiTabbedPaneUI )))
 
 (defn *create-ui
@@ -25,7 +25,7 @@
   "Invokes the installUI method on each UI handled by this object.
 
   a - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JComponent a]
+  ([^MultiTabbedPaneUI this ^javax.swing.JComponent a]
     (-> this (.installUI a))))
 
 (defn get-minimum-size
@@ -35,7 +35,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiTabbedPaneUI this ^javax.swing.JComponent a]
     (-> this (.getMinimumSize a))))
 
 (defn get-maximum-size
@@ -45,7 +45,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiTabbedPaneUI this ^javax.swing.JComponent a]
     (-> this (.getMaximumSize a))))
 
 (defn get-accessible-child
@@ -56,7 +56,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `javax.accessibility.Accessible`"
-  (^javax.accessibility.Accessible [^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JComponent a ^Integer b]
+  (^javax.accessibility.Accessible [^MultiTabbedPaneUI this ^javax.swing.JComponent a ^Integer b]
     (-> this (.getAccessibleChild a b))))
 
 (defn get-u-is
@@ -65,7 +65,7 @@
    UIs on components.
 
   returns: `javax.swing.plaf.ComponentUI[]`"
-  ([^javax.swing.plaf.multi.MultiTabbedPaneUI this]
+  ([^MultiTabbedPaneUI this]
     (-> this (.getUIs))))
 
 (defn get-tab-run-count
@@ -75,14 +75,14 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  (^Integer [^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JTabbedPane a]
+  (^Integer [^MultiTabbedPaneUI this ^javax.swing.JTabbedPane a]
     (-> this (.getTabRunCount a))))
 
 (defn uninstall-ui
   "Invokes the uninstallUI method on each UI handled by this object.
 
   a - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JComponent a]
+  ([^MultiTabbedPaneUI this ^javax.swing.JComponent a]
     (-> this (.uninstallUI a))))
 
 (defn contains
@@ -94,7 +94,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `boolean`"
-  (^Boolean [^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
+  (^Boolean [^MultiTabbedPaneUI this ^javax.swing.JComponent a ^Integer b ^Integer c]
     (-> this (.contains a b c))))
 
 (defn update
@@ -102,7 +102,7 @@
 
   a - the Graphics context in which to paint - `java.awt.Graphics`
   b - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiTabbedPaneUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
+  ([^MultiTabbedPaneUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
     (-> this (.update a b))))
 
 (defn tab-for-coordinate
@@ -114,7 +114,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  (^Integer [^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JTabbedPane a ^Integer b ^Integer c]
+  (^Integer [^MultiTabbedPaneUI this ^javax.swing.JTabbedPane a ^Integer b ^Integer c]
     (-> this (.tabForCoordinate a b c))))
 
 (defn get-accessible-children-count
@@ -124,7 +124,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `int`"
-  (^Integer [^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JComponent a]
+  (^Integer [^MultiTabbedPaneUI this ^javax.swing.JComponent a]
     (-> this (.getAccessibleChildrenCount a))))
 
 (defn paint
@@ -132,7 +132,7 @@
 
   a - the Graphics context in which to paint - `java.awt.Graphics`
   b - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.multi.MultiTabbedPaneUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
+  ([^MultiTabbedPaneUI this ^java.awt.Graphics a ^javax.swing.JComponent b]
     (-> this (.paint a b))))
 
 (defn get-tab-bounds
@@ -143,7 +143,7 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JTabbedPane a ^Integer b]
+  (^java.awt.Rectangle [^MultiTabbedPaneUI this ^javax.swing.JTabbedPane a ^Integer b]
     (-> this (.getTabBounds a b))))
 
 (defn get-preferred-size
@@ -153,6 +153,6 @@
 
   returns: the value obtained from the first UI, which is
    the UI obtained from the default LookAndFeel - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.multi.MultiTabbedPaneUI this ^javax.swing.JComponent a]
+  (^java.awt.Dimension [^MultiTabbedPaneUI this ^javax.swing.JComponent a]
     (-> this (.getPreferredSize a))))
 

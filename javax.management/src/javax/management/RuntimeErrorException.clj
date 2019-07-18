@@ -11,22 +11,22 @@
 
   e - the wrapped error. - `java.lang.Error`
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.Error e ^java.lang.String message]
+  (^RuntimeErrorException [^java.lang.Error e ^java.lang.String message]
     (new RuntimeErrorException e message))
-  ([^java.lang.Error e]
+  (^RuntimeErrorException [^java.lang.Error e]
     (new RuntimeErrorException e)))
 
 (defn get-target-error
   "Returns the actual Error thrown.
 
   returns: the wrapped Error. - `java.lang.Error`"
-  (^java.lang.Error [^javax.management.RuntimeErrorException this]
+  (^java.lang.Error [^RuntimeErrorException this]
     (-> this (.getTargetError))))
 
 (defn get-cause
   "Returns the actual Error thrown.
 
   returns: the wrapped Error. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.management.RuntimeErrorException this]
+  (^java.lang.Throwable [^RuntimeErrorException this]
     (-> this (.getCause))))
 

@@ -17,13 +17,13 @@
   "Constructor.
 
   Create this object with the appropriate identifier."
-  ([]
+  (^DefaultEditorKit$CutAction []
     (new DefaultEditorKit$CutAction )))
 
 (defn action-performed
   "The operation to perform when this action is triggered.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([^javax.swing.text.DefaultEditorKit$CutAction this ^java.awt.event.ActionEvent e]
+  ([^DefaultEditorKit$CutAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

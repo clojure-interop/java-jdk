@@ -17,9 +17,9 @@
   initial-size - The number of char values that will fit into this buffer before it is automatically expanded - `int`
 
   throws: java.lang.IllegalArgumentException - If initialSize is negative"
-  ([^Integer initial-size]
+  (^StringWriter [^Integer initial-size]
     (new StringWriter initial-size))
-  ([]
+  (^StringWriter []
     (new StringWriter )))
 
 (defn write
@@ -28,9 +28,9 @@
   cbuf - Array of characters - `char[]`
   off - Offset from which to start writing characters - `int`
   len - Number of characters to write - `int`"
-  ([^java.io.StringWriter this cbuf ^Integer off ^Integer len]
+  ([^StringWriter this cbuf ^Integer off ^Integer len]
     (-> this (.write cbuf off len)))
-  ([^java.io.StringWriter this ^Integer c]
+  ([^StringWriter this ^Integer c]
     (-> this (.write c))))
 
 (defn append
@@ -51,28 +51,28 @@
   returns: This writer - `java.io.StringWriter`
 
   throws: java.lang.IndexOutOfBoundsException - If start or end are negative, start is greater than end, or end is greater than csq.length()"
-  (^java.io.StringWriter [^java.io.StringWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
+  (^java.io.StringWriter [^StringWriter this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  (^java.io.StringWriter [^java.io.StringWriter this ^java.lang.CharSequence csq]
+  (^java.io.StringWriter [^StringWriter this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn to-string
   "Return the buffer's current value as a string.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.io.StringWriter this]
+  (^java.lang.String [^StringWriter this]
     (-> this (.toString))))
 
 (defn get-buffer
   "Return the string buffer itself.
 
   returns: StringBuffer holding the current buffer value. - `java.lang.StringBuffer`"
-  (^java.lang.StringBuffer [^java.io.StringWriter this]
+  (^java.lang.StringBuffer [^StringWriter this]
     (-> this (.getBuffer))))
 
 (defn flush
   "Flush the stream."
-  ([^java.io.StringWriter this]
+  ([^StringWriter this]
     (-> this (.flush))))
 
 (defn close
@@ -81,6 +81,6 @@
    an IOException.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.StringWriter this]
+  ([^StringWriter this]
     (-> this (.close))))
 

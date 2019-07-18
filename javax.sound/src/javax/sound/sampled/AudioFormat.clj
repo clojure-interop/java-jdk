@@ -91,19 +91,19 @@
    The encoding specifies the convention used to represent the data.
    The other parameters are further explained in the class description.
 
-  encoding - the audio encoding technique - `javax.sound.sampled.AudioFormat.Encoding`
+  encoding - the audio encoding technique - `javax.sound.sampled.AudioFormat$Encoding`
   sample-rate - the number of samples per second - `float`
   sample-size-in-bits - the number of bits in each sample - `int`
   channels - the number of channels (1 for mono, 2 for stereo, and so on) - `int`
   frame-size - the number of bytes in each frame - `int`
   frame-rate - the number of frames per second - `float`
   big-endian - indicates whether the data for a single sample is stored in big-endian byte order (false means little-endian) - `boolean`
-  properties - a Map<String,Object> object containing format properties - `java.util.Map<java.lang.String,java.lang.Object>`"
-  ([^javax.sound.sampled.AudioFormat.Encoding encoding ^Float sample-rate ^Integer sample-size-in-bits ^Integer channels ^Integer frame-size ^Float frame-rate ^Boolean big-endian ^java.util.Map properties]
+  properties - a Map<String,Object> object containing format properties - `java.util.Map`"
+  (^AudioFormat [^javax.sound.sampled.AudioFormat$Encoding encoding ^Float sample-rate ^Integer sample-size-in-bits ^Integer channels ^Integer frame-size ^Float frame-rate ^Boolean big-endian ^java.util.Map properties]
     (new AudioFormat encoding sample-rate sample-size-in-bits channels frame-size frame-rate big-endian properties))
-  ([^javax.sound.sampled.AudioFormat.Encoding encoding ^Float sample-rate ^Integer sample-size-in-bits ^Integer channels ^Integer frame-size ^Float frame-rate ^Boolean big-endian]
+  (^AudioFormat [^javax.sound.sampled.AudioFormat$Encoding encoding ^Float sample-rate ^Integer sample-size-in-bits ^Integer channels ^Integer frame-size ^Float frame-rate ^Boolean big-endian]
     (new AudioFormat encoding sample-rate sample-size-in-bits channels frame-size frame-rate big-endian))
-  ([^Float sample-rate ^Integer sample-size-in-bits ^Integer channels ^Boolean signed ^Boolean big-endian]
+  (^AudioFormat [^Float sample-rate ^Integer sample-size-in-bits ^Integer channels ^Boolean signed ^Boolean big-endian]
     (new AudioFormat sample-rate sample-size-in-bits channels signed big-endian)))
 
 (defn properties
@@ -114,7 +114,7 @@
   returns: a Map<String,Object> object containing
            all properties. If no properties are recognized, an empty map is
            returned. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  (^java.util.Map [^javax.sound.sampled.AudioFormat this]
+  (^java.util.Map [^AudioFormat this]
     (-> this (.properties))))
 
 (defn get-sample-rate
@@ -128,14 +128,14 @@
 
   returns: the number of samples per second,
    or AudioSystem.NOT_SPECIFIED - `float`"
-  (^Float [^javax.sound.sampled.AudioFormat this]
+  (^Float [^AudioFormat this]
     (-> this (.getSampleRate))))
 
 (defn get-encoding
   "Obtains the type of encoding for sounds in this format.
 
-  returns: the encoding type - `javax.sound.sampled.AudioFormat.Encoding`"
-  (^javax.sound.sampled.AudioFormat.Encoding [^javax.sound.sampled.AudioFormat this]
+  returns: the encoding type - `javax.sound.sampled.AudioFormat$Encoding`"
+  (^javax.sound.sampled.AudioFormat$Encoding [^AudioFormat this]
     (-> this (.getEncoding))))
 
 (defn to-string
@@ -144,7 +144,7 @@
    may vary between implementations of Java Sound.
 
   returns: a string that describes the format parameters - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.AudioFormat this]
+  (^java.lang.String [^AudioFormat this]
     (-> this (.toString))))
 
 (defn get-sample-size-in-bits
@@ -158,7 +158,7 @@
 
   returns: the number of bits in each sample,
    or AudioSystem.NOT_SPECIFIED - `int`"
-  (^Integer [^javax.sound.sampled.AudioFormat this]
+  (^Integer [^AudioFormat this]
     (-> this (.getSampleSizeInBits))))
 
 (defn get-channels
@@ -169,7 +169,7 @@
 
   returns: The number of channels (1 for mono, 2 for stereo, etc.),
    or AudioSystem.NOT_SPECIFIED - `int`"
-  (^Integer [^javax.sound.sampled.AudioFormat this]
+  (^Integer [^AudioFormat this]
     (-> this (.getChannels))))
 
 (defn get-frame-size
@@ -181,7 +181,7 @@
 
   returns: the number of bytes per frame,
    or AudioSystem.NOT_SPECIFIED - `int`"
-  (^Integer [^javax.sound.sampled.AudioFormat this]
+  (^Integer [^AudioFormat this]
     (-> this (.getFrameSize))))
 
 (defn get-property
@@ -197,7 +197,7 @@
 
   returns: the value of the property with the specified key,
            or null if the property does not exist. - `java.lang.Object`"
-  (^java.lang.Object [^javax.sound.sampled.AudioFormat this ^java.lang.String key]
+  (^java.lang.Object [^AudioFormat this ^java.lang.String key]
     (-> this (.getProperty key))))
 
 (defn get-frame-rate
@@ -209,7 +209,7 @@
 
   returns: the number of frames per second,
    or AudioSystem.NOT_SPECIFIED - `float`"
-  (^Float [^javax.sound.sampled.AudioFormat this]
+  (^Float [^AudioFormat this]
     (-> this (.getFrameRate))))
 
 (defn matches
@@ -227,7 +227,7 @@
 
   returns: true if this format matches the one specified,
            false otherwise. - `boolean`"
-  (^Boolean [^javax.sound.sampled.AudioFormat this ^javax.sound.sampled.AudioFormat format]
+  (^Boolean [^AudioFormat this ^javax.sound.sampled.AudioFormat format]
     (-> this (.matches format))))
 
 (defn big-endian?
@@ -237,6 +237,6 @@
 
   returns: true if the data is stored in big-endian byte order,
    false if little-endian - `boolean`"
-  (^Boolean [^javax.sound.sampled.AudioFormat this]
+  (^Boolean [^AudioFormat this]
     (-> this (.isBigEndian))))
 

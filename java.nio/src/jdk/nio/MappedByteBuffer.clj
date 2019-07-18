@@ -44,7 +44,7 @@
 
   returns: true if it is likely that this buffer's content
             is resident in physical memory - `boolean`"
-  (^Boolean [^java.nio.MappedByteBuffer this]
+  (^Boolean [^MappedByteBuffer this]
     (-> this (.isLoaded))))
 
 (defn load
@@ -56,7 +56,7 @@
    occur.
 
   returns: This buffer - `java.nio.MappedByteBuffer`"
-  (^java.nio.MappedByteBuffer [^java.nio.MappedByteBuffer this]
+  (^java.nio.MappedByteBuffer [^MappedByteBuffer this]
     (-> this (.load))))
 
 (defn force
@@ -75,6 +75,6 @@
    method has no effect.
 
   returns: This buffer - `java.nio.MappedByteBuffer`"
-  (^java.nio.MappedByteBuffer [^java.nio.MappedByteBuffer this]
+  (^java.nio.MappedByteBuffer [^MappedByteBuffer this]
     (-> this (.force))))
 

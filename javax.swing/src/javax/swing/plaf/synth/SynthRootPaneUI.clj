@@ -6,7 +6,7 @@
 
 (defn ->synth-root-pane-ui
   "Constructor."
-  ([]
+  (^SynthRootPaneUI []
     (new SynthRootPaneUI )))
 
 (defn *create-ui
@@ -24,7 +24,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthRootPaneUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^SynthRootPaneUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn update
@@ -37,7 +37,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthRootPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthRootPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint
@@ -47,7 +47,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthRootPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthRootPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn paint-border
@@ -59,7 +59,7 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^javax.swing.plaf.synth.SynthRootPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthRootPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn property-change
@@ -68,6 +68,6 @@
    reinstall the keyboard actions.
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.plaf.synth.SynthRootPaneUI this ^java.beans.PropertyChangeEvent e]
+  ([^SynthRootPaneUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 

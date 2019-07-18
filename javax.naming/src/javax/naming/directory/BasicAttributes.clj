@@ -35,20 +35,20 @@
   attr-id - non-null The id of the attribute to add. If this attribute set ignores the character case of its attribute ids, the case of attrID is ignored. - `java.lang.String`
   val - The value of the attribute to add. If null, a null value is added to the attribute. - `java.lang.Object`
   ignore-case - true means this attribute set will ignore the case of its attribute identifiers when retrieving or adding attributes; false means case is respected. - `boolean`"
-  ([^java.lang.String attr-id ^java.lang.Object val ^Boolean ignore-case]
+  (^BasicAttributes [^java.lang.String attr-id ^java.lang.Object val ^Boolean ignore-case]
     (new BasicAttributes attr-id val ignore-case))
-  ([^java.lang.String attr-id ^java.lang.Object val]
+  (^BasicAttributes [^java.lang.String attr-id ^java.lang.Object val]
     (new BasicAttributes attr-id val))
-  ([^Boolean ignore-case]
+  (^BasicAttributes [^Boolean ignore-case]
     (new BasicAttributes ignore-case))
-  ([]
+  (^BasicAttributes []
     (new BasicAttributes )))
 
 (defn case-ignored?
   "Description copied from interface: Attributes
 
   returns: true if case is ignored; false otherwise. - `boolean`"
-  (^Boolean [^javax.naming.directory.BasicAttributes this]
+  (^Boolean [^BasicAttributes this]
     (-> this (.isCaseIgnored))))
 
 (defn get-i-ds
@@ -59,7 +59,7 @@
            of class String.
            If attribute set has zero attributes, an empty enumeration
            is returned. - `javax.naming.NamingEnumeration<java.lang.String>`"
-  (^javax.naming.NamingEnumeration [^javax.naming.directory.BasicAttributes this]
+  (^javax.naming.NamingEnumeration [^BasicAttributes this]
     (-> this (.getIDs))))
 
 (defn put
@@ -70,9 +70,9 @@
 
   returns: The Attribute with attrID that was previous in this attribute set;
            null if no such attribute existed. - `javax.naming.directory.Attribute`"
-  (^javax.naming.directory.Attribute [^javax.naming.directory.BasicAttributes this ^java.lang.String attr-id ^java.lang.Object val]
+  (^javax.naming.directory.Attribute [^BasicAttributes this ^java.lang.String attr-id ^java.lang.Object val]
     (-> this (.put attr-id val)))
-  (^javax.naming.directory.Attribute [^javax.naming.directory.BasicAttributes this ^javax.naming.directory.Attribute attr]
+  (^javax.naming.directory.Attribute [^BasicAttributes this ^javax.naming.directory.Attribute attr]
     (-> this (.put attr))))
 
 (defn get-all
@@ -82,7 +82,7 @@
            Each element of the enumeration is of class Attribute.
            If attribute set has zero attributes, an empty enumeration
            is returned. - `javax.naming.NamingEnumeration<javax.naming.directory.Attribute>`"
-  (^javax.naming.NamingEnumeration [^javax.naming.directory.BasicAttributes this]
+  (^javax.naming.NamingEnumeration [^BasicAttributes this]
     (-> this (.getAll))))
 
 (defn to-string
@@ -92,7 +92,7 @@
    for debugging and is not meant to be interpreted programmatically.
 
   returns: A non-null string listing the contents of this attribute set. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.directory.BasicAttributes this]
+  (^java.lang.String [^BasicAttributes this]
     (-> this (.toString))))
 
 (defn remove
@@ -103,14 +103,14 @@
   returns: The Attribute with the same ID as attrID that was previous
            in the attribute set;
            null if no such attribute existed. - `javax.naming.directory.Attribute`"
-  (^javax.naming.directory.Attribute [^javax.naming.directory.BasicAttributes this ^java.lang.String attr-id]
+  (^javax.naming.directory.Attribute [^BasicAttributes this ^java.lang.String attr-id]
     (-> this (.remove attr-id))))
 
 (defn clone
   "Description copied from class: Object
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^javax.naming.directory.BasicAttributes this]
+  (^java.lang.Object [^BasicAttributes this]
     (-> this (.clone))))
 
 (defn hash-code
@@ -125,14 +125,14 @@
    have the same hash code.
 
   returns: an int representing the hash code of this BasicAttributes instance. - `int`"
-  (^Integer [^javax.naming.directory.BasicAttributes this]
+  (^Integer [^BasicAttributes this]
     (-> this (.hashCode))))
 
 (defn size
   "Description copied from interface: Attributes
 
   returns: The nonnegative number of attributes in this attribute set. - `int`"
-  (^Integer [^javax.naming.directory.BasicAttributes this]
+  (^Integer [^BasicAttributes this]
     (-> this (.size))))
 
 (defn get
@@ -141,7 +141,7 @@
   attr-id - The non-null id of the attribute to retrieve. If this attribute set ignores the character case of its attribute ids, the case of attrID is ignored. - `java.lang.String`
 
   returns: The attribute identified by attrID; null if not found. - `javax.naming.directory.Attribute`"
-  (^javax.naming.directory.Attribute [^javax.naming.directory.BasicAttributes this ^java.lang.String attr-id]
+  (^javax.naming.directory.Attribute [^BasicAttributes this ^java.lang.String attr-id]
     (-> this (.get attr-id))))
 
 (defn equals
@@ -161,6 +161,6 @@
   obj - the possibly null object to compare against. - `java.lang.Object`
 
   returns: true If obj is equal to this BasicAttributes. - `boolean`"
-  (^Boolean [^javax.naming.directory.BasicAttributes this ^java.lang.Object obj]
+  (^Boolean [^BasicAttributes this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

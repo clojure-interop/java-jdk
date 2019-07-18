@@ -16,6 +16,6 @@
 
 (defn ->inheritable-thread-local
   "Constructor."
-  ([]
+  (^InheritableThreadLocal []
     (new InheritableThreadLocal )))
 

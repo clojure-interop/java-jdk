@@ -20,7 +20,7 @@
   "Determines whether an algorithm and the corresponding key are granted
    permission for the specified cryptographic primitives.
 
-  primitives - a set of cryptographic primitives - `java.util.Set<java.security.CryptoPrimitive>`
+  primitives - a set of cryptographic primitives - `java.util.Set`
   algorithm - the algorithm name - `java.lang.String`
   key - the key - `java.security.Key`
   parameters - the algorithm parameters, or null if no additional parameters - `java.security.AlgorithmParameters`
@@ -29,10 +29,10 @@
        specified cryptographic primitives - `boolean`
 
   throws: java.lang.IllegalArgumentException - if primitives or algorithm is null or empty, or the key is null"
-  (^Boolean [^java.security.AlgorithmConstraints this ^java.util.Set primitives ^java.lang.String algorithm ^java.security.Key key ^java.security.AlgorithmParameters parameters]
+  (^Boolean [^AlgorithmConstraints this ^java.util.Set primitives ^java.lang.String algorithm ^java.security.Key key ^java.security.AlgorithmParameters parameters]
     (-> this (.permits primitives algorithm key parameters)))
-  (^Boolean [^java.security.AlgorithmConstraints this ^java.util.Set primitives ^java.lang.String algorithm ^java.security.AlgorithmParameters parameters]
+  (^Boolean [^AlgorithmConstraints this ^java.util.Set primitives ^java.lang.String algorithm ^java.security.AlgorithmParameters parameters]
     (-> this (.permits primitives algorithm parameters)))
-  (^Boolean [^java.security.AlgorithmConstraints this ^java.util.Set primitives ^java.security.Key key]
+  (^Boolean [^AlgorithmConstraints this ^java.util.Set primitives ^java.security.Key key]
     (-> this (.permits primitives key))))
 

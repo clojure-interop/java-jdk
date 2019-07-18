@@ -11,10 +11,10 @@
 (defn apply-as-double
   "Applies this function to the given arguments.
 
-  t - the first function argument - `ToDoubleBiFunction.T`
-  u - the second function argument - `ToDoubleBiFunction.U`
+  t - the first function argument - `T`
+  u - the second function argument - `U`
 
   returns: the function result - `double`"
-  (^Double [^java.util.function.ToDoubleBiFunction this ^ToDoubleBiFunction.T t ^ToDoubleBiFunction.U u]
+  (^Double [^ToDoubleBiFunction this t u]
     (-> this (.applyAsDouble t u))))
 

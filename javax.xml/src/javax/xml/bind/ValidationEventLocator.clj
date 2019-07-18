@@ -16,28 +16,28 @@
   "Return the name of the XML source as a URL if available
 
   returns: the name of the XML source as a URL or null if unavailable - `java.net.URL`"
-  (^java.net.URL [^javax.xml.bind.ValidationEventLocator this]
+  (^java.net.URL [^ValidationEventLocator this]
     (-> this (.getURL))))
 
 (defn get-offset
   "Return the byte offset if available
 
   returns: the byte offset into the input source or -1 if unavailable - `int`"
-  (^Integer [^javax.xml.bind.ValidationEventLocator this]
+  (^Integer [^ValidationEventLocator this]
     (-> this (.getOffset))))
 
 (defn get-line-number
   "Return the line number if available
 
   returns: the line number or -1 if unavailable - `int`"
-  (^Integer [^javax.xml.bind.ValidationEventLocator this]
+  (^Integer [^ValidationEventLocator this]
     (-> this (.getLineNumber))))
 
 (defn get-column-number
   "Return the column number if available
 
   returns: the column number or -1 if unavailable - `int`"
-  (^Integer [^javax.xml.bind.ValidationEventLocator this]
+  (^Integer [^ValidationEventLocator this]
     (-> this (.getColumnNumber))))
 
 (defn get-object
@@ -45,13 +45,13 @@
 
   returns: a reference to the object in the Java content tree or null if
            unavailable - `java.lang.Object`"
-  (^java.lang.Object [^javax.xml.bind.ValidationEventLocator this]
+  (^java.lang.Object [^ValidationEventLocator this]
     (-> this (.getObject))))
 
 (defn get-node
   "Return a reference to the DOM Node if available
 
   returns: a reference to the DOM Node or null if unavailable - `org.w3c.dom.Node`"
-  (^org.w3c.dom.Node [^javax.xml.bind.ValidationEventLocator this]
+  (^org.w3c.dom.Node [^ValidationEventLocator this]
     (-> this (.getNode))))
 

@@ -31,13 +31,13 @@
    into the associated Component.
 
   returns: the Insets - `java.awt.Insets`"
-  (^java.awt.Insets [^java.awt.dnd.Autoscroll this]
+  (^java.awt.Insets [^Autoscroll this]
     (-> this (.getAutoscrollInsets))))
 
 (defn autoscroll
   "notify the Component to autoscroll
 
   cursor-locn - A Point indicating the location of the cursor that triggered this operation. - `java.awt.Point`"
-  ([^java.awt.dnd.Autoscroll this ^java.awt.Point cursor-locn]
+  ([^Autoscroll this ^java.awt.Point cursor-locn]
     (-> this (.autoscroll cursor-locn))))
 

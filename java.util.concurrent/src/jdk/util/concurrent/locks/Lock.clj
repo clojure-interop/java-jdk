@@ -135,7 +135,7 @@
    may throw an (unchecked) exception in such circumstances.  The
    circumstances and the exception type must be documented by that
    Lock implementation."
-  ([^java.util.concurrent.locks.Lock this]
+  ([^Lock this]
     (-> this (.lock))))
 
 (defn lock-interruptibly
@@ -181,7 +181,7 @@
    be documented by that Lock implementation.
 
   throws: java.lang.InterruptedException - if the current thread is interrupted while acquiring the lock (and interruption of lock acquisition is supported)"
-  ([^java.util.concurrent.locks.Lock this]
+  ([^Lock this]
     (-> this (.lockInterruptibly))))
 
 (defn try-lock
@@ -240,9 +240,9 @@
            if the waiting time elapsed before the lock was acquired - `boolean`
 
   throws: java.lang.InterruptedException - if the current thread is interrupted while acquiring the lock (and interruption of lock acquisition is supported)"
-  (^Boolean [^java.util.concurrent.locks.Lock this ^Long time ^java.util.concurrent.TimeUnit unit]
+  (^Boolean [^Lock this ^Long time ^java.util.concurrent.TimeUnit unit]
     (-> this (.tryLock time unit)))
-  (^Boolean [^java.util.concurrent.locks.Lock this]
+  (^Boolean [^Lock this]
     (-> this (.tryLock))))
 
 (defn unlock
@@ -256,7 +256,7 @@
    an (unchecked) exception if the restriction is violated.
    Any restrictions and the exception
    type must be documented by that Lock implementation."
-  ([^java.util.concurrent.locks.Lock this]
+  ([^Lock this]
     (-> this (.unlock))))
 
 (defn new-condition
@@ -277,6 +277,6 @@
   returns: A new Condition instance for this Lock instance - `java.util.concurrent.locks.Condition`
 
   throws: java.lang.UnsupportedOperationException - if this Lock implementation does not support conditions"
-  (^java.util.concurrent.locks.Condition [^java.util.concurrent.locks.Lock this]
+  (^java.util.concurrent.locks.Condition [^Lock this]
     (-> this (.newCondition))))
 

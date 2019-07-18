@@ -17,8 +17,8 @@
    particular exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^CertificateException [^java.lang.String msg]
     (new CertificateException msg))
-  ([]
+  (^CertificateException []
     (new CertificateException )))
 

@@ -28,7 +28,7 @@
   locale - Natural language of the text string. null is interpreted to mean the default locale as returned by Locale.getDefault() - `java.util.Locale`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if userName is null."
-  ([^java.lang.String user-name ^java.util.Locale locale]
+  (^JobOriginatingUserName [^java.lang.String user-name ^java.util.Locale locale]
     (new JobOriginatingUserName user-name locale)))
 
 (defn equals
@@ -51,7 +51,7 @@
 
   returns: True if object is equivalent to this job
             originating user name attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.JobOriginatingUserName this ^java.lang.Object object]
+  (^Boolean [^JobOriginatingUserName this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -63,7 +63,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.JobOriginatingUserName this]
+  ([^JobOriginatingUserName this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -74,6 +74,6 @@
    category name is `job-originating-user-name`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.JobOriginatingUserName this]
+  (^java.lang.String [^JobOriginatingUserName this]
     (-> this (.getName))))
 

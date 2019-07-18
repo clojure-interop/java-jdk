@@ -19,7 +19,7 @@
    from being updated is implementation specific.
 
   returns: the value of the read-only attribute - `boolean`"
-  (^Boolean [^java.nio.file.attribute.DosFileAttributes this]
+  (^Boolean [^DosFileAttributes this]
     (-> this (.isReadOnly))))
 
 (defn hidden?
@@ -29,7 +29,7 @@
    users.
 
   returns: the value of the hidden attribute - `boolean`"
-  (^Boolean [^java.nio.file.attribute.DosFileAttributes this]
+  (^Boolean [^DosFileAttributes this]
     (-> this (.isHidden))))
 
 (defn archive?
@@ -38,7 +38,7 @@
     This attribute is typically used by backup programs.
 
   returns: the value of the archive attribute - `boolean`"
-  (^Boolean [^java.nio.file.attribute.DosFileAttributes this]
+  (^Boolean [^DosFileAttributes this]
     (-> this (.isArchive))))
 
 (defn system?
@@ -48,6 +48,6 @@
    of the operating system.
 
   returns: the value of the system attribute - `boolean`"
-  (^Boolean [^java.nio.file.attribute.DosFileAttributes this]
+  (^Boolean [^DosFileAttributes this]
     (-> this (.isSystem))))
 

@@ -39,8 +39,8 @@
    This implementation permits limited parallelism.
 
   returns: a Spliterator covering some portion of the
-   elements, or null if this spliterator cannot be split - `java.util.Spliterator.OfDouble`"
-  (^java.util.Spliterator.OfDouble [^java.util.Spliterators$AbstractDoubleSpliterator this]
+   elements, or null if this spliterator cannot be split - `java.util.Spliterator$OfDouble`"
+  (^java.util.Spliterator$OfDouble [^Spliterators$AbstractDoubleSpliterator this]
     (-> this (.trySplit))))
 
 (defn estimate-size
@@ -56,7 +56,7 @@
 
   returns: the estimated size, or Long.MAX_VALUE if infinite,
            unknown, or too expensive to compute. - `long`"
-  (^Long [^java.util.Spliterators$AbstractDoubleSpliterator this]
+  (^Long [^Spliterators$AbstractDoubleSpliterator this]
     (-> this (.estimateSize))))
 
 (defn characteristics
@@ -73,6 +73,6 @@
    about any computation using this Spliterator.
 
   returns: a representation of characteristics - `int`"
-  (^Integer [^java.util.Spliterators$AbstractDoubleSpliterator this]
+  (^Integer [^Spliterators$AbstractDoubleSpliterator this]
     (-> this (.characteristics))))
 

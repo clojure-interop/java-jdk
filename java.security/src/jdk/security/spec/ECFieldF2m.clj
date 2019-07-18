@@ -25,9 +25,9 @@
   rp - the BigInteger whose i-th bit corresponds to the i-th coefficient of the reduction polynomial. - `java.math.BigInteger`
 
   throws: java.lang.NullPointerException - if rp is null."
-  ([^Integer m ^java.math.BigInteger rp]
+  (^ECFieldF2m [^Integer m ^java.math.BigInteger rp]
     (new ECFieldF2m m rp))
-  ([^Integer m]
+  (^ECFieldF2m [^Integer m]
     (new ECFieldF2m m)))
 
 (defn get-field-size
@@ -35,7 +35,7 @@
    for this characteristic 2 finite field.
 
   returns: the field size in bits. - `int`"
-  (^Integer [^java.security.spec.ECFieldF2m this]
+  (^Integer [^ECFieldF2m this]
     (-> this (.getFieldSize))))
 
 (defn get-m
@@ -44,7 +44,7 @@
 
   returns: m with 2^m being the
    number of elements. - `int`"
-  (^Integer [^java.security.spec.ECFieldF2m this]
+  (^Integer [^ECFieldF2m this]
     (-> this (.getM))))
 
 (defn get-reduction-polynomial
@@ -55,7 +55,7 @@
   returns: a BigInteger whose i-th bit corresponds to the
    i-th coefficient of the reduction polynomial for polynomial
    basis or null for normal basis. - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.security.spec.ECFieldF2m this]
+  (^java.math.BigInteger [^ECFieldF2m this]
     (-> this (.getReductionPolynomial))))
 
 (defn get-mid-terms-of-reduction-polynomial
@@ -67,7 +67,7 @@
    middle term(s) of the reduction polynomial for polynomial
    basis or null for normal basis. A new array is returned
    each time this method is called. - `int[]`"
-  ([^java.security.spec.ECFieldF2m this]
+  ([^ECFieldF2m this]
     (-> this (.getMidTermsOfReductionPolynomial))))
 
 (defn equals
@@ -79,7 +79,7 @@
   returns: true if obj is an instance
    of ECFieldF2m and both m and the reduction
    polynomial match, false otherwise. - `boolean`"
-  (^Boolean [^java.security.spec.ECFieldF2m this ^java.lang.Object obj]
+  (^Boolean [^ECFieldF2m this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -87,6 +87,6 @@
    finite field.
 
   returns: a hash code value. - `int`"
-  (^Integer [^java.security.spec.ECFieldF2m this]
+  (^Integer [^ECFieldF2m this]
     (-> this (.hashCode))))
 

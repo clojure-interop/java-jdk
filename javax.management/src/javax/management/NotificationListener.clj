@@ -10,6 +10,6 @@
 
   notification - The notification. - `javax.management.Notification`
   handback - An opaque object which helps the listener to associate information regarding the MBean emitter. This object is passed to the addNotificationListener call and resent, without modification, to the listener. - `java.lang.Object`"
-  ([^javax.management.NotificationListener this ^javax.management.Notification notification ^java.lang.Object handback]
+  ([^NotificationListener this ^javax.management.Notification notification ^java.lang.Object handback]
     (-> this (.handleNotification notification handback))))
 

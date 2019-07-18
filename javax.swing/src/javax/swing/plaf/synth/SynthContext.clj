@@ -21,28 +21,28 @@
   state - State of the component as defined in SynthConstants. - `int`
 
   throws: java.lang.NullPointerException - if component, region of style is null."
-  ([^javax.swing.JComponent component ^javax.swing.plaf.synth.Region region ^javax.swing.plaf.synth.SynthStyle style ^Integer state]
+  (^SynthContext [^javax.swing.JComponent component ^javax.swing.plaf.synth.Region region ^javax.swing.plaf.synth.SynthStyle style ^Integer state]
     (new SynthContext component region style state)))
 
 (defn get-component
   "Returns the hosting component containing the region.
 
   returns: Hosting Component - `javax.swing.JComponent`"
-  (^javax.swing.JComponent [^javax.swing.plaf.synth.SynthContext this]
+  (^javax.swing.JComponent [^SynthContext this]
     (-> this (.getComponent))))
 
 (defn get-region
   "Returns the Region identifying this state.
 
   returns: Region of the hosting component - `javax.swing.plaf.synth.Region`"
-  (^javax.swing.plaf.synth.Region [^javax.swing.plaf.synth.SynthContext this]
+  (^javax.swing.plaf.synth.Region [^SynthContext this]
     (-> this (.getRegion))))
 
 (defn get-style
   "Returns the style associated with this Region.
 
   returns: SynthStyle associated with the region. - `javax.swing.plaf.synth.SynthStyle`"
-  (^javax.swing.plaf.synth.SynthStyle [^javax.swing.plaf.synth.SynthContext this]
+  (^javax.swing.plaf.synth.SynthStyle [^SynthContext this]
     (-> this (.getStyle))))
 
 (defn get-component-state
@@ -53,6 +53,6 @@
    or DISABLED.
 
   returns: State of Component - `int`"
-  (^Integer [^javax.swing.plaf.synth.SynthContext this]
+  (^Integer [^SynthContext this]
     (-> this (.getComponentState))))
 

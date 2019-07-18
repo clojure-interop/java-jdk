@@ -11,6 +11,6 @@
   p-1 - the ending offset in the model >= p0 - `int`
   bounds - the bounding box for the highlight - `java.awt.Shape`
   c - the editor - `javax.swing.text.JTextComponent`"
-  ([^javax.swing.text.Highlighter$HighlightPainter this ^java.awt.Graphics g ^Integer p-0 ^Integer p-1 ^java.awt.Shape bounds ^javax.swing.text.JTextComponent c]
+  ([^Highlighter$HighlightPainter this ^java.awt.Graphics g ^Integer p-0 ^Integer p-1 ^java.awt.Shape bounds ^javax.swing.text.JTextComponent c]
     (-> this (.paint g p-0 p-1 bounds c))))
 

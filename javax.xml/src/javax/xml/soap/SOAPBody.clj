@@ -34,11 +34,11 @@
   returns: the new SOAPFault object - `javax.xml.soap.SOAPFault`
 
   throws: javax.xml.soap.SOAPException - if there is a SOAP error"
-  (^javax.xml.soap.SOAPFault [^javax.xml.soap.SOAPBody this ^javax.xml.soap.Name fault-code ^java.lang.String fault-string ^java.util.Locale locale]
+  (^javax.xml.soap.SOAPFault [^SOAPBody this ^javax.xml.soap.Name fault-code ^java.lang.String fault-string ^java.util.Locale locale]
     (-> this (.addFault fault-code fault-string locale)))
-  (^javax.xml.soap.SOAPFault [^javax.xml.soap.SOAPBody this ^javax.xml.soap.Name fault-code ^java.lang.String fault-string]
+  (^javax.xml.soap.SOAPFault [^SOAPBody this ^javax.xml.soap.Name fault-code ^java.lang.String fault-string]
     (-> this (.addFault fault-code fault-string)))
-  (^javax.xml.soap.SOAPFault [^javax.xml.soap.SOAPBody this]
+  (^javax.xml.soap.SOAPFault [^SOAPBody this]
     (-> this (.addFault))))
 
 (defn has-fault?
@@ -48,7 +48,7 @@
   returns: true if a SOAPFault object exists
            in this SOAPBody object; false
            otherwise - `boolean`"
-  (^Boolean [^javax.xml.soap.SOAPBody this]
+  (^Boolean [^SOAPBody this]
     (-> this (.hasFault))))
 
 (defn get-fault
@@ -57,7 +57,7 @@
 
   returns: the SOAPFault object in this SOAPBody
            object if present, null otherwise. - `javax.xml.soap.SOAPFault`"
-  (^javax.xml.soap.SOAPFault [^javax.xml.soap.SOAPBody this]
+  (^javax.xml.soap.SOAPFault [^SOAPBody this]
     (-> this (.getFault))))
 
 (defn add-body-element
@@ -69,7 +69,7 @@
   returns: the new SOAPBodyElement object - `javax.xml.soap.SOAPBodyElement`
 
   throws: javax.xml.soap.SOAPException - if a SOAP error occurs"
-  (^javax.xml.soap.SOAPBodyElement [^javax.xml.soap.SOAPBody this ^javax.xml.soap.Name name]
+  (^javax.xml.soap.SOAPBodyElement [^SOAPBody this ^javax.xml.soap.Name name]
     (-> this (.addBodyElement name))))
 
 (defn add-document
@@ -87,7 +87,7 @@
            that was added. - `javax.xml.soap.SOAPBodyElement`
 
   throws: javax.xml.soap.SOAPException - if the Document cannot be added"
-  (^javax.xml.soap.SOAPBodyElement [^javax.xml.soap.SOAPBody this ^org.w3c.dom.Document document]
+  (^javax.xml.soap.SOAPBodyElement [^SOAPBody this ^org.w3c.dom.Document document]
     (-> this (.addDocument document))))
 
 (defn extract-content-as-document
@@ -100,6 +100,6 @@
            of the SOAPBody content. - `org.w3c.dom.Document`
 
   throws: javax.xml.soap.SOAPException - if there is not exactly one child SOAPElement of the SOAPBody."
-  (^org.w3c.dom.Document [^javax.xml.soap.SOAPBody this]
+  (^org.w3c.dom.Document [^SOAPBody this]
     (-> this (.extractContentAsDocument))))
 

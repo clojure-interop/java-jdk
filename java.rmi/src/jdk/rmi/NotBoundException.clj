@@ -12,8 +12,8 @@
    detail message.
 
   s - the detail message - `java.lang.String`"
-  ([^java.lang.String s]
+  (^NotBoundException [^java.lang.String s]
     (new NotBoundException s))
-  ([]
+  (^NotBoundException []
     (new NotBoundException )))
 

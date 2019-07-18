@@ -46,7 +46,7 @@
   hostname - the hostname of this server name - `java.lang.String`
 
   throws: java.lang.NullPointerException - if hostname is null"
-  ([^java.lang.String hostname]
+  (^SNIHostName [^java.lang.String hostname]
     (new SNIHostName hostname)))
 
 (defn *create-sni-matcher
@@ -86,7 +86,7 @@
 
   returns: the StandardCharsets.US_ASCII-compliant hostname
            of this SNIHostName object - `java.lang.String`"
-  (^java.lang.String [^javax.net.ssl.SNIHostName this]
+  (^java.lang.String [^SNIHostName this]
     (-> this (.getAsciiName))))
 
 (defn equals
@@ -101,7 +101,7 @@
 
   returns: true if, and only if, the other is considered
            equal to this instance - `boolean`"
-  (^Boolean [^javax.net.ssl.SNIHostName this ^java.lang.Object other]
+  (^Boolean [^SNIHostName this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn hash-code
@@ -111,7 +111,7 @@
    of this SNIHostName.
 
   returns: a hash code value for this SNIHostName. - `int`"
-  (^Integer [^javax.net.ssl.SNIHostName this]
+  (^Integer [^SNIHostName this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -138,6 +138,6 @@
    and subject to change.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.net.ssl.SNIHostName this]
+  (^java.lang.String [^SNIHostName this]
     (-> this (.toString))))
 

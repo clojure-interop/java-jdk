@@ -29,7 +29,7 @@
 
   width - the target width to scale the image - `int`
   height - the target height to scale the image - `int`"
-  ([^Integer width ^Integer height]
+  (^AreaAveragingScaleFilter [^Integer width ^Integer height]
     (new AreaAveragingScaleFilter width height)))
 
 (defn set-hints
@@ -44,7 +44,7 @@
    with the filtering operation.
 
   hints - a set of hints that the ImageConsumer uses to process the pixels - `int`"
-  ([^java.awt.image.AreaAveragingScaleFilter this ^Integer hints]
+  ([^AreaAveragingScaleFilter this ^Integer hints]
     (-> this (.setHints hints))))
 
 (defn set-pixels
@@ -70,6 +70,6 @@
   pixels - the array of pixels - `byte[]`
   off - the offset into the pixels array - `int`
   scansize - the distance from one row of pixels to the next in the pixels array - `int`"
-  ([^java.awt.image.AreaAveragingScaleFilter this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
+  ([^AreaAveragingScaleFilter this ^Integer x ^Integer y ^Integer w ^Integer h ^java.awt.image.ColorModel model pixels ^Integer off ^Integer scansize]
     (-> this (.setPixels x y w h model pixels off scansize))))
 

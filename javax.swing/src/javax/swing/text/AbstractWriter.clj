@@ -11,14 +11,14 @@
   "Returns the first offset to be output.
 
   returns: `int`"
-  (^Integer [^javax.swing.text.AbstractWriter this]
+  (^Integer [^AbstractWriter this]
     (-> this (.getStartOffset))))
 
 (defn get-end-offset
   "Returns the last offset to be output.
 
   returns: `int`"
-  (^Integer [^javax.swing.text.AbstractWriter this]
+  (^Integer [^AbstractWriter this]
     (-> this (.getEndOffset))))
 
 (defn set-line-separator
@@ -27,13 +27,13 @@
    line.separator.
 
   value - `java.lang.String`"
-  ([^javax.swing.text.AbstractWriter this ^java.lang.String value]
+  ([^AbstractWriter this ^java.lang.String value]
     (-> this (.setLineSeparator value))))
 
 (defn get-line-separator
   "Returns the string used to represent newlines.
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.AbstractWriter this]
+  (^java.lang.String [^AbstractWriter this]
     (-> this (.getLineSeparator))))
 

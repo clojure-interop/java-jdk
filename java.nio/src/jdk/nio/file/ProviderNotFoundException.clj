@@ -9,8 +9,8 @@
   Constructs an instance of this class.
 
   msg - the detail message - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^ProviderNotFoundException [^java.lang.String msg]
     (new ProviderNotFoundException msg))
-  ([]
+  (^ProviderNotFoundException []
     (new ProviderNotFoundException )))
 

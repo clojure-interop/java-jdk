@@ -19,6 +19,6 @@
   Constructs an UnsupportedLookAndFeelException object.
 
   s - a message String - `java.lang.String`"
-  ([^java.lang.String s]
+  (^UnsupportedLookAndFeelException [^java.lang.String s]
     (new UnsupportedLookAndFeelException s)))
 

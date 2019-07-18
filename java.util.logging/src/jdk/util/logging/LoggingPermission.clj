@@ -23,6 +23,6 @@
   actions - Must be either null or the empty string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^LoggingPermission [^java.lang.String name ^java.lang.String actions]
     (new LoggingPermission name actions)))
 

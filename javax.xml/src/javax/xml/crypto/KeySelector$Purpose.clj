@@ -8,7 +8,7 @@
 
   A key for signing.
 
-  type: javax.xml.crypto.KeySelector.Purpose"
+  type: javax.xml.crypto.KeySelector$Purpose"
   KeySelector$Purpose/SIGN)
 
 (def *-verify
@@ -16,7 +16,7 @@
 
   A key for verifying.
 
-  type: javax.xml.crypto.KeySelector.Purpose"
+  type: javax.xml.crypto.KeySelector$Purpose"
   KeySelector$Purpose/VERIFY)
 
 (def *-encrypt
@@ -24,7 +24,7 @@
 
   A key for encrypting.
 
-  type: javax.xml.crypto.KeySelector.Purpose"
+  type: javax.xml.crypto.KeySelector$Purpose"
   KeySelector$Purpose/ENCRYPT)
 
 (def *-decrypt
@@ -32,7 +32,7 @@
 
   A key for decrypting.
 
-  type: javax.xml.crypto.KeySelector.Purpose"
+  type: javax.xml.crypto.KeySelector$Purpose"
   KeySelector$Purpose/DECRYPT)
 
 (defn to-string
@@ -40,6 +40,6 @@
    `verify`, `encrypt`, or `decrypt`).
 
   returns: a string representation of this purpose - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.KeySelector$Purpose this]
+  (^java.lang.String [^KeySelector$Purpose this]
     (-> this (.toString))))
 

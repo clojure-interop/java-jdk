@@ -20,7 +20,7 @@
             is the generic representation - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.Struct this]
+  (^java.lang.String [^Struct this]
     (-> this (.getSQLTypeName))))
 
 (defn get-attributes
@@ -39,13 +39,13 @@
    of the structured type and returns a Java array containing
    the result.
 
-  map - a mapping of SQL type names to Java classes - `java.util.Map<java.lang.String,java.lang.Class<?>>`
+  map - a mapping of SQL type names to Java classes - `java.util.Map`
 
   returns: an array containing the ordered attribute values - `java.lang.Object[]`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^java.sql.Struct this ^java.util.Map> map]
+  ([^Struct this ^java.util.Map map]
     (-> this (.getAttributes map)))
-  ([^java.sql.Struct this]
+  ([^Struct this]
     (-> this (.getAttributes))))
 

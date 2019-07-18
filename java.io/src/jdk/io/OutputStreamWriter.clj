@@ -44,9 +44,9 @@
   charset-name - The name of a supported charset - `java.lang.String`
 
   throws: java.io.UnsupportedEncodingException - If the named encoding is not supported"
-  ([^java.io.OutputStream out ^java.lang.String charset-name]
+  (^OutputStreamWriter [^java.io.OutputStream out ^java.lang.String charset-name]
     (new OutputStreamWriter out charset-name))
-  ([^java.io.OutputStream out]
+  (^OutputStreamWriter [^java.io.OutputStream out]
     (new OutputStreamWriter out)))
 
 (defn get-encoding
@@ -62,7 +62,7 @@
 
   returns: The historical name of this encoding, or possibly
            null if the stream has been closed - `java.lang.String`"
-  (^java.lang.String [^java.io.OutputStreamWriter this]
+  (^java.lang.String [^OutputStreamWriter this]
     (-> this (.getEncoding))))
 
 (defn write
@@ -73,22 +73,22 @@
   len - Number of characters to write - `int`
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.OutputStreamWriter this cbuf ^Integer off ^Integer len]
+  ([^OutputStreamWriter this cbuf ^Integer off ^Integer len]
     (-> this (.write cbuf off len)))
-  ([^java.io.OutputStreamWriter this ^Integer c]
+  ([^OutputStreamWriter this ^Integer c]
     (-> this (.write c))))
 
 (defn flush
   "Flushes the stream.
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.OutputStreamWriter this]
+  ([^OutputStreamWriter this]
     (-> this (.flush))))
 
 (defn close
   "Description copied from class: Writer
 
   throws: java.io.IOException - If an I/O error occurs"
-  ([^java.io.OutputStreamWriter this]
+  ([^OutputStreamWriter this]
     (-> this (.close))))
 

@@ -41,11 +41,11 @@
   modifiers - The modifier keys down during event (shift, ctrl, alt, meta). Passing negative parameter is not recommended. Zero value means that no modifiers were passed - `int`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.lang.Object source ^Integer id ^java.lang.String command ^Long when ^Integer modifiers]
+  (^ActionEvent [^java.lang.Object source ^Integer id ^java.lang.String command ^Long when ^Integer modifiers]
     (new ActionEvent source id command when modifiers))
-  ([^java.lang.Object source ^Integer id ^java.lang.String command ^Integer modifiers]
+  (^ActionEvent [^java.lang.Object source ^Integer id ^java.lang.String command ^Integer modifiers]
     (new ActionEvent source id command modifiers))
-  ([^java.lang.Object source ^Integer id ^java.lang.String command]
+  (^ActionEvent [^java.lang.Object source ^Integer id ^java.lang.String command]
     (new ActionEvent source id command)))
 
 (def *-shift-mask
@@ -105,7 +105,7 @@
 
   This event id indicates that a meaningful action occurred.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ActionEvent/ACTION_PERFORMED)
 
 (defn get-action-command
@@ -121,7 +121,7 @@
    this method returns null.
 
   returns: the string identifying the command for this event - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.ActionEvent this]
+  (^java.lang.String [^ActionEvent this]
     (-> this (.getActionCommand))))
 
 (defn get-when
@@ -130,14 +130,14 @@
    the same as an underlying InputEvent.
 
   returns: this event's timestamp - `long`"
-  (^Long [^java.awt.event.ActionEvent this]
+  (^Long [^ActionEvent this]
     (-> this (.getWhen))))
 
 (defn get-modifiers
   "Returns the modifier keys held down during this action event.
 
   returns: the bitwise-or of the modifier constants - `int`"
-  (^Integer [^java.awt.event.ActionEvent this]
+  (^Integer [^ActionEvent this]
     (-> this (.getModifiers))))
 
 (defn param-string
@@ -145,6 +145,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its associated command - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.ActionEvent this]
+  (^java.lang.String [^ActionEvent this]
     (-> this (.paramString))))
 

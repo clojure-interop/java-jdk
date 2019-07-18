@@ -10,7 +10,7 @@
   "Constructor.
 
   Deprecated."
-  ([]
+  (^DefaultLoaderRepository []
     (new DefaultLoaderRepository )))
 
 (defn *load-class

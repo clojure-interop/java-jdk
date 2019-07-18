@@ -22,9 +22,9 @@
   date-format-pattern - the initial pattern for the SimpleDateFormat object that's used to display and parse the value of the text field. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the spinners model is not an instance of SpinnerDateModel"
-  ([^javax.swing.JSpinner spinner ^java.lang.String date-format-pattern]
+  (^JSpinner$DateEditor [^javax.swing.JSpinner spinner ^java.lang.String date-format-pattern]
     (new JSpinner$DateEditor spinner date-format-pattern))
-  ([^javax.swing.JSpinner spinner]
+  (^JSpinner$DateEditor [^javax.swing.JSpinner spinner]
     (new JSpinner$DateEditor spinner)))
 
 (defn get-format
@@ -33,13 +33,13 @@
    numbers.
 
   returns: the value of getTextField().getFormatter().getFormat(). - `java.text.SimpleDateFormat`"
-  (^java.text.SimpleDateFormat [^javax.swing.JSpinner$DateEditor this]
+  (^java.text.SimpleDateFormat [^JSpinner$DateEditor this]
     (-> this (.getFormat))))
 
 (defn get-model
   "Return our spinner ancestor's SpinnerDateModel.
 
   returns: getSpinner().getModel() - `javax.swing.SpinnerDateModel`"
-  (^javax.swing.SpinnerDateModel [^javax.swing.JSpinner$DateEditor this]
+  (^javax.swing.SpinnerDateModel [^JSpinner$DateEditor this]
     (-> this (.getModel))))
 

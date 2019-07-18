@@ -29,41 +29,41 @@
   text - The text for this attributed string. - `java.text.AttributedCharacterIterator`
   begin-index - Index of the first character of the range. - `int`
   end-index - Index of the character following the last character of the range. - `int`
-  attributes - Specifies attributes to be extracted from the text. If null is specified, all available attributes will be used. - `java.text.AttributedCharacterIterator.Attribute[]`
+  attributes - Specifies attributes to be extracted from the text. If null is specified, all available attributes will be used. - `java.text.AttributedCharacterIterator$Attribute[]`
 
   throws: java.lang.NullPointerException - if text is null."
-  ([^java.text.AttributedCharacterIterator text ^Integer begin-index ^Integer end-index attributes]
+  (^AttributedString [^java.text.AttributedCharacterIterator text ^Integer begin-index ^Integer end-index attributes]
     (new AttributedString text begin-index end-index attributes))
-  ([^java.text.AttributedCharacterIterator text ^Integer begin-index ^Integer end-index]
+  (^AttributedString [^java.text.AttributedCharacterIterator text ^Integer begin-index ^Integer end-index]
     (new AttributedString text begin-index end-index))
-  ([^java.lang.String text ^java.text.AttributedCharacterIterator.Attribute,?> attributes]
+  (^AttributedString [^java.lang.String text ^java.util.Map attributes]
     (new AttributedString text attributes))
-  ([^java.lang.String text]
+  (^AttributedString [^java.lang.String text]
     (new AttributedString text)))
 
 (defn add-attribute
   "Adds an attribute to a subrange of the string.
 
-  attribute - the attribute key - `java.text.AttributedCharacterIterator.Attribute`
+  attribute - the attribute key - `java.text.AttributedCharacterIterator$Attribute`
   value - The value of the attribute. May be null. - `java.lang.Object`
   begin-index - Index of the first character of the range. - `int`
   end-index - Index of the character following the last character of the range. - `int`
 
   throws: java.lang.NullPointerException - if attribute is null."
-  ([^java.text.AttributedString this ^java.text.AttributedCharacterIterator.Attribute attribute ^java.lang.Object value ^Integer begin-index ^Integer end-index]
+  ([^AttributedString this ^java.text.AttributedCharacterIterator$Attribute attribute ^java.lang.Object value ^Integer begin-index ^Integer end-index]
     (-> this (.addAttribute attribute value begin-index end-index)))
-  ([^java.text.AttributedString this ^java.text.AttributedCharacterIterator.Attribute attribute ^java.lang.Object value]
+  ([^AttributedString this ^java.text.AttributedCharacterIterator$Attribute attribute ^java.lang.Object value]
     (-> this (.addAttribute attribute value))))
 
 (defn add-attributes
   "Adds a set of attributes to a subrange of the string.
 
-  attributes - The attributes to be added to the string. - `java.text.AttributedCharacterIterator.Attribute,?>`
+  attributes - The attributes to be added to the string. - `java.util.Map`
   begin-index - Index of the first character of the range. - `int`
   end-index - Index of the character following the last character of the range. - `int`
 
   throws: java.lang.NullPointerException - if attributes is null."
-  ([^java.text.AttributedString this ^java.text.AttributedCharacterIterator.Attribute,?> attributes ^Integer begin-index ^Integer end-index]
+  ([^AttributedString this ^java.util.Map attributes ^Integer begin-index ^Integer end-index]
     (-> this (.addAttributes attributes begin-index end-index))))
 
 (defn get-iterator
@@ -74,17 +74,17 @@
    If the list is null, all available attribute information should be made
    accessible.
 
-  attributes - a list of attributes that the client is interested in - `java.text.AttributedCharacterIterator.Attribute[]`
+  attributes - a list of attributes that the client is interested in - `java.text.AttributedCharacterIterator$Attribute[]`
   begin-index - the index of the first character - `int`
   end-index - the index of the character following the last character - `int`
 
   returns: an iterator providing access to the text and its attributes - `java.text.AttributedCharacterIterator`
 
   throws: java.lang.IllegalArgumentException - if beginIndex is less then 0, endIndex is greater than the length of the string, or beginIndex is greater than endIndex."
-  (^java.text.AttributedCharacterIterator [^java.text.AttributedString this attributes ^Integer begin-index ^Integer end-index]
+  (^java.text.AttributedCharacterIterator [^AttributedString this attributes ^Integer begin-index ^Integer end-index]
     (-> this (.getIterator attributes begin-index end-index)))
-  (^java.text.AttributedCharacterIterator [^java.text.AttributedString this attributes]
+  (^java.text.AttributedCharacterIterator [^AttributedString this attributes]
     (-> this (.getIterator attributes)))
-  (^java.text.AttributedCharacterIterator [^java.text.AttributedString this]
+  (^java.text.AttributedCharacterIterator [^AttributedString this]
     (-> this (.getIterator))))
 

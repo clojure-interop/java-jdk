@@ -57,9 +57,9 @@
   buffer-size - the desired buffer size - `int`
 
   throws: javax.sound.sampled.LineUnavailableException - if the line cannot be opened due to resource restrictions"
-  ([^javax.sound.sampled.SourceDataLine this ^javax.sound.sampled.AudioFormat format ^Integer buffer-size]
+  ([^SourceDataLine this ^javax.sound.sampled.AudioFormat format ^Integer buffer-size]
     (-> this (.open format buffer-size)))
-  ([^javax.sound.sampled.SourceDataLine this ^javax.sound.sampled.AudioFormat format]
+  ([^SourceDataLine this ^javax.sound.sampled.AudioFormat format]
     (-> this (.open format))))
 
 (defn write
@@ -97,6 +97,6 @@
   returns: the number of bytes actually written - `int`
 
   throws: java.lang.IllegalArgumentException - if the requested number of bytes does not represent an integral number of sample frames, or if len is negative"
-  (^Integer [^javax.sound.sampled.SourceDataLine this b ^Integer off ^Integer len]
+  (^Integer [^SourceDataLine this b ^Integer off ^Integer len]
     (-> this (.write b off len))))
 

@@ -24,8 +24,8 @@
    Spliterator.SUBSIZED.  Calls to
    Spliterator.trySplit() always return null.
 
-  returns: An empty spliterator - `java.util.Spliterator.OfInt`"
-  (^java.util.Spliterator.OfInt []
+  returns: An empty spliterator - `java.util.Spliterator$OfInt`"
+  (^java.util.Spliterator$OfInt []
     (Spliterators/emptyIntSpliterator )))
 
 (defn *empty-long-spliterator
@@ -35,8 +35,8 @@
    Spliterator.SUBSIZED.  Calls to
    Spliterator.trySplit() always return null.
 
-  returns: An empty spliterator - `java.util.Spliterator.OfLong`"
-  (^java.util.Spliterator.OfLong []
+  returns: An empty spliterator - `java.util.Spliterator$OfLong`"
+  (^java.util.Spliterator$OfLong []
     (Spliterators/emptyLongSpliterator )))
 
 (defn *empty-double-spliterator
@@ -46,8 +46,8 @@
    Spliterator.SUBSIZED.  Calls to
    Spliterator.trySplit() always return null.
 
-  returns: An empty spliterator - `java.util.Spliterator.OfDouble`"
-  (^java.util.Spliterator.OfDouble []
+  returns: An empty spliterator - `java.util.Spliterator$OfDouble`"
+  (^java.util.Spliterator$OfDouble []
     (Spliterators/emptyDoubleSpliterator )))
 
 (defn *spliterator
@@ -75,7 +75,7 @@
   throws: java.lang.NullPointerException - if the given array is null"
   ([array ^Integer from-index ^Integer to-index ^Integer additional-characteristics]
     (Spliterators/spliterator array from-index to-index additional-characteristics))
-  ([iterator ^Long size ^Integer characteristics]
+  ([^java.util.Iterator iterator ^Long size ^Integer characteristics]
     (Spliterators/spliterator iterator size characteristics))
   ([array ^Integer additional-characteristics]
     (Spliterators/spliterator array additional-characteristics)))
@@ -93,13 +93,13 @@
    The behaviour of splitting and traversal is undefined if the iterator is
    operated on after the spliterator is returned.
 
-  iterator - The iterator for the source - `T>`
+  iterator - The iterator for the source - `java.util.Iterator`
   characteristics - Characteristics of this spliterator's source or elements (SIZED and SUBSIZED, if supplied, are ignored and are not reported.) - `int`
 
   returns: A spliterator from an iterator - `<T> java.util.Spliterator<T>`
 
   throws: java.lang.NullPointerException - if the given iterator is null"
-  ([iterator ^Integer characteristics]
+  ([^java.util.Iterator iterator ^Integer characteristics]
     (Spliterators/spliteratorUnknownSize iterator characteristics)))
 
 (defn *iterator
@@ -109,11 +109,11 @@
    The behaviour of traversal is undefined if the spliterator is operated
    after the iterator is returned.
 
-  spliterator - The spliterator - `T>`
+  spliterator - The spliterator - `java.util.Spliterator`
 
   returns: An iterator - `<T> java.util.Iterator<T>`
 
   throws: java.lang.NullPointerException - if the given spliterator is null"
-  ([spliterator]
+  ([^java.util.Spliterator spliterator]
     (Spliterators/iterator spliterator)))
 

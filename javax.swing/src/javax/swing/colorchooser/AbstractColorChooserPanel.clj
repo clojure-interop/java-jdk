@@ -16,7 +16,7 @@
 
 (defn ->abstract-color-chooser-panel
   "Constructor."
-  ([]
+  (^AbstractColorChooserPanel []
     (new AbstractColorChooserPanel )))
 
 (defn get-mnemonic
@@ -33,21 +33,21 @@
 
   returns: KeyEvent.VK constant identifying the mnemonic; <= 0 for no
            mnemonic - `int`"
-  (^Integer [^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^Integer [^AbstractColorChooserPanel this]
     (-> this (.getMnemonic))))
 
 (defn get-large-display-icon
   "Returns the large display icon for the panel.
 
   returns: the large display icon - `javax.swing.Icon`"
-  (^javax.swing.Icon [^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^javax.swing.Icon [^AbstractColorChooserPanel this]
     (-> this (.getLargeDisplayIcon))))
 
 (defn get-display-name
   "Returns a string containing the display name of the panel.
 
   returns: the name of the display panel - `java.lang.String`"
-  (^java.lang.String [^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^java.lang.String [^AbstractColorChooserPanel this]
     (-> this (.getDisplayName))))
 
 (defn uninstall-chooser-panel
@@ -55,7 +55,7 @@
    If override this, be sure to call super.
 
   enclosing-chooser - `javax.swing.JColorChooser`"
-  ([^javax.swing.colorchooser.AbstractColorChooserPanel this ^javax.swing.JColorChooser enclosing-chooser]
+  ([^AbstractColorChooserPanel this ^javax.swing.JColorChooser enclosing-chooser]
     (-> this (.uninstallChooserPanel enclosing-chooser))))
 
 (defn install-chooser-panel
@@ -65,14 +65,14 @@
   enclosing-chooser - the panel to be added - `javax.swing.JColorChooser`
 
   throws: java.lang.RuntimeException - if the chooser panel has already been installed"
-  ([^javax.swing.colorchooser.AbstractColorChooserPanel this ^javax.swing.JColorChooser enclosing-chooser]
+  ([^AbstractColorChooserPanel this ^javax.swing.JColorChooser enclosing-chooser]
     (-> this (.installChooserPanel enclosing-chooser))))
 
 (defn paint
   "Draws the panel.
 
   g - the Graphics object - `java.awt.Graphics`"
-  ([^javax.swing.colorchooser.AbstractColorChooserPanel this ^java.awt.Graphics g]
+  ([^AbstractColorChooserPanel this ^java.awt.Graphics g]
     (-> this (.paint g))))
 
 (defn update-chooser
@@ -80,7 +80,7 @@
    It is also called by installChooserPanel to allow
    you to set up the initial state of your chooser.
    Override this method to update your ChooserPanel."
-  ([^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  ([^AbstractColorChooserPanel this]
     (-> this (.updateChooser))))
 
 (defn get-color-selection-model
@@ -88,7 +88,7 @@
 
   returns: the ColorSelectionModel model this panel
            is editing - `javax.swing.colorchooser.ColorSelectionModel`"
-  (^javax.swing.colorchooser.ColorSelectionModel [^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^javax.swing.colorchooser.ColorSelectionModel [^AbstractColorChooserPanel this]
     (-> this (.getColorSelectionModel))))
 
 (defn get-displayed-mnemonic-index
@@ -110,13 +110,13 @@
 
   returns: Character index to render mnemonic for; -1 to provide no
                      visual identifier for this panel. - `int`"
-  (^Integer [^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^Integer [^AbstractColorChooserPanel this]
     (-> this (.getDisplayedMnemonicIndex))))
 
 (defn get-small-display-icon
   "Returns the small display icon for the panel.
 
   returns: the small display icon - `javax.swing.Icon`"
-  (^javax.swing.Icon [^javax.swing.colorchooser.AbstractColorChooserPanel this]
+  (^javax.swing.Icon [^AbstractColorChooserPanel this]
     (-> this (.getSmallDisplayIcon))))
 

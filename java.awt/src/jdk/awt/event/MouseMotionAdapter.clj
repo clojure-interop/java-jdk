@@ -22,7 +22,7 @@
 
 (defn ->mouse-motion-adapter
   "Constructor."
-  ([]
+  (^MouseMotionAdapter []
     (new MouseMotionAdapter )))
 
 (defn mouse-dragged
@@ -33,7 +33,7 @@
    bounds of the component).
 
   e - `java.awt.event.MouseEvent`"
-  ([^java.awt.event.MouseMotionAdapter this ^java.awt.event.MouseEvent e]
+  ([^MouseMotionAdapter this e]
     (-> this (.mouseDragged e))))
 
 (defn mouse-moved
@@ -41,6 +41,6 @@
    (with no buttons no down).
 
   e - `java.awt.event.MouseEvent`"
-  ([^java.awt.event.MouseMotionAdapter this ^java.awt.event.MouseEvent e]
+  ([^MouseMotionAdapter this e]
     (-> this (.mouseMoved e))))
 

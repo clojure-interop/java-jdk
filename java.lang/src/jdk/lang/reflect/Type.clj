@@ -10,6 +10,6 @@
    about any type parameters.
 
   returns: a string describing this type - `default java.lang.String`"
-  ([^java.lang.reflect.Type this]
+  ([^Type this]
     (-> this (.getTypeName))))
 

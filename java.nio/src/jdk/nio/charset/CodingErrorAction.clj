@@ -39,6 +39,6 @@
   "Returns a string describing this action.
 
   returns: A descriptive string - `java.lang.String`"
-  (^java.lang.String [^java.nio.charset.CodingErrorAction this]
+  (^java.lang.String [^CodingErrorAction this]
     (-> this (.toString))))
 

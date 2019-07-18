@@ -82,9 +82,9 @@
   y - the Y coordinate of the upper-left corner of this Rectangle2D - `double`
   w - the width of this Rectangle2D - `double`
   h - the height of this Rectangle2D - `double`"
-  ([^java.awt.geom.Rectangle2D this ^Double x ^Double y ^Double w ^Double h]
+  ([^Rectangle2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.setRect x y w h)))
-  ([^java.awt.geom.Rectangle2D this ^java.awt.geom.Rectangle2D r]
+  ([^Rectangle2D this ^java.awt.geom.Rectangle2D r]
     (-> this (.setRect r))))
 
 (defn get-path-iterator
@@ -103,9 +103,9 @@
   returns: the PathIterator object that returns the
             geometry of the outline of this
             Rectangle2D, one segment at a time. - `java.awt.geom.PathIterator`"
-  (^java.awt.geom.PathIterator [^java.awt.geom.Rectangle2D this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^Rectangle2D this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness)))
-  (^java.awt.geom.PathIterator [^java.awt.geom.Rectangle2D this ^java.awt.geom.AffineTransform at]
+  (^java.awt.geom.PathIterator [^Rectangle2D this ^java.awt.geom.AffineTransform at]
     (-> this (.getPathIterator at))))
 
 (defn intersects-line
@@ -120,9 +120,9 @@
   returns: true if the specified line segment intersects
    the interior of this Rectangle2D; false
    otherwise. - `boolean`"
-  (^Boolean [^java.awt.geom.Rectangle2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
+  (^Boolean [^Rectangle2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
     (-> this (.intersectsLine x-1 y-1 x-2 y-2)))
-  (^Boolean [^java.awt.geom.Rectangle2D this ^java.awt.geom.Line2D l]
+  (^Boolean [^Rectangle2D this ^java.awt.geom.Line2D l]
     (-> this (.intersectsLine l))))
 
 (defn contains
@@ -162,9 +162,9 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  (^Boolean [^java.awt.geom.Rectangle2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^Rectangle2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  (^Boolean [^java.awt.geom.Rectangle2D this ^Double x ^Double y]
+  (^Boolean [^Rectangle2D this ^Double x ^Double y]
     (-> this (.contains x y))))
 
 (defn create-intersection
@@ -177,7 +177,7 @@
   returns: the largest Rectangle2D contained in both
             the specified Rectangle2D and in this
             Rectangle2D. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.geom.Rectangle2D this ^java.awt.geom.Rectangle2D r]
+  (^java.awt.geom.Rectangle2D [^Rectangle2D this ^java.awt.geom.Rectangle2D r]
     (-> this (.createIntersection r))))
 
 (defn create-union
@@ -190,7 +190,7 @@
   returns: the smallest Rectangle2D containing both
    the specified Rectangle2D and this
    Rectangle2D. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.geom.Rectangle2D this ^java.awt.geom.Rectangle2D r]
+  (^java.awt.geom.Rectangle2D [^Rectangle2D this ^java.awt.geom.Rectangle2D r]
     (-> this (.createUnion r))))
 
 (defn outcode
@@ -205,9 +205,9 @@
   y - the specified Y coordinate - `double`
 
   returns: the logical OR of all appropriate out codes. - `int`"
-  (^Integer [^java.awt.geom.Rectangle2D this ^Double x ^Double y]
+  (^Integer [^Rectangle2D this ^Double x ^Double y]
     (-> this (.outcode x y)))
-  (^Integer [^java.awt.geom.Rectangle2D this ^java.awt.geom.Point2D p]
+  (^Integer [^Rectangle2D this ^java.awt.geom.Point2D p]
     (-> this (.outcode p))))
 
 (defn get-bounds-2-d
@@ -250,14 +250,14 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.geom.Rectangle2D this]
+  (^java.awt.geom.Rectangle2D [^Rectangle2D this]
     (-> this (.getBounds2D))))
 
 (defn hash-code
   "Returns the hashcode for this Rectangle2D.
 
   returns: the hashcode for this Rectangle2D. - `int`"
-  (^Integer [^java.awt.geom.Rectangle2D this]
+  (^Integer [^Rectangle2D this]
     (-> this (.hashCode))))
 
 (defn add
@@ -278,9 +278,9 @@
 
   newx - the X coordinate of the new point - `double`
   newy - the Y coordinate of the new point - `double`"
-  ([^java.awt.geom.Rectangle2D this ^Double newx ^Double newy]
+  ([^Rectangle2D this ^Double newx ^Double newy]
     (-> this (.add newx newy)))
-  ([^java.awt.geom.Rectangle2D this ^java.awt.geom.Point2D pt]
+  ([^Rectangle2D this ^java.awt.geom.Point2D pt]
     (-> this (.add pt))))
 
 (defn set-frame
@@ -291,7 +291,7 @@
   y - the Y coordinate of the upper-left corner of this Rectangle2D - `double`
   w - the width of this Rectangle2D - `double`
   h - the height of this Rectangle2D - `double`"
-  ([^java.awt.geom.Rectangle2D this ^Double x ^Double y ^Double w ^Double h]
+  ([^Rectangle2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.setFrame x y w h))))
 
 (defn equals
@@ -306,7 +306,7 @@
   returns: true if obj is an instance
                        of Rectangle2D and has
                        the same values; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.geom.Rectangle2D this ^java.lang.Object obj]
+  (^Boolean [^Rectangle2D this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn intersects
@@ -343,6 +343,6 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.geom.Rectangle2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^Rectangle2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h))))
 

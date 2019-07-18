@@ -7,7 +7,7 @@
 
   The type of Redirect.PIPE.
 
-  type: java.lang.ProcessBuilder.Redirect.Type"
+  type: java.lang.ProcessBuilder$Redirect$Type"
   ProcessBuilder$Redirect$Type/PIPE)
 
 (def INHERIT
@@ -15,7 +15,7 @@
 
   The type of Redirect.INHERIT.
 
-  type: java.lang.ProcessBuilder.Redirect.Type"
+  type: java.lang.ProcessBuilder$Redirect$Type"
   ProcessBuilder$Redirect$Type/INHERIT)
 
 (def READ
@@ -24,7 +24,7 @@
   The type of redirects returned from
    Redirect.from(File).
 
-  type: java.lang.ProcessBuilder.Redirect.Type"
+  type: java.lang.ProcessBuilder$Redirect$Type"
   ProcessBuilder$Redirect$Type/READ)
 
 (def WRITE
@@ -33,7 +33,7 @@
   The type of redirects returned from
    Redirect.to(File).
 
-  type: java.lang.ProcessBuilder.Redirect.Type"
+  type: java.lang.ProcessBuilder$Redirect$Type"
   ProcessBuilder$Redirect$Type/WRITE)
 
 (def APPEND
@@ -42,7 +42,7 @@
   The type of redirects returned from
    Redirect.appendTo(File).
 
-  type: java.lang.ProcessBuilder.Redirect.Type"
+  type: java.lang.ProcessBuilder$Redirect$Type"
   ProcessBuilder$Redirect$Type/APPEND)
 
 (defn *values
@@ -54,7 +54,7 @@
   for (ProcessBuilder.Redirect.Type c : ProcessBuilder.Redirect.Type.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.lang.ProcessBuilder.Redirect.Type[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.lang.ProcessBuilder$Redirect$Type[]`"
   ([]
     (ProcessBuilder$Redirect$Type/values )))
 
@@ -66,9 +66,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.lang.ProcessBuilder.Redirect.Type`
+  returns: the enum constant with the specified name - `java.lang.ProcessBuilder$Redirect$Type`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.lang.ProcessBuilder.Redirect.Type [^java.lang.String name]
+  (^java.lang.ProcessBuilder$Redirect$Type [^java.lang.String name]
     (ProcessBuilder$Redirect$Type/valueOf name)))
 

@@ -7,7 +7,7 @@
 
 (defn ->midi-file-writer
   "Constructor."
-  ([]
+  (^MidiFileWriter []
     (new MidiFileWriter )))
 
 (defn get-midi-file-types
@@ -18,9 +18,9 @@
 
   returns: array of file types. If no file types are supported, returns an
            array of length 0. - `int[]`"
-  ([^javax.sound.midi.spi.MidiFileWriter this ^javax.sound.midi.Sequence sequence]
+  ([^MidiFileWriter this ^javax.sound.midi.Sequence sequence]
     (-> this (.getMidiFileTypes sequence)))
-  ([^javax.sound.midi.spi.MidiFileWriter this]
+  ([^MidiFileWriter this]
     (-> this (.getMidiFileTypes))))
 
 (defn file-type-supported?
@@ -32,9 +32,9 @@
 
   returns: true if the file type is supported for this sequence,
            otherwise false - `boolean`"
-  (^Boolean [^javax.sound.midi.spi.MidiFileWriter this ^Integer file-type ^javax.sound.midi.Sequence sequence]
+  (^Boolean [^MidiFileWriter this ^Integer file-type ^javax.sound.midi.Sequence sequence]
     (-> this (.isFileTypeSupported file-type sequence)))
-  (^Boolean [^javax.sound.midi.spi.MidiFileWriter this ^Integer file-type]
+  (^Boolean [^MidiFileWriter this ^Integer file-type]
     (-> this (.isFileTypeSupported file-type))))
 
 (defn write
@@ -48,6 +48,6 @@
   returns: the number of bytes written to the output stream - `int`
 
   throws: java.io.IOException - if an I/O exception occurs"
-  (^Integer [^javax.sound.midi.spi.MidiFileWriter this ^javax.sound.midi.Sequence in ^Integer file-type ^java.io.OutputStream out]
+  (^Integer [^MidiFileWriter this ^javax.sound.midi.Sequence in ^Integer file-type ^java.io.OutputStream out]
     (-> this (.write in file-type out))))
 

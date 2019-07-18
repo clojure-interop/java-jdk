@@ -27,7 +27,7 @@
    ratio (width divided by height).
 
   returns: the width of the image in user coordinates. - `float`"
-  (^Float [^java.awt.image.renderable.RenderableImage this]
+  (^Float [^RenderableImage this]
     (-> this (.getWidth))))
 
 (defn create-default-rendering
@@ -39,7 +39,7 @@
    rendering for speed.
 
   returns: a RenderedImage containing the rendered data. - `java.awt.image.RenderedImage`"
-  (^java.awt.image.RenderedImage [^java.awt.image.renderable.RenderableImage this]
+  (^java.awt.image.RenderedImage [^RenderableImage this]
     (-> this (.createDefaultRendering))))
 
 (defn dynamic?
@@ -52,7 +52,7 @@
   returns: true if successive renderings with the
            same arguments might produce different results;
            false otherwise. - `boolean`"
-  (^Boolean [^java.awt.image.renderable.RenderableImage this]
+  (^Boolean [^RenderableImage this]
     (-> this (.isDynamic))))
 
 (defn get-min-y
@@ -60,14 +60,14 @@
 
   returns: the minimum Y coordinate of the rendering-independent image
    data. - `float`"
-  (^Float [^java.awt.image.renderable.RenderableImage this]
+  (^Float [^RenderableImage this]
     (-> this (.getMinY))))
 
 (defn get-property-names
   "Returns a list of names recognized by getProperty.
 
   returns: a list of property names. - `java.lang.String[]`"
-  ([^java.awt.image.renderable.RenderableImage this]
+  ([^RenderableImage this]
     (-> this (.getPropertyNames))))
 
 (defn get-height
@@ -75,7 +75,7 @@
    usual height of a RenderedImage is equal to 1.0F.
 
   returns: the height of the image in user coordinates. - `float`"
-  (^Float [^java.awt.image.renderable.RenderableImage this]
+  (^Float [^RenderableImage this]
     (-> this (.getHeight))))
 
 (defn get-property
@@ -87,7 +87,7 @@
 
   returns: a reference to the property Object, or the value
            java.awt.Image.UndefinedProperty. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.image.renderable.RenderableImage this ^java.lang.String name]
+  (^java.lang.Object [^RenderableImage this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn create-rendering
@@ -105,7 +105,7 @@
   render-context - the RenderContext to use to produce the rendering. - `java.awt.image.renderable.RenderContext`
 
   returns: a RenderedImage containing the rendered data. - `java.awt.image.RenderedImage`"
-  (^java.awt.image.RenderedImage [^java.awt.image.renderable.RenderableImage this ^java.awt.image.renderable.RenderContext render-context]
+  (^java.awt.image.RenderedImage [^RenderableImage this ^java.awt.image.renderable.RenderContext render-context]
     (-> this (.createRendering render-context))))
 
 (defn get-min-x
@@ -113,7 +113,7 @@
 
   returns: the minimum X coordinate of the rendering-independent image
    data. - `float`"
-  (^Float [^java.awt.image.renderable.RenderableImage this]
+  (^Float [^RenderableImage this]
     (-> this (.getMinX))))
 
 (defn create-scaled-rendering
@@ -141,7 +141,7 @@
   hints - a RenderingHints object containing hints. - `java.awt.RenderingHints`
 
   returns: a RenderedImage containing the rendered data. - `java.awt.image.RenderedImage`"
-  (^java.awt.image.RenderedImage [^java.awt.image.renderable.RenderableImage this ^Integer w ^Integer h ^java.awt.RenderingHints hints]
+  (^java.awt.image.RenderedImage [^RenderableImage this ^Integer w ^Integer h ^java.awt.RenderingHints hints]
     (-> this (.createScaledRendering w h hints))))
 
 (defn get-sources
@@ -151,6 +151,6 @@
    or null, to indicate that no information is available.
 
   returns: a (possibly empty) Vector of RenderableImages, or null. - `java.util.Vector<java.awt.image.renderable.RenderableImage>`"
-  (^java.util.Vector [^java.awt.image.renderable.RenderableImage this]
+  (^java.util.Vector [^RenderableImage this]
     (-> this (.getSources))))
 

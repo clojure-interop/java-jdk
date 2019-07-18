@@ -20,6 +20,6 @@
 
 (defn ->ui-resource
   "Constructor."
-  ([]
+  (^DefaultTableCellRenderer$UIResource []
     (new DefaultTableCellRenderer$UIResource )))
 

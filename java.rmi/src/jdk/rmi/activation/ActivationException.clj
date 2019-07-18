@@ -22,11 +22,11 @@
 
   s - the detail message - `java.lang.String`
   cause - the cause - `java.lang.Throwable`"
-  ([^java.lang.String s ^java.lang.Throwable cause]
+  (^ActivationException [^java.lang.String s ^java.lang.Throwable cause]
     (new ActivationException s cause))
-  ([^java.lang.String s]
+  (^ActivationException [^java.lang.String s]
     (new ActivationException s))
-  ([]
+  (^ActivationException []
     (new ActivationException )))
 
 (defn -detail
@@ -47,7 +47,7 @@
    any, of this exception.
 
   returns: the detail message - `java.lang.String`"
-  (^java.lang.String [^java.rmi.activation.ActivationException this]
+  (^java.lang.String [^ActivationException this]
     (-> this (.getMessage))))
 
 (defn get-cause
@@ -55,6 +55,6 @@
    of the detail field.
 
   returns: the cause, which may be null. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^java.rmi.activation.ActivationException this]
+  (^java.lang.Throwable [^ActivationException this]
     (-> this (.getCause))))
 

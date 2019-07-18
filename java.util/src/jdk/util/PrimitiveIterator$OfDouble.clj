@@ -9,7 +9,7 @@
   returns: the next double element in the iteration - `double`
 
   throws: java.util.NoSuchElementException - if the iteration has no more elements"
-  (^Double [^java.util.PrimitiveIterator$OfDouble this]
+  (^Double [^PrimitiveIterator$OfDouble this]
     (-> this (.nextDouble))))
 
 (defn for-each-remaining
@@ -23,13 +23,13 @@
   returns: `default void`
 
   throws: java.lang.NullPointerException - if the specified action is null"
-  ([^java.util.PrimitiveIterator$OfDouble this ^java.util.function.DoubleConsumer action]
+  ([^PrimitiveIterator$OfDouble this ^java.util.function.DoubleConsumer action]
     (-> this (.forEachRemaining action))))
 
 (defn next
   "Returns the next element in the iteration.
 
   returns: the next element in the iteration - `default java.lang.Double`"
-  ([^java.util.PrimitiveIterator$OfDouble this]
+  ([^PrimitiveIterator$OfDouble this]
     (-> this (.next))))
 

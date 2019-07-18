@@ -12,7 +12,7 @@
 
 (defn ->encoder
   "Constructor."
-  ([]
+  (^Encoder []
     (new Encoder )))
 
 (defn set-exception-listener
@@ -21,7 +21,7 @@
    exceptions.
 
   exception-listener - The exception handler for this stream; if null the default exception listener will be used. - `java.beans.ExceptionListener`"
-  ([^java.beans.Encoder this ^java.beans.ExceptionListener exception-listener]
+  ([^Encoder this ^java.beans.ExceptionListener exception-listener]
     (-> this (.setExceptionListener exception-listener))))
 
 (defn get-exception-listener
@@ -29,7 +29,7 @@
 
   returns: The exception handler for this stream;
       Will return the default exception listener if this has not explicitly been set. - `java.beans.ExceptionListener`"
-  (^java.beans.ExceptionListener [^java.beans.Encoder this]
+  (^java.beans.ExceptionListener [^Encoder this]
     (-> this (.getExceptionListener))))
 
 (defn get-persistence-delegate
@@ -109,18 +109,18 @@
        public Bar(int x, int y) { ... }
    }
 
-  type - the class of the objects - `java.lang.Class<?>`
+  type - the class of the objects - `java.lang.Class`
 
   returns: the persistence delegate for the given type - `java.beans.PersistenceDelegate`"
-  (^java.beans.PersistenceDelegate [^java.beans.Encoder this ^java.lang.Class type]
+  (^java.beans.PersistenceDelegate [^Encoder this ^java.lang.Class type]
     (-> this (.getPersistenceDelegate type))))
 
 (defn set-persistence-delegate
   "Associates the specified persistence delegate with the given type.
 
-  type - the class of objects that the specified persistence delegate applies to - `java.lang.Class<?>`
+  type - the class of objects that the specified persistence delegate applies to - `java.lang.Class`
   delegate - the persistence delegate for instances of the given type - `java.beans.PersistenceDelegate`"
-  ([^java.beans.Encoder this ^java.lang.Class type ^java.beans.PersistenceDelegate delegate]
+  ([^Encoder this ^java.lang.Class type ^java.beans.PersistenceDelegate delegate]
     (-> this (.setPersistenceDelegate type delegate))))
 
 (defn remove
@@ -129,7 +129,7 @@
   old-instance - The entry that should be removed. - `java.lang.Object`
 
   returns: The entry that was removed. - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.Encoder this ^java.lang.Object old-instance]
+  (^java.lang.Object [^Encoder this ^java.lang.Object old-instance]
     (-> this (.remove old-instance))))
 
 (defn get
@@ -144,7 +144,7 @@
   old-instance - The instance to be looked up. - `java.lang.Object`
 
   returns: The object, null if the object has not been seen before. - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.Encoder this ^java.lang.Object old-instance]
+  (^java.lang.Object [^Encoder this ^java.lang.Object old-instance]
     (-> this (.get old-instance))))
 
 (defn write-statement
@@ -165,7 +165,7 @@
    expression with the results.
 
   old-stm - The expression to be written to the stream. - `java.beans.Statement`"
-  ([^java.beans.Encoder this ^java.beans.Statement old-stm]
+  ([^Encoder this ^java.beans.Statement old-stm]
     (-> this (.writeStatement old-stm))))
 
 (defn write-expression
@@ -178,6 +178,6 @@
    by calling writeObject.
 
   old-exp - The expression to be written to the stream. - `java.beans.Expression`"
-  ([^java.beans.Encoder this ^java.beans.Expression old-exp]
+  ([^Encoder this ^java.beans.Expression old-exp]
     (-> this (.writeExpression old-exp))))
 

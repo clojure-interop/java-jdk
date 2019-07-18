@@ -17,8 +17,8 @@
 
   s - the detail message - `java.lang.String`
   ex - the nested exception - `java.lang.Exception`"
-  ([^java.lang.String s ^java.lang.Exception ex]
+  (^ServerException [^java.lang.String s ^java.lang.Exception ex]
     (new ServerException s ex))
-  ([^java.lang.String s]
+  (^ServerException [^java.lang.String s]
     (new ServerException s)))
 

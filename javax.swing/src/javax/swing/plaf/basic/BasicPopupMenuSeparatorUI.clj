@@ -6,7 +6,7 @@
 
 (defn ->basic-popup-menu-separator-ui
   "Constructor."
-  ([]
+  (^BasicPopupMenuSeparatorUI []
     (new BasicPopupMenuSeparatorUI )))
 
 (defn *create-ui
@@ -21,7 +21,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicPopupMenuSeparatorUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^BasicPopupMenuSeparatorUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-preferred-size
@@ -30,6 +30,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicPopupMenuSeparatorUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicPopupMenuSeparatorUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

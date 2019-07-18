@@ -13,8 +13,8 @@
 (defn get-kind
   "Gets the kind of this file object.
 
-  returns: the kind - `javax.tools.JavaFileObject.Kind`"
-  (^javax.tools.JavaFileObject.Kind [^javax.tools.JavaFileObject this]
+  returns: the kind - `javax.tools.JavaFileObject$Kind`"
+  (^javax.tools.JavaFileObject$Kind [^JavaFileObject this]
     (-> this (.getKind))))
 
 (defn name-compatible?
@@ -25,11 +25,11 @@
    section 6.2 `Names and Identifiers`.
 
   simple-name - a simple name of a class - `java.lang.String`
-  kind - a kind - `javax.tools.JavaFileObject.Kind`
+  kind - a kind - `javax.tools.JavaFileObject$Kind`
 
   returns: true if this file object is compatible; false
    otherwise - `boolean`"
-  (^Boolean [^javax.tools.JavaFileObject this ^java.lang.String simple-name ^javax.tools.JavaFileObject.Kind kind]
+  (^Boolean [^JavaFileObject this ^java.lang.String simple-name ^javax.tools.JavaFileObject$Kind kind]
     (-> this (.isNameCompatible simple-name kind))))
 
 (defn get-nesting-kind
@@ -42,7 +42,7 @@
 
   returns: the nesting kind, or null if the nesting kind
    is not known - `javax.lang.model.element.NestingKind`"
-  (^javax.lang.model.element.NestingKind [^javax.tools.JavaFileObject this]
+  (^javax.lang.model.element.NestingKind [^JavaFileObject this]
     (-> this (.getNestingKind))))
 
 (defn get-access-level
@@ -52,6 +52,6 @@
    returns null.
 
   returns: the access level - `javax.lang.model.element.Modifier`"
-  (^javax.lang.model.element.Modifier [^javax.tools.JavaFileObject this]
+  (^javax.lang.model.element.Modifier [^JavaFileObject this]
     (-> this (.getAccessLevel))))
 

@@ -19,7 +19,7 @@
    represents the primitive float argument.
 
   value - the value to be represented by the Float. - `float`"
-  ([^Float value]
+  (^Float [^Float value]
     (new Float value)))
 
 (def *-positive-infinity
@@ -638,7 +638,7 @@
 
   returns: the float value represented by this object
             converted to type short - `short`"
-  (^Short [^java.lang.Float this]
+  (^Short [^Float this]
     (-> this (.shortValue))))
 
 (defn double-value
@@ -647,7 +647,7 @@
 
   returns: the float value represented by this
            object converted to type double - `double`"
-  (^Double [^java.lang.Float this]
+  (^Double [^Float this]
     (-> this (.doubleValue))))
 
 (defn long-value
@@ -656,7 +656,7 @@
 
   returns: the float value represented by this object
             converted to type long - `long`"
-  (^Long [^java.lang.Float this]
+  (^Long [^Float this]
     (-> this (.longValue))))
 
 (defn byte-value
@@ -665,7 +665,7 @@
 
   returns: the float value represented by this object
             converted to type byte - `byte`"
-  (^Byte [^java.lang.Float this]
+  (^Byte [^Float this]
     (-> this (.byteValue))))
 
 (defn to-string
@@ -675,7 +675,7 @@
    toString of one argument.
 
   returns: a String representation of this object. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Float this]
+  (^java.lang.String [^Float this]
     (-> this (.toString))))
 
 (defn infinite?
@@ -685,14 +685,14 @@
   returns: true if the value represented by this object is
             positive infinity or negative infinity;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Float this]
+  (^Boolean [^Float this]
     (-> this (.isInfinite))))
 
 (defn float-value
   "Returns the float value of this Float object.
 
   returns: the float value represented by this object - `float`"
-  (^Float [^java.lang.Float this]
+  (^Float [^Float this]
     (-> this (.floatValue))))
 
 (defn na-n?
@@ -701,7 +701,7 @@
 
   returns: true if the value represented by this object is
             NaN; false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Float this]
+  (^Boolean [^Float this]
     (-> this (.isNaN))))
 
 (defn int-value
@@ -710,7 +710,7 @@
 
   returns: the float value represented by this object
             converted to type int - `int`"
-  (^Integer [^java.lang.Float this]
+  (^Integer [^Float this]
     (-> this (.intValue))))
 
 (defn hash-code
@@ -721,7 +721,7 @@
    object.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.lang.Float this]
+  (^Integer [^Float this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -753,7 +753,7 @@
             and a value greater than 0 if this
             Float is numerically greater than
             anotherFloat. - `int`"
-  (^Integer [^java.lang.Float this ^java.lang.Float another-float]
+  (^Integer [^Float this ^java.lang.Float another-float]
     (-> this (.compareTo another-float))))
 
 (defn equals
@@ -794,6 +794,6 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Float this ^java.lang.Object obj]
+  (^Boolean [^Float this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

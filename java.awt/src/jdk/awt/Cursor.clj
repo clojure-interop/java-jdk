@@ -11,7 +11,7 @@
   type - the type of cursor - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified cursor type is invalid"
-  ([^Integer type]
+  (^Cursor [^Integer type]
     (new Cursor type)))
 
 (def *-default-cursor
@@ -168,20 +168,20 @@
   "Returns the type for this cursor.
 
   returns: `int`"
-  (^Integer [^java.awt.Cursor this]
+  (^Integer [^Cursor this]
     (-> this (.getType))))
 
 (defn get-name
   "Returns the name of this cursor.
 
   returns: a localized description of this cursor. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Cursor this]
+  (^java.lang.String [^Cursor this]
     (-> this (.getName))))
 
 (defn to-string
   "Returns a string representation of this cursor.
 
   returns: a string representation of this cursor. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Cursor this]
+  (^java.lang.String [^Cursor this]
     (-> this (.toString))))
 

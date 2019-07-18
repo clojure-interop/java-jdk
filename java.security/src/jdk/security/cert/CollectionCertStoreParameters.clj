@@ -41,12 +41,12 @@
    that has been initialized with this Collection, the
    Collection must have fail-fast iterators.
 
-  collection - a Collection of Certificates and CRLs - `java.util.Collection<?>`
+  collection - a Collection of Certificates and CRLs - `java.util.Collection`
 
   throws: java.lang.NullPointerException - if collection is null"
-  ([^java.util.Collection collection]
+  (^CollectionCertStoreParameters [^java.util.Collection collection]
     (new CollectionCertStoreParameters collection))
-  ([]
+  (^CollectionCertStoreParameters []
     (new CollectionCertStoreParameters )))
 
 (defn get-collection
@@ -57,7 +57,7 @@
    CRLs from the Collection.
 
   returns: the Collection (never null) - `java.util.Collection<?>`"
-  (^java.util.Collection [^java.security.cert.CollectionCertStoreParameters this]
+  (^java.util.Collection [^CollectionCertStoreParameters this]
     (-> this (.getCollection))))
 
 (defn clone
@@ -65,13 +65,13 @@
    Collection is copied, and not the contents.
 
   returns: the copy - `java.lang.Object`"
-  (^java.lang.Object [^java.security.cert.CollectionCertStoreParameters this]
+  (^java.lang.Object [^CollectionCertStoreParameters this]
     (-> this (.clone))))
 
 (defn to-string
   "Returns a formatted string describing the parameters.
 
   returns: a formatted string describing the parameters - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.CollectionCertStoreParameters this]
+  (^java.lang.String [^CollectionCertStoreParameters this]
     (-> this (.toString))))
 

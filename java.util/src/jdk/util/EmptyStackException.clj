@@ -9,6 +9,6 @@
 
   Constructs a new EmptyStackException with null
    as its error message string."
-  ([]
+  (^EmptyStackException []
     (new EmptyStackException )))
 

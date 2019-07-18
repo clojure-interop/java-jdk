@@ -15,7 +15,7 @@
   mime-type - MIME media type string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if mimeType is null."
-  ([^java.lang.String mime-type]
+  (^DocFlavor$INPUT_STREAM [^java.lang.String mime-type]
     (new DocFlavor$INPUT_STREAM mime-type)))
 
 (def *-text-plain-host
@@ -27,7 +27,7 @@
    Print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_PLAIN_HOST)
 
 (def *-text-plain-utf-8
@@ -38,7 +38,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_PLAIN_UTF_8)
 
 (def *-text-plain-utf-16
@@ -49,7 +49,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_PLAIN_UTF_16)
 
 (def *-text-plain-utf-16-be
@@ -61,7 +61,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_PLAIN_UTF_16BE)
 
 (def *-text-plain-utf-16-le
@@ -73,7 +73,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_PLAIN_UTF_16LE)
 
 (def *-text-plain-us-ascii
@@ -84,7 +84,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_PLAIN_US_ASCII)
 
 (def *-text-html-host
@@ -96,7 +96,7 @@
    Print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_HTML_HOST)
 
 (def *-text-html-utf-8
@@ -107,7 +107,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_HTML_UTF_8)
 
 (def *-text-html-utf-16
@@ -118,7 +118,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_HTML_UTF_16)
 
 (def *-text-html-utf-16-be
@@ -130,7 +130,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_HTML_UTF_16BE)
 
 (def *-text-html-utf-16-le
@@ -142,7 +142,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_HTML_UTF_16LE)
 
 (def *-text-html-us-ascii
@@ -153,7 +153,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/TEXT_HTML_US_ASCII)
 
 (def *-pdf
@@ -163,7 +163,7 @@
    data representation class name = `java.io.InputStream`
    (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/PDF)
 
 (def *-postscript
@@ -173,7 +173,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/POSTSCRIPT)
 
 (def *-pcl
@@ -183,7 +183,7 @@
    print data representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/PCL)
 
 (def *-gif
@@ -193,7 +193,7 @@
    representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/GIF)
 
 (def *-jpeg
@@ -203,7 +203,7 @@
    representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/JPEG)
 
 (def *-png
@@ -213,7 +213,7 @@
    representation class name =
    `java.io.InputStream` (byte stream).
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/PNG)
 
 (def *-autosense
@@ -226,6 +226,6 @@
    The client must determine that data described
    using this DocFlavor is valid for the printer.
 
-  type: javax.print.DocFlavor.INPUT_STREAM"
+  type: javax.print.DocFlavor$INPUT_STREAM"
   DocFlavor$INPUT_STREAM/AUTOSENSE)
 

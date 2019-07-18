@@ -26,7 +26,7 @@
 
 (defn ->property-editor-manager
   "Constructor."
-  ([]
+  (^PropertyEditorManager []
     (new PropertyEditorManager )))
 
 (defn *register-editor
@@ -40,8 +40,8 @@
    If there is a security manager, its checkPropertiesAccess
    method is called. This could result in a java.lang.SecurityException.
 
-  target-type - the class object of the type to be edited - `java.lang.Class<?>`
-  editor-class - the class object of the editor class - `java.lang.Class<?>`
+  target-type - the class object of the type to be edited - `java.lang.Class`
+  editor-class - the class object of the editor class - `java.lang.Class`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkPropertiesAccess method doesn't allow setting of system properties"
   ([^java.lang.Class target-type ^java.lang.Class editor-class]
@@ -50,7 +50,7 @@
 (defn *find-editor
   "Locate a value editor for a given target type.
 
-  target-type - The Class object for the type to be edited - `java.lang.Class<?>`
+  target-type - The Class object for the type to be edited - `java.lang.Class`
 
   returns: An editor object for the given target class.
    The result is null if no suitable editor can be found. - `java.beans.PropertyEditor`"

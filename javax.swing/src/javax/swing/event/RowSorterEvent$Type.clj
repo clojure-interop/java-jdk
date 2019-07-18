@@ -7,7 +7,7 @@
 
   Indicates the sort order has changed.
 
-  type: javax.swing.event.RowSorterEvent.Type"
+  type: javax.swing.event.RowSorterEvent$Type"
   RowSorterEvent$Type/SORT_ORDER_CHANGED)
 
 (def SORTED
@@ -16,7 +16,7 @@
   Indicates the contents have been newly sorted or
    transformed in some way.
 
-  type: javax.swing.event.RowSorterEvent.Type"
+  type: javax.swing.event.RowSorterEvent$Type"
   RowSorterEvent$Type/SORTED)
 
 (defn *values
@@ -28,7 +28,7 @@
   for (RowSorterEvent.Type c : RowSorterEvent.Type.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.event.RowSorterEvent.Type[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.swing.event.RowSorterEvent$Type[]`"
   ([]
     (RowSorterEvent$Type/values )))
 
@@ -40,9 +40,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.swing.event.RowSorterEvent.Type`
+  returns: the enum constant with the specified name - `javax.swing.event.RowSorterEvent$Type`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.swing.event.RowSorterEvent.Type [^java.lang.String name]
+  (^javax.swing.event.RowSorterEvent$Type [^java.lang.String name]
     (RowSorterEvent$Type/valueOf name)))
 

@@ -12,7 +12,7 @@
 
   keysize - the modulus size (specified in number of bits) - `int`
   public-exponent - the public exponent - `java.math.BigInteger`"
-  ([^Integer keysize ^java.math.BigInteger public-exponent]
+  (^RSAKeyGenParameterSpec [^Integer keysize ^java.math.BigInteger public-exponent]
     (new RSAKeyGenParameterSpec keysize public-exponent)))
 
 (def *-f-0
@@ -35,13 +35,13 @@
   "Returns the keysize.
 
   returns: the keysize. - `int`"
-  (^Integer [^java.security.spec.RSAKeyGenParameterSpec this]
+  (^Integer [^RSAKeyGenParameterSpec this]
     (-> this (.getKeysize))))
 
 (defn get-public-exponent
   "Returns the public-exponent value.
 
   returns: the public-exponent value. - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.security.spec.RSAKeyGenParameterSpec this]
+  (^java.math.BigInteger [^RSAKeyGenParameterSpec this]
     (-> this (.getPublicExponent))))
 

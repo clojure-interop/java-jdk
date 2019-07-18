@@ -7,13 +7,13 @@
   "The target section of the processing instruction
 
   returns: the String value of the PI or null - `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.events.ProcessingInstruction this]
+  (^java.lang.String [^ProcessingInstruction this]
     (-> this (.getTarget))))
 
 (defn get-data
   "The data section of the processing instruction
 
   returns: the String value of the PI's data or null - `java.lang.String`"
-  (^java.lang.String [^javax.xml.stream.events.ProcessingInstruction this]
+  (^java.lang.String [^ProcessingInstruction this]
     (-> this (.getData))))
 

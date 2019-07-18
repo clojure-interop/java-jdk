@@ -4,6 +4,6 @@
 
 (defn ->basic-highlighter
   "Constructor."
-  ([]
+  (^BasicTextUI$BasicHighlighter []
     (new BasicTextUI$BasicHighlighter )))
 

@@ -64,12 +64,12 @@
    SerialArray cannot serialize null array values.
 
   array - the Array object to be serialized - `java.sql.Array`
-  map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT (an SQL structured type or distinct type) and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped. The map parameter does not have any effect for Blob, Clob, DATALINK, or JAVA_OBJECT types. - `java.util.Map<java.lang.String,java.lang.Class<?>>`
+  map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT (an SQL structured type or distinct type) and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped. The map parameter does not have any effect for Blob, Clob, DATALINK, or JAVA_OBJECT types. - `java.util.Map`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs serializing the Array object"
-  ([^java.sql.Array array ^java.util.Map> map]
+  (^SerialArray [^java.sql.Array array ^java.util.Map map]
     (new SerialArray array map))
-  ([^java.sql.Array array]
+  (^SerialArray [^java.sql.Array array]
     (new SerialArray array)))
 
 (defn free
@@ -79,7 +79,7 @@
    subsequent calls to free are treated as a no-op.
 
   throws: java.sql.SQLException - if an error occurs releasing the SerialArray's resources"
-  ([^javax.sql.rowset.serial.SerialArray this]
+  ([^SerialArray this]
     (-> this (.free))))
 
 (defn get-array
@@ -98,19 +98,19 @@
 
   index - the index into this SerialArray object of the first element to be copied; the index of the first element in the array is 0 - `long`
   count - the number of consecutive elements to be copied, starting at the given index - `int`
-  map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map<java.lang.String,java.lang.Class<?>>`
+  map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map`
 
   returns: a copy of the designated elements in this SerialArray
            object as an Object in the Java programming language - `java.lang.Object`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  (^java.lang.Object [^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count ^java.util.Map> map]
+  (^java.lang.Object [^SerialArray this ^Long index ^Integer count ^java.util.Map map]
     (-> this (.getArray index count map)))
-  (^java.lang.Object [^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count]
+  (^java.lang.Object [^SerialArray this ^Long index ^Integer count]
     (-> this (.getArray index count)))
-  (^java.lang.Object [^javax.sql.rowset.serial.SerialArray this ^java.util.Map> map]
+  (^java.lang.Object [^SerialArray this ^java.util.Map map]
     (-> this (.getArray map)))
-  (^java.lang.Object [^javax.sql.rowset.serial.SerialArray this]
+  (^java.lang.Object [^SerialArray this]
     (-> this (.getArray))))
 
 (defn get-base-type
@@ -122,7 +122,7 @@
            the SQL type of the elements in this SerialArray object - `int`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  (^Integer [^javax.sql.rowset.serial.SerialArray this]
+  (^Integer [^SerialArray this]
     (-> this (.getBaseType))))
 
 (defn get-base-type-name
@@ -133,7 +133,7 @@
            SerialArray object - `java.lang.String`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs; if free had previously been called on this object"
-  (^java.lang.String [^javax.sql.rowset.serial.SerialArray this]
+  (^java.lang.String [^SerialArray this]
     (-> this (.getBaseTypeName))))
 
 (defn get-result-set
@@ -151,20 +151,20 @@
 
   index - the index into this SerialArray object of the first element to be copied; the index of the first element in the array is 0 - `long`
   count - the number of consecutive elements to be copied, starting at the given index - `int`
-  map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map<java.lang.String,java.lang.Class<?>>`
+  map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map`
 
   returns: a ResultSet object containing the designated
            elements in this SerialArray object, with a
            separate row for each element - `java.sql.ResultSet`
 
   throws: javax.sql.rowset.serial.SerialException - if called with the cause set to UnsupportedOperationException"
-  (^java.sql.ResultSet [^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count ^java.util.Map> map]
+  (^java.sql.ResultSet [^SerialArray this ^Long index ^Integer count ^java.util.Map map]
     (-> this (.getResultSet index count map)))
-  (^java.sql.ResultSet [^javax.sql.rowset.serial.SerialArray this ^Long index ^Integer count]
+  (^java.sql.ResultSet [^SerialArray this ^Long index ^Integer count]
     (-> this (.getResultSet index count)))
-  (^java.sql.ResultSet [^javax.sql.rowset.serial.SerialArray this ^java.util.Map> map]
+  (^java.sql.ResultSet [^SerialArray this ^java.util.Map map]
     (-> this (.getResultSet map)))
-  (^java.sql.ResultSet [^javax.sql.rowset.serial.SerialArray this]
+  (^java.sql.ResultSet [^SerialArray this]
     (-> this (.getResultSet))))
 
 (defn equals
@@ -174,7 +174,7 @@
 
   returns: true if the given object represents a SerialArray
             equivalent to this SerialArray, false otherwise - `boolean`"
-  (^Boolean [^javax.sql.rowset.serial.SerialArray this ^java.lang.Object obj]
+  (^Boolean [^SerialArray this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -183,7 +183,7 @@
    of the elements of the  SerialArray object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.sql.rowset.serial.SerialArray this]
+  (^Integer [^SerialArray this]
     (-> this (.hashCode))))
 
 (defn clone
@@ -192,6 +192,6 @@
    to the original underlying object array of this SerialArray object.
 
   returns: a clone of this SerialArray - `java.lang.Object`"
-  (^java.lang.Object [^javax.sql.rowset.serial.SerialArray this]
+  (^java.lang.Object [^SerialArray this]
     (-> this (.clone))))
 

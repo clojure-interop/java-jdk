@@ -24,9 +24,9 @@
 
   key - the locale independent name of the relation. - `java.lang.String`
   target - the target object for this relation - `java.lang.Object`"
-  ([^java.lang.String key ^java.lang.Object target]
+  (^AccessibleRelation [^java.lang.String key ^java.lang.Object target]
     (new AccessibleRelation key target))
-  ([^java.lang.String key]
+  (^AccessibleRelation [^java.lang.String key]
     (new AccessibleRelation key)))
 
 (def *-label-for
@@ -258,20 +258,20 @@
   "Returns the key for this relation
 
   returns: the key for this relation - `java.lang.String`"
-  (^java.lang.String [^javax.accessibility.AccessibleRelation this]
+  (^java.lang.String [^AccessibleRelation this]
     (-> this (.getKey))))
 
 (defn get-target
   "Returns the target objects for this relation
 
   returns: an array containing the target objects for this relation - `java.lang.Object[]`"
-  ([^javax.accessibility.AccessibleRelation this]
+  ([^AccessibleRelation this]
     (-> this (.getTarget))))
 
 (defn set-target
   "Sets the target object for this relation
 
   target - the target object for this relation - `java.lang.Object`"
-  ([^javax.accessibility.AccessibleRelation this ^java.lang.Object target]
+  ([^AccessibleRelation this ^java.lang.Object target]
     (-> this (.setTarget target))))
 

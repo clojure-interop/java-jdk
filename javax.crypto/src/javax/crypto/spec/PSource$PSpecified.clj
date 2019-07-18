@@ -14,7 +14,7 @@
   p - the value of the encoding input. The contents of the array are copied to protect against subsequent modification. - `byte[]`
 
   throws: java.lang.NullPointerException - if p is null."
-  ([p]
+  (^PSource$PSpecified [p]
     (new PSource$PSpecified p)))
 
 (def *-default
@@ -22,7 +22,7 @@
 
   The encoding input P whose value equals byte[0].
 
-  type: javax.crypto.spec.PSource.PSpecified"
+  type: javax.crypto.spec.PSource$PSpecified"
   PSource$PSpecified/DEFAULT)
 
 (defn get-value
@@ -30,6 +30,6 @@
 
   returns: the value of encoding input P. A new array is
    returned each time this method is called. - `byte[]`"
-  ([^javax.crypto.spec.PSource$PSpecified this]
+  ([^PSource$PSpecified this]
     (-> this (.getValue))))
 

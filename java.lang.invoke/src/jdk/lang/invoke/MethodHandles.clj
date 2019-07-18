@@ -122,7 +122,7 @@
    If there is a security manager, its checkPermission method
    is called with a ReflectPermission(`suppressAccessChecks`) permission.
 
-  expected - a class object representing the desired result type T - `java.lang.Class<T>`
+  expected - a class object representing the desired result type T - `java.lang.Class`
   target - a direct method handle to crack into symbolic reference components - `java.lang.invoke.MethodHandle`
 
   returns: a reference to the method, constructor, or field object - `<T extends java.lang.reflect.Member> T`
@@ -259,13 +259,13 @@
    in order to create a method handle of the correct return type.
 
   target - method handle to call - `java.lang.invoke.MethodHandle`
-  ex-type - the type of exception which the handler will catch - `java.lang.Throwable>`
+  ex-type - the type of exception which the handler will catch - `java.lang.Class`
   handler - method handle to call if a matching exception is thrown - `java.lang.invoke.MethodHandle`
 
   returns: method handle which incorporates the specified try/catch logic - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if any argument is null"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandle target ^java.lang.Throwable> ex-type ^java.lang.invoke.MethodHandle handler]
+  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandle target ^java.lang.Class ex-type ^java.lang.invoke.MethodHandle handler]
     (MethodHandles/catchException target ex-type handler)))
 
 (defn *constant
@@ -277,7 +277,7 @@
    else reference conversions are attempted.
    The returned method handle is equivalent to identity(type).bindTo(value).
 
-  type - the return type of the desired method handle - `java.lang.Class<?>`
+  type - the return type of the desired method handle - `java.lang.Class`
   value - the value to return - `java.lang.Object`
 
   returns: a method handle of the given return type and no arguments, which always returns the given value - `java.lang.invoke.MethodHandle`
@@ -292,7 +292,7 @@
    Its last argument will be the array's element type.
    The first and second arguments will be the array type and int.
 
-  array-class - the class of an array - `java.lang.Class<?>`
+  array-class - the class of an array - `java.lang.Class`
 
   returns: a method handle which can store values into the array type - `java.lang.invoke.MethodHandle`
 
@@ -353,7 +353,7 @@
    element type.  Its first argument will be the array type,
    and the second will be int.
 
-  array-class - an array type - `java.lang.Class<?>`
+  array-class - an array type - `java.lang.Class`
 
   returns: a method handle which can load values from the given array type - `java.lang.invoke.MethodHandle`
 
@@ -441,8 +441,8 @@
    invokedynamic instruction
    executing in the same caller class C.
 
-  returns: a lookup object for the caller of this method, with private access - `java.lang.invoke.MethodHandles.Lookup`"
-  (^java.lang.invoke.MethodHandles.Lookup []
+  returns: a lookup object for the caller of this method, with private access - `java.lang.invoke.MethodHandles$Lookup`"
+  (^java.lang.invoke.MethodHandles$Lookup []
     (MethodHandles/lookup )))
 
 (defn *public-lookup
@@ -464,7 +464,7 @@
    Also, it cannot access
    caller sensitive methods.
 
-  returns: a lookup object which is trusted minimally - `java.lang.invoke.MethodHandles.Lookup Lookup`"
+  returns: a lookup object which is trusted minimally - `java.lang.invoke.MethodHandles$Lookup Lookup`"
   ([]
     (MethodHandles/publicLookup )))
 
@@ -540,19 +540,19 @@
 
   target - the method handle to invoke after the arguments are dropped - `java.lang.invoke.MethodHandle`
   pos - position of first argument to drop (zero for the leftmost) - `int`
-  value-types - the type(s) of the argument(s) to drop - `java.util.List<java.lang.Class<?>>`
+  value-types - the type(s) of the argument(s) to drop - `java.util.List`
 
   returns: a method handle which drops arguments of the given types,
            before calling the original method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if the target is null, or if the valueTypes list or any of its elements is null"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandle target ^Integer pos ^java.util.List> value-types]
+  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandle target ^Integer pos ^java.util.List value-types]
     (MethodHandles/dropArguments target pos value-types)))
 
 (defn *identity
   "Produces a method handle which returns its sole argument when invoked.
 
-  type - the type of the sole parameter and return value of the desired method handle - `java.lang.Class<?>`
+  type - the type of the sole parameter and return value of the desired method handle - `java.lang.Class`
 
   returns: a unary method handle which accepts and returns the given type - `java.lang.invoke.MethodHandle`
 
@@ -643,13 +643,13 @@
    The return type may be anything convenient:  It doesn't matter to the
    method handle's behavior, since it will never return normally.
 
-  return-type - the return type of the desired method handle - `java.lang.Class<?>`
-  ex-type - the parameter type of the desired method handle - `java.lang.Throwable>`
+  return-type - the return type of the desired method handle - `java.lang.Class`
+  ex-type - the parameter type of the desired method handle - `java.lang.Class`
 
   returns: method handle which can throw the given exceptions - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if either argument is null"
-  (^java.lang.invoke.MethodHandle [^java.lang.Class return-type ^java.lang.Throwable> ex-type]
+  (^java.lang.invoke.MethodHandle [^java.lang.Class return-type ^java.lang.Class ex-type]
     (MethodHandles/throwException return-type ex-type)))
 
 (defn *exact-invoker

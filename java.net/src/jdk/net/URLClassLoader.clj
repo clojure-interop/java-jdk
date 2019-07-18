@@ -31,11 +31,11 @@
   factory - the URLStreamHandlerFactory to use when creating URLs - `java.net.URLStreamHandlerFactory`
 
   throws: java.lang.SecurityException - if a security manager exists and its checkCreateClassLoader method doesn't allow creation of a class loader."
-  ([urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory]
+  (^URLClassLoader [urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory]
     (new URLClassLoader urls parent factory))
-  ([urls ^java.lang.ClassLoader parent]
+  (^URLClassLoader [urls ^java.lang.ClassLoader parent]
     (new URLClassLoader urls parent))
-  ([urls]
+  (^URLClassLoader [urls]
     (new URLClassLoader urls)))
 
 (defn *new-instance
@@ -68,7 +68,7 @@
 
   returns: An input stream for reading the resource, or null
             if the resource could not be found - `java.io.InputStream`"
-  (^java.io.InputStream [^java.net.URLClassLoader this ^java.lang.String name]
+  (^java.io.InputStream [^URLClassLoader this ^java.lang.String name]
     (-> this (.getResourceAsStream name))))
 
 (defn close
@@ -89,7 +89,7 @@
    loader has no effect.
 
   throws: java.io.IOException - if closing any file opened by this class loader resulted in an IOException. Any such exceptions are caught internally. If only one is caught, then it is re-thrown. If more than one exception is caught, then the second and following exceptions are added as suppressed exceptions of the first one caught, which is then re-thrown."
-  ([^java.net.URLClassLoader this]
+  ([^URLClassLoader this]
     (-> this (.close))))
 
 (defn get-ur-ls
@@ -98,7 +98,7 @@
    along with any URLs subsequently appended by the addURL() method.
 
   returns: the search path of URLs for loading classes and resources. - `java.net.URL[]`"
-  ([^java.net.URLClassLoader this]
+  ([^URLClassLoader this]
     (-> this (.getURLs))))
 
 (defn find-resource
@@ -108,7 +108,7 @@
 
   returns: a URL for the resource, or null
    if the resource could not be found, or if the loader is closed. - `java.net.URL`"
-  (^java.net.URL [^java.net.URLClassLoader this ^java.lang.String name]
+  (^java.net.URL [^URLClassLoader this ^java.lang.String name]
     (-> this (.findResource name))))
 
 (defn find-resources
@@ -121,6 +121,6 @@
            If the loader is closed, the Enumeration will be empty. - `java.util.Enumeration<java.net.URL>`
 
   throws: java.io.IOException - if an I/O exception occurs"
-  (^java.util.Enumeration [^java.net.URLClassLoader this ^java.lang.String name]
+  (^java.util.Enumeration [^URLClassLoader this ^java.lang.String name]
     (-> this (.findResources name))))
 

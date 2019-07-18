@@ -47,8 +47,8 @@
   l - The nonnull listener. - `javax.naming.event.NamingListener`
 
   throws: javax.naming.NamingException - If a problem was encountered while adding the listener."
-  ([^javax.naming.event.EventDirContext this ^javax.naming.Name target ^java.lang.String filter filter-args ^javax.naming.directory.SearchControls ctls ^javax.naming.event.NamingListener l]
+  ([^EventDirContext this ^javax.naming.Name target ^java.lang.String filter filter-args ^javax.naming.directory.SearchControls ctls ^javax.naming.event.NamingListener l]
     (-> this (.addNamingListener target filter filter-args ctls l)))
-  ([^javax.naming.event.EventDirContext this ^javax.naming.Name target ^java.lang.String filter ^javax.naming.directory.SearchControls ctls ^javax.naming.event.NamingListener l]
+  ([^EventDirContext this ^javax.naming.Name target ^java.lang.String filter ^javax.naming.directory.SearchControls ctls ^javax.naming.event.NamingListener l]
     (-> this (.addNamingListener target filter ctls l))))
 

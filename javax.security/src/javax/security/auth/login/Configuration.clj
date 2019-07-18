@@ -175,15 +175,15 @@
    the Security.getProviders() method.
 
   type - the specified Configuration type. See the Configuration section in the Java Cryptography Architecture Standard Algorithm Name Documentation for a list of standard Configuration types. - `java.lang.String`
-  params - parameters for the Configuration, which may be null. - `javax.security.auth.login.Configuration.Parameters`
+  params - parameters for the Configuration, which may be null. - `javax.security.auth.login.Configuration$Parameters`
   provider - the provider. - `java.lang.String`
 
   returns: the new Configuration object. - `javax.security.auth.login.Configuration`
 
   throws: java.lang.SecurityException - if the caller does not have permission to get a Configuration instance for the specified type."
-  (^javax.security.auth.login.Configuration [^java.lang.String type ^javax.security.auth.login.Configuration.Parameters params ^java.lang.String provider]
+  (^javax.security.auth.login.Configuration [^java.lang.String type ^javax.security.auth.login.Configuration$Parameters params ^java.lang.String provider]
     (Configuration/getInstance type params provider))
-  (^javax.security.auth.login.Configuration [^java.lang.String type ^javax.security.auth.login.Configuration.Parameters params]
+  (^javax.security.auth.login.Configuration [^java.lang.String type ^javax.security.auth.login.Configuration$Parameters params]
     (Configuration/getInstance type params)))
 
 (defn get-provider
@@ -194,7 +194,7 @@
    Otherwise this method returns null.
 
   returns: the Provider of this Configuration, or null. - `java.security.Provider`"
-  (^java.security.Provider [^javax.security.auth.login.Configuration this]
+  (^java.security.Provider [^Configuration this]
     (-> this (.getProvider))))
 
 (defn get-type
@@ -205,7 +205,7 @@
    Otherwise this method returns null.
 
   returns: the type of this Configuration, or null. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.login.Configuration this]
+  (^java.lang.String [^Configuration this]
     (-> this (.getType))))
 
 (defn get-parameters
@@ -215,8 +215,8 @@
    was obtained via a call to Configuration.getInstance.
    Otherwise this method returns null.
 
-  returns: Configuration parameters, or null. - `javax.security.auth.login.Configuration.Parameters`"
-  (^javax.security.auth.login.Configuration.Parameters [^javax.security.auth.login.Configuration this]
+  returns: Configuration parameters, or null. - `javax.security.auth.login.Configuration$Parameters`"
+  (^javax.security.auth.login.Configuration$Parameters [^Configuration this]
     (-> this (.getParameters))))
 
 (defn get-app-configuration-entry
@@ -228,7 +228,7 @@
   returns: an array of AppConfigurationEntries for the specified name
             from this Configuration, or null if there are no entries
             for the specified name - `javax.security.auth.login.AppConfigurationEntry[]`"
-  ([^javax.security.auth.login.Configuration this ^java.lang.String name]
+  ([^Configuration this ^java.lang.String name]
     (-> this (.getAppConfigurationEntry name))))
 
 (defn refresh
@@ -244,6 +244,6 @@
    by the implementation.
 
   throws: java.lang.SecurityException - if the caller does not have permission to refresh its Configuration."
-  ([^javax.security.auth.login.Configuration this]
+  ([^Configuration this]
     (-> this (.refresh))))
 

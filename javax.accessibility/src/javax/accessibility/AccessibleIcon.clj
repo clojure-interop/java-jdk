@@ -19,7 +19,7 @@
    of the icon.
 
   returns: the description of the icon - `java.lang.String`"
-  (^java.lang.String [^javax.accessibility.AccessibleIcon this]
+  (^java.lang.String [^AccessibleIcon this]
     (-> this (.getAccessibleIconDescription))))
 
 (defn set-accessible-icon-description
@@ -29,20 +29,20 @@
    of the icon.
 
   description - the description of the icon - `java.lang.String`"
-  ([^javax.accessibility.AccessibleIcon this ^java.lang.String description]
+  ([^AccessibleIcon this ^java.lang.String description]
     (-> this (.setAccessibleIconDescription description))))
 
 (defn get-accessible-icon-width
   "Gets the width of the icon
 
   returns: the width of the icon. - `int`"
-  (^Integer [^javax.accessibility.AccessibleIcon this]
+  (^Integer [^AccessibleIcon this]
     (-> this (.getAccessibleIconWidth))))
 
 (defn get-accessible-icon-height
   "Gets the height of the icon
 
   returns: the height of the icon. - `int`"
-  (^Integer [^javax.accessibility.AccessibleIcon this]
+  (^Integer [^AccessibleIcon this]
     (-> this (.getAccessibleIconHeight))))
 

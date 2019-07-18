@@ -34,9 +34,9 @@
   "Visits an IntersectionType in a manner defined by a subclass.
 
   t - the type to visit - `javax.lang.model.type.IntersectionType`
-  p - a visitor-specified parameter - `AbstractTypeVisitor8.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit as defined by a subclass - `AbstractTypeVisitor8.R`"
-  (^AbstractTypeVisitor8.R [^javax.lang.model.util.AbstractTypeVisitor8 this ^javax.lang.model.type.IntersectionType t ^AbstractTypeVisitor8.P p]
+  returns: the result of the visit as defined by a subclass - `R`"
+  ([^AbstractTypeVisitor8 this ^javax.lang.model.type.IntersectionType t p]
     (-> this (.visitIntersection t p))))
 

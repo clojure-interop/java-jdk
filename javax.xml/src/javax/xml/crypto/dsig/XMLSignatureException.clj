@@ -18,11 +18,11 @@
 
   message - the detail message - `java.lang.String`
   cause - the cause (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^XMLSignatureException [^java.lang.String message ^java.lang.Throwable cause]
     (new XMLSignatureException message cause))
-  ([^java.lang.String message]
+  (^XMLSignatureException [^java.lang.String message]
     (new XMLSignatureException message))
-  ([]
+  (^XMLSignatureException []
     (new XMLSignatureException )))
 
 (defn get-cause
@@ -33,7 +33,7 @@
 
   returns: the cause of this XMLSignatureException or
            null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.xml.crypto.dsig.XMLSignatureException this]
+  (^java.lang.Throwable [^XMLSignatureException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace
@@ -41,8 +41,8 @@
    the cause's backtrace to the specified print stream.
 
   s - PrintStream to use for output - `java.io.PrintStream`"
-  ([^javax.xml.crypto.dsig.XMLSignatureException this ^java.io.PrintStream s]
+  ([^XMLSignatureException this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([^javax.xml.crypto.dsig.XMLSignatureException this]
+  ([^XMLSignatureException this]
     (-> this (.printStackTrace))))
 

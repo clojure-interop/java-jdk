@@ -17,7 +17,7 @@
 
 (defn ->file-filter
   "Constructor."
-  ([]
+  (^FileFilter []
     (new FileFilter )))
 
 (defn accept
@@ -26,13 +26,13 @@
   f - `java.io.File`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.filechooser.FileFilter this ^java.io.File f]
+  (^Boolean [^FileFilter this ^java.io.File f]
     (-> this (.accept f))))
 
 (defn get-description
   "The description of this filter. For example: `JPG and GIF Images`
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.filechooser.FileFilter this]
+  (^java.lang.String [^FileFilter this]
     (-> this (.getDescription))))
 

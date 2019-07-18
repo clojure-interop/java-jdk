@@ -14,16 +14,16 @@
   Creates a new AtomicBoolean with the given initial value.
 
   initial-value - the initial value - `boolean`"
-  ([^Boolean initial-value]
+  (^AtomicBoolean [^Boolean initial-value]
     (new AtomicBoolean initial-value))
-  ([]
+  (^AtomicBoolean []
     (new AtomicBoolean )))
 
 (defn get
   "Returns the current value.
 
   returns: the current value - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicBoolean this]
+  (^Boolean [^AtomicBoolean this]
     (-> this (.get))))
 
 (defn compare-and-set
@@ -35,7 +35,7 @@
 
   returns: true if successful. False return indicates that
    the actual value was not equal to the expected value. - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicBoolean this ^Boolean expect ^Boolean update]
+  (^Boolean [^AtomicBoolean this ^Boolean expect ^Boolean update]
     (-> this (.compareAndSet expect update))))
 
 (defn weak-compare-and-set
@@ -50,21 +50,21 @@
   update - the new value - `boolean`
 
   returns: true if successful - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicBoolean this ^Boolean expect ^Boolean update]
+  (^Boolean [^AtomicBoolean this ^Boolean expect ^Boolean update]
     (-> this (.weakCompareAndSet expect update))))
 
 (defn set
   "Unconditionally sets to the given value.
 
   new-value - the new value - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicBoolean this ^Boolean new-value]
+  ([^AtomicBoolean this ^Boolean new-value]
     (-> this (.set new-value))))
 
 (defn lazy-set
   "Eventually sets to the given value.
 
   new-value - the new value - `boolean`"
-  ([^java.util.concurrent.atomic.AtomicBoolean this ^Boolean new-value]
+  ([^AtomicBoolean this ^Boolean new-value]
     (-> this (.lazySet new-value))))
 
 (defn get-and-set?
@@ -73,13 +73,13 @@
   new-value - the new value - `boolean`
 
   returns: the previous value - `boolean`"
-  (^Boolean [^java.util.concurrent.atomic.AtomicBoolean this ^Boolean new-value]
+  (^Boolean [^AtomicBoolean this ^Boolean new-value]
     (-> this (.getAndSet new-value))))
 
 (defn to-string
   "Returns the String representation of the current value.
 
   returns: the String representation of the current value - `java.lang.String`"
-  (^java.lang.String [^java.util.concurrent.atomic.AtomicBoolean this]
+  (^java.lang.String [^AtomicBoolean this]
     (-> this (.toString))))
 

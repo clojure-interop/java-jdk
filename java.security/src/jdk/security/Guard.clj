@@ -17,6 +17,6 @@
   object - the object being protected by the guard. - `java.lang.Object`
 
   throws: java.lang.SecurityException - if access is denied."
-  ([^java.security.Guard this ^java.lang.Object object]
+  ([^Guard this ^java.lang.Object object]
     (-> this (.checkGuard object))))
 

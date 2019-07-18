@@ -40,26 +40,26 @@
   returns: the value held by this OptionalDouble - `double`
 
   throws: java.util.NoSuchElementException - if there is no value present"
-  (^Double [^java.util.OptionalDouble this]
+  (^Double [^OptionalDouble this]
     (-> this (.getAsDouble))))
 
 (defn or-else-throw
   "Return the contained value, if present, otherwise throw an exception
    to be created by the provided supplier.
 
-  exception-supplier - The supplier which will return the exception to be thrown - `java.util.function.Supplier<X>`
+  exception-supplier - The supplier which will return the exception to be thrown - `java.util.function.Supplier`
 
   returns: the present value - `<X extends java.lang.Throwable> double`
 
   throws: X - if there is no value present"
-  ([^java.util.OptionalDouble this ^java.util.function.Supplier exception-supplier]
+  ([^OptionalDouble this ^java.util.function.Supplier exception-supplier]
     (-> this (.orElseThrow exception-supplier))))
 
 (defn present?
   "Return true if there is a value present, otherwise false.
 
   returns: true if there is a value present, otherwise false - `boolean`"
-  (^Boolean [^java.util.OptionalDouble this]
+  (^Boolean [^OptionalDouble this]
     (-> this (.isPresent))))
 
 (defn to-string
@@ -86,7 +86,7 @@
    between implementations and versions.
 
   returns: the string representation of this instance - `java.lang.String`"
-  (^java.lang.String [^java.util.OptionalDouble this]
+  (^java.lang.String [^OptionalDouble this]
     (-> this (.toString))))
 
 (defn or-else-get
@@ -98,7 +98,7 @@
   returns: the value if present otherwise the result of other.getAsDouble() - `double`
 
   throws: java.lang.NullPointerException - if value is not present and other is null"
-  (^Double [^java.util.OptionalDouble this ^java.util.function.DoubleSupplier other]
+  (^Double [^OptionalDouble this ^java.util.function.DoubleSupplier other]
     (-> this (.orElseGet other))))
 
 (defn if-present
@@ -108,7 +108,7 @@
   consumer - block to be executed if a value is present - `java.util.function.DoubleConsumer`
 
   throws: java.lang.NullPointerException - if value is present and consumer is null"
-  ([^java.util.OptionalDouble this ^java.util.function.DoubleConsumer consumer]
+  ([^OptionalDouble this ^java.util.function.DoubleConsumer consumer]
     (-> this (.ifPresent consumer))))
 
 (defn hash-code
@@ -116,7 +116,7 @@
    no value is present.
 
   returns: hash code value of the present value or 0 if no value is present - `int`"
-  (^Integer [^java.util.OptionalDouble this]
+  (^Integer [^OptionalDouble this]
     (-> this (.hashCode))))
 
 (defn or-else
@@ -125,7 +125,7 @@
   other - the value to be returned if there is no value present - `double`
 
   returns: the value, if present, otherwise other - `double`"
-  (^Double [^java.util.OptionalDouble this ^Double other]
+  (^Double [^OptionalDouble this ^Double other]
     (-> this (.orElse other))))
 
 (defn equals
@@ -140,6 +140,6 @@
 
   returns: {code true} if the other object is `equal to` this object
    otherwise false - `boolean`"
-  (^Boolean [^java.util.OptionalDouble this ^java.lang.Object obj]
+  (^Boolean [^OptionalDouble this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -176,7 +176,7 @@
   "Constructor.
 
   Constructs this SwingWorker."
-  ([]
+  (^SwingWorker []
     (new SwingWorker )))
 
 (defn cancel
@@ -198,7 +198,7 @@
   returns: false if the task could not be cancelled,
    typically because it has already completed normally;
    true otherwise - `boolean`"
-  (^Boolean [^javax.swing.SwingWorker this ^Boolean may-interrupt-if-running]
+  (^Boolean [^SwingWorker this ^Boolean may-interrupt-if-running]
     (-> this (.cancel may-interrupt-if-running))))
 
 (defn fire-property-change
@@ -220,7 +220,7 @@
   property-name - the programmatic name of the property that was changed - `java.lang.String`
   old-value - the old value of the property - `java.lang.Object`
   new-value - the new value of the property - `java.lang.Object`"
-  ([^javax.swing.SwingWorker this ^java.lang.String property-name ^java.lang.Object old-value ^java.lang.Object new-value]
+  ([^SwingWorker this ^java.lang.String property-name ^java.lang.Object old-value ^java.lang.Object new-value]
     (-> this (.firePropertyChange property-name old-value new-value))))
 
 (defn cancelled?
@@ -228,7 +228,7 @@
    normally.
 
   returns: true if this task was cancelled before it completed - `boolean`"
-  (^Boolean [^javax.swing.SwingWorker this]
+  (^Boolean [^SwingWorker this]
     (-> this (.isCancelled))))
 
 (defn get-property-change-support
@@ -247,27 +247,27 @@
    Thread.
 
   returns: PropertyChangeSupport for this SwingWorker - `java.beans.PropertyChangeSupport`"
-  (^java.beans.PropertyChangeSupport [^javax.swing.SwingWorker this]
+  (^java.beans.PropertyChangeSupport [^SwingWorker this]
     (-> this (.getPropertyChangeSupport))))
 
 (defn run
   "Sets this Future to the result of computation unless
    it has been cancelled."
-  ([^javax.swing.SwingWorker this]
+  ([^SwingWorker this]
     (-> this (.run))))
 
 (defn get-progress
   "Returns the progress bound property.
 
   returns: the progress bound property. - `int`"
-  (^Integer [^javax.swing.SwingWorker this]
+  (^Integer [^SwingWorker this]
     (-> this (.getProgress))))
 
 (defn get-state
   "Returns the SwingWorker state bound property.
 
-  returns: the current state - `javax.swing.SwingWorker.StateValue`"
-  (^javax.swing.SwingWorker.StateValue [^javax.swing.SwingWorker this]
+  returns: the current state - `javax.swing.SwingWorker$StateValue`"
+  (^javax.swing.SwingWorker$StateValue [^SwingWorker this]
     (-> this (.getState))))
 
 (defn remove-property-change-listener
@@ -283,7 +283,7 @@
    PropertyChangeSupport from getPropertyChangeSupport().
 
   listener - the PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([^javax.swing.SwingWorker this ^java.beans.PropertyChangeListener listener]
+  ([^SwingWorker this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn execute
@@ -298,7 +298,7 @@
    SwingWorker is only designed to be executed once.  Executing a
    SwingWorker more than once will not result in invoking the
    doInBackground method twice."
-  ([^javax.swing.SwingWorker this]
+  ([^SwingWorker this]
     (-> this (.execute))))
 
 (defn done?
@@ -309,7 +309,7 @@
    true.
 
   returns: true if this task completed - `boolean`"
-  (^Boolean [^javax.swing.SwingWorker this]
+  (^Boolean [^SwingWorker this]
     (-> this (.isDone))))
 
 (defn add-property-change-listener
@@ -323,7 +323,7 @@
    PropertyChangeSupport from getPropertyChangeSupport().
 
   listener - the PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([^javax.swing.SwingWorker this ^java.beans.PropertyChangeListener listener]
+  ([^SwingWorker this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn get
@@ -335,11 +335,11 @@
   timeout - the maximum time to wait - `long`
   unit - the time unit of the timeout argument - `java.util.concurrent.TimeUnit`
 
-  returns: the computed result - `SwingWorker.T`
+  returns: the computed result - `T`
 
   throws: java.lang.InterruptedException - if the current thread was interrupted while waiting"
-  (^SwingWorker.T [^javax.swing.SwingWorker this ^Long timeout ^java.util.concurrent.TimeUnit unit]
+  ([^SwingWorker this ^Long timeout ^java.util.concurrent.TimeUnit unit]
     (-> this (.get timeout unit)))
-  (^SwingWorker.T [^javax.swing.SwingWorker this]
+  ([^SwingWorker this]
     (-> this (.get))))
 

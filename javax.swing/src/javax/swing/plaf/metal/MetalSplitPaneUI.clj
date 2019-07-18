@@ -14,7 +14,7 @@
 
 (defn ->metal-split-pane-ui
   "Constructor."
-  ([]
+  (^MetalSplitPaneUI []
     (new MetalSplitPaneUI )))
 
 (defn *create-ui
@@ -30,6 +30,6 @@
   "Creates the default divider.
 
   returns: `javax.swing.plaf.basic.BasicSplitPaneDivider`"
-  (^javax.swing.plaf.basic.BasicSplitPaneDivider [^javax.swing.plaf.metal.MetalSplitPaneUI this]
+  (^javax.swing.plaf.basic.BasicSplitPaneDivider [^MetalSplitPaneUI this]
     (-> this (.createDefaultDivider))))
 

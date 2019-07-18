@@ -99,7 +99,7 @@
 
   obj - the object being exported - `java.rmi.Remote`
   location - the object's code location - `java.lang.String`
-  data - the object's bootstrapping data - `java.rmi.MarshalledObject<?>`
+  data - the object's bootstrapping data - `java.rmi.MarshalledObject`
   restart - if true, the object is restarted (reactivated) when either the activator is restarted or the object's activation group is restarted after an unexpected crash; if false, the object is only activated on demand. Specifying restart to be true does not force an initial immediate activation of a newly registered object; initial activation is lazy. - `boolean`
   port - the port on which the object is exported (an anonymous port is used if port=0) - `int`
   csf - the client-side socket factory for making calls to the remote object - `java.rmi.server.RMIClientSocketFactory`

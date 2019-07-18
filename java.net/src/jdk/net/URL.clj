@@ -127,15 +127,15 @@
   handler - the stream handler for the URL. - `java.net.URLStreamHandler`
 
   throws: java.net.MalformedURLException - if an unknown protocol is specified."
-  ([^java.lang.String protocol ^java.lang.String host ^Integer port ^java.lang.String file ^java.net.URLStreamHandler handler]
+  (^URL [^java.lang.String protocol ^java.lang.String host ^Integer port ^java.lang.String file ^java.net.URLStreamHandler handler]
     (new URL protocol host port file handler))
-  ([^java.lang.String protocol ^java.lang.String host ^Integer port ^java.lang.String file]
+  (^URL [^java.lang.String protocol ^java.lang.String host ^Integer port ^java.lang.String file]
     (new URL protocol host port file))
-  ([^java.lang.String protocol ^java.lang.String host ^java.lang.String file]
+  (^URL [^java.lang.String protocol ^java.lang.String host ^java.lang.String file]
     (new URL protocol host file))
-  ([^java.net.URL context ^java.lang.String spec]
+  (^URL [^java.net.URL context ^java.lang.String spec]
     (new URL context spec))
-  ([^java.lang.String spec]
+  (^URL [^java.lang.String spec]
     (new URL spec)))
 
 (defn *set-url-stream-handler-factory
@@ -164,14 +164,14 @@
    then -1 is returned.
 
   returns: the port number - `int`"
-  (^Integer [^java.net.URL this]
+  (^Integer [^URL this]
     (-> this (.getDefaultPort))))
 
 (defn get-authority
   "Gets the authority part of this URL.
 
   returns: the authority part of this URL - `java.lang.String`"
-  (^java.lang.String [^java.net.URL this]
+  (^java.lang.String [^URL this]
     (-> this (.getAuthority))))
 
 (defn get-ref
@@ -180,7 +180,7 @@
 
   returns: the anchor (also known as the `reference`) of this
             URL, or null if one does not exist - `java.lang.String`"
-  (^java.lang.String [^java.net.URL this]
+  (^java.lang.String [^URL this]
     (-> this (.getRef))))
 
 (defn open-stream
@@ -194,7 +194,7 @@
   returns: an input stream for reading from the URL connection. - `java.io.InputStream`
 
   throws: java.io.IOException - if an I/O exception occurs."
-  (^java.io.InputStream [^java.net.URL this]
+  (^java.io.InputStream [^URL this]
     (-> this (.openStream))))
 
 (defn to-uri
@@ -207,7 +207,7 @@
   returns: a URI instance equivalent to this URL. - `java.net.URI`
 
   throws: java.net.URISyntaxException - if this URL is not formatted strictly according to to RFC2396 and cannot be converted to a URI."
-  (^java.net.URI [^java.net.URL this]
+  (^java.net.URI [^URL this]
     (-> this (.toURI))))
 
 (defn to-string
@@ -216,7 +216,7 @@
    method of the stream protocol handler for this object.
 
   returns: a string representation of this object. - `java.lang.String`"
-  (^java.lang.String [^java.net.URL this]
+  (^java.lang.String [^URL this]
     (-> this (.toString))))
 
 (defn get-user-info
@@ -224,7 +224,7 @@
 
   returns: the userInfo part of this URL, or
    null if one does not exist - `java.lang.String`"
-  (^java.lang.String [^java.net.URL this]
+  (^java.lang.String [^URL this]
     (-> this (.getUserInfo))))
 
 (defn open-connection
@@ -241,9 +241,9 @@
   returns: a URLConnection to the URL. - `java.net.URLConnection`
 
   throws: java.io.IOException - if an I/O exception occurs."
-  (^java.net.URLConnection [^java.net.URL this ^java.net.Proxy proxy]
+  (^java.net.URLConnection [^URL this ^java.net.Proxy proxy]
     (-> this (.openConnection proxy)))
-  (^java.net.URLConnection [^java.net.URL this]
+  (^java.net.URLConnection [^URL this]
     (-> this (.openConnection))))
 
 (defn get-path
@@ -251,7 +251,7 @@
 
   returns: the path part of this URL, or an
    empty string if one does not exist - `java.lang.String`"
-  (^java.lang.String [^java.net.URL this]
+  (^java.lang.String [^URL this]
     (-> this (.getPath))))
 
 (defn to-external-form
@@ -260,7 +260,7 @@
    method of the stream protocol handler for this object.
 
   returns: a string representation of this object. - `java.lang.String`"
-  (^java.lang.String [^java.net.URL this]
+  (^java.lang.String [^URL this]
     (-> this (.toExternalForm))))
 
 (defn get-query
@@ -268,21 +268,21 @@
 
   returns: the query part of this URL,
    or null if one does not exist - `java.lang.String`"
-  (^java.lang.String [^java.net.URL this]
+  (^java.lang.String [^URL this]
     (-> this (.getQuery))))
 
 (defn get-port
   "Gets the port number of this URL.
 
   returns: the port number, or -1 if the port is not set - `int`"
-  (^Integer [^java.net.URL this]
+  (^Integer [^URL this]
     (-> this (.getPort))))
 
 (defn get-protocol
   "Gets the protocol name of this URL.
 
   returns: the protocol of this URL. - `java.lang.String`"
-  (^java.lang.String [^java.net.URL this]
+  (^java.lang.String [^URL this]
     (-> this (.getProtocol))))
 
 (defn hash-code
@@ -292,7 +292,7 @@
    comparison. As such, this operation is a blocking operation.
 
   returns: a hash code for this URL. - `int`"
-  (^Integer [^java.net.URL this]
+  (^Integer [^URL this]
     (-> this (.hashCode))))
 
 (defn get-file
@@ -305,7 +305,7 @@
 
   returns: the file name of this URL,
    or an empty string if one does not exist - `java.lang.String`"
-  (^java.lang.String [^java.net.URL this]
+  (^java.lang.String [^URL this]
     (-> this (.getFile))))
 
 (defn get-host
@@ -315,7 +315,7 @@
    enclosed in square brackets ('[' and ']').
 
   returns: the host name of this URL. - `java.lang.String`"
-  (^java.lang.String [^java.net.URL this]
+  (^java.lang.String [^URL this]
     (-> this (.getHost))))
 
 (defn equals
@@ -343,7 +343,7 @@
 
   returns: true if the objects are the same;
             false otherwise. - `boolean`"
-  (^Boolean [^java.net.URL this ^java.lang.Object obj]
+  (^Boolean [^URL this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn same-file
@@ -357,7 +357,7 @@
 
   returns: true if they reference the same remote object;
             false otherwise. - `boolean`"
-  (^Boolean [^java.net.URL this ^java.net.URL other]
+  (^Boolean [^URL this ^java.net.URL other]
     (-> this (.sameFile other))))
 
 (defn get-content
@@ -373,8 +373,8 @@
                  null if none of the requested types are supported. - `java.lang.Object`
 
   throws: java.io.IOException - if an I/O exception occurs."
-  (^java.lang.Object [^java.net.URL this classes]
+  (^java.lang.Object [^URL this classes]
     (-> this (.getContent classes)))
-  (^java.lang.Object [^java.net.URL this]
+  (^java.lang.Object [^URL this]
     (-> this (.getContent))))
 

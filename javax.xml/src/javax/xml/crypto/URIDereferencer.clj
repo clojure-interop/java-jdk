@@ -20,6 +20,6 @@
   returns: the dereferenced data - `javax.xml.crypto.Data`
 
   throws: java.lang.NullPointerException - if uriReference or context are null"
-  (^javax.xml.crypto.Data [^javax.xml.crypto.URIDereferencer this ^javax.xml.crypto.URIReference uri-reference ^javax.xml.crypto.XMLCryptoContext context]
+  (^javax.xml.crypto.Data [^URIDereferencer this ^javax.xml.crypto.URIReference uri-reference ^javax.xml.crypto.XMLCryptoContext context]
     (-> this (.dereference uri-reference context))))
 

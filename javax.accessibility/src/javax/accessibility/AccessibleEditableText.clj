@@ -17,7 +17,7 @@
 
   start-index - the starting index in the text - `int`
   end-index - the ending index in the text - `int`"
-  ([^javax.accessibility.AccessibleEditableText this ^Integer start-index ^Integer end-index]
+  ([^AccessibleEditableText this ^Integer start-index ^Integer end-index]
     (-> this (.delete start-index end-index))))
 
 (defn paste
@@ -25,7 +25,7 @@
    starting at the specified index.
 
   start-index - the starting index in the text - `int`"
-  ([^javax.accessibility.AccessibleEditableText this ^Integer start-index]
+  ([^AccessibleEditableText this ^Integer start-index]
     (-> this (.paste start-index))))
 
 (defn get-text-range
@@ -35,7 +35,7 @@
   end-index - the ending index in the text - `int`
 
   returns: the text string between the indices - `java.lang.String`"
-  (^java.lang.String [^javax.accessibility.AccessibleEditableText this ^Integer start-index ^Integer end-index]
+  (^java.lang.String [^AccessibleEditableText this ^Integer start-index ^Integer end-index]
     (-> this (.getTextRange start-index end-index))))
 
 (defn select-text
@@ -43,7 +43,7 @@
 
   start-index - the starting index in the text - `int`
   end-index - the ending index in the text - `int`"
-  ([^javax.accessibility.AccessibleEditableText this ^Integer start-index ^Integer end-index]
+  ([^AccessibleEditableText this ^Integer start-index ^Integer end-index]
     (-> this (.selectText start-index end-index))))
 
 (defn insert-text-at-index
@@ -51,7 +51,7 @@
 
   index - the index in the text where the string will be inserted - `int`
   s - the string to insert in the text - `java.lang.String`"
-  ([^javax.accessibility.AccessibleEditableText this ^Integer index ^java.lang.String s]
+  ([^AccessibleEditableText this ^Integer index ^java.lang.String s]
     (-> this (.insertTextAtIndex index s))))
 
 (defn replace-text
@@ -61,7 +61,7 @@
   start-index - the starting index in the text - `int`
   end-index - the ending index in the text - `int`
   s - the string to replace the text between two indices - `java.lang.String`"
-  ([^javax.accessibility.AccessibleEditableText this ^Integer start-index ^Integer end-index ^java.lang.String s]
+  ([^AccessibleEditableText this ^Integer start-index ^Integer end-index ^java.lang.String s]
     (-> this (.replaceText start-index end-index s))))
 
 (defn set-attributes
@@ -70,7 +70,7 @@
   start-index - the starting index in the text - `int`
   end-index - the ending index in the text - `int`
   as - the attribute set - `javax.swing.text.AttributeSet`"
-  ([^javax.accessibility.AccessibleEditableText this ^Integer start-index ^Integer end-index ^javax.swing.text.AttributeSet as]
+  ([^AccessibleEditableText this ^Integer start-index ^Integer end-index ^javax.swing.text.AttributeSet as]
     (-> this (.setAttributes start-index end-index as))))
 
 (defn cut
@@ -78,13 +78,13 @@
 
   start-index - the starting index in the text - `int`
   end-index - the ending index in the text - `int`"
-  ([^javax.accessibility.AccessibleEditableText this ^Integer start-index ^Integer end-index]
+  ([^AccessibleEditableText this ^Integer start-index ^Integer end-index]
     (-> this (.cut start-index end-index))))
 
 (defn set-text-contents
   "Sets the text contents to the specified string.
 
   s - the string to set the text contents - `java.lang.String`"
-  ([^javax.accessibility.AccessibleEditableText this ^java.lang.String s]
+  ([^AccessibleEditableText this ^java.lang.String s]
     (-> this (.setTextContents s))))
 

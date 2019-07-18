@@ -35,17 +35,17 @@
 
   text - the text of the button - `java.lang.String`
   icon - the Icon image to display on the button - `javax.swing.Icon`"
-  ([^java.lang.String text ^javax.swing.Icon icon]
+  (^JButton [^java.lang.String text ^javax.swing.Icon icon]
     (new JButton text icon))
-  ([^javax.swing.Icon icon]
+  (^JButton [^javax.swing.Icon icon]
     (new JButton icon))
-  ([]
+  (^JButton []
     (new JButton )))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and
    feel."
-  ([^javax.swing.JButton this]
+  ([^JButton this]
     (-> this (.updateUI))))
 
 (defn get-ui-class-id
@@ -53,7 +53,7 @@
    that renders this component.
 
   returns: the string `ButtonUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JButton this]
+  (^java.lang.String [^JButton this]
     (-> this (.getUIClassID))))
 
 (defn default-button?
@@ -65,14 +65,14 @@
    to access the default button.
 
   returns: the value of the defaultButton property - `boolean`"
-  (^Boolean [^javax.swing.JButton this]
+  (^Boolean [^JButton this]
     (-> this (.isDefaultButton))))
 
 (defn default-capable?
   "Gets the value of the defaultCapable property.
 
   returns: the value of the defaultCapable property - `boolean`"
-  (^Boolean [^javax.swing.JButton this]
+  (^Boolean [^JButton this]
     (-> this (.isDefaultCapable))))
 
 (defn set-default-capable
@@ -84,7 +84,7 @@
    specified by the look and feel.
 
   default-capable - true if this button will be capable of being the default button on the RootPane; otherwise false - `boolean`"
-  ([^javax.swing.JButton this ^Boolean default-capable]
+  ([^JButton this ^Boolean default-capable]
     (-> this (.setDefaultCapable default-capable))))
 
 (defn remove-notify
@@ -93,7 +93,7 @@
    RootPane, and if so, sets the RootPane's
    default button to null to ensure the
    RootPane doesn't hold onto an invalid button reference."
-  ([^javax.swing.JButton this]
+  ([^JButton this]
     (-> this (.removeNotify))))
 
 (defn get-accessible-context
@@ -105,6 +105,6 @@
 
   returns: an AccessibleJButton that serves as the
            AccessibleContext of this JButton - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JButton this]
+  (^javax.accessibility.AccessibleContext [^JButton this]
     (-> this (.getAccessibleContext))))
 

@@ -14,13 +14,13 @@
    when marshalled is formed according to the requirements of the protocol
    binding in use.
 
-  msg - An object that will form the message or payload of the message used to invoke the operation. - `Dispatch.T`
+  msg - An object that will form the message or payload of the message used to invoke the operation. - `T`
 
   returns: The response message or message payload to the
-       operation invocation. - `Dispatch.T`
+       operation invocation. - `T`
 
   throws: javax.xml.ws.WebServiceException - If there is any error in the configuration of the Dispatch instance"
-  (^Dispatch.T [^javax.xml.ws.Dispatch this ^Dispatch.T msg]
+  ([^Dispatch this msg]
     (-> this (.invoke msg))))
 
 (defn invoke-async
@@ -33,8 +33,8 @@
    when marshalled is formed according to the requirements of the protocol
    binding in use.
 
-  msg - An object that will form the message or payload of the message used to invoke the operation. - `Dispatch.T`
-  handler - The handler object that will receive the response to the operation invocation. - `javax.xml.ws.AsyncHandler<Dispatch.T>`
+  msg - An object that will form the message or payload of the message used to invoke the operation. - `T`
+  handler - The handler object that will receive the response to the operation invocation. - `javax.xml.ws.AsyncHandler`
 
   returns: A Future object that may be used to check the status
        of the operation invocation. This object MUST NOT be used to try to
@@ -43,9 +43,9 @@
        and any use of it will result in non-portable behaviour. - `java.util.concurrent.Future<?>`
 
   throws: javax.xml.ws.WebServiceException - If there is any error in the configuration of the Dispatch instance"
-  (^java.util.concurrent.Future [^javax.xml.ws.Dispatch this ^Dispatch.T msg ^javax.xml.ws.AsyncHandler handler]
+  (^java.util.concurrent.Future [^Dispatch this msg ^javax.xml.ws.AsyncHandler handler]
     (-> this (.invokeAsync msg handler)))
-  (^javax.xml.ws.Response [^javax.xml.ws.Dispatch this ^Dispatch.T msg]
+  (^javax.xml.ws.Response [^Dispatch this msg]
     (-> this (.invokeAsync msg))))
 
 (defn invoke-one-way
@@ -60,9 +60,9 @@
    when marshalled is formed according to the requirements of the protocol
    binding in use.
 
-  msg - An object that will form the message or payload of the message used to invoke the operation. - `Dispatch.T`
+  msg - An object that will form the message or payload of the message used to invoke the operation. - `T`
 
   throws: javax.xml.ws.WebServiceException - If there is any error in the configuration of the Dispatch instance or if an error occurs during the invocation."
-  ([^javax.xml.ws.Dispatch this ^Dispatch.T msg]
+  ([^Dispatch this msg]
     (-> this (.invokeOneWay msg))))
 

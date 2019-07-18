@@ -16,7 +16,7 @@
   locale - the locale to apply; null means apply no locale - `java.util.Locale`
 
   throws: java.lang.IllegalStateException - if the task has started"
-  ([^javax.tools.DocumentationTool$DocumentationTask this ^java.util.Locale locale]
+  ([^DocumentationTool$DocumentationTask this ^java.util.Locale locale]
     (-> this (.setLocale locale))))
 
 (defn call
@@ -28,6 +28,6 @@
    false otherwise - `java.lang.Boolean`
 
   throws: java.lang.RuntimeException - if an unrecoverable error occurred in a user-supplied component. The cause will be the error in user code."
-  (^java.lang.Boolean [^javax.tools.DocumentationTool$DocumentationTask this]
+  (^java.lang.Boolean [^DocumentationTool$DocumentationTask this]
     (-> this (.call))))
 

@@ -13,8 +13,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^ServerNotActiveException [^java.lang.String s]
     (new ServerNotActiveException s))
-  ([]
+  (^ServerNotActiveException []
     (new ServerNotActiveException )))
 

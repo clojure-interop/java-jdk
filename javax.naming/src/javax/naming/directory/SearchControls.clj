@@ -20,9 +20,9 @@
   attrs - The identifiers of the attributes to return along with the entry. If null, return all attributes. If empty return no attributes. - `java.lang.String[]`
   retobj - If true, return the object bound to the name of the entry; if false, do not return object. - `boolean`
   deref - If true, dereference links during search. - `boolean`"
-  ([^Integer scope ^Long countlim ^Integer timelim attrs ^Boolean retobj ^Boolean deref]
+  (^SearchControls [^Integer scope ^Long countlim ^Integer timelim attrs ^Boolean retobj ^Boolean deref]
     (new SearchControls scope countlim timelim attrs retobj deref))
-  ([]
+  (^SearchControls []
     (new SearchControls )))
 
 (def *-object-scope
@@ -95,14 +95,14 @@
    0 indicates no limit:  all entries will be returned.
 
   limit - The maximum number of entries that will be returned. - `long`"
-  ([^javax.naming.directory.SearchControls this ^Long limit]
+  ([^SearchControls this ^Long limit]
     (-> this (.setCountLimit limit))))
 
 (defn set-deref-link-flag
   "Enables/disables link dereferencing during the search.
 
   on - if true links will be dereferenced; if false, not followed. - `boolean`"
-  ([^javax.naming.directory.SearchControls this ^Boolean on]
+  ([^SearchControls this ^Boolean on]
     (-> this (.setDerefLinkFlag on))))
 
 (defn set-time-limit
@@ -111,7 +111,7 @@
    If the value is 0, this means to wait indefinitely.
 
   ms - The time limit of these SearchControls in milliseconds. - `int`"
-  ([^javax.naming.directory.SearchControls this ^Integer ms]
+  ([^SearchControls this ^Integer ms]
     (-> this (.setTimeLimit ms))))
 
 (defn set-search-scope
@@ -119,7 +119,7 @@
    OBJECT_SCOPE, ONELEVEL_SCOPE, SUBTREE_SCOPE.
 
   scope - The search scope of this SearchControls. - `int`"
-  ([^javax.naming.directory.SearchControls this ^Integer scope]
+  ([^SearchControls this ^Integer scope]
     (-> this (.setSearchScope scope))))
 
 (defn set-returning-obj-flag
@@ -129,7 +129,7 @@
    If enabled, the object will be returned.
 
   on - if true, objects will be returned; if false, objects will not be returned. - `boolean`"
-  ([^javax.naming.directory.SearchControls this ^Boolean on]
+  ([^SearchControls this ^Boolean on]
     (-> this (.setReturningObjFlag on))))
 
 (defn get-time-limit
@@ -138,7 +138,7 @@
    If the value is 0, this means to wait indefinitely.
 
   returns: The time limit of these SearchControls in milliseconds. - `int`"
-  (^Integer [^javax.naming.directory.SearchControls this]
+  (^Integer [^SearchControls this]
     (-> this (.getTimeLimit))))
 
 (defn set-returning-attributes
@@ -148,14 +148,14 @@
    An empty array indicates no attributes are returned.
 
   attrs - An array of attribute ids identifying the attributes that will be returned. Can be null. - `java.lang.String[]`"
-  ([^javax.naming.directory.SearchControls this attrs]
+  ([^SearchControls this attrs]
     (-> this (.setReturningAttributes attrs))))
 
 (defn get-deref-link-flag?
   "Determines whether links will be dereferenced during the search.
 
   returns: true if links will be dereferenced; false otherwise. - `boolean`"
-  (^Boolean [^javax.naming.directory.SearchControls this]
+  (^Boolean [^SearchControls this]
     (-> this (.getDerefLinkFlag))))
 
 (defn get-returning-attributes
@@ -166,7 +166,7 @@
 
   returns: An array of attribute ids identifying the attributes that
    will be returned. Can be null. - `java.lang.String[]`"
-  ([^javax.naming.directory.SearchControls this]
+  ([^SearchControls this]
     (-> this (.getReturningAttributes))))
 
 (defn get-count-limit
@@ -176,14 +176,14 @@
    0 indicates that all entries will be returned.
 
   returns: The maximum number of entries that will be returned. - `long`"
-  (^Long [^javax.naming.directory.SearchControls this]
+  (^Long [^SearchControls this]
     (-> this (.getCountLimit))))
 
 (defn get-returning-obj-flag?
   "Determines whether objects will be returned as part of the result.
 
   returns: true if objects will be returned; false otherwise. - `boolean`"
-  (^Boolean [^javax.naming.directory.SearchControls this]
+  (^Boolean [^SearchControls this]
     (-> this (.getReturningObjFlag))))
 
 (defn get-search-scope
@@ -192,6 +192,6 @@
    One of OBJECT_SCOPE, ONELEVEL_SCOPE, SUBTREE_SCOPE.
 
   returns: The search scope of this SearchControls. - `int`"
-  (^Integer [^javax.naming.directory.SearchControls this]
+  (^Integer [^SearchControls this]
     (-> this (.getSearchScope))))
 

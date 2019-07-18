@@ -20,11 +20,11 @@
 
   reader - An XMLReader to be used for the parse. - `org.xml.sax.XMLReader`
   input-source - A SAX input source reference that must be non-null and that will be passed to the reader parse method. - `org.xml.sax.InputSource`"
-  ([^org.xml.sax.XMLReader reader ^org.xml.sax.InputSource input-source]
+  (^SAXSource [^org.xml.sax.XMLReader reader ^org.xml.sax.InputSource input-source]
     (new SAXSource reader input-source))
-  ([^org.xml.sax.InputSource input-source]
+  (^SAXSource [^org.xml.sax.InputSource input-source]
     (new SAXSource input-source))
-  ([]
+  (^SAXSource []
     (new SAXSource )))
 
 (def *-feature
@@ -51,28 +51,28 @@
   "Set the XMLReader to be used for the Source.
 
   reader - A valid XMLReader or XMLFilter reference. - `org.xml.sax.XMLReader`"
-  ([^javax.xml.transform.sax.SAXSource this ^org.xml.sax.XMLReader reader]
+  ([^SAXSource this ^org.xml.sax.XMLReader reader]
     (-> this (.setXMLReader reader))))
 
 (defn get-xml-reader
   "Get the XMLReader to be used for the Source.
 
   returns: A valid XMLReader or XMLFilter reference, or null. - `org.xml.sax.XMLReader`"
-  (^org.xml.sax.XMLReader [^javax.xml.transform.sax.SAXSource this]
+  (^org.xml.sax.XMLReader [^SAXSource this]
     (-> this (.getXMLReader))))
 
 (defn set-input-source
   "Set the SAX InputSource to be used for the Source.
 
   input-source - A valid InputSource reference. - `org.xml.sax.InputSource`"
-  ([^javax.xml.transform.sax.SAXSource this ^org.xml.sax.InputSource input-source]
+  ([^SAXSource this ^org.xml.sax.InputSource input-source]
     (-> this (.setInputSource input-source))))
 
 (defn get-input-source
   "Get the SAX InputSource to be used for the Source.
 
   returns: A valid InputSource reference, or null. - `org.xml.sax.InputSource`"
-  (^org.xml.sax.InputSource [^javax.xml.transform.sax.SAXSource this]
+  (^org.xml.sax.InputSource [^SAXSource this]
     (-> this (.getInputSource))))
 
 (defn set-system-id
@@ -88,7 +88,7 @@
    no byte stream or character stream is specified).
 
   system-id - The system identifier as a URI string. - `java.lang.String`"
-  ([^javax.xml.transform.sax.SAXSource this ^java.lang.String system-id]
+  ([^SAXSource this ^java.lang.String system-id]
     (-> this (.setSystemId system-id))))
 
 (defn get-system-id
@@ -96,6 +96,6 @@
    will be resolved.
 
   returns: Base URL for the Source, or null. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.transform.sax.SAXSource this]
+  (^java.lang.String [^SAXSource this]
     (-> this (.getSystemId))))
 

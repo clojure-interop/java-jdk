@@ -47,7 +47,7 @@
   Constructs a CompositeView for the given element.
 
   elem - the element this view is responsible for - `javax.swing.text.Element`"
-  ([^javax.swing.text.Element elem]
+  (^CompositeView [^javax.swing.text.Element elem]
     (new CompositeView elem)))
 
 (defn set-parent
@@ -64,7 +64,7 @@
    the loadChildren method will not be called.
 
   parent - the parent of the view, null if none - `javax.swing.text.View`"
-  ([^javax.swing.text.CompositeView this ^javax.swing.text.View parent]
+  ([^CompositeView this ^javax.swing.text.View parent]
     (-> this (.setParent parent))))
 
 (defn get-view
@@ -73,7 +73,7 @@
   n - the number of the desired view, >= 0 && < getViewCount() - `int`
 
   returns: the view at index n - `javax.swing.text.View`"
-  (^javax.swing.text.View [^javax.swing.text.CompositeView this ^Integer n]
+  (^javax.swing.text.View [^CompositeView this ^Integer n]
     (-> this (.getView n))))
 
 (defn get-child-allocation
@@ -85,7 +85,7 @@
   a - the allocation to this view - `java.awt.Shape`
 
   returns: the allocation to the child - `java.awt.Shape`"
-  (^java.awt.Shape [^javax.swing.text.CompositeView this ^Integer index ^java.awt.Shape a]
+  (^java.awt.Shape [^CompositeView this ^Integer index ^java.awt.Shape a]
     (-> this (.getChildAllocation index a))))
 
 (defn replace
@@ -99,7 +99,7 @@
   offset - the starting index into the child views to insert the new views; >= 0 and <= getViewCount - `int`
   length - the number of existing child views to remove; this should be a value >= 0 and <= (getViewCount() - offset) - `int`
   views - the child views to add; this value can be null to indicate no children are being added (useful to remove) - `javax.swing.text.View[]`"
-  ([^javax.swing.text.CompositeView this ^Integer offset ^Integer length views]
+  ([^CompositeView this ^Integer offset ^Integer length views]
     (-> this (.replace offset length views))))
 
 (defn view-to-model
@@ -109,11 +109,11 @@
   x - x coordinate of the view location to convert >= 0 - `float`
   y - y coordinate of the view location to convert >= 0 - `float`
   a - the allocated region to render into - `java.awt.Shape`
-  bias - either Position.Bias.Forward or Position.Bias.Backward - `javax.swing.text.Position.Bias[]`
+  bias - either Position.Bias.Forward or Position.Bias.Backward - `javax.swing.text.Position$Bias[]`
 
   returns: the location within the model that best represents the
     given point in the view >= 0 - `int`"
-  (^Integer [^javax.swing.text.CompositeView this ^Float x ^Float y ^java.awt.Shape a bias]
+  (^Integer [^CompositeView this ^Float x ^Float y ^java.awt.Shape a bias]
     (-> this (.viewToModel x y a bias))))
 
 (defn get-view-index
@@ -123,18 +123,18 @@
    method for backward compatibility.
 
   pos - the position >= 0 - `int`
-  b - `javax.swing.text.Position.Bias`
+  b - `javax.swing.text.Position$Bias`
 
   returns: index of the view representing the given position, or
      -1 if no view represents that position - `int`"
-  (^Integer [^javax.swing.text.CompositeView this ^Integer pos ^javax.swing.text.Position.Bias b]
+  (^Integer [^CompositeView this ^Integer pos ^javax.swing.text.Position$Bias b]
     (-> this (.getViewIndex pos b))))
 
 (defn get-view-count
   "Returns the number of child views of this view.
 
   returns: the number of views >= 0 - `int`"
-  (^Integer [^javax.swing.text.CompositeView this]
+  (^Integer [^CompositeView this]
     (-> this (.getViewCount))))
 
 (defn model-to-view
@@ -142,17 +142,17 @@
    to the coordinate space of the view mapped to it.
 
   p-0 - the position to convert >= 0 - `int`
-  b-0 - the bias toward the previous character or the next character represented by p0, in case the position is a boundary of two views; either Position.Bias.Forward or Position.Bias.Backward - `javax.swing.text.Position.Bias`
+  b-0 - the bias toward the previous character or the next character represented by p0, in case the position is a boundary of two views; either Position.Bias.Forward or Position.Bias.Backward - `javax.swing.text.Position$Bias`
   p-1 - the position to convert >= 0 - `int`
-  b-1 - the bias toward the previous character or the next character represented by p1, in case the position is a boundary of two views - `javax.swing.text.Position.Bias`
+  b-1 - the bias toward the previous character or the next character represented by p1, in case the position is a boundary of two views - `javax.swing.text.Position$Bias`
   a - the allocated region to render into - `java.awt.Shape`
 
   returns: the bounding box of the given position is returned - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  (^java.awt.Shape [^javax.swing.text.CompositeView this ^Integer p-0 ^javax.swing.text.Position.Bias b-0 ^Integer p-1 ^javax.swing.text.Position.Bias b-1 ^java.awt.Shape a]
+  (^java.awt.Shape [^CompositeView this ^Integer p-0 ^javax.swing.text.Position$Bias b-0 ^Integer p-1 ^javax.swing.text.Position$Bias b-1 ^java.awt.Shape a]
     (-> this (.modelToView p-0 b-0 p-1 b-1 a)))
-  (^java.awt.Shape [^javax.swing.text.CompositeView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position.Bias b]
+  (^java.awt.Shape [^CompositeView this ^Integer pos ^java.awt.Shape a ^javax.swing.text.Position$Bias b]
     (-> this (.modelToView pos a b))))
 
 (defn get-next-visual-position-from
@@ -168,15 +168,15 @@
    the BadLocationException will be thrown.
 
   pos - the position to convert - `int`
-  b - a bias value of either Position.Bias.Forward or Position.Bias.Backward - `javax.swing.text.Position.Bias`
+  b - a bias value of either Position.Bias.Forward or Position.Bias.Backward - `javax.swing.text.Position$Bias`
   a - the allocated region to render into - `java.awt.Shape`
   direction - the direction from the current position that can be thought of as the arrow keys typically found on a keyboard; this may be one of the following: SwingConstants.WEST SwingConstants.EAST SwingConstants.NORTH SwingConstants.SOUTH - `int`
-  bias-ret - an array containing the bias that was checked - `javax.swing.text.Position.Bias[]`
+  bias-ret - an array containing the bias that was checked - `javax.swing.text.Position$Bias[]`
 
   returns: the location within the model that best represents the next
     location visual position - `int`
 
   throws: javax.swing.text.BadLocationException - the given position is not a valid position within the document"
-  (^Integer [^javax.swing.text.CompositeView this ^Integer pos ^javax.swing.text.Position.Bias b ^java.awt.Shape a ^Integer direction bias-ret]
+  (^Integer [^CompositeView this ^Integer pos ^javax.swing.text.Position$Bias b ^java.awt.Shape a ^Integer direction bias-ret]
     (-> this (.getNextVisualPositionFrom pos b a direction bias-ret))))
 

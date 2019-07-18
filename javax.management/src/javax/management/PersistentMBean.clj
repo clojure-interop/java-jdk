@@ -16,7 +16,7 @@
    and before the MBean is registered with the MBeanServer.
 
   throws: javax.management.MBeanException - Wraps another exception or persistence is not supported"
-  ([^javax.management.PersistentMBean this]
+  ([^PersistentMBean this]
     (-> this (.load))))
 
 (defn store
@@ -43,6 +43,6 @@
       = `onTimer` && now < 'lastPersistTime'  'persistPeriod'
 
   throws: javax.management.MBeanException - Wraps another exception or persistence is not supported"
-  ([^javax.management.PersistentMBean this]
+  ([^PersistentMBean this]
     (-> this (.store))))
 

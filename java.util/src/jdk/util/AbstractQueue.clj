@@ -29,12 +29,12 @@
    This implementation returns true if offer succeeds,
    else throws an IllegalStateException.
 
-  e - the element to add - `AbstractQueue.E`
+  e - the element to add - `E`
 
   returns: true (as specified by Collection.add(E)) - `boolean`
 
   throws: java.lang.IllegalStateException - if the element cannot be added at this time due to capacity restrictions"
-  (^Boolean [^java.util.AbstractQueue this ^AbstractQueue.E e]
+  (^Boolean [^AbstractQueue this e]
     (-> this (.add e))))
 
 (defn remove
@@ -45,10 +45,10 @@
    This implementation returns the result of poll
    unless the queue is empty.
 
-  returns: the head of this queue - `AbstractQueue.E`
+  returns: the head of this queue - `E`
 
   throws: java.util.NoSuchElementException - if this queue is empty"
-  (^AbstractQueue.E [^java.util.AbstractQueue this]
+  ([^AbstractQueue this]
     (-> this (.remove))))
 
 (defn element
@@ -59,10 +59,10 @@
    This implementation returns the result of peek
    unless the queue is empty.
 
-  returns: the head of this queue - `AbstractQueue.E`
+  returns: the head of this queue - `E`
 
   throws: java.util.NoSuchElementException - if this queue is empty"
-  (^AbstractQueue.E [^java.util.AbstractQueue this]
+  ([^AbstractQueue this]
     (-> this (.element))))
 
 (defn clear
@@ -71,7 +71,7 @@
 
    This implementation repeatedly invokes poll until it
    returns null."
-  ([^java.util.AbstractQueue this]
+  ([^AbstractQueue this]
     (-> this (.clear))))
 
 (defn add-all
@@ -89,11 +89,11 @@
    having been successfully added when the associated exception is
    thrown.
 
-  c - collection containing elements to be added to this queue - `AbstractQueue.E>`
+  c - collection containing elements to be added to this queue - `java.util.Collection`
 
   returns: true if this queue changed as a result of the call - `boolean`
 
   throws: java.lang.ClassCastException - if the class of an element of the specified collection prevents it from being added to this queue"
-  (^Boolean [^java.util.AbstractQueue this ^AbstractQueue.E> c]
+  (^Boolean [^AbstractQueue this ^java.util.Collection c]
     (-> this (.addAll c))))
 

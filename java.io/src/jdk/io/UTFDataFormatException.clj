@@ -21,8 +21,8 @@
    method of class java.lang.Throwable.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^UTFDataFormatException [^java.lang.String s]
     (new UTFDataFormatException s))
-  ([]
+  (^UTFDataFormatException []
     (new UTFDataFormatException )))
 

@@ -5,7 +5,7 @@
 
 (defn ->metal-scroll-bar-ui
   "Constructor."
-  ([]
+  (^MetalScrollBarUI []
     (new MetalScrollBarUI )))
 
 (def *-free-standing-prop
@@ -27,6 +27,6 @@
   c - the JScrollBar that's delegating this method to us - `javax.swing.JComponent`
 
   returns: the preferred size of a Basic JScrollBar - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.metal.MetalScrollBarUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^MetalScrollBarUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

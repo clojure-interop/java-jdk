@@ -35,6 +35,6 @@
 
 (defn ->default-focus-traversal-policy
   "Constructor."
-  ([]
+  (^DefaultFocusTraversalPolicy []
     (new DefaultFocusTraversalPolicy )))
 

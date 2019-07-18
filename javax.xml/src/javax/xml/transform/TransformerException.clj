@@ -12,11 +12,11 @@
   message - The error or warning message, or null to use the message from the embedded exception. - `java.lang.String`
   locator - The locator object for the error or warning. - `javax.xml.transform.SourceLocator`
   e - Any exception - `java.lang.Throwable`"
-  ([^java.lang.String message ^javax.xml.transform.SourceLocator locator ^java.lang.Throwable e]
+  (^TransformerException [^java.lang.String message ^javax.xml.transform.SourceLocator locator ^java.lang.Throwable e]
     (new TransformerException message locator e))
-  ([^java.lang.String message ^java.lang.Throwable e]
+  (^TransformerException [^java.lang.String message ^java.lang.Throwable e]
     (new TransformerException message e))
-  ([^java.lang.String message]
+  (^TransformerException [^java.lang.String message]
     (new TransformerException message)))
 
 (defn get-locator
@@ -24,7 +24,7 @@
    object that specifies where an error occurred.
 
   returns: A SourceLocator object, or null if none was specified. - `javax.xml.transform.SourceLocator`"
-  (^javax.xml.transform.SourceLocator [^javax.xml.transform.TransformerException this]
+  (^javax.xml.transform.SourceLocator [^TransformerException this]
     (-> this (.getLocator))))
 
 (defn set-locator
@@ -32,14 +32,14 @@
    object that specifies where an error occurred.
 
   location - A SourceLocator object, or null to clear the location. - `javax.xml.transform.SourceLocator`"
-  ([^javax.xml.transform.TransformerException this ^javax.xml.transform.SourceLocator location]
+  ([^TransformerException this ^javax.xml.transform.SourceLocator location]
     (-> this (.setLocator location))))
 
 (defn get-exception
   "This method retrieves an exception that this exception wraps.
 
   returns: An Throwable object, or null. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.xml.transform.TransformerException this]
+  (^java.lang.Throwable [^TransformerException this]
     (-> this (.getException))))
 
 (defn get-cause
@@ -48,7 +48,7 @@
    caused this throwable to get thrown.)
 
   returns: the cause, or null if unknown - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.xml.transform.TransformerException this]
+  (^java.lang.Throwable [^TransformerException this]
     (-> this (.getCause))))
 
 (defn init-cause
@@ -67,7 +67,7 @@
   returns: a reference to this Throwable instance. - `java.lang.Throwable`
 
   throws: java.lang.IllegalArgumentException - if cause is this throwable. (A throwable cannot be its own cause.)"
-  (^java.lang.Throwable [^javax.xml.transform.TransformerException this ^java.lang.Throwable cause]
+  (^java.lang.Throwable [^TransformerException this ^java.lang.Throwable cause]
     (-> this (.initCause cause))))
 
 (defn get-message-and-location
@@ -76,7 +76,7 @@
 
   returns: A String representing the error message with
            location information appended. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.transform.TransformerException this]
+  (^java.lang.String [^TransformerException this]
     (-> this (.getMessageAndLocation))))
 
 (defn get-location-as-string
@@ -84,7 +84,7 @@
 
   returns: A string with location info, or null
    if there is no location information. - `java.lang.String`"
-  (^java.lang.String [^javax.xml.transform.TransformerException this]
+  (^java.lang.String [^TransformerException this]
     (-> this (.getLocationAsString))))
 
 (defn print-stack-trace
@@ -93,8 +93,8 @@
    objects, as well as this object.
 
   s - The stream where the dump will be sent to. - `java.io.PrintStream`"
-  ([^javax.xml.transform.TransformerException this ^java.io.PrintStream s]
+  ([^TransformerException this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([^javax.xml.transform.TransformerException this]
+  ([^TransformerException this]
     (-> this (.printStackTrace))))
 

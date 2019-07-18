@@ -31,7 +31,7 @@
   "Constructor.
 
   Construct an Observable with zero Observers."
-  ([]
+  (^Observable []
     (new Observable )))
 
 (defn add-observer
@@ -43,7 +43,7 @@
   o - an observer to be added. - `java.util.Observer`
 
   throws: java.lang.NullPointerException - if the parameter o is null."
-  ([^java.util.Observable this ^java.util.Observer o]
+  ([^Observable this ^java.util.Observer o]
     (-> this (.addObserver o))))
 
 (defn delete-observer
@@ -51,7 +51,7 @@
    Passing null to this method will have no effect.
 
   o - the observer to be deleted. - `java.util.Observer`"
-  ([^java.util.Observable this ^java.util.Observer o]
+  ([^Observable this ^java.util.Observer o]
     (-> this (.deleteObserver o))))
 
 (defn notify-observers
@@ -64,14 +64,14 @@
    arguments: this observable object and the arg argument.
 
   arg - any object. - `java.lang.Object`"
-  ([^java.util.Observable this ^java.lang.Object arg]
+  ([^Observable this ^java.lang.Object arg]
     (-> this (.notifyObservers arg)))
-  ([^java.util.Observable this]
+  ([^Observable this]
     (-> this (.notifyObservers))))
 
 (defn delete-observers
   "Clears the observer list so that this object no longer has any observers."
-  ([^java.util.Observable this]
+  ([^Observable this]
     (-> this (.deleteObservers))))
 
 (defn has-changed?
@@ -81,13 +81,13 @@
             method has been called more recently than the
             clearChanged method on this object;
             false otherwise. - `boolean`"
-  (^Boolean [^java.util.Observable this]
+  (^Boolean [^Observable this]
     (-> this (.hasChanged))))
 
 (defn count-observers
   "Returns the number of observers of this Observable object.
 
   returns: the number of observers of this object. - `int`"
-  (^Integer [^java.util.Observable this]
+  (^Integer [^Observable this]
     (-> this (.countObservers))))
 

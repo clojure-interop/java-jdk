@@ -27,6 +27,6 @@
 
   returns: constructed thread, or null if the request to
            create a thread is rejected - `java.lang.Thread`"
-  (^java.lang.Thread [^java.util.concurrent.ThreadFactory this ^java.lang.Runnable r]
+  (^java.lang.Thread [^ThreadFactory this ^java.lang.Runnable r]
     (-> this (.newThread r))))
 

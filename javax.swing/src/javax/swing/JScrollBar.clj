@@ -47,11 +47,11 @@
   max - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is not one of VERTICAL, HORIZONTAL"
-  ([^Integer orientation ^Integer value ^Integer extent ^Integer min ^Integer max]
+  (^JScrollBar [^Integer orientation ^Integer value ^Integer extent ^Integer min ^Integer max]
     (new JScrollBar orientation value extent min max))
-  ([^Integer orientation]
+  (^JScrollBar [^Integer orientation]
     (new JScrollBar orientation))
-  ([]
+  (^JScrollBar []
     (new JScrollBar )))
 
 (defn get-adjustment-listeners
@@ -60,7 +60,7 @@
 
   returns: all of the AdjustmentListeners added or an empty
            array if no listeners have been added - `java.awt.event.AdjustmentListener[]`"
-  ([^javax.swing.JScrollBar this]
+  ([^JScrollBar this]
     (-> this (.getAdjustmentListeners))))
 
 (defn get-visible-amount
@@ -69,7 +69,7 @@
    scrollbar `knob` or `thumb` is proportional to the extent.
 
   returns: the value of the model's extent property - `int`"
-  (^Integer [^javax.swing.JScrollBar this]
+  (^Integer [^JScrollBar this]
     (-> this (.getVisibleAmount))))
 
 (defn set-block-increment
@@ -82,7 +82,7 @@
    and ignore this property.
 
   block-increment - the block increment - `int`"
-  ([^javax.swing.JScrollBar this ^Integer block-increment]
+  ([^JScrollBar this ^Integer block-increment]
     (-> this (.setBlockIncrement block-increment))))
 
 (defn get-minimum-size
@@ -90,21 +90,21 @@
    rigid along the other axis.
 
   returns: the value of the minimumSize property - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.JScrollBar this]
+  (^java.awt.Dimension [^JScrollBar this]
     (-> this (.getMinimumSize))))
 
 (defn get-value-is-adjusting?
   "True if the scrollbar knob is being dragged.
 
   returns: the value of the model's valueIsAdjusting property - `boolean`"
-  (^Boolean [^javax.swing.JScrollBar this]
+  (^Boolean [^JScrollBar this]
     (-> this (.getValueIsAdjusting))))
 
 (defn get-orientation
   "Returns the component's orientation (horizontal or vertical).
 
   returns: VERTICAL or HORIZONTAL - `int`"
-  (^Integer [^javax.swing.JScrollBar this]
+  (^Integer [^JScrollBar this]
     (-> this (.getOrientation))))
 
 (defn get-maximum-size
@@ -112,7 +112,7 @@
    rigid along the other axis.
 
   returns: the value of the maximumSize property - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.JScrollBar this]
+  (^java.awt.Dimension [^JScrollBar this]
     (-> this (.getMaximumSize))))
 
 (defn get-minimum
@@ -120,7 +120,7 @@
    (usually zero).
 
   returns: the value of the model's minimum property - `int`"
-  (^Integer [^javax.swing.JScrollBar this]
+  (^Integer [^JScrollBar this]
     (-> this (.getMinimum))))
 
 (defn get-unit-increment
@@ -143,9 +143,9 @@
   direction - is -1 or 1 for up/down respectively - `int`
 
   returns: the value of the unitIncrement property - `int`"
-  (^Integer [^javax.swing.JScrollBar this ^Integer direction]
+  (^Integer [^JScrollBar this ^Integer direction]
     (-> this (.getUnitIncrement direction)))
-  (^Integer [^javax.swing.JScrollBar this]
+  (^Integer [^JScrollBar this]
     (-> this (.getUnitIncrement))))
 
 (defn get-block-increment
@@ -168,9 +168,9 @@
   direction - is -1 or 1 for up/down respectively - `int`
 
   returns: the value of the blockIncrement property - `int`"
-  (^Integer [^javax.swing.JScrollBar this ^Integer direction]
+  (^Integer [^JScrollBar this ^Integer direction]
     (-> this (.getBlockIncrement direction)))
-  (^Integer [^javax.swing.JScrollBar this]
+  (^Integer [^JScrollBar this]
     (-> this (.getBlockIncrement))))
 
 (defn add-adjustment-listener
@@ -187,35 +187,35 @@
    fabricate the origin of the change here.
 
   l - the AdjustmentLister to add - `java.awt.event.AdjustmentListener`"
-  ([^javax.swing.JScrollBar this ^java.awt.event.AdjustmentListener l]
+  ([^JScrollBar this ^java.awt.event.AdjustmentListener l]
     (-> this (.addAdjustmentListener l))))
 
 (defn get-ui-class-id
   "Returns the name of the LookAndFeel class for this component.
 
   returns: `ScrollBarUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JScrollBar this]
+  (^java.lang.String [^JScrollBar this]
     (-> this (.getUIClassID))))
 
 (defn get-value
   "Returns the scrollbar's value.
 
   returns: the model's value property - `int`"
-  (^Integer [^javax.swing.JScrollBar this]
+  (^Integer [^JScrollBar this]
     (-> this (.getValue))))
 
 (defn remove-adjustment-listener
   "Removes an AdjustmentEvent listener.
 
   l - the AdjustmentLister to remove - `java.awt.event.AdjustmentListener`"
-  ([^javax.swing.JScrollBar this ^java.awt.event.AdjustmentListener l]
+  ([^JScrollBar this ^java.awt.event.AdjustmentListener l]
     (-> this (.removeAdjustmentListener l))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the ScrollBarUI L&F object - `javax.swing.plaf.ScrollBarUI`"
-  ([^javax.swing.JScrollBar this ^javax.swing.plaf.ScrollBarUI ui]
+  ([^JScrollBar this ^javax.swing.plaf.ScrollBarUI ui]
     (-> this (.setUI ui))))
 
 (defn set-maximum
@@ -223,7 +223,7 @@
    can only be set to maximum - extent.
 
   maximum - the maximum value - `int`"
-  ([^javax.swing.JScrollBar this ^Integer maximum]
+  ([^JScrollBar this ^Integer maximum]
     (-> this (.setMaximum maximum))))
 
 (defn get-ui
@@ -231,7 +231,7 @@
    this component.
 
   returns: `javax.swing.plaf.ScrollBarUI`"
-  (^javax.swing.plaf.ScrollBarUI [^javax.swing.JScrollBar this]
+  (^javax.swing.plaf.ScrollBarUI [^JScrollBar this]
     (-> this (.getUI))))
 
 (defn set-value-is-adjusting
@@ -242,7 +242,7 @@
    valueIsAdjusting is true.
 
   b - `boolean`"
-  ([^javax.swing.JScrollBar this ^Boolean b]
+  ([^JScrollBar this ^Boolean b]
     (-> this (.setValueIsAdjusting b))))
 
 (defn get-accessible-context
@@ -253,7 +253,7 @@
 
   returns: an AccessibleJScrollBar that serves as the
            AccessibleContext of this JScrollBar - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JScrollBar this]
+  (^javax.accessibility.AccessibleContext [^JScrollBar this]
     (-> this (.getAccessibleContext))))
 
 (defn set-values
@@ -267,7 +267,7 @@
   new-extent - `int`
   new-min - `int`
   new-max - `int`"
-  ([^javax.swing.JScrollBar this ^Integer new-value ^Integer new-extent ^Integer new-min ^Integer new-max]
+  ([^JScrollBar this ^Integer new-value ^Integer new-extent ^Integer new-min ^Integer new-max]
     (-> this (.setValues new-value new-extent new-min new-max))))
 
 (defn set-unit-increment
@@ -280,7 +280,7 @@
    and ignore this property.
 
   unit-increment - the unit increment - `int`"
-  ([^javax.swing.JScrollBar this ^Integer unit-increment]
+  ([^JScrollBar this ^Integer unit-increment]
     (-> this (.setUnitIncrement unit-increment))))
 
 (defn set-value
@@ -288,7 +288,7 @@
    to the model.
 
   value - the current value, between minimum and maximum - visibleAmount - `int`"
-  ([^javax.swing.JScrollBar this ^Integer value]
+  ([^JScrollBar this ^Integer value]
     (-> this (.setValue value))))
 
 (defn set-enabled
@@ -296,7 +296,7 @@
    When the disabled, the knob position cannot be changed.
 
   x - a boolean value, where true enables the component and false disables it - `boolean`"
-  ([^javax.swing.JScrollBar this ^Boolean x]
+  ([^JScrollBar this ^Boolean x]
     (-> this (.setEnabled x))))
 
 (defn set-orientation
@@ -306,14 +306,14 @@
   orientation - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is not one of VERTICAL, HORIZONTAL"
-  ([^javax.swing.JScrollBar this ^Integer orientation]
+  ([^JScrollBar this ^Integer orientation]
     (-> this (.setOrientation orientation))))
 
 (defn set-visible-amount
   "Set the model's extent property.
 
   extent - the length of the indicator - `int`"
-  ([^javax.swing.JScrollBar this ^Integer extent]
+  ([^JScrollBar this ^Integer extent]
     (-> this (.setVisibleAmount extent))))
 
 (defn get-model
@@ -321,21 +321,21 @@
    fundamental properties: minimum, maximum, value, extent.
 
   returns: `javax.swing.BoundedRangeModel`"
-  (^javax.swing.BoundedRangeModel [^javax.swing.JScrollBar this]
+  (^javax.swing.BoundedRangeModel [^JScrollBar this]
     (-> this (.getModel))))
 
 (defn set-minimum
   "Sets the model's minimum property.
 
   minimum - the minimum value - `int`"
-  ([^javax.swing.JScrollBar this ^Integer minimum]
+  ([^JScrollBar this ^Integer minimum]
     (-> this (.setMinimum minimum))))
 
 (defn get-maximum
   "The maximum value of the scrollbar is maximum - extent.
 
   returns: the value of the model's maximum property - `int`"
-  (^Integer [^javax.swing.JScrollBar this]
+  (^Integer [^JScrollBar this]
     (-> this (.getMaximum))))
 
 (defn set-model
@@ -343,11 +343,11 @@
    fundamental properties: minimum, maximum, value, extent.
 
   new-model - `javax.swing.BoundedRangeModel`"
-  ([^javax.swing.JScrollBar this ^javax.swing.BoundedRangeModel new-model]
+  ([^JScrollBar this ^javax.swing.BoundedRangeModel new-model]
     (-> this (.setModel new-model))))
 
 (defn update-ui
   "Overrides JComponent.updateUI."
-  ([^javax.swing.JScrollBar this]
+  ([^JScrollBar this]
     (-> this (.updateUI))))
 

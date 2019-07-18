@@ -11,8 +11,8 @@
 
   s - the detail message. - `java.lang.String`
   ex - the nested exception - `java.lang.Exception`"
-  ([^java.lang.String s ^java.lang.Exception ex]
+  (^SocketSecurityException [^java.lang.String s ^java.lang.Exception ex]
     (new SocketSecurityException s ex))
-  ([^java.lang.String s]
+  (^SocketSecurityException [^java.lang.String s]
     (new SocketSecurityException s)))
 

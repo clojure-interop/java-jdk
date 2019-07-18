@@ -70,7 +70,7 @@
    have the name `basic`.
 
   returns: the name of the attribute view - `java.lang.String`"
-  (^java.lang.String [^java.nio.file.attribute.BasicFileAttributeView this]
+  (^java.lang.String [^BasicFileAttributeView this]
     (-> this (.name))))
 
 (defn read-attributes
@@ -82,7 +82,7 @@
   returns: the file attributes - `java.nio.file.attribute.BasicFileAttributes`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.nio.file.attribute.BasicFileAttributes [^java.nio.file.attribute.BasicFileAttributeView this]
+  (^java.nio.file.attribute.BasicFileAttributes [^BasicFileAttributeView this]
     (-> this (.readAttributes))))
 
 (defn set-times
@@ -120,6 +120,6 @@
   create-time - the file's create time, or null to not change the value - `java.nio.file.attribute.FileTime`
 
   throws: java.io.IOException - if an I/O error occurs"
-  ([^java.nio.file.attribute.BasicFileAttributeView this ^java.nio.file.attribute.FileTime last-modified-time ^java.nio.file.attribute.FileTime last-access-time ^java.nio.file.attribute.FileTime create-time]
+  ([^BasicFileAttributeView this ^java.nio.file.attribute.FileTime last-modified-time ^java.nio.file.attribute.FileTime last-access-time ^java.nio.file.attribute.FileTime create-time]
     (-> this (.setTimes last-modified-time last-access-time create-time))))
 

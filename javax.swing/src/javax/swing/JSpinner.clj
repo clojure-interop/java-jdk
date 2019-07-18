@@ -74,9 +74,9 @@
   model - `javax.swing.SpinnerModel`
 
   throws: java.lang.NullPointerException - if the model is null"
-  ([^javax.swing.SpinnerModel model]
+  (^JSpinner [^javax.swing.SpinnerModel model]
     (new JSpinner model))
-  ([]
+  (^JSpinner []
     (new JSpinner )))
 
 (defn add-change-listener
@@ -90,7 +90,7 @@
    SpinnerModel.
 
   listener - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.JSpinner this ^javax.swing.event.ChangeListener listener]
+  ([^JSpinner this ^javax.swing.event.ChangeListener listener]
     (-> this (.addChangeListener listener))))
 
 (defn get-previous-value
@@ -108,7 +108,7 @@
 
   returns: the previous legal value or null
      if one doesn't exist - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.JSpinner this]
+  (^java.lang.Object [^JSpinner this]
     (-> this (.getPreviousValue))))
 
 (defn get-editor
@@ -117,7 +117,7 @@
 
   returns: the component that displays and potentially
       changes the model's value - `javax.swing.JComponent`"
-  (^javax.swing.JComponent [^javax.swing.JSpinner this]
+  (^javax.swing.JComponent [^JSpinner this]
     (-> this (.getEditor))))
 
 (defn commit-edit
@@ -127,7 +127,7 @@
    call if forwarded to the editor, otherwise this does nothing.
 
   throws: java.text.ParseException - if the currently edited value couldn't be committed."
-  ([^javax.swing.JSpinner this]
+  ([^JSpinner this]
     (-> this (.commitEdit))))
 
 (defn get-ui-class-id
@@ -135,7 +135,7 @@
    (L&F) class used to render this component.
 
   returns: the string `SpinnerUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JSpinner this]
+  (^java.lang.String [^JSpinner this]
     (-> this (.getUIClassID))))
 
 (defn get-value
@@ -153,14 +153,14 @@
    getModel().getValue()
 
   returns: `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.JSpinner this]
+  (^java.lang.Object [^JSpinner this]
     (-> this (.getValue))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from this spinner.
 
   listener - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.JSpinner this ^javax.swing.event.ChangeListener listener]
+  ([^JSpinner this ^javax.swing.event.ChangeListener listener]
     (-> this (.removeChangeListener listener))))
 
 (defn get-change-listeners
@@ -169,28 +169,28 @@
 
   returns: all of the ChangeListeners added or an empty
            array if no listeners have been added - `javax.swing.event.ChangeListener[]`"
-  ([^javax.swing.JSpinner this]
+  ([^JSpinner this]
     (-> this (.getChangeListeners))))
 
 (defn set-ui
   "Sets the look and feel (L&F) object that renders this component.
 
   ui - the SpinnerUI L&F object - `javax.swing.plaf.SpinnerUI`"
-  ([^javax.swing.JSpinner this ^javax.swing.plaf.SpinnerUI ui]
+  ([^JSpinner this ^javax.swing.plaf.SpinnerUI ui]
     (-> this (.setUI ui))))
 
 (defn get-ui
   "Returns the look and feel (L&F) object that renders this component.
 
   returns: the SpinnerUI object that renders this component - `javax.swing.plaf.SpinnerUI`"
-  (^javax.swing.plaf.SpinnerUI [^javax.swing.JSpinner this]
+  (^javax.swing.plaf.SpinnerUI [^JSpinner this]
     (-> this (.getUI))))
 
 (defn get-accessible-context
   "Gets the AccessibleContext for the JSpinner
 
   returns: the AccessibleContext for the JSpinner - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JSpinner this]
+  (^javax.accessibility.AccessibleContext [^JSpinner this]
     (-> this (.getAccessibleContext))))
 
 (defn set-value
@@ -209,7 +209,7 @@
   value - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if value isn't allowed"
-  ([^javax.swing.JSpinner this ^java.lang.Object value]
+  ([^JSpinner this ^java.lang.Object value]
     (-> this (.setValue value))))
 
 (defn get-model
@@ -217,7 +217,7 @@
    this spinners sequence of values.
 
   returns: the value of the model property - `javax.swing.SpinnerModel`"
-  (^javax.swing.SpinnerModel [^javax.swing.JSpinner this]
+  (^javax.swing.SpinnerModel [^JSpinner this]
     (-> this (.getModel))))
 
 (defn get-next-value
@@ -233,7 +233,7 @@
    getModel().getNextValue()
 
   returns: the next legal value or null if one doesn't exist - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.JSpinner this]
+  (^java.lang.Object [^JSpinner this]
     (-> this (.getNextValue))))
 
 (defn set-model
@@ -250,12 +250,12 @@
   model - the new SpinnerModel - `javax.swing.SpinnerModel`
 
   throws: java.lang.IllegalArgumentException - if model is null"
-  ([^javax.swing.JSpinner this ^javax.swing.SpinnerModel model]
+  ([^JSpinner this ^javax.swing.SpinnerModel model]
     (-> this (.setModel model))))
 
 (defn update-ui
   "Resets the UI property with the value from the current look and feel."
-  ([^javax.swing.JSpinner this]
+  ([^JSpinner this]
     (-> this (.updateUI))))
 
 (defn set-editor
@@ -269,6 +269,6 @@
   editor - the new editor - `javax.swing.JComponent`
 
   throws: java.lang.IllegalArgumentException - if editor is null"
-  ([^javax.swing.JSpinner this ^javax.swing.JComponent editor]
+  ([^JSpinner this ^javax.swing.JComponent editor]
     (-> this (.setEditor editor))))
 

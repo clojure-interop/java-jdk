@@ -64,7 +64,7 @@
   extra-image-metadata-format-class-names - an array of Strings, or null, to be used to instantiate a metadata format object to be returned from getImageMetadataFormat. An array of length 0 is normalized to null. - `java.lang.String[]`
 
   throws: java.lang.IllegalArgumentException - if inputTypes is null or has length 0."
-  ([^java.lang.String vendor-name ^java.lang.String version names suffixes mime-types ^java.lang.String reader-class-name input-types writer-spi-names ^Boolean supports-standard-stream-metadata-format ^java.lang.String native-stream-metadata-format-name ^java.lang.String native-stream-metadata-format-class-name extra-stream-metadata-format-names extra-stream-metadata-format-class-names ^Boolean supports-standard-image-metadata-format ^java.lang.String native-image-metadata-format-name ^java.lang.String native-image-metadata-format-class-name extra-image-metadata-format-names extra-image-metadata-format-class-names]
+  (^ImageReaderSpi [^java.lang.String vendor-name ^java.lang.String version names suffixes mime-types ^java.lang.String reader-class-name input-types writer-spi-names ^Boolean supports-standard-stream-metadata-format ^java.lang.String native-stream-metadata-format-name ^java.lang.String native-stream-metadata-format-class-name extra-stream-metadata-format-names extra-stream-metadata-format-class-names ^Boolean supports-standard-image-metadata-format ^java.lang.String native-image-metadata-format-name ^java.lang.String native-image-metadata-format-class-name extra-image-metadata-format-names extra-image-metadata-format-class-names]
     (new ImageReaderSpi vendor-name version names suffixes mime-types reader-class-name input-types writer-spi-names supports-standard-stream-metadata-format native-stream-metadata-format-name native-stream-metadata-format-class-name extra-stream-metadata-format-names extra-stream-metadata-format-class-names supports-standard-image-metadata-format native-image-metadata-format-name native-image-metadata-format-class-name extra-image-metadata-format-names extra-image-metadata-format-class-names)))
 
 (def *-standard-input-type
@@ -73,7 +73,7 @@
   Deprecated. Instead of using this field, directly create
    the equivalent array { ImageInputStream.class }.
 
-  type: java.lang.    java.lang.Class[]"
+  type: java.lang.Class[]"
   ImageReaderSpi/STANDARD_INPUT_TYPE)
 
 (defn get-input-types
@@ -88,7 +88,7 @@
 
   returns: a non-null array of
    Classobjects of length at least 1. - `java.lang.Class[]`"
-  ([^javax.imageio.spi.ImageReaderSpi this]
+  ([^ImageReaderSpi this]
     (-> this (.getInputTypes))))
 
 (defn can-decode-input?
@@ -127,7 +127,7 @@
    be decoded. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if source is null."
-  (^Boolean [^javax.imageio.spi.ImageReaderSpi this ^java.lang.Object source]
+  (^Boolean [^ImageReaderSpi this ^java.lang.Object source]
     (-> this (.canDecodeInput source))))
 
 (defn create-reader-instance
@@ -148,9 +148,9 @@
   returns: an ImageReader instance. - `javax.imageio.ImageReader`
 
   throws: java.io.IOException - if the attempt to instantiate the reader fails."
-  (^javax.imageio.ImageReader [^javax.imageio.spi.ImageReaderSpi this ^java.lang.Object extension]
+  (^javax.imageio.ImageReader [^ImageReaderSpi this ^java.lang.Object extension]
     (-> this (.createReaderInstance extension)))
-  (^javax.imageio.ImageReader [^javax.imageio.spi.ImageReaderSpi this]
+  (^javax.imageio.ImageReader [^ImageReaderSpi this]
     (-> this (.createReaderInstance))))
 
 (defn own-reader?
@@ -168,7 +168,7 @@
   returns: true if reader is recognized. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if reader is null."
-  (^Boolean [^javax.imageio.spi.ImageReaderSpi this ^javax.imageio.ImageReader reader]
+  (^Boolean [^ImageReaderSpi this ^javax.imageio.ImageReader reader]
     (-> this (.isOwnReader reader))))
 
 (defn get-image-writer-spi-names
@@ -201,6 +201,6 @@
   returns: an array of Strings of length at least 1
    containing names of ImageWriterSpi, or
    null. - `java.lang.String[]`"
-  ([^javax.imageio.spi.ImageReaderSpi this]
+  ([^ImageReaderSpi this]
     (-> this (.getImageWriterSpiNames))))
 

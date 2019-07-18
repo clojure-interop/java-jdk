@@ -38,18 +38,18 @@
 
   text - the text of the JMenuItem - `java.lang.String`
   icon - the icon of the JMenuItem - `javax.swing.Icon`"
-  ([^java.lang.String text ^javax.swing.Icon icon]
+  (^JMenuItem [^java.lang.String text ^javax.swing.Icon icon]
     (new JMenuItem text icon))
-  ([^javax.swing.Icon icon]
+  (^JMenuItem [^javax.swing.Icon icon]
     (new JMenuItem icon))
-  ([]
+  (^JMenuItem []
     (new JMenuItem )))
 
 (defn process-menu-drag-mouse-event
   "Handles mouse drag in a menu.
 
   e - a MenuDragMouseEvent object - `javax.swing.event.MenuDragMouseEvent`"
-  ([^javax.swing.JMenuItem this ^javax.swing.event.MenuDragMouseEvent e]
+  ([^JMenuItem this e]
     (-> this (.processMenuDragMouseEvent e))))
 
 (defn get-component
@@ -58,14 +58,14 @@
    events and detect if an event is inside a menu component.
 
   returns: the Component that paints this menu item - `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.JMenuItem this]
+  (^java.awt.Component [^JMenuItem this]
     (-> this (.getComponent))))
 
 (defn armed?
   "Returns whether the menu item is `armed`.
 
   returns: true if the menu item is armed, and it can be selected - `boolean`"
-  (^Boolean [^javax.swing.JMenuItem this]
+  (^Boolean [^JMenuItem this]
     (-> this (.isArmed))))
 
 (defn get-ui-class-id
@@ -73,14 +73,14 @@
    render this component.
 
   returns: the string `MenuItemUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JMenuItem this]
+  (^java.lang.String [^JMenuItem this]
     (-> this (.getUIClassID))))
 
 (defn add-menu-drag-mouse-listener
   "Adds a MenuDragMouseListener to the menu item.
 
   l - the MenuDragMouseListener to be added - `javax.swing.event.MenuDragMouseListener`"
-  ([^javax.swing.JMenuItem this ^javax.swing.event.MenuDragMouseListener l]
+  ([^JMenuItem this ^javax.swing.event.MenuDragMouseListener l]
     (-> this (.addMenuDragMouseListener l))))
 
 (defn menu-selection-changed
@@ -88,7 +88,7 @@
    MenuElement is selected or unselected.
 
   is-included - true if this menu item is on the part of the menu path that changed, false if this menu is part of the a menu path that changed, but this particular part of that path is still the same - `boolean`"
-  ([^javax.swing.JMenuItem this ^Boolean is-included]
+  ([^JMenuItem this ^Boolean is-included]
     (-> this (.menuSelectionChanged is-included))))
 
 (defn set-armed
@@ -98,7 +98,7 @@
    event will not fire and the menu item will be disarmed.
 
   b - true to arm the menu item so it can be selected - `boolean`"
-  ([^javax.swing.JMenuItem this ^Boolean b]
+  ([^JMenuItem this ^Boolean b]
     (-> this (.setArmed b))))
 
 (defn get-menu-key-listeners
@@ -107,14 +107,14 @@
 
   returns: all of the MenuKeyListeners added or an empty
            array if no listeners have been added - `javax.swing.event.MenuKeyListener[]`"
-  ([^javax.swing.JMenuItem this]
+  ([^JMenuItem this]
     (-> this (.getMenuKeyListeners))))
 
 (defn add-menu-key-listener
   "Adds a MenuKeyListener to the menu item.
 
   l - the MenuKeyListener to be added - `javax.swing.event.MenuKeyListener`"
-  ([^javax.swing.JMenuItem this ^javax.swing.event.MenuKeyListener l]
+  ([^JMenuItem this ^javax.swing.event.MenuKeyListener l]
     (-> this (.addMenuKeyListener l))))
 
 (defn set-accelerator
@@ -125,7 +125,7 @@
    not the menu is currently displayed.
 
   key-stroke - the KeyStroke which will serve as an accelerator - `javax.swing.KeyStroke`"
-  ([^javax.swing.JMenuItem this ^javax.swing.KeyStroke key-stroke]
+  ([^JMenuItem this ^javax.swing.KeyStroke key-stroke]
     (-> this (.setAccelerator key-stroke))))
 
 (defn get-accelerator
@@ -134,21 +134,21 @@
 
   returns: a KeyStroke object identifying the
             accelerator key - `javax.swing.KeyStroke`"
-  (^javax.swing.KeyStroke [^javax.swing.JMenuItem this]
+  (^javax.swing.KeyStroke [^JMenuItem this]
     (-> this (.getAccelerator))))
 
 (defn set-ui
   "Sets the look and feel object that renders this component.
 
   ui - the JMenuItemUI L&F object - `javax.swing.plaf.MenuItemUI`"
-  ([^javax.swing.JMenuItem this ^javax.swing.plaf.MenuItemUI ui]
+  ([^JMenuItem this ^javax.swing.plaf.MenuItemUI ui]
     (-> this (.setUI ui))))
 
 (defn process-menu-key-event
   "Handles a keystroke in a menu.
 
   e - a MenuKeyEvent object - `javax.swing.event.MenuKeyEvent`"
-  ([^javax.swing.JMenuItem this ^javax.swing.event.MenuKeyEvent e]
+  ([^JMenuItem this ^javax.swing.event.MenuKeyEvent e]
     (-> this (.processMenuKeyEvent e))))
 
 (defn get-accessible-context
@@ -160,14 +160,14 @@
 
   returns: an AccessibleJMenuItem that serves as the
            AccessibleContext of this JMenuItem - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JMenuItem this]
+  (^javax.accessibility.AccessibleContext [^JMenuItem this]
     (-> this (.getAccessibleContext))))
 
 (defn remove-menu-key-listener
   "Removes a MenuKeyListener from the menu item.
 
   l - the MenuKeyListener to be removed - `javax.swing.event.MenuKeyListener`"
-  ([^javax.swing.JMenuItem this ^javax.swing.event.MenuKeyListener l]
+  ([^JMenuItem this ^javax.swing.event.MenuKeyListener l]
     (-> this (.removeMenuKeyListener l))))
 
 (defn get-sub-elements
@@ -175,14 +175,14 @@
    components for this menu component.
 
   returns: an array of MenuElements - `javax.swing.MenuElement[]`"
-  ([^javax.swing.JMenuItem this]
+  ([^JMenuItem this]
     (-> this (.getSubElements))))
 
 (defn set-enabled
   "Enables or disables the menu item.
 
   b - true to enable the item - `boolean`"
-  ([^javax.swing.JMenuItem this ^Boolean b]
+  ([^JMenuItem this ^Boolean b]
     (-> this (.setEnabled b))))
 
 (defn process-key-event
@@ -196,7 +196,7 @@
   e - a KeyEvent - `java.awt.event.KeyEvent`
   path - the MenuElement path array - `javax.swing.MenuElement[]`
   manager - the MenuSelectionManager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.JMenuItem this ^java.awt.event.KeyEvent e path ^javax.swing.MenuSelectionManager manager]
+  ([^JMenuItem this ^java.awt.event.KeyEvent e path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processKeyEvent e path manager))))
 
 (defn get-menu-drag-mouse-listeners
@@ -205,7 +205,7 @@
 
   returns: all of the MenuDragMouseListeners added or an empty
            array if no listeners have been added - `javax.swing.event.MenuDragMouseListener[]`"
-  ([^javax.swing.JMenuItem this]
+  ([^JMenuItem this]
     (-> this (.getMenuDragMouseListeners))))
 
 (defn process-mouse-event
@@ -220,25 +220,25 @@
   e - a MouseEvent - `java.awt.event.MouseEvent`
   path - the MenuElement path array - `javax.swing.MenuElement[]`
   manager - the MenuSelectionManager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.JMenuItem this ^java.awt.event.MouseEvent e path ^javax.swing.MenuSelectionManager manager]
+  ([^JMenuItem this e path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processMouseEvent e path manager))))
 
 (defn remove-menu-drag-mouse-listener
   "Removes a MenuDragMouseListener from the menu item.
 
   l - the MenuDragMouseListener to be removed - `javax.swing.event.MenuDragMouseListener`"
-  ([^javax.swing.JMenuItem this ^javax.swing.event.MenuDragMouseListener l]
+  ([^JMenuItem this ^javax.swing.event.MenuDragMouseListener l]
     (-> this (.removeMenuDragMouseListener l))))
 
 (defn set-model
   "Sets the model that this button represents.
 
   new-model - the new ButtonModel - `javax.swing.ButtonModel`"
-  ([^javax.swing.JMenuItem this ^javax.swing.ButtonModel new-model]
+  ([^JMenuItem this ^javax.swing.ButtonModel new-model]
     (-> this (.setModel new-model))))
 
 (defn update-ui
   "Resets the UI property with a value from the current look and feel."
-  ([^javax.swing.JMenuItem this]
+  ([^JMenuItem this]
     (-> this (.updateUI))))
 

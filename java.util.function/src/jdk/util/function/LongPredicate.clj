@@ -15,7 +15,7 @@
 
   returns: true if the input argument matches the predicate,
    otherwise false - `boolean`"
-  (^Boolean [^java.util.function.LongPredicate this ^Long value]
+  (^Boolean [^LongPredicate this ^Long value]
     (-> this (.test value))))
 
 (defn and
@@ -34,7 +34,7 @@
    AND of this predicate and the other predicate - `default java.util.function.LongPredicate`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^java.util.function.LongPredicate this ^java.util.function.LongPredicate other]
+  ([^LongPredicate this ^java.util.function.LongPredicate other]
     (-> this (.and other))))
 
 (defn negate
@@ -43,7 +43,7 @@
 
   returns: a predicate that represents the logical negation of this
    predicate - `default java.util.function.LongPredicate`"
-  ([^java.util.function.LongPredicate this]
+  ([^LongPredicate this]
     (-> this (.negate))))
 
 (defn or
@@ -62,6 +62,6 @@
    OR of this predicate and the other predicate - `default java.util.function.LongPredicate`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^java.util.function.LongPredicate this ^java.util.function.LongPredicate other]
+  ([^LongPredicate this ^java.util.function.LongPredicate other]
     (-> this (.or other))))
 

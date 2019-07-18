@@ -15,6 +15,6 @@
   right - the second operand - `int`
 
   returns: the operator result - `int`"
-  (^Integer [^java.util.function.IntBinaryOperator this ^Integer left ^Integer right]
+  (^Integer [^IntBinaryOperator this ^Integer left ^Integer right]
     (-> this (.applyAsInt left right))))
 

@@ -6,7 +6,7 @@
 
 (defn ->basic-popup-menu-ui
   "Constructor."
-  ([]
+  (^BasicPopupMenuUI []
     (new BasicPopupMenuUI )))
 
 (defn *create-ui
@@ -20,25 +20,25 @@
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicPopupMenuUI this ^javax.swing.JComponent c]
+  ([^BasicPopupMenuUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn install-defaults
   ""
-  ([^javax.swing.plaf.basic.BasicPopupMenuUI this]
+  ([^BasicPopupMenuUI this]
     (-> this (.installDefaults))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicPopupMenuUI this ^javax.swing.JComponent c]
+  ([^BasicPopupMenuUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn popup-trigger?
   "e - `java.awt.event.MouseEvent`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.plaf.basic.BasicPopupMenuUI this ^java.awt.event.MouseEvent e]
+  (^Boolean [^BasicPopupMenuUI this e]
     (-> this (.isPopupTrigger e))))
 

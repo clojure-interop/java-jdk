@@ -21,7 +21,7 @@
   table - the quantization table, as an int array. - `int[]`
 
   throws: java.lang.IllegalArgumentException - if table is null or table.length is not equal to 64."
-  ([table]
+  (^JPEGQTable [table]
     (new JPEGQTable table)))
 
 (def *-k-1-luminance
@@ -75,7 +75,7 @@
    of ints in natural (not zig-zag) order.
 
   returns: A copy of the current quantization table. - `int[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGQTable this]
+  ([^JPEGQTable this]
     (-> this (.getTable))))
 
 (defn get-scaled-instance
@@ -92,13 +92,13 @@
 
   returns: a new quantization table that is a linear multiple
    of the current table. - `javax.imageio.plugins.jpeg.JPEGQTable`"
-  (^javax.imageio.plugins.jpeg.JPEGQTable [^javax.imageio.plugins.jpeg.JPEGQTable this ^Float scale-factor ^Boolean force-baseline]
+  (^javax.imageio.plugins.jpeg.JPEGQTable [^JPEGQTable this ^Float scale-factor ^Boolean force-baseline]
     (-> this (.getScaledInstance scale-factor force-baseline))))
 
 (defn to-string
   "Returns a String representing this quantization table.
 
   returns: a String representing this quantization table. - `java.lang.String`"
-  (^java.lang.String [^javax.imageio.plugins.jpeg.JPEGQTable this]
+  (^java.lang.String [^JPEGQTable this]
     (-> this (.toString))))
 

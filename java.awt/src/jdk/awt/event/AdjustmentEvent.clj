@@ -37,9 +37,9 @@
   is-adjusting - A boolean that equals true if the event is one of a series of multiple adjusting events, otherwise false - `boolean`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.awt.Adjustable source ^Integer id ^Integer type ^Integer value ^Boolean is-adjusting]
+  (^AdjustmentEvent [^java.awt.Adjustable source ^Integer id ^Integer type ^Integer value ^Boolean is-adjusting]
     (new AdjustmentEvent source id type value is-adjusting))
-  ([^java.awt.Adjustable source ^Integer id ^Integer type ^Integer value]
+  (^AdjustmentEvent [^java.awt.Adjustable source ^Integer id ^Integer type ^Integer value]
     (new AdjustmentEvent source id type value)))
 
 (def *-adjustment-first
@@ -71,7 +71,7 @@
 
   The unit increment adjustment type.
 
-  type: java.lang.annotation.    int"
+  type: int"
   AdjustmentEvent/UNIT_INCREMENT)
 
 (def *-unit-decrement
@@ -79,7 +79,7 @@
 
   The unit decrement adjustment type.
 
-  type: java.lang.annotation.    int"
+  type: int"
   AdjustmentEvent/UNIT_DECREMENT)
 
 (def *-block-decrement
@@ -87,7 +87,7 @@
 
   The block decrement adjustment type.
 
-  type: java.lang.annotation.    int"
+  type: int"
   AdjustmentEvent/BLOCK_DECREMENT)
 
 (def *-block-increment
@@ -95,7 +95,7 @@
 
   The block increment adjustment type.
 
-  type: java.lang.annotation.    int"
+  type: int"
   AdjustmentEvent/BLOCK_INCREMENT)
 
 (def *-track
@@ -103,21 +103,21 @@
 
   The absolute tracking adjustment type.
 
-  type: java.lang.annotation.    int"
+  type: int"
   AdjustmentEvent/TRACK)
 
 (defn get-adjustable
   "Returns the Adjustable object where this event originated.
 
   returns: the Adjustable object where this event originated - `java.awt.Adjustable`"
-  (^java.awt.Adjustable [^java.awt.event.AdjustmentEvent this]
+  (^java.awt.Adjustable [^AdjustmentEvent this]
     (-> this (.getAdjustable))))
 
 (defn get-value
   "Returns the current value in the adjustment event.
 
   returns: the current value in the adjustment event - `int`"
-  (^Integer [^java.awt.event.AdjustmentEvent this]
+  (^Integer [^AdjustmentEvent this]
     (-> this (.getValue))))
 
 (defn get-adjustment-type
@@ -131,7 +131,7 @@
    TRACK
 
   returns: one of the adjustment values listed above - `int`"
-  (^Integer [^java.awt.event.AdjustmentEvent this]
+  (^Integer [^AdjustmentEvent this]
     (-> this (.getAdjustmentType))))
 
 (defn get-value-is-adjusting?
@@ -140,13 +140,13 @@
 
   returns: true if this is one of multiple
            adjustment events, otherwise returns false - `boolean`"
-  (^Boolean [^java.awt.event.AdjustmentEvent this]
+  (^Boolean [^AdjustmentEvent this]
     (-> this (.getValueIsAdjusting))))
 
 (defn param-string
   "Description copied from class: AWTEvent
 
   returns: a string representation of this event - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.AdjustmentEvent this]
+  (^java.lang.String [^AdjustmentEvent this]
     (-> this (.paramString))))
 

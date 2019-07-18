@@ -19,7 +19,7 @@
   Constructor.
 
   immediate-purge-flag - flag to indicate when a notification is received for the unregistration of an MBean referenced in a relation, if an immediate `purge` of the relations (look for the relations no longer valid) has to be performed , or if that will be performed only when the purgeRelations method will be explicitly called. true is immediate purge. - `boolean`"
-  ([^Boolean immediate-purge-flag]
+  (^RelationService [^Boolean immediate-purge-flag]
     (new RelationService immediate-purge-flag)))
 
 (defn get-roles
@@ -33,7 +33,7 @@
    retrieved). - `javax.management.relation.RoleResult`
 
   throws: javax.management.relation.RelationServiceNotRegisteredException - if the Relation Service is not registered in the MBean Server"
-  (^javax.management.relation.RoleResult [^javax.management.relation.RelationService this ^java.lang.String relation-id role-name-array]
+  (^javax.management.relation.RoleResult [^RelationService this ^java.lang.String relation-id role-name-array]
     (-> this (.getRoles relation-id role-name-array))))
 
 (defn update-role-map
@@ -50,10 +50,10 @@
 
   relation-id - relation identifier of the updated relation - `java.lang.String`
   new-role - new role (name and new value) - `javax.management.relation.Role`
-  old-value - old role value (List of ObjectName objects) - `java.util.List<javax.management.ObjectName>`
+  old-value - old role value (List of ObjectName objects) - `java.util.List`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([^javax.management.relation.RelationService this ^java.lang.String relation-id ^javax.management.relation.Role new-role ^java.util.List old-value]
+  ([^RelationService this ^java.lang.String relation-id ^javax.management.relation.Role new-role ^java.util.List old-value]
     (-> this (.updateRoleMap relation-id new-role old-value))))
 
 (defn get-role-info
@@ -65,7 +65,7 @@
   returns: RoleInfo object. - `javax.management.relation.RoleInfo`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^javax.management.relation.RoleInfo [^javax.management.relation.RelationService this ^java.lang.String relation-type-name ^java.lang.String role-info-name]
+  (^javax.management.relation.RoleInfo [^RelationService this ^java.lang.String relation-type-name ^java.lang.String role-info-name]
     (-> this (.getRoleInfo relation-type-name role-info-name))))
 
 (defn is-active
@@ -74,7 +74,7 @@
    MBean Server
 
   throws: javax.management.relation.RelationServiceNotRegisteredException - if it is not registered"
-  ([^javax.management.relation.RelationService this]
+  ([^RelationService this]
     (-> this (.isActive))))
 
 (defn get-relation-type-name
@@ -85,7 +85,7 @@
   returns: the name of the associated relation type. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.lang.String [^javax.management.relation.RelationService this ^java.lang.String relation-id]
+  (^java.lang.String [^RelationService this ^java.lang.String relation-id]
     (-> this (.getRelationTypeName relation-id))))
 
 (defn get-role
@@ -97,7 +97,7 @@
   returns: the ArrayList of ObjectName objects being the role value - `java.util.List<javax.management.ObjectName>`
 
   throws: javax.management.relation.RelationServiceNotRegisteredException - if the Relation Service is not registered"
-  (^java.util.List [^javax.management.relation.RelationService this ^java.lang.String relation-id ^java.lang.String role-name]
+  (^java.util.List [^RelationService this ^java.lang.String relation-id ^java.lang.String role-name]
     (-> this (.getRole relation-id role-name))))
 
 (defn get-purge-flag?
@@ -109,7 +109,7 @@
    true is immediate purge.
 
   returns: true if purges are automatic. - `boolean`"
-  (^Boolean [^javax.management.relation.RelationService this]
+  (^Boolean [^RelationService this]
     (-> this (.getPurgeFlag))))
 
 (defn find-associated-m-beans
@@ -127,7 +127,7 @@
    relations). - `java.util.Map<javax.management.ObjectName,java.util.List<java.lang.String>>`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.util.Map> [^javax.management.relation.RelationService this ^javax.management.ObjectName mbean-name ^java.lang.String relation-type-name ^java.lang.String role-name]
+  (^java.util.Map [^RelationService this ^javax.management.ObjectName mbean-name ^java.lang.String relation-type-name ^java.lang.String role-name]
     (-> this (.findAssociatedMBeans mbean-name relation-type-name role-name))))
 
 (defn check-role-reading
@@ -143,7 +143,7 @@
    - integer corresponding to RoleStatus.ROLE_NOT_READABLE - `java.lang.Integer`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.lang.Integer [^javax.management.relation.RelationService this ^java.lang.String role-name ^java.lang.String relation-type-name]
+  (^java.lang.Integer [^RelationService this ^java.lang.String role-name ^java.lang.String relation-type-name]
     (-> this (.checkRoleReading role-name relation-type-name))))
 
 (defn is-relation
@@ -156,7 +156,7 @@
    relation handled by the Relation Service) - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.lang.String [^javax.management.relation.RelationService this ^javax.management.ObjectName object-name]
+  (^java.lang.String [^RelationService this ^javax.management.ObjectName object-name]
     (-> this (.isRelation object-name))))
 
 (defn get-role-cardinality
@@ -168,7 +168,7 @@
   returns: the number of currently referenced MBeans in that role - `java.lang.Integer`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.lang.Integer [^javax.management.relation.RelationService this ^java.lang.String relation-id ^java.lang.String role-name]
+  (^java.lang.Integer [^RelationService this ^java.lang.String relation-id ^java.lang.String role-name]
     (-> this (.getRoleCardinality relation-id role-name))))
 
 (defn create-relation
@@ -184,7 +184,7 @@
   role-list - role list to initialize roles of the relation (can be null). - `javax.management.relation.RoleList`
 
   throws: javax.management.relation.RelationServiceNotRegisteredException - if the Relation Service is not registered in the MBean Server"
-  ([^javax.management.relation.RelationService this ^java.lang.String relation-id ^java.lang.String relation-type-name ^javax.management.relation.RoleList role-list]
+  ([^RelationService this ^java.lang.String relation-id ^java.lang.String relation-type-name ^javax.management.relation.RoleList role-list]
     (-> this (.createRelation relation-id relation-type-name role-list))))
 
 (defn send-relation-removal-notification
@@ -198,10 +198,10 @@
    It is called in Relation Service removeRelation() method.
 
   relation-id - relation identifier of the updated relation - `java.lang.String`
-  unreg-m-bean-list - List of ObjectNames of MBeans expected to be unregistered due to relation removal (can be null) - `java.util.List<javax.management.ObjectName>`
+  unreg-m-bean-list - List of ObjectNames of MBeans expected to be unregistered due to relation removal (can be null) - `java.util.List`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([^javax.management.relation.RelationService this ^java.lang.String relation-id ^java.util.List unreg-m-bean-list]
+  ([^RelationService this ^java.lang.String relation-id ^java.util.List unreg-m-bean-list]
     (-> this (.sendRelationRemovalNotification relation-id unreg-m-bean-list))))
 
 (defn get-notification-info
@@ -209,7 +209,7 @@
    of the notification and the notification types sent.
 
   returns: the array of possible notifications. - `javax.management.MBeanNotificationInfo[]`"
-  ([^javax.management.relation.RelationService this]
+  ([^RelationService this]
     (-> this (.getNotificationInfo))))
 
 (defn get-all-roles
@@ -222,19 +222,19 @@
    readable). - `javax.management.relation.RoleResult`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^javax.management.relation.RoleResult [^javax.management.relation.RelationService this ^java.lang.String relation-id]
+  (^javax.management.relation.RoleResult [^RelationService this ^java.lang.String relation-id]
     (-> this (.getAllRoles relation-id))))
 
 (defn post-deregister
   "Description copied from interface: MBeanRegistration"
-  ([^javax.management.relation.RelationService this]
+  ([^RelationService this]
     (-> this (.postDeregister))))
 
 (defn pre-deregister
   "Description copied from interface: MBeanRegistration
 
   throws: java.lang.Exception - This exception will be caught by the MBean server and re-thrown as an MBeanRegistrationException."
-  ([^javax.management.relation.RelationService this]
+  ([^RelationService this]
     (-> this (.preDeregister))))
 
 (defn set-role
@@ -248,21 +248,21 @@
   role - role to be set (name and new value) - `javax.management.relation.Role`
 
   throws: javax.management.relation.RelationServiceNotRegisteredException - if the Relation Service is not registered in the MBean Server"
-  ([^javax.management.relation.RelationService this ^java.lang.String relation-id ^javax.management.relation.Role role]
+  ([^RelationService this ^java.lang.String relation-id ^javax.management.relation.Role role]
     (-> this (.setRole relation-id role))))
 
 (defn get-all-relation-type-names
   "Retrieves names of all known relation types.
 
   returns: ArrayList of relation type names (Strings) - `java.util.List<java.lang.String>`"
-  (^java.util.List [^javax.management.relation.RelationService this]
+  (^java.util.List [^RelationService this]
     (-> this (.getAllRelationTypeNames))))
 
 (defn post-register
   "Description copied from interface: MBeanRegistration
 
   registration-done - Indicates whether or not the MBean has been successfully registered in the MBean server. The value false means that the registration phase has failed. - `java.lang.Boolean`"
-  ([^javax.management.relation.RelationService this ^java.lang.Boolean registration-done]
+  ([^RelationService this ^java.lang.Boolean registration-done]
     (-> this (.postRegister registration-done))))
 
 (defn add-relation-type
@@ -272,7 +272,7 @@
   relation-type-obj - relation type object (implementing the RelationType interface) - `javax.management.relation.RelationType`
 
   throws: java.lang.IllegalArgumentException - if null parameter or if relationTypeObj.getRelationTypeName() returns null."
-  ([^javax.management.relation.RelationService this ^javax.management.relation.RelationType relation-type-obj]
+  ([^RelationService this ^javax.management.relation.RelationType relation-type-obj]
     (-> this (.addRelationType relation-type-obj))))
 
 (defn check-role-writing
@@ -293,7 +293,7 @@
    - integer for RoleStatus.REF_MBEAN_NOT_REGISTERED - `java.lang.Integer`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.lang.Integer [^javax.management.relation.RelationService this ^javax.management.relation.Role role ^java.lang.String relation-type-name ^java.lang.Boolean init-flag]
+  (^java.lang.Integer [^RelationService this ^javax.management.relation.Role role ^java.lang.String relation-type-name ^java.lang.Boolean init-flag]
     (-> this (.checkRoleWriting role relation-type-name init-flag))))
 
 (defn get-all-relation-ids
@@ -301,7 +301,7 @@
    Relation Service.
 
   returns: ArrayList of String - `java.util.List<java.lang.String>`"
-  (^java.util.List [^javax.management.relation.RelationService this]
+  (^java.util.List [^RelationService this]
     (-> this (.getAllRelationIds))))
 
 (defn handle-notification
@@ -311,7 +311,7 @@
 
   notif - The notification. - `javax.management.Notification`
   handback - An opaque object which helps the listener to associate information regarding the MBean emitter (can be null). - `java.lang.Object`"
-  ([^javax.management.relation.RelationService this ^javax.management.Notification notif ^java.lang.Object handback]
+  ([^RelationService this ^javax.management.Notification notif ^java.lang.Object handback]
     (-> this (.handleNotification notif handback))))
 
 (defn has-relation?
@@ -323,7 +323,7 @@
   returns: boolean: true if there is a relation, false else - `java.lang.Boolean`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.lang.Boolean [^javax.management.relation.RelationService this ^java.lang.String relation-id]
+  (^java.lang.Boolean [^RelationService this ^java.lang.String relation-id]
     (-> this (.hasRelation relation-id))))
 
 (defn set-purge-flag
@@ -335,7 +335,7 @@
    true is immediate purge.
 
   purge-flag - flag - `boolean`"
-  ([^javax.management.relation.RelationService this ^Boolean purge-flag]
+  ([^RelationService this ^Boolean purge-flag]
     (-> this (.setPurgeFlag purge-flag))))
 
 (defn send-relation-creation-notification
@@ -352,7 +352,7 @@
   relation-id - relation identifier of the updated relation - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([^javax.management.relation.RelationService this ^java.lang.String relation-id]
+  ([^RelationService this ^java.lang.String relation-id]
     (-> this (.sendRelationCreationNotification relation-id))))
 
 (defn get-referenced-m-beans
@@ -364,7 +364,7 @@
     ObjectName -> ArrayList of String (role names) - `java.util.Map<javax.management.ObjectName,java.util.List<java.lang.String>>`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.util.Map> [^javax.management.relation.RelationService this ^java.lang.String relation-id]
+  (^java.util.Map [^RelationService this ^java.lang.String relation-id]
     (-> this (.getReferencedMBeans relation-id))))
 
 (defn set-roles
@@ -382,7 +382,7 @@
    set). - `javax.management.relation.RoleResult`
 
   throws: javax.management.relation.RelationServiceNotRegisteredException - if the Relation Service is not registered in the MBean Server"
-  (^javax.management.relation.RoleResult [^javax.management.relation.RelationService this ^java.lang.String relation-id ^javax.management.relation.RoleList role-list]
+  (^javax.management.relation.RoleResult [^RelationService this ^java.lang.String relation-id ^javax.management.relation.RoleList role-list]
     (-> this (.setRoles relation-id role-list))))
 
 (defn send-role-update-notification
@@ -401,10 +401,10 @@
 
   relation-id - relation identifier of the updated relation - `java.lang.String`
   new-role - new role (name and new value) - `javax.management.relation.Role`
-  old-value - old role value (List of ObjectName objects) - `java.util.List<javax.management.ObjectName>`
+  old-value - old role value (List of ObjectName objects) - `java.util.List`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([^javax.management.relation.RelationService this ^java.lang.String relation-id ^javax.management.relation.Role new-role ^java.util.List old-value]
+  ([^RelationService this ^java.lang.String relation-id ^javax.management.relation.Role new-role ^java.util.List old-value]
     (-> this (.sendRoleUpdateNotification relation-id new-role old-value))))
 
 (defn create-relation-type
@@ -416,7 +416,7 @@
   role-info-array - array of role infos - `javax.management.relation.RoleInfo[]`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  ([^javax.management.relation.RelationService this ^java.lang.String relation-type-name role-info-array]
+  ([^RelationService this ^java.lang.String relation-type-name role-info-array]
     (-> this (.createRelationType relation-type-name role-info-array))))
 
 (defn is-relation-m-bean
@@ -430,7 +430,7 @@
    the relation is not an MBean. - `javax.management.ObjectName`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^javax.management.ObjectName [^javax.management.relation.RelationService this ^java.lang.String relation-id]
+  (^javax.management.ObjectName [^RelationService this ^java.lang.String relation-id]
     (-> this (.isRelationMBean relation-id))))
 
 (defn find-referencing-relations
@@ -448,7 +448,7 @@
    roles in the same relation). - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.util.Map> [^javax.management.relation.RelationService this ^javax.management.ObjectName mbean-name ^java.lang.String relation-type-name ^java.lang.String role-name]
+  (^java.util.Map [^RelationService this ^javax.management.ObjectName mbean-name ^java.lang.String relation-type-name ^java.lang.String role-name]
     (-> this (.findReferencingRelations mbean-name relation-type-name role-name))))
 
 (defn add-relation
@@ -468,7 +468,7 @@
   relation-object-name - ObjectName of the relation MBean to be added. - `javax.management.ObjectName`
 
   throws: javax.management.relation.InvalidRelationServiceException - if: - no Relation Service name in MBean - the Relation Service name in the MBean is not the one of the current Relation Service"
-  ([^javax.management.relation.RelationService this ^javax.management.ObjectName relation-object-name]
+  ([^RelationService this ^javax.management.ObjectName relation-object-name]
     (-> this (.addRelation relation-object-name))))
 
 (defn find-relations-of-type
@@ -479,7 +479,7 @@
   returns: an ArrayList of relation ids. - `java.util.List<java.lang.String>`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.util.List [^javax.management.relation.RelationService this ^java.lang.String relation-type-name]
+  (^java.util.List [^RelationService this ^java.lang.String relation-type-name]
     (-> this (.findRelationsOfType relation-type-name))))
 
 (defn purge-relations
@@ -506,7 +506,7 @@
    update it calling its handleMBeanUnregistration() callback.
 
   throws: javax.management.relation.RelationServiceNotRegisteredException - if the Relation Service is not registered in the MBean Server."
-  ([^javax.management.relation.RelationService this]
+  ([^RelationService this]
     (-> this (.purgeRelations))))
 
 (defn get-role-infos
@@ -518,7 +518,7 @@
   returns: ArrayList of RoleInfo. - `java.util.List<javax.management.relation.RoleInfo>`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
-  (^java.util.List [^javax.management.relation.RelationService this ^java.lang.String relation-type-name]
+  (^java.util.List [^RelationService this ^java.lang.String relation-type-name]
     (-> this (.getRoleInfos relation-type-name))))
 
 (defn pre-register
@@ -533,7 +533,7 @@
    the returned value. - `javax.management.ObjectName`
 
   throws: java.lang.Exception - This exception will be caught by the MBean Server and re-thrown as an MBeanRegistrationException."
-  (^javax.management.ObjectName [^javax.management.relation.RelationService this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
+  (^javax.management.ObjectName [^RelationService this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 
 (defn remove-relation-type
@@ -544,7 +544,7 @@
   relation-type-name - name of the relation type to be removed - `java.lang.String`
 
   throws: javax.management.relation.RelationServiceNotRegisteredException - if the Relation Service is not registered in the MBean Server"
-  ([^javax.management.relation.RelationService this ^java.lang.String relation-type-name]
+  ([^RelationService this ^java.lang.String relation-type-name]
     (-> this (.removeRelationType relation-type-name))))
 
 (defn remove-relation
@@ -559,6 +559,6 @@
   relation-id - relation id of the relation to be removed - `java.lang.String`
 
   throws: javax.management.relation.RelationServiceNotRegisteredException - if the Relation Service is not registered in the MBean Server"
-  ([^javax.management.relation.RelationService this ^java.lang.String relation-id]
+  ([^RelationService this ^java.lang.String relation-id]
     (-> this (.removeRelation relation-id))))
 

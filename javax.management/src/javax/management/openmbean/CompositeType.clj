@@ -23,10 +23,10 @@
   description - The human readable description of the composite type this instance represents; cannot be a null or empty string. - `java.lang.String`
   item-names - The names of the items contained in the composite data values described by this CompositeType instance; cannot be null and should contain at least one element; no element can be a null or empty string. Note that the order in which the item names are given is not important to differentiate a CompositeType instance from another; the item names are internally stored sorted in ascending alphanumeric order. - `java.lang.String[]`
   item-descriptions - The descriptions, in the same order as itemNames, of the items contained in the composite data values described by this CompositeType instance; should be of the same size as itemNames; no element can be null or an empty string. - `java.lang.String[]`
-  item-types - The open type instances, in the same order as itemNames, describing the items contained in the composite data values described by this CompositeType instance; should be of the same size as itemNames; no element can be null. - `javax.management.openmbean.OpenType<?>[]`
+  item-types - The open type instances, in the same order as itemNames, describing the items contained in the composite data values described by this CompositeType instance; should be of the same size as itemNames; no element can be null. - `javax.management.openmbean.OpenType[]`
 
   throws: java.lang.IllegalArgumentException - If typeName or description is a null or empty string, or itemNames or itemDescriptions or itemTypes is null, or any element of itemNames or itemDescriptions is a null or empty string, or any element of itemTypes is null, or itemNames or itemDescriptions or itemTypes are not of the same size."
-  ([^java.lang.String type-name ^java.lang.String description item-names item-descriptions item-types]
+  (^CompositeType [^java.lang.String type-name ^java.lang.String description item-names item-descriptions item-types]
     (new CompositeType type-name description item-names item-descriptions item-types)))
 
 (defn contains-key
@@ -36,7 +36,7 @@
   item-name - the name of the item. - `java.lang.String`
 
   returns: true if an item of this name is present. - `boolean`"
-  (^Boolean [^javax.management.openmbean.CompositeType this ^java.lang.String item-name]
+  (^Boolean [^CompositeType this ^java.lang.String item-name]
     (-> this (.containsKey item-name))))
 
 (defn get-description
@@ -47,7 +47,7 @@
   item-name - the name of the item. - `java.lang.String`
 
   returns: the description. - `java.lang.String`"
-  (^java.lang.String [^javax.management.openmbean.CompositeType this ^java.lang.String item-name]
+  (^java.lang.String [^CompositeType this ^java.lang.String item-name]
     (-> this (.getDescription item-name))))
 
 (defn get-type
@@ -58,7 +58,7 @@
   item-name - the name of the time. - `java.lang.String`
 
   returns: the type. - `javax.management.openmbean.OpenType<?>`"
-  (^javax.management.openmbean.OpenType [^javax.management.openmbean.CompositeType this ^java.lang.String item-name]
+  (^javax.management.openmbean.OpenType [^CompositeType this ^java.lang.String item-name]
     (-> this (.getType item-name))))
 
 (defn key-set
@@ -66,7 +66,7 @@
    The set's iterator will return the item names in ascending order.
 
   returns: a Set of String. - `java.util.Set<java.lang.String>`"
-  (^java.util.Set [^javax.management.openmbean.CompositeType this]
+  (^java.util.Set [^CompositeType this]
     (-> this (.keySet))))
 
 (defn value?
@@ -111,7 +111,7 @@
 
   returns: true if obj is a value for this
    composite type, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.openmbean.CompositeType this ^java.lang.Object obj]
+  (^Boolean [^CompositeType this ^java.lang.Object obj]
     (-> this (.isValue obj))))
 
 (defn equals
@@ -125,7 +125,7 @@
   obj - the object to be compared for equality with this CompositeType instance; if obj is null, equals returns false. - `java.lang.Object`
 
   returns: true if the specified object is equal to this CompositeType instance. - `boolean`"
-  (^Boolean [^javax.management.openmbean.CompositeType this ^java.lang.Object obj]
+  (^Boolean [^CompositeType this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -143,7 +143,7 @@
    on the first call to hashCode, and then the same value is returned for subsequent calls.
 
   returns: the hash code value for this CompositeType instance - `int`"
-  (^Integer [^javax.management.openmbean.CompositeType this]
+  (^Integer [^CompositeType this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -157,6 +157,6 @@
    on the first call to toString, and then the same value is returned for subsequent calls.
 
   returns: a string representation of this CompositeType instance - `java.lang.String`"
-  (^java.lang.String [^javax.management.openmbean.CompositeType this]
+  (^java.lang.String [^CompositeType this]
     (-> this (.toString))))
 

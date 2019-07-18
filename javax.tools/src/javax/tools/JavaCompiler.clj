@@ -188,15 +188,15 @@
 
   out - a Writer for additional output from the compiler; use System.err if null - `java.io.Writer`
   file-manager - a file manager; if null use the compiler's standard filemanager - `javax.tools.JavaFileManager`
-  diagnostic-listener - a diagnostic listener; if null use the compiler's default method for reporting diagnostics - `javax.tools.JavaFileObject>`
-  options - compiler options, null means no options - `java.lang.Iterable<java.lang.String>`
-  classes - names of classes to be processed by annotation processing, null means no class names - `java.lang.Iterable<java.lang.String>`
-  compilation-units - the compilation units to compile, null means no compilation units - `javax.tools.JavaFileObject>`
+  diagnostic-listener - a diagnostic listener; if null use the compiler's default method for reporting diagnostics - `javax.tools.DiagnosticListener`
+  options - compiler options, null means no options - `java.lang.Iterable`
+  classes - names of classes to be processed by annotation processing, null means no class names - `java.lang.Iterable`
+  compilation-units - the compilation units to compile, null means no compilation units - `java.lang.Iterable`
 
-  returns: an object representing the compilation - `javax.tools.JavaCompiler.CompilationTask`
+  returns: an object representing the compilation - `javax.tools.JavaCompiler$CompilationTask`
 
   throws: java.lang.RuntimeException - if an unrecoverable error occurred in a user supplied component. The cause will be the error in user code."
-  (^javax.tools.JavaCompiler.CompilationTask [^javax.tools.JavaCompiler this ^java.io.Writer out ^javax.tools.JavaFileManager file-manager ^javax.tools.JavaFileObject> diagnostic-listener ^java.lang.Iterable options ^java.lang.Iterable classes ^javax.tools.JavaFileObject> compilation-units]
+  (^javax.tools.JavaCompiler$CompilationTask [^JavaCompiler this ^java.io.Writer out ^javax.tools.JavaFileManager file-manager ^javax.tools.DiagnosticListener diagnostic-listener ^java.lang.Iterable options ^java.lang.Iterable classes ^java.lang.Iterable compilation-units]
     (-> this (.getTask out file-manager diagnostic-listener options classes compilation-units))))
 
 (defn get-standard-file-manager
@@ -209,11 +209,11 @@
    it is accessed after calls to flush or close.
    The standard file manager must be usable with other tools.
 
-  diagnostic-listener - a diagnostic listener for non-fatal diagnostics; if null use the compiler's default method for reporting diagnostics - `javax.tools.JavaFileObject>`
+  diagnostic-listener - a diagnostic listener for non-fatal diagnostics; if null use the compiler's default method for reporting diagnostics - `javax.tools.DiagnosticListener`
   locale - the locale to apply when formatting diagnostics; null means the default locale. - `java.util.Locale`
   charset - the character set used for decoding bytes; if null use the platform default - `java.nio.charset.Charset`
 
   returns: the standard file manager - `javax.tools.StandardJavaFileManager`"
-  (^javax.tools.StandardJavaFileManager [^javax.tools.JavaCompiler this ^javax.tools.JavaFileObject> diagnostic-listener ^java.util.Locale locale ^java.nio.charset.Charset charset]
+  (^javax.tools.StandardJavaFileManager [^JavaCompiler this ^javax.tools.DiagnosticListener diagnostic-listener ^java.util.Locale locale ^java.nio.charset.Charset charset]
     (-> this (.getStandardFileManager diagnostic-listener locale charset))))
 

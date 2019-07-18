@@ -87,20 +87,20 @@
   "Returns true if the Style is a stand-alone style.
 
   returns: true if the style is a stand-alone style. - `boolean`"
-  (^Boolean [^java.time.format.TextStyle this]
+  (^Boolean [^TextStyle this]
     (-> this (.isStandalone))))
 
 (defn as-standalone
   "Returns the stand-alone style with the same size.
 
   returns: the stand-alone style with the same size - `java.time.format.TextStyle`"
-  (^java.time.format.TextStyle [^java.time.format.TextStyle this]
+  (^java.time.format.TextStyle [^TextStyle this]
     (-> this (.asStandalone))))
 
 (defn as-normal
   "Returns the normal style with the same size.
 
   returns: the normal style with the same size - `java.time.format.TextStyle`"
-  (^java.time.format.TextStyle [^java.time.format.TextStyle this]
+  (^java.time.format.TextStyle [^TextStyle this]
     (-> this (.asNormal))))
 

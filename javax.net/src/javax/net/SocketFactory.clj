@@ -57,10 +57,10 @@
   returns: the Socket - `java.net.Socket`
 
   throws: java.io.IOException - if an I/O error occurs when creating the socket"
-  (^java.net.Socket [^javax.net.SocketFactory this ^java.lang.String host ^Integer port ^java.net.InetAddress local-host ^Integer local-port]
+  (^java.net.Socket [^SocketFactory this ^java.lang.String host ^Integer port ^java.net.InetAddress local-host ^Integer local-port]
     (-> this (.createSocket host port local-host local-port)))
-  (^java.net.Socket [^javax.net.SocketFactory this ^java.lang.String host ^Integer port]
+  (^java.net.Socket [^SocketFactory this ^java.lang.String host ^Integer port]
     (-> this (.createSocket host port)))
-  (^java.net.Socket [^javax.net.SocketFactory this]
+  (^java.net.Socket [^SocketFactory this]
     (-> this (.createSocket))))
 

@@ -13,7 +13,7 @@
 
 (defn ->abstract-formatter-factory
   "Constructor."
-  ([]
+  (^JFormattedTextField$AbstractFormatterFactory []
     (new JFormattedTextField$AbstractFormatterFactory )))
 
 (defn get-formatter
@@ -24,7 +24,7 @@
 
   returns: AbstractFormatter to handle formatting duties, a null
            return value implies the JFormattedTextField should behave
-           like a normal JTextField - `javax.swing.JFormattedTextField.AbstractFormatter`"
-  (^javax.swing.JFormattedTextField.AbstractFormatter [^javax.swing.JFormattedTextField$AbstractFormatterFactory this ^javax.swing.JFormattedTextField tf]
+           like a normal JTextField - `javax.swing.JFormattedTextField$AbstractFormatter`"
+  (^javax.swing.JFormattedTextField$AbstractFormatter [^JFormattedTextField$AbstractFormatterFactory this ^javax.swing.JFormattedTextField tf]
     (-> this (.getFormatter tf))))
 

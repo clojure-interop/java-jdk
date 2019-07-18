@@ -11,8 +11,8 @@
    detail message.
 
   msg - the detail message - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^PortUnreachableException [^java.lang.String msg]
     (new PortUnreachableException msg))
-  ([]
+  (^PortUnreachableException []
     (new PortUnreachableException )))
 

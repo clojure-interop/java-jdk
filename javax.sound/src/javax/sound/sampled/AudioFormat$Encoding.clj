@@ -32,7 +32,7 @@
   Constructs a new encoding.
 
   name - the name of the new type of encoding - `java.lang.String`"
-  ([^java.lang.String name]
+  (^AudioFormat$Encoding [^java.lang.String name]
     (new AudioFormat$Encoding name)))
 
 (def *-pcm-signed
@@ -40,7 +40,7 @@
 
   Specifies signed, linear PCM data.
 
-  type: javax.sound.sampled.AudioFormat.Encoding"
+  type: javax.sound.sampled.AudioFormat$Encoding"
   AudioFormat$Encoding/PCM_SIGNED)
 
 (def *-pcm-unsigned
@@ -48,7 +48,7 @@
 
   Specifies unsigned, linear PCM data.
 
-  type: javax.sound.sampled.AudioFormat.Encoding"
+  type: javax.sound.sampled.AudioFormat$Encoding"
   AudioFormat$Encoding/PCM_UNSIGNED)
 
 (def *-pcm-float
@@ -56,7 +56,7 @@
 
   Specifies floating-point PCM data.
 
-  type: javax.sound.sampled.AudioFormat.Encoding"
+  type: javax.sound.sampled.AudioFormat$Encoding"
   AudioFormat$Encoding/PCM_FLOAT)
 
 (def *-ulaw
@@ -64,7 +64,7 @@
 
   Specifies u-law encoded data.
 
-  type: javax.sound.sampled.AudioFormat.Encoding"
+  type: javax.sound.sampled.AudioFormat$Encoding"
   AudioFormat$Encoding/ULAW)
 
 (def *-alaw
@@ -72,7 +72,7 @@
 
   Specifies a-law encoded data.
 
-  type: javax.sound.sampled.AudioFormat.Encoding"
+  type: javax.sound.sampled.AudioFormat$Encoding"
   AudioFormat$Encoding/ALAW)
 
 (defn equals
@@ -82,14 +82,14 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^javax.sound.sampled.AudioFormat$Encoding this ^java.lang.Object obj]
+  (^Boolean [^AudioFormat$Encoding this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Finalizes the hashCode method
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.sound.sampled.AudioFormat$Encoding this]
+  (^Integer [^AudioFormat$Encoding this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -99,6 +99,6 @@
    the name `pcm_signed`.
 
   returns: the encoding name - `java.lang.String`"
-  (^java.lang.String [^javax.sound.sampled.AudioFormat$Encoding this]
+  (^java.lang.String [^AudioFormat$Encoding this]
     (-> this (.toString))))
 

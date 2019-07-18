@@ -15,10 +15,10 @@
 
   s - the detail message. - `java.lang.String`
   cause - the cause, may be null. - `java.lang.Throwable`"
-  ([^java.lang.String s ^java.lang.Throwable cause]
+  (^BootstrapMethodError [^java.lang.String s ^java.lang.Throwable cause]
     (new BootstrapMethodError s cause))
-  ([^java.lang.String s]
+  (^BootstrapMethodError [^java.lang.String s]
     (new BootstrapMethodError s))
-  ([]
+  (^BootstrapMethodError []
     (new BootstrapMethodError )))
 

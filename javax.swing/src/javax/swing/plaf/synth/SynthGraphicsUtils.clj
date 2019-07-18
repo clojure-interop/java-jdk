@@ -7,7 +7,7 @@
   "Constructor.
 
   Creates a SynthGraphicsUtils."
-  ([]
+  (^SynthGraphicsUtils []
     (new SynthGraphicsUtils )))
 
 (defn draw-line
@@ -26,9 +26,9 @@
   x-2 - x destination - `int`
   y-2 - y destination - `int`
   style-key - identifies the requested style of the line (e.g. `dashed`) - `java.lang.Object`"
-  ([^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object paint-key ^java.awt.Graphics g ^Integer x-1 ^Integer y-1 ^Integer x-2 ^Integer y-2 ^java.lang.Object style-key]
+  ([^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object paint-key ^java.awt.Graphics g ^Integer x-1 ^Integer y-1 ^Integer x-2 ^Integer y-2 ^java.lang.Object style-key]
     (-> this (.drawLine context paint-key g x-1 y-1 x-2 y-2 style-key)))
-  ([^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object paint-key ^java.awt.Graphics g ^Integer x-1 ^Integer y-1 ^Integer x-2 ^Integer y-2]
+  ([^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object paint-key ^java.awt.Graphics g ^Integer x-1 ^Integer y-1 ^Integer x-2 ^Integer y-2]
     (-> this (.drawLine context paint-key g x-1 y-1 x-2 y-2))))
 
 (defn layout-text
@@ -49,7 +49,7 @@
   icon-text-gap - gap between icon and text - `int`
 
   returns: `java.lang.String`"
-  (^java.lang.String [^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.FontMetrics fm ^java.lang.String text ^javax.swing.Icon icon ^Integer h-align ^Integer v-align ^Integer h-text-position ^Integer v-text-position ^java.awt.Rectangle view-r ^java.awt.Rectangle icon-r ^java.awt.Rectangle text-r ^Integer icon-text-gap]
+  (^java.lang.String [^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.FontMetrics fm ^java.lang.String text ^javax.swing.Icon icon ^Integer h-align ^Integer v-align ^Integer h-text-position ^Integer v-text-position ^java.awt.Rectangle view-r ^java.awt.Rectangle icon-r ^java.awt.Rectangle text-r ^Integer icon-text-gap]
     (-> this (.layoutText ss fm text icon h-align v-align h-text-position v-text-position view-r icon-r text-r icon-text-gap))))
 
 (defn compute-string-width
@@ -61,7 +61,7 @@
   text - Text to get size of. - `java.lang.String`
 
   returns: `int`"
-  (^Integer [^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Font font ^java.awt.FontMetrics metrics ^java.lang.String text]
+  (^Integer [^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Font font ^java.awt.FontMetrics metrics ^java.lang.String text]
     (-> this (.computeStringWidth ss font metrics text))))
 
 (defn get-minimum-size
@@ -79,7 +79,7 @@
   mnemonic-index - Index into text to render the mnemonic at, -1 indicates no mnemonic. - `int`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Font font ^java.lang.String text ^javax.swing.Icon icon ^Integer h-align ^Integer v-align ^Integer h-text-position ^Integer v-text-position ^Integer icon-text-gap ^Integer mnemonic-index]
+  (^java.awt.Dimension [^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Font font ^java.lang.String text ^javax.swing.Icon icon ^Integer h-align ^Integer v-align ^Integer h-text-position ^Integer v-text-position ^Integer icon-text-gap ^Integer mnemonic-index]
     (-> this (.getMinimumSize ss font text icon h-align v-align h-text-position v-text-position icon-text-gap mnemonic-index))))
 
 (defn get-maximum-size
@@ -97,7 +97,7 @@
   mnemonic-index - Index into text to render the mnemonic at, -1 indicates no mnemonic. - `int`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Font font ^java.lang.String text ^javax.swing.Icon icon ^Integer h-align ^Integer v-align ^Integer h-text-position ^Integer v-text-position ^Integer icon-text-gap ^Integer mnemonic-index]
+  (^java.awt.Dimension [^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Font font ^java.lang.String text ^javax.swing.Icon icon ^Integer h-align ^Integer v-align ^Integer h-text-position ^Integer v-text-position ^Integer icon-text-gap ^Integer mnemonic-index]
     (-> this (.getMaximumSize ss font text icon h-align v-align h-text-position v-text-position icon-text-gap mnemonic-index))))
 
 (defn get-maximum-char-height
@@ -108,7 +108,7 @@
 
   returns: maximum height of the characters for the font from the passed
            in context. - `int`"
-  (^Integer [^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext context]
+  (^Integer [^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext context]
     (-> this (.getMaximumCharHeight context))))
 
 (defn get-preferred-size
@@ -126,7 +126,7 @@
   mnemonic-index - Index into text to render the mnemonic at, -1 indicates no mnemonic. - `int`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Font font ^java.lang.String text ^javax.swing.Icon icon ^Integer h-align ^Integer v-align ^Integer h-text-position ^Integer v-text-position ^Integer icon-text-gap ^Integer mnemonic-index]
+  (^java.awt.Dimension [^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Font font ^java.lang.String text ^javax.swing.Icon icon ^Integer h-align ^Integer v-align ^Integer h-text-position ^Integer v-text-position ^Integer icon-text-gap ^Integer mnemonic-index]
     (-> this (.getPreferredSize ss font text icon h-align v-align h-text-position v-text-position icon-text-gap mnemonic-index))))
 
 (defn paint-text
@@ -144,10 +144,10 @@
   icon-text-gap - gap between icon and text - `int`
   mnemonic-index - Index into text to render the mnemonic at, -1 indicates no mnemonic. - `int`
   text-offset - Amount to offset the text when painting - `int`"
-  ([^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Graphics g ^java.lang.String text ^javax.swing.Icon icon ^Integer h-align ^Integer v-align ^Integer h-text-position ^Integer v-text-position ^Integer icon-text-gap ^Integer mnemonic-index ^Integer text-offset]
+  ([^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Graphics g ^java.lang.String text ^javax.swing.Icon icon ^Integer h-align ^Integer v-align ^Integer h-text-position ^Integer v-text-position ^Integer icon-text-gap ^Integer mnemonic-index ^Integer text-offset]
     (-> this (.paintText ss g text icon h-align v-align h-text-position v-text-position icon-text-gap mnemonic-index text-offset)))
-  ([^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Graphics g ^java.lang.String text ^Integer x ^Integer y ^Integer mnemonic-index]
+  ([^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Graphics g ^java.lang.String text ^Integer x ^Integer y ^Integer mnemonic-index]
     (-> this (.paintText ss g text x y mnemonic-index)))
-  ([^javax.swing.plaf.synth.SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Graphics g ^java.lang.String text ^java.awt.Rectangle bounds ^Integer mnemonic-index]
+  ([^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext ss ^java.awt.Graphics g ^java.lang.String text ^java.awt.Rectangle bounds ^Integer mnemonic-index]
     (-> this (.paintText ss g text bounds mnemonic-index))))
 

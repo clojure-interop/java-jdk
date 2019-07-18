@@ -118,7 +118,7 @@
   ref-info - The possibly null object for which to create an object. - `java.lang.Object`
   name - The name of this object relative to nameCtx. Specifying a name is optional; if it is omitted, name should be null. - `javax.naming.Name`
   name-ctx - The context relative to which the name parameter is specified. If null, name is relative to the default initial context. - `javax.naming.Context`
-  environment - The possibly null environment to be used in the creation of the object factory and the object. - `java.util.Hashtable<?,?>`
+  environment - The possibly null environment to be used in the creation of the object factory and the object. - `java.util.Hashtable`
 
   returns: An object created using refInfo; or
             refInfo if an object cannot be created using
@@ -179,7 +179,7 @@
    accepts no arguments.
 
   scheme - The non-null scheme-id of the URLs supported by the context. - `java.lang.String`
-  environment - The possibly null environment properties to be used in the creation of the object factory and the context. - `java.util.Hashtable<?,?>`
+  environment - The possibly null environment properties to be used in the creation of the object factory and the context. - `java.util.Hashtable`
 
   returns: A context for resolving URLs with the
            scheme id scheme;
@@ -202,7 +202,7 @@
    InitialContextFactory interface) must be public and must have a
    public constructor that accepts no arguments.
 
-  env - The possibly null environment properties used when creating the context. - `java.util.Hashtable<?,?>`
+  env - The possibly null environment properties used when creating the context. - `java.util.Hashtable`
 
   returns: A non-null initial context. - `javax.naming.Context`
 
@@ -302,7 +302,7 @@
   obj - The non-null object for which to get state to bind. - `java.lang.Object`
   name - The name of this object relative to nameCtx, or null if no name is specified. - `javax.naming.Name`
   name-ctx - The context relative to which the name parameter is specified, or null if name is relative to the default initial context. - `javax.naming.Context`
-  environment - The possibly null environment to be used in the creation of the state factory and the object's state. - `java.util.Hashtable<?,?>`
+  environment - The possibly null environment to be used in the creation of the state factory and the object's state. - `java.util.Hashtable`
 
   returns: The non-null object representing obj's state for
     binding.  It could be the object (obj) itself. - `java.lang.Object`

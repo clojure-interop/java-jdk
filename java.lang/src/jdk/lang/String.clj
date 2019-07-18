@@ -61,30 +61,26 @@
 (defn ->string
   "Constructor.
 
-  Constructs a new String by decoding the specified subarray of
-   bytes using the specified charset.  The length of the new String
-   is a function of the charset, and hence may not be equal to the length
-   of the subarray.
+  Deprecated. This method does not properly convert bytes into characters.
+   As of JDK 1.1, the preferred way to do this is via the
+   String constructors that take a Charset, charset name, or that use the platform's
+   default charset.
 
-    The behavior of this constructor when the given bytes are not valid
-   in the given charset is unspecified.  The CharsetDecoder class should be used when more control
-   over the decoding process is required.
+  ascii - The bytes to be converted to characters - `byte[]`
+  hibyte - The top 8 bits of each 16-bit Unicode code unit - `int`
+  offset - The initial offset - `int`
+  count - The length - `int`
 
-  bytes - The bytes to be decoded into characters - `byte[]`
-  offset - The index of the first byte to decode - `int`
-  length - The number of bytes to decode - `int`
-  charset-name - The name of a supported java.nio.charset.charset - `java.lang.String`
-
-  throws: java.io.UnsupportedEncodingException - If the named charset is not supported"
-  ([bytes ^Integer offset ^Integer length ^java.lang.String charset-name]
-    (new String bytes offset length charset-name))
-  ([value ^Integer offset ^Integer count]
+  throws: java.lang.IndexOutOfBoundsException - If the offset or count argument is invalid"
+  (^String [ascii ^Integer hibyte ^Integer offset ^Integer count]
+    (new String ascii hibyte offset count))
+  (^String [value ^Integer offset ^Integer count]
     (new String value offset count))
-  ([bytes ^java.lang.String charset-name]
-    (new String bytes charset-name))
-  ([^java.lang.String original]
+  (^String [ascii ^Integer hibyte]
+    (new String ascii hibyte))
+  (^String [^java.lang.String original]
     (new String original))
-  ([]
+  (^String []
     (new String )))
 
 (def *-case-insensitive-order
@@ -199,7 +195,7 @@
   dst-begin - the start offset in the destination array. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - If any of the following is true: srcBegin is negative. srcBegin is greater than srcEnd srcEnd is greater than the length of this string dstBegin is negative dstBegin+(srcEnd-srcBegin) is larger than dst.length"
-  ([^java.lang.String this ^Integer src-begin ^Integer src-end dst ^Integer dst-begin]
+  ([^String this ^Integer src-begin ^Integer src-end dst ^Integer dst-begin]
     (-> this (.getChars src-begin src-end dst dst-begin))))
 
 (defn trim
@@ -232,7 +228,7 @@
   returns: A string whose value is this string, with any leading and trailing white
             space removed, or this string if it has no leading or
             trailing white space. - `java.lang.String`"
-  (^java.lang.String [^java.lang.String this]
+  (^java.lang.String [^String this]
     (-> this (.trim))))
 
 (defn to-lower-case
@@ -281,9 +277,9 @@
   locale - use the case transformation rules for this locale - `java.util.Locale`
 
   returns: the String, converted to lowercase. - `java.lang.String`"
-  (^java.lang.String [^java.lang.String this ^java.util.Locale locale]
+  (^java.lang.String [^String this ^java.util.Locale locale]
     (-> this (.toLowerCase locale)))
-  (^java.lang.String [^java.lang.String this]
+  (^java.lang.String [^String this]
     (-> this (.toLowerCase))))
 
 (defn replace-all
@@ -314,7 +310,7 @@
   returns: The resulting String - `java.lang.String`
 
   throws: java.util.regex.PatternSyntaxException - if the regular expression's syntax is invalid"
-  (^java.lang.String [^java.lang.String this ^java.lang.String regex ^java.lang.String replacement]
+  (^java.lang.String [^String this ^java.lang.String regex ^java.lang.String replacement]
     (-> this (.replaceAll regex replacement))))
 
 (defn contains
@@ -324,7 +320,7 @@
   s - the sequence to search for - `java.lang.CharSequence`
 
   returns: true if this string contains s, false otherwise - `boolean`"
-  (^Boolean [^java.lang.String this ^java.lang.CharSequence s]
+  (^Boolean [^String this ^java.lang.CharSequence s]
     (-> this (.contains s))))
 
 (defn ends-with
@@ -338,7 +334,7 @@
             result will be true if the argument is the
             empty string or is equal to this String object
             as determined by the equals(Object) method. - `boolean`"
-  (^Boolean [^java.lang.String this ^java.lang.String suffix]
+  (^Boolean [^String this ^java.lang.String suffix]
     (-> this (.endsWith suffix))))
 
 (defn replace-first
@@ -369,35 +365,33 @@
   returns: The resulting String - `java.lang.String`
 
   throws: java.util.regex.PatternSyntaxException - if the regular expression's syntax is invalid"
-  (^java.lang.String [^java.lang.String this ^java.lang.String regex ^java.lang.String replacement]
+  (^java.lang.String [^String this ^java.lang.String regex ^java.lang.String replacement]
     (-> this (.replaceFirst regex replacement))))
 
 (defn to-string
   "This object (which is already a string!) is itself returned.
 
   returns: the string itself. - `java.lang.String`"
-  (^java.lang.String [^java.lang.String this]
+  (^java.lang.String [^String this]
     (-> this (.toString))))
 
 (defn get-bytes
-  "Encodes this String into a sequence of bytes using the named
-   charset, storing the result into a new byte array.
+  "Deprecated. This method does not properly convert characters into
+   bytes.  As of JDK 1.1, the preferred way to do this is via the
+   getBytes() method, which uses the platform's default charset.
 
-    The behavior of this method when this string cannot be encoded in
-   the given charset is unspecified.  The CharsetEncoder class should be used when more control
-   over the encoding process is required.
+  src-begin - Index of the first character in the string to copy - `int`
+  src-end - Index after the last character in the string to copy - `int`
+  dst - The destination array - `byte[]`
+  dst-begin - The start offset in the destination array - `int`
 
-  charset-name - The name of a supported java.nio.charset.charset - `java.lang.String`
-
-  returns: The resultant byte array - `byte[]`
-
-  throws: java.io.UnsupportedEncodingException - If the named charset is not supported"
-  ([^java.lang.String this ^java.lang.String charset-name]
+  throws: java.lang.IndexOutOfBoundsException - If any of the following is true: srcBegin is negative srcBegin is greater than srcEnd srcEnd is greater than the length of this String dstBegin is negative dstBegin+(srcEnd-srcBegin) is larger than dst.length"
+  ([^String this ^Integer src-begin ^Integer src-end dst ^Integer dst-begin]
+    (-> this (.getBytes src-begin src-end dst dst-begin)))
+  ([^String this ^java.lang.String charset-name]
     (-> this (.getBytes charset-name)))
-  ([^java.lang.String this]
-    (-> this (.getBytes)))
-  ([^java.lang.String this ^Integer src-begin ^Integer src-end dst ^Integer dst-begin]
-    (-> this (.getBytes src-begin src-end dst dst-begin))))
+  ([^String this]
+    (-> this (.getBytes))))
 
 (defn sub-sequence
   "Returns a character sequence that is a subsequence of this sequence.
@@ -420,7 +414,7 @@
   returns: the specified subsequence. - `java.lang.CharSequence`
 
   throws: java.lang.IndexOutOfBoundsException - if beginIndex or endIndex is negative, if endIndex is greater than length(), or if beginIndex is greater than endIndex"
-  (^java.lang.CharSequence [^java.lang.String this ^Integer begin-index ^Integer end-index]
+  (^java.lang.CharSequence [^String this ^Integer begin-index ^Integer end-index]
     (-> this (.subSequence begin-index end-index))))
 
 (defn substring
@@ -441,9 +435,9 @@
   returns: the specified substring. - `java.lang.String`
 
   throws: java.lang.IndexOutOfBoundsException - if the beginIndex is negative, or endIndex is larger than the length of this String object, or beginIndex is larger than endIndex."
-  (^java.lang.String [^java.lang.String this ^Integer begin-index ^Integer end-index]
+  (^java.lang.String [^String this ^Integer begin-index ^Integer end-index]
     (-> this (.substring begin-index end-index)))
-  (^java.lang.String [^java.lang.String this ^Integer begin-index]
+  (^java.lang.String [^String this ^Integer begin-index]
     (-> this (.substring begin-index))))
 
 (defn equals-ignore-case
@@ -466,7 +460,7 @@
 
   returns: true if the argument is not null and it
             represents an equivalent String ignoring case; false otherwise - `boolean`"
-  (^Boolean [^java.lang.String this ^java.lang.String another-string]
+  (^Boolean [^String this ^java.lang.String another-string]
     (-> this (.equalsIgnoreCase another-string))))
 
 (defn replace
@@ -498,7 +492,7 @@
 
   returns: a string derived from this string by replacing every
             occurrence of oldChar with newChar. - `java.lang.String`"
-  (^java.lang.String [^java.lang.String this ^Character old-char ^Character new-char]
+  (^java.lang.String [^String this ^Character old-char ^Character new-char]
     (-> this (.replace old-char new-char))))
 
 (defn to-char-array
@@ -507,7 +501,7 @@
   returns: a newly allocated character array whose length is the length
             of this string and whose contents are initialized to contain
             the character sequence represented by this string. - `char[]`"
-  ([^java.lang.String this]
+  ([^String this]
     (-> this (.toCharArray))))
 
 (defn last-index-of
@@ -538,9 +532,9 @@
             character sequence represented by this object that is less
             than or equal to fromIndex, or -1
             if the character does not occur before that point. - `int`"
-  (^Integer [^java.lang.String this ^Integer ch ^Integer from-index]
+  (^Integer [^String this ^Integer ch ^Integer from-index]
     (-> this (.lastIndexOf ch from-index)))
-  (^Integer [^java.lang.String this ^Integer ch]
+  (^Integer [^String this ^Integer ch]
     (-> this (.lastIndexOf ch))))
 
 (defn char-at
@@ -560,7 +554,7 @@
                The first char value is at index 0. - `char`
 
   throws: java.lang.IndexOutOfBoundsException - if the index argument is negative or not less than the length of this string."
-  (^Character [^java.lang.String this ^Integer index]
+  (^Character [^String this ^Integer index]
     (-> this (.charAt index))))
 
 (defn split
@@ -634,9 +628,9 @@
             around matches of the given regular expression - `java.lang.String[]`
 
   throws: java.util.regex.PatternSyntaxException - if the regular expression's syntax is invalid"
-  ([^java.lang.String this ^java.lang.String regex ^Integer limit]
+  ([^String this ^java.lang.String regex ^Integer limit]
     (-> this (.split regex limit)))
-  ([^java.lang.String this ^java.lang.String regex]
+  ([^String this ^java.lang.String regex]
     (-> this (.split regex))))
 
 (defn to-upper-case
@@ -681,9 +675,9 @@
   locale - use the case transformation rules for this locale - `java.util.Locale`
 
   returns: the String, converted to uppercase. - `java.lang.String`"
-  (^java.lang.String [^java.lang.String this ^java.util.Locale locale]
+  (^java.lang.String [^String this ^java.util.Locale locale]
     (-> this (.toUpperCase locale)))
-  (^java.lang.String [^java.lang.String this]
+  (^java.lang.String [^String this]
     (-> this (.toUpperCase))))
 
 (defn concat
@@ -705,7 +699,7 @@
 
   returns: a string that represents the concatenation of this object's
             characters followed by the string argument's characters. - `java.lang.String`"
-  (^java.lang.String [^java.lang.String this ^java.lang.String str]
+  (^java.lang.String [^String this ^java.lang.String str]
     (-> this (.concat str))))
 
 (defn offset-by-code-points
@@ -721,7 +715,7 @@
   returns: the index within this String - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if index is negative or larger then the length of this String, or if codePointOffset is positive and the substring starting with index has fewer than codePointOffset code points, or if codePointOffset is negative and the substring before index has fewer than the absolute value of codePointOffset code points."
-  (^Integer [^java.lang.String this ^Integer index ^Integer code-point-offset]
+  (^Integer [^String this ^Integer index ^Integer code-point-offset]
     (-> this (.offsetByCodePoints index code-point-offset))))
 
 (defn length
@@ -731,7 +725,7 @@
 
   returns: the length of the sequence of characters represented by this
             object. - `int`"
-  (^Integer [^java.lang.String this]
+  (^Integer [^String this]
     (-> this (.length))))
 
 (defn region-matches
@@ -780,9 +774,9 @@
             false otherwise. Whether the matching is exact
             or case insensitive depends on the ignoreCase
             argument. - `boolean`"
-  (^Boolean [^java.lang.String this ^Boolean ignore-case ^Integer toffset ^java.lang.String other ^Integer ooffset ^Integer len]
+  (^Boolean [^String this ^Boolean ignore-case ^Integer toffset ^java.lang.String other ^Integer ooffset ^Integer len]
     (-> this (.regionMatches ignore-case toffset other ooffset len)))
-  (^Boolean [^java.lang.String this ^Integer toffset ^java.lang.String other ^Integer ooffset ^Integer len]
+  (^Boolean [^String this ^Integer toffset ^java.lang.String other ^Integer ooffset ^Integer len]
     (-> this (.regionMatches toffset other ooffset len))))
 
 (defn matches
@@ -801,7 +795,7 @@
             given regular expression - `boolean`
 
   throws: java.util.regex.PatternSyntaxException - if the regular expression's syntax is invalid"
-  (^Boolean [^java.lang.String this ^java.lang.String regex]
+  (^Boolean [^String this ^java.lang.String regex]
     (-> this (.matches regex))))
 
 (defn intern
@@ -826,7 +820,7 @@
 
   returns: a string that has the same contents as this string, but is
             guaranteed to be from a pool of unique strings. - `java.lang.String`"
-  (^java.lang.String [^java.lang.String this]
+  (^java.lang.String [^String this]
     (-> this (.intern))))
 
 (defn starts-with
@@ -846,9 +840,9 @@
 
 
             this.substring(toffset).startsWith(prefix) - `boolean`"
-  (^Boolean [^java.lang.String this ^java.lang.String prefix ^Integer toffset]
+  (^Boolean [^String this ^java.lang.String prefix ^Integer toffset]
     (-> this (.startsWith prefix toffset)))
-  (^Boolean [^java.lang.String this ^java.lang.String prefix]
+  (^Boolean [^String this ^java.lang.String prefix]
     (-> this (.startsWith prefix))))
 
 (defn hash-code
@@ -863,7 +857,7 @@
    (The hash value of the empty string is zero.)
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.lang.String this]
+  (^Integer [^String this]
     (-> this (.hashCode))))
 
 (defn empty?
@@ -871,7 +865,7 @@
 
   returns: true if length() is 0, otherwise
    false - `boolean`"
-  (^Boolean [^java.lang.String this]
+  (^Boolean [^String this]
     (-> this (.isEmpty))))
 
 (defn code-point-count
@@ -890,7 +884,7 @@
    range - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the beginIndex is negative, or endIndex is larger than the length of this String, or beginIndex is larger than endIndex."
-  (^Integer [^java.lang.String this ^Integer begin-index ^Integer end-index]
+  (^Integer [^String this ^Integer begin-index ^Integer end-index]
     (-> this (.codePointCount begin-index end-index))))
 
 (defn compare-to
@@ -934,7 +928,7 @@
             is lexicographically less than the string argument; and a
             value greater than 0 if this string is
             lexicographically greater than the string argument. - `int`"
-  (^Integer [^java.lang.String this ^java.lang.String another-string]
+  (^Integer [^String this ^java.lang.String another-string]
     (-> this (.compareTo another-string))))
 
 (defn code-point-before
@@ -956,7 +950,7 @@
   returns: the Unicode code point value before the given index. - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the index argument is less than 1 or greater than the length of this string."
-  (^Integer [^java.lang.String this ^Integer index]
+  (^Integer [^String this ^Integer index]
     (-> this (.codePointBefore index))))
 
 (defn index-of
@@ -998,9 +992,9 @@
             character sequence represented by this object that is greater
             than or equal to fromIndex, or -1
             if the character does not occur. - `int`"
-  (^Integer [^java.lang.String this ^Integer ch ^Integer from-index]
+  (^Integer [^String this ^Integer ch ^Integer from-index]
     (-> this (.indexOf ch from-index)))
-  (^Integer [^java.lang.String this ^Integer ch]
+  (^Integer [^String this ^Integer ch]
     (-> this (.indexOf ch))))
 
 (defn content-equals
@@ -1014,7 +1008,7 @@
   returns: true if this String represents the same
             sequence of characters as the specified StringBuffer,
             false otherwise - `boolean`"
-  (^Boolean [^java.lang.String this ^java.lang.StringBuffer sb]
+  (^Boolean [^String this ^java.lang.StringBuffer sb]
     (-> this (.contentEquals sb))))
 
 (defn equals
@@ -1025,7 +1019,7 @@
 
   returns: true if the given object represents a String
             equivalent to this string, false otherwise - `boolean`"
-  (^Boolean [^java.lang.String this ^java.lang.Object an-object]
+  (^Boolean [^String this ^java.lang.Object an-object]
     (-> this (.equals an-object))))
 
 (defn compare-to-ignore-case
@@ -1046,7 +1040,7 @@
   returns: a negative integer, zero, or a positive integer as the
             specified String is greater than, equal to, or less
             than this String, ignoring case considerations. - `int`"
-  (^Integer [^java.lang.String this ^java.lang.String str]
+  (^Integer [^String this ^java.lang.String str]
     (-> this (.compareToIgnoreCase str))))
 
 (defn code-point-at
@@ -1069,6 +1063,6 @@
                index - `int`
 
   throws: java.lang.IndexOutOfBoundsException - if the index argument is negative or not less than the length of this string."
-  (^Integer [^java.lang.String this ^Integer index]
+  (^Integer [^String this ^Integer index]
     (-> this (.codePointAt index))))
 

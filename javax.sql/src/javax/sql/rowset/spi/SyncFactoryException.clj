@@ -12,8 +12,8 @@
    detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^SyncFactoryException [^java.lang.String msg]
     (new SyncFactoryException msg))
-  ([]
+  (^SyncFactoryException []
     (new SyncFactoryException )))
 

@@ -21,13 +21,13 @@
   uri-reference - the URIReference that was being dereferenced when the error was encountered - `javax.xml.crypto.URIReference`
 
   throws: java.lang.NullPointerException - if uriReference is null"
-  ([^java.lang.String message ^java.lang.Throwable cause ^javax.xml.crypto.URIReference uri-reference]
+  (^URIReferenceException [^java.lang.String message ^java.lang.Throwable cause ^javax.xml.crypto.URIReference uri-reference]
     (new URIReferenceException message cause uri-reference))
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^URIReferenceException [^java.lang.String message ^java.lang.Throwable cause]
     (new URIReferenceException message cause))
-  ([^java.lang.String message]
+  (^URIReferenceException [^java.lang.String message]
     (new URIReferenceException message))
-  ([]
+  (^URIReferenceException []
     (new URIReferenceException )))
 
 (defn get-uri-reference
@@ -36,7 +36,7 @@
 
   returns: the URIReference that was being dereferenced
    when the exception was thrown, or null if not specified - `javax.xml.crypto.URIReference`"
-  (^javax.xml.crypto.URIReference [^javax.xml.crypto.URIReferenceException this]
+  (^javax.xml.crypto.URIReference [^URIReferenceException this]
     (-> this (.getURIReference))))
 
 (defn get-cause
@@ -47,7 +47,7 @@
 
   returns: the cause of this URIReferenceException or
       null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.xml.crypto.URIReferenceException this]
+  (^java.lang.Throwable [^URIReferenceException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace
@@ -55,8 +55,8 @@
    the cause's backtrace to the specified print stream.
 
   s - PrintStream to use for output - `java.io.PrintStream`"
-  ([^javax.xml.crypto.URIReferenceException this ^java.io.PrintStream s]
+  ([^URIReferenceException this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([^javax.xml.crypto.URIReferenceException this]
+  ([^URIReferenceException this]
     (-> this (.printStackTrace))))
 

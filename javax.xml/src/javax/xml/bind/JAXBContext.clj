@@ -241,7 +241,7 @@
 
   context-path - list of java package names that contain schema derived classes - `java.lang.String`
   class-loader - This class loader will be used to locate the implementation classes. - `java.lang.ClassLoader`
-  properties - provider-specific properties. Can be null, which means the same thing as passing in an empty map. - `java.util.Map<java.lang.String,?>`
+  properties - provider-specific properties. Can be null, which means the same thing as passing in an empty map. - `java.util.Map`
 
   returns: a new instance of a JAXBContext - `javax.xml.bind.JAXBContext`
 
@@ -260,7 +260,7 @@
   returns: an Unmarshaller object - `javax.xml.bind.Unmarshaller`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while creating the Unmarshaller object"
-  (^javax.xml.bind.Unmarshaller [^javax.xml.bind.JAXBContext this]
+  (^javax.xml.bind.Unmarshaller [^JAXBContext this]
     (-> this (.createUnmarshaller))))
 
 (defn create-marshaller
@@ -270,7 +270,7 @@
   returns: a Marshaller object - `javax.xml.bind.Marshaller`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while creating the Marshaller object"
-  (^javax.xml.bind.Marshaller [^javax.xml.bind.JAXBContext this]
+  (^javax.xml.bind.Marshaller [^JAXBContext this]
     (-> this (.createMarshaller))))
 
 (defn create-validator
@@ -279,21 +279,21 @@
   returns: a Validator object - `javax.xml.bind.Validator`
 
   throws: javax.xml.bind.JAXBException - if an error was encountered while creating the Validator object"
-  (^javax.xml.bind.Validator [^javax.xml.bind.JAXBContext this]
+  (^javax.xml.bind.Validator [^JAXBContext this]
     (-> this (.createValidator))))
 
 (defn create-binder
   "Creates a Binder object that can be used for
    associative/in-place unmarshalling/marshalling.
 
-  dom-type - select the DOM API to use by passing in its DOM Node class. - `java.lang.Class<T>`
+  dom-type - select the DOM API to use by passing in its DOM Node class. - `java.lang.Class`
 
   returns: always a new valid Binder object. - `<T> javax.xml.bind.Binder<T>`
 
   throws: java.lang.UnsupportedOperationException - if DOM API corresponding to domType is not supported by the implementation."
-  ([^javax.xml.bind.JAXBContext this ^java.lang.Class dom-type]
+  ([^JAXBContext this ^java.lang.Class dom-type]
     (-> this (.createBinder dom-type)))
-  (^javax.xml.bind.Binder [^javax.xml.bind.JAXBContext this]
+  (^javax.xml.bind.Binder [^JAXBContext this]
     (-> this (.createBinder))))
 
 (defn create-jaxb-introspector
@@ -303,7 +303,7 @@
   returns: always return a non-null valid JAXBIntrospector object. - `javax.xml.bind.JAXBIntrospector`
 
   throws: java.lang.UnsupportedOperationException - Calling this method on JAXB 1.0 implementations will throw an UnsupportedOperationException."
-  (^javax.xml.bind.JAXBIntrospector [^javax.xml.bind.JAXBContext this]
+  (^javax.xml.bind.JAXBIntrospector [^JAXBContext this]
     (-> this (.createJAXBIntrospector))))
 
 (defn generate-schema
@@ -312,6 +312,6 @@
   output-resolver - this object controls the output to which schemas will be sent. - `javax.xml.bind.SchemaOutputResolver`
 
   throws: java.io.IOException - if SchemaOutputResolver throws an IOException."
-  ([^javax.xml.bind.JAXBContext this ^javax.xml.bind.SchemaOutputResolver output-resolver]
+  ([^JAXBContext this ^javax.xml.bind.SchemaOutputResolver output-resolver]
     (-> this (.generateSchema output-resolver))))
 

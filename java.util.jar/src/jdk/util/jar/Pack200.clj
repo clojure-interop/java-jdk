@@ -87,8 +87,8 @@
    A multi-threaded application should either allocate multiple
    packer engines, or else serialize use of one engine with a lock.
 
-  returns: A newly allocated Packer engine. - `java.util.jar.Pack200.Packer`"
-  (^java.util.jar.Pack200.Packer []
+  returns: A newly allocated Packer engine. - `java.util.jar.Pack200$Packer`"
+  (^java.util.jar.Pack200$Packer []
     (Pack200/newPacker )))
 
 (defn *new-unpacker
@@ -110,7 +110,7 @@
    A multi-threaded application should either allocate multiple
    unpacker engines, or else serialize use of one engine with a lock.
 
-  returns: A newly allocated Unpacker engine. - `java.util.jar.Pack200.Unpacker`"
-  (^java.util.jar.Pack200.Unpacker []
+  returns: A newly allocated Unpacker engine. - `java.util.jar.Pack200$Unpacker`"
+  (^java.util.jar.Pack200$Unpacker []
     (Pack200/newUnpacker )))
 

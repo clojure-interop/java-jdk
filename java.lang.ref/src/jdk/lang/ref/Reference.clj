@@ -12,8 +12,8 @@
    this method returns null.
 
   returns: The object to which this reference refers, or
-             null if this reference object has been cleared - `Reference.T`"
-  (^Reference.T [^java.lang.ref.Reference this]
+             null if this reference object has been cleared - `T`"
+  ([^Reference this]
     (-> this (.get))))
 
 (defn clear
@@ -22,7 +22,7 @@
 
     This method is invoked only by Java code; when the garbage collector
    clears references it does so directly, without invoking this method."
-  ([^java.lang.ref.Reference this]
+  ([^Reference this]
     (-> this (.clear))))
 
 (defn enqueued?
@@ -33,7 +33,7 @@
 
   returns: true if and only if this reference object has
              been enqueued - `boolean`"
-  (^Boolean [^java.lang.ref.Reference this]
+  (^Boolean [^Reference this]
     (-> this (.isEnqueued))))
 
 (defn enqueue
@@ -46,6 +46,6 @@
   returns: true if this reference object was successfully
              enqueued; false if it was already enqueued or if
              it was not registered with a queue when it was created - `boolean`"
-  (^Boolean [^java.lang.ref.Reference this]
+  (^Boolean [^Reference this]
     (-> this (.enqueue))))
 

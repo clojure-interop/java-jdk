@@ -24,34 +24,34 @@
   "Returns the type of event.
 
   returns: the type of event - `int`"
-  (^Integer [^javax.accessibility.AccessibleTableModelChange this]
+  (^Integer [^AccessibleTableModelChange this]
     (-> this (.getType))))
 
 (defn get-first-row
   "Returns the first row that changed.
 
   returns: the first row that changed - `int`"
-  (^Integer [^javax.accessibility.AccessibleTableModelChange this]
+  (^Integer [^AccessibleTableModelChange this]
     (-> this (.getFirstRow))))
 
 (defn get-last-row
   "Returns the last row that changed.
 
   returns: the last row that changed - `int`"
-  (^Integer [^javax.accessibility.AccessibleTableModelChange this]
+  (^Integer [^AccessibleTableModelChange this]
     (-> this (.getLastRow))))
 
 (defn get-first-column
   "Returns the first column that changed.
 
   returns: the first column that changed - `int`"
-  (^Integer [^javax.accessibility.AccessibleTableModelChange this]
+  (^Integer [^AccessibleTableModelChange this]
     (-> this (.getFirstColumn))))
 
 (defn get-last-column
   "Returns the last column that changed.
 
   returns: the last column that changed - `int`"
-  (^Integer [^javax.accessibility.AccessibleTableModelChange this]
+  (^Integer [^AccessibleTableModelChange this]
     (-> this (.getLastColumn))))
 

@@ -374,7 +374,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.JobStateReason this]
+  ([^JobStateReason this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -385,6 +385,6 @@
    category name is `job-state-reason`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.JobStateReason this]
+  (^java.lang.String [^JobStateReason this]
     (-> this (.getName))))
 

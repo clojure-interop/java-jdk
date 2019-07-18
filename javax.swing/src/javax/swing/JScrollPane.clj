@@ -120,27 +120,27 @@
   view - the component to display in the scrollpanes viewport - `java.awt.Component`
   vsb-policy - an integer that specifies the vertical scrollbar policy - `int`
   hsb-policy - an integer that specifies the horizontal scrollbar policy - `int`"
-  ([^java.awt.Component view ^Integer vsb-policy ^Integer hsb-policy]
+  (^JScrollPane [^java.awt.Component view ^Integer vsb-policy ^Integer hsb-policy]
     (new JScrollPane view vsb-policy hsb-policy))
-  ([^Integer vsb-policy ^Integer hsb-policy]
+  (^JScrollPane [^Integer vsb-policy ^Integer hsb-policy]
     (new JScrollPane vsb-policy hsb-policy))
-  ([^java.awt.Component view]
+  (^JScrollPane [^java.awt.Component view]
     (new JScrollPane view))
-  ([]
+  (^JScrollPane []
     (new JScrollPane )))
 
 (defn get-viewport-border-bounds
   "Returns the bounds of the viewport's border.
 
   returns: a Rectangle object specifying the viewport border - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^javax.swing.JScrollPane this]
+  (^java.awt.Rectangle [^JScrollPane this]
     (-> this (.getViewportBorderBounds))))
 
 (defn get-vertical-scroll-bar-policy
   "Returns the vertical scroll bar policy value.
 
   returns: the verticalScrollBarPolicy property - `int`"
-  (^Integer [^javax.swing.JScrollPane this]
+  (^Integer [^JScrollPane this]
     (-> this (.getVerticalScrollBarPolicy))))
 
 (defn set-layout
@@ -155,7 +155,7 @@
   layout - the specified layout manager - `java.awt.LayoutManager`
 
   throws: java.lang.ClassCastException - if layout is not a ScrollPaneLayout"
-  ([^javax.swing.JScrollPane this ^java.awt.LayoutManager layout]
+  ([^JScrollPane this ^java.awt.LayoutManager layout]
     (-> this (.setLayout layout))))
 
 (defn set-viewport
@@ -170,7 +170,7 @@
    to add a viewport and a view to the scrollpane.
 
   viewport - the new viewport to be used; if viewport is null, the old viewport is still removed and the new viewport is set to null - `javax.swing.JViewport`"
-  ([^javax.swing.JScrollPane this ^javax.swing.JViewport viewport]
+  ([^JScrollPane this ^javax.swing.JViewport viewport]
     (-> this (.setViewport viewport))))
 
 (defn set-viewport-border
@@ -184,14 +184,14 @@
    and feel implementation.
 
   viewport-border - the border to be added - `javax.swing.border.Border`"
-  ([^javax.swing.JScrollPane this ^javax.swing.border.Border viewport-border]
+  ([^JScrollPane this ^javax.swing.border.Border viewport-border]
     (-> this (.setViewportBorder viewport-border))))
 
 (defn get-row-header
   "Returns the row header.
 
   returns: the rowHeader property - `javax.swing.JViewport`"
-  (^javax.swing.JViewport [^javax.swing.JScrollPane this]
+  (^javax.swing.JViewport [^JScrollPane this]
     (-> this (.getRowHeader))))
 
 (defn get-ui-class-id
@@ -199,7 +199,7 @@
    render this component.
 
   returns: the string `ScrollPaneUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JScrollPane this]
+  (^java.lang.String [^JScrollPane this]
     (-> this (.getUIClassID))))
 
 (defn validate-root?
@@ -209,7 +209,7 @@
    validated.
 
   returns: true - `boolean`"
-  (^Boolean [^javax.swing.JScrollPane this]
+  (^Boolean [^JScrollPane this]
     (-> this (.isValidateRoot))))
 
 (defn set-vertical-scroll-bar
@@ -219,7 +219,7 @@
    horizontal scrollbars by default.
 
   vertical-scroll-bar - the new vertical scrollbar to be added - `javax.swing.JScrollBar`"
-  ([^javax.swing.JScrollPane this ^javax.swing.JScrollBar vertical-scroll-bar]
+  ([^JScrollPane this ^javax.swing.JScrollBar vertical-scroll-bar]
     (-> this (.setVerticalScrollBar vertical-scroll-bar))))
 
 (defn create-horizontal-scroll-bar
@@ -230,7 +230,7 @@
    create the horizontal scrollbar.
 
   returns: a JScrollBar with a horizontal orientation - `javax.swing.JScrollBar`"
-  (^javax.swing.JScrollBar [^javax.swing.JScrollPane this]
+  (^javax.swing.JScrollBar [^JScrollPane this]
     (-> this (.createHorizontalScrollBar))))
 
 (defn set-row-header
@@ -244,7 +244,7 @@
    to add a row header component and its viewport to the scroll pane.
 
   row-header - the new row header to be used; if null the old row header is still removed and the new rowHeader is set to null - `javax.swing.JViewport`"
-  ([^javax.swing.JScrollPane this ^javax.swing.JViewport row-header]
+  ([^JScrollPane this ^javax.swing.JViewport row-header]
     (-> this (.setRowHeader row-header))))
 
 (defn create-vertical-scroll-bar
@@ -255,7 +255,7 @@
    vertical scrollbar.
 
   returns: a JScrollBar with a vertical orientation - `javax.swing.JScrollBar`"
-  (^javax.swing.JScrollBar [^javax.swing.JScrollPane this]
+  (^javax.swing.JScrollBar [^JScrollPane this]
     (-> this (.createVerticalScrollBar))))
 
 (defn set-ui
@@ -263,7 +263,7 @@
    look and feel (L&F) for this component.
 
   ui - the ScrollPaneUI L&F object - `javax.swing.plaf.ScrollPaneUI`"
-  ([^javax.swing.JScrollPane this ^javax.swing.plaf.ScrollPaneUI ui]
+  ([^JScrollPane this ^javax.swing.plaf.ScrollPaneUI ui]
     (-> this (.setUI ui))))
 
 (defn set-horizontal-scroll-bar-policy
@@ -276,7 +276,7 @@
   policy - one of the three values listed above - `int`
 
   throws: java.lang.IllegalArgumentException - if policy is not one of the legal values shown above"
-  ([^javax.swing.JScrollPane this ^Integer policy]
+  ([^JScrollPane this ^Integer policy]
     (-> this (.setHorizontalScrollBarPolicy policy))))
 
 (defn get-ui
@@ -284,7 +284,7 @@
 
   returns: the ScrollPaneUI object that renders this
                             component - `javax.swing.plaf.ScrollPaneUI`"
-  (^javax.swing.plaf.ScrollPaneUI [^javax.swing.JScrollPane this]
+  (^javax.swing.plaf.ScrollPaneUI [^JScrollPane this]
     (-> this (.getUI))))
 
 (defn set-vertical-scroll-bar-policy
@@ -298,7 +298,7 @@
   policy - one of the three values listed above - `int`
 
   throws: java.lang.IllegalArgumentException - if policy is not one of the legal values shown above"
-  ([^javax.swing.JScrollPane this ^Integer policy]
+  ([^JScrollPane this ^Integer policy]
     (-> this (.setVerticalScrollBarPolicy policy))))
 
 (defn set-wheel-scrolling-enabled
@@ -306,7 +306,7 @@
    Wheel scrolling is enabled by default.
 
   handle-wheel - true if scrolling should be done automatically for a MouseWheelEvent, false otherwise. - `boolean`"
-  ([^javax.swing.JScrollPane this ^Boolean handle-wheel]
+  ([^JScrollPane this ^Boolean handle-wheel]
     (-> this (.setWheelScrollingEnabled handle-wheel))))
 
 (defn set-row-header-view
@@ -320,7 +320,7 @@
    scrollpane.setRowHeaderView(myBigComponentsRowHeader);
 
   view - the component to display as the row header - `java.awt.Component`"
-  ([^javax.swing.JScrollPane this ^java.awt.Component view]
+  ([^JScrollPane this ^java.awt.Component view]
     (-> this (.setRowHeaderView view))))
 
 (defn set-corner
@@ -349,7 +349,7 @@
   corner - one of the following components: lowerLeft lowerRight upperLeft upperRight - `java.awt.Component`
 
   throws: java.lang.IllegalArgumentException - if corner key is invalid"
-  ([^javax.swing.JScrollPane this ^java.lang.String key ^java.awt.Component corner]
+  ([^JScrollPane this ^java.lang.String key ^java.awt.Component corner]
     (-> this (.setCorner key corner))))
 
 (defn set-viewport-view
@@ -365,7 +365,7 @@
    Applications should not add children directly to the scrollpane.
 
   view - the component to add to the viewport - `java.awt.Component`"
-  ([^javax.swing.JScrollPane this ^java.awt.Component view]
+  ([^JScrollPane this ^java.awt.Component view]
     (-> this (.setViewportView view))))
 
 (defn get-accessible-context
@@ -376,28 +376,28 @@
 
   returns: an AccessibleJScrollPane that serves as the
            AccessibleContext of this JScrollPane - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JScrollPane this]
+  (^javax.accessibility.AccessibleContext [^JScrollPane this]
     (-> this (.getAccessibleContext))))
 
 (defn get-viewport
   "Returns the current JViewport.
 
   returns: the viewport property - `javax.swing.JViewport`"
-  (^javax.swing.JViewport [^javax.swing.JScrollPane this]
+  (^javax.swing.JViewport [^JScrollPane this]
     (-> this (.getViewport))))
 
 (defn get-horizontal-scroll-bar-policy
   "Returns the horizontal scroll bar policy value.
 
   returns: the horizontalScrollBarPolicy property - `int`"
-  (^Integer [^javax.swing.JScrollPane this]
+  (^Integer [^JScrollPane this]
     (-> this (.getHorizontalScrollBarPolicy))))
 
 (defn get-column-header
   "Returns the column header.
 
   returns: the columnHeader property - `javax.swing.JViewport`"
-  (^javax.swing.JViewport [^javax.swing.JScrollPane this]
+  (^javax.swing.JViewport [^JScrollPane this]
     (-> this (.getColumnHeader))))
 
 (defn set-column-header-view
@@ -411,7 +411,7 @@
    scrollpane.setColumnHeaderView(myBigComponentsColumnHeader);
 
   view - the component to display as the column header - `java.awt.Component`"
-  ([^javax.swing.JScrollPane this ^java.awt.Component view]
+  ([^JScrollPane this ^java.awt.Component view]
     (-> this (.setColumnHeaderView view))))
 
 (defn set-component-orientation
@@ -420,7 +420,7 @@
    ComponentOrientation argument.
 
   co - one of the following values: java.awt.ComponentOrientation.LEFT_TO_RIGHT java.awt.ComponentOrientation.RIGHT_TO_LEFT java.awt.ComponentOrientation.UNKNOWN - `java.awt.ComponentOrientation`"
-  ([^javax.swing.JScrollPane this ^java.awt.ComponentOrientation co]
+  ([^JScrollPane this ^java.awt.ComponentOrientation co]
     (-> this (.setComponentOrientation co))))
 
 (defn get-vertical-scroll-bar
@@ -428,7 +428,7 @@
    vertical view position.
 
   returns: the verticalScrollBar property - `javax.swing.JScrollBar`"
-  (^javax.swing.JScrollBar [^javax.swing.JScrollPane this]
+  (^javax.swing.JScrollBar [^JScrollPane this]
     (-> this (.getVerticalScrollBar))))
 
 (defn wheel-scrolling-enabled?
@@ -436,21 +436,21 @@
    mouse wheel.  Wheel scrolling is enabled by default.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.JScrollPane this]
+  (^Boolean [^JScrollPane this]
     (-> this (.isWheelScrollingEnabled))))
 
 (defn update-ui
   "Replaces the current ScrollPaneUI object with a version
    from the current default look and feel.
    To be called when the default look and feel changes."
-  ([^javax.swing.JScrollPane this]
+  ([^JScrollPane this]
     (-> this (.updateUI))))
 
 (defn get-viewport-border
   "Returns the Border object that surrounds the viewport.
 
   returns: the viewportBorder property - `javax.swing.border.Border`"
-  (^javax.swing.border.Border [^javax.swing.JScrollPane this]
+  (^javax.swing.border.Border [^JScrollPane this]
     (-> this (.getViewportBorder))))
 
 (defn set-column-header
@@ -463,7 +463,7 @@
    to add a column header component and its viewport to the scroll pane.
 
   column-header - `javax.swing.JViewport`"
-  ([^javax.swing.JScrollPane this ^javax.swing.JViewport column-header]
+  ([^JScrollPane this ^javax.swing.JViewport column-header]
     (-> this (.setColumnHeader column-header))))
 
 (defn set-horizontal-scroll-bar
@@ -473,7 +473,7 @@
    horizontal and vertical scrollbars by default.
 
   horizontal-scroll-bar - the horizontal scrollbar to be added - `javax.swing.JScrollBar`"
-  ([^javax.swing.JScrollPane this ^javax.swing.JScrollBar horizontal-scroll-bar]
+  ([^JScrollPane this ^javax.swing.JScrollBar horizontal-scroll-bar]
     (-> this (.setHorizontalScrollBar horizontal-scroll-bar))))
 
 (defn get-horizontal-scroll-bar
@@ -481,7 +481,7 @@
    horizontal view position.
 
   returns: the horizontalScrollBar property - `javax.swing.JScrollBar`"
-  (^javax.swing.JScrollBar [^javax.swing.JScrollPane this]
+  (^javax.swing.JScrollBar [^JScrollPane this]
     (-> this (.getHorizontalScrollBar))))
 
 (defn get-corner
@@ -502,6 +502,6 @@
   returns: the corner component (which may be null)
            identified by the given key, or null
            if the key is invalid - `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.JScrollPane this ^java.lang.String key]
+  (^java.awt.Component [^JScrollPane this ^java.lang.String key]
     (-> this (.getCorner key))))
 

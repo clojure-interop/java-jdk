@@ -34,11 +34,11 @@
   data-array - The short array for the DataBuffer. - `short[]`
   size - The size of the DataBuffer bank. - `int`
   offset - The offset into the dataArray. - `int`"
-  ([data-array ^Integer size ^Integer offset]
+  (^DataBufferShort [data-array ^Integer size ^Integer offset]
     (new DataBufferShort data-array size offset))
-  ([^Integer size ^Integer num-banks]
+  (^DataBufferShort [^Integer size ^Integer num-banks]
     (new DataBufferShort size num-banks))
-  ([^Integer size]
+  (^DataBufferShort [^Integer size]
     (new DataBufferShort size)))
 
 (defn get-data
@@ -52,9 +52,9 @@
   bank - The bank whose data array you want to get. - `int`
 
   returns: The data array for the specified bank. - `short[]`"
-  ([^java.awt.image.DataBufferShort this ^Integer bank]
+  ([^DataBufferShort this ^Integer bank]
     (-> this (.getData bank)))
-  ([^java.awt.image.DataBufferShort this]
+  ([^DataBufferShort this]
     (-> this (.getData))))
 
 (defn get-bank-data
@@ -66,7 +66,7 @@
    an associated image in video memory).
 
   returns: All of the data arrays. - `short[][]`"
-  ([^java.awt.image.DataBufferShort this]
+  ([^DataBufferShort this]
     (-> this (.getBankData))))
 
 (defn get-elem
@@ -76,9 +76,9 @@
   i - The data array element you want to get. - `int`
 
   returns: The requested data array element as an integer. - `int`"
-  (^Integer [^java.awt.image.DataBufferShort this ^Integer bank ^Integer i]
+  (^Integer [^DataBufferShort this ^Integer bank ^Integer i]
     (-> this (.getElem bank i)))
-  (^Integer [^java.awt.image.DataBufferShort this ^Integer i]
+  (^Integer [^DataBufferShort this ^Integer i]
     (-> this (.getElem i))))
 
 (defn set-elem
@@ -88,8 +88,8 @@
   bank - The bank in which you want to set the data array element. - `int`
   i - The data array element you want to set. - `int`
   val - The integer value to which you want to set the specified data array element. - `int`"
-  ([^java.awt.image.DataBufferShort this ^Integer bank ^Integer i ^Integer val]
+  ([^DataBufferShort this ^Integer bank ^Integer i ^Integer val]
     (-> this (.setElem bank i val)))
-  ([^java.awt.image.DataBufferShort this ^Integer i ^Integer val]
+  ([^DataBufferShort this ^Integer i ^Integer val]
     (-> this (.setElem i val))))
 

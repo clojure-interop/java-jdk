@@ -6,7 +6,7 @@
 
 (defn ->synth-tool-tip-ui
   "Constructor."
-  ([]
+  (^SynthToolTipUI []
     (new SynthToolTipUI )))
 
 (defn *create-ui
@@ -24,7 +24,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthToolTipUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^SynthToolTipUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn update
@@ -37,7 +37,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthToolTipUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthToolTipUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint-border
@@ -49,7 +49,7 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^javax.swing.plaf.synth.SynthToolTipUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthToolTipUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn paint
@@ -59,7 +59,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthToolTipUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthToolTipUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-preferred-size
@@ -73,13 +73,13 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.synth.SynthToolTipUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^SynthToolTipUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 
 (defn property-change
   "This method gets called when a bound property is changed.
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.plaf.synth.SynthToolTipUI this ^java.beans.PropertyChangeEvent e]
+  ([^SynthToolTipUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 

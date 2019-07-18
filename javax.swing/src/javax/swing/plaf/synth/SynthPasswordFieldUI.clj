@@ -6,7 +6,7 @@
 
 (defn ->synth-password-field-ui
   "Constructor."
-  ([]
+  (^SynthPasswordFieldUI []
     (new SynthPasswordFieldUI )))
 
 (defn *create-ui
@@ -24,7 +24,7 @@
   elem - the element - `javax.swing.text.Element`
 
   returns: the view - `javax.swing.text.View`"
-  (^javax.swing.text.View [^javax.swing.plaf.synth.SynthPasswordFieldUI this ^javax.swing.text.Element elem]
+  (^javax.swing.text.View [^SynthPasswordFieldUI this ^javax.swing.text.Element elem]
     (-> this (.create elem))))
 
 (defn paint-border
@@ -36,6 +36,6 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^javax.swing.plaf.synth.SynthPasswordFieldUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthPasswordFieldUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 

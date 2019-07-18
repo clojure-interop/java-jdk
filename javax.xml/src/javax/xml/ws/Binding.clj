@@ -10,16 +10,16 @@
    is required to configure the binding instance with the new chain.
 
   returns: java.util.List<Handler> Handler chain - `java.util.List<javax.xml.ws.handler.Handler>`"
-  (^java.util.List [^javax.xml.ws.Binding this]
+  (^java.util.List [^Binding this]
     (-> this (.getHandlerChain))))
 
 (defn set-handler-chain
   "Sets the handler chain for the protocol binding instance.
 
-  chain - A List of handler configuration entries - `java.util.List<javax.xml.ws.handler.Handler>`
+  chain - A List of handler configuration entries - `java.util.List`
 
   throws: javax.xml.ws.WebServiceException - On an error in the configuration of the handler chain"
-  ([^javax.xml.ws.Binding this ^java.util.List chain]
+  ([^Binding this ^java.util.List chain]
     (-> this (.setHandlerChain chain))))
 
 (defn get-binding-id
@@ -27,6 +27,6 @@
 
   returns: String The binding identifier for the port.
       Never returns null - `java.lang.String`"
-  (^java.lang.String [^javax.xml.ws.Binding this]
+  (^java.lang.String [^Binding this]
     (-> this (.getBindingID))))
 

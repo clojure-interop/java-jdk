@@ -13,6 +13,6 @@
   "Return the bounds comprising this intersection type.
 
   returns: the bounds of this intersection types. - `java.util.List<? extends javax.lang.model.type.TypeMirror>`"
-  ([^javax.lang.model.type.IntersectionType this]
+  ([^IntersectionType this]
     (-> this (.getBounds))))
 

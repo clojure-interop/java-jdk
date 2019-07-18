@@ -62,7 +62,7 @@
    implements the given interface, which is assumed to be interface Attribute or a subinterface thereof.
 
   object - Object to test. - `java.lang.Object`
-  interface-name - Interface the object must implement. - `java.lang.Class<?>`
+  interface-name - Interface the object must implement. - `java.lang.Class`
 
   returns: If object is a Class
             that implements interfaceName,
@@ -78,7 +78,7 @@
    thereof.
 
   object - Object to test. - `java.lang.Object`
-  interface-name - Interface of which the object must be an instance. - `java.lang.Class<?>`
+  interface-name - Interface of which the object must be an instance. - `java.lang.Class`
 
   returns: If object is an instance of
             interfaceName, object is returned
@@ -94,7 +94,7 @@
    category of the given attribute value object. If so, this method
    returns doing nothing. If not, this method throws an exception.
 
-  category - Attribute category to test. - `java.lang.Class<?>`
+  category - Attribute category to test. - `java.lang.Class`
   attribute - Attribute value to test. - `javax.print.attribute.Attribute`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if the category is null or if the attribute is null."

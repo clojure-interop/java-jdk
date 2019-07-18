@@ -129,14 +129,14 @@
 
   returns: a Point2D object containing the ending coordinates of
            the path or null if there are no points in the path. - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.geom.Path2D this]
+  (^java.awt.geom.Point2D [^Path2D this]
     (-> this (.getCurrentPoint))))
 
 (defn get-winding-rule
   "Returns the fill style winding rule.
 
   returns: an integer representing the current winding rule. - `int`"
-  (^Integer [^java.awt.geom.Path2D this]
+  (^Integer [^Path2D this]
     (-> this (.getWindingRule))))
 
 (defn get-path-iterator
@@ -181,7 +181,7 @@
 
   returns: a new PathIterator that independently traverses
            a flattened view of the geometry of the  Shape. - `java.awt.geom.PathIterator`"
-  (^java.awt.geom.PathIterator [^java.awt.geom.Path2D this ^java.awt.geom.AffineTransform at ^Double flatness]
+  (^java.awt.geom.PathIterator [^Path2D this ^java.awt.geom.AffineTransform at ^Double flatness]
     (-> this (.getPathIterator at flatness))))
 
 (defn line-to
@@ -191,7 +191,7 @@
 
   x - the specified X coordinate - `double`
   y - the specified Y coordinate - `double`"
-  ([^java.awt.geom.Path2D this ^Double x ^Double y]
+  ([^Path2D this ^Double x ^Double y]
     (-> this (.lineTo x y))))
 
 (defn contains
@@ -245,11 +245,11 @@
             intersects method returns true
             and the containment calculations would be too expensive to
             perform. - `boolean`"
-  (^Boolean [^java.awt.geom.Path2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^Path2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.contains x y w h)))
-  (^Boolean [^java.awt.geom.Path2D this ^Double x ^Double y]
+  (^Boolean [^Path2D this ^Double x ^Double y]
     (-> this (.contains x y)))
-  (^Boolean [^java.awt.geom.Path2D this ^java.awt.geom.Point2D p]
+  (^Boolean [^Path2D this ^java.awt.geom.Point2D p]
     (-> this (.contains p))))
 
 (defn transform
@@ -259,7 +259,7 @@
    boundary defined by this object.
 
   at - the AffineTransform used to transform the area - `java.awt.geom.AffineTransform`"
-  ([^java.awt.geom.Path2D this ^java.awt.geom.AffineTransform at]
+  ([^Path2D this ^java.awt.geom.AffineTransform at]
     (-> this (.transform at))))
 
 (defn curve-to
@@ -276,14 +276,14 @@
   y-2 - the Y coordinate of the second Bézier control point - `double`
   x-3 - the X coordinate of the final end point - `double`
   y-3 - the Y coordinate of the final end point - `double`"
-  ([^java.awt.geom.Path2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2 ^Double x-3 ^Double y-3]
+  ([^Path2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2 ^Double x-3 ^Double y-3]
     (-> this (.curveTo x-1 y-1 x-2 y-2 x-3 y-3))))
 
 (defn reset
   "Resets the path to empty.  The append position is set back to the
    beginning of the path and all coordinates and point types are
    forgotten."
-  ([^java.awt.geom.Path2D this]
+  ([^Path2D this]
     (-> this (.reset))))
 
 (defn move-to
@@ -292,7 +292,7 @@
 
   x - the specified X coordinate - `double`
   y - the specified Y coordinate - `double`"
-  ([^java.awt.geom.Path2D this ^Double x ^Double y]
+  ([^Path2D this ^Double x ^Double y]
     (-> this (.moveTo x y))))
 
 (defn create-transformed-shape
@@ -314,7 +314,7 @@
 
   returns: a new Shape, transformed with the specified
            AffineTransform. - `java.awt.Shape`"
-  (^java.awt.Shape [^java.awt.geom.Path2D this ^java.awt.geom.AffineTransform at]
+  (^java.awt.Shape [^Path2D this ^java.awt.geom.AffineTransform at]
     (-> this (.createTransformedShape at))))
 
 (defn append
@@ -334,7 +334,7 @@
 
   s - the Shape whose geometry is appended to this path - `java.awt.Shape`
   connect - a boolean to control whether or not to turn an initial moveTo segment into a lineTo segment to connect the new geometry to the existing path - `boolean`"
-  ([^java.awt.geom.Path2D this ^java.awt.Shape s ^Boolean connect]
+  ([^Path2D this ^java.awt.Shape s ^Boolean connect]
     (-> this (.append s connect))))
 
 (defn clone
@@ -343,7 +343,7 @@
   returns: a clone of this instance. - `java.lang.Object`
 
   throws: java.lang.OutOfMemoryError - if there is not enough memory."
-  (^java.lang.Object [^java.awt.geom.Path2D this]
+  (^java.lang.Object [^Path2D this]
     (-> this (.clone))))
 
 (defn get-bounds
@@ -386,7 +386,7 @@
 
   returns: an integer Rectangle that completely encloses
                    the Shape. - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^java.awt.geom.Path2D this]
+  (^java.awt.Rectangle [^Path2D this]
     (-> this (.getBounds))))
 
 (defn set-winding-rule
@@ -395,14 +395,14 @@
   rule - an integer representing the specified winding rule - `int`
 
   throws: java.lang.IllegalArgumentException - if rule is not either WIND_EVEN_ODD or WIND_NON_ZERO"
-  ([^java.awt.geom.Path2D this ^Integer rule]
+  ([^Path2D this ^Integer rule]
     (-> this (.setWindingRule rule))))
 
 (defn close-path
   "Closes the current subpath by drawing a straight line back to
    the coordinates of the last moveTo.  If the path is already
    closed then this method has no effect."
-  ([^java.awt.geom.Path2D this]
+  ([^Path2D this]
     (-> this (.closePath))))
 
 (defn intersects
@@ -452,9 +452,9 @@
             the interior of the rectangular area intersect, or are
             both highly likely to intersect and intersection calculations
             would be too expensive to perform; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.geom.Path2D this ^Double x ^Double y ^Double w ^Double h]
+  (^Boolean [^Path2D this ^Double x ^Double y ^Double w ^Double h]
     (-> this (.intersects x y w h)))
-  (^Boolean [^java.awt.geom.Path2D this ^java.awt.geom.Rectangle2D r]
+  (^Boolean [^Path2D this ^java.awt.geom.Rectangle2D r]
     (-> this (.intersects r))))
 
 (defn quad-to
@@ -469,6 +469,6 @@
   y-1 - the Y coordinate of the quadratic control point - `double`
   x-2 - the X coordinate of the final end point - `double`
   y-2 - the Y coordinate of the final end point - `double`"
-  ([^java.awt.geom.Path2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
+  ([^Path2D this ^Double x-1 ^Double y-1 ^Double x-2 ^Double y-2]
     (-> this (.quadTo x-1 y-1 x-2 y-2))))
 

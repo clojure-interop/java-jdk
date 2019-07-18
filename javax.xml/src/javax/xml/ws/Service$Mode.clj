@@ -5,13 +5,13 @@
 (def MESSAGE
   "Enum Constant.
 
-  type: javax.xml.ws.Service.Mode"
+  type: javax.xml.ws.Service$Mode"
   Service$Mode/MESSAGE)
 
 (def PAYLOAD
   "Enum Constant.
 
-  type: javax.xml.ws.Service.Mode"
+  type: javax.xml.ws.Service$Mode"
   Service$Mode/PAYLOAD)
 
 (defn *values
@@ -23,7 +23,7 @@
   for (Service.Mode c : Service.Mode.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.xml.ws.Service.Mode[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.xml.ws.Service$Mode[]`"
   ([]
     (Service$Mode/values )))
 
@@ -35,9 +35,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.xml.ws.Service.Mode`
+  returns: the enum constant with the specified name - `javax.xml.ws.Service$Mode`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.xml.ws.Service.Mode [^java.lang.String name]
+  (^javax.xml.ws.Service$Mode [^java.lang.String name]
     (Service$Mode/valueOf name)))
 

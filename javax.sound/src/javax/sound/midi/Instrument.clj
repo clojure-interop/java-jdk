@@ -16,6 +16,6 @@
    numbers where this instrument is to be stored in the synthesizer.
 
   returns: this instrument's patch - `javax.sound.midi.Patch`"
-  (^javax.sound.midi.Patch [^javax.sound.midi.Instrument this]
+  (^javax.sound.midi.Patch [^Instrument this]
     (-> this (.getPatch))))
 

@@ -9,7 +9,7 @@
   The DialogType instance to use for
    specifying the cross-platform, pure Java print dialog.
 
-  type: java.awt.JobAttributes.DialogType"
+  type: java.awt.JobAttributes$DialogType"
   JobAttributes$DialogType/COMMON)
 
 (def *-native
@@ -18,7 +18,7 @@
   The DialogType instance to use for
    specifying the platform's native print dialog.
 
-  type: java.awt.JobAttributes.DialogType"
+  type: java.awt.JobAttributes$DialogType"
   JobAttributes$DialogType/NATIVE)
 
 (def *-none
@@ -27,20 +27,20 @@
   The DialogType instance to use for
    specifying no print dialog.
 
-  type: java.awt.JobAttributes.DialogType"
+  type: java.awt.JobAttributes$DialogType"
   JobAttributes$DialogType/NONE)
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.JobAttributes$DialogType this]
+  (^Integer [^JobAttributes$DialogType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.JobAttributes$DialogType this]
+  (^java.lang.String [^JobAttributes$DialogType this]
     (-> this (.toString))))
 

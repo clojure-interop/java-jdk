@@ -42,11 +42,11 @@
   orientation - the initial orientation -- it must be either HORIZONTAL or VERTICAL - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is neither HORIZONTAL nor VERTICAL"
-  ([^java.lang.String name ^Integer orientation]
+  (^JToolBar [^java.lang.String name ^Integer orientation]
     (new JToolBar name orientation))
-  ([^Integer orientation]
+  (^JToolBar [^Integer orientation]
     (new JToolBar orientation))
-  ([]
+  (^JToolBar []
     (new JToolBar )))
 
 (defn get-orientation
@@ -55,7 +55,7 @@
 
   returns: an integer representing the current orientation -- either
             HORIZONTAL or VERTICAL - `int`"
-  (^Integer [^javax.swing.JToolBar this]
+  (^Integer [^JToolBar this]
     (-> this (.getOrientation))))
 
 (defn set-floatable
@@ -69,14 +69,14 @@
    they will ignore this property.
 
   b - if true, the tool bar can be moved; false otherwise - `boolean`"
-  ([^javax.swing.JToolBar this ^Boolean b]
+  ([^JToolBar this ^Boolean b]
     (-> this (.setFloatable b))))
 
 (defn set-layout
   "Description copied from class: Container
 
   mgr - the specified layout manager - `java.awt.LayoutManager`"
-  ([^javax.swing.JToolBar this ^java.awt.LayoutManager mgr]
+  ([^JToolBar this ^java.awt.LayoutManager mgr]
     (-> this (.setLayout mgr))))
 
 (defn get-component-index
@@ -87,7 +87,7 @@
 
   returns: an integer indicating the component's position,
             where 0 is first - `int`"
-  (^Integer [^javax.swing.JToolBar this ^java.awt.Component c]
+  (^Integer [^JToolBar this ^java.awt.Component c]
     (-> this (.getComponentIndex c))))
 
 (defn get-component-at-index
@@ -97,7 +97,7 @@
 
   returns: the Component at that position,
             or null for an invalid index - `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.JToolBar this ^Integer i]
+  (^java.awt.Component [^JToolBar this ^Integer i]
     (-> this (.getComponentAtIndex i))))
 
 (defn set-margin
@@ -111,14 +111,14 @@
    effectively be ignored).
 
   m - an Insets object that defines the space between the border and the buttons - `java.awt.Insets`"
-  ([^javax.swing.JToolBar this ^java.awt.Insets m]
+  ([^JToolBar this ^java.awt.Insets m]
     (-> this (.setMargin m))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `ToolBarUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JToolBar this]
+  (^java.lang.String [^JToolBar this]
     (-> this (.getUIClassID))))
 
 (defn add-separator
@@ -126,9 +126,9 @@
    of the tool bar.
 
   size - the Dimension of the separator - `java.awt.Dimension`"
-  ([^javax.swing.JToolBar this ^java.awt.Dimension size]
+  ([^JToolBar this ^java.awt.Dimension size]
     (-> this (.addSeparator size)))
-  ([^javax.swing.JToolBar this]
+  ([^JToolBar this]
     (-> this (.addSeparator))))
 
 (defn set-border-painted
@@ -139,35 +139,35 @@
    they will ignore this property.
 
   b - if true, the border is painted - `boolean`"
-  ([^javax.swing.JToolBar this ^Boolean b]
+  ([^JToolBar this ^Boolean b]
     (-> this (.setBorderPainted b))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the ToolBarUI L&F object - `javax.swing.plaf.ToolBarUI`"
-  ([^javax.swing.JToolBar this ^javax.swing.plaf.ToolBarUI ui]
+  ([^JToolBar this ^javax.swing.plaf.ToolBarUI ui]
     (-> this (.setUI ui))))
 
 (defn get-ui
   "Returns the tool bar's current UI.
 
   returns: `javax.swing.plaf.ToolBarUI`"
-  (^javax.swing.plaf.ToolBarUI [^javax.swing.JToolBar this]
+  (^javax.swing.plaf.ToolBarUI [^JToolBar this]
     (-> this (.getUI))))
 
 (defn rollover?
   "Returns the rollover state.
 
   returns: true if rollover toolbar buttons are to be drawn; otherwise false - `boolean`"
-  (^Boolean [^javax.swing.JToolBar this]
+  (^Boolean [^JToolBar this]
     (-> this (.isRollover))))
 
 (defn floatable?
   "Gets the floatable property.
 
   returns: the value of the floatable property - `boolean`"
-  (^Boolean [^javax.swing.JToolBar this]
+  (^Boolean [^JToolBar this]
     (-> this (.isFloatable))))
 
 (defn get-accessible-context
@@ -178,7 +178,7 @@
 
   returns: an AccessibleJToolBar that serves as the
            AccessibleContext of this JToolBar - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JToolBar this]
+  (^javax.accessibility.AccessibleContext [^JToolBar this]
     (-> this (.getAccessibleContext))))
 
 (defn set-orientation
@@ -190,7 +190,7 @@
   o - the new orientation -- either HORIZONTAL or VERTICAL - `int`
 
   throws: java.lang.IllegalArgumentException - if orientation is neither HORIZONTAL nor VERTICAL"
-  ([^javax.swing.JToolBar this ^Integer o]
+  ([^JToolBar this ^Integer o]
     (-> this (.setOrientation o))))
 
 (defn add
@@ -199,14 +199,14 @@
   a - the Action object to add as a new menu item - `javax.swing.Action`
 
   returns: the new button which dispatches the action - `javax.swing.JButton`"
-  (^javax.swing.JButton [^javax.swing.JToolBar this ^javax.swing.Action a]
+  (^javax.swing.JButton [^JToolBar this ^javax.swing.Action a]
     (-> this (.add a))))
 
 (defn border-painted?
   "Gets the borderPainted property.
 
   returns: the value of the borderPainted property - `boolean`"
-  (^Boolean [^javax.swing.JToolBar this]
+  (^Boolean [^JToolBar this]
     (-> this (.isBorderPainted))))
 
 (defn set-rollover
@@ -219,14 +219,14 @@
    property.
 
   rollover - true for rollover toolbar buttons; otherwise false - `boolean`"
-  ([^javax.swing.JToolBar this ^Boolean rollover]
+  ([^JToolBar this ^Boolean rollover]
     (-> this (.setRollover rollover))))
 
 (defn update-ui
   "Notification from the UIFactory that the L&F has changed.
    Called to replace the UI with the latest version from the
    UIFactory."
-  ([^javax.swing.JToolBar this]
+  ([^JToolBar this]
     (-> this (.updateUI))))
 
 (defn get-margin
@@ -234,6 +234,6 @@
    its buttons.
 
   returns: an Insets object containing the margin values - `java.awt.Insets`"
-  (^java.awt.Insets [^javax.swing.JToolBar this]
+  (^java.awt.Insets [^JToolBar this]
     (-> this (.getMargin))))
 

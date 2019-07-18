@@ -16,7 +16,7 @@
    moment this PointerInfo was created.
 
   returns: GraphicsDevice corresponding to the pointer - `java.awt.GraphicsDevice`"
-  (^java.awt.GraphicsDevice [^java.awt.PointerInfo this]
+  (^java.awt.GraphicsDevice [^PointerInfo this]
     (-> this (.getDevice))))
 
 (defn get-location
@@ -25,6 +25,6 @@
    about coordinate calculation for multiscreen systems.
 
   returns: coordinates of mouse pointer - `java.awt.Point`"
-  (^java.awt.Point [^java.awt.PointerInfo this]
+  (^java.awt.Point [^PointerInfo this]
     (-> this (.getLocation))))
 

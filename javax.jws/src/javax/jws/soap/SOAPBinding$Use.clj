@@ -5,13 +5,13 @@
 (def LITERAL
   "Enum Constant.
 
-  type: javax.jws.soap.SOAPBinding.Use"
+  type: javax.jws.soap.SOAPBinding$Use"
   SOAPBinding$Use/LITERAL)
 
 (def ENCODED
   "Enum Constant.
 
-  type: javax.jws.soap.SOAPBinding.Use"
+  type: javax.jws.soap.SOAPBinding$Use"
   SOAPBinding$Use/ENCODED)
 
 (defn *values
@@ -23,7 +23,7 @@
   for (SOAPBinding.Use c : SOAPBinding.Use.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.jws.soap.SOAPBinding.Use[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.jws.soap.SOAPBinding$Use[]`"
   ([]
     (SOAPBinding$Use/values )))
 
@@ -35,9 +35,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.jws.soap.SOAPBinding.Use`
+  returns: the enum constant with the specified name - `javax.jws.soap.SOAPBinding$Use`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.jws.soap.SOAPBinding.Use [^java.lang.String name]
+  (^javax.jws.soap.SOAPBinding$Use [^java.lang.String name]
     (SOAPBinding$Use/valueOf name)))
 

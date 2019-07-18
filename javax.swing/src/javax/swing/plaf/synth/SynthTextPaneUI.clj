@@ -15,7 +15,7 @@
 
 (defn ->synth-text-pane-ui
   "Constructor."
-  ([]
+  (^SynthTextPaneUI []
     (new SynthTextPaneUI )))
 
 (defn *create-ui
@@ -47,7 +47,7 @@
    to represent the model.
 
   c - the editor component - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthTextPaneUI this ^javax.swing.JComponent c]
+  ([^SynthTextPaneUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn paint-border
@@ -59,6 +59,6 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^javax.swing.plaf.synth.SynthTextPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthTextPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 

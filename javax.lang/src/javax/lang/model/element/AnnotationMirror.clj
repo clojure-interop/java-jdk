@@ -12,7 +12,7 @@
   "Returns the type of this annotation.
 
   returns: the type of this annotation - `javax.lang.model.type.DeclaredType`"
-  (^javax.lang.model.type.DeclaredType [^javax.lang.model.element.AnnotationMirror this]
+  (^javax.lang.model.type.DeclaredType [^AnnotationMirror this]
     (-> this (.getAnnotationType))))
 
 (defn get-element-values
@@ -32,6 +32,6 @@
 
   returns: the values of this annotation's elements,
             or an empty map if there are none - `java.util.Map<? extends javax.lang.model.element.ExecutableElement,? extends javax.lang.model.element.AnnotationValue>`"
-  ([^javax.lang.model.element.AnnotationMirror this]
+  ([^AnnotationMirror this]
     (-> this (.getElementValues))))
 

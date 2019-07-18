@@ -8,6 +8,6 @@
 (defn run
   "Sets this Future to the result of its computation
    unless it has been cancelled."
-  ([^java.util.concurrent.RunnableFuture this]
+  ([^RunnableFuture this]
     (-> this (.run))))
 

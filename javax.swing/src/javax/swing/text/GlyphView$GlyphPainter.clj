@@ -13,7 +13,7 @@
 
 (defn ->glyph-painter
   "Constructor."
-  ([]
+  (^GlyphView$GlyphPainter []
     (new GlyphView$GlyphPainter )))
 
 (defn get-painter
@@ -27,29 +27,29 @@
   p-0 - the starting document offset >= 0 - `int`
   p-1 - the ending document offset >= p0 - `int`
 
-  returns: `javax.swing.text.GlyphView.GlyphPainter`"
-  (^javax.swing.text.GlyphView.GlyphPainter [^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer p-0 ^Integer p-1]
+  returns: `javax.swing.text.GlyphView$GlyphPainter`"
+  (^javax.swing.text.GlyphView$GlyphPainter [^GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer p-0 ^Integer p-1]
     (-> this (.getPainter v p-0 p-1))))
 
 (defn get-ascent
   "v - `javax.swing.text.GlyphView`
 
   returns: `float`"
-  (^Float [^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v]
+  (^Float [^GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v]
     (-> this (.getAscent v))))
 
 (defn get-descent
   "v - `javax.swing.text.GlyphView`
 
   returns: `float`"
-  (^Float [^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v]
+  (^Float [^GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v]
     (-> this (.getDescent v))))
 
 (defn get-height
   "v - `javax.swing.text.GlyphView`
 
   returns: `float`"
-  (^Float [^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v]
+  (^Float [^GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v]
     (-> this (.getHeight v))))
 
 (defn paint
@@ -60,7 +60,7 @@
   a - `java.awt.Shape`
   p-0 - `int`
   p-1 - `int`"
-  ([^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^java.awt.Graphics g ^java.awt.Shape a ^Integer p-0 ^Integer p-1]
+  ([^GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^java.awt.Graphics g ^java.awt.Shape a ^Integer p-0 ^Integer p-1]
     (-> this (.paint v g a p-0 p-1))))
 
 (defn get-bounded-position
@@ -77,7 +77,7 @@
   len - specifies the distance into the view where a potential break is desired >= 0. - `float`
 
   returns: the maximum model location possible for a break. - `int`"
-  (^Integer [^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer p-0 ^Float x ^Float len]
+  (^Integer [^GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer p-0 ^Float x ^Float len]
     (-> this (.getBoundedPosition v p-0 x len))))
 
 (defn view-to-model
@@ -88,11 +88,11 @@
   x - the X coordinate - `float`
   y - the Y coordinate - `float`
   a - the allocated region to render into - `java.awt.Shape`
-  bias-return - either Position.Bias.Forward or Position.Bias.Backward is returned as the zero-th element of this array - `javax.swing.text.Position.Bias[]`
+  bias-return - either Position.Bias.Forward or Position.Bias.Backward is returned as the zero-th element of this array - `javax.swing.text.Position$Bias[]`
 
   returns: the location within the model that best represents the
            given point of view - `int`"
-  (^Integer [^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Float x ^Float y ^java.awt.Shape a bias-return]
+  (^Integer [^GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Float x ^Float y ^java.awt.Shape a bias-return]
     (-> this (.viewToModel v x y a bias-return))))
 
 (defn get-span
@@ -106,7 +106,7 @@
   x - `float`
 
   returns: `float`"
-  (^Float [^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer p-0 ^Integer p-1 ^javax.swing.text.TabExpander e ^Float x]
+  (^Float [^GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer p-0 ^Integer p-1 ^javax.swing.text.TabExpander e ^Float x]
     (-> this (.getSpan v p-0 p-1 e x))))
 
 (defn model-to-view
@@ -116,13 +116,13 @@
 
   v - the GlyphView containing the destination coordinate space - `javax.swing.text.GlyphView`
   pos - the position to convert - `int`
-  bias - either Position.Bias.Forward or Position.Bias.Backward - `javax.swing.text.Position.Bias`
+  bias - either Position.Bias.Forward or Position.Bias.Backward - `javax.swing.text.Position$Bias`
   a - Bounds of the View - `java.awt.Shape`
 
   returns: the bounding box of the given position - `java.awt.Shape`
 
   throws: javax.swing.text.BadLocationException - if the given position does not represent a valid location in the associated document"
-  (^java.awt.Shape [^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer pos ^javax.swing.text.Position.Bias bias ^java.awt.Shape a]
+  (^java.awt.Shape [^GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer pos ^javax.swing.text.Position$Bias bias ^java.awt.Shape a]
     (-> this (.modelToView v pos bias a))))
 
 (defn get-next-visual-position-from
@@ -134,15 +134,15 @@
 
   v - the view to use - `javax.swing.text.GlyphView`
   pos - the position to convert >= 0 - `int`
-  b - either Position.Bias.Forward or Position.Bias.Backward - `javax.swing.text.Position.Bias`
+  b - either Position.Bias.Forward or Position.Bias.Backward - `javax.swing.text.Position$Bias`
   a - the allocated region to render into - `java.awt.Shape`
   direction - the direction from the current position that can be thought of as the arrow keys typically found on a keyboard. This may be SwingConstants.WEST, SwingConstants.EAST, SwingConstants.NORTH, or SwingConstants.SOUTH. - `int`
-  bias-ret - either Position.Bias.Forward or Position.Bias.Backward is returned as the zero-th element of this array - `javax.swing.text.Position.Bias[]`
+  bias-ret - either Position.Bias.Forward or Position.Bias.Backward is returned as the zero-th element of this array - `javax.swing.text.Position$Bias[]`
 
   returns: the location within the model that best represents the next
     location visual position. - `int`
 
   throws: javax.swing.text.BadLocationException"
-  (^Integer [^javax.swing.text.GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer pos ^javax.swing.text.Position.Bias b ^java.awt.Shape a ^Integer direction bias-ret]
+  (^Integer [^GlyphView$GlyphPainter this ^javax.swing.text.GlyphView v ^Integer pos ^javax.swing.text.Position$Bias b ^java.awt.Shape a ^Integer direction bias-ret]
     (-> this (.getNextVisualPositionFrom v pos b a direction bias-ret))))
 

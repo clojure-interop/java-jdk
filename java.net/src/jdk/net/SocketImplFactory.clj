@@ -10,6 +10,6 @@
   "Creates a new SocketImpl instance.
 
   returns: a new instance of SocketImpl. - `java.net.SocketImpl`"
-  (^java.net.SocketImpl [^java.net.SocketImplFactory this]
+  (^java.net.SocketImpl [^SocketImplFactory this]
     (-> this (.createSocketImpl))))
 

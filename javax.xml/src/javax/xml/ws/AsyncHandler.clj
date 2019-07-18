@@ -8,7 +8,7 @@
 (defn handle-response
   "Called when the response to an asynchronous operation is available.
 
-  res - The response to the operation invocation. - `javax.xml.ws.Response<AsyncHandler.T>`"
-  ([^javax.xml.ws.AsyncHandler this ^javax.xml.ws.Response res]
+  res - The response to the operation invocation. - `javax.xml.ws.Response`"
+  ([^AsyncHandler this ^javax.xml.ws.Response res]
     (-> this (.handleResponse res))))
 

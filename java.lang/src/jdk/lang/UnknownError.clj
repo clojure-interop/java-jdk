@@ -11,8 +11,8 @@
    message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^UnknownError [^java.lang.String s]
     (new UnknownError s))
-  ([]
+  (^UnknownError []
     (new UnknownError )))
 

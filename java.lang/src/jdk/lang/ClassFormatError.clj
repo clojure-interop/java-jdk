@@ -12,8 +12,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^ClassFormatError [^java.lang.String s]
     (new ClassFormatError s))
-  ([]
+  (^ClassFormatError []
     (new ClassFormatError )))
 

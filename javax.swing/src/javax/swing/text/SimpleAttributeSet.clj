@@ -19,9 +19,9 @@
   Creates a new attribute set based on a supplied set of attributes.
 
   source - the set of attributes - `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.AttributeSet source]
+  (^SimpleAttributeSet [^javax.swing.text.AttributeSet source]
     (new SimpleAttributeSet source))
-  ([]
+  (^SimpleAttributeSet []
     (new SimpleAttributeSet )))
 
 (def *-empty
@@ -38,28 +38,28 @@
   attr - the second attribute set - `javax.swing.text.AttributeSet`
 
   returns: true if the sets are equal, false otherwise - `boolean`"
-  (^Boolean [^javax.swing.text.SimpleAttributeSet this ^javax.swing.text.AttributeSet attr]
+  (^Boolean [^SimpleAttributeSet this ^javax.swing.text.AttributeSet attr]
     (-> this (.isEqual attr))))
 
 (defn set-resolve-parent
   "Sets the resolving parent.
 
   parent - the parent - `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.SimpleAttributeSet this ^javax.swing.text.AttributeSet parent]
+  ([^SimpleAttributeSet this ^javax.swing.text.AttributeSet parent]
     (-> this (.setResolveParent parent))))
 
 (defn to-string
   "Converts the attribute set to a String.
 
   returns: the string - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.SimpleAttributeSet this]
+  (^java.lang.String [^SimpleAttributeSet this]
     (-> this (.toString))))
 
 (defn get-attribute-count
   "Gets a count of the number of attributes.
 
   returns: the count - `int`"
-  (^Integer [^javax.swing.text.SimpleAttributeSet this]
+  (^Integer [^SimpleAttributeSet this]
     (-> this (.getAttributeCount))))
 
 (defn get-resolve-parent
@@ -70,7 +70,7 @@
    through.
 
   returns: the parent - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.SimpleAttributeSet this]
+  (^javax.swing.text.AttributeSet [^SimpleAttributeSet this]
     (-> this (.getResolveParent))))
 
 (defn get-attribute
@@ -79,49 +79,49 @@
   name - the attribute name - `java.lang.Object`
 
   returns: the value - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.text.SimpleAttributeSet this ^java.lang.Object name]
+  (^java.lang.Object [^SimpleAttributeSet this ^java.lang.Object name]
     (-> this (.getAttribute name))))
 
 (defn remove-attribute
   "Removes an attribute from the list.
 
   name - the attribute name - `java.lang.Object`"
-  ([^javax.swing.text.SimpleAttributeSet this ^java.lang.Object name]
+  ([^SimpleAttributeSet this ^java.lang.Object name]
     (-> this (.removeAttribute name))))
 
 (defn add-attributes
   "Adds a set of attributes to the list.
 
   attributes - the set of attributes to add - `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.SimpleAttributeSet this ^javax.swing.text.AttributeSet attributes]
+  ([^SimpleAttributeSet this ^javax.swing.text.AttributeSet attributes]
     (-> this (.addAttributes attributes))))
 
 (defn copy-attributes
   "Makes a copy of the attributes.
 
   returns: the copy - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.SimpleAttributeSet this]
+  (^javax.swing.text.AttributeSet [^SimpleAttributeSet this]
     (-> this (.copyAttributes))))
 
 (defn remove-attributes
   "Removes a set of attributes from the list.
 
-  names - the set of names to remove - `java.util.Enumeration<?>`"
-  ([^javax.swing.text.SimpleAttributeSet this ^java.util.Enumeration names]
+  names - the set of names to remove - `java.util.Enumeration`"
+  ([^SimpleAttributeSet this ^java.util.Enumeration names]
     (-> this (.removeAttributes names))))
 
 (defn clone
   "Clones a set of attributes.
 
   returns: the new set of attributes - `java.lang.Object`"
-  (^java.lang.Object [^javax.swing.text.SimpleAttributeSet this]
+  (^java.lang.Object [^SimpleAttributeSet this]
     (-> this (.clone))))
 
 (defn hash-code
   "Returns a hashcode for this set of attributes.
 
   returns: a hashcode value for this set of attributes. - `int`"
-  (^Integer [^javax.swing.text.SimpleAttributeSet this]
+  (^Integer [^SimpleAttributeSet this]
     (-> this (.hashCode))))
 
 (defn defined?
@@ -130,7 +130,7 @@
   attr-name - the attribute name - `java.lang.Object`
 
   returns: true if the attribute is defined - `boolean`"
-  (^Boolean [^javax.swing.text.SimpleAttributeSet this ^java.lang.Object attr-name]
+  (^Boolean [^SimpleAttributeSet this ^java.lang.Object attr-name]
     (-> this (.isDefined attr-name))))
 
 (defn add-attribute
@@ -138,14 +138,14 @@
 
   name - the attribute name - `java.lang.Object`
   value - the attribute value - `java.lang.Object`"
-  ([^javax.swing.text.SimpleAttributeSet this ^java.lang.Object name ^java.lang.Object value]
+  ([^SimpleAttributeSet this ^java.lang.Object name ^java.lang.Object value]
     (-> this (.addAttribute name value))))
 
 (defn empty?
   "Checks whether the set of attributes is empty.
 
   returns: true if the set is empty else false - `boolean`"
-  (^Boolean [^javax.swing.text.SimpleAttributeSet this]
+  (^Boolean [^SimpleAttributeSet this]
     (-> this (.isEmpty))))
 
 (defn contains-attributes
@@ -155,7 +155,7 @@
   attributes - the attribute list - `javax.swing.text.AttributeSet`
 
   returns: true if the list contains all the name/value pairs - `boolean`"
-  (^Boolean [^javax.swing.text.SimpleAttributeSet this ^javax.swing.text.AttributeSet attributes]
+  (^Boolean [^SimpleAttributeSet this ^javax.swing.text.AttributeSet attributes]
     (-> this (.containsAttributes attributes))))
 
 (defn contains-attribute
@@ -166,14 +166,14 @@
   value - the value - `java.lang.Object`
 
   returns: true if the name/value pair is in the list - `boolean`"
-  (^Boolean [^javax.swing.text.SimpleAttributeSet this ^java.lang.Object name ^java.lang.Object value]
+  (^Boolean [^SimpleAttributeSet this ^java.lang.Object name ^java.lang.Object value]
     (-> this (.containsAttribute name value))))
 
 (defn get-attribute-names
   "Gets the names of the attributes in the set.
 
   returns: the names as an Enumeration - `java.util.Enumeration<?>`"
-  (^java.util.Enumeration [^javax.swing.text.SimpleAttributeSet this]
+  (^java.util.Enumeration [^SimpleAttributeSet this]
     (-> this (.getAttributeNames))))
 
 (defn equals
@@ -185,6 +185,6 @@
 
   returns: true if the objects are equal;
               false otherwise - `boolean`"
-  (^Boolean [^javax.swing.text.SimpleAttributeSet this ^java.lang.Object obj]
+  (^Boolean [^SimpleAttributeSet this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

@@ -25,45 +25,45 @@
 (defn *fields-in
   "Returns a list of fields in elements.
 
-  elements - the elements to filter - `javax.lang.model.element.Element>`
+  elements - the elements to filter - `java.lang.Iterable`
 
   returns: a list of fields in elements - `java.util.List<javax.lang.model.element.VariableElement>`"
-  (^java.util.List [^javax.lang.model.element.Element> elements]
+  (^java.util.List [^java.lang.Iterable elements]
     (ElementFilter/fieldsIn elements)))
 
 (defn *constructors-in
   "Returns a list of constructors in elements.
 
-  elements - the elements to filter - `javax.lang.model.element.Element>`
+  elements - the elements to filter - `java.lang.Iterable`
 
   returns: a list of constructors in elements - `java.util.List<javax.lang.model.element.ExecutableElement>`"
-  (^java.util.List [^javax.lang.model.element.Element> elements]
+  (^java.util.List [^java.lang.Iterable elements]
     (ElementFilter/constructorsIn elements)))
 
 (defn *methods-in
   "Returns a list of methods in elements.
 
-  elements - the elements to filter - `javax.lang.model.element.Element>`
+  elements - the elements to filter - `java.lang.Iterable`
 
   returns: a list of methods in elements - `java.util.List<javax.lang.model.element.ExecutableElement>`"
-  (^java.util.List [^javax.lang.model.element.Element> elements]
+  (^java.util.List [^java.lang.Iterable elements]
     (ElementFilter/methodsIn elements)))
 
 (defn *types-in
   "Returns a list of types in elements.
 
-  elements - the elements to filter - `javax.lang.model.element.Element>`
+  elements - the elements to filter - `java.lang.Iterable`
 
   returns: a list of types in elements - `java.util.List<javax.lang.model.element.TypeElement>`"
-  (^java.util.List [^javax.lang.model.element.Element> elements]
+  (^java.util.List [^java.lang.Iterable elements]
     (ElementFilter/typesIn elements)))
 
 (defn *packages-in
   "Returns a list of packages in elements.
 
-  elements - the elements to filter - `javax.lang.model.element.Element>`
+  elements - the elements to filter - `java.lang.Iterable`
 
   returns: a list of packages in elements - `java.util.List<javax.lang.model.element.PackageElement>`"
-  (^java.util.List [^javax.lang.model.element.Element> elements]
+  (^java.util.List [^java.lang.Iterable elements]
     (ElementFilter/packagesIn elements)))
 

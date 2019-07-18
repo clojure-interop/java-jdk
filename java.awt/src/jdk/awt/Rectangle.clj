@@ -97,13 +97,13 @@
   y - the specified Y coordinate - `int`
   width - the width of the Rectangle - `int`
   height - the height of the Rectangle - `int`"
-  ([^Integer x ^Integer y ^Integer width ^Integer height]
+  (^Rectangle [^Integer x ^Integer y ^Integer width ^Integer height]
     (new Rectangle x y width height))
-  ([^Integer width ^Integer height]
+  (^Rectangle [^Integer width ^Integer height]
     (new Rectangle width height))
-  ([^java.awt.Rectangle r]
+  (^Rectangle [^java.awt.Rectangle r]
     (new Rectangle r))
-  ([]
+  (^Rectangle []
     (new Rectangle )))
 
 (defn -x
@@ -155,7 +155,7 @@
   y - the Y coordinate of the upper-left corner of the specified rectangle - `double`
   width - the width of the specified rectangle - `double`
   height - the new height of the specified rectangle - `double`"
-  ([^java.awt.Rectangle this ^Double x ^Double y ^Double width ^Double height]
+  ([^Rectangle this ^Double x ^Double y ^Double width ^Double height]
     (-> this (.setRect x y width height))))
 
 (defn get-location
@@ -166,7 +166,7 @@
 
   returns: the Point that is the upper-left corner of
                     this Rectangle. - `java.awt.Point`"
-  (^java.awt.Point [^java.awt.Rectangle this]
+  (^java.awt.Point [^Rectangle this]
     (-> this (.getLocation))))
 
 (defn get-width
@@ -174,7 +174,7 @@
    double precision.
 
   returns: the width of the bounding Rectangle. - `double`"
-  (^Double [^java.awt.Rectangle this]
+  (^Double [^Rectangle this]
     (-> this (.getWidth))))
 
 (defn set-location
@@ -185,9 +185,9 @@
 
   x - the X coordinate of the new location - `int`
   y - the Y coordinate of the new location - `int`"
-  ([^java.awt.Rectangle this ^Integer x ^Integer y]
+  ([^Rectangle this ^Integer x ^Integer y]
     (-> this (.setLocation x y)))
-  ([^java.awt.Rectangle this ^java.awt.Point p]
+  ([^Rectangle this ^java.awt.Point p]
     (-> this (.setLocation p))))
 
 (defn translate
@@ -197,7 +197,7 @@
 
   dx - the distance to move this Rectangle along the X axis - `int`
   dy - the distance to move this Rectangle along the Y axis - `int`"
-  ([^java.awt.Rectangle this ^Integer dx ^Integer dy]
+  ([^Rectangle this ^Integer dx ^Integer dy]
     (-> this (.translate dx dy))))
 
 (defn contains
@@ -215,11 +215,11 @@
               (X, Y, W, H)
               is entirely enclosed inside this Rectangle;
               false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Rectangle this ^Integer x ^Integer y ^Integer w ^Integer h]
+  (^Boolean [^Rectangle this ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.contains x y w h)))
-  (^Boolean [^java.awt.Rectangle this ^Integer x ^Integer y]
+  (^Boolean [^Rectangle this ^Integer x ^Integer y]
     (-> this (.contains x y)))
-  (^Boolean [^java.awt.Rectangle this ^java.awt.Point p]
+  (^Boolean [^Rectangle this ^java.awt.Point p]
     (-> this (.contains p))))
 
 (defn union
@@ -246,7 +246,7 @@
   returns: the smallest Rectangle containing both
               the specified Rectangle and this
               Rectangle. - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^java.awt.Rectangle this ^java.awt.Rectangle r]
+  (^java.awt.Rectangle [^Rectangle this ^java.awt.Rectangle r]
     (-> this (.union r))))
 
 (defn to-string
@@ -255,7 +255,7 @@
 
   returns: a String representing this
                  Rectangle object's coordinate and size values. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Rectangle this]
+  (^java.lang.String [^Rectangle this]
     (-> this (.toString))))
 
 (defn reshape
@@ -265,10 +265,8 @@
   x - the new X coordinate for the upper-left corner of this Rectangle - `int`
   y - the new Y coordinate for the upper-left corner of this Rectangle - `int`
   width - the new width for this Rectangle - `int`
-  height - the new height for this Rectangle - `int`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.Rectangle this ^Integer x ^Integer y ^Integer width ^Integer height]
+  height - the new height for this Rectangle - `int`"
+  ([^Rectangle this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.reshape x y width height))))
 
 (defn create-intersection
@@ -281,7 +279,7 @@
   returns: the largest Rectangle2D contained in both
             the specified Rectangle2D and in this
             Rectangle2D. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.Rectangle this ^java.awt.geom.Rectangle2D r]
+  (^java.awt.geom.Rectangle2D [^Rectangle this ^java.awt.geom.Rectangle2D r]
     (-> this (.createIntersection r))))
 
 (defn get-y
@@ -289,7 +287,7 @@
    double precision.
 
   returns: the Y coordinate of the bounding Rectangle. - `double`"
-  (^Double [^java.awt.Rectangle this]
+  (^Double [^Rectangle this]
     (-> this (.getY))))
 
 (defn create-union
@@ -302,7 +300,7 @@
   returns: the smallest Rectangle2D containing both
    the specified Rectangle2D and this
    Rectangle2D. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.Rectangle this ^java.awt.geom.Rectangle2D r]
+  (^java.awt.geom.Rectangle2D [^Rectangle this ^java.awt.geom.Rectangle2D r]
     (-> this (.createUnion r))))
 
 (defn get-x
@@ -310,7 +308,7 @@
    double precision.
 
   returns: the X coordinate of the bounding Rectangle. - `double`"
-  (^Double [^java.awt.Rectangle this]
+  (^Double [^Rectangle this]
     (-> this (.getX))))
 
 (defn intersection
@@ -326,7 +324,7 @@
               specified Rectangle and in
               this Rectangle; or if the rectangles
               do not intersect, an empty rectangle. - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^java.awt.Rectangle this ^java.awt.Rectangle r]
+  (^java.awt.Rectangle [^Rectangle this ^java.awt.Rectangle r]
     (-> this (.intersection r))))
 
 (defn get-height
@@ -334,7 +332,7 @@
    double precision.
 
   returns: the height of the bounding Rectangle. - `double`"
-  (^Double [^java.awt.Rectangle this]
+  (^Double [^Rectangle this]
     (-> this (.getHeight))))
 
 (defn outcode
@@ -349,7 +347,7 @@
   y - the specified Y coordinate - `double`
 
   returns: the logical OR of all appropriate out codes. - `int`"
-  (^Integer [^java.awt.Rectangle this ^Double x ^Double y]
+  (^Integer [^Rectangle this ^Double x ^Double y]
     (-> this (.outcode x y))))
 
 (defn get-bounds-2-d
@@ -392,7 +390,7 @@
 
   returns: an instance of Rectangle2D that is a
                    high-precision bounding box of the Shape. - `java.awt.geom.Rectangle2D`"
-  (^java.awt.geom.Rectangle2D [^java.awt.Rectangle this]
+  (^java.awt.geom.Rectangle2D [^Rectangle this]
     (-> this (.getBounds2D))))
 
 (defn move
@@ -400,10 +398,8 @@
    replaced by setLocation(int, int).
 
   x - the X coordinate of the new location - `int`
-  y - the Y coordinate of the new location - `int`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.Rectangle this ^Integer x ^Integer y]
+  y - the Y coordinate of the new location - `int`"
+  ([^Rectangle this ^Integer x ^Integer y]
     (-> this (.move x y))))
 
 (defn set-size
@@ -415,9 +411,9 @@
 
   width - the new width for this Rectangle - `int`
   height - the new height for this Rectangle - `int`"
-  ([^java.awt.Rectangle this ^Integer width ^Integer height]
+  ([^Rectangle this ^Integer width ^Integer height]
     (-> this (.setSize width height)))
-  ([^java.awt.Rectangle this ^java.awt.Dimension d]
+  ([^Rectangle this ^java.awt.Dimension d]
     (-> this (.setSize d))))
 
 (defn inside
@@ -430,8 +426,8 @@
   returns: true if the point
               (X,Y) is inside this
               Rectangle;
-              false otherwise. - `java.lang.  boolean`"
-  ([^java.awt.Rectangle this ^Integer x ^Integer y]
+              false otherwise. - `boolean`"
+  (^Boolean [^Rectangle this ^Integer x ^Integer y]
     (-> this (.inside x y))))
 
 (defn get-bounds
@@ -443,7 +439,7 @@
 
   returns: a new Rectangle, equal to the
    bounding Rectangle for this Rectangle. - `java.awt.Rectangle`"
-  (^java.awt.Rectangle [^java.awt.Rectangle this]
+  (^java.awt.Rectangle [^Rectangle this]
     (-> this (.getBounds))))
 
 (defn set-bounds
@@ -459,9 +455,9 @@
   y - the new Y coordinate for the upper-left corner of this Rectangle - `int`
   width - the new width for this Rectangle - `int`
   height - the new height for this Rectangle - `int`"
-  ([^java.awt.Rectangle this ^Integer x ^Integer y ^Integer width ^Integer height]
+  ([^Rectangle this ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.setBounds x y width height)))
-  ([^java.awt.Rectangle this ^java.awt.Rectangle r]
+  ([^Rectangle this ^java.awt.Rectangle r]
     (-> this (.setBounds r))))
 
 (defn add
@@ -491,9 +487,9 @@
 
   newx - the X coordinate of the new point - `int`
   newy - the Y coordinate of the new point - `int`"
-  ([^java.awt.Rectangle this ^Integer newx ^Integer newy]
+  ([^Rectangle this ^Integer newx ^Integer newy]
     (-> this (.add newx newy)))
-  ([^java.awt.Rectangle this ^java.awt.Point pt]
+  ([^Rectangle this ^java.awt.Point pt]
     (-> this (.add pt))))
 
 (defn empty?
@@ -503,7 +499,7 @@
 
   returns: true if the RectangularShape is empty;
             false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Rectangle this]
+  (^Boolean [^Rectangle this]
     (-> this (.isEmpty))))
 
 (defn resize
@@ -511,10 +507,8 @@
    replaced by setSize(int, int).
 
   width - the new width for this Rectangle - `int`
-  height - the new height for this Rectangle - `int`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.Rectangle this ^Integer width ^Integer height]
+  height - the new height for this Rectangle - `int`"
+  ([^Rectangle this ^Integer width ^Integer height]
     (-> this (.resize width height))))
 
 (defn get-size
@@ -526,7 +520,7 @@
 
   returns: a Dimension, representing the size of
               this Rectangle. - `java.awt.Dimension`"
-  (^java.awt.Dimension [^java.awt.Rectangle this]
+  (^java.awt.Dimension [^Rectangle this]
     (-> this (.getSize))))
 
 (defn equals
@@ -541,7 +535,7 @@
 
   returns: true if the objects are equal;
               false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Rectangle this ^java.lang.Object obj]
+  (^Boolean [^Rectangle this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn intersects
@@ -554,7 +548,7 @@
   returns: true if the specified Rectangle
               and this Rectangle intersect;
               false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Rectangle this ^java.awt.Rectangle r]
+  (^Boolean [^Rectangle this ^java.awt.Rectangle r]
     (-> this (.intersects r))))
 
 (defn grow
@@ -580,6 +574,6 @@
 
   h - the horizontal expansion - `int`
   v - the vertical expansion - `int`"
-  ([^java.awt.Rectangle this ^Integer h ^Integer v]
+  ([^Rectangle this ^Integer h ^Integer v]
     (-> this (.grow h v))))
 

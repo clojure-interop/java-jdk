@@ -5,6 +5,6 @@
 
 (defn ->datagram-socket-impl
   "Constructor."
-  ([]
+  (^DatagramSocketImpl []
     (new DatagramSocketImpl )))
 

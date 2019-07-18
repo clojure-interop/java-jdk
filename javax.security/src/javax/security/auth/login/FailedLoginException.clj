@@ -15,8 +15,8 @@
    exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^FailedLoginException [^java.lang.String msg]
     (new FailedLoginException msg))
-  ([]
+  (^FailedLoginException []
     (new FailedLoginException )))
 

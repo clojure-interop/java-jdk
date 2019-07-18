@@ -30,7 +30,7 @@
   returns: This channel - `java.nio.channels.NetworkChannel`
 
   throws: java.nio.channels.AlreadyBoundException - If the socket is already bound"
-  (^java.nio.channels.NetworkChannel [^java.nio.channels.NetworkChannel this ^java.net.SocketAddress local]
+  (^java.nio.channels.NetworkChannel [^NetworkChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn get-local-address
@@ -43,31 +43,31 @@
             if the channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  (^java.net.SocketAddress [^java.nio.channels.NetworkChannel this]
+  (^java.net.SocketAddress [^NetworkChannel this]
     (-> this (.getLocalAddress))))
 
 (defn set-option
   "Sets the value of a socket option.
 
-  name - The socket option - `java.net.SocketOption<T>`
+  name - The socket option - `java.net.SocketOption`
   value - The value of the socket option. A value of null may be a valid value for some socket options. - `T`
 
   returns: This channel - `<T> java.nio.channels.NetworkChannel`
 
   throws: java.lang.UnsupportedOperationException - If the socket option is not supported by this channel"
-  ([^java.nio.channels.NetworkChannel this ^java.net.SocketOption name value]
+  ([^NetworkChannel this ^java.net.SocketOption name value]
     (-> this (.setOption name value))))
 
 (defn get-option
   "Returns the value of a socket option.
 
-  name - The socket option - `java.net.SocketOption<T>`
+  name - The socket option - `java.net.SocketOption`
 
   returns: The value of the socket option. A value of null may be
             a valid value for some socket options. - `<T> T`
 
   throws: java.lang.UnsupportedOperationException - If the socket option is not supported by this channel"
-  ([^java.nio.channels.NetworkChannel this ^java.net.SocketOption name]
+  ([^NetworkChannel this ^java.net.SocketOption name]
     (-> this (.getOption name))))
 
 (defn supported-options
@@ -77,6 +77,6 @@
    channel has been closed.
 
   returns: A set of the socket options supported by this channel - `java.util.Set<java.net.SocketOption<?>>`"
-  (^java.util.Set> [^java.nio.channels.NetworkChannel this]
+  (^java.util.Set [^NetworkChannel this]
     (-> this (.supportedOptions))))
 

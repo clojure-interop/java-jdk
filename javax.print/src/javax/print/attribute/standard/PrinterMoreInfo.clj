@@ -27,7 +27,7 @@
   uri - URI. - `java.net.URI`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if uri is null."
-  ([^java.net.URI uri]
+  (^PrinterMoreInfo [^java.net.URI uri]
     (new PrinterMoreInfo uri)))
 
 (defn equals
@@ -47,7 +47,7 @@
 
   returns: True if object is equivalent to this printer
             more info attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.PrinterMoreInfo this ^java.lang.Object object]
+  (^Boolean [^PrinterMoreInfo this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -58,7 +58,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.PrinterMoreInfo this]
+  ([^PrinterMoreInfo this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -69,6 +69,6 @@
    category name is `printer-more-info`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.PrinterMoreInfo this]
+  (^java.lang.String [^PrinterMoreInfo this]
     (-> this (.getName))))
 

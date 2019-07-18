@@ -14,8 +14,8 @@
   attribute - Attribute value to add to the set. - `javax.print.attribute.PrintServiceAttribute`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if attribute is null."
-  ([^javax.print.attribute.PrintServiceAttribute attribute]
+  (^HashPrintServiceAttributeSet [^javax.print.attribute.PrintServiceAttribute attribute]
     (new HashPrintServiceAttributeSet attribute))
-  ([]
+  (^HashPrintServiceAttributeSet []
     (new HashPrintServiceAttributeSet )))
 

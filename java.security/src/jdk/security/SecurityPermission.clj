@@ -277,8 +277,8 @@
   actions - should be null. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^SecurityPermission [^java.lang.String name ^java.lang.String actions]
     (new SecurityPermission name actions))
-  ([^java.lang.String name]
+  (^SecurityPermission [^java.lang.String name]
     (new SecurityPermission name)))
 

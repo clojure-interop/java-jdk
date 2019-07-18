@@ -9,7 +9,7 @@
 
 (defn ->input-stream
   "Constructor."
-  ([]
+  (^InputStream []
     (new InputStream )))
 
 (defn read
@@ -62,11 +62,11 @@
                the stream has been reached. - `int`
 
   throws: java.io.IOException - If the first byte cannot be read for any reason other than end of file, or if the input stream has been closed, or if some other I/O error occurs."
-  (^Integer [^java.io.InputStream this b ^Integer off ^Integer len]
+  (^Integer [^InputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^java.io.InputStream this b]
+  (^Integer [^InputStream this b]
     (-> this (.read b)))
-  (^Integer [^java.io.InputStream this]
+  (^Integer [^InputStream this]
     (-> this (.read))))
 
 (defn skip
@@ -91,7 +91,7 @@
   returns: the actual number of bytes skipped. - `long`
 
   throws: java.io.IOException - if the stream does not support seek, or if some other I/O error occurs."
-  (^Long [^java.io.InputStream this ^Long n]
+  (^Long [^InputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn available
@@ -120,7 +120,7 @@
                it reaches the end of the input stream. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^Integer [^java.io.InputStream this]
+  (^Integer [^InputStream this]
     (-> this (.available))))
 
 (defn close
@@ -131,7 +131,7 @@
    nothing.
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.InputStream this]
+  ([^InputStream this]
     (-> this (.close))))
 
 (defn mark
@@ -157,7 +157,7 @@
    nothing.
 
   readlimit - the maximum limit of bytes that can be read before the mark position becomes invalid. - `int`"
-  ([^java.io.InputStream this ^Integer readlimit]
+  ([^InputStream this ^Integer readlimit]
     (-> this (.mark readlimit))))
 
 (defn reset
@@ -200,7 +200,7 @@
    does nothing except throw an IOException.
 
   throws: java.io.IOException - if this stream has not been marked or if the mark has been invalidated."
-  ([^java.io.InputStream this]
+  ([^InputStream this]
     (-> this (.reset))))
 
 (defn mark-supported
@@ -212,6 +212,6 @@
 
   returns: true if this stream instance supports the mark
             and reset methods; false otherwise. - `boolean`"
-  (^Boolean [^java.io.InputStream this]
+  (^Boolean [^InputStream this]
     (-> this (.markSupported))))
 

@@ -31,10 +31,10 @@
    attributes that are SQL structured types.
 
   in - an instance of Struct - `java.sql.Struct`
-  map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map<java.lang.String,java.lang.Class<?>>`
+  map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs"
-  ([^java.sql.Struct in ^java.util.Map> map]
+  (^SerialStruct [^java.sql.Struct in ^java.util.Map map]
     (new SerialStruct in map)))
 
 (defn get-sql-type-name
@@ -47,7 +47,7 @@
            SerialStruct object represents - `java.lang.String`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs"
-  (^java.lang.String [^javax.sql.rowset.serial.SerialStruct this]
+  (^java.lang.String [^SerialStruct this]
     (-> this (.getSQLTypeName))))
 
 (defn get-attributes
@@ -56,7 +56,7 @@
    Object values, using the given type map for
    custom mapping if appropriate.
 
-  map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map<java.lang.String,java.lang.Class<?>>`
+  map - a java.util.Map object in which each entry consists of 1) a String object giving the fully qualified name of a UDT and 2) the Class object for the SQLData implementation that defines how the UDT is to be mapped - `java.util.Map`
 
   returns: an array of Object values, with each
            element being an attribute of the SQL structured
@@ -64,9 +64,9 @@
            represents - `java.lang.Object[]`
 
   throws: javax.sql.rowset.serial.SerialException - if an error occurs"
-  ([^javax.sql.rowset.serial.SerialStruct this ^java.util.Map> map]
+  ([^SerialStruct this ^java.util.Map map]
     (-> this (.getAttributes map)))
-  ([^javax.sql.rowset.serial.SerialStruct this]
+  ([^SerialStruct this]
     (-> this (.getAttributes))))
 
 (defn equals
@@ -79,7 +79,7 @@
 
   returns: true if the given object represents a SerialStruct
             equivalent to this SerialStruct, false otherwise - `boolean`"
-  (^Boolean [^javax.sql.rowset.serial.SerialStruct this ^java.lang.Object obj]
+  (^Boolean [^SerialStruct this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -89,7 +89,7 @@
    SQLTypeName
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.sql.rowset.serial.SerialStruct this]
+  (^Integer [^SerialStruct this]
     (-> this (.hashCode))))
 
 (defn clone
@@ -98,6 +98,6 @@
    to the original underlying attribs array of this SerialStruct object.
 
   returns: a clone of this SerialStruct - `java.lang.Object`"
-  (^java.lang.Object [^javax.sql.rowset.serial.SerialStruct this]
+  (^java.lang.Object [^SerialStruct this]
     (-> this (.clone))))
 

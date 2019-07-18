@@ -419,7 +419,7 @@
   class-name - Fully-qualified representation class name. - `java.lang.String`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if mimeType is null or className is null."
-  ([^java.lang.String mime-type ^java.lang.String class-name]
+  (^DocFlavor [^java.lang.String mime-type ^java.lang.String class-name]
     (new DocFlavor mime-type class-name)))
 
 (def *-host-encoding
@@ -444,21 +444,21 @@
    canonical form. Each parameter value is enclosed in quotes.
 
   returns: the mime type - `java.lang.String`"
-  (^java.lang.String [^javax.print.DocFlavor this]
+  (^java.lang.String [^DocFlavor this]
     (-> this (.getMimeType))))
 
 (defn get-media-type
   "Returns this doc flavor object's media type (from the MIME type).
 
   returns: the media type - `java.lang.String`"
-  (^java.lang.String [^javax.print.DocFlavor this]
+  (^java.lang.String [^DocFlavor this]
     (-> this (.getMediaType))))
 
 (defn get-media-subtype
   "Returns this doc flavor object's media subtype (from the MIME type).
 
   returns: the media sub-type - `java.lang.String`"
-  (^java.lang.String [^javax.print.DocFlavor this]
+  (^java.lang.String [^DocFlavor this]
     (-> this (.getMediaSubtype))))
 
 (defn get-parameter
@@ -475,14 +475,14 @@
    null if that parameter is not in the mime type string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if paramName is null."
-  (^java.lang.String [^javax.print.DocFlavor this ^java.lang.String param-name]
+  (^java.lang.String [^DocFlavor this ^java.lang.String param-name]
     (-> this (.getParameter param-name))))
 
 (defn get-representation-class-name
   "Returns the name of this doc flavor object's representation class.
 
   returns: the name of the representation class. - `java.lang.String`"
-  (^java.lang.String [^javax.print.DocFlavor this]
+  (^java.lang.String [^DocFlavor this]
     (-> this (.getRepresentationClassName))))
 
 (defn to-string
@@ -492,14 +492,14 @@
             value is enclosed in quotes.
             A `class=` parameter is appended to the
             MIME type string to indicate the representation class name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.DocFlavor this]
+  (^java.lang.String [^DocFlavor this]
     (-> this (.toString))))
 
 (defn hash-code
   "Returns a hash code for this doc flavor object.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.print.DocFlavor this]
+  (^Integer [^DocFlavor this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -519,6 +519,6 @@
 
   returns: True if this doc flavor object equals obj, false
             otherwise. - `boolean`"
-  (^Boolean [^javax.print.DocFlavor this ^java.lang.Object obj]
+  (^Boolean [^DocFlavor this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

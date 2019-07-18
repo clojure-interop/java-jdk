@@ -48,7 +48,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.ColorSupported this]
+  ([^ColorSupported this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -58,6 +58,6 @@
    For class ColorSupported, the category name is `color-supported`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.ColorSupported this]
+  (^java.lang.String [^ColorSupported this]
     (-> this (.getName))))
 

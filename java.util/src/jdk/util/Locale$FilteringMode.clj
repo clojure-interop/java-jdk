@@ -10,7 +10,7 @@
    are basic, basic filtering is selected. Otherwise, extended
    filtering is selected.
 
-  type: java.util.Locale.FilteringMode"
+  type: java.util.Locale$FilteringMode"
   Locale$FilteringMode/AUTOSELECT_FILTERING)
 
 (def EXTENDED_FILTERING
@@ -18,7 +18,7 @@
 
   Specifies extended filtering.
 
-  type: java.util.Locale.FilteringMode"
+  type: java.util.Locale$FilteringMode"
   Locale$FilteringMode/EXTENDED_FILTERING)
 
 (def IGNORE_EXTENDED_RANGES
@@ -27,7 +27,7 @@
   Specifies basic filtering: Note that any extended language ranges
    included in the given Language Priority List are ignored.
 
-  type: java.util.Locale.FilteringMode"
+  type: java.util.Locale$FilteringMode"
   Locale$FilteringMode/IGNORE_EXTENDED_RANGES)
 
 (def MAP_EXTENDED_RANGES
@@ -41,7 +41,7 @@
    not the first subtag, `*` and extra `-` are removed.
    For example, `ja-*-JP` is mapped to `ja-JP`.
 
-  type: java.util.Locale.FilteringMode"
+  type: java.util.Locale$FilteringMode"
   Locale$FilteringMode/MAP_EXTENDED_RANGES)
 
 (def REJECT_EXTENDED_RANGES
@@ -51,7 +51,7 @@
    included in the given Language Priority List, the list is rejected
    and the filtering method throws IllegalArgumentException.
 
-  type: java.util.Locale.FilteringMode"
+  type: java.util.Locale$FilteringMode"
   Locale$FilteringMode/REJECT_EXTENDED_RANGES)
 
 (defn *values
@@ -63,7 +63,7 @@
   for (Locale.FilteringMode c : Locale.FilteringMode.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `java.util.Locale.FilteringMode[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `java.util.Locale$FilteringMode[]`"
   ([]
     (Locale$FilteringMode/values )))
 
@@ -75,9 +75,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `java.util.Locale.FilteringMode`
+  returns: the enum constant with the specified name - `java.util.Locale$FilteringMode`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^java.util.Locale.FilteringMode [^java.lang.String name]
+  (^java.util.Locale$FilteringMode [^java.lang.String name]
     (Locale$FilteringMode/valueOf name)))
 

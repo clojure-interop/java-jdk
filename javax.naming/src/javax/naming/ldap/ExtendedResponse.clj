@@ -44,7 +44,7 @@
 
   returns: A possibly null object identifier string representing the LDAP
            ExtendedResponse.responseName component. - `java.lang.String`"
-  (^java.lang.String [^javax.naming.ldap.ExtendedResponse this]
+  (^java.lang.String [^ExtendedResponse this]
     (-> this (.getID))))
 
 (defn get-encoded-value
@@ -57,6 +57,6 @@
   returns: A possibly null byte array representing the ASN.1 BER encoded
            contents of the LDAP ExtendedResponse.response
            component. - `byte[]`"
-  ([^javax.naming.ldap.ExtendedResponse this]
+  ([^ExtendedResponse this]
     (-> this (.getEncodedValue))))
 

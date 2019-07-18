@@ -50,12 +50,12 @@
    sets.  The behavior of this operation is undefined if the specified
    collection is modified while the operation is in progress.
 
-  c - collection containing elements to be added to this set - `Set.E>`
+  c - collection containing elements to be added to this set - `java.util.Collection`
 
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the addAll operation is not supported by this set"
-  (^Boolean [^java.util.Set this ^Set.E> c]
+  (^Boolean [^Set this ^java.util.Collection c]
     (-> this (.addAll c))))
 
 (defn spliterator
@@ -65,8 +65,8 @@
    Implementations should document the reporting of additional
    characteristic values.
 
-  returns: a Spliterator over the elements in this set - `default java.util.Spliterator<Set.E>`"
-  ([^java.util.Set this]
+  returns: a Spliterator over the elements in this set - `default java.util.Spliterator<E>`"
+  ([^Set this]
     (-> this (.spliterator))))
 
 (defn contains
@@ -80,7 +80,7 @@
   returns: true if this set contains the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this set (optional)"
-  (^Boolean [^java.util.Set this ^java.lang.Object o]
+  (^Boolean [^Set this ^java.lang.Object o]
     (-> this (.contains o))))
 
 (defn iterator
@@ -88,8 +88,8 @@
    returned in no particular order (unless this set is an instance of some
    class that provides a guarantee).
 
-  returns: an iterator over the elements in this set - `java.util.Iterator<Set.E>`"
-  (^java.util.Iterator [^java.util.Set this]
+  returns: an iterator over the elements in this set - `java.util.Iterator<E>`"
+  (^java.util.Iterator [^Set this]
     (-> this (.iterator))))
 
 (defn remove
@@ -107,7 +107,7 @@
   returns: true if this set contained the specified element - `boolean`
 
   throws: java.lang.ClassCastException - if the type of the specified element is incompatible with this set (optional)"
-  (^Boolean [^java.util.Set this ^java.lang.Object o]
+  (^Boolean [^Set this ^java.lang.Object o]
     (-> this (.remove o))))
 
 (defn hash-code
@@ -120,7 +120,7 @@
    Object.hashCode().
 
   returns: the hash code value for this set - `int`"
-  (^Integer [^java.util.Set this]
+  (^Integer [^Set this]
     (-> this (.hashCode))))
 
 (defn add
@@ -141,20 +141,20 @@
    Individual set implementations should clearly document any
    restrictions on the elements that they may contain.
 
-  e - element to be added to this set - `Set.E`
+  e - element to be added to this set - `E`
 
   returns: true if this set did not already contain the specified
            element - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the add operation is not supported by this set"
-  (^Boolean [^java.util.Set this ^Set.E e]
+  (^Boolean [^Set this e]
     (-> this (.add e))))
 
 (defn empty?
   "Returns true if this set contains no elements.
 
   returns: true if this set contains no elements - `boolean`"
-  (^Boolean [^java.util.Set this]
+  (^Boolean [^Set this]
     (-> this (.isEmpty))))
 
 (defn size
@@ -163,7 +163,7 @@
    Integer.MAX_VALUE.
 
   returns: the number of elements in this set (its cardinality) - `int`"
-  (^Integer [^java.util.Set this]
+  (^Integer [^Set this]
     (-> this (.size))))
 
 (defn retain-all
@@ -174,12 +174,12 @@
    operation effectively modifies this set so that its value is the
    intersection of the two sets.
 
-  c - collection containing elements to be retained in this set - `java.util.Collection<?>`
+  c - collection containing elements to be retained in this set - `java.util.Collection`
 
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the retainAll operation is not supported by this set"
-  (^Boolean [^java.util.Set this ^java.util.Collection c]
+  (^Boolean [^Set this ^java.util.Collection c]
     (-> this (.retainAll c))))
 
 (defn clear
@@ -187,7 +187,7 @@
    The set will be empty after this call returns.
 
   throws: java.lang.UnsupportedOperationException - if the clear method is not supported by this set"
-  ([^java.util.Set this]
+  ([^Set this]
     (-> this (.clear))))
 
 (defn to-array
@@ -229,9 +229,9 @@
   returns: an array containing all the elements in this set - `<T> T[]`
 
   throws: java.lang.ArrayStoreException - if the runtime type of the specified array is not a supertype of the runtime type of every element in this set"
-  ([^java.util.Set this a]
+  ([^Set this a]
     (-> this (.toArray a)))
-  ([^java.util.Set this]
+  ([^Set this]
     (-> this (.toArray))))
 
 (defn remove-all
@@ -241,12 +241,12 @@
    set so that its value is the asymmetric set difference of
    the two sets.
 
-  c - collection containing elements to be removed from this set - `java.util.Collection<?>`
+  c - collection containing elements to be removed from this set - `java.util.Collection`
 
   returns: true if this set changed as a result of the call - `boolean`
 
   throws: java.lang.UnsupportedOperationException - if the removeAll operation is not supported by this set"
-  (^Boolean [^java.util.Set this ^java.util.Collection c]
+  (^Boolean [^Set this ^java.util.Collection c]
     (-> this (.removeAll c))))
 
 (defn equals
@@ -261,7 +261,7 @@
   o - object to be compared for equality with this set - `java.lang.Object`
 
   returns: true if the specified object is equal to this set - `boolean`"
-  (^Boolean [^java.util.Set this ^java.lang.Object o]
+  (^Boolean [^Set this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn contains-all
@@ -269,12 +269,12 @@
    specified collection.  If the specified collection is also a set, this
    method returns true if it is a subset of this set.
 
-  c - collection to be checked for containment in this set - `java.util.Collection<?>`
+  c - collection to be checked for containment in this set - `java.util.Collection`
 
   returns: true if this set contains all of the elements of the
            specified collection - `boolean`
 
   throws: java.lang.ClassCastException - if the types of one or more elements in the specified collection are incompatible with this set (optional)"
-  (^Boolean [^java.util.Set this ^java.util.Collection c]
+  (^Boolean [^Set this ^java.util.Collection c]
     (-> this (.containsAll c))))
 

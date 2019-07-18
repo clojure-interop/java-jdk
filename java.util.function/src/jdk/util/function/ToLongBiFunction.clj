@@ -11,10 +11,10 @@
 (defn apply-as-long
   "Applies this function to the given arguments.
 
-  t - the first function argument - `ToLongBiFunction.T`
-  u - the second function argument - `ToLongBiFunction.U`
+  t - the first function argument - `T`
+  u - the second function argument - `U`
 
   returns: the function result - `long`"
-  (^Long [^java.util.function.ToLongBiFunction this ^ToLongBiFunction.T t ^ToLongBiFunction.U u]
+  (^Long [^ToLongBiFunction this t u]
     (-> this (.applyAsLong t u))))
 

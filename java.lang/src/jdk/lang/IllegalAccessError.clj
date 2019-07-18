@@ -15,8 +15,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^IllegalAccessError [^java.lang.String s]
     (new IllegalAccessError s))
-  ([]
+  (^IllegalAccessError []
     (new IllegalAccessError )))
 

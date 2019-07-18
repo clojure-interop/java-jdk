@@ -8,7 +8,7 @@
 
   The intersect filter operation.
 
-  type: javax.xml.crypto.dsig.spec.XPathType.Filter"
+  type: javax.xml.crypto.dsig.spec.XPathType$Filter"
   XPathType$Filter/INTERSECT)
 
 (def *-subtract
@@ -16,7 +16,7 @@
 
   The subtract filter operation.
 
-  type: javax.xml.crypto.dsig.spec.XPathType.Filter"
+  type: javax.xml.crypto.dsig.spec.XPathType$Filter"
   XPathType$Filter/SUBTRACT)
 
 (def *-union
@@ -24,13 +24,13 @@
 
   The union filter operation.
 
-  type: javax.xml.crypto.dsig.spec.XPathType.Filter"
+  type: javax.xml.crypto.dsig.spec.XPathType$Filter"
   XPathType$Filter/UNION)
 
 (defn to-string
   "Returns the string form of the operation.
 
   returns: the string form of the operation - `java.lang.String`"
-  (^java.lang.String [^javax.xml.crypto.dsig.spec.XPathType$Filter this]
+  (^java.lang.String [^XPathType$Filter this]
     (-> this (.toString))))
 

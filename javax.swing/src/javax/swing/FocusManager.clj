@@ -15,7 +15,7 @@
 
 (defn ->focus-manager
   "Constructor."
-  ([]
+  (^FocusManager []
     (new FocusManager )))
 
 (def *-focus-manager-class-property
@@ -62,17 +62,15 @@
 
 (defn *disable-swing-focus-manager
   "Deprecated. as of 1.4, replaced by
-   KeyboardFocusManager.setDefaultFocusTraversalPolicy(FocusTraversalPolicy)
-
-  returns: `java.lang.   void`"
+   KeyboardFocusManager.setDefaultFocusTraversalPolicy(FocusTraversalPolicy)"
   ([]
     (FocusManager/disableSwingFocusManager )))
 
-(defn *is-focus-manager-enabled
+(defn *focus-manager-enabled?
   "Deprecated. As of 1.4, replaced by
      KeyboardFocusManager.getDefaultFocusTraversalPolicy()
 
-  returns: `java.lang.   boolean`"
-  ([]
+  returns: `boolean`"
+  (^Boolean []
     (FocusManager/isFocusManagerEnabled )))
 

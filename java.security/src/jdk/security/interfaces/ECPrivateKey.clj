@@ -7,6 +7,6 @@
   "Returns the private value S.
 
   returns: the private value S. - `java.math.BigInteger`"
-  (^java.math.BigInteger [^java.security.interfaces.ECPrivateKey this]
+  (^java.math.BigInteger [^ECPrivateKey this]
     (-> this (.getS))))
 

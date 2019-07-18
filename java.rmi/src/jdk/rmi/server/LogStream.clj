@@ -33,23 +33,21 @@
 
   name - name identifying the desired LogStream - `java.lang.String`
 
-  returns: log associated with given name - `java.lang.   java.rmi.server.LogStream`"
-  ([^java.lang.String name]
+  returns: log associated with given name - `java.rmi.server.LogStream`"
+  (^java.rmi.server.LogStream [^java.lang.String name]
     (LogStream/log name)))
 
 (defn *get-default-stream
   "Deprecated. no replacement
 
-  returns: default log stream - `java.lang.   java.io.PrintStream`"
-  ([]
+  returns: default log stream - `java.io.PrintStream`"
+  (^java.io.PrintStream []
     (LogStream/getDefaultStream )))
 
 (defn *set-default-stream
   "Deprecated. no replacement
 
-  new-default - new default log stream - `java.io.PrintStream`
-
-  returns: `java.lang.   void`"
+  new-default - new default log stream - `java.io.PrintStream`"
   ([^java.io.PrintStream new-default]
     (LogStream/setDefaultStream new-default)))
 
@@ -58,41 +56,39 @@
 
   s - name of logging level (e.g., 'SILENT', 'BRIEF', 'VERBOSE') - `java.lang.String`
 
-  returns: corresponding integer log level - `java.lang.   int`"
-  ([^java.lang.String s]
+  returns: corresponding integer log level - `int`"
+  (^Integer [^java.lang.String s]
     (LogStream/parseLevel s)))
 
 (defn get-output-stream
   "Deprecated. no replacement
 
-  returns: output stream for this log - `java.lang.  java.io.OutputStream`"
-  ([^java.rmi.server.LogStream this]
+  returns: output stream for this log - `java.io.OutputStream`"
+  (^java.io.OutputStream [^LogStream this]
     (-> this (.getOutputStream))))
 
 (defn set-output-stream
   "Deprecated. no replacement
 
-  out - new output stream for this log - `java.io.OutputStream`
-
-  returns: `java.lang.  void`"
-  ([^java.rmi.server.LogStream this ^java.io.OutputStream out]
+  out - new output stream for this log - `java.io.OutputStream`"
+  ([^LogStream this ^java.io.OutputStream out]
     (-> this (.setOutputStream out))))
 
 (defn write
   "Deprecated. no replacement
 
-  b - The byte to be written - `int`
-
-  returns: `java.lang.  void`"
-  ([^java.rmi.server.LogStream this ^Integer b]
-    (-> this (.write b)))
-  ([^java.rmi.server.LogStream this b ^Integer off ^Integer len]
-    (-> this (.write b off len))))
+  b - A byte array - `byte[]`
+  off - Offset from which to start taking bytes - `int`
+  len - Number of bytes to write - `int`"
+  ([^LogStream this b ^Integer off ^Integer len]
+    (-> this (.write b off len)))
+  ([^LogStream this ^Integer b]
+    (-> this (.write b))))
 
 (defn to-string
   "Deprecated. no replacement
 
-  returns: log name - `java.lang.  java.lang.String`"
-  ([^java.rmi.server.LogStream this]
+  returns: log name - `java.lang.String`"
+  (^java.lang.String [^LogStream this]
     (-> this (.toString))))
 

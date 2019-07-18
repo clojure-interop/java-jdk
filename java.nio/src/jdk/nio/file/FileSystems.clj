@@ -119,7 +119,7 @@
    invoked to construct the new file system.
 
   uri - the URI identifying the file system - `java.net.URI`
-  env - a map of provider specific properties to configure the file system; may be empty - `java.util.Map<java.lang.String,?>`
+  env - a map of provider specific properties to configure the file system; may be empty - `java.util.Map`
   loader - the class loader to locate the provider or null to only attempt to locate an installed provider - `java.lang.ClassLoader`
 
   returns: a new file system - `java.nio.file.FileSystem`

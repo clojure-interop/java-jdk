@@ -21,10 +21,10 @@
   Creates a new weak reference that refers to the given object and is
    registered with the given queue.
 
-  referent - object the new weak reference will refer to - `WeakReference.T`
-  q - the queue with which the reference is to be registered, or null if registration is not required - `WeakReference.T>`"
-  ([^WeakReference.T referent ^WeakReference.T> q]
+  referent - object the new weak reference will refer to - `T`
+  q - the queue with which the reference is to be registered, or null if registration is not required - `java.lang.ref.ReferenceQueue`"
+  (^WeakReference [referent ^java.lang.ref.ReferenceQueue q]
     (new WeakReference referent q))
-  ([^WeakReference.T referent]
+  (^WeakReference [referent]
     (new WeakReference referent)))
 

@@ -18,7 +18,7 @@
   name - the name to which the object is being bound or unbound - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if session is null."
-  ([^javax.net.ssl.SSLSession session ^java.lang.String name]
+  (^SSLSessionBindingEvent [^javax.net.ssl.SSLSession session ^java.lang.String name]
     (new SSLSessionBindingEvent session name)))
 
 (defn get-name
@@ -26,7 +26,7 @@
    from which the object is being unbound.
 
   returns: the name to which the object is being bound or unbound - `java.lang.String`"
-  (^java.lang.String [^javax.net.ssl.SSLSessionBindingEvent this]
+  (^java.lang.String [^SSLSessionBindingEvent this]
     (-> this (.getName))))
 
 (defn get-session
@@ -34,6 +34,6 @@
    from which the listener is being unbound.
 
   returns: the SSLSession - `javax.net.ssl.SSLSession`"
-  (^javax.net.ssl.SSLSession [^javax.net.ssl.SSLSessionBindingEvent this]
+  (^javax.net.ssl.SSLSession [^SSLSessionBindingEvent this]
     (-> this (.getSession))))
 

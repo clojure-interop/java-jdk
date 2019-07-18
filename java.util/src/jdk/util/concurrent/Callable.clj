@@ -16,9 +16,9 @@
 (defn call
   "Computes a result, or throws an exception if unable to do so.
 
-  returns: computed result - `Callable.V`
+  returns: computed result - `V`
 
   throws: java.lang.Exception - if unable to compute a result"
-  (^Callable.V [^java.util.concurrent.Callable this]
+  ([^Callable this]
     (-> this (.call))))
 

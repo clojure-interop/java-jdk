@@ -78,7 +78,7 @@
   "Returns the provider that created this channel.
 
   returns: The provider that created this channel - `java.nio.channels.spi.AsynchronousChannelProvider`"
-  (^java.nio.channels.spi.AsynchronousChannelProvider [^java.nio.channels.AsynchronousServerSocketChannel this]
+  (^java.nio.channels.spi.AsynchronousChannelProvider [^AsynchronousServerSocketChannel this]
     (-> this (.provider))))
 
 (defn bind
@@ -102,21 +102,21 @@
   returns: This channel - `java.nio.channels.AsynchronousServerSocketChannel`
 
   throws: java.nio.channels.AlreadyBoundException - If the socket is already bound"
-  (^java.nio.channels.AsynchronousServerSocketChannel [^java.nio.channels.AsynchronousServerSocketChannel this ^java.net.SocketAddress local ^Integer backlog]
+  (^java.nio.channels.AsynchronousServerSocketChannel [^AsynchronousServerSocketChannel this ^java.net.SocketAddress local ^Integer backlog]
     (-> this (.bind local backlog)))
-  (^java.nio.channels.AsynchronousServerSocketChannel [^java.nio.channels.AsynchronousServerSocketChannel this ^java.net.SocketAddress local]
+  (^java.nio.channels.AsynchronousServerSocketChannel [^AsynchronousServerSocketChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn set-option
   "Description copied from interface: NetworkChannel
 
-  name - The socket option - `java.net.SocketOption<T>`
+  name - The socket option - `java.net.SocketOption`
   value - The value of the socket option. A value of null may be a valid value for some socket options. - `T`
 
   returns: This channel - `<T> java.nio.channels.AsynchronousServerSocketChannel`
 
   throws: java.lang.IllegalArgumentException - If the value is not a valid value for this socket option"
-  ([^java.nio.channels.AsynchronousServerSocketChannel this ^java.net.SocketOption name value]
+  ([^AsynchronousServerSocketChannel this ^java.net.SocketOption name value]
     (-> this (.setOption name value))))
 
 (defn accept
@@ -143,14 +143,14 @@
    the connection is closed and the operation completes with a SecurityException.
 
   attachment - The object to attach to the I/O operation; can be null - `A`
-  handler - The handler for consuming the result - `A>`
+  handler - The handler for consuming the result - `java.nio.channels.CompletionHandler`
 
   returns: `<A> void`
 
   throws: java.nio.channels.AcceptPendingException - If an accept operation is already in progress on this channel"
-  ([^java.nio.channels.AsynchronousServerSocketChannel this attachment handler]
+  ([^AsynchronousServerSocketChannel this attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.accept attachment handler)))
-  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousServerSocketChannel this]
+  (^java.util.concurrent.Future [^AsynchronousServerSocketChannel this]
     (-> this (.accept))))
 
 (defn get-local-address
@@ -172,6 +172,6 @@
             channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  (^java.net.SocketAddress [^java.nio.channels.AsynchronousServerSocketChannel this]
+  (^java.net.SocketAddress [^AsynchronousServerSocketChannel this]
     (-> this (.getLocalAddress))))
 

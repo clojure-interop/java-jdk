@@ -48,15 +48,15 @@
   last-row - `int`
   column - `int`
   type - `int`"
-  ([^javax.swing.table.TableModel source ^Integer first-row ^Integer last-row ^Integer column ^Integer type]
+  (^TableModelEvent [^javax.swing.table.TableModel source ^Integer first-row ^Integer last-row ^Integer column ^Integer type]
     (new TableModelEvent source first-row last-row column type))
-  ([^javax.swing.table.TableModel source ^Integer first-row ^Integer last-row ^Integer column]
+  (^TableModelEvent [^javax.swing.table.TableModel source ^Integer first-row ^Integer last-row ^Integer column]
     (new TableModelEvent source first-row last-row column))
-  ([^javax.swing.table.TableModel source ^Integer first-row ^Integer last-row]
+  (^TableModelEvent [^javax.swing.table.TableModel source ^Integer first-row ^Integer last-row]
     (new TableModelEvent source first-row last-row))
-  ([^javax.swing.table.TableModel source ^Integer row]
+  (^TableModelEvent [^javax.swing.table.TableModel source ^Integer row]
     (new TableModelEvent source row))
-  ([^javax.swing.table.TableModel source]
+  (^TableModelEvent [^javax.swing.table.TableModel source]
     (new TableModelEvent source)))
 
 (def *-insert
@@ -104,14 +104,14 @@
    ie. names, types and order of the columns.
 
   returns: `int`"
-  (^Integer [^javax.swing.event.TableModelEvent this]
+  (^Integer [^TableModelEvent this]
     (-> this (.getFirstRow))))
 
 (defn get-last-row
   "Returns the last row that changed.
 
   returns: `int`"
-  (^Integer [^javax.swing.event.TableModelEvent this]
+  (^Integer [^TableModelEvent this]
     (-> this (.getLastRow))))
 
 (defn get-column
@@ -120,13 +120,13 @@
     rows changed.
 
   returns: `int`"
-  (^Integer [^javax.swing.event.TableModelEvent this]
+  (^Integer [^TableModelEvent this]
     (-> this (.getColumn))))
 
 (defn get-type
   "Returns the type of event - one of: INSERT, UPDATE and DELETE.
 
   returns: `int`"
-  (^Integer [^javax.swing.event.TableModelEvent this]
+  (^Integer [^TableModelEvent this]
     (-> this (.getType))))
 

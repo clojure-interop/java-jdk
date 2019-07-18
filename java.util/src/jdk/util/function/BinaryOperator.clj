@@ -13,25 +13,25 @@
   "Returns a BinaryOperator which returns the lesser of two elements
    according to the specified Comparator.
 
-  comparator - a Comparator for comparing the two values - `T>`
+  comparator - a Comparator for comparing the two values - `java.util.Comparator`
 
   returns: a BinaryOperator which returns the lesser of its operands,
            according to the supplied Comparator - `<T> java.util.function.BinaryOperator<T>`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([comparator]
+  ([^java.util.Comparator comparator]
     (BinaryOperator/minBy comparator)))
 
 (defn *max-by
   "Returns a BinaryOperator which returns the greater of two elements
    according to the specified Comparator.
 
-  comparator - a Comparator for comparing the two values - `T>`
+  comparator - a Comparator for comparing the two values - `java.util.Comparator`
 
   returns: a BinaryOperator which returns the greater of its operands,
            according to the supplied Comparator - `<T> java.util.function.BinaryOperator<T>`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  ([comparator]
+  ([^java.util.Comparator comparator]
     (BinaryOperator/maxBy comparator)))
 

@@ -50,14 +50,14 @@
    KeyManagerFactory object.
 
   returns: the algorithm name of this KeyManagerFactory object. - `java.lang.String`"
-  (^java.lang.String [^javax.net.ssl.KeyManagerFactory this]
+  (^java.lang.String [^KeyManagerFactory this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this KeyManagerFactory object.
 
   returns: the provider of this KeyManagerFactory object - `java.security.Provider`"
-  (^java.security.Provider [^javax.net.ssl.KeyManagerFactory this]
+  (^java.security.Provider [^KeyManagerFactory this]
     (-> this (.getProvider))))
 
 (defn init
@@ -74,9 +74,9 @@
   password - the password for recovering keys in the KeyStore - `char[]`
 
   throws: java.security.KeyStoreException - if this operation fails"
-  ([^javax.net.ssl.KeyManagerFactory this ^java.security.KeyStore ks password]
+  ([^KeyManagerFactory this ^java.security.KeyStore ks password]
     (-> this (.init ks password)))
-  ([^javax.net.ssl.KeyManagerFactory this ^javax.net.ssl.ManagerFactoryParameters spec]
+  ([^KeyManagerFactory this ^javax.net.ssl.ManagerFactoryParameters spec]
     (-> this (.init spec))))
 
 (defn get-key-managers
@@ -85,6 +85,6 @@
   returns: the key managers - `javax.net.ssl.KeyManager[]`
 
   throws: java.lang.IllegalStateException - if the KeyManagerFactory is not initialized"
-  ([^javax.net.ssl.KeyManagerFactory this]
+  ([^KeyManagerFactory this]
     (-> this (.getKeyManagers))))
 

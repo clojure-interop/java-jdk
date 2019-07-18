@@ -53,7 +53,7 @@
 
   Any of the family of XYZ color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_XYZ)
 
 (def *-type-lab
@@ -61,7 +61,7 @@
 
   Any of the family of Lab color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_Lab)
 
 (def *-type-luv
@@ -69,7 +69,7 @@
 
   Any of the family of Luv color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_Luv)
 
 (def *-type-y-cb-cr
@@ -77,7 +77,7 @@
 
   Any of the family of YCbCr color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_YCbCr)
 
 (def *-type-yxy
@@ -85,7 +85,7 @@
 
   Any of the family of Yxy color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_Yxy)
 
 (def *-type-rgb
@@ -93,7 +93,7 @@
 
   Any of the family of RGB color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_RGB)
 
 (def *-type-gray
@@ -101,7 +101,7 @@
 
   Any of the family of GRAY color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_GRAY)
 
 (def *-type-hsv
@@ -109,7 +109,7 @@
 
   Any of the family of HSV color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_HSV)
 
 (def *-type-hls
@@ -117,7 +117,7 @@
 
   Any of the family of HLS color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_HLS)
 
 (def *-type-cmyk
@@ -125,7 +125,7 @@
 
   Any of the family of CMYK color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_CMYK)
 
 (def *-type-cmy
@@ -133,7 +133,7 @@
 
   Any of the family of CMY color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_CMY)
 
 (def *-type-2-clr
@@ -141,7 +141,7 @@
 
   Generic 2 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_2CLR)
 
 (def *-type-3-clr
@@ -149,7 +149,7 @@
 
   Generic 3 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_3CLR)
 
 (def *-type-4-clr
@@ -157,7 +157,7 @@
 
   Generic 4 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_4CLR)
 
 (def *-type-5-clr
@@ -165,7 +165,7 @@
 
   Generic 5 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_5CLR)
 
 (def *-type-6-clr
@@ -173,7 +173,7 @@
 
   Generic 6 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_6CLR)
 
 (def *-type-7-clr
@@ -181,7 +181,7 @@
 
   Generic 7 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_7CLR)
 
 (def *-type-8-clr
@@ -189,7 +189,7 @@
 
   Generic 8 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_8CLR)
 
 (def *-type-9-clr
@@ -197,7 +197,7 @@
 
   Generic 9 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_9CLR)
 
 (def *-type-aclr
@@ -205,7 +205,7 @@
 
   Generic 10 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_ACLR)
 
 (def *-type-bclr
@@ -213,7 +213,7 @@
 
   Generic 11 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_BCLR)
 
 (def *-type-cclr
@@ -221,7 +221,7 @@
 
   Generic 12 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_CCLR)
 
 (def *-type-dclr
@@ -229,7 +229,7 @@
 
   Generic 13 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_DCLR)
 
 (def *-type-eclr
@@ -237,7 +237,7 @@
 
   Generic 14 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_ECLR)
 
 (def *-type-fclr
@@ -245,7 +245,7 @@
 
   Generic 15 component color spaces.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/TYPE_FCLR)
 
 (def *-cs-s-rgb
@@ -256,7 +256,7 @@
    http://www.w3.org/pub/WWW/Graphics/Color/sRGB.html
    .
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/CS_sRGB)
 
 (def *-cs-linear-rgb
@@ -265,7 +265,7 @@
   A built-in linear RGB color space.  This space is based on the
    same RGB primaries as CS_sRGB, but has a linear tone reproduction curve.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/CS_LINEAR_RGB)
 
 (def *-cs-ciexyz
@@ -273,7 +273,7 @@
 
   The CIEXYZ conversion color space defined above.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/CS_CIEXYZ)
 
 (def *-cs-pycc
@@ -281,7 +281,7 @@
 
   The Photo YCC conversion color space.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/CS_PYCC)
 
 (def *-cs-gray
@@ -289,7 +289,7 @@
 
   The built-in linear gray scale color space.
 
-  type: java.lang.annotation.    int"
+  type: int"
   ColorSpace/CS_GRAY)
 
 (defn *get-instance
@@ -313,7 +313,7 @@
 
   returns: the type constant that represents the type of this
            ColorSpace - `int`"
-  (^Integer [^java.awt.color.ColorSpace this]
+  (^Integer [^ColorSpace this]
     (-> this (.getType))))
 
 (defn get-min-value
@@ -327,7 +327,7 @@
   returns: the minimum normalized component value - `float`
 
   throws: java.lang.IllegalArgumentException - if component is less than 0 or greater than numComponents - 1"
-  (^Float [^java.awt.color.ColorSpace this ^Integer component]
+  (^Float [^ColorSpace this ^Integer component]
     (-> this (.getMinValue component))))
 
 (defn get-max-value
@@ -341,7 +341,7 @@
   returns: the maximum normalized component value - `float`
 
   throws: java.lang.IllegalArgumentException - if component is less than 0 or greater than numComponents - 1"
-  (^Float [^java.awt.color.ColorSpace this ^Integer component]
+  (^Float [^ColorSpace this ^Integer component]
     (-> this (.getMaxValue component))))
 
 (defn get-name
@@ -352,7 +352,7 @@
   returns: the name of the component at the specified index - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if idx is less than 0 or greater than numComponents - 1"
-  (^java.lang.String [^java.awt.color.ColorSpace this ^Integer idx]
+  (^java.lang.String [^ColorSpace this ^Integer idx]
     (-> this (.getName idx))))
 
 (defn from-rgb
@@ -376,7 +376,7 @@
            components in this ColorSpace - `float[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if array length is not at least 3"
-  ([^java.awt.color.ColorSpace this rgbvalue]
+  ([^ColorSpace this rgbvalue]
     (-> this (.fromRGB rgbvalue))))
 
 (defn cs-s-rgb?
@@ -384,14 +384,14 @@
 
   returns: true if this is a CS_sRGB color
            space, false if it is not - `boolean`"
-  (^Boolean [^java.awt.color.ColorSpace this]
+  (^Boolean [^ColorSpace this]
     (-> this (.isCS_sRGB))))
 
 (defn get-num-components
   "Returns the number of components of this ColorSpace.
 
   returns: The number of components in this ColorSpace. - `int`"
-  (^Integer [^java.awt.color.ColorSpace this]
+  (^Integer [^ColorSpace this]
     (-> this (.getNumComponents))))
 
 (defn from-ciexyz
@@ -419,7 +419,7 @@
            components in this ColorSpace - `float[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if array length is not at least 3"
-  ([^java.awt.color.ColorSpace this colorvalue]
+  ([^ColorSpace this colorvalue]
     (-> this (.fromCIEXYZ colorvalue))))
 
 (defn to-ciexyz
@@ -445,7 +445,7 @@
   returns: a float array of length 3 - `float[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if array length is not at least the number of components in this ColorSpace."
-  ([^java.awt.color.ColorSpace this colorvalue]
+  ([^ColorSpace this colorvalue]
     (-> this (.toCIEXYZ colorvalue))))
 
 (defn to-rgb
@@ -468,6 +468,6 @@
   returns: a float array of length 3 - `float[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if array length is not at least the number of components in this ColorSpace"
-  ([^java.awt.color.ColorSpace this colorvalue]
+  ([^ColorSpace this colorvalue]
     (-> this (.toRGB colorvalue))))
 

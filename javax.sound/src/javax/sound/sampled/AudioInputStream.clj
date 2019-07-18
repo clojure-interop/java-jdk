@@ -28,9 +28,9 @@
   stream - the stream on which this AudioInputStream object is based - `java.io.InputStream`
   format - the format of this stream's audio data - `javax.sound.sampled.AudioFormat`
   length - the length in sample frames of the data in this stream - `long`"
-  ([^java.io.InputStream stream ^javax.sound.sampled.AudioFormat format ^Long length]
+  (^AudioInputStream [^java.io.InputStream stream ^javax.sound.sampled.AudioFormat format ^Long length]
     (new AudioInputStream stream format length))
-  ([^javax.sound.sampled.TargetDataLine line]
+  (^AudioInputStream [^javax.sound.sampled.TargetDataLine line]
     (new AudioInputStream line)))
 
 (defn skip
@@ -42,7 +42,7 @@
   returns: the actual number of bytes skipped - `long`
 
   throws: java.io.IOException - if an input or output error occurs"
-  (^Long [^javax.sound.sampled.AudioInputStream this ^Long n]
+  (^Long [^AudioInputStream this ^Long n]
     (-> this (.skip n))))
 
 (defn read
@@ -61,11 +61,11 @@
    is no more data because the end of the stream has been reached - `int`
 
   throws: java.io.IOException - if an input or output error occurs"
-  (^Integer [^javax.sound.sampled.AudioInputStream this b ^Integer off ^Integer len]
+  (^Integer [^AudioInputStream this b ^Integer off ^Integer len]
     (-> this (.read b off len)))
-  (^Integer [^javax.sound.sampled.AudioInputStream this b]
+  (^Integer [^AudioInputStream this b]
     (-> this (.read b)))
-  (^Integer [^javax.sound.sampled.AudioInputStream this]
+  (^Integer [^AudioInputStream this]
     (-> this (.read))))
 
 (defn reset
@@ -73,14 +73,14 @@
    mark method was last invoked.
 
   throws: java.io.IOException - if an input or output error occurs."
-  ([^javax.sound.sampled.AudioInputStream this]
+  ([^AudioInputStream this]
     (-> this (.reset))))
 
 (defn get-frame-length
   "Obtains the length of the stream, expressed in sample frames rather than bytes.
 
   returns: the length in sample frames - `long`"
-  (^Long [^javax.sound.sampled.AudioInputStream this]
+  (^Long [^AudioInputStream this]
     (-> this (.getFrameLength))))
 
 (defn mark-supported
@@ -89,7 +89,7 @@
 
   returns: true if this stream supports the mark
    and reset methods; false otherwise - `boolean`"
-  (^Boolean [^javax.sound.sampled.AudioInputStream this]
+  (^Boolean [^AudioInputStream this]
     (-> this (.markSupported))))
 
 (defn close
@@ -97,21 +97,21 @@
    with the stream.
 
   throws: java.io.IOException - if an input or output error occurs"
-  ([^javax.sound.sampled.AudioInputStream this]
+  ([^AudioInputStream this]
     (-> this (.close))))
 
 (defn get-format
   "Obtains the audio format of the sound data in this audio input stream.
 
   returns: an audio format object describing this stream's format - `javax.sound.sampled.AudioFormat`"
-  (^javax.sound.sampled.AudioFormat [^javax.sound.sampled.AudioInputStream this]
+  (^javax.sound.sampled.AudioFormat [^AudioInputStream this]
     (-> this (.getFormat))))
 
 (defn mark
   "Marks the current position in this audio input stream.
 
   readlimit - the maximum number of bytes that can be read before the mark position becomes invalid. - `int`"
-  ([^javax.sound.sampled.AudioInputStream this ^Integer readlimit]
+  ([^AudioInputStream this ^Integer readlimit]
     (-> this (.mark readlimit))))
 
 (defn available
@@ -125,6 +125,6 @@
   returns: the number of bytes that can be read from this audio input stream without blocking - `int`
 
   throws: java.io.IOException - if an input or output error occurs"
-  (^Integer [^javax.sound.sampled.AudioInputStream this]
+  (^Integer [^AudioInputStream this]
     (-> this (.available))))
 

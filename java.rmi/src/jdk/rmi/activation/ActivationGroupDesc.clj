@@ -27,12 +27,12 @@
 
   class-name - the group's package qualified class name or null. A null group class name indicates the system's default ActivationGroup implementation. - `java.lang.String`
   location - the location from where to load the group's class - `java.lang.String`
-  data - the group's initialization data contained in marshalled form (could contain properties, for example) - `java.rmi.MarshalledObject<?>`
+  data - the group's initialization data contained in marshalled form (could contain properties, for example) - `java.rmi.MarshalledObject`
   overrides - a properties map which will override those set by default in the subprocess environment (will be translated into -D options), or null. - `java.util.Properties`
-  cmd - the controlling options for executing the VM in another process (or null). - `java.rmi.activation.ActivationGroupDesc.CommandEnvironment`"
-  ([^java.lang.String class-name ^java.lang.String location ^java.rmi.MarshalledObject data ^java.util.Properties overrides ^java.rmi.activation.ActivationGroupDesc.CommandEnvironment cmd]
+  cmd - the controlling options for executing the VM in another process (or null). - `java.rmi.activation.ActivationGroupDesc$CommandEnvironment`"
+  (^ActivationGroupDesc [^java.lang.String class-name ^java.lang.String location ^java.rmi.MarshalledObject data ^java.util.Properties overrides ^java.rmi.activation.ActivationGroupDesc$CommandEnvironment cmd]
     (new ActivationGroupDesc class-name location data overrides cmd))
-  ([^java.util.Properties overrides ^java.rmi.activation.ActivationGroupDesc.CommandEnvironment cmd]
+  (^ActivationGroupDesc [^java.util.Properties overrides ^java.rmi.activation.ActivationGroupDesc$CommandEnvironment cmd]
     (new ActivationGroupDesc overrides cmd)))
 
 (defn get-class-name
@@ -41,35 +41,35 @@
    ActivationGroup implementation.
 
   returns: the group's class name - `java.lang.String`"
-  (^java.lang.String [^java.rmi.activation.ActivationGroupDesc this]
+  (^java.lang.String [^ActivationGroupDesc this]
     (-> this (.getClassName))))
 
 (defn get-location
   "Returns the group's code location.
 
   returns: the group's code location - `java.lang.String`"
-  (^java.lang.String [^java.rmi.activation.ActivationGroupDesc this]
+  (^java.lang.String [^ActivationGroupDesc this]
     (-> this (.getLocation))))
 
 (defn get-data
   "Returns the group's initialization data.
 
   returns: the group's initialization data - `java.rmi.MarshalledObject<?>`"
-  (^java.rmi.MarshalledObject [^java.rmi.activation.ActivationGroupDesc this]
+  (^java.rmi.MarshalledObject [^ActivationGroupDesc this]
     (-> this (.getData))))
 
 (defn get-property-overrides
   "Returns the group's property-override list.
 
   returns: the property-override list, or null - `java.util.Properties`"
-  (^java.util.Properties [^java.rmi.activation.ActivationGroupDesc this]
+  (^java.util.Properties [^ActivationGroupDesc this]
     (-> this (.getPropertyOverrides))))
 
 (defn get-command-environment
   "Returns the group's command-environment control object.
 
-  returns: the command-environment object, or null - `java.rmi.activation.ActivationGroupDesc.CommandEnvironment`"
-  (^java.rmi.activation.ActivationGroupDesc.CommandEnvironment [^java.rmi.activation.ActivationGroupDesc this]
+  returns: the command-environment object, or null - `java.rmi.activation.ActivationGroupDesc$CommandEnvironment`"
+  (^java.rmi.activation.ActivationGroupDesc$CommandEnvironment [^ActivationGroupDesc this]
     (-> this (.getCommandEnvironment))))
 
 (defn equals
@@ -78,13 +78,13 @@
   obj - the Object to compare with - `java.lang.Object`
 
   returns: true if these Objects are equal; false otherwise. - `boolean`"
-  (^Boolean [^java.rmi.activation.ActivationGroupDesc this ^java.lang.Object obj]
+  (^Boolean [^ActivationGroupDesc this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Produce identical numbers for similar ActivationGroupDescs.
 
   returns: an integer - `int`"
-  (^Integer [^java.rmi.activation.ActivationGroupDesc this]
+  (^Integer [^ActivationGroupDesc this]
     (-> this (.hashCode))))
 

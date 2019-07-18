@@ -15,7 +15,7 @@
   time-stamp - the time-stamp for the message, in microseconds. - `long`
 
   throws: java.lang.IllegalStateException - if the receiver is closed"
-  ([^javax.sound.midi.Receiver this ^javax.sound.midi.MidiMessage message ^Long time-stamp]
+  ([^Receiver this ^javax.sound.midi.MidiMessage message ^Long time-stamp]
     (-> this (.send message time-stamp))))
 
 (defn close
@@ -33,6 +33,6 @@
    Receiver is closed, too.  For a detailed
    description of open/close behaviour see the class description
    of MidiDevice."
-  ([^javax.sound.midi.Receiver this]
+  ([^Receiver this]
     (-> this (.close))))
 

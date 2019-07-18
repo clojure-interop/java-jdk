@@ -7,6 +7,6 @@
   "cause autoscroll to occur
 
   e - the ActionEvent - `java.awt.event.ActionEvent`"
-  ([^java.awt.dnd.DropTarget$DropTargetAutoScroller this ^java.awt.event.ActionEvent e]
+  ([^DropTarget$DropTargetAutoScroller this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

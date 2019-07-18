@@ -11,7 +11,7 @@
 
    3.1.2 AnonymousResponses Assertion in the generated WSDL.
 
-  type: javax.xml.ws.soap.AddressingFeature.Responses"
+  type: javax.xml.ws.soap.AddressingFeature$Responses"
   AddressingFeature$Responses/ANONYMOUS)
 
 (def NON_ANONYMOUS
@@ -23,7 +23,7 @@
 
    3.1.3 NonAnonymousResponses Assertion in the generated WSDL.
 
-  type: javax.xml.ws.soap.AddressingFeature.Responses"
+  type: javax.xml.ws.soap.AddressingFeature$Responses"
   AddressingFeature$Responses/NON_ANONYMOUS)
 
 (def ALL
@@ -31,7 +31,7 @@
 
   Supports all response types and this is the default
 
-  type: javax.xml.ws.soap.AddressingFeature.Responses"
+  type: javax.xml.ws.soap.AddressingFeature$Responses"
   AddressingFeature$Responses/ALL)
 
 (defn *values
@@ -43,7 +43,7 @@
   for (AddressingFeature.Responses c : AddressingFeature.Responses.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.xml.ws.soap.AddressingFeature.Responses[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.xml.ws.soap.AddressingFeature$Responses[]`"
   ([]
     (AddressingFeature$Responses/values )))
 
@@ -55,9 +55,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.xml.ws.soap.AddressingFeature.Responses`
+  returns: the enum constant with the specified name - `javax.xml.ws.soap.AddressingFeature$Responses`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.xml.ws.soap.AddressingFeature.Responses [^java.lang.String name]
+  (^javax.xml.ws.soap.AddressingFeature$Responses [^java.lang.String name]
     (AddressingFeature$Responses/valueOf name)))
 

@@ -98,9 +98,9 @@
                  with formatted text appended - `java.lang.StringBuffer`
 
   throws: java.lang.NullPointerException - if toAppendTo or pos is null"
-  (^java.lang.StringBuffer [^java.text.Format this ^java.lang.Object obj ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
+  (^java.lang.StringBuffer [^Format this ^java.lang.Object obj ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
     (-> this (.format obj to-append-to pos)))
-  (^java.lang.String [^java.text.Format this ^java.lang.Object obj]
+  (^java.lang.String [^Format this ^java.lang.Object obj]
     (-> this (.format obj))))
 
 (defn format-to-character-iterator
@@ -124,7 +124,7 @@
   returns: AttributedCharacterIterator describing the formatted value. - `java.text.AttributedCharacterIterator`
 
   throws: java.lang.NullPointerException - if obj is null."
-  (^java.text.AttributedCharacterIterator [^java.text.Format this ^java.lang.Object obj]
+  (^java.text.AttributedCharacterIterator [^Format this ^java.lang.Object obj]
     (-> this (.formatToCharacterIterator obj))))
 
 (defn parse-object
@@ -148,15 +148,15 @@
            error, returns null. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if pos is null."
-  (^java.lang.Object [^java.text.Format this ^java.lang.String source ^java.text.ParsePosition pos]
+  (^java.lang.Object [^Format this ^java.lang.String source ^java.text.ParsePosition pos]
     (-> this (.parseObject source pos)))
-  (^java.lang.Object [^java.text.Format this ^java.lang.String source]
+  (^java.lang.Object [^Format this ^java.lang.String source]
     (-> this (.parseObject source))))
 
 (defn clone
   "Creates and returns a copy of this object.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^java.text.Format this]
+  (^java.lang.Object [^Format this]
     (-> this (.clone))))
 

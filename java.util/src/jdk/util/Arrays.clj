@@ -65,12 +65,12 @@
    indeterminate state.
 
   array - array to be initialized - `T[]`
-  generator - a function accepting an index and producing the desired value for that position - `T>`
+  generator - a function accepting an index and producing the desired value for that position - `java.util.function.IntFunction`
 
   returns: `<T> void`
 
   throws: java.lang.NullPointerException - if the generator is null"
-  ([array generator]
+  ([array ^java.util.function.IntFunction generator]
     (Arrays/parallelSetAll array generator)))
 
 (defn *as-list
@@ -88,7 +88,7 @@
 
   a - the array by which the list will be backed - `T`
 
-  returns: a list view of the specified array - `java.lang.   <T> java.util.List<T>`"
+  returns: a list view of the specified array - `<T> java.util.List<T>`"
   ([a]
     (Arrays/asList a)))
 
@@ -100,12 +100,12 @@
    the caller and the array is left in an indeterminate state.
 
   array - array to be initialized - `T[]`
-  generator - a function accepting an index and producing the desired value for that position - `T>`
+  generator - a function accepting an index and producing the desired value for that position - `java.util.function.IntFunction`
 
   returns: `<T> void`
 
   throws: java.lang.NullPointerException - if the generator is null"
-  ([array generator]
+  ([array ^java.util.function.IntFunction generator]
     (Arrays/setAll array generator)))
 
 (defn *deep-equals
@@ -227,16 +227,16 @@
   a - the array to be sorted - `T[]`
   from-index - the index of the first element (inclusive) to be sorted - `int`
   to-index - the index of the last element (exclusive) to be sorted - `int`
-  c - the comparator to determine the order of the array. A null value indicates that the elements' java.lang.natural ordering should be used. - `T>`
+  c - the comparator to determine the order of the array. A null value indicates that the elements' java.lang.natural ordering should be used. - `java.util.Comparator`
 
   returns: `<T> void`
 
   throws: java.lang.ClassCastException - if the array contains elements that are not mutually comparable using the specified comparator."
-  ([a ^Integer from-index ^Integer to-index c]
+  ([a ^Integer from-index ^Integer to-index ^java.util.Comparator c]
     (Arrays/sort a from-index to-index c))
   ([a ^Integer from-index ^Integer to-index]
     (Arrays/sort a from-index to-index))
-  ([a c]
+  ([a ^java.util.Comparator c]
     (Arrays/sort a c))
   ([a]
     (Arrays/sort a)))
@@ -257,7 +257,7 @@
   from-index - the index of the first element (inclusive) to be searched - `int`
   to-index - the index of the last element (exclusive) to be searched - `int`
   key - the value to be searched for - `T`
-  c - the comparator by which the array is ordered. A null value indicates that the elements' java.lang.natural ordering should be used. - `T>`
+  c - the comparator by which the array is ordered. A null value indicates that the elements' java.lang.natural ordering should be used. - `java.util.Comparator`
 
   returns: index of the search key, if it is contained in the array
            within the specified range;
@@ -271,11 +271,11 @@
            and only if the key is found. - `<T> int`
 
   throws: java.lang.ClassCastException - if the range contains elements that are not mutually comparable using the specified comparator, or the search key is not comparable to the elements in the range using this comparator."
-  ([a ^Integer from-index ^Integer to-index key c]
+  ([a ^Integer from-index ^Integer to-index key ^java.util.Comparator c]
     (Arrays/binarySearch a from-index to-index key c))
   (^Integer [a ^Integer from-index ^Integer to-index ^Long key]
     (Arrays/binarySearch a from-index to-index key))
-  ([a key c]
+  ([a key ^java.util.Comparator c]
     (Arrays/binarySearch a key c))
   (^Integer [a ^Long key]
     (Arrays/binarySearch a key)))
@@ -287,7 +287,7 @@
   array - the array - `T[]`
   from-index - the index of the first element, inclusive - `int`
   to-index - the index of the last element, exclusive - `int`
-  op - a side-effect-free, associative function to perform the cumulation - `java.util.function.BinaryOperator<T>`
+  op - a side-effect-free, associative function to perform the cumulation - `java.util.function.BinaryOperator`
 
   returns: `<T> void`
 
@@ -345,13 +345,13 @@
 
   original - the array to be copied - `U[]`
   new-length - the length of the copy to be returned - `int`
-  new-type - the class of the copy to be returned - `T[]>`
+  new-type - the class of the copy to be returned - `java.lang.Class`
 
   returns: a copy of the original array, truncated or padded with nulls
        to obtain the specified length - `<T,U> T[]`
 
   throws: java.lang.NegativeArraySizeException - if newLength is negative"
-  ([original ^Integer new-length new-type]
+  ([original ^Integer new-length ^java.lang.Class new-type]
     (Arrays/copyOf original new-length new-type))
   ([original ^Integer new-length]
     (Arrays/copyOf original new-length)))
@@ -406,16 +406,16 @@
   a - the array to be sorted - `T[]`
   from-index - the index of the first element (inclusive) to be sorted - `int`
   to-index - the index of the last element (exclusive) to be sorted - `int`
-  cmp - the comparator to determine the order of the array. A null value indicates that the elements' java.lang.natural ordering should be used. - `T>`
+  cmp - the comparator to determine the order of the array. A null value indicates that the elements' java.lang.natural ordering should be used. - `java.util.Comparator`
 
   returns: `<T> void`
 
   throws: java.lang.IllegalArgumentException - if fromIndex > toIndex or (optional) if the natural ordering of the array elements is found to violate the Comparable contract"
-  ([a ^Integer from-index ^Integer to-index cmp]
+  ([a ^Integer from-index ^Integer to-index ^java.util.Comparator cmp]
     (Arrays/parallelSort a from-index to-index cmp))
   ([a ^Integer from-index ^Integer to-index]
     (Arrays/parallelSort a from-index to-index))
-  ([a cmp]
+  ([a ^java.util.Comparator cmp]
     (Arrays/parallelSort a cmp))
   ([a]
     (Arrays/parallelSort a)))
@@ -438,13 +438,13 @@
   original - the array from which a range is to be copied - `U[]`
   from - the initial index of the range to be copied, inclusive - `int`
   to - the final index of the range to be copied, exclusive. (This index may lie outside the array.) - `int`
-  new-type - the class of the copy to be returned - `T[]>`
+  new-type - the class of the copy to be returned - `java.lang.Class`
 
   returns: a new array containing the specified range from the original array,
        truncated or padded with nulls to obtain the required length - `<T,U> T[]`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if from < 0 or from > original.length"
-  ([original ^Integer from ^Integer to new-type]
+  ([original ^Integer from ^Integer to ^java.lang.Class new-type]
     (Arrays/copyOfRange original from to new-type))
   ([original ^Integer from ^Integer to]
     (Arrays/copyOfRange original from to)))

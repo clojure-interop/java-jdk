@@ -124,11 +124,11 @@
   key-location - Identifies the key location. The only legal values are KEY_LOCATION_UNKNOWN, KEY_LOCATION_STANDARD, KEY_LOCATION_LEFT, KEY_LOCATION_RIGHT, and KEY_LOCATION_NUMPAD. - `int`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer key-code ^Character key-char ^Integer key-location]
+  (^KeyEvent [^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer key-code ^Character key-char ^Integer key-location]
     (new KeyEvent source id when modifiers key-code key-char key-location))
-  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer key-code ^Character key-char]
+  (^KeyEvent [^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer key-code ^Character key-char]
     (new KeyEvent source id when modifiers key-code key-char))
-  ([^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer key-code]
+  (^KeyEvent [^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer key-code]
     (new KeyEvent source id when modifiers key-code)))
 
 (def *-key-first
@@ -584,7 +584,7 @@
 (def *-vk-back-slash
   "Static Constant.
 
-  Constant for the back slash key, `\`
+  Constant for the back slash key, ``
 
   type: int"
   KeyEvent/VK_BACK_SLASH)
@@ -1588,7 +1588,7 @@
   "Set the keyCode value to indicate a physical key.
 
   key-code - an integer corresponding to an actual key on the keyboard. - `int`"
-  ([^java.awt.event.KeyEvent this ^Integer key-code]
+  ([^KeyEvent this ^Integer key-code]
     (-> this (.setKeyCode key-code))))
 
 (defn get-key-location
@@ -1601,7 +1601,7 @@
   returns: the location of the key that was pressed or released.
            Always returns KEY_LOCATION_UNKNOWN for
            KEY_TYPED events. - `int`"
-  (^Integer [^java.awt.event.KeyEvent this]
+  (^Integer [^KeyEvent this]
     (-> this (.getKeyLocation))))
 
 (defn get-key-char
@@ -1617,7 +1617,7 @@
   returns: the Unicode character defined for this key event.
            If no valid Unicode character exists for this key event,
            CHAR_UNDEFINED is returned. - `char`"
-  (^Character [^java.awt.event.KeyEvent this]
+  (^Character [^KeyEvent this]
     (-> this (.getKeyChar))))
 
 (defn get-extended-key-code
@@ -1630,14 +1630,14 @@
    letter `Cyrillic I short`.
 
   returns: `int`"
-  (^Integer [^java.awt.event.KeyEvent this]
+  (^Integer [^KeyEvent this]
     (-> this (.getExtendedKeyCode))))
 
 (defn set-key-char
   "Set the keyChar value to indicate a logical character.
 
   key-char - a char corresponding to to the combination of keystrokes that make up this event. - `char`"
-  ([^java.awt.event.KeyEvent this ^Character key-char]
+  ([^KeyEvent this ^Character key-char]
     (-> this (.setKeyChar key-char))))
 
 (defn get-key-code
@@ -1646,16 +1646,14 @@
   returns: the integer code for an actual key on the keyboard.
            (For KEY_TYPED events, the keyCode is
            VK_UNDEFINED.) - `int`"
-  (^Integer [^java.awt.event.KeyEvent this]
+  (^Integer [^KeyEvent this]
     (-> this (.getKeyCode))))
 
 (defn set-modifiers
   "Deprecated. as of JDK1.1.4
 
-  modifiers - an integer combination of the modifier constants. - `int`
-
-  returns: `java.lang.  void`"
-  ([^java.awt.event.KeyEvent this ^Integer modifiers]
+  modifiers - an integer combination of the modifier constants. - `int`"
+  ([^KeyEvent this ^Integer modifiers]
     (-> this (.setModifiers modifiers))))
 
 (defn param-string
@@ -1663,7 +1661,7 @@
    This method is useful for event logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.KeyEvent this]
+  (^java.lang.String [^KeyEvent this]
     (-> this (.paramString))))
 
 (defn action-key?
@@ -1673,6 +1671,6 @@
 
   returns: true if the key is an `action` key,
            false otherwise - `boolean`"
-  (^Boolean [^java.awt.event.KeyEvent this]
+  (^Boolean [^KeyEvent this]
     (-> this (.isActionKey))))
 

@@ -4,7 +4,7 @@
 
 (defn ->basic-graphics-utils
   "Constructor."
-  ([]
+  (^BasicGraphicsUtils []
     (new BasicGraphicsUtils )))
 
 (defn *get-preferred-button-size

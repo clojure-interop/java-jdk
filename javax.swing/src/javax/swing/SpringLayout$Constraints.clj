@@ -79,20 +79,20 @@
   y - the spring value for the y property - `javax.swing.Spring`
   width - the spring value for the width property - `javax.swing.Spring`
   height - the spring value for the height property - `javax.swing.Spring`"
-  ([^javax.swing.Spring x ^javax.swing.Spring y ^javax.swing.Spring width ^javax.swing.Spring height]
+  (^SpringLayout$Constraints [^javax.swing.Spring x ^javax.swing.Spring y ^javax.swing.Spring width ^javax.swing.Spring height]
     (new SpringLayout$Constraints x y width height))
-  ([^javax.swing.Spring x ^javax.swing.Spring y]
+  (^SpringLayout$Constraints [^javax.swing.Spring x ^javax.swing.Spring y]
     (new SpringLayout$Constraints x y))
-  ([^java.awt.Component c]
+  (^SpringLayout$Constraints [^java.awt.Component c]
     (new SpringLayout$Constraints c))
-  ([]
+  (^SpringLayout$Constraints []
     (new SpringLayout$Constraints )))
 
 (defn get-width
   "Returns the value of the width property.
 
   returns: the spring controlling the width of a component - `javax.swing.Spring`"
-  (^javax.swing.Spring [^javax.swing.SpringLayout$Constraints this]
+  (^javax.swing.Spring [^SpringLayout$Constraints this]
     (-> this (.getWidth))))
 
 (defn set-width
@@ -100,7 +100,7 @@
    which controls the width of a component.
 
   width - the spring controlling the width of this Constraints object - `javax.swing.Spring`"
-  ([^javax.swing.SpringLayout$Constraints this ^javax.swing.Spring width]
+  ([^SpringLayout$Constraints this ^javax.swing.Spring width]
     (-> this (.setWidth width))))
 
 (defn set-height
@@ -108,7 +108,7 @@
    which controls the height of a component.
 
   height - the spring controlling the height of this Constraints object - `javax.swing.Spring`"
-  ([^javax.swing.SpringLayout$Constraints this ^javax.swing.Spring height]
+  ([^SpringLayout$Constraints this ^javax.swing.Spring height]
     (-> this (.setHeight height))))
 
 (defn get-constraint
@@ -133,7 +133,7 @@
   returns: the spring controlling the specified edge, may be null - `javax.swing.Spring`
 
   throws: java.lang.NullPointerException - if edgeName is null"
-  (^javax.swing.Spring [^javax.swing.SpringLayout$Constraints this ^java.lang.String edge-name]
+  (^javax.swing.Spring [^SpringLayout$Constraints this ^java.lang.String edge-name]
     (-> this (.getConstraint edge-name))))
 
 (defn get-y
@@ -141,7 +141,7 @@
 
   returns: the spring controlling the y value
            of a component's location - `javax.swing.Spring`"
-  (^javax.swing.Spring [^javax.swing.SpringLayout$Constraints this]
+  (^javax.swing.Spring [^SpringLayout$Constraints this]
     (-> this (.getY))))
 
 (defn get-x
@@ -149,14 +149,14 @@
 
   returns: the spring controlling the x value
            of a component's location - `javax.swing.Spring`"
-  (^javax.swing.Spring [^javax.swing.SpringLayout$Constraints this]
+  (^javax.swing.Spring [^SpringLayout$Constraints this]
     (-> this (.getX))))
 
 (defn get-height
   "Returns the value of the height property.
 
   returns: the spring controlling the height of a component - `javax.swing.Spring`"
-  (^javax.swing.Spring [^javax.swing.SpringLayout$Constraints this]
+  (^javax.swing.Spring [^SpringLayout$Constraints this]
     (-> this (.getHeight))))
 
 (defn set-y
@@ -165,7 +165,7 @@
    of a component's location.
 
   y - the spring controlling the y value of a component's location - `javax.swing.Spring`"
-  ([^javax.swing.SpringLayout$Constraints this ^javax.swing.Spring y]
+  ([^SpringLayout$Constraints this ^javax.swing.Spring y]
     (-> this (.setY y))))
 
 (defn set-constraint
@@ -191,7 +191,7 @@
   s - the spring controlling the specified edge - `javax.swing.Spring`
 
   throws: java.lang.NullPointerException - if edgeName is null"
-  ([^javax.swing.SpringLayout$Constraints this ^java.lang.String edge-name ^javax.swing.Spring s]
+  ([^SpringLayout$Constraints this ^java.lang.String edge-name ^javax.swing.Spring s]
     (-> this (.setConstraint edge-name s))))
 
 (defn set-x
@@ -200,6 +200,6 @@
    of a component's location.
 
   x - the spring controlling the x value of a component's location - `javax.swing.Spring`"
-  ([^javax.swing.SpringLayout$Constraints this ^javax.swing.Spring x]
+  ([^SpringLayout$Constraints this ^javax.swing.Spring x]
     (-> this (.setX x))))
 

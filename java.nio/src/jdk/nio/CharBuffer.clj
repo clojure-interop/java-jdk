@@ -267,7 +267,7 @@
             of the first element of the buffer - `int`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  (^Integer [^java.nio.CharBuffer this]
+  (^Integer [^CharBuffer this]
     (-> this (.arrayOffset))))
 
 (defn compact
@@ -291,7 +291,7 @@
   returns: This buffer - `java.nio.CharBuffer`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is read-only"
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this]
+  (^java.nio.CharBuffer [^CharBuffer this]
     (-> this (.compact))))
 
 (defn put
@@ -328,18 +328,18 @@
   returns: This buffer - `java.nio.CharBuffer`
 
   throws: java.nio.BufferOverflowException - If there is insufficient space in this buffer"
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this src ^Integer offset ^Integer length]
+  (^java.nio.CharBuffer [^CharBuffer this src ^Integer offset ^Integer length]
     (-> this (.put src offset length)))
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this ^Integer index ^Character c]
+  (^java.nio.CharBuffer [^CharBuffer this ^Integer index ^Character c]
     (-> this (.put index c)))
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this ^Character c]
+  (^java.nio.CharBuffer [^CharBuffer this ^Character c]
     (-> this (.put c))))
 
 (defn chars
   "Description copied from interface: CharSequence
 
   returns: an IntStream of char values from this sequence - `java.util.stream.IntStream`"
-  (^java.util.stream.IntStream [^java.nio.CharBuffer this]
+  (^java.util.stream.IntStream [^CharBuffer this]
     (-> this (.chars))))
 
 (defn to-string
@@ -351,7 +351,7 @@
    change the buffer's position.
 
   returns: The specified string - `java.lang.String`"
-  (^java.lang.String [^java.nio.CharBuffer this]
+  (^java.lang.String [^CharBuffer this]
     (-> this (.toString))))
 
 (defn read
@@ -366,7 +366,7 @@
            -1 if this source of characters is at its end - `int`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^Integer [^java.nio.CharBuffer this ^java.nio.CharBuffer target]
+  (^Integer [^CharBuffer this ^java.nio.CharBuffer target]
     (-> this (.read target))))
 
 (defn sub-sequence
@@ -388,7 +388,7 @@
   returns: The new character buffer - `java.nio.CharBuffer`
 
   throws: java.lang.IndexOutOfBoundsException - If the preconditions on start and end do not hold"
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this ^Integer start ^Integer end]
+  (^java.nio.CharBuffer [^CharBuffer this ^Integer start ^Integer end]
     (-> this (.subSequence start end))))
 
 (defn duplicate
@@ -405,7 +405,7 @@
    only if, this buffer is read-only.
 
   returns: The new char buffer - `java.nio.CharBuffer`"
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this]
+  (^java.nio.CharBuffer [^CharBuffer this]
     (-> this (.duplicate))))
 
 (defn has-array?
@@ -417,7 +417,7 @@
 
   returns: true if, and only if, this buffer
             is backed by an array and is not read-only - `boolean`"
-  (^Boolean [^java.nio.CharBuffer this]
+  (^Boolean [^CharBuffer this]
     (-> this (.hasArray))))
 
 (defn char-at
@@ -430,14 +430,14 @@
             position()  index - `char`
 
   throws: java.lang.IndexOutOfBoundsException - If the preconditions on index do not hold"
-  (^Character [^java.nio.CharBuffer this ^Integer index]
+  (^Character [^CharBuffer this ^Integer index]
     (-> this (.charAt index))))
 
 (defn direct?
   "Tells whether or not this char buffer is direct.
 
   returns: true if, and only if, this buffer is direct - `boolean`"
-  (^Boolean [^java.nio.CharBuffer this]
+  (^Boolean [^CharBuffer this]
     (-> this (.isDirect))))
 
 (defn length
@@ -449,7 +449,7 @@
    remaining().
 
   returns: The length of this character buffer - `int`"
-  (^Integer [^java.nio.CharBuffer this]
+  (^Integer [^CharBuffer this]
     (-> this (.length))))
 
 (defn order
@@ -461,7 +461,7 @@
    byte buffer at the moment that the view is created.
 
   returns: This buffer's byte order - `java.nio.ByteOrder`"
-  (^java.nio.ByteOrder [^java.nio.CharBuffer this]
+  (^java.nio.ByteOrder [^CharBuffer this]
     (-> this (.order))))
 
 (defn append
@@ -483,9 +483,9 @@
   returns: This buffer - `java.nio.CharBuffer`
 
   throws: java.nio.BufferOverflowException - If there is insufficient space in this buffer"
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this ^java.lang.CharSequence csq ^Integer start ^Integer end]
+  (^java.nio.CharBuffer [^CharBuffer this ^java.lang.CharSequence csq ^Integer start ^Integer end]
     (-> this (.append csq start end)))
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this ^java.lang.CharSequence csq]
+  (^java.nio.CharBuffer [^CharBuffer this ^java.lang.CharSequence csq]
     (-> this (.append csq))))
 
 (defn slice
@@ -504,7 +504,7 @@
    is read-only.
 
   returns: The new char buffer - `java.nio.CharBuffer`"
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this]
+  (^java.nio.CharBuffer [^CharBuffer this]
     (-> this (.slice))))
 
 (defn hash-code
@@ -519,7 +519,7 @@
    is known that their contents will not change.
 
   returns: The current hash code of this buffer - `int`"
-  (^Integer [^java.nio.CharBuffer this]
+  (^Integer [^CharBuffer this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -546,7 +546,7 @@
 
   returns: A negative integer, zero, or a positive integer as this buffer
             is less than, equal to, or greater than the given buffer - `int`"
-  (^Integer [^java.nio.CharBuffer this ^java.nio.CharBuffer that]
+  (^Integer [^CharBuffer this ^java.nio.CharBuffer that]
     (-> this (.compareTo that))))
 
 (defn get
@@ -583,11 +583,11 @@
   returns: This buffer - `java.nio.CharBuffer`
 
   throws: java.nio.BufferUnderflowException - If there are fewer than length chars remaining in this buffer"
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this dst ^Integer offset ^Integer length]
+  (^java.nio.CharBuffer [^CharBuffer this dst ^Integer offset ^Integer length]
     (-> this (.get dst offset length)))
-  (^Character [^java.nio.CharBuffer this ^Integer index]
+  (^Character [^CharBuffer this ^Integer index]
     (-> this (.get index)))
-  (^Character [^java.nio.CharBuffer this]
+  (^Character [^CharBuffer this]
     (-> this (.get))))
 
 (defn equals
@@ -621,7 +621,7 @@
 
   returns: true if, and only if, this buffer is equal to the
              given object - `boolean`"
-  (^Boolean [^java.nio.CharBuffer this ^java.lang.Object ob]
+  (^Boolean [^CharBuffer this ^java.lang.Object ob]
     (-> this (.equals ob))))
 
 (defn array
@@ -638,7 +638,7 @@
   returns: The array that backs this buffer - `char[]`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  ([^java.nio.CharBuffer this]
+  ([^CharBuffer this]
     (-> this (.array))))
 
 (defn as-read-only-buffer
@@ -658,6 +658,6 @@
    exactly the same way as the duplicate method.
 
   returns: The new, read-only char buffer - `java.nio.CharBuffer`"
-  (^java.nio.CharBuffer [^java.nio.CharBuffer this]
+  (^java.nio.CharBuffer [^CharBuffer this]
     (-> this (.asReadOnlyBuffer))))
 

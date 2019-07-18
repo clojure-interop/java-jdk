@@ -28,9 +28,9 @@
   item-values - the values of the items, listed in the same order as their respective names in itemNames; each item value can be null, but if it is non-null it must be a valid value for the open type defined in compositeType for the corresponding item; must be of the same size as itemNames; must not be null or empty. - `java.lang.Object[]`
 
   throws: java.lang.IllegalArgumentException - compositeType is null, or itemNames[] or itemValues[] is null or empty, or one of the elements in itemNames[] is a null or empty string, or itemNames[] and itemValues[] are not of the same size."
-  ([^javax.management.openmbean.CompositeType composite-type item-names item-values]
+  (^CompositeDataSupport [^javax.management.openmbean.CompositeType composite-type item-names item-values]
     (new CompositeDataSupport composite-type item-names item-values))
-  ([^javax.management.openmbean.CompositeType composite-type ^java.util.Map items]
+  (^CompositeDataSupport [^javax.management.openmbean.CompositeType composite-type ^java.util.Map items]
     (new CompositeDataSupport composite-type items)))
 
 (defn values
@@ -41,7 +41,7 @@
    item names.
 
   returns: the values. - `java.util.Collection<?>`"
-  (^java.util.Collection [^javax.management.openmbean.CompositeDataSupport this]
+  (^java.util.Collection [^CompositeDataSupport this]
     (-> this (.values))))
 
 (defn get-all
@@ -53,7 +53,7 @@
   returns: the values corresponding to the keys. - `java.lang.Object[]`
 
   throws: java.lang.IllegalArgumentException - if an element in keys is a null or empty String."
-  ([^javax.management.openmbean.CompositeDataSupport this keys]
+  ([^CompositeDataSupport this keys]
     (-> this (.getAll keys))))
 
 (defn to-string
@@ -64,7 +64,7 @@
    (ie list the itemName=itemValue mappings).
 
   returns: a string representation of this CompositeDataSupport instance - `java.lang.String`"
-  (^java.lang.String [^javax.management.openmbean.CompositeDataSupport this]
+  (^java.lang.String [^CompositeDataSupport this]
     (-> this (.toString))))
 
 (defn contains-value
@@ -75,7 +75,7 @@
   value - the value to be tested. - `java.lang.Object`
 
   returns: true if this CompositeData contains the value. - `boolean`"
-  (^Boolean [^javax.management.openmbean.CompositeDataSupport this ^java.lang.Object value]
+  (^Boolean [^CompositeDataSupport this ^java.lang.Object value]
     (-> this (.containsValue value))))
 
 (defn hash-code
@@ -98,7 +98,7 @@
    of Arrays.hashCode(e) for arrays of primitive types.
 
   returns: the hash code value for this CompositeDataSupport instance - `int`"
-  (^Integer [^javax.management.openmbean.CompositeDataSupport this]
+  (^Integer [^CompositeDataSupport this]
     (-> this (.hashCode))))
 
 (defn contains-key
@@ -109,7 +109,7 @@
   key - the key to be tested. - `java.lang.String`
 
   returns: true if this CompositeData contains the key. - `boolean`"
-  (^Boolean [^javax.management.openmbean.CompositeDataSupport this ^java.lang.String key]
+  (^Boolean [^CompositeDataSupport this ^java.lang.String key]
     (-> this (.containsKey key))))
 
 (defn get
@@ -120,14 +120,14 @@
   returns: the value associated with this key. - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if key is a null or empty String."
-  (^java.lang.Object [^javax.management.openmbean.CompositeDataSupport this ^java.lang.String key]
+  (^java.lang.Object [^CompositeDataSupport this ^java.lang.String key]
     (-> this (.get key))))
 
 (defn get-composite-type
   "Returns the composite type  of this composite data instance.
 
   returns: the type of this CompositeData. - `javax.management.openmbean.CompositeType`"
-  (^javax.management.openmbean.CompositeType [^javax.management.openmbean.CompositeDataSupport this]
+  (^javax.management.openmbean.CompositeType [^CompositeDataSupport this]
     (-> this (.getCompositeType))))
 
 (defn equals
@@ -156,6 +156,6 @@
 
   returns: true if the specified object is equal to this
    CompositeDataSupport instance. - `boolean`"
-  (^Boolean [^javax.management.openmbean.CompositeDataSupport this ^java.lang.Object obj]
+  (^Boolean [^CompositeDataSupport this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

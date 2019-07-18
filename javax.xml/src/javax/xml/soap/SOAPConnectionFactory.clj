@@ -10,7 +10,7 @@
 
 (defn ->soap-connection-factory
   "Constructor."
-  ([]
+  (^SOAPConnectionFactory []
     (new SOAPConnectionFactory )))
 
 (defn *new-instance
@@ -30,6 +30,6 @@
   returns: the new SOAPConnection object. - `javax.xml.soap.SOAPConnection`
 
   throws: javax.xml.soap.SOAPException - if there was an exception creating the SOAPConnection object."
-  (^javax.xml.soap.SOAPConnection [^javax.xml.soap.SOAPConnectionFactory this]
+  (^javax.xml.soap.SOAPConnection [^SOAPConnectionFactory this]
     (-> this (.createConnection))))
 

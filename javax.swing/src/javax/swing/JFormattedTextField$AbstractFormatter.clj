@@ -30,7 +30,7 @@
 
 (defn ->abstract-formatter
   "Constructor."
-  ([]
+  (^JFormattedTextField$AbstractFormatter []
     (new JFormattedTextField$AbstractFormatter )))
 
 (defn install
@@ -64,7 +64,7 @@
    different time than JFormattedTextField does.
 
   ftf - JFormattedTextField to format for, may be null indicating uninstall from current JFormattedTextField. - `javax.swing.JFormattedTextField`"
-  ([^javax.swing.JFormattedTextField$AbstractFormatter this ^javax.swing.JFormattedTextField ftf]
+  ([^JFormattedTextField$AbstractFormatter this ^javax.swing.JFormattedTextField ftf]
     (-> this (.install ftf))))
 
 (defn uninstall
@@ -73,7 +73,7 @@
    DocumentFilter, NavigationFilter
    and additional Actions installed on the
    JFormattedTextField."
-  ([^javax.swing.JFormattedTextField$AbstractFormatter this]
+  ([^JFormattedTextField$AbstractFormatter this]
     (-> this (.uninstall))))
 
 (defn string-to-value
@@ -85,7 +85,7 @@
   returns: Object representation of text - `java.lang.Object`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  (^java.lang.Object [^javax.swing.JFormattedTextField$AbstractFormatter this ^java.lang.String text]
+  (^java.lang.Object [^JFormattedTextField$AbstractFormatter this ^java.lang.String text]
     (-> this (.stringToValue text))))
 
 (defn value-to-string
@@ -96,6 +96,6 @@
   returns: String representation of value - `java.lang.String`
 
   throws: java.text.ParseException - if there is an error in the conversion"
-  (^java.lang.String [^javax.swing.JFormattedTextField$AbstractFormatter this ^java.lang.Object value]
+  (^java.lang.String [^JFormattedTextField$AbstractFormatter this ^java.lang.Object value]
     (-> this (.valueToString value))))
 

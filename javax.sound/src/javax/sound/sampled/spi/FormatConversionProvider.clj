@@ -17,7 +17,7 @@
 
 (defn ->format-conversion-provider
   "Constructor."
-  ([]
+  (^FormatConversionProvider []
     (new FormatConversionProvider )))
 
 (defn get-source-encodings
@@ -26,8 +26,8 @@
 
   returns: array of source format encodings. If for some reason provider
    does not provide any conversion services, an array of length 0 is
-   returned. - `javax.sound.sampled.AudioFormat.Encoding[]`"
-  ([^javax.sound.sampled.spi.FormatConversionProvider this]
+   returned. - `javax.sound.sampled.AudioFormat$Encoding[]`"
+  ([^FormatConversionProvider this]
     (-> this (.getSourceEncodings))))
 
 (defn get-target-encodings
@@ -38,41 +38,41 @@
 
   source-format - format of the incoming data - `javax.sound.sampled.AudioFormat`
 
-  returns: array of supported target format encodings. - `javax.sound.sampled.AudioFormat.Encoding[]`"
-  ([^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat source-format]
+  returns: array of supported target format encodings. - `javax.sound.sampled.AudioFormat$Encoding[]`"
+  ([^FormatConversionProvider this ^javax.sound.sampled.AudioFormat source-format]
     (-> this (.getTargetEncodings source-format)))
-  ([^javax.sound.sampled.spi.FormatConversionProvider this]
+  ([^FormatConversionProvider this]
     (-> this (.getTargetEncodings))))
 
 (defn source-encoding-supported?
   "Indicates whether the format converter supports conversion from the
    specified source format encoding.
 
-  source-encoding - the source format encoding for which support is queried - `javax.sound.sampled.AudioFormat.Encoding`
+  source-encoding - the source format encoding for which support is queried - `javax.sound.sampled.AudioFormat$Encoding`
 
   returns: true if the encoding is supported, otherwise false - `boolean`"
-  (^Boolean [^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding source-encoding]
+  (^Boolean [^FormatConversionProvider this ^javax.sound.sampled.AudioFormat$Encoding source-encoding]
     (-> this (.isSourceEncodingSupported source-encoding))))
 
 (defn target-encoding-supported?
   "Indicates whether the format converter supports conversion to the
    specified target format encoding.
 
-  target-encoding - the target format encoding for which support is queried - `javax.sound.sampled.AudioFormat.Encoding`
+  target-encoding - the target format encoding for which support is queried - `javax.sound.sampled.AudioFormat$Encoding`
 
   returns: true if the encoding is supported, otherwise false - `boolean`"
-  (^Boolean [^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding target-encoding]
+  (^Boolean [^FormatConversionProvider this ^javax.sound.sampled.AudioFormat$Encoding target-encoding]
     (-> this (.isTargetEncodingSupported target-encoding))))
 
 (defn conversion-supported?
   "Indicates whether the format converter supports conversion to a particular encoding
    from a particular format.
 
-  target-encoding - desired encoding of the outgoing data - `javax.sound.sampled.AudioFormat.Encoding`
+  target-encoding - desired encoding of the outgoing data - `javax.sound.sampled.AudioFormat$Encoding`
   source-format - format of the incoming data - `javax.sound.sampled.AudioFormat`
 
   returns: true if the conversion is supported, otherwise false - `boolean`"
-  (^Boolean [^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding target-encoding ^javax.sound.sampled.AudioFormat source-format]
+  (^Boolean [^FormatConversionProvider this ^javax.sound.sampled.AudioFormat$Encoding target-encoding ^javax.sound.sampled.AudioFormat source-format]
     (-> this (.isConversionSupported target-encoding source-format))))
 
 (defn get-target-formats
@@ -81,23 +81,23 @@
    If no target formats with the specified encoding are supported
    for this source format, an array of length 0 is returned.
 
-  target-encoding - desired encoding of the stream after processing - `javax.sound.sampled.AudioFormat.Encoding`
+  target-encoding - desired encoding of the stream after processing - `javax.sound.sampled.AudioFormat$Encoding`
   source-format - format of the incoming data - `javax.sound.sampled.AudioFormat`
 
   returns: array of supported target formats. - `javax.sound.sampled.AudioFormat[]`"
-  ([^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding target-encoding ^javax.sound.sampled.AudioFormat source-format]
+  ([^FormatConversionProvider this ^javax.sound.sampled.AudioFormat$Encoding target-encoding ^javax.sound.sampled.AudioFormat source-format]
     (-> this (.getTargetFormats target-encoding source-format))))
 
 (defn get-audio-input-stream
   "Obtains an audio input stream with the specified encoding from the given audio
    input stream.
 
-  target-encoding - desired encoding of the stream after processing - `javax.sound.sampled.AudioFormat.Encoding`
+  target-encoding - desired encoding of the stream after processing - `javax.sound.sampled.AudioFormat$Encoding`
   source-stream - stream from which data to be processed should be read - `javax.sound.sampled.AudioInputStream`
 
   returns: stream from which processed data with the specified target encoding may be read - `javax.sound.sampled.AudioInputStream`
 
   throws: java.lang.IllegalArgumentException - if the format combination supplied is not supported."
-  (^javax.sound.sampled.AudioInputStream [^javax.sound.sampled.spi.FormatConversionProvider this ^javax.sound.sampled.AudioFormat.Encoding target-encoding ^javax.sound.sampled.AudioInputStream source-stream]
+  (^javax.sound.sampled.AudioInputStream [^FormatConversionProvider this ^javax.sound.sampled.AudioFormat$Encoding target-encoding ^javax.sound.sampled.AudioInputStream source-stream]
     (-> this (.getAudioInputStream target-encoding source-stream))))
 

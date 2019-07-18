@@ -37,7 +37,7 @@
    element which declares the parameter is returned.
 
   returns: the enclosing element, or null if there is none - `javax.lang.model.element.Element`"
-  (^javax.lang.model.element.Element [^javax.lang.model.element.Element this]
+  (^javax.lang.model.element.Element [^Element this]
     (-> this (.getEnclosingElement))))
 
 (defn get-annotation-mirrors
@@ -48,14 +48,14 @@
 
   returns: the annotations directly present on this
    construct; an empty list if there are none - `java.util.List<? extends javax.lang.model.element.AnnotationMirror>`"
-  ([^javax.lang.model.element.Element this]
+  ([^Element this]
     (-> this (.getAnnotationMirrors))))
 
 (defn get-kind
   "Returns the kind of this element.
 
   returns: the kind of this element - `javax.lang.model.element.ElementKind`"
-  (^javax.lang.model.element.ElementKind [^javax.lang.model.element.Element this]
+  (^javax.lang.model.element.ElementKind [^Element this]
     (-> this (.getKind))))
 
 (defn get-enclosed-elements
@@ -78,7 +78,7 @@
    methods in ElementFilter.
 
   returns: the enclosed elements, or an empty list if none - `java.util.List<? extends javax.lang.model.element.Element>`"
-  ([^javax.lang.model.element.Element this]
+  ([^Element this]
     (-> this (.getEnclosedElements))))
 
 (defn get-modifiers
@@ -87,7 +87,7 @@
    modifiers of interface members, are included.
 
   returns: the modifiers of this element, or an empty set if there are none - `java.util.Set<javax.lang.model.element.Modifier>`"
-  (^java.util.Set [^javax.lang.model.element.Element this]
+  (^java.util.Set [^Element this]
     (-> this (.getModifiers))))
 
 (defn as-type
@@ -104,7 +104,7 @@
    for obtaining the full range of types defined by an element.
 
   returns: the type defined by this element - `javax.lang.model.type.TypeMirror`"
-  (^javax.lang.model.type.TypeMirror [^javax.lang.model.element.Element this]
+  (^javax.lang.model.type.TypeMirror [^Element this]
     (-> this (.asType))))
 
 (defn get-annotation
@@ -135,28 +135,28 @@
    callers that are written to operate on a known, fixed set of
    annotation types.
 
-  annotation-type - the Class object corresponding to the annotation type - `java.lang.Class<A>`
+  annotation-type - the Class object corresponding to the annotation type - `java.lang.Class`
 
   returns: this construct's annotation for the specified
    annotation type if present, else null - `<A extends java.lang.annotation.Annotation> A`"
-  ([^javax.lang.model.element.Element this ^java.lang.Class annotation-type]
+  ([^Element this ^java.lang.Class annotation-type]
     (-> this (.getAnnotation annotation-type))))
 
 (defn accept
   "Applies a visitor to this element.
 
-  v - the visitor operating on this element - `javax.lang.model.element.ElementVisitor<R,P>`
+  v - the visitor operating on this element - `javax.lang.model.element.ElementVisitor`
   p - additional parameter to the visitor - `P`
 
   returns: a visitor-specified result - `<R,P> R`"
-  ([^javax.lang.model.element.Element this ^javax.lang.model.element.ElementVisitor v p]
+  ([^Element this ^javax.lang.model.element.ElementVisitor v p]
     (-> this (.accept v p))))
 
 (defn hash-code
   "Obeys the general contract of Object.hashCode.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.lang.model.element.Element this]
+  (^Integer [^Element this]
     (-> this (.hashCode))))
 
 (defn get-simple-name
@@ -176,7 +176,7 @@
    If it represents an anonymous class or instance initializer, an empty name is returned.
 
   returns: the simple name of this element - `javax.lang.model.element.Name`"
-  (^javax.lang.model.element.Name [^javax.lang.model.element.Element this]
+  (^javax.lang.model.element.Name [^Element this]
     (-> this (.getSimpleName))))
 
 (defn equals
@@ -196,6 +196,6 @@
 
   returns: true if the specified object represents the same
             element as this - `boolean`"
-  (^Boolean [^javax.lang.model.element.Element this ^java.lang.Object obj]
+  (^Boolean [^Element this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

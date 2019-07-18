@@ -173,7 +173,7 @@
    either CLASS or ENUM.
 
   returns: true if this is a kind of class - `boolean`"
-  (^Boolean [^javax.lang.model.element.ElementKind this]
+  (^Boolean [^ElementKind this]
     (-> this (.isClass))))
 
 (defn interface?
@@ -181,7 +181,7 @@
    either INTERFACE or ANNOTATION_TYPE.
 
   returns: true if this is a kind of interface - `boolean`"
-  (^Boolean [^javax.lang.model.element.ElementKind this]
+  (^Boolean [^ElementKind this]
     (-> this (.isInterface))))
 
 (defn field?
@@ -189,6 +189,6 @@
    either FIELD or ENUM_CONSTANT.
 
   returns: true if this is a kind of field - `boolean`"
-  (^Boolean [^javax.lang.model.element.ElementKind this]
+  (^Boolean [^ElementKind this]
     (-> this (.isField))))
 

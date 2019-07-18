@@ -7,7 +7,7 @@
 
 (defn ->basic-label-ui
   "Constructor."
-  ([]
+  (^BasicLabelUI []
     (new BasicLabelUI )))
 
 (defn *create-ui
@@ -23,7 +23,7 @@
   "Description copied from class: ComponentUI
 
   c - the component where this UI delegate is being installed - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicLabelUI this ^javax.swing.JComponent c]
+  ([^BasicLabelUI this ^javax.swing.JComponent c]
     (-> this (.installUI c))))
 
 (defn get-minimum-size
@@ -32,7 +32,7 @@
   c - the component whose minimum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: getPreferredSize(c) - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicLabelUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicLabelUI this ^javax.swing.JComponent c]
     (-> this (.getMinimumSize c))))
 
 (defn get-maximum-size
@@ -41,14 +41,14 @@
   c - the component whose maximum size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: getPreferredSize(c) - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicLabelUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicLabelUI this ^javax.swing.JComponent c]
     (-> this (.getMaximumSize c))))
 
 (defn uninstall-ui
   "Description copied from class: ComponentUI
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicLabelUI this ^javax.swing.JComponent c]
+  ([^BasicLabelUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-baseline-resize-behavior
@@ -58,17 +58,17 @@
   c - JComponent to return baseline resize behavior for - `javax.swing.JComponent`
 
   returns: an enum indicating how the baseline changes as the component
-           size changes - `java.awt.Component.BaselineResizeBehavior`
+           size changes - `java.awt.Component$BaselineResizeBehavior`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^java.awt.Component.BaselineResizeBehavior [^javax.swing.plaf.basic.BasicLabelUI this ^javax.swing.JComponent c]
+  (^java.awt.Component$BaselineResizeBehavior [^BasicLabelUI this ^javax.swing.JComponent c]
     (-> this (.getBaselineResizeBehavior c))))
 
 (defn property-change
   "Description copied from interface: PropertyChangeListener
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.plaf.basic.BasicLabelUI this ^java.beans.PropertyChangeEvent e]
+  ([^BasicLabelUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 
 (defn paint
@@ -79,7 +79,7 @@
 
   g - the Graphics context in which to paint - `java.awt.Graphics`
   c - the component being painted; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.basic.BasicLabelUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^BasicLabelUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn get-baseline
@@ -93,7 +93,7 @@
                     baseline - `int`
 
   throws: java.lang.NullPointerException - if c is null"
-  (^Integer [^javax.swing.plaf.basic.BasicLabelUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
+  (^Integer [^BasicLabelUI this ^javax.swing.JComponent c ^Integer width ^Integer height]
     (-> this (.getBaseline c width height))))
 
 (defn get-preferred-size
@@ -102,6 +102,6 @@
   c - the component whose preferred size is being queried; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`
 
   returns: `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicLabelUI this ^javax.swing.JComponent c]
+  (^java.awt.Dimension [^BasicLabelUI this ^javax.swing.JComponent c]
     (-> this (.getPreferredSize c))))
 

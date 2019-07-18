@@ -110,7 +110,7 @@
   returns: the keys (never null, may be empty) - `javax.security.auth.kerberos.KerberosKey[]`
 
   throws: java.lang.NullPointerException - if the principal argument is null"
-  ([^javax.security.auth.kerberos.KeyTab this ^javax.security.auth.kerberos.KerberosPrincipal principal]
+  ([^KeyTab this ^javax.security.auth.kerberos.KerberosPrincipal principal]
     (-> this (.getKeys principal))))
 
 (defn exists?
@@ -124,21 +124,21 @@
   returns: true if the keytab file exists; false otherwise. - `boolean`
 
   throws: java.lang.SecurityException - if a security manager exists and the read access to the keytab file is not permitted"
-  (^Boolean [^javax.security.auth.kerberos.KeyTab this]
+  (^Boolean [^KeyTab this]
     (-> this (.exists))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.kerberos.KeyTab this]
+  (^java.lang.String [^KeyTab this]
     (-> this (.toString))))
 
 (defn hash-code
   "Returns a hashcode for this KeyTab.
 
   returns: a hashCode() for the KeyTab - `int`"
-  (^Integer [^javax.security.auth.kerberos.KeyTab this]
+  (^Integer [^KeyTab this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -150,7 +150,7 @@
   other - the Object to compare to - `java.lang.Object`
 
   returns: true if the specified object is equal to this KeyTab - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KeyTab this ^java.lang.Object other]
+  (^Boolean [^KeyTab this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn get-principal
@@ -162,13 +162,13 @@
    User can call isBound() to verify this case.
 
   returns: the service principal - `javax.security.auth.kerberos.KerberosPrincipal`"
-  (^javax.security.auth.kerberos.KerberosPrincipal [^javax.security.auth.kerberos.KeyTab this]
+  (^javax.security.auth.kerberos.KerberosPrincipal [^KeyTab this]
     (-> this (.getPrincipal))))
 
 (defn bound?
   "Returns if the keytab is bound to a principal
 
   returns: if the keytab is bound to a principal - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KeyTab this]
+  (^Boolean [^KeyTab this]
     (-> this (.isBound))))
 

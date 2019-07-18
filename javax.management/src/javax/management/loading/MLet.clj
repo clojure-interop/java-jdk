@@ -106,15 +106,15 @@
   parent - The parent class loader for delegation. - `java.lang.ClassLoader`
   factory - The URLStreamHandlerFactory to use when creating URLs. - `java.net.URLStreamHandlerFactory`
   delegate-to-clr - True if, when a class is not found in either the parent ClassLoader or the URLs, the MLet should delegate to its containing MBeanServer's ClassLoaderRepository. - `boolean`"
-  ([urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory ^Boolean delegate-to-clr]
+  (^MLet [urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory ^Boolean delegate-to-clr]
     (new MLet urls parent factory delegate-to-clr))
-  ([urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory]
+  (^MLet [urls ^java.lang.ClassLoader parent ^java.net.URLStreamHandlerFactory factory]
     (new MLet urls parent factory))
-  ([urls ^java.lang.ClassLoader parent]
+  (^MLet [urls ^java.lang.ClassLoader parent]
     (new MLet urls parent))
-  ([urls]
+  (^MLet [urls]
     (new MLet urls))
-  ([]
+  (^MLet []
     (new MLet )))
 
 (defn add-url
@@ -122,7 +122,7 @@
    resources.
 
   url - the URL to be added to the search path of URLs - `java.net.URL`"
-  ([^javax.management.loading.MLet this ^java.net.URL url]
+  ([^MLet this ^java.net.URL url]
     (-> this (.addURL url))))
 
 (defn write-external
@@ -140,13 +140,13 @@
   out - The object output stream to write to. - `java.io.ObjectOutput`
 
   throws: java.io.IOException - If a problem occurred while writing."
-  ([^javax.management.loading.MLet this ^java.io.ObjectOutput out]
+  ([^MLet this ^java.io.ObjectOutput out]
     (-> this (.writeExternal out))))
 
 (defn post-deregister
   "Allows the m-let to perform any operations needed after having been
    unregistered in the MBean server."
-  ([^javax.management.loading.MLet this]
+  ([^MLet this]
     (-> this (.postDeregister))))
 
 (defn pre-deregister
@@ -154,7 +154,7 @@
    by the MBean server.
 
   throws: java.lang.Exception - This exception should be caught by the MBean server and re-thrown as an MBeanRegistrationException."
-  ([^javax.management.loading.MLet this]
+  ([^MLet this]
     (-> this (.preDeregister))))
 
 (defn get-ur-ls
@@ -163,7 +163,7 @@
    along with any URLs subsequently appended by the addURL() method.
 
   returns: the search path of URLs for loading classes and resources. - `java.net.URL[]`"
-  ([^javax.management.loading.MLet this]
+  ([^MLet this]
     (-> this (.getURLs))))
 
 (defn get-m-beans-from-url
@@ -179,7 +179,7 @@
    (that is, an error or an exception) if the MBean could not be created. - `java.util.Set<java.lang.Object>`
 
   throws: javax.management.ServiceNotFoundException - One of the following errors has occurred: The m-let text file does not contain an MLET tag, the m-let text file is not found, a mandatory attribute of the MLET tag is not specified, the value of url is null."
-  (^java.util.Set [^javax.management.loading.MLet this ^java.net.URL url]
+  (^java.util.Set [^MLet this ^java.net.URL url]
     (-> this (.getMBeansFromURL url))))
 
 (defn get-library-directory
@@ -189,7 +189,7 @@
   returns: The current directory used by the library loader. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if this implementation does not support storing native libraries in this way."
-  (^java.lang.String [^javax.management.loading.MLet this]
+  (^java.lang.String [^MLet this]
     (-> this (.getLibraryDirectory))))
 
 (defn load-class
@@ -204,7 +204,7 @@
   returns: The resulting Class object. - `java.lang.Class<?>`
 
   throws: java.lang.ClassNotFoundException - The specified class could not be found in this ClassLoader nor in the given ClassLoaderRepository."
-  (^java.lang.Class [^javax.management.loading.MLet this ^java.lang.String name ^javax.management.loading.ClassLoaderRepository clr]
+  (^java.lang.Class [^MLet this ^java.lang.String name ^javax.management.loading.ClassLoaderRepository clr]
     (-> this (.loadClass name clr))))
 
 (defn post-register
@@ -212,7 +212,7 @@
    registered in the MBean server or after the registration has failed.
 
   registration-done - Indicates whether or not the m-let has been successfully registered in the MBean server. The value false means that either the registration phase has failed. - `java.lang.Boolean`"
-  ([^javax.management.loading.MLet this ^java.lang.Boolean registration-done]
+  ([^MLet this ^java.lang.Boolean registration-done]
     (-> this (.postRegister registration-done))))
 
 (defn set-library-directory
@@ -222,7 +222,7 @@
   libdir - The directory used by the library loader. - `java.lang.String`
 
   throws: java.lang.UnsupportedOperationException - if this implementation does not support storing native libraries in this way."
-  ([^javax.management.loading.MLet this ^java.lang.String libdir]
+  ([^MLet this ^java.lang.String libdir]
     (-> this (.setLibraryDirectory libdir))))
 
 (defn read-external
@@ -240,7 +240,7 @@
   in - The object input stream to read from. - `java.io.ObjectInput`
 
   throws: java.io.IOException - if a problem occurred while reading."
-  ([^javax.management.loading.MLet this ^java.io.ObjectInput in]
+  ([^MLet this ^java.io.ObjectInput in]
     (-> this (.readExternal in))))
 
 (defn pre-register
@@ -255,6 +255,6 @@
   returns: The name of the m-let registered. - `javax.management.ObjectName`
 
   throws: java.lang.Exception - This exception should be caught by the MBean server and re-thrownas an MBeanRegistrationException."
-  (^javax.management.ObjectName [^javax.management.loading.MLet this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
+  (^javax.management.ObjectName [^MLet this ^javax.management.MBeanServer server ^javax.management.ObjectName name]
     (-> this (.preRegister server name))))
 

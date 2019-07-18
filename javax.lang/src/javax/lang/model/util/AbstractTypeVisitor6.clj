@@ -36,32 +36,32 @@
    invocation v.visit(t, p) is equivalent to t.accept(v, p).
 
   t - the type to visit - `javax.lang.model.type.TypeMirror`
-  p - a visitor-specified parameter - `AbstractTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: a visitor-specified result - `AbstractTypeVisitor6.R`"
-  (^AbstractTypeVisitor6.R [^javax.lang.model.util.AbstractTypeVisitor6 this ^javax.lang.model.type.TypeMirror t ^AbstractTypeVisitor6.P p]
+  returns: a visitor-specified result - `R`"
+  ([^AbstractTypeVisitor6 this ^javax.lang.model.type.TypeMirror t p]
     (-> this (.visit t p)))
-  (^AbstractTypeVisitor6.R [^javax.lang.model.util.AbstractTypeVisitor6 this ^javax.lang.model.type.TypeMirror t]
+  ([^AbstractTypeVisitor6 this ^javax.lang.model.type.TypeMirror t]
     (-> this (.visit t))))
 
 (defn visit-union
   "Visits a UnionType element by calling visitUnknown.
 
   t - the type to visit - `javax.lang.model.type.UnionType`
-  p - a visitor-specified parameter - `AbstractTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of visitUnknown - `AbstractTypeVisitor6.R`"
-  (^AbstractTypeVisitor6.R [^javax.lang.model.util.AbstractTypeVisitor6 this ^javax.lang.model.type.UnionType t ^AbstractTypeVisitor6.P p]
+  returns: the result of visitUnknown - `R`"
+  ([^AbstractTypeVisitor6 this ^javax.lang.model.type.UnionType t p]
     (-> this (.visitUnion t p))))
 
 (defn visit-intersection
   "Visits an IntersectionType element by calling visitUnknown.
 
   t - the type to visit - `javax.lang.model.type.IntersectionType`
-  p - a visitor-specified parameter - `AbstractTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of visitUnknown - `AbstractTypeVisitor6.R`"
-  (^AbstractTypeVisitor6.R [^javax.lang.model.util.AbstractTypeVisitor6 this ^javax.lang.model.type.IntersectionType t ^AbstractTypeVisitor6.P p]
+  returns: the result of visitUnknown - `R`"
+  ([^AbstractTypeVisitor6 this ^javax.lang.model.type.IntersectionType t p]
     (-> this (.visitIntersection t p))))
 
 (defn visit-unknown
@@ -73,11 +73,11 @@
    subclass.
 
   t - the type to visit - `javax.lang.model.type.TypeMirror`
-  p - a visitor-specified parameter - `AbstractTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: a visitor-specified result - `AbstractTypeVisitor6.R`
+  returns: a visitor-specified result - `R`
 
   throws: javax.lang.model.type.UnknownTypeException - a visitor implementation may optionally throw this exception"
-  (^AbstractTypeVisitor6.R [^javax.lang.model.util.AbstractTypeVisitor6 this ^javax.lang.model.type.TypeMirror t ^AbstractTypeVisitor6.P p]
+  ([^AbstractTypeVisitor6 this ^javax.lang.model.type.TypeMirror t p]
     (-> this (.visitUnknown t p))))
 

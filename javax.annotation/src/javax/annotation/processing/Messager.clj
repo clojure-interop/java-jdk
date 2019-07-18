@@ -20,17 +20,17 @@
    annotation value inside the annotation mirror of the annotated
    element.
 
-  kind - the kind of message - `javax.tools.Diagnostic.Kind`
+  kind - the kind of message - `javax.tools.Diagnostic$Kind`
   msg - the message, or an empty string if none - `java.lang.CharSequence`
   e - the annotated element - `javax.lang.model.element.Element`
   a - the annotation containing the annotation value - `javax.lang.model.element.AnnotationMirror`
   v - the annotation value to use as a position hint - `javax.lang.model.element.AnnotationValue`"
-  ([^javax.annotation.processing.Messager this ^javax.tools.Diagnostic.Kind kind ^java.lang.CharSequence msg ^javax.lang.model.element.Element e ^javax.lang.model.element.AnnotationMirror a ^javax.lang.model.element.AnnotationValue v]
+  ([^Messager this ^javax.tools.Diagnostic$Kind kind ^java.lang.CharSequence msg ^javax.lang.model.element.Element e ^javax.lang.model.element.AnnotationMirror a ^javax.lang.model.element.AnnotationValue v]
     (-> this (.printMessage kind msg e a v)))
-  ([^javax.annotation.processing.Messager this ^javax.tools.Diagnostic.Kind kind ^java.lang.CharSequence msg ^javax.lang.model.element.Element e ^javax.lang.model.element.AnnotationMirror a]
+  ([^Messager this ^javax.tools.Diagnostic$Kind kind ^java.lang.CharSequence msg ^javax.lang.model.element.Element e ^javax.lang.model.element.AnnotationMirror a]
     (-> this (.printMessage kind msg e a)))
-  ([^javax.annotation.processing.Messager this ^javax.tools.Diagnostic.Kind kind ^java.lang.CharSequence msg ^javax.lang.model.element.Element e]
+  ([^Messager this ^javax.tools.Diagnostic$Kind kind ^java.lang.CharSequence msg ^javax.lang.model.element.Element e]
     (-> this (.printMessage kind msg e)))
-  ([^javax.annotation.processing.Messager this ^javax.tools.Diagnostic.Kind kind ^java.lang.CharSequence msg]
+  ([^Messager this ^javax.tools.Diagnostic$Kind kind ^java.lang.CharSequence msg]
     (-> this (.printMessage kind msg))))
 

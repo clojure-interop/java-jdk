@@ -9,7 +9,7 @@
 
 (defn ->abstract-spinner-model
   "Constructor."
-  ([]
+  (^AbstractSpinnerModel []
     (new AbstractSpinnerModel )))
 
 (defn add-change-listener
@@ -17,14 +17,14 @@
    ChangeListeners must be notified when the models value changes.
 
   l - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.AbstractSpinnerModel this ^javax.swing.event.ChangeListener l]
+  ([^AbstractSpinnerModel this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from the model's listener list.
 
   l - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.AbstractSpinnerModel this ^javax.swing.event.ChangeListener l]
+  ([^AbstractSpinnerModel this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -33,7 +33,7 @@
 
   returns: all of the ChangeListeners added or an empty
            array if no listeners have been added - `javax.swing.event.ChangeListener[]`"
-  ([^javax.swing.AbstractSpinnerModel this]
+  ([^AbstractSpinnerModel this]
     (-> this (.getChangeListeners))))
 
 (defn get-listeners
@@ -44,10 +44,10 @@
 
    myAbstractSpinnerModel.getListeners(ChangeListener.class);
 
-  listener-type - the type of listeners to return, e.g. ChangeListener.class - `java.lang.Class<T>`
+  listener-type - the type of listeners to return, e.g. ChangeListener.class - `java.lang.Class`
 
   returns: all of the objects receiving listenerType notifications
            from this model - `<T extends java.util.EventListener> T[]`"
-  ([^javax.swing.AbstractSpinnerModel this ^java.lang.Class listener-type]
+  ([^AbstractSpinnerModel this ^java.lang.Class listener-type]
     (-> this (.getListeners listener-type))))
 

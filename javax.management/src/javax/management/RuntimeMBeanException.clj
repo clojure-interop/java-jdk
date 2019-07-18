@@ -14,22 +14,22 @@
 
   e - the wrapped exception. - `java.lang.RuntimeException`
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.RuntimeException e ^java.lang.String message]
+  (^RuntimeMBeanException [^java.lang.RuntimeException e ^java.lang.String message]
     (new RuntimeMBeanException e message))
-  ([^java.lang.RuntimeException e]
+  (^RuntimeMBeanException [^java.lang.RuntimeException e]
     (new RuntimeMBeanException e)))
 
 (defn get-target-exception
   "Returns the actual RuntimeException thrown.
 
   returns: the wrapped RuntimeException. - `java.lang.RuntimeException`"
-  (^java.lang.RuntimeException [^javax.management.RuntimeMBeanException this]
+  (^java.lang.RuntimeException [^RuntimeMBeanException this]
     (-> this (.getTargetException))))
 
 (defn get-cause
   "Returns the actual RuntimeException thrown.
 
   returns: the wrapped RuntimeException. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.management.RuntimeMBeanException this]
+  (^java.lang.Throwable [^RuntimeMBeanException this]
     (-> this (.getCause))))
 

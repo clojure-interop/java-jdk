@@ -97,7 +97,7 @@
   value - Integer value. - `int`
 
   throws: java.lang.IllegalArgumentException - (Unchecked exception) Thrown if value is less than 1."
-  ([^Integer value]
+  (^NumberUp [^Integer value]
     (new NumberUp value)))
 
 (defn equals
@@ -116,7 +116,7 @@
 
   returns: True if object is equivalent to this number up
             attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.NumberUp this ^java.lang.Object object]
+  (^Boolean [^NumberUp this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -127,7 +127,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.NumberUp this]
+  ([^NumberUp this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -137,6 +137,6 @@
    For class NumberUp, the category name is `number-up`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.NumberUp this]
+  (^java.lang.String [^NumberUp this]
     (-> this (.getName))))
 

@@ -14,6 +14,6 @@
   value - the function argument - `long`
 
   returns: the function result - `int`"
-  (^Integer [^java.util.function.LongToIntFunction this ^Long value]
+  (^Integer [^LongToIntFunction this ^Long value]
     (-> this (.applyAsInt value))))
 

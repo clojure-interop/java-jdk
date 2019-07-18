@@ -28,7 +28,7 @@
    the specified session id does not refer to a valid SSLSession. - `javax.net.ssl.SSLSession`
 
   throws: java.lang.NullPointerException - if sessionId is null."
-  (^javax.net.ssl.SSLSession [^javax.net.ssl.SSLSessionContext this session-id]
+  (^javax.net.ssl.SSLSession [^SSLSessionContext this session-id]
     (-> this (.getSession session-id))))
 
 (defn get-ids
@@ -36,7 +36,7 @@
    SSLSessionContext.
 
   returns: an enumeration of all the Session id's - `java.util.Enumeration<byte[]>`"
-  ([^javax.net.ssl.SSLSessionContext this]
+  ([^SSLSessionContext this]
     (-> this (.getIds))))
 
 (defn set-session-timeout
@@ -54,7 +54,7 @@
   seconds - the new session timeout limit in seconds; zero means there is no limit. - `int`
 
   throws: java.lang.IllegalArgumentException - if the timeout specified is < 0."
-  ([^javax.net.ssl.SSLSessionContext this ^Integer seconds]
+  ([^SSLSessionContext this ^Integer seconds]
     (-> this (.setSessionTimeout seconds))))
 
 (defn get-session-timeout
@@ -72,7 +72,7 @@
 
   returns: the session timeout limit in seconds; zero means there is no
    limit. - `int`"
-  (^Integer [^javax.net.ssl.SSLSessionContext this]
+  (^Integer [^SSLSessionContext this]
     (-> this (.getSessionTimeout))))
 
 (defn set-session-cache-size
@@ -83,7 +83,7 @@
   size - the new session cache size limit; zero means there is no limit. - `int`
 
   throws: java.lang.IllegalArgumentException - if the specified size is < 0."
-  ([^javax.net.ssl.SSLSessionContext this ^Integer size]
+  ([^SSLSessionContext this ^Integer size]
     (-> this (.setSessionCacheSize size))))
 
 (defn get-session-cache-size
@@ -92,6 +92,6 @@
    SSLSessionContext.
 
   returns: size of the session cache; zero means there is no size limit. - `int`"
-  (^Integer [^javax.net.ssl.SSLSessionContext this]
+  (^Integer [^SSLSessionContext this]
     (-> this (.getSessionCacheSize))))
 

@@ -18,7 +18,7 @@
   Constructs a ParagraphView for the given element.
 
   elem - the element that this view is responsible for - `javax.swing.text.Element`"
-  ([^javax.swing.text.Element elem]
+  (^ParagraphView [^javax.swing.text.Element elem]
     (new ParagraphView elem)))
 
 (defn get-flow-span
@@ -29,7 +29,7 @@
 
   returns: the constraining span for the given view at
     index - `int`"
-  (^Integer [^javax.swing.text.ParagraphView this ^Integer index]
+  (^Integer [^ParagraphView this ^Integer index]
     (-> this (.getFlowSpan index))))
 
 (defn get-flow-start
@@ -40,7 +40,7 @@
 
   returns: the location for the given view at
     index - `int`"
-  (^Integer [^javax.swing.text.ParagraphView this ^Integer index]
+  (^Integer [^ParagraphView this ^Integer index]
     (-> this (.getFlowStart index))))
 
 (defn next-tab-stop
@@ -64,7 +64,7 @@
   tab-offset - the position within the text stream that the tab occurred at >= 0 - `int`
 
   returns: the trailing end of the tab expansion >= 0 - `float`"
-  (^Float [^javax.swing.text.ParagraphView this ^Float x ^Integer tab-offset]
+  (^Float [^ParagraphView this ^Float x ^Integer tab-offset]
     (-> this (.nextTabStop x tab-offset))))
 
 (defn paint
@@ -74,7 +74,7 @@
 
   g - the rendering surface to use - `java.awt.Graphics`
   a - the allocated region to render into - `java.awt.Shape`"
-  ([^javax.swing.text.ParagraphView this ^java.awt.Graphics g ^java.awt.Shape a]
+  ([^ParagraphView this ^java.awt.Graphics g ^java.awt.Shape a]
     (-> this (.paint g a))))
 
 (defn get-alignment
@@ -90,7 +90,7 @@
      origin and 1.0 indicates alignment to the full span
      away from the origin.  An alignment of 0.5 would be the
      center of the view. - `float`"
-  (^Float [^javax.swing.text.ParagraphView this ^Integer axis]
+  (^Float [^ParagraphView this ^Integer axis]
     (-> this (.getAlignment axis))))
 
 (defn break-view
@@ -108,7 +108,7 @@
     given span, if the view can be broken; if the view
     doesn't support breaking behavior, the view itself is
     returned - `javax.swing.text.View`"
-  (^javax.swing.text.View [^javax.swing.text.ParagraphView this ^Integer axis ^Float len ^java.awt.Shape a]
+  (^javax.swing.text.View [^ParagraphView this ^Integer axis ^Float len ^java.awt.Shape a]
     (-> this (.breakView axis len a))))
 
 (defn get-break-weight
@@ -125,7 +125,7 @@
 
   returns: a value indicating the attractiveness of breaking here;
     either GoodBreakWeight or BadBreakWeight - `int`"
-  (^Integer [^javax.swing.text.ParagraphView this ^Integer axis ^Float len]
+  (^Integer [^ParagraphView this ^Integer axis ^Float len]
     (-> this (.getBreakWeight axis len))))
 
 (defn changed-update
@@ -135,6 +135,6 @@
   changes - the change information from the associated document - `javax.swing.event.DocumentEvent`
   a - the current allocation of the view - `java.awt.Shape`
   f - the factory to use to rebuild if the view has children - `javax.swing.text.ViewFactory`"
-  ([^javax.swing.text.ParagraphView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
+  ([^ParagraphView this ^javax.swing.event.DocumentEvent changes ^java.awt.Shape a ^javax.swing.text.ViewFactory f]
     (-> this (.changedUpdate changes a f))))
 

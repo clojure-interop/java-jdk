@@ -60,7 +60,7 @@
    leadSelectionPath property maintained by the JTree.
 
   returns: `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.tree.TreeSelectionModel this]
+  (^javax.swing.tree.TreePath [^TreeSelectionModel this]
     (-> this (.getLeadSelectionPath))))
 
 (defn get-max-selection-row
@@ -69,14 +69,14 @@
    or there is no RowMapper, this will return -1.
 
   returns: `int`"
-  (^Integer [^javax.swing.tree.TreeSelectionModel this]
+  (^Integer [^TreeSelectionModel this]
     (-> this (.getMaxSelectionRow))))
 
 (defn get-selection-count
   "Returns the number of paths that are selected.
 
   returns: `int`"
-  (^Integer [^javax.swing.tree.TreeSelectionModel this]
+  (^Integer [^TreeSelectionModel this]
     (-> this (.getSelectionCount))))
 
 (defn row-selected?
@@ -85,13 +85,13 @@
   row - `int`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.tree.TreeSelectionModel this ^Integer row]
+  (^Boolean [^TreeSelectionModel this ^Integer row]
     (-> this (.isRowSelected row))))
 
 (defn clear-selection
   "Empties the current selection.  If this represents a change in the
    current selection, the selection listeners are notified."
-  ([^javax.swing.tree.TreeSelectionModel this]
+  ([^TreeSelectionModel this]
     (-> this (.clearSelection))))
 
 (defn get-row-mapper
@@ -99,7 +99,7 @@
    row.
 
   returns: `javax.swing.tree.RowMapper`"
-  (^javax.swing.tree.RowMapper [^javax.swing.tree.TreeSelectionModel this]
+  (^javax.swing.tree.RowMapper [^TreeSelectionModel this]
     (-> this (.getRowMapper))))
 
 (defn add-tree-selection-listener
@@ -107,7 +107,7 @@
    set of selected TreePaths changes.
 
   x - the new listener to be added - `javax.swing.event.TreeSelectionListener`"
-  ([^javax.swing.tree.TreeSelectionModel this ^javax.swing.event.TreeSelectionListener x]
+  ([^TreeSelectionModel this ^javax.swing.event.TreeSelectionListener x]
     (-> this (.addTreeSelectionListener x))))
 
 (defn reset-row-selection
@@ -118,7 +118,7 @@
    You do not normally have to call this; JTree and its associated
    listeners will invoke this for you. If you are implementing your own
    view class, then you will have to invoke this."
-  ([^javax.swing.tree.TreeSelectionModel this]
+  ([^TreeSelectionModel this]
     (-> this (.resetRowSelection))))
 
 (defn set-selection-path
@@ -127,7 +127,7 @@
    null, this has the same effect as invoking clearSelection.
 
   path - new path to select - `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.TreeSelectionModel this ^javax.swing.tree.TreePath path]
+  ([^TreeSelectionModel this ^javax.swing.tree.TreePath path]
     (-> this (.setSelectionPath path))))
 
 (defn remove-tree-selection-listener
@@ -135,7 +135,7 @@
    the set of selected TreePaths changes.
 
   x - the listener to remove - `javax.swing.event.TreeSelectionListener`"
-  ([^javax.swing.tree.TreeSelectionModel this ^javax.swing.event.TreeSelectionListener x]
+  ([^TreeSelectionModel this ^javax.swing.event.TreeSelectionListener x]
     (-> this (.removeTreeSelectionListener x))))
 
 (defn get-selection-paths
@@ -143,7 +143,7 @@
    empty array) if nothing is currently selected.
 
   returns: `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.tree.TreeSelectionModel this]
+  ([^TreeSelectionModel this]
     (-> this (.getSelectionPaths))))
 
 (defn get-lead-selection-row
@@ -151,7 +151,7 @@
    added.
 
   returns: `int`"
-  (^Integer [^javax.swing.tree.TreeSelectionModel this]
+  (^Integer [^TreeSelectionModel this]
     (-> this (.getLeadSelectionRow))))
 
 (defn get-selection-path
@@ -161,7 +161,7 @@
    RowMapper.
 
   returns: `javax.swing.tree.TreePath`"
-  (^javax.swing.tree.TreePath [^javax.swing.tree.TreeSelectionModel this]
+  (^javax.swing.tree.TreePath [^TreeSelectionModel this]
     (-> this (.getSelectionPath))))
 
 (defn add-selection-paths
@@ -171,7 +171,7 @@
    no effect if paths is null.
 
   paths - the new paths to add to the current selection - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.tree.TreeSelectionModel this paths]
+  ([^TreeSelectionModel this paths]
     (-> this (.addSelectionPaths paths))))
 
 (defn remove-property-change-listener
@@ -180,7 +180,7 @@
    for all properties.
 
   listener - the PropertyChangeListener to be removed - `java.beans.PropertyChangeListener`"
-  ([^javax.swing.tree.TreeSelectionModel this ^java.beans.PropertyChangeListener listener]
+  ([^TreeSelectionModel this ^java.beans.PropertyChangeListener listener]
     (-> this (.removePropertyChangeListener listener))))
 
 (defn get-min-selection-row
@@ -189,14 +189,14 @@
    or there is no RowMapper, this will return -1.
 
   returns: `int`"
-  (^Integer [^javax.swing.tree.TreeSelectionModel this]
+  (^Integer [^TreeSelectionModel this]
     (-> this (.getMinSelectionRow))))
 
 (defn selection-empty?
   "Returns true if the selection is currently empty.
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.tree.TreeSelectionModel this]
+  (^Boolean [^TreeSelectionModel this]
     (-> this (.isSelectionEmpty))))
 
 (defn get-selection-rows
@@ -205,7 +205,7 @@
    a RowMapper has not been set.
 
   returns: `int[]`"
-  ([^javax.swing.tree.TreeSelectionModel this]
+  ([^TreeSelectionModel this]
     (-> this (.getSelectionRows))))
 
 (defn path-selected?
@@ -215,7 +215,7 @@
   path - `javax.swing.tree.TreePath`
 
   returns: `boolean`"
-  (^Boolean [^javax.swing.tree.TreeSelectionModel this ^javax.swing.tree.TreePath path]
+  (^Boolean [^TreeSelectionModel this ^javax.swing.tree.TreePath path]
     (-> this (.isPathSelected path))))
 
 (defn add-selection-path
@@ -224,7 +224,7 @@
    no effect if path is null.
 
   path - the new path to add to the current selection - `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.TreeSelectionModel this ^javax.swing.tree.TreePath path]
+  ([^TreeSelectionModel this ^javax.swing.tree.TreePath path]
     (-> this (.addSelectionPath path))))
 
 (defn get-selection-mode
@@ -234,7 +234,7 @@
    DISCONTIGUOUS_TREE_SELECTION.
 
   returns: `int`"
-  (^Integer [^javax.swing.tree.TreeSelectionModel this]
+  (^Integer [^TreeSelectionModel this]
     (-> this (.getSelectionMode))))
 
 (defn remove-selection-path
@@ -243,7 +243,7 @@
    path is null.
 
   path - the path to remove from the selection - `javax.swing.tree.TreePath`"
-  ([^javax.swing.tree.TreeSelectionModel this ^javax.swing.tree.TreePath path]
+  ([^TreeSelectionModel this ^javax.swing.tree.TreePath path]
     (-> this (.removeSelectionPath path))))
 
 (defn add-property-change-listener
@@ -254,7 +254,7 @@
    changes.
 
   listener - the PropertyChangeListener to be added - `java.beans.PropertyChangeListener`"
-  ([^javax.swing.tree.TreeSelectionModel this ^java.beans.PropertyChangeListener listener]
+  ([^TreeSelectionModel this ^java.beans.PropertyChangeListener listener]
     (-> this (.addPropertyChangeListener listener))))
 
 (defn remove-selection-paths
@@ -264,7 +264,7 @@
    This method has no effect if paths is null.
 
   paths - the path to remove from the selection - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.tree.TreeSelectionModel this paths]
+  ([^TreeSelectionModel this paths]
     (-> this (.removeSelectionPaths paths))))
 
 (defn set-selection-mode
@@ -278,7 +278,7 @@
    implementation to decide what TreePath remains selected.
 
   mode - `int`"
-  ([^javax.swing.tree.TreeSelectionModel this ^Integer mode]
+  ([^TreeSelectionModel this ^Integer mode]
     (-> this (.setSelectionMode mode))))
 
 (defn set-row-mapper
@@ -286,7 +286,7 @@
    the row for a particular TreePath.
 
   new-mapper - `javax.swing.tree.RowMapper`"
-  ([^javax.swing.tree.TreeSelectionModel this ^javax.swing.tree.RowMapper new-mapper]
+  ([^TreeSelectionModel this ^javax.swing.tree.RowMapper new-mapper]
     (-> this (.setRowMapper new-mapper))))
 
 (defn set-selection-paths
@@ -295,6 +295,6 @@
    null, this has the same effect as invoking clearSelection.
 
   paths - new selection - `javax.swing.tree.TreePath[]`"
-  ([^javax.swing.tree.TreeSelectionModel this paths]
+  ([^TreeSelectionModel this paths]
     (-> this (.setSelectionPaths paths))))
 

@@ -34,7 +34,7 @@
 
 (defn ->print-service-lookup
   "Constructor."
-  ([]
+  (^PrintServiceLookup []
     (new PrintServiceLookup )))
 
 (defn *lookup-print-services
@@ -146,9 +146,9 @@
 
   returns: array of matching PrintServices. If no services match, the
    array is zero-length. - `javax.print.PrintService[]`"
-  ([^javax.print.PrintServiceLookup this ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
+  ([^PrintServiceLookup this ^javax.print.DocFlavor flavor ^javax.print.attribute.AttributeSet attributes]
     (-> this (.getPrintServices flavor attributes)))
-  ([^javax.print.PrintServiceLookup this]
+  ([^PrintServiceLookup this]
     (-> this (.getPrintServices))))
 
 (defn get-multi-doc-print-services
@@ -165,7 +165,7 @@
 
   returns: array of matching PrintServices. If no services match, the
    array is zero-length. - `javax.print.MultiDocPrintService[]`"
-  ([^javax.print.PrintServiceLookup this flavors ^javax.print.attribute.AttributeSet attributes]
+  ([^PrintServiceLookup this flavors ^javax.print.attribute.AttributeSet attributes]
     (-> this (.getMultiDocPrintServices flavors attributes))))
 
 (defn get-default-print-service
@@ -175,6 +175,6 @@
 
   returns: the default PrintService for this lookup service.
    If there is no default, returns null. - `javax.print.PrintService`"
-  (^javax.print.PrintService [^javax.print.PrintServiceLookup this]
+  (^javax.print.PrintService [^PrintServiceLookup this]
     (-> this (.getDefaultPrintService))))
 

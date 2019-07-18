@@ -31,14 +31,14 @@
   Construct an empty instance with zero count, zero sum,
    Double.POSITIVE_INFINITY min, Double.NEGATIVE_INFINITY
    max and zero average."
-  ([]
+  (^DoubleSummaryStatistics []
     (new DoubleSummaryStatistics )))
 
 (defn accept
   "Records another value into the summary information.
 
   value - the input value - `double`"
-  ([^java.util.DoubleSummaryStatistics this ^Double value]
+  ([^DoubleSummaryStatistics this ^Double value]
     (-> this (.accept value))))
 
 (defn combine
@@ -48,14 +48,14 @@
   other - another DoubleSummaryStatistics - `java.util.DoubleSummaryStatistics`
 
   throws: java.lang.NullPointerException - if other is null"
-  ([^java.util.DoubleSummaryStatistics this ^java.util.DoubleSummaryStatistics other]
+  ([^DoubleSummaryStatistics this ^java.util.DoubleSummaryStatistics other]
     (-> this (.combine other))))
 
 (defn get-count
   "Return the count of values recorded.
 
   returns: the count of values - `long`"
-  (^Long [^java.util.DoubleSummaryStatistics this]
+  (^Long [^DoubleSummaryStatistics this]
     (-> this (.getCount))))
 
 (defn get-sum
@@ -77,7 +77,7 @@
    values.
 
   returns: the sum of values, or zero if none - `double`"
-  (^Double [^java.util.DoubleSummaryStatistics this]
+  (^Double [^DoubleSummaryStatistics this]
     (-> this (.getSum))))
 
 (defn get-min
@@ -89,7 +89,7 @@
   returns: the minimum recorded value, Double.NaN if any recorded
    value was NaN or Double.POSITIVE_INFINITY if no values were
    recorded - `double`"
-  (^Double [^java.util.DoubleSummaryStatistics this]
+  (^Double [^DoubleSummaryStatistics this]
     (-> this (.getMin))))
 
 (defn get-max
@@ -101,7 +101,7 @@
   returns: the maximum recorded value, Double.NaN if any recorded
    value was NaN or Double.NEGATIVE_INFINITY if no values were
    recorded - `double`"
-  (^Double [^java.util.DoubleSummaryStatistics this]
+  (^Double [^DoubleSummaryStatistics this]
     (-> this (.getMax))))
 
 (defn get-average
@@ -118,7 +118,7 @@
    other technique to reduce the error bound in the numerical sum used to compute the average.
 
   returns: the arithmetic mean of values, or zero if none - `double`"
-  (^Double [^java.util.DoubleSummaryStatistics this]
+  (^Double [^DoubleSummaryStatistics this]
     (-> this (.getAverage))))
 
 (defn to-string
@@ -145,6 +145,6 @@
    between implementations and versions.
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.util.DoubleSummaryStatistics this]
+  (^java.lang.String [^DoubleSummaryStatistics this]
     (-> this (.toString))))
 

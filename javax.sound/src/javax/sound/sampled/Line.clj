@@ -46,7 +46,7 @@
    that describes the change.
 
   listener - the object to add as a listener to this line - `javax.sound.sampled.LineListener`"
-  ([^javax.sound.sampled.Line this ^javax.sound.sampled.LineListener listener]
+  ([^Line this ^javax.sound.sampled.LineListener listener]
     (-> this (.addLineListener listener))))
 
 (defn get-controls
@@ -55,7 +55,7 @@
    If there are no controls, this method returns an array of length 0.
 
   returns: the array of controls - `javax.sound.sampled.Control[]`"
-  ([^javax.sound.sampled.Line this]
+  ([^Line this]
     (-> this (.getControls))))
 
 (defn get-control
@@ -63,23 +63,23 @@
    if there is any.
    Some controls may only be available when the line is open.
 
-  control - the type of the requested control - `javax.sound.sampled.Control.Type`
+  control - the type of the requested control - `javax.sound.sampled.Control$Type`
 
   returns: a control of the specified type - `javax.sound.sampled.Control`
 
   throws: java.lang.IllegalArgumentException - if a control of the specified type is not supported"
-  (^javax.sound.sampled.Control [^javax.sound.sampled.Line this ^javax.sound.sampled.Control.Type control]
+  (^javax.sound.sampled.Control [^Line this ^javax.sound.sampled.Control$Type control]
     (-> this (.getControl control))))
 
 (defn control-supported?
   "Indicates whether the line supports a control of the specified type.
    Some controls may only be available when the line is open.
 
-  control - the type of the control for which support is queried - `javax.sound.sampled.Control.Type`
+  control - the type of the control for which support is queried - `javax.sound.sampled.Control$Type`
 
   returns: true if at least one control of the specified type is
    supported, otherwise false. - `boolean`"
-  (^Boolean [^javax.sound.sampled.Line this ^javax.sound.sampled.Control.Type control]
+  (^Boolean [^Line this ^javax.sound.sampled.Control$Type control]
     (-> this (.isControlSupported control))))
 
 (defn close
@@ -89,14 +89,14 @@
    to the line's listeners.
 
   throws: java.lang.SecurityException - if the line cannot be closed due to security restrictions."
-  ([^javax.sound.sampled.Line this]
+  ([^Line this]
     (-> this (.close))))
 
 (defn remove-line-listener
   "Removes the specified listener from this line's list of listeners.
 
   listener - listener to remove - `javax.sound.sampled.LineListener`"
-  ([^javax.sound.sampled.Line this ^javax.sound.sampled.LineListener listener]
+  ([^Line this ^javax.sound.sampled.LineListener listener]
     (-> this (.removeLineListener listener))))
 
 (defn open?
@@ -105,7 +105,7 @@
    playing or capturing sound.
 
   returns: true if the line is open, otherwise false - `boolean`"
-  (^Boolean [^javax.sound.sampled.Line this]
+  (^Boolean [^Line this]
     (-> this (.isOpen))))
 
 (defn open
@@ -140,14 +140,14 @@
    as the default format.
 
   throws: java.lang.IllegalArgumentException - if this method is called on a Clip instance."
-  ([^javax.sound.sampled.Line this]
+  ([^Line this]
     (-> this (.open))))
 
 (defn get-line-info
   "Obtains the Line.Info object describing this
    line.
 
-  returns: description of the line - `javax.sound.sampled.Line.Info`"
-  (^javax.sound.sampled.Line.Info [^javax.sound.sampled.Line this]
+  returns: description of the line - `javax.sound.sampled.Line$Info`"
+  (^javax.sound.sampled.Line$Info [^Line this]
     (-> this (.getLineInfo))))
 

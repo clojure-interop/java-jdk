@@ -19,8 +19,8 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^InterruptedException [^java.lang.String s]
     (new InterruptedException s))
-  ([]
+  (^InterruptedException []
     (new InterruptedException )))
 

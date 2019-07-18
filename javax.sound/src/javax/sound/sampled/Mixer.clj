@@ -33,7 +33,7 @@
    array of length 0 is returned. - `javax.sound.sampled.Line[]`
 
   throws: java.lang.SecurityException - if the matching lines are not available due to security restrictions"
-  ([^javax.sound.sampled.Mixer this]
+  ([^Mixer this]
     (-> this (.getSourceLines))))
 
 (defn get-source-line-info
@@ -41,14 +41,14 @@
    by the mixer.
    Some source lines may only be available when this mixer is open.
 
-  info - a Line.Info object describing lines about which information is queried - `javax.sound.sampled.Line.Info`
+  info - a Line.Info object describing lines about which information is queried - `javax.sound.sampled.Line$Info`
 
   returns: an array of Line.Info objects describing source lines matching
    the type requested.  If no matching source lines are supported, an array of length 0
-   is returned. - `javax.sound.sampled.Line.Info[]`"
-  ([^javax.sound.sampled.Mixer this ^javax.sound.sampled.Line.Info info]
+   is returned. - `javax.sound.sampled.Line$Info[]`"
+  ([^Mixer this ^javax.sound.sampled.Line$Info info]
     (-> this (.getSourceLineInfo info)))
-  ([^javax.sound.sampled.Mixer this]
+  ([^Mixer this]
     (-> this (.getSourceLineInfo))))
 
 (defn unsynchronize
@@ -61,7 +61,7 @@
   lines - the synchronized lines for which synchronization should be released, or null for all this mixer's synchronized lines - `javax.sound.sampled.Line[]`
 
   throws: java.lang.IllegalArgumentException - if the lines cannot be unsynchronized. This may occur if the argument specified does not exactly match a set of lines for which synchronization has already been established."
-  ([^javax.sound.sampled.Mixer this lines]
+  ([^Mixer this lines]
     (-> this (.unsynchronize lines))))
 
 (defn get-target-line-info
@@ -69,14 +69,14 @@
    by the mixer.
    Some target lines may only be available when this mixer is open.
 
-  info - a Line.Info object describing lines about which information is queried - `javax.sound.sampled.Line.Info`
+  info - a Line.Info object describing lines about which information is queried - `javax.sound.sampled.Line$Info`
 
   returns: an array of Line.Info objects describing target lines matching
    the type requested.  If no matching target lines are supported, an array of length 0
-   is returned. - `javax.sound.sampled.Line.Info[]`"
-  ([^javax.sound.sampled.Mixer this ^javax.sound.sampled.Line.Info info]
+   is returned. - `javax.sound.sampled.Line$Info[]`"
+  ([^Mixer this ^javax.sound.sampled.Line$Info info]
     (-> this (.getTargetLineInfo info)))
-  ([^javax.sound.sampled.Mixer this]
+  ([^Mixer this]
     (-> this (.getTargetLineInfo))))
 
 (defn line-supported?
@@ -84,11 +84,11 @@
    the specified Line.Info object.
    Some lines may only be supported when this mixer is open.
 
-  info - describes the line for which support is queried - `javax.sound.sampled.Line.Info`
+  info - describes the line for which support is queried - `javax.sound.sampled.Line$Info`
 
   returns: true if at least one matching line is
    supported, false otherwise - `boolean`"
-  (^Boolean [^javax.sound.sampled.Mixer this ^javax.sound.sampled.Line.Info info]
+  (^Boolean [^Mixer this ^javax.sound.sampled.Line$Info info]
     (-> this (.isLineSupported info))))
 
 (defn synchronization-supported?
@@ -99,7 +99,7 @@
 
   returns: true if the lines can be synchronized, false
    otherwise - `boolean`"
-  (^Boolean [^javax.sound.sampled.Mixer this lines ^Boolean maintain-sync]
+  (^Boolean [^Mixer this lines ^Boolean maintain-sync]
     (-> this (.isSynchronizationSupported lines maintain-sync))))
 
 (defn synchronize
@@ -112,15 +112,15 @@
   maintain-sync - true if the synchronization must be precisely maintained (i.e., the synchronization must be sample-accurate) at all times during operation of the lines , or false if precise synchronization is required only during start and stop operations - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the lines cannot be synchronized. This may occur if the lines are of different types or have different formats for which this mixer does not support synchronization, or if all lines specified do not belong to this mixer."
-  ([^javax.sound.sampled.Mixer this lines ^Boolean maintain-sync]
+  ([^Mixer this lines ^Boolean maintain-sync]
     (-> this (.synchronize lines maintain-sync))))
 
 (defn get-mixer-info
   "Obtains information about this mixer, including the product's name,
    version, vendor, etc.
 
-  returns: a mixer info object that describes this mixer - `javax.sound.sampled.Mixer.Info`"
-  (^javax.sound.sampled.Mixer.Info [^javax.sound.sampled.Mixer this]
+  returns: a mixer info object that describes this mixer - `javax.sound.sampled.Mixer$Info`"
+  (^javax.sound.sampled.Mixer$Info [^Mixer this]
     (-> this (.getMixerInfo))))
 
 (defn get-line
@@ -133,13 +133,13 @@
    will be used as the default format of the returned
    DataLine.
 
-  info - describes the desired line - `javax.sound.sampled.Line.Info`
+  info - describes the desired line - `javax.sound.sampled.Line$Info`
 
   returns: a line that is available for use and that matches the description
    in the specified Line.Info object - `javax.sound.sampled.Line`
 
   throws: javax.sound.sampled.LineUnavailableException - if a matching line is not available due to resource restrictions"
-  (^javax.sound.sampled.Line [^javax.sound.sampled.Mixer this ^javax.sound.sampled.Line.Info info]
+  (^javax.sound.sampled.Line [^Mixer this ^javax.sound.sampled.Line$Info info]
     (-> this (.getLine info))))
 
 (defn get-max-lines
@@ -159,10 +159,10 @@
    the return value should be 32.
    If there is no limit, this function returns AudioSystem.NOT_SPECIFIED.
 
-  info - a Line.Info that describes the line for which the number of supported instances is queried - `javax.sound.sampled.Line.Info`
+  info - a Line.Info that describes the line for which the number of supported instances is queried - `javax.sound.sampled.Line$Info`
 
   returns: the maximum number of matching lines supported, or AudioSystem.NOT_SPECIFIED - `int`"
-  (^Integer [^javax.sound.sampled.Mixer this ^javax.sound.sampled.Line.Info info]
+  (^Integer [^Mixer this ^javax.sound.sampled.Line$Info info]
     (-> this (.getMaxLines info))))
 
 (defn get-target-lines
@@ -173,6 +173,6 @@
    array of length 0 is returned. - `javax.sound.sampled.Line[]`
 
   throws: java.lang.SecurityException - if the matching lines are not available due to security restrictions"
-  ([^javax.sound.sampled.Mixer this]
+  ([^Mixer this]
     (-> this (.getTargetLines))))
 

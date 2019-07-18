@@ -70,7 +70,7 @@
   s - the string value to be written. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^java.lang.String s]
+  ([^DataOutput this ^java.lang.String s]
     (-> this (.writeUTF s))))
 
 (defn write-bytes
@@ -93,7 +93,7 @@
   s - the string of bytes to be written. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^java.lang.String s]
+  ([^DataOutput this ^java.lang.String s]
     (-> this (.writeBytes s))))
 
 (defn write-double
@@ -113,7 +113,7 @@
   v - the double value to be written. - `double`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^Double v]
+  ([^DataOutput this ^Double v]
     (-> this (.writeDouble v))))
 
 (defn write-boolean
@@ -131,7 +131,7 @@
   v - the boolean to be written. - `boolean`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^Boolean v]
+  ([^DataOutput this ^Boolean v]
     (-> this (.writeBoolean v))))
 
 (defn write-long
@@ -158,7 +158,7 @@
   v - the long value to be written. - `long`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^Long v]
+  ([^DataOutput this ^Long v]
     (-> this (.writeLong v))))
 
 (defn write-short
@@ -179,7 +179,7 @@
   v - the short value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^Integer v]
+  ([^DataOutput this ^Integer v]
     (-> this (.writeShort v))))
 
 (defn write-int
@@ -201,7 +201,7 @@
   v - the int value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^Integer v]
+  ([^DataOutput this ^Integer v]
     (-> this (.writeInt v))))
 
 (defn write-float
@@ -221,7 +221,7 @@
   v - the float value to be written. - `float`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^Float v]
+  ([^DataOutput this ^Float v]
     (-> this (.writeFloat v))))
 
 (defn write-chars
@@ -242,7 +242,7 @@
   s - the string value to be written. - `java.lang.String`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^java.lang.String s]
+  ([^DataOutput this ^java.lang.String s]
     (-> this (.writeChars s))))
 
 (defn write-char
@@ -264,7 +264,7 @@
   v - the char value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^Integer v]
+  ([^DataOutput this ^Integer v]
     (-> this (.writeChar v))))
 
 (defn write-byte
@@ -282,7 +282,7 @@
   v - the byte value to be written. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this ^Integer v]
+  ([^DataOutput this ^Integer v]
     (-> this (.writeByte v))))
 
 (defn write
@@ -305,8 +305,8 @@
   len - the number of bytes to write. - `int`
 
   throws: java.io.IOException - if an I/O error occurs."
-  ([^java.io.DataOutput this b ^Integer off ^Integer len]
+  ([^DataOutput this b ^Integer off ^Integer len]
     (-> this (.write b off len)))
-  ([^java.io.DataOutput this ^Integer b]
+  ([^DataOutput this ^Integer b]
     (-> this (.write b))))
 

@@ -25,9 +25,9 @@
   set-rounding-mode - The rounding mode to use. - `java.math.RoundingMode`
 
   throws: java.lang.IllegalArgumentException - if the setPrecision parameter is less than zero."
-  ([^Integer set-precision ^java.math.RoundingMode set-rounding-mode]
+  (^MathContext [^Integer set-precision ^java.math.RoundingMode set-rounding-mode]
     (new MathContext set-precision set-rounding-mode))
-  ([^Integer set-precision]
+  (^MathContext [^Integer set-precision]
     (new MathContext set-precision)))
 
 (def *-unlimited
@@ -81,7 +81,7 @@
 
   returns: an int which is the value of the precision
            setting - `int`"
-  (^Integer [^java.math.MathContext this]
+  (^Integer [^MathContext this]
     (-> this (.getPrecision))))
 
 (defn get-rounding-mode
@@ -98,7 +98,7 @@
 
   returns: a RoundingMode object which is the value of the
            roundingMode setting - `java.math.RoundingMode`"
-  (^java.math.RoundingMode [^java.math.MathContext this]
+  (^java.math.RoundingMode [^MathContext this]
     (-> this (.getRoundingMode))))
 
 (defn equals
@@ -110,14 +110,14 @@
   returns: true if and only if the specified Object is
            a MathContext object which has exactly the same
            settings as this object - `boolean`"
-  (^Boolean [^java.math.MathContext this ^java.lang.Object x]
+  (^Boolean [^MathContext this ^java.lang.Object x]
     (-> this (.equals x))))
 
 (defn hash-code
   "Returns the hash code for this MathContext.
 
   returns: hash code for this MathContext - `int`"
-  (^Integer [^java.math.MathContext this]
+  (^Integer [^MathContext this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -151,6 +151,6 @@
    this class.
 
   returns: a String representing the context settings - `java.lang.String`"
-  (^java.lang.String [^java.math.MathContext this]
+  (^java.lang.String [^MathContext this]
     (-> this (.toString))))
 

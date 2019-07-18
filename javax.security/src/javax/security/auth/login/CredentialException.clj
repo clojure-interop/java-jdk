@@ -11,8 +11,8 @@
    exception.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^CredentialException [^java.lang.String msg]
     (new CredentialException msg))
-  ([]
+  (^CredentialException []
     (new CredentialException )))
 

@@ -19,7 +19,7 @@
   committed-character-count - `int`
   caret - `java.awt.font.TextHitInfo`
   visible-position - `java.awt.font.TextHitInfo`"
-  ([^java.awt.im.spi.InputMethodContext this ^Integer id ^java.text.AttributedCharacterIterator text ^Integer committed-character-count ^java.awt.font.TextHitInfo caret ^java.awt.font.TextHitInfo visible-position]
+  ([^InputMethodContext this ^Integer id ^java.text.AttributedCharacterIterator text ^Integer committed-character-count ^java.awt.font.TextHitInfo caret ^java.awt.font.TextHitInfo visible-position]
     (-> this (.dispatchInputMethodEvent id text committed-character-count caret visible-position))))
 
 (defn create-input-method-window
@@ -49,7 +49,7 @@
   returns: a window with special characteristics for use by input methods - `java.awt.Window`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  (^java.awt.Window [^java.awt.im.spi.InputMethodContext this ^java.lang.String title ^Boolean attach-to-input-context]
+  (^java.awt.Window [^InputMethodContext this ^java.lang.String title ^Boolean attach-to-input-context]
     (-> this (.createInputMethodWindow title attach-to-input-context))))
 
 (defn create-input-method-j-frame
@@ -79,7 +79,7 @@
   returns: a JFrame with special characteristics for use by input methods - `javax.swing.JFrame`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless returns true"
-  (^javax.swing.JFrame [^java.awt.im.spi.InputMethodContext this ^java.lang.String title ^Boolean attach-to-input-context]
+  (^javax.swing.JFrame [^InputMethodContext this ^java.lang.String title ^Boolean attach-to-input-context]
     (-> this (.createInputMethodJFrame title attach-to-input-context))))
 
 (defn enable-client-window-notification
@@ -91,6 +91,6 @@
 
   input-method - the input method for which notifications are enabled or disabled - `java.awt.im.spi.InputMethod`
   enable - true to enable, false to disable - `boolean`"
-  ([^java.awt.im.spi.InputMethodContext this ^java.awt.im.spi.InputMethod input-method ^Boolean enable]
+  ([^InputMethodContext this ^java.awt.im.spi.InputMethod input-method ^Boolean enable]
     (-> this (.enableClientWindowNotification input-method enable))))
 

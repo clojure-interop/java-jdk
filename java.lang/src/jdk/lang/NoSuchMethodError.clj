@@ -16,8 +16,8 @@
    specified detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^NoSuchMethodError [^java.lang.String s]
     (new NoSuchMethodError s))
-  ([]
+  (^NoSuchMethodError []
     (new NoSuchMethodError )))
 

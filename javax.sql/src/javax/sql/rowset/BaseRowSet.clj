@@ -266,7 +266,7 @@
    a default Vector object for its listeners
    field. The other default values with which it is initialized are listed
    in Section 6.0 of the class comment for this class."
-  ([]
+  (^BaseRowSet []
     (new BaseRowSet )))
 
 (def *-unicode-stream-param
@@ -340,7 +340,7 @@
   rows - the number of rows to fetch; 0 to let the driver decide what the best fetch size is; must not be less than 0 or more than the maximum number of rows allowed for this RowSet object (the number returned by a call to the method getMaxRows()) - `int`
 
   throws: java.sql.SQLException - if the specified fetch size is less than 0 or more than the limit for the maximum number of rows"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer rows]
+  ([^BaseRowSet this ^Integer rows]
     (-> this (.setFetchSize rows))))
 
 (defn set-bytes
@@ -364,7 +364,7 @@
   x - the parameter value - `byte[]`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index x]
+  ([^BaseRowSet this ^Integer parameter-index x]
     (-> this (.setBytes parameter-index x))))
 
 (defn set-string
@@ -388,7 +388,7 @@
   x - the parameter value - `java.lang.String`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.lang.String x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.lang.String x]
     (-> this (.setString parameter-index x))))
 
 (defn remove-row-set-listener
@@ -401,7 +401,7 @@
    value.
 
   listener - a RowSetListener object that is on the list of listeners for this RowSet object - `javax.sql.RowSetListener`"
-  ([^javax.sql.rowset.BaseRowSet this ^javax.sql.RowSetListener listener]
+  ([^BaseRowSet this ^javax.sql.RowSetListener listener]
     (-> this (.removeRowSetListener listener))))
 
 (defn set-array
@@ -434,7 +434,7 @@
   array - an Array object representing an SQL ARRAY value; cannot be null. The Array object passed to this method must return a non-null Object for all getArray() method calls. A null value will cause a SQLException to be thrown. - `java.sql.Array`
 
   throws: java.sql.SQLException - if an error occurs; the parameter index is out of bounds or the ARRAY is null"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.Array array]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.Array array]
     (-> this (.setArray parameter-index array))))
 
 (defn set-type-map
@@ -444,15 +444,15 @@
    this type map will be used unless a different type map is explicitly
    supplied to a method, in which case the type map supplied will be used.
 
-  map - a java.util.Map object that contains the mapping from SQL type names for user defined types (UDT) to classes in the Java programming language. Each entry in the Map object consists of the fully qualified SQL name of a UDT and the Class object for the SQLData implementation of that UDT. May be null. - `java.util.Map<java.lang.String,java.lang.Class<?>>`"
-  ([^javax.sql.rowset.BaseRowSet this ^java.util.Map> map]
+  map - a java.util.Map object that contains the mapping from SQL type names for user defined types (UDT) to classes in the Java programming language. Each entry in the Map object consists of the fully qualified SQL name of a UDT and the Class object for the SQLData implementation of that UDT. May be null. - `java.util.Map`"
+  ([^BaseRowSet this ^java.util.Map map]
     (-> this (.setTypeMap map))))
 
 (defn set-read-only
   "Sets this RowSet object's readOnly  property to the given boolean.
 
   value - true to indicate that this RowSet object is read-only; false to indicate that it is updatable - `boolean`"
-  ([^javax.sql.rowset.BaseRowSet this ^Boolean value]
+  ([^BaseRowSet this ^Boolean value]
     (-> this (.setReadOnly value))))
 
 (defn set-time
@@ -502,9 +502,9 @@
   cal - the java.util.Calendar object the driver can use to construct the time - `java.util.Calendar`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.Time x ^java.util.Calendar cal]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.Time x ^java.util.Calendar cal]
     (-> this (.setTime parameter-index x cal)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.Time x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.Time x]
     (-> this (.setTime parameter-index x))))
 
 (defn set-timestamp
@@ -554,9 +554,9 @@
   cal - the java.util.Calendar object the driver can use to construct the timestamp - `java.util.Calendar`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.Timestamp x ^java.util.Calendar cal]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.Timestamp x ^java.util.Calendar cal]
     (-> this (.setTimestamp parameter-index x cal)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.Timestamp x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.Timestamp x]
     (-> this (.setTimestamp parameter-index x))))
 
 (defn set-date
@@ -604,9 +604,9 @@
   cal - a java.util.Calendar object to use when when constructing the date - `java.util.Calendar`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.Date x ^java.util.Calendar cal]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.Date x ^java.util.Calendar cal]
     (-> this (.setDate parameter-index x cal)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.Date x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.Date x]
     (-> this (.setDate parameter-index x))))
 
 (defn set-boolean
@@ -628,7 +628,7 @@
   x - the parameter value - `boolean`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^Boolean x]
+  ([^BaseRowSet this ^Integer parameter-index ^Boolean x]
     (-> this (.setBoolean parameter-index x))))
 
 (defn get-url
@@ -645,7 +645,7 @@
            object; may be null (default value) if not set - `java.lang.String`
 
   throws: java.sql.SQLException - if an error occurs retrieving the URL value"
-  (^java.lang.String [^javax.sql.rowset.BaseRowSet this]
+  (^java.lang.String [^BaseRowSet this]
     (-> this (.getUrl))))
 
 (defn get-type
@@ -662,7 +662,7 @@
            ResultSet.TYPE_SCROLL_SENSITIVE - `int`
 
   throws: java.sql.SQLException - if an error occurs getting the type of of this RowSet object"
-  (^Integer [^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^BaseRowSet this]
     (-> this (.getType))))
 
 (defn set-command
@@ -678,7 +678,7 @@
   cmd - a String object containing an SQL query that will be set as this RowSet object's command property; may be null but may not be an empty string - `java.lang.String`
 
   throws: java.sql.SQLException - if an empty string is provided as the command value"
-  ([^javax.sql.rowset.BaseRowSet this ^java.lang.String cmd]
+  ([^BaseRowSet this ^java.lang.String cmd]
     (-> this (.setCommand cmd))))
 
 (defn set-n-character-stream
@@ -692,9 +692,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if the driver does not support national character sets; if the driver can detect that a data conversion error could occur ; or if a database access error occurs"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.Reader value ^Long length]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.Reader value ^Long length]
     (-> this (.setNCharacterStream parameter-index value length)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.Reader value]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.Reader value]
     (-> this (.setNCharacterStream parameter-index value))))
 
 (defn set-null
@@ -754,9 +754,9 @@
   type-name - the fully qualified name of an SQL user-defined type, which is ignored if the parameter is not a user-defined type or REF value - `java.lang.String`
 
   throws: java.sql.SQLException - if an error occurs or the given parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^Integer sql-type ^java.lang.String type-name]
+  ([^BaseRowSet this ^Integer parameter-index ^Integer sql-type ^java.lang.String type-name]
     (-> this (.setNull parameter-index sql-type type-name)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^Integer sql-type]
+  ([^BaseRowSet this ^Integer parameter-index ^Integer sql-type]
     (-> this (.setNull parameter-index sql-type))))
 
 (defn set-query-timeout
@@ -767,7 +767,7 @@
   seconds - the new query time-out limit in seconds; zero means that there is no limit; must not be less than zero - `int`
 
   throws: java.sql.SQLException - if an error occurs setting the query time-out or if the query time-out value is less than 0"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer seconds]
+  ([^BaseRowSet this ^Integer seconds]
     (-> this (.setQueryTimeout seconds))))
 
 (defn get-transaction-isolation
@@ -788,7 +788,7 @@
            Connection.TRANSACTION_READ_COMMITTED,
            Connection.TRANSACTION_REPEATABLE_READ, or
            Connection.TRANSACTION_SERIALIZABLE - `int`"
-  (^Integer [^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^BaseRowSet this]
     (-> this (.getTransactionIsolation))))
 
 (defn set-password
@@ -799,7 +799,7 @@
    execute.
 
   pass - the String object that represents the password that is supplied to the database to create a connection. It may be null. - `java.lang.String`"
-  ([^javax.sql.rowset.BaseRowSet this ^java.lang.String pass]
+  ([^BaseRowSet this ^java.lang.String pass]
     (-> this (.setPassword pass))))
 
 (defn set-binary-stream
@@ -854,9 +854,9 @@
   length - the number of bytes in the stream; lengths of 0 or less are are undefined but will cause an invalid length exception to be thrown in the underlying JDBC driver. - `int`
 
   throws: java.sql.SQLException - if an error occurs, the parameter index is out of bounds, or when connected to a data source, the number of bytes the driver reads and sends to the database is not equal to the number of bytes specified in length"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
     (-> this (.setBinaryStream parameter-index x length)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.InputStream x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.InputStream x]
     (-> this (.setBinaryStream parameter-index x))))
 
 (defn set-type
@@ -866,7 +866,7 @@
   type - one of the following constants: ResultSet.TYPE_FORWARD_ONLY, ResultSet.TYPE_SCROLL_INSENSITIVE, or ResultSet.TYPE_SCROLL_SENSITIVE - `int`
 
   throws: java.sql.SQLException - if the parameter supplied is not one of the following constants: ResultSet.TYPE_FORWARD_ONLY or ResultSet.TYPE_SCROLL_INSENSITIVE ResultSet.TYPE_SCROLL_SENSITIVE"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer type]
+  ([^BaseRowSet this ^Integer type]
     (-> this (.setType type))))
 
 (defn add-row-set-listener
@@ -886,7 +886,7 @@
    event notifications from this RowSet.
 
   listener - an object that has implemented the javax.sql.RowSetListener interface and wants to be notified of any events that occur on this RowSet object; May be null. - `javax.sql.RowSetListener`"
-  ([^javax.sql.rowset.BaseRowSet this ^javax.sql.RowSetListener listener]
+  ([^BaseRowSet this ^javax.sql.RowSetListener listener]
     (-> this (.addRowSetListener listener))))
 
 (defn get-command
@@ -910,7 +910,7 @@
   returns: the String that is the value for this
            RowSet object's command property;
            may be null - `java.lang.String`"
-  (^java.lang.String [^javax.sql.rowset.BaseRowSet this]
+  (^java.lang.String [^BaseRowSet this]
     (-> this (.getCommand))))
 
 (defn set-blob
@@ -928,9 +928,9 @@
   length - the number of bytes in the parameter data. - `long`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed PreparedStatement, if parameterIndex does not correspond to a parameter marker in the SQL statement, if the length specified is less than zero or if the number of bytes in the inputstream does not match the specified length."
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.InputStream input-stream ^Long length]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.InputStream input-stream ^Long length]
     (-> this (.setBlob parameter-index input-stream length)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.Blob x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.Blob x]
     (-> this (.setBlob parameter-index x))))
 
 (defn set-url
@@ -959,7 +959,7 @@
   url - a String object that contains the JDBC URL that will be used to establish the connection to a database for this RowSet object; may be null but must not be an empty string - `java.lang.String`
 
   throws: java.sql.SQLException - if an error occurs setting the Url property or the parameter supplied is a string with a length of 0 (an empty string)"
-  ([^javax.sql.rowset.BaseRowSet this ^java.lang.String url]
+  ([^BaseRowSet this ^java.lang.String url]
     (-> this (.setUrl url))))
 
 (defn set-object
@@ -1022,11 +1022,11 @@
   scale - for the types java.sql.Types.DECIMAL and java.sql.Types.NUMERIC, this is the number of digits after the decimal point. For all other types, this value will be ignored. - `int`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.lang.Object x ^Integer target-sql-type ^Integer scale]
+  ([^BaseRowSet this ^Integer parameter-index ^java.lang.Object x ^Integer target-sql-type ^Integer scale]
     (-> this (.setObject parameter-index x target-sql-type scale)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.lang.Object x ^Integer target-sql-type]
+  ([^BaseRowSet this ^Integer parameter-index ^java.lang.Object x ^Integer target-sql-type]
     (-> this (.setObject parameter-index x target-sql-type)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.lang.Object x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.lang.Object x]
     (-> this (.setObject parameter-index x))))
 
 (defn set-escape-processing
@@ -1042,7 +1042,7 @@
   enable - true to enable escape processing; false to disable it - `boolean`
 
   throws: java.sql.SQLException - if an error occurs setting the underlying JDBC technology-enabled driver to process the escape syntax"
-  ([^javax.sql.rowset.BaseRowSet this ^Boolean enable]
+  ([^BaseRowSet this ^Boolean enable]
     (-> this (.setEscapeProcessing enable))))
 
 (defn set-max-rows
@@ -1053,7 +1053,7 @@
   max - an int indicating the current maximum number of rows; zero means that there is no limit - `int`
 
   throws: java.sql.SQLException - if an error occurs internally setting the maximum limit on the number of rows that a JDBC RowSet object can contain; or if max is less than 0; or if max is less than the fetchSize of the RowSet"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer max]
+  ([^BaseRowSet this ^Integer max]
     (-> this (.setMaxRows max))))
 
 (defn get-username
@@ -1064,7 +1064,7 @@
   returns: the String object containing the user name that
            is supplied to the data source to create a connection; may be
            null (default value) if not set - `java.lang.String`"
-  (^java.lang.String [^javax.sql.rowset.BaseRowSet this]
+  (^java.lang.String [^BaseRowSet this]
     (-> this (.getUsername))))
 
 (defn clear-parameters
@@ -1084,7 +1084,7 @@
    method in that it maintains the schema of the RowSet object.
 
   throws: java.sql.SQLException - if an error occurs clearing the parameters"
-  ([^javax.sql.rowset.BaseRowSet this]
+  ([^BaseRowSet this]
     (-> this (.clearParameters))))
 
 (defn get-fetch-direction
@@ -1096,7 +1096,7 @@
                     ResultSet.FETCH_UNKNOWN - `int`
 
   throws: java.sql.SQLException - if an error occurs in determining the current fetch direction for fetching rows"
-  (^Integer [^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^BaseRowSet this]
     (-> this (.getFetchDirection))))
 
 (defn set-n-clob
@@ -1115,9 +1115,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if parameterIndex does not correspond to a parameter marker in the SQL statement; if the length specified is less than zero; if the driver does not support national character sets; if the driver can detect that a data conversion error could occur; if a database access error occurs or this method is called on a closed CallableStatement"
-  ([^javax.sql.rowset.BaseRowSet this ^java.lang.String parameter-name ^java.io.Reader reader ^Long length]
+  ([^BaseRowSet this ^java.lang.String parameter-name ^java.io.Reader reader ^Long length]
     (-> this (.setNClob parameter-name reader length)))
-  ([^javax.sql.rowset.BaseRowSet this ^java.lang.String parameter-name ^java.sql.NClob value]
+  ([^BaseRowSet this ^java.lang.String parameter-name ^java.sql.NClob value]
     (-> this (.setNClob parameter-name value))))
 
 (defn get-max-field-size
@@ -1133,7 +1133,7 @@
        limit; zero means that there is no limit - `int`
 
   throws: java.sql.SQLException - if an error occurs internally determining the maximum limit of the column size"
-  (^Integer [^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^BaseRowSet this]
     (-> this (.getMaxFieldSize))))
 
 (defn set-clob
@@ -1151,9 +1151,9 @@
   length - the number of characters in the parameter data. - `long`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed PreparedStatement, if parameterIndex does not correspond to a parameter marker in the SQL statement, or if the length specified is less than zero."
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.Reader reader ^Long length]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.Reader reader ^Long length]
     (-> this (.setClob parameter-index reader length)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.Clob x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.Clob x]
     (-> this (.setClob parameter-index x))))
 
 (defn set-transaction-isolation
@@ -1171,7 +1171,7 @@
   level - one of the following constants, listed in ascending order: Connection.TRANSACTION_NONE, Connection.TRANSACTION_READ_UNCOMMITTED, Connection.TRANSACTION_READ_COMMITTED, Connection.TRANSACTION_REPEATABLE_READ, or Connection.TRANSACTION_SERIALIZABLE - `int`
 
   throws: java.sql.SQLException - if the given parameter is not one of the Connection constants"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer level]
+  ([^BaseRowSet this ^Integer level]
     (-> this (.setTransactionIsolation level))))
 
 (defn set-double
@@ -1194,7 +1194,7 @@
   x - the parameter value - `double`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^Double x]
+  ([^BaseRowSet this ^Integer parameter-index ^Double x]
     (-> this (.setDouble parameter-index x))))
 
 (defn set-ref
@@ -1227,7 +1227,7 @@
   ref - a Ref object representing an SQL REF value; cannot be null - `java.sql.Ref`
 
   throws: java.sql.SQLException - if an error occurs; the parameter index is out of bounds or the Ref object is null; or the Ref object returns a null base type name."
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.Ref ref]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.Ref ref]
     (-> this (.setRef parameter-index ref))))
 
 (defn set-long
@@ -1249,7 +1249,7 @@
   x - the parameter value - `long`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^Long x]
+  ([^BaseRowSet this ^Integer parameter-index ^Long x]
     (-> this (.setLong parameter-index x))))
 
 (defn set-max-field-size
@@ -1265,7 +1265,7 @@
   max - an int indicating the new maximum column size limit; zero means that there is no limit - `int`
 
   throws: java.sql.SQLException - if (1) an error occurs internally setting the maximum limit of the column size or (2) a size of less than 0 is set"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer max]
+  ([^BaseRowSet this ^Integer max]
     (-> this (.setMaxFieldSize max))))
 
 (defn get-show-deleted?
@@ -1282,7 +1282,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if an error occurs determining if deleted rows are visible or not"
-  (^Boolean [^javax.sql.rowset.BaseRowSet this]
+  (^Boolean [^BaseRowSet this]
     (-> this (.getShowDeleted))))
 
 (defn set-username
@@ -1292,7 +1292,7 @@
    calling the method execute.
 
   name - the String object containing the user name that is supplied to the data source to create a connection. It may be null. - `java.lang.String`"
-  ([^javax.sql.rowset.BaseRowSet this ^java.lang.String name]
+  ([^BaseRowSet this ^java.lang.String name]
     (-> this (.setUsername name))))
 
 (defn set-byte
@@ -1314,7 +1314,7 @@
   x - the parameter value - `byte`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^Byte x]
+  ([^BaseRowSet this ^Integer parameter-index ^Byte x]
     (-> this (.setByte parameter-index x))))
 
 (defn set-n-string
@@ -1329,7 +1329,7 @@
   value - the parameter value - `java.lang.String`
 
   throws: java.sql.SQLException - if the driver does not support national character sets; if the driver can detect that a data conversion error could occur ; or if a database access error occurs"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.lang.String value]
+  ([^BaseRowSet this ^Integer parameter-index ^java.lang.String value]
     (-> this (.setNString parameter-index value))))
 
 (defn set-short
@@ -1351,7 +1351,7 @@
   x - the parameter value - `short`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^Short x]
+  ([^BaseRowSet this ^Integer parameter-index ^Short x]
     (-> this (.setShort parameter-index x))))
 
 (defn set-concurrency
@@ -1363,7 +1363,7 @@
   concurrency - one of the following constants: ResultSet.CONCUR_READ_ONLY or ResultSet.CONCUR_UPDATABLE - `int`
 
   throws: java.sql.SQLException - if the parameter supplied is not one of the following constants: ResultSet.CONCUR_UPDATABLE or ResultSet.CONCUR_READ_ONLY"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer concurrency]
+  ([^BaseRowSet this ^Integer concurrency]
     (-> this (.setConcurrency concurrency))))
 
 (defn set-ascii-stream
@@ -1420,9 +1420,9 @@
   length - the number of bytes in the stream. This is the number of bytes the driver will send to the DBMS; lengths of 0 or less are are undefined but will cause an invalid length exception to be thrown in the underlying JDBC driver. - `int`
 
   throws: java.sql.SQLException - if an error occurs, the parameter index is out of bounds, or when connected to a data source, the number of bytes the driver reads and sends to the database is not equal to the number of bytes specified in length"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
     (-> this (.setAsciiStream parameter-index x length)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.InputStream x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.InputStream x]
     (-> this (.setAsciiStream parameter-index x))))
 
 (defn set-big-decimal
@@ -1444,7 +1444,7 @@
   x - the parameter value - `java.math.BigDecimal`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.math.BigDecimal x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.math.BigDecimal x]
     (-> this (.setBigDecimal parameter-index x))))
 
 (defn get-max-rows
@@ -1455,7 +1455,7 @@
        rows; zero means that there is no limit - `int`
 
   throws: java.sql.SQLException - if an error occurs internally determining the maximum limit of rows that a Rowset object can contain"
-  (^Integer [^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^BaseRowSet this]
     (-> this (.getMaxRows))))
 
 (defn set-int
@@ -1477,7 +1477,7 @@
   x - the parameter value - `int`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^Integer x]
+  ([^BaseRowSet this ^Integer parameter-index ^Integer x]
     (-> this (.setInt parameter-index x))))
 
 (defn get-query-timeout
@@ -1489,7 +1489,7 @@
        there is no limit - `int`
 
   throws: java.sql.SQLException - if an error occurs in determining the query time-out value"
-  (^Integer [^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^BaseRowSet this]
     (-> this (.getQueryTimeout))))
 
 (defn get-fetch-size
@@ -1500,7 +1500,7 @@
        needs more rows from the database - `int`
 
   throws: java.sql.SQLException - if an error occurs determining the number of rows in the current fetch size"
-  (^Integer [^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^BaseRowSet this]
     (-> this (.getFetchSize))))
 
 (defn get-concurrency
@@ -1517,7 +1517,7 @@
        ResultSet.CONCUR_UPDATABLE - `int`
 
   throws: java.sql.SQLException - if an error occurs getting the concurrency of this RowSet object"
-  (^Integer [^javax.sql.rowset.BaseRowSet this]
+  (^Integer [^BaseRowSet this]
     (-> this (.getConcurrency))))
 
 (defn set-character-stream
@@ -1575,9 +1575,9 @@
   length - the number of characters in the stream; lengths of 0 or less are undefined but will cause an invalid length exception to be thrown in the underlying JDBC driver. - `int`
 
   throws: java.sql.SQLException - if an error occurs, the parameter index is out of bounds, or when connected to a data source, the number of bytes the driver reads and sends to the database is not equal to the number of bytes specified in length"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.Reader reader ^Integer length]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.Reader reader ^Integer length]
     (-> this (.setCharacterStream parameter-index reader length)))
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.Reader reader]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.Reader reader]
     (-> this (.setCharacterStream parameter-index reader))))
 
 (defn get-type-map
@@ -1597,7 +1597,7 @@
 
   returns: the java.util.Map object that is the type map
            for this RowSet object's connection - `java.util.Map<java.lang.String,java.lang.Class<?>>`"
-  (^java.util.Map> [^javax.sql.rowset.BaseRowSet this]
+  (^java.util.Map [^BaseRowSet this]
     (-> this (.getTypeMap))))
 
 (defn get-data-source-name
@@ -1615,7 +1615,7 @@
            DataSource object to be used for making a
            connection; if no logical name has been set, null
            is returned. - `java.lang.String`"
-  (^java.lang.String [^javax.sql.rowset.BaseRowSet this]
+  (^java.lang.String [^BaseRowSet this]
     (-> this (.getDataSourceName))))
 
 (defn set-data-source-name
@@ -1634,7 +1634,7 @@
   name - a String object with the name that can be supplied to a naming service based on JNDI technology to retrieve the DataSource object that can be used to get a connection; may be null but must not be an empty string - `java.lang.String`
 
   throws: java.sql.SQLException - if an empty string is provided as the DataSource name"
-  ([^javax.sql.rowset.BaseRowSet this ^java.lang.String name]
+  ([^BaseRowSet this ^java.lang.String name]
     (-> this (.setDataSourceName name))))
 
 (defn read-only?
@@ -1646,7 +1646,7 @@
 
   returns: true if this RowSet object
            cannot be updated; false otherwise - `boolean`"
-  (^Boolean [^javax.sql.rowset.BaseRowSet this]
+  (^Boolean [^BaseRowSet this]
     (-> this (.isReadOnly))))
 
 (defn set-url
@@ -1658,7 +1658,7 @@
   x - the java.net.URL object to be set - `java.net.URL`
 
   throws: java.sql.SQLException - if a database access error occurs or this method is called on a closed PreparedStatement"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.net.URL x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.net.URL x]
     (-> this (.setURL parameter-index x))))
 
 (defn get-escape-processing?
@@ -1669,7 +1669,7 @@
            false otherwise - `boolean`
 
   throws: java.sql.SQLException - if an error occurs determining if escape processing is enabled or not or if the internal escape processing trigger has not been enabled"
-  (^Boolean [^javax.sql.rowset.BaseRowSet this]
+  (^Boolean [^BaseRowSet this]
     (-> this (.getEscapeProcessing))))
 
 (defn set-unicode-stream
@@ -1679,10 +1679,8 @@
   x - the java.io.InputStream object that contains the UNICODE parameter value - `java.io.InputStream`
   length - the number of bytes in the input stream - `int`
 
-  returns: `java.lang.  void`
-
   throws: java.sql.SQLException - if an error occurs, the parameter index is out of bounds, or the number of bytes the driver reads and sends to the database is not equal to the number of bytes specified in length"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
+  ([^BaseRowSet this ^Integer parameter-index ^java.io.InputStream x ^Integer length]
     (-> this (.setUnicodeStream parameter-index x length))))
 
 (defn set-show-deleted
@@ -1693,7 +1691,7 @@
   value - true if deleted rows should be shown; false otherwise - `boolean`
 
   throws: java.sql.SQLException - if an error occurs setting whether deleted rows are visible or not"
-  ([^javax.sql.rowset.BaseRowSet this ^Boolean value]
+  ([^BaseRowSet this ^Boolean value]
     (-> this (.setShowDeleted value))))
 
 (defn set-sqlxml
@@ -1704,7 +1702,7 @@
   xml-object - a SQLXML object that maps an SQL XML value - `java.sql.SQLXML`
 
   throws: java.sql.SQLException - if a database access error occurs, this method is called on a closed result set, the java.xml.transform.Result, Writer or OutputStream has not been closed for the SQLXML object or if there is an error processing the XML value. The getCause method of the exception may provide a more detailed exception, for example, if the stream does not contain valid XML."
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.SQLXML xml-object]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.SQLXML xml-object]
     (-> this (.setSQLXML parameter-index xml-object))))
 
 (defn set-float
@@ -1726,7 +1724,7 @@
   x - the parameter value - `float`
 
   throws: java.sql.SQLException - if an error occurs or the parameter index is out of bounds"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^Float x]
+  ([^BaseRowSet this ^Integer parameter-index ^Float x]
     (-> this (.setFloat parameter-index x))))
 
 (defn set-fetch-direction
@@ -1748,7 +1746,7 @@
   direction - one of ResultSet.FETCH_FORWARD, ResultSet.FETCH_REVERSE, or ResultSet.FETCH_UNKNOWN - `int`
 
   throws: java.sql.SQLException - if (1) the RowSet type is TYPE_FORWARD_ONLY and the given fetch direction is not FETCH_FORWARD or (2) the given fetch direction is not one of the following: ResultSet.FETCH_FORWARD, ResultSet.FETCH_REVERSE, or ResultSet.FETCH_UNKNOWN"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer direction]
+  ([^BaseRowSet this ^Integer direction]
     (-> this (.setFetchDirection direction))))
 
 (defn set-row-id
@@ -1760,7 +1758,7 @@
   x - the parameter value - `java.sql.RowId`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^javax.sql.rowset.BaseRowSet this ^Integer parameter-index ^java.sql.RowId x]
+  ([^BaseRowSet this ^Integer parameter-index ^java.sql.RowId x]
     (-> this (.setRowId parameter-index x))))
 
 (defn get-password
@@ -1771,7 +1769,7 @@
 
   returns: the String object that represents the password
            that must be supplied to the database to create a connection - `java.lang.String`"
-  (^java.lang.String [^javax.sql.rowset.BaseRowSet this]
+  (^java.lang.String [^BaseRowSet this]
     (-> this (.getPassword))))
 
 (defn get-params
@@ -1806,6 +1804,6 @@
            command; an empty array if no parameters have been set - `java.lang.Object[]`
 
   throws: java.sql.SQLException - if an error occurs retrieving the object array of parameters of this RowSet object or if not all parameters have been set"
-  ([^javax.sql.rowset.BaseRowSet this]
+  ([^BaseRowSet this]
     (-> this (.getParams))))
 

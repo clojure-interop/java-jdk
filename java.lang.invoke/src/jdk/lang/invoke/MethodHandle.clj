@@ -419,7 +419,7 @@
   returns: the signature-polymorphic result, statically represented using Object - `java.lang.Object`
 
   throws: java.lang.invoke.WrongMethodTypeException - if the target's type cannot be adjusted to the caller's symbolic type descriptor"
-  (^java.lang.Object [^java.lang.invoke.MethodHandle this ^java.lang.Object args]
+  (^java.lang.Object [^MethodHandle this ^java.lang.Object args]
     (-> this (.invoke args))))
 
 (defn as-varargs-collector
@@ -562,13 +562,13 @@
    effect on this decision, only a comparison between the symbolic
    type descriptor of the call site and the type descriptor of the method handle.)
 
-  array-type - often Object[], the type of the array argument which will collect the arguments - `java.lang.Class<?>`
+  array-type - often Object[], the type of the array argument which will collect the arguments - `java.lang.Class`
 
   returns: a new method handle which can collect any number of trailing arguments
            into an array, before calling the original method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if arrayType is a null reference"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandle this ^java.lang.Class array-type]
+  (^java.lang.invoke.MethodHandle [^MethodHandle this ^java.lang.Class array-type]
     (-> this (.asVarargsCollector array-type))))
 
 (defn varargs-collector?
@@ -583,7 +583,7 @@
        which resolves to a variable arity Java method or constructor
 
   returns: true if this method handle accepts more than one arity of plain, inexact invoke calls - `boolean`"
-  (^Boolean [^java.lang.invoke.MethodHandle this]
+  (^Boolean [^MethodHandle this]
     (-> this (.isVarargsCollector))))
 
 (defn bind-to
@@ -611,7 +611,7 @@
            argument list, before calling the original method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.IllegalArgumentException - if the target does not have a leading parameter type that is a reference type"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandle this ^java.lang.Object x]
+  (^java.lang.invoke.MethodHandle [^MethodHandle this ^java.lang.Object x]
     (-> this (.bindTo x))))
 
 (defn as-type
@@ -711,7 +711,7 @@
              necessary return value conversions - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if newType is a null reference"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandle this ^java.lang.invoke.MethodType new-type]
+  (^java.lang.invoke.MethodHandle [^MethodHandle this ^java.lang.invoke.MethodType new-type]
     (-> this (.asType new-type))))
 
 (defn to-string
@@ -728,7 +728,7 @@
    Therefore, the present syntax should not be parsed by applications.)
 
   returns: a string representation of the method handle - `java.lang.String`"
-  (^java.lang.String [^java.lang.invoke.MethodHandle this]
+  (^java.lang.String [^MethodHandle this]
     (-> this (.toString))))
 
 (defn invoke-with-arguments
@@ -779,7 +779,7 @@
   returns: the result returned by the target - `java.lang.Object`
 
   throws: java.lang.ClassCastException - if an argument cannot be converted by reference casting"
-  (^java.lang.Object [^java.lang.invoke.MethodHandle this ^java.lang.Object arguments]
+  (^java.lang.Object [^MethodHandle this ^java.lang.Object arguments]
     (-> this (.invokeWithArguments arguments))))
 
 (defn as-fixed-arity
@@ -822,7 +822,7 @@
   assertEquals(`[three, thee, tee]`, asListFix.invoke((Object)argv).toString());
 
   returns: a new method handle which accepts only a fixed number of arguments - `java.lang.invoke.MethodHandle`"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandle this]
+  (^java.lang.invoke.MethodHandle [^MethodHandle this]
     (-> this (.asFixedArity))))
 
 (defn as-spreader
@@ -901,14 +901,14 @@
   MethodHandle caToString2 = caString3.asSpreader(char[].class, 2);
   assertEquals(`[A, B, C]`, (String) caToString2.invokeExact('A', `BC`.toCharArray()));
 
-  array-type - usually Object[], the type of the array argument from which to extract the spread arguments - `java.lang.Class<?>`
+  array-type - usually Object[], the type of the array argument from which to extract the spread arguments - `java.lang.Class`
   array-length - the number of arguments to spread from an incoming array argument - `int`
 
   returns: a new method handle which spreads its final array argument,
            before calling the original method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if arrayType is a null reference"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandle this ^java.lang.Class array-type ^Integer array-length]
+  (^java.lang.invoke.MethodHandle [^MethodHandle this ^java.lang.Class array-type ^Integer array-length]
     (-> this (.asSpreader array-type array-length))))
 
 (defn invoke-exact
@@ -929,7 +929,7 @@
   returns: the signature-polymorphic result, statically represented using Object - `java.lang.Object`
 
   throws: java.lang.invoke.WrongMethodTypeException - if the target's type is not identical with the caller's symbolic type descriptor"
-  (^java.lang.Object [^java.lang.invoke.MethodHandle this ^java.lang.Object args]
+  (^java.lang.Object [^MethodHandle this ^java.lang.Object args]
     (-> this (.invokeExact args))))
 
 (defn type
@@ -937,7 +937,7 @@
    Every invocation of this method handle via invokeExact must exactly match this type.
 
   returns: the method handle type - `java.lang.invoke.MethodType`"
-  (^java.lang.invoke.MethodType [^java.lang.invoke.MethodHandle this]
+  (^java.lang.invoke.MethodType [^MethodHandle this]
     (-> this (.type))))
 
 (defn as-collector
@@ -998,13 +998,13 @@
     .asCollector(long[].class, 1);
   assertEquals(`[123]`, (String) longsToString.invokeExact((long)123));
 
-  array-type - often Object[], the type of the array argument which will collect the arguments - `java.lang.Class<?>`
+  array-type - often Object[], the type of the array argument which will collect the arguments - `java.lang.Class`
   array-length - the number of arguments to collect into a new array argument - `int`
 
   returns: a new method handle which collects some trailing argument
            into an array, before calling the original method handle - `java.lang.invoke.MethodHandle`
 
   throws: java.lang.NullPointerException - if arrayType is a null reference"
-  (^java.lang.invoke.MethodHandle [^java.lang.invoke.MethodHandle this ^java.lang.Class array-type ^Integer array-length]
+  (^java.lang.invoke.MethodHandle [^MethodHandle this ^java.lang.Class array-type ^Integer array-length]
     (-> this (.asCollector array-type array-length))))
 

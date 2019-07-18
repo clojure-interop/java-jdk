@@ -27,18 +27,18 @@
   offset - the offset in iv where the 8-byte IV starts. - `int`
 
   throws: java.lang.IllegalArgumentException - if iv is null."
-  ([^Integer effective-key-bits iv ^Integer offset]
+  (^RC2ParameterSpec [^Integer effective-key-bits iv ^Integer offset]
     (new RC2ParameterSpec effective-key-bits iv offset))
-  ([^Integer effective-key-bits iv]
+  (^RC2ParameterSpec [^Integer effective-key-bits iv]
     (new RC2ParameterSpec effective-key-bits iv))
-  ([^Integer effective-key-bits]
+  (^RC2ParameterSpec [^Integer effective-key-bits]
     (new RC2ParameterSpec effective-key-bits)))
 
 (defn get-effective-key-bits
   "Returns the effective key size in bits.
 
   returns: the effective key size in bits. - `int`"
-  (^Integer [^javax.crypto.spec.RC2ParameterSpec this]
+  (^Integer [^RC2ParameterSpec this]
     (-> this (.getEffectiveKeyBits))))
 
 (defn get-iv
@@ -46,7 +46,7 @@
 
   returns: the IV or null if this parameter set does not contain an IV.
    Returns a new array each time this method is called. - `byte[]`"
-  ([^javax.crypto.spec.RC2ParameterSpec this]
+  ([^RC2ParameterSpec this]
     (-> this (.getIV))))
 
 (defn equals
@@ -59,7 +59,7 @@
 
   returns: true if the objects are considered equal, false if
    obj is null or otherwise. - `boolean`"
-  (^Boolean [^javax.crypto.spec.RC2ParameterSpec this ^java.lang.Object obj]
+  (^Boolean [^RC2ParameterSpec this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -67,6 +67,6 @@
    Objects that are equal will also have the same hashcode.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.crypto.spec.RC2ParameterSpec this]
+  (^Integer [^RC2ParameterSpec this]
     (-> this (.hashCode))))
 

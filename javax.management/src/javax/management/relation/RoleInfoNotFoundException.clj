@@ -10,8 +10,8 @@
   Constructor with given message put in exception.
 
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^RoleInfoNotFoundException [^java.lang.String message]
     (new RoleInfoNotFoundException message))
-  ([]
+  (^RoleInfoNotFoundException []
     (new RoleInfoNotFoundException )))
 

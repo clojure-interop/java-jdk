@@ -24,7 +24,7 @@
 
   class-name - the fully qualified name of the class of the lock object. - `java.lang.String`
   identity-hash-code - the identity hash code of the lock object. - `int`"
-  ([^java.lang.String class-name ^Integer identity-hash-code]
+  (^LockInfo [^java.lang.String class-name ^Integer identity-hash-code]
     (new LockInfo class-name identity-hash-code)))
 
 (defn *from
@@ -59,7 +59,7 @@
   "Returns the fully qualified name of the class of the lock object.
 
   returns: the fully qualified name of the class of the lock object. - `java.lang.String`"
-  (^java.lang.String [^java.lang.management.LockInfo this]
+  (^java.lang.String [^LockInfo this]
     (-> this (.getClassName))))
 
 (defn get-identity-hash-code
@@ -67,7 +67,7 @@
    returned from the System.identityHashCode(java.lang.Object) method.
 
   returns: the identity hash code of the lock object. - `int`"
-  (^Integer [^java.lang.management.LockInfo this]
+  (^Integer [^LockInfo this]
     (-> this (.getIdentityHashCode))))
 
 (defn to-string
@@ -83,6 +83,6 @@
    where lock is the lock object.
 
   returns: the string representation of a lock. - `java.lang.String`"
-  (^java.lang.String [^java.lang.management.LockInfo this]
+  (^java.lang.String [^LockInfo this]
     (-> this (.toString))))
 

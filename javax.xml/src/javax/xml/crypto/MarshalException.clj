@@ -18,11 +18,11 @@
 
   message - the detail message - `java.lang.String`
   cause - the cause (A null value is permitted, and indicates that the cause is nonexistent or unknown.) - `java.lang.Throwable`"
-  ([^java.lang.String message ^java.lang.Throwable cause]
+  (^MarshalException [^java.lang.String message ^java.lang.Throwable cause]
     (new MarshalException message cause))
-  ([^java.lang.String message]
+  (^MarshalException [^java.lang.String message]
     (new MarshalException message))
-  ([]
+  (^MarshalException []
     (new MarshalException )))
 
 (defn get-cause
@@ -33,7 +33,7 @@
 
   returns: the cause of this MarshalException or
            null if the cause is nonexistent or unknown. - `java.lang.Throwable`"
-  (^java.lang.Throwable [^javax.xml.crypto.MarshalException this]
+  (^java.lang.Throwable [^MarshalException this]
     (-> this (.getCause))))
 
 (defn print-stack-trace
@@ -41,8 +41,8 @@
    the cause's backtrace to the specified print stream.
 
   s - PrintStream to use for output - `java.io.PrintStream`"
-  ([^javax.xml.crypto.MarshalException this ^java.io.PrintStream s]
+  ([^MarshalException this ^java.io.PrintStream s]
     (-> this (.printStackTrace s)))
-  ([^javax.xml.crypto.MarshalException this]
+  ([^MarshalException this]
     (-> this (.printStackTrace))))
 

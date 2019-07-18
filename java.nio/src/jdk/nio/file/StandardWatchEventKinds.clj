@@ -12,7 +12,7 @@
     The context for this event is
    implementation specific and may be null. The event count may be greater than 1.
 
-  type: java.nio.file.WatchEvent.Kind<java.lang.Object>"
+  type: java.nio.file.WatchEvent$Kind<java.lang.Object>"
   StandardWatchEventKinds/OVERFLOW)
 
 (def *-entry-create
@@ -25,7 +25,7 @@
    or renamed into the directory. The event count
    for this event is always 1.
 
-  type: java.nio.file.WatchEvent.Kind<java.nio.file.Path>"
+  type: java.nio.file.WatchEvent$Kind<java.nio.file.Path>"
   StandardWatchEventKinds/ENTRY_CREATE)
 
 (def *-entry-delete
@@ -38,7 +38,7 @@
    the directory. The event count for this event
    is always 1.
 
-  type: java.nio.file.WatchEvent.Kind<java.nio.file.Path>"
+  type: java.nio.file.WatchEvent$Kind<java.nio.file.Path>"
   StandardWatchEventKinds/ENTRY_DELETE)
 
 (def *-entry-modify
@@ -51,6 +51,6 @@
    modified. The event count for this event is
    1 or greater.
 
-  type: java.nio.file.WatchEvent.Kind<java.nio.file.Path>"
+  type: java.nio.file.WatchEvent$Kind<java.nio.file.Path>"
   StandardWatchEventKinds/ENTRY_MODIFY)
 

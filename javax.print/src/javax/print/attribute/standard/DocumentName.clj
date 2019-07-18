@@ -24,7 +24,7 @@
   locale - Natural language of the text string. null is interpreted to mean the default locale as returned by Locale.getDefault() - `java.util.Locale`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if documentName is null."
-  ([^java.lang.String document-name ^java.util.Locale locale]
+  (^DocumentName [^java.lang.String document-name ^java.util.Locale locale]
     (new DocumentName document-name locale)))
 
 (defn equals
@@ -47,7 +47,7 @@
 
   returns: True if object is equivalent to this document
             name attribute, false otherwise. - `boolean`"
-  (^Boolean [^javax.print.attribute.standard.DocumentName this ^java.lang.Object object]
+  (^Boolean [^DocumentName this ^java.lang.Object object]
     (-> this (.equals object))))
 
 (defn get-category
@@ -58,7 +58,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.DocumentName this]
+  ([^DocumentName this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -68,6 +68,6 @@
    For class DocumentName, the category name is `document-name`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.DocumentName this]
+  (^java.lang.String [^DocumentName this]
     (-> this (.getName))))
 

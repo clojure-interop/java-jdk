@@ -24,7 +24,7 @@
 
      grant {
        permission javax.security.auth.PrivateCredentialPermission
-               `com.sun.PrivateCredential com.sun.Principal \`duke\``,
+               `com.sun.PrivateCredential com.sun.Principal `duke``,
                `read`;
      };
 
@@ -78,7 +78,7 @@
   actions - the actions specifying that the Credential can be read. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if name does not conform to the correct syntax or if actions is not `read`."
-  ([^java.lang.String name ^java.lang.String actions]
+  (^PrivateCredentialPermission [^java.lang.String name ^java.lang.String actions]
     (new PrivateCredentialPermission name actions)))
 
 (defn get-credential-class
@@ -87,7 +87,7 @@
 
   returns: the Class name of the Credential associated with this
             PrivateCredentialPermission. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.PrivateCredentialPermission this]
+  (^java.lang.String [^PrivateCredentialPermission this]
     (-> this (.getCredentialClass))))
 
 (defn get-principals
@@ -105,7 +105,7 @@
 
   returns: the Principal class and names associated
             with this PrivateCredentialPermission. - `java.lang.String[][]`"
-  ([^javax.security.auth.PrivateCredentialPermission this]
+  ([^PrivateCredentialPermission this]
     (-> this (.getPrincipals))))
 
 (defn implies
@@ -129,7 +129,7 @@
 
   returns: true if this PrivateCredentialPermission implies
    the specified Permission, false if not. - `boolean`"
-  (^Boolean [^javax.security.auth.PrivateCredentialPermission this ^java.security.Permission p]
+  (^Boolean [^PrivateCredentialPermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -146,14 +146,14 @@
   returns: true if obj is a PrivateCredentialPermission,
             has the same credential class as this object,
             and has the same Principals as this object. - `boolean`"
-  (^Boolean [^javax.security.auth.PrivateCredentialPermission this ^java.lang.Object obj]
+  (^Boolean [^PrivateCredentialPermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.security.auth.PrivateCredentialPermission this]
+  (^Integer [^PrivateCredentialPermission this]
     (-> this (.hashCode))))
 
 (defn get-actions
@@ -161,7 +161,7 @@
    This method always returns the String, `read`.
 
   returns: the actions (always returns `read`). - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.PrivateCredentialPermission this]
+  (^java.lang.String [^PrivateCredentialPermission this]
     (-> this (.getActions))))
 
 (defn new-permission-collection
@@ -171,6 +171,6 @@
    so this method always returns null.
 
   returns: null in all cases. - `java.security.PermissionCollection`"
-  (^java.security.PermissionCollection [^javax.security.auth.PrivateCredentialPermission this]
+  (^java.security.PermissionCollection [^PrivateCredentialPermission this]
     (-> this (.newPermissionCollection))))
 

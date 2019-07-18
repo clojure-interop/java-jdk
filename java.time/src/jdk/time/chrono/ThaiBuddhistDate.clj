@@ -75,7 +75,7 @@
   field - the field to query the range for, not null - `java.time.temporal.TemporalField`
 
   returns: the range of valid values for the field, not null - `java.time.temporal.ValueRange`"
-  (^java.time.temporal.ValueRange [^java.time.chrono.ThaiBuddhistDate this ^java.time.temporal.TemporalField field]
+  (^java.time.temporal.ValueRange [^ThaiBuddhistDate this ^java.time.temporal.TemporalField field]
     (-> this (.range field))))
 
 (defn get-era
@@ -85,14 +85,14 @@
    defined by ThaiBuddhistEra.
 
   returns: the era applicable at this date, not null - `java.time.chrono.ThaiBuddhistEra`"
-  (^java.time.chrono.ThaiBuddhistEra [^java.time.chrono.ThaiBuddhistDate this]
+  (^java.time.chrono.ThaiBuddhistEra [^ThaiBuddhistDate this]
     (-> this (.getEra))))
 
 (defn to-epoch-day
   "Description copied from interface: ChronoLocalDate
 
   returns: the Epoch Day equivalent to this date - `long`"
-  (^Long [^java.time.chrono.ThaiBuddhistDate this]
+  (^Long [^ThaiBuddhistDate this]
     (-> this (.toEpochDay))))
 
 (defn plus
@@ -102,16 +102,16 @@
   unit - the unit of the amount to add, not null - `java.time.temporal.TemporalUnit`
 
   returns: an object of the same type with the specified period added, not null - `java.time.chrono.ThaiBuddhistDate`"
-  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  (^java.time.chrono.ThaiBuddhistDate [^ThaiBuddhistDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.plus amount-to-add unit)))
-  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistDate this ^java.time.temporal.TemporalAmount amount]
+  (^java.time.chrono.ThaiBuddhistDate [^ThaiBuddhistDate this ^java.time.temporal.TemporalAmount amount]
     (-> this (.plus amount))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.time.chrono.ThaiBuddhistDate this]
+  (^java.lang.String [^ThaiBuddhistDate this]
     (-> this (.toString))))
 
 (defn minus
@@ -121,9 +121,9 @@
   unit - the unit of the amount to subtract, not null - `java.time.temporal.TemporalUnit`
 
   returns: an object of the same type with the specified period subtracted, not null - `java.time.chrono.ThaiBuddhistDate`"
-  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
+  (^java.time.chrono.ThaiBuddhistDate [^ThaiBuddhistDate this ^Long amount-to-add ^java.time.temporal.TemporalUnit unit]
     (-> this (.minus amount-to-add unit)))
-  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistDate this ^java.time.temporal.TemporalAmount amount]
+  (^java.time.chrono.ThaiBuddhistDate [^ThaiBuddhistDate this ^java.time.temporal.TemporalAmount amount]
     (-> this (.minus amount))))
 
 (defn get-long
@@ -132,7 +132,7 @@
   field - the field to get, not null - `java.time.temporal.TemporalField`
 
   returns: the value for the field - `long`"
-  (^Long [^java.time.chrono.ThaiBuddhistDate this ^java.time.temporal.TemporalField field]
+  (^Long [^ThaiBuddhistDate this ^java.time.temporal.TemporalField field]
     (-> this (.getLong field))))
 
 (defn length-of-month
@@ -142,7 +142,7 @@
    Month lengths match those of the ISO calendar system.
 
   returns: the length of the month in days - `int`"
-  (^Integer [^java.time.chrono.ThaiBuddhistDate this]
+  (^Integer [^ThaiBuddhistDate this]
     (-> this (.lengthOfMonth))))
 
 (defn until
@@ -152,9 +152,9 @@
   unit - the unit to measure the amount in, not null - `java.time.temporal.TemporalUnit`
 
   returns: the amount of time between this date and the end date - `long`"
-  (^Long [^java.time.chrono.ThaiBuddhistDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
+  (^Long [^ThaiBuddhistDate this ^java.time.temporal.Temporal end-exclusive ^java.time.temporal.TemporalUnit unit]
     (-> this (.until end-exclusive unit)))
-  (^java.time.chrono.ChronoPeriod [^java.time.chrono.ThaiBuddhistDate this ^java.time.chrono.ChronoLocalDate end-date]
+  (^java.time.chrono.ChronoPeriod [^ThaiBuddhistDate this ^java.time.chrono.ChronoLocalDate end-date]
     (-> this (.until end-date))))
 
 (defn get-chronology
@@ -164,14 +164,14 @@
    The era and other fields in ChronoField are defined by the chronology.
 
   returns: the Thai Buddhist chronology, not null - `java.time.chrono.ThaiBuddhistChronology`"
-  (^java.time.chrono.ThaiBuddhistChronology [^java.time.chrono.ThaiBuddhistDate this]
+  (^java.time.chrono.ThaiBuddhistChronology [^ThaiBuddhistDate this]
     (-> this (.getChronology))))
 
 (defn hash-code
   "A hash code for this date.
 
   returns: a suitable hash code based only on the Chronology and the date - `int`"
-  (^Integer [^java.time.chrono.ThaiBuddhistDate this]
+  (^Integer [^ThaiBuddhistDate this]
     (-> this (.hashCode))))
 
 (defn with
@@ -181,9 +181,9 @@
   new-value - the new value of the field in the result - `long`
 
   returns: an object of the same type with the specified field set, not null - `java.time.chrono.ThaiBuddhistDate`"
-  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistDate this ^java.time.temporal.TemporalField field ^Long new-value]
+  (^java.time.chrono.ThaiBuddhistDate [^ThaiBuddhistDate this ^java.time.temporal.TemporalField field ^Long new-value]
     (-> this (.with field new-value)))
-  (^java.time.chrono.ThaiBuddhistDate [^java.time.chrono.ThaiBuddhistDate this ^java.time.temporal.TemporalAdjuster adjuster]
+  (^java.time.chrono.ThaiBuddhistDate [^ThaiBuddhistDate this ^java.time.temporal.TemporalAdjuster adjuster]
     (-> this (.with adjuster))))
 
 (defn equals
@@ -198,7 +198,7 @@
   obj - the object to check, null returns false - `java.lang.Object`
 
   returns: true if this is equal to the other date - `boolean`"
-  (^Boolean [^java.time.chrono.ThaiBuddhistDate this ^java.lang.Object obj]
+  (^Boolean [^ThaiBuddhistDate this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn at-time
@@ -207,6 +207,6 @@
   local-time - the local time to use, not null - `java.time.LocalTime`
 
   returns: the local date-time formed from this date and the specified time, not null - `java.time.chrono.ChronoLocalDateTime<java.time.chrono.ThaiBuddhistDate>`"
-  (^java.time.chrono.ChronoLocalDateTime [^java.time.chrono.ThaiBuddhistDate this ^java.time.LocalTime local-time]
+  (^java.time.chrono.ChronoLocalDateTime [^ThaiBuddhistDate this ^java.time.LocalTime local-time]
     (-> this (.atTime local-time))))
 

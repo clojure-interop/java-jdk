@@ -14,6 +14,6 @@
    of the eval methods of CompiledScript. - `javax.script.CompiledScript`
 
   throws: javax.script.ScriptException - if compilation fails."
-  (^javax.script.CompiledScript [^javax.script.Compilable this ^java.lang.String script]
+  (^javax.script.CompiledScript [^Compilable this ^java.lang.String script]
     (-> this (.compile script))))
 

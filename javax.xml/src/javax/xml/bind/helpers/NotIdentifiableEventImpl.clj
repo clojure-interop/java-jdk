@@ -19,8 +19,8 @@
   linked-exception - An optional linked exception that may provide additional information about the event - may be null. - `java.lang.Throwable`
 
   throws: java.lang.IllegalArgumentException - if an illegal severity field is supplied"
-  ([^Integer severity ^java.lang.String message ^javax.xml.bind.ValidationEventLocator locator ^java.lang.Throwable linked-exception]
+  (^NotIdentifiableEventImpl [^Integer severity ^java.lang.String message ^javax.xml.bind.ValidationEventLocator locator ^java.lang.Throwable linked-exception]
     (new NotIdentifiableEventImpl severity message locator linked-exception))
-  ([^Integer severity ^java.lang.String message ^javax.xml.bind.ValidationEventLocator locator]
+  (^NotIdentifiableEventImpl [^Integer severity ^java.lang.String message ^javax.xml.bind.ValidationEventLocator locator]
     (new NotIdentifiableEventImpl severity message locator)))
 

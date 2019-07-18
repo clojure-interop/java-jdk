@@ -6,7 +6,7 @@
 
 (defn ->synth-menu-item-ui
   "Constructor."
-  ([]
+  (^SynthMenuItemUI []
     (new SynthMenuItemUI )))
 
 (defn *create-ui
@@ -36,7 +36,7 @@
    Nullify any allocated instance data objects to allow for GC.
 
   c - the component from which this UI delegate is being removed; this argument is often ignored, but might be used if the UI object is stateless and shared by multiple components - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthMenuItemUI this ^javax.swing.JComponent c]
+  ([^SynthMenuItemUI this ^javax.swing.JComponent c]
     (-> this (.uninstallUI c))))
 
 (defn get-context
@@ -45,7 +45,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthMenuItemUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^SynthMenuItemUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn update
@@ -58,7 +58,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthMenuItemUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthMenuItemUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint
@@ -68,7 +68,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthMenuItemUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthMenuItemUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn paint-border
@@ -80,13 +80,13 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^javax.swing.plaf.synth.SynthMenuItemUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthMenuItemUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn property-change
   "This method gets called when a bound property is changed.
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.plaf.synth.SynthMenuItemUI this ^java.beans.PropertyChangeEvent e]
+  ([^SynthMenuItemUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 

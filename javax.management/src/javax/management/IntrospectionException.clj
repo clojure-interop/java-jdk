@@ -9,8 +9,8 @@
   Constructor that allows a specific error message to be specified.
 
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^IntrospectionException [^java.lang.String message]
     (new IntrospectionException message))
-  ([]
+  (^IntrospectionException []
     (new IntrospectionException )))
 

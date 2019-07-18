@@ -37,12 +37,12 @@
    p).
 
   e - the element to visit - `javax.lang.model.element.Element`
-  p - a visitor-specified parameter - `AbstractElementVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: a visitor-specified result - `AbstractElementVisitor6.R`"
-  (^AbstractElementVisitor6.R [^javax.lang.model.util.AbstractElementVisitor6 this ^javax.lang.model.element.Element e ^AbstractElementVisitor6.P p]
+  returns: a visitor-specified result - `R`"
+  ([^AbstractElementVisitor6 this ^javax.lang.model.element.Element e p]
     (-> this (.visit e p)))
-  (^AbstractElementVisitor6.R [^javax.lang.model.util.AbstractElementVisitor6 this ^javax.lang.model.element.Element e]
+  ([^AbstractElementVisitor6 this ^javax.lang.model.element.Element e]
     (-> this (.visit e))))
 
 (defn visit-unknown
@@ -56,11 +56,11 @@
    This behavior is not required of a subclass.
 
   e - the element to visit - `javax.lang.model.element.Element`
-  p - a visitor-specified parameter - `AbstractElementVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: a visitor-specified result - `AbstractElementVisitor6.R`
+  returns: a visitor-specified result - `R`
 
   throws: javax.lang.model.element.UnknownElementException - a visitor implementation may optionally throw this exception"
-  (^AbstractElementVisitor6.R [^javax.lang.model.util.AbstractElementVisitor6 this ^javax.lang.model.element.Element e ^AbstractElementVisitor6.P p]
+  ([^AbstractElementVisitor6 this ^javax.lang.model.element.Element e p]
     (-> this (.visitUnknown e p))))
 

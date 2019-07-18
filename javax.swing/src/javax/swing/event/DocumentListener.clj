@@ -24,7 +24,7 @@
    range given by the DocumentEvent bounds the freshly inserted region.
 
   e - the document event - `javax.swing.event.DocumentEvent`"
-  ([^javax.swing.event.DocumentListener this ^javax.swing.event.DocumentEvent e]
+  ([^DocumentListener this ^javax.swing.event.DocumentEvent e]
     (-> this (.insertUpdate e))))
 
 (defn remove-update
@@ -33,13 +33,13 @@
    saw (that is, before updating sticky positions).
 
   e - the document event - `javax.swing.event.DocumentEvent`"
-  ([^javax.swing.event.DocumentListener this ^javax.swing.event.DocumentEvent e]
+  ([^DocumentListener this ^javax.swing.event.DocumentEvent e]
     (-> this (.removeUpdate e))))
 
 (defn changed-update
   "Gives notification that an attribute or set of attributes changed.
 
   e - the document event - `javax.swing.event.DocumentEvent`"
-  ([^javax.swing.event.DocumentListener this ^javax.swing.event.DocumentEvent e]
+  ([^DocumentListener this ^javax.swing.event.DocumentEvent e]
     (-> this (.changedUpdate e))))
 

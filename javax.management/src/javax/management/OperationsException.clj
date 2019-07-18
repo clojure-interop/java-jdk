@@ -10,8 +10,8 @@
   Constructor that allows a specific error message to be specified.
 
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^OperationsException [^java.lang.String message]
     (new OperationsException message))
-  ([]
+  (^OperationsException []
     (new OperationsException )))
 

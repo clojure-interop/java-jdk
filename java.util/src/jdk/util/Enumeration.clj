@@ -28,16 +28,16 @@
   returns: true if and only if this enumeration object
              contains at least one more element to provide;
             false otherwise. - `boolean`"
-  (^Boolean [^java.util.Enumeration this]
+  (^Boolean [^Enumeration this]
     (-> this (.hasMoreElements))))
 
 (defn next-element
   "Returns the next element of this enumeration if this enumeration
    object has at least one more element to provide.
 
-  returns: the next element of this enumeration. - `Enumeration.E`
+  returns: the next element of this enumeration. - `E`
 
   throws: java.util.NoSuchElementException - if no more elements exist."
-  (^Enumeration.E [^java.util.Enumeration this]
+  ([^Enumeration this]
     (-> this (.nextElement))))
 

@@ -11,6 +11,6 @@
    found by an SSL subsystem.
 
   reason - describes the problem. - `java.lang.String`"
-  ([^java.lang.String reason]
+  (^SSLKeyException [^java.lang.String reason]
     (new SSLKeyException reason)))
 

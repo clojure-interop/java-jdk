@@ -14,16 +14,16 @@
 (defn completed
   "Invoked when an operation has completed.
 
-  result - The result of the I/O operation. - `CompletionHandler.V`
-  attachment - The object attached to the I/O operation when it was initiated. - `CompletionHandler.A`"
-  ([^java.nio.channels.CompletionHandler this ^CompletionHandler.V result ^CompletionHandler.A attachment]
+  result - The result of the I/O operation. - `V`
+  attachment - The object attached to the I/O operation when it was initiated. - `A`"
+  ([^CompletionHandler this result attachment]
     (-> this (.completed result attachment))))
 
 (defn failed
   "Invoked when an operation fails.
 
   exc - The exception to indicate why the I/O operation failed - `java.lang.Throwable`
-  attachment - The object attached to the I/O operation when it was initiated. - `CompletionHandler.A`"
-  ([^java.nio.channels.CompletionHandler this ^java.lang.Throwable exc ^CompletionHandler.A attachment]
+  attachment - The object attached to the I/O operation when it was initiated. - `A`"
+  ([^CompletionHandler this ^java.lang.Throwable exc attachment]
     (-> this (.failed exc attachment))))
 

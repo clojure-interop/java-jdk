@@ -12,9 +12,10 @@
 
   Deprecated. no replacement
 
-  name - the detail message - `java.lang.String`"
-  ([^java.lang.String name]
-    (new RMISecurityException name))
-  ([^java.lang.String name ^java.lang.String arg]
-    (new RMISecurityException name arg)))
+  name - the detail message - `java.lang.String`
+  arg - ignored - `java.lang.String`"
+  (^RMISecurityException [^java.lang.String name ^java.lang.String arg]
+    (new RMISecurityException name arg))
+  (^RMISecurityException [^java.lang.String name]
+    (new RMISecurityException name)))
 

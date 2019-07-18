@@ -5,7 +5,7 @@
 
 (defn ->basic-borders
   "Constructor."
-  ([]
+  (^BasicBorders []
     (new BasicBorders )))
 
 (defn *get-text-field-border

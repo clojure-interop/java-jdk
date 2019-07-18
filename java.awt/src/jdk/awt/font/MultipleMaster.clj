@@ -10,7 +10,7 @@
    Design axes include things like width, weight and optical scaling.
 
   returns: the number of multiple master design controls - `int`"
-  (^Integer [^java.awt.font.MultipleMaster this]
+  (^Integer [^MultipleMaster this]
     (-> this (.getNumDesignAxes))))
 
 (defn get-design-axis-ranges
@@ -21,7 +21,7 @@
    getDesignAxisNames.
 
   returns: an array of design limits for each axis. - `float[]`"
-  ([^java.awt.font.MultipleMaster this]
+  ([^MultipleMaster this]
     (-> this (.getDesignAxisRanges))))
 
 (defn get-design-axis-defaults
@@ -30,7 +30,7 @@
    in the same order returned by getDesignAxisNames.
 
   returns: an array of default design values for each axis. - `float[]`"
-  ([^java.awt.font.MultipleMaster this]
+  ([^MultipleMaster this]
     (-> this (.getDesignAxisDefaults))))
 
 (defn get-design-axis-names
@@ -38,7 +38,7 @@
    which the values for each axis are returned.
 
   returns: an array containing the names of each design axis. - `java.lang.String[]`"
-  ([^java.awt.font.MultipleMaster this]
+  ([^MultipleMaster this]
     (-> this (.getDesignAxisNames))))
 
 (defn derive-mm-font
@@ -54,8 +54,8 @@
   returns: a Font object that is an instance of
    MultipleMaster and is based on the specified metric
    information. - `java.awt.Font`"
-  (^java.awt.Font [^java.awt.font.MultipleMaster this glyph-widths ^Float avg-stem-width ^Float typical-cap-height ^Float typical-x-height ^Float italic-angle]
+  (^java.awt.Font [^MultipleMaster this glyph-widths ^Float avg-stem-width ^Float typical-cap-height ^Float typical-x-height ^Float italic-angle]
     (-> this (.deriveMMFont glyph-widths avg-stem-width typical-cap-height typical-x-height italic-angle)))
-  (^java.awt.Font [^java.awt.font.MultipleMaster this axes]
+  (^java.awt.Font [^MultipleMaster this axes]
     (-> this (.deriveMMFont axes))))
 

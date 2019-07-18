@@ -87,21 +87,21 @@
   "Returns a string describing this coder result.
 
   returns: A descriptive string - `java.lang.String`"
-  (^java.lang.String [^java.nio.charset.CoderResult this]
+  (^java.lang.String [^CoderResult this]
     (-> this (.toString))))
 
 (defn underflow?
   "Tells whether or not this object describes an underflow condition.
 
   returns: true if, and only if, this object denotes underflow - `boolean`"
-  (^Boolean [^java.nio.charset.CoderResult this]
+  (^Boolean [^CoderResult this]
     (-> this (.isUnderflow))))
 
 (defn overflow?
   "Tells whether or not this object describes an overflow condition.
 
   returns: true if, and only if, this object denotes overflow - `boolean`"
-  (^Boolean [^java.nio.charset.CoderResult this]
+  (^Boolean [^CoderResult this]
     (-> this (.isOverflow))))
 
 (defn error?
@@ -109,7 +109,7 @@
 
   returns: true if, and only if, this object denotes either a
             malformed-input error or an unmappable-character error - `boolean`"
-  (^Boolean [^java.nio.charset.CoderResult this]
+  (^Boolean [^CoderResult this]
     (-> this (.isError))))
 
 (defn malformed?
@@ -117,7 +117,7 @@
 
   returns: true if, and only if, this object denotes a
             malformed-input error - `boolean`"
-  (^Boolean [^java.nio.charset.CoderResult this]
+  (^Boolean [^CoderResult this]
     (-> this (.isMalformed))))
 
 (defn unmappable?
@@ -126,7 +126,7 @@
 
   returns: true if, and only if, this object denotes an
             unmappable-character error - `boolean`"
-  (^Boolean [^java.nio.charset.CoderResult this]
+  (^Boolean [^CoderResult this]
     (-> this (.isUnmappable))))
 
 (defn length
@@ -136,13 +136,13 @@
   returns: The length of the erroneous input, a positive integer - `int`
 
   throws: java.lang.UnsupportedOperationException - If this object does not describe an error condition, that is, if the isError does not return true"
-  (^Integer [^java.nio.charset.CoderResult this]
+  (^Integer [^CoderResult this]
     (-> this (.length))))
 
 (defn throw-exception
   "Throws an exception appropriate to the result described by this object.
 
   throws: java.nio.BufferUnderflowException - If this object is UNDERFLOW"
-  ([^java.nio.charset.CoderResult this]
+  ([^CoderResult this]
     (-> this (.throwException))))
 

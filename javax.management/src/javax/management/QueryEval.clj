@@ -5,7 +5,7 @@
 
 (defn ->query-eval
   "Constructor."
-  ([]
+  (^QueryEval []
     (new QueryEval )))
 
 (defn *get-m-bean-server
@@ -31,6 +31,6 @@
    called.
 
   s - The MBean server on which the query is to be performed. - `javax.management.MBeanServer`"
-  ([^javax.management.QueryEval this ^javax.management.MBeanServer s]
+  ([^QueryEval this ^javax.management.MBeanServer s]
     (-> this (.setMBeanServer s))))
 

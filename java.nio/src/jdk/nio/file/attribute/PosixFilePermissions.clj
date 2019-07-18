@@ -12,7 +12,7 @@
     If the set contains null or elements that are not of type
    PosixFilePermission then these elements are ignored.
 
-  perms - the set of permissions - `java.util.Set<java.nio.file.attribute.PosixFilePermission>`
+  perms - the set of permissions - `java.util.Set`
 
   returns: the string representation of the permission set - `java.lang.String`"
   (^java.lang.String [^java.util.Set perms]
@@ -52,12 +52,12 @@
    permissions, suitable for passing to the createFile or createDirectory
    methods.
 
-  perms - the set of permissions - `java.util.Set<java.nio.file.attribute.PosixFilePermission>`
+  perms - the set of permissions - `java.util.Set`
 
   returns: an attribute encapsulating the given file permissions with
             name `posix:permissions` - `java.nio.file.attribute.FileAttribute<java.util.Set<java.nio.file.attribute.PosixFilePermission>>`
 
   throws: java.lang.ClassCastException - if the set contains elements that are not of type PosixFilePermission"
-  (^java.nio.file.attribute.FileAttribute> [^java.util.Set perms]
+  (^java.nio.file.attribute.FileAttribute [^java.util.Set perms]
     (PosixFilePermissions/asFileAttribute perms)))
 

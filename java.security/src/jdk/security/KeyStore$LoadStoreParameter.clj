@@ -10,7 +10,7 @@
 (defn get-protection-parameter
   "Gets the parameter used to protect keystore data.
 
-  returns: the parameter used to protect keystore data, or null - `java.security.KeyStore.ProtectionParameter`"
-  (^java.security.KeyStore.ProtectionParameter [^java.security.KeyStore$LoadStoreParameter this]
+  returns: the parameter used to protect keystore data, or null - `java.security.KeyStore$ProtectionParameter`"
+  (^java.security.KeyStore$ProtectionParameter [^KeyStore$LoadStoreParameter this]
     (-> this (.getProtectionParameter))))
 

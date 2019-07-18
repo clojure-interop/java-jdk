@@ -35,14 +35,14 @@
   "Constructor.
 
   Creates a new menu bar."
-  ([]
+  (^JMenuBar []
     (new JMenuBar )))
 
 (defn get-component
   "Implemented to be a MenuElement. Returns this object.
 
   returns: the current Component (this) - `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.JMenuBar this]
+  (^java.awt.Component [^JMenuBar this]
     (-> this (.getComponent))))
 
 (defn get-component-index
@@ -52,7 +52,7 @@
 
   returns: an integer giving the component's position, where 0 is first;
             or -1 if it can't be found - `int`"
-  (^Integer [^javax.swing.JMenuBar this ^java.awt.Component c]
+  (^Integer [^JMenuBar this ^java.awt.Component c]
     (-> this (.getComponentIndex c))))
 
 (defn get-component-at-index
@@ -61,8 +61,8 @@
   i - an integer specifying the position, where 0 is first - `int`
 
   returns: the Component at the position,
-            or null for an invalid index - `java.lang.  java.awt.Component`"
-  ([^javax.swing.JMenuBar this ^Integer i]
+            or null for an invalid index - `java.awt.Component`"
+  (^java.awt.Component [^JMenuBar this ^Integer i]
     (-> this (.getComponentAtIndex i))))
 
 (defn set-margin
@@ -71,7 +71,7 @@
    use the default margins.
 
   m - an Insets object containing the margin values - `java.awt.Insets`"
-  ([^javax.swing.JMenuBar this ^java.awt.Insets m]
+  ([^JMenuBar this ^java.awt.Insets m]
     (-> this (.setMargin m))))
 
 (defn set-selected
@@ -79,61 +79,61 @@
    a change to the selection model.
 
   sel - the Component to select - `java.awt.Component`"
-  ([^javax.swing.JMenuBar this ^java.awt.Component sel]
+  ([^JMenuBar this ^java.awt.Component sel]
     (-> this (.setSelected sel))))
 
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
   returns: the string `MenuBarUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JMenuBar this]
+  (^java.lang.String [^JMenuBar this]
     (-> this (.getUIClassID))))
 
 (defn set-selection-model
   "Sets the model object to handle single selections.
 
   model - the SingleSelectionModel to use - `javax.swing.SingleSelectionModel`"
-  ([^javax.swing.JMenuBar this ^javax.swing.SingleSelectionModel model]
+  ([^JMenuBar this ^javax.swing.SingleSelectionModel model]
     (-> this (.setSelectionModel model))))
 
 (defn menu-selection-changed
   "Implemented to be a MenuElement -- does nothing.
 
   is-included - `boolean`"
-  ([^javax.swing.JMenuBar this ^Boolean is-included]
+  ([^JMenuBar this ^Boolean is-included]
     (-> this (.menuSelectionChanged is-included))))
 
 (defn set-border-painted
   "Sets whether the border should be painted.
 
   b - if true and border property is not null, the border is painted. - `boolean`"
-  ([^javax.swing.JMenuBar this ^Boolean b]
+  ([^JMenuBar this ^Boolean b]
     (-> this (.setBorderPainted b))))
 
 (defn add-notify
   "Overrides JComponent.addNotify to register this
    menu bar with the current keyboard manager."
-  ([^javax.swing.JMenuBar this]
+  ([^JMenuBar this]
     (-> this (.addNotify))))
 
 (defn get-selection-model
   "Returns the model object that handles single selections.
 
   returns: the SingleSelectionModel property - `javax.swing.SingleSelectionModel`"
-  (^javax.swing.SingleSelectionModel [^javax.swing.JMenuBar this]
+  (^javax.swing.SingleSelectionModel [^JMenuBar this]
     (-> this (.getSelectionModel))))
 
 (defn set-ui
   "Sets the L&F object that renders this component.
 
   ui - the new MenuBarUI L&F object - `javax.swing.plaf.MenuBarUI`"
-  ([^javax.swing.JMenuBar this ^javax.swing.plaf.MenuBarUI ui]
+  ([^JMenuBar this ^javax.swing.plaf.MenuBarUI ui]
     (-> this (.setUI ui))))
 
 (defn remove-notify
   "Overrides JComponent.removeNotify to unregister this
    menu bar with the current keyboard manager."
-  ([^javax.swing.JMenuBar this]
+  ([^JMenuBar this]
     (-> this (.removeNotify))))
 
 (defn get-menu
@@ -144,21 +144,21 @@
   returns: the JMenu at that position, or null if
             if there is no JMenu at that position (ie. if
             it is a JMenuItem) - `javax.swing.JMenu`"
-  (^javax.swing.JMenu [^javax.swing.JMenuBar this ^Integer index]
+  (^javax.swing.JMenu [^JMenuBar this ^Integer index]
     (-> this (.getMenu index))))
 
 (defn get-ui
   "Returns the menubar's current UI.
 
   returns: `javax.swing.plaf.MenuBarUI`"
-  (^javax.swing.plaf.MenuBarUI [^javax.swing.JMenuBar this]
+  (^javax.swing.plaf.MenuBarUI [^JMenuBar this]
     (-> this (.getUI))))
 
 (defn get-menu-count
   "Returns the number of items in the menu bar.
 
   returns: the number of items in the menu bar - `int`"
-  (^Integer [^javax.swing.JMenuBar this]
+  (^Integer [^JMenuBar this]
     (-> this (.getMenuCount))))
 
 (defn get-accessible-context
@@ -169,7 +169,7 @@
 
   returns: an AccessibleJMenuBar that serves as the
            AccessibleContext of this JMenuBar - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JMenuBar this]
+  (^javax.accessibility.AccessibleContext [^JMenuBar this]
     (-> this (.getAccessibleContext))))
 
 (defn get-sub-elements
@@ -180,7 +180,7 @@
    other menu elements.
 
   returns: an array of menu items in the menu bar. - `javax.swing.MenuElement[]`"
-  ([^javax.swing.JMenuBar this]
+  ([^JMenuBar this]
     (-> this (.getSubElements))))
 
 (defn process-key-event
@@ -189,14 +189,14 @@
   e - `java.awt.event.KeyEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.JMenuBar this ^java.awt.event.KeyEvent e path ^javax.swing.MenuSelectionManager manager]
+  ([^JMenuBar this ^java.awt.event.KeyEvent e path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processKeyEvent e path manager))))
 
 (defn selected?
   "Returns true if the menu bar currently has a component selected.
 
   returns: true if a selection has been made, else false - `boolean`"
-  (^Boolean [^javax.swing.JMenuBar this]
+  (^Boolean [^JMenuBar this]
     (-> this (.isSelected))))
 
 (defn process-mouse-event
@@ -205,7 +205,7 @@
   event - `java.awt.event.MouseEvent`
   path - `javax.swing.MenuElement[]`
   manager - `javax.swing.MenuSelectionManager`"
-  ([^javax.swing.JMenuBar this ^java.awt.event.MouseEvent event path ^javax.swing.MenuSelectionManager manager]
+  ([^JMenuBar this event path ^javax.swing.MenuSelectionManager manager]
     (-> this (.processMouseEvent event path manager))))
 
 (defn add
@@ -214,14 +214,14 @@
   c - the JMenu component to add - `javax.swing.JMenu`
 
   returns: the menu component - `javax.swing.JMenu`"
-  (^javax.swing.JMenu [^javax.swing.JMenuBar this ^javax.swing.JMenu c]
+  (^javax.swing.JMenu [^JMenuBar this ^javax.swing.JMenu c]
     (-> this (.add c))))
 
 (defn border-painted?
   "Returns true if the menu bars border should be painted.
 
   returns: true if the border should be painted, else false - `boolean`"
-  (^Boolean [^javax.swing.JMenuBar this]
+  (^Boolean [^JMenuBar this]
     (-> this (.isBorderPainted))))
 
 (defn get-help-menu
@@ -229,7 +229,7 @@
    implemented and will throw an exception.
 
   returns: the JMenu that delivers help to the user - `javax.swing.JMenu`"
-  (^javax.swing.JMenu [^javax.swing.JMenuBar this]
+  (^javax.swing.JMenu [^JMenuBar this]
     (-> this (.getHelpMenu))))
 
 (defn set-help-menu
@@ -238,12 +238,12 @@
    and will throw an exception.
 
   menu - the JMenu that delivers help to the user - `javax.swing.JMenu`"
-  ([^javax.swing.JMenuBar this ^javax.swing.JMenu menu]
+  ([^JMenuBar this ^javax.swing.JMenu menu]
     (-> this (.setHelpMenu menu))))
 
 (defn update-ui
   "Resets the UI property with a value from the current look and feel."
-  ([^javax.swing.JMenuBar this]
+  ([^JMenuBar this]
     (-> this (.updateUI))))
 
 (defn get-margin
@@ -252,6 +252,6 @@
    a default margin with zero size.
 
   returns: an Insets object containing the margin values - `java.awt.Insets`"
-  (^java.awt.Insets [^javax.swing.JMenuBar this]
+  (^java.awt.Insets [^JMenuBar this]
     (-> this (.getMargin))))
 

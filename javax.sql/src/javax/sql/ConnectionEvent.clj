@@ -22,9 +22,9 @@
   ex - the SQLException about to be thrown to the application - `java.sql.SQLException`
 
   throws: java.lang.IllegalArgumentException - if con is null."
-  ([^javax.sql.PooledConnection con ^java.sql.SQLException ex]
+  (^ConnectionEvent [^javax.sql.PooledConnection con ^java.sql.SQLException ex]
     (new ConnectionEvent con ex))
-  ([^javax.sql.PooledConnection con]
+  (^ConnectionEvent [^javax.sql.PooledConnection con]
     (new ConnectionEvent con)))
 
 (defn get-sql-exception
@@ -32,6 +32,6 @@
    ConnectionEvent object. May be null.
 
   returns: the SQLException about to be thrown or null - `java.sql.SQLException`"
-  (^java.sql.SQLException [^javax.sql.ConnectionEvent this]
+  (^java.sql.SQLException [^ConnectionEvent this]
     (-> this (.getSQLException))))
 

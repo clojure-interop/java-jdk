@@ -27,7 +27,7 @@
             member of this attribute set. - `boolean`
 
   throws: javax.print.attribute.UnmodifiableSetException - (unchecked exception) Thrown if this attribute set does not support the add() operation."
-  (^Boolean [^javax.print.attribute.DocAttributeSet this ^javax.print.attribute.Attribute attribute]
+  (^Boolean [^DocAttributeSet this ^javax.print.attribute.Attribute attribute]
     (-> this (.add attribute))))
 
 (defn add-all
@@ -54,6 +54,6 @@
             the call. - `boolean`
 
   throws: javax.print.attribute.UnmodifiableSetException - (Unchecked exception) Thrown if this attribute set does not support the addAll() method."
-  (^Boolean [^javax.print.attribute.DocAttributeSet this ^javax.print.attribute.AttributeSet attributes]
+  (^Boolean [^DocAttributeSet this ^javax.print.attribute.AttributeSet attributes]
     (-> this (.addAll attributes))))
 

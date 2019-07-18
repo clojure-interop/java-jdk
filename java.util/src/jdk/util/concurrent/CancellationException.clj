@@ -12,8 +12,8 @@
    message.
 
   message - the detail message - `java.lang.String`"
-  ([^java.lang.String message]
+  (^CancellationException [^java.lang.String message]
     (new CancellationException message))
-  ([]
+  (^CancellationException []
     (new CancellationException )))
 

@@ -17,7 +17,7 @@ All namespaces starting with **java.** are renamed to **jdk.** (java compiler li
 ## Clojars
 
 ```
-[clojure-interop/java.lang "1.0.3"]
+[clojure-interop/java.lang "1.0.4"]
 ```
 
 ## Class Members Naming Conventions
@@ -61,7 +61,7 @@ All namespaces starting with **java.** are renamed to **jdk.** (java compiler li
 - class **java.lang.Compiler**
 - annotation **java.lang.Deprecated**
 - class **java.lang.Double**
-- class **java.lang.Enum>**
+- class **java.lang.Enum**
 - class **java.lang.EnumConstantNotPresentException**
 - class **java.lang.Error**
 - class **java.lang.Exception**

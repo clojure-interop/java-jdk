@@ -28,7 +28,7 @@
 
   returns: an array of the matching alias names, or null if there
             were no matches. - `java.lang.String[]`"
-  ([^javax.net.ssl.X509KeyManager this ^java.lang.String key-type issuers]
+  ([^X509KeyManager this ^java.lang.String key-type issuers]
     (-> this (.getClientAliases key-type issuers))))
 
 (defn choose-client-alias
@@ -42,7 +42,7 @@
 
   returns: the alias name for the desired key, or null if there
             are no matches. - `java.lang.String`"
-  (^java.lang.String [^javax.net.ssl.X509KeyManager this key-type issuers ^java.net.Socket socket]
+  (^java.lang.String [^X509KeyManager this key-type issuers ^java.net.Socket socket]
     (-> this (.chooseClientAlias key-type issuers socket))))
 
 (defn get-server-aliases
@@ -55,7 +55,7 @@
 
   returns: an array of the matching alias names, or null
             if there were no matches. - `java.lang.String[]`"
-  ([^javax.net.ssl.X509KeyManager this ^java.lang.String key-type issuers]
+  ([^X509KeyManager this ^java.lang.String key-type issuers]
     (-> this (.getServerAliases key-type issuers))))
 
 (defn choose-server-alias
@@ -69,7 +69,7 @@
 
   returns: the alias name for the desired key, or null if there
             are no matches. - `java.lang.String`"
-  (^java.lang.String [^javax.net.ssl.X509KeyManager this ^java.lang.String key-type issuers ^java.net.Socket socket]
+  (^java.lang.String [^X509KeyManager this ^java.lang.String key-type issuers ^java.net.Socket socket]
     (-> this (.chooseServerAlias key-type issuers socket))))
 
 (defn get-certificate-chain
@@ -80,7 +80,7 @@
   returns: the certificate chain (ordered with the user's certificate first
             and the root certificate authority last), or null
             if the alias can't be found. - `java.security.cert.X509Certificate[]`"
-  ([^javax.net.ssl.X509KeyManager this ^java.lang.String alias]
+  ([^X509KeyManager this ^java.lang.String alias]
     (-> this (.getCertificateChain alias))))
 
 (defn get-private-key
@@ -89,6 +89,6 @@
   alias - the alias name - `java.lang.String`
 
   returns: the requested key, or null if the alias can't be found. - `java.security.PrivateKey`"
-  (^java.security.PrivateKey [^javax.net.ssl.X509KeyManager this ^java.lang.String alias]
+  (^java.security.PrivateKey [^X509KeyManager this ^java.lang.String alias]
     (-> this (.getPrivateKey alias))))
 

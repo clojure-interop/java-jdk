@@ -33,7 +33,7 @@
    it will receive multiple notifications.
 
   to - the specified TileObserver - `java.awt.image.TileObserver`"
-  ([^java.awt.image.WritableRenderedImage this ^java.awt.image.TileObserver to]
+  ([^WritableRenderedImage this ^java.awt.image.TileObserver to]
     (-> this (.addTileObserver to))))
 
 (defn remove-tile-observer
@@ -42,7 +42,7 @@
    notifications, it will now be registered for one fewer.
 
   to - the specified TileObserver - `java.awt.image.TileObserver`"
-  ([^java.awt.image.WritableRenderedImage this ^java.awt.image.TileObserver to]
+  ([^WritableRenderedImage this ^java.awt.image.TileObserver to]
     (-> this (.removeTileObserver to))))
 
 (defn get-writable-tile
@@ -56,7 +56,7 @@
   tile-y - the Y index of the tile. - `int`
 
   returns: a writable tile. - `java.awt.image.WritableRaster`"
-  (^java.awt.image.WritableRaster [^java.awt.image.WritableRenderedImage this ^Integer tile-x ^Integer tile-y]
+  (^java.awt.image.WritableRaster [^WritableRenderedImage this ^Integer tile-x ^Integer tile-y]
     (-> this (.getWritableTile tile-x tile-y))))
 
 (defn release-writable-tile
@@ -72,7 +72,7 @@
 
   tile-x - the X index of the tile. - `int`
   tile-y - the Y index of the tile. - `int`"
-  ([^java.awt.image.WritableRenderedImage this ^Integer tile-x ^Integer tile-y]
+  ([^WritableRenderedImage this ^Integer tile-x ^Integer tile-y]
     (-> this (.releaseWritableTile tile-x tile-y))))
 
 (defn tile-writable?
@@ -83,7 +83,7 @@
 
   returns: true if specified tile is checked out
            for writing; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.image.WritableRenderedImage this ^Integer tile-x ^Integer tile-y]
+  (^Boolean [^WritableRenderedImage this ^Integer tile-x ^Integer tile-y]
     (-> this (.isTileWritable tile-x tile-y))))
 
 (defn get-writable-tile-indices
@@ -93,7 +93,7 @@
 
   returns: an array containing the locations of tiles that are
            checked out for writing. - `java.awt.Point[]`"
-  ([^java.awt.image.WritableRenderedImage this]
+  ([^WritableRenderedImage this]
     (-> this (.getWritableTileIndices))))
 
 (defn has-tile-writers?
@@ -102,7 +102,7 @@
 
   returns: true if any tiles are checked out for
            writing; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.image.WritableRenderedImage this]
+  (^Boolean [^WritableRenderedImage this]
     (-> this (.hasTileWriters))))
 
 (defn set-data
@@ -111,6 +111,6 @@
    The operation is clipped to the bounds of the WritableRenderedImage.
 
   r - the specified Raster - `java.awt.image.Raster`"
-  ([^java.awt.image.WritableRenderedImage this ^java.awt.image.Raster r]
+  ([^WritableRenderedImage this ^java.awt.image.Raster r]
     (-> this (.setData r))))
 

@@ -14,6 +14,6 @@
   protocol - the protocol (`ftp`, `http`, `nntp`, etc.). - `java.lang.String`
 
   returns: a URLStreamHandler for the specific protocol. - `java.net.URLStreamHandler`"
-  (^java.net.URLStreamHandler [^java.net.URLStreamHandlerFactory this ^java.lang.String protocol]
+  (^java.net.URLStreamHandler [^URLStreamHandlerFactory this ^java.lang.String protocol]
     (-> this (.createURLStreamHandler protocol))))
 

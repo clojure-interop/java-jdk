@@ -19,13 +19,13 @@
 
   source - the Object that originated the event (typically this) - `java.lang.Object`
   edit - an UndoableEdit object - `javax.swing.undo.UndoableEdit`"
-  ([^java.lang.Object source ^javax.swing.undo.UndoableEdit edit]
+  (^UndoableEditEvent [^java.lang.Object source ^javax.swing.undo.UndoableEdit edit]
     (new UndoableEditEvent source edit)))
 
 (defn get-edit
   "Returns the edit value.
 
   returns: the UndoableEdit object encapsulating the edit - `javax.swing.undo.UndoableEdit`"
-  (^javax.swing.undo.UndoableEdit [^javax.swing.event.UndoableEditEvent this]
+  (^javax.swing.undo.UndoableEdit [^UndoableEditEvent this]
     (-> this (.getEdit))))
 

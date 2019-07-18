@@ -5,6 +5,6 @@
 
 (defn ->tool-tip-ui
   "Constructor."
-  ([]
+  (^ToolTipUI []
     (new ToolTipUI )))
 

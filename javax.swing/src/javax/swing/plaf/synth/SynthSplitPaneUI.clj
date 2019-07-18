@@ -6,7 +6,7 @@
 
 (defn ->synth-split-pane-ui
   "Constructor."
-  ([]
+  (^SynthSplitPaneUI []
     (new SynthSplitPaneUI )))
 
 (defn *create-ui
@@ -24,21 +24,21 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthSplitPaneUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^SynthSplitPaneUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn property-change
   "This method gets called when a bound property is changed.
 
   e - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.plaf.synth.SynthSplitPaneUI this ^java.beans.PropertyChangeEvent e]
+  ([^SynthSplitPaneUI this ^java.beans.PropertyChangeEvent e]
     (-> this (.propertyChange e))))
 
 (defn create-default-divider
   "Creates the default divider.
 
   returns: `javax.swing.plaf.basic.BasicSplitPaneDivider`"
-  (^javax.swing.plaf.basic.BasicSplitPaneDivider [^javax.swing.plaf.synth.SynthSplitPaneUI this]
+  (^javax.swing.plaf.basic.BasicSplitPaneDivider [^SynthSplitPaneUI this]
     (-> this (.createDefaultDivider))))
 
 (defn update
@@ -51,7 +51,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthSplitPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthSplitPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint
@@ -61,7 +61,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthSplitPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthSplitPaneUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn paint-border
@@ -73,7 +73,7 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^javax.swing.plaf.synth.SynthSplitPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthSplitPaneUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn finished-painting-children
@@ -82,6 +82,6 @@
 
   jc - `javax.swing.JSplitPane`
   g - `java.awt.Graphics`"
-  ([^javax.swing.plaf.synth.SynthSplitPaneUI this ^javax.swing.JSplitPane jc ^java.awt.Graphics g]
+  ([^SynthSplitPaneUI this ^javax.swing.JSplitPane jc ^java.awt.Graphics g]
     (-> this (.finishedPaintingChildren jc g))))
 

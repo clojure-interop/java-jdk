@@ -34,9 +34,9 @@
   "Visits a UnionType in a manner defined by a subclass.
 
   t - the type to visit - `javax.lang.model.type.UnionType`
-  p - a visitor-specified parameter - `AbstractTypeVisitor7.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit as defined by a subclass - `AbstractTypeVisitor7.R`"
-  (^AbstractTypeVisitor7.R [^javax.lang.model.util.AbstractTypeVisitor7 this ^javax.lang.model.type.UnionType t ^AbstractTypeVisitor7.P p]
+  returns: the result of the visit as defined by a subclass - `R`"
+  ([^AbstractTypeVisitor7 this ^javax.lang.model.type.UnionType t p]
     (-> this (.visitUnion t p))))
 

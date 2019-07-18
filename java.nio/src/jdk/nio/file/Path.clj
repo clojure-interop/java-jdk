@@ -69,7 +69,7 @@
   other - the path to resolve against this path's parent - `java.nio.file.Path`
 
   returns: the resulting path - `java.nio.file.Path`"
-  (^java.nio.file.Path [^java.nio.file.Path this ^java.nio.file.Path other]
+  (^java.nio.file.Path [^Path this ^java.nio.file.Path other]
     (-> this (.resolveSibling other))))
 
 (defn get-file-name
@@ -79,7 +79,7 @@
 
   returns: a path representing the name of the file or directory, or
             null if this path has zero elements - `java.nio.file.Path`"
-  (^java.nio.file.Path [^java.nio.file.Path this]
+  (^java.nio.file.Path [^Path this]
     (-> this (.getFileName))))
 
 (defn to-absolute-path
@@ -95,7 +95,7 @@
   returns: a Path object representing the absolute path - `java.nio.file.Path`
 
   throws: java.io.IOError - if an I/O error occurs"
-  (^java.nio.file.Path [^java.nio.file.Path this]
+  (^java.nio.file.Path [^Path this]
     (-> this (.toAbsolutePath))))
 
 (defn normalize
@@ -119,7 +119,7 @@
   returns: the resulting path or this path if it does not contain
             redundant name elements; an empty path is returned if this path
             does have a root component and all name elements are redundant - `java.nio.file.Path`"
-  (^java.nio.file.Path [^java.nio.file.Path this]
+  (^java.nio.file.Path [^Path this]
     (-> this (.normalize))))
 
 (defn to-file
@@ -133,7 +133,7 @@
   returns: a File object representing this path - `java.io.File`
 
   throws: java.lang.UnsupportedOperationException - if this Path is not associated with the default provider"
-  (^java.io.File [^java.nio.file.Path this]
+  (^java.io.File [^Path this]
     (-> this (.toFile))))
 
 (defn resolve
@@ -153,14 +153,14 @@
   other - the path to resolve against this path - `java.nio.file.Path`
 
   returns: the resulting path - `java.nio.file.Path`"
-  (^java.nio.file.Path [^java.nio.file.Path this ^java.nio.file.Path other]
+  (^java.nio.file.Path [^Path this ^java.nio.file.Path other]
     (-> this (.resolve other))))
 
 (defn get-file-system
   "Returns the file system that created this object.
 
   returns: the file system that created this object - `java.nio.file.FileSystem`"
-  (^java.nio.file.FileSystem [^java.nio.file.Path this]
+  (^java.nio.file.FileSystem [^Path this]
     (-> this (.getFileSystem))))
 
 (defn ends-with
@@ -186,7 +186,7 @@
 
   returns: true if this path ends with the given path; otherwise
             false - `boolean`"
-  (^Boolean [^java.nio.file.Path this ^java.nio.file.Path other]
+  (^Boolean [^Path this ^java.nio.file.Path other]
     (-> this (.endsWith other))))
 
 (defn to-string
@@ -199,7 +199,7 @@
     The returned path string uses the default name separator to separate names in the path.
 
   returns: the string representation of this path - `java.lang.String`"
-  (^java.lang.String [^java.nio.file.Path this]
+  (^java.lang.String [^Path this]
     (-> this (.toString))))
 
 (defn to-real-path
@@ -236,7 +236,7 @@
             located by this object - `java.nio.file.Path`
 
   throws: java.io.IOException - if the file does not exist or an I/O error occurs"
-  (^java.nio.file.Path [^java.nio.file.Path this ^java.nio.file.LinkOption options]
+  (^java.nio.file.Path [^Path this ^java.nio.file.LinkOption options]
     (-> this (.toRealPath options))))
 
 (defn iterator
@@ -248,7 +248,7 @@
    is the name of the file or directory denoted by this path. The root component, if present, is not returned by the iterator.
 
   returns: an iterator over the name elements of this path. - `java.util.Iterator<java.nio.file.Path>`"
-  (^java.util.Iterator [^java.nio.file.Path this]
+  (^java.util.Iterator [^Path this]
     (-> this (.iterator))))
 
 (defn to-uri
@@ -290,7 +290,7 @@
   returns: the URI representing this path - `java.net.URI`
 
   throws: java.io.IOError - if an I/O error occurs obtaining the absolute path, or where a file system is constructed to access the contents of a file as a file system, and the URI of the enclosing file system cannot be obtained"
-  (^java.net.URI [^java.nio.file.Path this]
+  (^java.net.URI [^Path this]
     (-> this (.toUri))))
 
 (defn get-name
@@ -306,7 +306,7 @@
   returns: the name element - `java.nio.file.Path`
 
   throws: java.lang.IllegalArgumentException - if index is negative, index is greater than or equal to the number of elements, or this path has zero name elements"
-  (^java.nio.file.Path [^java.nio.file.Path this ^Integer index]
+  (^java.nio.file.Path [^Path this ^Integer index]
     (-> this (.getName index))))
 
 (defn get-parent
@@ -330,7 +330,7 @@
    subpath(0, getNameCount()-1);
 
   returns: a path representing the path's parent - `java.nio.file.Path`"
-  (^java.nio.file.Path [^java.nio.file.Path this]
+  (^java.nio.file.Path [^Path this]
     (-> this (.getParent))))
 
 (defn subpath
@@ -350,7 +350,7 @@
             elements in this Path - `java.nio.file.Path`
 
   throws: java.lang.IllegalArgumentException - if beginIndex is negative, or greater than or equal to the number of elements. If endIndex is less than or equal to beginIndex, or larger than the number of elements."
-  (^java.nio.file.Path [^java.nio.file.Path this ^Integer begin-index ^Integer end-index]
+  (^java.nio.file.Path [^Path this ^Integer begin-index ^Integer end-index]
     (-> this (.subpath begin-index end-index))))
 
 (defn get-root
@@ -359,7 +359,7 @@
 
   returns: a path representing the root component of this path,
             or null - `java.nio.file.Path`"
-  (^java.nio.file.Path [^java.nio.file.Path this]
+  (^java.nio.file.Path [^Path this]
     (-> this (.getRoot))))
 
 (defn register
@@ -395,16 +395,16 @@
    on the existence of the symbolic link after it is registered.
 
   watcher - the watch service to which this object is to be registered - `java.nio.file.WatchService`
-  events - the events for which this object should be registered - `java.nio.file.WatchEvent.Kind<?>[]`
-  modifiers - the modifiers, if any, that modify how the object is registered - `java.nio.file.WatchEvent.Modifier`
+  events - the events for which this object should be registered - `java.nio.file.WatchEvent$Kind[]`
+  modifiers - the modifiers, if any, that modify how the object is registered - `java.nio.file.WatchEvent$Modifier`
 
   returns: a key representing the registration of this object with the
             given watch service - `java.nio.file.WatchKey`
 
   throws: java.lang.UnsupportedOperationException - if unsupported events or modifiers are specified"
-  (^java.nio.file.WatchKey [^java.nio.file.Path this ^java.nio.file.WatchService watcher events ^java.nio.file.WatchEvent.Modifier modifiers]
+  (^java.nio.file.WatchKey [^Path this ^java.nio.file.WatchService watcher events ^java.nio.file.WatchEvent$Modifier modifiers]
     (-> this (.register watcher events modifiers)))
-  (^java.nio.file.WatchKey [^java.nio.file.Path this ^java.nio.file.WatchService watcher ^java.nio.file.WatchEvent.Kind events]
+  (^java.nio.file.WatchKey [^Path this ^java.nio.file.WatchService watcher ^java.nio.file.WatchEvent$Kind events]
     (-> this (.register watcher events))))
 
 (defn starts-with
@@ -428,7 +428,7 @@
 
   returns: true if this path starts with the given path; otherwise
             false - `boolean`"
-  (^Boolean [^java.nio.file.Path this ^java.nio.file.Path other]
+  (^Boolean [^Path this ^java.nio.file.Path other]
     (-> this (.startsWith other))))
 
 (defn hash-code
@@ -438,7 +438,7 @@
    satisfies the general contract of the Object.hashCode method.
 
   returns: the hash-code value for this path - `int`"
-  (^Integer [^java.nio.file.Path this]
+  (^Integer [^Path this]
     (-> this (.hashCode))))
 
 (defn get-name-count
@@ -446,7 +446,7 @@
 
   returns: the number of elements in the path, or 0 if this path
             only represents a root component - `int`"
-  (^Integer [^java.nio.file.Path this]
+  (^Integer [^Path this]
     (-> this (.getNameCount))))
 
 (defn compare-to
@@ -466,7 +466,7 @@
             lexicographically greater than the argument - `int`
 
   throws: java.lang.ClassCastException - if the paths are associated with different providers"
-  (^Integer [^java.nio.file.Path this ^java.nio.file.Path other]
+  (^Integer [^Path this ^java.nio.file.Path other]
     (-> this (.compareTo other))))
 
 (defn relativize
@@ -504,7 +504,7 @@
             equal - `java.nio.file.Path`
 
   throws: java.lang.IllegalArgumentException - if other is not a Path that can be relativized against this path"
-  (^java.nio.file.Path [^java.nio.file.Path this ^java.nio.file.Path other]
+  (^java.nio.file.Path [^Path this ^java.nio.file.Path other]
     (-> this (.relativize other))))
 
 (defn equals
@@ -526,7 +526,7 @@
 
   returns: true if, and only if, the given object is a Path
             that is identical to this Path - `boolean`"
-  (^Boolean [^java.nio.file.Path this ^java.lang.Object other]
+  (^Boolean [^Path this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn absolute?
@@ -536,6 +536,6 @@
    with other path information in order to locate a file.
 
   returns: true if, and only if, this path is absolute - `boolean`"
-  (^Boolean [^java.nio.file.Path this]
+  (^Boolean [^Path this]
     (-> this (.isAbsolute))))
 

@@ -17,19 +17,19 @@
 
   name - cannot be a null or empty string. - `java.lang.String`
   description - cannot be a null or empty string. - `java.lang.String`
-  open-type - cannot be null. - `javax.management.openmbean.OpenType<T>`
+  open-type - cannot be null. - `javax.management.openmbean.OpenType`
   default-value - must be a valid value for the openType specified for this parameter; default value not supported for ArrayType and TabularType; can be null, in which case it means that no default value is set. - `T`
-  min-value - must be valid for the openType specified for this parameter; can be null, in which case it means that no minimal value is set. - `java.lang.Comparable<T>`
-  max-value - must be valid for the openType specified for this parameter; can be null, in which case it means that no maximal value is set. - `java.lang.Comparable<T>`
+  min-value - must be valid for the openType specified for this parameter; can be null, in which case it means that no minimal value is set. - `java.lang.Comparable`
+  max-value - must be valid for the openType specified for this parameter; can be null, in which case it means that no maximal value is set. - `java.lang.Comparable`
 
   throws: java.lang.IllegalArgumentException - if name or description are null or empty string, or openType is null."
-  ([^java.lang.String name ^java.lang.String description ^javax.management.openmbean.OpenType open-type default-value ^java.lang.Comparable min-value ^java.lang.Comparable max-value]
+  (^OpenMBeanParameterInfoSupport [^java.lang.String name ^java.lang.String description ^javax.management.openmbean.OpenType open-type default-value ^java.lang.Comparable min-value ^java.lang.Comparable max-value]
     (new OpenMBeanParameterInfoSupport name description open-type default-value min-value max-value))
-  ([^java.lang.String name ^java.lang.String description ^javax.management.openmbean.OpenType open-type default-value legal-values]
+  (^OpenMBeanParameterInfoSupport [^java.lang.String name ^java.lang.String description ^javax.management.openmbean.OpenType open-type default-value legal-values]
     (new OpenMBeanParameterInfoSupport name description open-type default-value legal-values))
-  ([^java.lang.String name ^java.lang.String description ^javax.management.openmbean.OpenType open-type ^javax.management.Descriptor descriptor]
+  (^OpenMBeanParameterInfoSupport [^java.lang.String name ^java.lang.String description ^javax.management.openmbean.OpenType open-type ^javax.management.Descriptor descriptor]
     (new OpenMBeanParameterInfoSupport name description open-type descriptor))
-  ([^java.lang.String name ^java.lang.String description ^javax.management.openmbean.OpenType open-type]
+  (^OpenMBeanParameterInfoSupport [^java.lang.String name ^java.lang.String description ^javax.management.openmbean.OpenType open-type]
     (new OpenMBeanParameterInfoSupport name description open-type)))
 
 (defn get-legal-values
@@ -38,7 +38,7 @@
    instance, if specified, or null otherwise.
 
   returns: the set of legal values. - `java.util.Set<?>`"
-  (^java.util.Set [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^java.util.Set [^OpenMBeanParameterInfoSupport this]
     (-> this (.getLegalValues))))
 
 (defn has-legal-values?
@@ -47,7 +47,7 @@
    otherwise.
 
   returns: true if there is a set of legal values. - `boolean`"
-  (^Boolean [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^Boolean [^OpenMBeanParameterInfoSupport this]
     (-> this (.hasLegalValues))))
 
 (defn get-open-type
@@ -55,7 +55,7 @@
    by this OpenMBeanParameterInfoSupport instance.
 
   returns: the open type. - `javax.management.openmbean.OpenType<?>`"
-  (^javax.management.openmbean.OpenType [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^javax.management.openmbean.OpenType [^OpenMBeanParameterInfoSupport this]
     (-> this (.getOpenType))))
 
 (defn get-min-value
@@ -64,7 +64,7 @@
    or null otherwise.
 
   returns: the minimum value. - `java.lang.Comparable<?>`"
-  (^java.lang.Comparable [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^java.lang.Comparable [^OpenMBeanParameterInfoSupport this]
     (-> this (.getMinValue))))
 
 (defn to-string
@@ -84,7 +84,7 @@
 
   returns: a string representation of this
    OpenMBeanParameterInfoSupport instance. - `java.lang.String`"
-  (^java.lang.String [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^java.lang.String [^OpenMBeanParameterInfoSupport this]
     (-> this (.toString))))
 
 (defn get-default-value
@@ -93,7 +93,7 @@
    or null otherwise.
 
   returns: the default value. - `java.lang.Object`"
-  (^java.lang.Object [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^java.lang.Object [^OpenMBeanParameterInfoSupport this]
     (-> this (.getDefaultValue))))
 
 (defn get-max-value
@@ -102,7 +102,7 @@
    or null otherwise.
 
   returns: the maximum value. - `java.lang.Comparable<?>`"
-  (^java.lang.Comparable [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^java.lang.Comparable [^OpenMBeanParameterInfoSupport this]
     (-> this (.getMaxValue))))
 
 (defn has-max-value?
@@ -111,7 +111,7 @@
    otherwise.
 
   returns: true if there is a maximum value. - `boolean`"
-  (^Boolean [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^Boolean [^OpenMBeanParameterInfoSupport this]
     (-> this (.hasMaxValue))))
 
 (defn value?
@@ -124,7 +124,7 @@
    for the parameter described by this
    OpenMBeanParameterInfo instance,
    false otherwise. - `boolean`"
-  (^Boolean [^javax.management.openmbean.OpenMBeanParameterInfoSupport this ^java.lang.Object obj]
+  (^Boolean [^OpenMBeanParameterInfoSupport this ^java.lang.Object obj]
     (-> this (.isValue obj))))
 
 (defn has-default-value?
@@ -133,7 +133,7 @@
    otherwise.
 
   returns: true if there is a default value. - `boolean`"
-  (^Boolean [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^Boolean [^OpenMBeanParameterInfoSupport this]
     (-> this (.hasDefaultValue))))
 
 (defn hash-code
@@ -159,7 +159,7 @@
    is returned for subsequent calls.
 
   returns: the hash code value for this OpenMBeanParameterInfoSupport instance - `int`"
-  (^Integer [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^Integer [^OpenMBeanParameterInfoSupport this]
     (-> this (.hashCode))))
 
 (defn has-min-value?
@@ -168,7 +168,7 @@
    otherwise.
 
   returns: true if there is a minimum value. - `boolean`"
-  (^Boolean [^javax.management.openmbean.OpenMBeanParameterInfoSupport this]
+  (^Boolean [^OpenMBeanParameterInfoSupport this]
     (-> this (.hasMinValue))))
 
 (defn equals
@@ -197,6 +197,6 @@
 
   returns: true if the specified object is equal to this
    OpenMBeanParameterInfoSupport instance. - `boolean`"
-  (^Boolean [^javax.management.openmbean.OpenMBeanParameterInfoSupport this ^java.lang.Object obj]
+  (^Boolean [^OpenMBeanParameterInfoSupport this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

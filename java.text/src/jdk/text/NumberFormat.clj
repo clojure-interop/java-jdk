@@ -222,7 +222,7 @@
   rounding-mode - The RoundingMode to be used - `java.math.RoundingMode`
 
   throws: java.lang.UnsupportedOperationException - The default implementation always throws this exception"
-  ([^java.text.NumberFormat this ^java.math.RoundingMode rounding-mode]
+  ([^NumberFormat this ^java.math.RoundingMode rounding-mode]
     (-> this (.setRoundingMode rounding-mode))))
 
 (defn set-minimum-integer-digits
@@ -233,7 +233,7 @@
    the new value
 
   new-value - the minimum number of integer digits to be shown; if less than zero, then zero is used. The concrete subclass may enforce an upper limit to this value appropriate to the numeric type being formatted. - `int`"
-  ([^java.text.NumberFormat this ^Integer new-value]
+  ([^NumberFormat this ^Integer new-value]
     (-> this (.setMinimumIntegerDigits new-value))))
 
 (defn get-minimum-integer-digits
@@ -241,7 +241,7 @@
    number.
 
   returns: the minimum number of digits - `int`"
-  (^Integer [^java.text.NumberFormat this]
+  (^Integer [^NumberFormat this]
     (-> this (.getMinimumIntegerDigits))))
 
 (defn parse-object
@@ -268,7 +268,7 @@
            error, returns null. - `java.lang.Object`
 
   throws: java.lang.NullPointerException - if pos is null."
-  (^java.lang.Object [^java.text.NumberFormat this ^java.lang.String source ^java.text.ParsePosition pos]
+  (^java.lang.Object [^NumberFormat this ^java.lang.String source ^java.text.ParsePosition pos]
     (-> this (.parseObject source pos))))
 
 (defn set-currency
@@ -282,7 +282,7 @@
   currency - the new currency to be used by this number format - `java.util.Currency`
 
   throws: java.lang.UnsupportedOperationException - if the number format class doesn't implement currency formatting"
-  ([^java.text.NumberFormat this ^java.util.Currency currency]
+  ([^NumberFormat this ^java.util.Currency currency]
     (-> this (.setCurrency currency))))
 
 (defn set-maximum-integer-digits
@@ -293,14 +293,14 @@
    the new value.
 
   new-value - the maximum number of integer digits to be shown; if less than zero, then zero is used. The concrete subclass may enforce an upper limit to this value appropriate to the numeric type being formatted. - `int`"
-  ([^java.text.NumberFormat this ^Integer new-value]
+  ([^NumberFormat this ^Integer new-value]
     (-> this (.setMaximumIntegerDigits new-value))))
 
 (defn set-parse-integer-only
   "Sets whether or not numbers should be parsed as integers only.
 
   value - true if numbers should be parsed as integers only; false otherwise - `boolean`"
-  ([^java.text.NumberFormat this ^Boolean value]
+  ([^NumberFormat this ^Boolean value]
     (-> this (.setParseIntegerOnly value))))
 
 (defn get-minimum-fraction-digits
@@ -308,7 +308,7 @@
    number.
 
   returns: the minimum number of digits - `int`"
-  (^Integer [^java.text.NumberFormat this]
+  (^Integer [^NumberFormat this]
     (-> this (.getMinimumFractionDigits))))
 
 (defn get-maximum-fraction-digits
@@ -316,7 +316,7 @@
    number.
 
   returns: the maximum number of digits. - `int`"
-  (^Integer [^java.text.NumberFormat this]
+  (^Integer [^NumberFormat this]
     (-> this (.getMaximumFractionDigits))))
 
 (defn get-maximum-integer-digits
@@ -324,7 +324,7 @@
    number.
 
   returns: the maximum number of digits - `int`"
-  (^Integer [^java.text.NumberFormat this]
+  (^Integer [^NumberFormat this]
     (-> this (.getMaximumIntegerDigits))))
 
 (defn set-maximum-fraction-digits
@@ -335,14 +335,14 @@
    the new value.
 
   new-value - the maximum number of fraction digits to be shown; if less than zero, then zero is used. The concrete subclass may enforce an upper limit to this value appropriate to the numeric type being formatted. - `int`"
-  ([^java.text.NumberFormat this ^Integer new-value]
+  ([^NumberFormat this ^Integer new-value]
     (-> this (.setMaximumFractionDigits new-value))))
 
 (defn clone
   "Overrides Cloneable.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^java.text.NumberFormat this]
+  (^java.lang.Object [^NumberFormat this]
     (-> this (.clone))))
 
 (defn parse
@@ -358,9 +358,9 @@
   parse-position - the parse position - `java.text.ParsePosition`
 
   returns: the parsed value - `java.lang.Number`"
-  (^java.lang.Number [^java.text.NumberFormat this ^java.lang.String source ^java.text.ParsePosition parse-position]
+  (^java.lang.Number [^NumberFormat this ^java.lang.String source ^java.text.ParsePosition parse-position]
     (-> this (.parse source parse-position)))
-  (^java.lang.Number [^java.text.NumberFormat this ^java.lang.String source]
+  (^java.lang.Number [^NumberFormat this ^java.lang.String source]
     (-> this (.parse source))))
 
 (defn set-minimum-fraction-digits
@@ -371,14 +371,14 @@
    the new value
 
   new-value - the minimum number of fraction digits to be shown; if less than zero, then zero is used. The concrete subclass may enforce an upper limit to this value appropriate to the numeric type being formatted. - `int`"
-  ([^java.text.NumberFormat this ^Integer new-value]
+  ([^NumberFormat this ^Integer new-value]
     (-> this (.setMinimumFractionDigits new-value))))
 
 (defn hash-code
   "Overrides hashCode.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.text.NumberFormat this]
+  (^Integer [^NumberFormat this]
     (-> this (.hashCode))))
 
 (defn parse-integer-only?
@@ -391,7 +391,7 @@
 
   returns: true if numbers should be parsed as integers only;
            false otherwise - `boolean`"
-  (^Boolean [^java.text.NumberFormat this]
+  (^Boolean [^NumberFormat this]
     (-> this (.isParseIntegerOnly))))
 
 (defn get-rounding-mode
@@ -404,14 +404,14 @@
   returns: The RoundingMode used for this NumberFormat. - `java.math.RoundingMode`
 
   throws: java.lang.UnsupportedOperationException - The default implementation always throws this exception"
-  (^java.math.RoundingMode [^java.text.NumberFormat this]
+  (^java.math.RoundingMode [^NumberFormat this]
     (-> this (.getRoundingMode))))
 
 (defn set-grouping-used
   "Set whether or not grouping will be used in this format.
 
   new-value - true if grouping is used; false otherwise - `boolean`"
-  ([^java.text.NumberFormat this ^Boolean new-value]
+  ([^NumberFormat this ^Boolean new-value]
     (-> this (.setGroupingUsed new-value))))
 
 (defn grouping-used?
@@ -422,7 +422,7 @@
 
   returns: true if grouping is used;
            false otherwise - `boolean`"
-  (^Boolean [^java.text.NumberFormat this]
+  (^Boolean [^NumberFormat this]
     (-> this (.isGroupingUsed))))
 
 (defn get-currency
@@ -438,7 +438,7 @@
   returns: the currency used by this number format, or null - `java.util.Currency`
 
   throws: java.lang.UnsupportedOperationException - if the number format class doesn't implement currency formatting"
-  (^java.util.Currency [^java.text.NumberFormat this]
+  (^java.util.Currency [^NumberFormat this]
     (-> this (.getCurrency))))
 
 (defn equals
@@ -448,7 +448,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.text.NumberFormat this ^java.lang.Object obj]
+  (^Boolean [^NumberFormat this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn format
@@ -475,8 +475,8 @@
   returns: the value passed in as toAppendTo - `java.lang.StringBuffer`
 
   throws: java.lang.IllegalArgumentException - if number is null or not an instance of Number."
-  (^java.lang.StringBuffer [^java.text.NumberFormat this ^java.lang.Object number ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
+  (^java.lang.StringBuffer [^NumberFormat this ^java.lang.Object number ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition pos]
     (-> this (.format number to-append-to pos)))
-  (^java.lang.String [^java.text.NumberFormat this ^Double number]
+  (^java.lang.String [^NumberFormat this ^Double number]
     (-> this (.format number))))
 

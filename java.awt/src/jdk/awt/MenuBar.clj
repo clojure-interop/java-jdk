@@ -29,7 +29,7 @@
   Creates a new menu bar.
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([]
+  (^MenuBar []
     (new MenuBar )))
 
 (defn get-shortcut-menu-item
@@ -42,7 +42,7 @@
   s - the specified menu shortcut. - `java.awt.MenuShortcut`
 
   returns: `java.awt.MenuItem`"
-  (^java.awt.MenuItem [^java.awt.MenuBar this ^java.awt.MenuShortcut s]
+  (^java.awt.MenuItem [^MenuBar this ^java.awt.MenuShortcut s]
     (-> this (.getShortcutMenuItem s))))
 
 (defn shortcuts
@@ -51,36 +51,36 @@
 
   returns: an enumeration of menu shortcuts that this
                         menu bar is managing. - `java.util.Enumeration<java.awt.MenuShortcut>`"
-  (^java.util.Enumeration [^java.awt.MenuBar this]
+  (^java.util.Enumeration [^MenuBar this]
     (-> this (.shortcuts))))
 
 (defn delete-shortcut
   "Deletes the specified menu shortcut.
 
   s - the menu shortcut to delete. - `java.awt.MenuShortcut`"
-  ([^java.awt.MenuBar this ^java.awt.MenuShortcut s]
+  ([^MenuBar this ^java.awt.MenuShortcut s]
     (-> this (.deleteShortcut s))))
 
 (defn count-menus
   "Deprecated. As of JDK version 1.1,
    replaced by getMenuCount().
 
-  returns: `java.lang.  int`"
-  ([^java.awt.MenuBar this]
+  returns: `int`"
+  (^Integer [^MenuBar this]
     (-> this (.countMenus))))
 
 (defn add-notify
   "Creates the menu bar's peer.  The peer allows us to change the
    appearance of the menu bar without changing any of the menu bar's
    functionality."
-  ([^java.awt.MenuBar this]
+  ([^MenuBar this]
     (-> this (.addNotify))))
 
 (defn remove-notify
   "Removes the menu bar's peer.  The peer allows us to change the
    appearance of the menu bar without changing any of the menu bar's
    functionality."
-  ([^java.awt.MenuBar this]
+  ([^MenuBar this]
     (-> this (.removeNotify))))
 
 (defn remove
@@ -88,7 +88,7 @@
    index from this menu bar.
 
   index - the position of the menu to be removed. - `int`"
-  ([^java.awt.MenuBar this ^Integer index]
+  ([^MenuBar this ^Integer index]
     (-> this (.remove index))))
 
 (defn get-menu
@@ -97,14 +97,14 @@
   i - the index position of the menu to be returned. - `int`
 
   returns: the menu at the specified index of this menu bar. - `java.awt.Menu`"
-  (^java.awt.Menu [^java.awt.MenuBar this ^Integer i]
+  (^java.awt.Menu [^MenuBar this ^Integer i]
     (-> this (.getMenu i))))
 
 (defn get-menu-count
   "Gets the number of menus on the menu bar.
 
   returns: the number of menus on the menu bar. - `int`"
-  (^Integer [^java.awt.MenuBar this]
+  (^Integer [^MenuBar this]
     (-> this (.getMenuCount))))
 
 (defn get-accessible-context
@@ -115,7 +115,7 @@
 
   returns: an AccessibleAWTMenuBar that serves as the
            AccessibleContext of this MenuBar - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^java.awt.MenuBar this]
+  (^javax.accessibility.AccessibleContext [^MenuBar this]
     (-> this (.getAccessibleContext))))
 
 (defn add
@@ -126,14 +126,14 @@
   m - the menu to be added - `java.awt.Menu`
 
   returns: the menu added - `java.awt.Menu`"
-  (^java.awt.Menu [^java.awt.MenuBar this ^java.awt.Menu m]
+  (^java.awt.Menu [^MenuBar this ^java.awt.Menu m]
     (-> this (.add m))))
 
 (defn get-help-menu
   "Gets the help menu on the menu bar.
 
   returns: the help menu on this menu bar. - `java.awt.Menu`"
-  (^java.awt.Menu [^java.awt.MenuBar this]
+  (^java.awt.Menu [^MenuBar this]
     (-> this (.getHelpMenu))))
 
 (defn set-help-menu
@@ -142,6 +142,6 @@
    removed from the menu bar, and replaced with the specified menu.
 
   m - the menu to be set as the help menu - `java.awt.Menu`"
-  ([^java.awt.MenuBar this ^java.awt.Menu m]
+  ([^MenuBar this ^java.awt.Menu m]
     (-> this (.setHelpMenu m))))
 

@@ -9,7 +9,7 @@
   The DefaultSelectionType instance to use for
    specifying that all pages of the job should be printed.
 
-  type: java.awt.JobAttributes.DefaultSelectionType"
+  type: java.awt.JobAttributes$DefaultSelectionType"
   JobAttributes$DefaultSelectionType/ALL)
 
 (def *-range
@@ -18,7 +18,7 @@
   The DefaultSelectionType instance to use for
    specifying that a range of pages of the job should be printed.
 
-  type: java.awt.JobAttributes.DefaultSelectionType"
+  type: java.awt.JobAttributes$DefaultSelectionType"
   JobAttributes$DefaultSelectionType/RANGE)
 
 (def *-selection
@@ -27,20 +27,20 @@
   The DefaultSelectionType instance to use for
    specifying that the current selection should be printed.
 
-  type: java.awt.JobAttributes.DefaultSelectionType"
+  type: java.awt.JobAttributes$DefaultSelectionType"
   JobAttributes$DefaultSelectionType/SELECTION)
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.awt.JobAttributes$DefaultSelectionType this]
+  (^Integer [^JobAttributes$DefaultSelectionType this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.JobAttributes$DefaultSelectionType this]
+  (^java.lang.String [^JobAttributes$DefaultSelectionType this]
     (-> this (.toString))))
 

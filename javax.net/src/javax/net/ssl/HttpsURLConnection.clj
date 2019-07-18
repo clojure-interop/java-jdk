@@ -72,7 +72,7 @@
   returns: the cipher suite - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if this method is called before the connection has been established."
-  (^java.lang.String [^javax.net.ssl.HttpsURLConnection this]
+  (^java.lang.String [^HttpsURLConnection this]
     (-> this (.getCipherSuite))))
 
 (defn get-local-principal
@@ -89,14 +89,14 @@
    sent, then null is returned. - `java.security.Principal`
 
   throws: java.lang.IllegalStateException - if this method is called before the connection has been established."
-  (^java.security.Principal [^javax.net.ssl.HttpsURLConnection this]
+  (^java.security.Principal [^HttpsURLConnection this]
     (-> this (.getLocalPrincipal))))
 
 (defn get-hostname-verifier
   "Gets the HostnameVerifier in place on this instance.
 
   returns: the host name verifier - `javax.net.ssl.HostnameVerifier`"
-  (^javax.net.ssl.HostnameVerifier [^javax.net.ssl.HttpsURLConnection this]
+  (^javax.net.ssl.HostnameVerifier [^HttpsURLConnection this]
     (-> this (.getHostnameVerifier))))
 
 (defn set-ssl-socket-factory
@@ -111,7 +111,7 @@
   sf - the SSL socket factory - `javax.net.ssl.SSLSocketFactory`
 
   throws: java.lang.IllegalArgumentException - if the SSLSocketFactory parameter is null."
-  ([^javax.net.ssl.HttpsURLConnection this ^javax.net.ssl.SSLSocketFactory sf]
+  ([^HttpsURLConnection this ^javax.net.ssl.SSLSocketFactory sf]
     (-> this (.setSSLSocketFactory sf))))
 
 (defn get-server-certificates
@@ -127,7 +127,7 @@
             any certificate authorities. - `java.security.cert.Certificate[]`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer is not verified."
-  ([^javax.net.ssl.HttpsURLConnection this]
+  ([^HttpsURLConnection this]
     (-> this (.getServerCertificates))))
 
 (defn set-hostname-verifier
@@ -140,7 +140,7 @@
   v - the host name verifier - `javax.net.ssl.HostnameVerifier`
 
   throws: java.lang.IllegalArgumentException - if the HostnameVerifier parameter is null."
-  ([^javax.net.ssl.HttpsURLConnection this ^javax.net.ssl.HostnameVerifier v]
+  ([^HttpsURLConnection this ^javax.net.ssl.HostnameVerifier v]
     (-> this (.setHostnameVerifier v))))
 
 (defn get-ssl-socket-factory
@@ -148,7 +148,7 @@
    for secure https URL connections.
 
   returns: the SSLSocketFactory - `javax.net.ssl.SSLSocketFactory`"
-  (^javax.net.ssl.SSLSocketFactory [^javax.net.ssl.HttpsURLConnection this]
+  (^javax.net.ssl.SSLSocketFactory [^HttpsURLConnection this]
     (-> this (.getSSLSocketFactory))))
 
 (defn get-local-certificates
@@ -170,7 +170,7 @@
             then null is returned. - `java.security.cert.Certificate[]`
 
   throws: java.lang.IllegalStateException - if this method is called before the connection has been established."
-  ([^javax.net.ssl.HttpsURLConnection this]
+  ([^HttpsURLConnection this]
     (-> this (.getLocalCertificates))))
 
 (defn get-peer-principal
@@ -188,6 +188,6 @@
    KerberosPrincipal for Kerberos cipher suites. - `java.security.Principal`
 
   throws: javax.net.ssl.SSLPeerUnverifiedException - if the peer was not verified"
-  (^java.security.Principal [^javax.net.ssl.HttpsURLConnection this]
+  (^java.security.Principal [^HttpsURLConnection this]
     (-> this (.getPeerPrincipal))))
 

@@ -18,13 +18,13 @@
   "Constructor.
 
   Creates this object with the appropriate identifier."
-  ([]
+  (^DefaultEditorKit$InsertContentAction []
     (new DefaultEditorKit$InsertContentAction )))
 
 (defn action-performed
   "The operation to perform when this action is triggered.
 
   e - the action event - `java.awt.event.ActionEvent`"
-  ([^javax.swing.text.DefaultEditorKit$InsertContentAction this ^java.awt.event.ActionEvent e]
+  ([^DefaultEditorKit$InsertContentAction this ^java.awt.event.ActionEvent e]
     (-> this (.actionPerformed e))))
 

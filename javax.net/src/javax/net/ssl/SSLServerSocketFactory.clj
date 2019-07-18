@@ -29,7 +29,7 @@
    authentication (that is, no anonymous cipher suites).
 
   returns: array of the cipher suites enabled by default - `java.lang.String[]`"
-  ([^javax.net.ssl.SSLServerSocketFactory this]
+  ([^SSLServerSocketFactory this]
     (-> this (.getDefaultCipherSuites))))
 
 (defn get-supported-cipher-suites
@@ -41,6 +41,6 @@
    cipher suites are useful in specialized applications.
 
   returns: an array of cipher suite names - `java.lang.String[]`"
-  ([^javax.net.ssl.SSLServerSocketFactory this]
+  ([^SSLServerSocketFactory this]
     (-> this (.getSupportedCipherSuites))))
 

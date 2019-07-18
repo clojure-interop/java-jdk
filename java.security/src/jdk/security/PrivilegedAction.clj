@@ -15,7 +15,7 @@
   returns: a class-dependent value that may represent the results of the
            computation. Each class that implements
            PrivilegedAction
-           should document what (if anything) this value represents. - `PrivilegedAction.T`"
-  (^PrivilegedAction.T [^java.security.PrivilegedAction this]
+           should document what (if anything) this value represents. - `T`"
+  ([^PrivilegedAction this]
     (-> this (.run))))
 

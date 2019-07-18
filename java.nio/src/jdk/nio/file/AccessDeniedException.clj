@@ -15,8 +15,8 @@
   file - a string identifying the file or null if not known - `java.lang.String`
   other - a string identifying the other file or null if not known - `java.lang.String`
   reason - a reason message with additional information or null - `java.lang.String`"
-  ([^java.lang.String file ^java.lang.String other ^java.lang.String reason]
+  (^AccessDeniedException [^java.lang.String file ^java.lang.String other ^java.lang.String reason]
     (new AccessDeniedException file other reason))
-  ([^java.lang.String file]
+  (^AccessDeniedException [^java.lang.String file]
     (new AccessDeniedException file)))
 

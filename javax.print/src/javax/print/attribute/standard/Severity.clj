@@ -72,7 +72,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.Severity this]
+  ([^Severity this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -82,6 +82,6 @@
    For class Severit, the category name is `severity`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.Severity this]
+  (^java.lang.String [^Severity this]
     (-> this (.getName))))
 

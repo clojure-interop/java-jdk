@@ -33,13 +33,13 @@
   y-2 - y coordinate of the second specified Point in user space - `float`
   color-2 - Color at the second specified Point - `java.awt.Color`
   cyclic - true if the gradient pattern should cycle repeatedly between the two colors; false otherwise - `boolean`"
-  ([^Float x-1 ^Float y-1 ^java.awt.Color color-1 ^Float x-2 ^Float y-2 ^java.awt.Color color-2 ^Boolean cyclic]
+  (^GradientPaint [^Float x-1 ^Float y-1 ^java.awt.Color color-1 ^Float x-2 ^Float y-2 ^java.awt.Color color-2 ^Boolean cyclic]
     (new GradientPaint x-1 y-1 color-1 x-2 y-2 color-2 cyclic))
-  ([^Float x-1 ^Float y-1 ^java.awt.Color color-1 ^Float x-2 ^Float y-2 ^java.awt.Color color-2]
+  (^GradientPaint [^Float x-1 ^Float y-1 ^java.awt.Color color-1 ^Float x-2 ^Float y-2 ^java.awt.Color color-2]
     (new GradientPaint x-1 y-1 color-1 x-2 y-2 color-2))
-  ([^java.awt.geom.Point2D pt-1 ^java.awt.Color color-1 ^java.awt.geom.Point2D pt-2 ^java.awt.Color color-2 ^Boolean cyclic]
+  (^GradientPaint [^java.awt.geom.Point2D pt-1 ^java.awt.Color color-1 ^java.awt.geom.Point2D pt-2 ^java.awt.Color color-2 ^Boolean cyclic]
     (new GradientPaint pt-1 color-1 pt-2 color-2 cyclic))
-  ([^java.awt.geom.Point2D pt-1 ^java.awt.Color color-1 ^java.awt.geom.Point2D pt-2 ^java.awt.Color color-2]
+  (^GradientPaint [^java.awt.geom.Point2D pt-1 ^java.awt.Color color-1 ^java.awt.geom.Point2D pt-2 ^java.awt.Color color-2]
     (new GradientPaint pt-1 color-1 pt-2 color-2)))
 
 (defn get-point-1
@@ -48,7 +48,7 @@
   returns: a Point2D object that is a copy of the point
    that anchors the first color of this
    GradientPaint. - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.GradientPaint this]
+  (^java.awt.geom.Point2D [^GradientPaint this]
     (-> this (.getPoint1))))
 
 (defn get-color-1
@@ -56,7 +56,7 @@
 
   returns: a Color object that is the color
    anchored by P1. - `java.awt.Color`"
-  (^java.awt.Color [^java.awt.GradientPaint this]
+  (^java.awt.Color [^GradientPaint this]
     (-> this (.getColor1))))
 
 (defn get-point-2
@@ -65,7 +65,7 @@
   returns: a Point2D object that is a copy of the point
    that anchors the second color of this
    GradientPaint. - `java.awt.geom.Point2D`"
-  (^java.awt.geom.Point2D [^java.awt.GradientPaint this]
+  (^java.awt.geom.Point2D [^GradientPaint this]
     (-> this (.getPoint2))))
 
 (defn get-color-2
@@ -73,7 +73,7 @@
 
   returns: a Color object that is the color
    anchored by P2. - `java.awt.Color`"
-  (^java.awt.Color [^java.awt.GradientPaint this]
+  (^java.awt.Color [^GradientPaint this]
     (-> this (.getColor2))))
 
 (defn cyclic?
@@ -82,7 +82,7 @@
 
   returns: true if the gradient cycles repeatedly
    between the two colors; false otherwise. - `boolean`"
-  (^Boolean [^java.awt.GradientPaint this]
+  (^Boolean [^GradientPaint this]
     (-> this (.isCyclic))))
 
 (defn create-context
@@ -100,7 +100,7 @@
 
   returns: the PaintContext for
            generating color patterns. - `java.awt.PaintContext`"
-  (^java.awt.PaintContext [^java.awt.GradientPaint this ^java.awt.image.ColorModel cm ^java.awt.Rectangle device-bounds ^java.awt.geom.Rectangle2D user-bounds ^java.awt.geom.AffineTransform xform ^java.awt.RenderingHints hints]
+  (^java.awt.PaintContext [^GradientPaint this ^java.awt.image.ColorModel cm ^java.awt.Rectangle device-bounds ^java.awt.geom.Rectangle2D user-bounds ^java.awt.geom.AffineTransform xform ^java.awt.RenderingHints hints]
     (-> this (.createContext cm device-bounds user-bounds xform hints))))
 
 (defn get-transparency
@@ -108,6 +108,6 @@
 
   returns: an integer value representing this GradientPaint
    object's transparency mode. - `int`"
-  (^Integer [^java.awt.GradientPaint this]
+  (^Integer [^GradientPaint this]
     (-> this (.getTransparency))))
 

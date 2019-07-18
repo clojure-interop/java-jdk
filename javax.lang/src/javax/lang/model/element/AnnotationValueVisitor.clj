@@ -45,142 +45,142 @@
   "Visits a double value in an annotation.
 
   d - the value being visited - `double`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^Double d ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^Double d p]
     (-> this (.visitDouble d p))))
 
 (defn visit
   "Visits an annotation value.
 
   av - the value to visit - `javax.lang.model.element.AnnotationValue`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: a visitor-specified result - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^javax.lang.model.element.AnnotationValue av ^AnnotationValueVisitor.P p]
+  returns: a visitor-specified result - `R`"
+  ([^AnnotationValueVisitor this ^javax.lang.model.element.AnnotationValue av p]
     (-> this (.visit av p)))
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^javax.lang.model.element.AnnotationValue av]
+  ([^AnnotationValueVisitor this ^javax.lang.model.element.AnnotationValue av]
     (-> this (.visit av))))
 
 (defn visit-annotation
   "Visits an annotation value in an annotation.
 
   a - the value being visited - `javax.lang.model.element.AnnotationMirror`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^javax.lang.model.element.AnnotationMirror a ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^javax.lang.model.element.AnnotationMirror a p]
     (-> this (.visitAnnotation a p))))
 
 (defn visit-long
   "Visits a long value in an annotation.
 
   i - the value being visited - `long`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^Long i ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^Long i p]
     (-> this (.visitLong i p))))
 
 (defn visit-short
   "Visits a short value in an annotation.
 
   s - the value being visited - `short`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^Short s ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^Short s p]
     (-> this (.visitShort s p))))
 
 (defn visit-string
   "Visits a string value in an annotation.
 
   s - the value being visited - `java.lang.String`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^java.lang.String s ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^java.lang.String s p]
     (-> this (.visitString s p))))
 
 (defn visit-float
   "Visits a float value in an annotation.
 
   f - the value being visited - `float`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^Float f ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^Float f p]
     (-> this (.visitFloat f p))))
 
 (defn visit-char
   "Visits a char value in an annotation.
 
   c - the value being visited - `char`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^Character c ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^Character c p]
     (-> this (.visitChar c p))))
 
 (defn visit-array
   "Visits an array value in an annotation.
 
-  vals - the value being visited - `javax.lang.model.element.AnnotationValue>`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  vals - the value being visited - `java.util.List`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^javax.lang.model.element.AnnotationValue> vals ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^java.util.List vals p]
     (-> this (.visitArray vals p))))
 
 (defn visit-int
   "Visits an int value in an annotation.
 
   i - the value being visited - `int`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^Integer i ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^Integer i p]
     (-> this (.visitInt i p))))
 
 (defn visit-enum-constant
   "Visits an enum value in an annotation.
 
   c - the value being visited - `javax.lang.model.element.VariableElement`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^javax.lang.model.element.VariableElement c ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^javax.lang.model.element.VariableElement c p]
     (-> this (.visitEnumConstant c p))))
 
 (defn visit-type
   "Visits a type value in an annotation.
 
   t - the value being visited - `javax.lang.model.type.TypeMirror`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^javax.lang.model.type.TypeMirror t ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^javax.lang.model.type.TypeMirror t p]
     (-> this (.visitType t p))))
 
 (defn visit-byte
   "Visits a byte value in an annotation.
 
   b - the value being visited - `byte`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^Byte b ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^Byte b p]
     (-> this (.visitByte b p))))
 
 (defn visit-boolean
   "Visits a boolean value in an annotation.
 
   b - the value being visited - `boolean`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^Boolean b ^AnnotationValueVisitor.P p]
+  returns: the result of the visit - `R`"
+  ([^AnnotationValueVisitor this ^Boolean b p]
     (-> this (.visitBoolean b p))))
 
 (defn visit-unknown
@@ -189,11 +189,11 @@
    of value can be stored in an annotation.
 
   av - the unknown value being visited - `javax.lang.model.element.AnnotationValue`
-  p - a visitor-specified parameter - `AnnotationValueVisitor.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of the visit - `AnnotationValueVisitor.R`
+  returns: the result of the visit - `R`
 
   throws: javax.lang.model.element.UnknownAnnotationValueException - a visitor implementation may optionally throw this exception"
-  (^AnnotationValueVisitor.R [^javax.lang.model.element.AnnotationValueVisitor this ^javax.lang.model.element.AnnotationValue av ^AnnotationValueVisitor.P p]
+  ([^AnnotationValueVisitor this ^javax.lang.model.element.AnnotationValue av p]
     (-> this (.visitUnknown av p))))
 

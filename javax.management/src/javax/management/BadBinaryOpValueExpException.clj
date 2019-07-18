@@ -12,20 +12,20 @@
   Constructs a BadBinaryOpValueExpException with the specified ValueExp.
 
   exp - the expression whose value was inappropriate. - `javax.management.ValueExp`"
-  ([^javax.management.ValueExp exp]
+  (^BadBinaryOpValueExpException [^javax.management.ValueExp exp]
     (new BadBinaryOpValueExpException exp)))
 
 (defn get-exp
   "Returns the ValueExp that originated the exception.
 
   returns: the problematic ValueExp. - `javax.management.ValueExp`"
-  (^javax.management.ValueExp [^javax.management.BadBinaryOpValueExpException this]
+  (^javax.management.ValueExp [^BadBinaryOpValueExpException this]
     (-> this (.getExp))))
 
 (defn to-string
   "Returns the string representing the object.
 
   returns: a string representation of this throwable. - `java.lang.String`"
-  (^java.lang.String [^javax.management.BadBinaryOpValueExpException this]
+  (^java.lang.String [^BadBinaryOpValueExpException this]
     (-> this (.toString))))
 

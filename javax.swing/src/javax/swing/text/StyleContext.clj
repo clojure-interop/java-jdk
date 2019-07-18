@@ -27,7 +27,7 @@
   "Constructor.
 
   Creates a new StyleContext object."
-  ([]
+  (^StyleContext []
     (new StyleContext )))
 
 (def *-default-style
@@ -123,7 +123,7 @@
    or removed.
 
   l - the change listener - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.text.StyleContext this ^javax.swing.event.ChangeListener l]
+  ([^StyleContext this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn get-foreground
@@ -135,7 +135,7 @@
   attr - the set of attributes - `javax.swing.text.AttributeSet`
 
   returns: the color - `java.awt.Color`"
-  (^java.awt.Color [^javax.swing.text.StyleContext this ^javax.swing.text.AttributeSet attr]
+  (^java.awt.Color [^StyleContext this ^javax.swing.text.AttributeSet attr]
     (-> this (.getForeground attr))))
 
 (defn read-attributes
@@ -145,21 +145,21 @@
   a - `javax.swing.text.MutableAttributeSet`
 
   throws: java.lang.ClassNotFoundException"
-  ([^javax.swing.text.StyleContext this ^java.io.ObjectInputStream in ^javax.swing.text.MutableAttributeSet a]
+  ([^StyleContext this ^java.io.ObjectInputStream in ^javax.swing.text.MutableAttributeSet a]
     (-> this (.readAttributes in a))))
 
 (defn to-string
   "Converts a StyleContext to a String.
 
   returns: the string - `java.lang.String`"
-  (^java.lang.String [^javax.swing.text.StyleContext this]
+  (^java.lang.String [^StyleContext this]
     (-> this (.toString))))
 
 (defn get-empty-set
   "Fetches an empty AttributeSet.
 
   returns: the set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.StyleContext this]
+  (^javax.swing.text.AttributeSet [^StyleContext this]
     (-> this (.getEmptySet))))
 
 (defn remove-change-listener
@@ -167,7 +167,7 @@
    added or removed.
 
   l - the change listener - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.text.StyleContext this ^javax.swing.event.ChangeListener l]
+  ([^StyleContext this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-font-metrics
@@ -176,7 +176,7 @@
   f - the font - `java.awt.Font`
 
   returns: the metrics - `java.awt.FontMetrics`"
-  (^java.awt.FontMetrics [^javax.swing.text.StyleContext this ^java.awt.Font f]
+  (^java.awt.FontMetrics [^StyleContext this ^java.awt.Font f]
     (-> this (.getFontMetrics f))))
 
 (defn get-change-listeners
@@ -185,7 +185,7 @@
 
   returns: all of the ChangeListeners added or an empty
            array if no listeners have been added - `javax.swing.event.ChangeListener[]`"
-  ([^javax.swing.text.StyleContext this]
+  ([^StyleContext this]
     (-> this (.getChangeListeners))))
 
 (defn add-style
@@ -197,7 +197,7 @@
   parent - the parent style. This may be null if unspecified attributes need not be resolved in some other style. - `javax.swing.text.Style`
 
   returns: the created style - `javax.swing.text.Style`"
-  (^javax.swing.text.Style [^javax.swing.text.StyleContext this ^java.lang.String nm ^javax.swing.text.Style parent]
+  (^javax.swing.text.Style [^StyleContext this ^java.lang.String nm ^javax.swing.text.Style parent]
     (-> this (.addStyle nm parent))))
 
 (defn remove-attribute
@@ -212,7 +212,7 @@
   name - the non-null attribute name - `java.lang.Object`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.StyleContext this ^javax.swing.text.AttributeSet old ^java.lang.Object name]
+  (^javax.swing.text.AttributeSet [^StyleContext this ^javax.swing.text.AttributeSet old ^java.lang.Object name]
     (-> this (.removeAttribute old name))))
 
 (defn write-attributes
@@ -222,14 +222,14 @@
   a - `javax.swing.text.AttributeSet`
 
   throws: java.io.IOException"
-  ([^javax.swing.text.StyleContext this ^java.io.ObjectOutputStream out ^javax.swing.text.AttributeSet a]
+  ([^StyleContext this ^java.io.ObjectOutputStream out ^javax.swing.text.AttributeSet a]
     (-> this (.writeAttributes out a))))
 
 (defn get-style-names
   "Fetches the names of the styles defined.
 
   returns: the list of names as an enumeration - `java.util.Enumeration<?>`"
-  (^java.util.Enumeration [^javax.swing.text.StyleContext this]
+  (^java.util.Enumeration [^StyleContext this]
     (-> this (.getStyleNames))))
 
 (defn add-attributes
@@ -244,7 +244,7 @@
   attr - the attributes to add - `javax.swing.text.AttributeSet`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.StyleContext this ^javax.swing.text.AttributeSet old ^javax.swing.text.AttributeSet attr]
+  (^javax.swing.text.AttributeSet [^StyleContext this ^javax.swing.text.AttributeSet old ^javax.swing.text.AttributeSet attr]
     (-> this (.addAttributes old attr))))
 
 (defn reclaim
@@ -259,7 +259,7 @@
    in Swing for more information.
 
   a - the set to reclaim - `javax.swing.text.AttributeSet`"
-  ([^javax.swing.text.StyleContext this ^javax.swing.text.AttributeSet a]
+  ([^StyleContext this ^javax.swing.text.AttributeSet a]
     (-> this (.reclaim a))))
 
 (defn remove-attributes
@@ -271,10 +271,10 @@
    in Swing for more information.
 
   old - the old attribute set - `javax.swing.text.AttributeSet`
-  names - the attribute names - `java.util.Enumeration<?>`
+  names - the attribute names - `java.util.Enumeration`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.StyleContext this ^javax.swing.text.AttributeSet old ^java.util.Enumeration names]
+  (^javax.swing.text.AttributeSet [^StyleContext this ^javax.swing.text.AttributeSet old ^java.util.Enumeration names]
     (-> this (.removeAttributes old names))))
 
 (defn get-font
@@ -288,9 +288,9 @@
   size - the point size >= 1 - `int`
 
   returns: the new font - `java.awt.Font`"
-  (^java.awt.Font [^javax.swing.text.StyleContext this ^java.lang.String family ^Integer style ^Integer size]
+  (^java.awt.Font [^StyleContext this ^java.lang.String family ^Integer style ^Integer size]
     (-> this (.getFont family style size)))
-  (^java.awt.Font [^javax.swing.text.StyleContext this ^javax.swing.text.AttributeSet attr]
+  (^java.awt.Font [^StyleContext this ^javax.swing.text.AttributeSet attr]
     (-> this (.getFont attr))))
 
 (defn add-attribute
@@ -307,7 +307,7 @@
   value - the attribute value - `java.lang.Object`
 
   returns: the updated attribute set - `javax.swing.text.AttributeSet`"
-  (^javax.swing.text.AttributeSet [^javax.swing.text.StyleContext this ^javax.swing.text.AttributeSet old ^java.lang.Object name ^java.lang.Object value]
+  (^javax.swing.text.AttributeSet [^StyleContext this ^javax.swing.text.AttributeSet old ^java.lang.Object name ^java.lang.Object value]
     (-> this (.addAttribute old name value))))
 
 (defn get-background
@@ -319,14 +319,14 @@
   attr - the set of attributes - `javax.swing.text.AttributeSet`
 
   returns: the color - `java.awt.Color`"
-  (^java.awt.Color [^javax.swing.text.StyleContext this ^javax.swing.text.AttributeSet attr]
+  (^java.awt.Color [^StyleContext this ^javax.swing.text.AttributeSet attr]
     (-> this (.getBackground attr))))
 
 (defn remove-style
   "Removes a named style previously added to the document.
 
   nm - the name of the style to remove - `java.lang.String`"
-  ([^javax.swing.text.StyleContext this ^java.lang.String nm]
+  ([^StyleContext this ^java.lang.String nm]
     (-> this (.removeStyle nm))))
 
 (defn get-style
@@ -335,6 +335,6 @@
   nm - the name of the style - `java.lang.String`
 
   returns: the style - `javax.swing.text.Style`"
-  (^javax.swing.text.Style [^javax.swing.text.StyleContext this ^java.lang.String nm]
+  (^javax.swing.text.Style [^StyleContext this ^java.lang.String nm]
     (-> this (.getStyle nm))))
 

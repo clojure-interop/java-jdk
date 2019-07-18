@@ -23,21 +23,21 @@
   "Constructor.
 
   Creates an ActionMap with no parent and no mappings."
-  ([]
+  (^ActionMap []
     (new ActionMap )))
 
 (defn set-parent
   "Sets this ActionMap's parent.
 
   map - the ActionMap that is the parent of this one - `javax.swing.ActionMap`"
-  ([^javax.swing.ActionMap this ^javax.swing.ActionMap map]
+  ([^ActionMap this ^javax.swing.ActionMap map]
     (-> this (.setParent map))))
 
 (defn keys
   "Returns the Action names that are bound in this ActionMap.
 
   returns: `java.lang.Object[]`"
-  ([^javax.swing.ActionMap this]
+  ([^ActionMap this]
     (-> this (.keys))))
 
 (defn all-keys
@@ -46,7 +46,7 @@
    this method includes the keys defined in the parent.
 
   returns: `java.lang.Object[]`"
-  ([^javax.swing.ActionMap this]
+  ([^ActionMap this]
     (-> this (.allKeys))))
 
 (defn put
@@ -58,7 +58,7 @@
 
   key - `java.lang.Object`
   action - `javax.swing.Action`"
-  ([^javax.swing.ActionMap this ^java.lang.Object key ^javax.swing.Action action]
+  ([^ActionMap this ^java.lang.Object key ^javax.swing.Action action]
     (-> this (.put key action))))
 
 (defn get-parent
@@ -66,26 +66,26 @@
 
   returns: the ActionMap that is the parent of this one,
            or null if this ActionMap has no parent - `javax.swing.ActionMap`"
-  (^javax.swing.ActionMap [^javax.swing.ActionMap this]
+  (^javax.swing.ActionMap [^ActionMap this]
     (-> this (.getParent))))
 
 (defn remove
   "Removes the binding for key from this ActionMap.
 
   key - `java.lang.Object`"
-  ([^javax.swing.ActionMap this ^java.lang.Object key]
+  ([^ActionMap this ^java.lang.Object key]
     (-> this (.remove key))))
 
 (defn size
   "Returns the number of bindings in this ActionMap.
 
   returns: the number of bindings in this ActionMap - `int`"
-  (^Integer [^javax.swing.ActionMap this]
+  (^Integer [^ActionMap this]
     (-> this (.size))))
 
 (defn clear
   "Removes all the mappings from this ActionMap."
-  ([^javax.swing.ActionMap this]
+  ([^ActionMap this]
     (-> this (.clear))))
 
 (defn get
@@ -95,6 +95,6 @@
   key - `java.lang.Object`
 
   returns: `javax.swing.Action`"
-  (^javax.swing.Action [^javax.swing.ActionMap this ^java.lang.Object key]
+  (^javax.swing.Action [^ActionMap this ^java.lang.Object key]
     (-> this (.get key))))
 

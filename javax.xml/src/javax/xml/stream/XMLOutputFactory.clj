@@ -146,9 +146,9 @@
   returns: `javax.xml.stream.XMLStreamWriter`
 
   throws: javax.xml.stream.XMLStreamException"
-  (^javax.xml.stream.XMLStreamWriter [^javax.xml.stream.XMLOutputFactory this ^java.io.OutputStream stream ^java.lang.String encoding]
+  (^javax.xml.stream.XMLStreamWriter [^XMLOutputFactory this ^java.io.OutputStream stream ^java.lang.String encoding]
     (-> this (.createXMLStreamWriter stream encoding)))
-  (^javax.xml.stream.XMLStreamWriter [^javax.xml.stream.XMLOutputFactory this ^java.io.Writer stream]
+  (^javax.xml.stream.XMLStreamWriter [^XMLOutputFactory this ^java.io.Writer stream]
     (-> this (.createXMLStreamWriter stream))))
 
 (defn create-xml-event-writer
@@ -160,9 +160,9 @@
   returns: `javax.xml.stream.XMLEventWriter`
 
   throws: javax.xml.stream.XMLStreamException"
-  (^javax.xml.stream.XMLEventWriter [^javax.xml.stream.XMLOutputFactory this ^java.io.OutputStream stream ^java.lang.String encoding]
+  (^javax.xml.stream.XMLEventWriter [^XMLOutputFactory this ^java.io.OutputStream stream ^java.lang.String encoding]
     (-> this (.createXMLEventWriter stream encoding)))
-  (^javax.xml.stream.XMLEventWriter [^javax.xml.stream.XMLOutputFactory this ^javax.xml.transform.Result result]
+  (^javax.xml.stream.XMLEventWriter [^XMLOutputFactory this ^javax.xml.transform.Result result]
     (-> this (.createXMLEventWriter result))))
 
 (defn set-property
@@ -172,7 +172,7 @@
   value - The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  ([^javax.xml.stream.XMLOutputFactory this ^java.lang.String name ^java.lang.Object value]
+  ([^XMLOutputFactory this ^java.lang.String name ^java.lang.Object value]
     (-> this (.setProperty name value))))
 
 (defn get-property
@@ -183,7 +183,7 @@
   returns: The value of the property - `java.lang.Object`
 
   throws: java.lang.IllegalArgumentException - if the property is not supported"
-  (^java.lang.Object [^javax.xml.stream.XMLOutputFactory this ^java.lang.String name]
+  (^java.lang.Object [^XMLOutputFactory this ^java.lang.String name]
     (-> this (.getProperty name))))
 
 (defn property-supported?
@@ -192,6 +192,6 @@
   name - The name of the property (may not be null) - `java.lang.String`
 
   returns: true if the property is supported and false otherwise - `boolean`"
-  (^Boolean [^javax.xml.stream.XMLOutputFactory this ^java.lang.String name]
+  (^Boolean [^XMLOutputFactory this ^java.lang.String name]
     (-> this (.isPropertySupported name))))
 

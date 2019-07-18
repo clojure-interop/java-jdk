@@ -51,7 +51,7 @@
   "Returns the provider that created this channel.
 
   returns: The provider that created this channel - `java.nio.channels.spi.SelectorProvider`"
-  (^java.nio.channels.spi.SelectorProvider [^java.nio.channels.SelectableChannel this]
+  (^java.nio.channels.spi.SelectorProvider [^SelectableChannel this]
     (-> this (.provider))))
 
 (defn valid-ops
@@ -62,7 +62,7 @@
    concrete channel class.
 
   returns: The valid-operation set - `int`"
-  (^Integer [^java.nio.channels.SelectableChannel this]
+  (^Integer [^SelectableChannel this]
     (-> this (.validOps))))
 
 (defn registered?
@@ -75,7 +75,7 @@
    for some time after it is closed.
 
   returns: true if, and only if, this channel is registered - `boolean`"
-  (^Boolean [^java.nio.channels.SelectableChannel this]
+  (^Boolean [^SelectableChannel this]
     (-> this (.isRegistered))))
 
 (defn key-for
@@ -87,7 +87,7 @@
   returns: The key returned when this channel was last registered with the
             given selector, or null if this channel is not
             currently registered with that selector - `java.nio.channels.SelectionKey`"
-  (^java.nio.channels.SelectionKey [^java.nio.channels.SelectableChannel this ^java.nio.channels.Selector sel]
+  (^java.nio.channels.SelectionKey [^SelectableChannel this ^java.nio.channels.Selector sel]
     (-> this (.keyFor sel))))
 
 (defn register
@@ -126,9 +126,9 @@
             the given selector - `java.nio.channels.SelectionKey`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  (^java.nio.channels.SelectionKey [^java.nio.channels.SelectableChannel this ^java.nio.channels.Selector sel ^Integer ops ^java.lang.Object att]
+  (^java.nio.channels.SelectionKey [^SelectableChannel this ^java.nio.channels.Selector sel ^Integer ops ^java.lang.Object att]
     (-> this (.register sel ops att)))
-  (^java.nio.channels.SelectionKey [^java.nio.channels.SelectableChannel this ^java.nio.channels.Selector sel ^Integer ops]
+  (^java.nio.channels.SelectionKey [^SelectableChannel this ^java.nio.channels.Selector sel ^Integer ops]
     (-> this (.register sel ops))))
 
 (defn configure-blocking
@@ -151,7 +151,7 @@
   returns: This selectable channel - `java.nio.channels.SelectableChannel`
 
   throws: java.nio.channels.ClosedChannelException - If this channel is closed"
-  (^java.nio.channels.SelectableChannel [^java.nio.channels.SelectableChannel this ^Boolean block]
+  (^java.nio.channels.SelectableChannel [^SelectableChannel this ^Boolean block]
     (-> this (.configureBlocking block))))
 
 (defn blocking?
@@ -162,7 +162,7 @@
    not specified.
 
   returns: true if, and only if, this channel is in blocking mode - `boolean`"
-  (^Boolean [^java.nio.channels.SelectableChannel this]
+  (^Boolean [^SelectableChannel this]
     (-> this (.isBlocking))))
 
 (defn blocking-lock
@@ -171,6 +171,6 @@
    specific blocking mode to be maintained for a short period of time.
 
   returns: The blocking-mode lock object - `java.lang.Object`"
-  (^java.lang.Object [^java.nio.channels.SelectableChannel this]
+  (^java.lang.Object [^SelectableChannel this]
     (-> this (.blockingLock))))
 

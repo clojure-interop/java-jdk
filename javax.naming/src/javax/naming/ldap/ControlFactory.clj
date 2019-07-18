@@ -31,7 +31,7 @@
 
   ctl - The non-null control object containing the OID and BER data. - `javax.naming.ldap.Control`
   ctx - The possibly null context in which the control is being created. If null, no such information is available. - `javax.naming.Context`
-  env - The possibly null environment of the context. This is used to find the value of the LdapContext.CONTROL_FACTORIES property. - `java.util.Hashtable<?,?>`
+  env - The possibly null environment of the context. This is used to find the value of the LdapContext.CONTROL_FACTORIES property. - `java.util.Hashtable`
 
   returns: A control object created using ctl; or
            ctl if a control object cannot be created using
@@ -73,6 +73,6 @@
   returns: A possibly null Control. - `javax.naming.ldap.Control`
 
   throws: javax.naming.NamingException - If ctl contains invalid data that prevents it from being used to create a control. A factory should only throw an exception if it knows how to produce the control (identified by the OID) but is unable to because of, for example invalid BER data."
-  (^javax.naming.ldap.Control [^javax.naming.ldap.ControlFactory this ^javax.naming.ldap.Control ctl]
+  (^javax.naming.ldap.Control [^ControlFactory this ^javax.naming.ldap.Control ctl]
     (-> this (.getControlInstance ctl))))
 

@@ -9,8 +9,8 @@
   Constructor that allows a specific error message to be specified.
 
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^ServiceNotFoundException [^java.lang.String message]
     (new ServiceNotFoundException message))
-  ([]
+  (^ServiceNotFoundException []
     (new ServiceNotFoundException )))
 

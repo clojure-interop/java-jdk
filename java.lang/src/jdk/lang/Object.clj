@@ -7,7 +7,7 @@
 
 (defn ->object
   "Constructor."
-  ([]
+  (^Object []
     (new Object )))
 
 (defn get-class
@@ -25,7 +25,7 @@
 
   returns: The Class object that represents the runtime
            class of this object. - `java.lang.Class<?>`"
-  (^java.lang.Class [^java.lang.Object this]
+  (^java.lang.Class [^Object this]
     (-> this (.getClass))))
 
 (defn hash-code
@@ -60,7 +60,7 @@
    Java™ programming language.)
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^java.lang.Object this]
+  (^Integer [^Object this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -107,7 +107,7 @@
 
   returns: true if this object is the same as the obj
             argument; false otherwise. - `boolean`"
-  (^Boolean [^java.lang.Object this ^java.lang.Object obj]
+  (^Boolean [^Object this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn to-string
@@ -130,7 +130,7 @@
    getClass().getName()  '@'  Integer.toHexString(hashCode())
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^java.lang.Object this]
+  (^java.lang.String [^Object this]
     (-> this (.toString))))
 
 (defn notify
@@ -161,7 +161,7 @@
    Only one thread at a time can own an object's monitor.
 
   throws: java.lang.IllegalMonitorStateException - if the current thread is not the owner of this object's monitor."
-  ([^java.lang.Object this]
+  ([^Object this]
     (-> this (.notify))))
 
 (defn notify-all
@@ -182,7 +182,7 @@
    a monitor.
 
   throws: java.lang.IllegalMonitorStateException - if the current thread is not the owner of this object's monitor."
-  ([^java.lang.Object this]
+  ([^Object this]
     (-> this (.notifyAll))))
 
 (defn wait
@@ -238,10 +238,10 @@
   nanos - additional time, in nanoseconds range 0-999999. - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of timeout is negative or the value of nanos is not in the range 0-999999."
-  ([^java.lang.Object this ^Long timeout ^Integer nanos]
+  ([^Object this ^Long timeout ^Integer nanos]
     (-> this (.wait timeout nanos)))
-  ([^java.lang.Object this ^Long timeout]
+  ([^Object this ^Long timeout]
     (-> this (.wait timeout)))
-  ([^java.lang.Object this]
+  ([^Object this]
     (-> this (.wait))))
 

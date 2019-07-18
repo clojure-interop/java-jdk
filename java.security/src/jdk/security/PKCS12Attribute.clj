@@ -25,9 +25,9 @@
   value - the attribute's value - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name or value is null"
-  ([^java.lang.String name ^java.lang.String value]
+  (^PKCS12Attribute [^java.lang.String name ^java.lang.String value]
     (new PKCS12Attribute name value))
-  ([encoded]
+  (^PKCS12Attribute [encoded]
     (new PKCS12Attribute encoded)))
 
 (defn get-name
@@ -35,7 +35,7 @@
    list of dot-separated integers.
 
   returns: the attribute's identifier - `java.lang.String`"
-  (^java.lang.String [^java.security.PKCS12Attribute this]
+  (^java.lang.String [^PKCS12Attribute this]
     (-> this (.getName))))
 
 (defn get-value
@@ -59,14 +59,14 @@
    Arrays.toString(java.lang.Object[]).
 
   returns: the attribute value's string encoding - `java.lang.String`"
-  (^java.lang.String [^java.security.PKCS12Attribute this]
+  (^java.lang.String [^PKCS12Attribute this]
     (-> this (.getValue))))
 
 (defn get-encoded
   "Returns the attribute's ASN.1 DER encoding.
 
   returns: a clone of the attribute's DER encoding - `byte[]`"
-  ([^java.security.PKCS12Attribute this]
+  ([^PKCS12Attribute this]
     (-> this (.getEncoded))))
 
 (defn equals
@@ -77,7 +77,7 @@
 
   returns: true if obj is a PKCS12Attribute and
    their DER encodings are equal. - `boolean`"
-  (^Boolean [^java.security.PKCS12Attribute this ^java.lang.Object obj]
+  (^Boolean [^PKCS12Attribute this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
@@ -85,13 +85,13 @@
    The hash code is computed from its DER encoding.
 
   returns: the hash code - `int`"
-  (^Integer [^java.security.PKCS12Attribute this]
+  (^Integer [^PKCS12Attribute this]
     (-> this (.hashCode))))
 
 (defn to-string
   "Returns a string representation of this PKCS12Attribute.
 
   returns: a name/value pair separated by an 'equals' symbol - `java.lang.String`"
-  (^java.lang.String [^java.security.PKCS12Attribute this]
+  (^java.lang.String [^PKCS12Attribute this]
     (-> this (.toString))))
 

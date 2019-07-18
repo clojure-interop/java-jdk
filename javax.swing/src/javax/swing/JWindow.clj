@@ -62,11 +62,11 @@
   gc - the GraphicsConfiguration that is used to construct the new window with; if gc is null, the system default GraphicsConfiguration is assumed, unless owner is also null, in which case the GraphicsConfiguration from the shared owner frame will be used. - `java.awt.GraphicsConfiguration`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([^java.awt.Window owner ^java.awt.GraphicsConfiguration gc]
+  (^JWindow [^java.awt.Window owner ^java.awt.GraphicsConfiguration gc]
     (new JWindow owner gc))
-  ([^java.awt.GraphicsConfiguration gc]
+  (^JWindow [^java.awt.GraphicsConfiguration gc]
     (new JWindow gc))
-  ([]
+  (^JWindow []
     (new JWindow )))
 
 (defn set-layout
@@ -77,7 +77,7 @@
    more information.
 
   manager - the LayoutManager - `java.awt.LayoutManager`"
-  ([^javax.swing.JWindow this ^java.awt.LayoutManager manager]
+  ([^JWindow this ^java.awt.LayoutManager manager]
     (-> this (.setLayout manager))))
 
 (defn set-layered-pane
@@ -87,7 +87,7 @@
   layered-pane - the new layeredPane object - `javax.swing.JLayeredPane`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the content pane parameter is null"
-  ([^javax.swing.JWindow this ^javax.swing.JLayeredPane layered-pane]
+  ([^JWindow this ^javax.swing.JLayeredPane layered-pane]
     (-> this (.setLayeredPane layered-pane))))
 
 (defn get-content-pane
@@ -95,7 +95,7 @@
    for this window.
 
   returns: the contentPane property - `java.awt.Container`"
-  (^java.awt.Container [^javax.swing.JWindow this]
+  (^java.awt.Container [^JWindow this]
     (-> this (.getContentPane))))
 
 (defn get-graphics
@@ -105,7 +105,7 @@
 
   returns: a graphics context for this component, or null
                if it has none - `java.awt.Graphics`"
-  (^java.awt.Graphics [^javax.swing.JWindow this]
+  (^java.awt.Graphics [^JWindow this]
     (-> this (.getGraphics))))
 
 (defn update
@@ -113,7 +113,7 @@
    prevent an unnecessary call to clear the background.
 
   g - the Graphics context in which to paint - `java.awt.Graphics`"
-  ([^javax.swing.JWindow this ^java.awt.Graphics g]
+  ([^JWindow this ^java.awt.Graphics g]
     (-> this (.update g))))
 
 (defn set-transfer-handler
@@ -138,7 +138,7 @@
    The Java Tutorial, for more information.
 
   new-handler - the new TransferHandler - `javax.swing.TransferHandler`"
-  ([^javax.swing.JWindow this ^javax.swing.TransferHandler new-handler]
+  ([^JWindow this ^javax.swing.TransferHandler new-handler]
     (-> this (.setTransferHandler new-handler))))
 
 (defn remove
@@ -151,7 +151,7 @@
   comp - the component to be removed - `java.awt.Component`
 
   throws: java.lang.NullPointerException - if comp is null"
-  ([^javax.swing.JWindow this ^java.awt.Component comp]
+  ([^JWindow this ^java.awt.Component comp]
     (-> this (.remove comp))))
 
 (defn repaint
@@ -164,14 +164,14 @@
   y - the y coordinate - `int`
   width - the width - `int`
   height - the height - `int`"
-  ([^javax.swing.JWindow this ^Long time ^Integer x ^Integer y ^Integer width ^Integer height]
+  ([^JWindow this ^Long time ^Integer x ^Integer y ^Integer width ^Integer height]
     (-> this (.repaint time x y width height))))
 
 (defn get-glass-pane
   "Returns the glassPane Component for this window.
 
   returns: the glassPane property - `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.JWindow this]
+  (^java.awt.Component [^JWindow this]
     (-> this (.getGlassPane))))
 
 (defn get-accessible-context
@@ -182,7 +182,7 @@
 
   returns: an AccessibleJWindow that serves as the
            AccessibleContext of this JWindow - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JWindow this]
+  (^javax.accessibility.AccessibleContext [^JWindow this]
     (-> this (.getAccessibleContext))))
 
 (defn set-glass-pane
@@ -190,21 +190,21 @@
    This method is called by the constructor.
 
   glass-pane - the glassPane object for this window - `java.awt.Component`"
-  ([^javax.swing.JWindow this ^java.awt.Component glass-pane]
+  ([^JWindow this ^java.awt.Component glass-pane]
     (-> this (.setGlassPane glass-pane))))
 
 (defn get-transfer-handler
   "Gets the transferHandler property.
 
   returns: the value of the transferHandler property - `javax.swing.TransferHandler`"
-  (^javax.swing.TransferHandler [^javax.swing.JWindow this]
+  (^javax.swing.TransferHandler [^JWindow this]
     (-> this (.getTransferHandler))))
 
 (defn get-root-pane
   "Returns the rootPane object for this window.
 
   returns: the rootPane property for this window - `javax.swing.JRootPane`"
-  (^javax.swing.JRootPane [^javax.swing.JWindow this]
+  (^javax.swing.JRootPane [^JWindow this]
     (-> this (.getRootPane))))
 
 (defn set-content-pane
@@ -214,13 +214,13 @@
   content-pane - the new contentPane - `java.awt.Container`
 
   throws: java.awt.IllegalComponentStateException - (a runtime exception) if the content pane parameter is null"
-  ([^javax.swing.JWindow this ^java.awt.Container content-pane]
+  ([^JWindow this ^java.awt.Container content-pane]
     (-> this (.setContentPane content-pane))))
 
 (defn get-layered-pane
   "Returns the layeredPane object for this window.
 
   returns: the layeredPane property - `javax.swing.JLayeredPane`"
-  (^javax.swing.JLayeredPane [^javax.swing.JWindow this]
+  (^javax.swing.JLayeredPane [^JWindow this]
     (-> this (.getLayeredPane))))
 

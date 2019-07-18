@@ -30,7 +30,7 @@
 
 (defn ->endpoint
   "Constructor."
-  ([]
+  (^Endpoint []
     (new Endpoint )))
 
 (def *-wsdl-service
@@ -100,14 +100,14 @@
 
    If the endpoint is not in a published state, this method
    has no effect."
-  ([^javax.xml.ws.Endpoint this]
+  ([^Endpoint this]
     (-> this (.stop))))
 
 (defn get-implementor
   "Returns the implementation object for this endpoint.
 
   returns: The implementor for this endpoint - `java.lang.Object`"
-  (^java.lang.Object [^javax.xml.ws.Endpoint this]
+  (^java.lang.Object [^Endpoint this]
     (-> this (.getImplementor))))
 
 (defn get-executor
@@ -118,7 +118,7 @@
 
   returns: The java.util.concurrent.Executor to be
            used to dispatch a request. - `java.util.concurrent.Executor`"
-  (^java.util.concurrent.Executor [^javax.xml.ws.Endpoint this]
+  (^java.util.concurrent.Executor [^Endpoint this]
     (-> this (.getExecutor))))
 
 (defn set-executor
@@ -135,14 +135,14 @@
   executor - The java.util.concurrent.Executor to be used to dispatch a request. - `java.util.concurrent.Executor`
 
   throws: java.lang.SecurityException - If the instance does not support setting an executor for security reasons (e.g. the necessary permissions are missing)."
-  ([^javax.xml.ws.Endpoint this ^java.util.concurrent.Executor executor]
+  ([^Endpoint this ^java.util.concurrent.Executor executor]
     (-> this (.setExecutor executor))))
 
 (defn get-binding
   "Returns the binding for this endpoint.
 
   returns: The binding for this endpoint - `javax.xml.ws.Binding`"
-  (^javax.xml.ws.Binding [^javax.xml.ws.Endpoint this]
+  (^javax.xml.ws.Binding [^Endpoint this]
     (-> this (.getBinding))))
 
 (defn get-properties
@@ -150,14 +150,14 @@
 
   returns: Map<String,Object> The property bag
            associated with this instance. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  (^java.util.Map [^javax.xml.ws.Endpoint this]
+  (^java.util.Map [^Endpoint this]
     (-> this (.getProperties))))
 
 (defn get-endpoint-reference
   "Returns the EndpointReference associated with
    this Endpoint instance.
 
-  clazz - Specifies the type of EndpointReference that MUST be returned. - `java.lang.Class<T>`
+  clazz - Specifies the type of EndpointReference that MUST be returned. - `java.lang.Class`
   reference-parameters - Reference parameters to be associated with the returned EndpointReference instance. - `org.w3c.dom.Element`
 
   returns: EndpointReference of type clazz of this
@@ -167,9 +167,9 @@
    the specified referenceParameters. - `<T extends javax.xml.ws.EndpointReference> T`
 
   throws: javax.xml.ws.WebServiceException - If any error in the creation of the EndpointReference or if the Endpoint is not in the published state or if the clazz is not a supported EndpointReference type."
-  ([^javax.xml.ws.Endpoint this ^java.lang.Class clazz ^org.w3c.dom.Element reference-parameters]
+  ([^Endpoint this ^java.lang.Class clazz ^org.w3c.dom.Element reference-parameters]
     (-> this (.getEndpointReference clazz reference-parameters)))
-  (^javax.xml.ws.EndpointReference [^javax.xml.ws.Endpoint this ^org.w3c.dom.Element reference-parameters]
+  (^javax.xml.ws.EndpointReference [^Endpoint this ^org.w3c.dom.Element reference-parameters]
     (-> this (.getEndpointReference reference-parameters))))
 
 (defn publish
@@ -182,28 +182,28 @@
   address - A URI specifying the address to use. The address MUST be compatible with the binding specified at the time the endpoint was created. - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - If the provided address URI is not usable in conjunction with the endpoint's binding."
-  ([^javax.xml.ws.Endpoint this ^java.lang.String address]
+  ([^Endpoint this ^java.lang.String address]
     (-> this (.publish address))))
 
 (defn set-properties
   "Sets the property bag for this Endpoint instance.
 
-  properties - The property bag associated with this instance. - `java.util.Map<java.lang.String,java.lang.Object>`"
-  ([^javax.xml.ws.Endpoint this ^java.util.Map properties]
+  properties - The property bag associated with this instance. - `java.util.Map`"
+  ([^Endpoint this ^java.util.Map properties]
     (-> this (.setProperties properties))))
 
 (defn get-metadata
   "Returns a list of metadata documents for the service.
 
   returns: List<javax.xml.transform.Source> A list of metadata documents for the service - `java.util.List<javax.xml.transform.Source>`"
-  (^java.util.List [^javax.xml.ws.Endpoint this]
+  (^java.util.List [^Endpoint this]
     (-> this (.getMetadata))))
 
 (defn published?
   "Returns true if the endpoint is in the published state.
 
   returns: true if the endpoint is in the published state. - `boolean`"
-  (^Boolean [^javax.xml.ws.Endpoint this]
+  (^Boolean [^Endpoint this]
     (-> this (.isPublished))))
 
 (defn set-endpoint-context
@@ -218,15 +218,15 @@
   ctxt - that is shared for multiple endpoints - `javax.xml.ws.EndpointContext`
 
   throws: java.lang.IllegalStateException - If the endpoint has been published already or it has been stopped."
-  ([^javax.xml.ws.Endpoint this ^javax.xml.ws.EndpointContext ctxt]
+  ([^Endpoint this ^javax.xml.ws.EndpointContext ctxt]
     (-> this (.setEndpointContext ctxt))))
 
 (defn set-metadata
   "Sets the metadata for this endpoint.
 
-  metadata - A list of XML document sources containing metadata information for the endpoint (e.g. WSDL or XML Schema documents) - `java.util.List<javax.xml.transform.Source>`
+  metadata - A list of XML document sources containing metadata information for the endpoint (e.g. WSDL or XML Schema documents) - `java.util.List`
 
   throws: java.lang.IllegalStateException - If the endpoint has already been published."
-  ([^javax.xml.ws.Endpoint this ^java.util.List metadata]
+  ([^Endpoint this ^java.util.List metadata]
     (-> this (.setMetadata metadata))))
 

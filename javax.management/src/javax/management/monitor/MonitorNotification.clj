@@ -139,27 +139,27 @@
   "Gets the observed object of this monitor notification.
 
   returns: The observed object. - `javax.management.ObjectName`"
-  (^javax.management.ObjectName [^javax.management.monitor.MonitorNotification this]
+  (^javax.management.ObjectName [^MonitorNotification this]
     (-> this (.getObservedObject))))
 
 (defn get-observed-attribute
   "Gets the observed attribute of this monitor notification.
 
   returns: The observed attribute. - `java.lang.String`"
-  (^java.lang.String [^javax.management.monitor.MonitorNotification this]
+  (^java.lang.String [^MonitorNotification this]
     (-> this (.getObservedAttribute))))
 
 (defn get-derived-gauge
   "Gets the derived gauge of this monitor notification.
 
   returns: The derived gauge. - `java.lang.Object`"
-  (^java.lang.Object [^javax.management.monitor.MonitorNotification this]
+  (^java.lang.Object [^MonitorNotification this]
     (-> this (.getDerivedGauge))))
 
 (defn get-trigger
   "Gets the threshold/string (depending on the monitor type) that triggered off this monitor notification.
 
   returns: The trigger. - `java.lang.Object`"
-  (^java.lang.Object [^javax.management.monitor.MonitorNotification this]
+  (^java.lang.Object [^MonitorNotification this]
     (-> this (.getTrigger))))
 

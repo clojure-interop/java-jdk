@@ -44,89 +44,89 @@
   "Visits a declared type. This implementation calls defaultAction.
 
   t - the type to visit - `javax.lang.model.type.DeclaredType`
-  p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.DeclaredType t ^SimpleTypeVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleTypeVisitor6 this ^javax.lang.model.type.DeclaredType t p]
     (-> this (.visitDeclared t p))))
 
 (defn visit-array
   "Visits an array type. This implementation calls defaultAction.
 
   t - the type to visit - `javax.lang.model.type.ArrayType`
-  p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.ArrayType t ^SimpleTypeVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleTypeVisitor6 this ^javax.lang.model.type.ArrayType t p]
     (-> this (.visitArray t p))))
 
 (defn visit-type-variable
   "Visits a type variable. This implementation calls defaultAction.
 
   t - the type to visit - `javax.lang.model.type.TypeVariable`
-  p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.TypeVariable t ^SimpleTypeVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleTypeVisitor6 this ^javax.lang.model.type.TypeVariable t p]
     (-> this (.visitTypeVariable t p))))
 
 (defn visit-null
   "Visits the null type. This implementation calls defaultAction.
 
   t - the type to visit - `javax.lang.model.type.NullType`
-  p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.NullType t ^SimpleTypeVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleTypeVisitor6 this ^javax.lang.model.type.NullType t p]
     (-> this (.visitNull t p))))
 
 (defn visit-no-type
   "Visits a NoType instance. This implementation calls defaultAction.
 
   t - the type to visit - `javax.lang.model.type.NoType`
-  p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.NoType t ^SimpleTypeVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleTypeVisitor6 this ^javax.lang.model.type.NoType t p]
     (-> this (.visitNoType t p))))
 
 (defn visit-wildcard
   "Visits a wildcard type. This implementation calls defaultAction.
 
   t - the type to visit - `javax.lang.model.type.WildcardType`
-  p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.WildcardType t ^SimpleTypeVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleTypeVisitor6 this ^javax.lang.model.type.WildcardType t p]
     (-> this (.visitWildcard t p))))
 
 (defn visit-primitive
   "Visits a primitive type. This implementation calls defaultAction.
 
   t - the type to visit - `javax.lang.model.type.PrimitiveType`
-  p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.PrimitiveType t ^SimpleTypeVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleTypeVisitor6 this ^javax.lang.model.type.PrimitiveType t p]
     (-> this (.visitPrimitive t p))))
 
 (defn visit-executable
   "Visits an executable type. This implementation calls defaultAction.
 
   t - the type to visit - `javax.lang.model.type.ExecutableType`
-  p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.ExecutableType t ^SimpleTypeVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleTypeVisitor6 this ^javax.lang.model.type.ExecutableType t p]
     (-> this (.visitExecutable t p))))
 
 (defn visit-error
   "Visits an error type. This implementation calls defaultAction.
 
   t - the type to visit - `javax.lang.model.type.ErrorType`
-  p - a visitor-specified parameter - `SimpleTypeVisitor6.P`
+  p - a visitor-specified parameter - `P`
 
-  returns: the result of defaultAction - `SimpleTypeVisitor6.R`"
-  (^SimpleTypeVisitor6.R [^javax.lang.model.util.SimpleTypeVisitor6 this ^javax.lang.model.type.ErrorType t ^SimpleTypeVisitor6.P p]
+  returns: the result of defaultAction - `R`"
+  ([^SimpleTypeVisitor6 this ^javax.lang.model.type.ErrorType t p]
     (-> this (.visitError t p))))
 

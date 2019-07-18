@@ -61,21 +61,21 @@
    Mac object.
 
   returns: the algorithm name of this Mac object. - `java.lang.String`"
-  (^java.lang.String [^javax.crypto.Mac this]
+  (^java.lang.String [^Mac this]
     (-> this (.getAlgorithm))))
 
 (defn get-provider
   "Returns the provider of this Mac object.
 
   returns: the provider of this Mac object. - `java.security.Provider`"
-  (^java.security.Provider [^javax.crypto.Mac this]
+  (^java.security.Provider [^Mac this]
     (-> this (.getProvider))))
 
 (defn get-mac-length
   "Returns the length of the MAC in bytes.
 
   returns: the MAC length in bytes. - `int`"
-  (^Integer [^javax.crypto.Mac this]
+  (^Integer [^Mac this]
     (-> this (.getMacLength))))
 
 (defn init
@@ -86,9 +86,9 @@
   params - the algorithm parameters. - `java.security.spec.AlgorithmParameterSpec`
 
   throws: java.security.InvalidKeyException - if the given key is inappropriate for initializing this MAC."
-  ([^javax.crypto.Mac this ^java.security.Key key ^java.security.spec.AlgorithmParameterSpec params]
+  ([^Mac this ^java.security.Key key ^java.security.spec.AlgorithmParameterSpec params]
     (-> this (.init key params)))
-  ([^javax.crypto.Mac this ^java.security.Key key]
+  ([^Mac this ^java.security.Key key]
     (-> this (.init key))))
 
 (defn update
@@ -100,9 +100,9 @@
   len - the number of bytes to process. - `int`
 
   throws: java.lang.IllegalStateException - if this Mac has not been initialized."
-  ([^javax.crypto.Mac this input ^Integer offset ^Integer len]
+  ([^Mac this input ^Integer offset ^Integer len]
     (-> this (.update input offset len)))
-  ([^javax.crypto.Mac this ^Byte input]
+  ([^Mac this ^Byte input]
     (-> this (.update input))))
 
 (defn do-final
@@ -126,11 +126,11 @@
   out-offset - the offset in output where the MAC is stored - `int`
 
   throws: javax.crypto.ShortBufferException - if the given output buffer is too small to hold the result"
-  ([^javax.crypto.Mac this output ^Integer out-offset]
+  ([^Mac this output ^Integer out-offset]
     (-> this (.doFinal output out-offset)))
-  ([^javax.crypto.Mac this input]
+  ([^Mac this input]
     (-> this (.doFinal input)))
-  ([^javax.crypto.Mac this]
+  ([^Mac this]
     (-> this (.doFinal))))
 
 (defn reset
@@ -146,7 +146,7 @@
    (In order to reuse this Mac object with a different key,
    it must be reinitialized via a call to init(Key) or
    init(Key, AlgorithmParameterSpec)."
-  ([^javax.crypto.Mac this]
+  ([^Mac this]
     (-> this (.reset))))
 
 (defn clone
@@ -155,6 +155,6 @@
   returns: a clone if the provider implementation is cloneable. - `java.lang.Object`
 
   throws: java.lang.CloneNotSupportedException - if this is called on a delegate that does not support Cloneable."
-  (^java.lang.Object [^javax.crypto.Mac this]
+  (^java.lang.Object [^Mac this]
     (-> this (.clone))))
 

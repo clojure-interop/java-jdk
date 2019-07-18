@@ -14,10 +14,10 @@
 
   s - Detail message, or null if no detail message. - `java.lang.String`
   e - Chained exception. - `java.lang.Exception`"
-  ([^java.lang.String s ^java.lang.Exception e]
+  (^PrintException [^java.lang.String s ^java.lang.Exception e]
     (new PrintException s e))
-  ([^java.lang.String s]
+  (^PrintException [^java.lang.String s]
     (new PrintException s))
-  ([]
+  (^PrintException []
     (new PrintException )))
 

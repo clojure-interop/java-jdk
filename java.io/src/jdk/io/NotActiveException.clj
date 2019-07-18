@@ -9,8 +9,8 @@
   Constructor to create a new NotActiveException with the reason given.
 
   reason - a String describing the reason for the exception. - `java.lang.String`"
-  ([^java.lang.String reason]
+  (^NotActiveException [^java.lang.String reason]
     (new NotActiveException reason))
-  ([]
+  (^NotActiveException []
     (new NotActiveException )))
 

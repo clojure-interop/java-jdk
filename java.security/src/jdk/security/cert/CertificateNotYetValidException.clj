@@ -14,8 +14,8 @@
    particular exception.
 
   message - the detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^CertificateNotYetValidException [^java.lang.String message]
     (new CertificateNotYetValidException message))
-  ([]
+  (^CertificateNotYetValidException []
     (new CertificateNotYetValidException )))
 

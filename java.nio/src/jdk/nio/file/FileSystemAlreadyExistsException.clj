@@ -10,8 +10,8 @@
   Constructs an instance of this class.
 
   msg - the detail message - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^FileSystemAlreadyExistsException [^java.lang.String msg]
     (new FileSystemAlreadyExistsException msg))
-  ([]
+  (^FileSystemAlreadyExistsException []
     (new FileSystemAlreadyExistsException )))
 

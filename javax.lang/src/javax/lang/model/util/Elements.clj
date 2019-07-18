@@ -17,7 +17,7 @@
   returns: the text of a constant expression - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the argument is not a primitive value or string"
-  (^java.lang.String [^javax.lang.model.util.Elements this ^java.lang.Object value]
+  (^java.lang.String [^Elements this ^java.lang.Object value]
     (-> this (.getConstantExpression value))))
 
 (defn get-package-of
@@ -27,7 +27,7 @@
   type - the element being examined - `javax.lang.model.element.Element`
 
   returns: the package of an element - `javax.lang.model.element.PackageElement`"
-  (^javax.lang.model.element.PackageElement [^javax.lang.model.util.Elements this ^javax.lang.model.element.Element type]
+  (^javax.lang.model.element.PackageElement [^Elements this ^javax.lang.model.element.Element type]
     (-> this (.getPackageOf type))))
 
 (defn overrides
@@ -77,7 +77,7 @@
 
   returns: true if and only if the first method overrides
             the second - `boolean`"
-  (^Boolean [^javax.lang.model.util.Elements this ^javax.lang.model.element.ExecutableElement overrider ^javax.lang.model.element.ExecutableElement overridden ^javax.lang.model.element.TypeElement type]
+  (^Boolean [^Elements this ^javax.lang.model.element.ExecutableElement overrider ^javax.lang.model.element.ExecutableElement overridden ^javax.lang.model.element.TypeElement type]
     (-> this (.overrides overrider overridden type))))
 
 (defn get-all-annotation-mirrors
@@ -87,7 +87,7 @@
   e - the element being examined - `javax.lang.model.element.Element`
 
   returns: all annotations of the element - `java.util.List<? extends javax.lang.model.element.AnnotationMirror>`"
-  ([^javax.lang.model.util.Elements this ^javax.lang.model.element.Element e]
+  ([^Elements this ^javax.lang.model.element.Element e]
     (-> this (.getAllAnnotationMirrors e))))
 
 (defn functional-interface?
@@ -96,7 +96,7 @@
   type - the type element being examined - `javax.lang.model.element.TypeElement`
 
   returns: true if the element is a functional interface, false otherwise - `boolean`"
-  (^Boolean [^javax.lang.model.util.Elements this ^javax.lang.model.element.TypeElement type]
+  (^Boolean [^Elements this ^javax.lang.model.element.TypeElement type]
     (-> this (.isFunctionalInterface type))))
 
 (defn get-element-values-with-defaults
@@ -105,7 +105,7 @@
   a - annotation to examine - `javax.lang.model.element.AnnotationMirror`
 
   returns: the values of the annotation's elements, including defaults - `java.util.Map<? extends javax.lang.model.element.ExecutableElement,? extends javax.lang.model.element.AnnotationValue>`"
-  ([^javax.lang.model.util.Elements this ^javax.lang.model.element.AnnotationMirror a]
+  ([^Elements this ^javax.lang.model.element.AnnotationMirror a]
     (-> this (.getElementValuesWithDefaults a))))
 
 (defn get-all-members
@@ -119,7 +119,7 @@
   type - the type being examined - `javax.lang.model.element.TypeElement`
 
   returns: all members of the type - `java.util.List<? extends javax.lang.model.element.Element>`"
-  ([^javax.lang.model.util.Elements this ^javax.lang.model.element.TypeElement type]
+  ([^Elements this ^javax.lang.model.element.TypeElement type]
     (-> this (.getAllMembers type))))
 
 (defn get-type-element
@@ -128,7 +128,7 @@
   name - the canonical name - `java.lang.CharSequence`
 
   returns: the named type element, or null if it cannot be found - `javax.lang.model.element.TypeElement`"
-  (^javax.lang.model.element.TypeElement [^javax.lang.model.util.Elements this ^java.lang.CharSequence name]
+  (^javax.lang.model.element.TypeElement [^Elements this ^java.lang.CharSequence name]
     (-> this (.getTypeElement name))))
 
 (defn get-name
@@ -138,7 +138,7 @@
   cs - the character sequence to return as a name - `java.lang.CharSequence`
 
   returns: a name with the same sequence of characters as the argument - `javax.lang.model.element.Name`"
-  (^javax.lang.model.element.Name [^javax.lang.model.util.Elements this ^java.lang.CharSequence cs]
+  (^javax.lang.model.element.Name [^Elements this ^java.lang.CharSequence cs]
     (-> this (.getName cs))))
 
 (defn hides
@@ -149,7 +149,7 @@
 
   returns: true if and only if the first element hides
             the second - `boolean`"
-  (^Boolean [^javax.lang.model.util.Elements this ^javax.lang.model.element.Element hider ^javax.lang.model.element.Element hidden]
+  (^Boolean [^Elements this ^javax.lang.model.element.Element hider ^javax.lang.model.element.Element hidden]
     (-> this (.hides hider hidden))))
 
 (defn deprecated?
@@ -158,7 +158,7 @@
   e - the element being examined - `javax.lang.model.element.Element`
 
   returns: true if the element is deprecated, false otherwise - `boolean`"
-  (^Boolean [^javax.lang.model.util.Elements this ^javax.lang.model.element.Element e]
+  (^Boolean [^Elements this ^javax.lang.model.element.Element e]
     (-> this (.isDeprecated e))))
 
 (defn get-binary-name
@@ -167,7 +167,7 @@
   type - the type element being examined - `javax.lang.model.element.TypeElement`
 
   returns: the binary name - `javax.lang.model.element.Name`"
-  (^javax.lang.model.element.Name [^javax.lang.model.util.Elements this ^javax.lang.model.element.TypeElement type]
+  (^javax.lang.model.element.Name [^Elements this ^javax.lang.model.element.TypeElement type]
     (-> this (.getBinaryName type))))
 
 (defn get-package-element
@@ -176,7 +176,7 @@
   name - fully qualified package name, or `` for an unnamed package - `java.lang.CharSequence`
 
   returns: the named package, or null if it cannot be found - `javax.lang.model.element.PackageElement`"
-  (^javax.lang.model.element.PackageElement [^javax.lang.model.util.Elements this ^java.lang.CharSequence name]
+  (^javax.lang.model.element.PackageElement [^Elements this ^java.lang.CharSequence name]
     (-> this (.getPackageElement name))))
 
 (defn get-doc-comment
@@ -201,7 +201,7 @@
 
   returns: the documentation comment of the element, or null
             if there is none - `java.lang.String`"
-  (^java.lang.String [^javax.lang.model.util.Elements this ^javax.lang.model.element.Element e]
+  (^java.lang.String [^Elements this ^javax.lang.model.element.Element e]
     (-> this (.getDocComment e))))
 
 (defn print-elements
@@ -212,6 +212,6 @@
 
   w - the writer to print the output to - `java.io.Writer`
   elements - the elements to print - `javax.lang.model.element.Element`"
-  ([^javax.lang.model.util.Elements this ^java.io.Writer w ^javax.lang.model.element.Element elements]
+  ([^Elements this ^java.io.Writer w ^javax.lang.model.element.Element elements]
     (-> this (.printElements w elements))))
 

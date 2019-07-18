@@ -14,14 +14,14 @@
 
 (defn ->basic-combo-box-renderer
   "Constructor."
-  ([]
+  (^BasicComboBoxRenderer []
     (new BasicComboBoxRenderer )))
 
 (defn get-preferred-size
   "Description copied from class: JComponent
 
   returns: the value of the preferredSize property - `java.awt.Dimension`"
-  (^java.awt.Dimension [^javax.swing.plaf.basic.BasicComboBoxRenderer this]
+  (^java.awt.Dimension [^BasicComboBoxRenderer this]
     (-> this (.getPreferredSize))))
 
 (defn get-list-cell-renderer-component
@@ -34,6 +34,6 @@
   cell-has-focus - True if the specified cell has the focus. - `boolean`
 
   returns: A component whose paint() method will render the specified value. - `java.awt.Component`"
-  (^java.awt.Component [^javax.swing.plaf.basic.BasicComboBoxRenderer this ^javax.swing.JList list ^java.lang.Object value ^Integer index ^Boolean is-selected ^Boolean cell-has-focus]
+  (^java.awt.Component [^BasicComboBoxRenderer this ^javax.swing.JList list ^java.lang.Object value ^Integer index ^Boolean is-selected ^Boolean cell-has-focus]
     (-> this (.getListCellRendererComponent list value index is-selected cell-has-focus))))
 

@@ -161,7 +161,7 @@
   returns: a stream containing the XML data. - `java.io.InputStream`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. An exception is thrown if the state is not readable."
-  (^java.io.InputStream [^java.sql.SQLXML this]
+  (^java.io.InputStream [^SQLXML this]
     (-> this (.getBinaryStream))))
 
 (defn set-string
@@ -180,7 +180,7 @@
   value - the XML value - `java.lang.String`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not writable."
-  ([^java.sql.SQLXML this ^java.lang.String value]
+  ([^SQLXML this ^java.lang.String value]
     (-> this (.setString value))))
 
 (defn free
@@ -194,7 +194,7 @@
    calls to free are treated as a no-op.
 
   throws: java.sql.SQLException - if there is an error freeing the XML value."
-  ([^java.sql.SQLXML this]
+  ([^SQLXML this]
     (-> this (.free))))
 
 (defn set-binary-stream
@@ -210,7 +210,7 @@
   returns: a stream to which data can be written. - `java.io.OutputStream`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. An exception is thrown if the state is not writable."
-  (^java.io.OutputStream [^java.sql.SQLXML this]
+  (^java.io.OutputStream [^SQLXML this]
     (-> this (.setBinaryStream))))
 
 (defn get-string
@@ -229,7 +229,7 @@
   returns: a string representation of the XML value designated by this SQLXML instance. - `java.lang.String`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not readable."
-  (^java.lang.String [^java.sql.SQLXML this]
+  (^java.lang.String [^SQLXML this]
     (-> this (.getString))))
 
 (defn get-character-stream
@@ -248,7 +248,7 @@
   returns: a stream containing the XML data. - `java.io.Reader`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not readable."
-  (^java.io.Reader [^java.sql.SQLXML this]
+  (^java.io.Reader [^SQLXML this]
     (-> this (.getCharacterStream))))
 
 (defn get-source
@@ -272,12 +272,12 @@
      xmlReader.setContentHandler(myHandler);
      xmlReader.parse(saxSource.getInputSource());
 
-  source-class - The class of the source, or null. If the class is null, a vendor specific Source implementation will be returned. The following classes are supported at a minimum: javax.xml.transform.dom.DOMSource - returns a DOMSource javax.xml.transform.sax.SAXSource - returns a SAXSource javax.xml.transform.stax.StAXSource - returns a StAXSource javax.xml.transform.stream.StreamSource - returns a StreamSource - `java.lang.Class<T>`
+  source-class - The class of the source, or null. If the class is null, a vendor specific Source implementation will be returned. The following classes are supported at a minimum: javax.xml.transform.dom.DOMSource - returns a DOMSource javax.xml.transform.sax.SAXSource - returns a SAXSource javax.xml.transform.stax.StAXSource - returns a StAXSource javax.xml.transform.stream.StreamSource - returns a StreamSource - `java.lang.Class`
 
   returns: a Source for reading the XML value. - `<T extends javax.xml.transform.Source> T`
 
   throws: java.sql.SQLException - if there is an error processing the XML value or if this feature is not supported. The getCause() method of the exception may provide a more detailed exception, for example, if an XML parser exception occurs. An exception is thrown if the state is not readable."
-  ([^java.sql.SQLXML this ^java.lang.Class source-class]
+  ([^SQLXML this ^java.lang.Class source-class]
     (-> this (.getSource source-class))))
 
 (defn set-result
@@ -300,12 +300,12 @@
      // set the XML elements and attributes into the result
      contentHandler.endDocument();
 
-  result-class - The class of the result, or null. If resultClass is null, a vendor specific Result implementation will be returned. The following classes are supported at a minimum: javax.xml.transform.dom.DOMResult - returns a DOMResult javax.xml.transform.sax.SAXResult - returns a SAXResult javax.xml.transform.stax.StAXResult - returns a StAXResult javax.xml.transform.stream.StreamResult - returns a StreamResult - `java.lang.Class<T>`
+  result-class - The class of the result, or null. If resultClass is null, a vendor specific Result implementation will be returned. The following classes are supported at a minimum: javax.xml.transform.dom.DOMResult - returns a DOMResult javax.xml.transform.sax.SAXResult - returns a SAXResult javax.xml.transform.stax.StAXResult - returns a StAXResult javax.xml.transform.stream.StreamResult - returns a StreamResult - `java.lang.Class`
 
   returns: Returns a Result for setting the XML value. - `<T extends javax.xml.transform.Result> T`
 
   throws: java.sql.SQLException - if there is an error processing the XML value or if this feature is not supported. The getCause() method of the exception may provide a more detailed exception, for example, if an XML parser exception occurs. An exception is thrown if the state is not writable."
-  ([^java.sql.SQLXML this ^java.lang.Class result-class]
+  ([^SQLXML this ^java.lang.Class result-class]
     (-> this (.setResult result-class))))
 
 (defn set-character-stream
@@ -324,6 +324,6 @@
   returns: a stream to which data can be written. - `java.io.Writer`
 
   throws: java.sql.SQLException - if there is an error processing the XML value. The getCause() method of the exception may provide a more detailed exception, for example, if the stream does not contain valid characters. An exception is thrown if the state is not writable."
-  (^java.io.Writer [^java.sql.SQLXML this]
+  (^java.io.Writer [^SQLXML this]
     (-> this (.setCharacterStream))))
 

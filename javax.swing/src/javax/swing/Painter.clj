@@ -68,9 +68,9 @@
    between.
 
   g - The Graphics2D to render to. This must not be null. - `java.awt.Graphics2D`
-  object - an optional configuration parameter. This may be null. - `Painter.T`
+  object - an optional configuration parameter. This may be null. - `T`
   width - width of the area to paint. - `int`
   height - height of the area to paint. - `int`"
-  ([^javax.swing.Painter this ^java.awt.Graphics2D g ^Painter.T object ^Integer width ^Integer height]
+  ([^Painter this ^java.awt.Graphics2D g object ^Integer width ^Integer height]
     (-> this (.paint g object width height))))
 

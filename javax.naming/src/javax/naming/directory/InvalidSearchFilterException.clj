@@ -16,8 +16,8 @@
    with an explanation. All other fields are set to null.
 
   msg - Detail about this exception. Can be null. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^InvalidSearchFilterException [^java.lang.String msg]
     (new InvalidSearchFilterException msg))
-  ([]
+  (^InvalidSearchFilterException []
     (new InvalidSearchFilterException )))
 

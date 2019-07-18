@@ -64,9 +64,9 @@
   returns: A new datagram channel - `java.nio.channels.DatagramChannel`
 
   throws: java.lang.UnsupportedOperationException - If the specified protocol family is not supported"
-  (^java.nio.channels.DatagramChannel [^java.nio.channels.spi.SelectorProvider this ^java.net.ProtocolFamily family]
+  (^java.nio.channels.DatagramChannel [^SelectorProvider this ^java.net.ProtocolFamily family]
     (-> this (.openDatagramChannel family)))
-  (^java.nio.channels.DatagramChannel [^java.nio.channels.spi.SelectorProvider this]
+  (^java.nio.channels.DatagramChannel [^SelectorProvider this]
     (-> this (.openDatagramChannel))))
 
 (defn open-pipe
@@ -75,7 +75,7 @@
   returns: The new pipe - `java.nio.channels.Pipe`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^java.nio.channels.Pipe [^java.nio.channels.spi.SelectorProvider this]
+  (^java.nio.channels.Pipe [^SelectorProvider this]
     (-> this (.openPipe))))
 
 (defn open-selector
@@ -84,7 +84,7 @@
   returns: The new selector - `java.nio.channels.spi.AbstractSelector`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^java.nio.channels.spi.AbstractSelector [^java.nio.channels.spi.SelectorProvider this]
+  (^java.nio.channels.spi.AbstractSelector [^SelectorProvider this]
     (-> this (.openSelector))))
 
 (defn open-server-socket-channel
@@ -93,7 +93,7 @@
   returns: The new channel - `java.nio.channels.ServerSocketChannel`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^java.nio.channels.ServerSocketChannel [^java.nio.channels.spi.SelectorProvider this]
+  (^java.nio.channels.ServerSocketChannel [^SelectorProvider this]
     (-> this (.openServerSocketChannel))))
 
 (defn open-socket-channel
@@ -102,7 +102,7 @@
   returns: The new channel - `java.nio.channels.SocketChannel`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^java.nio.channels.SocketChannel [^java.nio.channels.spi.SelectorProvider this]
+  (^java.nio.channels.SocketChannel [^SelectorProvider this]
     (-> this (.openSocketChannel))))
 
 (defn inherited-channel
@@ -154,6 +154,6 @@
   returns: The inherited channel, if any, otherwise null. - `java.nio.channels.Channel`
 
   throws: java.io.IOException - If an I/O error occurs"
-  (^java.nio.channels.Channel [^java.nio.channels.spi.SelectorProvider this]
+  (^java.nio.channels.Channel [^SelectorProvider this]
     (-> this (.inheritedChannel))))
 

@@ -39,7 +39,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.PrinterIsAcceptingJobs this]
+  ([^PrinterIsAcceptingJobs this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -50,6 +50,6 @@
    category name is `printer-is-accepting-jobs`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.PrinterIsAcceptingJobs this]
+  (^java.lang.String [^PrinterIsAcceptingJobs this]
     (-> this (.getName))))
 

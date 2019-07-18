@@ -16,6 +16,6 @@
    detail message.
 
   s - the detail message - `java.lang.String`"
-  ([^java.lang.String s]
+  (^UnknownGroupException [^java.lang.String s]
     (new UnknownGroupException s)))
 

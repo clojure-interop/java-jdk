@@ -14,8 +14,8 @@
    detail message.
 
   s - the detail message. - `java.lang.String`"
-  ([^java.lang.String s]
+  (^AbstractMethodError [^java.lang.String s]
     (new AbstractMethodError s))
-  ([]
+  (^AbstractMethodError []
     (new AbstractMethodError )))
 

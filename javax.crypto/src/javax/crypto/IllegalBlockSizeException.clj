@@ -11,8 +11,8 @@
    detail message.
 
   msg - the detail message. - `java.lang.String`"
-  ([^java.lang.String msg]
+  (^IllegalBlockSizeException [^java.lang.String msg]
     (new IllegalBlockSizeException msg))
-  ([]
+  (^IllegalBlockSizeException []
     (new IllegalBlockSizeException )))
 

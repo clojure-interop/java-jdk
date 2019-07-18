@@ -30,13 +30,13 @@
   owner - the owner of this stream. null is a legal value - `java.lang.Object`
   exception-listener - the exception handler for the stream, or null to use the default - `java.beans.ExceptionListener`
   cl - the class loader used for instantiating objects. null indicates that the default class loader should be used - `java.lang.ClassLoader`"
-  ([^java.io.InputStream in ^java.lang.Object owner ^java.beans.ExceptionListener exception-listener ^java.lang.ClassLoader cl]
+  (^XMLDecoder [^java.io.InputStream in ^java.lang.Object owner ^java.beans.ExceptionListener exception-listener ^java.lang.ClassLoader cl]
     (new XMLDecoder in owner exception-listener cl))
-  ([^java.io.InputStream in ^java.lang.Object owner ^java.beans.ExceptionListener exception-listener]
+  (^XMLDecoder [^java.io.InputStream in ^java.lang.Object owner ^java.beans.ExceptionListener exception-listener]
     (new XMLDecoder in owner exception-listener))
-  ([^java.io.InputStream in ^java.lang.Object owner]
+  (^XMLDecoder [^java.io.InputStream in ^java.lang.Object owner]
     (new XMLDecoder in owner))
-  ([^java.io.InputStream in]
+  (^XMLDecoder [^java.io.InputStream in]
     (new XMLDecoder in)))
 
 (defn *create-handler
@@ -61,7 +61,7 @@
 (defn close
   "This method closes the input stream associated
    with this stream."
-  ([^java.beans.XMLDecoder this]
+  ([^XMLDecoder this]
     (-> this (.close))))
 
 (defn set-exception-listener
@@ -70,7 +70,7 @@
    exceptions.
 
   exception-listener - The exception handler for this stream; if null the default exception listener will be used. - `java.beans.ExceptionListener`"
-  ([^java.beans.XMLDecoder this ^java.beans.ExceptionListener exception-listener]
+  ([^XMLDecoder this ^java.beans.ExceptionListener exception-listener]
     (-> this (.setExceptionListener exception-listener))))
 
 (defn get-exception-listener
@@ -78,7 +78,7 @@
 
   returns: The exception handler for this stream.
        Will return the default exception listener if this has not explicitly been set. - `java.beans.ExceptionListener`"
-  (^java.beans.ExceptionListener [^java.beans.XMLDecoder this]
+  (^java.beans.ExceptionListener [^XMLDecoder this]
     (-> this (.getExceptionListener))))
 
 (defn read-object
@@ -87,20 +87,20 @@
   returns: the next object read - `java.lang.Object`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if the stream contains no objects (or no more objects)"
-  (^java.lang.Object [^java.beans.XMLDecoder this]
+  (^java.lang.Object [^XMLDecoder this]
     (-> this (.readObject))))
 
 (defn set-owner
   "Sets the owner of this decoder to owner.
 
   owner - The owner of this decoder. - `java.lang.Object`"
-  ([^java.beans.XMLDecoder this ^java.lang.Object owner]
+  ([^XMLDecoder this ^java.lang.Object owner]
     (-> this (.setOwner owner))))
 
 (defn get-owner
   "Gets the owner of this decoder.
 
   returns: The owner of this decoder. - `java.lang.Object`"
-  (^java.lang.Object [^java.beans.XMLDecoder this]
+  (^java.lang.Object [^XMLDecoder this]
     (-> this (.getOwner))))
 

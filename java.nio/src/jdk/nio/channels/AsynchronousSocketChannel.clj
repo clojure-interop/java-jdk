@@ -105,7 +105,7 @@
   returns: The channel - `java.nio.channels.AsynchronousSocketChannel`
 
   throws: java.nio.channels.NotYetConnectedException - If this channel is not yet connected"
-  (^java.nio.channels.AsynchronousSocketChannel [^java.nio.channels.AsynchronousSocketChannel this]
+  (^java.nio.channels.AsynchronousSocketChannel [^AsynchronousSocketChannel this]
     (-> this (.shutdownOutput))))
 
 (defn bind
@@ -116,7 +116,7 @@
   returns: This channel - `java.nio.channels.AsynchronousSocketChannel`
 
   throws: java.nio.channels.ConnectionPendingException - If a connection operation is already in progress on this channel"
-  (^java.nio.channels.AsynchronousSocketChannel [^java.nio.channels.AsynchronousSocketChannel this ^java.net.SocketAddress local]
+  (^java.nio.channels.AsynchronousSocketChannel [^AsynchronousSocketChannel this ^java.net.SocketAddress local]
     (-> this (.bind local))))
 
 (defn get-remote-address
@@ -129,7 +129,7 @@
             connected - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  (^java.net.SocketAddress [^java.nio.channels.AsynchronousSocketChannel this]
+  (^java.net.SocketAddress [^AsynchronousSocketChannel this]
     (-> this (.getRemoteAddress))))
 
 (defn read
@@ -183,25 +183,25 @@
   timeout - The maximum time for the I/O operation to complete - `long`
   unit - The time unit of the timeout argument - `java.util.concurrent.TimeUnit`
   attachment - The object to attach to the I/O operation; can be null - `A`
-  handler - The handler for consuming the result - `A>`
+  handler - The handler for consuming the result - `java.nio.channels.CompletionHandler`
 
   returns: `<A> void`
 
   throws: java.lang.IndexOutOfBoundsException - If the pre-conditions for the offset and length parameter aren't met"
-  ([^java.nio.channels.AsynchronousSocketChannel this dsts ^Integer offset ^Integer length ^Long timeout ^java.util.concurrent.TimeUnit unit attachment handler]
+  ([^AsynchronousSocketChannel this dsts ^Integer offset ^Integer length ^Long timeout ^java.util.concurrent.TimeUnit unit attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.read dsts offset length timeout unit attachment handler)))
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer dst ^Long timeout ^java.util.concurrent.TimeUnit unit attachment handler]
+  ([^AsynchronousSocketChannel this ^java.nio.ByteBuffer dst ^Long timeout ^java.util.concurrent.TimeUnit unit attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.read dst timeout unit attachment handler)))
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer dst attachment handler]
+  ([^AsynchronousSocketChannel this ^java.nio.ByteBuffer dst attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.read dst attachment handler)))
-  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer dst]
+  (^java.util.concurrent.Future [^AsynchronousSocketChannel this ^java.nio.ByteBuffer dst]
     (-> this (.read dst))))
 
 (defn provider
   "Returns the provider that created this channel.
 
   returns: The provider that created this channel - `java.nio.channels.spi.AsynchronousChannelProvider`"
-  (^java.nio.channels.spi.AsynchronousChannelProvider [^java.nio.channels.AsynchronousSocketChannel this]
+  (^java.nio.channels.spi.AsynchronousChannelProvider [^AsynchronousSocketChannel this]
     (-> this (.provider))))
 
 (defn connect
@@ -219,14 +219,14 @@
 
   remote - The remote address to which this channel is to be connected - `java.net.SocketAddress`
   attachment - The object to attach to the I/O operation; can be null - `A`
-  handler - The handler for consuming the result - `A>`
+  handler - The handler for consuming the result - `java.nio.channels.CompletionHandler`
 
   returns: `<A> void`
 
   throws: java.nio.channels.UnresolvedAddressException - If the given remote address is not fully resolved"
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.net.SocketAddress remote attachment handler]
+  ([^AsynchronousSocketChannel this ^java.net.SocketAddress remote attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.connect remote attachment handler)))
-  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousSocketChannel this ^java.net.SocketAddress remote]
+  (^java.util.concurrent.Future [^AsynchronousSocketChannel this ^java.net.SocketAddress remote]
     (-> this (.connect remote))))
 
 (defn get-local-address
@@ -248,19 +248,19 @@
             channel's socket is not bound - `java.net.SocketAddress`
 
   throws: java.nio.channels.ClosedChannelException - If the channel is closed"
-  (^java.net.SocketAddress [^java.nio.channels.AsynchronousSocketChannel this]
+  (^java.net.SocketAddress [^AsynchronousSocketChannel this]
     (-> this (.getLocalAddress))))
 
 (defn set-option
   "Description copied from interface: NetworkChannel
 
-  name - The socket option - `java.net.SocketOption<T>`
+  name - The socket option - `java.net.SocketOption`
   value - The value of the socket option. A value of null may be a valid value for some socket options. - `T`
 
   returns: This channel - `<T> java.nio.channels.AsynchronousSocketChannel`
 
   throws: java.lang.IllegalArgumentException - If the value is not a valid value for this socket option"
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.net.SocketOption name value]
+  ([^AsynchronousSocketChannel this ^java.net.SocketOption name value]
     (-> this (.setOption name value))))
 
 (defn shutdown-input
@@ -277,7 +277,7 @@
   returns: The channel - `java.nio.channels.AsynchronousSocketChannel`
 
   throws: java.nio.channels.NotYetConnectedException - If this channel is not yet connected"
-  (^java.nio.channels.AsynchronousSocketChannel [^java.nio.channels.AsynchronousSocketChannel this]
+  (^java.nio.channels.AsynchronousSocketChannel [^AsynchronousSocketChannel this]
     (-> this (.shutdownInput))))
 
 (defn write
@@ -328,17 +328,17 @@
   timeout - The maximum time for the I/O operation to complete - `long`
   unit - The time unit of the timeout argument - `java.util.concurrent.TimeUnit`
   attachment - The object to attach to the I/O operation; can be null - `A`
-  handler - The handler for consuming the result - `A>`
+  handler - The handler for consuming the result - `java.nio.channels.CompletionHandler`
 
   returns: `<A> void`
 
   throws: java.lang.IndexOutOfBoundsException - If the pre-conditions for the offset and length parameter aren't met"
-  ([^java.nio.channels.AsynchronousSocketChannel this srcs ^Integer offset ^Integer length ^Long timeout ^java.util.concurrent.TimeUnit unit attachment handler]
+  ([^AsynchronousSocketChannel this srcs ^Integer offset ^Integer length ^Long timeout ^java.util.concurrent.TimeUnit unit attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.write srcs offset length timeout unit attachment handler)))
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer src ^Long timeout ^java.util.concurrent.TimeUnit unit attachment handler]
+  ([^AsynchronousSocketChannel this ^java.nio.ByteBuffer src ^Long timeout ^java.util.concurrent.TimeUnit unit attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.write src timeout unit attachment handler)))
-  ([^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer src attachment handler]
+  ([^AsynchronousSocketChannel this ^java.nio.ByteBuffer src attachment ^java.nio.channels.CompletionHandler handler]
     (-> this (.write src attachment handler)))
-  (^java.util.concurrent.Future [^java.nio.channels.AsynchronousSocketChannel this ^java.nio.ByteBuffer src]
+  (^java.util.concurrent.Future [^AsynchronousSocketChannel this ^java.nio.ByteBuffer src]
     (-> this (.write src))))
 

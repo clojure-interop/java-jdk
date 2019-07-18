@@ -7,8 +7,8 @@
 
   color - `java.awt.Color`
   thickness - `int`"
-  ([^java.awt.Color color ^Integer thickness]
+  (^BorderUIResource$LineBorderUIResource [^java.awt.Color color ^Integer thickness]
     (new BorderUIResource$LineBorderUIResource color thickness))
-  ([^java.awt.Color color]
+  (^BorderUIResource$LineBorderUIResource [^java.awt.Color color]
     (new BorderUIResource$LineBorderUIResource color)))
 

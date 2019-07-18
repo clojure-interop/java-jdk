@@ -70,7 +70,7 @@
 
   service-principal - the name of the service principal. An asterisk may appear by itself, to signify any service principal. - `java.lang.String`
   action - the action string - `java.lang.String`"
-  ([^java.lang.String service-principal ^java.lang.String action]
+  (^ServicePermission [^java.lang.String service-principal ^java.lang.String action]
     (new ServicePermission service-principal action)))
 
 (defn implies
@@ -83,7 +83,7 @@
 
   returns: true if the specified permission is implied by this object,
    false if not. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.ServicePermission this ^java.security.Permission p]
+  (^Boolean [^ServicePermission this ^java.security.Permission p]
     (-> this (.implies p))))
 
 (defn equals
@@ -94,14 +94,14 @@
   returns: true if obj is a ServicePermission, and has the
     same service principal, and actions as this
    ServicePermission object. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.ServicePermission this ^java.lang.Object obj]
+  (^Boolean [^ServicePermission this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code value for this object.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.security.auth.kerberos.ServicePermission this]
+  (^Integer [^ServicePermission this]
     (-> this (.hashCode))))
 
 (defn get-actions
@@ -110,7 +110,7 @@
    initiate, accept.
 
   returns: the actions of this Permission. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.kerberos.ServicePermission this]
+  (^java.lang.String [^ServicePermission this]
     (-> this (.getActions))))
 
 (defn new-permission-collection
@@ -124,6 +124,6 @@
 
   returns: a new PermissionCollection object suitable for storing
    ServicePermissions. - `java.security.PermissionCollection`"
-  (^java.security.PermissionCollection [^javax.security.auth.kerberos.ServicePermission this]
+  (^java.security.PermissionCollection [^ServicePermission this]
     (-> this (.newPermissionCollection))))
 

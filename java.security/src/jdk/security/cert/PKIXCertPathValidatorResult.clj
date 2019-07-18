@@ -33,7 +33,7 @@
   subject-public-key - the public key of the subject - `java.security.PublicKey`
 
   throws: java.lang.NullPointerException - if the subjectPublicKey or trustAnchor parameters are null"
-  ([^java.security.cert.TrustAnchor trust-anchor ^java.security.cert.PolicyNode policy-tree ^java.security.PublicKey subject-public-key]
+  (^PKIXCertPathValidatorResult [^java.security.cert.TrustAnchor trust-anchor ^java.security.cert.PolicyNode policy-tree ^java.security.PublicKey subject-public-key]
     (new PKIXCertPathValidatorResult trust-anchor policy-tree subject-public-key)))
 
 (defn get-trust-anchor
@@ -41,7 +41,7 @@
    as a trust anchor for the certification path.
 
   returns: the TrustAnchor (never null) - `java.security.cert.TrustAnchor`"
-  (^java.security.cert.TrustAnchor [^java.security.cert.PKIXCertPathValidatorResult this]
+  (^java.security.cert.TrustAnchor [^PKIXCertPathValidatorResult this]
     (-> this (.getTrustAnchor))))
 
 (defn get-policy-tree
@@ -60,7 +60,7 @@
 
   returns: the root node of the valid policy tree, or null
    if there are no valid policies - `java.security.cert.PolicyNode`"
-  (^java.security.cert.PolicyNode [^java.security.cert.PKIXCertPathValidatorResult this]
+  (^java.security.cert.PolicyNode [^PKIXCertPathValidatorResult this]
     (-> this (.getPolicyTree))))
 
 (defn get-public-key
@@ -68,14 +68,14 @@
    path, including any inherited public key parameters if applicable.
 
   returns: the public key of the subject (never null) - `java.security.PublicKey`"
-  (^java.security.PublicKey [^java.security.cert.PKIXCertPathValidatorResult this]
+  (^java.security.PublicKey [^PKIXCertPathValidatorResult this]
     (-> this (.getPublicKey))))
 
 (defn clone
   "Returns a copy of this object.
 
   returns: the copy - `java.lang.Object`"
-  (^java.lang.Object [^java.security.cert.PKIXCertPathValidatorResult this]
+  (^java.lang.Object [^PKIXCertPathValidatorResult this]
     (-> this (.clone))))
 
 (defn to-string
@@ -84,6 +84,6 @@
 
   returns: a String describing the contents of this
            PKIXCertPathValidatorResult - `java.lang.String`"
-  (^java.lang.String [^java.security.cert.PKIXCertPathValidatorResult this]
+  (^java.lang.String [^PKIXCertPathValidatorResult this]
     (-> this (.toString))))
 

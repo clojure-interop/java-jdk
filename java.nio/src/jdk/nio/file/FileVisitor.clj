@@ -71,25 +71,25 @@
    then entries in the directory are visited. If this method returns SKIP_SUBTREE or SKIP_SIBLINGS then entries in the
    directory (and any descendants) will not be visited.
 
-  dir - a reference to the directory - `FileVisitor.T`
+  dir - a reference to the directory - `T`
   attrs - the directory's basic attributes - `java.nio.file.attribute.BasicFileAttributes`
 
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.nio.file.FileVisitResult [^java.nio.file.FileVisitor this ^FileVisitor.T dir ^java.nio.file.attribute.BasicFileAttributes attrs]
+  (^java.nio.file.FileVisitResult [^FileVisitor this dir ^java.nio.file.attribute.BasicFileAttributes attrs]
     (-> this (.preVisitDirectory dir attrs))))
 
 (defn visit-file
   "Invoked for a file in a directory.
 
-  file - a reference to the file - `FileVisitor.T`
+  file - a reference to the file - `T`
   attrs - the file's basic attributes - `java.nio.file.attribute.BasicFileAttributes`
 
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.nio.file.FileVisitResult [^java.nio.file.FileVisitor this ^FileVisitor.T file ^java.nio.file.attribute.BasicFileAttributes attrs]
+  (^java.nio.file.FileVisitResult [^FileVisitor this file ^java.nio.file.attribute.BasicFileAttributes attrs]
     (-> this (.visitFile file attrs))))
 
 (defn visit-file-failed
@@ -97,13 +97,13 @@
    if the file's attributes could not be read, the file is a directory
    that could not be opened, and other reasons.
 
-  file - a reference to the file - `FileVisitor.T`
+  file - a reference to the file - `T`
   exc - the I/O exception that prevented the file from being visited - `java.io.IOException`
 
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.nio.file.FileVisitResult [^java.nio.file.FileVisitor this ^FileVisitor.T file ^java.io.IOException exc]
+  (^java.nio.file.FileVisitResult [^FileVisitor this file ^java.io.IOException exc]
     (-> this (.visitFileFailed file exc))))
 
 (defn post-visit-directory
@@ -113,12 +113,12 @@
    method returning SKIP_SIBLINGS,
    or an I/O error when iterating over the directory).
 
-  dir - a reference to the directory - `FileVisitor.T`
+  dir - a reference to the directory - `T`
   exc - null if the iteration of the directory completes without an error; otherwise the I/O exception that caused the iteration of the directory to complete prematurely - `java.io.IOException`
 
   returns: the visit result - `java.nio.file.FileVisitResult`
 
   throws: java.io.IOException - if an I/O error occurs"
-  (^java.nio.file.FileVisitResult [^java.nio.file.FileVisitor this ^FileVisitor.T dir ^java.io.IOException exc]
+  (^java.nio.file.FileVisitResult [^FileVisitor this dir ^java.io.IOException exc]
     (-> this (.postVisitDirectory dir exc))))
 

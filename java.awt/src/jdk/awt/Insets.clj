@@ -16,7 +16,7 @@
   left - the inset from the left. - `int`
   bottom - the inset from the bottom. - `int`
   right - the inset from the right. - `int`"
-  ([^Integer top ^Integer left ^Integer bottom ^Integer right]
+  (^Insets [^Integer top ^Integer left ^Integer bottom ^Integer right]
     (new Insets top left bottom right)))
 
 (defn -top
@@ -70,7 +70,7 @@
   left - the inset from the left. - `int`
   bottom - the inset from the bottom. - `int`
   right - the inset from the right. - `int`"
-  ([^java.awt.Insets this ^Integer top ^Integer left ^Integer bottom ^Integer right]
+  ([^Insets this ^Integer top ^Integer left ^Integer bottom ^Integer right]
     (-> this (.set top left bottom right))))
 
 (defn equals
@@ -83,14 +83,14 @@
 
   returns: true if the two insets are equal;
                             otherwise false. - `boolean`"
-  (^Boolean [^java.awt.Insets this ^java.lang.Object obj]
+  (^Boolean [^Insets this ^java.lang.Object obj]
     (-> this (.equals obj))))
 
 (defn hash-code
   "Returns the hash code for this Insets.
 
   returns: a hash code for this Insets. - `int`"
-  (^Integer [^java.awt.Insets this]
+  (^Integer [^Insets this]
     (-> this (.hashCode))))
 
 (defn to-string
@@ -101,13 +101,13 @@
    null.
 
   returns: a string representation of this Insets object. - `java.lang.String`"
-  (^java.lang.String [^java.awt.Insets this]
+  (^java.lang.String [^Insets this]
     (-> this (.toString))))
 
 (defn clone
   "Create a copy of this object.
 
   returns: a copy of this Insets object. - `java.lang.Object`"
-  (^java.lang.Object [^java.awt.Insets this]
+  (^java.lang.Object [^Insets this]
     (-> this (.clone))))
 

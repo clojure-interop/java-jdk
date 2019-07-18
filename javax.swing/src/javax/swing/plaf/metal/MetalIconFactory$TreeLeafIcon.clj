@@ -4,16 +4,16 @@
 
 (defn ->tree-leaf-icon
   "Constructor."
-  ([]
+  (^MetalIconFactory$TreeLeafIcon []
     (new MetalIconFactory$TreeLeafIcon )))
 
 (defn get-shift
   "returns: `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$TreeLeafIcon this]
+  (^Integer [^MetalIconFactory$TreeLeafIcon this]
     (-> this (.getShift))))
 
 (defn get-additional-height
   "returns: `int`"
-  (^Integer [^javax.swing.plaf.metal.MetalIconFactory$TreeLeafIcon this]
+  (^Integer [^MetalIconFactory$TreeLeafIcon this]
     (-> this (.getAdditionalHeight))))
 

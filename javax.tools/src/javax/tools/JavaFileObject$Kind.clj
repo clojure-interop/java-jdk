@@ -8,7 +8,7 @@
   Source files written in the Java programming language.  For
    example, regular files ending with .java.
 
-  type: javax.tools.JavaFileObject.Kind"
+  type: javax.tools.JavaFileObject$Kind"
   JavaFileObject$Kind/SOURCE)
 
 (def CLASS
@@ -17,7 +17,7 @@
   Class files for the Java Virtual Machine.  For example,
    regular files ending with .class.
 
-  type: javax.tools.JavaFileObject.Kind"
+  type: javax.tools.JavaFileObject$Kind"
   JavaFileObject$Kind/CLASS)
 
 (def HTML
@@ -25,7 +25,7 @@
 
   HTML files.  For example, regular files ending with .html.
 
-  type: javax.tools.JavaFileObject.Kind"
+  type: javax.tools.JavaFileObject$Kind"
   JavaFileObject$Kind/HTML)
 
 (def OTHER
@@ -33,7 +33,7 @@
 
   Any other kind.
 
-  type: javax.tools.JavaFileObject.Kind"
+  type: javax.tools.JavaFileObject$Kind"
   JavaFileObject$Kind/OTHER)
 
 (def -extension
@@ -55,7 +55,7 @@
   for (JavaFileObject.Kind c : JavaFileObject.Kind.values())
       System.out.println(c);
 
-  returns: an array containing the constants of this enum type, in the order they are declared - `javax.tools.JavaFileObject.Kind[]`"
+  returns: an array containing the constants of this enum type, in the order they are declared - `javax.tools.JavaFileObject$Kind[]`"
   ([]
     (JavaFileObject$Kind/values )))
 
@@ -67,9 +67,9 @@
 
   name - the name of the enum constant to be returned. - `java.lang.String`
 
-  returns: the enum constant with the specified name - `javax.tools.JavaFileObject.Kind`
+  returns: the enum constant with the specified name - `javax.tools.JavaFileObject$Kind`
 
   throws: java.lang.IllegalArgumentException - if this enum type has no constant with the specified name"
-  (^javax.tools.JavaFileObject.Kind [^java.lang.String name]
+  (^javax.tools.JavaFileObject$Kind [^java.lang.String name]
     (JavaFileObject$Kind/valueOf name)))
 

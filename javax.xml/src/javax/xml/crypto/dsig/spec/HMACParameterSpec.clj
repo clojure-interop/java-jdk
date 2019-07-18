@@ -22,13 +22,13 @@
    length.
 
   output-length - the truncation length in number of bits - `int`"
-  ([^Integer output-length]
+  (^HMACParameterSpec [^Integer output-length]
     (new HMACParameterSpec output-length)))
 
 (defn get-output-length
   "Returns the truncation length.
 
   returns: the truncation length in number of bits - `int`"
-  (^Integer [^javax.xml.crypto.dsig.spec.HMACParameterSpec this]
+  (^Integer [^HMACParameterSpec this]
     (-> this (.getOutputLength))))
 

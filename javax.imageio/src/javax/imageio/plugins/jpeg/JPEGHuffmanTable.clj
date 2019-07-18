@@ -21,7 +21,7 @@
   values - an array of shorts containing the values in order of increasing code length. - `short[]`
 
   throws: java.lang.IllegalArgumentException - if lengths or values are null, the length of lengths is greater than 16, the length of values is greater than 256, if any value in lengths or values is less than zero, or if the arrays do not describe a valid Huffman table."
-  ([lengths values]
+  (^JPEGHuffmanTable [lengths values]
     (new JPEGHuffmanTable lengths values)))
 
 (def *-std-dc-luminance
@@ -62,7 +62,7 @@
 
   returns: a short array where array[k-1]
    is equal to the number of values in the table of length k. - `short[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGHuffmanTable this]
+  ([^JPEGHuffmanTable this]
     (-> this (.getLengths))))
 
 (defn get-values
@@ -72,13 +72,13 @@
    from getLengths. The returned array is a copy.
 
   returns: a short array of values. - `short[]`"
-  ([^javax.imageio.plugins.jpeg.JPEGHuffmanTable this]
+  ([^JPEGHuffmanTable this]
     (-> this (.getValues))))
 
 (defn to-string
   "Returns a String representing this Huffman table.
 
   returns: a String representing this Huffman table. - `java.lang.String`"
-  (^java.lang.String [^javax.imageio.plugins.jpeg.JPEGHuffmanTable this]
+  (^java.lang.String [^JPEGHuffmanTable this]
     (-> this (.toString))))
 

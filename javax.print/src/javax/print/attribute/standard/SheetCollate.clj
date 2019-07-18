@@ -135,7 +135,7 @@
 
   returns: Printing attribute class (category), an instance of class
             java.lang.Class. - `java.lang.Class<? extends javax.print.attribute.Attribute>`"
-  ([^javax.print.attribute.standard.SheetCollate this]
+  ([^SheetCollate this]
     (-> this (.getCategory))))
 
 (defn get-name
@@ -145,6 +145,6 @@
    For class SheetCollate, the category name is `sheet-collate`.
 
   returns: Attribute category name. - `java.lang.String`"
-  (^java.lang.String [^javax.print.attribute.standard.SheetCollate this]
+  (^java.lang.String [^SheetCollate this]
     (-> this (.getName))))
 

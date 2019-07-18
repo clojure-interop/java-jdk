@@ -235,7 +235,7 @@
             of the first element of the buffer - `int`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  (^Integer [^java.nio.IntBuffer this]
+  (^Integer [^IntBuffer this]
     (-> this (.arrayOffset))))
 
 (defn compact
@@ -259,7 +259,7 @@
   returns: This buffer - `java.nio.IntBuffer`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is read-only"
-  (^java.nio.IntBuffer [^java.nio.IntBuffer this]
+  (^java.nio.IntBuffer [^IntBuffer this]
     (-> this (.compact))))
 
 (defn put
@@ -296,18 +296,18 @@
   returns: This buffer - `java.nio.IntBuffer`
 
   throws: java.nio.BufferOverflowException - If there is insufficient space in this buffer"
-  (^java.nio.IntBuffer [^java.nio.IntBuffer this src ^Integer offset ^Integer length]
+  (^java.nio.IntBuffer [^IntBuffer this src ^Integer offset ^Integer length]
     (-> this (.put src offset length)))
-  (^java.nio.IntBuffer [^java.nio.IntBuffer this ^Integer index ^Integer i]
+  (^java.nio.IntBuffer [^IntBuffer this ^Integer index ^Integer i]
     (-> this (.put index i)))
-  (^java.nio.IntBuffer [^java.nio.IntBuffer this ^Integer i]
+  (^java.nio.IntBuffer [^IntBuffer this ^Integer i]
     (-> this (.put i))))
 
 (defn to-string
   "Returns a string summarizing the state of this buffer.
 
   returns: A summary string - `java.lang.String`"
-  (^java.lang.String [^java.nio.IntBuffer this]
+  (^java.lang.String [^IntBuffer this]
     (-> this (.toString))))
 
 (defn duplicate
@@ -324,7 +324,7 @@
    only if, this buffer is read-only.
 
   returns: The new int buffer - `java.nio.IntBuffer`"
-  (^java.nio.IntBuffer [^java.nio.IntBuffer this]
+  (^java.nio.IntBuffer [^IntBuffer this]
     (-> this (.duplicate))))
 
 (defn has-array?
@@ -336,14 +336,14 @@
 
   returns: true if, and only if, this buffer
             is backed by an array and is not read-only - `boolean`"
-  (^Boolean [^java.nio.IntBuffer this]
+  (^Boolean [^IntBuffer this]
     (-> this (.hasArray))))
 
 (defn direct?
   "Tells whether or not this int buffer is direct.
 
   returns: true if, and only if, this buffer is direct - `boolean`"
-  (^Boolean [^java.nio.IntBuffer this]
+  (^Boolean [^IntBuffer this]
     (-> this (.isDirect))))
 
 (defn order
@@ -355,7 +355,7 @@
    byte buffer at the moment that the view is created.
 
   returns: This buffer's byte order - `java.nio.ByteOrder`"
-  (^java.nio.ByteOrder [^java.nio.IntBuffer this]
+  (^java.nio.ByteOrder [^IntBuffer this]
     (-> this (.order))))
 
 (defn slice
@@ -374,7 +374,7 @@
    is read-only.
 
   returns: The new int buffer - `java.nio.IntBuffer`"
-  (^java.nio.IntBuffer [^java.nio.IntBuffer this]
+  (^java.nio.IntBuffer [^IntBuffer this]
     (-> this (.slice))))
 
 (defn hash-code
@@ -389,7 +389,7 @@
    is known that their contents will not change.
 
   returns: The current hash code of this buffer - `int`"
-  (^Integer [^java.nio.IntBuffer this]
+  (^Integer [^IntBuffer this]
     (-> this (.hashCode))))
 
 (defn compare-to
@@ -416,7 +416,7 @@
 
   returns: A negative integer, zero, or a positive integer as this buffer
             is less than, equal to, or greater than the given buffer - `int`"
-  (^Integer [^java.nio.IntBuffer this ^java.nio.IntBuffer that]
+  (^Integer [^IntBuffer this ^java.nio.IntBuffer that]
     (-> this (.compareTo that))))
 
 (defn get
@@ -453,11 +453,11 @@
   returns: This buffer - `java.nio.IntBuffer`
 
   throws: java.nio.BufferUnderflowException - If there are fewer than length ints remaining in this buffer"
-  (^java.nio.IntBuffer [^java.nio.IntBuffer this dst ^Integer offset ^Integer length]
+  (^java.nio.IntBuffer [^IntBuffer this dst ^Integer offset ^Integer length]
     (-> this (.get dst offset length)))
-  (^Integer [^java.nio.IntBuffer this ^Integer index]
+  (^Integer [^IntBuffer this ^Integer index]
     (-> this (.get index)))
-  (^Integer [^java.nio.IntBuffer this]
+  (^Integer [^IntBuffer this]
     (-> this (.get))))
 
 (defn equals
@@ -491,7 +491,7 @@
 
   returns: true if, and only if, this buffer is equal to the
              given object - `boolean`"
-  (^Boolean [^java.nio.IntBuffer this ^java.lang.Object ob]
+  (^Boolean [^IntBuffer this ^java.lang.Object ob]
     (-> this (.equals ob))))
 
 (defn array
@@ -508,7 +508,7 @@
   returns: The array that backs this buffer - `int[]`
 
   throws: java.nio.ReadOnlyBufferException - If this buffer is backed by an array but is read-only"
-  ([^java.nio.IntBuffer this]
+  ([^IntBuffer this]
     (-> this (.array))))
 
 (defn as-read-only-buffer
@@ -528,6 +528,6 @@
    exactly the same way as the duplicate method.
 
   returns: The new, read-only int buffer - `java.nio.IntBuffer`"
-  (^java.nio.IntBuffer [^java.nio.IntBuffer this]
+  (^java.nio.IntBuffer [^IntBuffer this]
     (-> this (.asReadOnlyBuffer))))
 

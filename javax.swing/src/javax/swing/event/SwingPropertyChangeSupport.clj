@@ -15,9 +15,9 @@
   notify-on-edt - whether to notify listeners on the Event Dispatch Thread only - `boolean`
 
   throws: java.lang.NullPointerException - if sourceBean is null"
-  ([^java.lang.Object source-bean ^Boolean notify-on-edt]
+  (^SwingPropertyChangeSupport [^java.lang.Object source-bean ^Boolean notify-on-edt]
     (new SwingPropertyChangeSupport source-bean notify-on-edt))
-  ([^java.lang.Object source-bean]
+  (^SwingPropertyChangeSupport [^java.lang.Object source-bean]
     (new SwingPropertyChangeSupport source-bean)))
 
 (defn fire-property-change
@@ -37,13 +37,13 @@
   evt - the PropertyChangeEvent to be fired - `java.beans.PropertyChangeEvent`
 
   throws: java.lang.NullPointerException - if evt is null"
-  ([^javax.swing.event.SwingPropertyChangeSupport this ^java.beans.PropertyChangeEvent evt]
+  ([^SwingPropertyChangeSupport this ^java.beans.PropertyChangeEvent evt]
     (-> this (.firePropertyChange evt))))
 
 (defn notify-on-edt?
   "Returns notifyOnEDT property.
 
   returns: notifyOnEDT property - `boolean`"
-  (^Boolean [^javax.swing.event.SwingPropertyChangeSupport this]
+  (^Boolean [^SwingPropertyChangeSupport this]
     (-> this (.isNotifyOnEDT))))
 

@@ -23,14 +23,14 @@
   changes - The Children affected - `java.util.Collection`
 
   throws: java.lang.NullPointerException - if changes is null"
-  ([^java.beans.beancontext.BeanContext bc ^java.util.Collection changes]
+  (^BeanContextMembershipEvent [^java.beans.beancontext.BeanContext bc ^java.util.Collection changes]
     (new BeanContextMembershipEvent bc changes)))
 
 (defn size
   "Gets the number of children affected by the notification.
 
   returns: the number of children affected by the notification - `int`"
-  (^Integer [^java.beans.beancontext.BeanContextMembershipEvent this]
+  (^Integer [^BeanContextMembershipEvent this]
     (-> this (.size))))
 
 (defn contains
@@ -40,20 +40,20 @@
 
   returns: true if affected, false
    if not - `boolean`"
-  (^Boolean [^java.beans.beancontext.BeanContextMembershipEvent this ^java.lang.Object child]
+  (^Boolean [^BeanContextMembershipEvent this ^java.lang.Object child]
     (-> this (.contains child))))
 
 (defn to-array
   "Gets the array of children affected by this event.
 
   returns: the array of children affected - `java.lang.Object[]`"
-  ([^java.beans.beancontext.BeanContextMembershipEvent this]
+  ([^BeanContextMembershipEvent this]
     (-> this (.toArray))))
 
 (defn iterator
   "Gets the array of children affected by this event.
 
   returns: the array of children effected - `java.util.Iterator`"
-  (^java.util.Iterator [^java.beans.beancontext.BeanContextMembershipEvent this]
+  (^java.util.Iterator [^BeanContextMembershipEvent this]
     (-> this (.iterator))))
 

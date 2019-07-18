@@ -169,7 +169,7 @@
   in - input stream to read from - `java.io.InputStream`
 
   throws: java.io.StreamCorruptedException - if the stream header is incorrect"
-  ([^java.io.InputStream in]
+  (^ObjectInputStream [^java.io.InputStream in]
     (new ObjectInputStream in)))
 
 (defn read-object
@@ -195,7 +195,7 @@
   returns: the object read from the stream - `java.lang.Object`
 
   throws: java.lang.ClassNotFoundException - Class of a serialized object cannot be found."
-  (^java.lang.Object [^java.io.ObjectInputStream this]
+  (^java.lang.Object [^ObjectInputStream this]
     (-> this (.readObject))))
 
 (defn register-validation
@@ -209,7 +209,7 @@
   prio - controls the order of callbacks;zero is a good default. Use higher numbers to be called back earlier, lower numbers for later callbacks. Within a priority, callbacks are processed in no particular order. - `int`
 
   throws: java.io.NotActiveException - The stream is not currently reading objects so it is invalid to register a callback."
-  ([^java.io.ObjectInputStream this ^java.io.ObjectInputValidation obj ^Integer prio]
+  ([^ObjectInputStream this ^java.io.ObjectInputValidation obj ^Integer prio]
     (-> this (.registerValidation obj prio))))
 
 (defn read-unsigned-byte
@@ -218,7 +218,7 @@
   returns: the 8 bit byte read. - `int`
 
   throws: java.io.EOFException - If end of file is reached."
-  (^Integer [^java.io.ObjectInputStream this]
+  (^Integer [^ObjectInputStream this]
     (-> this (.readUnsignedByte))))
 
 (defn read-byte
@@ -227,7 +227,7 @@
   returns: the 8 bit byte read. - `byte`
 
   throws: java.io.EOFException - If end of file is reached."
-  (^Byte [^java.io.ObjectInputStream this]
+  (^Byte [^ObjectInputStream this]
     (-> this (.readByte))))
 
 (defn read-fully
@@ -238,9 +238,9 @@
   len - the maximum number of bytes to read - `int`
 
   throws: java.io.EOFException - If end of file is reached."
-  ([^java.io.ObjectInputStream this buf ^Integer off ^Integer len]
+  ([^ObjectInputStream this buf ^Integer off ^Integer len]
     (-> this (.readFully buf off len)))
-  ([^java.io.ObjectInputStream this buf]
+  ([^ObjectInputStream this buf]
     (-> this (.readFully buf))))
 
 (defn read-char
@@ -249,7 +249,7 @@
   returns: the 16 bit char read. - `char`
 
   throws: java.io.EOFException - If end of file is reached."
-  (^Character [^java.io.ObjectInputStream this]
+  (^Character [^ObjectInputStream this]
     (-> this (.readChar))))
 
 (defn read-fields
@@ -257,10 +257,10 @@
    name.
 
   returns: the GetField object representing the persistent
-            fields of the object being deserialized - `java.io.ObjectInputStream.GetField`
+            fields of the object being deserialized - `java.io.ObjectInputStream$GetField`
 
   throws: java.lang.ClassNotFoundException - if the class of a serialized object could not be found."
-  (^java.io.ObjectInputStream.GetField [^java.io.ObjectInputStream this]
+  (^java.io.ObjectInputStream$GetField [^ObjectInputStream this]
     (-> this (.readFields))))
 
 (defn read-unshared
@@ -300,7 +300,7 @@
   returns: reference to deserialized object - `java.lang.Object`
 
   throws: java.lang.ClassNotFoundException - if class of an object to deserialize cannot be found"
-  (^java.lang.Object [^java.io.ObjectInputStream this]
+  (^java.lang.Object [^ObjectInputStream this]
     (-> this (.readUnshared))))
 
 (defn read-float
@@ -309,7 +309,7 @@
   returns: the 32 bit float read. - `float`
 
   throws: java.io.EOFException - If end of file is reached."
-  (^Float [^java.io.ObjectInputStream this]
+  (^Float [^ObjectInputStream this]
     (-> this (.readFloat))))
 
 (defn read
@@ -325,9 +325,9 @@
             the stream is reached. - `int`
 
   throws: java.io.IOException - If an I/O error has occurred."
-  (^Integer [^java.io.ObjectInputStream this buf ^Integer off ^Integer len]
+  (^Integer [^ObjectInputStream this buf ^Integer off ^Integer len]
     (-> this (.read buf off len)))
-  (^Integer [^java.io.ObjectInputStream this]
+  (^Integer [^ObjectInputStream this]
     (-> this (.read))))
 
 (defn read-boolean
@@ -336,7 +336,7 @@
   returns: the boolean read. - `boolean`
 
   throws: java.io.EOFException - If end of file is reached."
-  (^Boolean [^java.io.ObjectInputStream this]
+  (^Boolean [^ObjectInputStream this]
     (-> this (.readBoolean))))
 
 (defn read-int
@@ -345,7 +345,7 @@
   returns: the 32 bit integer read. - `int`
 
   throws: java.io.EOFException - If end of file is reached."
-  (^Integer [^java.io.ObjectInputStream this]
+  (^Integer [^ObjectInputStream this]
     (-> this (.readInt))))
 
 (defn read-long
@@ -354,7 +354,7 @@
   returns: the read 64 bit long. - `long`
 
   throws: java.io.EOFException - If end of file is reached."
-  (^Long [^java.io.ObjectInputStream this]
+  (^Long [^ObjectInputStream this]
     (-> this (.readLong))))
 
 (defn close
@@ -362,7 +362,7 @@
    associated with the stream.
 
   throws: java.io.IOException - If an I/O error has occurred."
-  ([^java.io.ObjectInputStream this]
+  ([^ObjectInputStream this]
     (-> this (.close))))
 
 (defn default-read-object
@@ -372,7 +372,7 @@
    called otherwise.
 
   throws: java.lang.ClassNotFoundException - if the class of a serialized object could not be found."
-  ([^java.io.ObjectInputStream this]
+  ([^ObjectInputStream this]
     (-> this (.defaultReadObject))))
 
 (defn read-short
@@ -381,7 +381,7 @@
   returns: the 16 bit short read. - `short`
 
   throws: java.io.EOFException - If end of file is reached."
-  (^Short [^java.io.ObjectInputStream this]
+  (^Short [^ObjectInputStream this]
     (-> this (.readShort))))
 
 (defn skip-bytes
@@ -392,7 +392,7 @@
   returns: the actual number of bytes skipped. - `int`
 
   throws: java.io.IOException - If an I/O error has occurred."
-  (^Integer [^java.io.ObjectInputStream this ^Integer len]
+  (^Integer [^ObjectInputStream this ^Integer len]
     (-> this (.skipBytes len))))
 
 (defn read-utf
@@ -403,7 +403,7 @@
   returns: the String. - `java.lang.String`
 
   throws: java.io.IOException - if there are I/O errors while reading from the underlying InputStream"
-  (^java.lang.String [^java.io.ObjectInputStream this]
+  (^java.lang.String [^ObjectInputStream this]
     (-> this (.readUTF))))
 
 (defn read-double
@@ -412,7 +412,7 @@
   returns: the 64 bit double read. - `double`
 
   throws: java.io.EOFException - If end of file is reached."
-  (^Double [^java.io.ObjectInputStream this]
+  (^Double [^ObjectInputStream this]
     (-> this (.readDouble))))
 
 (defn available
@@ -421,17 +421,17 @@
   returns: the number of available bytes. - `int`
 
   throws: java.io.IOException - if there are I/O errors while reading from the underlying InputStream"
-  (^Integer [^java.io.ObjectInputStream this]
+  (^Integer [^ObjectInputStream this]
     (-> this (.available))))
 
 (defn read-line
   "Deprecated. This method does not properly convert bytes to characters.
             see DataInputStream for the details and alternatives.
 
-  returns: a String copy of the line. - `java.lang.  java.lang.String`
+  returns: a String copy of the line. - `java.lang.String`
 
   throws: java.io.IOException - if there are I/O errors while reading from the underlying InputStream"
-  ([^java.io.ObjectInputStream this]
+  (^java.lang.String [^ObjectInputStream this]
     (-> this (.readLine))))
 
 (defn read-unsigned-short
@@ -440,6 +440,6 @@
   returns: the 16 bit short read. - `int`
 
   throws: java.io.EOFException - If end of file is reached."
-  (^Integer [^java.io.ObjectInputStream this]
+  (^Integer [^ObjectInputStream this]
     (-> this (.readUnsignedShort))))
 

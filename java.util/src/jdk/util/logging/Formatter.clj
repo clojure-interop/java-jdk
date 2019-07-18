@@ -22,7 +22,7 @@
   record - the log record to be formatted. - `java.util.logging.LogRecord`
 
   returns: the formatted log record - `java.lang.String`"
-  (^java.lang.String [^java.util.logging.Formatter this ^java.util.logging.LogRecord record]
+  (^java.lang.String [^Formatter this ^java.util.logging.LogRecord record]
     (-> this (.format record))))
 
 (defn get-head
@@ -34,7 +34,7 @@
   h - The target handler (can be null) - `java.util.logging.Handler`
 
   returns: header string - `java.lang.String`"
-  (^java.lang.String [^java.util.logging.Formatter this ^java.util.logging.Handler h]
+  (^java.lang.String [^Formatter this ^java.util.logging.Handler h]
     (-> this (.getHead h))))
 
 (defn get-tail
@@ -46,7 +46,7 @@
   h - The target handler (can be null) - `java.util.logging.Handler`
 
   returns: tail string - `java.lang.String`"
-  (^java.lang.String [^java.util.logging.Formatter this ^java.util.logging.Handler h]
+  (^java.lang.String [^Formatter this ^java.util.logging.Handler h]
     (-> this (.getTail h))))
 
 (defn format-message
@@ -68,6 +68,6 @@
   record - the log record containing the raw message - `java.util.logging.LogRecord`
 
   returns: a localized and formatted message - `java.lang.String`"
-  (^java.lang.String [^java.util.logging.Formatter this ^java.util.logging.LogRecord record]
+  (^java.lang.String [^Formatter this ^java.util.logging.LogRecord record]
     (-> this (.formatMessage record))))
 

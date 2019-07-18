@@ -15,7 +15,7 @@
            or 0 if the value isn't available for the locale - `int`
 
   throws: java.lang.NullPointerException - if locale is null."
-  (^Integer [^java.util.spi.CalendarDataProvider this ^java.util.Locale locale]
+  (^Integer [^CalendarDataProvider this ^java.util.Locale locale]
     (-> this (.getFirstDayOfWeek locale))))
 
 (defn get-minimal-days-in-first-week
@@ -30,6 +30,6 @@
            or 0 if the value isn't available for the locale - `int`
 
   throws: java.lang.NullPointerException - if locale is null."
-  (^Integer [^java.util.spi.CalendarDataProvider this ^java.util.Locale locale]
+  (^Integer [^CalendarDataProvider this ^java.util.Locale locale]
     (-> this (.getMinimalDaysInFirstWeek locale))))
 

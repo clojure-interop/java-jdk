@@ -54,12 +54,12 @@
    numericoid = number 1*( DOT number )
 
   name - an X.500 distinguished name in RFC 1779 or RFC 2253 format - `java.lang.String`
-  keyword-map - an attribute type keyword map, where each key is a keyword String that maps to a corresponding object identifier in String form (a sequence of nonnegative integers separated by periods). The map may be empty but never null. - `java.util.Map<java.lang.String,java.lang.String>`
+  keyword-map - an attribute type keyword map, where each key is a keyword String that maps to a corresponding object identifier in String form (a sequence of nonnegative integers separated by periods). The map may be empty but never null. - `java.util.Map`
 
   throws: java.lang.NullPointerException - if name or keywordMap is null"
-  ([^java.lang.String name ^java.util.Map keyword-map]
+  (^X500Principal [^java.lang.String name ^java.util.Map keyword-map]
     (new X500Principal name keyword-map))
-  ([^java.lang.String name]
+  (^X500Principal [^java.lang.String name]
     (new X500Principal name)))
 
 (def *-rfc-1779
@@ -109,17 +109,17 @@
    implementations.
 
   format - the format to use - `java.lang.String`
-  oid-map - an OID map, where each key is an object identifier in String form (a sequence of nonnegative integers separated by periods) that maps to a corresponding attribute type keyword String. The map may be empty but never null. - `java.util.Map<java.lang.String,java.lang.String>`
+  oid-map - an OID map, where each key is an object identifier in String form (a sequence of nonnegative integers separated by periods) that maps to a corresponding attribute type keyword String. The map may be empty but never null. - `java.util.Map`
 
   returns: a string representation of this X500Principal
             using the specified format - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the specified format is invalid, null, or an OID in the name maps to an improperly specified keyword"
-  (^java.lang.String [^javax.security.auth.x500.X500Principal this ^java.lang.String format ^java.util.Map oid-map]
+  (^java.lang.String [^X500Principal this ^java.lang.String format ^java.util.Map oid-map]
     (-> this (.getName format oid-map)))
-  (^java.lang.String [^javax.security.auth.x500.X500Principal this ^java.lang.String format]
+  (^java.lang.String [^X500Principal this ^java.lang.String format]
     (-> this (.getName format)))
-  (^java.lang.String [^javax.security.auth.x500.X500Principal this]
+  (^java.lang.String [^X500Principal this]
     (-> this (.getName))))
 
 (defn get-encoded
@@ -132,7 +132,7 @@
 
   returns: a byte array containing the distinguished name in ASN.1 DER
    encoded form - `byte[]`"
-  ([^javax.security.auth.x500.X500Principal this]
+  ([^X500Principal this]
     (-> this (.getEncoded))))
 
 (defn to-string
@@ -140,7 +140,7 @@
    X500Principal.
 
   returns: a string representation of this X500Principal - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.x500.X500Principal this]
+  (^java.lang.String [^X500Principal this]
     (-> this (.toString))))
 
 (defn equals
@@ -159,7 +159,7 @@
 
   returns: true if the specified Object is equal
             to this X500Principal, false otherwise - `boolean`"
-  (^Boolean [^javax.security.auth.x500.X500Principal this ^java.lang.Object o]
+  (^Boolean [^X500Principal this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
@@ -169,6 +169,6 @@
    getName(X500Principal.CANONICAL).hashCode()
 
   returns: a hash code for this X500Principal - `int`"
-  (^Integer [^javax.security.auth.x500.X500Principal this]
+  (^Integer [^X500Principal this]
     (-> this (.hashCode))))
 

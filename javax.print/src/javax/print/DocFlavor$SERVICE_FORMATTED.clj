@@ -16,7 +16,7 @@
   class-name - Fully-qualified representation class name. - `java.lang.String`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if className is null."
-  ([^java.lang.String class-name]
+  (^DocFlavor$SERVICE_FORMATTED [^java.lang.String class-name]
     (new DocFlavor$SERVICE_FORMATTED class-name)))
 
 (def *-renderable-image
@@ -27,7 +27,7 @@
    `java.awt.image.renderable.RenderableImage`
    (renderable image object).
 
-  type: javax.print.DocFlavor.SERVICE_FORMATTED"
+  type: javax.print.DocFlavor$SERVICE_FORMATTED"
   DocFlavor$SERVICE_FORMATTED/RENDERABLE_IMAGE)
 
 (def *-printable
@@ -37,7 +37,7 @@
    representation class name = `java.awt.print.Printable`
    (printable object).
 
-  type: javax.print.DocFlavor.SERVICE_FORMATTED"
+  type: javax.print.DocFlavor$SERVICE_FORMATTED"
   DocFlavor$SERVICE_FORMATTED/PRINTABLE)
 
 (def *-pageable
@@ -47,6 +47,6 @@
    representation class name = `java.awt.print.Pageable`
    (pageable object).
 
-  type: javax.print.DocFlavor.SERVICE_FORMATTED"
+  type: javax.print.DocFlavor$SERVICE_FORMATTED"
   DocFlavor$SERVICE_FORMATTED/PAGEABLE)
 

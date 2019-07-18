@@ -6,7 +6,7 @@
 
 (defn ->synth-tree-ui
   "Constructor."
-  ([]
+  (^SynthTreeUI []
     (new SynthTreeUI )))
 
 (defn *create-ui
@@ -20,7 +20,7 @@
 
 (defn get-expanded-icon
   "returns: `javax.swing.Icon`"
-  (^javax.swing.Icon [^javax.swing.plaf.synth.SynthTreeUI this]
+  (^javax.swing.Icon [^SynthTreeUI this]
     (-> this (.getExpandedIcon))))
 
 (defn get-context
@@ -29,7 +29,7 @@
   c - Component requesting SynthContext. - `javax.swing.JComponent`
 
   returns: SynthContext describing component. - `javax.swing.plaf.synth.SynthContext`"
-  (^javax.swing.plaf.synth.SynthContext [^javax.swing.plaf.synth.SynthTreeUI this ^javax.swing.JComponent c]
+  (^javax.swing.plaf.synth.SynthContext [^SynthTreeUI this ^javax.swing.JComponent c]
     (-> this (.getContext c))))
 
 (defn update
@@ -42,7 +42,7 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthTreeUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthTreeUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.update g c))))
 
 (defn paint-border
@@ -54,7 +54,7 @@
   y - the Y coordinate - `int`
   w - width of the border - `int`
   h - height of the border - `int`"
-  ([^javax.swing.plaf.synth.SynthTreeUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
+  ([^SynthTreeUI this ^javax.swing.plaf.synth.SynthContext context ^java.awt.Graphics g ^Integer x ^Integer y ^Integer w ^Integer h]
     (-> this (.paintBorder context g x y w h))))
 
 (defn paint
@@ -64,13 +64,13 @@
 
   g - the Graphics object used for painting - `java.awt.Graphics`
   c - the component being painted - `javax.swing.JComponent`"
-  ([^javax.swing.plaf.synth.SynthTreeUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
+  ([^SynthTreeUI this ^java.awt.Graphics g ^javax.swing.JComponent c]
     (-> this (.paint g c))))
 
 (defn property-change
   "This method gets called when a bound property is changed.
 
   event - A PropertyChangeEvent object describing the event source and the property that has changed. - `java.beans.PropertyChangeEvent`"
-  ([^javax.swing.plaf.synth.SynthTreeUI this ^java.beans.PropertyChangeEvent event]
+  ([^SynthTreeUI this ^java.beans.PropertyChangeEvent event]
     (-> this (.propertyChange event))))
 

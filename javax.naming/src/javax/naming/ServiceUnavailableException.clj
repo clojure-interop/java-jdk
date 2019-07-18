@@ -17,8 +17,8 @@
    explanation. All other fields default to null.
 
   explanation - Possibly null additional detail about this exception. - `java.lang.String`"
-  ([^java.lang.String explanation]
+  (^ServiceUnavailableException [^java.lang.String explanation]
     (new ServiceUnavailableException explanation))
-  ([]
+  (^ServiceUnavailableException []
     (new ServiceUnavailableException )))
 

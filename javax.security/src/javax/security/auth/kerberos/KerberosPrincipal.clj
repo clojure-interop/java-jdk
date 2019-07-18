@@ -28,9 +28,9 @@
   name-type - the name type of the principal - `int`
 
   throws: java.lang.IllegalArgumentException - if name is improperly formatted, if name is null, if the nameType is not supported, or if name does not contain the realm to use and the default realm is not specified in either a Kerberos configuration file or via the java.security.krb5.realm system property."
-  ([^java.lang.String name ^Integer name-type]
+  (^KerberosPrincipal [^java.lang.String name ^Integer name-type]
     (new KerberosPrincipal name name-type))
-  ([^java.lang.String name]
+  (^KerberosPrincipal [^java.lang.String name]
     (new KerberosPrincipal name)))
 
 (def *-krb-nt-unknown
@@ -85,7 +85,7 @@
   "Returns the realm component of this Kerberos principal.
 
   returns: the realm component of this Kerberos principal. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.kerberos.KerberosPrincipal this]
+  (^java.lang.String [^KerberosPrincipal this]
     (-> this (.getRealm))))
 
 (defn hash-code
@@ -96,7 +96,7 @@
     hashCode = getName().hashCode();
 
   returns: a hashCode() for the KerberosPrincipal - `int`"
-  (^Integer [^javax.security.auth.kerberos.KerberosPrincipal this]
+  (^Integer [^KerberosPrincipal this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -111,7 +111,7 @@
 
   returns: true if the Object passed in represents the same principal
    as this one, false otherwise. - `boolean`"
-  (^Boolean [^javax.security.auth.kerberos.KerberosPrincipal this ^java.lang.Object other]
+  (^Boolean [^KerberosPrincipal this ^java.lang.Object other]
     (-> this (.equals other))))
 
 (defn get-name
@@ -120,7 +120,7 @@
    Section 2.1 of RFC 1964.
 
   returns: the principal name. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.kerberos.KerberosPrincipal this]
+  (^java.lang.String [^KerberosPrincipal this]
     (-> this (.getName))))
 
 (defn get-name-type
@@ -129,13 +129,13 @@
     RFC4120.
 
   returns: the name type. - `int`"
-  (^Integer [^javax.security.auth.kerberos.KerberosPrincipal this]
+  (^Integer [^KerberosPrincipal this]
     (-> this (.getNameType))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.security.auth.kerberos.KerberosPrincipal this]
+  (^java.lang.String [^KerberosPrincipal this]
     (-> this (.toString))))
 

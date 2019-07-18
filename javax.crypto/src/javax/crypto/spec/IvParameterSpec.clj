@@ -21,9 +21,9 @@
   len - the number of IV bytes. - `int`
 
   throws: java.lang.IllegalArgumentException - if iv is null or (iv.length - offset < len)"
-  ([iv ^Integer offset ^Integer len]
+  (^IvParameterSpec [iv ^Integer offset ^Integer len]
     (new IvParameterSpec iv offset len))
-  ([iv]
+  (^IvParameterSpec [iv]
     (new IvParameterSpec iv)))
 
 (defn get-iv
@@ -31,6 +31,6 @@
 
   returns: the initialization vector (IV). Returns a new array
    each time this method is called. - `byte[]`"
-  ([^javax.crypto.spec.IvParameterSpec this]
+  ([^IvParameterSpec this]
     (-> this (.getIV))))
 

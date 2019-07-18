@@ -13,7 +13,7 @@
 
 (defn ->default-desktop-manager
   "Constructor."
-  ([]
+  (^DefaultDesktopManager []
     (new DefaultDesktopManager )))
 
 (defn drag-frame
@@ -25,14 +25,14 @@
   f - `javax.swing.JComponent`
   new-x - `int`
   new-y - `int`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y]
+  ([^DefaultDesktopManager this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y]
     (-> this (.dragFrame f new-x new-y))))
 
 (defn begin-dragging-frame
   "Description copied from interface: DesktopManager
 
   f - `javax.swing.JComponent`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JComponent f]
+  ([^DefaultDesktopManager this ^javax.swing.JComponent f]
     (-> this (.beginDraggingFrame f))))
 
 (defn resize-frame
@@ -43,7 +43,7 @@
   new-y - the new y-coordinate - `int`
   new-width - the new width - `int`
   new-height - the new height - `int`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y ^Integer new-width ^Integer new-height]
+  ([^DefaultDesktopManager this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y ^Integer new-width ^Integer new-height]
     (-> this (.resizeFrame f new-x new-y new-width new-height))))
 
 (defn activate-frame
@@ -53,7 +53,7 @@
    There can be only one active frame across all Layers.
 
   f - the JInternalFrame to be activated - `javax.swing.JInternalFrame`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JInternalFrame f]
+  ([^DefaultDesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.activateFrame f))))
 
 (defn minimize-frame
@@ -61,14 +61,14 @@
    to a maximizeFrame call.
 
   f - the JInternalFrame to be restored - `javax.swing.JInternalFrame`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JInternalFrame f]
+  ([^DefaultDesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.minimizeFrame f))))
 
 (defn maximize-frame
   "Resizes the frame to fill its parents bounds.
 
   f - the frame to be resized - `javax.swing.JInternalFrame`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JInternalFrame f]
+  ([^DefaultDesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.maximizeFrame f))))
 
 (defn close-frame
@@ -76,14 +76,14 @@
    desktopIcon, from its parent.
 
   f - the JInternalFrame to be removed - `javax.swing.JInternalFrame`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JInternalFrame f]
+  ([^DefaultDesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.closeFrame f))))
 
 (defn end-resizing-frame
   "Description copied from interface: DesktopManager
 
   f - `javax.swing.JComponent`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JComponent f]
+  ([^DefaultDesktopManager this ^javax.swing.JComponent f]
     (-> this (.endResizingFrame f))))
 
 (defn open-frame
@@ -92,7 +92,7 @@
    Will remove the desktopIcon from its parent if it successfully adds the frame.
 
   f - `javax.swing.JInternalFrame`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JInternalFrame f]
+  ([^DefaultDesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.openFrame f))))
 
 (defn set-bounds-for-frame
@@ -103,7 +103,7 @@
   new-y - `int`
   new-width - `int`
   new-height - `int`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y ^Integer new-width ^Integer new-height]
+  ([^DefaultDesktopManager this ^javax.swing.JComponent f ^Integer new-x ^Integer new-y ^Integer new-width ^Integer new-height]
     (-> this (.setBoundsForFrame f new-x new-y new-width new-height))))
 
 (defn deiconify-frame
@@ -111,21 +111,21 @@
    to the parent.
 
   f - the JInternalFrame to be de-iconified - `javax.swing.JInternalFrame`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JInternalFrame f]
+  ([^DefaultDesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.deiconifyFrame f))))
 
 (defn deactivate-frame
   "Description copied from interface: DesktopManager
 
   f - `javax.swing.JInternalFrame`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JInternalFrame f]
+  ([^DefaultDesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.deactivateFrame f))))
 
 (defn end-dragging-frame
   "Description copied from interface: DesktopManager
 
   f - `javax.swing.JComponent`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JComponent f]
+  ([^DefaultDesktopManager this ^javax.swing.JComponent f]
     (-> this (.endDraggingFrame f))))
 
 (defn begin-resizing-frame
@@ -133,7 +133,7 @@
 
   f - `javax.swing.JComponent`
   direction - `int`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JComponent f ^Integer direction]
+  ([^DefaultDesktopManager this ^javax.swing.JComponent f ^Integer direction]
     (-> this (.beginResizingFrame f direction))))
 
 (defn iconify-frame
@@ -141,6 +141,6 @@
    desktopIcon to the parent.
 
   f - the JInternalFrame to be iconified - `javax.swing.JInternalFrame`"
-  ([^javax.swing.DefaultDesktopManager this ^javax.swing.JInternalFrame f]
+  ([^DefaultDesktopManager this ^javax.swing.JInternalFrame f]
     (-> this (.iconifyFrame f))))
 

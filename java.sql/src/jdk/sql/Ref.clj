@@ -30,23 +30,23 @@
   returns: the fully-qualified SQL name of the referenced SQL structured type - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.String [^java.sql.Ref this]
+  (^java.lang.String [^Ref this]
     (-> this (.getBaseTypeName))))
 
 (defn get-object
   "Retrieves the referenced object and maps it to a Java type
    using the given type map.
 
-  map - a java.util.Map object that contains the mapping to use (the fully-qualified name of the SQL structured type being referenced and the class object for SQLData implementation to which the SQL structured type will be mapped) - `java.util.Map<java.lang.String,java.lang.Class<?>>`
+  map - a java.util.Map object that contains the mapping to use (the fully-qualified name of the SQL structured type being referenced and the class object for SQLData implementation to which the SQL structured type will be mapped) - `java.util.Map`
 
   returns: a Java Object that is the custom mapping for
             the SQL structured type to which this Ref
             object refers - `java.lang.Object`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  (^java.lang.Object [^java.sql.Ref this ^java.util.Map> map]
+  (^java.lang.Object [^Ref this ^java.util.Map map]
     (-> this (.getObject map)))
-  (^java.lang.Object [^java.sql.Ref this]
+  (^java.lang.Object [^Ref this]
     (-> this (.getObject))))
 
 (defn set-object
@@ -58,6 +58,6 @@
   value - an Object representing the SQL structured type instance that this Ref object will reference - `java.lang.Object`
 
   throws: java.sql.SQLException - if a database access error occurs"
-  ([^java.sql.Ref this ^java.lang.Object value]
+  ([^Ref this ^java.lang.Object value]
     (-> this (.setObject value))))
 

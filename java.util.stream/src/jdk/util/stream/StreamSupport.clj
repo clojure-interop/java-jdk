@@ -28,12 +28,12 @@
    Non-Interference for
    more details.
 
-  supplier - a Supplier of a Spliterator - `java.util.Spliterator<T>>`
+  supplier - a Supplier of a Spliterator - `java.util.function.Supplier`
   characteristics - Spliterator characteristics of the supplied Spliterator. The characteristics must be equal to supplier.get().characteristics(), otherwise undefined behavior may occur when terminal operation commences. - `int`
   parallel - if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream. - `boolean`
 
   returns: a new sequential or parallel Stream - `<T> java.util..Stream<T>`"
-  ([^java.util.Spliterator> supplier ^Integer characteristics ^Boolean parallel]
+  ([^java.util.function.Supplier supplier ^Integer characteristics ^Boolean parallel]
     (StreamSupport/stream supplier characteristics parallel))
   ([^java.util.Spliterator spliterator ^Boolean parallel]
     (StreamSupport/stream spliterator parallel)))
@@ -59,14 +59,14 @@
    Non-Interference for
    more details.
 
-  supplier - a Supplier of a Spliterator.OfInt - `java.util.Spliterator.OfInt>`
+  supplier - a Supplier of a Spliterator.OfInt - `java.util.function.Supplier`
   characteristics - Spliterator characteristics of the supplied Spliterator.OfInt. The characteristics must be equal to supplier.get().characteristics(), otherwise undefined behavior may occur when terminal operation commences. - `int`
   parallel - if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream. - `boolean`
 
   returns: a new sequential or parallel IntStream - `java.util.stream.IntStream`"
-  (^java.util.stream.IntStream [^java.util.Spliterator.OfInt> supplier ^Integer characteristics ^Boolean parallel]
+  (^java.util.stream.IntStream [^java.util.function.Supplier supplier ^Integer characteristics ^Boolean parallel]
     (StreamSupport/intStream supplier characteristics parallel))
-  (^java.util.stream.IntStream [^java.util.Spliterator.OfInt spliterator ^Boolean parallel]
+  (^java.util.stream.IntStream [^java.util.Spliterator$OfInt spliterator ^Boolean parallel]
     (StreamSupport/intStream spliterator parallel)))
 
 (defn *long-stream
@@ -90,14 +90,14 @@
    Non-Interference for
    more details.
 
-  supplier - a Supplier of a Spliterator.OfLong - `java.util.Spliterator.OfLong>`
+  supplier - a Supplier of a Spliterator.OfLong - `java.util.function.Supplier`
   characteristics - Spliterator characteristics of the supplied Spliterator.OfLong. The characteristics must be equal to supplier.get().characteristics(), otherwise undefined behavior may occur when terminal operation commences. - `int`
   parallel - if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream. - `boolean`
 
   returns: a new sequential or parallel LongStream - `java.util.stream.LongStream`"
-  (^java.util.stream.LongStream [^java.util.Spliterator.OfLong> supplier ^Integer characteristics ^Boolean parallel]
+  (^java.util.stream.LongStream [^java.util.function.Supplier supplier ^Integer characteristics ^Boolean parallel]
     (StreamSupport/longStream supplier characteristics parallel))
-  (^java.util.stream.LongStream [^java.util.Spliterator.OfLong spliterator ^Boolean parallel]
+  (^java.util.stream.LongStream [^java.util.Spliterator$OfLong spliterator ^Boolean parallel]
     (StreamSupport/longStream spliterator parallel)))
 
 (defn *double-stream
@@ -121,13 +121,13 @@
    Non-Interference for
    more details.
 
-  supplier - A Supplier of a Spliterator.OfDouble - `java.util.Spliterator.OfDouble>`
+  supplier - A Supplier of a Spliterator.OfDouble - `java.util.function.Supplier`
   characteristics - Spliterator characteristics of the supplied Spliterator.OfDouble. The characteristics must be equal to supplier.get().characteristics(), otherwise undefined behavior may occur when terminal operation commences. - `int`
   parallel - if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream. - `boolean`
 
   returns: a new sequential or parallel DoubleStream - `java.util.stream.DoubleStream`"
-  (^java.util.stream.DoubleStream [^java.util.Spliterator.OfDouble> supplier ^Integer characteristics ^Boolean parallel]
+  (^java.util.stream.DoubleStream [^java.util.function.Supplier supplier ^Integer characteristics ^Boolean parallel]
     (StreamSupport/doubleStream supplier characteristics parallel))
-  (^java.util.stream.DoubleStream [^java.util.Spliterator.OfDouble spliterator ^Boolean parallel]
+  (^java.util.stream.DoubleStream [^java.util.Spliterator$OfDouble spliterator ^Boolean parallel]
     (StreamSupport/doubleStream spliterator parallel)))
 

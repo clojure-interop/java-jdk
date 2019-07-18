@@ -22,7 +22,7 @@
   The array index for the
    desktop system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/DESKTOP)
 
 (def *-active-caption
@@ -31,7 +31,7 @@
   The array index for the
    activeCaption system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/ACTIVE_CAPTION)
 
 (def *-active-caption-text
@@ -40,7 +40,7 @@
   The array index for the
    activeCaptionText system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/ACTIVE_CAPTION_TEXT)
 
 (def *-active-caption-border
@@ -49,7 +49,7 @@
   The array index for the
    activeCaptionBorder system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/ACTIVE_CAPTION_BORDER)
 
 (def *-inactive-caption
@@ -58,7 +58,7 @@
   The array index for the
    inactiveCaption system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/INACTIVE_CAPTION)
 
 (def *-inactive-caption-text
@@ -67,7 +67,7 @@
   The array index for the
    inactiveCaptionText system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/INACTIVE_CAPTION_TEXT)
 
 (def *-inactive-caption-border
@@ -76,7 +76,7 @@
   The array index for the
    inactiveCaptionBorder system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/INACTIVE_CAPTION_BORDER)
 
 (def *-window
@@ -85,7 +85,7 @@
   The array index for the
    window system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/WINDOW)
 
 (def *-window-border
@@ -94,7 +94,7 @@
   The array index for the
    windowBorder system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/WINDOW_BORDER)
 
 (def *-window-text
@@ -103,7 +103,7 @@
   The array index for the
    windowText system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/WINDOW_TEXT)
 
 (def *-menu
@@ -112,7 +112,7 @@
   The array index for the
    menu system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/MENU)
 
 (def *-menu-text
@@ -121,7 +121,7 @@
   The array index for the
    menuText system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/MENU_TEXT)
 
 (def *-text
@@ -130,7 +130,7 @@
   The array index for the
    text system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/TEXT)
 
 (def *-text-text
@@ -139,7 +139,7 @@
   The array index for the
    textText system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/TEXT_TEXT)
 
 (def *-text-highlight
@@ -148,7 +148,7 @@
   The array index for the
    textHighlight system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/TEXT_HIGHLIGHT)
 
 (def *-text-highlight-text
@@ -157,7 +157,7 @@
   The array index for the
    textHighlightText system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/TEXT_HIGHLIGHT_TEXT)
 
 (def *-text-inactive-text
@@ -166,7 +166,7 @@
   The array index for the
    textInactiveText system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/TEXT_INACTIVE_TEXT)
 
 (def *-control
@@ -175,7 +175,7 @@
   The array index for the
    control system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/CONTROL)
 
 (def *-control-text
@@ -184,7 +184,7 @@
   The array index for the
    controlText system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/CONTROL_TEXT)
 
 (def *-control-highlight
@@ -193,7 +193,7 @@
   The array index for the
    controlHighlight system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/CONTROL_HIGHLIGHT)
 
 (def *-control-lt-highlight
@@ -202,7 +202,7 @@
   The array index for the
    controlLtHighlight system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/CONTROL_LT_HIGHLIGHT)
 
 (def *-control-shadow
@@ -211,7 +211,7 @@
   The array index for the
    controlShadow system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/CONTROL_SHADOW)
 
 (def *-control-dk-shadow
@@ -220,7 +220,7 @@
   The array index for the
    controlDkShadow system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/CONTROL_DK_SHADOW)
 
 (def *-scrollbar
@@ -229,7 +229,7 @@
   The array index for the
    scrollbar system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/SCROLLBAR)
 
 (def *-info
@@ -238,7 +238,7 @@
   The array index for the
    info system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/INFO)
 
 (def *-info-text
@@ -247,7 +247,7 @@
   The array index for the
    infoText system color.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/INFO_TEXT)
 
 (def *-num-colors
@@ -255,7 +255,7 @@
 
   The number of system colors in the array.
 
-  type: java.lang.annotation.    int"
+  type: int"
   SystemColor/NUM_COLORS)
 
 (def *-desktop
@@ -488,6 +488,6 @@
    The returned string may be empty but may not be null.
 
   returns: a string representation of this Color - `java.lang.String`"
-  (^java.lang.String [^java.awt.SystemColor this]
+  (^java.lang.String [^SystemColor this]
     (-> this (.toString))))
 

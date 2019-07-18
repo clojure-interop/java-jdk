@@ -9,8 +9,8 @@
   Constructor that allows a specific error message to be specified.
 
   message - detail message. - `java.lang.String`"
-  ([^java.lang.String message]
+  (^AttributeNotFoundException [^java.lang.String message]
     (new AttributeNotFoundException message))
-  ([]
+  (^AttributeNotFoundException []
     (new AttributeNotFoundException )))
 

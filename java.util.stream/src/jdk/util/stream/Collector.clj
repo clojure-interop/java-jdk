@@ -120,15 +120,15 @@
 (defn supplier
   "A function that creates and returns a new mutable result container.
 
-  returns: a function which returns a new, mutable result container - `java.util.function.Supplier<Collector.A>`"
-  (^java.util.function.Supplier [^java.util.stream.Collector this]
+  returns: a function which returns a new, mutable result container - `java.util.function.Supplier<A>`"
+  (^java.util.function.Supplier [^Collector this]
     (-> this (.supplier))))
 
 (defn accumulator
   "A function that folds a value into a mutable result container.
 
-  returns: a function which folds a value into a mutable result container - `java.util.function.BiConsumer<Collector.A,Collector.T>`"
-  (^java.util.function.BiConsumer [^java.util.stream.Collector this]
+  returns: a function which folds a value into a mutable result container - `java.util.function.BiConsumer<A,T>`"
+  (^java.util.function.BiConsumer [^Collector this]
     (-> this (.accumulator))))
 
 (defn combiner
@@ -137,8 +137,8 @@
    return that, or may return a new result container.
 
   returns: a function which combines two partial results into a combined
-   result - `java.util.function.BinaryOperator<Collector.A>`"
-  (^java.util.function.BinaryOperator [^java.util.stream.Collector this]
+   result - `java.util.function.BinaryOperator<A>`"
+  (^java.util.function.BinaryOperator [^Collector this]
     (-> this (.combiner))))
 
 (defn finisher
@@ -150,33 +150,33 @@
    unchecked cast from A to R.
 
   returns: a function which transforms the intermediate result to the final
-   result - `java.util.function.Function<Collector.A,Collector.R>`"
-  (^java.util.function.Function [^java.util.stream.Collector this]
+   result - `java.util.function.Function<A,R>`"
+  (^java.util.function.Function [^Collector this]
     (-> this (.finisher))))
 
 (defn characteristics
   "Returns a Set of Collector.Characteristics indicating
    the characteristics of this Collector.  This set should be immutable.
 
-  returns: an immutable set of collector characteristics - `java.util.Set<java.util.stream.Collector.Characteristics>`"
-  (^java.util.Set [^java.util.stream.Collector this]
+  returns: an immutable set of collector characteristics - `java.util.Set<java.util.stream.Collector$Characteristics>`"
+  (^java.util.Set [^Collector this]
     (-> this (.characteristics))))
 
 (defn *of
   "Returns a new Collector described by the given supplier,
    accumulator, combiner, and finisher functions.
 
-  supplier - The supplier function for the new collector - `java.util.function.Supplier<A>`
-  accumulator - The accumulator function for the new collector - `java.util.function.BiConsumer<A,T>`
-  combiner - The combiner function for the new collector - `java.util.function.BinaryOperator<A>`
-  finisher - The finisher function for the new collector - `java.util.function.Function<A,R>`
-  characteristics - The collector characteristics for the new collector - `java.util.stream.Collector.Characteristics`
+  supplier - The supplier function for the new collector - `java.util.function.Supplier`
+  accumulator - The accumulator function for the new collector - `java.util.function.BiConsumer`
+  combiner - The combiner function for the new collector - `java.util.function.BinaryOperator`
+  finisher - The finisher function for the new collector - `java.util.function.Function`
+  characteristics - The collector characteristics for the new collector - `java.util.stream.Collector$Characteristics`
 
   returns: the new Collector - `<T,A,R> java.util.stream.Collector<T,A,R>`
 
   throws: java.lang.NullPointerException - if any argument is null"
-  ([^java.util.function.Supplier supplier ^java.util.function.BiConsumer accumulator ^java.util.function.BinaryOperator combiner ^java.util.function.Function finisher ^java.util.stream.Collector.Characteristics characteristics]
+  ([^java.util.function.Supplier supplier ^java.util.function.BiConsumer accumulator ^java.util.function.BinaryOperator combiner ^java.util.function.Function finisher ^java.util.stream.Collector$Characteristics characteristics]
     (Collector/of supplier accumulator combiner finisher characteristics))
-  ([^java.util.function.Supplier supplier ^java.util.function.BiConsumer accumulator ^java.util.function.BinaryOperator combiner ^java.util.stream.Collector.Characteristics characteristics]
+  ([^java.util.function.Supplier supplier ^java.util.function.BiConsumer accumulator ^java.util.function.BinaryOperator combiner ^java.util.stream.Collector$Characteristics characteristics]
     (Collector/of supplier accumulator combiner characteristics)))
 

@@ -31,11 +31,11 @@
   tear-off - if true, the menu is a tear-off menu. - `boolean`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."
-  ([^java.lang.String label ^Boolean tear-off]
+  (^Menu [^java.lang.String label ^Boolean tear-off]
     (new Menu label tear-off))
-  ([^java.lang.String label]
+  (^Menu [^java.lang.String label]
     (new Menu label))
-  ([]
+  (^Menu []
     (new Menu )))
 
 (defn get-item
@@ -44,19 +44,19 @@
   index - the position of the item to be returned. - `int`
 
   returns: the item located at the specified index. - `java.awt.MenuItem`"
-  (^java.awt.MenuItem [^java.awt.Menu this ^Integer index]
+  (^java.awt.MenuItem [^Menu this ^Integer index]
     (-> this (.getItem index))))
 
 (defn get-item-count
   "Get the number of items in this menu.
 
   returns: the number of items in this menu. - `int`"
-  (^Integer [^java.awt.Menu this]
+  (^Integer [^Menu this]
     (-> this (.getItemCount))))
 
 (defn add-separator
   "Adds a separator line, or a hypen, to the menu at the current position."
-  ([^java.awt.Menu this]
+  ([^Menu this]
     (-> this (.addSeparator))))
 
 (defn insert-separator
@@ -65,26 +65,26 @@
   index - the position at which the menu separator should be inserted. - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of index is less than 0."
-  ([^java.awt.Menu this ^Integer index]
+  ([^Menu this ^Integer index]
     (-> this (.insertSeparator index))))
 
 (defn add-notify
   "Creates the menu's peer.  The peer allows us to modify the
    appearance of the menu without changing its functionality."
-  ([^java.awt.Menu this]
+  ([^Menu this]
     (-> this (.addNotify))))
 
 (defn remove-notify
   "Removes the menu's peer.  The peer allows us to modify the appearance
    of the menu without changing its functionality."
-  ([^java.awt.Menu this]
+  ([^Menu this]
     (-> this (.removeNotify))))
 
 (defn remove
   "Removes the menu item at the specified index from this menu.
 
   index - the position of the item to be removed. - `int`"
-  ([^java.awt.Menu this ^Integer index]
+  ([^Menu this ^Integer index]
     (-> this (.remove index))))
 
 (defn get-accessible-context
@@ -95,7 +95,7 @@
 
   returns: an AccessibleAWTMenu that serves as the
            AccessibleContext of this Menu - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^java.awt.Menu this]
+  (^javax.accessibility.AccessibleContext [^Menu this]
     (-> this (.getAccessibleContext))))
 
 (defn param-string
@@ -106,7 +106,7 @@
    null.
 
   returns: the parameter string of this menu - `java.lang.String`"
-  (^java.lang.String [^java.awt.Menu this]
+  (^java.lang.String [^Menu this]
     (-> this (.paramString))))
 
 (defn tear-off?
@@ -118,7 +118,7 @@
 
   returns: true if this is a tear-off menu;
                            false otherwise. - `boolean`"
-  (^Boolean [^java.awt.Menu this]
+  (^Boolean [^Menu this]
     (-> this (.isTearOff))))
 
 (defn insert
@@ -129,7 +129,7 @@
   index - the position at which the menu item should be inserted. - `int`
 
   throws: java.lang.IllegalArgumentException - if the value of index is less than zero"
-  ([^java.awt.Menu this ^java.awt.MenuItem menuitem ^Integer index]
+  ([^Menu this ^java.awt.MenuItem menuitem ^Integer index]
     (-> this (.insert menuitem index))))
 
 (defn add
@@ -140,19 +140,19 @@
   mi - the menu item to be added - `java.awt.MenuItem`
 
   returns: the menu item added - `java.awt.MenuItem`"
-  (^java.awt.MenuItem [^java.awt.Menu this ^java.awt.MenuItem mi]
+  (^java.awt.MenuItem [^Menu this ^java.awt.MenuItem mi]
     (-> this (.add mi))))
 
 (defn remove-all
   "Removes all items from this menu."
-  ([^java.awt.Menu this]
+  ([^Menu this]
     (-> this (.removeAll))))
 
 (defn count-items
   "Deprecated. As of JDK version 1.1,
    replaced by getItemCount().
 
-  returns: `java.lang.  int`"
-  ([^java.awt.Menu this]
+  returns: `int`"
+  (^Integer [^Menu this]
     (-> this (.countItems))))
 

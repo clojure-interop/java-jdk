@@ -9,7 +9,7 @@
    id.
 
   id - the id of the new tag - `java.lang.String`"
-  ([^java.lang.String id]
+  (^HTML$UnknownTag [^java.lang.String id]
     (new HTML$UnknownTag id)))
 
 (defn hash-code
@@ -17,7 +17,7 @@
    for this tag.
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.swing.text.html.HTML$UnknownTag this]
+  (^Integer [^HTML$UnknownTag this]
     (-> this (.hashCode))))
 
 (defn equals
@@ -30,6 +30,6 @@
 
   returns: true if the objects are equal;
               false otherwise - `boolean`"
-  (^Boolean [^javax.swing.text.html.HTML$UnknownTag this ^java.lang.Object obj]
+  (^Boolean [^HTML$UnknownTag this ^java.lang.Object obj]
     (-> this (.equals obj))))
 

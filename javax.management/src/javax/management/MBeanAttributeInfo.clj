@@ -19,11 +19,11 @@
   descriptor - The descriptor for the attribute. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`
 
   throws: java.lang.IllegalArgumentException - if isIs is true but isReadable is not, or if isIs is true and type is not boolean or java.lang.Boolean. (New code should always use boolean rather than java.lang.Boolean.)"
-  ([^java.lang.String name ^java.lang.String type ^java.lang.String description ^Boolean is-readable ^Boolean is-writable ^Boolean is-is ^javax.management.Descriptor descriptor]
+  (^MBeanAttributeInfo [^java.lang.String name ^java.lang.String type ^java.lang.String description ^Boolean is-readable ^Boolean is-writable ^Boolean is-is ^javax.management.Descriptor descriptor]
     (new MBeanAttributeInfo name type description is-readable is-writable is-is descriptor))
-  ([^java.lang.String name ^java.lang.String type ^java.lang.String description ^Boolean is-readable ^Boolean is-writable ^Boolean is-is]
+  (^MBeanAttributeInfo [^java.lang.String name ^java.lang.String type ^java.lang.String description ^Boolean is-readable ^Boolean is-writable ^Boolean is-is]
     (new MBeanAttributeInfo name type description is-readable is-writable is-is))
-  ([^java.lang.String name ^java.lang.String description ^java.lang.reflect.Method getter ^java.lang.reflect.Method setter]
+  (^MBeanAttributeInfo [^java.lang.String name ^java.lang.String description ^java.lang.reflect.Method getter ^java.lang.reflect.Method setter]
     (new MBeanAttributeInfo name description getter setter)))
 
 (defn clone
@@ -37,42 +37,42 @@
    interest to subclasses.
 
   returns: a clone of this instance. - `java.lang.Object`"
-  (^java.lang.Object [^javax.management.MBeanAttributeInfo this]
+  (^java.lang.Object [^MBeanAttributeInfo this]
     (-> this (.clone))))
 
 (defn get-type
   "Returns the class name of the attribute.
 
   returns: the class name. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanAttributeInfo this]
+  (^java.lang.String [^MBeanAttributeInfo this]
     (-> this (.getType))))
 
 (defn readable?
   "Whether the value of the attribute can be read.
 
   returns: True if the attribute can be read, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.MBeanAttributeInfo this]
+  (^Boolean [^MBeanAttributeInfo this]
     (-> this (.isReadable))))
 
 (defn writable?
   "Whether new values can be written to the attribute.
 
   returns: True if the attribute can be written to, false otherwise. - `boolean`"
-  (^Boolean [^javax.management.MBeanAttributeInfo this]
+  (^Boolean [^MBeanAttributeInfo this]
     (-> this (.isWritable))))
 
 (defn is?
   "Indicates if this attribute has an `is` getter.
 
   returns: true if this attribute has an `is` getter. - `boolean`"
-  (^Boolean [^javax.management.MBeanAttributeInfo this]
+  (^Boolean [^MBeanAttributeInfo this]
     (-> this (.isIs))))
 
 (defn to-string
   "Description copied from class: Object
 
   returns: a string representation of the object. - `java.lang.String`"
-  (^java.lang.String [^javax.management.MBeanAttributeInfo this]
+  (^java.lang.String [^MBeanAttributeInfo this]
     (-> this (.toString))))
 
 (defn equals
@@ -83,13 +83,13 @@
   returns: true if and only if o is an MBeanAttributeInfo such
    that its MBeanFeatureInfo.getName(), getType(), MBeanFeatureInfo.getDescription(), isReadable(), isWritable(), and isIs() values are equal (not
    necessarily identical) to those of this MBeanAttributeInfo. - `boolean`"
-  (^Boolean [^javax.management.MBeanAttributeInfo this ^java.lang.Object o]
+  (^Boolean [^MBeanAttributeInfo this ^java.lang.Object o]
     (-> this (.equals o))))
 
 (defn hash-code
   "Description copied from class: Object
 
   returns: a hash code value for this object. - `int`"
-  (^Integer [^javax.management.MBeanAttributeInfo this]
+  (^Integer [^MBeanAttributeInfo this]
     (-> this (.hashCode))))
 

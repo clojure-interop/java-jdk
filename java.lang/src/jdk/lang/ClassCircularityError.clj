@@ -11,8 +11,8 @@
    message.
 
   s - The detail message - `java.lang.String`"
-  ([^java.lang.String s]
+  (^ClassCircularityError [^java.lang.String s]
     (new ClassCircularityError s))
-  ([]
+  (^ClassCircularityError []
     (new ClassCircularityError )))
 

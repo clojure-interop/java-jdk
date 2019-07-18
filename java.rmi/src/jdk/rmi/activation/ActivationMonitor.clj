@@ -29,7 +29,7 @@
   id - the object's activation identifier - `java.rmi.activation.ActivationID`
 
   throws: java.rmi.activation.UnknownObjectException - if object is unknown"
-  ([^java.rmi.activation.ActivationMonitor this ^java.rmi.activation.ActivationID id]
+  ([^ActivationMonitor this ^java.rmi.activation.ActivationID id]
     (-> this (.inactiveObject id))))
 
 (defn active-object
@@ -39,10 +39,10 @@
    is registered and `activated` itself).
 
   id - the active object's id - `java.rmi.activation.ActivationID`
-  obj - the marshalled form of the object's stub - `java.rmi.Remote>`
+  obj - the marshalled form of the object's stub - `java.rmi.MarshalledObject`
 
   throws: java.rmi.activation.UnknownObjectException - if object is unknown"
-  ([^java.rmi.activation.ActivationMonitor this ^java.rmi.activation.ActivationID id ^java.rmi.Remote> obj]
+  ([^ActivationMonitor this ^java.rmi.activation.ActivationID id ^java.rmi.MarshalledObject obj]
     (-> this (.activeObject id obj))))
 
 (defn inactive-group
@@ -55,6 +55,6 @@
   incarnation - the group's incarnation number - `long`
 
   throws: java.rmi.activation.UnknownGroupException - if group is unknown"
-  ([^java.rmi.activation.ActivationMonitor this ^java.rmi.activation.ActivationGroupID id ^Long incarnation]
+  ([^ActivationMonitor this ^java.rmi.activation.ActivationGroupID id ^Long incarnation]
     (-> this (.inactiveGroup id incarnation))))
 

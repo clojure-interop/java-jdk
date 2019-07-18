@@ -94,20 +94,20 @@
   max - the maximum value of the progress bar - `int`
 
   throws: java.lang.IllegalArgumentException - if orient is an illegal value"
-  ([^Integer orient ^Integer min ^Integer max]
+  (^JProgressBar [^Integer orient ^Integer min ^Integer max]
     (new JProgressBar orient min max))
-  ([^Integer min ^Integer max]
+  (^JProgressBar [^Integer min ^Integer max]
     (new JProgressBar min max))
-  ([^Integer orient]
+  (^JProgressBar [^Integer orient]
     (new JProgressBar orient))
-  ([]
+  (^JProgressBar []
     (new JProgressBar )))
 
 (defn add-change-listener
   "Adds the specified ChangeListener to the progress bar.
 
   l - the ChangeListener to add - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.JProgressBar this ^javax.swing.event.ChangeListener l]
+  ([^JProgressBar this ^javax.swing.event.ChangeListener l]
     (-> this (.addChangeListener l))))
 
 (defn set-string
@@ -121,7 +121,7 @@
    the isStringPainted method returns true.
 
   s - the value of the progress string - `java.lang.String`"
-  ([^javax.swing.JProgressBar this ^java.lang.String s]
+  ([^JProgressBar this ^java.lang.String s]
     (-> this (.setString s))))
 
 (defn get-orientation
@@ -131,7 +131,7 @@
    SwingConstants.HORIZONTAL.
 
   returns: HORIZONTAL or VERTICAL - `int`"
-  (^Integer [^javax.swing.JProgressBar this]
+  (^Integer [^JProgressBar this]
     (-> this (.getOrientation))))
 
 (defn get-percent-complete
@@ -139,14 +139,14 @@
    Note that this number is between 0.0 and 1.0.
 
   returns: the percent complete for this progress bar - `double`"
-  (^Double [^javax.swing.JProgressBar this]
+  (^Double [^JProgressBar this]
     (-> this (.getPercentComplete))))
 
 (defn string-painted?
   "Returns the value of the stringPainted property.
 
   returns: the value of the stringPainted property - `boolean`"
-  (^Boolean [^javax.swing.JProgressBar this]
+  (^Boolean [^JProgressBar this]
     (-> this (.isStringPainted))))
 
 (defn get-minimum
@@ -154,7 +154,7 @@
    from the BoundedRangeModel.
 
   returns: the progress bar's minimum value - `int`"
-  (^Integer [^javax.swing.JProgressBar this]
+  (^Integer [^JProgressBar this]
     (-> this (.getMinimum))))
 
 (defn get-string
@@ -165,14 +165,14 @@
 
   returns: the value of the progress string, or a simple percentage string
            if the progress string is null - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JProgressBar this]
+  (^java.lang.String [^JProgressBar this]
     (-> this (.getString))))
 
 (defn get-ui-class-id
   "Returns the name of the look-and-feel class that renders this component.
 
   returns: the string `ProgressBarUI` - `java.lang.String`"
-  (^java.lang.String [^javax.swing.JProgressBar this]
+  (^java.lang.String [^JProgressBar this]
     (-> this (.getUIClassID))))
 
 (defn get-value
@@ -182,7 +182,7 @@
    minimum and maximum values, inclusive.
 
   returns: the current value of the progress bar - `int`"
-  (^Integer [^javax.swing.JProgressBar this]
+  (^Integer [^JProgressBar this]
     (-> this (.getValue))))
 
 (defn set-border-painted
@@ -193,14 +193,14 @@
    they will ignore this property.
 
   b - true if the progress bar should paint its border; otherwise, false - `boolean`"
-  ([^javax.swing.JProgressBar this ^Boolean b]
+  ([^JProgressBar this ^Boolean b]
     (-> this (.setBorderPainted b))))
 
 (defn remove-change-listener
   "Removes a ChangeListener from the progress bar.
 
   l - the ChangeListener to remove - `javax.swing.event.ChangeListener`"
-  ([^javax.swing.JProgressBar this ^javax.swing.event.ChangeListener l]
+  ([^JProgressBar this ^javax.swing.event.ChangeListener l]
     (-> this (.removeChangeListener l))))
 
 (defn get-change-listeners
@@ -209,21 +209,21 @@
 
   returns: all of the ChangeListeners added or an empty
            array if no listeners have been added - `javax.swing.event.ChangeListener[]`"
-  ([^javax.swing.JProgressBar this]
+  ([^JProgressBar this]
     (-> this (.getChangeListeners))))
 
 (defn set-ui
   "Sets the look-and-feel object that renders this component.
 
   ui - a ProgressBarUI object - `javax.swing.plaf.ProgressBarUI`"
-  ([^javax.swing.JProgressBar this ^javax.swing.plaf.ProgressBarUI ui]
+  ([^JProgressBar this ^javax.swing.plaf.ProgressBarUI ui]
     (-> this (.setUI ui))))
 
 (defn indeterminate?
   "Returns the value of the indeterminate property.
 
   returns: the value of the indeterminate property - `boolean`"
-  (^Boolean [^javax.swing.JProgressBar this]
+  (^Boolean [^JProgressBar this]
     (-> this (.isIndeterminate))))
 
 (defn set-maximum
@@ -238,7 +238,7 @@
    all change listeners are notified.
 
   n - the new maximum - `int`"
-  ([^javax.swing.JProgressBar this ^Integer n]
+  ([^JProgressBar this ^Integer n]
     (-> this (.setMaximum n))))
 
 (defn set-indeterminate
@@ -258,14 +258,14 @@
    for examples of using indeterminate progress bars.
 
   new-value - true if the progress bar should change to indeterminate mode; false if it should revert to normal. - `boolean`"
-  ([^javax.swing.JProgressBar this ^Boolean new-value]
+  ([^JProgressBar this ^Boolean new-value]
     (-> this (.setIndeterminate new-value))))
 
 (defn get-ui
   "Returns the look-and-feel object that renders this component.
 
   returns: the ProgressBarUI object that renders this component - `javax.swing.plaf.ProgressBarUI`"
-  (^javax.swing.plaf.ProgressBarUI [^javax.swing.JProgressBar this]
+  (^javax.swing.plaf.ProgressBarUI [^JProgressBar this]
     (-> this (.getUI))))
 
 (defn set-string-painted
@@ -278,7 +278,7 @@
    or might support them only when the progress bar is in determinate mode.
 
   b - true if the progress bar should render a string - `boolean`"
-  ([^javax.swing.JProgressBar this ^Boolean b]
+  ([^JProgressBar this ^Boolean b]
     (-> this (.setStringPainted b))))
 
 (defn get-accessible-context
@@ -290,7 +290,7 @@
 
   returns: an AccessibleJProgressBar that serves as the
            AccessibleContext of this JProgressBar - `javax.accessibility.AccessibleContext`"
-  (^javax.accessibility.AccessibleContext [^javax.swing.JProgressBar this]
+  (^javax.accessibility.AccessibleContext [^JProgressBar this]
     (-> this (.getAccessibleContext))))
 
 (defn set-value
@@ -306,7 +306,7 @@
    all change listeners are notified.
 
   n - the new value - `int`"
-  ([^javax.swing.JProgressBar this ^Integer n]
+  ([^JProgressBar this ^Integer n]
     (-> this (.setValue n))))
 
 (defn set-orientation
@@ -318,21 +318,21 @@
   new-orientation - HORIZONTAL or VERTICAL - `int`
 
   throws: java.lang.IllegalArgumentException - if newOrientation is an illegal value"
-  ([^javax.swing.JProgressBar this ^Integer new-orientation]
+  ([^JProgressBar this ^Integer new-orientation]
     (-> this (.setOrientation new-orientation))))
 
 (defn border-painted?
   "Returns the borderPainted property.
 
   returns: the value of the borderPainted property - `boolean`"
-  (^Boolean [^javax.swing.JProgressBar this]
+  (^Boolean [^JProgressBar this]
     (-> this (.isBorderPainted))))
 
 (defn get-model
   "Returns the data model used by this progress bar.
 
   returns: the BoundedRangeModel currently in use - `javax.swing.BoundedRangeModel`"
-  (^javax.swing.BoundedRangeModel [^javax.swing.JProgressBar this]
+  (^javax.swing.BoundedRangeModel [^JProgressBar this]
     (-> this (.getModel))))
 
 (defn set-minimum
@@ -348,7 +348,7 @@
    all change listeners are notified.
 
   n - the new minimum - `int`"
-  ([^javax.swing.JProgressBar this ^Integer n]
+  ([^JProgressBar this ^Integer n]
     (-> this (.setMinimum n))))
 
 (defn get-maximum
@@ -356,7 +356,7 @@
    from the BoundedRangeModel.
 
   returns: the progress bar's maximum value - `int`"
-  (^Integer [^javax.swing.JProgressBar this]
+  (^Integer [^JProgressBar this]
     (-> this (.getMaximum))))
 
 (defn set-model
@@ -365,11 +365,11 @@
    and is set to 0.
 
   new-model - the BoundedRangeModel to use - `javax.swing.BoundedRangeModel`"
-  ([^javax.swing.JProgressBar this ^javax.swing.BoundedRangeModel new-model]
+  ([^JProgressBar this ^javax.swing.BoundedRangeModel new-model]
     (-> this (.setModel new-model))))
 
 (defn update-ui
   "Resets the UI property to a value from the current look and feel."
-  ([^javax.swing.JProgressBar this]
+  ([^JProgressBar this]
     (-> this (.updateUI))))
 

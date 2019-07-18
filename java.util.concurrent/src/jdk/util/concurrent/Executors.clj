@@ -43,7 +43,7 @@
    under the selected permission settings holding within that
    action; or if not possible, throw an associated AccessControlException.
 
-  callable - the underlying task - `java.util.concurrent.Callable<T>`
+  callable - the underlying task - `java.util.concurrent.Callable`
 
   returns: a callable object - `<T> java.util.concurrent.Callable<T>`
 
@@ -139,7 +139,7 @@
    under the selected permission settings holding within that
    action; or if not possible, throw an associated AccessControlException.
 
-  callable - the underlying task - `java.util.concurrent.Callable<T>`
+  callable - the underlying task - `java.util.concurrent.Callable`
 
   returns: a callable object - `<T> java.util.concurrent.Callable<T>`
 

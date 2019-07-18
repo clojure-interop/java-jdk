@@ -7,6 +7,6 @@
   "Invoked when the target of the listener has changed its state.
 
   e - a ChangeEvent object - `javax.swing.event.ChangeEvent`"
-  ([^javax.swing.event.ChangeListener this ^javax.swing.event.ChangeEvent e]
+  ([^ChangeListener this ^javax.swing.event.ChangeEvent e]
     (-> this (.stateChanged e))))
 

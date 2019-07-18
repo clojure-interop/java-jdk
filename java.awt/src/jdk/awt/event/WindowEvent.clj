@@ -32,13 +32,13 @@
   new-state - New state of the window for window state change event. See #getNewState() for allowable values - `int`
 
   throws: java.lang.IllegalArgumentException - if source is null"
-  ([^java.awt.Window source ^Integer id ^java.awt.Window opposite ^Integer old-state ^Integer new-state]
+  (^WindowEvent [^java.awt.Window source ^Integer id ^java.awt.Window opposite ^Integer old-state ^Integer new-state]
     (new WindowEvent source id opposite old-state new-state))
-  ([^java.awt.Window source ^Integer id ^Integer old-state ^Integer new-state]
+  (^WindowEvent [^java.awt.Window source ^Integer id ^Integer old-state ^Integer new-state]
     (new WindowEvent source id old-state new-state))
-  ([^java.awt.Window source ^Integer id ^java.awt.Window opposite]
+  (^WindowEvent [^java.awt.Window source ^Integer id ^java.awt.Window opposite]
     (new WindowEvent source id opposite))
-  ([^java.awt.Window source ^Integer id]
+  (^WindowEvent [^java.awt.Window source ^Integer id]
     (new WindowEvent source id)))
 
 (def *-window-first
@@ -55,7 +55,7 @@
   The window opened event.  This event is delivered only
    the first time a window is made visible.
 
-  type: java.lang.annotation.    int"
+  type: int"
   WindowEvent/WINDOW_OPENED)
 
 (def *-window-closing
@@ -67,7 +67,7 @@
    while processing this event, the window close operation will be
    cancelled.
 
-  type: java.lang.annotation.    int"
+  type: int"
   WindowEvent/WINDOW_CLOSING)
 
 (def *-window-closed
@@ -76,7 +76,7 @@
   The window closed event. This event is delivered after the displayable
    window has been closed as the result of a call to dispose.
 
-  type: java.lang.annotation.    int"
+  type: int"
   WindowEvent/WINDOW_CLOSED)
 
 (def *-window-iconified
@@ -87,7 +87,7 @@
    For many platforms, a minimized window is displayed as
    the icon specified in the window's iconImage property.
 
-  type: java.lang.annotation.    int"
+  type: int"
   WindowEvent/WINDOW_ICONIFIED)
 
 (def *-window-deiconified
@@ -96,7 +96,7 @@
   The window deiconified event type. This event is delivered when
    the window has been changed from a minimized to a normal state.
 
-  type: java.lang.annotation.    int"
+  type: int"
   WindowEvent/WINDOW_DEICONIFIED)
 
 (def *-window-activated
@@ -109,7 +109,7 @@
    active Window is always either the focused Window, or the first Frame or
    Dialog that is an owner of the focused Window.
 
-  type: java.lang.annotation.    int"
+  type: int"
   WindowEvent/WINDOW_ACTIVATED)
 
 (def *-window-deactivated
@@ -122,7 +122,7 @@
    title bar. The active Window is always either the focused Window, or the
    first Frame or Dialog that is an owner of the focused Window.
 
-  type: java.lang.annotation.    int"
+  type: int"
   WindowEvent/WINDOW_DEACTIVATED)
 
 (def *-window-gained-focus
@@ -132,7 +132,7 @@
    Window becomes the focused Window, which means that the Window, or one
    of its subcomponents, will receive keyboard events.
 
-  type: java.lang.annotation.    int"
+  type: int"
   WindowEvent/WINDOW_GAINED_FOCUS)
 
 (def *-window-lost-focus
@@ -142,7 +142,7 @@
    is no longer the focused Window, which means keyboard events will no
    longer be delivered to the Window or any of its subcomponents.
 
-  type: java.lang.annotation.    int"
+  type: int"
   WindowEvent/WINDOW_LOST_FOCUS)
 
 (def *-window-state-changed
@@ -152,7 +152,7 @@
    when a Window's state is changed by virtue of it being
    iconified, maximized etc.
 
-  type: java.lang.annotation.    int"
+  type: int"
   WindowEvent/WINDOW_STATE_CHANGED)
 
 (def *-window-last
@@ -167,7 +167,7 @@
   "Returns the originator of the event.
 
   returns: the Window object that originated the event - `java.awt.Window`"
-  (^java.awt.Window [^java.awt.event.WindowEvent this]
+  (^java.awt.Window [^WindowEvent this]
     (-> this (.getWindow))))
 
 (defn get-opposite-window
@@ -181,7 +181,7 @@
 
   returns: the other Window involved in the focus or activation change, or
            null - `java.awt.Window`"
-  (^java.awt.Window [^java.awt.event.WindowEvent this]
+  (^java.awt.Window [^WindowEvent this]
     (-> this (.getOppositeWindow))))
 
 (defn get-old-state
@@ -199,7 +199,7 @@
    and MAXIMIZED_VERT.
 
   returns: a bitwise mask of the previous window state - `int`"
-  (^Integer [^java.awt.event.WindowEvent this]
+  (^Integer [^WindowEvent this]
     (-> this (.getOldState))))
 
 (defn get-new-state
@@ -217,7 +217,7 @@
    and MAXIMIZED_VERT.
 
   returns: a bitwise mask of the new window state - `int`"
-  (^Integer [^java.awt.event.WindowEvent this]
+  (^Integer [^WindowEvent this]
     (-> this (.getNewState))))
 
 (defn param-string
@@ -225,6 +225,6 @@
    This method is useful for event-logging and for debugging.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"
-  (^java.lang.String [^java.awt.event.WindowEvent this]
+  (^java.lang.String [^WindowEvent this]
     (-> this (.paramString))))
 

@@ -12,8 +12,8 @@
    exception.
 
   s - the String that contains a detailed message - `java.lang.String`"
-  ([^java.lang.String s]
+  (^IllegalComponentStateException [^java.lang.String s]
     (new IllegalComponentStateException s))
-  ([]
+  (^IllegalComponentStateException []
     (new IllegalComponentStateException )))
 
