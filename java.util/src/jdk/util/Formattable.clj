@@ -56,7 +56,7 @@
         }
 
         public String toString() {
-            return String.format(`%s - %s`, symbol, companyName);
+            return String.format(\"%s - %s\", symbol, companyName);
         }
     }
 
@@ -65,14 +65,14 @@
   class produces the following output for various format strings.
 
   Formatter fmt = new Formatter();
-    StockName sn = new StockName(`HUGE`, `Huge Fruit, Inc.`,
-                                 `Fruit Titanesque, Inc.`);
-    fmt.format(`%s`, sn);                   //   -> `Huge Fruit, Inc.`
-    fmt.format(`%s`, sn.toString());        //   -> `HUGE - Huge Fruit, Inc.`
-    fmt.format(`%#s`, sn);                  //   -> `HUGE`
-    fmt.format(`%-10.8s`, sn);              //   -> `HUGE      `
-    fmt.format(`%.12s`, sn);                //   -> `Huge Fruit,*`
-    fmt.format(Locale.FRANCE, `%25s`, sn);  //   -> `   Fruit Titanesque, Inc.`
+    StockName sn = new StockName(\"HUGE\", \"Huge Fruit, Inc.\",
+                                 \"Fruit Titanesque, Inc.\");
+    fmt.format(\"%s\", sn);                   //   -> \"Huge Fruit, Inc.\"
+    fmt.format(\"%s\", sn.toString());        //   -> \"HUGE - Huge Fruit, Inc.\"
+    fmt.format(\"%#s\", sn);                  //   -> \"HUGE\"
+    fmt.format(\"%-10.8s\", sn);              //   -> \"HUGE      \"
+    fmt.format(\"%.12s\", sn);                //   -> \"Huge Fruit,*\"
+    fmt.format(Locale.FRANCE, \"%25s\", sn);  //   -> \"   Fruit Titanesque, Inc.\"
 
 
    Formattables are not necessarily safe for multithreaded access.  Thread

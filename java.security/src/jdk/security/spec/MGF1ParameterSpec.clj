@@ -38,7 +38,7 @@
 (def *-sha-1
   "Static Constant.
 
-  The MGF1ParameterSpec which uses `SHA-1` message digest.
+  The MGF1ParameterSpec which uses \"SHA-1\" message digest.
 
   type: java.security.spec.MGF1ParameterSpec"
   MGF1ParameterSpec/SHA1)
@@ -46,7 +46,7 @@
 (def *-sha-224
   "Static Constant.
 
-  The MGF1ParameterSpec which uses `SHA-224` message digest.
+  The MGF1ParameterSpec which uses \"SHA-224\" message digest.
 
   type: java.security.spec.MGF1ParameterSpec"
   MGF1ParameterSpec/SHA224)
@@ -54,7 +54,7 @@
 (def *-sha-256
   "Static Constant.
 
-  The MGF1ParameterSpec which uses `SHA-256` message digest.
+  The MGF1ParameterSpec which uses \"SHA-256\" message digest.
 
   type: java.security.spec.MGF1ParameterSpec"
   MGF1ParameterSpec/SHA256)
@@ -62,7 +62,7 @@
 (def *-sha-384
   "Static Constant.
 
-  The MGF1ParameterSpec which uses `SHA-384` message digest.
+  The MGF1ParameterSpec which uses \"SHA-384\" message digest.
 
   type: java.security.spec.MGF1ParameterSpec"
   MGF1ParameterSpec/SHA384)

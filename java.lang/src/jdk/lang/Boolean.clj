@@ -88,8 +88,8 @@
 (defn *to-string
   "Returns a String object representing the specified
    boolean.  If the specified boolean is true, then
-   the string `true` will be returned, otherwise the
-   string `false` will be returned.
+   the string \"true\" will be returned, otherwise the
+   string \"false\" will be returned.
 
   b - the boolean to be converted - `boolean`
 
@@ -112,9 +112,9 @@
   "Parses the string argument as a boolean.  The boolean
    returned represents the value true if the string argument
    is not null and is equal, ignoring case, to the string
-   `true`.
-   Example: Boolean.parseBoolean(`True`) returns true.
-   Example: Boolean.parseBoolean(`yes`) returns false.
+   \"true\".
+   Example: Boolean.parseBoolean(\"True\") returns true.
+   Example: Boolean.parseBoolean(\"yes\") returns false.
 
   s - the String containing the boolean representation to be parsed - `java.lang.String`
 
@@ -146,7 +146,7 @@
 (defn *get-boolean?
   "Returns true if and only if the system property
    named by the argument exists and is equal to the string
-   `true`. (Beginning with version 1.0.2 of the
+   \"true\". (Beginning with version 1.0.2 of the
    JavaTM platform, the test of
    this string is case insensitive.) A system property is accessible
    through getProperty, a method defined by the
@@ -185,8 +185,8 @@
 (defn to-string
   "Returns a String object representing this Boolean's
    value.  If this object represents the value true,
-   a string equal to `true` is returned. Otherwise, a
-   string equal to `false` is returned.
+   a string equal to \"true\" is returned. Otherwise, a
+   string equal to \"false\" is returned.
 
   returns: a string representation of this object. - `java.lang.String`"
   (^java.lang.String [^Boolean this]

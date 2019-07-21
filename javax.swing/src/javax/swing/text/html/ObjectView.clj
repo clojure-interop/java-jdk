@@ -28,8 +28,8 @@
   A simple example HTML invocation is:
 
 
-       <object classid=`javax.swing.JLabel`>
-       <param name=`text` value=`sample text`>
+       <object classid=\"javax.swing.JLabel\">
+       <param name=\"text\" value=\"sample text\">
        </object>"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.text.html ObjectView]))

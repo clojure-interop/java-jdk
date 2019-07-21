@@ -1,6 +1,6 @@
 (ns javax.xml.bind.JAXBPermission
   "This class is for JAXB permissions. A JAXBPermission
-  contains a name (also referred to as a `target name`) but
+  contains a name (also referred to as a \"target name\") but
   no actions list; you either have the named permission
   or you don't.
 
@@ -41,7 +41,7 @@
 
   Creates a new JAXBPermission with the specified name.
 
-  name - The name of the JAXBPermission. As of 2.2 only `setDatatypeConverter` is defined. - `java.lang.String`"
+  name - The name of the JAXBPermission. As of 2.2 only \"setDatatypeConverter\" is defined. - `java.lang.String`"
   (^JAXBPermission [^java.lang.String name]
     (new JAXBPermission name)))
 

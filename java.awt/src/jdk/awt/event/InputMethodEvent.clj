@@ -156,7 +156,7 @@
    This method is useful for event-logging and for debugging.
    It contains the event ID in text form, the characters of the
    committed and composed text
-   separated by `+`, the number of committed characters,
+   separated by \"+\", the number of committed characters,
    the caret, and the visible position.
 
   returns: a string identifying the event and its attributes - `java.lang.String`"

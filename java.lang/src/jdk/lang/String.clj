@@ -1,6 +1,6 @@
 (ns jdk.lang.String
   "The String class represents character strings. All
-  string literals in Java programs, such as `abc`, are
+  string literals in Java programs, such as \"abc\", are
   implemented as instances of this class.
 
   Strings are constant; their values cannot be changed after they
@@ -8,7 +8,7 @@
   Because String objects are immutable they can be shared. For example:
 
 
-      String str = `abc`;
+      String str = \"abc\";
   is equivalent to:
 
 
@@ -17,10 +17,10 @@
   Here are some more examples of how strings can be used:
 
 
-      System.out.println(`abc`);
-      String cde = `cde`;
-      System.out.println(`abc`  cde);
-      String c = `abc`.substring(2,3);
+      System.out.println(\"abc\");
+      String cde = \"cde\";
+      System.out.println(\"abc\"  cde);
+      String c = \"abc\".substring(2,3);
       String d = cde.substring(1, 2);
 
   The class String includes methods for examining
@@ -105,10 +105,10 @@
    For example,
 
 
-       String message = String.join(`-`, `Java`, `is`, `cool`);
-       // message returned is: `Java-is-cool`
+       String message = String.join(\"-\", \"Java\", \"is\", \"cool\");
+       // message returned is: \"Java-is-cool\"
 
-   Note that if an element is null, then `null` is added.
+   Note that if an element is null, then \"null\" is added.
 
   delimiter - the delimiter that separates each element - `java.lang.CharSequence`
   elements - the elements to join together. - `java.lang.CharSequence`
@@ -205,18 +205,18 @@
    If this String object represents an empty character
    sequence, or the first and last characters of character sequence
    represented by this String object both have codes
-   greater than '\u0020' (the space character), then a
+   greater than '\\u0020' (the space character), then a
    reference to this String object is returned.
 
    Otherwise, if there is no character with a code greater than
-   '\u0020' in the string, then a
+   '\\u0020' in the string, then a
    String object representing an empty string is
    returned.
 
    Otherwise, let k be the index of the first character in the
-   string whose code is greater than '\u0020', and let
+   string whose code is greater than '\\u0020', and let
    m be the index of the last character in the string whose code
-   is greater than '\u0020'. A String
+   is greater than '\\u0020'. A String
    object is returned, representing the substring of this string that
    begins with the character at index k and ends with the
    character at index m-that is, the result of
@@ -248,14 +248,14 @@
 
 
      tr (Turkish)
-     \u0130
-     \u0069
+     \\u0130
+     \\u0069
      capital letter I with dot above -> small letter i
 
 
      tr (Turkish)
-     \u0049
-     \u0131
+     \\u0049
+     \\u0131
      capital letter I -> small letter dotless i
 
 
@@ -297,7 +297,7 @@
 
 
 
-   Note that backslashes (\) and dollar signs ($) in the
+   Note that backslashes (\\) and dollar signs ($) in the
    replacement string may cause the results to be different than if it were
    being treated as a literal replacement string; see
    Matcher.replaceAll.
@@ -352,7 +352,7 @@
 
 
 
-   Note that backslashes (\) and dollar signs ($) in the
+   Note that backslashes (\\) and dollar signs ($) in the
    replacement string may cause the results to be different than if it were
    being treated as a literal replacement string; see
    Matcher.replaceFirst(java.lang.String).
@@ -426,8 +426,8 @@
    Examples:
 
 
-   `hamburger`.substring(4, 8) returns `urge`
-   `smiles`.substring(1, 5) returns `mile`
+   \"hamburger\".substring(4, 8) returns \"urge\"
+   \"smiles\".substring(1, 5) returns \"mile\"
 
   begin-index - the beginning index, inclusive. - `int`
   end-index - the ending index, exclusive. - `int`
@@ -479,13 +479,13 @@
    Examples:
 
 
-   `mesquite in your cellar`.replace('e', 'o')
-           returns `mosquito in your collar`
-   `the war of baronets`.replace('r', 'y')
-           returns `the way of bayonets`
-   `sparring with a purple porpoise`.replace('p', 't')
-           returns `starring with a turtle tortoise`
-   `JonL`.replace('q', 'x') returns `JonL` (no change)
+   \"mesquite in your cellar\".replace('e', 'o')
+           returns \"mosquito in your collar\"
+   \"the war of baronets\".replace('r', 'y')
+           returns \"the way of bayonets\"
+   \"sparring with a purple porpoise\".replace('p', 't')
+           returns \"starring with a turtle tortoise\"
+   \"JonL\".replace('q', 'x') returns \"JonL\" (no change)
 
   old-char - the old character. - `char`
   new-char - the new character. - `char`
@@ -584,7 +584,7 @@
    the pattern will be applied as many times as possible, the array can
    have any length, and trailing empty strings will be discarded.
 
-    The string `boo:and:foo`, for example, yields the
+    The string \"boo:and:foo\", for example, yields the
    following results with these parameters:
 
 
@@ -595,22 +595,22 @@
 
    :
        2
-       { `boo`, `and:foo` }
+       { \"boo\", \"and:foo\" }
    :
        5
-       { `boo`, `and`, `foo` }
+       { \"boo\", \"and\", \"foo\" }
    :
        -2
-       { `boo`, `and`, `foo` }
+       { \"boo\", \"and\", \"foo\" }
    o
        5
-       { `b`, ``, `:and:f`, ``, `` }
+       { \"b\", \"\", \":and:f\", \"\", \"\" }
    o
        -2
-       { `b`, ``, `:and:f`, ``, `` }
+       { \"b\", \"\", \":and:f\", \"\", \"\" }
    o
        0
-       { `b`, ``, `:and:f` }
+       { \"b\", \"\", \":and:f\" }
 
 
     An invocation of this method of the form
@@ -651,20 +651,20 @@
 
 
      tr (Turkish)
-     \u0069
-     \u0130
+     \\u0069
+     \\u0130
      small letter i -> capital letter I with dot above
 
 
      tr (Turkish)
-     \u0131
-     \u0049
+     \\u0131
+     \\u0049
      small letter dotless i -> capital letter I
 
 
      (all)
-     \u00df
-     \u0053 \u0053
+     \\u00df
+     \\u0053 \\u0053
      small letter sharp s -> two letters: SS
 
 
@@ -692,8 +692,8 @@
    Examples:
 
 
-   `cares`.concat(`s`) returns `caress`
-   `to`.concat(`get`).concat(`her`) returns `together`
+   \"cares\".concat(\"s\") returns \"caress\"
+   \"to\".concat(\"get\").concat(\"her\") returns \"together\"
 
   str - the String that is concatenated to the end of this String. - `java.lang.String`
 

@@ -51,7 +51,7 @@
       Description
 
 
-      `gregory`
+      \"gregory\"
       Calendar.ERA
       0
       GregorianCalendar.BC (BCE)
@@ -61,7 +61,7 @@
       GregorianCalendar.AD (CE)
 
 
-      `buddhist`
+      \"buddhist\"
       Calendar.ERA
       0
       BC (BCE)
@@ -71,7 +71,7 @@
       B.E. (Buddhist Era)
 
 
-      `japanese`
+      \"japanese\"
       Calendar.ERA
       0
       Seireki (Before Meiji)
@@ -101,7 +101,7 @@
       Year representation in SimpleDateFormat.
 
 
-      `roc`
+      \"roc\"
       Calendar.ERA
       0
       Before R.O.C.
@@ -111,7 +111,7 @@
       R.O.C.
 
 
-      `islamic`
+      \"islamic\"
       Calendar.ERA
       0
       Before AH
@@ -122,7 +122,7 @@
 
 
 
-  Calendar field value names for `gregory` must be consistent with
+  Calendar field value names for \"gregory\" must be consistent with
   the date-time symbols provided by DateFormatSymbolsProvider.
 
   Time zone names are supported by TimeZoneNameProvider."
@@ -151,10 +151,10 @@
    (LONG), Calendar.LONG_STANDALONE,
    Calendar.NARROW_FORMAT, or Calendar.NARROW_STANDALONE.
 
-   For example, the following call will return `Sunday`.
+   For example, the following call will return \"Sunday\".
 
 
-   getDisplayName(`gregory`, Calendar.DAY_OF_WEEK, Calendar.SUNDAY,
+   getDisplayName(\"gregory\", Calendar.DAY_OF_WEEK, Calendar.SUNDAY,
                   Calendar.LONG_STANDALONE, Locale.ENGLISH);
 
   calendar-type - the calendar type. (Any calendar type given by locale is ignored.) - `java.lang.String`
@@ -182,15 +182,15 @@
    style gives the style of the string representation. It must be
    one of Calendar.ALL_STYLES, Calendar.SHORT_FORMAT (SHORT), Calendar.SHORT_STANDALONE, Calendar.LONG_FORMAT (LONG), Calendar.LONG_STANDALONE, Calendar.NARROW_FORMAT, or
    Calendar.NARROW_STANDALONE. Note that narrow names may
-   not be unique due to use of single characters, such as `S` for Sunday
+   not be unique due to use of single characters, such as \"S\" for Sunday
    and Saturday, and that no narrow names are included in that case.
 
    For example, the following call will return a Map containing
-   `January` to Calendar.JANUARY, `Jan` to Calendar.JANUARY, `February` to Calendar.FEBRUARY,
-   `Feb` to Calendar.FEBRUARY, and so on.
+   \"January\" to Calendar.JANUARY, \"Jan\" to Calendar.JANUARY, \"February\" to Calendar.FEBRUARY,
+   \"Feb\" to Calendar.FEBRUARY, and so on.
 
 
-   getDisplayNames(`gregory`, Calendar.MONTH, Calendar.ALL_STYLES, Locale.ENGLISH);
+   getDisplayNames(\"gregory\", Calendar.MONTH, Calendar.ALL_STYLES, Locale.ENGLISH);
 
   calendar-type - the calendar type. (Any calendar type given by locale is ignored.) - `java.lang.String`
   field - the calendar field for which the display names are returned - `int`

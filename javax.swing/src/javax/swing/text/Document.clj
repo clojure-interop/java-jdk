@@ -20,10 +20,10 @@
 
 
   In the example, if the content of a document is the
-  sequence `The quick brown fox,` as shown in the preceding diagram,
-  the location just before the word `The` is 0, and the location after
-  the word `The` and before the whitespace that follows it is 3.
-  The entire sequence of characters in the sequence `The` is called a
+  sequence \"The quick brown fox,\" as shown in the preceding diagram,
+  the location just before the word \"The\" is 0, and the location after
+  the word \"The\" and before the whitespace that follows it is 3.
+  The entire sequence of characters in the sequence \"The\" is called a
   range.
   The following methods give access to the character data
   that makes up the content.

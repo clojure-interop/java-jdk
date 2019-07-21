@@ -10,9 +10,9 @@
   the user can drag out a tool bar into a separate window
   (unless the floatable property is set to false).
   For drag-out to work correctly, it is recommended that you add
-  JToolBar instances to one of the four `sides` of a
+  JToolBar instances to one of the four \"sides\" of a
   container whose layout manager is a BorderLayout,
-  and do not add children to any of the other four `sides`.
+  and do not add children to any of the other four \"sides\".
 
   Warning: Swing is not thread safe. For more
   information see Swing's Threading
@@ -117,7 +117,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `ToolBarUI` - `java.lang.String`"
+  returns: the string \"ToolBarUI\" - `java.lang.String`"
   (^java.lang.String [^JToolBar this]
     (-> this (.getUIClassID))))
 

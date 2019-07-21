@@ -172,15 +172,15 @@
     (-> this (.createStandardLabels increment))))
 
 (defn get-extent
-  "Returns the `extent` from the BoundedRangeModel.
-   This represents the range of values `covered` by the knob.
+  "Returns the \"extent\" from the BoundedRangeModel.
+   This represents the range of values \"covered\" by the knob.
 
   returns: an int representing the extent - `int`"
   (^Integer [^JSlider this]
     (-> this (.getExtent))))
 
 (defn set-extent
-  "Sets the size of the range `covered` by the knob.  Most look
+  "Sets the size of the range \"covered\" by the knob.  Most look
    and feel implementations will change the value by this amount
    if the user clicks on either side of the knob.  This method just
    forwards the new extent value to the model.
@@ -200,7 +200,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: `SliderUI` - `java.lang.String`"
+  returns: \"SliderUI\" - `java.lang.String`"
   (^java.lang.String [^JSlider this]
     (-> this (.getUIClassID))))
 
@@ -498,8 +498,8 @@
    > 0, and getPaintLabels returns
    true, a standard label table will be generated (by calling
    createStandardLabels) with labels at the major tick marks.
-   For the example above, you would get text labels: `0`,
-   `10`, `20`, `30`, `40`, `50`.
+   For the example above, you would get text labels: \"0\",
+   \"10\", \"20\", \"30\", \"40\", \"50\".
    The label table is then set on the slider by calling
    setLabelTable.
 

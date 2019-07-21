@@ -36,7 +36,7 @@
 
    If the local part is null an
    IllegalArgumentException is thrown.
-   A local part of `` is allowed to preserve
+   A local part of \"\" is allowed to preserve
    compatible behavior with QName 1.0.
 
    If the prefix is null, an
@@ -79,7 +79,7 @@
    by James Clark.  Although this is not a standard
    specification, it is in common use, e.g. Transformer.setParameter(String name, Object value).
    This implementation parses a String formatted
-   as: `{`  Namespace URI  `}`  local part.  If the Namespace
+   as: \"{\"  Namespace URI  \"}\"  local part.  If the Namespace
    URI .equals(XMLConstants.NULL_NS_URI), only the
    local part should be provided.
 
@@ -178,7 +178,7 @@
    by James Clark.  Although this is not a standard
    specification, it is in common use, e.g. Transformer.setParameter(String name, Object value).
    This implementation represents a QName as:
-   `{`  Namespace URI  `}`  local part.  If the Namespace URI
+   \"{\"  Namespace URI  \"}\"  local part.  If the Namespace URI
    .equals(XMLConstants.NULL_NS_URI), only the
    local part is returned.  An appropriate use of this method is
    for debugging or logging for human consumption.

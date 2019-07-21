@@ -11,14 +11,14 @@
    The getAttribute and
   setAttribute methods may also be
   used to read or update the owner. In that case, the owner attribute is
-  identified by the name `owner`, and the value of the attribute is
+  identified by the name \"owner\", and the value of the attribute is
   a UserPrincipal."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.nio.file.attribute FileOwnerAttributeView]))
 
 (defn name
   "Returns the name of the attribute view. Attribute views of this type
-   have the name `owner`.
+   have the name \"owner\".
 
   returns: the name of the attribute view - `java.lang.String`"
   (^java.lang.String [^FileOwnerAttributeView this]

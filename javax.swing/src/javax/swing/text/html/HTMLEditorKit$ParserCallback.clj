@@ -19,7 +19,7 @@
   "Static Constant.
 
   This is passed as an attribute in the attributeset to indicate
-   the element is implied eg, the string '<>foo<\t>'
+   the element is implied eg, the string '<>foo<\\t>'
    contains an implied html element and an implied body element.
 
   type: java.lang.Object"
@@ -70,8 +70,8 @@
 
 (defn handle-end-of-line-string
   "This is invoked after the stream has been parsed, but before
-   flush. eol will be one of \n, \r
-   or \r\n, which ever is encountered the most in parsing the
+   flush. eol will be one of \\n, \\r
+   or \\r\\n, which ever is encountered the most in parsing the
    stream.
 
   eol - `java.lang.String`"

@@ -44,7 +44,7 @@
    The thread ID property will be initialized with a unique ID for
    the current thread.
 
-   All other properties will be initialized to `null`.
+   All other properties will be initialized to \"null\".
 
   level - a logging level value - `java.util.logging.Level`
   msg - the raw non-localized logging message (may be null) - `java.lang.String`"
@@ -229,9 +229,9 @@
     (-> this (.setThreadID thread-id))))
 
 (defn get-message
-  "Get the `raw` log message, before localization or formatting.
+  "Get the \"raw\" log message, before localization or formatting.
 
-   May be null, which is equivalent to the empty string ``.
+   May be null, which is equivalent to the empty string \"\".
 
    This message may be either the final text or a localization key.
 
@@ -252,7 +252,7 @@
     (-> this (.setMillis millis))))
 
 (defn set-message
-  "Set the `raw` log message, before localization or formatting.
+  "Set the \"raw\" log message, before localization or formatting.
 
   message - the raw message string (may be null) - `java.lang.String`"
   ([^LogRecord this ^java.lang.String message]

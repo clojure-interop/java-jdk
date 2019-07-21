@@ -120,7 +120,7 @@
 (defn cancel-latest-committed-text
   "Gets the latest committed text from the text editing component and
    removes it from the component's text body.
-   This is used for the `Undo Commit` feature in some input methods, where
+   This is used for the \"Undo Commit\" feature in some input methods, where
    the committed text reverts to its previous composed state. The composed
    text will be sent to the component using an InputMethodEvent.
 
@@ -138,7 +138,7 @@
 
   attributes - a list of attributes that the input method is interested in - `java.text.AttributedCharacterIterator$Attribute[]`
 
-  returns: the latest committed text, or null when the `Undo Commit`
+  returns: the latest committed text, or null when the \"Undo Commit\"
    feature is not supported - `java.text.AttributedCharacterIterator`"
   (^java.text.AttributedCharacterIterator [^InputMethodRequests this attributes]
     (-> this (.cancelLatestCommittedText attributes))))
@@ -146,7 +146,7 @@
 (defn get-selected-text
   "Gets the currently selected text from the text editing component.
    This may be used for a variety of purposes.
-   One of them is the `Reconvert` feature in some input methods.
+   One of them is the \"Reconvert\" feature in some input methods.
    In this case, the input method will typically send an input method event
    to replace the selected text with composed text. Depending on the input
    method's capabilities, this may be the original composed text for the

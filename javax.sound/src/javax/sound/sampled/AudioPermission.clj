@@ -46,7 +46,7 @@
   "Constructor.
 
   Creates a new AudioPermission object that has the specified
-   symbolic name, such as `play` or `record`.  The actions
+   symbolic name, such as \"play\" or \"record\".  The actions
    parameter is currently unused and should be null.
 
   name - the name of the new AudioPermission - `java.lang.String`

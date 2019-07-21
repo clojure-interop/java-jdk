@@ -21,65 +21,65 @@
   (^QuadCurve2D$Float []
     (new QuadCurve2D$Float )))
 
-(defn -x-1
+(defn x-1
   "Instance Field.
 
   The X coordinate of the start point of the quadratic curve
    segment.
 
   type: float"
-  [this]
-  (-> this .-x1))
+  (^Float [^QuadCurve2D$Float this]
+    (-> this .-x1)))
 
-(defn -y-1
+(defn y-1
   "Instance Field.
 
   The Y coordinate of the start point of the quadratic curve
    segment.
 
   type: float"
-  [this]
-  (-> this .-y1))
+  (^Float [^QuadCurve2D$Float this]
+    (-> this .-y1)))
 
-(defn -ctrlx
+(defn ctrlx
   "Instance Field.
 
   The X coordinate of the control point of the quadratic curve
    segment.
 
   type: float"
-  [this]
-  (-> this .-ctrlx))
+  (^Float [^QuadCurve2D$Float this]
+    (-> this .-ctrlx)))
 
-(defn -ctrly
+(defn ctrly
   "Instance Field.
 
   The Y coordinate of the control point of the quadratic curve
    segment.
 
   type: float"
-  [this]
-  (-> this .-ctrly))
+  (^Float [^QuadCurve2D$Float this]
+    (-> this .-ctrly)))
 
-(defn -x-2
+(defn x-2
   "Instance Field.
 
   The X coordinate of the end point of the quadratic curve
    segment.
 
   type: float"
-  [this]
-  (-> this .-x2))
+  (^Float [^QuadCurve2D$Float this]
+    (-> this .-x2)))
 
-(defn -y-2
+(defn y-2
   "Instance Field.
 
   The Y coordinate of the end point of the quadratic curve
    segment.
 
   type: float"
-  [this]
-  (-> this .-y2))
+  (^Float [^QuadCurve2D$Float this]
+    (-> this .-y2)))
 
 (defn get-x-1
   "Returns the X coordinate of the start point in

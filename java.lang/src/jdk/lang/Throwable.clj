@@ -24,7 +24,7 @@
   contain a cause: another throwable that caused this
   throwable to be constructed.  The recording of this causal information
   is referred to as the chained exception facility, as the
-  cause can, itself, have a cause, and so on, leading to a `chain` of
+  cause can, itself, have a cause, and so on, leading to a \"chain\" of
   exceptions, each caused by another.
 
   One reason that a throwable may have a cause is that the class that
@@ -34,7 +34,7 @@
   it is generally unrelated to the abstraction provided by the upper layer.
   Further, doing so would tie the API of the upper layer to the details of
   its implementation, assuming the lower layer's exception was a checked
-  exception.  Throwing a `wrapped exception` (i.e., an exception containing a
+  exception.  Throwing a \"wrapped exception\" (i.e., an exception containing a
   cause) allows the upper layer to communicate the details of the failure to
   its caller without incurring either of these shortcomings.  It preserves
   the flexibility to change the implementation of the upper layer without
@@ -61,7 +61,7 @@
   Throwable constructors that takes a cause.
 
   Because the initCause method is public, it allows a cause to be
-  associated with any throwable, even a `legacy throwable` whose
+  associated with any throwable, even a \"legacy throwable\" whose
   implementation predates the addition of the exception chaining mechanism to
   Throwable.
 
@@ -205,7 +205,7 @@
    The result is the concatenation of:
 
     the name of the class of this object
-    `: ` (a colon and a space)
+    \": \" (a colon and a space)
     the result of invoking this object's getLocalizedMessage()
         method
 
@@ -302,7 +302,7 @@
    creation with the initCause(Throwable) method.  While it is
    typically unnecessary to override this method, a subclass can override
    it to return a cause set by some other means.  This is appropriate for
-   a `legacy chained throwable` that predates the addition of chained
+   a \"legacy chained throwable\" that predates the addition of chained
    exceptions to Throwable.  Note that it is not
    necessary to override any of the PrintStackTrace methods,
    all of which invoke the getCause method to determine the

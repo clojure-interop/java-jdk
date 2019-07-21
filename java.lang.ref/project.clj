@@ -1,4 +1,4 @@
-(defproject clojure-interop/java.lang.ref "1.0.4"
+(defproject clojure-interop/java.lang.ref "1.0.5"
   :description "Clojure to Java Interop Bindings for java.lang.ref"
   :url "https://github.com/clojure-interop/java-jdk"
   :license {:name "Eclipse Public License"

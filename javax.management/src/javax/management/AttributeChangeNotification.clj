@@ -15,7 +15,7 @@
   is modified, myMbean creates and emits the following notification:
 
   new AttributeChangeNotification(myMbean, sequenceNumber, timeStamp, msg,
-                                  `myString`, `String`, oldValue, newValue);"
+                                  \"myString\", \"String\", oldValue, newValue);"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.management AttributeChangeNotification]))
 

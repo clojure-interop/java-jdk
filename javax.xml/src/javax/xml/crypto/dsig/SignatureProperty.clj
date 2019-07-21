@@ -5,14 +5,14 @@
   The XML Schema Definition is defined as:
 
 
- <element name=`SignatureProperty` type=`ds:SignaturePropertyType`/>
-    <complexType name=`SignaturePropertyType` mixed=`true`>
-      <choice maxOccurs=`unbounded`>
-        <any namespace=`##other` processContents=`lax`/>
+ <element name=\"SignatureProperty\" type=\"ds:SignaturePropertyType\"/>
+    <complexType name=\"SignaturePropertyType\" mixed=\"true\">
+      <choice maxOccurs=\"unbounded\">
+        <any namespace=\"##other\" processContents=\"lax\"/>
         <!-- (1,1) elements from (1, unbounded) namespaces -->
       </choice>
-      <attribute name=`Target` type=`anyURI` use=`required`/>
-      <attribute name=`Id` type=`ID` use=`optional`/>
+      <attribute name=\"Target\" type=\"anyURI\" use=\"required\"/>
+      <attribute name=\"Id\" type=\"ID\" use=\"optional\"/>
     </complexType>
 
   A SignatureProperty instance may be created by invoking the
@@ -21,9 +21,9 @@
 
 
 
-    XMLSignatureFactory factory = XMLSignatureFactory.getInstance(`DOM`);
+    XMLSignatureFactory factory = XMLSignatureFactory.getInstance(\"DOM\");
     SignatureProperty property = factory.newSignatureProperty
-       (Collections.singletonList(content), `#Signature-1`, `TimeStamp`);"
+       (Collections.singletonList(content), \"#Signature-1\", \"TimeStamp\");"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.crypto.dsig SignatureProperty]))
 

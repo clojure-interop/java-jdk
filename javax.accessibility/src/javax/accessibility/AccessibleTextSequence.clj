@@ -19,30 +19,30 @@
   (^AccessibleTextSequence [^Integer start ^Integer end ^java.lang.String txt]
     (new AccessibleTextSequence start end txt)))
 
-(defn -start-index
+(defn start-index
   "Instance Field.
 
   The start index of the text sequence
 
   type: int"
-  [this]
-  (-> this .-startIndex))
+  (^Integer [^AccessibleTextSequence this]
+    (-> this .-startIndex)))
 
-(defn -end-index
+(defn end-index
   "Instance Field.
 
   The end index of the text sequence
 
   type: int"
-  [this]
-  (-> this .-endIndex))
+  (^Integer [^AccessibleTextSequence this]
+    (-> this .-endIndex)))
 
-(defn -text
+(defn text
   "Instance Field.
 
   The text
 
   type: java.lang.String"
-  [this]
-  (-> this .-text))
+  (^java.lang.String [^AccessibleTextSequence this]
+    (-> this .-text)))
 

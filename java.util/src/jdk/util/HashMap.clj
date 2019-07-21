@@ -10,7 +10,7 @@
   This implementation provides constant-time performance for the basic
   operations (get and put), assuming the hash function
   disperses the elements properly among the buckets.  Iteration over
-  collection views requires time proportional to the `capacity` of the
+  collection views requires time proportional to the \"capacity\" of the
   HashMap instance (the number of buckets) plus its size (the number
   of key-value mappings).  Thus, it's very important not to set the initial
   capacity too high (or the load factor too low) if iteration performance is
@@ -56,14 +56,14 @@
   structural modification.)  This is typically accomplished by
   synchronizing on some object that naturally encapsulates the map.
 
-  If no such object exists, the map should be `wrapped` using the
+  If no such object exists, the map should be \"wrapped\" using the
   Collections.synchronizedMap
   method.  This is best done at creation time, to prevent accidental
   unsynchronized access to the map:
 
     Map m = Collections.synchronizedMap(new HashMap(...));
 
-  The iterators returned by all of this class's `collection view methods`
+  The iterators returned by all of this class's \"collection view methods\"
   are fail-fast: if the map is structurally modified at any time after
   the iterator is created, in any way except through the iterator's own
   remove method, the iterator will throw a

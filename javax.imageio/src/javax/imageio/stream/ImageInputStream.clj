@@ -2,7 +2,7 @@
   "A seekable input stream interface for use by
   ImageReaders.  Various input sources, such as
   InputStreams and Files,
-  as well as future fast I/O sources may be `wrapped` by a suitable
+  as well as future fast I/O sources may be \"wrapped\" by a suitable
   implementation of this interface for use by the Image I/O API."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.imageio.stream ImageInputStream]))
@@ -424,8 +424,8 @@
    the next group.
 
     If the first byte of a group matches the bit pattern
-   0xxxxxxx (where x means `may be
-   0 or 1`), then the group consists of
+   0xxxxxxx (where x means \"may be
+   0 or 1\"), then the group consists of
    just that byte. The byte is zero-extended to form a character.
 
     If the first byte of a group matches the bit pattern
@@ -611,18 +611,18 @@
     If end of file is encountered before even one byte can be
    read, then null is returned. Otherwise, each byte
    that is read is converted to type char by
-   zero-extension. If the character '\n' is
+   zero-extension. If the character '\\n' is
    encountered, it is discarded and reading ceases. If the
-   character '\r' is encountered, it is discarded
+   character '\\r' is encountered, it is discarded
    and, if the following byte converts  to the character
-   '\n', then that is discarded also; reading then
+   '\\n', then that is discarded also; reading then
    ceases. If end of file is encountered before either of the
-   characters '\n' and '\r' is
+   characters '\\n' and '\\r' is
    encountered, reading ceases. Once reading has ceased, a
    String is returned that contains all the
    characters read and not discarded, taken in order.  Note that
    every character in this string will have a value less than
-   \u0100, that is, (char)256.
+   \\u0100, that is, (char)256.
 
     The bit offset within the stream is reset to zero before
    the read occurs.

@@ -28,7 +28,7 @@
 
     SecondaryLoop loop;
 
-    JButton jButton = new JButton(`Button`);
+    JButton jButton = new JButton(\"Button\");
     jButton.addActionListener(new ActionListener() {
          @Override
         public void actionPerformed(ActionEvent e) {

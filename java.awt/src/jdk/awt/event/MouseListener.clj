@@ -1,5 +1,5 @@
 (ns jdk.awt.event.MouseListener
-  "The listener interface for receiving `interesting` mouse events
+  "The listener interface for receiving \"interesting\" mouse events
   (press, release, click, enter, and exit) on a component.
   (To track mouse moves and mouse drags, use the
   MouseMotionListener.)

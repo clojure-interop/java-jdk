@@ -104,8 +104,8 @@
 
 (defn *load-class
   "Returns a class instance for the specified class.
-   The spec for this method is the `Java to IDL language
-   mapping`, ptc/00-01-06.
+   The spec for this method is the \"Java to IDL language
+   mapping\", ptc/00-01-06.
    In Java SE Platform, this method works as follows:
    Find the first non-null ClassLoader on the
    call stack and attempt to load the class using this

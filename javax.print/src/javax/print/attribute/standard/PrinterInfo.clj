@@ -1,11 +1,11 @@
 (ns javax.print.attribute.standard.PrinterInfo
   "Class PrinterInfo is a printing attribute class, a text attribute, that
   provides descriptive information about a printer. This could include things
-  like: `This printer can be used for printing color transparencies for
-  HR presentations`, or `Out of courtesy for others, please
-  print only small (1-5 page) jobs at this printer`, or even \
-  `This printer is going away on July 1, 1997, please find a new
-  printer`.
+  like: \"This printer can be used for printing color transparencies for
+  HR presentations\", or \"Out of courtesy for others, please
+  print only small (1-5 page) jobs at this printer\", or even \\
+  \"This printer is going away on July 1, 1997, please find a new
+  printer\".
 
   IPP Compatibility: The string value gives the IPP name value. The
   locale gives the IPP natural language. The category name returned by
@@ -50,7 +50,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PrinterInfo, the category is class PrinterInfo itself.
@@ -64,7 +64,7 @@
   "Get the name of the category of which this attribute value is an
    instance.
 
-   For class PrinterInfo, the category name is `printer-info`.
+   For class PrinterInfo, the category name is \"printer-info\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PrinterInfo this]

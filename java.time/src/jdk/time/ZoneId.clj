@@ -183,16 +183,16 @@
 (defn *of-offset
   "Obtains an instance of ZoneId wrapping an offset.
 
-   If the prefix is `GMT`, `UTC`, or `UT` a ZoneId
+   If the prefix is \"GMT\", \"UTC\", or \"UT\" a ZoneId
    with the prefix and the non-zero offset is returned.
-   If the prefix is empty `` the ZoneOffset is returned.
+   If the prefix is empty \"\" the ZoneOffset is returned.
 
   prefix - the time-zone ID, not null - `java.lang.String`
   offset - the offset, not null - `java.time.ZoneOffset`
 
   returns: the zone ID, not null - `java.time.ZoneId`
 
-  throws: java.lang.IllegalArgumentException - if the prefix is not one of `GMT`, `UTC`, or `UT`, or ``"
+  throws: java.lang.IllegalArgumentException - if the prefix is not one of \"GMT\", \"UTC\", or \"UT\", or \"\""
   (^java.time.ZoneId [^java.lang.String prefix ^java.time.ZoneOffset offset]
     (ZoneId/ofOffset prefix offset)))
 

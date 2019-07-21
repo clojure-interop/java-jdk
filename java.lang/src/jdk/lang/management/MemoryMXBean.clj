@@ -238,7 +238,7 @@
 
   value - true to enable verbose output; false to disable. - `boolean`
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(\"control\")."
   ([^MemoryMXBean this ^Boolean value]
     (-> this (.setVerbose value))))
 

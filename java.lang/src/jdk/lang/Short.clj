@@ -116,8 +116,8 @@
    determined by whether Character.digit(char,
    int) returns a nonnegative value) except that the first
    character may be an ASCII minus sign '-'
-   ('\u002D') to indicate a negative value or an
-   ASCII plus sign '+' ('\u002B') to
+   ('\\u002D') to indicate a negative value or an
+   ASCII plus sign '+' ('\\u002B') to
    indicate a positive value.  The resulting short value
    is returned.
 
@@ -131,8 +131,8 @@
 
     Any character of the string is not a digit of the
    specified radix, except that the first character may be a minus
-   sign '-' ('\u002D') or plus sign
-   '+' ('\u002B') provided that the
+   sign '-' ('\\u002D') or plus sign
+   '+' ('\\u002B') provided that the
    string is longer than length 1.
 
     The value represented by the string is not a value of type
@@ -176,8 +176,8 @@
    except that underscores are not accepted between digits.
 
    The sequence of characters following an optional
-   sign and/or radix specifier (`0x`, `0X`,
-   `#`, or leading zero) is parsed as by the Short.parseShort method with the indicated radix (10, 16, or
+   sign and/or radix specifier (\"0x\", \"0X\",
+   \"#\", or leading zero) is parsed as by the Short.parseShort method with the indicated radix (10, 16, or
    8).  This sequence of characters must represent a positive
    value or a NumberFormatException will be thrown.  The
    result is negated if first character of the specified String is the minus sign.  No whitespace characters are

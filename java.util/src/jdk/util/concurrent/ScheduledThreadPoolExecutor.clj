@@ -156,7 +156,7 @@
    true, future executions of existing periodic tasks will
    be cancelled.
 
-  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
+  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(\"modifyThread\"), or the security manager's checkAccess method denies access."
   ([^ScheduledThreadPoolExecutor this]
     (-> this (.shutdown))))
 
@@ -283,7 +283,7 @@
            which are for scheduling purposes used as the basis of a
            zero-delay ScheduledFuture. - `java.util.List<java.lang.Runnable>`
 
-  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
+  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(\"modifyThread\"), or the security manager's checkAccess method denies access."
   (^java.util.List [^ScheduledThreadPoolExecutor this]
     (-> this (.shutdownNow))))
 

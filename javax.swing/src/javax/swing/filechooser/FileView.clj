@@ -49,7 +49,7 @@
 (defn get-description
   "A human readable description of the file. For example,
    a file named jag.jpg might have a description that read:
-   `A JPEG image file of James Gosling's face`.
+   \"A JPEG image file of James Gosling's face\".
 
   f - `java.io.File`
 
@@ -60,7 +60,7 @@
 (defn get-type-description
   "A human readable description of the type of the file. For
    example, a jpg file might have a type description of:
-   `A JPEG Compressed Image File`
+   \"A JPEG Compressed Image File\"
 
   f - `java.io.File`
 

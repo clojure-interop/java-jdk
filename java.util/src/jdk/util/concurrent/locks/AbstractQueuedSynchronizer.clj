@@ -25,7 +25,7 @@
   mode and a shared mode. When acquired in exclusive mode,
   attempted acquires by other threads cannot succeed. Shared mode
   acquires by multiple threads may (but need not) succeed. This class
-  does not `understand` these differences except in the
+  does not \"understand\" these differences except in the
   mechanical sense that when a shared mode acquire succeeds, the next
   waiting thread (if one exists) must also determine whether it can
   acquire as well. Threads waiting in the different modes share the
@@ -119,13 +119,13 @@
   queued threads are allowed to recontend before later queued
   threads, and each recontention has an unbiased chance to succeed
   against incoming threads.  Also, while acquires do not
-  `spin` in the usual sense, they may perform multiple
+  \"spin\" in the usual sense, they may perform multiple
   invocations of tryAcquire interspersed with other
   computations before blocking.  This gives most of the benefits of
   spins when exclusive synchronization is only briefly held, without
   most of the liabilities when it isn't. If so desired, you can
   augment this by preceding calls to acquire methods with
-  `fast-path` checks, possibly prechecking hasContended()
+  \"fast-path\" checks, possibly prechecking hasContended()
   and/or hasQueuedThreads() to only do so if the synchronizer
   is likely not to be contended.
 
@@ -318,9 +318,9 @@
 
 (defn to-string
   "Returns a string identifying this synchronizer, as well as its state.
-   The state, in brackets, includes the String `State =`
+   The state, in brackets, includes the String \"State =\"
    followed by the current value of getState(), and either
-   `nonempty` or `empty` depending on whether the
+   \"nonempty\" or \"empty\" depending on whether the
    queue is empty.
 
   returns: a string identifying this synchronizer, as well as its state - `java.lang.String`"

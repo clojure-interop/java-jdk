@@ -6,7 +6,7 @@
    More specifically, a SignedObject contains another Serializable
   object, the (to-be-)signed object and its signature.
 
-   The signed object is a `deep copy` (in serialized form) of an
+   The signed object is a \"deep copy\" (in serialized form) of an
   original object.  Once the copy is made, further manipulation of
   the original object has no side effect on the copy.
 
@@ -55,9 +55,9 @@
   DSA, using DSA and SHA-256.  The algorithm is specified using the
   same convention as that for signatures. The DSA algorithm using the
   SHA-256 message digest algorithm can be specified, for example, as
-  `SHA256withDSA`.  In the case of
+  \"SHA256withDSA\".  In the case of
   RSA the signing algorithm could be specified as, for example,
-  `SHA256withRSA`.  The algorithm name must be
+  \"SHA256withRSA\".  The algorithm name must be
   specified, as there is no default.
 
    The name of the Cryptography Package Provider is designated

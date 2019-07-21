@@ -7,14 +7,14 @@
   defined as:
 
 
-  <schema xmlns=`http://www.w3.org/2001/XMLSchema`
-          xmlns:ec=`http://www.w3.org/2001/10/xml-exc-c14n#`
-          targetNamespace=`http://www.w3.org/2001/10/xml-exc-c14n#`
-          version=`0.1` elementFormDefault=`qualified`>
+  <schema xmlns=\"http://www.w3.org/2001/XMLSchema\"
+          xmlns:ec=\"http://www.w3.org/2001/10/xml-exc-c14n#\"
+          targetNamespace=\"http://www.w3.org/2001/10/xml-exc-c14n#\"
+          version=\"0.1\" elementFormDefault=\"qualified\">
 
-  <element name=`InclusiveNamespaces` type=`ec:InclusiveNamespaces`/>
-  <complexType name=`InclusiveNamespaces`>
-    <attribute name=`PrefixList` type=`xsd:string`/>
+  <element name=\"InclusiveNamespaces\" type=\"ec:InclusiveNamespaces\"/>
+  <complexType name=\"InclusiveNamespaces\">
+    <attribute name=\"PrefixList\" type=\"xsd:string\"/>
   </complexType>
   </schema>"
   (:refer-clojure :only [require comment defn ->])
@@ -38,7 +38,7 @@
 (def *-default
   "Static Constant.
 
-  Indicates the default namespace (`#default`).
+  Indicates the default namespace (\"#default\").
 
   type: java.lang.String"
   ExcC14NParameterSpec/DEFAULT)

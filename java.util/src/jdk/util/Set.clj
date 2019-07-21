@@ -33,7 +33,7 @@
   operation on an ineligible element whose completion would not result in
   the insertion of an ineligible element into the set may throw an
   exception or it may succeed, at the option of the implementation.
-  Such exceptions are marked as `optional` in the specification for this
+  Such exceptions are marked as \"optional\" in the specification for this
   interface.
 
   This interface is a member of the

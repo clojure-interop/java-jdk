@@ -9,7 +9,7 @@
 
         XMLDecoder d = new XMLDecoder(
                            new BufferedInputStream(
-                               new FileInputStream(`Test.xml`)));
+                               new FileInputStream(\"Test.xml\")));
         Object result = d.readObject();
         d.close();
 

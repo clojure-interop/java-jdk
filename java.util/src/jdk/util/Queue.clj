@@ -51,7 +51,7 @@
   add an element only by throwing an unchecked exception.  The
   offer method is designed for use when failure is a normal,
   rather than exceptional occurrence, for example, in fixed-capacity
-  (or `bounded`) queues.
+  (or \"bounded\") queues.
 
   The remove() and poll() methods remove and
   return the head of the queue.

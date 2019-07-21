@@ -33,7 +33,7 @@
   a structural modification.)  This is typically accomplished by
   synchronizing on some object that naturally encapsulates the list.
 
-  If no such object exists, the list should be `wrapped` using the
+  If no such object exists, the list should be \"wrapped\" using the
   Collections.synchronizedList
   method.  This is best done at creation time, to prevent accidental
   unsynchronized access to the list:

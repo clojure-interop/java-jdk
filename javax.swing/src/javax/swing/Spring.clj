@@ -23,7 +23,7 @@
    By defining simple arithmetic operations on Springs,
    the behavior of a collection of Springs
    can be reduced to that of an ordinary (non-compound) Spring. We define
-   the `+`, `-`, max, and min operators on
+   the \"+\", \"-\", max, and min operators on
    Springs so that, in each case, the result is a Spring
    whose characteristics bear a useful mathematical relationship to its constituent
    springs.
@@ -59,7 +59,7 @@
 
        max([a1, b1, c1], [a2, b2, c2]) = [max(a1, a2), max(b1, b2), max(c1, c2)]
 
-   With both intervals and Springs we can define `-` and min
+   With both intervals and Springs we can define \"-\" and min
    in terms of negation:
 
 

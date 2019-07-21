@@ -63,7 +63,7 @@
        //                  on the last Sunday in October
        // Save:            1 hour
        SimpleTimeZone(-28800000,
-                      `America/Los_Angeles`,
+                      \"America/Los_Angeles\",
                       Calendar.APRIL, 1, -Calendar.SUNDAY,
                       7200000,
                       Calendar.OCTOBER, -1, Calendar.SUNDAY,
@@ -77,7 +77,7 @@
        //                  on the last Sunday in October
        // Save:            1 hour
        SimpleTimeZone(3600000,
-                      `Europe/Paris`,
+                      \"Europe/Paris\",
                       Calendar.MARCH, -1, Calendar.SUNDAY,
                       3600000, SimpleTimeZone.UTC_TIME,
                       Calendar.OCTOBER, -1, Calendar.SUNDAY,

@@ -4,23 +4,23 @@
   W3C Recommendation for XML-Signature XPath Filter 2.0:
 
 
-  <schema xmlns=`http://www.w3.org/2001/XMLSchema`
-          xmlns:xf=`http://www.w3.org/2002/06/xmldsig-filter2`
-          targetNamespace=`http://www.w3.org/2002/06/xmldsig-filter2`
-          version=`0.1` elementFormDefault=`qualified`>
+  <schema xmlns=\"http://www.w3.org/2001/XMLSchema\"
+          xmlns:xf=\"http://www.w3.org/2002/06/xmldsig-filter2\"
+          targetNamespace=\"http://www.w3.org/2002/06/xmldsig-filter2\"
+          version=\"0.1\" elementFormDefault=\"qualified\">
 
-  <element name=`XPath`
-           type=`xf:XPathType`/>
+  <element name=\"XPath\"
+           type=\"xf:XPathType\"/>
 
-  <complexType name=`XPathType`>
+  <complexType name=\"XPathType\">
     <simpleContent>
-      <extension base=`string`>
-        <attribute name=`Filter`>
+      <extension base=\"string\">
+        <attribute name=\"Filter\">
           <simpleType>
-            <restriction base=`string`>
-              <enumeration value=`intersect`/>
-              <enumeration value=`subtract`/>
-              <enumeration value=`union`/>
+            <restriction base=\"string\">
+              <enumeration value=\"intersect\"/>
+              <enumeration value=\"subtract\"/>
+              <enumeration value=\"union\"/>
             </restriction>
           </simpleType>
         </attribute>

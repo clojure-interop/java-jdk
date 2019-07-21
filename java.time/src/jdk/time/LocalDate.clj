@@ -5,7 +5,7 @@
   LocalDate is an immutable date-time object that represents a date,
   often viewed as year-month-day. Other date fields, such as day-of-year,
   day-of-week and week-of-year, can also be accessed.
-  For example, the value `2nd October 2007` can be stored in a LocalDate.
+  For example, the value \"2nd October 2007\" can be stored in a LocalDate.
 
   This class does not store or represent a time or time-zone.
   Instead, it is a description of the date, as used for birthdays.
@@ -32,7 +32,7 @@
   "Static Constant.
 
   The minimum supported LocalDate, '-999999999-01-01'.
-   This could be used by an application as a `far past` date.
+   This could be used by an application as a \"far past\" date.
 
   type: java.time.LocalDate"
   LocalDate/MIN)
@@ -41,7 +41,7 @@
   "Static Constant.
 
   The maximum supported LocalDate, '+999999999-12-31'.
-   This could be used by an application as a `far future` date.
+   This could be used by an application as a \"far future\" date.
 
   type: java.time.LocalDate"
   LocalDate/MAX)
@@ -988,7 +988,7 @@
   "Compares this date to another date.
 
    The comparison is primarily based on the date, from earliest to latest.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
    If all the dates being compared are instances of LocalDate,
    then the comparison will be entirely based on the date.

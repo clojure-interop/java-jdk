@@ -613,7 +613,7 @@
    UndefinedProperty field.  If the properties
    for this image are not yet known, then this method returns
    null and the ImageObserver object is
-   notified later.  The property name `comment` should be used to
+   notified later.  The property name \"comment\" should be used to
    store an optional comment that can be presented to the user as a
    description of the image, its source, or its author.
 

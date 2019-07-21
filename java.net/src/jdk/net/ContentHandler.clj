@@ -28,7 +28,7 @@
       YoyoDyne.experimental.text.plain
   If the loading of the content handler class would be performed by
   a classloader that is outside of the delegation chain of the caller,
-  the JVM will need the RuntimePermission `getClassLoader`."
+  the JVM will need the RuntimePermission \"getClassLoader\"."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.net ContentHandler]))
 

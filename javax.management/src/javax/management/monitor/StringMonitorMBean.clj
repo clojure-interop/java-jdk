@@ -12,7 +12,7 @@
            set of observed MBeans, or null otherwise. - `java.lang.String`"
   (^java.lang.String [^StringMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
-  (^.lang.String [^StringMonitorMBean this]
+  (^java.lang.String [^StringMonitorMBean this]
     (-> this (.getDerivedGauge))))
 
 (defn get-derived-gauge-time-stamp

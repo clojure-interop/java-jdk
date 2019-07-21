@@ -27,7 +27,7 @@
 (defn *inactive
   "Informs the system that the object with the corresponding activation
    id is currently inactive. If the object is currently
-   active, the object is `unexported` from the RMI runtime (only if
+   active, the object is \"unexported\" from the RMI runtime (only if
    there are no pending or in-progress calls)
    so the that it can no longer receive incoming calls. This call
    informs this VM's ActivationGroup that the object is inactive,

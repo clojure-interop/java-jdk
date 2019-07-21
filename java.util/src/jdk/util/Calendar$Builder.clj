@@ -32,14 +32,14 @@
   compatible week parameters.
 
 
-    Calendar cal = new Calendar.Builder().setCalendarType(`iso8601`)
+    Calendar cal = new Calendar.Builder().setCalendarType(\"iso8601\")
                          .setWeekDate(2013, 1, MONDAY).build();
   The following code produces a Japanese Calendar with date
   1989-01-08 (Gregorian), assuming that the default ERA
   is Heisei that started on that day.
 
 
-    Calendar cal = new Calendar.Builder().setCalendarType(`japanese`)
+    Calendar cal = new Calendar.Builder().setCalendarType(\"japanese\")
                          .setFields(YEAR, 1, DAY_OF_YEAR, 1).build();"
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util Calendar$Builder]))
@@ -143,8 +143,8 @@
 
    In addition to the available calendar types returned by the
    Calendar.getAvailableCalendarTypes
-   method, `gregorian` and `iso8601` as aliases of
-   `gregory` can be used with this method.
+   method, \"gregorian\" and \"iso8601\" as aliases of
+   \"gregory\" can be used with this method.
 
   type - the calendar type - `java.lang.String`
 
@@ -212,15 +212,15 @@
    used to determine what Calendar to be created. If no explicit
    calendar type is given, the locale's default calendar is created.
 
-   If the calendar type is `iso8601`, the
+   If the calendar type is \"iso8601\", the
    Gregorian change date
    of a GregorianCalendar is set to Date(Long.MIN_VALUE)
    to be the proleptic Gregorian calendar. Its week definition
    parameters are also set to be compatible
    with the ISO 8601 standard. Note that the
    getCalendarType method of
-   a GregorianCalendar created with `iso8601` returns
-   `gregory`.
+   a GregorianCalendar created with \"iso8601\" returns
+   \"gregory\".
 
    The default values are used for locale and time zone if these
    parameters haven't been given explicitly.

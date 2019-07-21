@@ -49,7 +49,7 @@
 (defn to-string
   "Returns a string representation of this object.  In general,
    the toString method returns a string that
-   `textually represents` this object. The result should be a
+   \"textually represents\" this object. The result should be a
    concise but informative representation that is easy for a
    person to read.
 

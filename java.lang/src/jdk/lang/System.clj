@@ -13,7 +13,7 @@
 (def *-in
   "Static Constant.
 
-  The `standard` input stream. This stream is already
+  The \"standard\" input stream. This stream is already
    open and ready to supply input data. Typically this stream
    corresponds to keyboard input or another input source specified by
    the host environment or user.
@@ -24,7 +24,7 @@
 (def *-out
   "Static Constant.
 
-  The `standard` output stream. This stream is already
+  The \"standard\" output stream. This stream is already
    open and ready to accept output data. Typically this stream
    corresponds to display output or another output destination
    specified by the host environment or user.
@@ -43,7 +43,7 @@
 (def *-err
   "Static Constant.
 
-  The `standard` error output stream. This stream is already
+  The \"standard\" error output stream. This stream is already
    open and ready to accept output data.
 
    Typically this stream corresponds to display output or another
@@ -62,7 +62,7 @@
 
     If there is a security manager already installed, this method first
    calls the security manager's checkPermission method
-   with a RuntimePermission(`setSecurityManager`)
+   with a RuntimePermission(\"setSecurityManager\")
    permission to ensure it's ok to replace the existing
    security manager.
    This may result in throwing a SecurityException.
@@ -243,7 +243,7 @@
 
    First, if a security manager exists, its
    SecurityManager.checkPermission method
-   is called with a PropertyPermission(key, `write`)
+   is called with a PropertyPermission(key, \"write\")
    permission. This may result in a SecurityException being thrown.
    If no exception is thrown, the specified property is removed.
 
@@ -266,7 +266,7 @@
 
     See the description of the class Date for
    a discussion of slight discrepancies that may arise between
-   `computer time` and coordinated universal time (UTC).
+   \"computer time\" and coordinated universal time (UTC).
 
   returns: the difference, measured in milliseconds, between
             the current time and midnight, January 1, 1970 UTC. - `long`"
@@ -283,11 +283,11 @@
     (System/getSecurityManager )))
 
 (defn *set-in
-  "Reassigns the `standard` input stream.
+  "Reassigns the \"standard\" input stream.
 
    First, if there is a security manager, its checkPermission
-   method is called with a RuntimePermission(`setIO`) permission
-    to see if it's ok to reassign the `standard` input stream.
+   method is called with a RuntimePermission(\"setIO\") permission
+    to see if it's ok to reassign the \"standard\" input stream.
 
   in - the new standard input stream. - `java.io.InputStream`
 
@@ -311,7 +311,7 @@
    If a security manager exists, its
    checkPermission
    method is called with a
-   RuntimePermission(`getenv.`+name)
+   RuntimePermission(\"getenv.\"+name)
    permission.  This may result in a SecurityException
    being thrown.  If no exception is thrown the value of the
    variable name is returned.
@@ -334,7 +334,7 @@
    On UNIX systems the alphabetic case of name is
    typically significant, while on Microsoft Windows systems it is
    typically not.  For example, the expression
-   System.getenv(`FOO`).equals(System.getenv(`foo`))
+   System.getenv(\"FOO\").equals(System.getenv(\"foo\"))
    is likely to be true on Microsoft Windows.
 
   name - the name of the environment variable - `java.lang.String`
@@ -412,11 +412,11 @@
    os.version
        Operating system version
    file.separator
-       File separator (`/` on UNIX)
+       File separator (\"/\" on UNIX)
    path.separator
-       Path separator (`:` on UNIX)
+       Path separator (\":\" on UNIX)
    line.separator
-       Line separator (`\n` on UNIX)
+       Line separator (\"\\n\" on UNIX)
    user.name
        User's account name
    user.home
@@ -510,11 +510,11 @@
     (System/loadLibrary libname)))
 
 (defn *set-err
-  "Reassigns the `standard` error output stream.
+  "Reassigns the \"standard\" error output stream.
 
    First, if there is a security manager, its checkPermission
-   method is called with a RuntimePermission(`setIO`) permission
-    to see if it's ok to reassign the `standard` error output stream.
+   method is called with a RuntimePermission(\"setIO\") permission
+    to see if it's ok to reassign the \"standard\" error output stream.
 
   err - the new standard error output stream. - `java.io.PrintStream`
 
@@ -581,8 +581,8 @@
   "Returns the system-dependent line separator string.  It always
    returns the same value - the initial value of the system property line.separator.
 
-   On UNIX systems, it returns `\n`; on Microsoft
-   Windows systems it returns `\r\n`.
+   On UNIX systems, it returns \"\\n\"; on Microsoft
+   Windows systems it returns \"\\r\\n\".
 
   returns: the system-dependent line separator string - `java.lang.String`"
   (^java.lang.String []
@@ -613,7 +613,7 @@
 
    First, if a security manager exists, its
    SecurityManager.checkPermission method
-   is called with a PropertyPermission(key, `write`)
+   is called with a PropertyPermission(key, \"write\")
    permission. This may result in a SecurityException being thrown.
    If no exception is thrown, the specified property is set to the given
    value.
@@ -665,11 +665,11 @@
     (System/gc )))
 
 (defn *set-out
-  "Reassigns the `standard` output stream.
+  "Reassigns the \"standard\" output stream.
 
    First, if there is a security manager, its checkPermission
-   method is called with a RuntimePermission(`setIO`) permission
-    to see if it's ok to reassign the `standard` output stream.
+   method is called with a RuntimePermission(\"setIO\") permission
+    to see if it's ok to reassign the \"standard\" output stream.
 
   out - the new standard output stream - `java.io.PrintStream`
 

@@ -28,7 +28,7 @@
   "Sets the text that is presented by this
    text component to be the specified text.
 
-  t - the new text; if this parameter is null then the text is set to the empty string `` - `java.lang.String`"
+  t - the new text; if this parameter is null then the text is set to the empty string \"\" - `java.lang.String`"
   ([^TextComponent this ^java.lang.String t]
     (-> this (.setText t))))
 

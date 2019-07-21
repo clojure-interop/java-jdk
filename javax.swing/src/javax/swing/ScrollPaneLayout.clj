@@ -2,7 +2,7 @@
   "The layout manager used by JScrollPane.
   JScrollPaneLayout is
   responsible for nine components: a viewport, two scrollbars,
-  a row header, a column header, and four `corner` components.
+  a row header, a column header, and four \"corner\" components.
 
   Warning:
   Serialized objects of this class will not be compatible with

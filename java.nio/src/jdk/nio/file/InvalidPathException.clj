@@ -47,7 +47,7 @@
   "Returns a string describing the error.  The resulting string
    consists of the reason string followed by a colon character
    (':'), a space, and the input string.  If the error index is
-   defined then the string ` at index ` followed by the index, in
+   defined then the string \" at index \" followed by the index, in
    decimal, is inserted after the reason string and before the colon
    character.
 

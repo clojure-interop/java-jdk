@@ -32,7 +32,7 @@
 
   DateFormat df = DateFormat.getDateInstance();
   for (int i = 0; i < myDate.length; +i) {
-      output.println(df.format(myDate[i])  `; `);
+      output.println(df.format(myDate[i])  \"; \");
   }
 
   To format a date for a different Locale, specify it in the
@@ -302,7 +302,7 @@
   "Gets the time formatter with the given formatting style
    for the given locale.
 
-  style - the given formatting style. For example, SHORT for `h:mm a` in the US locale. - `int`
+  style - the given formatting style. For example, SHORT for \"h:mm a\" in the US locale. - `int`
   a-locale - the given locale. - `java.util.Locale`
 
   returns: a time formatter. - `java.text.DateFormat`"
@@ -317,7 +317,7 @@
   "Gets the date formatter with the given formatting style
    for the given locale.
 
-  style - the given formatting style. For example, SHORT for `M/d/yy` in the US locale. - `int`
+  style - the given formatting style. For example, SHORT for \"M/d/yy\" in the US locale. - `int`
   a-locale - the given locale. - `java.util.Locale`
 
   returns: a date formatter. - `java.text.DateFormat`"
@@ -493,7 +493,7 @@
 
 (defn parse
   "Parse a date/time string according to the given parse position.  For
-   example, a time text `07/10/96 4:5 PM, PDT` will be parsed into a Date
+   example, a time text \"07/10/96 4:5 PM, PDT\" will be parsed into a Date
    that is equivalent to Date(837039900000L).
 
     By default, parsing is lenient: If the input is not in the form used
@@ -541,7 +541,7 @@
 
   obj - must be a Number or a Date. - `java.lang.Object`
   to-append-to - the string buffer for the returning time string. - `java.lang.StringBuffer`
-  field-position - keeps track of the position of the field within the returned string. On input: an alignment field, if desired. On output: the offsets of the alignment field. For example, given a time text `1996.07.10 AD at 15:08:56 PDT`, if the given fieldPosition is DateFormat.YEAR_FIELD, the begin index and end index of fieldPosition will be set to 0 and 4, respectively. Notice that if the same time field appears more than once in a pattern, the fieldPosition will be set for the first occurrence of that time field. For instance, formatting a Date to the time string `1 PM PDT (Pacific Daylight Time)` using the pattern `h a z (zzzz)` and the alignment field DateFormat.TIMEZONE_FIELD, the begin index and end index of fieldPosition will be set to 5 and 8, respectively, for the first occurrence of the timezone pattern character 'z'. - `java.text.FieldPosition`
+  field-position - keeps track of the position of the field within the returned string. On input: an alignment field, if desired. On output: the offsets of the alignment field. For example, given a time text \"1996.07.10 AD at 15:08:56 PDT\", if the given fieldPosition is DateFormat.YEAR_FIELD, the begin index and end index of fieldPosition will be set to 0 and 4, respectively. Notice that if the same time field appears more than once in a pattern, the fieldPosition will be set for the first occurrence of that time field. For instance, formatting a Date to the time string \"1 PM PDT (Pacific Daylight Time)\" using the pattern \"h a z (zzzz)\" and the alignment field DateFormat.TIMEZONE_FIELD, the begin index and end index of fieldPosition will be set to 5 and 8, respectively, for the first occurrence of the timezone pattern character 'z'. - `java.text.FieldPosition`
 
   returns: the string buffer passed in as toAppendTo, with formatted text appended. - `java.lang.StringBuffer`"
   (^java.lang.StringBuffer [^DateFormat this ^java.lang.Object obj ^java.lang.StringBuffer to-append-to ^java.text.FieldPosition field-position]

@@ -1,15 +1,15 @@
 (ns javax.net.ssl.SSLPermission
   "This class is for various network permissions.
-  An SSLPermission contains a name (also referred to as a `target name`) but
+  An SSLPermission contains a name (also referred to as a \"target name\") but
   no actions list; you either have the named permission
   or you don't.
 
   The target name is the name of the network permission (see below). The naming
   convention follows the  hierarchical property naming convention.
   Also, an asterisk
-  may appear at the end of the name, following a `.`, or by itself, to
-  signify a wildcard match. For example: `foo.*` and `*` signify a wildcard
-  match, while `*foo` and `a*b` do not.
+  may appear at the end of the name, following a \".\", or by itself, to
+  signify a wildcard match. For example: \"foo.*\" and \"*\" signify a wildcard
+  match, while \"*foo\" and \"a*b\" do not.
 
   The following table lists all the possible SSLPermission target names,
   and for each provides a description of what the permission allows

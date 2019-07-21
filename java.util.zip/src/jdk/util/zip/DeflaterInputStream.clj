@@ -1,5 +1,5 @@
 (ns jdk.util.zip.DeflaterInputStream
-  "Implements an input stream filter for compressing data in the `deflate`
+  "Implements an input stream filter for compressing data in the \"deflate\"
   compression format."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util.zip DeflaterInputStream]))
@@ -11,7 +11,7 @@
    size.
 
   in - input stream to read the uncompressed data to - `java.io.InputStream`
-  defl - compressor (`deflater`) for this stream - `java.util.zip.Deflater`
+  defl - compressor (\"deflater\") for this stream - `java.util.zip.Deflater`
   buf-len - compression buffer size - `int`
 
   throws: java.lang.IllegalArgumentException - if bufLen <= 0"

@@ -31,7 +31,7 @@
   The following is one example of the use of the tokenizer. The code:
 
 
-      StringTokenizer st = new StringTokenizer(`this is a test`);
+      StringTokenizer st = new StringTokenizer(\"this is a test\");
       while (st.hasMoreTokens()) {
           System.out.println(st.nextToken());
       }
@@ -54,7 +54,7 @@
   method can be used to break up a string into its basic tokens:
 
 
-      String[] result = `this is a test`.split(`\\s`);
+      String[] result = \"this is a test\".split(\"\\\\s\");
       for (int x=0; x<result.length; x++)
           System.out.println(result[x]);
 

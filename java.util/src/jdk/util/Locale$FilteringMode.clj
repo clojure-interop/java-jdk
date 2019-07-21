@@ -36,10 +36,10 @@
   Specifies basic filtering: If any extended language ranges are
    included in the given Language Priority List, they are mapped to the
    basic language range. Specifically, a language range starting with a
-   subtag `*` is treated as a language range `*`. For
-   example, `*-US` is treated as `*`. If `*` is
-   not the first subtag, `*` and extra `-` are removed.
-   For example, `ja-*-JP` is mapped to `ja-JP`.
+   subtag \"*\" is treated as a language range \"*\". For
+   example, \"*-US\" is treated as \"*\". If \"*\" is
+   not the first subtag, \"*\" and extra \"-\" are removed.
+   For example, \"ja-*-JP\" is mapped to \"ja-JP\".
 
   type: java.util.Locale$FilteringMode"
   Locale$FilteringMode/MAP_EXTENDED_RANGES)

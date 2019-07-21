@@ -359,7 +359,7 @@
 
   a - the attribute set - `javax.swing.text.AttributeSet`
 
-  returns: the font family, `Monospaced` as the default - `java.lang.String`"
+  returns: the font family, \"Monospaced\" as the default - `java.lang.String`"
   (^java.lang.String [^javax.swing.text.AttributeSet a]
     (StyleConstants/getFontFamily a)))
 

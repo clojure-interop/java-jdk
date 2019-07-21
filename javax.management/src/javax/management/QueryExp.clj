@@ -1,6 +1,6 @@
 (ns javax.management.QueryExp
-  "Represents relational constraints similar to database query `where
-  clauses`. Instances of QueryExp are returned by the static methods of the
+  "Represents relational constraints similar to database query \"where
+  clauses\". Instances of QueryExp are returned by the static methods of the
   Query class.
 
   It is possible, but not

@@ -25,12 +25,12 @@
    Transformer.setOutputProperties(java.util.Properties).
 
    The properties returned should contain properties set by the stylesheet,
-   and these properties are `defaulted` by default properties specified by
+   and these properties are \"defaulted\" by default properties specified by
    section 16 of the
    XSL Transformations (XSLT) W3C Recommendation.  The properties that
    were specifically set by the stylesheet should be in the base
    Properties list, while the XSLT default properties that were not
-   specifically set should be in the `default` Properties list.  Thus,
+   specifically set should be in the \"default\" Properties list.  Thus,
    getOutputProperties().getProperty(String key) will obtain any
    property in that was set by the stylesheet, or the default
    properties, while

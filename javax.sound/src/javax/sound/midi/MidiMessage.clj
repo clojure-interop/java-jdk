@@ -1,7 +1,7 @@
 (ns javax.sound.midi.MidiMessage
   "MidiMessage is the base class for MIDI messages.  They include
   not only the standard MIDI messages that a synthesizer can respond to, but also
-  `meta-events` that can be used by sequencer programs.  There are meta-events
+  \"meta-events\" that can be used by sequencer programs.  There are meta-events
   for such information as lyrics, copyrights, tempo indications, time and key
   signatures, markers, etc.  For more information, see the Standard MIDI Files 1.0
   specification, which is part of the Complete MIDI 1.0 Detailed Specification
@@ -32,7 +32,7 @@
 
   If you simply need to pass a known MIDI byte value as a method parameter,
   it can be expressed directly as an integer, using (for example) decimal or
-  hexadecimal notation.  For instance, to pass the `active sensing` status byte
+  hexadecimal notation.  For instance, to pass the \"active sensing\" status byte
   as the first argument to ShortMessage's
   setMessage(int)
   method, you can express it as 254 or 0xFE."
@@ -52,7 +52,7 @@
     (-> this (.getMessage))))
 
 (defn get-status
-  "Obtains the status byte for the MIDI message.  The status `byte` is
+  "Obtains the status byte for the MIDI message.  The status \"byte\" is
    represented as an integer; see the
    discussion in the
    MidiMessage class description.

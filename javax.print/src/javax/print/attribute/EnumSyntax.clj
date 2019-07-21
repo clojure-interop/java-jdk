@@ -1,6 +1,6 @@
 (ns javax.print.attribute.EnumSyntax
   "Class EnumSyntax is an abstract base class providing the common
-  implementation of all `type safe enumeration` objects. An enumeration class
+  implementation of all \"type safe enumeration\" objects. An enumeration class
   (which extends class EnumSyntax) provides a group of enumeration values
   (objects) that are singleton instances of the enumeration class; for example:
 
@@ -13,11 +13,11 @@
           public static final Bach P_D_Q                = new Bach(4);
 
           private static final String[] stringTable = {
-              `Johann Sebastian Bach`,
-               `Wilhelm Friedemann Bach`,
-               `Carl Philip Emmanuel Bach`,
-               `Johann Christian Bach`,
-               `P.D.Q. Bach`
+              \"Johann Sebastian Bach\",
+               \"Wilhelm Friedemann Bach\",
+               \"Carl Philip Emmanuel Bach\",
+               \"Johann Christian Bach\",
+               \"P.D.Q. Bach\"
           };
 
           protected String[] getStringTable() {
@@ -43,7 +43,7 @@
       Bach theComposer;
       . . .
       if (theComposer == Bach.JOHANN_SEBASTIAN) {
-          System.out.println (`The greatest composer of all time!`);
+          System.out.println (\"The greatest composer of all time!\");
       }
   The equals() method for an enumeration class just does a test
   for identical objects (==).

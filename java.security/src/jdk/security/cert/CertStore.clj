@@ -81,7 +81,7 @@
 (defn *get-default-type
   "Returns the default CertStore type as specified by the
    certstore.type security property, or the string
-   `LDAP` if no such property exists.
+   \"LDAP\" if no such property exists.
 
    The default CertStore type can be used by applications
    that do not want to use a hard-coded type when calling one of the
@@ -94,7 +94,7 @@
 
   returns: the default CertStore type as specified by the
    certstore.type security property, or the string
-   `LDAP` if no such property exists. - `java.lang.String`"
+   \"LDAP\" if no such property exists. - `java.lang.String`"
   (^java.lang.String []
     (CertStore/getDefaultType )))
 

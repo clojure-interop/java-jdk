@@ -126,7 +126,7 @@
    At most, one ChangeEvent is generated.
 
   new-value - an int giving the current value - `int`
-  new-extent - an int giving the amount by which the value can `jump` - `int`
+  new-extent - an int giving the amount by which the value can \"jump\" - `int`
   new-min - an int giving the minimum value - `int`
   new-max - an int giving the maximum value - `int`
   adjusting - a boolean, true if a series of changes are in progress - `boolean`"

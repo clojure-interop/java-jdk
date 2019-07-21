@@ -5,27 +5,27 @@
 
   The conversion process is the reverse of that used by the URLEncoder class. It is assumed
   that all characters in the encoded string are one of the following:
-  `a` through `z`,
-  `A` through `Z`,
-  `0` through `9`, and
-  `-`, `_`,
-  `.`, and `*`. The
-  character `%` is allowed but is interpreted
+  \"a\" through \"z\",
+  \"A\" through \"Z\",
+  \"0\" through \"9\", and
+  \"-\", \"_\",
+  \".\", and \"*\". The
+  character \"%\" is allowed but is interpreted
   as the start of a special escaped sequence.
 
   The following rules are applied in the conversion:
 
 
-  The alphanumeric characters `a` through
-      `z`, `A` through
-      `Z` and `0`
-      through `9` remain the same.
-  The special characters `.`,
-      `-`, `*`, and
-      `_` remain the same.
-  The plus sign `+` is converted into a
-      space character `   ` .
-  A sequence of the form `%xy` will be
+  The alphanumeric characters \"a\" through
+      \"z\", \"A\" through
+      \"Z\" and \"0\"
+      through \"9\" remain the same.
+  The special characters \".\",
+      \"-\", \"*\", and
+      \"_\" remain the same.
+  The plus sign \"+\" is converted into a
+      space character \"   \" .
+  A sequence of the form \"%xy\" will be
       treated as representing a byte where xy is the two-digit
       hexadecimal representation of the 8 bits. Then, all substrings
       that contain one or more of these byte sequences consecutively
@@ -53,7 +53,7 @@
    encoding scheme.
    The supplied encoding is used to determine
    what characters are represented by any consecutive sequences of the
-   form `%xy`.
+   form \"%xy\".
 
    Note: The
    World Wide Web Consortium Recommendation states that

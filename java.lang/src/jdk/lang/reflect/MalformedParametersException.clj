@@ -10,7 +10,7 @@
    The number of parameters (parameter_count) is wrong for the method
    A constant pool index is out of bounds.
    A constant pool index does not refer to a UTF-8 entry
-   A parameter's name is ``, or contains an illegal character
+   A parameter's name is \"\", or contains an illegal character
    The flags field contains an illegal flag (something other than
       FINAL, SYNTHETIC, or MANDATED)
 

@@ -161,7 +161,7 @@
 
   Indicates this object paints every pixel within its
    rectangular region. A non-opaque component paints only some of
-   its pixels, allowing the pixels underneath it to `show through`.
+   its pixels, allowing the pixels underneath it to \"show through\".
    A component that does not fully paint its pixels therefore
    provides a degree of transparency.
 

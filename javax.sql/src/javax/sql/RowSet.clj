@@ -21,7 +21,7 @@
 
   The RowSet interface is unique in that it is intended to be
   implemented using the rest of the JDBC API.  In other words, a
-  RowSet implementation is a layer of software that executes `on top`
+  RowSet implementation is a layer of software that executes \"on top\"
   of a JDBC driver.  Implementations of the RowSet interface can
   be provided by anyone, including JDBC driver vendors who want to
   provide a RowSet implementation as part of their JDBC products.

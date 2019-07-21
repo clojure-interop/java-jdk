@@ -19,7 +19,7 @@
   to allow for negative shift distances.  A right-shift with a negative
   shift distance results in a left shift, and vice-versa.  The unsigned
   right shift operator (>>>) is omitted, as this operation makes
-  little sense in combination with the `infinite word size` abstraction
+  little sense in combination with the \"infinite word size\" abstraction
   provided by this class.
 
   Semantics of bitwise logical operations exactly mimic those of Java's
@@ -40,16 +40,16 @@
   extended so that it contains the designated bit.  None of the single-bit
   operations can produce a BigInteger with a different sign from the
   BigInteger being operated on, as they affect only a single bit, and the
-  `infinite word size` abstraction provided by this class ensures that there
-  are infinitely many `virtual sign bits` preceding each BigInteger.
+  \"infinite word size\" abstraction provided by this class ensures that there
+  are infinitely many \"virtual sign bits\" preceding each BigInteger.
 
   For the sake of brevity and clarity, pseudo-code is used throughout the
   descriptions of BigInteger methods.  The pseudo-code expression
-  (i  j) is shorthand for `a BigInteger whose value is
-  that of the BigInteger i plus that of the BigInteger j.`
+  (i  j) is shorthand for \"a BigInteger whose value is
+  that of the BigInteger i plus that of the BigInteger j.\"
   The pseudo-code expression (i == j) is shorthand for
-  `true if and only if the BigInteger i represents the same
-  value as the BigInteger j.`  Other pseudo-code expressions are
+  \"true if and only if the BigInteger i represents the same
+  value as the BigInteger j.\"  Other pseudo-code expressions are
   interpreted similarly.
 
   All methods and constructors in this class throw
@@ -129,7 +129,7 @@
 
 (defn *value-of
   "Returns a BigInteger whose value is equal to that of the
-   specified long.  This `static factory method` is
+   specified long.  This \"static factory method\" is
    provided in preference to a (long) constructor
    because it allows for reuse of frequently used BigIntegers.
 

@@ -5,7 +5,7 @@
   can be arbitrary strings, but they should normally be based on
   the package name or class name of the logged component, such
   as java.net or javax.swing.  In addition it is possible to create
-  `anonymous` Loggers that are not stored in the Logger namespace.
+  \"anonymous\" Loggers that are not stored in the Logger namespace.
 
   Logger objects may be obtained by calls on one of the getLogger
   factory methods.  These will either create a new Logger or
@@ -18,10 +18,10 @@
   objects, which can forward the messages to a variety of
   destinations, including consoles, files, OS logs, etc.
 
-  Each Logger keeps track of a `parent` Logger, which is its
+  Each Logger keeps track of a \"parent\" Logger, which is its
   nearest existing ancestor in the Logger namespace.
 
-  Each Logger has a `Level` associated with it.  This reflects
+  Each Logger has a \"Level\" associated with it.  This reflects
   a minimum Level that this logger cares about.  If a Logger's
   level is set to null, then its effective level is inherited
   from its parent, which may in turn obtain it recursively from its
@@ -56,17 +56,17 @@
   name, then it will inherit the ResourceBundle or resource bundle name
   from its parent, recursively up the tree.
 
-  Most of the logger output methods take a `msg` argument.  This
+  Most of the logger output methods take a \"msg\" argument.  This
   msg argument may be either a raw value or a localization key.
   During formatting, if the logger has (or inherits) a localization
   ResourceBundle and if the ResourceBundle has a mapping for
   the msg string, then the msg string is replaced by the localized value.
   Otherwise the original msg string is used.  Typically, formatters use
   java.text.MessageFormat style formatting to format parameters, so
-  for example a format string `{0} {1}` would format two parameters
+  for example a format string \"{0} {1}\" would format two parameters
   as strings.
 
-  A set of methods alternatively take a `msgSupplier` instead of a `msg`
+  A set of methods alternatively take a \"msgSupplier\" instead of a \"msg\"
   argument.  These methods take a Supplier<String> function
   which is invoked to construct the desired log message only when the message
   actually is to be logged based on the effective log level thus eliminating
@@ -121,30 +121,30 @@
   The logging methods are grouped in five main categories:
 
 
-      There are a set of `log` methods that take a log level, a message
+      There are a set of \"log\" methods that take a log level, a message
       string, and optionally some parameters to the message string.
 
-      There are a set of `logp` methods (for `log precise`) that are
-      like the `log` methods, but also take an explicit source class name
+      There are a set of \"logp\" methods (for \"log precise\") that are
+      like the \"log\" methods, but also take an explicit source class name
       and method name.
 
-      There are a set of `logrb` method (for `log with resource bundle`)
-      that are like the `logp` method, but also take an explicit resource
+      There are a set of \"logrb\" method (for \"log with resource bundle\")
+      that are like the \"logp\" method, but also take an explicit resource
       bundle object for use in localizing the log message.
 
       There are convenience methods for tracing method entries (the
-      `entering` methods), method returns (the `exiting` methods) and
-      throwing exceptions (the `throwing` methods).
+      \"entering\" methods), method returns (the \"exiting\" methods) and
+      throwing exceptions (the \"throwing\" methods).
 
       Finally, there are a set of convenience methods for use in the
       very simplest cases, when a developer simply wants to log a
       simple string at a given log level.  These methods are named
-      after the standard Level names (`severe`, `warning`, `info`, etc.)
+      after the standard Level names (\"severe\", \"warning\", \"info\", etc.)
       and take a single argument, a message string.
 
 
   For the methods that do not take an explicit source name and
-  method name, the Logging framework will make a `best effort`
+  method name, the Logging framework will make a \"best effort\"
   to determine which class and method called into the logging method.
   However, it is important to realize that this automatically inferred
   information may only be approximate (or may even be quite wrong!).
@@ -159,7 +159,7 @@
   the namespace.  Therefore, any subclasses of Logger (unless they
   are implemented in conjunction with a new LogManager class) should
   take care to obtain a Logger instance from the LogManager class and
-  should delegate operations such as `isLoggable` and `log(LogRecord)`
+  should delegate operations such as \"isLoggable\" and \"log(LogRecord)\"
   to that instance.  Note that in order to intercept all logging
   output, subclasses need only override the log(LogRecord) method.
   All the other logging methods are implemented as calls on this
@@ -187,7 +187,7 @@
    For compatibility with old JDK versions where the
    Logger.getGlobal() is not available use the call
    Logger.getLogger(Logger.GLOBAL_LOGGER_NAME)
-   or Logger.getLogger(`global`).
+   or Logger.getLogger(\"global\").
 
   type: java.util.logging.Logger"
   Logger/global)
@@ -214,9 +214,9 @@
    created Logger with the given name may be garbage collected at any
    time if there is no strong reference to the Logger. In particular,
    this means that two back-to-back calls like
-   getLogger(`MyLogger`, ...).log(...) may use different Logger
-   objects named `MyLogger` if there is no strong reference to the
-   Logger named `MyLogger` elsewhere in the program.
+   getLogger(\"MyLogger\", ...).log(...) may use different Logger
+   objects named \"MyLogger\" if there is no strong reference to the
+   Logger named \"MyLogger\" elsewhere in the program.
 
    If the named Logger already exists and does not yet have a
    localization resource bundle then the given resource bundle
@@ -248,7 +248,7 @@
    a setLevel or an addHandler on an anonymous Logger.
 
    Even although the new logger is anonymous, it is configured
-   to have the root logger (``) as its parent.  This means that
+   to have the root logger (\"\") as its parent.  This means that
    by default it inherits its effective level and handlers
    from the root logger.  Changing its parent via the
    setParent method
@@ -268,7 +268,7 @@
   "Log a method entry, with one parameter.
 
    This is a convenience method that can be used to log entry
-   to a method.  A LogRecord with message `ENTRY {0}`, log level
+   to a method.  A LogRecord with message \"ENTRY {0}\", log level
    FINER, and the given sourceMethod, sourceClass, and parameter
    is logged.
 
@@ -299,7 +299,7 @@
 
   parent - the new parent logger - `java.util.logging.Logger`
 
-  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(\"control\")."
   ([^Logger this ^java.util.logging.Logger parent]
     (-> this (.setParent parent))))
 
@@ -373,7 +373,7 @@
 
   handler - a logging Handler - `java.util.logging.Handler`
 
-  throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(\"control\")."
   ([^Logger this ^java.util.logging.Handler handler]
     (-> this (.addHandler handler))))
 
@@ -422,7 +422,7 @@
 
   use-parent-handlers - true if output is to be sent to the logger's parent. - `boolean`
 
-  throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(\"control\")."
   ([^Logger this ^Boolean use-parent-handlers]
     (-> this (.setUseParentHandlers use-parent-handlers))))
 
@@ -489,7 +489,7 @@
    If the logger is currently enabled for the given message
    level then the given arguments are stored in a LogRecord
    which is forwarded to all registered output handlers.  The
-   LogRecord's message is set to `THROW`.
+   LogRecord's message is set to \"THROW\".
 
    Note that the thrown argument is stored in the LogRecord thrown
    property, rather than the LogRecord parameters property.  Thus it is
@@ -506,9 +506,9 @@
   "Return the parent for this Logger.
 
    This method returns the nearest extant parent in the namespace.
-   Thus if a Logger is called `a.b.c.d`, and a Logger called `a.b`
-   has been created but no logger `a.b.c` exists, then a call of
-   getParent on the Logger `a.b.c.d` will return the Logger `a.b`.
+   Thus if a Logger is called \"a.b.c.d\", and a Logger called \"a.b\"
+   has been created but no logger \"a.b.c\" exists, then a call of
+   getParent on the Logger \"a.b.c.d\" will return the Logger \"a.b\".
 
    The result will be null if it is called on the root Logger
    in the namespace.
@@ -524,7 +524,7 @@
 
   handler - a logging Handler - `java.util.logging.Handler`
 
-  throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(\"control\")."
   ([^Logger this ^java.util.logging.Handler handler]
     (-> this (.removeHandler handler))))
 
@@ -586,7 +586,7 @@
   "Log a method return, with result object.
 
    This is a convenience method that can be used to log returning
-   from a method.  A LogRecord with message `RETURN {0}`, log level
+   from a method.  A LogRecord with message \"RETURN {0}\", log level
    FINER, and the gives sourceMethod, sourceClass, and result
    object is logged.
 
@@ -601,13 +601,13 @@
 (defn set-filter
   "Set a filter to control output on this Logger.
 
-   After passing the initial `level` check, the Logger will
+   After passing the initial \"level\" check, the Logger will
    call this Filter to check if a log record should really
    be published.
 
   new-filter - a filter object (may be null) - `java.util.logging.Filter`
 
-  throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(\"control\")."
   ([^Logger this ^java.util.logging.Filter new-filter]
     (-> this (.setFilter new-filter))))
 
@@ -623,7 +623,7 @@
 
   new-level - the new value for the log level (may be null) - `java.util.logging.Level`
 
-  throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists, this logger is not anonymous, and the caller does not have LoggingPermission(\"control\")."
   ([^Logger this ^java.util.logging.Level new-level]
     (-> this (.setLevel new-level))))
 

@@ -7,16 +7,16 @@
   The following is an example of a namespace declaration in an element.
 
 
-    <wombat:GetLastTradePrice xmlns:wombat=`http://www.wombat.org/trader`>
-  (`xmlns` stands for `XML namespace`.)
+    <wombat:GetLastTradePrice xmlns:wombat=\"http://www.wombat.org/trader\">
+  (\"xmlns\" stands for \"XML namespace\".)
   The following
   shows what the methods in the Name interface will return.
 
-   getQualifiedName will return `prefix:LocalName` =
-       `WOMBAT:GetLastTradePrice`
-   getURI will return `http://www.wombat.org/trader`
-   getLocalName will return `GetLastTracePrice`
-   getPrefix will return `WOMBAT`
+   getQualifiedName will return \"prefix:LocalName\" =
+       \"WOMBAT:GetLastTradePrice\"
+   getURI will return \"http://www.wombat.org/trader\"
+   getLocalName will return \"GetLastTracePrice\"
+   getPrefix will return \"WOMBAT\"
 
 
   XML namespaces are used to disambiguate SOAP identifiers from
@@ -32,8 +32,8 @@
   Name object with all three.
 
 
-      Name name = se.createName(`GetLastTradePrice`, `WOMBAT`,
-                                 `http://www.wombat.org/trader`);
+      Name name = se.createName(\"GetLastTradePrice\", \"WOMBAT\",
+                                 \"http://www.wombat.org/trader\");
   The following line of code gives an example of how a Name object
   can be used. The variable element is a SOAPElement object.
   This code creates a new SOAPElement object with the given name and

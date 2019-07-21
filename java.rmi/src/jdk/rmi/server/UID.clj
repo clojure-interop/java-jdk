@@ -1,7 +1,7 @@
 (ns jdk.rmi.server.UID
   "A UID represents an identifier that is unique over time
   with respect to the host it is generated on, or one of 216
-  `well-known` identifiers.
+  \"well-known\" identifiers.
 
   The UID() constructor can be used to generate an
   identifier that is unique over time with respect to the host it is
@@ -37,7 +37,7 @@
 (defn ->uid
   "Constructor.
 
-  Creates a `well-known` UID.
+  Creates a \"well-known\" UID.
 
    There are 216 possible such well-known ids.
 

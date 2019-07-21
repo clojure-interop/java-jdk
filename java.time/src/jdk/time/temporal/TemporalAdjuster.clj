@@ -26,8 +26,8 @@
   finding the first day of next month
   finding the first or last day of the year
   finding the first day of next year
-  finding the first or last day-of-week within a month, such as `first Wednesday in June`
-  finding the next or previous day-of-week, such as `next Thursday`"
+  finding the first or last day-of-week within a month, such as \"first Wednesday in June\"
+  finding the next or previous day-of-week, such as \"next Thursday\""
   (:refer-clojure :only [require comment defn ->])
   (:import [java.time.temporal TemporalAdjuster]))
 

@@ -160,7 +160,7 @@
 (defn get-ui-class-id
   "Returns the class ID for the UI.
 
-  returns: the ID (`TextAreaUI`) - `java.lang.String`"
+  returns: the ID (\"TextAreaUI\") - `java.lang.String`"
   (^java.lang.String [^JTextArea this]
     (-> this (.getUIClassID))))
 
@@ -178,7 +178,7 @@
   orientation - Either SwingConstants.VERTICAL or SwingConstants.HORIZONTAL. - `int`
   direction - Less than zero to scroll up/left, greater than zero for down/right. - `int`
 
-  returns: The `unit` increment for scrolling in the specified direction - `int`
+  returns: The \"unit\" increment for scrolling in the specified direction - `int`
 
   throws: java.lang.IllegalArgumentException - for an invalid orientation"
   (^Integer [^JTextArea this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
@@ -189,7 +189,7 @@
    to true the lines will be wrapped if they are too long
    to fit within the allocated width.  If set to false,
    the lines will always be unwrapped.  A PropertyChange
-   event (`lineWrap`) is fired when the policy is changed.
+   event (\"lineWrap\") is fired when the policy is changed.
    By default this property is false.
 
   wrap - indicates if lines should be wrapped - `boolean`"
@@ -232,7 +232,7 @@
 (defn set-tab-size
   "Sets the number of characters to expand tabs to.
    This will be multiplied by the maximum advance for
-   variable width fonts.  A PropertyChange event (`tabSize`) is fired
+   variable width fonts.  A PropertyChange event (\"tabSize\") is fired
    when the tab size changes.
 
   size - number of characters to expand to - `int`"

@@ -10,19 +10,19 @@
   latter service principal is specified to restrict the use of a
   proxiable ticket.
 
-  For example, to specify the `host` service use of a forwardable TGT the
+  For example, to specify the \"host\" service use of a forwardable TGT the
   target permission is specified as follows:
 
 
 
-   DelegationPermission(``host/foo.example.com@EXAMPLE.COM` `krbtgt/EXAMPLE.COM@EXAMPLE.COM``);
+   DelegationPermission(\"\\\"host/foo.example.com@EXAMPLE.COM\\\" \\\"krbtgt/EXAMPLE.COM@EXAMPLE.COM\\\"\");
 
-  To give the `backup` service a proxiable nfs service ticket the target permission
+  To give the \"backup\" service a proxiable nfs service ticket the target permission
   might be specified:
 
 
 
-   DelegationPermission(``backup/bar.example.com@EXAMPLE.COM` `nfs/home.EXAMPLE.COM@EXAMPLE.COM``);"
+   DelegationPermission(\"\\\"backup/bar.example.com@EXAMPLE.COM\\\" \\\"nfs/home.EXAMPLE.COM@EXAMPLE.COM\\\"\");"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.security.auth.kerberos DelegationPermission]))
 
@@ -42,7 +42,7 @@
     (new DelegationPermission principals)))
 
 (defn implies
-  "Checks if this Kerberos delegation permission object `implies` the
+  "Checks if this Kerberos delegation permission object \"implies\" the
    specified permission.
 
    If none of the above are true, implies returns false.

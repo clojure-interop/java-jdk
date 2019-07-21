@@ -13,10 +13,10 @@
 (defn draw-line
   "Draws a line between the two end points.
    This implementation supports only one line style key,
-   `dashed`. The `dashed` line style is applied
+   \"dashed\". The \"dashed\" line style is applied
    only to vertical and horizontal lines.
    Specifying null or any key different from
-   `dashed` will draw solid lines.
+   \"dashed\" will draw solid lines.
 
   context - identifies hosting region - `javax.swing.plaf.synth.SynthContext`
   paint-key - identifies the portion of the component being asked to paint, may be null - `java.lang.Object`
@@ -25,7 +25,7 @@
   y-1 - y origin - `int`
   x-2 - x destination - `int`
   y-2 - y destination - `int`
-  style-key - identifies the requested style of the line (e.g. `dashed`) - `java.lang.Object`"
+  style-key - identifies the requested style of the line (e.g. \"dashed\") - `java.lang.Object`"
   ([^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object paint-key ^java.awt.Graphics g ^Integer x-1 ^Integer y-1 ^Integer x-2 ^Integer y-2 ^java.lang.Object style-key]
     (-> this (.drawLine context paint-key g x-1 y-1 x-2 y-2 style-key)))
   ([^SynthGraphicsUtils this ^javax.swing.plaf.synth.SynthContext context ^java.lang.Object paint-key ^java.awt.Graphics g ^Integer x-1 ^Integer y-1 ^Integer x-2 ^Integer y-2]

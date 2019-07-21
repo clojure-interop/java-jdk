@@ -6,10 +6,10 @@
   The PropertyEditorManager uses three techniques for locating an editor
   for a given type.  First, it provides a registerEditor method to allow
   an editor to be specifically registered for a given type.  Second it
-  tries to locate a suitable class by adding `Editor` to the full
-  qualified classname of the given type (e.g. `foo.bah.FozEditor`).
+  tries to locate a suitable class by adding \"Editor\" to the full
+  qualified classname of the given type (e.g. \"foo.bah.FozEditor\").
   Finally it takes the simple classname (without the package name) adds
-  `Editor` to it and looks in a search-path of packages for a matching
+  \"Editor\" to it and looks in a search-path of packages for a matching
   class.
 
   So for an input class foo.bah.Fred, the PropertyEditorManager would
@@ -19,7 +19,7 @@
   standardEditorsPackage.FredEditor class.
 
   Default PropertyEditors will be provided for the Java primitive types
-  `boolean`, `byte`, `short`, `int`, `long`, `float`, and `double`; and
+  \"boolean\", \"byte\", \"short\", \"int\", \"long\", \"float\", and \"double\"; and
   for the classes java.lang.String. java.awt.Color, and java.awt.Font."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.beans PropertyEditorManager]))
@@ -63,7 +63,7 @@
   returns: The array of package names that will be searched in
             order to find property editors.
         The default value for this array is implementation-dependent,
-           e.g. Sun implementation initially sets to  {`sun.beans.editors`}. - `java.lang.String[]`"
+           e.g. Sun implementation initially sets to  {\"sun.beans.editors\"}. - `java.lang.String[]`"
   ([]
     (PropertyEditorManager/getEditorSearchPath )))
 

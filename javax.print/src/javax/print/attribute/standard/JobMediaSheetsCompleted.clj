@@ -53,7 +53,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class JobMediaSheetsCompleted, the category is class
@@ -69,7 +69,7 @@
    instance.
 
    For class JobMediaSheetsCompleted, the category name is
-   `job-media-sheets-completed`.
+   \"job-media-sheets-completed\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^JobMediaSheetsCompleted this]

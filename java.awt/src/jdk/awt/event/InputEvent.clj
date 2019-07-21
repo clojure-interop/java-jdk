@@ -3,7 +3,7 @@
 
   Input events are delivered to listeners before they are
   processed normally by the source where they originated.
-  This allows listeners and component subclasses to `consume`
+  This allows listeners and component subclasses to \"consume\"
   the event so that the source will not process them in their
   default manner.  For example, consuming mousePressed events
   on a Button component will prevent the Button from being
@@ -167,7 +167,7 @@
 
 (defn *get-modifiers-ex-text
   "Returns a String describing the extended modifier keys and
-   mouse buttons, such as `Shift`, `Button1`, or `Ctrl+Shift`.
+   mouse buttons, such as \"Shift\", \"Button1\", or \"Ctrl+Shift\".
    These strings can be localized by changing the
    awt.properties file.
 

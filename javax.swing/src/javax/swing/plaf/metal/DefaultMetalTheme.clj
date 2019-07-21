@@ -1,6 +1,6 @@
 (ns javax.swing.plaf.metal.DefaultMetalTheme
   "A concrete implementation of MetalTheme providing
-  the original look of the Java Look and Feel, code-named `Steel`. Refer
+  the original look of the Java Look and Feel, code-named \"Steel\". Refer
   to MetalLookAndFeel.setCurrentTheme(javax.swing.plaf.metal.MetalTheme) for details on changing
   the default theme.
 
@@ -19,7 +19,7 @@
       java -Dswing.boldMetal=false MyApp.
   Set the defaults property swing.boldMetal to
       Boolean.FALSE.  For example:
-      UIManager.put(`swing.boldMetal`, Boolean.FALSE);
+      UIManager.put(\"swing.boldMetal\", Boolean.FALSE);
 
   The defaults property swing.boldMetal, if set,
   takes precedence over the system property of the same name. After
@@ -30,7 +30,7 @@
 
 
     // turn off bold fonts
-    UIManager.put(`swing.boldMetal`, Boolean.FALSE);
+    UIManager.put(\"swing.boldMetal\", Boolean.FALSE);
 
     // re-install the Metal Look and Feel
     UIManager.setLookAndFeel(new MetalLookAndFeel());
@@ -58,7 +58,7 @@
     (new DefaultMetalTheme )))
 
 (defn get-name
-  "Returns the name of this theme. This returns `Steel`.
+  "Returns the name of this theme. This returns \"Steel\".
 
   returns: the name of this theme. - `java.lang.String`"
   (^java.lang.String [^DefaultMetalTheme this]

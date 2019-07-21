@@ -268,8 +268,8 @@
   "Returns the channel for which this key was created.  This method will
    continue to return the channel even after the key is cancelled.
 
-  returns: This key's channel - `java.nio.s.SelectableChannel`"
-  (^java.nio.s.SelectableChannel [^SelectionKey this]
+  returns: This key's channel - `java.nio.channels.SelectableChannel`"
+  (^java.nio.channels.SelectableChannel [^SelectionKey this]
     (-> this (.channel))))
 
 (defn selector

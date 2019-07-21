@@ -3,7 +3,7 @@
   along with a mark bit, that can be updated atomically.
 
   Implementation note: This implementation maintains markable
-  references by creating internal objects representing `boxed`
+  references by creating internal objects representing \"boxed\"
   [reference, boolean] pairs."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util.concurrent.atomic AtomicMarkableReference]))

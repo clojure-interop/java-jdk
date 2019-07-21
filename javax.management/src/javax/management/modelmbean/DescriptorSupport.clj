@@ -64,7 +64,7 @@
 (defn to-string
   "Returns a human readable string representing the
    descriptor.  The string will be in the format of
-   `fieldName=fieldValue,fieldName2=fieldValue2,...`
+   \"fieldName=fieldValue,fieldName2=fieldValue2,...\"
 
    If there are no fields in the descriptor, then an empty String
    is returned.
@@ -116,7 +116,7 @@
 
    This implementation does not support  interoperating with a directory
    or lookup service. Thus, conforming to the specification, no checking is
-   done on the `export` field.
+   done on the \"export\" field.
 
    Otherwise this implementation returns false if:
 
@@ -128,7 +128,7 @@
    lastReturnedTimeStamp if defined, are null, or not a Numeric
    String or not a Numeric Value >= -1
     log fieldName, if defined, is null, or not a Boolean or
-   not a String with value `t`, `f`, `true`, `false`. These String
+   not a String with value \"t\", \"f\", \"true\", \"false\". These String
    values must not be case sensitive.
     visibility fieldName, if defined, is null, or not a
    Numeric String or a not Numeric Value >= 1 and <= 4
@@ -136,8 +136,8 @@
    String or not a Numeric Value >= 0 and <= 6
     persistPolicy fieldName, if defined, is null, or not one of
    the following strings:
-     `OnUpdate`, `OnTimer`, `NoMoreOftenThan`, `OnUnregister`, `Always`,
-     `Never`. These String values must not be case sensitive.
+     \"OnUpdate\", \"OnTimer\", \"NoMoreOftenThan\", \"OnUnregister\", \"Always\",
+     \"Never\". These String values must not be case sensitive.
 
   returns: true if the values are legal. - `boolean`
 

@@ -92,7 +92,7 @@
 
   permission - the Permission object to check. - `java.security.Permission`
 
-  returns: true if `permission` is implicit to this ProtectionDomain. - `boolean`"
+  returns: true if \"permission\" is implicit to this ProtectionDomain. - `boolean`"
   (^Boolean [^ProtectionDomain this ^java.security.Permission permission]
     (-> this (.implies permission))))
 

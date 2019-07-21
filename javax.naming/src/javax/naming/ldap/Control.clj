@@ -6,7 +6,7 @@
   to affect the behavior of predefined operations.
   Controls can be sent along with any LDAP operation to the server.
   These are referred to as request controls. For example, a
-  `sort` control can be sent with an LDAP search operation to
+  \"sort\" control can be sent with an LDAP search operation to
   request that the results be returned in a particular order.
   Solicited and unsolicited controls can also be returned with
   responses from the server. Such controls are referred to as

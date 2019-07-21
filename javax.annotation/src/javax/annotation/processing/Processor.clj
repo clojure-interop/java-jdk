@@ -64,7 +64,7 @@
   processors are available, the round has run to completion.  If
   there are no annotation types present, annotation processing still
   occurs but only universal processors which support
-  processing all annotation types, `*`, can claim the (empty)
+  processing all annotation types, \"*\", can claim the (empty)
   set of annotation types.
 
   An annotation type is considered present if there is at least
@@ -89,7 +89,7 @@
   type and its containing annotation type in the set of supported annotation types of a
   processor.
 
-  Note that if a processor supports `*` and returns true, all annotations are claimed.  Therefore, a universal
+  Note that if a processor supports \"*\" and returns true, all annotations are claimed.  Therefore, a universal
   processor being used to, for example, implement additional validity
   checks should return false so as to not prevent other such
   checkers from being able to run.
@@ -174,11 +174,11 @@
   "Returns the names of the annotation types supported by this
    processor.  An element of the result may be the canonical
    (fully qualified) name of a supported annotation type.
-   Alternately it may be of the form `name.*`
+   Alternately it may be of the form \"name.*\"
    representing the set of all annotation types with canonical
-   names beginning with `name.`.  Finally, `*` by itself represents the set of all annotation types,
+   names beginning with \"name.\".  Finally, \"*\" by itself represents the set of all annotation types,
    including the empty set.  Note that a processor should not
-   claim `*` unless it is actually processing all files;
+   claim \"*\" unless it is actually processing all files;
    claiming unnecessary annotations may cause a performance
    slowdown in some environments.
 
@@ -229,7 +229,7 @@
    always return the same boolean value or may vary the result
    based on chosen criteria.
 
-   The input set will be empty if the processor supports `*` and the root elements have no annotations.  A Processor must gracefully handle an empty set of annotations.
+   The input set will be empty if the processor supports \"*\" and the root elements have no annotations.  A Processor must gracefully handle an empty set of annotations.
 
   annotations - the annotation types requested to be processed - `java.util.Set`
   round-env - environment for information about the current and prior round - `javax.annotation.processing.RoundEnvironment`
@@ -282,14 +282,14 @@
 
    import static javax.annotation.processing.Completions.*;
    ...
-   return Arrays.asList(of(`3`),
-                        of(`7`),
-                        of(`31`),
-                        of(`127`),
-                        of(`8191`),
-                        of(`131071`),
-                        of(`524287`),
-                        of(`2147483647`));
+   return Arrays.asList(of(\"3\"),
+                        of(\"7\"),
+                        of(\"31\"),
+                        of(\"127\"),
+                        of(\"8191\"),
+                        of(\"131071\"),
+                        of(\"524287\"),
+                        of(\"2147483647\"));
 
 
    A more informative set of completions would include the number
@@ -298,14 +298,14 @@
 
 
 
-   return Arrays.asList(of(`3`,          `M2`),
-                        of(`7`,          `M3`),
-                        of(`31`,         `M5`),
-                        of(`127`,        `M7`),
-                        of(`8191`,       `M13`),
-                        of(`131071`,     `M17`),
-                        of(`524287`,     `M19`),
-                        of(`2147483647`, `M31`));
+   return Arrays.asList(of(\"3\",          \"M2\"),
+                        of(\"7\",          \"M3\"),
+                        of(\"31\",         \"M5\"),
+                        of(\"127\",        \"M7\"),
+                        of(\"8191\",       \"M13\"),
+                        of(\"131071\",     \"M17\"),
+                        of(\"524287\",     \"M19\"),
+                        of(\"2147483647\", \"M31\"));
 
 
    However, if the userText is available, it can be checked
@@ -318,14 +318,14 @@
 
 
 
-   the value of userText will be `1`; and only
+   the value of userText will be \"1\"; and only
    two of the primes are possible completions:
 
 
 
 
-   return Arrays.asList(of(`127`,        `M7`),
-                        of(`131071`,     `M17`));
+   return Arrays.asList(of(\"127\",        \"M7\"),
+                        of(\"131071\",     \"M17\"));
 
 
    Sometimes no valid completion is possible.  For example, there
@@ -351,7 +351,7 @@
 
 
 
-   return Arrays.asList(of(``, `No in-range Mersenne primes start with 9`));
+   return Arrays.asList(of(\"\", \"No in-range Mersenne primes start with 9\"));
 
   element - the element being annotated - `javax.lang.model.element.Element`
   annotation - the (perhaps partial) annotation being applied to the element - `javax.lang.model.element.AnnotationMirror`

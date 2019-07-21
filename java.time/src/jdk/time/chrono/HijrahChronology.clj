@@ -41,11 +41,11 @@
 
   Selecting the chronology from the locale uses Chronology.ofLocale(java.util.Locale)
   to find the Chronology based on Locale supported BCP 47 extension mechanism
-  to request a specific calendar (`ca`). For example,
+  to request a specific calendar (\"ca\"). For example,
 
 
 
-       Locale locale = Locale.forLanguageTag(`en-US-u-ca-islamic-umalqura`);
+       Locale locale = Locale.forLanguageTag(\"en-US-u-ca-islamic-umalqura\");
        Chronology chrono = Chronology.ofLocale(locale);"
   (:refer-clojure :only [require comment defn ->])
   (:import [java.time.chrono HijrahChronology]))

@@ -23,7 +23,7 @@
 
   If a security manager is installed, and if a method is called which results in an
   attempt to open a connection, the caller must possess either:-
-  a `connect` SocketPermission to the host/port combination of the
+  a \"connect\" SocketPermission to the host/port combination of the
   destination URL or
   a URLPermission that permits this request.
 
@@ -557,7 +557,7 @@
 
    HTTP/1.0 200 OK
    HTTP/1.0 404 Not Found
-   Extracts the Strings `OK` and `Not Found` respectively.
+   Extracts the Strings \"OK\" and \"Not Found\" respectively.
    Returns null if none could be discerned from the responses
    (the result was not valid HTTP).
 

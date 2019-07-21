@@ -102,7 +102,7 @@
    A provider supplies rules for one or more zone IDs.
    A provider cannot be registered if it supplies a zone ID that has already been
    registered. See the notes on time-zone IDs in ZoneId, especially
-   the section on using the concept of a `group` to make IDs unique.
+   the section on using the concept of a \"group\" to make IDs unique.
 
    To ensure the integrity of time-zones already created, there is no way
    to deregister providers.

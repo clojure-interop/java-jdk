@@ -4,7 +4,7 @@
   provider interfaces, see the class comment for the
   IIORegistry class.
 
-   This interface allows arbitrary objects to be `wrapped` by
+   This interface allows arbitrary objects to be \"wrapped\" by
   instances of ImageOutputStream.  For example, a
   particular ImageOutputStreamSpi might allow a generic
   OutputStream to be used as a destination; another
@@ -37,7 +37,7 @@
 (defn get-output-class
   "Returns a Class object representing the class or
    interface type that must be implemented by an output
-   destination in order to be `wrapped` in an
+   destination in order to be \"wrapped\" in an
    ImageOutputStream via the
    createOutputStreamInstance method.
 

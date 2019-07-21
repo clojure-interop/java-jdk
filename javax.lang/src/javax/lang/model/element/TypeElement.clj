@@ -61,9 +61,9 @@
    The name of a generic type does not include any reference
    to its formal type parameters.
    For example, the fully qualified name of the interface
-   java.util.Set<E> is `java.util.Set`.
-   Nested types use `.` as a separator, as in
-   `java.util.Map.Entry`.
+   java.util.Set<E> is \"java.util.Set\".
+   Nested types use \".\" as a separator, as in
+   \"java.util.Map.Entry\".
 
   returns: the fully qualified name of this class or interface, or
    an empty name if none - `javax.lang.model.element.Name`"

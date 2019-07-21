@@ -8,20 +8,20 @@
 
 
 
-  <element name=`KeyInfo` type=`ds:KeyInfoType`/>
-  <complexType name=`KeyInfoType` mixed=`true`>
-    <choice maxOccurs=`unbounded`>
-      <element ref=`ds:KeyName`/>
-      <element ref=`ds:KeyValue`/>
-      <element ref=`ds:RetrievalMethod`/>
-      <element ref=`ds:X509Data`/>
-      <element ref=`ds:PGPData`/>
-      <element ref=`ds:SPKIData`/>
-      <element ref=`ds:MgmtData`/>
-      <any processContents=`lax` namespace=`##other`/>
+  <element name=\"KeyInfo\" type=\"ds:KeyInfoType\"/>
+  <complexType name=\"KeyInfoType\" mixed=\"true\">
+    <choice maxOccurs=\"unbounded\">
+      <element ref=\"ds:KeyName\"/>
+      <element ref=\"ds:KeyValue\"/>
+      <element ref=\"ds:RetrievalMethod\"/>
+      <element ref=\"ds:X509Data\"/>
+      <element ref=\"ds:PGPData\"/>
+      <element ref=\"ds:SPKIData\"/>
+      <element ref=\"ds:MgmtData\"/>
+      <any processContents=\"lax\" namespace=\"##other\"/>
       <!-- (1,1) elements from (0,unbounded) namespaces -->
     </choice>
-    <attribute name=`Id` type=`ID` use=`optional`/>
+    <attribute name=\"Id\" type=\"ID\" use=\"optional\"/>
   </complexType>
 
   A KeyInfo instance may be created by invoking one of the
@@ -31,9 +31,9 @@
   for example:
 
 
-    KeyInfoFactory factory = KeyInfoFactory.getInstance(`DOM`);
+    KeyInfoFactory factory = KeyInfoFactory.getInstance(\"DOM\");
     KeyInfo keyInfo = factory.newKeyInfo
-       (Collections.singletonList(factory.newKeyName(`Alice`), `keyinfo-1`));
+       (Collections.singletonList(factory.newKeyName(\"Alice\"), \"keyinfo-1\"));
 
   KeyInfo objects can also be marshalled to XML by invoking
   the marshal method."

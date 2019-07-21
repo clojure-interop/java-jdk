@@ -297,7 +297,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `SplitPaneUI` - `java.lang.String`"
+  returns: the string \"SplitPaneUI\" - `java.lang.String`"
   (^java.lang.String [^JSplitPane this]
     (-> this (.getUIClassID))))
 

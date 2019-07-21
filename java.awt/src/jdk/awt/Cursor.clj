@@ -147,7 +147,7 @@
 
 (defn *get-system-custom-cursor
   "Returns a system-specific custom cursor object matching the
-   specified name.  Cursor names are, for example: `Invalid.16x16`
+   specified name.  Cursor names are, for example: \"Invalid.16x16\"
 
   name - a string describing the desired system-specific custom cursor - `java.lang.String`
 

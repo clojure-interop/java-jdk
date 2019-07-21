@@ -56,12 +56,12 @@
   In addition to sorting TableRowSorter provides the ability
   to filter.  A filter is specified using the setFilter
   method. The following example will only show rows containing the string
-  `foo`:
+  \"foo\":
 
 
     TableModel myModel = createMyTableModel();
     TableRowSorter sorter = new TableRowSorter(myModel);
-    sorter.setRowFilter(RowFilter.regexFilter(`.*foo.*`));
+    sorter.setRowFilter(RowFilter.regexFilter(\".*foo.*\"));
     JTable table = new JTable(myModel);
     table.setRowSorter(sorter);
 

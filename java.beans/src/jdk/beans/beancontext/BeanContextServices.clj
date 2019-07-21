@@ -1,6 +1,6 @@
 (ns jdk.beans.beancontext.BeanContextServices
   " The BeanContextServices interface provides a mechanism for a BeanContext
-  to expose generic `services` to the BeanContextChild objects within."
+  to expose generic \"services\" to the BeanContextChild objects within."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.beans.beancontext BeanContextServices]))
 

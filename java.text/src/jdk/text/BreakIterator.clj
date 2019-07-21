@@ -344,7 +344,7 @@
 
   offset - the character offset to check. - `int`
 
-  returns: true if `offset` is a boundary position,
+  returns: true if \"offset\" is a boundary position,
    false otherwise. - `boolean`
 
   throws: java.lang.IllegalArgumentException - if the specified offset is less than the first text boundary or greater than the last text boundary."

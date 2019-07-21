@@ -11,7 +11,7 @@
   "This implementation compares the path of its URI to the given
    simple name.  This method returns true if the given kind is
    equal to the kind of this object, and if the path is equal to
-   simpleName  kind.extension or if it ends with `/`  simpleName  kind.extension.
+   simpleName  kind.extension or if it ends with \"/\"  simpleName  kind.extension.
 
    This method calls getKind() and toUri() and
    does not access the fields uri and kind

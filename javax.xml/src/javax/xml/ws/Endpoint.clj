@@ -89,7 +89,7 @@
 
   returns: The newly created endpoint. - `javax.xml.ws.Endpoint`
 
-  throws: java.lang.SecurityException - If a java.lang.SecurityManger is being used and the application doesn't have the WebServicePermission(`publishEndpoint`) permission."
+  throws: java.lang.SecurityException - If a java.lang.SecurityManger is being used and the application doesn't have the WebServicePermission(\"publishEndpoint\") permission."
   (^javax.xml.ws.Endpoint [^java.lang.String address ^java.lang.Object implementor ^javax.xml.ws.WebServiceFeature features]
     (Endpoint/publish address implementor features))
   (^javax.xml.ws.Endpoint [^java.lang.String address ^java.lang.Object implementor]

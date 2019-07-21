@@ -23,7 +23,7 @@
   that data. CAs act as trusted third parties, making introductions
   between principals who have no direct knowledge of each other.
   CA certificates are either signed by themselves, or by some other
-  CA such as a `root` CA.
+  CA such as a \"root\" CA.
 
   More information can be found in
   RFC 3280: Internet X.509
@@ -52,8 +52,8 @@
   an example of how to instantiate an X.509 certificate:
 
 
-  try (InputStream inStream = new FileInputStream(`fileName-of-cert`)) {
-      CertificateFactory cf = CertificateFactory.getInstance(`X.509`);
+  try (InputStream inStream = new FileInputStream(\"fileName-of-cert\")) {
+      CertificateFactory cf = CertificateFactory.getInstance(\"X.509\");
       X509Certificate cert = (X509Certificate)cf.generateCertificate(inStream);
   }"
   (:refer-clojure :only [require comment defn ->])
@@ -124,7 +124,7 @@
    using the well-established string formats for those types (subject to
    the restrictions included in RFC 3280). IPv4 address names are
    returned using dotted quad notation. IPv6 address names are returned
-   in the form `a1:a2:...:a8`, where a1-a8 are hexadecimal values
+   in the form \"a1:a2:...:a8\", where a1-a8 are hexadecimal values
    representing the eight 16-bit pieces of the address. OID names are
    returned as Strings represented as a series of nonnegative
    integers separated by periods. And directory names (distinguished names)
@@ -384,7 +384,7 @@
    Gets the subject (subject distinguished name) value
    from the certificate.  If the subject value is empty,
    then the getName() method of the returned
-   Principal object returns an empty string (``).
+   Principal object returns an empty string (\"\").
 
     The ASN.1 definition for this is:
 
@@ -492,7 +492,7 @@
 
 (defn get-sig-alg-name
   "Gets the signature algorithm name for the certificate
-   signature algorithm. An example is the string `SHA256withRSA`.
+   signature algorithm. An example is the string \"SHA256withRSA\".
    The ASN.1 definition for this is:
 
 
@@ -516,7 +516,7 @@
   "Returns the subject (subject distinguished name) value from the
    certificate as an X500Principal.  If the subject value
    is empty, then the getName() method of the returned
-   X500Principal object returns an empty string (``).
+   X500Principal object returns an empty string (\"\").
 
    It is recommended that subclasses override this method.
 
@@ -529,7 +529,7 @@
   "Gets the signature algorithm OID string from the certificate.
    An OID is represented by a set of nonnegative whole numbers separated
    by periods.
-   For example, the string `1.2.840.10040.4.3` identifies the SHA-1
+   For example, the string \"1.2.840.10040.4.3\" identifies the SHA-1
    with DSA signature algorithm defined in
    RFC 3279: Algorithms and
    Identifiers for the Internet X.509 Public Key Infrastructure Certificate

@@ -10,8 +10,8 @@
   performance: initial capacity and load factor.  The
   capacity is the number of buckets in the hash table, and the
   initial capacity is simply the capacity at the time the hash table
-  is created.  Note that the hash table is open: in the case of a `hash
-  collision`, a single bucket stores multiple entries, which must be searched
+  is created.  Note that the hash table is open: in the case of a \"hash
+  collision\", a single bucket stores multiple entries, which must be searched
   sequentially.  The load factor is a measure of how full the hash
   table is allowed to get before its capacity is automatically increased.
   The initial capacity and load factor parameters are merely hints to
@@ -41,20 +41,20 @@
 
     Hashtable<String, Integer> numbers
       = new Hashtable<String, Integer>();
-    numbers.put(`one`, 1);
-    numbers.put(`two`, 2);
-    numbers.put(`three`, 3);
+    numbers.put(\"one\", 1);
+    numbers.put(\"two\", 2);
+    numbers.put(\"three\", 3);
 
   To retrieve a number, use the following code:
 
 
-    Integer n = numbers.get(`two`);
+    Integer n = numbers.get(\"two\");
     if (n != null) {
-      System.out.println(`two = `  n);
+      System.out.println(\"two = \"  n);
     }
 
   The iterators returned by the iterator method of the collections
-  returned by all of this class's `collection view methods` are
+  returned by all of this class's \"collection view methods\" are
   fail-fast: if the Hashtable is structurally modified at any time
   after the iterator is created, in any way except through the iterator's own
   remove method, the iterator will throw a ConcurrentModificationException.  Thus, in the face of concurrent
@@ -223,7 +223,7 @@
 (defn to-string
   "Returns a string representation of this Hashtable object
    in the form of a set of entries, enclosed in braces and separated
-   by the ASCII characters `, ` (comma and space). Each
+   by the ASCII characters \", \" (comma and space). Each
    entry is rendered as the key, an equals sign =, and the
    associated element, where the toString method is used to
    convert the key and element to strings.

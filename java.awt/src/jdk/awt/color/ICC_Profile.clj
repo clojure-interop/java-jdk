@@ -1038,7 +1038,7 @@
 (defn get-pcs-type
   "Returns the color space type of the Profile Connection Space (PCS).
    Returns one of the color space type constants defined by the
-   ColorSpace class.  This is the `output` color space of the
+   ColorSpace class.  This is the \"output\" color space of the
    profile.  For an input, display, or output profile useful
    for tagging colors or images, this will be either TYPE_XYZ or
    TYPE_Lab and should be interpreted as the corresponding specific
@@ -1053,7 +1053,7 @@
 (defn get-color-space-type
   "Returns the color space type.  Returns one of the color space type
    constants defined by the ColorSpace class.  This is the
-   `input` color space of the profile.  The type defines the
+   \"input\" color space of the profile.  The type defines the
    number of components of the color space and the interpretation,
    e.g. TYPE_RGB identifies a color space with three components - red,
    green, and blue.  It does not define the particular color
@@ -1066,7 +1066,7 @@
     (-> this (.getColorSpaceType))))
 
 (defn get-num-components
-  "Returns the number of color components in the `input` color
+  "Returns the number of color components in the \"input\" color
    space of this profile.  For example if the color space type
    of this profile is TYPE_RGB, then this method will return 3.
 

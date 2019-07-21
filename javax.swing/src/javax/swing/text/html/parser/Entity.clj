@@ -15,38 +15,38 @@
   (^Entity [^java.lang.String name ^Integer type data]
     (new Entity name type data)))
 
-(defn -name
+(defn name
   "Instance Field.
 
   type: java.lang.String"
-  [this]
-  (-> this .-name))
+  (^java.lang.String [^Entity this]
+    (-> this .-name)))
 
-(defn -type
+(defn type
   "Instance Field.
 
   type: int"
-  [this]
-  (-> this .-type))
+  (^Integer [^Entity this]
+    (-> this .-type)))
 
-(defn -data
+(defn data
   "Instance Field.
 
   type: char[]"
-  [this]
-  (-> this .-data))
+  ([^Entity this]
+    (-> this .-data)))
 
 (defn *name-2type
   "Converts nm string to the corresponding
    entity type.  If the string does not have a corresponding
-   entity type, returns the type corresponding to `CDATA`.
-   Valid entity types are: `PUBLIC`, `CDATA`, `SDATA`, `PI`,
-   `STARTTAG`, `ENDTAG`, `MS`, `MD`, `SYSTEM`.
+   entity type, returns the type corresponding to \"CDATA\".
+   Valid entity types are: \"PUBLIC\", \"CDATA\", \"SDATA\", \"PI\",
+   \"STARTTAG\", \"ENDTAG\", \"MS\", \"MD\", \"SYSTEM\".
 
   nm - the string to be converted - `java.lang.String`
 
   returns: the corresponding entity type, or the type corresponding
-     to `CDATA`, if none exists - `int`"
+     to \"CDATA\", if none exists - `int`"
   (^Integer [^java.lang.String nm]
     (Entity/name2type nm)))
 

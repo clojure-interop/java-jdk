@@ -24,7 +24,7 @@
 
    If there is a security manager, its
    checkPermission method will be invoked with a
-   java.util.logging.LoggingPermission(`control`)
+   java.util.logging.LoggingPermission(\"control\")
    permission; this could result in a SecurityException.
 
   out - the output stream to which RMI calls should be logged - `java.io.OutputStream`

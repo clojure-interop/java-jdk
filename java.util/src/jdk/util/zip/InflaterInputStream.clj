@@ -1,6 +1,6 @@
 (ns jdk.util.zip.InflaterInputStream
   "This class implements a stream filter for uncompressing data in the
-  `deflate` compression format. It is also used as the basis for other
+  \"deflate\" compression format. It is also used as the basis for other
   decompression filters, such as GZIPInputStream."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util.zip InflaterInputStream]))
@@ -12,7 +12,7 @@
    buffer size.
 
   in - the input stream - `java.io.InputStream`
-  inf - the decompressor (`inflater`) - `java.util.zip.Inflater`
+  inf - the decompressor (\"inflater\") - `java.util.zip.Inflater`
   size - the input buffer size - `int`
 
   throws: java.lang.IllegalArgumentException - if size <= 0"

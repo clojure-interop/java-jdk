@@ -57,8 +57,8 @@
   in the String and StringBuffer classes. In
   this representation, supplementary characters are represented as a pair
   of char values, the first from the high-surrogates
-  range, (\uD800-\uDBFF), the second from the
-  low-surrogates range (\uDC00-\uDFFF).
+  range, (\\uD800-\\uDBFF), the second from the
+  low-surrogates range (\\uDC00-\\uDFFF).
 
   A char value, therefore, represents Basic
   Multilingual Plane (BMP) code points, including the surrogate
@@ -75,7 +75,7 @@
   The methods that only accept a char value cannot support
   supplementary characters. They treat char values from the
   surrogate ranges as undefined characters. For example,
-  Character.isLetter('\uD840') returns false, even though
+  Character.isLetter('\\uD840') returns false, even though
   this specific value if followed by any low-surrogate value in a string
   would represent a letter.
 
@@ -133,7 +133,7 @@
   "Static Constant.
 
   The constant value of this field is the smallest value of type
-   char, '\u0000'.
+   char, '\\u0000'.
 
   type: char"
   Character/MIN_VALUE)
@@ -142,7 +142,7 @@
   "Static Constant.
 
   The constant value of this field is the largest value of type
-   char, '\uFFFF'.
+   char, '\\uFFFF'.
 
   type: char"
   Character/MAX_VALUE)
@@ -159,7 +159,7 @@
 (def *-unassigned
   "Static Constant.
 
-  General category `Cn` in the Unicode specification.
+  General category \"Cn\" in the Unicode specification.
 
   type: byte"
   Character/UNASSIGNED)
@@ -167,7 +167,7 @@
 (def *-uppercase-letter
   "Static Constant.
 
-  General category `Lu` in the Unicode specification.
+  General category \"Lu\" in the Unicode specification.
 
   type: byte"
   Character/UPPERCASE_LETTER)
@@ -175,7 +175,7 @@
 (def *-lowercase-letter
   "Static Constant.
 
-  General category `Ll` in the Unicode specification.
+  General category \"Ll\" in the Unicode specification.
 
   type: byte"
   Character/LOWERCASE_LETTER)
@@ -183,7 +183,7 @@
 (def *-titlecase-letter
   "Static Constant.
 
-  General category `Lt` in the Unicode specification.
+  General category \"Lt\" in the Unicode specification.
 
   type: byte"
   Character/TITLECASE_LETTER)
@@ -191,7 +191,7 @@
 (def *-modifier-letter
   "Static Constant.
 
-  General category `Lm` in the Unicode specification.
+  General category \"Lm\" in the Unicode specification.
 
   type: byte"
   Character/MODIFIER_LETTER)
@@ -199,7 +199,7 @@
 (def *-other-letter
   "Static Constant.
 
-  General category `Lo` in the Unicode specification.
+  General category \"Lo\" in the Unicode specification.
 
   type: byte"
   Character/OTHER_LETTER)
@@ -207,7 +207,7 @@
 (def *-non-spacing-mark
   "Static Constant.
 
-  General category `Mn` in the Unicode specification.
+  General category \"Mn\" in the Unicode specification.
 
   type: byte"
   Character/NON_SPACING_MARK)
@@ -215,7 +215,7 @@
 (def *-enclosing-mark
   "Static Constant.
 
-  General category `Me` in the Unicode specification.
+  General category \"Me\" in the Unicode specification.
 
   type: byte"
   Character/ENCLOSING_MARK)
@@ -223,7 +223,7 @@
 (def *-combining-spacing-mark
   "Static Constant.
 
-  General category `Mc` in the Unicode specification.
+  General category \"Mc\" in the Unicode specification.
 
   type: byte"
   Character/COMBINING_SPACING_MARK)
@@ -231,7 +231,7 @@
 (def *-decimal-digit-number
   "Static Constant.
 
-  General category `Nd` in the Unicode specification.
+  General category \"Nd\" in the Unicode specification.
 
   type: byte"
   Character/DECIMAL_DIGIT_NUMBER)
@@ -239,7 +239,7 @@
 (def *-letter-number
   "Static Constant.
 
-  General category `Nl` in the Unicode specification.
+  General category \"Nl\" in the Unicode specification.
 
   type: byte"
   Character/LETTER_NUMBER)
@@ -247,7 +247,7 @@
 (def *-other-number
   "Static Constant.
 
-  General category `No` in the Unicode specification.
+  General category \"No\" in the Unicode specification.
 
   type: byte"
   Character/OTHER_NUMBER)
@@ -255,7 +255,7 @@
 (def *-space-separator
   "Static Constant.
 
-  General category `Zs` in the Unicode specification.
+  General category \"Zs\" in the Unicode specification.
 
   type: byte"
   Character/SPACE_SEPARATOR)
@@ -263,7 +263,7 @@
 (def *-line-separator
   "Static Constant.
 
-  General category `Zl` in the Unicode specification.
+  General category \"Zl\" in the Unicode specification.
 
   type: byte"
   Character/LINE_SEPARATOR)
@@ -271,7 +271,7 @@
 (def *-paragraph-separator
   "Static Constant.
 
-  General category `Zp` in the Unicode specification.
+  General category \"Zp\" in the Unicode specification.
 
   type: byte"
   Character/PARAGRAPH_SEPARATOR)
@@ -279,7 +279,7 @@
 (def *-control
   "Static Constant.
 
-  General category `Cc` in the Unicode specification.
+  General category \"Cc\" in the Unicode specification.
 
   type: byte"
   Character/CONTROL)
@@ -287,7 +287,7 @@
 (def *-format
   "Static Constant.
 
-  General category `Cf` in the Unicode specification.
+  General category \"Cf\" in the Unicode specification.
 
   type: byte"
   Character/FORMAT)
@@ -295,7 +295,7 @@
 (def *-private-use
   "Static Constant.
 
-  General category `Co` in the Unicode specification.
+  General category \"Co\" in the Unicode specification.
 
   type: byte"
   Character/PRIVATE_USE)
@@ -303,7 +303,7 @@
 (def *-surrogate
   "Static Constant.
 
-  General category `Cs` in the Unicode specification.
+  General category \"Cs\" in the Unicode specification.
 
   type: byte"
   Character/SURROGATE)
@@ -311,7 +311,7 @@
 (def *-dash-punctuation
   "Static Constant.
 
-  General category `Pd` in the Unicode specification.
+  General category \"Pd\" in the Unicode specification.
 
   type: byte"
   Character/DASH_PUNCTUATION)
@@ -319,7 +319,7 @@
 (def *-start-punctuation
   "Static Constant.
 
-  General category `Ps` in the Unicode specification.
+  General category \"Ps\" in the Unicode specification.
 
   type: byte"
   Character/START_PUNCTUATION)
@@ -327,7 +327,7 @@
 (def *-end-punctuation
   "Static Constant.
 
-  General category `Pe` in the Unicode specification.
+  General category \"Pe\" in the Unicode specification.
 
   type: byte"
   Character/END_PUNCTUATION)
@@ -335,7 +335,7 @@
 (def *-connector-punctuation
   "Static Constant.
 
-  General category `Pc` in the Unicode specification.
+  General category \"Pc\" in the Unicode specification.
 
   type: byte"
   Character/CONNECTOR_PUNCTUATION)
@@ -343,7 +343,7 @@
 (def *-other-punctuation
   "Static Constant.
 
-  General category `Po` in the Unicode specification.
+  General category \"Po\" in the Unicode specification.
 
   type: byte"
   Character/OTHER_PUNCTUATION)
@@ -351,7 +351,7 @@
 (def *-math-symbol
   "Static Constant.
 
-  General category `Sm` in the Unicode specification.
+  General category \"Sm\" in the Unicode specification.
 
   type: byte"
   Character/MATH_SYMBOL)
@@ -359,7 +359,7 @@
 (def *-currency-symbol
   "Static Constant.
 
-  General category `Sc` in the Unicode specification.
+  General category \"Sc\" in the Unicode specification.
 
   type: byte"
   Character/CURRENCY_SYMBOL)
@@ -367,7 +367,7 @@
 (def *-modifier-symbol
   "Static Constant.
 
-  General category `Sk` in the Unicode specification.
+  General category \"Sk\" in the Unicode specification.
 
   type: byte"
   Character/MODIFIER_SYMBOL)
@@ -375,7 +375,7 @@
 (def *-other-symbol
   "Static Constant.
 
-  General category `So` in the Unicode specification.
+  General category \"So\" in the Unicode specification.
 
   type: byte"
   Character/OTHER_SYMBOL)
@@ -383,7 +383,7 @@
 (def *-initial-quote-punctuation
   "Static Constant.
 
-  General category `Pi` in the Unicode specification.
+  General category \"Pi\" in the Unicode specification.
 
   type: byte"
   Character/INITIAL_QUOTE_PUNCTUATION)
@@ -391,7 +391,7 @@
 (def *-final-quote-punctuation
   "Static Constant.
 
-  General category `Pf` in the Unicode specification.
+  General category \"Pf\" in the Unicode specification.
 
   type: byte"
   Character/FINAL_QUOTE_PUNCTUATION)
@@ -408,7 +408,7 @@
 (def *-directionality-left-to-right
   "Static Constant.
 
-  Strong bidirectional character type `L` in the Unicode specification.
+  Strong bidirectional character type \"L\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_LEFT_TO_RIGHT)
@@ -416,7 +416,7 @@
 (def *-directionality-right-to-left
   "Static Constant.
 
-  Strong bidirectional character type `R` in the Unicode specification.
+  Strong bidirectional character type \"R\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_RIGHT_TO_LEFT)
@@ -424,7 +424,7 @@
 (def *-directionality-right-to-left-arabic
   "Static Constant.
 
-  Strong bidirectional character type `AL` in the Unicode specification.
+  Strong bidirectional character type \"AL\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_RIGHT_TO_LEFT_ARABIC)
@@ -432,7 +432,7 @@
 (def *-directionality-european-number
   "Static Constant.
 
-  Weak bidirectional character type `EN` in the Unicode specification.
+  Weak bidirectional character type \"EN\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_EUROPEAN_NUMBER)
@@ -440,7 +440,7 @@
 (def *-directionality-european-number-separator
   "Static Constant.
 
-  Weak bidirectional character type `ES` in the Unicode specification.
+  Weak bidirectional character type \"ES\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_EUROPEAN_NUMBER_SEPARATOR)
@@ -448,7 +448,7 @@
 (def *-directionality-european-number-terminator
   "Static Constant.
 
-  Weak bidirectional character type `ET` in the Unicode specification.
+  Weak bidirectional character type \"ET\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_EUROPEAN_NUMBER_TERMINATOR)
@@ -456,7 +456,7 @@
 (def *-directionality-arabic-number
   "Static Constant.
 
-  Weak bidirectional character type `AN` in the Unicode specification.
+  Weak bidirectional character type \"AN\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_ARABIC_NUMBER)
@@ -464,7 +464,7 @@
 (def *-directionality-common-number-separator
   "Static Constant.
 
-  Weak bidirectional character type `CS` in the Unicode specification.
+  Weak bidirectional character type \"CS\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_COMMON_NUMBER_SEPARATOR)
@@ -472,7 +472,7 @@
 (def *-directionality-nonspacing-mark
   "Static Constant.
 
-  Weak bidirectional character type `NSM` in the Unicode specification.
+  Weak bidirectional character type \"NSM\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_NONSPACING_MARK)
@@ -480,7 +480,7 @@
 (def *-directionality-boundary-neutral
   "Static Constant.
 
-  Weak bidirectional character type `BN` in the Unicode specification.
+  Weak bidirectional character type \"BN\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_BOUNDARY_NEUTRAL)
@@ -488,7 +488,7 @@
 (def *-directionality-paragraph-separator
   "Static Constant.
 
-  Neutral bidirectional character type `B` in the Unicode specification.
+  Neutral bidirectional character type \"B\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_PARAGRAPH_SEPARATOR)
@@ -496,7 +496,7 @@
 (def *-directionality-segment-separator
   "Static Constant.
 
-  Neutral bidirectional character type `S` in the Unicode specification.
+  Neutral bidirectional character type \"S\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_SEGMENT_SEPARATOR)
@@ -504,7 +504,7 @@
 (def *-directionality-whitespace
   "Static Constant.
 
-  Neutral bidirectional character type `WS` in the Unicode specification.
+  Neutral bidirectional character type \"WS\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_WHITESPACE)
@@ -512,7 +512,7 @@
 (def *-directionality-other-neutrals
   "Static Constant.
 
-  Neutral bidirectional character type `ON` in the Unicode specification.
+  Neutral bidirectional character type \"ON\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_OTHER_NEUTRALS)
@@ -520,7 +520,7 @@
 (def *-directionality-left-to-right-embedding
   "Static Constant.
 
-  Strong bidirectional character type `LRE` in the Unicode specification.
+  Strong bidirectional character type \"LRE\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_LEFT_TO_RIGHT_EMBEDDING)
@@ -528,7 +528,7 @@
 (def *-directionality-left-to-right-override
   "Static Constant.
 
-  Strong bidirectional character type `LRO` in the Unicode specification.
+  Strong bidirectional character type \"LRO\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_LEFT_TO_RIGHT_OVERRIDE)
@@ -536,7 +536,7 @@
 (def *-directionality-right-to-left-embedding
   "Static Constant.
 
-  Strong bidirectional character type `RLE` in the Unicode specification.
+  Strong bidirectional character type \"RLE\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_RIGHT_TO_LEFT_EMBEDDING)
@@ -544,7 +544,7 @@
 (def *-directionality-right-to-left-override
   "Static Constant.
 
-  Strong bidirectional character type `RLO` in the Unicode specification.
+  Strong bidirectional character type \"RLO\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_RIGHT_TO_LEFT_OVERRIDE)
@@ -552,7 +552,7 @@
 (def *-directionality-pop-directional-format
   "Static Constant.
 
-  Weak bidirectional character type `PDF` in the Unicode specification.
+  Weak bidirectional character type \"PDF\" in the Unicode specification.
 
   type: byte"
   Character/DIRECTIONALITY_POP_DIRECTIONAL_FORMAT)
@@ -563,7 +563,7 @@
   The minimum value of a
 
    Unicode high-surrogate code unit
-   in the UTF-16 encoding, constant '\uD800'.
+   in the UTF-16 encoding, constant '\\uD800'.
    A high-surrogate is also known as a leading-surrogate.
 
   type: char"
@@ -575,7 +575,7 @@
   The maximum value of a
 
    Unicode high-surrogate code unit
-   in the UTF-16 encoding, constant '\uDBFF'.
+   in the UTF-16 encoding, constant '\\uDBFF'.
    A high-surrogate is also known as a leading-surrogate.
 
   type: char"
@@ -587,7 +587,7 @@
   The minimum value of a
 
    Unicode low-surrogate code unit
-   in the UTF-16 encoding, constant '\uDC00'.
+   in the UTF-16 encoding, constant '\\uDC00'.
    A low-surrogate is also known as a trailing-surrogate.
 
   type: char"
@@ -599,7 +599,7 @@
   The maximum value of a
 
    Unicode low-surrogate code unit
-   in the UTF-16 encoding, constant '\uDFFF'.
+   in the UTF-16 encoding, constant '\\uDFFF'.
    A low-surrogate is also known as a trailing-surrogate.
 
   type: char"
@@ -609,7 +609,7 @@
   "Static Constant.
 
   The minimum value of a Unicode surrogate code unit in the
-   UTF-16 encoding, constant '\uD800'.
+   UTF-16 encoding, constant '\\uD800'.
 
   type: char"
   Character/MIN_SURROGATE)
@@ -618,7 +618,7 @@
   "Static Constant.
 
   The maximum value of a Unicode surrogate code unit in the
-   UTF-16 encoding, constant '\uDFFF'.
+   UTF-16 encoding, constant '\\uDFFF'.
 
   type: char"
   Character/MAX_SURROGATE)
@@ -751,7 +751,7 @@
    the specified radix. If the value of radix is not a
    valid radix, or the value of digit is not a valid
    digit in the specified radix, the null character
-   ('\u0000') is returned.
+   ('\\u0000') is returned.
 
    The radix argument is valid if it is greater than or
    equal to MIN_RADIX and less than or equal to
@@ -779,7 +779,7 @@
    significantly better space and time performance by caching
    frequently requested values.
 
-   This method will always cache values in the range '\u0000' to '\u007F', inclusive, and may
+   This method will always cache values in the range '\\u0000' to '\\u007F', inclusive, and may
    cache other values outside of this range.
 
   c - a char value. - `char`
@@ -873,10 +873,10 @@
 
 
    a b c d e f g h i j k l m n o p q r s t u v w x y z
-   '\u00DF' '\u00E0' '\u00E1' '\u00E2' '\u00E3' '\u00E4' '\u00E5' '\u00E6'
-   '\u00E7' '\u00E8' '\u00E9' '\u00EA' '\u00EB' '\u00EC' '\u00ED' '\u00EE'
-   '\u00EF' '\u00F0' '\u00F1' '\u00F2' '\u00F3' '\u00F4' '\u00F5' '\u00F6'
-   '\u00F8' '\u00F9' '\u00FA' '\u00FB' '\u00FC' '\u00FD' '\u00FE' '\u00FF'
+   '\\u00DF' '\\u00E0' '\\u00E1' '\\u00E2' '\\u00E3' '\\u00E4' '\\u00E5' '\\u00E6'
+   '\\u00E7' '\\u00E8' '\\u00E9' '\\u00EA' '\\u00EB' '\\u00EC' '\\u00ED' '\\u00EE'
+   '\\u00EF' '\\u00F0' '\\u00F1' '\\u00F2' '\\u00F3' '\\u00F4' '\\u00F5' '\\u00F6'
+   '\\u00F8' '\\u00F9' '\\u00FA' '\\u00FB' '\\u00FC' '\\u00FD' '\\u00FE' '\\u00FF'
     Many other Unicode characters are lowercase too.
 
    Note: This method cannot handle  supplementary characters. To support
@@ -1027,9 +1027,9 @@
 (defn *iso-control?
   "Determines if the specified character is an ISO control
    character.  A character is considered to be an ISO control
-   character if its code is in the range '\u0000'
-   through '\u001F' or in the range
-   '\u007F' through '\u009F'.
+   character if its code is in the range '\\u0000'
+   through '\\u001F' or in the range
+   '\\u007F' through '\\u009F'.
 
    Note: This method cannot handle  supplementary characters. To support
    all Unicode characters, including supplementary characters, use
@@ -1053,7 +1053,7 @@
    name is the same as the result of expression.
 
    Character.UnicodeBlock.of(codePoint).toString().replace('_', ' ')
-        ` `
+        \" \"
         Integer.toHexString(codePoint).toUpperCase(Locale.ENGLISH);
 
   code-point - the character (Unicode code point) - `int`
@@ -1091,15 +1091,15 @@
 (defn *get-numeric-value
   "Returns the int value that the specified Unicode
    character represents. For example, the character
-   '\u216C' (the roman numeral fifty) will return
+   '\\u216C' (the roman numeral fifty) will return
    an int with a value of 50.
 
-   The letters A-Z in their uppercase ('\u0041' through
-   '\u005A'), lowercase
-   ('\u0061' through '\u007A'), and
-   full width variant ('\uFF21' through
-   '\uFF3A' and '\uFF41' through
-   '\uFF5A') forms have numeric values from 10
+   The letters A-Z in their uppercase ('\\u0041' through
+   '\\u005A'), lowercase
+   ('\\u0061' through '\\u007A'), and
+   full width variant ('\\uFF21' through
+   '\\uFF3A' and '\\uFF41' through
+   '\\uFF5A') forms have numeric values from 10
    through 35. This is independent of the Unicode specification,
    which does not assign numeric values to these char
    values.
@@ -1179,10 +1179,10 @@
 
 
    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-   '\u00C0' '\u00C1' '\u00C2' '\u00C3' '\u00C4' '\u00C5' '\u00C6' '\u00C7'
-   '\u00C8' '\u00C9' '\u00CA' '\u00CB' '\u00CC' '\u00CD' '\u00CE' '\u00CF'
-   '\u00D0' '\u00D1' '\u00D2' '\u00D3' '\u00D4' '\u00D5' '\u00D6' '\u00D8'
-   '\u00D9' '\u00DA' '\u00DB' '\u00DC' '\u00DD' '\u00DE'
+   '\\u00C0' '\\u00C1' '\\u00C2' '\\u00C3' '\\u00C4' '\\u00C5' '\\u00C6' '\\u00C7'
+   '\\u00C8' '\\u00C9' '\\u00CA' '\\u00CB' '\\u00CC' '\\u00CD' '\\u00CE' '\\u00CF'
+   '\\u00D0' '\\u00D1' '\\u00D2' '\\u00D3' '\\u00D4' '\\u00D5' '\\u00D6' '\\u00D8'
+   '\\u00D9' '\\u00DA' '\\u00DB' '\\u00DC' '\\u00DD' '\\u00DE'
     Many other Unicode characters are uppercase too.
 
    Note: This method cannot handle  supplementary characters. To support
@@ -1227,10 +1227,10 @@
   "Determines whether the character is mirrored according to the
    Unicode specification.  Mirrored characters should have their
    glyphs horizontally mirrored when displayed in text that is
-   right-to-left.  For example, '\u0028' LEFT
+   right-to-left.  For example, '\\u0028' LEFT
    PARENTHESIS is semantically defined to be an opening
-   parenthesis.  This will appear as a `(` in text that is
-   left-to-right but as a `)` in text that is right-to-left.
+   parenthesis.  This will appear as a \"(\" in text that is
+   left-to-right but as a \")\" in text that is right-to-left.
 
    Note: This method cannot handle  supplementary characters. To support
    all Unicode characters, including supplementary characters, use
@@ -1379,9 +1379,9 @@
 
    ISO control characters that are not whitespace
 
-   '\u0000' through '\u0008'
-   '\u000E' through '\u001B'
-   '\u007F' through '\u009F'
+   '\\u0000' through '\\u0008'
+   '\\u000E' through '\\u001B'
+   '\\u007F' through '\\u009F'
 
 
    all characters that have the FORMAT general
@@ -1446,8 +1446,8 @@
    is TITLECASE_LETTER.
 
    Some characters look like pairs of Latin letters. For example, there
-   is an uppercase letter that looks like `LJ` and has a corresponding
-   lowercase letter that looks like `lj`. A third form, which looks like `Lj`,
+   is an uppercase letter that looks like \"LJ\" and has a corresponding
+   lowercase letter that looks like \"lj\". A third form, which looks like \"Lj\",
    is the appropriate form to use when rendering a word in lowercase
    with initial capitals, as for a book title.
 
@@ -1521,15 +1521,15 @@
 
    Some Unicode character ranges that contain digits:
 
-   '\u0030' through '\u0039',
+   '\\u0030' through '\\u0039',
        ISO-LATIN-1 digits ('0' through '9')
-   '\u0660' through '\u0669',
+   '\\u0660' through '\\u0669',
        Arabic-Indic digits
-   '\u06F0' through '\u06F9',
+   '\\u06F0' through '\\u06F9',
        Extended Arabic-Indic digits
-   '\u0966' through '\u096F',
+   '\\u0966' through '\\u096F',
        Devanagari digits
-   '\uFF10' through '\uFF19',
+   '\\uFF10' through '\\uFF19',
        Fullwidth digits
 
 
@@ -1625,17 +1625,17 @@
 
     It is a Unicode space character (SPACE_SEPARATOR,
         LINE_SEPARATOR, or PARAGRAPH_SEPARATOR)
-        but is not also a non-breaking space ('\u00A0',
-        '\u2007', '\u202F').
-    It is '\t', U+0009 HORIZONTAL TABULATION.
-    It is '\n', U+000A LINE FEED.
-    It is '\u000B', U+000B VERTICAL TABULATION.
-    It is '\f', U+000C FORM FEED.
-    It is '\r', U+000D CARRIAGE RETURN.
-    It is '\u001C', U+001C FILE SEPARATOR.
-    It is '\u001D', U+001D GROUP SEPARATOR.
-    It is '\u001E', U+001E RECORD SEPARATOR.
-    It is '\u001F', U+001F UNIT SEPARATOR.
+        but is not also a non-breaking space ('\\u00A0',
+        '\\u2007', '\\u202F').
+    It is '\\t', U+0009 HORIZONTAL TABULATION.
+    It is '\\n', U+000A LINE FEED.
+    It is '\\u000B', U+000B VERTICAL TABULATION.
+    It is '\\f', U+000C FORM FEED.
+    It is '\\r', U+000D CARRIAGE RETURN.
+    It is '\\u001C', U+001C FILE SEPARATOR.
+    It is '\\u001D', U+001D GROUP SEPARATOR.
+    It is '\\u001E', U+001E RECORD SEPARATOR.
+    It is '\\u001F', U+001F UNIT SEPARATOR.
 
 
    Note: This method cannot handle  supplementary characters. To support
@@ -1738,16 +1738,16 @@
        In this case, ch - 'a'  10
        is returned.
    The character is one of the fullwidth uppercase Latin letters A
-       ('\uFF21') through Z ('\uFF3A')
+       ('\\uFF21') through Z ('\\uFF3A')
        and its code is less than
-       radix  '\uFF21' - 10.
-       In this case, ch - '\uFF21'  10
+       radix  '\\uFF21' - 10.
+       In this case, ch - '\\uFF21'  10
        is returned.
    The character is one of the fullwidth lowercase Latin letters a
-       ('\uFF41') through z ('\uFF5A')
+       ('\\uFF41') through z ('\\uFF5A')
        and its code is less than
-       radix  '\uFF41' - 10.
-       In this case, ch - '\uFF41'  10
+       radix  '\\uFF41' - 10.
+       In this case, ch - '\\uFF41'  10
        is returned.
 
 

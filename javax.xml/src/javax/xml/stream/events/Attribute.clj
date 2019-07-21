@@ -21,9 +21,9 @@
 
 (defn get-dtd-type
   "Gets the type of this attribute, default is
-   the String `CDATA`
+   the String \"CDATA\"
 
-  returns: the type as a String, default is `CDATA` - `java.lang.String`"
+  returns: the type as a String, default is \"CDATA\" - `java.lang.String`"
   (^java.lang.String [^Attribute this]
     (-> this (.getDTDType))))
 

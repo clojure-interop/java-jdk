@@ -6,7 +6,7 @@
   (:import [javax.print.attribute Attribute]))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value when it is added to an attribute set.
 
   returns: Printing attribute class (category), an instance of class

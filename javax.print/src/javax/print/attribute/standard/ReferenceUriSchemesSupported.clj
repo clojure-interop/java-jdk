@@ -1,9 +1,9 @@
 (ns javax.print.attribute.standard.ReferenceUriSchemesSupported
   "Class ReferenceUriSchemesSupported is a printing attribute class
-  an enumeration, that indicates a `URI scheme,` such as `http:` or `ftp:`,
+  an enumeration, that indicates a \"URI scheme,\" such as \"http:\" or \"ftp:\",
   that a printer can use to retrieve print data stored at a URI location.
   If a printer supports doc flavors with a print data representation class of
-  `java.net.URL`, the printer uses instances of class
+  \"java.net.URL\", the printer uses instances of class
   ReferenceUriSchemesSupported to advertise the URI schemes it can accept.
   The acceptable URI schemes are included as service attributes in the
   lookup service; this lets clients search the
@@ -94,7 +94,7 @@
   ReferenceUriSchemesSupported/FILE)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class ReferenceUriSchemesSupported and any vendor-defined
@@ -111,7 +111,7 @@
 
    For class ReferenceUriSchemesSupported and any vendor-defined
    subclasses, the category name is
-   `reference-uri-schemes-supported`.
+   \"reference-uri-schemes-supported\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^ReferenceUriSchemesSupported this]

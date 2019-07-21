@@ -34,11 +34,11 @@
 
 
 
-       FileOutputStream fos = new FileOutputStream(`t.tmp`);
+       FileOutputStream fos = new FileOutputStream(\"t.tmp\");
        ObjectOutputStream oos = new ObjectOutputStream(fos);
 
        oos.writeInt(12345);
-       oos.writeObject(`Today`);
+       oos.writeObject(\"Today\");
        oos.writeObject(new Date());
 
        oos.close();
@@ -122,7 +122,7 @@
    when reading the header.
 
    If a security manager is installed, this constructor will check for
-   the `enableSubclassImplementation` SerializablePermission when invoked
+   the \"enableSubclassImplementation\" SerializablePermission when invoked
    directly or indirectly by the constructor of a subclass which overrides
    the ObjectOutputStream.putFields or ObjectOutputStream.writeUnshared
    methods.
@@ -134,7 +134,7 @@
     (new ObjectOutputStream out)))
 
 (defn write-unshared
-  "Writes an `unshared` object to the ObjectOutputStream.  This method is
+  "Writes an \"unshared\" object to the ObjectOutputStream.  This method is
    identical to writeObject, except that it always writes the given object
    as a new, unique object in the stream (as opposed to a back-reference
    pointing to a previously serialized instance).  Specifically:
@@ -160,7 +160,7 @@
 
    ObjectOutputStream subclasses which override this method can only be
    constructed in security contexts possessing the
-   `enableSubclassImplementation` SerializablePermission; any attempt to
+   \"enableSubclassImplementation\" SerializablePermission; any attempt to
    instantiate such a subclass without this permission will cause a
    SecurityException to be thrown.
 

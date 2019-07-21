@@ -25,7 +25,7 @@
 
 
 
-  URL url = new URL(`jar:file:/home/duke/duke.jar!/`);
+  URL url = new URL(\"jar:file:/home/duke/duke.jar!/\");
   JarURLConnection jarConnection = (JarURLConnection)url.openConnection();
   Manifest manifest = jarConnection.getManifest();
 

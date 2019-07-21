@@ -102,7 +102,7 @@
    mixer can flush data from the buffer for a specific input line, but any
    unplayed data already in the output buffer (the result of the mix) will
    still be played.  You can invoke this method after pausing a line (the
-   normal case) if you want to skip the `stale` data when you restart
+   normal case) if you want to skip the \"stale\" data when you restart
    playback or capture. (It is legal to flush a line that is not stopped,
    but doing so on an active line is likely to cause a discontinuity in the
    data, resulting in a perceptible click.)"

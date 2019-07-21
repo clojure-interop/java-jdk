@@ -37,17 +37,17 @@
   a property of the same name in the domain clause. All property names
   are case-insensitive. The following properties are supported:
 
-   keystoreType=`<type>`
+   keystoreType=\"<type>\"
        The keystore type.
-   keystoreURI=`<url>`
+   keystoreURI=\"<url>\"
        The keystore location.
-   keystoreProviderName=`<name>`
+   keystoreProviderName=\"<name>\"
        The name of the keystore's JCE provider.
-   keystorePasswordEnv=`<environment-variable>`
+   keystorePasswordEnv=\"<environment-variable>\"
        The environment variable that stores a keystore password.
            Alternatively, passwords may be supplied to the constructor
            method in a Map<String, ProtectionParameter>.
-   entryNameSeparator=`<separator>`
+   entryNameSeparator=\"<separator>\"
        The separator between a keystore name prefix and an entry name.
            When specified, it applies to all the entries in a domain.
            Its default value is a space.
@@ -59,14 +59,14 @@
 
   domain app1 {
       keystore app1-truststore
-          keystoreURI=`file:///app1/etc/truststore.jks`;
+          keystoreURI=\"file:///app1/etc/truststore.jks\";
 
       keystore system-truststore
-          keystoreURI=`${java.home}/lib/security/cacerts`;
+          keystoreURI=\"${java.home}/lib/security/cacerts\";
 
       keystore app1-keystore
-          keystoreType=`PKCS12`
-          keystoreURI=`file:///app1/etc/keystore.p12`;
+          keystoreType=\"PKCS12\"
+          keystoreURI=\"file:///app1/etc/keystore.p12\";
   };"
   (:refer-clojure :only [require comment defn ->])
   (:import [java.security DomainLoadStoreParameter]))

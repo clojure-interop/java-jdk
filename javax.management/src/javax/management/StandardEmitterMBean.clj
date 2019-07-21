@@ -16,11 +16,11 @@
 
       MBeanServer mbs;
       ...
-      final String[] types = new String[] {`sun.disc.space`,`sun.disc.alarm`};
+      final String[] types = new String[] {\"sun.disc.space\",\"sun.disc.alarm\"};
       final MBeanNotificationInfo info = new MBeanNotificationInfo(
                                            types,
                                            Notification.class.getName(),
-                                           `Notification about disc info.`);
+                                           \"Notification about disc info.\");
       final NotificationEmitter emitter =
                      new NotificationBroadcasterSupport(info);
 

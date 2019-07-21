@@ -6,7 +6,7 @@
 
   IPP Compatibility: The CopiesSupported attribute's canonical array
   form gives the lower and upper bound for the range of copies to be included
-  in an IPP `copies-supported` attribute. See class SetOfIntegerSyntax for an
+  in an IPP \"copies-supported\" attribute. See class SetOfIntegerSyntax for an
   explanation of canonical array form. The category name returned by
   getName() gives the IPP attribute name."
   (:refer-clojure :only [require comment defn ->])
@@ -49,7 +49,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class CopiesSupported, the category
@@ -65,7 +65,7 @@
    instance.
 
    For class CopiesSupported, the category
-   name is `copies-supported`.
+   name is \"copies-supported\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^CopiesSupported this]

@@ -92,8 +92,8 @@
 
    If this method was declared to take a variable number of
    arguments, instead of denoting the last parameter as
-   `Type[]`, it is denoted as
-   `Type...`.
+   \"Type[]\", it is denoted as
+   \"Type...\".
 
    A space is used to separate access modifiers from one another
    and from the type parameters or return type.  If there are no
@@ -105,7 +105,7 @@
    exception types.
 
    The access modifiers are placed in canonical order as
-   specified by `The Java Language Specification`.  This is
+   specified by \"The Java Language Specification\".  This is
    public, protected or private first,
    and then other modifiers in the following order:
    abstract, default, static, final,
@@ -191,7 +191,7 @@
       public boolean java.lang.Object.equals(java.lang.Object)
 
    The access modifiers are placed in canonical order as
-   specified by `The Java Language Specification`.  This is
+   specified by \"The Java Language Specification\".  This is
    public, protected or private first,
    and then other modifiers in the following order:
    abstract, default, static, final,
@@ -346,7 +346,7 @@
    represent the annotations on the formal parameters, in
    declaration order, of the Executable represented by
    this object.  Synthetic and mandated parameters (see
-   explanation below), such as the outer `this` parameter to an
+   explanation below), such as the outer \"this\" parameter to an
    inner class constructor will be represented in the returned
    array.  If the executable has no parameters (meaning no formal,
    no synthetic, and no mandated parameters), a zero-length array
@@ -358,9 +358,9 @@
    effect on the arrays returned to other callers.
 
    A compiler may add extra parameters that are implicitly
-   declared in source (`mandated`), as well as parameters that
+   declared in source (\"mandated\"), as well as parameters that
    are neither implicitly nor explicitly declared in source
-   (`synthetic`) to the parameter list for a method.  See Parameter for more information.
+   (\"synthetic\") to the parameter list for a method.  See Parameter for more information.
 
   returns: an array of arrays that represent the annotations on
       the formal and implicit parameters, in declaration order, of

@@ -20,7 +20,7 @@
   with the geometry of the scrollpane and its child and these should
   not be set by programs using the scrollpane.
 
-  If the scrollbar display policy is defined as `never`, then the
+  If the scrollbar display policy is defined as \"never\", then the
   scrollpane can still be programmatically scrolled using the
   setScrollPosition() method and the scrollpane will move and clip
   the child's contents appropriately.  This policy is useful if the

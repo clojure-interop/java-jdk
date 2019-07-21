@@ -30,21 +30,21 @@
    three bytes, depending on the value of the
    character.
    If a character c
-   is in the range \u0001 through
-   \u007f, it is represented
+   is in the range \\u0001 through
+   \\u007f, it is represented
    by one byte:
 
 
   (byte)c
-   If a character c is \u0000
-   or is in the range \u0080
-   through \u07ff, then it is
+   If a character c is \\u0000
+   or is in the range \\u0080
+   through \\u07ff, then it is
    represented by two bytes, to be written
    in the order shown:
 
    (byte)(0xc0 | (0x1f & (c >> 6)))
    (byte)(0x80 | (0x3f & c))  If a character
-   c is in the range \u0800
+   c is in the range \\u0800
    through uffff, then it is
    represented by three bytes, to be written
    in the order shown:

@@ -32,8 +32,8 @@
 
   Creates a scrollbar with the specified orientation,
    value, extent, minimum, and maximum.
-   The `extent` is the size of the viewable area. It is also known
-   as the `visible amount`.
+   The \"extent\" is the size of the viewable area. It is also known
+   as the \"visible amount\".
 
    Note: Use setBlockIncrement to set the block
    increment to a size slightly smaller than the view's extent.
@@ -64,9 +64,9 @@
     (-> this (.getAdjustmentListeners))))
 
 (defn get-visible-amount
-  "Returns the scrollbar's extent, aka its `visibleAmount`.  In many
+  "Returns the scrollbar's extent, aka its \"visibleAmount\".  In many
    scrollbar look and feel implementations the size of the
-   scrollbar `knob` or `thumb` is proportional to the extent.
+   scrollbar \"knob\" or \"thumb\" is proportional to the extent.
 
   returns: the value of the model's extent property - `int`"
   (^Integer [^JScrollBar this]
@@ -150,9 +150,9 @@
 
 (defn get-block-increment
   "Returns the amount to change the scrollbar's value by,
-   given a block (usually `page`) up/down request.  A ScrollBarUI
+   given a block (usually \"page\") up/down request.  A ScrollBarUI
    implementation typically calls this method when the user clicks
-   above or below the scrollbar `knob` to change the value
+   above or below the scrollbar \"knob\" to change the value
    up or down by large amount.  Subclasses my override this
    method to compute a value, e.g. the change required to scroll
    up or down one paragraph in a text document.
@@ -193,7 +193,7 @@
 (defn get-ui-class-id
   "Returns the name of the LookAndFeel class for this component.
 
-  returns: `ScrollBarUI` - `java.lang.String`"
+  returns: \"ScrollBarUI\" - `java.lang.String`"
   (^java.lang.String [^JScrollBar this]
     (-> this (.getUIClassID))))
 

@@ -28,21 +28,21 @@
     Formatter formatter = new Formatter(sb, Locale.US);
 
     // Explicit argument indices may be used to re-order output.
-    formatter.format(`%4$2s %3$2s %2$2s %1$2s`, `a`, `b`, `c`, `d`)
-    // -> ` d  c  b  a`
+    formatter.format(\"%4$2s %3$2s %2$2s %1$2s\", \"a\", \"b\", \"c\", \"d\")
+    // -> \" d  c  b  a\"
 
     // Optional locale as the first argument can be used to get
     // locale-specific formatting of numbers.  The precision and width can be
     // given to round and align the value.
-    formatter.format(Locale.FRANCE, `e = %+10.4f`, Math.E);
-    // -> `e =    2,7183`
+    formatter.format(Locale.FRANCE, \"e = %+10.4f\", Math.E);
+    // -> \"e =    2,7183\"
 
     // The '(' numeric flag may be used to format negative numbers with
     // parentheses rather than a minus sign.  Group separators are
     // automatically inserted.
-    formatter.format(`Amount gained or lost since last statement: $ %(,.2f`,
+    formatter.format(\"Amount gained or lost since last statement: $ %(,.2f\",
                      balanceDelta);
-    // -> `Amount gained or lost since last statement: $ (6,217.58)`
+    // -> \"Amount gained or lost since last statement: $ (6,217.58)\"
 
    Convenience methods for common formatting requests exist as illustrated
   by the following invocations:
@@ -50,13 +50,13 @@
 
 
     // Writes a formatted string to System.out.
-    System.out.format(`Local time: %tT`, Calendar.getInstance());
-    // -> `Local time: 13:34:18`
+    System.out.format(\"Local time: %tT\", Calendar.getInstance());
+    // -> \"Local time: 13:34:18\"
 
     // Writes formatted output to System.err.
-    System.err.printf(`Unable to open file '%1$s': %2$s`,
+    System.err.printf(\"Unable to open file '%1$s': %2$s\",
                       fileName, exception.getMessage());
-    // -> `Unable to open file 'food': No such file or directory`
+    // -> \"Unable to open file 'food': No such file or directory\"
 
    Like C's sprintf(3), Strings may be formatted using the static
   method String.format:
@@ -69,8 +69,8 @@
     import static java.util.Calendar.*;
 
     Calendar c = new GregorianCalendar(1995, MAY, 23);
-    String s = String.format(`Duke's Birthday: %1$tb %1$te, %1$tY`, c);
-    // -> s == `Duke's Birthday: May 23, 1995`
+    String s = String.format(\"Duke's Birthday: %1$tb %1$te, %1$tY\", c);
+    // -> s == \"Duke's Birthday: May 23, 1995\"
 
   Organization
 
@@ -95,13 +95,13 @@
 
 
     Calendar c = ...;
-    String s = String.format(`Duke's Birthday: %1$tm %1$te,%1$tY`, c);
+    String s = String.format(\"Duke's Birthday: %1$tm %1$te,%1$tY\", c);
 
   This format string is the first argument to the format method.  It
-  contains three format specifiers `%1$tm`, `%1$te`, and
-  `%1$tY` which indicate how the arguments should be processed and
+  contains three format specifiers \"%1$tm\", \"%1$te\", and
+  \"%1$tY\" which indicate how the arguments should be processed and
   where they should be inserted in the text.  The remaining portions of the
-  format string are fixed text including `Dukes Birthday: ` and any
+  format string are fixed text including \"Dukes Birthday: \" and any
   other spaces or punctuation.
 
   The argument list consists of all arguments passed to the method after the
@@ -119,7 +119,7 @@
 
    The optional argument_index is a decimal integer indicating the
   position of the argument in the argument list.  The first argument is
-  referenced by `1$`, the second by `2$`, etc.
+  referenced by \"1$\", the second by \"2$\", etc.
 
    The optional flags is a set of characters that modify the output
   format.  The set of valid flags depends on the conversion.
@@ -195,7 +195,7 @@
   Date and TemporalAccessor
 
    Percent - produces a literal '%'
-  ('\u0025')
+  ('\\u0025')
 
    Line Separator - produces the platform-specific line separator
 
@@ -221,19 +221,19 @@
    'b', 'B'
        general
        If the argument arg is null, then the result is
-      `false`.  If arg is a boolean or Boolean, then the result is the string returned by String.valueOf(arg).  Otherwise, the result is
-      `true`.
+      \"false\".  If arg is a boolean or Boolean, then the result is the string returned by String.valueOf(arg).  Otherwise, the result is
+      \"true\".
 
    'h', 'H'
        general
        If the argument arg is null, then the result is
-      `null`.  Otherwise, the result is obtained by invoking
+      \"null\".  Otherwise, the result is obtained by invoking
       Integer.toHexString(arg.hashCode()).
 
    's', 'S'
        general
        If the argument arg is null, then the result is
-      `null`.  If arg implements Formattable, then
+      \"null\".  If arg implements Formattable, then
       arg.formatTo is invoked. Otherwise, the
       result is obtained by invoking arg.toString().
 
@@ -280,7 +280,7 @@
 
   '%'
        percent
-       The result is a literal '%' ('\u0025')
+       The result is a literal '%' ('\\u0025')
 
   'n'
        line separator
@@ -324,7 +324,7 @@
 
   'S'
        Seconds within the minute, formatted as two digits with a leading
-      zero as necessary, i.e. 00 - 60 (`60` is a special
+      zero as necessary, i.e. 00 - 60 (\"60\" is a special
       value required to support leap seconds).
 
   'L'
@@ -337,7 +337,7 @@
 
   'p'
        Locale-specific morning or afternoon marker
-      in lower case, e.g.`am` or `pm`. Use of the conversion
+      in lower case, e.g.\"am\" or \"pm\". Use of the conversion
       prefix 'T' forces this output to upper case.
 
   'z'
@@ -373,22 +373,22 @@
 
 
   'B'
-       Locale-specific full month name, e.g. `January`, `February`.
+       Locale-specific full month name, e.g. \"January\", \"February\".
 
   'b'
        Locale-specific abbreviated month name,
-      e.g. `Jan`, `Feb`.
+      e.g. \"Jan\", \"Feb\".
 
   'h'
        Same as 'b'.
 
   'A'
        Locale-specific full name of the day of the week,
-      e.g. `Sunday`, `Monday`
+      e.g. \"Sunday\", \"Monday\"
 
   'a'
        Locale-specific short name of the day of the week,
-      e.g. `Sun`, `Mon`
+      e.g. \"Sun\", \"Mon\"
 
   'C'
        Four-digit year divided by 100, formatted as two digits
@@ -426,26 +426,26 @@
 
 
   'R'
-       Time formatted for the 24-hour clock as `%tH:%tM`
+       Time formatted for the 24-hour clock as \"%tH:%tM\"
 
   'T'
-       Time formatted for the 24-hour clock as `%tH:%tM:%tS`.
+       Time formatted for the 24-hour clock as \"%tH:%tM:%tS\".
 
   'r'
-       Time formatted for the 12-hour clock as `%tI:%tM:%tS %Tp`.
+       Time formatted for the 12-hour clock as \"%tI:%tM:%tS %Tp\".
       The location of the morning or afternoon marker ('%Tp') may be
       locale-dependent.
 
   'D'
-       Date formatted as `%tm/%td/%ty`.
+       Date formatted as \"%tm/%td/%ty\".
 
   'F'
        ISO 8601
-      complete date formatted as `%tY-%tm-%td`.
+      complete date formatted as \"%tY-%tm-%td\".
 
   'c'
-       Date and time formatted as `%ta %tb %td %tT %tZ %tY`,
-      e.g. `Sun Jul 20 16:17:00 EDT 1969`.
+       Date and time formatted as \"%ta %tb %td %tT %tZ %tY\",
+      e.g. \"Sun Jul 20 16:17:00 EDT 1969\".
 
 
 
@@ -558,19 +558,19 @@
 
    The argument index is a decimal integer indicating the position of the
   argument in the argument list.  The first argument is referenced by
-  `1$`, the second by `2$`, etc.
+  \"1$\", the second by \"2$\", etc.
 
    Another way to reference arguments by position is to use the
-  '<' ('\u003c') flag, which causes the argument for
+  '<' ('\\u003c') flag, which causes the argument for
   the previous format specifier to be re-used.  For example, the following two
   statements would produce identical strings:
 
 
 
     Calendar c = ...;
-    String s1 = String.format(`Duke's Birthday: %1$tm %1$te,%1$tY`, c);
+    String s1 = String.format(\"Duke's Birthday: %1$tm %1$te,%1$tY\", c);
 
-    String s2 = String.format(`Duke's Birthday: %1$tm %<te,%<tY`, c);
+    String s2 = String.format(\"Duke's Birthday: %1$tm %<te,%<tY\", c);
 
 
   Details
@@ -615,40 +615,40 @@
 
 
    'b'
-       '\u0062'
-       Produces either `true` or `false` as returned by
+       '\\u0062'
+       Produces either \"true\" or \"false\" as returned by
       Boolean.toString(boolean).
 
        If the argument is null, then the result is
-      `false`.  If the argument is a boolean or Boolean, then the result is the string returned by String.valueOf().  Otherwise, the result is
-      `true`.
+      \"false\".  If the argument is a boolean or Boolean, then the result is the string returned by String.valueOf().  Otherwise, the result is
+      \"true\".
 
        If the '#' flag is given, then a FormatFlagsConversionMismatchException will be thrown.
 
    'B'
-       '\u0042'
+       '\\u0042'
        The upper-case variant of 'b'.
 
    'h'
-       '\u0068'
+       '\\u0068'
        Produces a string representing the hash code value of the object.
 
        If the argument, arg is null, then the
-      result is `null`.  Otherwise, the result is obtained
+      result is \"null\".  Otherwise, the result is obtained
       by invoking Integer.toHexString(arg.hashCode()).
 
        If the '#' flag is given, then a FormatFlagsConversionMismatchException will be thrown.
 
    'H'
-       '\u0048'
+       '\\u0048'
        The upper-case variant of 'h'.
 
    's'
-       '\u0073'
+       '\\u0073'
        Produces a string.
 
        If the argument is null, then the result is
-      `null`.  If the argument implements Formattable, then
+      \"null\".  If the argument implements Formattable, then
       its formatTo method is invoked.
       Otherwise, the result is obtained by invoking the argument's
       toString() method.
@@ -657,7 +657,7 @@
       will be thrown.
 
    'S'
-       '\u0053'
+       '\\u0053'
        The upper-case variant of 's'.
 
 
@@ -667,14 +667,14 @@
 
 
    '-'
-       '\u002d'
-       Left justifies the output.  Spaces ('\u0020') will be
+       '\\u002d'
+       Left justifies the output.  Spaces ('\\u0020') will be
       added at the end of the converted value as required to fill the minimum
       width of the field.  If the width is not provided, then a MissingFormatWidthException will be thrown.  If this flag is not given
       then the output will be right-justified.
 
    '#'
-       '\u0023'
+       '\\u0023'
        Requires the output use an alternate form.  The definition of the
       form is specified by the conversion.
 
@@ -683,7 +683,7 @@
    The width is the minimum number of characters to
   be written to the
   output.  If the length of the converted value is less than the width then
-  the output will be padded by '  ' ('\u0020')
+  the output will be padded by '  ' ('\\u0020')
   until the total number of characters equals the width.  The padding is on
   the left by default.  If the '-' flag is given, then the padding
   will be on the right.  If the width is not specified then there is no
@@ -707,7 +707,7 @@
 
 
    'c'
-       '\u0063'
+       '\\u0063'
        Formats the argument as a Unicode character as described in Unicode Character
       Representation.  This may be more than one 16-bit char in
       the case where the argument represents a supplementary character.
@@ -715,7 +715,7 @@
        If the '#' flag is given, then a FormatFlagsConversionMismatchException will be thrown.
 
    'C'
-       '\u0043'
+       '\\u0043'
        The upper-case variant of 'c'.
 
 
@@ -763,7 +763,7 @@
    If a decimal separator is present, a locale-specific decimal separator is
   substituted.
 
-   If the ',' ('\u002c')
+   If the ',' ('\\u002c')
   flag is given, then the locale-specific grouping separator is
   inserted by scanning the integer part of the string from least significant
   to most significant digits and inserting a separator at intervals defined by
@@ -775,23 +775,23 @@
   the length of the string is equal to the requested field width.
 
    If the value is negative and the '(' flag is given, then a
-  '(' ('\u0028') is prepended and a ')'
-  ('\u0029') is appended.
+  '(' ('\\u0028') is prepended and a ')'
+  ('\\u0029') is appended.
 
    If the value is negative (or floating-point negative zero) and
-  '(' flag is not given, then a '-' ('\u002d')
+  '(' flag is not given, then a '-' ('\\u002d')
   is prepended.
 
    If the '+' flag is given and the value is positive or zero (or
-  floating-point positive zero), then a '+' ('\u002b')
+  floating-point positive zero), then a '+' ('\\u002b')
   will be prepended.
 
 
 
-   If the value is NaN or positive infinity the literal strings `NaN` or
-  `Infinity` respectively, will be output.  If the value is negative infinity,
-  then the output will be `(Infinity)` if the '(' flag is given
-  otherwise the output will be `-Infinity`.  These values are not localized.
+   If the value is NaN or positive infinity the literal strings \"NaN\" or
+  \"Infinity\" respectively, will be output.  If the value is negative infinity,
+  then the output will be \"(Infinity)\" if the '(' flag is given
+  otherwise the output will be \"-Infinity\".  These values are not localized.
 
    Byte, Short, Integer, and Long
 
@@ -802,7 +802,7 @@
 
 
    'd'
-       '\u0064'
+       '\\u0064'
        Formats the argument as a decimal integer. The localization algorithm is applied.
 
        If the '0' flag is given and the value is negative, then
@@ -811,7 +811,7 @@
        If the '#' flag is given then a FormatFlagsConversionMismatchException will be thrown.
 
    'o'
-       '\u006f'
+       '\\u006f'
        Formats the argument as an integer in base eight.  No localization
       is applied.
 
@@ -833,7 +833,7 @@
       thrown.
 
    'x'
-       '\u0078'
+       '\\u0078'
        Formats the argument as an integer in base sixteen. No
       localization is applied.
 
@@ -845,7 +845,7 @@
       classes as appropriate.
 
        If the '#' flag is given then the output will always begin
-      with the radix indicator `0x`.
+      with the radix indicator \"0x\".
 
        If the '0' flag is given then the output will be padded to
       the field width with leading zeros after the radix indicator or sign (if
@@ -855,18 +855,18 @@
       ',' flags are given then a FormatFlagsConversionMismatchException will be thrown.
 
    'X'
-       '\u0058'
+       '\\u0058'
        The upper-case variant of 'x'.  The entire string
       representing the number will be converted to upper case including the 'x' (if any) and
       all hexadecimal digits 'a' - 'f'
-      ('\u0061' -  '\u0066').
+      ('\\u0061' -  '\\u0066').
 
 
 
    If the conversion is 'o', 'x', or 'X' and
   both the '#' and the '0' flags are given, then result will
-  contain the radix indicator ('0' for octal and `0x` or
-  `0X` for hexadecimal), some number of zeros (based on the width),
+  contain the radix indicator ('0' for octal and \"0x\" or
+  \"0X\" for hexadecimal), some number of zeros (based on the width),
   and the value.
 
    If the '-' flag is not given, then the space padding will occur
@@ -878,7 +878,7 @@
 
 
    '+'
-       '\u002b'
+       '\\u002b'
        Requires the output to include a positive sign for all positive
       numbers.  If this flag is not given then only negative values will
       include a sign.
@@ -887,15 +887,15 @@
       then an IllegalFormatFlagsException will be thrown.
 
    '  '
-       '\u0020'
+       '\\u0020'
        Requires the output to include a single extra space
-      ('\u0020') for non-negative values.
+      ('\\u0020') for non-negative values.
 
        If both the '+' and '  ' flags are given
       then an IllegalFormatFlagsException will be thrown.
 
    '0'
-       '\u0030'
+       '\\u0030'
        Requires the output to be padded with leading zeros to the minimum field
       width following any sign or radix indicator except when converting NaN
       or infinity.  If the width is not provided, then a MissingFormatWidthException will be thrown.
@@ -904,16 +904,16 @@
       IllegalFormatFlagsException will be thrown.
 
    ','
-       '\u002c'
+       '\\u002c'
        Requires the output to include the locale-specific group separators as
-      described in the `group` section of the
+      described in the \"group\" section of the
       localization algorithm.
 
    '('
-       '\u0028'
+       '\\u0028'
        Requires the output to prepend a '('
-      ('\u0028') and append a ')'
-      ('\u0029') to negative values.
+      ('\\u0028') and append a ')'
+      ('\\u0029') to negative values.
 
 
 
@@ -924,7 +924,7 @@
 
    The output is right-justified within the width
 
-   Negative numbers begin with a '-' ('\u002d')
+   Negative numbers begin with a '-' ('\\u002d')
 
    Positive numbers and zero do not include a sign or extra leading
   space
@@ -937,7 +937,7 @@
   be written to the output.  This includes any signs, digits, grouping
   separators, radix indicator, and parentheses.  If the length of the
   converted value is less than the width then the output will be padded by
-  spaces ('\u0020') until the total number of characters equals
+  spaces ('\\u0020') until the total number of characters equals
   width.  The padding is on the left by default.  If '-' flag is
   given then the padding will be on the right.  If width is not specified then
   there is no minimum.
@@ -952,24 +952,24 @@
 
 
    'd'
-       '\u0064'
+       '\\u0064'
        Requires the output to be formatted as a decimal integer. The localization algorithm is applied.
 
        If the '#' flag is given FormatFlagsConversionMismatchException will be thrown.
 
    'o'
-       '\u006f'
+       '\\u006f'
        Requires the output to be formatted as an integer in base eight.
       No localization is applied.
 
        If x is negative then the result will be a signed value
-      beginning with '-' ('\u002d').  Signed output is
+      beginning with '-' ('\\u002d').  Signed output is
       allowed for this type because unlike the primitive types it is not
       possible to create an unsigned equivalent without assuming an explicit
       data-type size.
 
        If x is positive or zero and the '+' flag is given
-      then the result will begin with '+' ('\u002b').
+      then the result will begin with '+' ('\\u002b').
 
        If the '#' flag is given then the output will always begin
       with '0' prefix.
@@ -980,21 +980,21 @@
        If the ',' flag is given then a FormatFlagsConversionMismatchException will be thrown.
 
    'x'
-       '\u0078'
+       '\\u0078'
        Requires the output to be formatted as an integer in base
       sixteen.  No localization is applied.
 
        If x is negative then the result will be a signed value
-      beginning with '-' ('\u002d').  Signed output is
+      beginning with '-' ('\\u002d').  Signed output is
       allowed for this type because unlike the primitive types it is not
       possible to create an unsigned equivalent without assuming an explicit
       data-type size.
 
        If x is positive or zero and the '+' flag is given
-      then the result will begin with '+' ('\u002b').
+      then the result will begin with '+' ('\\u002b').
 
        If the '#' flag is given then the output will always begin
-      with the radix indicator `0x`.
+      with the radix indicator \"0x\".
 
        If the '0' flag is given then the output will be padded to
       the field width with leading zeros after the radix indicator or sign (if
@@ -1003,18 +1003,18 @@
        If the ',' flag is given then a FormatFlagsConversionMismatchException will be thrown.
 
    'X'
-       '\u0058'
+       '\\u0058'
        The upper-case variant of 'x'.  The entire string
       representing the number will be converted to upper case including the 'x' (if any) and
       all hexadecimal digits 'a' - 'f'
-      ('\u0061' - '\u0066').
+      ('\\u0061' - '\\u0066').
 
 
 
    If the conversion is 'o', 'x', or 'X' and
   both the '#' and the '0' flags are given, then result will
-  contain the base indicator ('0' for octal and `0x` or
-  `0X` for hexadecimal), some number of zeros (based on the width),
+  contain the base indicator ('0' for octal and \"0x\" or
+  \"0X\" for hexadecimal), some number of zeros (based on the width),
   and the value.
 
    If the '0' flag is given and the value is negative, then the
@@ -1040,17 +1040,17 @@
 
 
    'e'
-       '\u0065'
+       '\\u0065'
        Requires the output to be formatted using computerized scientific notation.  The localization algorithm is applied.
 
        The formatting of the magnitude m depends upon its value.
 
-       If m is NaN or infinite, the literal strings `NaN` or
-      `Infinity`, respectively, will be output.  These values are not
+       If m is NaN or infinite, the literal strings \"NaN\" or
+      \"Infinity\", respectively, will be output.  These values are not
       localized.
 
        If m is positive-zero or negative-zero, then the exponent
-      will be `+00`.
+      will be \"+00\".
 
        Otherwise, the result is a string that represents the sign and
       magnitude (absolute value) of the argument.  The formatting of the sign
@@ -1065,7 +1065,7 @@
       integer part of a, as a single decimal digit, followed by the
       decimal separator followed by decimal digits representing the fractional
       part of a, followed by the exponent symbol 'e'
-      ('\u0065'), followed by the sign of the exponent, followed
+      ('\\u0065'), followed by the sign of the exponent, followed
       by a representation of n as a decimal integer, as produced by the
       method Long.toString(long, int), and zero-padded to include at
       least two digits.
@@ -1083,12 +1083,12 @@
       If the ',' flag is given, then an FormatFlagsConversionMismatchException will be thrown.
 
    'E'
-       '\u0045'
+       '\\u0045'
        The upper-case variant of 'e'.  The exponent symbol
-      will be 'E' ('\u0045').
+      will be 'E' ('\\u0045').
 
    'g'
-       '\u0067'
+       '\\u0067'
        Requires the output to be formatted in general scientific notation
       as described below. The localization
       algorithm is applied.
@@ -1110,11 +1110,11 @@
        If the '#' flag is given then an FormatFlagsConversionMismatchException will be thrown.
 
    'G'
-       '\u0047'
+       '\\u0047'
        The upper-case variant of 'g'.
 
    'f'
-       '\u0066'
+       '\\u0066'
        Requires the output to be formatted using decimal
       format.  The localization algorithm is
       applied.
@@ -1125,8 +1125,8 @@
       algorithm. The formatting of the magnitude m depends upon its
       value.
 
-       If m NaN or infinite, the literal strings `NaN` or
-      `Infinity`, respectively, will be output.  These values are not
+       If m NaN or infinite, the literal strings \"NaN\" or
+      \"Infinity\", respectively, will be output.  These values are not
       localized.
 
        The magnitude is formatted as the integer part of m, with no
@@ -1144,7 +1144,7 @@
       appropriate.
 
    'a'
-       '\u0061'
+       '\\u0061'
        Requires the output to be formatted in hexadecimal exponential
       form.  No localization is applied.
 
@@ -1152,28 +1152,28 @@
       (absolute value) of the argument x.
 
        If x is negative or a negative-zero value then the result
-      will begin with '-' ('\u002d').
+      will begin with '-' ('\\u002d').
 
        If x is positive or a positive-zero value and the
       '+' flag is given then the result will begin with '+'
-      ('\u002b').
+      ('\\u002b').
 
        The formatting of the magnitude m depends upon its value.
 
 
 
-       If the value is NaN or infinite, the literal strings `NaN` or
-      `Infinity`, respectively, will be output.
+       If the value is NaN or infinite, the literal strings \"NaN\" or
+      \"Infinity\", respectively, will be output.
 
        If m is zero then it is represented by the string
-      `0x0.0p0`.
+      \"0x0.0p0\".
 
        If m is a double value with a normalized
       representation then substrings are used to represent the significand and
       exponent fields.  The significand is represented by the characters
-      `0x1.` followed by the hexadecimal representation of the rest
+      \"0x1.\" followed by the hexadecimal representation of the rest
       of the significand as a fraction.  The exponent is represented by
-      'p' ('\u0070') followed by a decimal string of the
+      'p' ('\\u0070') followed by a decimal string of the
       unbiased exponent as if produced by invoking Integer.toString on the exponent value.  If the
       precision is specified, the value is rounded to the given number of
       hexadecimal digits.
@@ -1195,12 +1195,12 @@
        If the '(' or ',' flags are given, then a FormatFlagsConversionMismatchException will be thrown.
 
    'A'
-       '\u0041'
+       '\\u0041'
        The upper-case variant of 'a'.  The entire string
       representing the number will be converted to upper case including the
-      'x' ('\u0078') and 'p'
-      ('\u0070' and all hexadecimal digits 'a' -
-      'f' ('\u0061' - '\u0066').
+      'x' ('\\u0078') and 'p'
+      ('\\u0070' and all hexadecimal digits 'a' -
+      'f' ('\\u0061' - '\\u0066').
 
 
 
@@ -1233,7 +1233,7 @@
   separators, decimal separators, exponential symbol, radix indicator,
   parentheses, and strings representing infinity and NaN as applicable.  If
   the length of the converted value is less than the width then the output
-  will be padded by spaces ('\u0020') until the total number of
+  will be padded by spaces ('\\u0020') until the total number of
   characters equals width.  The padding is on the left by default.  If the
   '-' flag is given then the padding will be on the right.  If width
   is not specified then there is no minimum.
@@ -1260,13 +1260,13 @@
 
 
    'e'
-       '\u0065'
+       '\\u0065'
        Requires the output to be formatted using computerized scientific notation.  The localization algorithm is applied.
 
        The formatting of the magnitude m depends upon its value.
 
        If m is positive-zero or negative-zero, then the exponent
-      will be `+00`.
+      will be \"+00\".
 
        Otherwise, the result is a string that represents the sign and
       magnitude (absolute value) of the argument.  The formatting of the sign
@@ -1281,7 +1281,7 @@
       integer part of a, as a single decimal digit, followed by the
       decimal separator followed by decimal digits representing the fractional
       part of a, followed by the exponent symbol 'e'
-      ('\u0065'), followed by the sign of the exponent, followed
+      ('\\u0065'), followed by the sign of the exponent, followed
       by a representation of n as a decimal integer, as produced by the
       method Long.toString(long, int), and zero-padded to include at
       least two digits.
@@ -1298,12 +1298,12 @@
        If the ',' flag is given, then an FormatFlagsConversionMismatchException will be thrown.
 
    'E'
-       '\u0045'
+       '\\u0045'
        The upper-case variant of 'e'.  The exponent symbol
-      will be 'E' ('\u0045').
+      will be 'E' ('\\u0045').
 
    'g'
-       '\u0067'
+       '\\u0067'
        Requires the output to be formatted in general scientific notation
       as described below. The localization
       algorithm is applied.
@@ -1325,11 +1325,11 @@
        If the '#' flag is given then an FormatFlagsConversionMismatchException will be thrown.
 
    'G'
-       '\u0047'
+       '\\u0047'
        The upper-case variant of 'g'.
 
    'f'
-       '\u0066'
+       '\\u0066'
        Requires the output to be formatted using decimal
       format.  The localization algorithm is
       applied.
@@ -1374,10 +1374,10 @@
 
 
    't'
-       '\u0074'
+       '\\u0074'
        Prefix for date and time conversion characters.
    'T'
-       '\u0054'
+       '\\u0054'
        The upper-case variant of 't'.
 
 
@@ -1394,61 +1394,61 @@
 
 
    'H'
-       '\u0048'
+       '\\u0048'
        Hour of the day for the 24-hour clock, formatted as two digits with
       a leading zero as necessary i.e. 00 - 23. 00
       corresponds to midnight.
 
   'I'
-       '\u0049'
+       '\\u0049'
        Hour for the 12-hour clock, formatted as two digits with a leading
       zero as necessary, i.e.  01 - 12.  01 corresponds to
       one o'clock (either morning or afternoon).
 
   'k'
-       '\u006b'
+       '\\u006b'
        Hour of the day for the 24-hour clock, i.e. 0 - 23.
       0 corresponds to midnight.
 
   'l'
-       '\u006c'
+       '\\u006c'
        Hour for the 12-hour clock, i.e. 1 - 12.  1
       corresponds to one o'clock (either morning or afternoon).
 
   'M'
-       '\u004d'
+       '\\u004d'
        Minute within the hour formatted as two digits with a leading zero
       as necessary, i.e.  00 - 59.
 
   'S'
-       '\u0053'
+       '\\u0053'
        Seconds within the minute, formatted as two digits with a leading
-      zero as necessary, i.e. 00 - 60 (`60` is a special
+      zero as necessary, i.e. 00 - 60 (\"60\" is a special
       value required to support leap seconds).
 
   'L'
-       '\u004c'
+       '\\u004c'
        Millisecond within the second formatted as three digits with
       leading zeros as necessary, i.e. 000 - 999.
 
   'N'
-       '\u004e'
+       '\\u004e'
        Nanosecond within the second, formatted as nine digits with leading
       zeros as necessary, i.e. 000000000 - 999999999.  The precision
       of this value is limited by the resolution of the underlying operating
       system or hardware.
 
   'p'
-       '\u0070'
+       '\\u0070'
        Locale-specific morning or afternoon marker
-      in lower case, e.g.`am` or `pm`.  Use of the
+      in lower case, e.g.\"am\" or \"pm\".  Use of the
       conversion prefix 'T' forces this output to upper case.  (Note
       that 'p' produces lower-case output.  This is different from
       GNU date and POSIX strftime(3c) which produce
       upper-case output.)
 
   'z'
-       '\u007a'
+       '\\u007a'
        RFC 822
       style numeric time zone offset from GMT, e.g. -0800.  This
       value will be adjusted as necessary for Daylight Saving Time.  For
@@ -1457,7 +1457,7 @@
       instance of the Java virtual machine.
 
   'Z'
-       '\u005a'
+       '\\u005a'
        A string representing the abbreviation for the time zone.  This
       value will be adjusted as necessary for Daylight Saving Time.  For
       long, Long, and Date the time zone used is
@@ -1466,13 +1466,13 @@
       supersede the locale of the argument (if any).
 
   's'
-       '\u0073'
+       '\\u0073'
        Seconds since the beginning of the epoch starting at 1 January 1970
       00:00:00 UTC, i.e. Long.MIN_VALUE/1000 to
       Long.MAX_VALUE/1000.
 
   'Q'
-       '\u004f'
+       '\\u004f'
        Milliseconds since the beginning of the epoch starting at 1 January
       1970 00:00:00 UTC, i.e. Long.MIN_VALUE to
       Long.MAX_VALUE. The precision of this value is limited by
@@ -1485,66 +1485,66 @@
 
 
   'B'
-       '\u0042'
-       Locale-specific full month name, e.g. `January`, `February`.
+       '\\u0042'
+       Locale-specific full month name, e.g. \"January\", \"February\".
 
   'b'
-       '\u0062'
+       '\\u0062'
        Locale-specific abbreviated month name,
-      e.g. `Jan`, `Feb`.
+      e.g. \"Jan\", \"Feb\".
 
   'h'
-       '\u0068'
+       '\\u0068'
        Same as 'b'.
 
   'A'
-       '\u0041'
+       '\\u0041'
        Locale-specific full name of the day of the week,
-      e.g. `Sunday`, `Monday`
+      e.g. \"Sunday\", \"Monday\"
 
   'a'
-       '\u0061'
+       '\\u0061'
        Locale-specific short name of the day of the week,
-      e.g. `Sun`, `Mon`
+      e.g. \"Sun\", \"Mon\"
 
   'C'
-       '\u0043'
+       '\\u0043'
        Four-digit year divided by 100, formatted as two digits
       with leading zero as necessary, i.e. 00 - 99
 
   'Y'
-       '\u0059'  Year, formatted to at least
+       '\\u0059'  Year, formatted to at least
       four digits with leading zeros as necessary, e.g. 0092 equals
       92 CE for the Gregorian calendar.
 
   'y'
-       '\u0079'
+       '\\u0079'
        Last two digits of the year, formatted with leading zeros as
       necessary, i.e. 00 - 99.
 
   'j'
-       '\u006a'
+       '\\u006a'
        Day of year, formatted as three digits with leading zeros as
       necessary, e.g. 001 - 366 for the Gregorian calendar.
       001 corresponds to the first day of the year.
 
   'm'
-       '\u006d'
+       '\\u006d'
        Month, formatted as two digits with leading zeros as necessary,
-      i.e. 01 - 13, where `01` is the first month of the
-      year and (`13` is a special value required to support lunar
+      i.e. 01 - 13, where \"01\" is the first month of the
+      year and (\"13\" is a special value required to support lunar
       calendars).
 
   'd'
-       '\u0064'
+       '\\u0064'
        Day of month, formatted as two digits with leading zeros as
-      necessary, i.e. 01 - 31, where `01` is the first day
+      necessary, i.e. 01 - 31, where \"01\" is the first day
       of the month.
 
   'e'
-       '\u0065'
+       '\\u0065'
        Day of month, formatted as two digits, i.e. 1 - 31 where
-      `1` is the first day of the month.
+      \"1\" is the first day of the month.
 
 
 
@@ -1554,32 +1554,32 @@
 
 
   'R'
-       '\u0052'
-       Time formatted for the 24-hour clock as `%tH:%tM`
+       '\\u0052'
+       Time formatted for the 24-hour clock as \"%tH:%tM\"
 
   'T'
-       '\u0054'
-       Time formatted for the 24-hour clock as `%tH:%tM:%tS`.
+       '\\u0054'
+       Time formatted for the 24-hour clock as \"%tH:%tM:%tS\".
 
   'r'
-       '\u0072'
-       Time formatted for the 12-hour clock as `%tI:%tM:%tS
-      %Tp`.  The location of the morning or afternoon marker
+       '\\u0072'
+       Time formatted for the 12-hour clock as \"%tI:%tM:%tS
+      %Tp\".  The location of the morning or afternoon marker
       ('%Tp') may be locale-dependent.
 
   'D'
-       '\u0044'
-       Date formatted as `%tm/%td/%ty`.
+       '\\u0044'
+       Date formatted as \"%tm/%td/%ty\".
 
   'F'
-       '\u0046'
+       '\\u0046'
        ISO 8601
-      complete date formatted as `%tY-%tm-%td`.
+      complete date formatted as \"%tY-%tm-%td\".
 
   'c'
-       '\u0063'
-       Date and time formatted as `%ta %tb %td %tT %tZ %tY`,
-      e.g. `Sun Jul 20 16:17:00 EDT 1969`.
+       '\\u0063'
+       Date and time formatted as \"%ta %tb %td %tT %tZ %tY\",
+      e.g. \"Sun Jul 20 16:17:00 EDT 1969\".
 
 
 
@@ -1589,7 +1589,7 @@
    The width is the minimum number of characters to
   be written to the output.  If the length of the converted value is less than
   the width then the output will be padded by spaces
-  ('\u0020') until the total number of characters equals width.
+  ('\\u0020') until the total number of characters equals width.
   The padding is on the left by default.  If the '-' flag is given
   then the padding will be on the right.  If width is not specified then there
   is no minimum.
@@ -1604,12 +1604,12 @@
 
 
   '%'
-       The result is a literal '%' ('\u0025')
+       The result is a literal '%' ('\\u0025')
 
    The width is the minimum number of characters to
   be written to the output including the '%'.  If the length of the
   converted value is less than the width then the output will be
-  padded by spaces ('\u0020') until the total number of
+  padded by spaces ('\\u0020') until the total number of
   characters equals width.  The padding is on the left.  If width is not
   specified then just the '%' is output.
 
@@ -1629,7 +1629,7 @@
 
 
   'n'
-       the platform-specific line separator as returned by System.getProperty(`line.separator`).
+       the platform-specific line separator as returned by System.getProperty(\"line.separator\").
 
 
 
@@ -1646,27 +1646,27 @@
    Explicit indexing is used when the format specifier contains an
   argument index.  The argument index is a decimal integer indicating the
   position of the argument in the argument list.  The first argument is
-  referenced by `1$`, the second by `2$`, etc.  An argument
+  referenced by \"1$\", the second by \"2$\", etc.  An argument
   may be referenced more than once.
 
    For example:
 
 
 
-    formatter.format(`%4$s %3$s %2$s %1$s %4$s %3$s %2$s %1$s`,
-                     `a`, `b`, `c`, `d`)
-    // -> `d c b a d c b a`
+    formatter.format(\"%4$s %3$s %2$s %1$s %4$s %3$s %2$s %1$s\",
+                     \"a\", \"b\", \"c\", \"d\")
+    // -> \"d c b a d c b a\"
 
    Relative indexing is used when the format specifier contains a
-  '<' ('\u003c') flag which causes the argument for
+  '<' ('\\u003c') flag which causes the argument for
   the previous format specifier to be re-used.  If there is no previous
   argument, then a MissingFormatArgumentException is thrown.
 
 
 
-     formatter.format(`%s %s %<s %<s`, `a`, `b`, `c`, `d`)
-     // -> `a b b b`
-     // `c` and `d` are ignored because they are not referenced
+     formatter.format(\"%s %s %<s %<s\", \"a\", \"b\", \"c\", \"d\")
+     // -> \"a b b b\"
+     // \"c\" and \"d\" are ignored because they are not referenced
 
    Ordinary indexing is used when the format specifier contains
   neither an argument index nor a '<' flag.  Each format specifier
@@ -1676,8 +1676,8 @@
 
 
 
-    formatter.format(`%s %s %s %s`, `a`, `b`, `c`, `d`)
-    // -> `a b c d`
+    formatter.format(\"%s %s %s %s\", \"a\", \"b\", \"c\", \"d\")
+    // -> \"a b c d\"
 
 
 
@@ -1686,9 +1686,9 @@
 
 
 
-    formatter.format(`%2$s %s %<s %s`, `a`, `b`, `c`, `d`)
-    // -> `b a a b`
-    // `c` and `d` are ignored because they are not referenced
+    formatter.format(\"%2$s %s %<s %s\", \"a\", \"b\", \"c\", \"d\")
+    // -> \"b a a b\"
+    // \"c\" and \"d\" are ignored because they are not referenced
 
    The maximum number of arguments is limited by the maximum dimension of a
   Java array as defined by
@@ -1754,9 +1754,9 @@
 
 
      Formatter f = new Formatter();
-     f.format(`Last reboot at %tc`, lastRebootDate);
+     f.format(\"Last reboot at %tc\", lastRebootDate);
      String s = f.toString();
-     // -> s == `Last reboot at Sat Jan 01 00:00:00 PST 2000`
+     // -> s == \"Last reboot at Sat Jan 01 00:00:00 PST 2000\"
 
     An invocation of this method behaves in exactly the same way as the
    invocation

@@ -17,7 +17,7 @@
   Suppose a sorted set (or sorted map) with an explicit comparator c
   is used with elements (or keys) drawn from a set S.  If the
   ordering imposed by c on S is inconsistent with equals,
-  the sorted set (or sorted map) will behave `strangely.`  In particular the
+  the sorted set (or sorted map) will behave \"strangely.\"  In particular the
   sorted set (or sorted map) will violate the general contract for set (or
   map), which is defined in terms of equals.
 
@@ -90,8 +90,8 @@
    It is generally the case, but not strictly required that
    (compare(x, y)==0) == (x.equals(y)).  Generally speaking,
    any comparator that violates this condition should clearly indicate
-   this fact.  The recommended language is `Note: this comparator
-   imposes orderings that are inconsistent with equals.`
+   this fact.  The recommended language is \"Note: this comparator
+   imposes orderings that are inconsistent with equals.\"
 
   o-1 - the first object to be compared. - `T`
   o-2 - the second object to be compared. - `T`
@@ -276,7 +276,7 @@
     (Comparator/comparingInt key-extractor)))
 
 (defn equals
-  "Indicates whether some other object is `equal to` this
+  "Indicates whether some other object is \"equal to\" this
    comparator.  This method must obey the general contract of
    Object.equals(Object).  Additionally, this method can return
    true only if the specified object is also a comparator

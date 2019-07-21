@@ -1,6 +1,6 @@
 (ns javax.imageio.plugins.jpeg.JPEGHuffmanTable
   "A class encapsulating a single JPEG Huffman table.
-  Fields are provided for the `standard` tables taken
+  Fields are provided for the \"standard\" tables taken
   from Annex K of the JPEG specification.
   These are the tables used as defaults.
 

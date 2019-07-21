@@ -18,7 +18,7 @@
   class name:
 
 
-    UIManager.setLookAndFeel(`javax.swing.plaf.metal.MetalLookAndFeel`);
+    UIManager.setLookAndFeel(\"javax.swing.plaf.metal.MetalLookAndFeel\");
   Once the look and feel has been changed it is imperative to invoke
   updateUI on all JComponents. The method SwingUtilities.updateComponentTreeUI(java.awt.Component) makes it easy to apply updateUI to a containment hierarchy. Refer to it for
   details. The exact behavior of not invoking updateUI after changing the look and feel is
@@ -62,15 +62,15 @@
   Invoking any of the various get methods
   results in checking each of the defaults, in order, returning
   the first non-null value. For example, invoking
-  UIManager.getString(`Table.foreground`) results in first
+  UIManager.getString(\"Table.foreground\") results in first
   checking developer defaults. If the developer defaults contain
-  a value for `Table.foreground` it is returned, otherwise
+  a value for \"Table.foreground\" it is returned, otherwise
   the look and feel defaults are checked, followed by the system defaults.
 
   It's important to note that getDefaults returns a custom
   instance of UIDefaults with this resolution logic built into it.
-  For example, UIManager.getDefaults().getString(`Table.foreground`)
-  is equivalent to UIManager.getString(`Table.foreground`). Both
+  For example, UIManager.getDefaults().getString(\"Table.foreground\")
+  is equivalent to UIManager.getString(\"Table.foreground\"). Both
   resolve using the algorithm just described. In many places the
   documentation uses the word defaults to refer to the custom instance
   of UIDefaults with the resolution logic as previously described.

@@ -56,7 +56,7 @@
 
 
 
-  has the initial value `\uFFFD`;
+  has the initial value \"\\uFFFD\";
 
 
   its value may be changed via the replaceWith method.
@@ -347,7 +347,7 @@
 (defn charset
   "Returns the charset that created this decoder.
 
-  returns: This decoder's charset - `java.nio..Charset`"
-  (^java.nio..Charset [^CharsetDecoder this]
+  returns: This decoder's charset - `java.nio.charset.Charset`"
+  (^java.nio.charset.Charset [^CharsetDecoder this]
     (-> this (.charset))))
 

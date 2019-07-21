@@ -47,7 +47,7 @@
 
          public void actionPerformed(ActionEvent e)
          {
-             System.out.println(`Hello There`);
+             System.out.println(\"Hello There\");
          }
      }
   In this example, serializing aButton by itself
@@ -72,7 +72,7 @@
           {
               public void actionPerformed(ActionEvent e)
               {
-                  System.out.println(`Hello There`);
+                  System.out.println(\"Hello There\");
               }
           }
 
@@ -148,7 +148,7 @@
 
    An opaque component paints every pixel within its
    rectangular region. A non-opaque component paints only some of
-   its pixels, allowing the pixels underneath it to `show through`.
+   its pixels, allowing the pixels underneath it to \"show through\".
    A component that does not fully paint its pixels therefore
    provides a degree of transparency.
 
@@ -190,7 +190,7 @@
 
 (defn double-buffered?
   "Returns true if this component is painted to an offscreen image
-   (`buffer`) that's copied to the screen later.  Component
+   (\"buffer\") that's copied to the screen later.  Component
    subclasses that support double buffering should override this
    method to return true if double buffering is enabled.
 
@@ -243,7 +243,7 @@
     (-> this (.handleEvent evt))))
 
 (defn get-location
-  "Stores the x,y origin of this component into `return value` rv
+  "Stores the x,y origin of this component into \"return value\" rv
    and return rv.   If rv is null a new
    Point is allocated.
    This version of getLocation is useful if the
@@ -497,7 +497,7 @@
     (-> this (.validate))))
 
 (defn contains
-  "Checks whether this component `contains` the specified point,
+  "Checks whether this component \"contains\" the specified point,
    where x and y are defined to be
    relative to the coordinate system of this component.
 
@@ -1691,7 +1691,7 @@
     (-> this (.requestFocus))))
 
 (defn get-bounds
-  "Stores the bounds of this component into `return value` rv and
+  "Stores the bounds of this component into \"return value\" rv and
    return rv.  If rv is null a new
    Rectangle is allocated.
    This version of getBounds is useful if the caller
@@ -2065,18 +2065,18 @@
    property. The specified property may be user-defined, or one of the
    following:
 
-      this Component's font (`font`)
-      this Component's background color (`background`)
-      this Component's foreground color (`foreground`)
-      this Component's focusability (`focusable`)
+      this Component's font (\"font\")
+      this Component's background color (\"background\")
+      this Component's foreground color (\"foreground\")
+      this Component's focusability (\"focusable\")
       this Component's focus traversal keys enabled state
-          (`focusTraversalKeysEnabled`)
+          (\"focusTraversalKeysEnabled\")
       this Component's Set of FORWARD_TRAVERSAL_KEYS
-          (`forwardFocusTraversalKeys`)
+          (\"forwardFocusTraversalKeys\")
       this Component's Set of BACKWARD_TRAVERSAL_KEYS
-          (`backwardFocusTraversalKeys`)
+          (\"backwardFocusTraversalKeys\")
       this Component's Set of UP_CYCLE_TRAVERSAL_KEYS
-          (`upCycleFocusTraversalKeys`)
+          (\"upCycleFocusTraversalKeys\")
 
    Note that if this Component is inheriting a bound property, then no
    event will be fired in response to a change in the inherited property.
@@ -2159,7 +2159,7 @@
     (-> this (.isShowing))))
 
 (defn get-size
-  "Stores the width/height of this component into `return value` rv
+  "Stores the width/height of this component into \"return value\" rv
    and return rv.   If rv is null a new
    Dimension object is allocated.  This version of
    getSize is useful if the caller wants to avoid

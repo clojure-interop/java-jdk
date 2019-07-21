@@ -137,7 +137,7 @@
    The difference between this method and getAnnotation(Class)
    is that this method detects if its argument is a repeatable
    annotation type, and if so, attempts to find one or more
-   annotations of that type by `looking through` a container annotation.
+   annotations of that type by \"looking through\" a container annotation.
 
     The annotations returned by this method could contain an element
    whose value is of type Class.

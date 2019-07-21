@@ -19,8 +19,8 @@
   slash character (/)) to separate each component.
   The JNDI syntax defines the following meta characters:
 
-  escape (backward slash \),
-  quote characters  (single (') and double quotes (`)), and
+  escape (backward slash \\),
+  quote characters  (single (') and double quotes (\")), and
   component separator (forward slash character (/)).
 
   Any occurrence of a leading quote, an escape preceding any meta character,
@@ -57,53 +57,53 @@
 
 
 
- ``
+ \"\"
 
- {} (the empty name == new CompositeName(``) == new CompositeName())
-
-
-
-
-
- `x`
-
- {`x`}
+ {} (the empty name == new CompositeName(\"\") == new CompositeName())
 
 
 
 
 
- `x/y`
+ \"x\"
 
- {`x`, `y`}
-
-
-
- `x/`
- {`x`, ``}
+ {\"x\"}
 
 
 
- `/x`
- {``, `x`}
+
+
+ \"x/y\"
+
+ {\"x\", \"y\"}
 
 
 
- `/`
- {``}
+ \"x/\"
+ {\"x\", \"\"}
 
 
 
- `//`
- {``, ``}
+ \"/x\"
+ {\"\", \"x\"}
 
 
- `/x/`
- {``, `x`, ``}
+
+ \"/\"
+ {\"\"}
 
 
- `x//y`
- {`x`, ``, `y`}
+
+ \"//\"
+ {\"\", \"\"}
+
+
+ \"/x/\"
+ {\"\", \"x\", \"\"}
+
+
+ \"x//y\"
+ {\"x\", \"\", \"y\"}
 
 
 
@@ -123,37 +123,37 @@
 
 
 
- `x/y`            `/`   = x/y/
+ \"x/y\"            \"/\"   = x/y/
 
 
- {`x`, `y`}       {``}  = {`x`, `y`, ``}
-
-
-
-
-
- ``               `x`   = `x`
-
-
- {}               {`x`} = {`x`}
+ {\"x\", \"y\"}       {\"\"}  = {\"x\", \"y\", \"\"}
 
 
 
 
 
- `/`              `x`   = `/x`
+ \"\"               \"x\"   = \"x\"
 
 
- {``}             {`x`} = {``, `x`}
+ {}               {\"x\"} = {\"x\"}
 
 
 
 
 
- `x`    ``       ``    = `x`
+ \"/\"              \"x\"   = \"/x\"
 
 
- {`x`}  {}       {}    = {`x`}
+ {\"\"}             {\"x\"} = {\"\", \"x\"}
+
+
+
+
+
+ \"x\"    \"\"       \"\"    = \"x\"
+
+
+ {\"x\"}  {}       {}    = {\"x\"}
 
 
 
@@ -353,9 +353,9 @@
    the components in the composite name. The effect is as if all the
    components were lined up in their specified ordered and the
    lexicographical rules applied over the two line-ups.
-   If this composite name is `lexicographically` lesser than obj,
+   If this composite name is \"lexicographically\" lesser than obj,
    a negative number is returned.
-   If this composite name is `lexicographically` greater than obj,
+   If this composite name is \"lexicographically\" greater than obj,
    a positive number is returned.
 
   obj - The non-null object to compare against. - `java.lang.Object`

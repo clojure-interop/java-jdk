@@ -79,7 +79,7 @@
    is set to false.
 
 
-   Note that `the validation` here means
+   Note that \"the validation\" here means
    a validating
    parser as defined in the XML recommendation.
    In other words, it essentially just controls the DTD validation.

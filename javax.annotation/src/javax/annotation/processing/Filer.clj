@@ -22,7 +22,7 @@
   name is a non-null, non-empty sequence of path segments separated
   by '/'; '.' and '..' are invalid path
   segments.  A valid relative name must match the
-  `path-rootless` rule of RFC 3986, section
+  \"path-rootless\" rule of RFC 3986, section
   3.3.
 
   The file creation methods take a variable number of arguments to
@@ -42,8 +42,8 @@
 
 
 
-       filer.createSourceFile(`GeneratedFromUserSource`,
-                              eltUtils.getTypeElement(`UserSource`));
+       filer.createSourceFile(\"GeneratedFromUserSource\",
+                              eltUtils.getTypeElement(\"UserSource\"));
 
   If there are no originating elements, none need to be passed.  This
   information may be used in an incremental environment to determine
@@ -94,8 +94,8 @@
    be used.  A source file can also be created to hold information
    about a package, including package annotations.  To create a
    source file for a named package, have name be the
-   package's name followed by `.package-info`; to create a
-   source file for an unnamed package, use `package-info`.
+   package's name followed by \".package-info\"; to create a
+   source file for an unnamed package, use \"package-info\".
 
     Note that to use a particular java.nio.charset.charset to encode the contents of the
    file, an OutputStreamWriter with the chosen charset can
@@ -111,7 +111,7 @@
    should be compatible with the source version being used
    for this run.
 
-  name - canonical (fully qualified) name of the principal type being declared in this file or a package name followed by `.package-info` for a package information file - `java.lang.CharSequence`
+  name - canonical (fully qualified) name of the principal type being declared in this file or a package name followed by \".package-info\" for a package information file - `java.lang.CharSequence`
   originating-elements - type or package elements causally associated with the creation of this file, may be elided or null - `javax.lang.model.element.Element`
 
   returns: a JavaFileObject to write the new source file - `javax.tools.JavaFileObject`
@@ -128,14 +128,14 @@
    written.  A class file can also be created to hold information
    about a package, including package annotations.  To create a
    class file for a named package, have name be the
-   package's name followed by `.package-info`; creating a
+   package's name followed by \".package-info\"; creating a
    class file for an unnamed package is not supported.
 
    To avoid subsequent errors, the contents of the class file
    should be compatible with the source version being used
    for this run.
 
-  name - binary name of the type being written or a package name followed by `.package-info` for a package information file - `java.lang.CharSequence`
+  name - binary name of the type being written or a package name followed by \".package-info\" for a package information file - `java.lang.CharSequence`
   originating-elements - type or package elements causally associated with the creation of this file, may be elided or null - `javax.lang.model.element.Element`
 
   returns: a JavaFileObject to write the new class file - `javax.tools.JavaFileObject`

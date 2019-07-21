@@ -1,5 +1,5 @@
 (ns javax.naming.spi.Resolver
-  "This interface represents an `intermediate context` for name resolution.
+  "This interface represents an \"intermediate context\" for name resolution.
 
   The Resolver interface contains methods that are implemented by contexts
   that do not support subtypes of Context, but which can act as

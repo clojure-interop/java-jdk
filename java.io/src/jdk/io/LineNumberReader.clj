@@ -11,7 +11,7 @@
   getLineNumber().
 
    A line is considered to be terminated by any one of a
-  line feed ('\n'), a carriage return ('\r'), or a carriage return followed
+  line feed ('\\n'), a carriage return ('\\r'), or a carriage return followed
   immediately by a linefeed."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.io LineNumberReader]))

@@ -22,28 +22,28 @@
 
 
      The uppercase letters 'A' through 'Z'
-         ('\u0041' through '\u005a'),
+         ('\\u0041' through '\\u005a'),
 
      The lowercase letters 'a' through 'z'
-         ('\u0061' through '\u007a'),
+         ('\\u0061' through '\\u007a'),
 
      The digits '0' through '9'
-         ('\u0030' through '\u0039'),
+         ('\\u0030' through '\\u0039'),
 
      The dash character '-'
-         ('\u002d', HYPHEN-MINUS),
+         ('\\u002d', HYPHEN-MINUS),
 
      The plus character '+'
-         ('\u002b', PLUS SIGN),
+         ('\\u002b', PLUS SIGN),
 
      The period character '.'
-         ('\u002e', FULL STOP),
+         ('\\u002e', FULL STOP),
 
      The colon character ':'
-         ('\u003a', COLON), and
+         ('\\u003a', COLON), and
 
      The underscore character '_'
-         ('\u005f', LOW LINE).
+         ('\\u005f', LOW LINE).
 
 
 
@@ -73,7 +73,7 @@
   than one registry name then its canonical name must be the MIME-preferred
   name and the other names in the registry must be valid aliases.  If a
   supported charset is not listed in the IANA registry then its canonical name
-  must begin with one of the strings `X-` or `x-`.
+  must begin with one of the strings \"X-\" or \"x-\".
 
    The IANA charset registry does change over time, and so the canonical
   name and the aliases of a particular charset may also change over time.  To
@@ -124,7 +124,7 @@
    The UTF-16 charsets use sixteen-bit quantities and are
   therefore sensitive to byte order.  In these encodings the byte order of a
   stream may be indicated by an initial byte-order mark represented by
-  the Unicode character '\uFEFF'.  Byte-order marks are handled
+  the Unicode character '\\uFEFF'.  Byte-order marks are handled
   as follows:
 
 

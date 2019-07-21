@@ -6,7 +6,7 @@
   such as quarter-of-year, can be obtained.
 
   This class does not store or represent a year, time or time-zone.
-  For example, the value `December 3rd` can be stored in a MonthDay.
+  For example, the value \"December 3rd\" can be stored in a MonthDay.
 
   Since a MonthDay does not possess a year, the leap day of
   February 29th is considered valid.
@@ -371,7 +371,7 @@
   "Compares this month-day to another month-day.
 
    The comparison is based first on value of the month, then on the value of the day.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
   other - the other month-day to compare to, not null - `java.time.MonthDay`
 

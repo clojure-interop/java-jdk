@@ -331,7 +331,7 @@
 
 (defn set-default-close-operation
   "Sets the operation that will happen by default when
-   the user initiates a `close` on this internal frame.
+   the user initiates a \"close\" on this internal frame.
    The possible choices are:
 
 
@@ -466,7 +466,7 @@
   "Returns the name of the look-and-feel
    class that renders this component.
 
-  returns: the string `InternalFrameUI` - `java.lang.String`"
+  returns: the string \"InternalFrameUI\" - `java.lang.String`"
   (^java.lang.String [^JInternalFrame this]
     (-> this (.getUIClassID))))
 
@@ -680,7 +680,7 @@
 
 (defn selected?
   "Returns whether the JInternalFrame is the
-   currently `selected` or active frame.
+   currently \"selected\" or active frame.
 
   returns: true if this internal frame is currently selected (active) - `boolean`"
   (^Boolean [^JInternalFrame this]
@@ -844,7 +844,7 @@
 
 (defn get-default-close-operation
   "Returns the default operation that occurs when the user
-   initiates a `close` on this internal frame.
+   initiates a \"close\" on this internal frame.
 
   returns: the operation that will occur when the user closes the internal
            frame - `int`"

@@ -52,7 +52,7 @@
   the write lock. Writer preference is common, as writes are expected to be
   short and infrequent. Reader preference is less common as it can lead to
   lengthy delays for a write if the readers are frequent and long-lived as
-  expected. Fair, or `in-order` implementations are also possible.
+  expected. Fair, or \"in-order\" implementations are also possible.
 
   Determining whether readers that request the read lock while a
   reader is active and a writer is waiting, are granted the read lock.

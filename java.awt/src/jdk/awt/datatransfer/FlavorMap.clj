@@ -1,6 +1,6 @@
 (ns jdk.awt.datatransfer.FlavorMap
-  "A two-way Map between `natives` (Strings), which correspond to platform-
-  specific data formats, and `flavors` (DataFlavors), which correspond to
+  "A two-way Map between \"natives\" (Strings), which correspond to platform-
+  specific data formats, and \"flavors\" (DataFlavors), which correspond to
   platform-independent MIME types. FlavorMaps need not be symmetric, but
   typically are."
   (:refer-clojure :only [require comment defn ->])

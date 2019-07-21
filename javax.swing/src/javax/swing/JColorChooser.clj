@@ -16,7 +16,7 @@
   the user presses one of the dialog buttons.
   The ability to create instances of JColorChooser panes
   directly (within any container). PropertyChange listeners
-  can be added to detect when the current `color` property changes.
+  can be added to detect when the current \"color\" property changes.
 
 
   Warning: Swing is not thread safe. For more
@@ -71,10 +71,10 @@
 
 (defn *show-dialog
   "Shows a modal color-chooser dialog and blocks until the
-   dialog is hidden.  If the user presses the `OK` button, then
+   dialog is hidden.  If the user presses the \"OK\" button, then
    this method hides/disposes the dialog and returns the selected color.
-   If the user presses the `Cancel` button or closes the dialog without
-   pressing `OK`, then this method hides/disposes the dialog and returns
+   If the user presses the \"Cancel\" button or closes the dialog without
+   pressing \"OK\", then this method hides/disposes the dialog and returns
    null.
 
   component - the parent Component for the dialog - `java.awt.Component`
@@ -89,9 +89,9 @@
 
 (defn *create-dialog
   "Creates and returns a new dialog containing the specified
-   ColorChooser pane along with `OK`, `Cancel`, and `Reset`
-   buttons. If the `OK` or `Cancel` buttons are pressed, the dialog is
-   automatically hidden (but not disposed).  If the `Reset`
+   ColorChooser pane along with \"OK\", \"Cancel\", and \"Reset\"
+   buttons. If the \"OK\" or \"Cancel\" buttons are pressed, the dialog is
+   automatically hidden (but not disposed).  If the \"Reset\"
    button is pressed, the color-chooser's color will be reset to the
    color which was set the last time show was invoked on the
    dialog and the dialog will remain showing.
@@ -100,8 +100,8 @@
   title - the title for the dialog - `java.lang.String`
   modal - a boolean. When true, the remainder of the program is inactive until the dialog is closed. - `boolean`
   chooser-pane - the color-chooser to be placed inside the dialog - `javax.swing.JColorChooser`
-  ok-listener - the ActionListener invoked when `OK` is pressed - `java.awt.event.ActionListener`
-  cancel-listener - the ActionListener invoked when `Cancel` is pressed - `java.awt.event.ActionListener`
+  ok-listener - the ActionListener invoked when \"OK\" is pressed - `java.awt.event.ActionListener`
+  cancel-listener - the ActionListener invoked when \"Cancel\" is pressed - `java.awt.event.ActionListener`
 
   returns: a new dialog containing the color-chooser pane - `javax.swing.JDialog`
 
@@ -112,7 +112,7 @@
 (defn set-preview-panel
   "Sets the current preview panel.
    This will fire a PropertyChangeEvent for the property
-   named `previewPanel`.
+   named \"previewPanel\".
 
   preview - the JComponent which displays the current color - `javax.swing.JComponent`"
   ([^JColorChooser this ^javax.swing.JComponent preview]
@@ -146,7 +146,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `ColorChooserUI` - `java.lang.String`"
+  returns: the string \"ColorChooserUI\" - `java.lang.String`"
   (^java.lang.String [^JColorChooser this]
     (-> this (.getUIClassID))))
 

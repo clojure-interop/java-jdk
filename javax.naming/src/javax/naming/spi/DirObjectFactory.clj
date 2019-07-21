@@ -14,9 +14,9 @@
   object from the directory, might already have attributes that
   are useful for the object factory to check to see whether the
   factory is supposed to process the object. For instance, an LDAP-style
-  service provider might have read the `objectclass` of the object.
+  service provider might have read the \"objectclass\" of the object.
   A CORBA object factory might be interested only in LDAP entries
-  with `objectclass=corbaObject`. By using the attributes supplied by
+  with \"objectclass=corbaObject\". By using the attributes supplied by
   the LDAP service provider, the CORBA object factory can quickly
   eliminate objects that it need not worry about, and non-CORBA object
   factories can quickly eliminate CORBA-related LDAP entries."

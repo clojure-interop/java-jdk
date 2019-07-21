@@ -101,7 +101,7 @@
 (defn compare-to
   "Compare this field with another ObjectStreamField.  Return
    -1 if this is smaller, 0 if equal, 1 if greater.  Types that are
-   primitives are `smaller` than object types.  If equal, the field names
+   primitives are \"smaller\" than object types.  If equal, the field names
    are compared.
 
   obj - the object to be compared. - `java.lang.Object`

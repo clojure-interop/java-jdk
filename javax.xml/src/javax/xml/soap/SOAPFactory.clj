@@ -39,7 +39,7 @@
    local name, prefix and uri. The concrete type of the return value
    will depend on the name given to the new SOAPElement. For
    instance, a new SOAPElement with the name
-   `{http://www.w3.org/2003/05/soap-envelope}Envelope` would cause a
+   \"{http://www.w3.org/2003/05/soap-envelope}Envelope\" would cause a
    SOAPEnvelope that supports SOAP 1.2 behavior to be created.
 
   local-name - a String giving the local name for the new element - `java.lang.String`

@@ -27,7 +27,7 @@
    creating a proxy or Dispatch instance.
    The runtime MUST also make sure that binding of
    SEI parameters/return values respect the wsdl:binding.
-   With this feature enabled, if a required (wsdl:required=`true`)
+   With this feature enabled, if a required (wsdl:required=\"true\")
    wsdl:binding extension is in the WSDL and it is not
    supported by a JAX-WS runtime and it has not
    been explicitly turned off by the web service developer, then

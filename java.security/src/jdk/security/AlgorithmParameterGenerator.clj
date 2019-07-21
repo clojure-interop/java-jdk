@@ -11,11 +11,11 @@
 
 
   The algorithm-independent approach uses the fact that all parameter
-  generators share the concept of a `size` and a
+  generators share the concept of a \"size\" and a
   source of randomness. The measure of size is universally shared
   by all algorithm parameters, though it is interpreted differently
   for different algorithms. For example, in the case of parameters for
-  the DSA algorithm, `size` corresponds to the size
+  the DSA algorithm, \"size\" corresponds to the size
   of the prime modulus (in bits).
   When using this approach, algorithm-specific parameter generation
   values - if any - default to some standard values, unless they can be

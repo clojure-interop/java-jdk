@@ -19,41 +19,41 @@
   (^Rectangle2D$Double []
     (new Rectangle2D$Double )))
 
-(defn -x
+(defn x
   "Instance Field.
 
   The X coordinate of this Rectangle2D.
 
   type: double"
-  [this]
-  (-> this .-x))
+  (^Double [^Rectangle2D$Double this]
+    (-> this .-x)))
 
-(defn -y
+(defn y
   "Instance Field.
 
   The Y coordinate of this Rectangle2D.
 
   type: double"
-  [this]
-  (-> this .-y))
+  (^Double [^Rectangle2D$Double this]
+    (-> this .-y)))
 
-(defn -width
+(defn width
   "Instance Field.
 
   The width of this Rectangle2D.
 
   type: double"
-  [this]
-  (-> this .-width))
+  (^Double [^Rectangle2D$Double this]
+    (-> this .-width)))
 
-(defn -height
+(defn height
   "Instance Field.
 
   The height of this Rectangle2D.
 
   type: double"
-  [this]
-  (-> this .-height))
+  (^Double [^Rectangle2D$Double this]
+    (-> this .-height)))
 
 (defn set-rect
   "Sets the location and size of this Rectangle2D

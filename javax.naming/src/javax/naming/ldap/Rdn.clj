@@ -2,7 +2,7 @@
   "This class represents a relative distinguished name, or RDN, which is a
   component of a distinguished name as specified by
   RFC 2253.
-  An example of an RDN is `OU=Sales+CN=J.Smith`. In this example,
+  An example of an RDN is \"OU=Sales+CN=J.Smith\". In this example,
   the RDN consist of multiple attribute type/value pairs. The
   RDN is parsed as described in the class description for
   LdapName.
@@ -21,8 +21,8 @@
 
   Rdn will properly parse all valid RDNs, but
   does not attempt to detect all possible violations when parsing
-  invalid RDNs. It is `generous` in accepting invalid RDNs.
-  The `validity` of a name is determined ultimately when it
+  invalid RDNs. It is \"generous\" in accepting invalid RDNs.
+  The \"validity\" of a name is determined ultimately when it
   is supplied to an LDAP server, which may accept or
   reject the name based on factors such as its schema information
   and interoperability considerations.
@@ -32,20 +32,20 @@
   constructor that takes type and value as arguments:
 
 
-       Rdn rdn = new Rdn(`cn`, `Juicy, Fruit`);
+       Rdn rdn = new Rdn(\"cn\", \"Juicy, Fruit\");
        System.out.println(rdn.toString());
-  The last line will print cn=Juicy\, Fruit. The
+  The last line will print cn=Juicy\\, Fruit. The
   unescapeValue() method can be
   used to unescape the escaped comma resulting in the original
-  value `Juicy, Fruit`. The escapeValue() method adds the escape back preceding the comma.
+  value \"Juicy, Fruit\". The escapeValue() method adds the escape back preceding the comma.
 
   This class can be instantiated by a string representation
   of the RDN defined in RFC 2253 as shown in the following code example:
 
 
-       Rdn rdn = new Rdn(`cn=Juicy\\, Fruit`);
+       Rdn rdn = new Rdn(\"cn=Juicy\\\\, Fruit\");
        System.out.println(rdn.toString());
-  The last line will print cn=Juicy\, Fruit.
+  The last line will print cn=Juicy\\, Fruit.
 
   Concurrent multithreaded read-only access of an instance of
   Rdn need not be synchronized.
@@ -80,8 +80,8 @@
    to the rules specified in
    RFC 2253.
 
-   For example, if the val is `Sue, Grabbit and Runn`, the escaped
-   value returned by this method is `Sue\, Grabbit and Runn`.
+   For example, if the val is \"Sue, Grabbit and Runn\", the escaped
+   value returned by this method is \"Sue\\, Grabbit and Runn\".
 
    A string value is represented as a String and binary value
    as a byte array.
@@ -165,7 +165,7 @@
 
    The attribute type and value pairs of the RDNs are lined up
    against each other and compared lexicographically. The order of
-   components in multi-valued Rdns (such as `ou=Sales+cn=Bob`) is not
+   components in multi-valued Rdns (such as \"ou=Sales+cn=Bob\") is not
    significant.
 
   obj - The non-null object to compare against. - `java.lang.Object`
@@ -181,7 +181,7 @@
   "Compares the specified Object with this Rdn for equality.
    Returns true if the given object is also a Rdn and the two Rdns
    represent the same attribute type and value mappings. The order of
-   components in multi-valued Rdns (such as `ou=Sales+cn=Bob`) is not
+   components in multi-valued Rdns (such as \"ou=Sales+cn=Bob\") is not
    significant.
 
    Type and value equality matching is done as below:

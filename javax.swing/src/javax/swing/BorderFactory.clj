@@ -131,7 +131,7 @@
     (BorderFactory/createCompoundBorder )))
 
 (defn *create-etched-border
-  "Creates a border with an `etched` look using
+  "Creates a border with an \"etched\" look using
    the specified highlighting and shading colors.
 
   type - one of EtchedBorder.RAISED, or EtchedBorder.LOWERED - `int`

@@ -120,13 +120,13 @@
 
 (defn to-string
   "Returns a string version of this resolution attribute in the given units.
-   The string takes the form `CxF U`,
+   The string takes the form \"CxF U\",
    where C is the cross feed direction resolution, F is the
    feed direction resolution, and U is the units name. The values are
    rounded to the nearest integer.
 
   units - Unit conversion factor, e.g. CODE>DPI or DPCM. - `int`
-  units-name - Units name string, e.g. `dpi` or `dpcm`. If null, no units name is appended to the result. - `java.lang.String`
+  units-name - Units name string, e.g. \"dpi\" or \"dpcm\". If null, no units name is appended to the result. - `java.lang.String`
 
   returns: String version of this resolution attribute. - `java.lang.String`
 

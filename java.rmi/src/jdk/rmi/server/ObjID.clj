@@ -9,7 +9,7 @@
   with respect to the host it is generated on.
 
   The ObjID(int) constructor can be used to create a
-  `well-known` object identifier.  The scope of a well-known
+  \"well-known\" object identifier.  The scope of a well-known
   ObjID depends on the RMI runtime it is exported to.
 
   An ObjID instance contains an object number (of type
@@ -21,7 +21,7 @@
   constructor with the value zero.
 
   If the system property java.rmi.server.randomIDs
-  is defined to equal the string `true` (case insensitive),
+  is defined to equal the string \"true\" (case insensitive),
   then the ObjID() constructor will use a cryptographically
   strong random number generator to choose the object number of the
   returned ObjID."
@@ -31,7 +31,7 @@
 (defn ->obj-id
   "Constructor.
 
-  Creates a `well-known` object identifier.
+  Creates a \"well-known\" object identifier.
 
    An ObjID created via this constructor will not
    clash with any ObjIDs generated via the no-arg

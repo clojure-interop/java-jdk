@@ -3,7 +3,7 @@
   class ClassLoader is an abstract class.  Given the binary name of a class, a class loader should attempt to
   locate or generate data that constitutes a definition for the class.  A
   typical strategy is to transform the name into a file name and then read a
-  `class file` of that name from a file system.
+  \"class file\" of that name from a file system.
 
    Every Class object contains a reference to the ClassLoader that defined
   it.
@@ -27,7 +27,7 @@
   resource, a ClassLoader instance will delegate the search for the
   class or resource to its parent class loader before attempting to find the
   class or resource itself.  The virtual machine's built-in class loader,
-  called the `bootstrap class loader`, does not itself have a parent but may
+  called the \"bootstrap class loader\", does not itself have a parent but may
   serve as the parent of a ClassLoader instance.
 
    Class loaders that support concurrent loading of classes are known as
@@ -64,7 +64,7 @@
 
 
     ClassLoader loader = new NetworkClassLoader(host, port);
-    Object main = loader.loadClass(`Main`, true).newInstance();
+    Object main = loader.loadClass(\"Main\", true).newInstance();
          . . .
 
    The network class loader subclass must define the methods findClass and loadClassData to load a class
@@ -98,10 +98,10 @@
    Examples of valid class names include:
 
 
-    `java.lang.String`
-    `javax.swing.JSpinner$DefaultEditor`
-    `java.security.KeyStore$Builder$FileBuilder$1`
-    `java.net.URLClassLoader$3$1`"
+    \"java.lang.String\"
+    \"javax.swing.JSpinner$DefaultEditor\"
+    \"java.security.KeyStore$Builder$FileBuilder$1\"
+    \"java.net.URLClassLoader$3$1\""
   (:refer-clojure :only [require comment defn ->])
   (:import [java.lang ClassLoader]))
 
@@ -157,7 +157,7 @@
     The default system class loader is an implementation-dependent
    instance of this class.
 
-    If the system property `java.system.class.loader` is defined
+    If the system property \"java.system.class.loader\" is defined
    when this method is first invoked then the value of that property is
    taken to be the name of a class that will be returned as the system
    class loader.  The class is loaded using the default system class loader
@@ -170,7 +170,7 @@
     If a security manager is present, and the invoker's class loader is
    not null and the invoker's class loader is not the same as or
    an ancestor of the system class loader, then this method invokes the
-   security manager's checkPermission method with a RuntimePermission(`getClassLoader`) permission to verify
+   security manager's checkPermission method with a RuntimePermission(\"getClassLoader\") permission to verify
    access to the system class loader.  If not, a
    SecurityException will be thrown.
 
@@ -207,7 +207,7 @@
    false and discards any package defaults or class assertion
    status settings associated with the class loader.  This method is
    provided so that class loaders can be made to ignore any command line or
-   persistent assertion status settings and `start with a clean slate.`"
+   persistent assertion status settings and \"start with a clean slate.\""
   ([^ClassLoader this]
     (-> this (.clearAssertionStatus))))
 
@@ -290,10 +290,10 @@
   "Sets the package default assertion status for the named package.  The
    package default assertion status determines the assertion status for
    classes initialized in the future that belong to the named package or
-   any of its `subpackages`.
+   any of its \"subpackages\".
 
     A subpackage of a package named p is any package whose name begins
-   with `p.`.  For example, javax.swing.text is a
+   with \"p.\".  For example, javax.swing.text is a
    subpackage of javax.swing, and both java.util and
    java.lang.reflect are subpackages of java.
 
@@ -308,7 +308,7 @@
    assertion status, and may be overridden on a per-class basis by invoking
    setClassAssertionStatus(String, boolean).
 
-  package-name - The name of the package whose package default assertion status is to be set. A null value indicates the unnamed package that is `current` (see section 7.4.2 of The Java™ Language Specification.) - `java.lang.String`
+  package-name - The name of the package whose package default assertion status is to be set. A null value indicates the unnamed package that is \"current\" (see section 7.4.2 of The Java™ Language Specification.) - `java.lang.String`
   enabled - true if classes loaded by this classloader and belonging to the named package or any of its subpackages will have assertions enabled by default, false if they will have assertions disabled by default. - `boolean`"
   ([^ClassLoader this ^java.lang.String package-name ^Boolean enabled]
     (-> this (.setPackageAssertionStatus package-name enabled))))
@@ -321,7 +321,7 @@
 
     If a security manager is present, and the invoker's class loader is
    not null and is not an ancestor of this class loader, then this
-   method invokes the security manager's checkPermission method with a RuntimePermission(`getClassLoader`) permission to verify
+   method invokes the security manager's checkPermission method with a RuntimePermission(\"getClassLoader\") permission to verify
    access to the parent class loader is permitted.  If not, a
    SecurityException will be thrown.
 

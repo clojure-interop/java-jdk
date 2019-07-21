@@ -97,7 +97,7 @@
    This method is included for the benefit of applications that must
    generate bytecodes that process method handles and invokedynamic.
 
-  descriptor - a bytecode-level type descriptor string `(T...)T` - `java.lang.String`
+  descriptor - a bytecode-level type descriptor string \"(T...)T\" - `java.lang.String`
   loader - the class loader in which to look up the types - `java.lang.ClassLoader`
 
   returns: a method type matching the bytecode-level type descriptor - `java.lang.invoke.MethodType`
@@ -202,7 +202,7 @@
 
 (defn to-string
   "Returns a string representation of the method type,
-   of the form `(PT0,PT1...)RT`.
+   of the form \"(PT0,PT1...)RT\".
    The string representation of a method type is a
    parenthesis enclosed, comma separated list of type names,
    followed immediately by the return type.

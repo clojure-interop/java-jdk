@@ -7,12 +7,12 @@
 (def *-left-justify
   "Static Constant.
 
-  Left-justifies the output.  Spaces ('\u0020') will be added
+  Left-justifies the output.  Spaces ('\\u0020') will be added
    at the end of the converted value as required to fill the minimum width
    of the field.  If this flag is not set then the output will be
    right-justified.
 
-    This flag corresponds to '-' ('\u002d') in
+    This flag corresponds to '-' ('\\u002d') in
    the format specifier.
 
   type: int"
@@ -30,7 +30,7 @@
 
        out.toUpperCase()
 
-    This flag corresponds to 'S' ('\u0053') in
+    This flag corresponds to 'S' ('\\u0053') in
    the format specifier.
 
   type: int"
@@ -42,7 +42,7 @@
   Requires the output to use an alternate form.  The definition of the
    form is specified by the Formattable.
 
-    This flag corresponds to '#' ('\u0023') in
+    This flag corresponds to '#' ('\\u0023') in
    the format specifier.
 
   type: int"

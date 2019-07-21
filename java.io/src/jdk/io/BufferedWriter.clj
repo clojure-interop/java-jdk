@@ -7,7 +7,7 @@
 
    A newLine() method is provided, which uses the platform's own notion of
   line separator as defined by the system property line.separator.
-  Not all platforms use the newline character ('\n') to terminate lines.
+  Not all platforms use the newline character ('\\n') to terminate lines.
   Calling this method to terminate each output line is therefore preferred to
   writing a newline character directly.
 
@@ -19,7 +19,7 @@
 
 
   PrintWriter out
-    = new PrintWriter(new BufferedWriter(new FileWriter(`foo.out`)));
+    = new PrintWriter(new BufferedWriter(new FileWriter(\"foo.out\")));
 
   will buffer the PrintWriter's output to the file.  Without buffering, each
   invocation of a print() method would cause characters to be converted into
@@ -66,7 +66,7 @@
 (defn new-line
   "Writes a line separator.  The line separator string is defined by the
    system property line.separator, and is not necessarily a single
-   newline ('\n') character.
+   newline ('\\n') character.
 
   throws: java.io.IOException - If an I/O error occurs"
   ([^BufferedWriter this]

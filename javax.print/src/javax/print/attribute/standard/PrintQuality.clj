@@ -34,7 +34,7 @@
   PrintQuality/HIGH)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PrintQuality and any vendor-defined subclasses, the category is
@@ -50,7 +50,7 @@
    instance.
 
    For class PrintQuality and any vendor-defined subclasses, the category
-   name is `print-quality`.
+   name is \"print-quality\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PrintQuality this]

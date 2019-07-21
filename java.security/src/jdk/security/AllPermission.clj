@@ -27,7 +27,7 @@
     (new AllPermission )))
 
 (defn implies
-  "Checks if the specified permission is `implied` by
+  "Checks if the specified permission is \"implied\" by
    this object. This method always returns true.
 
   p - the permission to check against. - `java.security.Permission`

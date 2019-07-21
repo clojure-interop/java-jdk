@@ -11,7 +11,7 @@
   "Creates a new URLStreamHandler instance with the specified
    protocol.
 
-  protocol - the protocol (`ftp`, `http`, `nntp`, etc.). - `java.lang.String`
+  protocol - the protocol (\"ftp\", \"http\", \"nntp\", etc.). - `java.lang.String`
 
   returns: a URLStreamHandler for the specific protocol. - `java.net.URLStreamHandler`"
   (^java.net.URLStreamHandler [^URLStreamHandlerFactory this ^java.lang.String protocol]

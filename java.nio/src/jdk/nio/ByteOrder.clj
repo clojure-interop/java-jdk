@@ -38,7 +38,7 @@
 (defn to-string
   "Constructs a string describing this object.
 
-    This method returns the string `BIG_ENDIAN` for BIG_ENDIAN and `LITTLE_ENDIAN` for LITTLE_ENDIAN.
+    This method returns the string \"BIG_ENDIAN\" for BIG_ENDIAN and \"LITTLE_ENDIAN\" for LITTLE_ENDIAN.
 
   returns: The specified string - `java.lang.String`"
   (^java.lang.String [^ByteOrder this]

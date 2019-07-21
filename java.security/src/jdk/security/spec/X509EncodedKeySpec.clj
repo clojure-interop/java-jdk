@@ -35,7 +35,7 @@
   "Returns the name of the encoding format associated with this
    key specification.
 
-  returns: the string `X.509`. - `java.lang.String`"
+  returns: the string \"X.509\". - `java.lang.String`"
   (^java.lang.String [^X509EncodedKeySpec this]
     (-> this (.getFormat))))
 

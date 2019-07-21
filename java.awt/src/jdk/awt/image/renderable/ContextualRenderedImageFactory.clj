@@ -5,7 +5,7 @@
   may be performed by a single class such as RenderedImageOp through
   the use of multiple instances of ContextualRenderedImageFactory.
   The name ContextualRenderedImageFactory is commonly shortened to
-  `CRIF.`
+  \"CRIF.\"
 
    All operations that are to be used in a rendering-independent
   chain must implement ContextualRenderedImageFactory.
@@ -42,7 +42,7 @@
    containing the operation's sources and parameters.  The output
    is a RenderedImage that takes the RenderContext into account to
    determine its dimensions and placement on the image plane.
-   This method houses the `intelligence` that allows a
+   This method houses the \"intelligence\" that allows a
    rendering-independent operation to adapt to a specific
    RenderContext.
 

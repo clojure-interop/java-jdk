@@ -6,7 +6,7 @@
 
   For a rotating set of files, as each file reaches a given size
   limit, it is closed, rotated out, and a new file opened.
-  Successively older files are named by adding `0`, `1`, `2`,
+  Successively older files are named by adding \"0\", \"1\", \"2\",
   etc. into the base filename.
 
   By default buffering is enabled in the IO libraries but each log
@@ -41,7 +41,7 @@
          specifies how many output files to cycle through (defaults to 1).
      <handler-name>.pattern
          specifies a pattern for generating the output file name.  See
-         below for details. (Defaults to `%h/java%u.log`).
+         below for details. (Defaults to \"%h/java%u.log\").
      <handler-name>.append
          specifies whether the FileHandler should append onto
          any existing files (defaults to false).
@@ -62,29 +62,29 @@
   A pattern consists of a string that includes the following special
   components that will be replaced at runtime:
 
-      `/`    the local pathname separator
-       `%t`   the system temporary directory
-       `%h`   the value of the `user.home` system property
-       `%g`   the generation number to distinguish rotated logs
-       `%u`   a unique number to resolve conflicts
-       `%%`   translates to a single percent sign `%`
+      \"/\"    the local pathname separator
+       \"%t\"   the system temporary directory
+       \"%h\"   the value of the \"user.home\" system property
+       \"%g\"   the generation number to distinguish rotated logs
+       \"%u\"   a unique number to resolve conflicts
+       \"%%\"   translates to a single percent sign \"%\"
 
-  If no `%g` field has been specified and the file count is greater
+  If no \"%g\" field has been specified and the file count is greater
   than one, then the generation number will be added to the end of
   the generated filename, after a dot.
 
-  Thus for example a pattern of `%t/java%g.log` with a count of 2
+  Thus for example a pattern of \"%t/java%g.log\" with a count of 2
   would typically cause log files to be written on Solaris to
   /var/tmp/java0.log and /var/tmp/java1.log whereas on Windows 95 they
-  would be typically written to C:\TEMP\java0.log and C:\TEMP\java1.log
+  would be typically written to C:\\TEMP\\java0.log and C:\\TEMP\\java1.log
 
   Generation numbers follow the sequence 0, 1, 2, etc.
 
-  Normally the `%u` unique field is set to 0.  However, if the FileHandler
+  Normally the \"%u\" unique field is set to 0.  However, if the FileHandler
   tries to open the filename and finds the file is currently in use by
   another process it will increment the unique number field and try
   again.  This will be repeated until FileHandler finds a file name that
-  is  not currently in use. If there is a conflict and no `%u` field has
+  is  not currently in use. If there is a conflict and no \"%u\" field has
   been specified, it will be added at the end of the filename after a dot.
   (This will be after any automatically added generation number.)
 
@@ -141,7 +141,7 @@
 (defn close
   "Close all the files.
 
-  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(\"control\")."
   ([^FileHandler this]
     (-> this (.close))))
 

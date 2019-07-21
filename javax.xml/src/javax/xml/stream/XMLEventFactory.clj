@@ -33,13 +33,13 @@
      Use the value of the system property identified by factoryId.
 
 
-     Use the properties file `lib/stax.properties` in the JRE directory.
+     Use the properties file \"lib/stax.properties\" in the JRE directory.
        This configuration file is in standard java.util.Properties format
        and contains the fully qualified name of the implementation class
        with the key being the given factoryId.
 
 
-     If factoryId is `javax.xml.stream.XMLEventFactory`,
+     If factoryId is \"javax.xml.stream.XMLEventFactory\",
      use the service-provider loading facilities, defined by the
      ServiceLoader class, to attempt to locate and load
      an implementation of the service using the specified ClassLoader.
@@ -193,7 +193,7 @@
 
   encoding - the encoding style - `java.lang.String`
   version - the XML version - `java.lang.String`
-  standalone - the status of standalone may be set to `true` or `false` - `boolean`
+  standalone - the status of standalone may be set to \"true\" or \"false\" - `boolean`
 
   returns: a StartDocument event - `javax.xml.stream.events.StartDocument`"
   (^javax.xml.stream.events.StartDocument [^XMLEventFactory this ^java.lang.String encoding ^java.lang.String version ^Boolean standalone]

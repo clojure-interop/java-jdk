@@ -19,25 +19,25 @@
   (^Point []
     (new Point )))
 
-(defn -x
+(defn x
   "Instance Field.
 
   The X coordinate of this Point.
    If no X coordinate is set it will default to 0.
 
   type: int"
-  [this]
-  (-> this .-x))
+  (^Integer [^Point this]
+    (-> this .-x)))
 
-(defn -y
+(defn y
   "Instance Field.
 
   The Y coordinate of this Point.
    If no Y coordinate is set it will default to 0.
 
   type: int"
-  [this]
-  (-> this .-y))
+  (^Integer [^Point this]
+    (-> this .-y)))
 
 (defn get-x
   "Returns the X coordinate of this Point2D in

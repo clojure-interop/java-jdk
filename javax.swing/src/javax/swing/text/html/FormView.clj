@@ -114,12 +114,12 @@
 (defn action-performed
   "Responsible for processing the ActionEvent.
    If the element associated with the FormView,
-   has a type of `submit`, `reset`, `text` or `password`
-   then the action is processed.  In the case of a `submit`
-   the form is submitted.  In the case of a `reset`
+   has a type of \"submit\", \"reset\", \"text\" or \"password\"
+   then the action is processed.  In the case of a \"submit\"
+   the form is submitted.  In the case of a \"reset\"
    the form is reset to its original state.
-   In the case of `text` or `password`, if the
-   element is the last one of type `text` or `password`,
+   In the case of \"text\" or \"password\", if the
+   element is the last one of type \"text\" or \"password\",
    the form is submitted.  Otherwise, focus is transferred
    to the next component in the form.
 

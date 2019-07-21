@@ -45,7 +45,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PagesPerMinute, the category is class PagesPerMinute itself.
@@ -60,7 +60,7 @@
    instance.
 
    For class PagesPerMinute, the
-   category name is `pages-per-minute`.
+   category name is \"pages-per-minute\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PagesPerMinute this]

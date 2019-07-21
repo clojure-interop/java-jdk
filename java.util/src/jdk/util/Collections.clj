@@ -1,7 +1,7 @@
 (ns jdk.util.Collections
   "This class consists exclusively of static methods that operate on or return
   collections.  It contains polymorphic algorithms that operate on
-  collections, `wrappers`, which return a new collection backed by a
+  collections, \"wrappers\", which return a new collection backed by a
   specified collection, and a few other odds and ends.
 
   The methods of this class all throw a NullPointerException
@@ -15,7 +15,7 @@
   to.  (For example, the algorithm used by sort does not have to be
   a mergesort, but it does have to be stable.)
 
-  The `destructive` algorithms contained in this class, that is, the
+  The \"destructive\" algorithms contained in this class, that is, the
   algorithms that modify the collection on which they operate, are specified
   to throw UnsupportedOperationException if the collection does not
   support the appropriate mutation primitive(s), such as the set
@@ -65,7 +65,7 @@
    convenient way to add a few elements to an existing collection:
 
 
-       Collections.addAll(flavors, `Peaches 'n Plutonium`, `Rocky Racoon`);
+       Collections.addAll(flavors, \"Peaches 'n Plutonium\", \"Rocky Racoon\");
 
   c - the collection into which elements are to be inserted - `java.util.Collection`
   elements - the elements to insert into c - `T`
@@ -144,7 +144,7 @@
    The returned sorted set will be serializable if the specified
    sorted set is serializable.
 
-  s - the sorted set to be `wrapped` in a synchronized sorted set. - `java.util.SortedSet`
+  s - the sorted set to be \"wrapped\" in a synchronized sorted set. - `java.util.SortedSet`
 
   returns: a synchronized view of the specified sorted set. - `<T> java.util.SortedSet<T>`"
   ([^java.util.SortedSet s]
@@ -225,9 +225,9 @@
 
 (defn *unmodifiable-navigable-map
   "Returns an unmodifiable view of the specified navigable map.  This method
-   allows modules to provide users with `read-only` access to internal
-   navigable maps.  Query operations on the returned navigable map `read
-   through` to the specified navigable map.  Attempts to modify the returned
+   allows modules to provide users with \"read-only\" access to internal
+   navigable maps.  Query operations on the returned navigable map \"read
+   through\" to the specified navigable map.  Attempts to modify the returned
    navigable map, whether direct, via its collection views, or via its
    subMap, headMap, or tailMap views, result in
    an UnsupportedOperationException.
@@ -299,8 +299,8 @@
 
 (defn *unmodifiable-collection
   "Returns an unmodifiable view of the specified collection.  This method
-   allows modules to provide users with `read-only` access to internal
-   collections.  Query operations on the returned collection `read through`
+   allows modules to provide users with \"read-only\" access to internal
+   collections.  Query operations on the returned collection \"read through\"
    to the specified collection, and attempts to modify the returned
    collection, whether direct or via its iterator, result in an
    UnsupportedOperationException.
@@ -391,7 +391,7 @@
    The returned navigable set will be serializable if the specified
    navigable set is serializable.
 
-  s - the navigable set to be `wrapped` in a synchronized navigable set - `java.util.NavigableSet`
+  s - the navigable set to be \"wrapped\" in a synchronized navigable set - `java.util.NavigableSet`
 
   returns: a synchronized view of the specified navigable set - `<T> java.util.NavigableSet<T>`"
   ([^java.util.NavigableSet s]
@@ -436,7 +436,7 @@
    The returned sorted map will be serializable if the specified
    sorted map is serializable.
 
-  m - the sorted map to be `wrapped` in a synchronized sorted map. - `java.util.SortedMap`
+  m - the sorted map to be \"wrapped\" in a synchronized sorted map. - `java.util.SortedMap`
 
   returns: a synchronized view of the specified sorted map. - `<K,V> java.util.SortedMap<K,V>`"
   ([^java.util.SortedMap m]
@@ -473,7 +473,7 @@
    or -1 if there is no such index.  (Returns -1 if
    target.size() > source.size())
 
-   This implementation uses the `brute force` technique of scanning
+   This implementation uses the \"brute force\" technique of scanning
    over the source list, looking for a match with the target at each
    location in turn.
 
@@ -488,9 +488,9 @@
 
 (defn *unmodifiable-sorted-set
   "Returns an unmodifiable view of the specified sorted set.  This method
-   allows modules to provide users with `read-only` access to internal
-   sorted sets.  Query operations on the returned sorted set `read
-   through` to the specified sorted set.  Attempts to modify the returned
+   allows modules to provide users with \"read-only\" access to internal
+   sorted sets.  Query operations on the returned sorted set \"read
+   through\" to the specified sorted set.  Attempts to modify the returned
    sorted set, whether direct, via its iterator, or via its
    subSet, headSet, or tailSet views, result in
    an UnsupportedOperationException.
@@ -550,7 +550,7 @@
    The returned set will be serializable if the specified set is
    serializable.
 
-  s - the set to be `wrapped` in a synchronized set. - `java.util.Set`
+  s - the set to be \"wrapped\" in a synchronized set. - `java.util.Set`
 
   returns: a synchronized view of the specified set. - `<T> java.util.Set<T>`"
   ([^java.util.Set s]
@@ -563,7 +563,7 @@
 
    This implementation traverses the list backwards, from the last element
    up to the second, repeatedly swapping a randomly selected element into
-   the `current position`.  Elements are randomly selected from the
+   the \"current position\".  Elements are randomly selected from the
    portion of the list that runs from the first element to the current
    position, inclusive.
 
@@ -571,8 +571,8 @@
    implement the RandomAccess interface and is large, this
    implementation dumps the specified list into an array before shuffling
    it, and dumps the shuffled array back into the list.  This avoids the
-   quadratic behavior that would result from shuffling a `sequential
-   access` list in place.
+   quadratic behavior that would result from shuffling a \"sequential
+   access\" list in place.
 
   list - the list to be shuffled. - `java.util.List`
   rnd - the source of randomness to use to shuffle the list. - `java.util.Random`
@@ -641,7 +641,7 @@
    elements equal to the specified object, there is no guarantee which one
    will be found.
 
-   This method runs in log(n) time for a `random access` list (which
+   This method runs in log(n) time for a \"random access\" list (which
    provides near-constant-time positional access).  If the specified list
    does not implement the RandomAccess interface and is large,
    this method will do an iterator-based binary search that performs
@@ -732,7 +732,7 @@
    The returned navigable map will be serializable if the specified
    navigable map is serializable.
 
-  m - the navigable map to be `wrapped` in a synchronized navigable map - `java.util.NavigableMap`
+  m - the navigable map to be \"wrapped\" in a synchronized navigable map - `java.util.NavigableMap`
 
   returns: a synchronized view of the specified navigable map. - `<K,V> java.util.NavigableMap<K,V>`"
   ([^java.util.NavigableMap m]
@@ -757,8 +757,8 @@
 
 (defn *unmodifiable-list
   "Returns an unmodifiable view of the specified list.  This method allows
-   modules to provide users with `read-only` access to internal
-   lists.  Query operations on the returned list `read through` to the
+   modules to provide users with \"read-only\" access to internal
+   lists.  Query operations on the returned list \"read through\" to the
    specified list, and attempts to modify the returned list, whether
    direct or via its iterator, result in an
    UnsupportedOperationException.
@@ -898,8 +898,8 @@
 
 (defn *unmodifiable-map
   "Returns an unmodifiable view of the specified map.  This method
-   allows modules to provide users with `read-only` access to internal
-   maps.  Query operations on the returned map `read through`
+   allows modules to provide users with \"read-only\" access to internal
+   maps.  Query operations on the returned map \"read through\"
    to the specified map, and attempts to modify the returned
    map, whether direct or via its collection views, result in an
    UnsupportedOperationException.
@@ -1017,7 +1017,7 @@
    or -1 if there is no such index.  (Returns -1 if
    target.size() > source.size())
 
-   This implementation uses the `brute force` technique of iterating
+   This implementation uses the \"brute force\" technique of iterating
    over the source list, looking for a match with the target at each
    location in turn.
 
@@ -1052,7 +1052,7 @@
    The returned list will be serializable if the specified list is
    serializable.
 
-  list - the list to be `wrapped` in a synchronized list. - `java.util.List`
+  list - the list to be \"wrapped\" in a synchronized list. - `java.util.List`
 
   returns: a synchronized view of the specified list. - `<T> java.util.List<T>`"
   ([^java.util.List list]
@@ -1146,7 +1146,7 @@
    The returned collection will be serializable if the specified collection
    is serializable.
 
-  c - the collection to be `wrapped` in a synchronized collection. - `java.util.Collection`
+  c - the collection to be \"wrapped\" in a synchronized collection. - `java.util.Collection`
 
   returns: a synchronized view of the specified collection. - `<T> java.util.Collection<T>`"
   ([^java.util.Collection c]
@@ -1215,8 +1215,8 @@
 
 (defn *unmodifiable-sorted-map
   "Returns an unmodifiable view of the specified sorted map.  This method
-   allows modules to provide users with `read-only` access to internal
-   sorted maps.  Query operations on the returned sorted map `read through`
+   allows modules to provide users with \"read-only\" access to internal
+   sorted maps.  Query operations on the returned sorted map \"read through\"
    to the specified sorted map.  Attempts to modify the returned
    sorted map, whether direct, via its collection views, or via its
    subMap, headMap, or tailMap views, result in
@@ -1233,9 +1233,9 @@
 
 (defn *unmodifiable-navigable-set
   "Returns an unmodifiable view of the specified navigable set.  This method
-   allows modules to provide users with `read-only` access to internal
-   navigable sets.  Query operations on the returned navigable set `read
-   through` to the specified navigable set.  Attempts to modify the returned
+   allows modules to provide users with \"read-only\" access to internal
+   navigable sets.  Query operations on the returned navigable set \"read
+   through\" to the specified navigable set.  Attempts to modify the returned
    navigable set, whether direct, via its iterator, or via its
    subSet, headSet, or tailSet views, result in
    an UnsupportedOperationException.
@@ -1355,7 +1355,7 @@
    The returned map will be serializable if the specified map is
    serializable.
 
-  m - the map to be `wrapped` in a synchronized map. - `java.util.Map`
+  m - the map to be \"wrapped\" in a synchronized map. - `java.util.Map`
 
   returns: a synchronized view of the specified map. - `<K,V> java.util.Map<K,V>`"
   ([^java.util.Map m]
@@ -1402,8 +1402,8 @@
 
 (defn *unmodifiable-set
   "Returns an unmodifiable view of the specified set.  This method allows
-   modules to provide users with `read-only` access to internal sets.
-   Query operations on the returned set `read through` to the specified
+   modules to provide users with \"read-only\" access to internal sets.
+   Query operations on the returned set \"read through\" to the specified
    set, and attempts to modify the returned set, whether direct or via its
    iterator, result in an UnsupportedOperationException.
 

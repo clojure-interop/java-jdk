@@ -73,7 +73,7 @@
     (-> this (.getCodeSigners))))
 
 (defn implies
-  "Returns true if this CodeSource object `implies` the specified CodeSource.
+  "Returns true if this CodeSource object \"implies\" the specified CodeSource.
 
    More specifically, this method makes the following checks.
    If any fail, it returns false. If they all succeed, it returns true.
@@ -106,13 +106,13 @@
 
          If this object's file (getLocation().getFile()) doesn't equal
              codesource's file, then the following checks are made:
-             If this object's file ends with `/-`,
+             If this object's file ends with \"/-\",
              then codesource's file must start with this object's
-             file (exclusive the trailing `-`).
-             If this object's file ends with a `/*`,
+             file (exclusive the trailing \"-\").
+             If this object's file ends with a \"/*\",
              then codesource's file must start with this object's
-             file and must not have any further `/` separators.
-             If this object's file doesn't end with a `/`,
+             file and must not have any further \"/\" separators.
+             If this object's file doesn't end with a \"/\",
              then codesource's file must match this object's
              file with a '/' appended.
 
@@ -124,7 +124,7 @@
 
    For example, the codesource objects with the following locations
    and null certificates all imply
-   the codesource with the location `http://java.sun.com/classes/foo.jar`
+   the codesource with the location \"http://java.sun.com/classes/foo.jar\"
    and null certificates:
 
 

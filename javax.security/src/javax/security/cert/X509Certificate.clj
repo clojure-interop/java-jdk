@@ -26,7 +26,7 @@
   that data. CAs act as trusted third parties, making introductions
   between principals who have no direct knowledge of each other.
   CA certificates are either signed by themselves, or by some other
-  CA such as a `root` CA.
+  CA such as a \"root\" CA.
 
   The ASN.1 definition of tbsCertificate is:
 
@@ -44,7 +44,7 @@
   Here is sample code to instantiate an X.509 certificate:
 
 
-  InputStream inStream = new FileInputStream(`fileName-of-cert`);
+  InputStream inStream = new FileInputStream(\"fileName-of-cert\");
   X509Certificate cert = X509Certificate.getInstance(inStream);
   inStream.close();
   OR
@@ -245,7 +245,7 @@
 
 (defn get-sig-alg-name
   "Gets the signature algorithm name for the certificate
-   signature algorithm. An example is the string `SHA-1/DSA`.
+   signature algorithm. An example is the string \"SHA-1/DSA\".
    The ASN.1 definition for this is:
 
 
@@ -269,7 +269,7 @@
   "Gets the signature algorithm OID string from the certificate.
    An OID is represented by a set of positive whole numbers separated
    by periods.
-   For example, the string `1.2.840.10040.4.3` identifies the SHA-1
+   For example, the string \"1.2.840.10040.4.3\" identifies the SHA-1
    with DSA signature algorithm, as per the PKIX part I.
 
    See getSigAlgName for

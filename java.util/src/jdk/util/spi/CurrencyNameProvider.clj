@@ -11,8 +11,8 @@
 
 (defn get-symbol
   "Gets the symbol of the given currency code for the specified locale.
-   For example, for `USD` (US Dollar), the symbol is `$` if the specified
-   locale is the US, while for other locales it may be `US$`. If no
+   For example, for \"USD\" (US Dollar), the symbol is \"$\" if the specified
+   locale is the US, while for other locales it may be \"US$\". If no
    symbol can be determined, null should be returned.
 
   currency-code - the ISO 4217 currency code, which consists of three upper-case letters between 'A' (U+0041) and 'Z' (U+005A) - `java.lang.String`

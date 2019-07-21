@@ -6,7 +6,7 @@
   the XPath Filtering transform parameters is defined as:
 
 
-  <element name=`XPath` type=`string`/>"
+  <element name=\"XPath\" type=\"string\"/>"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.crypto.dsig.spec XPathFilterParameterSpec]))
 

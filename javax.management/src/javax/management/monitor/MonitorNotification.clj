@@ -30,8 +30,8 @@
 
   String monitors only:
 
-      The observed attribute has matched the `string to compare` value.
-      The observed attribute has differed from the `string to compare` value."
+      The observed attribute has matched the \"string to compare\" value.
+      The observed attribute has differed from the \"string to compare\" value."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.management.monitor MonitorNotification]))
 
@@ -118,7 +118,7 @@
 (def *-string-to-compare-value-matched
   "Static Constant.
 
-  Notification type denoting that the observed attribute has matched the `string to compare` value.
+  Notification type denoting that the observed attribute has matched the \"string to compare\" value.
    This notification is only fired by string monitors.
    The value of this notification type is jmx.monitor.string.matches.
 
@@ -128,7 +128,7 @@
 (def *-string-to-compare-value-differed
   "Static Constant.
 
-  Notification type denoting that the observed attribute has differed from the `string to compare` value.
+  Notification type denoting that the observed attribute has differed from the \"string to compare\" value.
    This notification is only fired by string monitors.
    The value of this notification type is jmx.monitor.string.differs.
 

@@ -21,7 +21,7 @@
 
 
 
-  CertPathBuilder cpb = CertPathBuilder.getInstance(`PKIX`);
+  CertPathBuilder cpb = CertPathBuilder.getInstance(\"PKIX\");
   PKIXRevocationChecker rc = (PKIXRevocationChecker)cpb.getRevocationChecker();
   rc.setOptions(EnumSet.of(Option.PREFER_CRLS));
   params.addCertPathChecker(rc);
@@ -81,7 +81,7 @@
 (defn *get-default-type
   "Returns the default CertPathBuilder type as specified by
    the certpathbuilder.type security property, or the string
-   `PKIX` if no such property exists.
+   \"PKIX\" if no such property exists.
 
    The default CertPathBuilder type can be used by
    applications that do not want to use a hard-coded type when calling one
@@ -94,7 +94,7 @@
 
   returns: the default CertPathBuilder type as specified
    by the certpathbuilder.type security property, or the string
-   `PKIX` if no such property exists. - `java.lang.String`"
+   \"PKIX\" if no such property exists. - `java.lang.String`"
   (^java.lang.String []
     (CertPathBuilder/getDefaultType )))
 

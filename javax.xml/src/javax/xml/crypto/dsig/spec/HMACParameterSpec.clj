@@ -8,9 +8,9 @@
   element is defined as:
 
 
-  <element name=`HMACOutputLength` minOccurs=`0` type=`ds:HMACOutputLengthType`/>
-  <simpleType name=`HMACOutputLengthType`>
-    <restriction base=`integer`/>
+  <element name=\"HMACOutputLength\" minOccurs=\"0\" type=\"ds:HMACOutputLengthType\"/>
+  <simpleType name=\"HMACOutputLengthType\">
+    <restriction base=\"integer\"/>
   </simpleType>"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.crypto.dsig.spec HMACParameterSpec]))

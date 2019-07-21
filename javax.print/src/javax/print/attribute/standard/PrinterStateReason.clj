@@ -27,7 +27,7 @@
   IPP Compatibility:
   The string values returned by each individual PrinterStateReason and
   associated Severity object's toString()
-  methods, concatenated together with a hyphen (`-`) in
+  methods, concatenated together with a hyphen (\"-\") in
   between, gives the IPP keyword value for a PrinterStateReasons.
   The category name returned by getName() gives the IPP
   attribute name."
@@ -347,7 +347,7 @@
   PrinterStateReason/INTERPRETER_RESOURCE_UNAVAILABLE)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PrinterStateReason and any vendor-defined subclasses, the
@@ -363,7 +363,7 @@
    instance.
 
    For class PrinterStateReason and any vendor-defined subclasses, the
-   category name is `printer-state-reason`.
+   category name is \"printer-state-reason\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PrinterStateReason this]

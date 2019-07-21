@@ -55,7 +55,7 @@
 (defn to-string
   "Returns a string representation of the object. In general, the
    toString method returns a string that
-   `textually represents` this object. The result should
+   \"textually represents\" this object. The result should
    be a concise but informative representation that is easy for a
    person to read.
    It is recommended that all subclasses override this method.
@@ -129,16 +129,16 @@
     (-> this (.orElse other))))
 
 (defn equals
-  "Indicates whether some other object is `equal to` this OptionalLong. The
+  "Indicates whether some other object is \"equal to\" this OptionalLong. The
    other object is considered equal if:
 
    it is also an OptionalLong and;
    both instances have no value present or;
-   the present values are `equal to` each other via ==.
+   the present values are \"equal to\" each other via ==.
 
   obj - an object to be tested for equality - `java.lang.Object`
 
-  returns: {code true} if the other object is `equal to` this object
+  returns: {code true} if the other object is \"equal to\" this object
    otherwise false - `boolean`"
   (^Boolean [^OptionalLong this ^java.lang.Object obj]
     (-> this (.equals obj))))

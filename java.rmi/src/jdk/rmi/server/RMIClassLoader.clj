@@ -35,7 +35,7 @@
 
   If the system property
   java.rmi.server.RMIClassLoaderSpi is defined, then if
-  its value equals the string `default`, the provider
+  its value equals the string \"default\", the provider
   instance will be the value returned by an invocation of the getDefaultProviderInstance() method, and for any other value, if
   a class named with the value of the property can be loaded by the
   system class loader (see ClassLoader.getSystemClassLoader())
@@ -136,7 +136,7 @@
 
    If there is a security manger, its checkPermission
    method will be invoked with a
-   RuntimePermission(`getClassLoader`) permission;
+   RuntimePermission(\"getClassLoader\") permission;
    this could result in a SecurityException.
    The provider implementation of this method may also perform further
    security checks to verify that the calling context has permission to
@@ -192,7 +192,7 @@
 
    If there is a security manager, its
    checkPermission method will be invoked with a
-   RuntimePermission(`setFactory`) permission; this
+   RuntimePermission(\"setFactory\") permission; this
    could result in a SecurityException.
 
    The default service provider instance implements

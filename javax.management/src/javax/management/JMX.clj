@@ -130,7 +130,7 @@
    An interface is an MXBean interface if it is public,
    annotated @MXBean or @MXBean(true)
    or if it does not have an @MXBean annotation
-   and its name ends with `MXBean`.
+   and its name ends with \"MXBean\".
 
   interface-class - The candidate interface. - `java.lang.Class`
 

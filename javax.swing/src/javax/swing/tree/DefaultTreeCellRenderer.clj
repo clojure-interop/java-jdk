@@ -17,14 +17,14 @@
 
       Property:
       Key:
-    `leafIcon``Tree.leafIcon`
-    `closedIcon``Tree.closedIcon`
-    `openIcon``Tree.openIcon`
-    `textSelectionColor``Tree.selectionForeground`
-    `textNonSelectionColor``Tree.textForeground`
-    `backgroundSelectionColor``Tree.selectionBackground`
-    `backgroundNonSelectionColor``Tree.textBackground`
-    `borderSelectionColor``Tree.selectionBorderColor`
+    \"leafIcon\"\"Tree.leafIcon\"
+    \"closedIcon\"\"Tree.closedIcon\"
+    \"openIcon\"\"Tree.openIcon\"
+    \"textSelectionColor\"\"Tree.selectionForeground\"
+    \"textNonSelectionColor\"\"Tree.textForeground\"
+    \"backgroundSelectionColor\"\"Tree.selectionBackground\"
+    \"backgroundNonSelectionColor\"\"Tree.textBackground\"
+    \"borderSelectionColor\"\"Tree.selectionBorderColor\"
 
 
   Implementation Note:

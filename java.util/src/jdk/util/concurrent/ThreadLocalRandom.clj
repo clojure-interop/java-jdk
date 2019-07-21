@@ -30,8 +30,8 @@
 (defn *current
   "Returns the current thread's ThreadLocalRandom.
 
-  returns: the current thread's ThreadLocalRandom - `java.util.con.ThreadLocalRandom`"
-  (^java.util.con.ThreadLocalRandom []
+  returns: the current thread's ThreadLocalRandom - `java.util.concurrent.ThreadLocalRandom`"
+  (^java.util.concurrent.ThreadLocalRandom []
     (ThreadLocalRandom/current )))
 
 (defn longs
@@ -158,7 +158,7 @@
 (defn next-gaussian
   "Description copied from class: Random
 
-  returns: the next pseudorandom, Gaussian (`normally`) distributed
+  returns: the next pseudorandom, Gaussian (\"normally\") distributed
            double value with mean 0.0 and
            standard deviation 1.0 from this random number
            generator's sequence - `double`"

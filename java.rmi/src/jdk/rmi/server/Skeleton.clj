@@ -20,7 +20,7 @@
 (defn get-operations
   "Deprecated. no replacement
 
-  returns: operations supported by skeleton - `.rmi.server.Operation[]`"
+  returns: operations supported by skeleton - `java.rmi.server.Operation[]`"
   ([^Skeleton this]
     (-> this (.getOperations))))
 

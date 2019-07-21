@@ -1,6 +1,6 @@
 (ns javax.naming.ldap.UnsolicitedNotificationListener
   "This interface is for handling UnsolicitedNotificationEvent.
-  `Unsolicited notification` is defined in
+  \"Unsolicited notification\" is defined in
   RFC 2251.
   It allows the server to send unsolicited notifications to the client.
   A UnsolicitedNotificationListener must:

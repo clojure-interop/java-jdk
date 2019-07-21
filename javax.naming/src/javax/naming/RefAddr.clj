@@ -3,7 +3,7 @@
   It consists of a type that describes the communication mechanism
   and an address contents determined by an RefAddr subclass.
 
-  For example, an address type could be `BSD Printer Address`,
+  For example, an address type could be \"BSD Printer Address\",
   which specifies that it is an address to be used with the BSD printing
   protocol. Its contents could be the machine name identifying the
   location of the printer server that understands this protocol.

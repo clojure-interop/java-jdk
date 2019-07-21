@@ -1,7 +1,7 @@
 (ns javax.imageio.ImageReadParam
   "A class describing how a stream is to be decoded.  Instances of
   this class or its subclasses are used to supply prescriptive
-  `how-to` information to instances of ImageReader.
+  \"how-to\" information to instances of ImageReader.
 
    An image encoded as part of a file or stream may be thought of
   extending out in multiple dimensions: the spatial dimensions of

@@ -10,7 +10,7 @@
   When you create an initial context (InitialLdapContext),
   you can specify a list of request controls.
   These controls will be used as the request controls for any
-  implicit LDAP `bind` operation performed by the context or contexts
+  implicit LDAP \"bind\" operation performed by the context or contexts
   derived from the context. These are called connection request controls.
   Use getConnectControls() to get a context's connection request
   controls.
@@ -26,7 +26,7 @@
   request controls.
   This is required for those applications needing to send critical
   controls that might not be applicable to both the context operation and
-  any implicit LDAP `bind` operation.
+  any implicit LDAP \"bind\" operation.
   A typical user program would do the following:
 
 
@@ -41,7 +41,7 @@
   critConnCtls. See the LdapContext interface for
   more discussion about request controls.
 
-  Service provider implementors should read the `Service Provider` section
+  Service provider implementors should read the \"Service Provider\" section
   in the LdapContext class description for implementation details."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.naming.ldap InitialLdapContext]))

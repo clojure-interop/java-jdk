@@ -2,7 +2,7 @@
   "The Remote interface serves to identify interfaces whose
   methods may be invoked from a non-local virtual machine.  Any object that
   is a remote object must directly or indirectly implement this interface.
-  Only those methods specified in a `remote interface`, an interface that
+  Only those methods specified in a \"remote interface\", an interface that
   extends java.rmi.Remote are available remotely.
 
   Implementation classes can implement any number of remote interfaces and

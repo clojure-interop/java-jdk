@@ -8,11 +8,11 @@
 
 
 
-    <element name=`X509IssuerSerial` type=`ds:X509IssuerSerialType`/>
-    <complexType name=`X509IssuerSerialType`>
+    <element name=\"X509IssuerSerial\" type=\"ds:X509IssuerSerialType\"/>
+    <complexType name=\"X509IssuerSerialType\">
       <sequence>
-        <element name=`X509IssuerName` type=`string`/>
-        <element name=`X509SerialNumber` type=`integer`/>
+        <element name=\"X509IssuerName\" type=\"string\"/>
+        <element name=\"X509SerialNumber\" type=\"integer\"/>
       </sequence>
     </complexType>
 
@@ -25,7 +25,7 @@
   existing X509Certificate:
 
 
-  KeyInfoFactory factory = KeyInfoFactory.getInstance(`DOM`);
+  KeyInfoFactory factory = KeyInfoFactory.getInstance(\"DOM\");
   X509IssuerSerial issuer = factory.newX509IssuerSerial
       (cert.getIssuerX500Principal().getName(), cert.getSerialNumber());"
   (:refer-clojure :only [require comment defn ->])

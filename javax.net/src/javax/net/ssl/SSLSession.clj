@@ -214,7 +214,7 @@
    permission to access it or a security exception may be thrown.
    In a Java environment, the security manager's
    checkPermission method is called with a
-   SSLPermission(`getSSLSessionContext`) permission.
+   SSLPermission(\"getSSLSessionContext\") permission.
 
   returns: the session context used for this session, or null
    if the context is unavailable. - `javax.net.ssl.SSLSessionContext`
@@ -232,7 +232,7 @@
 
    When multiple certificates are available for use in a
    handshake, the implementation chooses what it considers the
-   `best` certificate chain available, and transmits that to
+   \"best\" certificate chain available, and transmits that to
    the other side.  This method allows the caller to know
    which certificate chain was actually used.
 

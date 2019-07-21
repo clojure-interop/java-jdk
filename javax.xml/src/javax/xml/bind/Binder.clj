@@ -52,7 +52,7 @@
   "Changes in JAXB object tree are updated in its associated XML parse tree.
 
 
-   This operation can be thought of as an `in-place` marshalling.
+   This operation can be thought of as an \"in-place\" marshalling.
    The difference is that instead of creating a whole new XML tree,
    this operation updates an existing tree while trying to preserve
    the XML as much as possible.
@@ -133,7 +133,7 @@
   "Takes an XML node and updates its associated JAXB object and its descendants.
 
 
-   This operation can be thought of as an `in-place` unmarshalling.
+   This operation can be thought of as an \"in-place\" unmarshalling.
    The difference is that instead of creating a whole new JAXB tree,
    this operation updates an existing tree, reusing as much JAXB objects
    as possible.

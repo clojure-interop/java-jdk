@@ -6,8 +6,8 @@
   Corresponding to each Timer object is a single background
   thread that is used to execute all of the timer's tasks, sequentially.
   Timer tasks should complete quickly.  If a timer task takes excessive time
-  to complete, it `hogs` the timer's task execution thread.  This can, in
-  turn, delay the execution of subsequent tasks, which may `bunch up` and
+  to complete, it \"hogs\" the timer's task execution thread.  This can, in
+  turn, delay the execution of subsequent tasks, which may \"bunch up\" and
   execute in rapid succession when (and if) the offending task finally
   completes.
 
@@ -82,7 +82,7 @@
    clock underlying Object.wait(long) is accurate).
 
    Fixed-delay execution is appropriate for recurring activities
-   that require `smoothness.`  In other words, it is appropriate for
+   that require \"smoothness.\"  In other words, it is appropriate for
    activities where it is more important to keep the frequency accurate
    in the short run than in the long run.  This includes most animation
    tasks, such as blinking a cursor at regular intervals.  It also includes
@@ -109,7 +109,7 @@
    scheduled execution time of the initial execution.  If an execution is
    delayed for any reason (such as garbage collection or other background
    activity), two or more executions will occur in rapid succession to
-   `catch up.`  In the long run, the frequency of execution will be
+   \"catch up.\"  In the long run, the frequency of execution will be
    exactly the reciprocal of the specified period (assuming the system
    clock underlying Object.wait(long) is accurate).
 

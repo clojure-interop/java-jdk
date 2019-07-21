@@ -5,7 +5,7 @@
   of the Metal Look and Feel strive to keep the default look up to
   date, possibly through the use of new themes in the future.
   Therefore, developers should only use this class directly when they
-  wish to customize the `Ocean` look, or force it to be the current
+  wish to customize the \"Ocean\" look, or force it to be the current
   theme, regardless of future updates.
 
 
@@ -31,9 +31,9 @@
     (-> this (.addCustomEntriesToTable table))))
 
 (defn get-name
-  "Return the name of this theme, `Ocean`.
+  "Return the name of this theme, \"Ocean\".
 
-  returns: `Ocean` - `java.lang.String`"
+  returns: \"Ocean\" - `java.lang.String`"
   (^java.lang.String [^OceanTheme this]
     (-> this (.getName))))
 

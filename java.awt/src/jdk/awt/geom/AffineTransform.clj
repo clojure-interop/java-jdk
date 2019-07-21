@@ -1,8 +1,8 @@
 (ns jdk.awt.geom.AffineTransform
   "The AffineTransform class represents a 2D affine transform
   that performs a linear mapping from 2D coordinates to other 2D
-  coordinates that preserves the `straightness` and
-  `parallelness` of lines.  Affine transformations can be constructed
+  coordinates that preserves the \"straightness\" and
+  \"parallelness\" of lines.  Affine transformations can be constructed
   using sequences of translations, scales, flips, rotations, and shears.
 
   Such a coordinate transformation can be represented by a 3 row by

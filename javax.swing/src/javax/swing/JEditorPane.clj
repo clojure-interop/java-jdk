@@ -240,7 +240,7 @@
    Any old kit is first deinstalled, then if kit is
    non-null,
    the new kit is installed, and a default document created for it.
-   A PropertyChange event (`editorKit`) is always fired when
+   A PropertyChange event (\"editorKit\") is always fired when
    setEditorKit is called.
 
    NOTE: This has the side effect of changing the model,
@@ -384,7 +384,7 @@
 (defn get-ui-class-id
   "Gets the class ID for the UI.
 
-  returns: the string `EditorPaneUI` - `java.lang.String`"
+  returns: the string \"EditorPaneUI\" - `java.lang.String`"
   (^java.lang.String [^JEditorPane this]
     (-> this (.getUIClassID))))
 

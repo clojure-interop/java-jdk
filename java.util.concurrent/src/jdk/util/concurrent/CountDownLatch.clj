@@ -195,7 +195,7 @@
 
 (defn to-string
   "Returns a string identifying this latch, as well as its state.
-   The state, in brackets, includes the String `Count =`
+   The state, in brackets, includes the String \"Count =\"
    followed by the current count.
 
   returns: a string identifying this latch, as well as its state - `java.lang.String`"

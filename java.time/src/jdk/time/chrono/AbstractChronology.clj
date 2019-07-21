@@ -108,7 +108,7 @@
 
    The comparison order first by the chronology ID string, then by any
    additional information specific to the subclass.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
   other - the other chronology to compare to, not null - `java.time.chrono.Chronology`
 

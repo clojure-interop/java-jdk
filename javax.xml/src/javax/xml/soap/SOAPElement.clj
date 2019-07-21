@@ -5,7 +5,7 @@
   specification.
 
   Methods in this interface that are required to return SAAJ specific objects
-  may `silently` replace nodes in the tree as required to successfully return
+  may \"silently\" replace nodes in the tree as required to successfully return
   objects of the correct type. See getChildElements() and
   javax.xml.soap
   for details."

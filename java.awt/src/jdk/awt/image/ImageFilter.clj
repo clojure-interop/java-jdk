@@ -3,7 +3,7 @@
   are used to deliver data from an ImageProducer to an ImageConsumer.
   It is meant to be used in conjunction with a FilteredImageSource
   object to produce filtered versions of existing images.  It is a
-  base class that provides the calls needed to implement a `Null filter`
+  base class that provides the calls needed to implement a \"Null filter\"
   which has no effect on the data being passed through.  Filters should
   subclass this class and override the methods which deal with the
   data that needs to be filtered and modify it as necessary."

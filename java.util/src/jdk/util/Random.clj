@@ -141,7 +141,7 @@
      return next(24) / ((float)(1 << 24));
    }
 
-   The hedge `approximately` is used in the foregoing description only
+   The hedge \"approximately\" is used in the foregoing description only
    because the next method is only approximately an unbiased source of
    independently chosen bits. If it were a perfect source of randomly
    chosen bits, then the algorithm shown would choose float
@@ -174,7 +174,7 @@
 
    public int nextInt(int bound) {
      if (bound <= 0)
-       throw new IllegalArgumentException(`bound must be positive`);
+       throw new IllegalArgumentException(\"bound must be positive\");
 
      if ((bound & -bound) == bound)  // i.e., bound is a power of 2
        return (int)((bound * (long)next(31)) >> 31);
@@ -187,7 +187,7 @@
      return val;
    }
 
-   The hedge `approximately` is used in the foregoing description only
+   The hedge \"approximately\" is used in the foregoing description only
    because the next method is only approximately an unbiased source of
    independently chosen bits.  If it were a perfect source of randomly
    chosen bits, then the algorithm shown would choose int
@@ -318,7 +318,7 @@
     (-> this (.ints))))
 
 (defn next-gaussian
-  "Returns the next pseudorandom, Gaussian (`normally`) distributed
+  "Returns the next pseudorandom, Gaussian (\"normally\") distributed
    double value with mean 0.0 and standard
    deviation 1.0 from this random number generator's sequence.
 
@@ -358,7 +358,7 @@
    independent values at the cost of only one call to StrictMath.log
    and one call to StrictMath.sqrt.
 
-  returns: the next pseudorandom, Gaussian (`normally`) distributed
+  returns: the next pseudorandom, Gaussian (\"normally\") distributed
            double value with mean 0.0 and
            standard deviation 1.0 from this random number
            generator's sequence - `double`"
@@ -406,7 +406,7 @@
        / (double)(1L << 53);
    }
 
-   The hedge `approximately` is used in the foregoing description only
+   The hedge \"approximately\" is used in the foregoing description only
    because the next method is only approximately an unbiased
    source of independently chosen bits. If it were a perfect source of
    randomly chosen bits, then the algorithm shown would choose

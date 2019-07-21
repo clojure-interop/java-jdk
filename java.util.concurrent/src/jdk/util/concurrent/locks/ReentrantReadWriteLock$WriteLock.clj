@@ -210,7 +210,7 @@
 (defn to-string
   "Returns a string identifying this lock, as well as its lock
    state.  The state, in brackets includes either the String
-   `Unlocked` or the String `Locked by`
+   \"Unlocked\" or the String \"Locked by\"
    followed by the name of the owning thread.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"

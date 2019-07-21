@@ -521,7 +521,7 @@
   "Static Constant.
 
   The user has moved the bubble (thumb) in a scroll bar,
-   moving to an `absolute` position, rather than to
+   moving to an \"absolute\" position, rather than to
    an offset from the last position.
 
   type: int"
@@ -599,7 +599,7 @@
   type: int"
   Event/LOST_FOCUS)
 
-(defn -target
+(defn target
   "Instance Field.
 
   The target component. This indicates the component over which the
@@ -607,20 +607,20 @@
    This object has been replaced by AWTEvent.getSource()
 
   type: java.lang.Object"
-  [this]
-  (-> this .-target))
+  (^java.lang.Object [^Event this]
+    (-> this .-target)))
 
-(defn -when
+(defn when
   "Instance Field.
 
   The time stamp.
    Replaced by InputEvent.getWhen().
 
   type: long"
-  [this]
-  (-> this .-when))
+  (^Long [^Event this]
+    (-> this .-when)))
 
-(defn -id
+(defn id
   "Instance Field.
 
   Indicates which type of event the event is, and which
@@ -628,40 +628,40 @@
    This has been replaced by AWTEvent.getID()
 
   type: int"
-  [this]
-  (-> this .-id))
+  (^Integer [^Event this]
+    (-> this .-id)))
 
-(defn -x
+(defn x
   "Instance Field.
 
   The x coordinate of the event.
    Replaced by MouseEvent.getX()
 
   type: int"
-  [this]
-  (-> this .-x))
+  (^Integer [^Event this]
+    (-> this .-x)))
 
-(defn -y
+(defn y
   "Instance Field.
 
   The y coordinate of the event.
    Replaced by MouseEvent.getY()
 
   type: int"
-  [this]
-  (-> this .-y))
+  (^Integer [^Event this]
+    (-> this .-y)))
 
-(defn -key
+(defn key
   "Instance Field.
 
   The key code of the key that was pressed in a keyboard event.
    This has been replaced by KeyEvent.getKeyCode()
 
   type: int"
-  [this]
-  (-> this .-key))
+  (^Integer [^Event this]
+    (-> this .-key)))
 
-(defn -modifiers
+(defn modifiers
   "Instance Field.
 
   The state of the modifier keys.
@@ -670,10 +670,10 @@
    of InputEvent.
 
   type: int"
-  [this]
-  (-> this .-modifiers))
+  (^Integer [^Event this]
+    (-> this .-modifiers)))
 
-(defn -click-count
+(defn click-count
   "Instance Field.
 
   For MOUSE_DOWN events, this field indicates the
@@ -682,10 +682,10 @@
    This field has been replaced by MouseEvent.getClickCount().
 
   type: int"
-  [this]
-  (-> this .-clickCount))
+  (^Integer [^Event this]
+    (-> this .-clickCount)))
 
-(defn -arg
+(defn arg
   "Instance Field.
 
   An arbitrary argument of the event. The value of this field
@@ -693,10 +693,10 @@
    arg has been replaced by event specific property.
 
   type: java.lang.Object"
-  [this]
-  (-> this .-arg))
+  (^java.lang.Object [^Event this]
+    (-> this .-arg)))
 
-(defn -evt
+(defn evt
   "Instance Field.
 
   The next event. This field is set when putting events into a
@@ -704,8 +704,8 @@
    This has been replaced by EventQueue.
 
   type: java.awt.Event"
-  [this]
-  (-> this .-evt))
+  (^java.awt.Event [^Event this]
+    (-> this .-evt)))
 
 (defn translate
   "NOTE: The Event class is obsolete and is

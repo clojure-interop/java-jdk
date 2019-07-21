@@ -93,6 +93,6 @@
            set of observed MBeans, or null otherwise. - `java.lang.Number`"
   (^java.lang.Number [^GaugeMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
-  (^.lang.Number [^GaugeMonitorMBean this]
+  (^java.lang.Number [^GaugeMonitorMBean this]
     (-> this (.getDerivedGauge))))
 

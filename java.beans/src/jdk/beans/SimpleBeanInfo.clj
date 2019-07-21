@@ -2,9 +2,9 @@
   "This is a support class to make it easier for people to provide
   BeanInfo classes.
 
-  It defaults to providing `noop` information, and can be selectively
+  It defaults to providing \"noop\" information, and can be selectively
   overriden to provide more explicit information on chosen topics.
-  When the introspector sees the `noop` values, it will apply low
+  When the introspector sees the \"noop\" values, it will apply low
   level introspection and design patterns to automatically analyze
   the target bean."
   (:refer-clojure :only [require comment defn ->])
@@ -82,7 +82,7 @@
    current object's class file and loads an image object
    from that file.  Typically images will be GIFs.
 
-  resource-name - A pathname relative to the directory holding the class file of the current class. For example, `wombat.gif`. - `java.lang.String`
+  resource-name - A pathname relative to the directory holding the class file of the current class. For example, \"wombat.gif\". - `java.lang.String`
 
   returns: an image object.  May be null if the load failed. - `java.awt.Image`"
   (^java.awt.Image [^SimpleBeanInfo this ^java.lang.String resource-name]

@@ -8,7 +8,7 @@
   The object that implements the TextListener interface gets
   this TextEvent when the event occurs. The listener is
   spared the details of processing individual mouse movements and key strokes
-  Instead, it can process a `meaningful` (semantic) event like `text changed`.
+  Instead, it can process a \"meaningful\" (semantic) event like \"text changed\".
 
   An unspecified behavior will be caused if the id parameter
   of any particular TextEvent instance is not

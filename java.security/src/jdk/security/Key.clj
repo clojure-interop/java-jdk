@@ -63,7 +63,7 @@
 
 (defn get-algorithm
   "Returns the standard algorithm name for this key. For
-   example, `DSA` would indicate that this key is a DSA key.
+   example, \"DSA\" would indicate that this key is a DSA key.
    See Appendix A in the
    Java Cryptography Architecture API Specification & Reference
    for information about standard algorithm names.
@@ -81,11 +81,11 @@
    For example, the name of the ASN.1 data format for public
    keys is SubjectPublicKeyInfo, as
    defined by the X.509 standard; in this case, the returned format is
-   `X.509`. Similarly,
+   \"X.509\". Similarly,
    the name of the ASN.1 data format for private keys is
    PrivateKeyInfo,
    as defined by the PKCS #8 standard; in this case, the returned format is
-   `PKCS#8`.
+   \"PKCS#8\".
 
   returns: the primary encoding format of the key. - `java.lang.String`"
   (^java.lang.String [^Key this]

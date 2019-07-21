@@ -10,7 +10,7 @@
   This means that the implementation sometimes deviates from
   the SGML specification in favor of HTML.
 
-  The parser treats \r and \r\n as \n. Newlines after starttags
+  The parser treats \\r and \\r\\n as \\n. Newlines after starttags
   and before end tags are ignored just as specified in the SGML/HTML
   specification.
 
@@ -22,9 +22,9 @@
   '<b>blah <i> <strike> foo' which can be treated as:
   '<b>blah <i><strike>foo'
   as well as:
-  '<p><a href=`xx`> <em>Using</em></a></p>'
+  '<p><a href=\"xx\"> <em>Using</em></a></p>'
   which appears to be treated as:
-  '<p><a href=`xx`><em>Using</em></a></p>'
+  '<p><a href=\"xx\"><em>Using</em></a></p>'
 
   If strict is false, when a tag that breaks flow,
   (TagElement.breaksFlows) or trailing whitespace is

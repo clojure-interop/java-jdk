@@ -1,5 +1,5 @@
 (ns javax.swing.JToolTip
-  "Used to display a `Tip` for a Component. Typically components provide api
+  "Used to display a \"Tip\" for a Component. Typically components provide api
   to automate the process of using ToolTips.
   For example, any Swing component can use the JComponent
   setToolTipText method to specify the text
@@ -49,7 +49,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `ToolTipUI` - `java.lang.String`"
+  returns: the string \"ToolTipUI\" - `java.lang.String`"
   (^java.lang.String [^JToolTip this]
     (-> this (.getUIClassID))))
 

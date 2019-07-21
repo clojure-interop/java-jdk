@@ -63,8 +63,8 @@
 (defn get-anchor-selection-index
   "Return the first index argument from the most recent call to
    setSelectionInterval(), addSelectionInterval() or removeSelectionInterval().
-   The most recent index0 is considered the `anchor` and the most recent
-   index1 is considered the `lead`.  Some interfaces display these
+   The most recent index0 is considered the \"anchor\" and the most recent
+   index1 is considered the \"lead\".  Some interfaces display these
    indices specially, e.g. Windows95 displays the lead index with a
    dotted yellow outline.
 
@@ -369,7 +369,7 @@
      Only one list index can be selected at a time. In this mode,
      setSelectionInterval and addSelectionInterval are
      equivalent, both replacing the current selection with the index
-     represented by the second argument (the `lead`).
+     represented by the second argument (the \"lead\").
    ListSelectionModel.SINGLE_INTERVAL_SELECTION -
      Only one contiguous interval can be selected at a time.
      In this mode, addSelectionInterval behaves like

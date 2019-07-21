@@ -242,7 +242,7 @@
   "Associates the editor with a text document.
    The currently registered factory is used to build a view for
    the document, which gets displayed by the editor after revalidation.
-   A PropertyChange event (`document`) is propagated to each listener.
+   A PropertyChange event (\"document\") is propagated to each listener.
 
   doc - the document to display/edit - `javax.swing.text.Document`"
   ([^JFormattedTextField this ^javax.swing.text.Document doc]
@@ -272,7 +272,7 @@
 (defn get-ui-class-id
   "Gets the class ID for a UI.
 
-  returns: the string `FormattedTextFieldUI` - `java.lang.String`"
+  returns: the string \"FormattedTextFieldUI\" - `java.lang.String`"
   (^java.lang.String [^JFormattedTextField this]
     (-> this (.getUIClassID))))
 

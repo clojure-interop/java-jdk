@@ -8,8 +8,8 @@
   acceptable. If not supplied the default is FIDELITY_FALSE.
 
 
-  IPP Compatibility: The IPP boolean value is `true` for FIDELITY_TRUE
-  and `false` for FIDELITY_FALSE. The category name returned by
+  IPP Compatibility: The IPP boolean value is \"true\" for FIDELITY_TRUE
+  and \"false\" for FIDELITY_FALSE. The category name returned by
   getName() is the IPP attribute name.  The enumeration's
   integer value is the IPP enum value.  The toString() method
   returns the IPP string representation of the attribute value.
@@ -36,7 +36,7 @@
   Fidelity/FIDELITY_FALSE)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class Fidelity the category is class Fidelity itself.
@@ -51,7 +51,7 @@
    instance.
 
    For class Fidelity the category name is
-   `ipp-attribute-fidelity`.
+   \"ipp-attribute-fidelity\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^Fidelity this]

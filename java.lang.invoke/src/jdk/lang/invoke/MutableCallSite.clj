@@ -15,12 +15,12 @@
  MethodHandle MH_name = name.dynamicInvoker();
  MethodType MT_str1 = MethodType.methodType(String.class);
  MethodHandle MH_upcase = MethodHandles.lookup()
-     .findVirtual(String.class, `toUpperCase`, MT_str1);
+     .findVirtual(String.class, \"toUpperCase\", MT_str1);
  MethodHandle worker1 = MethodHandles.filterReturnValue(MH_name, MH_upcase);
- name.setTarget(MethodHandles.constant(String.class, `Rocky`));
- assertEquals(`ROCKY`, (String) worker1.invokeExact());
- name.setTarget(MethodHandles.constant(String.class, `Fred`));
- assertEquals(`FRED`, (String) worker1.invokeExact());
+ name.setTarget(MethodHandles.constant(String.class, \"Rocky\"));
+ assertEquals(\"ROCKY\", (String) worker1.invokeExact());
+ name.setTarget(MethodHandles.constant(String.class, \"Fred\"));
+ assertEquals(\"FRED\", (String) worker1.invokeExact());
  // (mutation can be continued indefinitely)
 
   The same call site may be used in several places at once.
@@ -28,13 +28,13 @@
 
  MethodType MT_str2 = MethodType.methodType(String.class, String.class);
  MethodHandle MH_cat = lookup().findVirtual(String.class,
-   `concat`, methodType(String.class, String.class));
- MethodHandle MH_dear = MethodHandles.insertArguments(MH_cat, 1, `, dear?`);
+   \"concat\", methodType(String.class, String.class));
+ MethodHandle MH_dear = MethodHandles.insertArguments(MH_cat, 1, \", dear?\");
  MethodHandle worker2 = MethodHandles.filterReturnValue(MH_name, MH_dear);
- assertEquals(`Fred, dear?`, (String) worker2.invokeExact());
- name.setTarget(MethodHandles.constant(String.class, `Wilma`));
- assertEquals(`WILMA`, (String) worker1.invokeExact());
- assertEquals(`Wilma, dear?`, (String) worker2.invokeExact());
+ assertEquals(\"Fred, dear?\", (String) worker2.invokeExact());
+ name.setTarget(MethodHandles.constant(String.class, \"Wilma\"));
+ assertEquals(\"WILMA\", (String) worker1.invokeExact());
+ assertEquals(\"Wilma, dear?\", (String) worker2.invokeExact());
 
   Non-synchronization of target values:
   A write to a mutable call site's target does not force other threads
@@ -84,7 +84,7 @@
 
    The overall effect is to force all future readers of each call site's target
    to accept the most recently stored value.
-   (`Most recently` is reckoned relative to the syncAll itself.)
+   (\"Most recently\" is reckoned relative to the syncAll itself.)
    Conversely, the syncAll call may block until all readers have
    (somehow) decached all previous versions of each call site's target.
 
@@ -132,7 +132,7 @@
        it is therefore required to see either the current target
        of S, or a later write to that target,
        if it executes a read on the target of S.
-       (This constraint is called `synchronization-order consistency`.)
+       (This constraint is called \"synchronization-order consistency\".)
    The JMM specifically allows optimizing compilers to elide
        reads or writes of variables that are known to be useless.
        Such elided reads and writes have no effect on the happens-before
@@ -228,7 +228,7 @@
 
 
    MethodHandle getTarget, invoker, result;
-   getTarget = MethodHandles.publicLookup().bind(this, `getTarget`, MethodType.methodType(MethodHandle.class));
+   getTarget = MethodHandles.publicLookup().bind(this, \"getTarget\", MethodType.methodType(MethodHandle.class));
    invoker = MethodHandles.exactInvoker(this.type());
    result = MethodHandles.foldArguments(invoker, getTarget)
 

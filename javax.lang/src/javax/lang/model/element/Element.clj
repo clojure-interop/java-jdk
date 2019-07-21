@@ -164,14 +164,14 @@
    name of a generic type does not include any reference to its
    formal type parameters.
 
-   For example, the simple name of the type element java.util.Set<E> is `Set`.
+   For example, the simple name of the type element java.util.Set<E> is \"Set\".
 
    If this element represents an unnamed package, an empty name is
    returned.
 
-   If it represents a constructor, the name `<init>` is returned.  If it
+   If it represents a constructor, the name \"<init>\" is returned.  If it
    represents a static
-   initializer, the name `<clinit>` is returned.
+   initializer, the name \"<clinit>\" is returned.
 
    If it represents an anonymous class or instance initializer, an empty name is returned.
 
@@ -187,7 +187,7 @@
    not directly accessible from the element's methods, including
    state about the presence of unrelated types.  Element objects
    created by different implementations of these interfaces should
-   not be expected to be equal even if `the same`
+   not be expected to be equal even if \"the same\"
    element is being modeled; this is analogous to the inequality
    of Class objects for the same class file loaded through
    different class loaders.

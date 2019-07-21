@@ -15,7 +15,7 @@
 (def *-action-copy
   "Static Constant.
 
-  An int representing a `copy` action.
+  An int representing a \"copy\" action.
 
   type: int"
   DnDConstants/ACTION_COPY)
@@ -23,7 +23,7 @@
 (def *-action-move
   "Static Constant.
 
-  An int representing a `move` action.
+  An int representing a \"move\" action.
 
   type: int"
   DnDConstants/ACTION_MOVE)
@@ -31,8 +31,8 @@
 (def *-action-copy-or-move
   "Static Constant.
 
-  An int representing a `copy` or
-   `move` action.
+  An int representing a \"copy\" or
+   \"move\" action.
 
   type: int"
   DnDConstants/ACTION_COPY_OR_MOVE)
@@ -40,13 +40,13 @@
 (def *-action-link
   "Static Constant.
 
-  An int representing a `link` action.
+  An int representing a \"link\" action.
 
    The link verb is found in many, if not all native DnD platforms, and the
    actual interpretation of LINK semantics is both platform
    and application dependent. Broadly speaking, the
-   semantic is `do not copy, or move the operand, but create a reference
-   to it`. Defining the meaning of `reference` is where ambiguity is
+   semantic is \"do not copy, or move the operand, but create a reference
+   to it\". Defining the meaning of \"reference\" is where ambiguity is
    introduced.
 
    The verb is provided for completeness, but its use is not recommended
@@ -60,7 +60,7 @@
 (def *-action-reference
   "Static Constant.
 
-  An int representing a `reference`
+  An int representing a \"reference\"
    action (synonym for ACTION_LINK).
 
   type: int"

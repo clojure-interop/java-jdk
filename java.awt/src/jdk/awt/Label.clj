@@ -9,8 +9,8 @@
 
 
   setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
-  add(new Label(`Hi There!`));
-  add(new Label(`Another Label`));
+  add(new Label(\"Hi There!\"));
+  add(new Label(\"Another Label\"));
 
   produces the following labels:"
   (:refer-clojure :only [require comment defn ->])
@@ -97,7 +97,7 @@
 (defn set-text
   "Sets the text for this label to the specified text.
 
-  text - the text that this label displays. If text is null, it is treated for display purposes like an empty string ``. - `java.lang.String`"
+  text - the text that this label displays. If text is null, it is treated for display purposes like an empty string \"\". - `java.lang.String`"
   ([^Label this ^java.lang.String text]
     (-> this (.setText text))))
 

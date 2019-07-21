@@ -18,7 +18,7 @@
 
   Alternatively, a scroll bar can represent a range of values. For
   example, if a scroll bar is used for scrolling through text, the
-  width of the `bubble` (also called the `thumb` or `scroll box`)
+  width of the \"bubble\" (also called the \"thumb\" or \"scroll box\")
   can be used to represent the amount of text that is visible.
   Here is an example of a scroll bar that represents a range:
 

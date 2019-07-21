@@ -183,7 +183,7 @@
    length.
 
     The first item in the array must be the name of the service
-   provider for the `preferred` reader, as it will be used to
+   provider for the \"preferred\" reader, as it will be used to
    instantiate the ImageReader returned by
    ImageIO.getImageReader(ImageWriter).
 

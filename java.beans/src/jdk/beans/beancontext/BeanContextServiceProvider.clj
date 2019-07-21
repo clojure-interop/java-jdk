@@ -4,7 +4,7 @@
 
 
   A JavaBean nested within a BeanContext, may ask that BeanContext to
-  provide an instance of a `service`, based upon a reference to a Java
+  provide an instance of a \"service\", based upon a reference to a Java
   Class object that represents that service.
 
 

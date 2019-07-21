@@ -23,27 +23,27 @@
     Description
 
 
-    `author`
+    \"author\"
     String
     name of the author of this file
 
 
-    `title`
+    \"title\"
     String
     title of this file
 
 
-    `copyright`
+    \"copyright\"
     String
     copyright message
 
 
-    `date`
+    \"date\"
     Date
     date of the recording or release
 
 
-    `comment`
+    \"comment\"
     String
     an arbitrary text"
   (:refer-clojure :only [require comment defn ->])

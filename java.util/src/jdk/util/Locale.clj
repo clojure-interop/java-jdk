@@ -8,10 +8,10 @@
   region, or culture.
 
    The Locale class implements IETF BCP 47 which is composed of
-  RFC 4647 `Matching of Language
-  Tags` and RFC 5646 `Tags
-  for Identifying Languages` with support for the LDML (UTS#35, `Unicode
-  Locale Data Markup Language`) BCP 47-compatible extensions for locale data
+  RFC 4647 \"Matching of Language
+  Tags\" and RFC 5646 \"Tags
+  for Identifying Languages\" with support for the LDML (UTS#35, \"Unicode
+  Locale Data Markup Language\") BCP 47-compatible extensions for locale data
   exchange.
 
    A Locale object logically consists of the fields
@@ -25,7 +25,7 @@
     When a language has both an alpha-2 code and an alpha-3 code, the
     alpha-2 code must be used.  You can find a full list of valid
     language codes in the IANA Language Subtag Registry (search for
-    `Type: language`).  The language field is case insensitive, but
+    \"Type: language\").  The language field is case insensitive, but
     Locale always canonicalizes to lower case.
 
     Well-formed language values have the form
@@ -34,13 +34,13 @@
     not needed since modern three-letter language codes replace
     them.
 
-    Example: `en` (English), `ja` (Japanese), `kok` (Konkani)
+    Example: \"en\" (English), \"ja\" (Japanese), \"kok\" (Konkani)
 
     script
 
     ISO 15924 alpha-4 script code.  You can find a full list of
     valid script codes in the IANA Language Subtag Registry (search
-    for `Type: script`).  The script field is case insensitive, but
+    for \"Type: script\").  The script field is case insensitive, but
     Locale always canonicalizes to title case (the first
     letter is upper case and the rest of the letters are lower
     case).
@@ -48,20 +48,20 @@
     Well-formed script values have the form
     [a-zA-Z]{4}
 
-    Example: `Latn` (Latin), `Cyrl` (Cyrillic)
+    Example: \"Latn\" (Latin), \"Cyrl\" (Cyrillic)
 
     country (region)
 
     ISO 3166 alpha-2 country code or UN M.49 numeric-3 area code.
     You can find a full list of valid country and region codes in the
-    IANA Language Subtag Registry (search for `Type: region`).  The
+    IANA Language Subtag Registry (search for \"Type: region\").  The
     country (region) field is case insensitive, but
     Locale always canonicalizes to upper case.
 
     Well-formed country/region values have
     the form [a-zA-Z]{2} | [0-9]{3}
 
-    Example: `US` (United States), `FR` (France), `029`
+    Example: \"US\" (United States), \"FR\" (France), \"029\"
     (Caribbean)
 
     variant
@@ -77,7 +77,7 @@
     additional variations that define a language or its dialects that
     are not covered by any combinations of language, script and
     region subtags.  You can find a full list of valid variant codes
-    in the IANA Language Subtag Registry (search for `Type: variant`).
+    in the IANA Language Subtag Registry (search for \"Type: variant\").
 
     However, the variant field in Locale has
     historically been used for any kind of variation, not just
@@ -93,7 +93,7 @@
     [0-9][0-9a-zA-Z]{3} | [0-9a-zA-Z]{5,8}. (Note: BCP 47 only
     uses hyphen ('-') as a delimiter, this is more lenient).
 
-    Example: `polyton` (Polytonic Greek), `POSIX`
+    Example: \"polyton\" (Polytonic Greek), \"POSIX\"
 
     extensions
 
@@ -112,8 +112,8 @@
     SUBTAG = [0-9a-zA-Z]{2,8} (that is, 'x' allows
     single-character subtags).
 
-    Example: key=`u`/value=`ca-japanese` (Japanese Calendar),
-    key=`x`/value=`java-1-7`
+    Example: key=\"u\"/value=\"ca-japanese\" (Japanese Calendar),
+    key=\"x\"/value=\"java-1-7\"
 
 
   Note: Although BCP 47 requires field values to be registered
@@ -125,21 +125,21 @@
 
   Unicode locale/language extension
 
-  UTS#35, `Unicode Locale Data Markup Language` defines optional
+  UTS#35, \"Unicode Locale Data Markup Language\" defines optional
   attributes and keywords to override or refine the default behavior
   associated with a locale.  A keyword is represented by a pair of
-  key and type.  For example, `nu-thai` indicates that Thai local
-  digits (value:`thai`) should be used for formatting numbers
-  (key:`nu`).
+  key and type.  For example, \"nu-thai\" indicates that Thai local
+  digits (value:\"thai\") should be used for formatting numbers
+  (key:\"nu\").
 
   The keywords are mapped to a BCP 47 extension value using the
   extension key 'u' (UNICODE_LOCALE_EXTENSION).  The above
-  example, `nu-thai`, becomes the extension `u-nu-thai`.code
+  example, \"nu-thai\", becomes the extension \"u-nu-thai\".code
 
   Thus, when a Locale object contains Unicode locale
   attributes and keywords,
   getExtension(UNICODE_LOCALE_EXTENSION) will return a
-  String representing this information, for example, `nu-thai`.  The
+  String representing this information, for example, \"nu-thai\".  The
   Locale class also provides getUnicodeLocaleAttributes(), getUnicodeLocaleKeys(), and
   getUnicodeLocaleType(java.lang.String) which allow you to access Unicode
   locale attributes and key/type pairs directly.  When represented as
@@ -150,7 +150,7 @@
 
   A well-formed locale key has the form
   [0-9a-zA-Z]{2}.  A well-formed locale type has the
-  form `` | [0-9a-zA-Z]{3,8} ('-' [0-9a-zA-Z]{3,8})* (it
+  form \"\" | [0-9a-zA-Z]{3,8} ('-' [0-9a-zA-Z]{3,8})* (it
   can be empty, or a series of subtags 3-8 alphanums in length).  A
   well-formed locale attribute has the form
   [0-9a-zA-Z]{3,8} (it is a single subtag with the same
@@ -208,7 +208,7 @@
   If an application or a system is internationalized and provides localized
   resources for multiple locales, it sometimes needs to find one or more
   locales (or language tags) which meet each user's specific preferences. Note
-  that a term `language tag` is used interchangeably with `locale` in this
+  that a term \"language tag\" is used interchangeably with \"locale\" in this
   locale matching documentation.
 
   In order to do matching a user's preferred locales to a set of language
@@ -228,16 +228,16 @@
 
   The filtering operation returns all matching language tags. It is defined
   in RFC 4647 as follows:
-  `In filtering, each language range represents the least specific language
+  \"In filtering, each language range represents the least specific language
   tag (that is, the language tag with fewest number of subtags) that is an
   acceptable match. All of the language tags in the matching set of tags will
   have an equal or greater number of subtags than the language range. Every
   non-wildcard subtag in the language range will appear in every one of the
-  matching language tags.`
+  matching language tags.\"
 
   There are two types of filtering: filtering for basic language ranges
-  (called `basic filtering`) and filtering for extended language ranges
-  (called `extended filtering`). They may return different results by what
+  (called \"basic filtering\") and filtering for extended language ranges
+  (called \"extended filtering\"). They may return different results by what
   kind of language ranges are included in the given Language Priority List.
   Locale.FilteringMode is a parameter to specify how filtering should
   be done.
@@ -246,13 +246,13 @@
 
   The lookup operation returns the best matching language tags. It is
   defined in RFC 4647 as follows:
-  `By contrast with filtering, each language range represents the most
+  \"By contrast with filtering, each language range represents the most
   specific tag that is an acceptable match.  The first matching tag found,
   according to the user's priority, is considered the closest match and is the
-  item returned.`
+  item returned.\"
 
   For example, if a Language Priority List consists of two language ranges,
-  `zh-Hant-TW` and `en-US`, in prioritized order, lookup
+  \"zh-Hant-TW\" and \"en-US\", in prioritized order, lookup
   method progressively searches the language tags below in order to find the
   best matching language tag.
 
@@ -267,7 +267,7 @@
   If there is a language tag which matches completely to a language range
   above, the language tag is returned.
 
-  `*` is the special language range, and it is ignored in lookup.
+  \"*\" is the special language range, and it is ignored in lookup.
 
   If multiple language tags match as a result of the subtag '*'
   included in a language range, the first matching language tag returned by
@@ -355,17 +355,17 @@
   Java has used ja_JP_JP to represent Japanese as used in
   Japan together with the Japanese Imperial calendar. This is now
   representable using a Unicode locale extension, by specifying the
-  Unicode locale key ca (for `calendar`) and type
+  Unicode locale key ca (for \"calendar\") and type
   japanese. When the Locale constructor is called with the
-  arguments `ja`, `JP`, `JP`, the extension `u-ca-japanese` is
+  arguments \"ja\", \"JP\", \"JP\", the extension \"u-ca-japanese\" is
   automatically added.
 
   Java has used th_TH_TH to represent Thai as used in
   Thailand together with Thai digits. This is also now representable using
   a Unicode locale extension, by specifying the Unicode locale key
-  nu (for `number`) and value thai. When the Locale
-  constructor is called with the arguments `th`, `TH`, `TH`, the
-  extension `u-nu-thai` is automatically added.
+  nu (for \"number\") and value thai. When the Locale
+  constructor is called with the arguments \"th\", \"TH\", \"TH\", the
+  extension \"u-nu-thai\" is automatically added.
 
   Serialization
 
@@ -418,12 +418,12 @@
    Note:
 
    ISO 639 is not a stable standard; some of the language codes it defines
-   (specifically `iw`, `ji`, and `in`) have changed.  This constructor accepts both the
-   old codes (`iw`, `ji`, and `in`) and the new codes (`he`, `yi`, and `id`), but all other
+   (specifically \"iw\", \"ji\", and \"in\") have changed.  This constructor accepts both the
+   old codes (\"iw\", \"ji\", and \"in\") and the new codes (\"he\", \"yi\", and \"id\"), but all other
    API on Locale will return only the OLD codes.
    For backward compatibility reasons, this constructor does not make
    any syntactic checks on the input.
-   The two cases (`ja`, `JP`, `JP`) and (`th`, `TH`, `TH`) are handled specially,
+   The two cases (\"ja\", \"JP\", \"JP\") and (\"th\", \"TH\", \"TH\") are handled specially,
    see Special Cases for more information.
 
   language - An ISO 639 alpha-2 or alpha-3 language code, or a language subtag up to 8 characters in length. See the Locale class description about valid language values. - `java.lang.String`
@@ -610,7 +610,7 @@
   "Static Constant.
 
   Useful constant for the root locale.  The root locale is the locale whose
-   language, country, and variant are empty (``) strings.  This is regarded
+   language, country, and variant are empty (\"\") strings.  This is regarded
    as the base locale of all locales, and is used as the language/country
    neutral locale for the locale sensitive operations.
 
@@ -638,7 +638,7 @@
    of the Java Virtual Machine. This does not affect the host locale.
 
    If there is a security manager, its checkPermission method is called
-   with a PropertyPermission(`user.language`, `write`) permission before
+   with a PropertyPermission(\"user.language\", \"write\") permission before
    the default locale is changed.
 
    The Java Virtual Machine sets the default locale during startup based
@@ -669,13 +669,13 @@
 
    The following conversions are performed:
 
-   The language code `und` is mapped to language ``.
+   The language code \"und\" is mapped to language \"\".
 
-   The language codes `he`, `yi`, and `id` are mapped to `iw`,
-   `ji`, and `in` respectively. (This is the same canonicalization
+   The language codes \"he\", \"yi\", and \"id\" are mapped to \"iw\",
+   \"ji\", and \"in\" respectively. (This is the same canonicalization
    that's done in Locale's constructors.)
 
-   The portion of a private use subtag prefixed by `lvariant`,
+   The portion of a private use subtag prefixed by \"lvariant\",
    if any, is removed and appended to the variant field in the
    result locale (without case normalization).  If it is then
    empty, the private use subtag is discarded:
@@ -683,13 +683,13 @@
 
 
        Locale loc;
-       loc = Locale.forLanguageTag(`en-US-x-lvariant-POSIX`);
-       loc.getVariant(); // returns `POSIX`
+       loc = Locale.forLanguageTag(\"en-US-x-lvariant-POSIX\");
+       loc.getVariant(); // returns \"POSIX\"
        loc.getExtension('x'); // returns null
 
-       loc = Locale.forLanguageTag(`de-POSIX-x-URP-lvariant-Abc-Def`);
-       loc.getVariant(); // returns `POSIX_Abc_Def`
-       loc.getExtension('x'); // returns `urp`
+       loc = Locale.forLanguageTag(\"de-POSIX-x-URP-lvariant-Abc-Def\");
+       loc.getVariant(); // returns \"POSIX_Abc_Def\"
+       loc.getExtension('x'); // returns \"urp\"
 
    When the languageTag argument contains an extlang subtag,
    the first such subtag is used as the language, and the primary
@@ -697,8 +697,8 @@
 
 
 
-       Locale.forLanguageTag(`ar-aao`).getLanguage(); // returns `aao`
-       Locale.forLanguageTag(`en-abc-def-us`).toString(); // returns `abc_US`
+       Locale.forLanguageTag(\"ar-aao\").getLanguage(); // returns \"aao\"
+       Locale.forLanguageTag(\"en-abc-def-us\").toString(); // returns \"abc_US\"
 
    Case is normalized except for variant tags, which are left
    unchanged.  Language is normalized to lower case, script to
@@ -711,10 +711,10 @@
 
 
 
-      Locale.forLanguageTag(`ja-JP-x-lvariant-JP`).toLanguageTag();
-      // returns `ja-JP-u-ca-japanese-x-lvariant-JP`
-      Locale.forLanguageTag(`th-TH-x-lvariant-TH`).toLanguageTag();
-      // returns `th-TH-u-nu-thai-x-lvariant-TH`
+      Locale.forLanguageTag(\"ja-JP-x-lvariant-JP\").toLanguageTag();
+      // returns \"ja-JP-u-ca-japanese-x-lvariant-JP\"
+      Locale.forLanguageTag(\"th-TH-x-lvariant-TH\").toLanguageTag();
+      // returns \"th-TH-u-nu-thai-x-lvariant-TH\"
 
    This implements the 'Language-Tag' production of BCP47, and
    so supports grandfathered (regular and irregular) as well as
@@ -767,7 +767,7 @@
 
 
    For a list of all grandfathered tags, see the
-   IANA Language Subtag Registry (search for `Type: grandfathered`).
+   IANA Language Subtag Registry (search for \"Type: grandfathered\").
 
    Note: there is no guarantee that toLanguageTag
    and forLanguageTag will round-trip.
@@ -934,12 +934,12 @@
    want to check for a specific language whose code has changed, don't do
 
 
-   if (locale.getLanguage().equals(`he`)) // BAD!
+   if (locale.getLanguage().equals(\"he\")) // BAD!
       ...
    Instead, do
 
 
-   if (locale.getLanguage().equals(new Locale(`he`).getLanguage()))
+   if (locale.getLanguage().equals(new Locale(\"he\").getLanguage()))
       ...
 
   returns: The language code, or the empty string if none is defined. - `java.lang.String`"
@@ -977,10 +977,10 @@
    syntax requirements, this method handles these fields as
    described below:
 
-   Language: If language is empty, or not well-formed (for example `a` or
-   `e2`), it will be emitted as `und` (Undetermined).
+   Language: If language is empty, or not well-formed (for example \"a\" or
+   \"e2\"), it will be emitted as \"und\" (Undetermined).
 
-   Country: If country is not well-formed (for example `12` or `USA`),
+   Country: If country is not well-formed (for example \"12\" or \"USA\"),
    it will be omitted.
 
    Variant: If variant is well-formed, each sub-segment
@@ -988,12 +988,12 @@
 
 
    if all sub-segments match [0-9a-zA-Z]{1,8}
-   (for example `WIN` or `Oracle_JDK_Standard_Edition`), the first
+   (for example \"WIN\" or \"Oracle_JDK_Standard_Edition\"), the first
    ill-formed sub-segment and all following will be appended to
    the private use subtag.  The first appended subtag will be
-   `lvariant`, followed by the sub-segments in order, separated by
-   hyphen. For example, `x-lvariant-WIN`,
-   `Oracle-x-lvariant-JDK-Standard-Edition`.
+   \"lvariant\", followed by the sub-segments in order, separated by
+   hyphen. For example, \"x-lvariant-WIN\",
+   \"Oracle-x-lvariant-JDK-Standard-Edition\".
 
    if any sub-segment does not match
    [0-9a-zA-Z]{1,8}, the variant will be truncated
@@ -1001,8 +1001,8 @@
    will be omitted.  If the remainder is non-empty, it will be
    emitted as a private use subtag as above (even if the remainder
    turns out to be well-formed).  For example,
-   `Solaris_isjustthecoolestthing` is emitted as
-   `x-lvariant-Solaris`, not as `solaris`.
+   \"Solaris_isjustthecoolestthing\" is emitted as
+   \"x-lvariant-Solaris\", not as \"solaris\".
 
    Special Conversions: Java supports some old locale
    representations, including deprecated ISO language codes,
@@ -1010,12 +1010,12 @@
    conversions:
 
 
-   Deprecated ISO language codes `iw`, `ji`, and `in` are
-   converted to `he`, `yi`, and `id`, respectively.
+   Deprecated ISO language codes \"iw\", \"ji\", and \"in\" are
+   converted to \"he\", \"yi\", and \"id\", respectively.
 
-   A locale with language `no`, country `NO`, and variant
-   `NY`, representing Norwegian Nynorsk (Norway), is converted
-   to a language tag `nn-NO`.
+   A locale with language \"no\", country \"NO\", and variant
+   \"NY\", representing Norwegian Nynorsk (Norway), is converted
+   to a language tag \"nn-NO\".
 
    Note: Although the language tag created by this
    method is well-formed (satisfies the syntax requirements
@@ -1023,10 +1023,10 @@
    necessarily a valid BCP 47 language tag.  For example,
 
 
-     new Locale(`xx`, `YY`).toLanguageTag();
+     new Locale(\"xx\", \"YY\").toLanguageTag();
 
-   will return `xx-YY`, but the language subtag `xx` and the
-   region subtag `YY` are invalid because they are not registered
+   will return \"xx-YY\", but the language subtag \"xx\" and the
+   region subtag \"YY\" are invalid because they are not registered
    in the IANA Language Subtag Registry.
 
   returns: a BCP47 language tag representing the locale - `java.lang.String`"
@@ -1064,7 +1064,7 @@
    object, consisting of language, country, variant, script,
    and extensions as below:
 
-   language  `_`  country  `_`  (variant  `_#` | `#`)  script  `-`  extensions
+   language  \"_\"  country  \"_\"  (variant  \"_#\" | \"#\")  script  \"-\"  extensions
 
 
    Language is always lower case, country is always upper case, script is always title
@@ -1080,7 +1080,7 @@
    language or country code).
 
    If script or extensions are present and variant is missing, no underscore is
-   added before the `#`.
+   added before the \"#\".
 
    This behavior is designed to support debugging and to be compatible with
    previous uses of toString that expected language, country, and variant
@@ -1184,8 +1184,8 @@
    If the language matches an ISO 639-1 two-letter code, the
    corresponding ISO 639-2/T three-letter lowercase code is
    returned.  The ISO 639-2 language codes can be found on-line,
-   see `Codes for the Representation of Names of Languages Part 2:
-   Alpha-3 Code`.  If the locale specifies a three-letter
+   see \"Codes for the Representation of Names of Languages Part 2:
+   Alpha-3 Code\".  If the locale specifies a three-letter
    language, the language is returned as is.  If the locale does
    not specify a language the empty string is returned.
 
@@ -1250,8 +1250,8 @@
    user.
    If possible, the name returned will be localized according to inLocale.
    For example, if the locale is fr_FR and inLocale
-   is en_US, getDisplayLanguage() will return `French`; if the locale is en_US and
-   inLocale is fr_FR, getDisplayLanguage() will return `anglais`.
+   is en_US, getDisplayLanguage() will return \"French\"; if the locale is en_US and
+   inLocale is fr_FR, getDisplayLanguage() will return \"anglais\".
    If the name returned cannot be localized according to inLocale,
    (say, we don't have a Japanese name for Croatian),
    this function falls back on the English name, and finally
@@ -1273,8 +1273,8 @@
    user.
    If possible, the name returned will be localized according to inLocale.
    For example, if the locale is fr_FR and inLocale
-   is en_US, getDisplayCountry() will return `France`; if the locale is en_US and
-   inLocale is fr_FR, getDisplayCountry() will return `Etats-Unis`.
+   is en_US, getDisplayCountry() will return \"France\"; if the locale is en_US and
+   inLocale is fr_FR, getDisplayCountry() will return \"Etats-Unis\".
    If the name returned cannot be localized according to inLocale.
    (say, we don't have a Japanese name for Croatia),
    this function falls back on the English name, and finally

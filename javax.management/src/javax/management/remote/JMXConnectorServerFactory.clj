@@ -4,7 +4,7 @@
 
   Each connector server is created by an instance of JMXConnectorServerProvider.  This instance is found as follows.  Suppose
   the given JMXServiceURL looks like
-  `service:jmx:protocol:remainder`.
+  \"service:jmx:protocol:remainder\".
   Then the factory will attempt to find the appropriate JMXConnectorServerProvider for protocol.  Each
   occurrence of the character + or - in
   protocol is replaced by . or

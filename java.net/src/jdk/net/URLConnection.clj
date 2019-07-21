@@ -99,7 +99,7 @@
   "Returns the default value of the allowUserInteraction
    field.
 
-   Ths default is `sticky`, being a part of the static state of all
+   Ths default is \"sticky\", being a part of the static state of all
    URLConnections.  This flag applies to the next, and all following
    URLConnections that are created.
 
@@ -122,7 +122,7 @@
    should be used after an appropriate instance of URLConnection
    is obtained. Invoking this method will have no effect.
 
-  key - the keyword by which the request is known (e.g., `Accept`). - `java.lang.String`
+  key - the keyword by which the request is known (e.g., \"Accept\"). - `java.lang.String`
   value - the value associated with the key. - `java.lang.String`"
   ([^java.lang.String key ^java.lang.String value]
     (URLConnection/setDefaultRequestProperty key value)))
@@ -143,7 +143,7 @@
 
 (defn *guess-content-type-from-name
   "Tries to determine the content type of an object, based
-   on the specified `file` component of a URL.
+   on the specified \"file\" component of a URL.
    This is a convenience method that can be used by
    subclasses that override the getContentType method.
 
@@ -159,7 +159,7 @@
    should be used after an appropriate instance of URLConnection
    is obtained.
 
-  key - the keyword by which the request is known (e.g., `Accept`). - `java.lang.String`
+  key - the keyword by which the request is known (e.g., \"Accept\"). - `java.lang.String`
 
   returns: the value of the default request property
    for the specified key. - `java.lang.String`"
@@ -190,7 +190,7 @@
 (defn *get-file-name-map
   "Loads filename map (a mimetable) from a data file. It will
    first try to load the user-specific table, defined
-   by `content.types.user.table` property. If that fails,
+   by \"content.types.user.table\" property. If that fails,
    it tries to load the default built-in table.
 
   returns: the FileNameMap - `java.net.FileNameMap`"
@@ -243,7 +243,7 @@
    key-value pair.  This method will not overwrite
    existing values associated with the same key.
 
-  key - the keyword by which the request is known (e.g., `Accept`). - `java.lang.String`
+  key - the keyword by which the request is known (e.g., \"Accept\"). - `java.lang.String`
   value - the value associated with it. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if already connected"
@@ -438,8 +438,8 @@
    URLConnection to the specified value.
 
    Some protocols do caching of documents.  Occasionally, it is important
-   to be able to `tunnel through` and ignore the caches (e.g., the
-   `reload` button in a browser).  If the UseCaches flag on a connection
+   to be able to \"tunnel through\" and ignore the caches (e.g., the
+   \"reload\" button in a browser).  If the UseCaches flag on a connection
    is true, the connection is allowed to use whatever caches it can.
     If false, caches are to be ignored.
     The default value comes from DefaultUseCaches, which defaults to
@@ -503,7 +503,7 @@
    to use a comma-separated list syntax which enables multiple
    properties to be appended into a single property.
 
-  key - the keyword by which the request is known (e.g., `Accept`). - `java.lang.String`
+  key - the keyword by which the request is known (e.g., \"Accept\"). - `java.lang.String`
   value - the value associated with it. - `java.lang.String`
 
   throws: java.lang.IllegalStateException - if already connected"
@@ -514,7 +514,7 @@
   "Returns the value of the named general request property for this
    connection.
 
-  key - the keyword by which the request is known (e.g., `Accept`). - `java.lang.String`
+  key - the keyword by which the request is known (e.g., \"Accept\"). - `java.lang.String`
 
   returns: the value of the named general request property for this
              connection. If key is null, then null is returned. - `java.lang.String`
@@ -536,7 +536,7 @@
   "Returns the default value of a URLConnection's
    useCaches flag.
 
-   Ths default is `sticky`, being a part of the static state of all
+   Ths default is \"sticky\", being a part of the static state of all
    URLConnections.  This flag applies to the next, and all following
    URLConnections that are created.
 

@@ -55,14 +55,14 @@
 
 
    X509Certificate cert = null;
-   try (InputStream inStrm = new FileInputStream(`DER-encoded-Cert`)) {
-       CertificateFactory cf = CertificateFactory.getInstance(`X.509`);
+   try (InputStream inStrm = new FileInputStream(\"DER-encoded-Cert\")) {
+       CertificateFactory cf = CertificateFactory.getInstance(\"X.509\");
        cert = (X509Certificate)cf.generateCertificate(inStrm);
    }
 
    Set<String> critSet = cert.getCriticalExtensionOIDs();
    if (critSet != null && !critSet.isEmpty()) {
-       System.out.println(`Set of critical extensions:`);
+       System.out.println(\"Set of critical extensions:\");
        for (String oid : critSet) {
            System.out.println(oid);
        }
@@ -86,8 +86,8 @@
 
    CertificateFactory cf = null;
    X509CRL crl = null;
-   try (InputStream inStrm = new FileInputStream(`DER-encoded-CRL`)) {
-       cf = CertificateFactory.getInstance(`X.509`);
+   try (InputStream inStrm = new FileInputStream(\"DER-encoded-CRL\")) {
+       cf = CertificateFactory.getInstance(\"X.509\");
        crl = (X509CRL)cf.generateCRL(inStrm);
    }
 

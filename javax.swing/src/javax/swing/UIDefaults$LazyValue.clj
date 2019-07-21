@@ -4,7 +4,7 @@
   looked up with one of the getXXX(key) methods.
   Lazy values are useful for defaults that are expensive
   to construct or are seldom retrieved.  The first time
-  a LazyValue is retrieved its `real value` is computed
+  a LazyValue is retrieved its \"real value\" is computed
   by calling LazyValue.createValue() and the real
   value is used to replace the LazyValue in the
   UIDefaults
@@ -19,7 +19,7 @@
        }
    };
 
-   uiDefaultsTable.put(`MyBorder`, borderLazyValue);"
+   uiDefaultsTable.put(\"MyBorder\", borderLazyValue);"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing UIDefaults$LazyValue]))
 

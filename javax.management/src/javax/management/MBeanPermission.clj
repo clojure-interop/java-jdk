@@ -33,14 +33,14 @@
   For a permission you have, this is either empty or a class
   name pattern.  A class name pattern is a string following the
   Java conventions for dot-separated class names.  It may end with
-  `.*` meaning that the permission grants access to any
-  class that begins with the string preceding `.*`.  For
-  instance, `javax.management.*` grants access to
+  \".*\" meaning that the permission grants access to any
+  class that begins with the string preceding \".*\".  For
+  instance, \"javax.management.*\" grants access to
   javax.management.MBeanServerDelegate and
   javax.management.timer.Timer, among other classes.
 
   A class name pattern can also be empty or the single character
-  `*`, both of which grant access to any class.
+  \"*\", both of which grant access to any class.
 
   The member.
 
@@ -50,7 +50,7 @@
 
   For a permission you have, this is either the name of an attribute
   or operation you can access, or it is empty or the single character
-  `*`, both of which grant access to any member.
+  \"*\", both of which grant access to any member.
 
   The object name.
 
@@ -90,7 +90,7 @@
   that is the empty string.
 
   One or more of the className, member,
-  or objectName may be the character `-`,
+  or objectName may be the character \"-\",
   which is equivalent to a null value.  A null value is implied by
   any value (including another null value) but does not imply any
   other value.
@@ -130,7 +130,7 @@
 
    The class name, member and object name parameters define a
    target name of the form
-   `className#member[objectName]` where each part is
+   \"className#member[objectName]\" where each part is
    optional.  This will be the result of Permission.getName() on the
    resultant MBeanPermission.
 
@@ -138,8 +138,8 @@
    desired actions granted on the target name.  It must not be
    empty or null.
 
-  class-name - the class name to which this permission applies. May be null or `-`, which represents a class name that is implied by any class name but does not imply any other class name. - `java.lang.String`
-  member - the member to which this permission applies. May be null or `-`, which represents a member that is implied by any member but does not imply any other member. - `java.lang.String`
+  class-name - the class name to which this permission applies. May be null or \"-\", which represents a class name that is implied by any class name but does not imply any other class name. - `java.lang.String`
+  member - the member to which this permission applies. May be null or \"-\", which represents a member that is implied by any member but does not imply any other member. - `java.lang.String`
   object-name - the object name to which this permission applies. May be null, which represents an object name that is implied by any object name but does not imply any other object name. - `javax.management.ObjectName`
   actions - the action string. - `java.lang.String`"
   (^MBeanPermission [^java.lang.String class-name ^java.lang.String member ^javax.management.ObjectName object-name ^java.lang.String actions]
@@ -148,7 +148,7 @@
     (new MBeanPermission name actions)))
 
 (defn get-actions
-  "Returns the `canonical string representation` of the actions. That is,
+  "Returns the \"canonical string representation\" of the actions. That is,
    this method always returns present actions in alphabetical order.
 
   returns: the canonical string representation of the actions. - `java.lang.String`"
@@ -163,7 +163,7 @@
     (-> this (.hashCode))))
 
 (defn implies
-  "Checks if this MBeanPermission object `implies` the
+  "Checks if this MBeanPermission object \"implies\" the
    specified permission.
 
    More specifically, this method returns true if:
@@ -185,11 +185,11 @@
 
 
 
-   If this object's className is `*`, p's
-   className always matches it.  If it is `a.*`, p's
-   className matches it if it begins with `a.`.
+   If this object's className is \"*\", p's
+   className always matches it.  If it is \"a.*\", p's
+   className matches it if it begins with \"a.\".
 
-   If this object's member is `*`, p's
+   If this object's member is \"*\", p's
    member always matches it.
 
    If this object's objectName n1 is an object name pattern,

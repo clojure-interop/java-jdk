@@ -62,7 +62,7 @@
     (-> this (.add o))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class JobStateReasons, the category is class JobStateReasons itself.
@@ -77,7 +77,7 @@
    instance.
 
    For class JobStateReasons, the category
-   name is `job-state-reasons`.
+   name is \"job-state-reasons\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^JobStateReasons this]

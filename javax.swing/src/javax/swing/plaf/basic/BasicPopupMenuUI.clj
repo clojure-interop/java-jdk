@@ -1,6 +1,6 @@
 (ns javax.swing.plaf.basic.BasicPopupMenuUI
   "A Windows L&F implementation of PopupMenuUI.  This implementation
-  is a `combined` view/controller."
+  is a \"combined\" view/controller."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.plaf.basic BasicPopupMenuUI]))
 

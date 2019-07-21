@@ -83,7 +83,7 @@
    the paragraph are separate text elements but are related
    in that the second element is a continuation
    of the first
-   element.  In other words, the first element `flows to`
+   element.  In other words, the first element \"flows to\"
    the second element.
 
   type: java.lang.String"
@@ -99,7 +99,7 @@
    text footer and/or text header.  The two parts of
    the paragraph are separate text elements but are related
    in that the second element is a continuation of the first
-   element.  In other words, the second element `flows from`
+   element.  In other words, the second element \"flows from\"
    the second element.
 
   type: java.lang.String"

@@ -88,7 +88,7 @@
   "Returns a string that specifies the name of the L&F class
    that renders this component.
 
-  returns: the string `CheckBoxUI` - `java.lang.String`"
+  returns: the string \"CheckBoxUI\" - `java.lang.String`"
   (^java.lang.String [^JCheckBox this]
     (-> this (.getUIClassID))))
 

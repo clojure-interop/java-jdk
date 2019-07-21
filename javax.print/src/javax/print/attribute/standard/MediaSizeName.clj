@@ -7,7 +7,7 @@
   name values.
 
   IPP Compatibility: MediaSizeName is a representation class for
-  values of the IPP `media` attribute which names media sizes.
+  values of the IPP \"media\" attribute which names media sizes.
   The names of the media sizes correspond to those in the IPP 1.1 RFC
   RFC 2911"
   (:refer-clojure :only [require comment defn ->])

@@ -152,7 +152,7 @@
   "Loads the native library specified by the filename argument.  The filename
    argument must be an absolute path name.
    (for example
-   Runtime.getRuntime().load(`/home/avh/lib/libX11.so`);).
+   Runtime.getRuntime().load(\"/home/avh/lib/libX11.so\");).
 
    If the filename argument, when stripped of any platform-specific library
    prefix, path, and file extension, indicates a library whose name is,
@@ -254,7 +254,7 @@
    LibFile) and then to put a static initializer:
 
 
-   static { System.loadLibrary(`LibFile`); }
+   static { System.loadLibrary(\"LibFile\"); }
    within the class declaration. When the class is loaded and
    initialized, the necessary native code implementation for the native
    methods will then be loaded as well.
@@ -401,8 +401,8 @@
    returns from the method call, the virtual machine has made
    its best effort to recycle all discarded objects.
 
-   The name gc stands for `garbage
-   collector`. The virtual machine performs this recycling
+   The name gc stands for \"garbage
+   collector\". The virtual machine performs this recycling
    process automatically as needed, in a separate thread, even if the
    gc method is not invoked explicitly.
 

@@ -72,7 +72,7 @@
   (^SizeRequirements []
     (new SizeRequirements )))
 
-(defn -minimum
+(defn minimum
   "Instance Field.
 
   The minimum size required.
@@ -81,10 +81,10 @@
    comp.getMinimumSize().height.
 
   type: int"
-  [this]
-  (-> this .-minimum))
+  (^Integer [^SizeRequirements this]
+    (-> this .-minimum)))
 
-(defn -preferred
+(defn preferred
   "Instance Field.
 
   The preferred (natural) size.
@@ -93,10 +93,10 @@
    comp.getPreferredSize().height.
 
   type: int"
-  [this]
-  (-> this .-preferred))
+  (^Integer [^SizeRequirements this]
+    (-> this .-preferred)))
 
-(defn -maximum
+(defn maximum
   "Instance Field.
 
   The maximum size allowed.
@@ -105,10 +105,10 @@
    comp.getMaximumSize().height.
 
   type: int"
-  [this]
-  (-> this .-maximum))
+  (^Integer [^SizeRequirements this]
+    (-> this .-maximum)))
 
-(defn -alignment
+(defn alignment
   "Instance Field.
 
   The alignment, specified as a value between 0.0 and 1.0,
@@ -116,8 +116,8 @@
    To specify centering, the alignment should be 0.5.
 
   type: float"
-  [this]
-  (-> this .-alignment))
+  (^Float [^SizeRequirements this]
+    (-> this .-alignment)))
 
 (defn *get-tiled-size-requirements
   "Determines the total space necessary to

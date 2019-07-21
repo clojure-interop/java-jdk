@@ -1,8 +1,8 @@
 (ns javax.print.DocFlavor
   "Class DocFlavor encapsulates an object that specifies the
   format in which print data is supplied to a DocPrintJob.
-  `Doc` is a short, easy-to-pronounce term that means `a piece of print data.`
-  The print data format, or `doc flavor`, consists of two things:
+  \"Doc\" is a short, easy-to-pronounce term that means \"a piece of print data.\"
+  The print data format, or \"doc flavor\", consists of two things:
 
 
   MIME type. This is a Multipurpose Internet Mail Extensions (MIME)
@@ -21,8 +21,8 @@
   Representation class name. This specifies the fully-qualified name of
   the class of the object from which the actual print data comes, as returned
   by the Class.getName() method.
-  (Thus the class name for byte[] is `[B`, for
-  char[] it is `[C`.)
+  (Thus the class name for byte[] is \"[B\", for
+  char[] it is \"[C\".)
 
 
   A DocPrintJob obtains its print data by means of interface
@@ -168,19 +168,19 @@
    MIME-TypeDescription
 
 
-  `text/plain`
+  \"text/plain\"
   Plain text in the default character set (US-ASCII)
 
 
-  `text/plain; charset=xxx`
+  \"text/plain; charset=xxx\"
   Plain text in character set xxx
 
 
-  `text/html`
+  \"text/html\"
   HyperText Markup Language in the default character set (US-ASCII)
 
 
-  `text/html; charset=xxx`
+  \"text/html; charset=xxx\"
   HyperText Markup Language in character set xxx
 
 
@@ -196,15 +196,15 @@
    MIME-TypeDescription
 
 
-  `application/pdf`
+  \"application/pdf\"
   Portable Document Format document
 
 
-  `application/postscript`
+  \"application/postscript\"
   PostScript document
 
 
-  `application/vnd.hp-PCL`
+  \"application/vnd.hp-PCL\"
   Printer Control Language document
 
 
@@ -220,15 +220,15 @@
 
 
 
-  `image/gif`
+  \"image/gif\"
   Graphics Interchange Format image
 
 
-  `image/jpeg`
+  \"image/jpeg\"
   Joint Photographic Experts Group image
 
 
-  `image/png`
+  \"image/png\"
   Portable Network Graphics image
 
 
@@ -244,12 +244,12 @@
 
 
 
-  `application/octet-stream`
+  \"application/octet-stream\"
   The print data format is unspecified (just an octet stream)
 
 
   The printer decides how to interpret the print data; the way this
-  `autosensing` works is implementation dependent. In general, preformatted
+  \"autosensing\" works is implementation dependent. In general, preformatted
   autosense print data is provided in a byte oriented representation class
   (byte array, InputStream, URL).
 
@@ -263,7 +263,7 @@
   determine the content to be printed -- such as a renderable image
   interface or a Java printable interface.
   The doc flavor's MIME type is the special value
-  `application/x-java-jvm-local-objectref` indicating the client
+  \"application/x-java-jvm-local-objectref\" indicating the client
   will supply a reference to a Java object that implements the interface
   named as the representation class.
   This MIME type is just a placeholder; what's
@@ -315,17 +315,17 @@
   Plain text print data provided through a byte stream. Specifically, the
   following doc flavors are recommended to be supported:
   ·
-  (`text/plain`, `java.io.InputStream`)
+  (\"text/plain\", \"java.io.InputStream\")
   ·
-  (`text/plain; charset=us-ascii`, `java.io.InputStream`)
+  (\"text/plain; charset=us-ascii\", \"java.io.InputStream\")
   ·
-  (`text/plain; charset=utf-8`, `java.io.InputStream`)
+  (\"text/plain; charset=utf-8\", \"java.io.InputStream\")
 
 
   Renderable image objects. Specifically, the following doc flavor is
   recommended to be supported:
   ·
-  (`application/x-java-jvm-local-objectref`, `java.awt.image.renderable.RenderableImage`)
+  (\"application/x-java-jvm-local-objectref\", \"java.awt.image.renderable.RenderableImage\")
 
 
   A Java Print Service instance is allowed to support any other doc flavors
@@ -343,13 +343,13 @@
 
 
   The character pair carriage return-line feed (CR-LF) means
-  `go to column 1 of the next line.`
+  \"go to column 1 of the next line.\"
 
   A carriage return (CR) character standing by itself means
-  `go to column 1 of the next line.`
+  \"go to column 1 of the next line.\"
 
   A line feed (LF) character standing by itself means
-  `go to column 1 of the next line.`
+  \"go to column 1 of the next line.\"
 
 
 
@@ -433,7 +433,7 @@
    previous versions of the Java platform.
    The value returned from method is valid only for the VM which
    returns it, for use in a DocFlavor.
-   This is the charset for all the `HOST` pre-defined DocFlavors in
+   This is the charset for all the \"HOST\" pre-defined DocFlavors in
    the executing VM.
 
   type: java.lang.String"
@@ -490,7 +490,7 @@
 
   returns: MIME type string based on the canonical form. Each parameter
             value is enclosed in quotes.
-            A `class=` parameter is appended to the
+            A \"class=\" parameter is appended to the
             MIME type string to indicate the representation class name. - `java.lang.String`"
   (^java.lang.String [^DocFlavor this]
     (-> this (.toString))))
@@ -510,8 +510,8 @@
    type, media subtype, and parameters), and has the same representation
    class name as this doc flavor object. Thus, if two doc flavor objects'
    MIME types are the same except for comments, they are considered equal.
-   However, two doc flavor objects with MIME types of `text/plain` and
-   `text/plain; charset=US-ASCII` are not considered equal, even though
+   However, two doc flavor objects with MIME types of \"text/plain\" and
+   \"text/plain; charset=US-ASCII\" are not considered equal, even though
    they represent the same media type (because the default character
    set for plain text is US-ASCII).
 

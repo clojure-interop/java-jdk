@@ -39,9 +39,9 @@
   Note: In this document,
   operators represent methods
   in the Spring class.
-  For example, `a  b` is equal to
+  For example, \"a  b\" is equal to
   Spring.sum(a, b),
-  and `a - b` is equal to
+  and \"a - b\" is equal to
   Spring.sum(a, Spring.minus(b)).
   See the
   Spring API documentation

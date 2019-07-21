@@ -86,7 +86,7 @@
    is replaced with a new instance of DefaultKeyboardFocusManager.
 
    If a SecurityManager is installed, the calling thread must be granted
-   the AWTPermission `replaceKeyboardFocusManager` in order to replace the
+   the AWTPermission \"replaceKeyboardFocusManager\" in order to replace the
    the current KeyboardFocusManager. If this permission is not granted,
    this method will throw a SecurityException, and the current
    KeyboardFocusManager will be unchanged.
@@ -331,7 +331,7 @@
    does not change the focused or active Windows.
 
    If a SecurityManager is installed, the calling thread must be granted
-   the `replaceKeyboardFocusManager` AWTPermission. If this permission is
+   the \"replaceKeyboardFocusManager\" AWTPermission. If this permission is
    not granted, this method will throw a SecurityException, and the current
    focus owner will not be cleared.
 
@@ -339,7 +339,7 @@
    current KeyboardFocusManager for the calling thread's context. It is not
    for general client use.
 
-  throws: java.lang.SecurityException - if the calling thread does not have `replaceKeyboardFocusManager` permission"
+  throws: java.lang.SecurityException - if the calling thread does not have \"replaceKeyboardFocusManager\" permission"
   ([^KeyboardFocusManager this]
     (-> this (.clearGlobalFocusOwner))))
 
@@ -564,22 +564,22 @@
 
       whether the KeyboardFocusManager is currently managing focus
           for this application or applet's browser context
-          (`managingFocus`)
-      the focus owner (`focusOwner`)
-      the permanent focus owner (`permanentFocusOwner`)
-      the focused Window (`focusedWindow`)
-      the active Window (`activeWindow`)
+          (\"managingFocus\")
+      the focus owner (\"focusOwner\")
+      the permanent focus owner (\"permanentFocusOwner\")
+      the focused Window (\"focusedWindow\")
+      the active Window (\"activeWindow\")
       the default focus traversal policy
-          (`defaultFocusTraversalPolicy`)
+          (\"defaultFocusTraversalPolicy\")
       the Set of default FORWARD_TRAVERSAL_KEYS
-          (`forwardDefaultFocusTraversalKeys`)
+          (\"forwardDefaultFocusTraversalKeys\")
       the Set of default BACKWARD_TRAVERSAL_KEYS
-          (`backwardDefaultFocusTraversalKeys`)
+          (\"backwardDefaultFocusTraversalKeys\")
       the Set of default UP_CYCLE_TRAVERSAL_KEYS
-          (`upCycleDefaultFocusTraversalKeys`)
+          (\"upCycleDefaultFocusTraversalKeys\")
       the Set of default DOWN_CYCLE_TRAVERSAL_KEYS
-          (`downCycleDefaultFocusTraversalKeys`)
-      the current focus cycle root (`currentFocusCycleRoot`)
+          (\"downCycleDefaultFocusTraversalKeys\")
+      the current focus cycle root (\"currentFocusCycleRoot\")
 
    If listener is null, no exception is thrown and no action is performed.
 
@@ -598,7 +598,7 @@
    among the possibilities.
 
    If a SecurityManager is installed, the calling thread must be granted
-   the `replaceKeyboardFocusManager` AWTPermission. If this permission is
+   the \"replaceKeyboardFocusManager\" AWTPermission. If this permission is
    not granted, this method will throw a SecurityException, and the current
    focus cycle root will not be changed.
 
@@ -607,7 +607,7 @@
 
   new-focus-cycle-root - the new focus cycle root - `java.awt.Container`
 
-  throws: java.lang.SecurityException - if the calling thread does not have `replaceKeyboardFocusManager` permission"
+  throws: java.lang.SecurityException - if the calling thread does not have \"replaceKeyboardFocusManager\" permission"
   ([^KeyboardFocusManager this ^java.awt.Container new-focus-cycle-root]
     (-> this (.setGlobalCurrentFocusCycleRoot new-focus-cycle-root))))
 
@@ -640,10 +640,10 @@
    property. The specified property may be user-defined, or one of the
    following:
 
-      the focus owner (`focusOwner`)
-      the permanent focus owner (`permanentFocusOwner`)
-      the focused Window (`focusedWindow`)
-      the active Window (`activeWindow`)
+      the focus owner (\"focusOwner\")
+      the permanent focus owner (\"permanentFocusOwner\")
+      the focused Window (\"focusedWindow\")
+      the active Window (\"activeWindow\")
 
    If listener is null, no exception is thrown and no action is performed.
 

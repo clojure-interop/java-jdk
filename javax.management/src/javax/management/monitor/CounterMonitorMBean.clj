@@ -85,7 +85,7 @@
            is in the set of observed MBeans, or null otherwise. - `java.lang.Number`"
   (^java.lang.Number [^CounterMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getThreshold object)))
-  (^.lang.Number [^CounterMonitorMBean this]
+  (^java.lang.Number [^CounterMonitorMBean this]
     (-> this (.getThreshold))))
 
 (defn set-init-threshold
@@ -123,6 +123,6 @@
            set of observed MBeans, or null otherwise. - `java.lang.Number`"
   (^java.lang.Number [^CounterMonitorMBean this ^javax.management.ObjectName object]
     (-> this (.getDerivedGauge object)))
-  (^.lang.Number [^CounterMonitorMBean this]
+  (^java.lang.Number [^CounterMonitorMBean this]
     (-> this (.getDerivedGauge))))
 

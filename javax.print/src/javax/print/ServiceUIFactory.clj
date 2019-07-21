@@ -24,7 +24,7 @@
                                           ServiceUIFactory.MAIN_UIROLE,
                                           ServiceUIFactory.JCOMPONENT_UI);
        if (swingui != null) {
-           tabbedpane.add(`Custom UI`, swingui);
+           tabbedpane.add(\"Custom UI\", swingui);
        }
    }"
   (:refer-clojure :only [require comment defn ->])
@@ -40,7 +40,7 @@
 
   Denotes a UI implemented as a Swing component.
    The value of the String is the fully qualified classname :
-   `javax.swing.JComponent`.
+   \"javax.swing.JComponent\".
 
   type: java.lang.String"
   ServiceUIFactory/JCOMPONENT_UI)
@@ -50,7 +50,7 @@
 
   Denotes a UI implemented as an AWT panel.
    The value of the String is the fully qualified classname :
-   `java.awt.Panel`
+   \"java.awt.Panel\"
 
   type: java.lang.String"
   ServiceUIFactory/PANEL_UI)
@@ -60,7 +60,7 @@
 
   Denotes a UI implemented as an AWT dialog.
    The value of the String is the fully qualified classname :
-   `java.awt.Dialog`
+   \"java.awt.Dialog\"
 
   type: java.lang.String"
   ServiceUIFactory/DIALOG_UI)
@@ -70,7 +70,7 @@
 
   Denotes a UI implemented as a Swing dialog.
    The value of the String is the fully qualified classname :
-   `javax.swing.JDialog`
+   \"javax.swing.JDialog\"
 
   type: java.lang.String"
   ServiceUIFactory/JDIALOG_UI)
@@ -78,7 +78,7 @@
 (def *-about-uirole
   "Static Constant.
 
-  Denotes a UI which performs an informative `About` role.
+  Denotes a UI which performs an informative \"About\" role.
 
   type: int"
   ServiceUIFactory/ABOUT_UIROLE)
@@ -129,7 +129,7 @@
    types available from this factory which implement this role.
    The returned Strings should refer to the static variables defined
    in this class so that applications can use equality of reference
-   (`==`).
+   (\"==\").
 
   role - to be looked up. - `int`
 

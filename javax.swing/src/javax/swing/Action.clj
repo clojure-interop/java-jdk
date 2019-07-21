@@ -91,7 +91,7 @@
        MNEMONIC_KEY
        A null value or Action results in the
            button's mnemonic property being set to
-           '\0'.
+           '\\0'.
 
        text
        All buttons

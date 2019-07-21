@@ -6,8 +6,8 @@
 
   Swing is built upon the foundation that each JComponent
   subclass has an implementation of a specific ComponentUI
-  subclass. The ComponentUI is often referred to as `the ui`,
-  `component ui`, or `look and feel delegate`. The ComponentUI
+  subclass. The ComponentUI is often referred to as \"the ui\",
+  \"component ui\", or \"look and feel delegate\". The ComponentUI
   subclass is responsible for providing the look and feel specific
   functionality of the component. For example, JTree requires
   an implementation of the ComponentUI subclass TreeUI. The implementation of the specific ComponentUI subclass is provided by the LookAndFeel. Each
@@ -18,7 +18,7 @@
   an implementation of the appropriate ComponentUI subclass by
   specifying a value for each of Swing's ui class ids in the UIDefaults object returned from getDefaults. For example,
   BasicLookAndFeel uses BasicTreeUI as the concrete
-  implementation for TreeUI. This is accomplished by BasicLookAndFeel providing the key-value pair `TreeUI`-`javax.swing.plaf.basic.BasicTreeUI`, in the
+  implementation for TreeUI. This is accomplished by BasicLookAndFeel providing the key-value pair \"TreeUI\"-\"javax.swing.plaf.basic.BasicTreeUI\", in the
   UIDefaults returned from getDefaults. Refer to
   UIDefaults.getUI(JComponent) for details on how the implementation
   of the ComponentUI subclass is obtained.
@@ -73,7 +73,7 @@
     JComponent c;
     Font font = c.getFont();
     if (font == null || (font instanceof UIResource)) {
-        c.setFont(UIManager.getFont(`fontKey`));
+        c.setFont(UIManager.getFont(\"fontKey\"));
     }
   If the font is null or a UIResource, the
   defaults table is queried with the key fontKey. All of
@@ -108,12 +108,12 @@
 
 
     JTextComponent.KeyBinding[] multilineBindings = makeKeyBindings( new Object[] {
-            `UP`, DefaultEditorKit.upAction,
-          `DOWN`, DefaultEditorKit.downAction,
-       `PAGE_UP`, DefaultEditorKit.pageUpAction,
-     `PAGE_DOWN`, DefaultEditorKit.pageDownAction,
-         `ENTER`, DefaultEditorKit.insertBreakAction,
-           `TAB`, DefaultEditorKit.insertTabAction
+            \"UP\", DefaultEditorKit.upAction,
+          \"DOWN\", DefaultEditorKit.downAction,
+       \"PAGE_UP\", DefaultEditorKit.pageUpAction,
+     \"PAGE_DOWN\", DefaultEditorKit.pageDownAction,
+         \"ENTER\", DefaultEditorKit.insertBreakAction,
+           \"TAB\", DefaultEditorKit.insertTabAction
     });
    If keyBindingList's length is odd, the last element is
    ignored.
@@ -212,8 +212,8 @@
 
 
      LookAndFeel.loadKeyBindings(inputMap, new Object[] {
-       `control X`, `cut`,
-       `control V`, `paste`
+       \"control X\", \"cut\",
+       \"control V\", \"paste\"
      });
 
    Supplying a null list of bindings (keys) does not
@@ -361,10 +361,10 @@
 
 (defn get-name
   "Return a short string that identifies this look and feel, e.g.
-   `CDE/Motif`.  This string should be appropriate for a menu item.
+   \"CDE/Motif\".  This string should be appropriate for a menu item.
    Distinct look and feels should have different names, e.g.
    a subclass of MotifLookAndFeel that changes the way a few components
-   are rendered should be called `CDE/Motif My Way`; something
+   are rendered should be called \"CDE/Motif My Way\"; something
    that would be useful to a user trying to select a L&F from a list
    of names.
 
@@ -386,7 +386,7 @@
 
 (defn get-description
   "Return a one line description of this look and feel implementation,
-   e.g. `The CDE/Motif Look and Feel`.   This string is intended for
+   e.g. \"The CDE/Motif Look and Feel\".   This string is intended for
    the user, e.g. in the title of a window or in a ToolTip message.
 
   returns: short description for the look and feel - `java.lang.String`"
@@ -429,7 +429,7 @@
     (-> this (.initialize))))
 
 (defn native-look-and-feel?
-  "If the underlying platform has a `native` look and feel, and
+  "If the underlying platform has a \"native\" look and feel, and
    this is an implementation of it, return true.  For
    example, when the underlying platform is Solaris running CDE
    a CDE/Motif look and feel implementation would return true.
@@ -443,7 +443,7 @@
   "Return a string that identifies this look and feel.  This string
    will be used by applications/services that want to recognize
    well known look and feel implementations.  Presently
-   the well known names are `Motif`, `Windows`, `Mac`, `Metal`.  Note
+   the well known names are \"Motif\", \"Windows\", \"Mac\", \"Metal\".  Note
    that a LookAndFeel derived from a well known superclass
    that doesn't make any fundamental changes to the look or feel
    shouldn't override this method.

@@ -47,7 +47,7 @@
   @Addressing
 
 
-    <wsam:Addressing wsp:Optional=`true`>
+    <wsam:Addressing wsp:Optional=\"true\">
       <wsp:Policy/>
     </wsam:Addressing>
 

@@ -47,7 +47,7 @@
   name - the system-dependent filename - `java.lang.String`
   mode - the access mode - `java.lang.String`
 
-  throws: java.lang.IllegalArgumentException - if the mode argument is not equal to one of `r`, `rw`, `rws`, or `rwd`"
+  throws: java.lang.IllegalArgumentException - if the mode argument is not equal to one of \"r\", \"rw\", \"rws\", or \"rwd\""
   (^RandomAccessFile [^java.lang.String name ^java.lang.String mode]
     (new RandomAccessFile name mode)))
 
@@ -563,7 +563,7 @@
    therefore, support the full Unicode character set.
 
     A line of text is terminated by a carriage-return character
-   ('\r'), a newline character ('\n'), a
+   ('\\r'), a newline character ('\\n'), a
    carriage-return character immediately followed by a newline character,
    or the end of the file.  Line-terminating characters are discarded and
    are not included as part of the string returned.

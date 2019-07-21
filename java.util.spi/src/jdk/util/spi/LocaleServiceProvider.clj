@@ -19,8 +19,8 @@
   provider-configuration file in the resource directory META-INF/services,
   using the fully qualified provider interface class name as the file name.
   The file should contain a list of fully-qualified concrete provider class names,
-  one per line. A line is terminated by any one of a line feed ('\n'), a carriage
-  return ('\r'), or a carriage return followed immediately by a line feed. Space
+  one per line. A line is terminated by any one of a line feed ('\\n'), a carriage
+  return ('\\r'), or a carriage return followed immediately by a line feed. Space
   and tab characters surrounding each name, as well as blank lines, are ignored.
   The comment character is '#' ('#'); on each line all characters following
   the first comment character are ignored. The file must be encoded in UTF-8.
@@ -84,7 +84,7 @@
   described above as if the locale was not supported.
 
   Starting from JDK8, the search order of locale sensitive services can
-  be configured by using the `java.locale.providers` system property.
+  be configured by using the \"java.locale.providers\" system property.
   This system property declares the user's preferred order for looking up
   the locale sensitive services separated by a comma. It is only read at
   the Java runtime startup, so the later call to System.setProperty() won't
@@ -94,17 +94,17 @@
 
 
   java.locale.providers=SPI,JRE
-  where `SPI` represents the locale sensitive services implemented in the
-  installed SPI providers, and `JRE` represents the locale sensitive services
+  where \"SPI\" represents the locale sensitive services implemented in the
+  installed SPI providers, and \"JRE\" represents the locale sensitive services
   in the Java Runtime Environment, the locale sensitive services in the SPI
   providers are looked up first.
 
-  There are two other possible locale sensitive service providers, i.e., `CLDR`
+  There are two other possible locale sensitive service providers, i.e., \"CLDR\"
   which is a provider based on Unicode Consortium's
-  CLDR Project, and `HOST` which is a
+  CLDR Project, and \"HOST\" which is a
   provider that reflects the user's custom settings in the underlying operating
   system. These two providers may not be available, depending on the Java Runtime
-  Environment implementation. Specifying `JRE,SPI` is identical to the default
+  Environment implementation. Specifying \"JRE,SPI\" is identical to the default
   behavior, which is compatibile with the prior releases."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util.spi LocaleServiceProvider]))

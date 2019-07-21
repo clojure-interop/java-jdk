@@ -1,5 +1,5 @@
 (ns jdk.nio.file.attribute.DosFileAttributeView
-  "A file attribute view that provides a view of the legacy `DOS` file attributes.
+  "A file attribute view that provides a view of the legacy \"DOS\" file attributes.
   These attributes are supported by file systems such as the File Allocation
   Table (FAT) format commonly used in consumer devices.
 
@@ -49,7 +49,7 @@
 
 (defn name
   "Returns the name of the attribute view. Attribute views of this type
-   have the name `dos`.
+   have the name \"dos\".
 
   returns: the name of the attribute view - `java.lang.String`"
   (^java.lang.String [^DosFileAttributeView this]

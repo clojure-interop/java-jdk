@@ -30,7 +30,7 @@
 
 
   IPP Compatibility: The information needed to construct an IPP
-  `printer-resolution` attribute can be obtained by calling
+  \"printer-resolution\" attribute can be obtained by calling
   methods on the PrinterResolution object. The category name returned by
   getName() gives the IPP attribute name."
   (:refer-clojure :only [require comment defn ->])
@@ -73,7 +73,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PrinterResolution, the category is class PrinterResolution itself.
@@ -88,7 +88,7 @@
    instance.
 
    For class PrinterResolution, the
-   category name is `printer-resolution`.
+   category name is \"printer-resolution\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PrinterResolution this]

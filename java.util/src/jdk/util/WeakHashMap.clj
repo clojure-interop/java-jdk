@@ -68,7 +68,7 @@
   and then unwrapping upon each get.
 
   The iterators returned by the iterator method of the collections
-  returned by all of this class's `collection view methods` are
+  returned by all of this class's \"collection view methods\" are
   fail-fast: if the map is structurally modified at any time after the
   iterator is created, in any way except through the iterator's own
   remove method, the iterator will throw a ConcurrentModificationException.  Thus, in the face of concurrent

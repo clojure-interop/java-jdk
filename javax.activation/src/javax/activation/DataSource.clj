@@ -36,7 +36,7 @@
 (defn get-content-type
   "This method returns the MIME type of the data in the form of a
    string. It should always return a valid type. It is suggested
-   that getContentType return `application/octet-stream` if the
+   that getContentType return \"application/octet-stream\" if the
    DataSource implementation can not determine the data type.
 
   returns: the MIME Type - `java.lang.String`"

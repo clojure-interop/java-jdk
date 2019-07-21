@@ -17,7 +17,7 @@
     user input.
 
   table - the JTable that is asking the editor to edit; can be null - `javax.swing.JTable`
-  value - the value of the cell to be edited; it is up to the specific editor to interpret and draw the value. For example, if value is the string `true`, it could be rendered as a string or it could be rendered as a check box that is checked. null is a valid value - `java.lang.Object`
+  value - the value of the cell to be edited; it is up to the specific editor to interpret and draw the value. For example, if value is the string \"true\", it could be rendered as a string or it could be rendered as a check box that is checked. null is a valid value - `java.lang.Object`
   is-selected - true if the cell is to be rendered with highlighting - `boolean`
   row - the row of the cell being edited - `int`
   column - the column of the cell being edited - `int`

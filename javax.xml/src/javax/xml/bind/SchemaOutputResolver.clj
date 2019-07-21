@@ -27,7 +27,7 @@
    into the same schema document.
 
   namespace-uri - The namespace URI that the schema declares. Can be the empty string, but never be null. - `java.lang.String`
-  suggested-file-name - A JAXB implementation generates an unique file name (like `schema1.xsd`) for the convenience of the callee. This name can be used for the file name of the schema, or the callee can just ignore this name and come up with its own name. This is just a hint. - `java.lang.String`
+  suggested-file-name - A JAXB implementation generates an unique file name (like \"schema1.xsd\") for the convenience of the callee. This name can be used for the file name of the schema, or the callee can just ignore this name and come up with its own name. This is just a hint. - `java.lang.String`
 
   returns: a Result object that encapsulates the actual destination
         of the schema.

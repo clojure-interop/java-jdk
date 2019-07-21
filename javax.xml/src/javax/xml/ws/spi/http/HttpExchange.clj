@@ -51,7 +51,7 @@
 (defn get-path-info
   "Returns the extra path information that follows the web service
    path but precedes the query string in the request URI and will start
-   with a `/` character.
+   with a \"/\" character.
 
 
    This can be used for MessageContext.PATH_INFO
@@ -125,8 +125,8 @@
   "Returns the context path of all the endpoints in an application.
    This path is the portion of the request URI that indicates the
    context of the request. The context path always comes first in a
-   request URI. The path starts with a `/` character but does not
-   end with a `/` character. If this method returns ``, the request
+   request URI. The path starts with a \"/\" character but does not
+   end with a \"/\" character. If this method returns \"\", the request
    is for default context. The container does not decode this string.
 
 
@@ -139,7 +139,7 @@
 
 (defn user-in-role?
   "Indicates whether an authenticated user is included in the specified
-   logical `role`.
+   logical \"role\".
 
   role - specifies the name of the role - `java.lang.String`
 
@@ -251,7 +251,7 @@
 (defn get-protocol
   "Returns the protocol string from the request in the form
    protocol/majorVersion.minorVersion. For example,
-   `HTTP/1.1`
+   \"HTTP/1.1\"
 
   returns: the protocol string from the request - `java.lang.String`"
   (^java.lang.String [^HttpExchange this]

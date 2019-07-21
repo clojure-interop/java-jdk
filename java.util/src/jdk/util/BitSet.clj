@@ -105,8 +105,8 @@
    terminal stream operation.  Otherwise, the result of the terminal
    stream operation is undefined.
 
-  returns: a stream of integers representing set indices - `java.util..IntStream`"
-  (^java.util..IntStream [^BitSet this]
+  returns: a stream of integers representing set indices - `java.util.stream.IntStream`"
+  (^java.util.stream.IntStream [^BitSet this]
     (-> this (.stream))))
 
 (defn and-not
@@ -122,7 +122,7 @@
    for which this BitSet contains a bit in the set
    state, the decimal representation of that index is included in
    the result. Such indices are listed in order from lowest to
-   highest, separated by `, ` (a comma and a space) and
+   highest, separated by \", \" (a comma and a space) and
    surrounded by braces, resulting in the usual mathematical
    notation for a set of integers.
 
@@ -130,16 +130,16 @@
 
 
    BitSet drPepper = new BitSet();
-   Now drPepper.toString() returns `{}`.
+   Now drPepper.toString() returns \"{}\".
 
 
    drPepper.set(2);
-   Now drPepper.toString() returns `{2}`.
+   Now drPepper.toString() returns \"{2}\".
 
 
    drPepper.set(4);
    drPepper.set(10);
-   Now drPepper.toString() returns `{2, 4, 10}`.
+   Now drPepper.toString() returns \"{2, 4, 10}\".
 
   returns: a string representation of this bit set - `java.lang.String`"
   (^java.lang.String [^BitSet this]
@@ -171,7 +171,7 @@
     (-> this (.or set))))
 
 (defn length
-  "Returns the `logical size` of this BitSet: the index of
+  "Returns the \"logical size\" of this BitSet: the index of
    the highest set bit in the BitSet plus one. Returns zero
    if the BitSet contains no set bits.
 

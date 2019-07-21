@@ -50,8 +50,8 @@
 
 
       <hashmap>
-          <entry key=`id123`>this is a value</entry>
-          <entry key=`id312`>this is another value</entry>
+          <entry key=\"id123\">this is a value</entry>
+          <entry key=\"id312\">this is another value</entry>
           ...
         </hashmap>
 
@@ -60,17 +60,17 @@
 
 
 
-      <xs:complexType name=`myHashMapType`>
+      <xs:complexType name=\"myHashMapType\">
         <xs:sequence>
-          <xs:element name=`entry` type=`myHashMapEntryType`
-                         minOccurs = `0` maxOccurs=`unbounded`/>
+          <xs:element name=\"entry\" type=\"myHashMapEntryType\"
+                         minOccurs = \"0\" maxOccurs=\"unbounded\"/>
         </xs:sequence>
       </xs:complexType>
 
-      <xs:complexType name=`myHashMapEntryType`>
+      <xs:complexType name=\"myHashMapEntryType\">
         <xs:simpleContent>
-          <xs:extension base=`xs:string`>
-            <xs:attribute name=`key` type=`xs:int`/>
+          <xs:extension base=\"xs:string\">
+            <xs:attribute name=\"key\" type=\"xs:int\"/>
           </xs:extension>
         </xs:simpleContent>
       </xs:complexType>
@@ -114,9 +114,9 @@
 
 
 
-      <xs:complexType name=`Foo`>
+      <xs:complexType name=\"Foo\">
         <xs:sequence>
-          <xs:element name=`hashmap` type=`myHashMapType`
+          <xs:element name=\"hashmap\" type=\"myHashMapType\"
         </xs:sequence>
       </xs:complexType>"
   (:refer-clojure :only [require comment defn ->])

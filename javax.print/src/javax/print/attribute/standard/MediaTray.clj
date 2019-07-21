@@ -9,7 +9,7 @@
   be created by defining a subclass of class MediaTray.
 
   IPP Compatibility: MediaTray is a representation class for
-  values of the IPP `media` attribute which name paper trays."
+  values of the IPP \"media\" attribute which name paper trays."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.print.attribute.standard MediaTray]))
 

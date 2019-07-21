@@ -21,8 +21,8 @@
 
 
      Detail d = sf.getDetail();
-     Name name = se.createName(`GetLastTradePrice`, `WOMBAT`,
-                                 `http://www.wombat.org/trader`);
+     Name name = se.createName(\"GetLastTradePrice\", \"WOMBAT\",
+                                 \"http://www.wombat.org/trader\");
      d.addDetailEntry(name);
      Iterator it = d.getDetailEntries();"
   (:refer-clojure :only [require comment defn ->])

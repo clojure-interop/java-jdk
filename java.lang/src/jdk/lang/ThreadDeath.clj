@@ -13,7 +13,7 @@
 
   The class ThreadDeath is specifically a subclass of
   Error rather than Exception, even though it is a
-  `normal occurrence`, because many applications catch all
+  \"normal occurrence\", because many applications catch all
   occurrences of Exception and then discard the exception."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.lang ThreadDeath]))

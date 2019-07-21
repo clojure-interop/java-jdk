@@ -4,7 +4,7 @@
   Such a descriptor contains:
    the group's class name,
    the group's code location (the location of the group's class), and
-   a `marshalled` object that can contain group specific
+   a \"marshalled\" object that can contain group specific
   initialization data.
 
   The group's class must be a concrete subclass of

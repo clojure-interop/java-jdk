@@ -9,7 +9,7 @@
   mechanism type desired, for example:
 
 
-    KeyInfoFactory factory = KeyInfoFactory.getInstance(`DOM`);
+    KeyInfoFactory factory = KeyInfoFactory.getInstance(\"DOM\");
 
 
   The objects that this factory produces will be based
@@ -26,7 +26,7 @@
   DOM mechanism would be specified in the Provider subclass as:
 
 
-      put(`KeyInfoFactory.DOM`, `org.example.DOMKeyInfoFactory`);
+      put(\"KeyInfoFactory.DOM\", \"org.example.DOMKeyInfoFactory\");
 
   Also, the XMLStructures that are created by this factory
   may contain state specific to the KeyInfo and are not
@@ -56,7 +56,7 @@
 
 (defn *get-instance
   "Returns a KeyInfoFactory that supports the
-   requested XML processing mechanism and representation type (ex: `DOM`),
+   requested XML processing mechanism and representation type (ex: \"DOM\"),
    as supplied by the specified provider. Note that the specified
    Provider object does not have to be registered in the
    provider list.
@@ -191,7 +191,7 @@
 
 (defn get-mechanism-type
   "Returns the type of the XML processing mechanism and representation
-   supported by this KeyInfoFactory (ex: `DOM`)
+   supported by this KeyInfoFactory (ex: \"DOM\")
 
   returns: the XML processing mechanism type supported by this
       KeyInfoFactory - `java.lang.String`"

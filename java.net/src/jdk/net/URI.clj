@@ -16,7 +16,7 @@
 
    URI syntax and components
 
-  At the highest level a URI reference (hereinafter simply `URI`) in string
+  At the highest level a URI reference (hereinafter simply \"URI\") in string
   form has the syntax
 
 
@@ -118,10 +118,10 @@
   The key operations supported by this class are those of
   normalization, resolution, and relativization.
 
-   Normalization is the process of removing unnecessary `.`
-  and `..` segments from the path component of a hierarchical URI.
-  Each `.` segment is simply removed.  A `..` segment is
-  removed only if it is preceded by a non-`..` segment.
+   Normalization is the process of removing unnecessary \".\"
+  and \"..\" segments from the path component of a hierarchical URI.
+  Each \".\" segment is simply removed.  A \"..\" segment is
+  removed only if it is preceded by a non-\"..\" segment.
   Normalization has no effect upon opaque URIs.
 
    Resolution is the process of resolving one URI against another,
@@ -211,12 +211,12 @@
         All alpha and digit characters
     unreserved
         All alphanum characters together with those in the string
-         `_-!.~'()*`
+         \"_-!.~'()*\"
     punct
-        The characters in the string `,;:$&+=`
+        The characters in the string \",;:$&+=\"
     reserved
         All punct characters together with those in the string
-         `?/[]@`
+         \"?/[]@\"
     escaped
         Escaped octets, that is, triplets consisting of the percent
             character ('%') followed by two hexadecimal digits
@@ -259,14 +259,14 @@
 
      A character is encoded by replacing it
     with the sequence of escaped octets that represent that character in the
-    UTF-8 character set.  The Euro currency symbol ('\u20AC'),
-    for example, is encoded as `%E2%82%AC`.  (Deviation from
+    UTF-8 character set.  The Euro currency symbol ('\\u20AC'),
+    for example, is encoded as \"%E2%82%AC\".  (Deviation from
     RFC 2396, which does not specify any particular character
     set.)
 
      An illegal character is quoted simply by
     encoding it.  The space character, for example, is quoted by replacing it
-    with `%20`.  UTF-8 contains US-ASCII, hence for US-ASCII
+    with \"%20\".  UTF-8 contains US-ASCII, hence for US-ASCII
     characters this transformation has exactly the effect required by
     RFC 2396.
 
@@ -277,7 +277,7 @@
     effect of de-quoting any quoted US-ASCII characters as well as that of
     decoding any encoded non-US-ASCII characters.  If a decoding error occurs
     when decoding the escaped octets then the erroneous octets are replaced by
-    '\uFFFD', the Unicode replacement character.
+    '\\uFFFD', the Unicode replacement character.
 
 
 
@@ -416,7 +416,7 @@
      followed by a colon character (':').
 
       If user information, a host, or a port are given then the
-     string `//` is appended.
+     string \"//\" is appended.
 
       If user information is given then it is appended, followed by
      a commercial-at character ('@').  Any character not in the
@@ -540,26 +540,26 @@
 
 
 
-      All `.` segments are removed.
+      All \".\" segments are removed.
 
-      If a `..` segment is preceded by a non-`..`
+      If a \"..\" segment is preceded by a non-\"..\"
      segment then both of these segments are removed.  This step is
      repeated until it is no longer applicable.
 
       If the path is relative, and if its first segment contains a
-     colon character (':'), then a `.` segment is
+     colon character (':'), then a \".\" segment is
      prepended.  This prevents a relative URI with a path such as
-     `a:b/c/d` from later being re-parsed as an opaque URI with a
-     scheme of `a` and a scheme-specific part of `b/c/d`.
+     \"a:b/c/d\" from later being re-parsed as an opaque URI with a
+     scheme of \"a\" and a scheme-specific part of \"b/c/d\".
      (Deviation from RFC 2396)
 
 
 
-    A normalized path will begin with one or more `..` segments
-   if there were insufficient non-`..` segments preceding them to
-   allow their removal.  A normalized path will begin with a `.`
+    A normalized path will begin with one or more \"..\" segments
+   if there were insufficient non-\"..\" segments preceding them to
+   allow their removal.  A normalized path will begin with a \".\"
    segment if one was inserted by step 3 above.  Otherwise, a normalized
-   path will not contain any `.` or `..` segments.
+   path will not contain any \".\" or \"..\" segments.
 
   returns: A URI equivalent to this URI,
             but whose path is in normal form - `java.net.URI`"
@@ -589,7 +589,7 @@
    query components are undefined, then a URI with the given fragment but
    with all other components equal to those of this URI is returned.  This
    allows a URI representing a standalone fragment reference, such as
-   `#foo`, to be usefully resolved against a base URI.
+   \"#foo\", to be usefully resolved against a base URI.
 
     Otherwise this method constructs a new hierarchical URI in a manner
    consistent with RFC 2396,
@@ -740,7 +740,7 @@
   "Returns the scheme component of this URI.
 
     The scheme component of a URI, if defined, only contains characters
-   in the alphanum category and in the string `-.+`.  A
+   in the alphanum category and in the string \"-.+\".  A
    scheme always starts with an alpha character.
 
    The scheme component of a URI cannot contain escaped octets, hence this
@@ -782,7 +782,7 @@
    cannot always distinguish a malformed server-based authority from a
    legitimate registry-based authority.  It must therefore treat some
    instances of the former as instances of the latter.  The authority
-   component in the URI string `//foo:bar`, for example, is not a
+   component in the URI string \"//foo:bar\", for example, is not a
    legal server-based authority but it is legal as a registry-based
    authority.
 

@@ -6,14 +6,14 @@
 
 
 
-  <element name=`Transform` type=`ds:TransformType`/>
-    <complexType name=`TransformType` mixed=`true`>
-      <choice minOccurs=`0` maxOccurs=`unbounded`>
-        <any namespace=`##other` processContents=`lax`/>
+  <element name=\"Transform\" type=\"ds:TransformType\"/>
+    <complexType name=\"TransformType\" mixed=\"true\">
+      <choice minOccurs=\"0\" maxOccurs=\"unbounded\">
+        <any namespace=\"##other\" processContents=\"lax\"/>
         <!-- (1,1) elements from (0,unbounded) namespaces -->
-        <element name=`XPath` type=`string`/>
+        <element name=\"XPath\" type=\"string\"/>
       </choice>
-      <attribute name=`Algorithm` type=`anyURI` use=`required`/>
+      <attribute name=\"Algorithm\" type=\"anyURI\" use=\"required\"/>
     </complexType>
 
   A Transform instance may be created by invoking the

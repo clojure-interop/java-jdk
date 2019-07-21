@@ -67,7 +67,7 @@
    as a literal replacement s in the
    appendReplacement method of the Matcher class.
    The String produced will match the sequence of characters
-   in s treated as a literal sequence. Slashes ('\') and
+   in s treated as a literal sequence. Slashes ('\\') and
    dollar signs ('$') will be given no special meaning.
 
   s - The string to be literalized - `java.lang.String`
@@ -86,7 +86,7 @@
    is replaced in the result by the replacement string.  The replacement
    string may contain references to captured subsequences as in the appendReplacement method.
 
-    Note that backslashes (\) and dollar signs ($) in
+    Note that backslashes (\\) and dollar signs ($) in
    the replacement string may cause the results to be different than if it
    were being treated as a literal replacement string. Dollar signs may be
    treated as references to captured subsequences as described above, and
@@ -94,9 +94,9 @@
    string.
 
     Given the regular expression a*b, the input
-   `aabfooaabfooabfoob`, and the replacement string
-   `-`, an invocation of this method on a matcher for that
-   expression would yield the string `-foo-foo-foo-`.
+   \"aabfooaabfooabfoob\", and the replacement string
+   \"-\", an invocation of this method on a matcher for that
+   expression would yield the string \"-foo-foo-foo-\".
 
     Invoking this method changes this matcher's state.  If the matcher
    is to be used in further matching operations then it should first be
@@ -285,7 +285,7 @@
    is replaced in the result by the replacement string.  The replacement
    string may contain references to captured subsequences as in the appendReplacement method.
 
-   Note that backslashes (\) and dollar signs ($) in
+   Note that backslashes (\\) and dollar signs ($) in
    the replacement string may cause the results to be different than if it
    were being treated as a literal replacement string. Dollar signs may be
    treated as references to captured subsequences as described above, and
@@ -293,9 +293,9 @@
    string.
 
     Given the regular expression dog, the input
-   `zzzdogzzzdogzzz`, and the replacement string
-   `cat`, an invocation of this method on a matcher for that
-   expression would yield the string `zzzcatzzzdogzzz`.
+   \"zzzdogzzzdogzzz\", and the replacement string
+   \"cat\", an invocation of this method on a matcher for that
+   expression would yield the string \"zzzcatzzzdogzzz\".
 
     Invoking this method changes this matcher's state.  If the matcher
    is to be used in further matching operations then it should first be
@@ -535,13 +535,13 @@
    the group reference. Subsequent numbers are incorporated into g if
    they would form a legal group reference. Only the numerals '0'
    through '9' are considered as potential components of the group
-   reference. If the second group matched the string `foo`, for
-   example, then passing the replacement string `$2bar` would
-   cause `foobar` to be appended to the string buffer. A dollar
+   reference. If the second group matched the string \"foo\", for
+   example, then passing the replacement string \"$2bar\" would
+   cause \"foobar\" to be appended to the string buffer. A dollar
    sign ($) may be included as a literal in the replacement
-   string by preceding it with a backslash (\$).
+   string by preceding it with a backslash (\\$).
 
-    Note that backslashes (\) and dollar signs ($) in
+    Note that backslashes (\\) and dollar signs ($) in
    the replacement string may cause the results to be different than if it
    were being treated as a literal replacement string. Dollar signs may be
    treated as references to captured subsequences as described above, and
@@ -555,11 +555,11 @@
 
 
 
-   Pattern p = Pattern.compile(`cat`);
-   Matcher m = p.matcher(`one cat two cats in the yard`);
+   Pattern p = Pattern.compile(\"cat\");
+   Matcher m = p.matcher(\"one cat two cats in the yard\");
    StringBuffer sb = new StringBuffer();
    while (m.find()) {
-       m.appendReplacement(sb, `dog`);
+       m.appendReplacement(sb, \"dog\");
    }
    m.appendTail(sb);
    System.out.println(sb.toString());

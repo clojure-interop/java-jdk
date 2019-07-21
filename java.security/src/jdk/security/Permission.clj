@@ -4,20 +4,20 @@
   as well as abstract functions for defining the semantics of the
   particular Permission subclass.
 
-  Most Permission objects also include an `actions` list that tells the actions
+  Most Permission objects also include an \"actions\" list that tells the actions
   that are permitted for the object.  For example,
   for a java.io.FilePermission object, the permission name is
   the pathname of a file (or directory), and the actions list
-  (such as `read, write`) specifies which actions are granted for the
+  (such as \"read, write\") specifies which actions are granted for the
   specified file (or for files in the specified directory).
   The actions list is optional for Permission objects, such as
   java.lang.RuntimePermission,
   that don't need such a list; you either have the named permission (such
-  as `system.exit`) or you don't.
+  as \"system.exit\") or you don't.
 
   An important method that must be implemented by each subclass is
   the implies method to compare Permissions. Basically,
-  `permission p1 implies permission p2` means that
+  \"permission p1 implies permission p2\" means that
   if one is granted permission p1, one is naturally granted permission p2.
   Thus, this is not an equality test, but rather more of a
   subset test.
@@ -52,7 +52,7 @@
     (-> this (.checkGuard object))))
 
 (defn implies
-  "Checks if the specified permission's actions are `implied by`
+  "Checks if the specified permission's actions are \"implied by\"
    this object's actions.
 
    This must be implemented by subclasses of Permission, as they are the
@@ -121,11 +121,11 @@
 
 
 
-     perm1 = new FilePermission(p1,`read,write`);
-     perm2 = new FilePermission(p2,`write,read`);
+     perm1 = new FilePermission(p1,\"read,write\");
+     perm2 = new FilePermission(p2,\"write,read\");
 
    both return
-   `read,write` when the getActions method is invoked.
+   \"read,write\" when the getActions method is invoked.
 
   returns: the actions of this Permission. - `java.lang.String`"
   (^java.lang.String [^Permission this]
@@ -150,8 +150,8 @@
 (defn to-string
   "Returns a string describing this Permission.  The convention is to
    specify the class name, the permission name, and the actions in
-   the following format: '(`ClassName` `name` `actions`)', or
-   '(`ClassName` `name`)' if actions list is null or empty.
+   the following format: '(\"ClassName\" \"name\" \"actions\")', or
+   '(\"ClassName\" \"name\")' if actions list is null or empty.
 
   returns: information about this Permission. - `java.lang.String`"
   (^java.lang.String [^Permission this]

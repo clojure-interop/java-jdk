@@ -222,9 +222,9 @@
    a FloatValue, then a NumberFormatException
    is thrown. Otherwise, s is regarded as
    representing an exact decimal value in the usual
-   `computerized scientific notation` or as an exact
+   \"computerized scientific notation\" or as an exact
    hexadecimal value; this exact numerical value is then
-   conceptually converted to an `infinitely precise`
+   conceptually converted to an \"infinitely precise\"
    binary value that is then rounded to type float
    by the usual round-to-nearest rule of IEEE 754 floating-point
    arithmetic, which includes preserving the sign of a zero
@@ -257,7 +257,7 @@
    float.  For example, if first converted to an
    intermediate double and then to
    float, the string
-   `1.00000017881393421514957253748434595763683319091796875001d`
+   \"1.00000017881393421514957253748434595763683319091796875001d\"
    results in the float value
    1.0000002f; if the string is converted directly to
    float, 1.0000001f results.
@@ -283,44 +283,44 @@
 
 
    If the argument is NaN, the result is the string
-       `NaN`.
+       \"NaN\".
    Otherwise, the result is a string that represents the sign and
    magnitude (absolute value) of the argument. If the sign is negative,
    the first character of the result is '-'
-   ('\u002D'); if the sign is positive, no sign character
+   ('\\u002D'); if the sign is positive, no sign character
    appears in the result. As for the magnitude m:
 
 
    If m is infinity, it is represented by the string
-   `Infinity`; thus, positive infinity produces the
-   result `Infinity` and negative infinity produces
-   the result `-Infinity`.
+   \"Infinity\"; thus, positive infinity produces the
+   result \"Infinity\" and negative infinity produces
+   the result \"-Infinity\".
 
    If m is zero, it is represented by the string
-   `0x0.0p0`; thus, negative zero produces the result
-   `-0x0.0p0` and positive zero produces the result
-   `0x0.0p0`.
+   \"0x0.0p0\"; thus, negative zero produces the result
+   \"-0x0.0p0\" and positive zero produces the result
+   \"0x0.0p0\".
 
    If m is a float value with a
    normalized representation, substrings are used to represent the
    significand and exponent fields.  The significand is
-   represented by the characters `0x1.`
+   represented by the characters \"0x1.\"
    followed by a lowercase hexadecimal representation of the rest
    of the significand as a fraction.  Trailing zeros in the
    hexadecimal representation are removed unless all the digits
    are zero, in which case a single zero is used. Next, the
-   exponent is represented by `p` followed
+   exponent is represented by \"p\" followed
    by a decimal string of the unbiased exponent as if produced by
    a call to Integer.toString on the
    exponent value.
 
    If m is a float value with a subnormal
    representation, the significand is represented by the
-   characters `0x0.` followed by a
+   characters \"0x0.\" followed by a
    hexadecimal representation of the rest of the significand as a
    fraction.  Trailing zeros in the hexadecimal representation are
    removed. Next, the exponent is represented by
-   `p-126`.  Note that there must be at
+   \"p-126\".  Note that there must be at
    least one nonzero digit in a subnormal significand.
 
 
@@ -356,7 +356,7 @@
    bit representation.
    The argument is considered to be a representation of a
    floating-point value according to the IEEE 754 floating-point
-   `single format` bit layout.
+   \"single format\" bit layout.
 
    If the argument is 0x7f800000, the result is positive
    infinity.
@@ -453,42 +453,42 @@
    argument. All characters mentioned below are ASCII characters.
 
    If the argument is NaN, the result is the string
-   `NaN`.
+   \"NaN\".
    Otherwise, the result is a string that represents the sign and
        magnitude (absolute value) of the argument. If the sign is
        negative, the first character of the result is
-       '-' ('\u002D'); if the sign is
+       '-' ('\\u002D'); if the sign is
        positive, no sign character appears in the result. As for
        the magnitude m:
 
    If m is infinity, it is represented by the characters
-       `Infinity`; thus, positive infinity produces
-       the result `Infinity` and negative infinity
-       produces the result `-Infinity`.
+       \"Infinity\"; thus, positive infinity produces
+       the result \"Infinity\" and negative infinity
+       produces the result \"-Infinity\".
    If m is zero, it is represented by the characters
-       `0.0`; thus, negative zero produces the result
-       `-0.0` and positive zero produces the result
-       `0.0`.
+       \"0.0\"; thus, negative zero produces the result
+       \"-0.0\" and positive zero produces the result
+       \"0.0\".
     If m is greater than or equal to 10-3 but
         less than 107, then it is represented as the
         integer part of m, in decimal form with no leading
         zeroes, followed by '.'
-        ('\u002E'), followed by one or more
+        ('\\u002E'), followed by one or more
         decimal digits representing the fractional part of
         m.
     If m is less than 10-3 or greater than or
         equal to 107, then it is represented in
-        so-called `computerized scientific notation.` Let n
+        so-called \"computerized scientific notation.\" Let n
         be the unique integer such that 10n ≤
         m < 10n+1; then let a
         be the mathematically exact quotient of m and
         10n so that 1 ≤ a < 10.
         The magnitude is then represented as the integer part of
         a, as a single decimal digit, followed by
-        '.' ('\u002E'), followed by
+        '.' ('\\u002E'), followed by
         decimal digits representing the fractional part of
         a, followed by the letter 'E'
-        ('\u0045'), followed by a representation
+        ('\\u0045'), followed by a representation
         of n as a decimal integer, as produced by the
         method Integer.toString(int).
 
@@ -530,7 +530,7 @@
 
 (defn *float-to-raw-int-bits
   "Returns a representation of the specified floating-point value
-   according to the IEEE 754 floating-point `single format` bit
+   according to the IEEE 754 floating-point \"single format\" bit
    layout, preserving Not-a-Number (NaN) values.
 
    Bit 31 (the bit that is selected by the mask
@@ -551,7 +551,7 @@
    If the argument is NaN, the result is the integer representing
    the actual NaN value.  Unlike the floatToIntBits
    method, floatToRawIntBits does not collapse all the
-   bit patterns encoding a NaN to a single `canonical`
+   bit patterns encoding a NaN to a single \"canonical\"
    NaN value.
 
    In all cases, the result is an integer that, when given to the
@@ -600,7 +600,7 @@
 
 (defn *float-to-int-bits
   "Returns a representation of the specified floating-point value
-   according to the IEEE 754 floating-point `single format` bit
+   according to the IEEE 754 floating-point \"single format\" bit
    layout.
 
    Bit 31 (the bit that is selected by the mask
@@ -624,7 +624,7 @@
    intBitsToFloat(int) method, will produce a floating-point
    value the same as the argument to floatToIntBits
    (except all NaN values are collapsed to a single
-   `canonical` NaN value).
+   \"canonical\" NaN value).
 
   value - a floating-point number. - `float`
 

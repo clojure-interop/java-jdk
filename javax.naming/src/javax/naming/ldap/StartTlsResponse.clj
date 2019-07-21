@@ -52,7 +52,7 @@
 (defn get-id
   "Retrieves the StartTLS response's object identifier string.
 
-  returns: The object identifier string, `1.3.6.1.4.1.1466.20037`. - `java.lang.String`"
+  returns: The object identifier string, \"1.3.6.1.4.1.1466.20037\". - `java.lang.String`"
   (^java.lang.String [^StartTlsResponse this]
     (-> this (.getID))))
 

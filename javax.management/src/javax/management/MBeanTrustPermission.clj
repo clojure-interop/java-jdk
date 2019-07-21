@@ -1,9 +1,9 @@
 (ns javax.management.MBeanTrustPermission
-  "This permission represents `trust` in a signer or codebase.
+  "This permission represents \"trust\" in a signer or codebase.
 
   MBeanTrustPermission contains a target name but no actions list.
-  A single target name, `register`, is defined for this permission.
-  The target `*` is also allowed, permitting `register` and any future
+  A single target name, \"register\", is defined for this permission.
+  The target \"*\" is also allowed, permitting \"register\" and any future
   targets that may be defined.
   Only the null value or the empty string are allowed for the action
   to allow the policy object to create the permissions specified in
@@ -20,8 +20,8 @@
 
   Create a new MBeanTrustPermission with the given name.
 
-  name - the name of the permission. It must be `register` or `*` for this permission. - `java.lang.String`
-  actions - the actions for the permission. It must be null or ``. - `java.lang.String`
+  name - the name of the permission. It must be \"register\" or \"*\" for this permission. - `java.lang.String`
+  actions - the actions for the permission. It must be null or \"\". - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."
   (^MBeanTrustPermission [^java.lang.String name ^java.lang.String actions]

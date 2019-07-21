@@ -59,12 +59,12 @@
 
    Runnable doHelloWorld = new Runnable() {
        public void run() {
-           System.out.println(`Hello World on `  Thread.currentThread());
+           System.out.println(\"Hello World on \"  Thread.currentThread());
        }
    };
 
    SwingUtilities.invokeLater(doHelloWorld);
-   System.out.println(`This might well be displayed before the other message.`);
+   System.out.println(\"This might well be displayed before the other message.\");
    If invokeLater is called from the event dispatching thread --
    for example, from a JButton's ActionListener -- the doRun.run() will
    still be deferred until all pending events have been processed.
@@ -110,7 +110,7 @@
 
    final Runnable doHelloWorld = new Runnable() {
        public void run() {
-           System.out.println(`Hello World on `  Thread.currentThread());
+           System.out.println(\"Hello World on \"  Thread.currentThread());
        }
    };
 
@@ -122,7 +122,7 @@
            catch (Exception e) {
                e.printStackTrace();
            }
-           System.out.println(`Finished on `  Thread.currentThread());
+           System.out.println(\"Finished on \"  Thread.currentThread());
        }
    };
    appThread.start();
@@ -345,7 +345,7 @@
 
    The component should either descend from JComponent
    or be another kind of lightweight component.
-   A lightweight component is one whose `lightweight` property
+   A lightweight component is one whose \"lightweight\" property
    (returned by the Component
    isLightweight method)
    is true. If the Component is not lightweight, bad things map happen:
@@ -587,7 +587,7 @@
 
 (defn *compute-string-width
   "Compute the width of the string using a font with the specified
-   `metrics` (sizes).
+   \"metrics\" (sizes).
 
   fm - a FontMetrics object to compute with - `java.awt.FontMetrics`
   str - the String to compute - `java.lang.String`

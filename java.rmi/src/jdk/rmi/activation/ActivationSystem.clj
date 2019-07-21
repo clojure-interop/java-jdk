@@ -1,6 +1,6 @@
 (ns jdk.rmi.activation.ActivationSystem
   "The ActivationSystem provides a means for registering
-  groups and `activatable` objects to be activated within those groups.
+  groups and \"activatable\" objects to be activated within those groups.
   The ActivationSystem works closely with the
   Activator, which activates objects registered via the
   ActivationSystem, and the ActivationMonitor,

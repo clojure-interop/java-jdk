@@ -69,7 +69,7 @@
 (defn get-trigger-event
   "Returns the initial event that triggered the gesture.
 
-  returns: the first `triggering` event in the sequence of the gesture - `java.awt.event.InputEvent`"
+  returns: the first \"triggering\" event in the sequence of the gesture - `java.awt.event.InputEvent`"
   (^java.awt.event.InputEvent [^DragGestureEvent this]
     (-> this (.getTriggerEvent))))
 

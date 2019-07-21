@@ -22,7 +22,7 @@
 (def *-armed
   "Static Constant.
 
-  Identifies the `armed` bit in the bitmask, which
+  Identifies the \"armed\" bit in the bitmask, which
    indicates partial commitment towards choosing/triggering
    the button.
 
@@ -32,7 +32,7 @@
 (def *-selected
   "Static Constant.
 
-  Identifies the `selected` bit in the bitmask, which
+  Identifies the \"selected\" bit in the bitmask, which
    indicates that the button has been selected. Only needed for
    certain types of buttons - such as radio button or check box.
 
@@ -42,7 +42,7 @@
 (def *-pressed
   "Static Constant.
 
-  Identifies the `pressed` bit in the bitmask, which
+  Identifies the \"pressed\" bit in the bitmask, which
    indicates that the button is pressed.
 
   type: int"
@@ -51,7 +51,7 @@
 (def *-enabled
   "Static Constant.
 
-  Identifies the `enabled` bit in the bitmask, which
+  Identifies the \"enabled\" bit in the bitmask, which
    indicates that the button can be selected by
    an input device (such as a mouse pointer).
 
@@ -61,7 +61,7 @@
 (def *-rollover
   "Static Constant.
 
-  Identifies the `rollover` bit in the bitmask, which
+  Identifies the \"rollover\" bit in the bitmask, which
    indicates that the mouse is over the button.
 
   type: int"

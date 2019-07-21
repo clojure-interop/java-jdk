@@ -194,7 +194,7 @@
   "Returns a string that specifies the name of the l&f class
    that renders this component.
 
-  returns: String `LabelUI` - `java.lang.String`"
+  returns: String \"LabelUI\" - `java.lang.String`"
   (^java.lang.String [^JLabel this]
     (-> this (.getUIClassID))))
 
@@ -341,7 +341,7 @@
     (-> this (.getDisplayedMnemonicIndex))))
 
 (defn set-disabled-icon
-  "Set the icon to be displayed if this JLabel is `disabled`
+  "Set the icon to be displayed if this JLabel is \"disabled\"
    (JLabel.setEnabled(false)).
 
    The default value of this property is null.

@@ -23,20 +23,20 @@
 
 
   ALLOWED_CLASSNAMES_LIST = {
-          `java.lang.Void`,
-          `java.lang.Boolean`,
-          `java.lang.Character`,
-          `java.lang.Byte`,
-          `java.lang.Short`,
-          `java.lang.Integer`,
-          `java.lang.Long`,
-          `java.lang.Float`,
-          `java.lang.Double`,
-          `java.lang.String`,
-          `java.math.BigDecimal`,
-          `java.math.BigInteger`,
-          `java.util.Date`,
-          `javax.management.ObjectName`,
+          \"java.lang.Void\",
+          \"java.lang.Boolean\",
+          \"java.lang.Character\",
+          \"java.lang.Byte\",
+          \"java.lang.Short\",
+          \"java.lang.Integer\",
+          \"java.lang.Long\",
+          \"java.lang.Float\",
+          \"java.lang.Double\",
+          \"java.lang.String\",
+          \"java.math.BigDecimal\",
+          \"java.math.BigInteger\",
+          \"java.util.Date\",
+          \"javax.management.ObjectName\",
           CompositeData.class.getName(),
           TabularData.class.getName() } ;
 
@@ -61,11 +61,11 @@
    in which case the class name follows the rules defined by the method
    getName() of java.lang.Class.
    For example, a 3-dimensional array of Strings has for class name
-   `[[[Ljava.lang.String;` (without the quotes),
+   \"[[[Ljava.lang.String;\" (without the quotes),
    a 3-dimensional array of Integers has for class name
-   `[[[Ljava.lang.Integer;` (without the quotes),
+   \"[[[Ljava.lang.Integer;\" (without the quotes),
    and a 3-dimensional array of int has for class name
-   `[[[I` (without the quotes)
+   \"[[[I\" (without the quotes)
 
   returns: the class name. - `java.lang.String`"
   (^java.lang.String [^OpenType this]

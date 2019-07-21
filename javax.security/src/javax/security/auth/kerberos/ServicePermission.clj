@@ -43,21 +43,21 @@
 
 
 
-      ServicePermission(`krbtgt/EXAMPLE.COM@EXAMPLE.COM`, `initiate`);
+      ServicePermission(\"krbtgt/EXAMPLE.COM@EXAMPLE.COM\", \"initiate\");
 
-  To obtain a service ticket to initiate a context with the `host`
+  To obtain a service ticket to initiate a context with the \"host\"
   service the permission is constructed as follows:
 
 
-      ServicePermission(`host/foo.example.com@EXAMPLE.COM`, `initiate`);
+      ServicePermission(\"host/foo.example.com@EXAMPLE.COM\", \"initiate\");
 
-  For a Kerberized server the action is `accept`. For example, the permission
-  necessary to access and use the secret key of the  Kerberized `host`
+  For a Kerberized server the action is \"accept\". For example, the permission
+  necessary to access and use the secret key of the  Kerberized \"host\"
   service (telnet and the likes)  would be constructed as follows:
 
 
 
-      ServicePermission(`host/foo.example.com@EXAMPLE.COM`, `accept`);"
+      ServicePermission(\"host/foo.example.com@EXAMPLE.COM\", \"accept\");"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.security.auth.kerberos ServicePermission]))
 
@@ -74,7 +74,7 @@
     (new ServicePermission service-principal action)))
 
 (defn implies
-  "Checks if this Kerberos service permission object `implies` the
+  "Checks if this Kerberos service permission object \"implies\" the
    specified permission.
 
    If none of the above are true, implies returns false.

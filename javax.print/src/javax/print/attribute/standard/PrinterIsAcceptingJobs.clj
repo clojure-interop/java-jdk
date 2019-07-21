@@ -6,8 +6,8 @@
   NOT_ACCEPTING_JOBS, the printer will reject jobs even when the PrinterState is IDLE. If value is ACCEPTING_JOBS, the Printer
   will accept jobs even when the PrinterState is STOPPED.
 
-  IPP Compatibility: The IPP boolean value is `true` for ACCEPTING_JOBS
-  and `false` for NOT_ACCEPTING_JOBS. The category name returned by
+  IPP Compatibility: The IPP boolean value is \"true\" for ACCEPTING_JOBS
+  and \"false\" for NOT_ACCEPTING_JOBS. The category name returned by
   getName() is the IPP attribute name.  The enumeration's
   integer value is the IPP enum value.  The toString() method
   returns the IPP string representation of the attribute value."
@@ -31,7 +31,7 @@
   PrinterIsAcceptingJobs/ACCEPTING_JOBS)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PrinterIsAcceptingJobs, the
@@ -47,7 +47,7 @@
    instance.
 
    For class PrinterIsAcceptingJobs, the
-   category name is `printer-is-accepting-jobs`.
+   category name is \"printer-is-accepting-jobs\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PrinterIsAcceptingJobs this]

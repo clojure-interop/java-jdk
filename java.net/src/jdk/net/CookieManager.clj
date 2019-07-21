@@ -115,7 +115,7 @@
   request-headers - - a Map from request header field names to lists of field values representing the current request headers - `java.util.Map`
 
   returns: an immutable map from state management headers, with
-              field names `Cookie` or `Cookie2` to a list of
+              field names \"Cookie\" or \"Cookie2\" to a list of
               cookies containing state information - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.io.IOException - if an I/O error occurs"

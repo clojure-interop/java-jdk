@@ -1,5 +1,5 @@
 (ns jdk.beans.VetoableChangeListener
-  "A VetoableChange event gets fired whenever a bean changes a `constrained`
+  "A VetoableChange event gets fired whenever a bean changes a \"constrained\"
   property.  You can register a VetoableChangeListener with a source bean
   so as to be notified of any constrained property updates."
   (:refer-clojure :only [require comment defn ->])

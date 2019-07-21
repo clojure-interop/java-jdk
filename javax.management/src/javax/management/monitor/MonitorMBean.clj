@@ -52,8 +52,8 @@
 (defn get-observed-object
   "Deprecated. As of JMX 1.2, replaced by getObservedObjects()
 
-  returns: The object being observed. - `.management.ObjectName`"
-  (^.management.ObjectName [^MonitorMBean this]
+  returns: The object being observed. - `javax.management.ObjectName`"
+  (^javax.management.ObjectName [^MonitorMBean this]
     (-> this (.getObservedObject))))
 
 (defn get-observed-attribute

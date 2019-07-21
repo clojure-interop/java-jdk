@@ -3,9 +3,9 @@
   a set of Checkbox buttons.
 
   Exactly one check box button in a CheckboxGroup can
-  be in the `on` state at any given time. Pushing any
-  button sets its state to `on` and forces any other button that
-  is in the `on` state into the `off` state.
+  be in the \"on\" state at any given time. Pushing any
+  button sets its state to \"on\" and forces any other button that
+  is in the \"on\" state into the \"off\" state.
 
   The following code example produces a new check box group,
   with three check boxes:
@@ -14,9 +14,9 @@
 
   setLayout(new GridLayout(3, 1));
   CheckboxGroup cbg = new CheckboxGroup();
-  add(new Checkbox(`one`, cbg, true));
-  add(new Checkbox(`two`, cbg, false));
-  add(new Checkbox(`three`, cbg, false));
+  add(new Checkbox(\"one\", cbg, true));
+  add(new Checkbox(\"two\", cbg, false));
+  add(new Checkbox(\"three\", cbg, false));
 
   This image depicts the check box group created by this example:"
   (:refer-clojure :only [require comment defn ->])
@@ -32,12 +32,12 @@
 (defn get-selected-checkbox
   "Gets the current choice from this check box group.
    The current choice is the check box in this
-   group that is currently in the `on` state,
+   group that is currently in the \"on\" state,
    or null if all check boxes in the
    group are off.
 
   returns: the check box that is currently in the
-                   `on` state, or null. - `java.awt.Checkbox`"
+                   \"on\" state, or null. - `java.awt.Checkbox`"
   (^java.awt.Checkbox [^CheckboxGroup this]
     (-> this (.getSelectedCheckbox))))
 
@@ -52,7 +52,7 @@
 (defn set-selected-checkbox
   "Sets the currently selected check box in this group
    to be the specified check box.
-   This method sets the state of that check box to `on` and
+   This method sets the state of that check box to \"on\" and
    sets all other check boxes in the group to be off.
 
    If the check box argument is null, all check boxes

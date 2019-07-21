@@ -137,10 +137,10 @@
 
    The string starts with an optional sign, denoted by the ASCII negative
    or positive symbol. If negative, the whole period is negated.
-   The ASCII letter `P` is next in upper or lower case.
+   The ASCII letter \"P\" is next in upper or lower case.
    There are then four sections, each consisting of a number and a suffix.
    At least one of the four sections must be present.
-   The sections have suffixes in ASCII of `Y`, `M`, `W` and `D` for
+   The sections have suffixes in ASCII of \"Y\", \"M\", \"W\" and \"D\" for
    years, months, weeks and days, accepted in upper or lower case.
    The suffixes must occur in order.
    The number part of each section must consist of ASCII digits.
@@ -155,14 +155,14 @@
    For example, the following are valid inputs:
 
 
-     `P2Y`             -- Period.ofYears(2)
-     `P3M`             -- Period.ofMonths(3)
-     `P4W`             -- Period.ofWeeks(4)
-     `P5D`             -- Period.ofDays(5)
-     `P1Y2M3D`         -- Period.of(1, 2, 3)
-     `P1Y2M3W4D`       -- Period.of(1, 2, 25)
-     `P-1Y2M`          -- Period.of(-1, 2, 0)
-     `-P1Y2M`          -- Period.of(-1, -2, 0)
+     \"P2Y\"             -- Period.ofYears(2)
+     \"P3M\"             -- Period.ofMonths(3)
+     \"P4W\"             -- Period.ofWeeks(4)
+     \"P5D\"             -- Period.ofDays(5)
+     \"P1Y2M3D\"         -- Period.of(1, 2, 3)
+     \"P1Y2M3W4D\"       -- Period.of(1, 2, 25)
+     \"P-1Y2M\"          -- Period.of(-1, 2, 0)
+     \"-P1Y2M\"          -- Period.of(-1, -2, 0)
 
   text - the text to parse, not null - `java.lang.CharSequence`
 
@@ -199,8 +199,8 @@
    This returns the months unit.
 
    The months unit is not automatically normalized with the years unit.
-   This means that a period of `15 months` is different to a period
-   of `1 year and 3 months`.
+   This means that a period of \"15 months\" is different to a period
+   of \"1 year and 3 months\".
 
   returns: the amount of months of this period, may be negative - `int`"
   (^Integer [^Period this]
@@ -230,8 +230,8 @@
 
    This returns a period with each of the years, months and days units
    individually multiplied.
-   For example, a period of `2 years, -3 months and 4 days` multiplied by
-   3 will return `6 years, -9 months and 12 days`.
+   For example, a period of \"2 years, -3 months and 4 days\" multiplied by
+   3 will return \"6 years, -9 months and 12 days\".
    No normalization is performed.
 
   scalar - the scalar to multiply by, not null - `int`
@@ -276,8 +276,8 @@
    This operates separately on the years, months and days.
    No normalization is performed.
 
-   For example, `1 year, 6 months and 3 days` plus `2 years, 2 months and 2 days`
-   returns `3 years, 8 months and 5 days`.
+   For example, \"1 year, 6 months and 3 days\" plus \"2 years, 2 months and 2 days\"
+   returns \"3 years, 8 months and 5 days\".
 
    The specified amount is typically an instance of Period.
    Other types are interpreted using from(TemporalAmount).
@@ -307,7 +307,7 @@
 
    This adds the amount to the months unit in a copy of this period.
    The years and days units are unaffected.
-   For example, `1 year, 6 months and 3 days` plus 2 months returns `1 year, 8 months and 3 days`.
+   For example, \"1 year, 6 months and 3 days\" plus 2 months returns \"1 year, 8 months and 3 days\".
 
    This instance is immutable and unaffected by this method call.
 
@@ -324,7 +324,7 @@
 
    This subtracts the amount from the months unit in a copy of this period.
    The years and days units are unaffected.
-   For example, `1 year, 6 months and 3 days` minus 2 months returns `1 year, 4 months and 3 days`.
+   For example, \"1 year, 6 months and 3 days\" minus 2 months returns \"1 year, 4 months and 3 days\".
 
    This instance is immutable and unaffected by this method call.
 
@@ -342,8 +342,8 @@
    This operates separately on the years, months and days.
    No normalization is performed.
 
-   For example, `1 year, 6 months and 3 days` minus `2 years, 2 months and 2 days`
-   returns `-1 years, 4 months and 1 day`.
+   For example, \"1 year, 6 months and 3 days\" minus \"2 years, 2 months and 2 days\"
+   returns \"-1 years, 4 months and 1 day\".
 
    The specified amount is typically an instance of Period.
    Other types are interpreted using from(TemporalAmount).
@@ -412,7 +412,7 @@
 
    This adds the amount to the days unit in a copy of this period.
    The years and months units are unaffected.
-   For example, `1 year, 6 months and 3 days` plus 2 days returns `1 year, 6 months and 5 days`.
+   For example, \"1 year, 6 months and 3 days\" plus 2 days returns \"1 year, 6 months and 5 days\".
 
    This instance is immutable and unaffected by this method call.
 
@@ -438,8 +438,8 @@
 
    This returns a period with each of the years, months and days units
    individually negated.
-   For example, a period of `2 years, -3 months and 4 days` will be
-   negated to `-2 years, 3 months and -4 days`.
+   For example, a period of \"2 years, -3 months and 4 days\" will be
+   negated to \"-2 years, 3 months and -4 days\".
    No normalization is performed.
 
   returns: a Period based on this period with the amounts negated, not null - `java.time.Period`
@@ -454,8 +454,8 @@
    This returns the years unit.
 
    The months unit is not automatically normalized with the years unit.
-   This means that a period of `15 months` is different to a period
-   of `1 year and 3 months`.
+   This means that a period of \"15 months\" is different to a period
+   of \"1 year and 3 months\".
 
   returns: the amount of years of this period, may be negative - `int`"
   (^Integer [^Period this]
@@ -468,8 +468,8 @@
    The months and days units are unaffected.
 
    The months unit is not automatically normalized with the years unit.
-   This means that a period of `15 months` is different to a period
-   of `1 year and 3 months`.
+   This means that a period of \"15 months\" is different to a period
+   of \"1 year and 3 months\".
 
    This instance is immutable and unaffected by this method call.
 
@@ -485,11 +485,11 @@
    This normalizes the years and months units, leaving the days unit unchanged.
    The months unit is adjusted to have an absolute value less than 11,
    with the years unit being adjusted to compensate. For example, a period of
-   `1 Year and 15 months` will be normalized to `2 years and 3 months`.
+   \"1 Year and 15 months\" will be normalized to \"2 years and 3 months\".
 
    The sign of the years and months units will be the same after normalization.
-   For example, a period of `1 year and -25 months` will be normalized to
-   `-1 year and -1 month`.
+   For example, a period of \"1 year and -25 months\" will be normalized to
+   \"-1 year and -1 month\".
 
    This instance is immutable and unaffected by this method call.
 
@@ -506,8 +506,8 @@
    The years and days units are unaffected.
 
    The months unit is not automatically normalized with the years unit.
-   This means that a period of `15 months` is different to a period
-   of `1 year and 3 months`.
+   This means that a period of \"15 months\" is different to a period
+   of \"1 year and 3 months\".
 
    This instance is immutable and unaffected by this method call.
 
@@ -522,7 +522,7 @@
 
    This subtracts the amount from the years unit in a copy of this period.
    The months and days units are unaffected.
-   For example, `1 year, 6 months and 3 days` minus 2 years returns `-1 years, 6 months and 3 days`.
+   For example, \"1 year, 6 months and 3 days\" minus 2 years returns \"-1 years, 6 months and 3 days\".
 
    This instance is immutable and unaffected by this method call.
 
@@ -611,8 +611,8 @@
 
    The comparison is based on the type Period and each of the three amounts.
    To be equal, the years, months and days units must be individually equal.
-   Note that this means that a period of `15 Months` is not equal to a period
-   of `1 Year and 3 Months`.
+   Note that this means that a period of \"15 Months\" is not equal to a period
+   of \"1 Year and 3 Months\".
 
   obj - the object to check, null returns false - `java.lang.Object`
 
@@ -625,7 +625,7 @@
 
    This adds the amount to the years unit in a copy of this period.
    The months and days units are unaffected.
-   For example, `1 year, 6 months and 3 days` plus 2 years returns `3 years, 6 months and 3 days`.
+   For example, \"1 year, 6 months and 3 days\" plus 2 years returns \"3 years, 6 months and 3 days\".
 
    This instance is immutable and unaffected by this method call.
 
@@ -642,7 +642,7 @@
 
    This subtracts the amount from the days unit in a copy of this period.
    The years and months units are unaffected.
-   For example, `1 year, 6 months and 3 days` minus 2 days returns `1 year, 6 months and 1 day`.
+   For example, \"1 year, 6 months and 3 days\" minus 2 days returns \"1 year, 6 months and 1 day\".
 
    This instance is immutable and unaffected by this method call.
 

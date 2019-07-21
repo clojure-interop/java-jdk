@@ -68,7 +68,7 @@
   returns: the value from the defaults table with key
       AbstractUndoableEdit.undoText, followed
       by a space, followed by getPresentationName
-      unless getPresentationName is `` in which
+      unless getPresentationName is \"\" in which
       case, the defaults value is returned alone. - `java.lang.String`"
   (^java.lang.String [^CompoundEdit this]
     (-> this (.getUndoPresentationName))))
@@ -106,7 +106,7 @@
    edits. If edits is empty,
    calls super.
 
-  returns: the empty string `` - `java.lang.String`"
+  returns: the empty string \"\" - `java.lang.String`"
   (^java.lang.String [^CompoundEdit this]
     (-> this (.getPresentationName))))
 
@@ -124,7 +124,7 @@
   returns: the value from the defaults table with key
       AbstractUndoableEdit.redoText, followed
       by a space, followed by getPresentationName
-      unless getPresentationName is `` in which
+      unless getPresentationName is \"\" in which
       case, the defaults value is returned alone. - `java.lang.String`"
   (^java.lang.String [^CompoundEdit this]
     (-> this (.getRedoPresentationName))))

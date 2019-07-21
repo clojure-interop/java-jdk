@@ -67,7 +67,7 @@
 
     List<Path> listSourceFiles(Path dir) throws IOException {
         List<Path> result = new ArrayList<>();
-        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir, `*.{c,h,cpp,hpp,java}`)) {
+        try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir, \"*.{c,h,cpp,hpp,java}\")) {
             for (Path entry: stream) {
                 result.add(entry);
             }

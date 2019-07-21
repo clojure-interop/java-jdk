@@ -66,13 +66,13 @@
   returns: a list of String objects; each element
    is an argument passed to the Java virtual machine. - `java.util.List<java.lang.String>`
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`monitor`)."
+  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(\"monitor\")."
   (^java.util.List [^RuntimeMXBean this]
     (-> this (.getInputArguments))))
 
 (defn get-vm-name
   "Returns the Java virtual machine implementation name.
-   This method is equivalent to System.getProperty(`java.vm.name`).
+   This method is equivalent to System.getProperty(\"java.vm.name\").
 
   returns: the Java virtual machine implementation name. - `java.lang.String`
 
@@ -82,7 +82,7 @@
 
 (defn get-vm-version
   "Returns the Java virtual machine implementation version.
-   This method is equivalent to System.getProperty(`java.vm.version`).
+   This method is equivalent to System.getProperty(\"java.vm.version\").
 
   returns: the Java virtual machine implementation version. - `java.lang.String`
 
@@ -129,7 +129,7 @@
 
 (defn get-library-path
   "Returns the Java library path.
-   This method is equivalent to System.getProperty(`java.library.path`).
+   This method is equivalent to System.getProperty(\"java.library.path\").
 
     Multiple paths in the Java library path are separated by the
    path separator character of the platform of the Java virtual machine
@@ -144,7 +144,7 @@
 (defn get-class-path
   "Returns the Java class path that is used by the system class loader
    to search for class files.
-   This method is equivalent to System.getProperty(`java.class.path`).
+   This method is equivalent to System.getProperty(\"java.class.path\").
 
     Multiple paths in the Java class path are separated by the
    path separator character of the platform of the Java virtual machine
@@ -158,7 +158,7 @@
 
 (defn get-spec-name
   "Returns the Java virtual machine specification name.
-   This method is equivalent to System.getProperty(`java.vm.specification.name`).
+   This method is equivalent to System.getProperty(\"java.vm.specification.name\").
 
   returns: the Java virtual machine specification name. - `java.lang.String`
 
@@ -168,7 +168,7 @@
 
 (defn get-spec-version
   "Returns the Java virtual machine specification version.
-   This method is equivalent to System.getProperty(`java.vm.specification.version`).
+   This method is equivalent to System.getProperty(\"java.vm.specification.version\").
 
   returns: the Java virtual machine specification version. - `java.lang.String`
 
@@ -178,7 +178,7 @@
 
 (defn get-spec-vendor
   "Returns the Java virtual machine specification vendor.
-   This method is equivalent to System.getProperty(`java.vm.specification.vendor`).
+   This method is equivalent to System.getProperty(\"java.vm.specification.vendor\").
 
   returns: the Java virtual machine specification vendor. - `java.lang.String`
 
@@ -198,7 +198,7 @@
 
 (defn get-vm-vendor
   "Returns the Java virtual machine implementation vendor.
-   This method is equivalent to System.getProperty(`java.vm.vendor`).
+   This method is equivalent to System.getProperty(\"java.vm.vendor\").
 
   returns: the Java virtual machine implementation vendor. - `java.lang.String`
 

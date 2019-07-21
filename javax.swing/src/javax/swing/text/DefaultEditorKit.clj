@@ -10,7 +10,7 @@
 
   There are two properties which deal with newlines.  The
   system property, line.separator, is defined to be
-  platform-dependent, either `\n`, `\r`, or `\r\n`.  There is also
+  platform-dependent, either \"\\n\", \"\\r\", or \"\\r\\n\".  There is also
   a property defined in DefaultEditorKit, called
   EndOfLineStringProperty,
   which is defined automatically when a document is loaded, to be
@@ -18,10 +18,10 @@
   When a document is loaded, EndOfLineStringProperty
   is set appropriately, and when the document is written back out, the
   EndOfLineStringProperty is used.  But while the document
-  is in memory, the `\n` character is used to define a
+  is in memory, the \"\\n\" character is used to define a
   newline, regardless of how the newline is defined when
   the document is on disk.  Therefore, for searching purposes,
-  `\n` should always be used.  When a new document is created,
+  \"\\n\" should always be used.  When a new document is created,
   and the EndOfLineStringProperty has not been defined,
   it will use the System property when writing out the
   document.
@@ -42,7 +42,7 @@
   "Static Constant.
 
   When reading a document if a CRLF is encountered a property
-   with this name is added and the value will be `\r\n`.
+   with this name is added and the value will be \"\\r\\n\".
 
   type: java.lang.String"
   DefaultEditorKit/EndOfLineStringProperty)

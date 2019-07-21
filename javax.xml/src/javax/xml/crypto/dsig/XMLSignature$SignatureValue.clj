@@ -6,11 +6,11 @@
 
 
 
-    <element name=`SignatureValue` type=`ds:SignatureValueType`/>
-      <complexType name=`SignatureValueType`>
+    <element name=\"SignatureValue\" type=\"ds:SignatureValueType\"/>
+      <complexType name=\"SignatureValueType\">
         <simpleContent>
-          <extension base=`base64Binary`>
-            <attribute name=`Id` type=`ID` use=`optional`/>
+          <extension base=\"base64Binary\">
+            <attribute name=\"Id\" type=\"ID\" use=\"optional\"/>
           </extension>
         </simpleContent>
       </complexType>"

@@ -49,7 +49,7 @@
    this interface.  While the combination is contiguous, from days to months within years,
    the combination does not have sufficient information to define the valid range of values
    for day-of-month.  As such, it is unable to implement plus/minus correctly.
-  The combination day-of-week and day-of-month (`Friday the 13th`) should not implement
+  The combination day-of-week and day-of-month (\"Friday the 13th\") should not implement
    this interface. It does not represent a contiguous set of fields, as days to weeks overlaps
    days to months."
   (:refer-clojure :only [require comment defn ->])

@@ -44,10 +44,10 @@
   opnum - operation number - `int`
   hash - stub/skeleton interface hash - `long`
 
-  returns: call object representing remote call - `.rmi.server.RemoteCall`
+  returns: call object representing remote call - `java.rmi.server.RemoteCall`
 
   throws: java.rmi.RemoteException - if failed to initiate new remote call"
-  (^.rmi.server.RemoteCall [^RemoteRef this ^java.rmi.server.RemoteObject obj op ^Integer opnum ^Long hash]
+  (^java.rmi.server.RemoteCall [^RemoteRef this ^java.rmi.server.RemoteObject obj op ^Integer opnum ^Long hash]
     (-> this (.newCall obj op opnum hash))))
 
 (defn done

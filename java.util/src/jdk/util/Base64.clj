@@ -8,25 +8,25 @@
 
 
   Basic
-   Uses `The Base64 Alphabet` as specified in Table 1 of
+   Uses \"The Base64 Alphabet\" as specified in Table 1 of
       RFC 4648 and RFC 2045 for encoding and decoding operation.
       The encoder does not add any line feed (line separator)
       character. The decoder rejects data that contains characters
       outside the base64 alphabet.
 
   URL and Filename safe
-   Uses the `URL and Filename safe Base64 Alphabet` as specified
+   Uses the \"URL and Filename safe Base64 Alphabet\" as specified
       in Table 2 of RFC 4648 for encoding and decoding. The
       encoder does not add any line feed (line separator) character.
       The decoder rejects data that contains characters outside the
       base64 alphabet.
 
   MIME
-   Uses the `The Base64 Alphabet` as specified in Table 1 of
+   Uses the \"The Base64 Alphabet\" as specified in Table 1 of
       RFC 2045 for encoding and decoding operation. The encoded output
       must be represented in lines of no more than 76 characters each
-      and uses a carriage return '\r' followed immediately by
-      a linefeed '\n' as the line separator. No line separator
+      and uses a carriage return '\\r' followed immediately by
+      a linefeed '\\n' as the line separator. No line separator
       is added to the end of the encoded output. All line separators
       or other characters not found in the base64 alphabet table are
       ignored in decoding operation.
@@ -64,7 +64,7 @@
 
   returns: A Base64 encoder. - `java.util.Base64$Encoder`
 
-  throws: java.lang.IllegalArgumentException - if lineSeparator includes any character of `The Base64 Alphabet` as specified in Table 1 of RFC 2045."
+  throws: java.lang.IllegalArgumentException - if lineSeparator includes any character of \"The Base64 Alphabet\" as specified in Table 1 of RFC 2045."
   (^java.util.Base64$Encoder [^Integer line-length line-separator]
     (Base64/getMimeEncoder line-length line-separator))
   (^java.util.Base64$Encoder []

@@ -17,8 +17,8 @@
   representing nanosecond-of-second, which will always be between 0 and 999,999,999.
   The model is of a directed duration, meaning that the duration may be negative.
 
-  The duration is measured in `seconds`, but these are not necessarily identical to
-  the scientific `SI second` definition based on atomic clocks.
+  The duration is measured in \"seconds\", but these are not necessarily identical to
+  the scientific \"SI second\" definition based on atomic clocks.
   This difference only impacts durations measured near a leap-second and should not affect
   most applications.
   See Instant for a discussion as to the meaning of the second and time-scales.
@@ -170,14 +170,14 @@
 
    The string starts with an optional sign, denoted by the ASCII negative
    or positive symbol. If negative, the whole period is negated.
-   The ASCII letter `P` is next in upper or lower case.
+   The ASCII letter \"P\" is next in upper or lower case.
    There are then four sections, each consisting of a number and a suffix.
-   The sections have suffixes in ASCII of `D`, `H`, `M` and `S` for
+   The sections have suffixes in ASCII of \"D\", \"H\", \"M\" and \"S\" for
    days, hours, minutes and seconds, accepted in upper or lower case.
-   The suffixes must occur in order. The ASCII letter `T` must occur before
+   The suffixes must occur in order. The ASCII letter \"T\" must occur before
    the first occurrence, if any, of an hour, minute or second section.
-   At least one of the four sections must be present, and if `T` is present
-   there must be at least one section after the `T`.
+   At least one of the four sections must be present, and if \"T\" is present
+   there must be at least one section after the \"T\".
    The number part of each section must consist of one or more ASCII digits.
    The number may be prefixed by the ASCII negative or positive symbol.
    The number of days, hours and minutes must parse to an long.
@@ -191,14 +191,14 @@
    Examples:
 
 
-      `PT20.345S` -- parses as `20.345 seconds`
-      `PT15M`     -- parses as `15 minutes` (where a minute is 60 seconds)
-      `PT10H`     -- parses as `10 hours` (where an hour is 3600 seconds)
-      `P2D`       -- parses as `2 days` (where a day is 24 hours or 86400 seconds)
-      `P2DT3H4M`  -- parses as `2 days, 3 hours and 4 minutes`
-      `P-6H3M`    -- parses as `-6 hours and 3 minutes`
-      `-P6H3M`    -- parses as `-6 hours and -3 minutes`
-      `-P-6H+3M`  -- parses as `+6 hours and -3 minutes`
+      \"PT20.345S\" -- parses as \"20.345 seconds\"
+      \"PT15M\"     -- parses as \"15 minutes\" (where a minute is 60 seconds)
+      \"PT10H\"     -- parses as \"10 hours\" (where an hour is 3600 seconds)
+      \"P2D\"       -- parses as \"2 days\" (where a day is 24 hours or 86400 seconds)
+      \"P2DT3H4M\"  -- parses as \"2 days, 3 hours and 4 minutes\"
+      \"P-6H3M\"    -- parses as \"-6 hours and 3 minutes\"
+      \"-P6H3M\"    -- parses as \"-6 hours and -3 minutes\"
+      \"-P-6H+3M\"  -- parses as \"+6 hours and -3 minutes\"
 
   text - the text to parse, not null - `java.lang.CharSequence`
 
@@ -495,10 +495,10 @@
    Examples:
 
 
-      `20.345 seconds`                 -- `PT20.345S
-      `15 minutes` (15 * 60 seconds)   -- `PT15M`
-      `10 hours` (10 * 3600 seconds)   -- `PT10H`
-      `2 days` (2 * 86400 seconds)     -- `PT48H`
+      \"20.345 seconds\"                 -- \"PT20.345S
+      \"15 minutes\" (15 * 60 seconds)   -- \"PT15M\"
+      \"10 hours\" (10 * 3600 seconds)   -- \"PT10H\"
+      \"2 days\" (2 * 86400 seconds)     -- \"PT48H\"
    Note that multiples of 24 hours are not output as days to avoid confusion
    with Period.
 
@@ -720,7 +720,7 @@
   "Compares this duration to the specified Duration.
 
    The comparison is based on the total length of the durations.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
   other-duration - the other duration to compare to, not null - `java.time.Duration`
 

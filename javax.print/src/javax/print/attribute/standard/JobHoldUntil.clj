@@ -36,12 +36,12 @@
   year, month, day, hour, minute, and so on, create a Calendar object and set it to the Date from the
   JobHoldUntil attribute.
 
-  IPP Compatibility: Although IPP supports a `job-hold-until` attribute
-  specified as a keyword, IPP does not at this time support a `job-hold-until`
+  IPP Compatibility: Although IPP supports a \"job-hold-until\" attribute
+  specified as a keyword, IPP does not at this time support a \"job-hold-until\"
   attribute specified as a date and time. However, the date and time can be
   converted to one of the standard IPP keywords with some loss of precision;
   for example, a JobHoldUntil value with today's date and 9:00pm local time
-  might be converted to the standard IPP keyword `night`. The category name
+  might be converted to the standard IPP keyword \"night\". The category name
   returned by getName() gives the IPP attribute name."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.print.attribute.standard JobHoldUntil]))
@@ -79,7 +79,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class JobHoldUntil, the category is class JobHoldUntil itself.
@@ -93,7 +93,7 @@
   "Get the name of the category of which this attribute value is an
    instance.
 
-   For class JobHoldUntil, the category name is `job-hold-until`.
+   For class JobHoldUntil, the category name is \"job-hold-until\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^JobHoldUntil this]

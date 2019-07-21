@@ -32,7 +32,7 @@
   is specified via its fully qualified class name.
   Authentication proceeds down the module list in the exact order specified.
   If an application does not have a specific entry,
-  it defaults to the specific entry for `other`.
+  it defaults to the specific entry for \"other\".
 
    The Flag value controls the overall behavior as authentication
   proceeds down the stack.  The following represents a description of the
@@ -80,7 +80,7 @@
   For example, a LoginModule may define options to support
   debugging/testing capabilities.  The correct way to specify options in the
   Configuration is by using the following key-value pairing:
-  debug=`true`.  The key and value should be separated by an
+  debug=\"true\".  The key and value should be separated by an
   'equals' symbol, and the value should be surrounded by double quotes.
   If a String in the form, ${system.property}, occurs in the value,
   it will be expanded to the value of the system property.
@@ -95,12 +95,12 @@
   Login {
     com.sun.security.auth.module.UnixLoginModule required;
     com.sun.security.auth.module.Krb5LoginModule optional
-                    useTicketCache=`true`
-                    ticketCache=`${user.home}${/}tickets`;
+                    useTicketCache=\"true\"
+                    ticketCache=\"${user.home}${/}tickets\";
   };
 
    This Configuration specifies that an application named,
-  `Login`, requires users to first authenticate to the
+  \"Login\", requires users to first authenticate to the
   com.sun.security.auth.module.UnixLoginModule, which is
   required to succeed.  Even if the UnixLoginModule
   authentication fails, the
@@ -111,8 +111,8 @@
   (Required) succeeds.
 
    Also note that the LoginModule-specific options,
-  useTicketCache=`true` and
-  ticketCache=${user.home}${/}tickets`,
+  useTicketCache=\"true\" and
+  ticketCache=${user.home}${/}tickets\",
   are passed to the Krb5LoginModule.
   These options instruct the Krb5LoginModule to
   use the ticket cache at the specified location.
@@ -135,7 +135,7 @@
    Application code can directly subclass Configuration to provide a custom
   implementation.  In addition, an instance of a Configuration object can be
   constructed by invoking one of the getInstance factory methods
-  with a standard type.  The default policy type is `JavaLoginConfig`.
+  with a standard type.  The default policy type is \"JavaLoginConfig\".
   See the Configuration section in the
   Java Cryptography Architecture Standard Algorithm Name Documentation
   for a list of standard Configuration types."

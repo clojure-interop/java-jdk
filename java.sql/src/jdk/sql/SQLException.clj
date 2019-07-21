@@ -6,7 +6,7 @@
 
      a string describing the error.  This is used as the Java Exception
         message, available via the method getMesasge.
-     a `SQLstate` string, which follows either the XOPEN SQLstate conventions
+     a \"SQLstate\" string, which follows either the XOPEN SQLstate conventions
          or the SQL:2003 conventions.
         The values of the SQLState string are described in the appropriate spec.
         The DatabaseMetaData method getSQLStateType

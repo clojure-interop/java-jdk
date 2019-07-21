@@ -12,7 +12,7 @@
 
      Panel p = new Panel();
      p.setLayout(new BorderLayout());
-     p.add(new Button(`Okay`), BorderLayout.SOUTH);
+     p.add(new Button(\"Okay\"), BorderLayout.SOUTH);
   As a convenience, BorderLayout interprets the
   absence of a string specification the same as the constant
   CENTER:
@@ -75,11 +75,11 @@
   public class buttonDir extends Applet {
     public void init() {
       setLayout(new BorderLayout());
-      add(new Button(`North`), BorderLayout.NORTH);
-      add(new Button(`South`), BorderLayout.SOUTH);
-      add(new Button(`East`), BorderLayout.EAST);
-      add(new Button(`West`), BorderLayout.WEST);
-      add(new Button(`Center`), BorderLayout.CENTER);
+      add(new Button(\"North\"), BorderLayout.NORTH);
+      add(new Button(\"South\"), BorderLayout.SOUTH);
+      add(new Button(\"East\"), BorderLayout.EAST);
+      add(new Button(\"West\"), BorderLayout.WEST);
+      add(new Button(\"Center\"), BorderLayout.CENTER);
     }
   }"
   (:refer-clojure :only [require comment defn ->])

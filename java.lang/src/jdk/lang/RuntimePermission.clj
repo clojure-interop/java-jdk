@@ -1,6 +1,6 @@
 (ns jdk.lang.RuntimePermission
   "This class is for runtime permissions. A RuntimePermission
-  contains a name (also referred to as a `target name`) but
+  contains a name (also referred to as a \"target name\") but
   no actions list; you either have the named permission
   or you don't.
 
@@ -8,9 +8,9 @@
   The target name is the name of the runtime permission (see below). The
   naming convention follows the  hierarchical property naming convention.
   Also, an asterisk
-  may appear at the end of the name, following a `.`, or by itself, to
-  signify a wildcard match. For example: `loadLibrary.*` and `*` signify a
-  wildcard match, while `*loadLibrary` and `a*b` do not.
+  may appear at the end of the name, following a \".\", or by itself, to
+  signify a wildcard match. For example: \"loadLibrary.*\" and \"*\" signify a
+  wildcard match, while \"*loadLibrary\" and \"a*b\" do not.
 
   The following table lists all the possible RuntimePermission target names,
   and for each provides a description of what the permission allows
@@ -104,10 +104,10 @@
     Halting of the Java Virtual Machine with the specified exit status
     This allows an attacker to mount a denial-of-service attack
   by automatically forcing the virtual machine to halt.
-  Note: The `exitVM.*` permission is automatically granted to all code
+  Note: The \"exitVM.*\" permission is automatically granted to all code
   loaded from the application class path, thus enabling applications
-  to terminate themselves. Also, the `exitVM` permission is equivalent to
-  `exitVM.*`.
+  to terminate themselves. Also, the \"exitVM\" permission is equivalent to
+  \"exitVM.*\".
 
 
 
@@ -132,7 +132,7 @@
     Setting of System.out, System.in, and System.err
     This allows changing the value of the standard system streams.
   An attacker may change System.in to monitor and
-  steal user input, or may set System.err to a `null` OutputStream,
+  steal user input, or may set System.err to a \"null\" OutputStream,
   which would hide any error messages sent to System.err.
 
 

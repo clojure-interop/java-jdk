@@ -19,7 +19,7 @@
   overwrite mode, setOverwriteMode(true). For example:
 
 
-  DecimalFormat decimalFormat = new DecimalFormat(`0.000E0`);
+  DecimalFormat decimalFormat = new DecimalFormat(\"0.000E0\");
   NumberFormatter textFormatter = new NumberFormatter(decimalFormat);
   textFormatter.setOverwriteMode(true);
   textFormatter.setAllowsInvalid(false);

@@ -24,8 +24,8 @@
       }
 
       public static Measure from(CompositeData cd) {
-          return new Measure((String) cd.get(`units`),
-                             (Number) cd.get(`value`));
+          return new Measure((String) cd.get(\"units\"),
+                             (Number) cd.get(\"value\"));
       }
 
       public String getUnits() {
@@ -33,7 +33,7 @@
       }
 
       // Can't be called getValue(), because Number is not a valid type
-      // in an MXBean, so the implied `value` property would be rejected.
+      // in an MXBean, so the implied \"value\" property would be rejected.
       public Number _getValue() {
           return value;
       }
@@ -47,8 +47,8 @@
                   itemDescriptions.add(ct.getDescription(item));
                   itemTypes.add(ct.getType(item));
               }
-              itemNames.add(`value`);
-              itemDescriptions.add(`long or double value of the measure`);
+              itemNames.add(\"value\");
+              itemDescriptions.add(\"long or double value of the measure\");
               itemTypes.add((value instanceof Long) ? SimpleType.LONG :
                             SimpleType.DOUBLE);
               CompositeType xct =
@@ -59,7 +59,7 @@
                                     itemTypes.toArray(new OpenType<?>[0]));
               CompositeData cd =
                   new CompositeDataSupport(xct,
-                                           new String[] {`units`, `value`},
+                                           new String[] {\"units\", \"value\"},
                                            new Object[] {units, value});
               assert ct.isValue(cd);  // check we've done it right
               return cd;

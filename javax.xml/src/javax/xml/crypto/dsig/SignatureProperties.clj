@@ -5,12 +5,12 @@
   The XML Schema Definition is defined as:
 
 
- <element name=`SignatureProperties` type=`ds:SignaturePropertiesType`/>
-    <complexType name=`SignaturePropertiesType`>
+ <element name=\"SignatureProperties\" type=\"ds:SignaturePropertiesType\"/>
+    <complexType name=\"SignaturePropertiesType\">
       <sequence>
-        <element ref=`ds:SignatureProperty` maxOccurs=`unbounded`/>
+        <element ref=\"ds:SignatureProperty\" maxOccurs=\"unbounded\"/>
       </sequence>
-      <attribute name=`Id` type=`ID` use=`optional`/>
+      <attribute name=\"Id\" type=\"ID\" use=\"optional\"/>
     </complexType>
 
   A SignatureProperties instance may be created by invoking the
@@ -19,9 +19,9 @@
 
 
 
-    XMLSignatureFactory factory = XMLSignatureFactory.getInstance(`DOM`);
+    XMLSignatureFactory factory = XMLSignatureFactory.getInstance(\"DOM\");
     SignatureProperties properties =
-       factory.newSignatureProperties(props, `signature-properties-1`);"
+       factory.newSignatureProperties(props, \"signature-properties-1\");"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.crypto.dsig SignatureProperties]))
 

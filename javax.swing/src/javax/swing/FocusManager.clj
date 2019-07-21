@@ -48,7 +48,7 @@
 
    If a SecurityManager is installed,
    the calling thread must be granted the AWTPermission
-   `replaceKeyboardFocusManager` in order to replace the
+   \"replaceKeyboardFocusManager\" in order to replace the
    the current KeyboardFocusManager.
    If this permission is not granted,
    this method will throw a SecurityException,

@@ -31,7 +31,7 @@
    being used for details on how to pass in processor-specific
    options.  For example, a command-line implementation may
    distinguish processor-specific options by prefixing them with a
-   known string like `-A`; other tool implementations may
+   known string like \"-A\"; other tool implementations may
    follow different conventions or provide alternative mechanisms.
    A given implementation may also provide implementation-specific
    ways of finding options passed to the tool in addition to the

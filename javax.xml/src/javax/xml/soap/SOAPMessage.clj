@@ -1,5 +1,5 @@
 (ns javax.xml.soap.SOAPMessage
-  "The root class for all SOAP messages. As transmitted on the `wire`, a SOAP
+  "The root class for all SOAP messages. As transmitted on the \"wire\", a SOAP
   message is an XML document or a MIME message whose first body part is an
   XML/SOAP document.
 
@@ -76,8 +76,8 @@
   "Static Constant.
 
   Specifies the character type encoding for the SOAP Message. Valid values
-   include `utf-8` and `utf-16`. See vendor documentation for additional
-   supported values. The default is `utf-8`.
+   include \"utf-8\" and \"utf-16\". See vendor documentation for additional
+   supported values. The default is \"utf-8\".
 
   type: java.lang.String"
   SOAPMessage/CHARACTER_SET_ENCODING)
@@ -86,8 +86,8 @@
   "Static Constant.
 
   Specifies whether the SOAP Message will contain an XML declaration when
-   it is sent. The only valid values are `true` and `false`. The default is
-   `false`.
+   it is sent. The only valid values are \"true\" and \"false\". The default is
+   \"false\".
 
   type: java.lang.String"
   SOAPMessage/WRITE_XML_DECLARATION)
@@ -265,17 +265,17 @@
    The valid property names include
    WRITE_XML_DECLARATION  and
    CHARACTER_SET_ENCODING. All of these standard SAAJ
-   properties are prefixed by `javax.xml.soap`. Vendors may also add
+   properties are prefixed by \"javax.xml.soap\". Vendors may also add
    implementation specific properties. These properties must be prefixed
    with package names that are unique to the vendor.
 
-   Setting the property WRITE_XML_DECLARATION to `true`
+   Setting the property WRITE_XML_DECLARATION to \"true\"
    will cause an XML Declaration to be written out at the start of the SOAP
-   message. The default value of `false` suppresses this declaration.
+   message. The default value of \"false\" suppresses this declaration.
 
    The property CHARACTER_SET_ENCODING defaults to the value
-   `utf-8` which causes the SOAP message to be encoded using
-   UTF-8. Setting CHARACTER_SET_ENCODING to `utf-16`
+   \"utf-8\" which causes the SOAP message to be encoded using
+   UTF-8. Setting CHARACTER_SET_ENCODING to \"utf-16\"
    causes the SOAP message to be encoded using UTF-16.
 
    Some implementations may allow encodings in addition to UTF-8 and
@@ -324,7 +324,7 @@
    Content-Type.
 
   content - an Object containing the content for the AttachmentPart object to be created - `java.lang.Object`
-  content-type - a String object giving the type of content; examples are `text/xml`, `text/plain`, and `image/jpeg` - `java.lang.String`
+  content-type - a String object giving the type of content; examples are \"text/xml\", \"text/plain\", and \"image/jpeg\" - `java.lang.String`
 
   returns: a new AttachmentPart object that contains the
            given data - `javax.xml.soap.AttachmentPart`

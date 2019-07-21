@@ -68,7 +68,7 @@
 (defn close
   "Close this output stream.
 
-  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(\"control\")."
   ([^SocketHandler this]
     (-> this (.close))))
 

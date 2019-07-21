@@ -16,7 +16,7 @@
 (defn get-attributes
   "Obtains this Print Job's set of printing attributes.
    The returned attribute set object is unmodifiable.
-   The returned attribute set object is a `snapshot` of this Print Job's
+   The returned attribute set object is a \"snapshot\" of this Print Job's
    attribute set at the time of the getAttributes() method
    call; that is, the returned attribute set's object's contents will
    not be updated if this Print Job's attribute set's contents change

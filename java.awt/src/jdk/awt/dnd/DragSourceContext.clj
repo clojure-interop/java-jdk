@@ -25,7 +25,7 @@
   and the pointer is over a target that accepts
   the move action, the default move cursor is shown. When
   the pointer is over an area that does not accept the transfer,
-  the default `no drop` cursor is shown.
+  the default \"no drop\" cursor is shown.
 
   This default handling mechanism is disabled when a custom cursor is set
   by the setCursor(java.awt.Cursor) method. When the default handling is disabled,

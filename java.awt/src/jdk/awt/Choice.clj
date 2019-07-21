@@ -7,16 +7,16 @@
 
 
   Choice ColorChooser = new Choice();
-  ColorChooser.add(`Green`);
-  ColorChooser.add(`Red`);
-  ColorChooser.add(`Blue`);
+  ColorChooser.add(\"Green\");
+  ColorChooser.add(\"Red\");
+  ColorChooser.add(\"Blue\");
 
   After this choice menu has been added to a panel,
   it appears as follows in its normal state:
 
 
 
-  In the picture, `Green` is the current choice.
+  In the picture, \"Green\" is the current choice.
   Pushing the mouse button down on the object causes a menu to
   appear with the current choice highlighted.
 

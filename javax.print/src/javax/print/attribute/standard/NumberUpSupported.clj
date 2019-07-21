@@ -4,7 +4,7 @@
 
   IPP Compatibility: The NumberUpSupported attribute's canonical array
   form gives the lower and upper bound for each range of number-up to be
-  included in an IPP `number-up-supported` attribute. See class SetOfIntegerSyntax for an
+  included in an IPP \"number-up-supported\" attribute. See class SetOfIntegerSyntax for an
   explanation of canonical array form. The category name returned by
   getName() gives the IPP attribute name."
   (:refer-clojure :only [require comment defn ->])
@@ -47,7 +47,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class NumberUpSupported, the
@@ -63,7 +63,7 @@
    instance.
 
    For class NumberUpSupported, the
-   category name is `number-up-supported`.
+   category name is \"number-up-supported\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^NumberUpSupported this]

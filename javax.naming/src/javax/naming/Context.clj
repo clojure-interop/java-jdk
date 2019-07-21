@@ -92,7 +92,7 @@
 
   It is implementation-dependent when environment properties are used
   and/or verified for validity.  For example, some of the
-  security-related properties are used by service providers to `log in`
+  security-related properties are used by service providers to \"log in\"
   to the directory.  This login process might occur at the time the
   context is created, or the first time a method is invoked on the
   context.  When, and whether this occurs at all, is
@@ -118,7 +118,7 @@
   A JNDI resource file is a file in the properties file format (see
   java.util.Properties),
   containing a list of key/value pairs.
-  The key is the name of the property (e.g. `java.naming.factory.object`)
+  The key is the name of the property (e.g. \"java.naming.factory.object\")
   and the value is a string in the format defined
   for that property.  Here is an example of a JNDI resource file:
 
@@ -129,7 +129,7 @@
 
   The JNDI class library reads the resource files and makes the property
   values freely available.  Thus JNDI resource files should be considered
-  to be `world readable`, and sensitive information such as clear-text
+  to be \"world readable\", and sensitive information such as clear-text
   passwords should not be stored there.
 
   There are two kinds of JNDI resource files:
@@ -144,7 +144,7 @@
 
   where prefix is
   the package name of the provider's context implementation(s),
-  with each period (`.`) converted to a slash (`/`).
+  with each period (\".\") converted to a slash (\"/\").
 
   For example, suppose a service provider defines a context
   implementation with class name com.sun.jndi.ldap.LdapCtx.
@@ -193,7 +193,7 @@
   JNDI uses the first value found or, in a few cases where it makes
   sense to do so, it concatenates all of the values (details are given
   below).
-  For example, if the `java.naming.factory.object` property is found in
+  For example, if the \"java.naming.factory.object\" property is found in
   three jndi.properties resource files, the
   list of object factories is a concatenation of the property
   values from all three files.
@@ -260,11 +260,11 @@
    composite name.  However, an attempt destroy the context using
    this composite name will fail with
    NotContextException, because the foreign context is not
-   a `subcontext` of the context in which it is bound.
+   a \"subcontext\" of the context in which it is bound.
    Instead, use unbind() to remove the
    binding of the foreign context.  Destroying the foreign context
    requires that the destroySubcontext() be performed
-   on a context from the foreign context's `native` naming system.
+   on a context from the foreign context's \"native\" naming system.
 
   name - the name of the context to be destroyed; may not be empty - `javax.naming.Name`
 
@@ -305,21 +305,21 @@
    same object, but relative to the ancestor context.  None of the
    names may be null.
 
-   For example, if this context is named `wiz.com` relative
+   For example, if this context is named \"wiz.com\" relative
    to the initial context, then
 
 
-    composeName(`east`, `wiz.com`)
-   might return `east.wiz.com`.
-   If instead this context is named `org/research`, then
+    composeName(\"east\", \"wiz.com\")
+   might return \"east.wiz.com\".
+   If instead this context is named \"org/research\", then
 
 
-    composeName(`user/jane`, `org/research`)
-   might return `org/research/user/jane` while
+    composeName(\"user/jane\", \"org/research\")
+   might return \"org/research/user/jane\" while
 
 
-    composeName(`user/jane`, `research`)
-   returns `research/user/jane`.
+    composeName(\"user/jane\", \"research\")
+   returns \"research/user/jane\".
 
   name - a name relative to this context - `javax.naming.Name`
   prefix - the name of this context relative to one of its ancestors - `javax.naming.Name`
@@ -518,7 +518,7 @@
 (defn get-name-in-namespace
   "Retrieves the full name of this context within its own namespace.
 
-    Many naming services have a notion of a `full name` for objects
+    Many naming services have a notion of a \"full name\" for objects
    in their respective namespaces.  For example, an LDAP entry has
    a distinguished name, and a DNS record has a fully qualified name.
    This method allows the client application to retrieve this name.

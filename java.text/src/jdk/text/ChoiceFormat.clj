@@ -11,7 +11,7 @@
   If there is no match, then either the first or last index is used, depending
   on whether the number (X) is too low or too high.  If the limit array is not
   in ascending order, the results of formatting will be incorrect.  ChoiceFormat
-  also accepts \u221E as equivalent to infinity(INF).
+  also accepts \\u221E as equivalent to infinity(INF).
 
 
   Note:
@@ -29,10 +29,10 @@
 
 
       limits = {1,2,3,4,5,6,7}
-      formats = {`Sun`,`Mon`,`Tue`,`Wed`,`Thur`,`Fri`,`Sat`}
+      formats = {\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thur\",\"Fri\",\"Sat\"}
 
       limits = {0, 1, ChoiceFormat.nextDouble(1)}
-      formats = {`no files`, `one file`, `many files`}
+      formats = {\"no files\", \"one file\", \"many files\"}
       (nextDouble can be used to get the next higher double, to
       make the half-open interval.)
 
@@ -43,12 +43,12 @@
 
 
   double[] limits = {1,2,3,4,5,6,7};
-  String[] dayOfWeekNames = {`Sun`,`Mon`,`Tue`,`Wed`,`Thur`,`Fri`,`Sat`};
+  String[] dayOfWeekNames = {\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thur\",\"Fri\",\"Sat\"};
   ChoiceFormat form = new ChoiceFormat(limits, dayOfWeekNames);
   ParsePosition status = new ParsePosition(0);
   for (double i = 0.0; i <= 8.0; +i) {
       status.setIndex(0);
-      System.out.println(i  ` -> `  form.format(i)  ` -> `
+      System.out.println(i  \" -> \"  form.format(i)  \" -> \"
                                 form.parse(form.format(i),status));
   }
 
@@ -57,12 +57,12 @@
 
 
   double[] filelimits = {0,1,2};
-  String[] filepart = {`are no files`,`is one file`,`are {2} files`};
+  String[] filepart = {\"are no files\",\"is one file\",\"are {2} files\"};
   ChoiceFormat fileform = new ChoiceFormat(filelimits, filepart);
   Format[] testFormats = {fileform, null, NumberFormat.getInstance()};
-  MessageFormat pattform = new MessageFormat(`There {0} on {1}`);
+  MessageFormat pattform = new MessageFormat(\"There {0} on {1}\");
   pattform.setFormats(testFormats);
-  Object[] testArgs = {null, `ADisk`, null};
+  Object[] testArgs = {null, \"ADisk\", null};
   for (int i = 0; i < 4; +i) {
       testArgs[0] = new Integer(i);
       testArgs[2] = testArgs[0];
@@ -76,19 +76,19 @@
 
 
   ChoiceFormat fmt = new ChoiceFormat(
-       `-1#is negative| 0#is zero or fraction | 1#is one |1.0<is 1+ |2#is two |2<is more than 2.`);
-  System.out.println(`Formatter Pattern : `  fmt.toPattern());
+       \"-1#is negative| 0#is zero or fraction | 1#is one |1.0<is 1+ |2#is two |2<is more than 2.\");
+  System.out.println(\"Formatter Pattern : \"  fmt.toPattern());
 
-  System.out.println(`Format with -INF : `  fmt.format(Double.NEGATIVE_INFINITY));
-  System.out.println(`Format with -1.0 : `  fmt.format(-1.0));
-  System.out.println(`Format with 0 : `  fmt.format(0));
-  System.out.println(`Format with 0.9 : `  fmt.format(0.9));
-  System.out.println(`Format with 1.0 : `  fmt.format(1));
-  System.out.println(`Format with 1.5 : `  fmt.format(1.5));
-  System.out.println(`Format with 2 : `  fmt.format(2));
-  System.out.println(`Format with 2.1 : `  fmt.format(2.1));
-  System.out.println(`Format with NaN : `  fmt.format(Double.NaN));
-  System.out.println(`Format with INF : `  fmt.format(Double.POSITIVE_INFINITY));
+  System.out.println(\"Format with -INF : \"  fmt.format(Double.NEGATIVE_INFINITY));
+  System.out.println(\"Format with -1.0 : \"  fmt.format(-1.0));
+  System.out.println(\"Format with 0 : \"  fmt.format(0));
+  System.out.println(\"Format with 0.9 : \"  fmt.format(0.9));
+  System.out.println(\"Format with 1.0 : \"  fmt.format(1));
+  System.out.println(\"Format with 1.5 : \"  fmt.format(1.5));
+  System.out.println(\"Format with 2 : \"  fmt.format(2));
+  System.out.println(\"Format with 2.1 : \"  fmt.format(2.1));
+  System.out.println(\"Format with NaN : \"  fmt.format(Double.NaN));
+  System.out.println(\"Format with INF : \"  fmt.format(Double.POSITIVE_INFINITY));
 
   And the output result would be like the following:
 

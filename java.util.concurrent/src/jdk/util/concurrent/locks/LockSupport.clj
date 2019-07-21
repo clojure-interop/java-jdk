@@ -17,10 +17,10 @@
   to unpark it will preserve liveness, due to the
   permit. Additionally, park will return if the caller's
   thread was interrupted, and timeout versions are supported. The
-  park method may also return at any other time, for `no
-  reason`, so in general must be invoked within a loop that rechecks
+  park method may also return at any other time, for \"no
+  reason\", so in general must be invoked within a loop that rechecks
   conditions upon return. In this sense park serves as an
-  optimization of a `busy wait` that does not waste as much time
+  optimization of a \"busy wait\" that does not waste as much time
   spinning, but must be paired with an unpark to be
   effective.
 

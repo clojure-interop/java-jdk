@@ -119,7 +119,7 @@
 (defn get-ui-class-id
   "Returns the class ID for the UI.
 
-  returns: the string `TextPaneUI` - `java.lang.String`"
+  returns: the string \"TextPaneUI\" - `java.lang.String`"
   (^java.lang.String [^JTextPane this]
     (-> this (.getUIClassID))))
 

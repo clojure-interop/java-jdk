@@ -103,7 +103,7 @@
   "Sets this applet's stub. This is done automatically by the system.
    If there is a security manager, its  checkPermission
    method is called with the
-   AWTPermission(`setAppletStub`)
+   AWTPermission(\"setAppletStub\")
    permission if a stub has already been set.
 
   stub - the new stub. - `java.applet.AppletStub`
@@ -179,12 +179,12 @@
    example, if this applet is specified as
 
 
-   <applet code=`Clock` width=50 height=50>
-   <param name=Color value=`blue`>
+   <applet code=\"Clock\" width=50 height=50>
+   <param name=Color value=\"blue\">
    </applet>
 
-   then a call to getParameter(`Color`) returns the
-   value `blue`.
+   then a call to getParameter(\"Color\") returns the
+   value \"blue\".
 
    The name argument is case insensitive.
 
@@ -241,7 +241,7 @@
 
 (defn show-status
   "Requests that the argument string be displayed in the
-   `status window`. Many browsers and applet viewers
+   \"status window\". Many browsers and applet viewers
    provide such a window, where the application can inform users of
    its current state.
 
@@ -311,9 +311,9 @@
 
 
    String pinfo[][] = {
-     {`fps`,    `1-10`,    `frames per second`},
-     {`repeat`, `boolean`, `repeat image loop`},
-     {`imgs`,   `url`,     `images directory`}
+     {\"fps\",    \"1-10\",    \"frames per second\"},
+     {\"repeat\", \"boolean\", \"repeat image loop\"},
+     {\"imgs\",   \"url\",     \"images directory\"}
    };
 
    The implementation of this method provided by the

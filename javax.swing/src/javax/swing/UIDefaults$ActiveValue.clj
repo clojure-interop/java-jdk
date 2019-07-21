@@ -12,7 +12,7 @@
        }
    };
 
-   uiDefaultsTable.put(`MyRenderer`, cellRendererActiveValue);"
+   uiDefaultsTable.put(\"MyRenderer\", cellRendererActiveValue);"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing UIDefaults$ActiveValue]))
 

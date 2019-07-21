@@ -23,7 +23,7 @@
 
    If a default context was set using the SSLContext.setDefault() method, it is returned. Otherwise, the first
    call of this method triggers the call
-   SSLContext.getInstance(`Default`).
+   SSLContext.getInstance(\"Default\").
    If successful, that object is made the default SSL context and returned.
 
    The default context is immediately

@@ -8,7 +8,7 @@
 
 
   if (list.getCellRenderer() == null) {
-      list.setCellRenderer((ListCellRenderer)(UIManager.get(`List.cellRenderer`)));
+      list.setCellRenderer((ListCellRenderer)(UIManager.get(\"List.cellRenderer\")));
   }
   At uninstallUI() time we reset the property to null if its value
   is an instance of UIResource:
@@ -21,13 +21,13 @@
   properties font, foreground, and background.  If one of these
   properties isn't initialized, or is explicitly set to null,
   its container provides the value.  For this reason the
-  `== null` is unreliable when installUI() is called
+  \"== null\" is unreliable when installUI() is called
   to dynamically change a components look and feel.  So at installUI()
   time we check to see if the current value is a UIResource:
 
 
   if (!(list.getFont() instanceof UIResource)) {
-      list.setFont(UIManager.getFont(`List.font`));
+      list.setFont(UIManager.getFont(\"List.font\"));
   }"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.plaf UIResource]))

@@ -15,14 +15,14 @@
   (^XAException []
     (new XAException )))
 
-(defn -error-code
+(defn error-code
   "Instance Field.
 
   The error code with which to create the SystemException.
 
   type: int"
-  [this]
-  (-> this .-errorCode))
+  (^Integer [^XAException this]
+    (-> this .-errorCode)))
 
 (def *-xa-rbbase
   "Static Constant.

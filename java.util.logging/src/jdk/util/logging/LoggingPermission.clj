@@ -3,7 +3,7 @@
   that is running with a SecurityManager calls one of the logging
   control methods (such as Logger.setLevel).
 
-  Currently there is only one named LoggingPermission.  This is `control`
+  Currently there is only one named LoggingPermission.  This is \"control\"
   and it grants the ability to control the logging configuration, for
   example by adding or removing Handlers, by adding or removing Filters,
   or by changing logging levels.
@@ -19,7 +19,7 @@
 
   Creates a new LoggingPermission object.
 
-  name - Permission name. Must be `control`. - `java.lang.String`
+  name - Permission name. Must be \"control\". - `java.lang.String`
   actions - Must be either null or the empty string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."

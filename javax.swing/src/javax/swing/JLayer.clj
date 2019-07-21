@@ -49,12 +49,12 @@
 
               // overridden method which catches MouseMotion events
               public void eventDispatched(AWTEvent e, JLayer<? extends JComponent> l) {
-                  System.out.println(`AWTEvent detected: `  e);
+                  System.out.println(\"AWTEvent detected: \"  e);
               }
           };
           // create a component to be decorated with the layer
           JPanel panel = new JPanel();
-          panel.add(new JButton(`JButton`));
+          panel.add(new JButton(\"JButton\"));
 
           // create the layer for the panel using our custom layerUI
           return new JLayer<JComponent>(panel, layerUI);
@@ -153,7 +153,7 @@
   orientation - Either SwingConstants.VERTICAL or SwingConstants.HORIZONTAL. - `int`
   direction - Less than zero to scroll up/left, greater than zero for down/right. - `int`
 
-  returns: the `block` increment for scrolling in the specified direction - `int`"
+  returns: the \"block\" increment for scrolling in the specified direction - `int`"
   (^Integer [^JLayer this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableBlockIncrement visible-rect orientation direction))))
 
@@ -174,7 +174,7 @@
   orientation - Either SwingConstants.VERTICAL or SwingConstants.HORIZONTAL. - `int`
   direction - Less than zero to scroll up/left, greater than zero for down/right. - `int`
 
-  returns: The `unit` increment for scrolling in the specified direction.
+  returns: The \"unit\" increment for scrolling in the specified direction.
            This value should always be positive. - `int`"
   (^Integer [^JLayer this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))

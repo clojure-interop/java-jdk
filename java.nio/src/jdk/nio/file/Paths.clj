@@ -13,8 +13,8 @@
    of name elements (see Path) and is joined to form a path string.
    The details as to how the Strings are joined is provider specific but
    typically they will be joined using the name-separator as the separator. For example, if the name separator is
-   `/` and getPath(`/foo`,`bar`,`gus`) is invoked, then the
-   path string `/foo/bar/gus` is converted to a Path.
+   \"/\" and getPath(\"/foo\",\"bar\",\"gus\") is invoked, then the
+   path string \"/foo/bar/gus\" is converted to a Path.
    A Path representing an empty path is returned if first
    is the empty string and more does not contain any non-empty
    strings.
@@ -29,7 +29,7 @@
 
 
        Path dir = ...
-       Path path = dir.resolve(`file`);
+       Path path = dir.resolve(\"file\");
 
   first - the path string or initial part of the path string - `java.lang.String`
   more - additional strings to be joined to form the path string - `java.lang.String`

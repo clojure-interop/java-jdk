@@ -2,7 +2,7 @@
   "A capability-based lock with three modes for controlling read/write
   access.  The state of a StampedLock consists of a version and mode.
   Lock acquisition methods return a stamp that represents and
-  controls access with respect to a lock state; `try` versions of
+  controls access with respect to a lock state; \"try\" versions of
   these methods may instead return the special value zero to
   represent failure to acquire access. Lock release and conversion
   methods require stamps as arguments, and fail if they do not match
@@ -43,7 +43,7 @@
 
 
   This class also supports methods that conditionally provide
-  conversions across the three modes. For example, method tryConvertToWriteLock(long) attempts to `upgrade` a mode, returning
+  conversions across the three modes. For example, method tryConvertToWriteLock(long) attempts to \"upgrade\" a mode, returning
   a valid write stamp if (1) already in writing mode (2) in reading
   mode and there are no other readers or (3) in optimistic mode and
   the lock is available. The forms of these methods are designed to
@@ -69,9 +69,9 @@
   locking.
 
   The scheduling policy of StampedLock does not consistently
-  prefer readers over writers or vice versa.  All `try` methods are
+  prefer readers over writers or vice versa.  All \"try\" methods are
   best-effort and do not necessarily conform to any scheduling or
-  fairness policy. A zero return from any `try` method for acquiring
+  fairness policy. A zero return from any \"try\" method for acquiring
   or converting locks does not carry any information about the state
   of the lock; a subsequent invocation may succeed.
 
@@ -198,7 +198,7 @@
    represents holding a lock, releases it and returns an
    observation stamp.  Or, if an optimistic read, returns it if
    validated. This method returns zero in all other cases, and so
-   may be useful as a form of `tryUnlock`.
+   may be useful as a form of \"tryUnlock\".
 
   stamp - a stamp - `long`
 
@@ -253,8 +253,8 @@
 
 (defn to-string
   "Returns a string identifying this lock, as well as its lock
-   state.  The state, in brackets, includes the String `Unlocked` or the String `Write-locked` or the String
-   `Read-locks:` followed by the current number of
+   state.  The state, in brackets, includes the String \"Unlocked\" or the String \"Write-locked\" or the String
+   \"Read-locks:\" followed by the current number of
    read-locks held.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"

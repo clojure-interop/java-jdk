@@ -18,7 +18,7 @@
    On systems without a mouse, returns null.
 
    If there is a security manager, its checkPermission method
-   is called with an AWTPermission(`watchMousePointer`)
+   is called with an AWTPermission(\"watchMousePointer\")
    permission before creating and returning a PointerInfo
    object. This may result in a SecurityException.
 

@@ -9,9 +9,9 @@
   "Returns a localized name for the given
    IETF BCP47 language code and the given locale that is appropriate for
    display to the user.
-   For example, if languageCode is `fr` and locale
-   is en_US, getDisplayLanguage() will return `French`; if languageCode
-   is `en` and locale is fr_FR, getDisplayLanguage() will return `anglais`.
+   For example, if languageCode is \"fr\" and locale
+   is en_US, getDisplayLanguage() will return \"French\"; if languageCode
+   is \"en\" and locale is fr_FR, getDisplayLanguage() will return \"anglais\".
    If the name returned cannot be localized according to locale,
    (say, the provider does not have a Japanese name for Croatian),
    this method returns null.
@@ -30,9 +30,9 @@
   "Returns a localized name for the given
    IETF BCP47 script code and the given locale that is appropriate for
    display to the user.
-   For example, if scriptCode is `Latn` and locale
-   is en_US, getDisplayScript() will return `Latin`; if scriptCode
-   is `Cyrl` and locale is fr_FR, getDisplayScript() will return `cyrillique`.
+   For example, if scriptCode is \"Latn\" and locale
+   is en_US, getDisplayScript() will return \"Latin\"; if scriptCode
+   is \"Cyrl\" and locale is fr_FR, getDisplayScript() will return \"cyrillique\".
    If the name returned cannot be localized according to locale,
    (say, the provider does not have a Japanese name for Cyrillic),
    this method returns null. The default implementation returns null.
@@ -51,9 +51,9 @@
   "Returns a localized name for the given
    IETF BCP47 region code (either ISO 3166 country code or UN M.49 area
    codes) and the given locale that is appropriate for display to the user.
-   For example, if countryCode is `FR` and locale
-   is en_US, getDisplayCountry() will return `France`; if countryCode
-   is `US` and locale is fr_FR, getDisplayCountry() will return `Etats-Unis`.
+   For example, if countryCode is \"FR\" and locale
+   is en_US, getDisplayCountry() will return \"France\"; if countryCode
+   is \"US\" and locale is fr_FR, getDisplayCountry() will return \"Etats-Unis\".
    If the name returned cannot be localized according to locale,
    (say, the provider does not have a Japanese name for Croatia),
    this method returns null.

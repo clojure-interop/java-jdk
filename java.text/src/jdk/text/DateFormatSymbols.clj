@@ -93,21 +93,21 @@
     (DateFormatSymbols/getInstance )))
 
 (defn set-short-weekdays
-  "Sets short weekday strings. For example: `Sun`, `Mon`, etc.
+  "Sets short weekday strings. For example: \"Sun\", \"Mon\", etc.
 
   new-short-weekdays - the new short weekday strings. The array should be indexed by Calendar.SUNDAY, Calendar.MONDAY, etc. - `java.lang.String[]`"
   ([^DateFormatSymbols this new-short-weekdays]
     (-> this (.setShortWeekdays new-short-weekdays))))
 
 (defn get-months
-  "Gets month strings. For example: `January`, `February`, etc.
+  "Gets month strings. For example: \"January\", \"February\", etc.
 
    If the language requires different forms for formatting and
    stand-alone usages, this method returns month names in the
    formatting form. For example, the preferred month name for
    January in the Czech language is ledna in the
    formatting form, while it is leden in the stand-alone
-   form. This method returns `ledna` in this case. Refer
+   form. This method returns \"ledna\" in this case. Refer
    to the
    Calendar Elements in the Unicode Locale Data Markup Language
    (LDML) specification for more details.
@@ -117,28 +117,28 @@
     (-> this (.getMonths))))
 
 (defn set-short-months
-  "Sets short month strings. For example: `Jan`, `Feb`, etc.
+  "Sets short month strings. For example: \"Jan\", \"Feb\", etc.
 
   new-short-months - the new short month strings. - `java.lang.String[]`"
   ([^DateFormatSymbols this new-short-months]
     (-> this (.setShortMonths new-short-months))))
 
 (defn set-months
-  "Sets month strings. For example: `January`, `February`, etc.
+  "Sets month strings. For example: \"January\", \"February\", etc.
 
   new-months - the new month strings. - `java.lang.String[]`"
   ([^DateFormatSymbols this new-months]
     (-> this (.setMonths new-months))))
 
 (defn set-am-pm-strings
-  "Sets ampm strings. For example: `AM` and `PM`.
+  "Sets ampm strings. For example: \"AM\" and \"PM\".
 
   new-ampms - the new ampm strings. - `java.lang.String[]`"
   ([^DateFormatSymbols this new-ampms]
     (-> this (.setAmPmStrings new-ampms))))
 
 (defn get-weekdays
-  "Gets weekday strings. For example: `Sunday`, `Monday`, etc.
+  "Gets weekday strings. For example: \"Sunday\", \"Monday\", etc.
 
   returns: the weekday strings. Use Calendar.SUNDAY,
    Calendar.MONDAY, etc. to index the result array. - `java.lang.String[]`"
@@ -146,35 +146,35 @@
     (-> this (.getWeekdays))))
 
 (defn set-eras
-  "Sets era strings. For example: `AD` and `BC`.
+  "Sets era strings. For example: \"AD\" and \"BC\".
 
   new-eras - the new era strings. - `java.lang.String[]`"
   ([^DateFormatSymbols this new-eras]
     (-> this (.setEras new-eras))))
 
 (defn get-am-pm-strings
-  "Gets ampm strings. For example: `AM` and `PM`.
+  "Gets ampm strings. For example: \"AM\" and \"PM\".
 
   returns: the ampm strings. - `java.lang.String[]`"
   ([^DateFormatSymbols this]
     (-> this (.getAmPmStrings))))
 
 (defn set-weekdays
-  "Sets weekday strings. For example: `Sunday`, `Monday`, etc.
+  "Sets weekday strings. For example: \"Sunday\", \"Monday\", etc.
 
   new-weekdays - the new weekday strings. The array should be indexed by Calendar.SUNDAY, Calendar.MONDAY, etc. - `java.lang.String[]`"
   ([^DateFormatSymbols this new-weekdays]
     (-> this (.setWeekdays new-weekdays))))
 
 (defn get-short-months
-  "Gets short month strings. For example: `Jan`, `Feb`, etc.
+  "Gets short month strings. For example: \"Jan\", \"Feb\", etc.
 
    If the language requires different forms for formatting and
    stand-alone usages, This method returns short month names in
    the formatting form. For example, the preferred abbreviation
    for January in the Catalan language is de gen. in the
    formatting form, while it is gen. in the stand-alone
-   form. This method returns `de gen.` in this case. Refer
+   form. This method returns \"de gen.\" in this case. Refer
    to the
    Calendar Elements in the Unicode Locale Data Markup Language
    (LDML) specification for more details.
@@ -220,7 +220,7 @@
     (-> this (.getLocalPatternChars))))
 
 (defn get-short-weekdays
-  "Gets short weekday strings. For example: `Sun`, `Mon`, etc.
+  "Gets short weekday strings. For example: \"Sun\", \"Mon\", etc.
 
   returns: the short weekday strings. Use Calendar.SUNDAY,
    Calendar.MONDAY, etc. to index the result array. - `java.lang.String[]`"
@@ -228,7 +228,7 @@
     (-> this (.getShortWeekdays))))
 
 (defn get-eras
-  "Gets era strings. For example: `AD` and `BC`.
+  "Gets era strings. For example: \"AD\" and \"BC\".
 
   returns: the era strings. - `java.lang.String[]`"
   ([^DateFormatSymbols this]

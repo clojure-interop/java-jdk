@@ -107,8 +107,8 @@
   address - The address of the endpoint to be targeted by the returned W3CEndpointReference. - `java.lang.String`
 
   returns: A W3CEndpointReferenceBuilder instance with
-     the address set to the wsa:Address. - `javax.xml.ws.wsing.W3CEndpointReferenceBuilder`"
-  (^javax.xml.ws.wsing.W3CEndpointReferenceBuilder [^W3CEndpointReferenceBuilder this ^java.lang.String address]
+     the address set to the wsa:Address. - `javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder`"
+  (^javax.xml.ws.wsaddressing.W3CEndpointReferenceBuilder [^W3CEndpointReferenceBuilder this ^java.lang.String address]
     (-> this (.address address))))
 
 (defn build

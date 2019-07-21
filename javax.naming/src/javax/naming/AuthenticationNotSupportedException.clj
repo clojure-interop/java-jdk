@@ -8,7 +8,7 @@
   provider- and server-specific. It may be specified using
   specific authentication schemes such
   those identified using SASL, or a generic authentication specifier
-  (such as `simple` and `strong`).
+  (such as \"simple\" and \"strong\").
 
   If the program wants to handle this exception in particular, it
   should catch AuthenticationNotSupportedException explicitly before

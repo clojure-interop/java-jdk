@@ -56,11 +56,11 @@
        public void init() {
            tracker = new MediaTracker(this);
            bg = getImage(getDocumentBase(),
-                   `images/background.gif`);
+                   \"images/background.gif\");
            tracker.addImage(bg, 0);
            for (int i = 0; i < 5; i++) {
                anim[i] = getImage(getDocumentBase(),
-                       `images/anim`+i+`.gif`);
+                       \"images/anim\"+i+\".gif\");
                tracker.addImage(anim[i], 1);
            }
        }

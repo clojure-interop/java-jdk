@@ -50,8 +50,8 @@
   characters:
 
 
-  MaskFormatter formatter = new MaskFormatter(`0x***`);
-  formatter.setValidCharacters(`0123456789abcdefABCDEF`);
+  MaskFormatter formatter = new MaskFormatter(\"0x***\");
+  formatter.setValidCharacters(\"0123456789abcdefABCDEF\");
 
   When initially formatting a value if the length of the string is
   less than the length of the mask, two things can happen. Either
@@ -59,19 +59,19 @@
   be used. Precedence is given to the placeholder string. For example:
 
 
-    MaskFormatter formatter = new MaskFormatter(`###-####`);
+    MaskFormatter formatter = new MaskFormatter(\"###-####\");
     formatter.setPlaceholderCharacter('_');
-    formatter.getDisplayValue(tf, `123`);
+    formatter.getDisplayValue(tf, \"123\");
 
   Would result in the string '123-____'. If
-  setPlaceholder(`555-1212`) was invoked '123-1212' would
+  setPlaceholder(\"555-1212\") was invoked '123-1212' would
   result. The placeholder String is only used on the initial format,
   on subsequent formats only the placeholder character will be used.
 
   If a MaskFormatter is configured to only allow valid characters
   (setAllowsInvalid(false)) literal characters will be skipped as
   necessary when editing. Consider a MaskFormatter with
-  the mask `###-####` and current value `555-1212`. Using the right
+  the mask \"###-####\" and current value \"555-1212\". Using the right
   arrow key to navigate through the field will result in (| indicates the
   position of the caret):
 

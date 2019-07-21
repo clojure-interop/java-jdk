@@ -32,23 +32,23 @@
   (^Dimension []
     (new Dimension )))
 
-(defn -width
+(defn width
   "Instance Field.
 
   The width dimension; negative values can be used.
 
   type: int"
-  [this]
-  (-> this .-width))
+  (^Integer [^Dimension this]
+    (-> this .-width)))
 
-(defn -height
+(defn height
   "Instance Field.
 
   The height dimension; negative values can be used.
 
   type: int"
-  [this]
-  (-> this .-height))
+  (^Integer [^Dimension this]
+    (-> this .-height)))
 
 (defn get-width
   "Returns the width of this Dimension in double

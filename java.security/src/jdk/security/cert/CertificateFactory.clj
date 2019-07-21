@@ -29,7 +29,7 @@
   FileInputStream fis = new FileInputStream(filename);
   BufferedInputStream bis = new BufferedInputStream(fis);
 
-  CertificateFactory cf = CertificateFactory.getInstance(`X.509`);
+  CertificateFactory cf = CertificateFactory.getInstance(\"X.509\");
 
   while (bis.available() > 0) {
      Certificate cert = cf.generateCertificate(bis);
@@ -42,7 +42,7 @@
 
 
   FileInputStream fis = new FileInputStream(filename);
-  CertificateFactory cf = CertificateFactory.getInstance(`X.509`);
+  CertificateFactory cf = CertificateFactory.getInstance(\"X.509\");
   Collection c = cf.generateCertificates(fis);
   Iterator i = c.iterator();
   while (i.hasNext()) {

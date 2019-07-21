@@ -104,11 +104,11 @@
    definition refers to the directory's notion of syntax.
 
    For example, even though a value might be
-   a Java String object, its directory syntax might be `Printable String`
-   or `Telephone Number`. Or a value might be a byte array, and its
-   directory syntax is `JPEG` or `Certificate`.
-   For example, if this attribute's syntax is `JPEG`,
-   this method would return the syntax definition for `JPEG`.
+   a Java String object, its directory syntax might be \"Printable String\"
+   or \"Telephone Number\". Or a value might be a byte array, and its
+   directory syntax is \"JPEG\" or \"Certificate\".
+   For example, if this attribute's syntax is \"JPEG\",
+   this method would return the syntax definition for \"JPEG\".
 
    The information that you can retrieve from a syntax definition
    is directory-dependent.

@@ -7,7 +7,7 @@
   than alternatives when traversal operations vastly outnumber
   mutations, and is useful when you cannot or don't want to
   synchronize traversals, yet need to preclude interference among
-  concurrent threads.  The `snapshot` style iterator method uses a
+  concurrent threads.  The \"snapshot\" style iterator method uses a
   reference to the state of the array at the point that the iterator
   was created. This array never changes during the lifetime of the
   iterator, so interference is impossible and the iterator is
@@ -121,8 +121,8 @@
   "Returns a string representation of this list.  The string
    representation consists of the string representations of the list's
    elements in the order they are returned by its iterator, enclosed in
-   square brackets (`[]`).  Adjacent elements are separated by
-   the characters `, ` (comma and space).  Elements are
+   square brackets (\"[]\").  Adjacent elements are separated by
+   the characters \", \" (comma and space).  Elements are
    converted to strings as by String.valueOf(Object).
 
   returns: a string representation of this list - `java.lang.String`"

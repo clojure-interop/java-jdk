@@ -1,5 +1,5 @@
 (ns jdk.security.Provider
-  "This class represents a `provider` for the
+  "This class represents a \"provider\" for the
   Java Security API, where a provider implements some or all parts of
   Java Security. Services that a provider may implement include:
 
@@ -16,7 +16,7 @@
   in each runtime it is installed in.
 
   See The Provider Class
-  in the `Java Cryptography Architecture API Specification & Reference`
+  in the \"Java Cryptography Architecture API Specification & Reference\"
   for information about how a particular type of provider, the
   cryptographic service provider, works and is installed. However,
   please note that a provider can be used to implement any security
@@ -75,7 +75,7 @@
    throws an exception.
 
    If a security manager is enabled, its checkSecurityAccess
-   method is called with the string `putProviderProperty.`+name,
+   method is called with the string \"putProviderProperty.\"+name,
    where name is the provider name, to see if it's ok to set this
    provider's property values.
 
@@ -100,7 +100,7 @@
    null, else returns the current value.
 
    If a security manager is enabled, its checkSecurityAccess
-   method is called with the string `putProviderProperty.`+name,
+   method is called with the string \"putProviderProperty.\"+name,
    where name is the provider name, to see if it's ok to set this
    provider's property values.
 
@@ -122,7 +122,7 @@
    value.
 
    If a security manager is enabled, its checkSecurityAccess
-   method is called with the string `putProviderProperty.`+name,
+   method is called with the string \"putProviderProperty.\"+name,
    where name is the provider name, to see if it's ok to set this
    provider's property values.
 
@@ -212,7 +212,7 @@
    mapped to the specified value.
 
    If a security manager is enabled, its checkSecurityAccess
-   method is called with the string `putProviderProperty.`+name,
+   method is called with the string \"putProviderProperty.\"+name,
    where name is the provider name, to see if it's ok to set this
    provider's property values.
 
@@ -248,7 +248,7 @@
    mapped to the specified value.
 
    If a security manager is enabled, its checkSecurityAccess
-   method is called with the string `removeProviderProperty.`+name,
+   method is called with the string \"removeProviderProperty.\"+name,
    where name is the provider name, to see if it's ok to remove this
    provider's properties.
 
@@ -285,8 +285,8 @@
    compute a new mapping given the key and its current mapped value.
 
    If a security manager is enabled, its checkSecurityAccess
-   method is called with the strings `putProviderProperty.`+name
-   and `removeProviderProperty.`+name, where name is the
+   method is called with the strings \"putProviderProperty.\"+name
+   and \"removeProviderProperty.\"+name, where name is the
    provider name, to see if it's ok to set this provider's property values
    and remove this provider's properties.
 
@@ -304,7 +304,7 @@
    used to look up facilities implemented by the provider.
 
    If a security manager is enabled, its checkSecurityAccess
-   method is called with the string `clearProviderProperties.`+name
+   method is called with the string \"clearProviderProperties.\"+name
    (where name is the provider name) to see if it's ok to clear
    this provider.
 
@@ -330,8 +330,8 @@
    combining multiple mapped values for a key.
 
    If a security manager is enabled, its checkSecurityAccess
-   method is called with the strings `putProviderProperty.`+name
-   and `removeProviderProperty.`+name, where name is the
+   method is called with the strings \"putProviderProperty.\"+name
+   and \"removeProviderProperty.\"+name, where name is the
    provider name, to see if it's ok to set this provider's property values
    and remove this provider's properties.
 
@@ -352,8 +352,8 @@
    mapping).
 
    If a security manager is enabled, its checkSecurityAccess
-   method is called with the strings `putProviderProperty.`+name
-   and `removeProviderProperty.`+name, where name is the
+   method is called with the strings \"putProviderProperty.\"+name
+   and \"removeProviderProperty.\"+name, where name is the
    provider name, to see if it's ok to set this provider's property values
    and remove this provider's properties.
 
@@ -380,8 +380,8 @@
    null.
 
    If a security manager is enabled, its checkSecurityAccess
-   method is called with the strings `putProviderProperty.`+name
-   and `removeProviderProperty.`+name, where name is the
+   method is called with the strings \"putProviderProperty.\"+name
+   and \"removeProviderProperty.\"+name, where name is the
    provider name, to see if it's ok to set this provider's property values
    and remove this provider's properties.
 

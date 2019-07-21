@@ -31,7 +31,7 @@
    be used by that context's service provider to inspect the
    fields of the exception.
 
-   The value of this constant is `java.naming.spi.CannotProceedException`.
+   The value of this constant is \"java.naming.spi.CannotProceedException\".
 
   type: java.lang.String"
   NamingManager/CPE)
@@ -75,7 +75,7 @@
    If refInfo is a Reference or
       Referenceable with no factory class name,
       and the address or addresses are StringRefAddrs with
-      address type `URL`,
+      address type \"URL\",
       try the URL context factory corresponding to each URL's scheme id
       to create the object (see getURLContext()).
       If that fails, continue to the next step.
@@ -110,7 +110,7 @@
     If there are several possible contexts from which the object
     could be named -- as will often be the case -- it is up to
     the caller to select one.  A good rule of thumb is to select the
-   `deepest` context available.
+   \"deepest\" context available.
    If nameCtx is null, name is relative
    to the default initial context.  If no name is being specified, the
    name parameter should be null.
@@ -138,7 +138,7 @@
 
    The class name of the factory that creates the resulting context
    has the naming convention scheme-idURLContextFactory
-   (e.g. `ftpURLContextFactory` for the `ftp` scheme-id),
+   (e.g. \"ftpURLContextFactory\" for the \"ftp\" scheme-id),
    in the package specified as follows.
    The Context.URL_PKG_PREFIXES environment property (which
    may contain values taken from applet parameters, system properties,
@@ -146,14 +146,14 @@
    contains a colon-separated list of package prefixes.
    Each package prefix in
    the property is tried in the order specified to load the factory class.
-   The default package prefix is `com.sun.jndi.url` (if none of the
+   The default package prefix is \"com.sun.jndi.url\" (if none of the
    specified packages work, this default is tried).
    The complete package name is constructed using the package prefix,
    concatenated with the scheme id.
 
-   For example, if the scheme id is `ldap`, and the
+   For example, if the scheme id is \"ldap\", and the
    Context.URL_PKG_PREFIXES property
-   contains `com.widget:com.wiz.jndi`,
+   contains \"com.widget:com.wiz.jndi\",
    the naming manager would attempt to load the following classes
    until one is successfully instantiated:
 
@@ -171,8 +171,8 @@
    For example, invoking getObjectInstance() as shown above
    on a LDAP URL context factory would return a
    context that can resolve LDAP urls
-   (e.g. `ldap://ldap.wiz.com/o=wiz,c=us`,
-   `ldap://ldap.umich.edu/o=umich,c=us`, ...).
+   (e.g. \"ldap://ldap.wiz.com/o=wiz,c=us\",
+   \"ldap://ldap.umich.edu/o=umich,c=us\", ...).
 
    Note that an object factory (an object that implements the ObjectFactory
    interface) must be public and must have a public constructor that
@@ -290,7 +290,7 @@
 
    The name and nameCtx parameters may
    optionally be used to specify the name of the object being created.
-   See the description of `Name and Context Parameters` in
+   See the description of \"Name and Context Parameters\" in
    ObjectFactory.getObjectInstance()
    for details.
 

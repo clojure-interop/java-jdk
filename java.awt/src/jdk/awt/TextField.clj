@@ -4,7 +4,7 @@
 
   For example, the following image depicts a frame with four
   text fields of varying widths. Two of these text fields
-  display the predefined text `Hello`.
+  display the predefined text \"Hello\".
 
 
 
@@ -16,11 +16,11 @@
   // a blank text field
   tf1 = new TextField();
   // blank field of 20 columns
-  tf2 = new TextField(``, 20);
+  tf2 = new TextField(\"\", 20);
   // predefined text displayed
-  tf3 = new TextField(`Hello!`);
+  tf3 = new TextField(\"Hello!\");
   // predefined text in 30 columns
-  tf4 = new TextField(`Hello`, 30);
+  tf4 = new TextField(\"Hello\", 30);
 
   Every time the user types a key in the text field, one or
   more key events are sent to the text field.  A KeyEvent
@@ -57,7 +57,7 @@
    number of columns. A column is an approximate average character
    width that is platform-dependent.
 
-  text - the text to be displayed. If text is null, the empty string `` will be displayed. - `java.lang.String`
+  text - the text to be displayed. If text is null, the empty string \"\" will be displayed. - `java.lang.String`
   columns - the number of columns. If columns is less than 0, columns is set to 0. - `int`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true."

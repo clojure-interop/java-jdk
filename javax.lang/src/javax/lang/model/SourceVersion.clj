@@ -158,7 +158,7 @@
    of an initial character for which Character.isJavaIdentifierStart(int) returns true,
    followed only by characters for which Character.isJavaIdentifierPart(int) returns true.
    This pattern matches regular identifiers, keywords, and the
-   literals `true`, `false`, and `null`.
+   literals \"true\", \"false\", and \"null\".
    The method returns false for all other strings.
 
   name - the string to check - `java.lang.CharSequence`

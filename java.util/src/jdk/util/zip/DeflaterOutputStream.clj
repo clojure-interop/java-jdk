@@ -1,6 +1,6 @@
 (ns jdk.util.zip.DeflaterOutputStream
   "This class implements an output stream filter for compressing data in
-  the `deflate` compression format. It is also used as the basis for other
+  the \"deflate\" compression format. It is also used as the basis for other
   types of compression filters, such as GZIPOutputStream."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util.zip DeflaterOutputStream]))
@@ -12,7 +12,7 @@
    buffer size and flush mode.
 
   out - the output stream - `java.io.OutputStream`
-  def - the compressor (`deflater`) - `java.util.zip.Deflater`
+  def - the compressor (\"deflater\") - `java.util.zip.Deflater`
   size - the output buffer size - `int`
   sync-flush - if true the flush() method of this instance flushes the compressor with flush mode Deflater.SYNC_FLUSH before flushing the output stream, otherwise only flushes the output stream - `boolean`
 

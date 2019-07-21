@@ -13,7 +13,7 @@
 
   Menu shortcuts may also be constructed for a wider set of keycodes
   using the java.awt.event.KeyEvent.getExtendedKeyCodeForChar call.
-  For example, a menu shortcut for `Ctrl+cyrillic ef` is created by
+  For example, a menu shortcut for \"Ctrl+cyrillic ef\" is created by
 
   MenuShortcut ms = new MenuShortcut(KeyEvent.getExtendedKeyCodeForChar('?'), false);
 

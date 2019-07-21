@@ -109,8 +109,8 @@
   "Gets the next transition after the specified instant.
 
    This returns details of the next transition after the specified instant.
-   For example, if the instant represents a point where `Summer` daylight savings time
-   applies, then the method will return the transition to the next `Winter` time.
+   For example, if the instant represents a point where \"Summer\" daylight savings time
+   applies, then the method will return the transition to the next \"Winter\" time.
 
   instant - the instant to get the next transition after, not null, but null may be ignored if the rules have a single offset for all instants - `java.time.Instant`
 
@@ -127,10 +127,10 @@
    Normal, with one valid offset. For the vast majority of the year, the normal
     case applies, where there is a single valid offset for the local date-time.
    Gap, with zero valid offsets. This is when clocks jump forward typically
-    due to the spring daylight savings change from `winter` to `summer`.
+    due to the spring daylight savings change from \"winter\" to \"summer\".
     In a gap there are local date-time values with no valid offset.
    Overlap, with two valid offsets. This is when clocks are set back typically
-    due to the autumn daylight savings change from `summer` to `winter`.
+    due to the autumn daylight savings change from \"summer\" to \"winter\".
     In an overlap there are local date-time values with two valid offsets.
 
    A transition is used to model the cases of a Gap or Overlap.
@@ -170,10 +170,10 @@
    Normal, with one valid offset. For the vast majority of the year, the normal
     case applies, where there is a single valid offset for the local date-time.
    Gap, with zero valid offsets. This is when clocks jump forward typically
-    due to the spring daylight savings change from `winter` to `summer`.
+    due to the spring daylight savings change from \"winter\" to \"summer\".
     In a gap there are local date-time values with no valid offset.
    Overlap, with two valid offsets. This is when clocks are set back typically
-    due to the autumn daylight savings change from `summer` to `winter`.
+    due to the autumn daylight savings change from \"summer\" to \"winter\".
     In an overlap there are local date-time values with two valid offsets.
 
    Thus, for any given local date-time there can be zero, one or two valid offsets.
@@ -238,8 +238,8 @@
   "Gets the previous transition before the specified instant.
 
    This returns details of the previous transition after the specified instant.
-   For example, if the instant represents a point where `summer` daylight saving time
-   applies, then the method will return the transition from the previous `winter` time.
+   For example, if the instant represents a point where \"summer\" daylight saving time
+   applies, then the method will return the transition from the previous \"winter\" time.
 
   instant - the instant to get the previous transition after, not null, but null may be ignored if the rules have a single offset for all instants - `java.time.Instant`
 

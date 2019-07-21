@@ -26,7 +26,7 @@
 (defn add-mtom-attachment
   "Consider binary data for optimized binary storage as an attachment.
 
-   Since content type is not known, the attachment's MIME content type must be set to `application/octet-stream`.
+   Since content type is not known, the attachment's MIME content type must be set to \"application/octet-stream\".
 
 
    The elementNamespace and elementLocalName
@@ -38,7 +38,7 @@
   data - represents the data to be attached. Must be non-null. The actual data region is specified by (data,offset,length) tuple. - `byte[]`
   offset - The offset within the array of the first byte to be read; must be non-negative and no larger than array.length - `int`
   length - The number of bytes to be read from the given array; must be non-negative and no larger than array.length - `int`
-  mime-type - If the data has an associated MIME type known to JAXB, that is passed as this parameter. If none is known, `application/octet-stream`. This parameter may never be null. - `java.lang.String`
+  mime-type - If the data has an associated MIME type known to JAXB, that is passed as this parameter. If none is known, \"application/octet-stream\". This parameter may never be null. - `java.lang.String`
   element-namespace - the namespace URI of the element that encloses the base64Binary data. Can be empty but never null. - `java.lang.String`
   element-local-name - The local name of the element. Always a non-null valid string. - `java.lang.String`
 
@@ -61,8 +61,8 @@
    and the XML content to be marshalled violates Step 1 in
    Creating XOP Pacakges
    http://www.w3.org/TR/2005/REC-xop10-20050125/#creating_xop_packages.
-   `Ensure the Original XML Infoset contains no element information item with a
-   [namespace name] of `http://www.w3.org/2004/08/xop/include` and a [local name] of Include`
+   \"Ensure the Original XML Infoset contains no element information item with a
+   [namespace name] of \"http://www.w3.org/2004/08/xop/include\" and a [local name] of Include\"
 
    When this method returns true and during the marshal process
    at least one call to addMtomAttachment(...) returns

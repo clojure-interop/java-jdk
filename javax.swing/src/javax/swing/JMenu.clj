@@ -6,10 +6,10 @@
   also contain JSeparators.
 
   In essence, a menu is a button with an associated JPopupMenu.
-  When the `button` is pressed, the JPopupMenu appears. If the
-  `button` is on the JMenuBar, the menu is a top-level window.
-  If the `button` is another menu item, then the JPopupMenu is
-  `pull-right` menu.
+  When the \"button\" is pressed, the JPopupMenu appears. If the
+  \"button\" is on the JMenuBar, the menu is a top-level window.
+  If the \"button\" is another menu item, then the JPopupMenu is
+  \"pull-right\" menu.
 
   Menus can be configured, and to some degree controlled, by
   Actions.  Using an
@@ -164,7 +164,7 @@
     (-> this (.setSelected b))))
 
 (defn do-click
-  "Programmatically performs a `click`.  This overrides the method
+  "Programmatically performs a \"click\".  This overrides the method
    AbstractButton.doClick in order to make the menu pop up.
 
   press-time - indicates the number of milliseconds the button was pressed for - `int`"
@@ -174,7 +174,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `MenuUI` - `java.lang.String`"
+  returns: the string \"MenuUI\" - `java.lang.String`"
   (^java.lang.String [^JMenu this]
     (-> this (.getUIClassID))))
 
@@ -353,7 +353,7 @@
     (-> this (.removeAll))))
 
 (defn set-model
-  "Sets the data model for the `menu button` -- the label
+  "Sets the data model for the \"menu button\" -- the label
    that the user clicks to open or close the menu.
 
   new-model - the ButtonModel - `javax.swing.ButtonModel`"

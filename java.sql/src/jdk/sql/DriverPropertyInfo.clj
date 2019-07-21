@@ -20,25 +20,25 @@
   (^DriverPropertyInfo [^java.lang.String name ^java.lang.String value]
     (new DriverPropertyInfo name value)))
 
-(defn -name
+(defn name
   "Instance Field.
 
   The name of the property.
 
   type: java.lang.String"
-  [this]
-  (-> this .-name))
+  (^java.lang.String [^DriverPropertyInfo this]
+    (-> this .-name)))
 
-(defn -description
+(defn description
   "Instance Field.
 
   A brief description of the property, which may be null.
 
   type: java.lang.String"
-  [this]
-  (-> this .-description))
+  (^java.lang.String [^DriverPropertyInfo this]
+    (-> this .-description)))
 
-(defn -required
+(defn required
   "Instance Field.
 
   The required field is true if a value must be
@@ -46,10 +46,10 @@
    during Driver.connect and false otherwise.
 
   type: boolean"
-  [this]
-  (-> this .-required))
+  (^Boolean [^DriverPropertyInfo this]
+    (-> this .-required)))
 
-(defn -value
+(defn value
   "Instance Field.
 
   The value field specifies the current value of
@@ -59,10 +59,10 @@
    may be null if no value is known.
 
   type: java.lang.String"
-  [this]
-  (-> this .-value))
+  (^java.lang.String [^DriverPropertyInfo this]
+    (-> this .-value)))
 
-(defn -choices
+(defn choices
   "Instance Field.
 
   An array of possible values if the value for the field
@@ -70,6 +70,6 @@
    from a particular set of values; otherwise null.
 
   type: java.lang.String[]"
-  [this]
-  (-> this .-choices))
+  ([^DriverPropertyInfo this]
+    (-> this .-choices)))
 

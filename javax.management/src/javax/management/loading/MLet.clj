@@ -9,7 +9,7 @@
 
   <MLET
        CODE = class | OBJECT = serfile
-       ARCHIVE = `archiveList`
+       ARCHIVE = \"archiveList\"
        [CODEBASE = codebaseURL]
        [NAME = mbeanname]
        [VERSION = version]
@@ -30,7 +30,7 @@
   This attribute specifies the .ser file that contains a serialized representation of the MBean to be obtained.
   This file must be contained in one of the .jar files specified by the ARCHIVE attribute. If the .jar file contains a directory hierarchy, specify the path of the file within this hierarchy. Otherwise  a match will not be found. Either CODE or OBJECT must be present.
 
-  ARCHIVE = `archiveList`
+  ARCHIVE = \"archiveList\"
 
   This mandatory attribute specifies one or more .jar files
   containing MBeans or other resources used by

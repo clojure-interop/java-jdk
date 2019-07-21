@@ -86,7 +86,7 @@
 (defn get-purge-flag?
   "Returns the flag to indicate if when a notification is received for the
    unregistration of an MBean referenced in a relation, if an immediate
-   `purge` of the relations (look for the relations no longer valid)
+   \"purge\" of the relations (look for the relations no longer valid)
    has to be performed, or if that will be performed only when the
    purgeRelations method is explicitly called.
    true is immediate purge.
@@ -276,7 +276,7 @@
 (defn set-purge-flag
   "Sets the flag to indicate if when a notification is received for the
    unregistration of an MBean referenced in a relation, if an immediate
-   `purge` of the relations (look for the relations no longer valid)
+   \"purge\" of the relations (look for the relations no longer valid)
    has to be performed, or if that will be performed only when the
    purgeRelations method is explicitly called.
    true is immediate purge.
@@ -383,7 +383,7 @@
 
 (defn find-referencing-relations
   "Retrieves the relations where a given MBean is referenced.
-   This corresponds to the CIM `References` and `ReferenceNames`
+   This corresponds to the CIM \"References\" and \"ReferenceNames\"
    operations.
 
   mbean-name - ObjectName of MBean - `javax.management.ObjectName`

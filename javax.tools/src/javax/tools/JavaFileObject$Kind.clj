@@ -36,15 +36,16 @@
   type: javax.tools.JavaFileObject$Kind"
   JavaFileObject$Kind/OTHER)
 
-(def -extension
+(defn extension
   "Instance Constant.
 
   The extension which (by convention) is normally used for
    this kind of file object.  If no convention exists, the
-   empty string (``) is used.
+   empty string (\"\") is used.
 
   type: java.lang.String"
-  (-> this .-extension))
+  (^java.lang.String [^JavaFileObject$Kind this]
+    (-> this .-extension)))
 
 (defn *values
   "Returns an array containing the constants of this enum type, in

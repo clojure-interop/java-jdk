@@ -14,12 +14,12 @@
   render the image myImage.png:
 
 
-   <style id=`buttonStyle`>
-     <imagePainter path=`myImage.png` sourceInsets=`2 2 2 2`
-                   paintCenter=`true` stretch=`true`/>
-     <insets top=`2` bottom=`2` left=`2` right=`2`/>
+   <style id=\"buttonStyle\">
+     <imagePainter path=\"myImage.png\" sourceInsets=\"2 2 2 2\"
+                   paintCenter=\"true\" stretch=\"true\"/>
+     <insets top=\"2\" bottom=\"2\" left=\"2\" right=\"2\"/>
    </style>
-   <bind style=`buttonStyle` type=`REGION` key=`button`/>
+   <bind style=\"buttonStyle\" type=\"REGION\" key=\"button\"/>
 
   SynthPainter is abstract in so far as it does no painting,
   all the methods

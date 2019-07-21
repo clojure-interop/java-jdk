@@ -16,7 +16,7 @@
 
   A typical use of this class is topology-preserving object graph
   transformations, such as serialization or deep-copying.  To perform such
-  a transformation, a program must maintain a `node table` that keeps track
+  a transformation, a program must maintain a \"node table\" that keeps track
   of all the object references that have already been processed.  The node
   table must not equate distinct objects even if they happen to be equal.
   Another typical use of this class is to maintain proxy objects.  For
@@ -42,7 +42,7 @@
 
   If the size of the map (the number of key-value mappings) sufficiently
   exceeds the expected maximum size, the number of buckets is increased.
-  Increasing the number of buckets (`rehashing`) may be fairly expensive, so
+  Increasing the number of buckets (\"rehashing\") may be fairly expensive, so
   it pays to create identity hash maps with a sufficiently large expected
   maximum size.  On the other hand, iteration over collection views requires
   time proportional to the number of buckets in the hash table, so it
@@ -58,7 +58,7 @@
   structural modification.)  This is typically accomplished by
   synchronizing on some object that naturally encapsulates the map.
 
-  If no such object exists, the map should be `wrapped` using the
+  If no such object exists, the map should be \"wrapped\" using the
   Collections.synchronizedMap
   method.  This is best done at creation time, to prevent accidental
   unsynchronized access to the map:
@@ -66,8 +66,8 @@
     Map m = Collections.synchronizedMap(new IdentityHashMap(...));
 
   The iterators returned by the iterator method of the
-  collections returned by all of this class's `collection view
-  methods` are fail-fast: if the map is structurally modified
+  collections returned by all of this class's \"collection view
+  methods\" are fail-fast: if the map is structurally modified
   at any time after the iterator is created, in any way except
   through the iterator's own remove method, the iterator
   will throw a ConcurrentModificationException.  Thus, in the

@@ -56,7 +56,7 @@
   "Returns a string that specifies the name of the l&f class
    that renders this component.
 
-  returns: String `ToggleButtonUI` - `java.lang.String`"
+  returns: String \"ToggleButtonUI\" - `java.lang.String`"
   (^java.lang.String [^JToggleButton this]
     (-> this (.getUIClassID))))
 

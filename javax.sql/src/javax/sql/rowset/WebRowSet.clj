@@ -234,8 +234,8 @@
 
 
   wrs.moveToInsertRow();
-  wrs.updateString(1, `fifththrow`);
-  wrs.updateString(2, `5`);
+  wrs.updateString(1, \"fifththrow\");
+  wrs.updateString(2, \"5\");
   wrs.insertRow();
   The following code fragment changes the second column value in the row just inserted.
   Note that this code applies when new rows are inserted right after the current row,
@@ -246,7 +246,7 @@
 
    wrs.moveToCurrentRow();
   wrs.next();
-  wrs.updateString(2, `V`);
+  wrs.updateString(2, \"V\");
   wrs.acceptChanges();
   Describing this in XML demonstrates where the Java code inserts a new row and then
   performs an update on the newly inserted row on an individual field.
@@ -306,8 +306,8 @@
 
 
   wrs.absolute(5);
-  wrs.updateString(1, `new4thRow`);
-  wrs.updateString(2, `IV`);
+  wrs.updateString(1, \"new4thRow\");
+  wrs.updateString(2, \"IV\");
   wrs.updateRow();
   In XML, this is described by the modifyRow tag. Both the original and new
   values are contained within the tag for original row tracking purposes.

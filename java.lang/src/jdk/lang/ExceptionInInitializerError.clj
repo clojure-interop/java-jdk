@@ -5,11 +5,11 @@
   initializer for a static variable.
 
   As of release 1.4, this exception has been retrofitted to conform to
-  the general purpose exception-chaining mechanism.  The `saved throwable
-  object` that may be provided at construction time and accessed via
+  the general purpose exception-chaining mechanism.  The \"saved throwable
+  object\" that may be provided at construction time and accessed via
   the getException() method is now known as the cause,
   and may be accessed via the Throwable.getCause() method, as well
-  as the aforementioned `legacy method.`"
+  as the aforementioned \"legacy method.\""
   (:refer-clojure :only [require comment defn ->])
   (:import [java.lang ExceptionInInitializerError]))
 

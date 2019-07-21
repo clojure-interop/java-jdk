@@ -1,7 +1,7 @@
 (ns javax.imageio.ImageWriteParam
   "A class describing how a stream is to be encoded.  Instances of
   this class or its subclasses are used to supply prescriptive
-  `how-to` information to instances of ImageWriter.
+  \"how-to\" information to instances of ImageWriter.
 
    A plug-in for a specific image format may define a subclass of
   this class, and return objects of that class from the
@@ -183,9 +183,9 @@
    PNG images).
 
     A compression quality setting of 0.0 is most generically
-   interpreted as `high compression is important,` while a setting of
-   1.0 is most generically interpreted as `high image quality is
-   important.`
+   interpreted as \"high compression is important,\" while a setting of
+   1.0 is most generically interpreted as \"high image quality is
+   important.\"
 
     If there are multiple compression types but none has been
    set, an IllegalStateException is thrown.
@@ -390,11 +390,11 @@
    greater than that returned from
    getCompressionQualityDescriptions.
 
-    As an example, the strings `Good`, `Better`, and `Best`
+    As an example, the strings \"Good\", \"Better\", and \"Best\"
    could be associated with the ranges [0, .33),
    [.33, .66), and [.66, 1.0].  In this
    case, getCompressionQualityDescriptions would
-   return { `Good`, `Better`, `Best` } and
+   return { \"Good\", \"Better\", \"Best\" } and
    getCompressionQualityValues would return
    { 0.0F, .33F, .66F, 1.0F }.
 

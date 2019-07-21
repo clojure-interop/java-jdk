@@ -43,7 +43,7 @@
    Input methods must call Window.dispose on the
    returned input method window when it is no longer needed.
 
-  title - the title to be displayed in the window's title bar, if there is such a title bar. A null value is treated as an empty string, ``. - `java.lang.String`
+  title - the title to be displayed in the window's title bar, if there is such a title bar. A null value is treated as an empty string, \"\". - `java.lang.String`
   attach-to-input-context - whether this window should share the input context that corresponds to this input method context - `boolean`
 
   returns: a window with special characteristics for use by input methods - `java.awt.Window`
@@ -73,7 +73,7 @@
    Input methods must call Window.dispose on the
    returned input method window when it is no longer needed.
 
-  title - the title to be displayed in the window's title bar, if there is such a title bar. A null value is treated as an empty string, ``. - `java.lang.String`
+  title - the title to be displayed in the window's title bar, if there is such a title bar. A null value is treated as an empty string, \"\". - `java.lang.String`
   attach-to-input-context - whether this window should share the input context that corresponds to this input method context - `boolean`
 
   returns: a JFrame with special characteristics for use by input methods - `javax.swing.JFrame`

@@ -39,9 +39,9 @@
                        differences), as in French.
              '!' : Turns on Thai/Lao vowel-consonant swapping.  If this
                        rule is in force when a Thai vowel of the range
-                       \U0E40-\U0E44 precedes a Thai consonant of the range
-                       \U0E01-\U0E2E OR a Lao vowel of the range \U0EC0-\U0EC4
-                       precedes a Lao consonant of the range \U0E81-\U0EAE then
+                       \\U0E40-\\U0E44 precedes a Thai consonant of the range
+                       \\U0E01-\\U0E2E OR a Lao vowel of the range \\U0EC0-\\U0EC4
+                       precedes a Lao consonant of the range \\U0E81-\\U0EAE then
                        the vowel is placed after the consonant for collation
                        purposes.
 
@@ -79,25 +79,25 @@
   a < c & a < b
 
   Either the text-argument must already be present in the sequence, or some
-  initial substring of the text-argument must be present. (e.g. `a < b & ae <
-  e` is valid since `a` is present in the sequence before `ae` is reset). In
-  this latter case, `ae` is not entered and treated as a single character;
-  instead, `e` is sorted as if it were expanded to two characters: `a`
-  followed by an `e`. This difference appears in natural languages: in
-  traditional Spanish `ch` is treated as though it contracts to a single
-  character (expressed as `c < ch < d`), while in traditional German
+  initial substring of the text-argument must be present. (e.g. \"a < b & ae <
+  e\" is valid since \"a\" is present in the sequence before \"ae\" is reset). In
+  this latter case, \"ae\" is not entered and treated as a single character;
+  instead, \"e\" is sorted as if it were expanded to two characters: \"a\"
+  followed by an \"e\". This difference appears in natural languages: in
+  traditional Spanish \"ch\" is treated as though it contracts to a single
+  character (expressed as \"c < ch < d\"), while in traditional German
   a-umlaut is treated as though it expanded to two characters
-  (expressed as `a,A < b,B ... &ae;\u00e3&AE;\u00c3`).
-  [\u00e3 and \u00c3 are, of course, the escape sequences for a-umlaut.]
+  (expressed as \"a,A < b,B ... &ae;\\u00e3&AE;\\u00c3\").
+  [\\u00e3 and \\u00c3 are, of course, the escape sequences for a-umlaut.]
 
   Ignorable Characters
 
   For ignorable characters, the first rule must start with a relation (the
-  examples we have used above are really fragments; `a < b` really should be
-  `< a < b`). If, however, the first relation is not `<`, then all the all
-  text-arguments up to the first `<` are ignorable. For example, `, - < a < b`
-  makes `-` an ignorable character, as we saw earlier in the word
-  `black-birds`. In the samples for different languages, you see that most
+  examples we have used above are really fragments; \"a < b\" really should be
+  \"< a < b\"). If, however, the first relation is not \"<\", then all the all
+  text-arguments up to the first \"<\" are ignorable. For example, \", - < a < b\"
+  makes \"-\" an ignorable character, as we saw earlier in the word
+  \"black-birds\". In the samples for different languages, you see that most
   accents are ignorable.
 
   Normalization and Accents
@@ -124,27 +124,27 @@
   The following are errors:
 
       A text-argument contains unquoted punctuation symbols
-         (e.g. `a < b-c < d`).
+         (e.g. \"a < b-c < d\").
       A relation or reset character not followed by a text-argument
-         (e.g. `a < ,b`).
+         (e.g. \"a < ,b\").
       A reset where the text-argument (or an initial substring of the
           text-argument) is not already in the sequence.
-          (e.g. `a < b & e < f`)
+          (e.g. \"a < b & e < f\")
 
   If you produce one of these errors, a RuleBasedCollator throws
   a ParseException.
 
   Examples
-  Simple:     `< a < b < c < d`
-  Norwegian:  `< a, A < b, B < c, C < d, D < e, E < f, F
+  Simple:     \"< a < b < c < d\"
+  Norwegian:  \"< a, A < b, B < c, C < d, D < e, E < f, F
                   < g, G < h, H < i, I < j, J < k, K < l, L
                   < m, M < n, N < o, O < p, P < q, Q < r, R
                   < s, S < t, T < u, U < v, V < w, W < x, X
                   < y, Y < z, Z
-                  < \u00E6, \u00C6
-                  < \u00F8, \u00D8
-                  < \u00E5 = a\u030A, \u00C5 = A\u030A;
-                       aa, AA`
+                  < \\u00E6, \\u00C6
+                  < \\u00F8, \\u00D8
+                  < \\u00E5 = a\\u030A, \\u00C5 = A\\u030A;
+                       aa, AA\"
 
 
   To create a RuleBasedCollator object with specialized
@@ -153,21 +153,21 @@
 
 
 
-  String simple = `< a< b< c< d`;
+  String simple = \"< a< b< c< d\";
   RuleBasedCollator mySimple = new RuleBasedCollator(simple);
 
   Or:
 
 
 
-  String Norwegian = `< a, A < b, B < c, C < d, D < e, E < f, F < g, G < h, H < i, I`
-                     `< j, J < k, K < l, L < m, M < n, N < o, O < p, P < q, Q < r, R`
-                     `< s, S < t, T < u, U < v, V < w, W < x, X < y, Y < z, Z`
-                     `< \u00E6, \u00C6`      // Latin letter ae & AE
-                     `< \u00F8, \u00D8`      // Latin letter o & O with stroke
-                     `< \u00E5 = a\u030A,`   // Latin letter a with ring above
-                     `  \u00C5 = A\u030A;`   // Latin letter A with ring above
-                     `  aa, AA`;
+  String Norwegian = \"< a, A < b, B < c, C < d, D < e, E < f, F < g, G < h, H < i, I\"
+                     \"< j, J < k, K < l, L < m, M < n, N < o, O < p, P < q, Q < r, R\"
+                     \"< s, S < t, T < u, U < v, V < w, W < x, X < y, Y < z, Z\"
+                     \"< \\u00E6, \\u00C6\"      // Latin letter ae & AE
+                     \"< \\u00F8, \\u00D8\"      // Latin letter o & O with stroke
+                     \"< \\u00E5 = a\\u030A,\"   // Latin letter a with ring above
+                     \"  \\u00C5 = A\\u030A;\"   // Latin letter A with ring above
+                     \"  aa, AA\";
   RuleBasedCollator myNorwegian = new RuleBasedCollator(Norwegian);
 
 
@@ -183,15 +183,15 @@
 
 
   // old rule
-  String oldRules = `=\u0301;\u0300;\u0302;\u0308`    // main accents
-                   `;\u0327;\u0303;\u0304;\u0305`    // main accents
-                   `;\u0306;\u0307;\u0309;\u030A`    // main accents
-                   `;\u030B;\u030C;\u030D;\u030E`    // main accents
-                   `;\u030F;\u0310;\u0311;\u0312`    // main accents
-                   `< a , A ; ae, AE ; \u00e6 , \u00c6`
-                   `< b , B < c, C < e, E & C < d, D`;
+  String oldRules = \"=\\u0301;\\u0300;\\u0302;\\u0308\"    // main accents
+                   \";\\u0327;\\u0303;\\u0304;\\u0305\"    // main accents
+                   \";\\u0306;\\u0307;\\u0309;\\u030A\"    // main accents
+                   \";\\u030B;\\u030C;\\u030D;\\u030E\"    // main accents
+                   \";\\u030F;\\u0310;\\u0311;\\u0312\"    // main accents
+                   \"< a , A ; ae, AE ; \\u00e6 , \\u00c6\"
+                   \"< b , B < c, C < e, E & C < d, D\";
   // change the order of accent characters
-  String addOn = `& \u0300 ; \u0308 ; \u0302`;
+  String addOn = \"& \\u0300 ; \\u0308 ; \\u0302\";
   RuleBasedCollator myCollator = new RuleBasedCollator(oldRules  addOn);"
   (:refer-clojure :only [require comment defn ->])
   (:import [java.text RuleBasedCollator]))
@@ -205,7 +205,7 @@
 
   rules - the collation rules to build the collation table from. - `java.lang.String`
 
-  throws: java.text.ParseException - A format exception will be thrown if the build process of the rules fails. For example, build rule `a < ? < d` will cause the constructor to throw the ParseException because the '?' is not quoted."
+  throws: java.text.ParseException - A format exception will be thrown if the build process of the rules fails. For example, build rule \"a < ? < d\" will cause the constructor to throw the ParseException because the '?' is not quoted."
   (^RuleBasedCollator [^java.lang.String rules]
     (new RuleBasedCollator rules)))
 

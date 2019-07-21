@@ -22,7 +22,7 @@
 (defn get-accessible-action-count
   "Returns the number of accessible actions available in this Link
    If there are more than one, the first one is NOT considered the
-   `default` action of this LINK object (e.g. in an HTML imagemap).
+   \"default\" action of this LINK object (e.g. in an HTML imagemap).
    In general, links will have only one AccessibleAction in them.
 
   returns: the zero-based number of Actions in this object - `int`"
@@ -43,12 +43,12 @@
    link action.  This should be a text string
    associated with anchoring text, this should be the
    anchor text.  E.g. from HTML:
-     <a HREF=`http://www.sun.com/access`>Accessibility</a>
-   this method would return `Accessibility`.
+     <a HREF=\"http://www.sun.com/access\">Accessibility</a>
+   this method would return \"Accessibility\".
 
    Similarly, from this HTML:
-     <a HREF=`#top`><img src=`top-hat.gif` alt=`top hat`></a>
-   this method would return `top hat`
+     <a HREF=\"#top\"><img src=\"top-hat.gif\" alt=\"top hat\"></a>
+   this method would return \"top hat\"
 
   i - zero-based index of the actions - `int`
 
@@ -59,9 +59,9 @@
 (defn get-accessible-action-object
   "Returns an object that represents the link action,
    as appropriate for that link.  E.g. from HTML:
-     <a HREF=`http://www.sun.com/access`>Accessibility</a>
+     <a HREF=\"http://www.sun.com/access\">Accessibility</a>
    this method would return a
-   java.net.URL(`http://www.sun.com/access.html`);
+   java.net.URL(\"http://www.sun.com/access.html\");
 
   i - zero-based index of the actions - `int`
 
@@ -72,13 +72,13 @@
 (defn get-accessible-action-anchor
   "Returns an object that represents the link anchor,
    as appropriate for that link.  E.g. from HTML:
-     <a href=`http://www.sun.com/access`>Accessibility</a>
+     <a href=\"http://www.sun.com/access\">Accessibility</a>
    this method would return a String containing the text:
-   `Accessibility`.
+   \"Accessibility\".
 
    Similarly, from this HTML:
-     <a HREF=`#top`><img src=`top-hat.gif` alt=`top hat`></a>
-   this might return the object ImageIcon(`top-hat.gif`, `top hat`);
+     <a HREF=\"#top\"><img src=\"top-hat.gif\" alt=\"top hat\"></a>
+   this might return the object ImageIcon(\"top-hat.gif\", \"top hat\");
 
   i - zero-based index of the actions - `int`
 

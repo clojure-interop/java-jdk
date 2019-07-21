@@ -77,7 +77,7 @@
 
   permission - the Permission object to compare. - `java.security.Permission`
 
-  returns: true if `permission` is implied by the  permissions in
+  returns: true if \"permission\" is implied by the  permissions in
    the collection, false if not. - `boolean`"
   (^Boolean [^PermissionCollection this ^java.security.Permission permission]
     (-> this (.implies permission))))
@@ -90,7 +90,7 @@
     (-> this (.elements))))
 
 (defn set-read-only
-  "Marks this PermissionCollection object as `readonly`. After
+  "Marks this PermissionCollection object as \"readonly\". After
    a PermissionCollection object
    is marked as readonly, no new Permission objects can be added to it
    using add."

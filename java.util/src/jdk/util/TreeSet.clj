@@ -24,7 +24,7 @@
   of the threads modifies the set, it must be synchronized
   externally.  This is typically accomplished by synchronizing on some
   object that naturally encapsulates the set.
-  If no such object exists, the set should be `wrapped` using the
+  If no such object exists, the set should be \"wrapped\" using the
   Collections.synchronizedSortedSet
   method.  This is best done at creation time, to prevent accidental
   unsynchronized access to the set:

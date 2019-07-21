@@ -8,8 +8,8 @@
 
 
    An optional system-dependent prefix string,
-       such as a disk-drive specifier, `/` for the UNIX root
-       directory, or `` for a Microsoft Windows UNC pathname, and
+       such as a disk-drive specifier, \"/\" for the UNIX root
+       directory, or \"\\\\\\\\\" for a Microsoft Windows UNC pathname, and
    A sequence of zero or more string names.
 
 
@@ -45,8 +45,8 @@
   Each directory's absolute pathname is an ancestor of any File
   object with an absolute abstract pathname which begins with the directory's
   absolute pathname.  For example, the directory denoted by the abstract
-  pathname `/usr` is an ancestor of the directory denoted by the
-  pathname `/usr/local/bin`.
+  pathname \"/usr\" is an ancestor of the directory denoted by the
+  pathname \"/usr/local/bin\".
 
    The prefix concept is used to handle root directories on UNIX platforms,
   and drive specifiers, root directories and UNC pathnames on Microsoft Windows platforms,
@@ -55,14 +55,14 @@
 
 
    For UNIX platforms, the prefix of an absolute pathname is always
-  `/`.  Relative pathnames have no prefix.  The abstract pathname
-  denoting the root directory has the prefix `/` and an empty
+  \"/\".  Relative pathnames have no prefix.  The abstract pathname
+  denoting the root directory has the prefix \"/\" and an empty
   name sequence.
 
    For Microsoft Windows platforms, the prefix of a pathname that contains a drive
-  specifier consists of the drive letter followed by `:` and
-  possibly followed by `` if the pathname is absolute.  The
-  prefix of a UNC pathname is ``; the hostname and the share
+  specifier consists of the drive letter followed by \":\" and
+  possibly followed by \"\\\\\" if the pathname is absolute.  The
+  prefix of a UNC pathname is \"\\\\\\\\\"; the hostname and the share
   name are the first two names in the name sequence.  A relative pathname that
   does not specify a drive has no prefix.
 
@@ -139,7 +139,7 @@
   The system-dependent default name-separator character.  This field is
    initialized to contain the first character of the value of the system
    property file.separator.  On UNIX systems the value of this
-   field is '/'; on Microsoft Windows systems it is '\\'.
+   field is '/'; on Microsoft Windows systems it is '\\\\'.
 
   type: char"
   File/separatorChar)
@@ -185,7 +185,7 @@
    root directory from which all other files in that file system
    can be reached.  Windows platforms, for example, have a root directory
    for each active drive; UNIX platforms have a single root directory,
-   namely `/`.  The set of available filesystem roots is affected
+   namely \"/\".  The set of available filesystem roots is affected
    by various system-level operations such as the insertion or ejection of
    removable media and the disconnecting or unmounting of physical or
    virtual disk drives.
@@ -236,9 +236,9 @@
 
     The prefix argument must be at least three characters
    long.  It is recommended that the prefix be a short, meaningful string
-   such as `hjb` or `mail`.  The
+   such as \"hjb\" or \"mail\".  The
    suffix argument may be null, in which case the
-   suffix `.tmp` will be used.
+   suffix \".tmp\" will be used.
 
     To create the new file, the prefix and the suffix may first be
    adjusted to fit the limitations of the underlying platform.  If the
@@ -254,14 +254,14 @@
    system-dependent default temporary-file directory will be used.  The
    default temporary-file directory is specified by the system property
    java.io.tmpdir.  On UNIX systems the default value of this
-   property is typically `/tmp` or `/var/tmp`; on
-   Microsoft Windows systems it is typically `C:\\WINNT\\TEMP`.  A different
+   property is typically \"/tmp\" or \"/var/tmp\"; on
+   Microsoft Windows systems it is typically \"C:\\\\WINNT\\\\TEMP\".  A different
    value may be given to this system property when the Java virtual machine
    is invoked, but programmatic changes to this property are not guaranteed
    to have any effect upon the temporary directory used by this method.
 
   prefix - The prefix string to be used in generating the file's name; must be at least three characters long - `java.lang.String`
-  suffix - The suffix string to be used in generating the file's name; may be null, in which case the suffix `.tmp` will be used - `java.lang.String`
+  suffix - The suffix string to be used in generating the file's name; may be null, in which case the suffix \".tmp\" will be used - `java.lang.String`
   directory - The directory in which the file is to be created, or null if the default temporary-file directory is to be used - `java.io.File`
 
   returns: An abstract pathname denoting a newly-created empty file - `java.io.File`
@@ -418,7 +418,7 @@
    may be used to obtain a Path representing this abstract pathname.
 
   returns: An absolute, hierarchical URI with a scheme equal to
-            `file`, a path representing this abstract pathname,
+            \"file\", a path representing this abstract pathname,
             and undefined authority, query, and fragment components - `java.net.URI`
 
   throws: java.lang.SecurityException - If a required system property value cannot be accessed."
@@ -447,7 +447,7 @@
    converts this pathname to absolute form if necessary, as if by invoking the
    getAbsolutePath() method, and then maps it to its unique form in a
    system-dependent way.  This typically involves removing redundant names
-   such as `.` and `..` from the pathname, resolving
+   such as \".\" and \"..\" from the pathname, resolving
    symbolic links (on UNIX platforms), and converting drive letters to a
    standard case (on Microsoft Windows platforms).
 
@@ -501,7 +501,7 @@
             value will be less than or equal to the total file system size
             returned by getTotalSpace(). - `long`
 
-  throws: java.lang.SecurityException - If a security manager has been installed and it denies RuntimePermission(`getFileSystemAttributes`) or its SecurityManager.checkRead(String) method denies read access to the file named by this abstract pathname"
+  throws: java.lang.SecurityException - If a security manager has been installed and it denies RuntimePermission(\"getFileSystemAttributes\") or its SecurityManager.checkRead(String) method denies read access to the file named by this abstract pathname"
   (^Long [^File this]
     (-> this (.getFreeSpace))))
 
@@ -512,7 +512,7 @@
   returns: The size, in bytes, of the partition or 0L if this
             abstract pathname does not name a partition - `long`
 
-  throws: java.lang.SecurityException - If a security manager has been installed and it denies RuntimePermission(`getFileSystemAttributes`) or its SecurityManager.checkRead(String) method denies read access to the file named by this abstract pathname"
+  throws: java.lang.SecurityException - If a security manager has been installed and it denies RuntimePermission(\"getFileSystemAttributes\") or its SecurityManager.checkRead(String) method denies read access to the file named by this abstract pathname"
   (^Long [^File this]
     (-> this (.getTotalSpace))))
 
@@ -651,7 +651,7 @@
             systems where this information is not available, this method
             will be equivalent to a call to getFreeSpace(). - `long`
 
-  throws: java.lang.SecurityException - If a security manager has been installed and it denies RuntimePermission(`getFileSystemAttributes`) or its SecurityManager.checkRead(String) method denies read access to the file named by this abstract pathname"
+  throws: java.lang.SecurityException - If a security manager has been installed and it denies RuntimePermission(\"getFileSystemAttributes\") or its SecurityManager.checkRead(String) method denies read access to the file named by this abstract pathname"
   (^Long [^File this]
     (-> this (.getUsableSpace))))
 
@@ -969,9 +969,9 @@
 (defn absolute?
   "Tests whether this abstract pathname is absolute.  The definition of
    absolute pathname is system dependent.  On UNIX systems, a pathname is
-   absolute if its prefix is `/`.  On Microsoft Windows systems, a
+   absolute if its prefix is \"/\".  On Microsoft Windows systems, a
    pathname is absolute if its prefix is a drive specifier followed by
-   ``, or if its prefix is ``.
+   \"\\\\\", or if its prefix is \"\\\\\\\\\".
 
   returns: true if this abstract pathname is absolute,
             false otherwise - `boolean`"

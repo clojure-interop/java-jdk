@@ -20,7 +20,7 @@
       do {
           // Perform the search
           NamingEnumeration results =
-              ctx.search(``, `(objectclass=*)`, new SearchControls());
+              ctx.search(\"\", \"(objectclass=*)\", new SearchControls());
 
           // Iterate over a batch of search results
           while (results != null && results.hasMore()) {

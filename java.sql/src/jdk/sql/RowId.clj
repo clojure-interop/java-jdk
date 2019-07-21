@@ -66,9 +66,9 @@
    java.sql.RowId object.
 
   Like java.sql.Date.toString()
-   returns the contents of its DATE as the String `2004-03-17`
+   returns the contents of its DATE as the String \"2004-03-17\"
    rather than as  DATE literal in SQL (which would have been the String
-   DATE `2004-03-17`), toString()
+   DATE \"2004-03-17\"), toString()
    returns the contents of its ROWID in a form specific to the driver supplying
    the connection, and possibly not as a ROWID literal.
 

@@ -21,14 +21,14 @@
   (^InvalidClassException [^java.lang.String reason]
     (new InvalidClassException reason)))
 
-(defn -classname
+(defn classname
   "Instance Field.
 
   Name of the invalid class.
 
   type: java.lang.String"
-  [this]
-  (-> this .-classname))
+  (^java.lang.String [^InvalidClassException this]
+    (-> this .-classname)))
 
 (defn get-message
   "Produce the message and include the classname, if present.

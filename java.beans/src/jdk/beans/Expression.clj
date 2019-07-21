@@ -1,7 +1,7 @@
 (ns jdk.beans.Expression
   "An Expression object represents a primitive expression
   in which a single method is applied to a target and a set of
-  arguments to return a result - as in `a.getFoo()`.
+  arguments to return a result - as in \"a.getFoo()\".
 
   In addition to the properties of the super class, the
   Expression object provides a value which
@@ -56,12 +56,12 @@
 
    Static methods may be called by using a class object as the target.
 
-   The reserved method name `new` may be used to call a class's constructor
-   as if all classes defined static `new` methods. Constructor invocations
+   The reserved method name \"new\" may be used to call a class's constructor
+   as if all classes defined static \"new\" methods. Constructor invocations
    are typically considered Expressions rather than Statements
    as they return a value.
 
-   The method names `get` and `set` defined in the List
+   The method names \"get\" and \"set\" defined in the List
    interface may also be applied to array instances, mapping to
    the static methods of the same name in the Array class.
 

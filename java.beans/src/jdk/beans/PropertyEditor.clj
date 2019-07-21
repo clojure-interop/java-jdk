@@ -115,8 +115,8 @@
 (defn get-value
   "Gets the property value.
 
-  returns: The value of the property.  Primitive types such as `int` will
-   be wrapped as the corresponding object type such as `java.lang.Integer`. - `java.lang.Object`"
+  returns: The value of the property.  Primitive types such as \"int\" will
+   be wrapped as the corresponding object type such as \"java.lang.Integer\". - `java.lang.Object`"
   (^java.lang.Object [^PropertyEditor this]
     (-> this (.getValue))))
 
@@ -158,8 +158,8 @@
 
 (defn set-value
   "Set (or change) the object that is to be edited.  Primitive types such
-   as `int` must be wrapped as the corresponding object type such as
-   `java.lang.Integer`.
+   as \"int\" must be wrapped as the corresponding object type such as
+   \"java.lang.Integer\".
 
   value - The new target object to be edited. Note that this object should not be modified by the PropertyEditor, rather the PropertyEditor should create a new object to hold any modified value. - `java.lang.Object`"
   ([^PropertyEditor this ^java.lang.Object value]

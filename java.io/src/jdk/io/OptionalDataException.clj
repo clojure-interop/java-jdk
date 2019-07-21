@@ -17,22 +17,22 @@
   (:refer-clojure :only [require comment defn ->])
   (:import [java.io OptionalDataException]))
 
-(defn -length
+(defn length
   "Instance Field.
 
   The number of bytes of primitive data available to be read
    in the current buffer.
 
   type: int"
-  [this]
-  (-> this .-length))
+  (^Integer [^OptionalDataException this]
+    (-> this .-length)))
 
-(defn -eof
+(defn eof
   "Instance Field.
 
   True if there is no more data in the buffered part of the stream.
 
   type: boolean"
-  [this]
-  (-> this .-eof))
+  (^Boolean [^OptionalDataException this]
+    (-> this .-eof)))
 

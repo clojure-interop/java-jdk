@@ -36,7 +36,7 @@
    the referral context. It might need to do this, for example, when
    it needs to supply special controls relating to authentication.
 
-   Service provider implementors should read the `Service Provider` section
+   Service provider implementors should read the \"Service Provider\" section
    in the LdapContext class description for implementation details.
 
   env - The possibly null environment properties to use when for the new context. If null, the context is initialized with no environment properties. - `java.util.Hashtable`

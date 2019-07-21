@@ -16,8 +16,8 @@
   Please see  RFC 5116
    for more information on the Authenticated Encryption with
   Associated Data (AEAD) algorithm, and
-  NIST Special Publication 800-38D, `NIST Recommendation for Block
-  Cipher Modes of Operation:  Galois/Counter Mode (GCM) and GMAC.`
+  NIST Special Publication 800-38D, \"NIST Recommendation for Block
+  Cipher Modes of Operation:  Galois/Counter Mode (GCM) and GMAC.\"
 
   The GCM specification states that tLen may only have the
   values {128, 120, 112, 104, 96}, or {64, 32} for certain

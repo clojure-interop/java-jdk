@@ -219,7 +219,7 @@
 (def *-html
   "Static Constant.
 
-  type: javax.swing.text.html.$Tag"
+  type: javax.swing.text.html.HTML$Tag"
   HTML$Tag/HTML)
 
 (def *-i

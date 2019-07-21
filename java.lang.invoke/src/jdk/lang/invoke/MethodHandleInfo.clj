@@ -33,13 +33,13 @@
   an equivalent method handle.
 
   If the underlying method is caller sensitive,
-  the direct method handle will have been `bound` to a particular caller class, the
+  the direct method handle will have been \"bound\" to a particular caller class, the
   lookup class
   of the lookup object used to create it.
   Cracking this method handle with a different lookup class will fail
   even if the underlying method is public (like Class.forName).
 
-  The requirement of lookup object matching provides a `fast fail` behavior
+  The requirement of lookup object matching provides a \"fast fail\" behavior
   for programs which may otherwise trust erroneous revelation of a method
   handle with symbolic information (or caller binding) from an unexpected scope.
   Use MethodHandles.reflectAs(java.lang.Class<T>, java.lang.invoke.MethodHandle) to override this limitation.
@@ -91,11 +91,11 @@
 (defn *reference-kind-to-string
   "Returns the descriptive name of the given reference kind,
    as defined in the table above.
-   The conventional prefix `REF_` is omitted.
+   The conventional prefix \"REF_\" is omitted.
 
   reference-kind - an integer code for a kind of reference used to access a class member - `int`
 
-  returns: a mixed-case string such as `getField` - `java.lang.String`
+  returns: a mixed-case string such as \"getField\" - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the argument is not a valid reference kind number"
   (^java.lang.String [^Integer reference-kind]
@@ -137,7 +137,7 @@
 (defn *to-string
   "Returns a string representation for a MethodHandleInfo,
    given the four parts of its symbolic reference.
-   This is defined to be of the form `RK C.N:MT`, where RK is the
+   This is defined to be of the form \"RK C.N:MT\", where RK is the
    reference kind string for kind,
    C is the name of defc
    N is the name, and
@@ -154,7 +154,7 @@
   name - the member name part of the symbolic reference - `java.lang.String`
   type - the method type part of the symbolic reference - `java.lang.invoke.MethodType`
 
-  returns: a string of the form `RK C.N:MT` - `java.lang.String`
+  returns: a string of the form \"RK C.N:MT\" - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if the first argument is not a valid reference kind number"
   (^java.lang.String [^Integer kind ^java.lang.Class defc ^java.lang.String name ^java.lang.invoke.MethodType type]
@@ -162,7 +162,7 @@
 
 (defn get-name
   "Returns the name of the cracked method handle's underlying member.
-   This is `<init>` if the underlying member was a constructor,
+   This is \"<init>\" if the underlying member was a constructor,
    else it is a simple method name or field name.
 
   returns: the simple name of the underlying member - `java.lang.String`"

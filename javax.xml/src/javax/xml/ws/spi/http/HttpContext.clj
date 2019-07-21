@@ -38,9 +38,9 @@
 
     HttpExchange exch = ...;
     String endpointAddress =
-        exch.getScheme()  `://`
+        exch.getScheme()  \"://\"
          exch.getLocalAddress().getHostName()
-         `:`  exch.getLocalAddress().getPort()
+         \":\"  exch.getLocalAddress().getPort()
          exch.getContextPath()  getPath();
 
   returns: this context's path - `java.lang.String`"

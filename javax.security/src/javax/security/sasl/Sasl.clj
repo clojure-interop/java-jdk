@@ -28,15 +28,15 @@
    of quality-of-protection values that the
    client or server is willing to support.  A qop value is one of
 
-   `auth` - authentication only
-   `auth-int` - authentication plus integrity protection
-   `auth-conf` - authentication plus integrity and confidentiality
+   \"auth\" - authentication only
+   \"auth-int\" - authentication plus integrity protection
+   \"auth-conf\" - authentication plus integrity and confidentiality
    protection
 
 
    The order of the list specifies the preference order of the client or
-   server. If this property is absent, the default qop is `auth`.
-   The value of this constant is `javax.security.sasl.qop`.
+   server. If this property is absent, the default qop is \"auth\".
+   The value of this constant is \"javax.security.sasl.qop\".
 
   type: java.lang.String"
   Sasl/QOP)
@@ -49,9 +49,9 @@
    of cipher strength values that
    the client or server is willing to support. A strength value is one of
 
-   `low`
-   `medium`
-   `high`
+   \"low\"
+   \"medium\"
+   \"high\"
 
    The order of the list specifies the preference order of the client or
    server.  An implementation should allow configuration of the meaning
@@ -60,8 +60,8 @@
    cipher suites that match the strength values.
 
    If this property is absent, the default strength is
-   `high,medium,low`.
-   The value of this constant is `javax.security.sasl.strength`.
+   \"high,medium,low\".
+   The value of this constant is \"javax.security.sasl.strength\".
 
   type: java.lang.String"
   Sasl/STRENGTH)
@@ -71,11 +71,11 @@
 
   The name of a property that specifies whether the
    server must authenticate to the client. The property contains
-   `true` if the server must
-   authenticate the to client; `false` otherwise.
-   The default is `false`.
+   \"true\" if the server must
+   authenticate the to client; \"false\" otherwise.
+   The default is \"false\".
    The value of this constant is
-   `javax.security.sasl.server.authentication`.
+   \"javax.security.sasl.server.authentication\".
 
   type: java.lang.String"
   Sasl/SERVER_AUTH)
@@ -89,7 +89,7 @@
    The property contains the bound host name after the authentication
    exchange has completed. It is only available on the server side.
    The value of this constant is
-   `javax.security.sasl.bound.server.name`.
+   \"javax.security.sasl.bound.server.name\".
 
   type: java.lang.String"
   Sasl/BOUND_SERVER_NAME)
@@ -102,7 +102,7 @@
    The property contains the string representation of an integer.
    If this property is absent, the default size
    is defined by the mechanism.
-   The value of this constant is `javax.security.sasl.maxbuffer`.
+   The value of this constant is \"javax.security.sasl.maxbuffer\".
 
   type: java.lang.String"
   Sasl/MAX_BUFFER)
@@ -115,7 +115,7 @@
    The property contains the string representation of an integer.
    The value of this property is negotiated between the client and server
    during the authentication exchange.
-   The value of this constant is `javax.security.sasl.rawsendsize`.
+   The value of this constant is \"javax.security.sasl.rawsendsize\".
 
   type: java.lang.String"
   Sasl/RAW_SEND_SIZE)
@@ -124,18 +124,18 @@
   "Static Constant.
 
   The name of a property that specifies whether to reuse previously
-   authenticated session information. The property contains `true` if the
+   authenticated session information. The property contains \"true\" if the
    mechanism implementation may attempt to reuse previously authenticated
-   session information; it contains `false` if the implementation must
+   session information; it contains \"false\" if the implementation must
    not reuse previously authenticated session information.  A setting of
-   `true` serves only as a hint: it does not necessarily entail actual
+   \"true\" serves only as a hint: it does not necessarily entail actual
    reuse because reuse might not be possible due to a number of reasons,
    including, but not limited to, lack of mechanism support for reuse,
    expiration of reusable information, and the peer's refusal to support
    reuse.
 
-   The property's default value is `false`.  The value of this constant
-   is `javax.security.sasl.reuse`.
+   The property's default value is \"false\".  The value of this constant
+   is \"javax.security.sasl.reuse\".
 
    Note that all other parameters and properties required to create a
    SASL client/server instance must be provided regardless of whether
@@ -155,12 +155,12 @@
 
   The name of a property that specifies
    whether mechanisms susceptible to simple plain passive attacks (e.g.,
-   `PLAIN`) are not permitted. The property
-   contains `true` if such mechanisms are not permitted;
-   `false` if such mechanisms are permitted.
-   The default is `false`.
+   \"PLAIN\") are not permitted. The property
+   contains \"true\" if such mechanisms are not permitted;
+   \"false\" if such mechanisms are permitted.
+   The default is \"false\".
    The value of this constant is
-   `javax.security.sasl.policy.noplaintext`.
+   \"javax.security.sasl.policy.noplaintext\".
 
   type: java.lang.String"
   Sasl/POLICY_NOPLAINTEXT)
@@ -171,12 +171,12 @@
   The name of a property that specifies whether
    mechanisms susceptible to active (non-dictionary) attacks
    are not permitted.
-   The property contains `true`
+   The property contains \"true\"
    if mechanisms susceptible to active attacks
-   are not permitted; `false` if such mechanisms are permitted.
-   The default is `false`.
+   are not permitted; \"false\" if such mechanisms are permitted.
+   The default is \"false\".
    The value of this constant is
-   `javax.security.sasl.policy.noactive`.
+   \"javax.security.sasl.policy.noactive\".
 
   type: java.lang.String"
   Sasl/POLICY_NOACTIVE)
@@ -186,13 +186,13 @@
 
   The name of a property that specifies whether
    mechanisms susceptible to passive dictionary attacks are not permitted.
-   The property contains `true`
+   The property contains \"true\"
    if mechanisms susceptible to dictionary attacks are not permitted;
-   `false` if such mechanisms are permitted.
-   The default is `false`.
+   \"false\" if such mechanisms are permitted.
+   The default is \"false\".
 
    The value of this constant is
-   `javax.security.sasl.policy.nodictionary`.
+   \"javax.security.sasl.policy.nodictionary\".
 
   type: java.lang.String"
   Sasl/POLICY_NODICTIONARY)
@@ -201,13 +201,13 @@
   "Static Constant.
 
   The name of a property that specifies whether mechanisms that accept
-   anonymous login are not permitted. The property contains `true`
+   anonymous login are not permitted. The property contains \"true\"
    if mechanisms that accept anonymous login are not permitted;
-   `false`
-   if such mechanisms are permitted. The default is `false`.
+   \"false\"
+   if such mechanisms are permitted. The default is \"false\".
 
    The value of this constant is
-   `javax.security.sasl.policy.noanonymous`.
+   \"javax.security.sasl.policy.noanonymous\".
 
   type: java.lang.String"
   Sasl/POLICY_NOANONYMOUS)
@@ -220,12 +220,12 @@
    means that breaking into one session will not automatically
    provide information for breaking into future sessions.
    The property
-   contains `true` if mechanisms that implement forward secrecy
-   between sessions are required; `false` if such mechanisms
-   are not required. The default is `false`.
+   contains \"true\" if mechanisms that implement forward secrecy
+   between sessions are required; \"false\" if such mechanisms
+   are not required. The default is \"false\".
 
    The value of this constant is
-   `javax.security.sasl.policy.forward`.
+   \"javax.security.sasl.policy.forward\".
 
   type: java.lang.String"
   Sasl/POLICY_FORWARD_SECRECY)
@@ -235,12 +235,12 @@
 
   The name of a property that specifies whether
    mechanisms that pass client credentials are required. The property
-   contains `true` if mechanisms that pass
-   client credentials are required; `false`
-   if such mechanisms are not required. The default is `false`.
+   contains \"true\" if mechanisms that pass
+   client credentials are required; \"false\"
+   if such mechanisms are not required. The default is \"false\".
 
    The value of this constant is
-   `javax.security.sasl.policy.credentials`.
+   \"javax.security.sasl.policy.credentials\".
 
   type: java.lang.String"
   Sasl/POLICY_PASS_CREDENTIALS)
@@ -256,7 +256,7 @@
    supports delegated authentication.
 
    The value of this constant is
-   `javax.security.sasl.credentials`.
+   \"javax.security.sasl.credentials\".
 
   type: java.lang.String"
   Sasl/CREDENTIALS)
@@ -266,12 +266,12 @@
 
    This method uses the
   JCA Security Provider Framework, described in the
-   `Java Cryptography Architecture API Specification & Reference`, for
+   \"Java Cryptography Architecture API Specification & Reference\", for
    locating and selecting a SaslClient implementation.
 
    First, it
    obtains an ordered list of SaslClientFactory instances from
-   the registered security providers for the `SaslClientFactory` service
+   the registered security providers for the \"SaslClientFactory\" service
    and the specified SASL mechanism(s). It then invokes
    createSaslClient() on each factory instance on the list
    until one produces a non-null SaslClient instance. It returns
@@ -287,19 +287,19 @@
 
    For example, a provider that contains a factory class,
    com.wiz.sasl.digest.ClientFactory, that supports the
-   `DIGEST-MD5` mechanism would register the following entry with the JCA:
+   \"DIGEST-MD5\" mechanism would register the following entry with the JCA:
    SaslClientFactory.DIGEST-MD5 com.wiz.sasl.digest.ClientFactory
 
    See the
-   `Java Cryptography Architecture API Specification & Reference`
+   \"Java Cryptography Architecture API Specification & Reference\"
    for information about how to install and configure security service
     providers.
 
-  mechanisms - The non-null list of mechanism names to try. Each is the IANA-registered name of a SASL mechanism. (e.g. `GSSAPI`, `CRAM-MD5`). - `java.lang.String[]`
+  mechanisms - The non-null list of mechanism names to try. Each is the IANA-registered name of a SASL mechanism. (e.g. \"GSSAPI\", \"CRAM-MD5\"). - `java.lang.String[]`
   authorization-id - The possibly null protocol-dependent identification to be used for authorization. If null or empty, the server derives an authorization ID from the client's authentication credentials. When the SASL authentication completes successfully, the specified entity is granted access. - `java.lang.String`
-  protocol - The non-null string name of the protocol for which the authentication is being performed (e.g., `ldap`). - `java.lang.String`
+  protocol - The non-null string name of the protocol for which the authentication is being performed (e.g., \"ldap\"). - `java.lang.String`
   server-name - The non-null fully-qualified host name of the server to authenticate to. - `java.lang.String`
-  props - The possibly null set of properties used to select the SASL mechanism and to configure the authentication exchange of the selected mechanism. For example, if props contains the Sasl.POLICY_NOPLAINTEXT property with the value `true`, then the selected SASL mechanism must not be susceptible to simple plain passive attacks. In addition to the standard properties declared in this class, other, possibly mechanism-specific, properties can be included. Properties not relevant to the selected mechanism are ignored, including any map entries with non-String keys. - `java.util.Map`
+  props - The possibly null set of properties used to select the SASL mechanism and to configure the authentication exchange of the selected mechanism. For example, if props contains the Sasl.POLICY_NOPLAINTEXT property with the value \"true\", then the selected SASL mechanism must not be susceptible to simple plain passive attacks. In addition to the standard properties declared in this class, other, possibly mechanism-specific, properties can be included. Properties not relevant to the selected mechanism are ignored, including any map entries with non-String keys. - `java.util.Map`
   cbh - The possibly null callback handler to used by the SASL mechanisms to get further information from the application/library to complete the authentication. For example, a SASL mechanism might require the authentication ID, password and realm from the caller. The authentication ID is requested by using a NameCallback. The password is requested by using a PasswordCallback. The realm is requested by using a RealmChoiceCallback if there is a list of realms to choose from, and by using a RealmCallback if the realm must be entered. - `javax.security.auth.callback.CallbackHandler`
 
   returns: A possibly null SaslClient created using the parameters
@@ -316,12 +316,12 @@
    This method uses the
   JCA Security Provider Framework,
    described in the
-   `Java Cryptography Architecture API Specification & Reference`, for
+   \"Java Cryptography Architecture API Specification & Reference\", for
    locating and selecting a SaslServer implementation.
 
    First, it
    obtains an ordered list of SaslServerFactory instances from
-   the registered security providers for the `SaslServerFactory` service
+   the registered security providers for the \"SaslServerFactory\" service
    and the specified mechanism. It then invokes
    createSaslServer() on each factory instance on the list
    until one produces a non-null SaslServer instance. It returns
@@ -337,18 +337,18 @@
 
    For example, a provider that contains a factory class,
    com.wiz.sasl.digest.ServerFactory, that supports the
-   `DIGEST-MD5` mechanism would register the following entry with the JCA:
+   \"DIGEST-MD5\" mechanism would register the following entry with the JCA:
    SaslServerFactory.DIGEST-MD5  com.wiz.sasl.digest.ServerFactory
 
    See the
-   `Java Cryptography Architecture API Specification & Reference`
+   \"Java Cryptography Architecture API Specification & Reference\"
    for information about how to install and configure security
    service providers.
 
-  mechanism - The non-null mechanism name. It must be an IANA-registered name of a SASL mechanism. (e.g. `GSSAPI`, `CRAM-MD5`). - `java.lang.String`
-  protocol - The non-null string name of the protocol for which the authentication is being performed (e.g., `ldap`). - `java.lang.String`
+  mechanism - The non-null mechanism name. It must be an IANA-registered name of a SASL mechanism. (e.g. \"GSSAPI\", \"CRAM-MD5\"). - `java.lang.String`
+  protocol - The non-null string name of the protocol for which the authentication is being performed (e.g., \"ldap\"). - `java.lang.String`
   server-name - The fully qualified host name of the server, or null if the server is not bound to any specific host name. If the mechanism does not allow an unbound server, a SaslException will be thrown. - `java.lang.String`
-  props - The possibly null set of properties used to select the SASL mechanism and to configure the authentication exchange of the selected mechanism. For example, if props contains the Sasl.POLICY_NOPLAINTEXT property with the value `true`, then the selected SASL mechanism must not be susceptible to simple plain passive attacks. In addition to the standard properties declared in this class, other, possibly mechanism-specific, properties can be included. Properties not relevant to the selected mechanism are ignored, including any map entries with non-String keys. - `java.util.Map`
+  props - The possibly null set of properties used to select the SASL mechanism and to configure the authentication exchange of the selected mechanism. For example, if props contains the Sasl.POLICY_NOPLAINTEXT property with the value \"true\", then the selected SASL mechanism must not be susceptible to simple plain passive attacks. In addition to the standard properties declared in this class, other, possibly mechanism-specific, properties can be included. Properties not relevant to the selected mechanism are ignored, including any map entries with non-String keys. - `java.util.Map`
   cbh - The possibly null callback handler to used by the SASL mechanisms to get further information from the application/library to complete the authentication. For example, a SASL mechanism might require the authentication ID, password and realm from the caller. The authentication ID is requested by using a NameCallback. The password is requested by using a PasswordCallback. The realm is requested by using a RealmChoiceCallback if there is a list of realms to choose from, and by using a RealmCallback if the realm must be entered. - `javax.security.auth.callback.CallbackHandler`
 
   returns: A possibly null SaslServer created using the parameters

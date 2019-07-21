@@ -25,7 +25,7 @@
         the previous example.
 
 
-        ap.setMimeHeader(`Content-Type`, `application/xml`);
+        ap.setMimeHeader(\"Content-Type\", \"application/xml\");
 
 
 
@@ -50,7 +50,7 @@
 
 
       AttachmentPart ap1 = m.createAttachmentPart();
-      ap1.setContent(contentString1, `text/plain`);
+      ap1.setContent(contentString1, \"text/plain\");
       m.addAttachmentPart(ap1);
 
 
@@ -62,7 +62,7 @@
 
       AttachmentPart ap2 = m.createAttachmentPart();
       byte[] jpegData =  ...;
-      ap2.setContent(new ByteArrayInputStream(jpegData), `image/jpeg`);
+      ap2.setContent(new ByteArrayInputStream(jpegData), \"image/jpeg\");
       m.addAttachmentPart(ap2);
 
   The getContent method retrieves the contents and header from
@@ -103,9 +103,9 @@
     (-> this (.addMimeHeader name value))))
 
 (defn set-content-type
-  "Sets the MIME header whose name is `Content-Type` with the given value.
+  "Sets the MIME header whose name is \"Content-Type\" with the given value.
 
-  content-type - a String giving the value of the `Content-Type` header - `java.lang.String`
+  content-type - a String giving the value of the \"Content-Type\" header - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified content type"
   ([^AttachmentPart this ^java.lang.String content-type]
@@ -140,9 +140,9 @@
     (-> this (.setBase64Content content content-type))))
 
 (defn set-content-id
-  "Sets the MIME header whose name is `Content-ID` with the given value.
+  "Sets the MIME header whose name is \"Content-ID\" with the given value.
 
-  content-id - a String giving the value of the `Content-ID` header - `java.lang.String`
+  content-id - a String giving the value of the \"Content-ID\" header - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified contentId value"
   ([^AttachmentPart this ^java.lang.String content-id]
@@ -168,10 +168,10 @@
     (-> this (.getRawContent))))
 
 (defn get-content-location
-  "Gets the value of the MIME header whose name is `Content-Location`.
+  "Gets the value of the MIME header whose name is \"Content-Location\".
 
   returns: a String giving the value of the
-            `Content-Location` header or null if there
+            \"Content-Location\" header or null if there
             is none - `java.lang.String`"
   (^java.lang.String [^AttachmentPart this]
     (-> this (.getContentLocation))))
@@ -195,10 +195,10 @@
     (-> this (.getNonMatchingMimeHeaders names))))
 
 (defn get-content-type
-  "Gets the value of the MIME header whose name is `Content-Type`.
+  "Gets the value of the MIME header whose name is \"Content-Type\".
 
   returns: a String giving the value of the
-            `Content-Type` header or null if there
+            \"Content-Type\" header or null if there
             is none - `java.lang.String`"
   (^java.lang.String [^AttachmentPart this]
     (-> this (.getContentType))))
@@ -288,9 +288,9 @@
     (-> this (.removeMimeHeader header))))
 
 (defn set-content-location
-  "Sets the MIME header whose name is `Content-Location` with the given value.
+  "Sets the MIME header whose name is \"Content-Location\" with the given value.
 
-  content-location - a String giving the value of the `Content-Location` header - `java.lang.String`
+  content-location - a String giving the value of the \"Content-Location\" header - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there was a problem with the specified content location"
   ([^AttachmentPart this ^java.lang.String content-location]
@@ -300,7 +300,7 @@
   "Gets all the values of the header identified by the given
    String.
 
-  name - the name of the header; example: `Content-Type` - `java.lang.String`
+  name - the name of the header; example: \"Content-Type\" - `java.lang.String`
 
   returns: a String array giving the value for the
            specified header - `java.lang.String[]`"
@@ -373,7 +373,7 @@
    DataContentHandler object that is used to interpret the bytes
    and (2) the Content-Type given in the header.
 
-   For the MIME content types `text/plain`, `text/html` and `text/xml`, the
+   For the MIME content types \"text/plain\", \"text/html\" and \"text/xml\", the
    DataContentHandler object does the conversions to and
    from the Java types corresponding to the MIME types.
    For other MIME types,the DataContentHandler object
@@ -402,10 +402,10 @@
     (-> this (.getContent))))
 
 (defn get-content-id
-  "Gets the value of the MIME header whose name is `Content-ID`.
+  "Gets the value of the MIME header whose name is \"Content-ID\".
 
   returns: a String giving the value of the
-            `Content-ID` header or null if there
+            \"Content-ID\" header or null if there
             is none - `java.lang.String`"
   (^java.lang.String [^AttachmentPart this]
     (-> this (.getContentId))))

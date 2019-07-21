@@ -54,7 +54,7 @@
 (defn to-string
   "Constructs a string representation of this Proxy.
    This String is constructed by calling toString() on its type
-   and concatenating ` @ ` and the toString() result from its address
+   and concatenating \" @ \" and the toString() result from its address
    if its type is not DIRECT.
 
   returns: a string representation of this object. - `java.lang.String`"

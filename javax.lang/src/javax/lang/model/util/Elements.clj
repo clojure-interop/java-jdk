@@ -45,7 +45,7 @@
 
 
    assert elements.overrides(m1, m2,
-            elements.getTypeElement(`java.lang.String`));
+            elements.getTypeElement(\"java.lang.String\"));
 
 
    A more interesting case can be illustrated by the following example
@@ -59,7 +59,7 @@
    m1 = ...;  // A.m
    m2 = ...;  // B.m
    assert ! elements.overrides(m1, m2,
-            elements.getTypeElement(`A`));
+            elements.getTypeElement(\"A\"));
 
 
    When viewed as a member of a third type C, however,
@@ -69,7 +69,7 @@
    class C extends A implements B {}
    ...
    assert elements.overrides(m1, m2,
-            elements.getTypeElement(`C`));
+            elements.getTypeElement(\"C\"));
 
   overrider - the first method, possible overrider - `javax.lang.model.element.ExecutableElement`
   overridden - the second method, possibly being overridden - `javax.lang.model.element.ExecutableElement`
@@ -173,26 +173,26 @@
 (defn get-package-element
   "Returns a package given its fully qualified name.
 
-  name - fully qualified package name, or `` for an unnamed package - `java.lang.CharSequence`
+  name - fully qualified package name, or \"\" for an unnamed package - `java.lang.CharSequence`
 
   returns: the named package, or null if it cannot be found - `javax.lang.model.element.PackageElement`"
   (^javax.lang.model.element.PackageElement [^Elements this ^java.lang.CharSequence name]
     (-> this (.getPackageElement name))))
 
 (defn get-doc-comment
-  "Returns the text of the documentation (`Javadoc`)
+  "Returns the text of the documentation (\"Javadoc\")
    comment of an element.
 
     A documentation comment of an element is a comment that
-   begins with `/**` , ends with a separate
-   `*/`, and immediately precedes the element,
+   begins with \"/**\" , ends with a separate
+   \"*/\", and immediately precedes the element,
    ignoring white space.  Therefore, a documentation comment
-   contains at least three`*` characters.  The text
+   contains at least three\"*\" characters.  The text
    returned for the documentation comment is a processed form of
-   the comment as it appears in source code.  The leading `/**` and trailing `*/` are removed.  For lines
-   of the comment starting after the initial `/**`,
+   the comment as it appears in source code.  The leading \"/**\" and trailing \"*/\" are removed.  For lines
+   of the comment starting after the initial \"/**\",
    leading white space characters are discarded as are any
-   consecutive `*` characters appearing after the white
+   consecutive \"*\" characters appearing after the white
    space or starting the line.  The processed lines are then
    concatenated together (including line terminators) and
    returned.

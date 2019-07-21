@@ -8,7 +8,7 @@
   It provides an immutable object used by sockets for binding, connecting, or
   as returned values.
 
-  The wildcard is a special local IP address. It usually means `any`
+  The wildcard is a special local IP address. It usually means \"any\"
   and can only be used for bind operations."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.net InetSocketAddress]))
@@ -115,7 +115,7 @@
    If both addresses are unresolved, then the hostname and the port number
    are compared.
 
-   Note: Hostnames are case insensitive. e.g. `FooBar` and `foobar` are
+   Note: Hostnames are case insensitive. e.g. \"FooBar\" and \"foobar\" are
    considered equal.
 
   obj - the object to compare against. - `java.lang.Object`

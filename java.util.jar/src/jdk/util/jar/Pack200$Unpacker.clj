@@ -4,7 +4,7 @@
   using Pack200.newUnpacker().
 
   Every JAR file produced by this engine will include the string
-  `PACK200` as a zip file comment.
+  \"PACK200\" as a zip file comment.
   This allows a deployer to detect if a JAR archive was packed and unpacked.
 
   Note: Unless otherwise noted, passing a null argument to a
@@ -17,7 +17,7 @@
 
 (defn properties
   "Get the set of this engine's properties. This set is
-   a `live view`, so that changing its
+   a \"live view\", so that changing its
    contents immediately affects the Packer engine, and
    changes from the engine (such as progress indications)
    are immediately visible in the map.

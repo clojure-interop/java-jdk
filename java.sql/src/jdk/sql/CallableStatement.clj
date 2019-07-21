@@ -862,10 +862,10 @@
   scale - the number of digits to the right of the decimal point - `int`
 
   returns: the parameter value.  If the value is SQL NULL, the result
-           is null. - `.math.BigDecimal`
+           is null. - `java.math.BigDecimal`
 
   throws: java.sql.SQLException - if the parameterIndex is not valid; if a database access error occurs or this method is called on a closed CallableStatement"
-  (^.math.BigDecimal [^CallableStatement this ^Integer parameter-index ^Integer scale]
+  (^java.math.BigDecimal [^CallableStatement this ^Integer parameter-index ^Integer scale]
     (-> this (.getBigDecimal parameter-index scale)))
   (^java.math.BigDecimal [^CallableStatement this ^Integer parameter-index]
     (-> this (.getBigDecimal parameter-index))))

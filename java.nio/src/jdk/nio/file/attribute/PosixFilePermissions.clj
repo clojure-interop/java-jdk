@@ -37,7 +37,7 @@
    and others have none.
 
 
-     Set<PosixFilePermission> perms = PosixFilePermissions.fromString(`rwxr-x---`);
+     Set<PosixFilePermission> perms = PosixFilePermissions.fromString(\"rwxr-x---\");
 
   perms - string representing a set of permissions - `java.lang.String`
 
@@ -55,7 +55,7 @@
   perms - the set of permissions - `java.util.Set`
 
   returns: an attribute encapsulating the given file permissions with
-            name `posix:permissions` - `java.nio.file.attribute.FileAttribute<java.util.Set<java.nio.file.attribute.PosixFilePermission>>`
+            name \"posix:permissions\" - `java.nio.file.attribute.FileAttribute<java.util.Set<java.nio.file.attribute.PosixFilePermission>>`
 
   throws: java.lang.ClassCastException - if the set contains elements that are not of type PosixFilePermission"
   (^java.nio.file.attribute.FileAttribute [^java.util.Set perms]

@@ -10,7 +10,7 @@
   the year, month, day, hour, minute, and so on, create a Calendar object and set it to the Date from the DateTimeAtProcessing attribute.
 
   IPP Compatibility: The information needed to construct an IPP
-  `date-time-at-processing` attribute can be obtained as described above. The
+  \"date-time-at-processing\" attribute can be obtained as described above. The
   category name returned by getName() gives the IPP attribute
   name."
   (:refer-clojure :only [require comment defn ->])
@@ -49,7 +49,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class DateTimeAtProcessing, the category is class
@@ -65,7 +65,7 @@
    instance.
 
    For class DateTimeAtProcessing, the category name is
-   `date-time-at-processing`.
+   \"date-time-at-processing\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^DateTimeAtProcessing this]

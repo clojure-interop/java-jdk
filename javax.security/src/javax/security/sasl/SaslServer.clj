@@ -15,7 +15,7 @@
 
 
   SaslServer ss = Sasl.createSaslServer(mechanism,
-      `ldap`, myFQDN, props, callbackHandler);
+      \"ldap\", myFQDN, props, callbackHandler);
   It can then proceed to use the server for authentication.
   For example, suppose the LDAP server received an LDAP BIND request
   containing the name of the SASL mechanism and an (optional) initial
@@ -40,8 +40,8 @@
   if (ss.isComplete() && status == SUCCESS) {
      String qop = (String) sc.getNegotiatedProperty(Sasl.QOP);
      if (qop != null
-         && (qop.equalsIgnoreCase(`auth-int`)
-             || qop.equalsIgnoreCase(`auth-conf`))) {
+         && (qop.equalsIgnoreCase(\"auth-int\")
+             || qop.equalsIgnoreCase(\"auth-conf\"))) {
 
        // Use SaslServer.wrap() and SaslServer.unwrap() for future
        // communication with client
@@ -54,7 +54,7 @@
 
 (defn get-mechanism-name
   "Returns the IANA-registered mechanism name of this SASL server.
-   (e.g. `CRAM-MD5`, `GSSAPI`).
+   (e.g. \"CRAM-MD5\", \"GSSAPI\").
 
   returns: A non-null string representing the IANA-registered mechanism name. - `java.lang.String`"
   (^java.lang.String [^SaslServer this]

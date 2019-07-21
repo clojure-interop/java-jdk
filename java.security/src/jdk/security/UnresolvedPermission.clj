@@ -1,6 +1,6 @@
 (ns jdk.security.UnresolvedPermission
   "The UnresolvedPermission class is used to hold Permissions that
-  were `unresolved` when the Policy was initialized.
+  were \"unresolved\" when the Policy was initialized.
   An unresolved permission is one whose actual Permission class
   does not yet exist at the time the Policy is initialized (see below).
 
@@ -23,13 +23,13 @@
   initialization. For example, a referenced permission class may
   be in a JAR file that will later be loaded.
   For each such class, an UnresolvedPermission is instantiated.
-  Thus, an UnresolvedPermission is essentially a `placeholder`
+  Thus, an UnresolvedPermission is essentially a \"placeholder\"
   containing information about the permission.
 
   Later, when code calls AccessController.checkPermission
   on a permission of a type that was previously unresolved,
   but whose class has since been loaded, previously-unresolved
-  permissions of that type are `resolved`. That is,
+  permissions of that type are \"resolved\". That is,
   for each such UnresolvedPermission, a new object of
   the appropriate class type is instantiated, based on the
   information in the UnresolvedPermission.
@@ -104,7 +104,7 @@
 (defn to-string
   "Returns a string describing this UnresolvedPermission.  The convention
    is to specify the class name, the permission name, and the actions, in
-   the following format: '(unresolved `ClassName` `name` `actions`)'.
+   the following format: '(unresolved \"ClassName\" \"name\" \"actions\")'.
 
   returns: information about this UnresolvedPermission. - `java.lang.String`"
   (^java.lang.String [^UnresolvedPermission this]
@@ -112,13 +112,13 @@
 
 (defn get-actions
   "Returns the canonical string representation of the actions,
-   which currently is the empty string ``, since there are no actions for
+   which currently is the empty string \"\", since there are no actions for
    an UnresolvedPermission. That is, the actions for the
    permission that will be created when this UnresolvedPermission
    is resolved may be non-null, but an UnresolvedPermission
    itself is never considered to have any actions.
 
-  returns: the empty string ``. - `java.lang.String`"
+  returns: the empty string \"\". - `java.lang.String`"
   (^java.lang.String [^UnresolvedPermission this]
     (-> this (.getActions))))
 

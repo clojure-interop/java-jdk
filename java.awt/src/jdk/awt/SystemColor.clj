@@ -3,7 +3,7 @@
   native GUI objects on a system.  For systems which support the dynamic
   update of the system colors (when the user changes the colors)
   the actual RGB values of these symbolic colors will also change
-  dynamically.  In order to compare the `current` RGB value of a
+  dynamically.  In order to compare the \"current\" RGB value of a
   SystemColor object with a non-symbolic Color object,
   getRGB should be used rather than equals.
 

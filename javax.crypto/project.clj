@@ -1,4 +1,4 @@
-(defproject clojure-interop/javax.crypto "1.0.4"
+(defproject clojure-interop/javax.crypto "1.0.5"
   :description "Clojure to Java Interop Bindings for javax.crypto"
   :url "https://github.com/clojure-interop/java-jdk"
   :license {:name "Eclipse Public License"

@@ -177,7 +177,7 @@
 (defn mouse-wheel
   "Rotates the scroll wheel on wheel-equipped mice.
 
-  wheel-amt - number of `notches` to move the mouse wheel Negative values indicate movement up/away from the user, positive values indicate movement down/towards the user. - `int`"
+  wheel-amt - number of \"notches\" to move the mouse wheel Negative values indicate movement up/away from the user, positive values indicate movement down/towards the user. - `int`"
   ([^Robot this ^Integer wheel-amt]
     (-> this (.mouseWheel wheel-amt))))
 

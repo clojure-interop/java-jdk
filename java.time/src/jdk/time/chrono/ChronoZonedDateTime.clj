@@ -420,7 +420,7 @@
 
    The comparison is based first on the instant, then on the local date-time,
    then on the zone ID, then on the chronology.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
    If all the date-time objects being compared are in the same chronology, then the
    additional chronology stage is not required.

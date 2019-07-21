@@ -40,26 +40,26 @@
   import static java.lang.invoke.MethodType.*;
   ...
   MethodHandle deepToString = publicLookup()
-    .findStatic(Arrays.class, `deepToString`, methodType(String.class, Object[].class));
+    .findStatic(Arrays.class, \"deepToString\", methodType(String.class, Object[].class));
 
   MethodHandle ts1 = deepToString.asCollector(String[].class, 1);
-  assertEquals(`[strange]`, (String) ts1.invokeExact(`strange`));
+  assertEquals(\"[strange]\", (String) ts1.invokeExact(\"strange\"));
 
   MethodHandle ts2 = deepToString.asCollector(String[].class, 2);
-  assertEquals(`[up, down]`, (String) ts2.invokeExact(`up`, `down`));
+  assertEquals(\"[up, down]\", (String) ts2.invokeExact(\"up\", \"down\"));
 
   MethodHandle ts3 = deepToString.asCollector(String[].class, 3);
   MethodHandle ts3_ts2 = collectArguments(ts3, 1, ts2);
-  assertEquals(`[top, [up, down], strange]`,
-               (String) ts3_ts2.invokeExact(`top`, `up`, `down`, `strange`));
+  assertEquals(\"[top, [up, down], strange]\",
+               (String) ts3_ts2.invokeExact(\"top\", \"up\", \"down\", \"strange\"));
 
   MethodHandle ts3_ts2_ts1 = collectArguments(ts3_ts2, 3, ts1);
-  assertEquals(`[top, [up, down], [strange]]`,
-               (String) ts3_ts2_ts1.invokeExact(`top`, `up`, `down`, `strange`));
+  assertEquals(\"[top, [up, down], [strange]]\",
+               (String) ts3_ts2_ts1.invokeExact(\"top\", \"up\", \"down\", \"strange\"));
 
   MethodHandle ts3_ts2_ts3 = collectArguments(ts3_ts2, 1, ts3);
-  assertEquals(`[top, [[up, down, strange], charm], bottom]`,
-               (String) ts3_ts2_ts3.invokeExact(`top`, `up`, `down`, `strange`, `charm`, `bottom`));
+  assertEquals(\"[top, [[up, down, strange], charm], bottom]\",
+               (String) ts3_ts2_ts3.invokeExact(\"top\", \"up\", \"down\", \"strange\", \"charm\", \"bottom\"));
     Here is pseudocode for the resulting adapter:
 
 
@@ -85,7 +85,7 @@
    }
 
    A collection adapter collectArguments(mh, 0, coll) is equivalent to
-   one which first `folds` the affected arguments, and then drops them, in separate
+   one which first \"folds\" the affected arguments, and then drops them, in separate
    steps as follows:
 
 
@@ -110,7 +110,7 @@
     (MethodHandles/collectArguments target pos filter)))
 
 (defn *reflect-as
-  "Performs an unchecked `crack` of a
+  "Performs an unchecked \"crack\" of a
    direct method handle.
    The result is as if the user had obtained a lookup object capable enough
    to crack the target method handle, called
@@ -120,7 +120,7 @@
    to resolve the symbolic reference to a member.
 
    If there is a security manager, its checkPermission method
-   is called with a ReflectPermission(`suppressAccessChecks`) permission.
+   is called with a ReflectPermission(\"suppressAccessChecks\") permission.
 
   expected - a class object representing the desired result type T - `java.lang.Class`
   target - a direct method handle to crack into symbolic reference components - `java.lang.invoke.MethodHandle`
@@ -382,12 +382,12 @@
   import static java.lang.invoke.MethodType.*;
   ...
   MethodHandle cat = lookup().findVirtual(String.class,
-    `concat`, methodType(String.class, String.class));
+    \"concat\", methodType(String.class, String.class));
   MethodHandle length = lookup().findVirtual(String.class,
-    `length`, methodType(int.class));
-  System.out.println((String) cat.invokeExact(`x`, `y`)); // xy
+    \"length\", methodType(int.class));
+  System.out.println((String) cat.invokeExact(\"x\", \"y\")); // xy
   MethodHandle f0 = filterReturnValue(cat, length);
-  System.out.println((int) f0.invokeExact(`x`, `y`)); // 2
+  System.out.println((int) f0.invokeExact(\"x\", \"y\")); // 2
     Here is pseudocode for the resulting adapter:
 
 
@@ -464,8 +464,8 @@
    Also, it cannot access
    caller sensitive methods.
 
-  returns: a lookup object which is trusted minimally - `java.lang.invoke.MethodHandles$Lookup Lookup`"
-  ([]
+  returns: a lookup object which is trusted minimally - `java.lang.invoke.MethodHandles$Lookup`"
+  (^java.lang.invoke.MethodHandles$Lookup []
     (MethodHandles/publicLookup )))
 
 (defn *invoker
@@ -483,7 +483,7 @@
    the required arity conversion will be made, again as if by asType.
 
    This method is equivalent to the following code (though it may be more efficient):
-   publicLookup().findVirtual(MethodHandle.class, `invoke`, type)
+   publicLookup().findVirtual(MethodHandle.class, \"invoke\", type)
 
    Discussion:
    A general method type is one which
@@ -526,12 +526,12 @@
   import static java.lang.invoke.MethodType.*;
   ...
   MethodHandle cat = lookup().findVirtual(String.class,
-    `concat`, methodType(String.class, String.class));
-  assertEquals(`xy`, (String) cat.invokeExact(`x`, `y`));
+    \"concat\", methodType(String.class, String.class));
+  assertEquals(\"xy\", (String) cat.invokeExact(\"x\", \"y\"));
   MethodType bigType = cat.type().insertParameterTypes(0, int.class, String.class);
   MethodHandle d0 = dropArguments(cat, 0, bigType.parameterList().subList(0,2));
   assertEquals(bigType, d0.type());
-  assertEquals(`yz`, (String) d0.invokeExact(123, `x`, `y`, `z`));
+  assertEquals(\"yz\", (String) d0.invokeExact(123, \"x\", \"y\", \"z\"));
 
    This method is also equivalent to the following code:
 
@@ -600,14 +600,14 @@
   import static java.lang.invoke.MethodType.*;
   ...
   MethodHandle trace = publicLookup().findVirtual(java.io.PrintStream.class,
-    `println`, methodType(void.class, String.class))
+    \"println\", methodType(void.class, String.class))
       .bindTo(System.out);
   MethodHandle cat = lookup().findVirtual(String.class,
-    `concat`, methodType(String.class, String.class));
-  assertEquals(`boojum`, (String) cat.invokeExact(`boo`, `jum`));
+    \"concat\", methodType(String.class, String.class));
+  assertEquals(\"boojum\", (String) cat.invokeExact(\"boo\", \"jum\"));
   MethodHandle catTrace = foldArguments(cat, trace);
-  // also prints `boo`:
-  assertEquals(`boojum`, (String) catTrace.invokeExact(`boo`, `jum`));
+  // also prints \"boo\":
+  assertEquals(\"boojum\", (String) catTrace.invokeExact(\"boo\", \"jum\"));
     Here is pseudocode for the resulting adapter:
 
 
@@ -660,7 +660,7 @@
    an additional leading argument of type MethodHandle.
 
    This method is equivalent to the following code (though it may be more efficient):
-   publicLookup().findVirtual(MethodHandle.class, `invokeExact`, type)
+   publicLookup().findVirtual(MethodHandle.class, \"invokeExact\", type)
 
 
    Discussion:
@@ -805,16 +805,16 @@
   import static java.lang.invoke.MethodType.*;
   ...
   MethodHandle cat = lookup().findVirtual(String.class,
-    `concat`, methodType(String.class, String.class));
+    \"concat\", methodType(String.class, String.class));
   MethodHandle upcase = lookup().findVirtual(String.class,
-    `toUpperCase`, methodType(String.class));
-  assertEquals(`xy`, (String) cat.invokeExact(`x`, `y`));
+    \"toUpperCase\", methodType(String.class));
+  assertEquals(\"xy\", (String) cat.invokeExact(\"x\", \"y\"));
   MethodHandle f0 = filterArguments(cat, 0, upcase);
-  assertEquals(`Xy`, (String) f0.invokeExact(`x`, `y`)); // Xy
+  assertEquals(\"Xy\", (String) f0.invokeExact(\"x\", \"y\")); // Xy
   MethodHandle f1 = filterArguments(cat, 1, upcase);
-  assertEquals(`xY`, (String) f1.invokeExact(`x`, `y`)); // xY
+  assertEquals(\"xY\", (String) f1.invokeExact(\"x\", \"y\")); // xY
   MethodHandle f2 = filterArguments(cat, 0, upcase, upcase);
-  assertEquals(`XY`, (String) f2.invokeExact(`x`, `y`)); // XY
+  assertEquals(\"XY\", (String) f2.invokeExact(\"x\", \"y\")); // XY
     Here is pseudocode for the resulting adapter:
 
 

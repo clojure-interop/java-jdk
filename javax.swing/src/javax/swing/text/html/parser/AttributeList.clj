@@ -26,47 +26,47 @@
   (^AttributeList [^java.lang.String name]
     (new AttributeList name)))
 
-(defn -name
+(defn name
   "Instance Field.
 
   type: java.lang.String"
-  [this]
-  (-> this .-name))
+  (^java.lang.String [^AttributeList this]
+    (-> this .-name)))
 
-(defn -type
+(defn type
   "Instance Field.
 
   type: int"
-  [this]
-  (-> this .-type))
+  (^Integer [^AttributeList this]
+    (-> this .-type)))
 
-(defn -values
+(defn values
   "Instance Field.
 
   type: java.util.Vector<?>"
-  [this]
-  (-> this .-values))
+  (^java.util.Vector [^AttributeList this]
+    (-> this .-values)))
 
-(defn -modifier
+(defn modifier
   "Instance Field.
 
   type: int"
-  [this]
-  (-> this .-modifier))
+  (^Integer [^AttributeList this]
+    (-> this .-modifier)))
 
-(defn -value
+(defn value
   "Instance Field.
 
   type: java.lang.String"
-  [this]
-  (-> this .-value))
+  (^java.lang.String [^AttributeList this]
+    (-> this .-value)))
 
-(defn -next
+(defn next
   "Instance Field.
 
   type: javax.swing.text.html.parser.AttributeList"
-  [this]
-  (-> this .-next))
+  (^javax.swing.text.html.parser.AttributeList [^AttributeList this]
+    (-> this .-next)))
 
 (defn *name-2type
   "nm - `java.lang.String`

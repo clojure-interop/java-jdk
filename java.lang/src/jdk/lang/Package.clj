@@ -14,8 +14,8 @@
   method for details.
 
   Specification version numbers use a syntax that consists of nonnegative
-  decimal integers separated by periods `.`, for example `2.0` or
-  `1.2.3.4.5.6.7`.  This allows an extensible number to be used to represent
+  decimal integers separated by periods \".\", for example \"2.0\" or
+  \"1.2.3.4.5.6.7\".  This allows an extensible number to be used to represent
   major, minor, micro, etc. versions.  The version specification is described
   by the following formal grammar:
 
@@ -110,7 +110,7 @@
 
 (defn to-string
   "Returns the string representation of this Package.
-   Its value is the string `package ` and the package name.
+   Its value is the string \"package \" and the package name.
    If the package title is defined it is appended.
    If the package version is defined it is appended.
 
@@ -268,7 +268,7 @@
   "Returns the version number of the specification
    that this package implements.
    This version string must be a sequence of nonnegative decimal
-   integers separated by `.`'s and may have leading zeros.
+   integers separated by \".\"'s and may have leading zeros.
    When version strings are compared the most significant
    numbers are compared.
 

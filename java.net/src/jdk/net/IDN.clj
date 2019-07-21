@@ -63,9 +63,9 @@
    as defined in RFC 3490, only operates on a single label. This method can handle
    both label and entire domain name, by assuming that labels in a domain name are
    always separated by dots. The following characters are recognized as dots:
-   \u002E (full stop), \u3002 (ideographic full stop), \uFF0E (fullwidth full stop),
-   and \uFF61 (halfwidth ideographic full stop). if dots are
-   used as label separators, this method also changes all of them to \u002E (full stop)
+   \\u002E (full stop), \\u3002 (ideographic full stop), \\uFF0E (fullwidth full stop),
+   and \\uFF61 (halfwidth ideographic full stop). if dots are
+   used as label separators, this method also changes all of them to \\u002E (full stop)
    in output translated string.
 
   input - the string to be processed - `java.lang.String`
@@ -89,8 +89,8 @@
    as defined in RFC 3490, only operates on a single label. This method can handle
    both label and entire domain name, by assuming that labels in a domain name are
    always separated by dots. The following characters are recognized as dots:
-   \u002E (full stop), \u3002 (ideographic full stop), \uFF0E (fullwidth full stop),
-   and \uFF61 (halfwidth ideographic full stop).
+   \\u002E (full stop), \\u3002 (ideographic full stop), \\uFF0E (fullwidth full stop),
+   and \\uFF61 (halfwidth ideographic full stop).
 
   input - the string to be processed - `java.lang.String`
   flag - process flag; can be 0 or any logical OR of possible flags - `int`

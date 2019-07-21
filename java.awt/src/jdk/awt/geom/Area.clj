@@ -41,7 +41,7 @@
       Shape results in a closed outline in the
       Area object.
   Creating an Area from a Shape
-      which encloses no area (even when `closed`) produces an
+      which encloses no area (even when \"closed\") produces an
       empty Area.  A common example of this issue
       is that producing an Area from a line will
       be empty since the line encloses no area.  An empty
@@ -54,7 +54,7 @@
       describe the same geometry even when the original
       outline is simple and obvious.  The analysis that the
       Area class must perform on the path may
-      not reflect the same concepts of `simple and obvious`
+      not reflect the same concepts of \"simple and obvious\"
       as a human being perceives."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.awt.geom Area]))

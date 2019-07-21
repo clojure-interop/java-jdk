@@ -1,8 +1,8 @@
 (ns jdk.rmi.activation.Activator
   "The Activator facilitates remote object activation. A
-  `faulting` remote reference calls the activator's
-  activate method to obtain a `live` reference to a
-  `activatable` remote object. Upon receiving a request for activation,
+  \"faulting\" remote reference calls the activator's
+  activate method to obtain a \"live\" reference to a
+  \"activatable\" remote object. Upon receiving a request for activation,
   the activator looks up the activation descriptor for the activation
   identifier, id, determines the group in which the
   object should be activated initiates object re-creation via the
@@ -29,7 +29,7 @@
   "Activate the object associated with the activation identifier,
    id. If the activator knows the object to be active
    already, and force is false , the stub with a
-   `live` reference is returned immediately to the caller;
+   \"live\" reference is returned immediately to the caller;
    otherwise, if the activator does not know that corresponding
    the remote object is active, the activator uses the activation
    descriptor information (previously registered) to determine the
@@ -52,7 +52,7 @@
    result (a marshalled remote object reference, a stub) to the
    caller.
 
-   Note that the activator receives a `marshalled` object instead of a
+   Note that the activator receives a \"marshalled\" object instead of a
    Remote object so that the activator does not need to load the
    code for that object, or participate in distributed garbage
    collection for that object. If the activator kept a strong

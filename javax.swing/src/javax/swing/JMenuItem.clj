@@ -1,6 +1,6 @@
 (ns javax.swing.JMenuItem
   "An implementation of an item in a menu. A menu item is essentially a button
-  sitting in a list. When the user selects the `button`, the action
+  sitting in a list. When the user selects the \"button\", the action
   associated with the menu item is performed. A JMenuItem
   contained in a JPopupMenu performs exactly that function.
 
@@ -62,7 +62,7 @@
     (-> this (.getComponent))))
 
 (defn armed?
-  "Returns whether the menu item is `armed`.
+  "Returns whether the menu item is \"armed\".
 
   returns: true if the menu item is armed, and it can be selected - `boolean`"
   (^Boolean [^JMenuItem this]
@@ -72,7 +72,7 @@
   "Returns the suffix used to construct the name of the L&F class used to
    render this component.
 
-  returns: the string `MenuItemUI` - `java.lang.String`"
+  returns: the string \"MenuItemUI\" - `java.lang.String`"
   (^java.lang.String [^JMenuItem this]
     (-> this (.getUIClassID))))
 
@@ -92,7 +92,7 @@
     (-> this (.menuSelectionChanged is-included))))
 
 (defn set-armed
-  "Identifies the menu item as `armed`. If the mouse button is
+  "Identifies the menu item as \"armed\". If the mouse button is
    released while it is over this item, the menu's action event
    will fire. If the mouse button is released elsewhere, the
    event will not fire and the menu item will be disarmed.

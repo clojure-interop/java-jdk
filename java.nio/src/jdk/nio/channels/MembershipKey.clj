@@ -89,8 +89,8 @@
    method will continue to return the channel even after the membership
    becomes invalid.
 
-  returns: the channel - `java.nio.s.MulticastChannel`"
-  (^java.nio.s.MulticastChannel [^MembershipKey this]
+  returns: the channel - `java.nio.channels.MulticastChannel`"
+  (^java.nio.channels.MulticastChannel [^MembershipKey this]
     (-> this (.channel))))
 
 (defn group

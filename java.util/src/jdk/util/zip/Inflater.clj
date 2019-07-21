@@ -14,8 +14,8 @@
 
   try {
       // Encode a String into bytes
-      String inputString = `blahblahblah??`;
-      byte[] input = inputString.getBytes(`UTF-8`);
+      String inputString = \"blahblahblah??\";
+      byte[] input = inputString.getBytes(\"UTF-8\");
 
       // Compress the bytes
       byte[] output = new byte[100];
@@ -32,7 +32,7 @@
       decompresser.end();
 
       // Decode the bytes into a String
-      String outputString = new String(result, 0, resultLength, `UTF-8`);
+      String outputString = new String(result, 0, resultLength, \"UTF-8\");
   } catch(java.io.UnsupportedEncodingException ex) {
       // handle
   } catch (java.util.zip.DataFormatException ex) {
@@ -49,7 +49,7 @@
    compatibility with the compression format used by both GZIP and PKZIP.
 
    Note: When using the 'nowrap' option it is also necessary to provide
-   an extra `dummy` byte as input. This is required by the ZLIB native
+   an extra \"dummy\" byte as input. This is required by the ZLIB native
    library in order to support certain optimizations.
 
   nowrap - if true then support GZIP compatible compression - `boolean`"

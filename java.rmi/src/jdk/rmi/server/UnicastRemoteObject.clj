@@ -56,7 +56,7 @@
 
 
 
-  A `root class` is determined as follows: if the remote object's
+  A \"root class\" is determined as follows: if the remote object's
   class directly implements an interface that extends Remote, then
   the remote object's class is the root class; otherwise, the root class is
   the most derived superclass of the remote object's class that directly

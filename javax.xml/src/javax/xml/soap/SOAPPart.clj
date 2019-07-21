@@ -6,17 +6,17 @@
 
   A SOAPPart object is a MIME part and has the MIME headers
   Content-Id, Content-Location, and Content-Type.  Because the value of
-  Content-Type must be `text/xml`, a SOAPPart object automatically
-  has a MIME header of Content-Type with its value set to `text/xml`.
-  The value must be `text/xml` because content in the SOAP part of a
-  message must be in XML format.  Content that is not of type `text/xml`
+  Content-Type must be \"text/xml\", a SOAPPart object automatically
+  has a MIME header of Content-Type with its value set to \"text/xml\".
+  The value must be \"text/xml\" because content in the SOAP part of a
+  message must be in XML format.  Content that is not of type \"text/xml\"
   must be in an AttachmentPart object rather than in the
   SOAPPart object.
 
   When a message is sent, its SOAP part must have the MIME header Content-Type
-  set to `text/xml`. Or, from the other perspective, the SOAP part of any
+  set to \"text/xml\". Or, from the other perspective, the SOAP part of any
   message that is received must have the MIME header Content-Type with a
-  value of `text/xml`.
+  value of \"text/xml\".
 
   A client can access the SOAPPart object of a
   SOAPMessage object by
@@ -69,20 +69,20 @@
     (-> this (.addMimeHeader name value))))
 
 (defn set-content-id
-  "Sets the value of the MIME header named `Content-Id`
+  "Sets the value of the MIME header named \"Content-Id\"
    to the given String.
 
-  content-id - a String giving the value of the MIME header `Content-Id` - `java.lang.String`
+  content-id - a String giving the value of the MIME header \"Content-Id\" - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there is a problem in setting the content id"
   ([^SOAPPart this ^java.lang.String content-id]
     (-> this (.setContentId content-id))))
 
 (defn get-content-location
-  "Retrieves the value of the MIME header whose name is `Content-Location`.
+  "Retrieves the value of the MIME header whose name is \"Content-Location\".
 
   returns: a String giving the value of the MIME header whose
-            name is `Content-Location` - `java.lang.String`"
+            name is \"Content-Location\" - `java.lang.String`"
   (^java.lang.String [^SOAPPart this]
     (-> this (.getContentLocation))))
 
@@ -113,10 +113,10 @@
     (-> this (.removeMimeHeader header))))
 
 (defn set-content-location
-  "Sets the value of the MIME header `Content-Location`
+  "Sets the value of the MIME header \"Content-Location\"
    to the given String.
 
-  content-location - a String giving the value of the MIME header `Content-Location` - `java.lang.String`
+  content-location - a String giving the value of the MIME header \"Content-Location\" - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if there is a problem in setting the content location."
   ([^SOAPPart this ^java.lang.String content-location]
@@ -127,7 +127,7 @@
    in this SOAPPart object that
    is identified by the given String.
 
-  name - the name of the header; example: `Content-Type` - `java.lang.String`
+  name - the name of the header; example: \"Content-Type\" - `java.lang.String`
 
   returns: a String array giving all the values for the
            specified header - `java.lang.String[]`"
@@ -195,10 +195,10 @@
     (-> this (.getContent))))
 
 (defn get-content-id
-  "Retrieves the value of the MIME header whose name is `Content-Id`.
+  "Retrieves the value of the MIME header whose name is \"Content-Id\".
 
   returns: a String giving the value of the MIME header
-           named `Content-Id` - `java.lang.String`"
+           named \"Content-Id\" - `java.lang.String`"
   (^java.lang.String [^SOAPPart this]
     (-> this (.getContentId))))
 

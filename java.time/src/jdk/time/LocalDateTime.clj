@@ -6,7 +6,7 @@
   often viewed as year-month-day-hour-minute-second. Other date and time fields,
   such as day-of-year, day-of-week and week-of-year, can also be accessed.
   Time is represented to nanosecond precision.
-  For example, the value `2nd October 2007 at 13:45.30.123456789` can be
+  For example, the value \"2nd October 2007 at 13:45.30.123456789\" can be
   stored in a LocalDateTime.
 
   This class does not store or represent a time-zone.
@@ -37,7 +37,7 @@
   The minimum supported LocalDateTime, '-999999999-01-01T00:00:00'.
    This is the local date-time of midnight at the start of the minimum date.
    This combines LocalDate.MIN and LocalTime.MIN.
-   This could be used by an application as a `far past` date-time.
+   This could be used by an application as a \"far past\" date-time.
 
   type: java.time.LocalDateTime"
   LocalDateTime/MIN)
@@ -48,7 +48,7 @@
   The maximum supported LocalDateTime, '+999999999-12-31T23:59:59.999999999'.
    This is the local date-time just before midnight at the end of the maximum date.
    This combines LocalDate.MAX and LocalTime.MAX.
-   This could be used by an application as a `far future` date-time.
+   This could be used by an application as a \"far future\" date-time.
 
   type: java.time.LocalDateTime"
   LocalDateTime/MAX)
@@ -636,12 +636,12 @@
 
    In most cases, there is only one valid offset for a local date-time.
    In the case of an overlap, where clocks are set back, there are two valid offsets.
-   This method uses the earlier offset typically corresponding to `summer`.
+   This method uses the earlier offset typically corresponding to \"summer\".
 
    In the case of a gap, where clocks jump forward, there is no valid offset.
    Instead, the local date-time is adjusted to be later by the length of the gap.
    For a typical one hour daylight savings change, the local date-time will be
-   moved one hour later into the offset typically corresponding to `summer`.
+   moved one hour later into the offset typically corresponding to \"summer\".
 
    To obtain the later offset during an overlap, call
    ZonedDateTime.withLaterOffsetAtOverlap() on the result of this method.
@@ -1072,7 +1072,7 @@
   "Compares this date-time to another date-time.
 
    The comparison is primarily based on the date-time, from earliest to latest.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
    If all the date-times being compared are instances of LocalDateTime,
    then the comparison will be entirely based on the date-time.

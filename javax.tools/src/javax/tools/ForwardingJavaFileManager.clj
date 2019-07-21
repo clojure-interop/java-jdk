@@ -25,7 +25,7 @@
   location - a location - `javax.tools.JavaFileManager$Location`
   package-name - a package name - `java.lang.String`
   kinds - return objects only of these kinds - `java.util.Set`
-  recurse - if true include `subpackages` - `boolean`
+  recurse - if true include \"subpackages\" - `boolean`
 
   returns: an Iterable of file objects matching the given criteria - `java.lang.Iterable<javax.tools.JavaFileObject>`
 

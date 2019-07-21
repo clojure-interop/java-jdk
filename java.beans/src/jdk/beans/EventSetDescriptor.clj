@@ -42,10 +42,10 @@
     (-> this (.getListenerMethods))))
 
 (defn set-in-default-event-set
-  "Marks an event set as being in the `default` set (or not).
+  "Marks an event set as being in the \"default\" set (or not).
    By default this is true.
 
-  in-default-event-set - true if the event set is in the `default` set, false if not - `boolean`"
+  in-default-event-set - true if the event set is in the \"default\" set, false if not - `boolean`"
   ([^EventSetDescriptor this ^Boolean in-default-event-set]
     (-> this (.setInDefaultEventSet in-default-event-set))))
 
@@ -72,10 +72,10 @@
     (-> this (.getListenerType))))
 
 (defn in-default-event-set?
-  "Reports if an event set is in the `default` set.
+  "Reports if an event set is in the \"default\" set.
 
   returns: true if the event set is in
-            the `default` set.  Defaults to true. - `boolean`"
+            the \"default\" set.  Defaults to true. - `boolean`"
   (^Boolean [^EventSetDescriptor this]
     (-> this (.isInDefaultEventSet))))
 

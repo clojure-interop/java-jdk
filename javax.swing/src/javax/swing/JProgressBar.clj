@@ -8,7 +8,7 @@
   percentage.
 
   JProgressBar uses a BoundedRangeModel as its data model,
-  with the value property representing the `current` state of the task,
+  with the value property representing the \"current\" state of the task,
   and the minimum and maximum properties representing the
   beginning and end points, respectively.
 
@@ -161,7 +161,7 @@
   "Returns a String representation of the current progress.
    By default, this returns a simple percentage String based on
    the value returned from getPercentComplete.  An example
-   would be the `42%`.  You can change this by calling setString.
+   would be the \"42%\".  You can change this by calling setString.
 
   returns: the value of the progress string, or a simple percentage string
            if the progress string is null - `java.lang.String`"
@@ -171,7 +171,7 @@
 (defn get-ui-class-id
   "Returns the name of the look-and-feel class that renders this component.
 
-  returns: the string `ProgressBarUI` - `java.lang.String`"
+  returns: the string \"ProgressBarUI\" - `java.lang.String`"
   (^java.lang.String [^JProgressBar this]
     (-> this (.getUIClassID))))
 

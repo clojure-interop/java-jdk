@@ -31,12 +31,12 @@
 
   Accessing Files
    Paths may be used with the Files class to operate on files,
-  directories, and other types of files. For example, suppose we want a BufferedReader to read text from a file `access.log`. The
-  file is located in a directory `logs` relative to the current working
+  directories, and other types of files. For example, suppose we want a BufferedReader to read text from a file \"access.log\". The
+  file is located in a directory \"logs\" relative to the current working
   directory and is UTF-8 encoded.
 
 
-      Path path = FileSystems.getDefault().getPath(`logs`, `access.log`);
+      Path path = FileSystems.getDefault().getPath(\"logs\", \"access.log\");
       BufferedReader reader = Files.newBufferedReader(path, StandardCharsets.UTF_8);
 
   Interoperability
@@ -59,8 +59,8 @@
   "Resolves the given path against this path's parent
    path. This is useful where a file name needs to be replaced with
    another file name. For example, suppose that the name separator is
-   `/` and a path represents `dir1/dir2/foo`, then invoking
-   this method with the Path `bar` will result in the Path `dir1/dir2/bar`. If this path does not have a parent path,
+   \"/\" and a path represents \"dir1/dir2/foo\", then invoking
+   this method with the Path \"bar\" will result in the Path \"dir1/dir2/bar\". If this path does not have a parent path,
    or other is absolute, then this method
    returns other. If other is an empty path then this method
    returns this path's parent, or where this path doesn't have a parent, the
@@ -103,16 +103,16 @@
 
     The precise definition of this method is implementation dependent but
    in general it derives from this path, a path that does not contain
-   redundant name elements. In many file systems, the `.`
-   and `..` are special names used to indicate the current directory
-   and parent directory. In such file systems all occurrences of `.`
-   are considered redundant. If a `..` is preceded by a
-   non-`..` name then both names are considered redundant (the
+   redundant name elements. In many file systems, the \".\"
+   and \"..\" are special names used to indicate the current directory
+   and parent directory. In such file systems all occurrences of \".\"
+   are considered redundant. If a \"..\" is preceded by a
+   non-\"..\" name then both names are considered redundant (the
    process to identify such names is repeated until it is no longer
    applicable).
 
     This method does not access the file system; the path may not locate
-   a file that exists. Eliminating `..` and a preceding name from a
+   a file that exists. Eliminating \"..\" and a preceding name from a
    path may result in the path that locates a different file than the original
    path. This can arise when the preceding name is a symbolic link.
 
@@ -222,9 +222,9 @@
    target. If the option NOFOLLOW_LINKS is
    present then this method does not resolve symbolic links.
 
-   Some implementations allow special names such as `..` to refer to
+   Some implementations allow special names such as \"..\" to refer to
    the parent directory. When deriving the real path, and a
-   `..` (or equivalent) is preceded by a non-`..` name then
+   \"..\" (or equivalent) is preceded by a non-\"..\" name then
    an implementation will typically cause both names to be removed. When
    not resolving symbolic links and the preceding name is a symbolic link
    then the names are only removed if it guaranteed that the resulting path
@@ -317,10 +317,10 @@
    component, if any, and each element in the path except for the
    farthest from the root in the directory hierarchy. This method
    does not access the file system; the path or its parent may not exist.
-   Furthermore, this method does not eliminate special names such as `.`
-   and `..` that may be used in some implementations. On UNIX for example,
-   the parent of `/a/b/c` is `/a/b`, and the parent of
-   `x/y/.` is `x/y`. This method may be used with the normalize method, to eliminate redundant names, for cases where
+   Furthermore, this method does not eliminate special names such as \".\"
+   and \"..\" that may be used in some implementations. On UNIX for example,
+   the parent of \"/a/b/c\" is \"/a/b\", and the parent of
+   \"x/y/.\" is \"x/y\". This method may be used with the normalize method, to eliminate redundant names, for cases where
    shell-like navigation is required.
 
     If this path has one or more elements, and no root component, then
@@ -476,8 +476,8 @@
    This method attempts to construct a relative path
    that when resolved against this path, yields a
    path that locates the same file as the given path. For example, on UNIX,
-   if this path is `/a/b` and the given path is `/a/b/c/d`
-   then the resulting relative path would be `c/d`. Where this
+   if this path is \"/a/b\" and the given path is \"/a/b/c/d\"
+   then the resulting relative path would be \"c/d\". Where this
    path and the given path do not have a root component,
    then a relative path can be constructed. A relative path cannot be
    constructed if only one of the paths have a root component. Where both
@@ -494,9 +494,9 @@
     When symbolic links are supported, then whether the resulting path,
    when resolved against this path, yields a path that can be used to locate
    the same file as other is implementation
-   dependent. For example, if this path is  `/a/b` and the given
-   path is `/a/x` then the resulting relative path may be `../x`. If `b` is a symbolic link then is implementation
-   dependent if `a/b/../x` would locate the same file as `/a/x`.
+   dependent. For example, if this path is  \"/a/b\" and the given
+   path is \"/a/x\" then the resulting relative path may be \"../x\". If \"b\" is a symbolic link then is implementation
+   dependent if \"a/b/../x\" would locate the same file as \"/a/x\".
 
   other - the path to relativize against this path - `java.nio.file.Path`
 

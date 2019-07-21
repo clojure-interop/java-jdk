@@ -70,7 +70,7 @@
   obj - the object to bind; possibly null - `java.lang.Object`
   attrs - the attributes to associate with the binding - `javax.naming.directory.Attributes`
 
-  throws: javax.naming.directory.InvalidAttributesException - if some `mandatory` attributes of the binding are not supplied"
+  throws: javax.naming.directory.InvalidAttributesException - if some \"mandatory\" attributes of the binding are not supplied"
   ([^InitialDirContext this ^java.lang.String name ^java.lang.Object obj ^javax.naming.directory.Attributes attrs]
     (-> this (.rebind name obj attrs))))
 
@@ -113,8 +113,8 @@
   "Description copied from interface: DirContext
 
   name - the name of the context or object to search - `java.lang.String`
-  filter-expr - the filter expression to use for the search. The expression may contain variables of the form `{i}` where i is a nonnegative integer. May not be null. - `java.lang.String`
-  filter-args - the array of arguments to substitute for the variables in filterExpr. The value of filterArgs[i] will replace each occurrence of `{i}`. If null, equivalent to an empty array. - `java.lang.Object[]`
+  filter-expr - the filter expression to use for the search. The expression may contain variables of the form \"{i}\" where i is a nonnegative integer. May not be null. - `java.lang.String`
+  filter-args - the array of arguments to substitute for the variables in filterExpr. The value of filterArgs[i] will replace each occurrence of \"{i}\". If null, equivalent to an empty array. - `java.lang.Object[]`
   cons - the search controls that control the search. If null, the default search controls are used (equivalent to (new SearchControls())). - `javax.naming.directory.SearchControls`
 
   returns: an enumeration of SearchResults of the objects

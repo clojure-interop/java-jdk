@@ -1,6 +1,6 @@
 (ns jdk.io.SerializablePermission
   "This class is for Serializable permissions. A SerializablePermission
-  contains a name (also referred to as a `target name`) but
+  contains a name (also referred to as a \"target name\") but
   no actions list; you either have the named permission
   or you don't.
 

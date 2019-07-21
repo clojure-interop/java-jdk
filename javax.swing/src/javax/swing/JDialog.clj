@@ -145,7 +145,7 @@
 
 (defn set-default-close-operation
   "Sets the operation that will happen by default when
-   the user initiates a `close` on this dialog.
+   the user initiates a \"close\" on this dialog.
    You must specify one of the following choices:
 
 
@@ -170,7 +170,7 @@
 
    The value is set to HIDE_ON_CLOSE by default. Changes
    to the value of this property cause the firing of a property
-   change event, with property name `defaultCloseOperation`.
+   change event, with property name \"defaultCloseOperation\".
 
    Note: When the last displayable window within the
    Java virtual machine (VM) is disposed of, the VM may
@@ -337,7 +337,7 @@
 
 (defn get-default-close-operation
   "Returns the operation which occurs when the user
-   initiates a `close` on this dialog.
+   initiates a \"close\" on this dialog.
 
   returns: an integer indicating the window-close operation - `int`"
   (^Integer [^JDialog this]

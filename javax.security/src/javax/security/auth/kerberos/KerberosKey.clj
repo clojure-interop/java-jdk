@@ -28,7 +28,7 @@
 
   Constructs a KerberosKey from the given bytes when the key type and
    key version number are known. This can be used when reading the secret
-   key information from a Kerberos `keytab`.
+   key information from a Kerberos \"keytab\".
 
   principal - the principal that this secret key belongs to - `javax.security.auth.kerberos.KerberosPrincipal`
   key-bytes - the raw bytes for the secret key - `byte[]`
@@ -70,7 +70,7 @@
 
 (defn get-algorithm
   "Returns the standard algorithm name for this key. For
-   example, `DES` would indicate that this key is a DES key.
+   example, \"DES\" would indicate that this key is a DES key.
    See Appendix A in the
    Java Cryptography Architecture API Specification & Reference
 
@@ -90,7 +90,7 @@
 (defn get-format
   "Returns the name of the encoding format for this secret key.
 
-  returns: the String `RAW` - `java.lang.String`"
+  returns: the String \"RAW\" - `java.lang.String`"
   (^java.lang.String [^KerberosKey this]
     (-> this (.getFormat))))
 

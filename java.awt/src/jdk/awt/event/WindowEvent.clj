@@ -61,7 +61,7 @@
 (def *-window-closing
   "Static Constant.
 
-  The `window is closing` event. This event is delivered when
+  The \"window is closing\" event. This event is delivered when
    the user attempts to close the window from the window's system menu.
    If the program does not explicitly hide or dispose the window
    while processing this event, the window close operation will be

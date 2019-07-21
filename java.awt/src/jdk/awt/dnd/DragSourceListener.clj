@@ -2,7 +2,7 @@
   "The DragSourceListener defines the
   event interface for originators of
   Drag and Drop operations to track the state of the user's gesture, and to
-  provide appropriate `drag over`
+  provide appropriate \"drag over\"
   feedback to the user throughout the
   Drag and Drop operation.
 

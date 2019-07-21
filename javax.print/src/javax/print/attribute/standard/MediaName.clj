@@ -9,7 +9,7 @@
   be created by defining a subclass of class MediaName.
 
   IPP Compatibility: MediaName is a representation class for
-  values of the IPP `media` attribute which names media."
+  values of the IPP \"media\" attribute which names media."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.print.attribute.standard MediaName]))
 

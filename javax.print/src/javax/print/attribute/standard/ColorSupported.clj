@@ -15,8 +15,8 @@
   attribute that tells whether the printer can print in color regardless of how
   the client specifies to print any particular document.
 
-  IPP Compatibility: The IPP boolean value is `true` for SUPPORTED and
-  `false` for NOT_SUPPORTED. The category name returned by
+  IPP Compatibility: The IPP boolean value is \"true\" for SUPPORTED and
+  \"false\" for NOT_SUPPORTED. The category name returned by
   getName() is the IPP attribute name.  The enumeration's
   integer value is the IPP enum value.  The toString() method
   returns the IPP string representation of the attribute value."
@@ -41,7 +41,7 @@
   ColorSupported/SUPPORTED)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class ColorSupported, the category is class ColorSupported itself.
@@ -55,7 +55,7 @@
   "Get the name of the category of which this attribute value is an
    instance.
 
-   For class ColorSupported, the category name is `color-supported`.
+   For class ColorSupported, the category name is \"color-supported\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^ColorSupported this]

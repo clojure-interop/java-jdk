@@ -1,8 +1,8 @@
 (ns jdk.awt.SystemTray
   "The SystemTray class represents the system tray for a
-  desktop.  On Microsoft Windows it is referred to as the `Taskbar
-  Status Area`, on Gnome it is referred to as the `Notification
-  Area`, on KDE it is referred to as the `System Tray`.  The system
+  desktop.  On Microsoft Windows it is referred to as the \"Taskbar
+  Status Area\", on Gnome it is referred to as the \"Notification
+  Area\", on KDE it is referred to as the \"System Tray\".  The system
   tray is shared by all applications running on the desktop.
 
    On some platforms the system tray may not be present or may not
@@ -47,7 +47,7 @@
           popup.add(defaultItem);
           /// ... add other items
           // construct a TrayIcon
-          trayIcon = new TrayIcon(image, `Tray Demo`, popup);
+          trayIcon = new TrayIcon(image, \"Tray Demo\", popup);
           // set the TrayIcon properties
           trayIcon.addActionListener(listener);
           // ...

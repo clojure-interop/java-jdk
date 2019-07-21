@@ -11,24 +11,24 @@
 
   NimbusStyle also supports the ability to override settings on a per
   component basis. NimbusStyle checks the component's client property map for
-  `Nimbus.Overrides`. If the value associated with this key is an instance of
+  \"Nimbus.Overrides\". If the value associated with this key is an instance of
   UIDefaults, then the values in that defaults table will override the standard
   Nimbus defaults in UIManager, but for that component instance only.
 
   Optionally, you may specify the client property
-  `Nimbus.Overrides.InheritDefaults`. If true, this client property indicates
+  \"Nimbus.Overrides.InheritDefaults\". If true, this client property indicates
   that the defaults located in UIManager should first be read, and then
   replaced with defaults located in the component client properties. If false,
   then only the defaults located in the component client property map will
   be used. If not specified, it is assumed to be true.
 
-  You must specify `Nimbus.Overrides` for `Nimbus.Overrides.InheritDefaults`
-  to have any effect. `Nimbus.Overrides` indicates whether there are any
-  overrides, while `Nimbus.Overrides.InheritDefaults` indicates whether those
+  You must specify \"Nimbus.Overrides\" for \"Nimbus.Overrides.InheritDefaults\"
+  to have any effect. \"Nimbus.Overrides\" indicates whether there are any
+  overrides, while \"Nimbus.Overrides.InheritDefaults\" indicates whether those
   overrides should first be initialized with the defaults from UIManager.
 
   The NimbusStyle is reloaded whenever a property change event is fired
-  for a component for `Nimbus.Overrides` or `Nimbus.Overrides.InheritDefaults`.
+  for a component for \"Nimbus.Overrides\" or \"Nimbus.Overrides.InheritDefaults\".
   So for example, setting a new UIDefaults on a component would cause the
   style to be reloaded.
 
@@ -42,9 +42,9 @@
   #getForegroundPainter, and #getBorderPainter.
 
   NimbusStyle allows you to specify custom states, or modify the order of
-  states. Synth (and thus Nimbus) has the concept of a `state`. For example,
-  a JButton might be in the `MOUSE_OVER` state, or the `ENABLED` state, or the
-  `DISABLED` state. These are all `standard` states which are defined in synth,
+  states. Synth (and thus Nimbus) has the concept of a \"state\". For example,
+  a JButton might be in the \"MOUSE_OVER\" state, or the \"ENABLED\" state, or the
+  \"DISABLED\" state. These are all \"standard\" states which are defined in synth,
   and which apply to all synth Regions.
 
   Sometimes, however, you need to have a custom state. For example, you
@@ -170,19 +170,19 @@
    Button.Enabled+Selected.background
 
    In this example, suppose you were in the Enabled+Selected state and
-   searched for `foreground`. In this case, we first check for
+   searched for \"foreground\". In this case, we first check for
    Button.Enabled+Selected.foreground, but no such color exists. We then
    fall back to the next valid state, in this case,
    Button.Enabled.foreground, and have a match. So we return it.
 
-   Again, if we were in the state Enabled and looked for `background`, we
+   Again, if we were in the state Enabled and looked for \"background\", we
    wouldn't find it in Button.Enabled, or in Button, but would at the top
    level in UIManager. So we return that value.
 
-   One special note: the `key` passed to this method could be of the form
-   `background` or `Button.background` where `Button` equals the prefix
+   One special note: the \"key\" passed to this method could be of the form
+   \"background\" or \"Button.background\" where \"Button\" equals the prefix
    passed to the NimbusStyle constructor. In either case, it looks for
-   `background`.
+   \"background\".
 
   ctx - `javax.swing.plaf.synth.SynthContext`
   key - must not be null - `java.lang.Object`

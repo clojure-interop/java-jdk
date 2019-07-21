@@ -16,7 +16,7 @@
   downward cast and have return values of base type; an exception
   will be thrown if the stored values do not have the correct type.
   There is no way to distinguish between the results of
-  `short s; add(s)` and `add(new Short(s))`.
+  \"short s; add(s)\" and \"add(new Short(s))\".
 
    Note that the get and set methods operate on references.
   Therefore, one must be careful not to share references between
@@ -60,7 +60,7 @@
 
 
   ParameterBlock pb = new ParameterBlock();
-  op = new RenderableImageOp(`operation`, pb.add(arg1).add(arg2));"
+  op = new RenderableImageOp(\"operation\", pb.add(arg1).add(arg2));"
   (:refer-clojure :only [require comment defn ->])
   (:import [java.awt.image.renderable ParameterBlock]))
 

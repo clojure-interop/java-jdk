@@ -23,9 +23,9 @@
   javax.xml.stream.notations and javax.xml.stream.entities.
   When the current event is a DTD the following call will return a
   list of Notations
-   List l = (List) getProperty(`javax.xml.stream.notations`);
+   List l = (List) getProperty(\"javax.xml.stream.notations\");
   The following call will return a list of entity declarations:
-  List l = (List) getProperty(`javax.xml.stream.entities`);
+  List l = (List) getProperty(\"javax.xml.stream.entities\");
   These properties can only be accessed during a DTD event and
   are defined to return null if the information is not available.
 
@@ -156,7 +156,7 @@
 
    NOTE:The 'xml' prefix is bound as defined in
    Namespaces in XML
-   specification to `http://www.w3.org/XML/1998/namespace`.
+   specification to \"http://www.w3.org/XML/1998/namespace\".
 
    NOTE: The 'xmlns' prefix must be resolved to following namespace
    http://www.w3.org/2000/xmlns/
@@ -182,7 +182,7 @@
    By default entity references must be
    expanded and reported transparently to the application.
    An exception will be thrown if an entity reference cannot be expanded.
-   If element content is empty (i.e. content is ``) then no CHARACTERS event will be reported.
+   If element content is empty (i.e. content is \"\") then no CHARACTERS event will be reported.
 
    Given the following XML:
    <foo><!--description-->content text<![CDATA[<greeting>Hello</greeting>]]>other content</foo>
@@ -297,7 +297,7 @@
 
    if(getEventType() != XMLStreamConstants.START_ELEMENT) {
    throw new XMLStreamException(
-   `parser must be on START_ELEMENT to read next text`, getLocation());
+   \"parser must be on START_ELEMENT to read next text\", getLocation());
    }
    int eventType = next();
    StringBuffer content = new StringBuffer();
@@ -312,13 +312,13 @@
    // skipping
    } else if(eventType == XMLStreamConstants.END_DOCUMENT) {
    throw new XMLStreamException(
-   `unexpected end of document when reading element text content`, this);
+   \"unexpected end of document when reading element text content\", this);
    } else if(eventType == XMLStreamConstants.START_ELEMENT) {
    throw new XMLStreamException(
-   `element text content may not contain START_ELEMENT`, getLocation());
+   \"element text content may not contain START_ELEMENT\", getLocation());
    } else {
    throw new XMLStreamException(
-   `Unexpected event type `+eventType, getLocation());
+   \"Unexpected event type \"+eventType, getLocation());
    }
    eventType = next();
    }
@@ -418,12 +418,12 @@
 
 (defn get-text-characters
   "Gets the the text associated with a CHARACTERS, SPACE or CDATA event.
-   Text starting a `sourceStart` is copied into `target` starting at `targetStart`.
-   Up to `length` characters are copied.  The number of characters actually copied is returned.
+   Text starting a \"sourceStart\" is copied into \"target\" starting at \"targetStart\".
+   Up to \"length\" characters are copied.  The number of characters actually copied is returned.
 
-   The `sourceStart` argument must be greater or equal to 0 and less than or equal to
-   the number of characters associated with the event.  Usually, one requests text starting at a `sourceStart` of 0.
-   If the number of characters actually copied is less than the `length`, then there is no more text.
+   The \"sourceStart\" argument must be greater or equal to 0 and less than or equal to
+   the number of characters associated with the event.  Usually, one requests text starting at a \"sourceStart\" of 0.
+   If the number of characters actually copied is less than the \"length\", then there is no more text.
    Otherwise, subsequent calls need to be made until all text has been retrieved. For example:
 
 
@@ -439,8 +439,8 @@
    }
 
    XMLStreamException may be thrown if there are any XML errors in the underlying source.
-   The `targetStart` argument must be greater than or equal to 0 and less than the length of `target`,
-   Length must be greater than 0 and `targetStart  length` must be less than or equal to length of `target`.
+   The \"targetStart\" argument must be greater than or equal to 0 and less than the length of \"target\",
+   Length must be greater than 0 and \"targetStart  length\" must be less than or equal to length of \"target\".
 
   source-start - the index of the first character in the source array to copy - `int`
   target - the destination array - `char[]`
@@ -551,7 +551,7 @@
    eventType = next();
    }
    if (eventType != XMLStreamConstants.START_ELEMENT && eventType != XMLStreamConstants.END_ELEMENT) {
-   throw new String XMLStreamException(`expected start or end tag`, getLocation());
+   throw new String XMLStreamException(\"expected start or end tag\", getLocation());
    }
    return eventType;
 

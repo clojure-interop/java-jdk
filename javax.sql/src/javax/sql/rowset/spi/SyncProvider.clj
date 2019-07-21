@@ -53,7 +53,7 @@
 
 
       SyncFactory.registerProvider(
-                           `com.fred.providers.HighAvailabilityProvider`);
+                           \"com.fred.providers.HighAvailabilityProvider\");
 
   The default SyncProvider object provided with the reference
   implementation uses the following name:
@@ -81,12 +81,12 @@
 
 
         CachedRowSet crs = new CachedRowSet(
-                   `com.fred.providers.HighAvailabilitySyncProvider`);
+                   \"com.fred.providers.HighAvailabilitySyncProvider\");
    Using the setSyncProvider method
 
 
         CachedRowSet crs = new CachedRowSet();
-        crs.setSyncProvider(`com.fred.providers.HighAvailabilitySyncProvider`);
+        crs.setSyncProvider(\"com.fred.providers.HighAvailabilitySyncProvider\");
 
 
 

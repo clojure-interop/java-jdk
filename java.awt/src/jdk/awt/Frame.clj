@@ -90,7 +90,7 @@
    with the specified title and a
    GraphicsConfiguration.
 
-  title - the title to be displayed in the frame's border. A null value is treated as an empty string, ``. - `java.lang.String`
+  title - the title to be displayed in the frame's border. A null value is treated as an empty string, \"\". - `java.lang.String`
   gc - the GraphicsConfiguration of the target screen device. If gc is null, the system default GraphicsConfiguration is assumed. - `java.awt.GraphicsConfiguration`
 
   throws: java.lang.IllegalArgumentException - if gc is not from a screen device."
@@ -216,7 +216,7 @@
 (def *-normal
   "Static Constant.
 
-  Frame is in the `normal` state.  This symbolic constant names a
+  Frame is in the \"normal\" state.  This symbolic constant names a
    frame state with all state bits cleared.
 
   type: int"
@@ -693,7 +693,7 @@
   "Gets the title of the frame.  The title is displayed in the
    frame's border.
 
-  returns: the title of this frame, or an empty string (``)
+  returns: the title of this frame, or an empty string (\"\")
                   if this frame doesn't have a title. - `java.lang.String`"
   (^java.lang.String [^Frame this]
     (-> this (.getTitle))))
@@ -701,7 +701,7 @@
 (defn set-title
   "Sets the title for this frame to the specified string.
 
-  title - the title to be displayed in the frame's border. A null value is treated as an empty string, ``. - `java.lang.String`"
+  title - the title to be displayed in the frame's border. A null value is treated as an empty string, \"\". - `java.lang.String`"
   ([^Frame this ^java.lang.String title]
     (-> this (.setTitle title))))
 

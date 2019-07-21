@@ -20,13 +20,13 @@
 
 
       NamespaceChangeListener listener = ...;
-      src.addNamingListener(`x`, SUBTREE_SCOPE, listener);
-  When an object named `x/y` is subsequently deleted, the corresponding
+      src.addNamingListener(\"x\", SUBTREE_SCOPE, listener);
+  When an object named \"x/y\" is subsequently deleted, the corresponding
   NamingEvent (evt) must contain:
 
 
       evt.getEventContext() == src
-      evt.getOldBinding().getName().equals(`x/y`)
+      evt.getOldBinding().getName().equals(\"x/y\")
 
   Care must be taken when multiple threads are accessing the same
   EventContext concurrently.

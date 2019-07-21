@@ -57,8 +57,8 @@
 
 (defn to-string
   "Returns a string representation of the object. This version returns the
-   concatenation of class name, `(`, a name identifying the attribute
-   and `)`.
+   concatenation of class name, \"(\", a name identifying the attribute
+   and \")\".
 
   returns: a string representation of the object. - `java.lang.String`"
   (^java.lang.String [^AttributedCharacterIterator$Attribute this]

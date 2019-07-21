@@ -109,7 +109,7 @@
   the number of seconds to cache the successful lookup. The default
   setting is to cache for an implementation specific period of time.
 
-  A value of -1 indicates `cache forever`.
+  A value of -1 indicates \"cache forever\".
 
   networkaddress.cache.negative.ttl (default: 10)
   Indicates the caching policy for un-successful name lookups
@@ -117,8 +117,8 @@
   indicate the number of seconds to cache the failure for
   un-successful lookups.
 
-  A value of 0 indicates `never cache`.
-  A value of -1 indicates `cache forever`."
+  A value of 0 indicates \"never cache\".
+  A value of -1 indicates \"cache forever\"."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.net InetAddress]))
 
@@ -127,7 +127,7 @@
    No name service is checked for the validity of the address.
 
     The host name can either be a machine name, such as
-   `java.sun.com`, or a textual representation of its IP
+   \"java.sun.com\", or a textual representation of its IP
    address.
     No validity checking is done on the host name either.
 
@@ -153,7 +153,7 @@
   "Determines the IP address of a host, given the host's name.
 
     The host name can either be a machine name, such as
-   `java.sun.com`, or a textual representation of its
+   \"java.sun.com\", or a textual representation of its
    IP address. If a literal IP address is supplied, only the
    validity of the address format is checked.
 
@@ -182,7 +182,7 @@
    based on the configured name service on the system.
 
     The host name can either be a machine name, such as
-   `java.sun.com`, or a textual representation of its IP
+   \"java.sun.com\", or a textual representation of its IP
    address. If a literal IP address is supplied, only the
    validity of the address format is checked.
 

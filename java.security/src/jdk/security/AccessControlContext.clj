@@ -17,7 +17,7 @@
 
    An AccessControlContext is created by calling the
   AccessController.getContext method.
-  The getContext method takes a `snapshot`
+  The getContext method takes a \"snapshot\"
   of the current calling context, and places
   it in an AccessControlContext object, which it returns. A sample call is
   the following:
@@ -64,7 +64,7 @@
             AccessControlContext, or null
             if there is none. - `java.security.DomainCombiner`
 
-  throws: java.lang.SecurityException - if a security manager is installed and the caller does not have the `getDomainCombiner` SecurityPermission"
+  throws: java.lang.SecurityException - if a security manager is installed and the caller does not have the \"getDomainCombiner\" SecurityPermission"
   (^java.security.DomainCombiner [^AccessControlContext this]
     (-> this (.getDomainCombiner))))
 

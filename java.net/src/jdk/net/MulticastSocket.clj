@@ -2,7 +2,7 @@
   "The multicast datagram socket class is useful for sending
   and receiving IP multicast packets.  A MulticastSocket is
   a (UDP) DatagramSocket, with additional capabilities for
-  joining `groups` of other multicast hosts on the internet.
+  joining \"groups\" of other multicast hosts on the internet.
 
   A multicast group is specified by a class D IP address
   and by a standard UDP port number. Class D IP addresses
@@ -17,8 +17,8 @@
 
   // join a Multicast group and send the group salutations
   ...
-  String msg = `Hello`;
-  InetAddress group = InetAddress.getByName(`228.5.6.7`);
+  String msg = \"Hello\";
+  InetAddress group = InetAddress.getByName(\"228.5.6.7\");
   MulticastSocket s = new MulticastSocket(6789);
   s.joinGroup(group);
   DatagramPacket hi = new DatagramPacket(msg.getBytes(), msg.length(),

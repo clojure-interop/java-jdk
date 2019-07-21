@@ -59,7 +59,7 @@
   as the base class for creating subclasses and the DefaultTableModel
   when subclassing is not required.
 
-  The `TableExample` directory in the demo area of the source distribution
+  The \"TableExample\" directory in the demo area of the source distribution
   gives a number of complete examples of JTable usage,
   covering how the JTable can be used to provide an
   editable view of data taken from a database and how to modify
@@ -661,7 +661,7 @@
   "Returns the suffix used to construct the name of the L&F class used to
    render this component.
 
-  returns: the string `TableUI` - `java.lang.String`"
+  returns: the string \"TableUI\" - `java.lang.String`"
   (^java.lang.String [^JTable this]
     (-> this (.getUIClassID))))
 
@@ -730,7 +730,7 @@
   orientation - either SwingConstants.VERTICAL or SwingConstants.HORIZONTAL - `int`
   direction - less than zero to scroll up/left, greater than zero for down/right - `int`
 
-  returns: the `unit` increment for scrolling in the specified direction - `int`"
+  returns: the \"unit\" increment for scrolling in the specified direction - `int`"
   (^Integer [^JTable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
@@ -903,7 +903,7 @@
    has returned and has allowed for the location to be shown.
 
    When this property changes, a property change event with
-   name `dropLocation` is fired by the component.
+   name \"dropLocation\" is fired by the component.
 
   returns: the drop location - `javax.swing.JTable$DropLocation`"
   (^javax.swing.JTable$DropLocation [^JTable this]
@@ -1271,8 +1271,8 @@
    resizingColumn of the tableHeader.
    When the method is called as a result of the resizing of an enclosing window,
    the resizingColumn is null. This means that resizing
-   has taken place `outside` the JTable and the change -
-   or `delta` - should be distributed to all of the columns regardless
+   has taken place \"outside\" the JTable and the change -
+   or \"delta\" - should be distributed to all of the columns regardless
    of this JTable's automatic resize mode.
 
    If the resizingColumn is not null, it is one of
@@ -1290,7 +1290,7 @@
    enclosed in a JScrollPane this may
    leave parts of the table invisible.
      AUTO_RESIZE_NEXT_COLUMN: Use just the column after the
-   resizing column. This results in the `boundary` or divider
+   resizing column. This results in the \"boundary\" or divider
    between adjacent cells being independently adjustable.
      AUTO_RESIZE_SUBSEQUENT_COLUMNS: Use all columns after the
    one being adjusted to absorb the changes.  This is the
@@ -1337,7 +1337,7 @@
 
     Overview
 
-   Call `DELTA` the difference between the target size and the
+   Call \"DELTA\" the difference between the target size and the
    sum of the preferred sizes of the elements in r. The individual
    sizes are calculated by taking the original preferred
    sizes and adding a share of the DELTA - that share being based on
@@ -1440,9 +1440,9 @@
    This method clears the selection and resets any variable row heights.
 
    This method fires a PropertyChangeEvent when appropriate,
-   with the property name `rowSorter`.  For
+   with the property name \"rowSorter\".  For
    backward-compatibility, this method fires an additional event with the
-   property name `sorter`.
+   property name \"sorter\".
 
    If the underlying model of the RowSorter differs from
    that of this JTable undefined behavior will result.
@@ -1687,13 +1687,13 @@
    are special and need to be escaped.
 
    Here's an example of creating a MessageFormat that can be
-   used to print `Duke's Table: Page - ` and the current page number:
+   used to print \"Duke's Table: Page - \" and the current page number:
 
 
 
        // notice the escaping of the single quote
-       // notice how the page number is included with `{0}`
-       MessageFormat format = new MessageFormat(`Duke''s Table: Page - {0}`);
+       // notice how the page number is included with \"{0}\"
+       MessageFormat format = new MessageFormat(\"Duke''s Table: Page - {0}\");
 
    The Printable constrains what it draws to the printable
    area of each page that it prints. Under certain circumstances, it may

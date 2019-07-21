@@ -75,7 +75,7 @@
   Generally this means that the dimension will be clipped independently
   to the range of 32-bit integers except that if the location had to be
   moved to store it into its pair of 32-bit fields then the dimensions
-  will be adjusted relative to the `best representation` of the location.
+  will be adjusted relative to the \"best representation\" of the location.
   If the true result had a negative dimension and was therefore
   non-existant along one or both axes, the stored dimensions will be
   negative numbers in those axes.
@@ -106,41 +106,41 @@
   (^Rectangle []
     (new Rectangle )))
 
-(defn -x
+(defn x
   "Instance Field.
 
   The X coordinate of the upper-left corner of the Rectangle.
 
   type: int"
-  [this]
-  (-> this .-x))
+  (^Integer [^Rectangle this]
+    (-> this .-x)))
 
-(defn -y
+(defn y
   "Instance Field.
 
   The Y coordinate of the upper-left corner of the Rectangle.
 
   type: int"
-  [this]
-  (-> this .-y))
+  (^Integer [^Rectangle this]
+    (-> this .-y)))
 
-(defn -width
+(defn width
   "Instance Field.
 
   The width of the Rectangle.
 
   type: int"
-  [this]
-  (-> this .-width))
+  (^Integer [^Rectangle this]
+    (-> this .-width)))
 
-(defn -height
+(defn height
   "Instance Field.
 
   The height of the Rectangle.
 
   type: int"
-  [this]
-  (-> this .-height))
+  (^Integer [^Rectangle this]
+    (-> this .-height)))
 
 (defn set-rect
   "Sets the bounds of this Rectangle to the integer bounds

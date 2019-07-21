@@ -150,7 +150,7 @@
 
 (defn to-string
   "Returns a string identifying this lock, as well as its lock state.
-   The state, in brackets, includes the String `Read locks =`
+   The state, in brackets, includes the String \"Read locks =\"
    followed by the number of held read locks.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"

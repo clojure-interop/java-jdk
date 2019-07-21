@@ -30,7 +30,7 @@
    provider satisfies the specified selection criterion iff the provider
    implements the
    specified algorithm or type for the specified cryptographic service.
-    For example, `CertificateFactory.X.509`
+    For example, \"CertificateFactory.X.509\"
    would be satisfied by any provider that supplied
    a CertificateFactory implementation for X.509 certificates.
     <crypto_service>.<algorithm_or_type>
@@ -43,7 +43,7 @@
    provider implements the specified algorithm or type for the specified
    cryptographic service and its implementation meets the
    constraint expressed by the specified attribute name/value pair.
-    For example, `Signature.SHA1withDSA KeySize:1024` would be
+    For example, \"Signature.SHA1withDSA KeySize:1024\" would be
    satisfied by any provider that implemented
    the SHA1withDSA signature algorithm with a keysize of 1024 (or larger).
 
@@ -78,12 +78,12 @@
 
    First, if there is a security manager, its
    checkSecurityAccess
-   method is called with the string `removeProvider.`+name
+   method is called with the string \"removeProvider.\"+name
    to see if it's ok to remove the provider.
    If the default implementation of checkSecurityAccess
    is used (i.e., that method is not overriden), then this will result in
    a call to the security manager's checkPermission method
-   with a SecurityPermission(`removeProvider.`+name)
+   with a SecurityPermission(\"removeProvider.\"+name)
    permission.
 
   name - the name of the provider to remove. - `java.lang.String`
@@ -94,7 +94,7 @@
 
 (defn *get-algorithm-property
   "Deprecated. This method used to return the value of a proprietary
-   property in the master file of the `SUN` Cryptographic Service
+   property in the master file of the \"SUN\" Cryptographic Service
    Provider in order to determine how to parse algorithm-specific
    parameters. Use the new provider-based and algorithm-independent
    AlgorithmParameters and KeyFactory engine
@@ -123,7 +123,7 @@
 
    First, if there is a security manager, its
    checkPermission  method is called with a
-   java.security.SecurityPermission(`getProperty.`+key)
+   java.security.SecurityPermission(\"getProperty.\"+key)
    permission to see if it's ok to retrieve the specified
    security property value..
 
@@ -140,10 +140,10 @@
 
    If there is a security manager, the
    SecurityManager.checkSecurityAccess(java.lang.String) method is called
-   with the `insertProvider` permission target name to see if
+   with the \"insertProvider\" permission target name to see if
    it's ok to add a new provider. If this permission check is denied,
    checkSecurityAccess is called again with the
-   `insertProvider.`+provider.getName() permission target name. If
+   \"insertProvider.\"+provider.getName() permission target name. If
    both checks are denied, a SecurityException is thrown.
 
   provider - the provider to be added. - `java.security.Provider`
@@ -161,7 +161,7 @@
 
    First, if there is a security manager, its
    checkPermission method is called with a
-   java.security.SecurityPermission(`setProperty.`+key)
+   java.security.SecurityPermission(\"setProperty.\"+key)
    permission to see if it's ok to set the specified
    security property value.
 
@@ -187,10 +187,10 @@
 
    If there is a security manager, the
    SecurityManager.checkSecurityAccess(java.lang.String) method is called
-   with the `insertProvider` permission target name to see if
+   with the \"insertProvider\" permission target name to see if
    it's ok to add a new provider. If this permission check is denied,
    checkSecurityAccess is called again with the
-   `insertProvider.`+provider.getName() permission target name. If
+   \"insertProvider.\"+provider.getName() permission target name. If
    both checks are denied, a SecurityException is thrown.
 
   provider - the provider to be added. - `java.security.Provider`

@@ -54,7 +54,7 @@
    private key was compromised or that the certificate otherwise became
    invalid. This implementation calls getExtensions() and
    checks the returned map for an entry for the Invalidity Date extension
-   OID (`2.5.29.24`). If found, it returns the invalidity date in the
+   OID (\"2.5.29.24\"). If found, it returns the invalidity date in the
    extension; otherwise null. A new Date object is returned each time the
    method is invoked to protect against subsequent modification.
 

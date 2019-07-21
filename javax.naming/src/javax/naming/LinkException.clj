@@ -4,7 +4,7 @@
   the problem with the link.
 
   Analogous to how NamingException captures name resolution information,
-  LinkException captures `link`-name resolution information pinpointing
+  LinkException captures \"link\"-name resolution information pinpointing
   the problem encountered while resolving a link. All these fields may
   be null.
 
@@ -65,7 +65,7 @@
 
    name is a composite name. If the intent is to set
    this field using a compound name or string, you must
-   `stringify` the compound name, and create a composite
+   \"stringify\" the compound name, and create a composite
    name with a single component using the string. You can then
    invoke this method using the resulting composite name.
 
@@ -111,7 +111,7 @@
 
    name is a composite name. If the intent is to set
    this field using a compound name or string, you must
-   `stringify` the compound name, and create a composite
+   \"stringify\" the compound name, and create a composite
    name with a single component using the string. You can then
    invoke this method using the resulting composite name.
 

@@ -4,8 +4,8 @@
   indicate the layout of multiple print-stream pages to impose upon a
   single side of an instance of a selected medium.
   This is useful to mirror the text layout conventions of different scripts.
-  For example, English is `toright-tobottom`, Hebrew is `toleft-tobottom`
-   and Japanese is usually `tobottom-toleft`.
+  For example, English is \"toright-tobottom\", Hebrew is \"toleft-tobottom\"
+   and Japanese is usually \"tobottom-toleft\".
 
   IPP Compatibility:  This attribute is not an IPP 1.1
   attribute; it is an attribute in the Production Printing Extension
@@ -90,7 +90,7 @@
   PresentationDirection/TOLEFT_TOTOP)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PresentationDirection
@@ -106,7 +106,7 @@
    instance.
 
    For class PresentationDirection
-   the category name is `presentation-direction`.
+   the category name is \"presentation-direction\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PresentationDirection this]

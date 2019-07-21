@@ -8,7 +8,7 @@
   XML mechanism type desired, for example:
 
 
-  TransformService ts = TransformService.getInstance(Transform.XPATH2, `DOM`);
+  TransformService ts = TransformService.getInstance(Transform.XPATH2, \"DOM\");
 
 
   TransformService implementations are registered and loaded
@@ -16,14 +16,14 @@
   TransformService service provider implementation should include
   a MechanismType service attribute that identifies the XML
   mechanism type that it supports. If the attribute is not specified,
-  `DOM` is assumed. For example, a service provider that supports the
+  \"DOM\" is assumed. For example, a service provider that supports the
   XPath Filter 2 Transform and DOM mechanism would be specified in the
   Provider subclass as:
 
 
-      put(`TransformService.`  Transform.XPATH2,
-          `org.example.XPath2TransformService`);
-      put(`TransformService.`  Transform.XPATH2  ` MechanismType`, `DOM`);
+      put(\"TransformService.\"  Transform.XPATH2,
+          \"org.example.XPath2TransformService\");
+      put(\"TransformService.\"  Transform.XPATH2  \" MechanismType\", \"DOM\");
   TransformService implementations that support the DOM
   mechanism type must abide by the DOM interoperability requirements defined
   in the

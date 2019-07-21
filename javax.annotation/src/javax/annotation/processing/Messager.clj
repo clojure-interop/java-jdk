@@ -7,7 +7,7 @@
 
   Printing a message with an error kind will raise an error.
 
-  Note that the messages `printed` by methods in this
+  Note that the messages \"printed\" by methods in this
   interface may or may not appear as textual output to a location
   like System.out or System.err.  Implementations may
   choose to present this information in a different fashion, such as

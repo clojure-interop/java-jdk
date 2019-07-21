@@ -23,7 +23,7 @@
    system if the JRE implementation supports it. For example,
 
 
-   NumberFormat.getNumberInstance(Locale.forLanguageTag(`th-TH-u-nu-thai`))
+   NumberFormat.getNumberInstance(Locale.forLanguageTag(\"th-TH-u-nu-thai\"))
    This may return a NumberFormat instance with the Thai numbering system,
    instead of the Latin numbering system.
 
@@ -61,7 +61,7 @@
    system if the JRE implementation supports it. For example,
 
 
-   NumberFormat.getNumberInstance(Locale.forLanguageTag(`th-TH-u-nu-thai`))
+   NumberFormat.getNumberInstance(Locale.forLanguageTag(\"th-TH-u-nu-thai\"))
    This may return a NumberFormat instance with the Thai numbering system,
    instead of the Latin numbering system.
 
@@ -99,17 +99,17 @@
 
 (defn get-exponent-separator
   "Returns the string used to separate the mantissa from the exponent.
-   Examples: `x10^` for 1.23x10^4, `E` for 1.23E4.
+   Examples: \"x10^\" for 1.23x10^4, \"E\" for 1.23E4.
 
   returns: the exponent separator string - `java.lang.String`"
   (^java.lang.String [^DecimalFormatSymbols this]
     (-> this (.getExponentSeparator))))
 
 (defn get-na-n
-  "Gets the string used to represent `not a number`. Almost always left
+  "Gets the string used to represent \"not a number\". Almost always left
    unchanged.
 
-  returns: the string representing `not a number` - `java.lang.String`"
+  returns: the string representing \"not a number\" - `java.lang.String`"
   (^java.lang.String [^DecimalFormatSymbols this]
     (-> this (.getNaN))))
 
@@ -147,10 +147,10 @@
     (-> this (.setPercent percent))))
 
 (defn set-na-n
-  "Sets the string used to represent `not a number`. Almost always left
+  "Sets the string used to represent \"not a number\". Almost always left
    unchanged.
 
-  na-n - the string representing `not a number` - `java.lang.String`"
+  na-n - the string representing \"not a number\" - `java.lang.String`"
   ([^DecimalFormatSymbols this ^java.lang.String na-n]
     (-> this (.setNaN na-n))))
 
@@ -253,7 +253,7 @@
 
 (defn set-exponent-separator
   "Sets the string used to separate the mantissa from the exponent.
-   Examples: `x10^` for 1.23x10^4, `E` for 1.23E4.
+   Examples: \"x10^\" for 1.23x10^4, \"E\" for 1.23E4.
 
   exp - the exponent separator string - `java.lang.String`
 

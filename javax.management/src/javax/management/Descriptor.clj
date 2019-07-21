@@ -66,15 +66,15 @@
   The convention is for the value of this field to contain a string
   that is the version of the model in which the element was first
   deprecated, followed by a space, followed by an explanation of the
-  deprecation, for example `1.3 Replaced by the Capacity
-  attribute`.
+  deprecation, for example \"1.3 Replaced by the Capacity
+  attribute\".
 
   descriptionResource
   BundleBaseNameStringAny
 
   The base name for the ResourceBundle in which the key given in
   the descriptionResourceKey field can be found, for example
-  `com.example.myapp.MBeanResources`.  The meaning of this
+  \"com.example.myapp.MBeanResources\".  The meaning of this
   field is defined by this specification but the field is not set or
   used by the JMX API itself.
 
@@ -90,7 +90,7 @@
   enabledString
   MBeanAttributeInfoMBeanNotificationInfoMBeanOperationInfo
 
-  The string `true` or `false` according as this
+  The string \"true\" or \"false\" according as this
   item is enabled.  When an attribute or operation is not enabled, it
   exists but cannot currently be accessed.  A user interface might
   present it as a greyed-out item.  For example, an attribute might
@@ -112,13 +112,13 @@
   immutableInfoString
   MBeanInfo
 
-  The string `true` or `false` according as this
+  The string \"true\" or \"false\" according as this
   MBean's MBeanInfo is immutable.  When this field is true,
   the MBeanInfo for the given MBean is guaranteed not to change over
   the lifetime of the MBean.  Hence, a client can read it once and
   cache the read value.  When this field is false or absent, there is
   no such guarantee, although that does not mean that the MBeanInfo
-  will necessarily change.  See also the `jmx.mbean.info.changed`
+  will necessarily change.  See also the \"jmx.mbean.info.changed\"
   notification.
 
   infoTimeoutStringLongMBeanInfo
@@ -130,7 +130,7 @@
   that the MBeanInfo is not likely to change within this period and
   therefore can be cached.  When this field is missing or has the
   value zero, it is not recommended to cache the MBeanInfo unless it
-  has the immutableInfo set to true or it has `jmx.mbean.info.changed` in
+  has the immutableInfo set to true or it has \"jmx.mbean.info.changed\" in
   its MBeanNotificationInfo array.
 
   interfaceClassName
@@ -163,7 +163,7 @@
   metricTypeString
   MBeanAttributeInfoMBeanOperationInfo
 
-  The type of a metric, one of the strings `counter` or `gauge`.
+  The type of a metric, one of the strings \"counter\" or \"gauge\".
   A metric is a measurement exported by an MBean, usually an
   attribute but sometimes the result of an operation.  A metric that
   is a counter has a value that never decreases except by
@@ -182,7 +182,7 @@
   mxbeanString
   MBeanInfo
 
-  The string `true` or `false` according as this
+  The string \"true\" or \"false\" according as this
   MBean is an MXBean.  A Standard MBean or MXBean registered
   directly with the MBean Server or created using the StandardMBean class will have this field in its MBeanInfo
   Descriptor.
@@ -205,7 +205,7 @@
   MXBean interface method that produced this MBeanAttributeInfo (etc).  For example, a method public
    MemoryUsage getHeapMemoryUsage();
   in an MXBean interface defines an attribute called HeapMemoryUsage of type CompositeData.  The originalType field in the Descriptor for this attribute will have
-  the value `java.lang.management.MemoryUsage`.
+  the value \"java.lang.management.MemoryUsage\".
 
   The format of this string is described in the section Type Names of the MXBean
   specification.
@@ -233,14 +233,14 @@
   was introduced.  A set of MBeans defined by an application is
   collectively called an information model.  The
   application may also define versions of this model, and use the
-  `since` field to record the version in which an element
+  \"since\" field to record the version in which an element
   first appeared.
 
   unitsString
   MBeanAttributeInfoMBeanParameterInfoMBeanOperationInfo
 
   The units in which an attribute, parameter, or operation return
-  value is measured, for example `bytes` or `seconds`.
+  value is measured, for example \"bytes\" or \"seconds\".
 
 
 
@@ -255,7 +255,7 @@
   ModelMBeanNotificationInfo, and
 
   ModelMBeanOperationInfo, as
-  well as the chapter `Model MBeans` of the JMX
+  well as the chapter \"Model MBeans\" of the JMX
   Specification.  The following table summarizes these fields.  Note
   that when the Type in this table is Number, a String that is the decimal
   representation of a Long can also be used.
@@ -282,8 +282,8 @@
       Default value for attribute.
 
   descriptorTypeStringAny
-      Type of descriptor, `mbean`, `attribute`, `constructor`, `operation`,
-          or `notification`.
+      Type of descriptor, \"mbean\", \"attribute\", \"constructor\", \"operation\",
+          or \"notification\".
 
   displayNameStringAny
       Human readable name of this item.
@@ -324,25 +324,25 @@
   persistPeriodNumber
       ModelMBeanInfoModelMBeanAttributeInfo
       Frequency of persist cycle in seconds. Used when persistPolicy is
-          `OnTimer` or `NoMoreOftenThan`.
+          \"OnTimer\" or \"NoMoreOftenThan\".
 
   persistPolicyString
       ModelMBeanInfoModelMBeanAttributeInfo
       One of: OnUpdate|OnTimer|NoMoreOftenThan|OnUnregister|Always|Never.
-          See the section `MBean Descriptor Fields` in the JMX specification
+          See the section \"MBean Descriptor Fields\" in the JMX specification
           document.
 
   presentationStringStringAny
       XML formatted string to allow presentation of data.
 
   protocolMapDescriptorModelMBeanAttributeInfo
-      See the section `Protocol Map Support` in the JMX specification
+      See the section \"Protocol Map Support\" in the JMX specification
           document.  Mappings must be appropriate for the attribute and entries
           can be updated or augmented at runtime.
 
   roleString
       ModelMBeanConstructorInfoModelMBeanOperationInfo
-      One of `constructor`, `operation`, `getter`, or `setter`.
+      One of \"constructor\", \"operation\", \"getter\", or \"setter\".
 
   setMethodStringModelMBeanAttributeInfo
       Name of operation descriptor for set method.

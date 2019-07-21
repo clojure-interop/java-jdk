@@ -1,6 +1,6 @@
 (ns jdk.lang.ArithmeticException
   "Thrown when an exceptional arithmetic condition has occurred. For
-  example, an integer `divide by zero` throws an
+  example, an integer \"divide by zero\" throws an
   instance of this class.
 
   ArithmeticException objects may be constructed by the

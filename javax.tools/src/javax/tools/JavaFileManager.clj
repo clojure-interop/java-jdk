@@ -20,11 +20,11 @@
 
 
     Discussion: this means that the names
-    `java/lang.package-info`, `java/lang/package-info`,
-    `java.lang.package-info`, are valid and equivalent.  Compare to
+    \"java/lang.package-info\", \"java/lang/package-info\",
+    \"java.lang.package-info\", are valid and equivalent.  Compare to
     binary name as defined in
     The Java™ Language Specification,
-    section 13.1 `The Form of a Binary`.
+    section 13.1 \"The Form of a Binary\".
 
 
   The case of names is significant.  All names should be treated
@@ -37,7 +37,7 @@
   methods in this interface use relative names.  A relative name is a
   non-null, non-empty sequence of path segments separated by '/'.
   '.' or '..'  are invalid path segments.  A valid relative name must
-  match the `path-rootless` rule of RFC 3986,
+  match the \"path-rootless\" rule of RFC 3986,
   section 3.3.  Informally, this should be true:
 
    URI.create(relativeName).normalize().getPath().equals(relativeName)
@@ -81,7 +81,7 @@
 
 (defn list
   "Lists all file objects matching the given criteria in the given
-   location.  List file objects in `subpackages` if recurse is
+   location.  List file objects in \"subpackages\" if recurse is
    true.
 
    Note: even if the given location is unknown to this file
@@ -91,7 +91,7 @@
   location - a location - `javax.tools.JavaFileManager$Location`
   package-name - a package name - `java.lang.String`
   kinds - return objects only of these kinds - `java.util.Set`
-  recurse - if true include `subpackages` - `boolean`
+  recurse - if true include \"subpackages\" - `boolean`
 
   returns: an Iterable of file objects matching the given criteria - `java.lang.Iterable<javax.tools.JavaFileObject>`
 
@@ -199,18 +199,18 @@
    Informally, the file object returned by this method is
    located in the concatenation of the location, package name, and
    relative name.  For example, to locate the properties file
-   `resources/compiler.properties` in the package
-   `com.sun.tools.javac` in the SOURCE_PATH location, this method
+   \"resources/compiler.properties\" in the package
+   \"com.sun.tools.javac\" in the SOURCE_PATH location, this method
    might be called like so:
 
 
 
-  getFileForInput(SOURCE_PATH, `com.sun.tools.javac`, `resources/compiler.properties`);
+  getFileForInput(SOURCE_PATH, \"com.sun.tools.javac\", \"resources/compiler.properties\");
 
    If the call was executed on Windows, with SOURCE_PATH set to
-   `C:\Documents and Settings\UncleBob\src\share\classes`,
+   \"C:\\Documents and Settings\\UncleBob\\src\\share\\classes\",
    a valid result would be a file object representing the file
-   `C:\Documents and Settings\UncleBob\src\share\classes\com\sun\tools\javac\resources\compiler.properties`.
+   \"C:\\Documents and Settings\\UncleBob\\src\\share\\classes\\com\\sun\\tools\\javac\\resources\\compiler.properties\".
 
   location - a location - `javax.tools.JavaFileManager$Location`
   package-name - a package name - `java.lang.String`

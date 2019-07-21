@@ -34,7 +34,7 @@
    JComponent.isPaintingForPrint().
 
   table - the JTable that is asking the renderer to draw; can be null - `javax.swing.JTable`
-  value - the value of the cell to be rendered. It is up to the specific renderer to interpret and draw the value. For example, if value is the string `true`, it could be rendered as a string or it could be rendered as a check box that is checked. null is a valid value - `java.lang.Object`
+  value - the value of the cell to be rendered. It is up to the specific renderer to interpret and draw the value. For example, if value is the string \"true\", it could be rendered as a string or it could be rendered as a check box that is checked. null is a valid value - `java.lang.Object`
   is-selected - true if the cell is to be rendered with the selection highlighted; otherwise false - `boolean`
   has-focus - if true, render cell appropriately. For example, put a special border on the cell, if the cell can be edited, render in the color used to indicate editing - `boolean`
   row - the row index of the cell being drawn. When drawing the header, the value of row is -1 - `int`

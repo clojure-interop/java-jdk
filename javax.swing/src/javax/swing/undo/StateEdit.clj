@@ -9,11 +9,11 @@
   A state edit is used as follows:
 
 
-       // Create the edit during the `before` state of the object
+       // Create the edit during the \"before\" state of the object
        StateEdit newEdit = new StateEdit(myObject);
        // Modify the object
        myObject.someStateModifyingMethod();
-       // `end` the edit when you are done modifying the object
+       // \"end\" the edit when you are done modifying the object
        newEdit.end();
 
   Note that when a StateEdit ends, it removes redundant state from
@@ -53,7 +53,7 @@
 (defn get-presentation-name
   "Gets the presentation name for this edit
 
-  returns: the empty string `` - `java.lang.String`"
+  returns: the empty string \"\" - `java.lang.String`"
   (^java.lang.String [^StateEdit this]
     (-> this (.getPresentationName))))
 

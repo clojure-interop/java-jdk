@@ -1,12 +1,12 @@
 (ns jdk.util.AbstractSequentialList
   "This class provides a skeletal implementation of the List
   interface to minimize the effort required to implement this interface
-  backed by a `sequential access` data store (such as a linked list).  For
+  backed by a \"sequential access\" data store (such as a linked list).  For
   random access data (such as an array), AbstractList should be used
   in preference to this class.
 
   This class is the opposite of the AbstractList class in the sense
-  that it implements the `random access` methods (get(int index),
+  that it implements the \"random access\" methods (get(int index),
   set(int index, E element), add(int index, E element) and
   remove(int index)) on top of the list's list iterator, instead of
   the other way around.

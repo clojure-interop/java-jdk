@@ -17,11 +17,11 @@
 
   As of release 1.4, this exception has been retrofitted to
   conform to the general purpose exception-chaining mechanism.  The
-  `undeclared checked exception that was thrown by the invocation
-  handler` that may be provided at construction time and accessed via
+  \"undeclared checked exception that was thrown by the invocation
+  handler\" that may be provided at construction time and accessed via
   the getUndeclaredThrowable() method is now known as the
-  cause, and may be accessed via the Throwable.getCause() method, as well as the aforementioned `legacy
-  method.`"
+  cause, and may be accessed via the Throwable.getCause() method, as well as the aforementioned \"legacy
+  method.\""
   (:refer-clojure :only [require comment defn ->])
   (:import [java.lang.reflect UndeclaredThrowableException]))
 

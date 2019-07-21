@@ -1,6 +1,6 @@
 (ns jdk.net.Socket
   "This class implements client sockets (also called just
-  `sockets`). A socket is an endpoint for communication
+  \"sockets\"). A socket is an endpoint for communication
   between two machines.
 
   The actual work of the socket is performed by an instance of the
@@ -637,7 +637,7 @@
     (-> this (.isBound))))
 
 (defn shutdown-input
-  "Places the input stream for this socket at `end of stream`.
+  "Places the input stream for this socket at \"end of stream\".
    Any data sent to the input stream side of the socket is acknowledged
    and then silently discarded.
 

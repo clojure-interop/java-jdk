@@ -67,7 +67,7 @@
   "Returns the name of the L&F class
    that renders this component.
 
-  returns: String `RadioButtonUI` - `java.lang.String`"
+  returns: String \"RadioButtonUI\" - `java.lang.String`"
   (^java.lang.String [^JRadioButton this]
     (-> this (.getUIClassID))))
 

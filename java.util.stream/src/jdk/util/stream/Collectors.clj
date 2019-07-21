@@ -17,7 +17,7 @@
       // Convert elements to strings and concatenate them, separated by commas
       String joined = things.stream()
                             .map(Object::toString)
-                            .collect(Collectors.joining(`, `));
+                            .collect(Collectors.joining(\", \"));
 
       // Compute sum of salaries of employee
       int total = employees.stream()
@@ -236,7 +236,7 @@
     (Collectors/toSet )))
 
 (defn *grouping-by-concurrent
-  "Returns a concurrent Collector implementing a cascaded `group by`
+  "Returns a concurrent Collector implementing a cascaded \"group by\"
    operation on input elements of type T, grouping elements
    according to a classification function, and then performing a reduction
    operation on the values associated with a given key using the specified
@@ -403,7 +403,7 @@
     (Collectors/summarizingLong mapper)))
 
 (defn *grouping-by
-  "Returns a Collector implementing a cascaded `group by` operation
+  "Returns a Collector implementing a cascaded \"group by\" operation
    on input elements of type T, grouping elements according to a
    classification function, and then performing a reduction operation on
    the values associated with a given key using the specified downstream

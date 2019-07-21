@@ -98,7 +98,7 @@
   "Returns the suffix used to construct the name of the look and feel
    (L&F) class used to render this component.
 
-  returns: the string `TableHeaderUI` - `java.lang.String`"
+  returns: the string \"TableHeaderUI\" - `java.lang.String`"
   (^java.lang.String [^JTableHeader this]
     (-> this (.getUIClassID))))
 

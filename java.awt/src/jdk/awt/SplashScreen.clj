@@ -10,7 +10,7 @@
   also closed manually using the Java API, see below).
 
   If your application is packaged in a jar file, you can use the
-  `SplashScreen-Image` option in a manifest file to show a splash screen.
+  \"SplashScreen-Image\" option in a manifest file to show a splash screen.
   Place the image in the jar archive and specify the path in the option.
   The path should not have a leading slash.
 
@@ -38,7 +38,7 @@
   whole splash screen image given the limitations of the target platform and
   display.
 
-  It is implied that the specified image is presented on the screen `as is`,
+  It is implied that the specified image is presented on the screen \"as is\",
   i.e. preserving the exact color values as specified in the image file. Under
   certain circumstances, though, the presented image may differ, e.g. when
   applying color dithering to present a 32 bits per pixel (bpp) image on a 16

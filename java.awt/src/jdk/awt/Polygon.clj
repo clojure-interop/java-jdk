@@ -35,7 +35,7 @@
   (^Polygon []
     (new Polygon )))
 
-(defn -npoints
+(defn npoints
   "Instance Field.
 
   The total number of points.  The value of npoints
@@ -45,10 +45,10 @@
    This value can be NULL.
 
   type: int"
-  [this]
-  (-> this .-npoints))
+  (^Integer [^Polygon this]
+    (-> this .-npoints)))
 
-(defn -xpoints
+(defn xpoints
   "Instance Field.
 
   The array of X coordinates.  The number of elements in
@@ -59,10 +59,10 @@
    number of valid points in this Polygon.
 
   type: int[]"
-  [this]
-  (-> this .-xpoints))
+  ([^Polygon this]
+    (-> this .-xpoints)))
 
-(defn -ypoints
+(defn ypoints
   "Instance Field.
 
   The array of Y coordinates.  The number of elements in
@@ -73,8 +73,8 @@
    number of valid points in this Polygon.
 
   type: int[]"
-  [this]
-  (-> this .-ypoints))
+  ([^Polygon this]
+    (-> this .-ypoints)))
 
 (defn get-path-iterator
   "Returns an iterator object that iterates along the boundary of

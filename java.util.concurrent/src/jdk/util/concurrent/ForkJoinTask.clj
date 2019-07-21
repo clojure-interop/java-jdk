@@ -5,7 +5,7 @@
   subtasks may be hosted by a small number of actual threads in a
   ForkJoinPool, at the price of some usage limitations.
 
-  A `main` ForkJoinTask begins execution when it is
+  A \"main\" ForkJoinTask begins execution when it is
   explicitly submitted to a ForkJoinPool, or, if not already
   engaged in a ForkJoin computation, commenced in the ForkJoinPool.commonPool() via fork(), invoke(), or
   related methods.  Once started, it will usually in turn start other
@@ -59,7 +59,7 @@
   waits for completion and report results using Future
   conventions. Method invoke() is semantically
   equivalent to fork(); join() but always attempts to begin
-  execution in the current thread. The `quiet` forms of
+  execution in the current thread. The \"quiet\" forms of
   these methods do not extract results or report exceptions. These
   may be useful when a set of tasks are being executed, and you need
   to delay processing of results or exceptions until all complete.

@@ -42,7 +42,7 @@
   constructors - array of ModelMBeanConstructorInfo objects which have descriptor - `javax.management.modelmbean.ModelMBeanConstructorInfo[]`
   operations - array of ModelMBeanOperationInfo objects which have descriptor - `javax.management.modelmbean.ModelMBeanOperationInfo[]`
   notifications - array of ModelMBeanNotificationInfo objects which have descriptor - `javax.management.modelmbean.ModelMBeanNotificationInfo[]`
-  mbeandescriptor - descriptor to be used as the MBeanDescriptor containing MBean wide policy. If the descriptor is null, a default descriptor will be constructed. The default descriptor is: name=className, descriptorType=`mbean`, displayName=className, persistPolicy=`never`, log=`F`, visibility=`1`. If the descriptor does not contain all of these fields, the missing ones are added with these default values. - `javax.management.Descriptor`
+  mbeandescriptor - descriptor to be used as the MBeanDescriptor containing MBean wide policy. If the descriptor is null, a default descriptor will be constructed. The default descriptor is: name=className, descriptorType=\"mbean\", displayName=className, persistPolicy=\"never\", log=\"F\", visibility=\"1\". If the descriptor does not contain all of these fields, the missing ones are added with these default values. - `javax.management.Descriptor`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException for invalid descriptor passed in parameter. (see getMBeanDescriptor for the definition of a valid MBean descriptor.)"
   (^ModelMBeanInfoSupport [^java.lang.String class-name ^java.lang.String description attributes constructors operations notifications ^javax.management.Descriptor mbeandescriptor]
@@ -100,7 +100,7 @@
 (defn get-descriptors
   "Description copied from interface: ModelMBeanInfo
 
-  in-descriptor-type - value of descriptorType field that must be set for the descriptor to be returned. Must be `mbean`, `attribute`, `operation`, `constructor` or `notification`. If it is null or empty then all types will be returned. - `java.lang.String`
+  in-descriptor-type - value of descriptorType field that must be set for the descriptor to be returned. Must be \"mbean\", \"attribute\", \"operation\", \"constructor\" or \"notification\". If it is null or empty then all types will be returned. - `java.lang.String`
 
   returns: Descriptor array containing all descriptors for the ModelMBean if type inDescriptorType. - `javax.management.Descriptor[]`
 
@@ -137,7 +137,7 @@
   "Description copied from interface: ModelMBeanInfo
 
   in-descriptor - The descriptor to be set in the ModelMBean. It must NOT be null. All descriptors must have name and descriptorType fields. - `javax.management.Descriptor`
-  in-descriptor-type - The type of the descriptor being set. If this is null then the descriptorType field in the descriptor is used. If specified this value must be set in the descriptorType field in the descriptor. Must be `mbean`,`attribute`, `constructor`, `operation`, or `notification`. - `java.lang.String`
+  in-descriptor-type - The type of the descriptor being set. If this is null then the descriptorType field in the descriptor is used. If specified this value must be set in the descriptorType field in the descriptor. Must be \"mbean\",\"attribute\", \"constructor\", \"operation\", or \"notification\". - `java.lang.String`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
   ([^ModelMBeanInfoSupport this ^javax.management.Descriptor in-descriptor ^java.lang.String in-descriptor-type]

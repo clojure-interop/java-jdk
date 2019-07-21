@@ -34,7 +34,7 @@
   orientation - Either SwingConstants.VERTICAL or SwingConstants.HORIZONTAL. - `int`
   direction - Less than zero to scroll up/left, greater than zero for down/right. - `int`
 
-  returns: The `unit` increment for scrolling in the specified direction.
+  returns: The \"unit\" increment for scrolling in the specified direction.
            This value should always be positive. - `int`"
   (^Integer [^Scrollable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
@@ -51,7 +51,7 @@
   orientation - Either SwingConstants.VERTICAL or SwingConstants.HORIZONTAL. - `int`
   direction - Less than zero to scroll up/left, greater than zero for down/right. - `int`
 
-  returns: The `block` increment for scrolling in the specified direction.
+  returns: The \"block\" increment for scrolling in the specified direction.
            This value should always be positive. - `int`"
   (^Integer [^Scrollable this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableBlockIncrement visible-rect orientation direction))))

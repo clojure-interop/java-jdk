@@ -65,7 +65,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `SeparatorUI` - `java.lang.String`"
+  returns: the string \"SeparatorUI\" - `java.lang.String`"
   (^java.lang.String [^JSeparator this]
     (-> this (.getUIClassID))))
 

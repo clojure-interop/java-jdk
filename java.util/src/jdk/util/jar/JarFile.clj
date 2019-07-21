@@ -331,8 +331,8 @@
 (defn stream
   "Description copied from class: ZipFile
 
-  returns: an ordered Stream of entries in this ZIP file - `java.util..Stream<java.util.jar.JarEntry>`"
-  (^java.util..Stream [^JarFile this]
+  returns: an ordered Stream of entries in this ZIP file - `java.util.stream.Stream<java.util.jar.JarEntry>`"
+  (^java.util.stream.Stream [^JarFile this]
     (-> this (.stream))))
 
 (defn get-input-stream

@@ -1,6 +1,6 @@
 (ns javax.management.RuntimeMBeanException
   "Represents runtime exceptions thrown by MBean methods in
-  the agent. It `wraps` the actual java.lang.RuntimeException exception thrown.
+  the agent. It \"wraps\" the actual java.lang.RuntimeException exception thrown.
   This exception will be built by the MBeanServer when a call to an
   MBean method throws a runtime exception."
   (:refer-clojure :only [require comment defn ->])

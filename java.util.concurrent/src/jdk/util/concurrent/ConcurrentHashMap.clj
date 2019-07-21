@@ -150,13 +150,13 @@
   filters, returning null (or, in the case of primitive
   specializations, the identity basis) if the element should not
   be combined. You can create compound transformations and
-  filterings by composing them yourself under this `null means
-  there is nothing there now` rule before using them in search or
+  filterings by composing them yourself under this \"null means
+  there is nothing there now\" rule before using them in search or
   reduce operations.
 
   Methods accepting and/or returning Entry arguments maintain
   key-value associations. They may be useful for example when
-  finding the key for the greatest value. Note that `plain` Entry
+  finding the key for the greatest value. Note that \"plain\" Entry
   arguments can be supplied using new
   AbstractMap.SimpleEntry(k,v).
 
@@ -450,10 +450,10 @@
 (defn to-string
   "Returns a string representation of this map.  The string
    representation consists of a list of key-value mappings (in no
-   particular order) enclosed in braces (`{}`).  Adjacent
-   mappings are separated by the characters `, ` (comma
+   particular order) enclosed in braces (\"{}\").  Adjacent
+   mappings are separated by the characters \", \" (comma
    and space).  Each key-value mapping is rendered as the key
-   followed by an equals sign (`=`) followed by the
+   followed by an equals sign (\"=\") followed by the
    associated value.
 
   returns: a string representation of this map - `java.lang.String`"

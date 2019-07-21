@@ -7,7 +7,7 @@
 
 (defn read-object
   "Read and return an object. The class that implements this interface
-   defines where the object is `read` from.
+   defines where the object is \"read\" from.
 
   returns: the object read from the stream - `java.lang.Object`
 

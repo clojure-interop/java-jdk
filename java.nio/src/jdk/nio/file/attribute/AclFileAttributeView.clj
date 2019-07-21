@@ -24,24 +24,24 @@
 
   RFC 3530 allows for special user identities to be used on platforms that
   support the POSIX defined access permissions. The special user identities
-  are `OWNER@`, `GROUP@`, and `EVERYONE@`. When both
+  are \"OWNER@\", \"GROUP@\", and \"EVERYONE@\". When both
   the AclFileAttributeView and the PosixFileAttributeView
   are supported then these special user identities may be included in ACL entries that are read or written. The file system's UserPrincipalLookupService may be used to obtain a UserPrincipal
   to represent these special identities by invoking the lookupPrincipalByName
   method.
 
    Usage Example:
-  Suppose we wish to add an entry to an existing ACL to grant `joe` access:
+  Suppose we wish to add an entry to an existing ACL to grant \"joe\" access:
 
 
-      // lookup `joe`
+      // lookup \"joe\"
       UserPrincipal joe = file.getFileSystem().getUserPrincipalLookupService()
-          .lookupPrincipalByName(`joe`);
+          .lookupPrincipalByName(\"joe\");
 
       // get view
       AclFileAttributeView view = Files.getFileAttributeView(file, AclFileAttributeView.class);
 
-      // create ACE to give `joe` read access
+      // create ACE to give \"joe\" read access
       AclEntry entry = AclEntry.newBuilder()
           .setType(AclEntryType.ALLOW)
           .setPrincipal(joe)
@@ -63,11 +63,11 @@
        Type
 
 
-       `acl`
+       \"acl\"
        List<AclEntry>
 
 
-       `owner`
+       \"owner\"
        UserPrincipal
 
 
@@ -85,7 +85,7 @@
 
    Implementations supporting this attribute view may also support setting
   the initial ACL when creating a file or directory. The initial ACL
-  may be provided to methods such as createFile or createDirectory as an FileAttribute with name `acl:acl` and a value that is the list of AclEntry objects.
+  may be provided to methods such as createFile or createDirectory as an FileAttribute with name \"acl:acl\" and a value that is the list of AclEntry objects.
 
    Where an implementation supports an ACL model that differs from the NFSv4
   defined ACL model then setting the initial ACL when creating the file must
@@ -98,7 +98,7 @@
 
 (defn name
   "Returns the name of the attribute view. Attribute views of this type
-   have the name `acl`.
+   have the name \"acl\".
 
   returns: the name of the attribute view - `java.lang.String`"
   (^java.lang.String [^AclFileAttributeView this]

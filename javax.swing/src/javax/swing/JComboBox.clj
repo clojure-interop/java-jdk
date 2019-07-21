@@ -101,8 +101,8 @@
    For example:
 
 
-     comboBox.addItem(makeObj(`Item 1`));
-     comboBox.addItem(makeObj(`Item 1`));
+     comboBox.addItem(makeObj(\"Item 1\"));
+     comboBox.addItem(makeObj(\"Item 1\"));
      ...
      private Object makeObj(final String item)  {
        return new Object() { public String toString() { return item; } };
@@ -234,7 +234,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `ComboBoxUI` - `java.lang.String`"
+  returns: the string \"ComboBoxUI\" - `java.lang.String`"
   (^java.lang.String [^JComboBox this]
     (-> this (.getUIClassID))))
 
@@ -457,7 +457,7 @@
     (-> this (.setEditable a-flag))))
 
 (defn get-prototype-display-value
-  "Returns the `prototypical display` value - an Object used
+  "Returns the \"prototypical display\" value - an Object used
    for the calculation of the display height and width.
 
   returns: the value of the prototypeDisplayValue property - `E`"
@@ -536,7 +536,7 @@
   "Returns the action command that is included in the event sent to
    action listeners.
 
-  returns: the string containing the `command` that is sent
+  returns: the string containing the \"command\" that is sent
             to action listeners. - `java.lang.String`"
   (^java.lang.String [^JComboBox this]
     (-> this (.getActionCommand))))
@@ -608,7 +608,7 @@
   "Sets the action command that should be included in the event
    sent to action listeners.
 
-  a-command - a string containing the `command` that is sent to action listeners; the same listener can then do different things depending on the command it receives - `java.lang.String`"
+  a-command - a string containing the \"command\" that is sent to action listeners; the same listener can then do different things depending on the command it receives - `java.lang.String`"
   ([^JComboBox this ^java.lang.String a-command]
     (-> this (.setActionCommand a-command))))
 

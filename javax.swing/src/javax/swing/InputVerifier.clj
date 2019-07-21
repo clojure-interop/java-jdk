@@ -13,7 +13,7 @@
   called.  Focus is transfered only if that method returns true.
 
   The following example has two text fields, with the first one expecting
-  the string `pass` to be entered by the user. If that string is entered in
+  the string \"pass\" to be entered by the user. If that string is entered in
   the first text field, then the user can advance to the second text field
   either by clicking in it or by pressing TAB. However, if another string
   is entered in the first text field, then the user will be unable to
@@ -28,16 +28,16 @@
 
   // This program demonstrates the use of the Swing InputVerifier class.
   // It creates two text fields; the first of the text fields expects the
-  // string `pass` as input, and will allow focus to advance out of it
+  // string \"pass\" as input, and will allow focus to advance out of it
   // only after that string is typed in by the user.
 
   public class VerifierTest extends JFrame {
       public VerifierTest() {
-          JTextField tf1 = new JTextField (`Type `pass` here`);
+          JTextField tf1 = new JTextField (\"Type \\\"pass\\\" here\");
           getContentPane().add (tf1, BorderLayout.NORTH);
           tf1.setInputVerifier(new PassVerifier());
 
-          JTextField tf2 = new JTextField (`TextField2`);
+          JTextField tf2 = new JTextField (\"TextField2\");
           getContentPane().add (tf2, BorderLayout.SOUTH);
 
           WindowListener l = new WindowAdapter() {
@@ -51,7 +51,7 @@
       class PassVerifier extends InputVerifier {
           public boolean verify(JComponent input) {
               JTextField tf = (JTextField) input;
-              return `pass`.equals(tf.getText());
+              return \"pass\".equals(tf.getText());
           }
       }
 

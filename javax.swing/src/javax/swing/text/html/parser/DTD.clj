@@ -6,99 +6,110 @@
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.text.html.parser DTD]))
 
-(defn -name
+(defn name
   "Instance Field.
 
   type: java.lang.String"
-  [this]
-  (-> this .-name))
+  (^java.lang.String [^DTD this]
+    (-> this .-name)))
 
-(defn -elements
+(defn elements
   "Instance Field.
 
   type: java.util.Vector<javax.swing.text.html.parser.Element>"
-  [this]
-  (-> this .-elements))
+  (^java.util.Vector [^DTD this]
+    (-> this .-elements)))
 
-(defn -element-hash
+(defn element-hash
   "Instance Field.
 
   type: java.util.Hashtable<java.lang.String,javax.swing.text.html.parser.Element>"
-  [this]
-  (-> this .-elementHash))
+  (^java.util.Hashtable [^DTD this]
+    (-> this .-elementHash)))
 
-(defn -entity-hash
+(defn entity-hash
   "Instance Field.
 
   type: java.util.Hashtable<java.lang.Object,javax.swing.text.html.parser.Entity>"
-  [this]
-  (-> this .-entityHash))
+  (^java.util.Hashtable [^DTD this]
+    (-> this .-entityHash)))
 
-(def -pcdata
+(defn pcdata
   "Instance Constant.
 
   type: javax.swing.text.html.parser.Element"
-  (-> this .-pcdata))
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-pcdata)))
 
-(def -html
-  "Instance Constant.
-
-  type: javax.swing.text..parser.Element"
-  (-> this .-html))
-
-(def -meta
+(defn html
   "Instance Constant.
 
   type: javax.swing.text.html.parser.Element"
-  (-> this .-meta))
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-html)))
 
-(def -base
+(defn meta
   "Instance Constant.
 
   type: javax.swing.text.html.parser.Element"
-  (-> this .-base))
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-meta)))
 
-(def -isindex
+(defn base
   "Instance Constant.
 
   type: javax.swing.text.html.parser.Element"
-  (-> this .-isindex))
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-base)))
 
-(def -head
+(defn isindex
   "Instance Constant.
 
   type: javax.swing.text.html.parser.Element"
-  (-> this .-head))
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-isindex)))
 
-(def -body
+(defn head
   "Instance Constant.
 
   type: javax.swing.text.html.parser.Element"
-  (-> this .-body))
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-head)))
 
-(def -applet
+(defn body
   "Instance Constant.
 
   type: javax.swing.text.html.parser.Element"
-  (-> this .-applet))
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-body)))
 
-(def -param
+(defn applet
   "Instance Constant.
 
   type: javax.swing.text.html.parser.Element"
-  (-> this .-param))
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-applet)))
 
-(def -p
-  "Instance Constant.
-
-  type: javax.swing.text.html.arser.Element"
-  (-> this .-p))
-
-(def -title
+(defn param
   "Instance Constant.
 
   type: javax.swing.text.html.parser.Element"
-  (-> this .-title))
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-param)))
+
+(defn p
+  "Instance Constant.
+
+  type: javax.swing.text.html.parser.Element"
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-p)))
+
+(defn title
+  "Instance Constant.
+
+  type: javax.swing.text.html.parser.Element"
+  (^javax.swing.text.html.parser.Element [^DTD this]
+    (-> this .-title)))
 
 (def *-file-version
   "Static Constant.

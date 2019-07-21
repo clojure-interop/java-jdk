@@ -14,18 +14,18 @@
   view.  The Entry argument can be used to obtain the values in
   each of the columns in that entry.  The following example shows an
   include method that allows only entries containing one or
-  more values starting with the string `a`:
+  more values starting with the string \"a\":
 
 
   RowFilter<Object,Object> startsWithAFilter = new RowFilter<Object,Object>() {
     public boolean include(Entry<? extends Object, ? extends Object> entry) {
       for (int i = entry.getValueCount() - 1; i >= 0; i--) {
-        if (entry.getStringValue(i).startsWith(`a`)) {
-          // The value starts with `a`, include it
+        if (entry.getStringValue(i).startsWith(\"a\")) {
+          // The value starts with \"a\", include it
           return true;
         }
       }
-      // None of the columns start with `a`; return false so that this
+      // None of the columns start with \"a\"; return false so that this
       // entry is not shown
       return false;
     }
@@ -66,16 +66,16 @@
    with at least one matching value are included.  For
    example, the following creates a RowFilter that
    includes entries with at least one value starting with
-   `a`:
+   \"a\":
 
 
-     RowFilter.regexFilter(`^a`);
+     RowFilter.regexFilter(\"^a\");
 
    The returned filter uses Matcher.find()
    to test for inclusion.  To test for exact matches use the
    characters '^' and '$' to match the beginning and end of the
-   string respectively.  For example, `^foo$` includes only rows whose
-   string is exactly `foo` and not, for example, `food`.  See
+   string respectively.  For example, \"^foo$\" includes only rows whose
+   string is exactly \"foo\" and not, for example, \"food\".  See
    Pattern for a complete description of
    the supported regular-expression constructs.
 
@@ -132,13 +132,13 @@
    of the supplied filters includes the entry.
 
    The following example creates a RowFilter that will
-   include any entries containing the string `foo` or the string
-   `bar`:
+   include any entries containing the string \"foo\" or the string
+   \"bar\":
 
 
      List<RowFilter<Object,Object>> filters = new ArrayList<RowFilter<Object,Object>>(2);
-     filters.add(RowFilter.regexFilter(`foo`));
-     filters.add(RowFilter.regexFilter(`bar`));
+     filters.add(RowFilter.regexFilter(\"foo\"));
+     filters.add(RowFilter.regexFilter(\"bar\"));
      RowFilter<Object,Object> fooBarFilter = RowFilter.orFilter(filters);
 
   filters - the RowFilters to test - `java.lang.Iterable`
@@ -154,13 +154,13 @@
    of the supplied filters include the entry.
 
    The following example creates a RowFilter that will
-   include any entries containing the string `foo` and the string
-   `bar`:
+   include any entries containing the string \"foo\" and the string
+   \"bar\":
 
 
      List<RowFilter<Object,Object>> filters = new ArrayList<RowFilter<Object,Object>>(2);
-     filters.add(RowFilter.regexFilter(`foo`));
-     filters.add(RowFilter.regexFilter(`bar`));
+     filters.add(RowFilter.regexFilter(\"foo\"));
+     filters.add(RowFilter.regexFilter(\"bar\"));
      RowFilter<Object,Object> fooBarFilter = RowFilter.andFilter(filters);
 
   filters - the RowFilters to test - `java.lang.Iterable`

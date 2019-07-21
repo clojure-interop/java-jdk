@@ -13,7 +13,7 @@
 
 
   Get a key pair generator for the DSA algorithm by calling the
-  KeyPairGenerator getInstance method with `DSA`
+  KeyPairGenerator getInstance method with \"DSA\"
   as its argument.
 
   Initialize the generator by casting the result to a DSAKeyPairGenerator

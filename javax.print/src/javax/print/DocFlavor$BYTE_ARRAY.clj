@@ -9,7 +9,7 @@
   "Constructor.
 
   Constructs a new doc flavor with the given MIME type and a print
-   data representation class name of `[B` (byte array).
+   data representation class name of \"[B\" (byte array).
 
   mime-type - MIME media type string. - `java.lang.String`
 
@@ -20,11 +20,11 @@
 (def *-text-plain-host
   "Static Constant.
 
-  Doc flavor with MIME type = `text/plain`,
+  Doc flavor with MIME type = \"text/plain\",
    encoded in the host platform encoding.
    See hostEncoding
    Print data representation class name =
-   `[B` (byte array).
+   \"[B\" (byte array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_PLAIN_HOST)
@@ -33,8 +33,8 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `text/plain; charset=utf-8`,
-   print data representation class name = `[B` (byte
+   \"text/plain; charset=utf-8\",
+   print data representation class name = \"[B\" (byte
    array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
@@ -44,8 +44,8 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `text/plain; charset=utf-16`,
-   print data representation class name = `[B` (byte
+   \"text/plain; charset=utf-16\",
+   print data representation class name = \"[B\" (byte
    array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
@@ -55,9 +55,9 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `text/plain; charset=utf-16be`
+   \"text/plain; charset=utf-16be\"
    (big-endian byte ordering),
-   print data representation class name = `[B` (byte
+   print data representation class name = \"[B\" (byte
    array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
@@ -67,9 +67,9 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `text/plain; charset=utf-16le`
+   \"text/plain; charset=utf-16le\"
    (little-endian byte ordering),
-   print data representation class name = `[B` (byte
+   print data representation class name = \"[B\" (byte
    array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
@@ -79,9 +79,9 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `text/plain; charset=us-ascii`,
+   \"text/plain; charset=us-ascii\",
    print data representation class name =
-   `[B` (byte array).
+   \"[B\" (byte array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_PLAIN_US_ASCII)
@@ -89,11 +89,11 @@
 (def *-text-html-host
   "Static Constant.
 
-  Doc flavor with MIME type = `text/html`,
+  Doc flavor with MIME type = \"text/html\",
    encoded in the host platform encoding.
    See hostEncoding
    Print data representation class name =
-   `[B` (byte array).
+   \"[B\" (byte array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_HTML_HOST)
@@ -102,8 +102,8 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `text/html; charset=utf-8`,
-   print data representation class name = `[B` (byte
+   \"text/html; charset=utf-8\",
+   print data representation class name = \"[B\" (byte
    array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
@@ -113,8 +113,8 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `text/html; charset=utf-16`,
-   print data representation class name = `[B` (byte
+   \"text/html; charset=utf-16\",
+   print data representation class name = \"[B\" (byte
    array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
@@ -124,9 +124,9 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `text/html; charset=utf-16be`
+   \"text/html; charset=utf-16be\"
    (big-endian byte ordering),
-   print data representation class name = `[B` (byte
+   print data representation class name = \"[B\" (byte
    array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
@@ -136,9 +136,9 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `text/html; charset=utf-16le`
+   \"text/html; charset=utf-16le\"
    (little-endian byte ordering),
-   print data representation class name = `[B` (byte
+   print data representation class name = \"[B\" (byte
    array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
@@ -148,9 +148,9 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `text/html; charset=us-ascii`,
+   \"text/html; charset=us-ascii\",
    print data representation class name =
-   `[B` (byte array).
+   \"[B\" (byte array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/TEXT_HTML_US_ASCII)
@@ -158,8 +158,8 @@
 (def *-pdf
   "Static Constant.
 
-  Doc flavor with MIME type = `application/pdf`, print
-   data representation class name = `[B` (byte array).
+  Doc flavor with MIME type = \"application/pdf\", print
+   data representation class name = \"[B\" (byte array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/PDF)
@@ -167,8 +167,8 @@
 (def *-postscript
   "Static Constant.
 
-  Doc flavor with MIME type = `application/postscript`,
-   print data representation class name = `[B` (byte
+  Doc flavor with MIME type = \"application/postscript\",
+   print data representation class name = \"[B\" (byte
    array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
@@ -177,8 +177,8 @@
 (def *-pcl
   "Static Constant.
 
-  Doc flavor with MIME type = `application/vnd.hp-PCL`,
-   print data representation class name = `[B` (byte
+  Doc flavor with MIME type = \"application/vnd.hp-PCL\",
+   print data representation class name = \"[B\" (byte
    array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
@@ -187,8 +187,8 @@
 (def *-gif
   "Static Constant.
 
-  Doc flavor with MIME type = `image/gif`, print data
-   representation class name = `[B` (byte array).
+  Doc flavor with MIME type = \"image/gif\", print data
+   representation class name = \"[B\" (byte array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/GIF)
@@ -196,8 +196,8 @@
 (def *-jpeg
   "Static Constant.
 
-  Doc flavor with MIME type = `image/jpeg`, print data
-   representation class name = `[B` (byte array).
+  Doc flavor with MIME type = \"image/jpeg\", print data
+   representation class name = \"[B\" (byte array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/JPEG)
@@ -205,8 +205,8 @@
 (def *-png
   "Static Constant.
 
-  Doc flavor with MIME type = `image/png`, print data
-   representation class name = `[B` (byte array).
+  Doc flavor with MIME type = \"image/png\", print data
+   representation class name = \"[B\" (byte array).
 
   type: javax.print.DocFlavor$BYTE_ARRAY"
   DocFlavor$BYTE_ARRAY/PNG)
@@ -215,8 +215,8 @@
   "Static Constant.
 
   Doc flavor with MIME type =
-   `application/octet-stream`,
-   print data representation class name = `[B` (byte
+   \"application/octet-stream\",
+   print data representation class name = \"[B\" (byte
    array). The client must determine that data described
    using this DocFlavor is valid for the printer.
 

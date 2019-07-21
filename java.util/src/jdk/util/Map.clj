@@ -23,7 +23,7 @@
   well defined on such a map.
 
   All general-purpose map implementation classes should provide two
-  `standard` constructors: a void (no arguments) constructor which creates an
+  \"standard\" constructors: a void (no arguments) constructor which creates an
   empty map, and a constructor with a single argument of type Map,
   which creates a new map with the same key-value mappings as its argument.
   In effect, the latter constructor allows the user to copy any map,
@@ -31,14 +31,14 @@
   enforce this recommendation (as interfaces cannot contain constructors) but
   all of the general-purpose map implementations in the JDK comply.
 
-  The `destructive` methods contained in this interface, that is, the
+  The \"destructive\" methods contained in this interface, that is, the
   methods that modify the map on which they operate, are specified to throw
   UnsupportedOperationException if this map does not support the
   operation.  If this is the case, these methods may, but are not required
   to, throw an UnsupportedOperationException if the invocation would
   have no effect on the map.  For example, invoking the putAll(Map)
   method on an unmodifiable map may, but is not required to, throw the
-  exception if the map whose mappings are to be `superimposed` is empty.
+  exception if the map whose mappings are to be \"superimposed\" is empty.
 
   Some map implementations have restrictions on the keys and values they
   may contain.  For example, some implementations prohibit null keys and
@@ -51,14 +51,14 @@
   attempting an operation on an ineligible key or value whose completion
   would not result in the insertion of an ineligible element into the map may
   throw an exception or it may succeed, at the option of the implementation.
-  Such exceptions are marked as `optional` in the specification for this
+  Such exceptions are marked as \"optional\" in the specification for this
   interface.
 
   Many methods in Collections Framework interfaces are defined
   in terms of the equals method.  For
-  example, the specification for the containsKey(Object key) method says: `returns true if and
+  example, the specification for the containsKey(Object key) method says: \"returns true if and
   only if this map contains a mapping for a key k such that
-  (key==null ? k==null : key.equals(k)).` This specification should
+  (key==null ? k==null : key.equals(k)).\" This specification should
   not be construed to imply that invoking Map.containsKey
   with a non-null argument key will cause key.equals(k) to
   be invoked for any key k.  Implementations are free to

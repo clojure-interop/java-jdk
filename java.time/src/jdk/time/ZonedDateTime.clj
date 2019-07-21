@@ -6,7 +6,7 @@
   This class stores all date and time fields, to a precision of nanoseconds,
   and a time-zone, with a zone offset used to handle ambiguous local date-times.
   For example, the value
-  `2nd October 2007 at 13:45.30.123456789 02:00 in the Europe/Paris time-zone`
+  \"2nd October 2007 at 13:45.30.123456789 02:00 in the Europe/Paris time-zone\"
   can be stored in a ZonedDateTime.
 
   This class handles conversion from the local time-line of LocalDateTime
@@ -23,10 +23,10 @@
   Normal, with one valid offset. For the vast majority of the year, the normal
    case applies, where there is a single valid offset for the local date-time.
   Gap, with zero valid offsets. This is when clocks jump forward typically
-   due to the spring daylight savings change from `winter` to `summer`.
+   due to the spring daylight savings change from \"winter\" to \"summer\".
    In a gap there are local date-time values with no valid offset.
   Overlap, with two valid offsets. This is when clocks are set back typically
-   due to the autumn daylight savings change from `summer` to `winter`.
+   due to the autumn daylight savings change from \"summer\" to \"winter\".
    In an overlap there are local date-time values with two valid offsets.
 
 
@@ -36,12 +36,12 @@
   For Gaps, the general strategy is that if the local date-time falls in the
   middle of a Gap, then the resulting zoned date-time will have a local date-time
   shifted forwards by the length of the Gap, resulting in a date-time in the later
-  offset, typically `summer` time.
+  offset, typically \"summer\" time.
 
   For Overlaps, the general strategy is that if the local date-time falls in the
   middle of an Overlap, then the previous offset will be retained. If there is no
   previous offset, or the previous offset is invalid, then the earlier offset is
-  used, typically `summer` time.. Two additional methods,
+  used, typically \"summer\" time.. Two additional methods,
   withEarlierOffsetAtOverlap() and withLaterOffsetAtOverlap(),
   help manage the case of an overlap.
 
@@ -92,12 +92,12 @@
 
    In most cases, there is only one valid offset for a local date-time.
    In the case of an overlap, when clocks are set back, there are two valid offsets.
-   This method uses the earlier offset typically corresponding to `summer`.
+   This method uses the earlier offset typically corresponding to \"summer\".
 
    In the case of a gap, when clocks jump forward, there is no valid offset.
    Instead, the local date-time is adjusted to be later by the length of the gap.
    For a typical one hour daylight savings change, the local date-time will be
-   moved one hour later into the offset typically corresponding to `summer`.
+   moved one hour later into the offset typically corresponding to \"summer\".
 
    This method exists primarily for writing test cases.
    Non test-code will typically use other methods to create an offset time.
@@ -135,12 +135,12 @@
    In most cases, there is only one valid offset for a local date-time.
    In the case of an overlap, where clocks are set back, there are two valid offsets.
    If the preferred offset is one of the valid offsets then it is used.
-   Otherwise the earlier valid offset is used, typically corresponding to `summer`.
+   Otherwise the earlier valid offset is used, typically corresponding to \"summer\".
 
    In the case of a gap, where clocks jump forward, there is no valid offset.
    Instead, the local date-time is adjusted to be later by the length of the gap.
    For a typical one hour daylight savings change, the local date-time will be
-   moved one hour later into the offset typically corresponding to `summer`.
+   moved one hour later into the offset typically corresponding to \"summer\".
 
   local-date-time - the local date-time, not null - `java.time.LocalDateTime`
   zone - the time-zone, not null - `java.time.ZoneId`

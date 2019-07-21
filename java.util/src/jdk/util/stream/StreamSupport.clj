@@ -32,7 +32,7 @@
   characteristics - Spliterator characteristics of the supplied Spliterator. The characteristics must be equal to supplier.get().characteristics(), otherwise undefined behavior may occur when terminal operation commences. - `int`
   parallel - if true then the returned stream is a parallel stream; if false the returned stream is a sequential stream. - `boolean`
 
-  returns: a new sequential or parallel Stream - `<T> java.util..Stream<T>`"
+  returns: a new sequential or parallel Stream - `<T> java.util.stream.Stream<T>`"
   ([^java.util.function.Supplier supplier ^Integer characteristics ^Boolean parallel]
     (StreamSupport/stream supplier characteristics parallel))
   ([^java.util.Spliterator spliterator ^Boolean parallel]

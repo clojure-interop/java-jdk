@@ -3,7 +3,7 @@
   a way to allocate events given an XMLStreamReader.  An implementation
   is not required to use the XMLEventFactory implementation but this
   is recommended.  The XMLEventAllocator can be set on an XMLInputFactory
-  using the property `javax.xml.stream.allocator`"
+  using the property \"javax.xml.stream.allocator\""
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.stream.util XMLEventAllocator]))
 

@@ -18,30 +18,30 @@
   (^AccessibleAttributeSequence [^Integer start ^Integer end ^javax.swing.text.AttributeSet attr]
     (new AccessibleAttributeSequence start end attr)))
 
-(defn -start-index
+(defn start-index
   "Instance Field.
 
   The start index of the text sequence
 
   type: int"
-  [this]
-  (-> this .-startIndex))
+  (^Integer [^AccessibleAttributeSequence this]
+    (-> this .-startIndex)))
 
-(defn -end-index
+(defn end-index
   "Instance Field.
 
   The end index of the text sequence
 
   type: int"
-  [this]
-  (-> this .-endIndex))
+  (^Integer [^AccessibleAttributeSequence this]
+    (-> this .-endIndex)))
 
-(defn -attributes
+(defn attributes
   "Instance Field.
 
   The text attributes
 
   type: javax.swing.text.AttributeSet"
-  [this]
-  (-> this .-attributes))
+  (^javax.swing.text.AttributeSet [^AccessibleAttributeSequence this]
+    (-> this .-attributes)))
 

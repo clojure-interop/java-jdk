@@ -24,32 +24,32 @@
   (^ContentModel []
     (new ContentModel )))
 
-(defn -type
+(defn type
   "Instance Field.
 
   Type. Either '*', '?', '+', ',', '|', '&'.
 
   type: int"
-  [this]
-  (-> this .-type))
+  (^Integer [^ContentModel this]
+    (-> this .-type)))
 
-(defn -content
+(defn content
   "Instance Field.
 
   The content. Either an Element or a ContentModel.
 
   type: java.lang.Object"
-  [this]
-  (-> this .-content))
+  (^java.lang.Object [^ContentModel this]
+    (-> this .-content)))
 
-(defn -next
+(defn next
   "Instance Field.
 
   The next content model (in a ',', '|' or '&' expression).
 
   type: javax.swing.text.html.parser.ContentModel"
-  [this]
-  (-> this .-next))
+  (^javax.swing.text.html.parser.ContentModel [^ContentModel this]
+    (-> this .-next)))
 
 (defn empty
   "Return true if the content model could

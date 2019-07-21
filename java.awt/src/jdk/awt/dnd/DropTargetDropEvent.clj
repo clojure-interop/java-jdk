@@ -47,7 +47,7 @@
    as the target.
 
   dtc - The DropTargetContext for this operation - `java.awt.dnd.DropTargetContext`
-  cursor-locn - The location of the `Drag` Cursor's hotspot in Component's coordinates - `java.awt.Point`
+  cursor-locn - The location of the \"Drag\" Cursor's hotspot in Component's coordinates - `java.awt.Point`
   drop-action - the user drop action. - `int`
   src-actions - the source drop actions. - `int`
   is-local - True if the source is in the same JVM as the target - `boolean`

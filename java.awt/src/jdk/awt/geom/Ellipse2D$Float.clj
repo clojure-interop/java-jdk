@@ -19,43 +19,43 @@
   (^Ellipse2D$Float []
     (new Ellipse2D$Float )))
 
-(defn -x
+(defn x
   "Instance Field.
 
   The X coordinate of the upper-left corner of the
    framing rectangle of this Ellipse2D.
 
   type: float"
-  [this]
-  (-> this .-x))
+  (^Float [^Ellipse2D$Float this]
+    (-> this .-x)))
 
-(defn -y
+(defn y
   "Instance Field.
 
   The Y coordinate of the upper-left corner of the
    framing rectangle of this Ellipse2D.
 
   type: float"
-  [this]
-  (-> this .-y))
+  (^Float [^Ellipse2D$Float this]
+    (-> this .-y)))
 
-(defn -width
+(defn width
   "Instance Field.
 
   The overall width of this Ellipse2D.
 
   type: float"
-  [this]
-  (-> this .-width))
+  (^Float [^Ellipse2D$Float this]
+    (-> this .-width)))
 
-(defn -height
+(defn height
   "Instance Field.
 
   The overall height of this Ellipse2D.
 
   type: float"
-  [this]
-  (-> this .-height))
+  (^Float [^Ellipse2D$Float this]
+    (-> this .-height)))
 
 (defn get-x
   "Returns the X coordinate of the upper-left corner of

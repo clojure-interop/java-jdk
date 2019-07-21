@@ -5,7 +5,7 @@
   the property list is a string.
 
   A property list can contain another property list as its
-  `defaults`; this second property list is searched if
+  \"defaults\"; this second property list is searched if
   the property key is not found in the original property list.
 
   Because Properties inherits from Hashtable, the
@@ -14,10 +14,10 @@
   allow the caller to insert entries whose keys or values are not
   Strings.  The setProperty method should be used
   instead.  If the store or save method is called
-  on a `compromised` Properties object that contains a
+  on a \"compromised\" Properties object that contains a
   non-String key or value, the call will fail. Similarly,
   the call to the propertyNames or list method
-  will fail if it is called on a `compromised` Properties
+  will fail if it is called on a \"compromised\" Properties
   object that contains a non-String key.
 
 
@@ -45,19 +45,19 @@
 
 
 
-  <!DOCTYPE properties SYSTEM `http://java.sun.com/dtd/properties.dtd`>
+  <!DOCTYPE properties SYSTEM \"http://java.sun.com/dtd/properties.dtd\">
   Note that the system URI (http://java.sun.com/dtd/properties.dtd) is
   not accessed when exporting or importing properties; it merely
   serves as a string to uniquely identify the DTD, which is:
 
 
-     <?xml version=`1.0` encoding=`UTF-8`?>
+     <?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
      <!-- DTD for properties -->
 
      <!ELEMENT properties ( comment?, entry* ) >
 
-     <!ATTLIST properties version CDATA #FIXED `1.0`>
+     <!ATTLIST properties version CDATA #FIXED \"1.0\">
 
      <!ELEMENT comment (#PCDATA) >
 
@@ -113,13 +113,13 @@
    kinds of line, natural lines and logical lines.
    A natural line is defined as a line of
    characters that is terminated either by a set of line terminator
-   characters (\n or \r or \r\n)
+   characters (\\n or \\r or \\r\\n)
    or by the end of the stream. A natural line may be either a blank line,
    a comment line, or hold all or some of a key-element pair. A logical
    line holds all the data of a key-element pair, which may be spread
    out across several adjacent natural lines by escaping
    the line terminator sequence with a backslash character
-   \.  Note that a comment line cannot be extended
+   \\.  Note that a comment line cannot be extended
    in this manner; every natural line that is a comment must have
    its own comment indicator, as described below. Lines are read from
    input until the end of the stream is reached.
@@ -131,9 +131,9 @@
    space character; comment lines are also ignored and do not
    encode key-element information.  In addition to line
    terminators, this format considers the characters space
-   (' ', '\u0020'), tab
-   ('\t', '\u0009'), and form feed
-   ('\f', '\u000C') to be white
+   (' ', '\\u0020'), tab
+   ('\\t', '\\u0009'), and form feed
+   ('\\f', '\\u000C') to be white
    space.
 
 
@@ -163,25 +163,25 @@
    included in the key by escaping them with a preceding backslash
    character; for example,
 
-   \:\=
+   \\:\\=
 
-   would be the two-character key `:=`.  Line
-   terminator characters can be included using \r and
-   \n escape sequences.  Any white space after the
+   would be the two-character key \":=\".  Line
+   terminator characters can be included using \\r and
+   \\n escape sequences.  Any white space after the
    key is skipped; if the first non-white space character after
    the key is '=' or ':', then it is
    ignored and any white space characters after it are also
    skipped.  All remaining characters on the line become part of
    the associated element string; if there are no remaining
    characters, the element is the empty string
-   ``.  Once the raw character sequences
+   \"\".  Once the raw character sequences
    constituting the key and element are identified, escape
    processing is performed as described above.
 
 
    As an example, each of the following three lines specifies the key
-   `Truth` and the associated element value
-   `Beauty`:
+   \"Truth\" and the associated element value
+   \"Beauty\":
 
 
    Truth = Beauty
@@ -191,15 +191,15 @@
    property:
 
 
-   fruits                           apple, banana, pear, \
-                                    cantaloupe, watermelon, \
+   fruits                           apple, banana, pear, \\
+                                    cantaloupe, watermelon, \\
                                     kiwi, mango
-   The key is `fruits` and the associated element is:
+   The key is \"fruits\" and the associated element is:
 
 
-  `apple, banana, pear, cantaloupe, watermelon, kiwi, mango`
-   Note that a space appears before each \ so that a space
-   will appear after each comma in the final result; the \,
+  \"apple, banana, pear, cantaloupe, watermelon, kiwi, mango\"
+   Note that a space appears before each \\ so that a space
+   will appear after each comma in the final result; the \\,
    line terminator, and leading white space on the continuation line are
    merely discarded and are not replaced by one or more other
    characters.
@@ -208,8 +208,8 @@
 
 
   cheeses
-   specifies that the key is `cheeses` and the associated
-   element is the empty string ``.
+   specifies that the key is \"cheeses\" and the associated
+   element is the empty string \"\".
 
 
    Characters in keys and elements can be represented in escape
@@ -223,16 +223,16 @@
 
     Octal escapes are not recognized.
 
-    The character sequence \b does not
+    The character sequence \\b does not
    represent a backspace character.
 
     The method does not treat a backslash character,
-   \, before a non-valid escape character as an
+   \\, before a non-valid escape character as an
    error; the backslash is silently dropped.  For example, in a
-   Java string the sequence `\z` would cause a
+   Java string the sequence \"\\z\" would cause a
    compile time error.  In contrast, this method silently drops
    the backslash.  Therefore, this method treats the two character
-   sequence `\b` as equivalent to the single
+   sequence \"\\b\" as equivalent to the single
    character 'b'.
 
     Escapes are not necessary for single and double quotes;
@@ -260,12 +260,12 @@
    The XML document must have the following DOCTYPE declaration:
 
 
-   <!DOCTYPE properties SYSTEM `http://java.sun.com/dtd/properties.dtd`>
+   <!DOCTYPE properties SYSTEM \"http://java.sun.com/dtd/properties.dtd\">
    Furthermore, the document must satisfy the properties DTD described
    above.
 
     An implementation is required to read XML documents that use the
-   `UTF-8` or `UTF-16` encoding. An implementation may
+   \"UTF-8\" or \"UTF-16\" encoding. An implementation may
    support additional encodings.
 
    The specified stream is closed after this method returns.
@@ -311,13 +311,13 @@
    The XML document will have the following DOCTYPE declaration:
 
 
-   <!DOCTYPE properties SYSTEM `http://java.sun.com/dtd/properties.dtd`>
+   <!DOCTYPE properties SYSTEM \"http://java.sun.com/dtd/properties.dtd\">
 
    If the specified comment is null then no comment
    will be stored in the document.
 
     An implementation is required to support writing of XML documents
-   that use the `UTF-8` or `UTF-16` encoding. An
+   that use the \"UTF-8\" or \"UTF-16\" encoding. An
    implementation may support additional encodings.
 
    The specified stream remains open after this method returns.
@@ -376,8 +376,8 @@
    If the comments argument is not null, then an ASCII #
    character, the comments string, and a line separator are first written
    to the output stream. Thus, the comments can serve as an
-   identifying comment. Any one of a line feed ('\n'), a carriage
-   return ('\r'), or a carriage return followed immediately by a line feed
+   identifying comment. Any one of a line feed ('\\n'), a carriage
+   return ('\\r'), or a carriage return followed immediately by a line feed
    in comments is replaced by a line separator generated by the Writer
    and if the next character in comments is not character # or
    character ! then an ASCII # is written out
@@ -392,9 +392,9 @@
    written out, one per line. For each entry the key string is
    written, then an ASCII =, then the associated
    element string. For the key, all space characters are
-   written with a preceding \ character.  For the
+   written with a preceding \\ character.  For the
    element, leading space characters, but not embedded or trailing
-   space characters, are written with a preceding \
+   space characters, are written with a preceding \\
    character. The key and element characters #,
    !, =, and : are written
    with a preceding backslash to ensure that they are properly loaded.

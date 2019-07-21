@@ -25,7 +25,7 @@
 
 (defn computer-node?
   "Used by UI classes to decide whether to display a special icon
-   for a computer node, e.g. `My Computer` or a network server.
+   for a computer node, e.g. \"My Computer\" or a network server.
 
    The default implementation has no way of knowing, so always returns false.
 
@@ -77,8 +77,8 @@
 
 (defn get-system-display-name
   "Name of a file, directory, or folder as it would be displayed in
-   a system file browser. Example from Windows: the `M:` directory
-   displays as `CD-ROM (M:)`
+   a system file browser. Example from Windows: the \"M:\\\" directory
+   displays as \"CD-ROM (M:)\"
 
    The default implementation gets information from the ShellFolder class.
 
@@ -95,7 +95,7 @@
 
 (defn file-system-root?
   "Is dir the root of a tree in the file system, such as a drive
-   or partition. Example: Returns true for `C:` on Windows 98.
+   or partition. Example: Returns true for \"C:\\\" on Windows 98.
 
   dir - a File object representing a directory - `java.io.File`
 
@@ -105,7 +105,7 @@
 
 (defn get-system-icon
   "Icon for a file, directory, or folder as it would be displayed in
-   a system file browser. Example from Windows: the `M:` directory
+   a system file browser. Example from Windows: the \"M:\\\" directory
    displays a CD-ROM icon.
 
    The default implementation gets information from the ShellFolder class.
@@ -119,7 +119,7 @@
 (defn parent?
   "On Windows, a file can appear in multiple folders, other than its
    parent directory in the filesystem. Folder could for example be the
-   `Desktop` folder which is not the same as file.getParentFile().
+   \"Desktop\" folder which is not the same as file.getParentFile().
 
   folder - a File object representing a directory or special folder - `java.io.File`
   file - a File object - `java.io.File`
@@ -152,8 +152,8 @@
 
 (defn get-system-type-description
   "Type description for a file, directory, or folder as it would be displayed in
-   a system file browser. Example from Windows: the `Desktop` folder
-   is described as `Desktop`.
+   a system file browser. Example from Windows: the \"Desktop\" folder
+   is described as \"Desktop\".
 
    Override for platforms with native ShellFolder implementations.
 
@@ -177,7 +177,7 @@
 
 (defn file-system?
   "Checks if f represents a real directory or file as opposed to a
-   special folder such as `Desktop`. Used by UI classes to decide if
+   special folder such as \"Desktop\". Used by UI classes to decide if
    a folder is selectable when doing directory choosing.
 
   f - a File object - `java.io.File`
@@ -188,7 +188,7 @@
 
 (defn get-roots
   "Returns all root partitions on this system. For example, on
-   Windows, this would be the `Desktop` folder, while on DOS this
+   Windows, this would be the \"Desktop\" folder, while on DOS this
    would be the A: through Z: drives.
 
   returns: `java.io.File[]`"
@@ -207,8 +207,8 @@
 (defn root?
   "Determines if the given file is a root in the navigable tree(s).
    Examples: Windows 98 has one root, the Desktop folder. DOS has one root
-   per drive letter, C:\, D:\, etc. Unix has one root,
-   the `/` directory.
+   per drive letter, C:\\, D:\\, etc. Unix has one root,
+   the \"/\" directory.
 
    The default implementation gets information from the ShellFolder class.
 
@@ -220,7 +220,7 @@
 
 (defn drive?
   "Used by UI classes to decide whether to display a special icon
-   for drives or partitions, e.g. a `hard disk` icon.
+   for drives or partitions, e.g. a \"hard disk\" icon.
 
    The default implementation has no way of knowing, so always returns false.
 

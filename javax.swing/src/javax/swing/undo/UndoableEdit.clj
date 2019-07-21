@@ -46,7 +46,7 @@
    deleting file resources used by objects that can no longer be
    undeleted. UndoManager calls this before it dequeues edits.
 
-   Note that this is a one-way operation. There is no `un-die`
+   Note that this is a one-way operation. There is no \"un-die\"
    method."
   ([^UndoableEdit this]
     (-> this (.die))))

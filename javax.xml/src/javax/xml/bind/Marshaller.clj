@@ -8,9 +8,9 @@
 
 
 
-        JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+        JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
         Unmarshaller u = jc.createUnmarshaller();
-        Object element = u.unmarshal( new File( `foo.xml` ) );
+        Object element = u.unmarshal( new File( \"foo.xml\" ) );
         Marshaller m = jc.createMarshaller();
 
 
@@ -19,7 +19,7 @@
 
 
 
-        OutputStream os = new FileOutputStream( `nosferatu.xml` );
+        OutputStream os = new FileOutputStream( \"nosferatu.xml\" );
         m.marshal( element, os );
 
 
@@ -181,7 +181,7 @@
 
     jaxb.encoding - value must be a java.lang.String
     The output encoding to use when marshalling the XML data.  The
-                Marshaller will use `UTF-8` by default if this property is not
+                Marshaller will use \"UTF-8\" by default if this property is not
         specified.
     jaxb.formatted.output - value must be a java.lang.Boolean
     This property controls whether or not the Marshaller will format
@@ -240,7 +240,7 @@
 
   Marshal Event Callbacks
 
-  `The Marshaller provides two styles of callback mechanisms
+  \"The Marshaller provides two styles of callback mechanisms
   that allow application specific processing during key points in the
   unmarshalling process.  In 'class defined' event callbacks, application
   specific code placed in JAXB mapped classes is triggered during

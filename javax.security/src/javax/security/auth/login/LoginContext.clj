@@ -87,8 +87,8 @@
   Configuration.getAppConfigurationEntry method.
   If the Configuration has no entries for the specified name,
   then the LoginContext calls
-  getAppConfigurationEntry with the name, `other`
-  (the default entry name).  If there is no entry for `other`,
+  getAppConfigurationEntry with the name, \"other\"
+  (the default entry name).  If there is no entry for \"other\",
   then a LoginException is thrown.
 
    When LoginContext uses the installed Configuration, the caller
@@ -155,7 +155,7 @@
   callback-handler - the CallbackHandler object used by LoginModules to communicate with the user, or null. - `javax.security.auth.callback.CallbackHandler`
   config - the Configuration that lists the login modules to be called to perform the authentication, or null. - `javax.security.auth.login.Configuration`
 
-  throws: javax.security.auth.login.LoginException - if the caller-specified name does not appear in the Configuration and there is no Configuration entry for `other`."
+  throws: javax.security.auth.login.LoginException - if the caller-specified name does not appear in the Configuration and there is no Configuration entry for \"other\"."
   (^LoginContext [^java.lang.String name ^javax.security.auth.Subject subject ^javax.security.auth.callback.CallbackHandler callback-handler ^javax.security.auth.login.Configuration config]
     (new LoginContext name subject callback-handler config))
   (^LoginContext [^java.lang.String name ^javax.security.auth.Subject subject ^javax.security.auth.callback.CallbackHandler callback-handler]

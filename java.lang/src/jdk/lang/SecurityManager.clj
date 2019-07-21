@@ -63,7 +63,7 @@
   and the checkPermission
   method that includes a context argument are provided
   for this situation. The
-  getSecurityContext method returns a `snapshot`
+  getSecurityContext method returns a \"snapshot\"
   of the current calling context. (The default implementation
   returns an AccessControlContext object.) A sample call is
   the following:
@@ -109,11 +109,11 @@
   java.security.Permission. BasicPermission defines the
   functionality needed for all permissions that contain a name
   that follows the hierarchical property naming convention
-  (for example, `exitVM`, `setFactory`, `queuePrintJob`, etc).
+  (for example, \"exitVM\", \"setFactory\", \"queuePrintJob\", etc).
   An asterisk
-  may appear at the end of the name, following a `.`, or by itself, to
-  signify a wildcard match. For example: `a.*` or `*` is valid,
-  `*a` or `a*b` is not valid.
+  may appear at the end of the name, following a \".\", or by itself, to
+  signify a wildcard match. For example: \"a.*\" or \"*\" is valid,
+  \"*a\" or \"a*b\" is not valid.
 
   FilePermission and SocketPermission are subclasses of the
   top-level class for permissions
@@ -124,13 +124,13 @@
   for a java.io.FilePermission object, the permission name is
   the path name of a file (or directory).
 
-  Some of the permission classes have an `actions` list that tells
+  Some of the permission classes have an \"actions\" list that tells
   the actions that are permitted for the object.  For example,
   for a java.io.FilePermission object, the actions list
-  (such as `read, write`) specifies which actions are granted for the
+  (such as \"read, write\") specifies which actions are granted for the
   specified file (or for files in the specified directory).
 
-  Other permission classes are for `named` permissions -
+  Other permission classes are for \"named\" permissions -
   ones that contain a name but no actions list; you either have the
   named permission or you don't.
 
@@ -161,7 +161,7 @@
 
     If there is a security manager already installed, this method first
    calls the security manager's checkPermission method
-   with the RuntimePermission(`createSecurityManager`)
+   with the RuntimePermission(\"createSecurityManager\")
    permission to ensure the calling thread has permission to create a new
    security manager.
    This may result in throwing a SecurityException.
@@ -179,7 +179,7 @@
     If context is an instance of
    AccessControlContext then the
    AccessControlContext.checkPermission method will
-   be invoked with the FilePermission(file,`read`) permission.
+   be invoked with the FilePermission(file,\"read\") permission.
     If context is not an instance of
    AccessControlContext then a
    SecurityException is thrown.
@@ -213,11 +213,11 @@
    Otherwise, the port number is checked. If it is not equal
    to -1, the context's checkPermission
    method is called with a
-   SocketPermission(host+`:`+port,`connect`) permission.
+   SocketPermission(host+\":\"+port,\"connect\") permission.
    If the port is equal to -1, then
    the context's checkPermission method
    is called with a
-   SocketPermission(host,`resolve`) permission.
+   SocketPermission(host,\"resolve\") permission.
 
    If you override this method, then you should make a call to
    super.checkConnect
@@ -273,7 +273,7 @@
    errors.
 
    This method calls checkPermission with the
-   RuntimePermission(`exitVM.`+status) permission.
+   RuntimePermission(\"exitVM.\"+status) permission.
 
    If you override this method, then you should make a call to
    super.checkExit
@@ -295,7 +295,7 @@
    accept method of class ServerSocket.
 
    This method calls checkPermission with the
-   SocketPermission(host+`:`+port,`accept`) permission.
+   SocketPermission(host+\":\"+port,\"accept\") permission.
 
    If you override this method, then you should make a call to
    super.checkAccept
@@ -355,7 +355,7 @@
 
    This method calls
    checkPermission with the
-   RuntimePermission(`queuePrintJob`) permission.
+   RuntimePermission(\"queuePrintJob\") permission.
 
    If you override this method, then you should make a call to
    super.checkPrintJobAccess
@@ -378,14 +378,14 @@
    If the thread argument is a system thread (belongs to
    the thread group with a null parent) then
    this method calls checkPermission with the
-   RuntimePermission(`modifyThread`) permission.
+   RuntimePermission(\"modifyThread\") permission.
    If the thread argument is not a system thread,
    this method just returns silently.
 
    Applications that want a stricter policy should override this
    method. If this method is overridden, the method that overrides
    it should additionally check to see if the calling thread has the
-   RuntimePermission(`modifyThread`) permission, and
+   RuntimePermission(\"modifyThread\") permission, and
    if so, return silently. This is to ensure that code granted
    that permission (such as the JDK itself) is allowed to
    manipulate any thread.
@@ -406,7 +406,7 @@
    calling thread is not allowed to create a new class loader.
 
    This method calls checkPermission with the
-   RuntimePermission(`createClassLoader`)
+   RuntimePermission(\"createClassLoader\")
    permission.
 
    If you override this method, then you should make a call to
@@ -447,11 +447,11 @@
 
    This method first gets a list of restricted packages by
    obtaining a comma-separated list from a call to
-   java.security.Security.getProperty(`package.definition`),
+   java.security.Security.getProperty(\"package.definition\"),
    and checks to see if pkg starts with or equals
    any of the restricted packages. If it does, then
    checkPermission gets called with the
-   RuntimePermission(`defineClassInPackage.`+pkg)
+   RuntimePermission(\"defineClassInPackage.\"+pkg)
    permission.
 
    If this method is overridden, then
@@ -472,7 +472,7 @@
    delete method of class File.
 
    This method calls checkPermission with the
-   FilePermission(file,`delete`) permission.
+   FilePermission(file,\"delete\") permission.
 
    If you override this method, then you should make a call to
    super.checkDelete
@@ -494,7 +494,7 @@
    class System.
 
    This method calls checkPermission with the
-   PropertyPermission(key, `read`) permission.
+   PropertyPermission(key, \"read\") permission.
 
    If you override this method, then you should make a call to
    super.checkPropertyAccess
@@ -516,7 +516,7 @@
    setProperties methods of class System.
 
    This method calls checkPermission with the
-   PropertyPermission(`*`, `read,write`) permission.
+   PropertyPermission(\"*\", \"read,write\") permission.
 
    If you override this method, then you should make a call to
    super.checkPropertiesAccess
@@ -533,7 +533,7 @@
    the specified local port number.
 
    This method calls checkPermission with the
-   SocketPermission(`localhost:`+port,`listen`).
+   SocketPermission(\"localhost:\"+port,\"listen\").
 
    If you override this method, then you should make a call to
    super.checkListen
@@ -592,10 +592,10 @@
    exec methods of class Runtime.
 
    This method calls checkPermission with the
-   FilePermission(cmd,`execute`) permission
+   FilePermission(cmd,\"execute\") permission
    if cmd is an absolute path, otherwise it calls
    checkPermission with
-   FilePermission(`<<ALL FILES>>`,`execute`).
+   FilePermission(\"<<ALL FILES>>\",\"execute\").
 
    If you override this method, then you should make a call to
    super.checkExec
@@ -619,7 +619,7 @@
    Runtime.
 
    This method calls checkPermission with the
-   RuntimePermission(`loadLibrary.`+lib) permission.
+   RuntimePermission(\"loadLibrary.\"+lib) permission.
 
    If you override this method, then you should make a call to
    super.checkLink
@@ -638,7 +638,7 @@
    descriptor.
 
    This method calls checkPermission with the
-   RuntimePermission(`writeFileDescriptor`)
+   RuntimePermission(\"writeFileDescriptor\")
    permission.
 
    If you override this method, then you should make a call to
@@ -663,11 +663,11 @@
    This method first gets a list of
    restricted packages by obtaining a comma-separated list from
    a call to
-   java.security.Security.getProperty(`package.access`),
+   java.security.Security.getProperty(\"package.access\"),
    and checks to see if pkg starts with or equals
    any of the restricted packages. If it does, then
    checkPermission gets called with the
-   RuntimePermission(`accessClassInPackage.`+pkg)
+   RuntimePermission(\"accessClassInPackage.\"+pkg)
    permission.
 
    If this method is overridden, then
@@ -725,7 +725,7 @@
    handler factory used by URL.
 
    This method calls checkPermission with the
-   RuntimePermission(`setFactory`) permission.
+   RuntimePermission(\"setFactory\") permission.
 
    If you override this method, then you should make a call to
    super.checkSetFactory

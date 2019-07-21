@@ -9,13 +9,13 @@
 
   Characters with accents or other adornments can be encoded in
   several different ways in Unicode.  For example, take the character A-acute.
-  In Unicode, this can be encoded as a single character (the `composed` form):
+  In Unicode, this can be encoded as a single character (the \"composed\" form):
 
 
 
        U+00C1    LATIN CAPITAL LETTER A WITH ACUTE
 
-  or as two separate characters (the `decomposed` form):
+  or as two separate characters (the \"decomposed\" form):
 
 
 
@@ -23,14 +23,14 @@
        U+0301    COMBINING ACUTE ACCENT
 
   To a user of your program, however, both of these sequences should be
-  treated as the same `user-level` character `A with acute accent`.  When you
+  treated as the same \"user-level\" character \"A with acute accent\".  When you
   are searching or comparing text, you must ensure that these two sequences are
   treated as equivalent.  In addition, you must handle characters with more than
   one accent. Sometimes the order of a character's combining accents is
   significant, while in other cases accent sequences in different orders are
   really equivalent.
 
-  Similarly, the string `ffi` can be encoded as three separate letters:
+  Similarly, the string \"ffi\" can be encoded as three separate letters:
 
 
 
@@ -47,7 +47,7 @@
   The ffi ligature is not a distinct semantic character, and strictly speaking
   it shouldn't be in Unicode at all, but it was included for compatibility
   with existing character sets that already provided it.  The Unicode standard
-  identifies such characters by giving them `compatibility` decompositions
+  identifies such characters by giving them \"compatibility\" decompositions
   into the corresponding semantic characters.  When sorting and searching, you
   will often want to use these mappings.
 

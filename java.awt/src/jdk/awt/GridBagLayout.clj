@@ -273,48 +273,48 @@
           GridBagLayout gridbag = new GridBagLayout();
           GridBagConstraints c = new GridBagConstraints();
 
-          setFont(new Font(`SansSerif`, Font.PLAIN, 14));
+          setFont(new Font(\"SansSerif\", Font.PLAIN, 14));
           setLayout(gridbag);
 
           c.fill = GridBagConstraints.BOTH;
           c.weightx = 1.0;
-          makebutton(`Button1`, gridbag, c);
-          makebutton(`Button2`, gridbag, c);
-          makebutton(`Button3`, gridbag, c);
+          makebutton(\"Button1\", gridbag, c);
+          makebutton(\"Button2\", gridbag, c);
+          makebutton(\"Button3\", gridbag, c);
 
           c.gridwidth = GridBagConstraints.REMAINDER; //end row
-          makebutton(`Button4`, gridbag, c);
+          makebutton(\"Button4\", gridbag, c);
 
           c.weightx = 0.0;                //reset to the default
-          makebutton(`Button5`, gridbag, c); //another row
+          makebutton(\"Button5\", gridbag, c); //another row
 
           c.gridwidth = GridBagConstraints.RELATIVE; //next-to-last in row
-          makebutton(`Button6`, gridbag, c);
+          makebutton(\"Button6\", gridbag, c);
 
           c.gridwidth = GridBagConstraints.REMAINDER; //end row
-          makebutton(`Button7`, gridbag, c);
+          makebutton(\"Button7\", gridbag, c);
 
           c.gridwidth = 1;                //reset to the default
           c.gridheight = 2;
           c.weighty = 1.0;
-          makebutton(`Button8`, gridbag, c);
+          makebutton(\"Button8\", gridbag, c);
 
           c.weighty = 0.0;                //reset to the default
           c.gridwidth = GridBagConstraints.REMAINDER; //end row
           c.gridheight = 1;               //reset to the default
-          makebutton(`Button9`, gridbag, c);
-          makebutton(`Button10`, gridbag, c);
+          makebutton(\"Button9\", gridbag, c);
+          makebutton(\"Button10\", gridbag, c);
 
           setSize(300, 100);
       }
 
       public static void main(String args[]) {
-          Frame f = new Frame(`GridBag Layout Example`);
+          Frame f = new Frame(\"GridBag Layout Example\");
           GridBagEx1 ex1 = new GridBagEx1();
 
           ex1.init();
 
-          f.add(`Center`, ex1);
+          f.add(\"Center\", ex1);
           f.pack();
           f.setSize(f.getPreferredSize());
           f.show();
@@ -330,7 +330,7 @@
   (^GridBagLayout []
     (new GridBagLayout )))
 
-(defn -column-widths
+(defn column-widths
   "Instance Field.
 
   This field holds the overrides to the column minimum
@@ -342,10 +342,10 @@
    the number of elements in columnWidth.
 
   type: int[]"
-  [this]
-  (-> this .-columnWidths))
+  ([^GridBagLayout this]
+    (-> this .-columnWidths)))
 
-(defn -row-heights
+(defn row-heights
   "Instance Field.
 
   This field holds the overrides to the row minimum
@@ -357,10 +357,10 @@
    the number of elements in rowHeights.
 
   type: int[]"
-  [this]
-  (-> this .-rowHeights))
+  ([^GridBagLayout this]
+    (-> this .-rowHeights)))
 
-(defn -column-weights
+(defn column-weights
   "Instance Field.
 
   This field holds the overrides to the column weights.
@@ -374,10 +374,10 @@
    not cause more columns to be created.
 
   type: double[]"
-  [this]
-  (-> this .-columnWeights))
+  ([^GridBagLayout this]
+    (-> this .-columnWeights)))
 
-(defn -row-weights
+(defn row-weights
   "Instance Field.
 
   This field holds the overrides to the row weights.
@@ -391,8 +391,8 @@
    not cause more rows to be created.
 
   type: double[]"
-  [this]
-  (-> this .-rowWeights))
+  ([^GridBagLayout this]
+    (-> this .-rowWeights)))
 
 (defn get-layout-weights
   "Determines the weights of the layout grid's columns and rows.

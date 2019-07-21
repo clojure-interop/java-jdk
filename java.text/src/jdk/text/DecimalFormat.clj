@@ -42,9 +42,9 @@
   NegativePattern:
           Prefixopt Number Suffixopt
   Prefix:
-          any Unicode characters except \uFFFE, \uFFFF, and special characters
+          any Unicode characters except \\uFFFE, \\uFFFF, and special characters
   Suffix:
-          any Unicode characters except \uFFFE, \uFFFF, and special characters
+          any Unicode characters except \\uFFFE, \\uFFFF, and special characters
   Number:
           Integer Exponentopt
           Integer . Fraction Exponentopt
@@ -69,16 +69,16 @@
           0 MinimumExponentopt
 
   A DecimalFormat pattern contains a positive and negative
-  subpattern, for example, `#,##0.00;(#,##0.00)`.  Each
+  subpattern, for example, \"#,##0.00;(#,##0.00)\".  Each
   subpattern has a prefix, numeric part, and suffix. The negative subpattern
   is optional; if absent, then the positive subpattern prefixed with the
   localized minus sign ('-' in most locales) is used as the
-  negative subpattern. That is, `0.00` alone is equivalent to
-  `0.00;-0.00`.  If there is an explicit negative subpattern, it
+  negative subpattern. That is, \"0.00\" alone is equivalent to
+  \"0.00;-0.00\".  If there is an explicit negative subpattern, it
   serves only to specify the negative prefix and suffix; the number of digits,
   minimal digits, and other characteristics are all the same as the positive
-  pattern. That means that `#,##0.0#;(#)` produces precisely
-  the same behavior as `#,##0.0#;(#,##0.0#)`.
+  pattern. That means that \"#,##0.0#;(#)\" produces precisely
+  the same behavior as \"#,##0.0#;(#,##0.0#)\".
 
   The prefixes, suffixes, and various symbols used for infinity, digits,
   thousands separators, decimal separators, etc. may be set to arbitrary
@@ -96,8 +96,8 @@
   of digits between the grouping characters, such as 3 for 100,000,000 or 4 for
   1,0000,0000.  If you supply a pattern with multiple grouping characters, the
   interval between the last one and the end of the integer is the one that is
-  used. So `#,##,###,####` == `######,####` ==
-  `##,####,####`.
+  used. So \"#,##,###,####\" == \"######,####\" ==
+  \"##,####,####\".
 
   Special Pattern Characters
 
@@ -162,12 +162,12 @@
            Yes
            Multiply by 100 and show as percentage
 
-           \u2030
+           \\u2030
            Prefix or suffix
            Yes
            Multiply by 1000 and show as per mille value
 
-           ¤ (\u00A4)
+           ¤ (\\u00A4)
            Prefix or suffix
            No
            Currency sign, replaced by currency symbol.  If
@@ -179,9 +179,9 @@
            Prefix or suffix
            No
            Used to quote special characters in a prefix or suffix,
-               for example, `'#'#` formats 123 to
-               `#123`.  To create a single quote
-               itself, use two in a row: `# o''clock`.
+               for example, \"'#'#\" formats 123 to
+               \"#123\".  To create a single quote
+               itself, use two in a row: \"# o''clock\".
 
 
 
@@ -195,14 +195,14 @@
   notation only via a pattern; there is currently no factory method
   that creates a scientific notation format.  In a pattern, the exponent
   character immediately followed by one or more digit characters indicates
-  scientific notation.  Example: `0.###E0` formats the number
-  1234 as `1.234E3`.
+  scientific notation.  Example: \"0.###E0\" formats the number
+  1234 as \"1.234E3\".
 
 
   The number of digit characters after the exponent character gives the
   minimum exponent digit count.  There is no maximum.  Negative exponents are
   formatted using the localized minus sign, not the prefix and suffix
-  from the pattern.  This allows patterns such as `0.###E0 m/s`.
+  from the pattern.  This allows patterns such as \"0.###E0 m/s\".
 
   The minimum and maximum number of integer digits are interpreted
   together:
@@ -213,19 +213,19 @@
   number of integer digits, and the minimum number of integer digits to be
   interpreted as 1.  The most common use of this is to generate
   engineering notation, in which the exponent is a multiple of three,
-  e.g., `##0.#####E0`. Using this pattern, the number 12345
-  formats to `12.345E3`, and 123456 formats to
-  `123.456E3`.
+  e.g., \"##0.#####E0\". Using this pattern, the number 12345
+  formats to \"12.345E3\", and 123456 formats to
+  \"123.456E3\".
 
   Otherwise, the minimum number of integer digits is achieved by adjusting the
-  exponent.  Example: 0.00123 formatted with `00.###E0` yields
-  `12.3E-4`.
+  exponent.  Example: 0.00123 formatted with \"00.###E0\" yields
+  \"12.3E-4\".
 
 
   The number of significant digits in the mantissa is the sum of the
   minimum integer and maximum fraction digits, and is
   unaffected by the maximum integer digits.  For example, 12345 formatted with
-  `##0.##E0` is `12.3E3`. To show all digits, set
+  \"##0.##E0\" is \"12.3E3\". To show all digits, set
   the significant digits count to zero.  The number of significant digits
   does not affect parsing.
 
@@ -249,16 +249,16 @@
   Special Values
 
   NaN is formatted as a string, which typically has a single character
-  \uFFFD.  This string is determined by the
+  \\uFFFD.  This string is determined by the
   DecimalFormatSymbols object.  This is the only value for which
   the prefixes and suffixes are not used.
 
   Infinity is formatted as a string, which typically has a single character
-  \u221E, with the positive or negative prefixes and suffixes
+  \\u221E, with the positive or negative prefixes and suffixes
   applied.  The infinity string is determined by the
   DecimalFormatSymbols object.
 
-  Negative zero (`-0`) parses to
+  Negative zero (\"-0\") parses to
 
   BigDecimal(0) if isParseBigDecimal() is
   true,
@@ -286,7 +286,7 @@
   double myNumber = -1234.56;
   NumberFormat form;
   for (int j = 0; j < 4; +j) {
-      System.out.println(`FORMAT`);
+      System.out.println(\"FORMAT\");
       for (int i = 0; i < locales.length; +i) {
           if (locales[i].getCountry().length() == 0) {
              continue; // Skip language-only locales
@@ -303,11 +303,11 @@
               form = NumberFormat.getPercentInstance(locales[i]); break;
           }
           if (form instanceof DecimalFormat) {
-              System.out.print(`: `  ((DecimalFormat) form).toPattern());
+              System.out.print(\": \"  ((DecimalFormat) form).toPattern());
           }
-          System.out.print(` -> `  form.format(myNumber));
+          System.out.print(\" -> \"  form.format(myNumber));
           try {
-              System.out.println(` -> `  form.parse(form.format(myNumber)));
+              System.out.println(\" -> \"  form.parse(form.format(myNumber)));
           } catch (ParseException e) {}
       }
   }"
@@ -341,7 +341,7 @@
 (defn set-grouping-size
   "Set the grouping size. Grouping size is the number of digits between
    grouping separators in the integer portion of a number.  For example,
-   in the number `123,456.78`, the grouping size is 3.
+   in the number \"123,456.78\", the grouping size is 3.
 
    The value passed in is converted to a byte, which may lose information.
 
@@ -447,7 +447,7 @@
 (defn get-grouping-size
   "Return the grouping size. Grouping size is the number of digits between
    grouping separators in the integer portion of a number.  For example,
-   in the number `123,456.78`, the grouping size is 3.
+   in the number \"123,456.78\", the grouping size is 3.
 
   returns: the grouping size - `int`"
   (^Integer [^DecimalFormat this]
@@ -475,10 +475,10 @@
    For a percent format, set the multiplier to 100 and the suffixes to
    have '%' (for Arabic, use the Arabic percent sign).
    For a per mille format, set the multiplier to 1000 and the suffixes to
-   have '\u2030'.
+   have '\\u2030'.
 
-   Example: with multiplier 100, 1.23 is formatted as `123`, and
-   `123` is parsed into 1.23.
+   Example: with multiplier 100, 1.23 is formatted as \"123\", and
+   \"123\" is parsed into 1.23.
 
   new-value - the new multiplier - `int`"
   ([^DecimalFormat this ^Integer new-value]
@@ -569,10 +569,10 @@
    by this routine, since that is the typical end-user desire;
    use setMaximumInteger if you want to set a real value.
    For negative numbers, use a second pattern, separated by a semicolon
-   Example `#,#00.0#` → 1,234.56
+   Example \"#,#00.0#\" → 1,234.56
    This means a minimum of 2 integer digits, 1 fraction digit, and
    a maximum of 2 fraction digits.
-   Example: `#,#00.0#;(#,#00.0#)` for negatives in
+   Example: \"#,#00.0#;(#,#00.0#)\" for negatives in
    parentheses.
    In negative patterns, the minimum and maximum counts are ignored;
    these are presumed to be set in the positive pattern.
@@ -650,8 +650,8 @@
 
      If isParseBigDecimal() is false (the default),
          most integer values are returned as Long
-         objects, no matter how they are written: `17` and
-         `17.000` both parse to Long(17).
+         objects, no matter how they are written: \"17\" and
+         \"17.000\" both parse to Long(17).
          Values that cannot fit into a Long are returned as
          Doubles. This includes values with a fractional part,
          infinite values, NaN, and the value -0.0.
@@ -659,7 +659,7 @@
          return a Double or a Long based on the
          presence of a decimal separator in the source string. Doing so
          would prevent integers that overflow the mantissa of a double,
-         such as `-9,223,372,036,854,775,808.00`, from being
+         such as \"-9,223,372,036,854,775,808.00\", from being
          parsed accurately.
 
          Callers may use the Number methods
@@ -740,10 +740,10 @@
    by this routine, since that is the typical end-user desire;
    use setMaximumInteger if you want to set a real value.
    For negative numbers, use a second pattern, separated by a semicolon
-   Example `#,#00.0#` → 1,234.56
+   Example \"#,#00.0#\" → 1,234.56
    This means a minimum of 2 integer digits, 1 fraction digit, and
    a maximum of 2 fraction digits.
-   Example: `#,#00.0#;(#,#00.0#)` for negatives in
+   Example: \"#,#00.0#;(#,#00.0#)\" for negatives in
    parentheses.
    In negative patterns, the minimum and maximum counts are ignored;
    these are presumed to be set in the positive pattern.

@@ -9,9 +9,9 @@
    to decide whether an access to a critical system
   resource is to be allowed or denied, based on the security policy
   currently in effect,
-  to mark code as being `privileged`, thus affecting subsequent
+  to mark code as being \"privileged\", thus affecting subsequent
   access determinations, and
-  to obtain a `snapshot` of the current calling context so
+  to obtain a \"snapshot\" of the current calling context so
   access-control decisions from a different context can be made with
   respect to the saved context.
 
@@ -19,12 +19,12 @@
   determines whether the access request indicated by a specified
   permission should be granted or denied. A sample call appears
   below. In this example, checkPermission will determine
-  whether or not to grant `read` access to the file named `testFile` in
-  the `/temp` directory.
+  whether or not to grant \"read\" access to the file named \"testFile\" in
+  the \"/temp\" directory.
 
 
 
-  FilePermission perm = new FilePermission(`/temp/testFile`, `read`);
+  FilePermission perm = new FilePermission(\"/temp/testFile\", \"read\");
   AccessController.checkPermission(perm);
 
    If a requested access is allowed,
@@ -63,15 +63,15 @@
   // Next, check the context inherited when the thread was created.
   // Whenever a new thread is created, the AccessControlContext at
   // that time is stored and associated with the new thread, as the
-  // `inherited` context.
+  // \"inherited\" context.
 
   inheritedContext.checkPermission(permission);
 
-   A caller can be marked as being `privileged`
+   A caller can be marked as being \"privileged\"
   (see doPrivileged and below).
   When making access control decisions, the checkPermission
   method stops checking if it reaches a caller that
-  was marked as `privileged` via a doPrivileged
+  was marked as \"privileged\" via a doPrivileged
   call without a context argument (see below for information about a
   context argument). If that caller's domain has the
   specified permission and at least one limiting permission argument (if any)
@@ -85,8 +85,8 @@
   until there are no more callers or another doPrivileged
   call matches the requested permission and returns normally.
 
-   The normal use of the `privileged` feature is as follows. If you
-  don't need to return a value from within the `privileged` block, do
+   The normal use of the \"privileged\" feature is as follows. If you
+  don't need to return a value from within the \"privileged\" block, do
   the following:
 
 
@@ -96,7 +96,7 @@
       AccessController.doPrivileged(new PrivilegedAction<Void>() {
           public Void run() {
               // privileged code goes here, for example:
-              System.loadLibrary(`awt`);
+              System.loadLibrary(\"awt\");
               return null; // nothing to return
           }
       });
@@ -127,14 +127,14 @@
       String user = AccessController.doPrivileged(
           new PrivilegedAction<String>() {
           public String run() {
-              return System.getProperty(`user.name`);
+              return System.getProperty(\"user.name\");
               }
           });
       ...normal code here...
   }
 
   If the action performed in your run method could
-  throw a `checked` exception (those listed in the throws clause
+  throw a \"checked\" exception (those listed in the throws clause
   of a method), then you need to use the
   PrivilegedExceptionAction interface instead of the
   PrivilegedAction interface:
@@ -147,22 +147,22 @@
           FileInputStream fis = AccessController.doPrivileged(
           new PrivilegedExceptionAction<FileInputStream>() {
               public FileInputStream run() throws FileNotFoundException {
-                  return new FileInputStream(`someFile`);
+                  return new FileInputStream(\"someFile\");
               }
           });
       } catch (PrivilegedActionException e) {
           // e.getException() should be an instance of FileNotFoundException,
-          // as only `checked` exceptions will be `wrapped` in a
+          // as only \"checked\" exceptions will be \"wrapped\" in a
           // PrivilegedActionException.
           throw (FileNotFoundException) e.getException();
       }
       ...normal code here...
    }
 
-   Be *very* careful in your use of the `privileged` construct, and
+   Be *very* careful in your use of the \"privileged\" construct, and
   always remember to make the privileged code section as small as possible.
   You can pass Permission arguments to further limit the
-  scope of the `privilege` (see below).
+  scope of the \"privilege\" (see below).
 
 
    Note that checkPermission always performs security checks
@@ -172,7 +172,7 @@
   different context (for example, from within a worker thread).
   The getContext method and
   AccessControlContext class are provided
-  for this situation. The getContext method takes a `snapshot`
+  for this situation. The getContext method takes a \"snapshot\"
   of the current calling context, and places
   it in an AccessControlContext object, which it returns. A sample call is
   the following:
@@ -212,7 +212,7 @@
               // argument then checking of the thread continues beyond the
               // caller of doPrivileged.
           }
-      }, acc, new FilePermission(`/temp/*`, read));
+      }, acc, new FilePermission(\"/temp/*\", read));
       ...normal code here...
   }
    Passing a limiting Permission argument of an instance of
@@ -241,7 +241,7 @@
    If a security manager is installed and the specified
    AccessControlContext was not created by system code and the
    caller's ProtectionDomain has not been granted the
-   `createAccessControlContext`
+   \"createAccessControlContext\"
    SecurityPermission, then the action is performed
    with no permissions.
 
@@ -279,7 +279,7 @@
    If a security manager is installed and the specified
    AccessControlContext was not created by system code and the
    caller's ProtectionDomain has not been granted the
-   `createAccessControlContext`
+   \"createAccessControlContext\"
    SecurityPermission, then the action is performed
    with no permissions.
 
@@ -296,7 +296,7 @@
     (AccessController/doPrivilegedWithCombiner action)))
 
 (defn *get-context
-  "This method takes a `snapshot` of the current calling context, which
+  "This method takes a \"snapshot\" of the current calling context, which
    includes the current Thread's inherited AccessControlContext and any
    limited privilege scope, and places it in an AccessControlContext object.
    This context may then be checked at a later point, possibly in another thread.

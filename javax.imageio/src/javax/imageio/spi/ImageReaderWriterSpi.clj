@@ -50,7 +50,7 @@
     (-> this (.getStreamMetadataFormat format-name))))
 
 (defn get-native-image-metadata-format-name
-  "Returns the name of the `native` image metadata format for
+  "Returns the name of the \"native\" image metadata format for
    this plug-in, which typically allows for lossless encoding and
    transmission of the image metadata stored in the format handled by
    this plug-in.  If no such format is supported,
@@ -196,7 +196,7 @@
     (-> this (.getImageMetadataFormat format-name))))
 
 (defn get-native-stream-metadata-format-name
-  "Returns the name of the `native` stream metadata format for
+  "Returns the name of the \"native\" stream metadata format for
    this plug-in, which typically allows for lossless encoding and
    transmission of the stream metadata stored in the format handled by
    this plug-in.  If no such format is supported,

@@ -18,7 +18,7 @@
    not meaningful for TLS versions prior to 1.2.
 
    The signature algorithm name must be a standard Java Security
-   name (such as `SHA1withRSA`, `SHA256withECDSA`, and so on).
+   name (such as \"SHA1withRSA\", \"SHA256withECDSA\", and so on).
    See Appendix A in the
    Java Cryptography Architecture API Specification & Reference
    for information about standard algorithm names.
@@ -43,7 +43,7 @@
    not meaningful for TLS versions prior to 1.2.
 
    The signature algorithm name must be a standard Java Security
-   name (such as `SHA1withRSA`, `SHA256withECDSA`, and so on).
+   name (such as \"SHA1withRSA\", \"SHA256withECDSA\", and so on).
    See Appendix A in the
    Java Cryptography Architecture API Specification & Reference
    for information about standard algorithm names.

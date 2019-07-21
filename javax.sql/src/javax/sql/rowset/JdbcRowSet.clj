@@ -63,11 +63,11 @@
 
 
       JdbcRowSetImpl jrs = new JdbcRowSetImpl();
-      jrs.setCommand(`SELECT * FROM TITLES WHERE TYPE = ?`);
-      jrs.setURL(`jdbc:myDriver:myAttribute`);
-      jrs.setUsername(`cervantes`);
-      jrs.setPassword(`sancho`);
-      jrs.setString(1, `BIOGRAPHY`);
+      jrs.setCommand(\"SELECT * FROM TITLES WHERE TYPE = ?\");
+      jrs.setURL(\"jdbc:myDriver:myAttribute\");
+      jrs.setUsername(\"cervantes\");
+      jrs.setPassword(\"sancho\");
+      jrs.setString(1, \"BIOGRAPHY\");
       jrs.execute();
   The variable jrs now represents an instance of
   JdbcRowSetImpl that is a thin wrapper around the

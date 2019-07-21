@@ -1,7 +1,7 @@
 (ns jdk.beans.VetoableChangeListenerProxy
   "A class which extends the EventListenerProxy
   specifically for adding a VetoableChangeListener
-  with a `constrained` property.
+  with a \"constrained\" property.
   Instances of this class can be added
   as VetoableChangeListeners to a bean
   which supports firing vetoable change events.

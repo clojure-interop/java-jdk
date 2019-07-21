@@ -106,8 +106,8 @@
 
 (defn to-string
   "Returns a string version of this two-dimensional size attribute in the
-   given units. The string takes the form `XxY
-   U`, where X is the X dimension, Y is the Y
+   given units. The string takes the form \"XxY
+   U\", where X is the X dimension, Y is the Y
    dimension, and U is the units name. The values are displayed in
    floating point.
 

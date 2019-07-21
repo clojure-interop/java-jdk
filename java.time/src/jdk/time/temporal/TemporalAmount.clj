@@ -1,6 +1,6 @@
 (ns jdk.time.temporal.TemporalAmount
   "Framework-level interface defining an amount of time, such as
-  `6 hours`, `8 days` or `2 years and 3 months`.
+  \"6 hours\", \"8 days\" or \"2 years and 3 months\".
 
   This is the base interface type for amounts of time.
   An amount is distinct from a date or time-of-day in that it is not tied
@@ -8,9 +8,9 @@
 
   The amount can be thought of as a Map of TemporalUnit to
   long, exposed via getUnits() and get(TemporalUnit).
-  A simple case might have a single unit-value pair, such as `6 hours`.
+  A simple case might have a single unit-value pair, such as \"6 hours\".
   A more complex case may have multiple unit-value pairs, such as
-  `7 years, 3 months and 5 days`.
+  \"7 years, 3 months and 5 days\".
 
   There are two common implementations.
   Period is a date-based implementation, storing years, months and days.

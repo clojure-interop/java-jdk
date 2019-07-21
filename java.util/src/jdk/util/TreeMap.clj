@@ -29,7 +29,7 @@
   with an existing key is not a structural modification.)  This is
   typically accomplished by synchronizing on some object that naturally
   encapsulates the map.
-  If no such object exists, the map should be `wrapped` using the
+  If no such object exists, the map should be \"wrapped\" using the
   Collections.synchronizedSortedMap
   method.  This is best done at creation time, to prevent accidental
   unsynchronized access to the map:
@@ -37,7 +37,7 @@
     SortedMap m = Collections.synchronizedSortedMap(new TreeMap(...));
 
   The iterators returned by the iterator method of the collections
-  returned by all of this class's `collection view methods` are
+  returned by all of this class's \"collection view methods\" are
   fail-fast: if the map is structurally modified at any time after
   the iterator is created, in any way except through the iterator's own
   remove method, the iterator will throw a ConcurrentModificationException.  Thus, in the face of concurrent

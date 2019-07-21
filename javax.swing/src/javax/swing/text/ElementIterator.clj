@@ -26,7 +26,7 @@
          while (true) {
             if ((elem = next()) != null) {
                 // process element
-                System.out.println(`elem: `  elem.getName());
+                System.out.println(\"elem: \"  elem.getName());
             } else {
                 break;
             }

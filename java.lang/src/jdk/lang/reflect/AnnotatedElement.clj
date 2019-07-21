@@ -8,7 +8,7 @@
   The getAnnotationsByType(Class) and getDeclaredAnnotationsByType(Class) methods support multiple
   annotations of the same type on an element. If the argument to
   either method is a repeatable annotation type (JLS 9.6), then the
-  method will `look through` a container annotation (JLS 9.7), if
+  method will \"look through\" a container annotation (JLS 9.7), if
   present, and return any annotations inside the container. Container
   annotations may be generated at compile-time to wrap multiple
   annotations of the argument type.
@@ -132,7 +132,7 @@
   The change to T changes the results of the get[Declared]AnnotationsByType(Class<T>) methods called with an
   argument of T, because those methods will now recognize an
   annotation of type TC as a container annotation for T
-  and will `look through` it to expose annotations of type T.
+  and will \"look through\" it to expose annotations of type T.
 
 
 
@@ -237,7 +237,7 @@
    The difference between this method and getAnnotation(Class)
    is that this method detects if its argument is a repeatable
    annotation type (JLS 9.6), and if so, attempts to find one or
-   more annotations of that type by `looking through` a container
+   more annotations of that type by \"looking through\" a container
    annotation.
 
    The caller of this method is free to modify the returned array; it will
@@ -280,8 +280,8 @@
 
    The difference between this method and getDeclaredAnnotation(Class) is that this method detects if its
    argument is a repeatable annotation type (JLS 9.6), and if so,
-   attempts to find one or more annotations of that type by `looking
-   through` a container annotation if one is present.
+   attempts to find one or more annotations of that type by \"looking
+   through\" a container annotation if one is present.
 
    The caller of this method is free to modify the returned array; it will
    have no effect on the arrays returned to other callers.

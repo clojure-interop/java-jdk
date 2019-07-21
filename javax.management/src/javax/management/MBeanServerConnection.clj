@@ -26,7 +26,7 @@
    String[] myPatterns = ...;
    int count = (Integer) mbeanServerConnection.invoke(
            objectName,
-           `countMatches`,
+           \"countMatches\",
            new Object[] {myPatterns, true},
            new String[] {String[].class.getName(), boolean.class.getName()});
 
@@ -285,14 +285,14 @@
    AttributeList outputAttrs = mbeanServerConnection.setAttributes(
    objectName, inputAttrs);
    if (inputAttrs.size() == outputAttrs.size())
-       System.out.println(`All attributes were set successfully`);
+       System.out.println(\"All attributes were set successfully\");
    else {
         List<String> missing = new  ArrayList<String>();
        for (Attribute a : inputAttrs.asList())
            missing.add(a.getName());
        for (Attribute a : outputAttrs.asList())
            missing.remove(a.getName());
-       System.out.println(`Did not set: `  missing);
+       System.out.println(\"Did not set: \"  missing);
    }
 
   name - The object name of the MBean within which the attributes are to be set. - `javax.management.ObjectName`
@@ -336,13 +336,13 @@
    String[] attrNames = ...;
    AttributeList list = mbeanServerConnection.getAttributes(objectName, attrNames);
    if (list.size() == attrNames.length)
-       System.out.println(`All attributes were retrieved successfully`);
+       System.out.println(\"All attributes were retrieved successfully\");
    else {
         List<String> missing = new  ArrayList<String>(
    Arrays.asList(attrNames));
        for (Attribute a : list.asList())
            missing.remove(a.getName());
-       System.out.println(`Did not retrieve: `  missing);
+       System.out.println(\"Did not retrieve: \"  missing);
    }
 
   name - The object name of the MBean from which the attributes are retrieved. - `javax.management.ObjectName`

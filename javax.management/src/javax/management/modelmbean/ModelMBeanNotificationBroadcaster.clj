@@ -39,7 +39,7 @@
    attribute to the registered AttributeChangeNotification listeners on the ModelMBean.
 
   old-value - The original value for the Attribute - `javax.management.Attribute`
-  new-value - The current value for the Attribute The constructed attributeChangeNotification will be: type `jmx.attribute.change` source this ModelMBean instance sequence 1 attributeName oldValue.getName() attributeType oldValue's class attributeOldValue oldValue.getValue() attributeNewValue newValue.getValue() - `javax.management.Attribute`
+  new-value - The current value for the Attribute The constructed attributeChangeNotification will be: type \"jmx.attribute.change\" source this ModelMBean instance sequence 1 attributeName oldValue.getName() attributeType oldValue's class attributeOldValue oldValue.getValue() attributeNewValue newValue.getValue() - `javax.management.Attribute`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
   ([^ModelMBeanNotificationBroadcaster this ^javax.management.Attribute old-value ^javax.management.Attribute new-value]

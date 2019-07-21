@@ -36,7 +36,7 @@
   "Informs that an object is now active. An ActivationGroup
    informs its monitor if an object in its group becomes active by
    other means than being activated directly (i.e., the object
-   is registered and `activated` itself).
+   is registered and \"activated\" itself).
 
   id - the active object's id - `java.rmi.activation.ActivationID`
   obj - the marshalled form of the object's stub - `java.rmi.MarshalledObject`

@@ -6,14 +6,14 @@
 
 
 
-    <element name=`SignatureMethod` type=`ds:SignatureMethodType`/>
-      <complexType name=`SignatureMethodType` mixed=`true`>
+    <element name=\"SignatureMethod\" type=\"ds:SignatureMethodType\"/>
+      <complexType name=\"SignatureMethodType\" mixed=\"true\">
         <sequence>
-          <element name=`HMACOutputLength` minOccurs=`0` type=`ds:HMACOutputLengthType`/>
-          <any namespace=`##any` minOccurs=`0` maxOccurs=`unbounded`/>
+          <element name=\"HMACOutputLength\" minOccurs=\"0\" type=\"ds:HMACOutputLengthType\"/>
+          <any namespace=\"##any\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>
             <!-- (0,unbounded) elements from (1,1) namespace -->
         </sequence>
-        <attribute name=`Algorithm` type=`anyURI` use=`required`/>
+        <attribute name=\"Algorithm\" type=\"anyURI\" use=\"required\"/>
       </complexType>
 
   A SignatureMethod instance may be created by invoking the

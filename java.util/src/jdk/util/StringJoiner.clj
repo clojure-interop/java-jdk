@@ -8,8 +8,8 @@
   However, if the setEmptyValue method is called, the emptyValue
   supplied will be returned instead. This can be used, for example, when
   creating a string using set notation to indicate an empty set, i.e.
-  `{}`, where the prefix is `{`, the
-  suffix is `}` and nothing has been added to the
+  \"{}\", where the prefix is \"{\", the
+  suffix is \"}\" and nothing has been added to the
   StringJoiner."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util StringJoiner]))
@@ -63,7 +63,7 @@
 (defn add
   "Adds a copy of the given CharSequence value as the next
    element of the StringJoiner value. If newElement is
-   null, then `null` is added.
+   null, then \"null\" is added.
 
   new-element - The element to add - `java.lang.CharSequence`
 

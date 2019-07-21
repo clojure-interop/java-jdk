@@ -28,7 +28,7 @@
   role-value - List of ObjectName objects - `java.util.List`
 
   returns: A String consisting of the ObjectNames separated by
-   newlines (\n). - `java.lang.String`
+   newlines (\\n). - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if null parameter"
   (^java.lang.String [^java.util.List role-value]

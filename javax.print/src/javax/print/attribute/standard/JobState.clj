@@ -139,7 +139,7 @@
   JobState/COMPLETED)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class JobState and any vendor-defined subclasses, the category is
@@ -155,7 +155,7 @@
    instance.
 
    For class JobState and any vendor-defined subclasses, the category
-   name is `job-state`.
+   name is \"job-state\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^JobState this]

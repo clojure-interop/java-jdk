@@ -13,11 +13,11 @@
 
      JFileChooser chooser = new JFileChooser();
      FileNameExtensionFilter filter = new FileNameExtensionFilter(
-         `JPG & GIF Images`, `jpg`, `gif`);
+         \"JPG & GIF Images\", \"jpg\", \"gif\");
      chooser.setFileFilter(filter);
      int returnVal = chooser.showOpenDialog(parent);
      if(returnVal == JFileChooser.APPROVE_OPTION) {
-        System.out.println(`You chose to open this file: `
+        System.out.println(\"You chose to open this file: \"
              chooser.getSelectedFile().getName());
      }
 
@@ -46,7 +46,7 @@
   "Static Constant.
 
   Type value indicating that the JFileChooser supports an
-   `Open` file operation.
+   \"Open\" file operation.
 
   type: int"
   JFileChooser/OPEN_DIALOG)
@@ -55,7 +55,7 @@
   "Static Constant.
 
   Type value indicating that the JFileChooser supports a
-   `Save` file operation.
+   \"Save\" file operation.
 
   type: int"
   JFileChooser/SAVE_DIALOG)
@@ -358,7 +358,7 @@
    FileChooserUI.
    If null, the UI object will determine the button's text.
 
-   Typically, this would be `Open` or `Save`.
+   Typically, this would be \"Open\" or \"Save\".
 
   returns: the text used in the ApproveButton - `java.lang.String`"
   (^java.lang.String [^JFileChooser this]
@@ -424,7 +424,7 @@
   "Returns a string that specifies the name of the L&F class
    that renders this component.
 
-  returns: the string `FileChooserUI` - `java.lang.String`"
+  returns: the string \"FileChooserUI\" - `java.lang.String`"
   (^java.lang.String [^JFileChooser this]
     (-> this (.getUIClassID))))
 
@@ -476,7 +476,7 @@
     (-> this (.setFileHidingEnabled b))))
 
 (defn show-save-dialog
-  "Pops up a `Save File` file chooser dialog. Note that the
+  "Pops up a \"Save File\" file chooser dialog. Note that the
    text that appears in the approve button is determined by
    the L&F.
 
@@ -496,23 +496,23 @@
 (defn show-dialog
   "Pops a custom file chooser dialog with a custom approve button.
    For example, the following code
-   pops up a file chooser with a `Run Application` button
-   (instead of the normal `Save` or `Open` button):
+   pops up a file chooser with a \"Run Application\" button
+   (instead of the normal \"Save\" or \"Open\" button):
 
 
-   filechooser.showDialog(parentFrame, `Run Application`);
+   filechooser.showDialog(parentFrame, \"Run Application\");
 
    Alternatively, the following code does the same thing:
 
 
       JFileChooser chooser = new JFileChooser(null);
-      chooser.setApproveButtonText(`Run Application`);
+      chooser.setApproveButtonText(\"Run Application\");
       chooser.showDialog(parentFrame, null);
 
    PENDING(jeff) - the following method should be added to the api:
         showDialog(Component parent);
    PENDING(kwalrath) - should specify modality and what
-        `depends` means.
+        \"depends\" means.
 
 
 
@@ -746,7 +746,7 @@
     (-> this (.rescanCurrentDirectory))))
 
 (defn show-open-dialog
-  "Pops up an `Open File` file chooser dialog. Note that the
+  "Pops up an \"Open File\" file chooser dialog. Note that the
    text that appears in the approve button is determined by
    the L&F.
 
@@ -872,7 +872,7 @@
    Likewise, use SAVE_DIALOG for letting the user choose
    a file for saving.
    Use CUSTOM_DIALOG when you want to use the file
-   chooser in a context other than `Open` or `Save`.
+   chooser in a context other than \"Open\" or \"Save\".
    For instance, you might want to bring up a file chooser that allows
    the user to choose a file to execute. Note that you normally would not
    need to set the JFileChooser to use
@@ -888,7 +888,7 @@
 
 (defn approve-selection
   "Called by the UI when the user hits the Approve button
-   (labeled `Open` or `Save`, by default). This can also be
+   (labeled \"Open\" or \"Save\", by default). This can also be
    called by the programmer.
    This method causes an action event to fire
    with the command string equal to
@@ -900,7 +900,7 @@
   "Sets the current directory. Passing in null sets the
    file chooser to point to the user's default directory.
    This default depends on the operating system. It is
-   typically the `My Documents` folder on Windows, and the user's
+   typically the \"My Documents\" folder on Windows, and the user's
    home directory on Unix.
 
    If the file passed in as currentDirectory is not a

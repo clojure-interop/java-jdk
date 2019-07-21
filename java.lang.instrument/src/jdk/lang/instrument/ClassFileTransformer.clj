@@ -121,7 +121,7 @@
    logging or debugging of format corruptions.
 
   loader - the defining loader of the class to be transformed, may be null if the bootstrap loader - `java.lang.ClassLoader`
-  class-name - the name of the class in the internal form of fully qualified class and interface names as defined in The Java Virtual Machine Specification. For example, `java/util/List`. - `java.lang.String`
+  class-name - the name of the class in the internal form of fully qualified class and interface names as defined in The Java Virtual Machine Specification. For example, \"java/util/List\". - `java.lang.String`
   class-being-redefined - if this is triggered by a redefine or retransform, the class being redefined or retransformed; if this is a class load, null - `java.lang.Class`
   protection-domain - the protection domain of the class being defined or redefined - `java.security.ProtectionDomain`
   classfile-buffer - the input byte buffer in class file format - must not be modified - `byte[]`

@@ -71,7 +71,7 @@
    that can be used to initialize a variable with the current property
    value.
 
-   Example results are `2`, `new Color(127,127,34)`, `Color.orange`, etc.
+   Example results are \"2\", \"new Color(127,127,34)\", \"Color.orange\", etc.
 
   returns: A fragment of Java code representing an initializer for the
             current value. - `java.lang.String`"

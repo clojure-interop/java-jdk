@@ -240,9 +240,9 @@
 
 (defn to-string
   "Returns a string identifying this lock, as well as its lock state.
-   The state, in brackets, includes the String `Write locks =`
+   The state, in brackets, includes the String \"Write locks =\"
    followed by the number of reentrantly held write locks, and the
-   String `Read locks =` followed by the number of held
+   String \"Read locks =\" followed by the number of held
    read locks.
 
   returns: a string identifying this lock, as well as its lock state - `java.lang.String`"

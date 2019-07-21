@@ -1,7 +1,7 @@
 (ns javax.print.attribute.standard.PrinterMessageFromOperator
   "Class PrinterMessageFromOperator is a printing attribute class, a text
   attribute, that provides a message from an operator, system administrator,
-  or `intelligent` process to indicate to the end user information about or
+  or \"intelligent\" process to indicate to the end user information about or
   status of the printer, such as why it is unavailable or when it is
   expected to be available.
 
@@ -60,7 +60,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PrinterMessageFromOperator,
@@ -76,7 +76,7 @@
    instance.
 
    For class PrinterMessageFromOperator,
-   the category name is `printer-message-from-operator`.
+   the category name is \"printer-message-from-operator\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PrinterMessageFromOperator this]

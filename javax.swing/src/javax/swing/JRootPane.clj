@@ -10,7 +10,7 @@
   The following image shows the relationships between
   the classes that use root panes.
 
-  The `heavyweight` components (those that delegate to a peer, or native
+  The \"heavyweight\" components (those that delegate to a peer, or native
   component on the host system) are shown with a darker, heavier box. The four
   heavyweight JFC/Swing containers (JFrame, JDialog,
   JWindow, and JApplet) are
@@ -21,7 +21,7 @@
   All five of these JFC/Swing containers implement the
   RootPaneContainer interface,
   and they all delegate their operations to a
-  JRootPane (shown with a little `handle` on top).
+  JRootPane (shown with a little \"handle\" on top).
 
   Note: The JComponent method getRootPane
   can be used to obtain the JRootPane that contains
@@ -302,7 +302,7 @@
   "Returns a string that specifies the name of the L&F class
    that renders this component.
 
-  returns: the string `RootPaneUI` - `java.lang.String`"
+  returns: the string \"RootPaneUI\" - `java.lang.String`"
   (^java.lang.String [^JRootPane this]
     (-> this (.getUIClassID))))
 

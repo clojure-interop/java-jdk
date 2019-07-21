@@ -1,5 +1,5 @@
 (ns javax.swing.GrayFilter
-  "An image filter that `disables` an image by turning
+  "An image filter that \"disables\" an image by turning
   it into a grayscale image, and brightening the pixels
   in the image. Used by buttons to create an image for
   a disabled button."
@@ -10,7 +10,7 @@
   "Constructor.
 
   Constructs a GrayFilter object that filters a color image to a
-   grayscale image. Used by buttons to create disabled (`grayed out`)
+   grayscale image. Used by buttons to create disabled (\"grayed out\")
    button images.
 
   b - a boolean -- true if the pixels should be brightened - `boolean`

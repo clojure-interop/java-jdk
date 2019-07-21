@@ -71,7 +71,7 @@
   semaphore, because it only has two states: one permit
   available, or zero permits available.  When used in this way, the
   binary semaphore has the property (unlike many Lock
-  implementations), that the `lock` can be released by a
+  implementations), that the \"lock\" can be released by a
   thread other than the owner (as semaphores have no notion of
   ownership).  This can be useful in some specialized contexts, such
   as deadlock recovery.
@@ -105,9 +105,9 @@
   postponement when these methods are used without fairness set true.
 
   Memory consistency effects: Actions in a thread prior to calling
-  a `release` method such as release()
+  a \"release\" method such as release()
   happen-before
-  actions following a successful `acquire` method such as acquire()
+  actions following a successful \"acquire\" method such as acquire()
   in another thread."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util.concurrent Semaphore]))
@@ -206,7 +206,7 @@
 
 (defn to-string
   "Returns a string identifying this semaphore, as well as its state.
-   The state, in brackets, includes the String `Permits =`
+   The state, in brackets, includes the String \"Permits =\"
    followed by the number of permits.
 
   returns: a string identifying this semaphore, as well as its state - `java.lang.String`"

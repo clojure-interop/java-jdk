@@ -1,13 +1,13 @@
 (ns jdk.io.StreamTokenizer
   "The StreamTokenizer class takes an input stream and
-  parses it into `tokens`, allowing the tokens to be
+  parses it into \"tokens\", allowing the tokens to be
   read one at a time. The parsing process is controlled by a table
   and a number of flags that can be set to various states. The
   stream tokenizer can recognize identifiers, numbers, quoted
   strings, and various comment styles.
 
   Each byte read from the input stream is regarded as a character
-  in the range '\u0000' through '\u00FF'.
+  in the range '\\u0000' through '\\u00FF'.
   The character value is used to look up five possible attributes of
   the character: white space, alphabetic,
   numeric, string quote, and comment character.
@@ -43,7 +43,7 @@
   (^StreamTokenizer [^java.io.InputStream is]
     (new StreamTokenizer is)))
 
-(defn -ttype
+(defn ttype
   "Instance Field.
 
   After a call to the nextToken method, this field
@@ -65,8 +65,8 @@
    The initial value of this field is -4.
 
   type: int"
-  [this]
-  (-> this .-ttype))
+  (^Integer [^StreamTokenizer this]
+    (-> this .-ttype)))
 
 (def *-tt-eof
   "Static Constant.
@@ -100,7 +100,7 @@
   type: int"
   StreamTokenizer/TT_WORD)
 
-(defn -sval
+(defn sval
   "Instance Field.
 
   If the current token is a word token, this field contains a
@@ -116,10 +116,10 @@
    The initial value of this field is null.
 
   type: java.lang.String"
-  [this]
-  (-> this .-sval))
+  (^java.lang.String [^StreamTokenizer this]
+    (-> this .-sval)))
 
-(defn -nval
+(defn nval
   "Instance Field.
 
   If the current token is a number, this field contains the value
@@ -129,8 +129,8 @@
    The initial value of this field is 0.0.
 
   type: double"
-  [this]
-  (-> this .-nval))
+  (^Double [^StreamTokenizer this]
+    (-> this .-nval)))
 
 (defn eol-is-significant
   "Determines whether or not ends of line are treated as tokens.
@@ -140,8 +140,8 @@
    this value when an end of line is read.
 
    A line is a sequence of characters ending with either a
-   carriage-return character ('\r') or a newline
-   character ('\n'). In addition, a carriage-return
+   carriage-return character ('\\r') or a newline
+   character ('\\n'). In addition, a carriage-return
    character followed immediately by a newline character is treated
    as a single end-of-line token.
 
@@ -204,7 +204,7 @@
    the string quote character, up to (but not including) the next
    occurrence of that same string quote character, or a line
    terminator, or end of file. The usual escape sequences such as
-   `\n` and `\t` are recognized and
+   \"\\n\" and \"\\t\" are recognized and
    converted to single characters as the string is parsed.
 
    Any other attribute settings for the specified character are cleared.
@@ -270,7 +270,7 @@
     (-> this (.nextToken))))
 
 (defn ordinary-char
-  "Specifies that the character argument is `ordinary`
+  "Specifies that the character argument is \"ordinary\"
    in this tokenizer. It removes any special significance the
    character has as a comment character, word component, string
    delimiter, white space, or number character. When such a character
@@ -278,7 +278,7 @@
    single-character token and sets ttype field to the
    character value.
 
-   Making a line terminator character `ordinary` may interfere
+   Making a line terminator character \"ordinary\" may interfere
    with the ability of a StreamTokenizer to count
    lines. The lineno method may no longer reflect
    the presence of such terminator characters in its line count.
@@ -309,7 +309,7 @@
 
         0 1 2 3 4 5 6 7 8 9 . -
 
-   has the `numeric` attribute.
+   has the \"numeric\" attribute.
 
    When the parser encounters a word token that has the format of a
    double precision floating-point number, it treats the token as a
@@ -322,7 +322,7 @@
 (defn ordinary-chars
   "Specifies that all characters c in the range
    low <= c <= high
-   are `ordinary` in this tokenizer. See the
+   are \"ordinary\" in this tokenizer. See the
    ordinaryChar method for more information on a
    character being ordinary.
 
@@ -333,7 +333,7 @@
 
 (defn reset-syntax
   "Resets this tokenizer's syntax table so that all characters are
-   `ordinary.` See the ordinaryChar method
+   \"ordinary.\" See the ordinaryChar method
    for more information on a character being ordinary."
   ([^StreamTokenizer this]
     (-> this (.resetSyntax))))

@@ -15,7 +15,7 @@
   description - A human readable description of the attribute. - `java.lang.String`
   is-readable - True if the attribute has a getter method, false otherwise. - `boolean`
   is-writable - True if the attribute has a setter method, false otherwise. - `boolean`
-  is-is - True if this attribute has an `is` getter, false otherwise. - `boolean`
+  is-is - True if this attribute has an \"is\" getter, false otherwise. - `boolean`
   descriptor - The descriptor for the attribute. This may be null which is equivalent to an empty descriptor. - `javax.management.Descriptor`
 
   throws: java.lang.IllegalArgumentException - if isIs is true but isReadable is not, or if isIs is true and type is not boolean or java.lang.Boolean. (New code should always use boolean rather than java.lang.Boolean.)"
@@ -62,9 +62,9 @@
     (-> this (.isWritable))))
 
 (defn is?
-  "Indicates if this attribute has an `is` getter.
+  "Indicates if this attribute has an \"is\" getter.
 
-  returns: true if this attribute has an `is` getter. - `boolean`"
+  returns: true if this attribute has an \"is\" getter. - `boolean`"
   (^Boolean [^MBeanAttributeInfo this]
     (-> this (.isIs))))
 

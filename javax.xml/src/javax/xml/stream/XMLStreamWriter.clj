@@ -3,7 +3,7 @@
   not perform well formedness checking on its input.  However
   the writeCharacters method is required to escape & , < and >
   For attribute values the writeAttribute method will escape the
-  above characters plus ` to ensure that all character content
+  above characters plus \" to ensure that all character content
   and attribute values are well formed.
 
   Each NAMESPACE
@@ -34,16 +34,16 @@
                isRepairingNamespaces == true
 
                    namespaceURI bound
-                  prefix:localName=`value` [1]
+                  prefix:localName=\"value\" [1]
 
 
                    namespaceURI unbound
-                  xmlns:{generated}=`namespaceURI` {generated}:localName=`value`
+                  xmlns:{generated}=\"namespaceURI\" {generated}:localName=\"value\"
 
                isRepairingNamespaces == false
 
                    namespaceURI bound
-                  prefix:localName=`value` [1]
+                  prefix:localName=\"value\" [1]
 
 
                    namespaceURI unbound
@@ -57,27 +57,27 @@
 
                    namespaceURI bound
                   bound to same prefix:
-                  prefix:localName=`value` [1]
+                  prefix:localName=\"value\" [1]
 
                   bound to different prefix:
-                  xmlns:{generated}=`namespaceURI` {generated}:localName=`value`
+                  xmlns:{generated}=\"namespaceURI\" {generated}:localName=\"value\"
 
 
                    namespaceURI unbound
-                  xmlns:prefix=`namespaceURI` prefix:localName=`value` [3]
+                  xmlns:prefix=\"namespaceURI\" prefix:localName=\"value\" [3]
 
                isRepairingNamespaces == false
 
                    namespaceURI bound
                   bound to same prefix:
-                  prefix:localName=`value` [1][2]
+                  prefix:localName=\"value\" [1][2]
 
                   bound to different prefix:
                   XMLStreamException[2]
 
 
                    namespaceURI unbound
-                  xmlns:prefix=`namespaceURI` prefix:localName=`value` [2][5]
+                  xmlns:prefix=\"namespaceURI\" prefix:localName=\"value\" [2][5]
 
 
 
@@ -92,7 +92,7 @@
 
 
                    namespaceURI unbound
-                  <{generated}:localName xmlns:{generated}=`namespaceURI`>
+                  <{generated}:localName xmlns:{generated}=\"namespaceURI\">
 
                isRepairingNamespaces == false
 
@@ -116,11 +116,11 @@
                   <prefix:localName> [1]
 
                   bound to different prefix:
-                  <{generated}:localName xmlns:{generated}=`namespaceURI`>
+                  <{generated}:localName xmlns:{generated}=\"namespaceURI\">
 
 
                    namespaceURI unbound
-                  <prefix:localName xmlns:prefix=`namespaceURI`> [4]
+                  <prefix:localName xmlns:prefix=\"namespaceURI\"> [4]
 
                isRepairingNamespaces == false
 
@@ -143,10 +143,10 @@
                   Notes:
 
                       [1] if namespaceURI == default Namespace URI, then no prefix is written
-                      [2] if prefix == `` || null && namespaceURI == ``, then no prefix or Namespace declaration is generated or written
-                      [3] if prefix == `` || null, then a prefix is randomly generated
-                      [4] if prefix == `` || null, then it is treated as the default Namespace and no prefix is generated or written, an xmlns declaration is generated and written if the namespaceURI is unbound
-                      [5] if prefix == `` || null, then it is treated as an invalid attempt to define the default Namespace and an XMLStreamException is thrown"
+                      [2] if prefix == \"\" || null && namespaceURI == \"\", then no prefix or Namespace declaration is generated or written
+                      [3] if prefix == \"\" || null, then a prefix is randomly generated
+                      [4] if prefix == \"\" || null, then it is treated as the default Namespace and no prefix is generated or written, an xmlns declaration is generated and written if the namespaceURI is unbound
+                      [5] if prefix == \"\" || null, then it is treated as an invalid attempt to define the default Namespace and an XMLStreamException is thrown"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.stream XMLStreamWriter]))
 
@@ -166,7 +166,7 @@
 (defn write-namespace
   "Writes a namespace to the output stream
    If the prefix argument to this method is the empty string,
-   `xmlns`, or null this method will delegate to writeDefaultNamespace
+   \"xmlns\", or null this method will delegate to writeDefaultNamespace
 
   prefix - the prefix to bind this namespace to - `java.lang.String`
   namespace-uri - the uri to bind the prefix to - `java.lang.String`

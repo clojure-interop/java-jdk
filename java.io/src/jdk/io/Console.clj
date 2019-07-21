@@ -48,7 +48,7 @@
   Console cons;
   char[] passwd;
   if ((cons = System.console()) != null &&
-      (passwd = cons.readPassword(`[%s]`, `Password:`)) != null) {
+      (passwd = cons.readPassword(\"[%s]\", \"Password:\")) != null) {
       ...
       java.util.Arrays.fill(passwd, ' ');
   }"
@@ -88,8 +88,8 @@
    bound for each invocation, even if the destination buffer has space for
    more characters. The Reader's read methods may block if a
    line bound has not been entered or reached on the console's input device.
-   A line bound is considered to be any one of a line feed ('\n'),
-   a carriage return ('\r'), a carriage return followed immediately
+   A line bound is considered to be any one of a line feed ('\\n'),
+   a carriage return ('\\r'), a carriage return followed immediately
    by a linefeed, or an end of stream.
 
   returns: The reader associated with this console - `java.io.Reader`"

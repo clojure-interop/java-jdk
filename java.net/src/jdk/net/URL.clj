@@ -1,6 +1,6 @@
 (ns jdk.net.URL
   "Class URL represents a Uniform Resource
-  Locator, a pointer to a `resource` on the World
+  Locator, a pointer to a \"resource\" on the World
   Wide Web. A resource can be something as simple as a file or a
   directory, or it can be a reference to a more complicated object,
   such as a query to a database or to a search engine. More
@@ -24,7 +24,7 @@
   a file, but it could be generated on the fly. This component of
   the URL is called the path component.
 
-  A URL can optionally specify a `port`, which is the
+  A URL can optionally specify a \"port\", which is the
   port number to which the TCP connection is made on the remote host
   machine. If the port is not specified, the default port for
   the protocol is used instead. For example, the default port for
@@ -40,9 +40,9 @@
   also supports scope_ids. The syntax and usage of scope_ids is described
   here.
 
-  A URL may have appended to it a `fragment`, also known
-  as a `ref` or a `reference`. The fragment is indicated by the sharp
-  sign character `#` followed by more characters. For example,
+  A URL may have appended to it a \"fragment\", also known
+  as a \"ref\" or a \"reference\". The fragment is indicated by the sharp
+  sign character \"#\" followed by more characters. For example,
 
 
       http://java.sun.com/index.html#chapter1
@@ -53,7 +53,7 @@
   document that has the tag chapter1 attached to it. The
   meaning of a tag is resource specific.
 
-  An application can also specify a `relative URL`,
+  An application can also specify a \"relative URL\",
   which contains only enough information to reach the resource
   relative to another URL. Relative URLs are frequently used within
   HTML pages. For example, if the contents of the URL:
@@ -115,7 +115,7 @@
    If the handler is not null and there is a security manager,
    the security manager's checkPermission
    method is called with a
-   NetPermission(`specifyStreamHandler`) permission.
+   NetPermission(\"specifyStreamHandler\") permission.
    This may result in a SecurityException.
 
    No validation of the inputs is performed by this constructor.
@@ -175,10 +175,10 @@
     (-> this (.getAuthority))))
 
 (defn get-ref
-  "Gets the anchor (also known as the `reference`) of this
+  "Gets the anchor (also known as the \"reference\") of this
    URL.
 
-  returns: the anchor (also known as the `reference`) of this
+  returns: the anchor (also known as the \"reference\") of this
             URL, or null if one does not exist - `java.lang.String`"
   (^java.lang.String [^URL this]
     (-> this (.getRef))))

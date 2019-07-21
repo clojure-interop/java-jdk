@@ -17,7 +17,7 @@
    with the SQLState initialized
    to 01004 when read is set to true and 22001
    when read is set to false,
-   the reason set to `Data truncation`, the
+   the reason set to \"Data truncation\", the
    vendor code set to 0, and
    the other fields set to the given values.
 

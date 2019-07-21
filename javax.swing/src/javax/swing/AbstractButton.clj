@@ -293,7 +293,7 @@
 
 (defn set-icon
   "Sets the button's default icon. This icon is
-   also used as the `pressed` and `disabled` icon if
+   also used as the \"pressed\" and \"disabled\" icon if
    there is no explicitly set pressed icon.
 
   default-icon - the icon used as the default image - `javax.swing.Icon`"
@@ -387,12 +387,12 @@
     (-> this (.setVerticalTextPosition text-position))))
 
 (defn do-click
-  "Programmatically perform a `click`. This does the same
+  "Programmatically perform a \"click\". This does the same
    thing as if the user had pressed and released the button.
-   The button stays visually `pressed` for pressTime
+   The button stays visually \"pressed\" for pressTime
     milliseconds.
 
-  press-time - the time to `hold down` the button, in milliseconds - `int`"
+  press-time - the time to \"hold down\" the button, in milliseconds - `int`"
   ([^AbstractButton this ^Integer press-time]
     (-> this (.doClick press-time)))
   ([^AbstractButton this]
@@ -432,14 +432,14 @@
 (defn set-rollover-selected-icon
   "Sets the rollover selected icon for the button.
 
-  rollover-selected-icon - the icon used as the `selected rollover` image - `javax.swing.Icon`"
+  rollover-selected-icon - the icon used as the \"selected rollover\" image - `javax.swing.Icon`"
   ([^AbstractButton this ^javax.swing.Icon rollover-selected-icon]
     (-> this (.setRolloverSelectedIcon rollover-selected-icon))))
 
 (defn set-rollover-icon
   "Sets the rollover icon for the button.
 
-  rollover-icon - the icon used as the `rollover` image - `javax.swing.Icon`"
+  rollover-icon - the icon used as the \"rollover\" image - `javax.swing.Icon`"
   ([^AbstractButton this ^javax.swing.Icon rollover-icon]
     (-> this (.setRolloverIcon rollover-icon))))
 
@@ -628,7 +628,7 @@
 (defn set-pressed-icon
   "Sets the pressed icon for the button.
 
-  pressed-icon - the icon used as the `pressed` image - `javax.swing.Icon`"
+  pressed-icon - the icon used as the \"pressed\" image - `javax.swing.Icon`"
   ([^AbstractButton this ^javax.swing.Icon pressed-icon]
     (-> this (.setPressedIcon pressed-icon))))
 
@@ -641,7 +641,7 @@
    corresponding action event generated.  By default the threshhold is 0,
    which means that for each mouse press, an action event will be
    fired, no matter how quickly the mouse clicks occur.  In buttons
-   where this behavior is not desirable (for example, the `OK` button
+   where this behavior is not desirable (for example, the \"OK\" button
    in a dialog), this threshhold should be set to an appropriate
    positive value.
 
@@ -703,7 +703,7 @@
 (defn set-selected-icon
   "Sets the selected icon for the button.
 
-  selected-icon - the icon used as the `selected` image - `javax.swing.Icon`"
+  selected-icon - the icon used as the \"selected\" image - `javax.swing.Icon`"
   ([^AbstractButton this ^javax.swing.Icon selected-icon]
     (-> this (.setSelectedIcon selected-icon))))
 
@@ -845,7 +845,7 @@
 
 
         setUI((ButtonUI)UIManager.getUI(
-            `ButtonUI`, `javax.swing.plaf.basic.BasicButtonUI`, this));"
+            \"ButtonUI\", \"javax.swing.plaf.basic.BasicButtonUI\", this));"
   ([^AbstractButton this]
     (-> this (.updateUI))))
 

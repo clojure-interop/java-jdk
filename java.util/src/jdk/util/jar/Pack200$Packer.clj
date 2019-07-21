@@ -32,11 +32,11 @@
   and unpacking will in general invalidate any digital signatures
   which rely on bytewise images of JAR elements.  In order both to sign
   and to pack a JAR, you must first pack and unpack the JAR to
-  `normalize` it, then compute signatures on the unpacked JAR elements,
+  \"normalize\" it, then compute signatures on the unpacked JAR elements,
   and finally repack the signed JAR.
   Both packing steps should
   use precisely the same options, and the segment limit may also
-  need to be set to `-1`, to prevent accidental variation of segment
+  need to be set to \"-1\", to prevent accidental variation of segment
   boundaries as class file sizes change slightly.
 
   (Here's why this works:  Any reordering the packer does
@@ -67,7 +67,7 @@
 
 (defn properties
   "Get the set of this engine's properties.
-   This set is a `live view`, so that changing its
+   This set is a \"live view\", so that changing its
    contents immediately affects the Packer engine, and
    changes from the engine (such as progress indications)
    are immediately visible in the map.

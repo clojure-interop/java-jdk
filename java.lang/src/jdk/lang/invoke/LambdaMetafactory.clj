@@ -1,5 +1,5 @@
 (ns jdk.lang.invoke.LambdaMetafactory
-  "Methods to facilitate the creation of simple `function objects` that
+  "Methods to facilitate the creation of simple \"function objects\" that
   implement one or more interfaces by delegation to a provided MethodHandle,
   possibly after type adaptation and partial evaluation of arguments.  These
   methods are typically used as bootstrap methods for invokedynamic
@@ -18,8 +18,8 @@
       CallSite whose target can be used to create suitable function
       objects.  Linkage may involve dynamically loading a new class that
       implements the target interface. The CallSite can be considered a
-      `factory` for function objects and so these linkage methods are referred
-      to as `metafactories`.
+      \"factory\" for function objects and so these linkage methods are referred
+      to as \"metafactories\".
 
       Capture occurs when the CallSite's target is
       invoked, typically through an invokedynamic call site,
@@ -45,7 +45,7 @@
   is parameterized as Predicate<String>, the input must be a
   String, even though the method to implement allows any Object.
   At linkage time, an additional MethodType parameter describes the
-  `instantiated` method type; on invocation, the arguments and eventual result
+  \"instantiated\" method type; on invocation, the arguments and eventual result
   are checked against this MethodType.
 
   This class provides two forms of linkage methods: a standard version
@@ -182,7 +182,7 @@
   LambdaMetafactory/FLAG_BRIDGES)
 
 (defn *metafactory
-  "Facilitates the creation of simple `function objects` that implement one
+  "Facilitates the creation of simple \"function objects\" that implement one
    or more interfaces by delegation to a provided MethodHandle,
    after appropriate type adaptation and partial evaluation of arguments.
    Typically used as a bootstrap method for invokedynamic
@@ -216,7 +216,7 @@
     (LambdaMetafactory/metafactory caller invoked-name invoked-type sam-method-type impl-method instantiated-method-type)))
 
 (defn *alt-metafactory
-  "Facilitates the creation of simple `function objects` that implement one
+  "Facilitates the creation of simple \"function objects\" that implement one
    or more interfaces by delegation to a provided MethodHandle,
    after appropriate type adaptation and partial evaluation of arguments.
    Typically used as a bootstrap method for invokedynamic

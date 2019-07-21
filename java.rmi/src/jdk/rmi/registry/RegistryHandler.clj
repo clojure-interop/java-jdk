@@ -12,10 +12,10 @@
   host - name of remote registry host - `java.lang.String`
   port - remote registry port - `int`
 
-  returns: remote registry stub - `.rmi.registry.Registry`
+  returns: remote registry stub - `java.rmi.registry.Registry`
 
   throws: java.rmi.RemoteException - if a remote error occurs"
-  (^.rmi.registry.Registry [^RegistryHandler this ^java.lang.String host ^Integer port]
+  (^java.rmi.registry.Registry [^RegistryHandler this ^java.lang.String host ^Integer port]
     (-> this (.registryStub host port))))
 
 (defn registry-impl
@@ -25,9 +25,9 @@
 
   port - port to export registry on - `int`
 
-  returns: registry stub - `.rmi.registry.Registry`
+  returns: registry stub - `java.rmi.registry.Registry`
 
   throws: java.rmi.RemoteException - if a remote error occurs"
-  (^.rmi.registry.Registry [^RegistryHandler this ^Integer port]
+  (^java.rmi.registry.Registry [^RegistryHandler this ^Integer port]
     (-> this (.registryImpl port))))
 

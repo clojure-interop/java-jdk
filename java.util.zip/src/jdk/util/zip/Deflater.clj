@@ -14,8 +14,8 @@
 
   try {
       // Encode a String into bytes
-      String inputString = `blahblahblah`;
-      byte[] input = inputString.getBytes(`UTF-8`);
+      String inputString = \"blahblahblah\";
+      byte[] input = inputString.getBytes(\"UTF-8\");
 
       // Compress the bytes
       byte[] output = new byte[100];
@@ -33,7 +33,7 @@
       decompresser.end();
 
       // Decode the bytes into a String
-      String outputString = new String(result, 0, resultLength, `UTF-8`);
+      String outputString = new String(result, 0, resultLength, \"UTF-8\");
   } catch(java.io.UnsupportedEncodingException ex) {
       // handle
   } catch (java.util.zip.DataFormatException ex) {

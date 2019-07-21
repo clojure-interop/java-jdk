@@ -9,8 +9,8 @@
   The object that implements the ItemListener interface gets
   this ItemEvent when the event occurs. The listener is
   spared the details of processing individual mouse movements and mouse
-  clicks, and can instead process a `meaningful` (semantic) event like
-  `item selected` or `item deselected`.
+  clicks, and can instead process a \"meaningful\" (semantic) event like
+  \"item selected\" or \"item deselected\".
 
   An unspecified behavior will be caused if the id parameter
   of any particular ItemEvent instance is not

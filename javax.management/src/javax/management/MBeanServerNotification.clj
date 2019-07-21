@@ -17,18 +17,18 @@
   private static final NotificationListener printListener = new NotificationListener() {
       public void handleNotification(Notification n, Object handback) {
           if (!(n instanceof MBeanServerNotification)) {
-              System.out.println(`Ignored notification of class `  n.getClass().getName());
+              System.out.println(\"Ignored notification of class \"  n.getClass().getName());
               return;
           }
           MBeanServerNotification mbsn = (MBeanServerNotification) n;
           String what;
           if (n.getType().equals(MBeanServerNotification.REGISTRATION_NOTIFICATION))
-              what = `MBean registered`;
+              what = \"MBean registered\";
           else if (n.getType().equals(MBeanServerNotification.UNREGISTRATION_NOTIFICATION))
-              what = `MBean unregistered`;
+              what = \"MBean unregistered\";
           else
-              what = `Unknown type `  n.getType();
-          System.out.println(`Received MBean Server notification: `  what  `: `
+              what = \"Unknown type \"  n.getType();
+          System.out.println(\"Received MBean Server notification: \"  what  \": \"
                   mbsn.getMBeanName());
       }
   };
@@ -45,9 +45,9 @@
   An MBeanServerNotification emitted to denote the registration or
   unregistration of a group of MBeans has the following characteristics:
   Its notification type is
-      `JMX.mbean.registered.group` or
-      `JMX.mbean.unregistered.group`, which can also be written REGISTRATION_NOTIFICATION+ `.group` or
-      UNREGISTRATION_NOTIFICATION+ `.group`.
+      \"JMX.mbean.registered.group\" or
+      \"JMX.mbean.unregistered.group\", which can also be written REGISTRATION_NOTIFICATION+ \".group\" or
+      UNREGISTRATION_NOTIFICATION+ \".group\".
 
   Its MBean name is an ObjectName pattern
       that selects the set (or a superset) of the MBeans being registered
@@ -81,7 +81,7 @@
   "Static Constant.
 
   Notification type denoting that an MBean has been registered.
-   Value is `JMX.mbean.registered`.
+   Value is \"JMX.mbean.registered\".
 
   type: java.lang.String"
   MBeanServerNotification/REGISTRATION_NOTIFICATION)
@@ -90,7 +90,7 @@
   "Static Constant.
 
   Notification type denoting that an MBean has been unregistered.
-   Value is `JMX.mbean.unregistered`.
+   Value is \"JMX.mbean.unregistered\".
 
   type: java.lang.String"
   MBeanServerNotification/UNREGISTRATION_NOTIFICATION)

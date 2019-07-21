@@ -283,7 +283,7 @@
    the cache.  This is basically a low-level cache for
    1.1 font features.
 
-  family - the font family (such as `Monospaced`) - `java.lang.String`
+  family - the font family (such as \"Monospaced\") - `java.lang.String`
   style - the style of the font (such as Font.PLAIN) - `int`
   size - the point size >= 1 - `int`
 

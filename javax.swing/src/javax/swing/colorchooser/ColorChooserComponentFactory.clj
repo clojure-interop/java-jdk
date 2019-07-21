@@ -1,5 +1,5 @@
 (ns javax.swing.colorchooser.ColorChooserComponentFactory
-  "A class designed to produce preconfigured `accessory` objects to
+  "A class designed to produce preconfigured \"accessory\" objects to
   insert into color choosers.
 
 

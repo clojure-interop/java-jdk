@@ -20,41 +20,41 @@
   (^Line2D$Double []
     (new Line2D$Double )))
 
-(defn -x-1
+(defn x-1
   "Instance Field.
 
   The X coordinate of the start point of the line segment.
 
   type: double"
-  [this]
-  (-> this .-x1))
+  (^Double [^Line2D$Double this]
+    (-> this .-x1)))
 
-(defn -y-1
+(defn y-1
   "Instance Field.
 
   The Y coordinate of the start point of the line segment.
 
   type: double"
-  [this]
-  (-> this .-y1))
+  (^Double [^Line2D$Double this]
+    (-> this .-y1)))
 
-(defn -x-2
+(defn x-2
   "Instance Field.
 
   The X coordinate of the end point of the line segment.
 
   type: double"
-  [this]
-  (-> this .-x2))
+  (^Double [^Line2D$Double this]
+    (-> this .-x2)))
 
-(defn -y-2
+(defn y-2
   "Instance Field.
 
   The Y coordinate of the end point of the line segment.
 
   type: double"
-  [this]
-  (-> this .-y2))
+  (^Double [^Line2D$Double this]
+    (-> this .-y2)))
 
 (defn get-x-1
   "Returns the X coordinate of the start point in double precision.

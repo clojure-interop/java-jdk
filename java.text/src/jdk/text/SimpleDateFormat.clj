@@ -25,7 +25,7 @@
   components of a date or time string.
   Text can be quoted using single quotes (') to avoid
   interpretation.
-  `''` represents a single quote.
+  \"''\" represents a single quote.
   All other characters are not interpreted; they're simply copied into the
   output string during formatting or matched against the input string
   during parsing.
@@ -180,22 +180,22 @@
           number.
       For parsing, if the number of pattern letters is more than 2,
           the year is interpreted literally, regardless of the number of
-          digits. So using the pattern `MM/dd/yyyy`, `01/11/12` parses to
+          digits. So using the pattern \"MM/dd/yyyy\", \"01/11/12\" parses to
           Jan 11, 12 A.D.
-      For parsing with the abbreviated year pattern (`y` or `yy`),
+      For parsing with the abbreviated year pattern (\"y\" or \"yy\"),
           SimpleDateFormat must interpret the abbreviated year
           relative to some century.  It does this by adjusting dates to be
           within 80 years before and 20 years after the time the SimpleDateFormat
-          instance is created. For example, using a pattern of `MM/dd/yy` and a
+          instance is created. For example, using a pattern of \"MM/dd/yy\" and a
           SimpleDateFormat instance created on Jan 1, 1997,  the string
-          `01/11/12` would be interpreted as Jan 11, 2012 while the string `05/04/64`
+          \"01/11/12\" would be interpreted as Jan 11, 2012 while the string \"05/04/64\"
           would be interpreted as May 4, 1964.
           During parsing, only strings consisting of exactly two digits, as defined by
           Character.isDigit(char), will be parsed into the default century.
           Any other numeric string, such as a one digit string, a three or more digit
-          string, or a two digit string that isn't all digits (for example, `-1`), is
-          interpreted literally.  So `01/02/3` or `01/02/003` are parsed, using the
-          same pattern, as Jan 2, 3 AD.  Likewise, `01/02/-3` is parsed as Jan 2, 4 BC.
+          string, or a two digit string that isn't all digits (for example, \"-1\"), is
+          interpreted literally.  So \"01/02/3\" or \"01/02/003\" are parsed, using the
+          same pattern, as Jan 2, 3 AD.  Likewise, \"01/02/-3\" is parsed as Jan 2, 4 BC.
 
       Otherwise, calendar system specific forms are applied.
       For both formatting and parsing, if the number of pattern
@@ -276,12 +276,12 @@
       Other definitions are as for general time zones or
       RFC 822 time zones.
 
-      For formatting, if the offset value from GMT is 0, `Z` is
+      For formatting, if the offset value from GMT is 0, \"Z\" is
       produced. If the number of pattern letters is 1, any fraction of an hour
-      is ignored. For example, if the pattern is `X` and the time zone is
-      `GMT+05:30`, `+05` is produced.
+      is ignored. For example, if the pattern is \"X\" and the time zone is
+      \"GMT+05:30\", \"+05\" is produced.
 
-      For parsing, `Z` is parsed as the UTC time zone designator.
+      For parsing, \"Z\" is parsed as the UTC time zone designator.
       General time zones are not accepted.
 
       If the number of pattern letters is 4 or more, IllegalArgumentException is thrown when constructing a SimpleDateFormat or applying a
@@ -304,37 +304,37 @@
           Date and Time Pattern
           Result
 
-          `yyyy.MM.dd G 'at' HH:mm:ss z`
+          \"yyyy.MM.dd G 'at' HH:mm:ss z\"
           2001.07.04 AD at 12:08:56 PDT
 
-          `EEE, MMM d, ''yy`
+          \"EEE, MMM d, ''yy\"
           Wed, Jul 4, '01
 
-          `h:mm a`
+          \"h:mm a\"
           12:08 PM
 
-          `hh 'o''clock' a, zzzz`
+          \"hh 'o''clock' a, zzzz\"
           12 o'clock PM, Pacific Daylight Time
 
-          `K:mm a, z`
+          \"K:mm a, z\"
           0:08 PM, PDT
 
-          `yyyyy.MMMMM.dd GGG hh:mm aaa`
+          \"yyyyy.MMMMM.dd GGG hh:mm aaa\"
           02001.July.04 AD 12:08 PM
 
-          `EEE, d MMM yyyy HH:mm:ss Z`
+          \"EEE, d MMM yyyy HH:mm:ss Z\"
           Wed, 4 Jul 2001 12:08:56 -0700
 
-          `yyMMddHHmmssZ`
+          \"yyMMddHHmmssZ\"
           010704120856-0700
 
-          `yyyy-MM-dd'T'HH:mm:ss.SSSZ`
+          \"yyyy-MM-dd'T'HH:mm:ss.SSSZ\"
           2001-07-04T12:08:56.235-0700
 
-          `yyyy-MM-dd'T'HH:mm:ss.SSSXXX`
+          \"yyyy-MM-dd'T'HH:mm:ss.SSSXXX\"
           2001-07-04T12:08:56.235-07:00
 
-          `YYYY-'W'ww-u`
+          \"YYYY-'W'ww-u\"
           2001-W27-3
 
 

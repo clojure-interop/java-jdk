@@ -18,7 +18,7 @@
    User-defined attributes may be used in some implementations to store
   security related attributes so consequently, in the case of the default
   provider at least, all methods that access user-defined attributes require the
-  RuntimePermission(`accessUserDefinedAttributes`) permission when a
+  RuntimePermission(\"accessUserDefinedAttributes\") permission when a
   security manager is installed.
 
    The supportsFileAttributeView method may be used to test if a specific FileStore supports the storage of user-defined
@@ -34,7 +34,7 @@
 
 (defn name
   "Returns the name of this attribute view. Attribute views of this type
-   have the name `user`.
+   have the name \"user\".
 
   returns: the name of the attribute view - `java.lang.String`"
   (^java.lang.String [^UserDefinedFileAttributeView this]
@@ -75,12 +75,12 @@
 
     Usage Example:
    Suppose we want to read a file's MIME type that is stored as a user-defined
-   attribute with the name `user.mimetype`.
+   attribute with the name \"user.mimetype\".
 
 
       UserDefinedFileAttributeView view =
           Files.getFileAttributeView(path, UserDefinedFileAttributeView.class);
-      String name = `user.mimetype`;
+      String name = \"user.mimetype\";
       ByteBuffer buf = ByteBuffer.allocate(view.size(name));
       view.read(name, buf);
       buf.flip();
@@ -122,7 +122,7 @@
 
       UserDefinedFileAttributeView view =
           FIles.getFileAttributeView(path, UserDefinedFileAttributeView.class);
-      view.write(`user.mimetype`, Charset.defaultCharset().encode(`text/html`));
+      view.write(\"user.mimetype\", Charset.defaultCharset().encode(\"text/html\"));
 
   name - The attribute name - `java.lang.String`
   src - The buffer containing the attribute value - `java.nio.ByteBuffer`

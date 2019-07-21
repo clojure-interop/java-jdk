@@ -1,6 +1,6 @@
 (ns javax.swing.plaf.metal.MetalPopupMenuSeparatorUI
   "A Metal L&F implementation of PopupMenuSeparatorUI.  This implementation
-  is a `combined` view/controller."
+  is a \"combined\" view/controller."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.plaf.metal MetalPopupMenuSeparatorUI]))
 

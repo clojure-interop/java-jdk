@@ -14,7 +14,7 @@
   nameString
       Notification name.
   descriptorTypeString
-      Must be `notification`.
+      Must be \"notification\".
   severityNumber
       0-6 where 0: unknown; 1: non-recoverable;
           2: critical, failure; 3: major, severe;
@@ -52,9 +52,9 @@
   notif-types - The array of strings (in dot notation) containing the notification types that may be emitted. - `java.lang.String[]`
   name - The name of the Notification class. - `java.lang.String`
   description - A human readable description of the Notification. Optional. - `java.lang.String`
-  descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the MBeanNotificationInfo. If it is null a default descriptor will be created. If the descriptor does not contain the fields `displayName` or `severity`, the missing ones are added with their default values. - `javax.management.Descriptor`
+  descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the MBeanNotificationInfo. If it is null a default descriptor will be created. If the descriptor does not contain the fields \"displayName\" or \"severity\", the missing ones are added with their default values. - `javax.management.Descriptor`
 
-  throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field `name` is not equal to parameter name, or descriptor field `descriptorType` is not equal to `notification`."
+  throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field \"name\" is not equal to parameter name, or descriptor field \"descriptorType\" is not equal to \"notification\"."
   (^ModelMBeanNotificationInfo [notif-types ^java.lang.String name ^java.lang.String description ^javax.management.Descriptor descriptor]
     (new ModelMBeanNotificationInfo notif-types name description descriptor))
   (^ModelMBeanNotificationInfo [notif-types ^java.lang.String name ^java.lang.String description]

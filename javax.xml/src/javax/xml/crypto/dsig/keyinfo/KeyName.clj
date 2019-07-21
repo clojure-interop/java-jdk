@@ -8,7 +8,7 @@
 
 
 
-  <element name=`KeyName` type=`string`/>
+  <element name=\"KeyName\" type=\"string\"/>
 
   A KeyName instance may be created by invoking the
   newKeyName method of the
@@ -16,8 +16,8 @@
   representing the name of the key; for example:
 
 
-  KeyInfoFactory factory = KeyInfoFactory.getInstance(`DOM`);
-  KeyName keyName = factory.newKeyName(`Alice`);"
+  KeyInfoFactory factory = KeyInfoFactory.getInstance(\"DOM\");
+  KeyName keyName = factory.newKeyName(\"Alice\");"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.crypto.dsig.keyinfo KeyName]))
 

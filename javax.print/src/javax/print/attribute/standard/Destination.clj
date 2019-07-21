@@ -5,8 +5,8 @@
   other than the printer device, and so will not support this attribute.
 
   A common use for this attribute will be applications which want
-  to redirect output to a local disk file : eg.`file:out.prn`.
-  Note that proper construction of `file:` scheme URI instances should
+  to redirect output to a local disk file : eg.\"file:out.prn\".
+  Note that proper construction of \"file:\" scheme URI instances should
   be performed using the toURI() method of class
   File.
   See the documentation on that class for more information.
@@ -52,7 +52,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class Destination, the category is class Destination itself.
@@ -66,7 +66,7 @@
   "Get the name of the category of which this attribute value is an
    instance.
 
-   For class Destination, the category name is `spool-data-destination`.
+   For class Destination, the category name is \"spool-data-destination\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^Destination this]

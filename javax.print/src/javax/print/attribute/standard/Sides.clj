@@ -98,7 +98,7 @@
    sides of consecutive media sheets, such that the orientation of each
    pair of print-stream pages on the medium would be correct for the
    reader as if for binding on the long edge. This imposition is also
-   known as `duplex` (see DUPLEX).
+   known as \"duplex\" (see DUPLEX).
 
   type: javax.print.attribute.standard.Sides"
   Sides/TWO_SIDED_LONG_EDGE)
@@ -110,7 +110,7 @@
    sides of consecutive media sheets, such that the orientation of each
    pair of print-stream pages on the medium would be correct for the
    reader as if for binding on the short edge. This imposition is also
-   known as `tumble` (see TUMBLE).
+   known as \"tumble\" (see TUMBLE).
 
   type: javax.print.attribute.standard.Sides"
   Sides/TWO_SIDED_SHORT_EDGE)
@@ -118,7 +118,7 @@
 (def *-duplex
   "Static Constant.
 
-  An alias for `two sided long edge` (see TWO_SIDED_LONG_EDGE).
+  An alias for \"two sided long edge\" (see TWO_SIDED_LONG_EDGE).
 
   type: javax.print.attribute.standard.Sides"
   Sides/DUPLEX)
@@ -126,13 +126,13 @@
 (def *-tumble
   "Static Constant.
 
-  An alias for `two sided short edge` (see TWO_SIDED_SHORT_EDGE).
+  An alias for \"two sided short edge\" (see TWO_SIDED_SHORT_EDGE).
 
   type: javax.print.attribute.standard.Sides"
   Sides/TUMBLE)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class Sides, the category is class Sides itself.
@@ -146,7 +146,7 @@
   "Get the name of the category of which this attribute value is an
    instance.
 
-   For class Sides, the category name is `sides`.
+   For class Sides, the category name is \"sides\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^Sides this]

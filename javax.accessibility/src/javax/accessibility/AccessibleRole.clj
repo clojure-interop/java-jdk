@@ -1,7 +1,7 @@
 (ns javax.accessibility.AccessibleRole
   "Class AccessibleRole determines the role of a component.  The role of a
   component describes its generic function. (E.G.,
-  `push button,` `table,` or `list.`)
+  \"push button,\" \"table,\" or \"list.\")
   The toDisplayString method allows you to obtain the localized string
   for a locale independent key from a predefined ResourceBundle for the
   keys defined in this class.
@@ -239,8 +239,8 @@
 
   An object usually drawn at the top of the primary dialog box of
    an application that contains a list of menus the user can choose
-   from.  For example, a menu bar might contain menus for `File,`
-   `Edit,` and `Help.`
+   from.  For example, a menu bar might contain menus for \"File,\"
+   \"Edit,\" and \"Help.\"
 
   type: javax.accessibility.AccessibleRole"
   AccessibleRole/MENU_BAR)
@@ -262,8 +262,8 @@
    of actions the user can choose from.  A menu can have any object
    as its children, but most often they are menu items, other menus,
    or rudimentary objects such as radio buttons, check boxes, or
-   separators.  For example, an application may have an `Edit` menu
-   that contains menu items for `Cut` and `Paste.`
+   separators.  For example, an application may have an \"Edit\" menu
+   that contains menu items for \"Cut\" and \"Paste.\"
 
   type: javax.accessibility.AccessibleRole"
   AccessibleRole/MENU)
@@ -272,8 +272,8 @@
   "Static Constant.
 
   An object usually contained in a menu that presents an action
-   the user can choose.  For example, the `Cut` menu item in an
-   `Edit` menu would be an action the user can select to cut the
+   the user can choose.  For example, the \"Cut\" menu item in an
+   \"Edit\" menu would be an action the user can select to cut the
    selected area of text in a document.
 
   type: javax.accessibility.AccessibleRole"
@@ -284,9 +284,9 @@
 
   An object usually contained in a menu to provide a visual
    and logical separation of the contents in a menu.  For example,
-   the `File` menu of an application might contain menu items for
-   `Open,` `Close,` and `Exit,` and will place a separator between
-   `Close` and `Exit` menu items.
+   the \"File\" menu of an application might contain menu items for
+   \"Open,\" \"Close,\" and \"Exit,\" and will place a separator between
+   \"Close\" and \"Exit\" menu items.
 
   type: javax.accessibility.AccessibleRole"
   AccessibleRole/SEPARATOR)
@@ -471,7 +471,7 @@
 
   An object that provides information about another object.  The
    accessibleDescription property of the tool tip is often displayed
-   to the user in a small `help bubble` when the user causes the
+   to the user in a small \"help bubble\" when the user causes the
    mouse to hover over the object associated with the tool tip.
 
   type: javax.accessibility.AccessibleRole"

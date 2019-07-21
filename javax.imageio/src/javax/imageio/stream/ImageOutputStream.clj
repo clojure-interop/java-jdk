@@ -2,7 +2,7 @@
   "A seekable output stream interface for use by
   ImageWriters.  Various output destinations, such as
   OutputStreams and Files, as well as
-  future fast I/O destinations may be `wrapped` by a suitable
+  future fast I/O destinations may be \"wrapped\" by a suitable
   implementation of this interface for use by the Image I/O API.
 
    Unlike a standard OutputStream, ImageOutputStream
@@ -30,16 +30,16 @@
    or three bytes, depending on the value of the character.
 
     If a character c is in the range
-   \u0001 through \u007f, it is
+   \\u0001 through \\u007f, it is
    represented by one byte:
 
 
 
    (byte)c
 
-    If a character c is \u0000 or
-   is in the range \u0080 through
-   \u07ff, then it is represented by two bytes,
+    If a character c is \\u0000 or
+   is in the range \\u0080 through
+   \\u07ff, then it is represented by two bytes,
    to be written in the order shown:
 
 
@@ -48,7 +48,7 @@
    (byte)(0x80 | (0x3f & c))
 
     If a character c is in the range
-   \u0800 through uffff, then it is
+   \\u0800 through uffff, then it is
    represented by three bytes, to be written in the order shown:
 
 

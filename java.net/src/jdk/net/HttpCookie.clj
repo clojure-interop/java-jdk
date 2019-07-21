@@ -48,7 +48,7 @@
    may contain more than one cookie definitions, so this is a static
    utility method instead of another constructor.
 
-  header - a String specifying the set-cookie header. The header should start with `set-cookie`, or `set-cookie2` token; or it should have no leading token at all. - `java.lang.String`
+  header - a String specifying the set-cookie header. The header should start with \"set-cookie\", or \"set-cookie2\" token; or it should have no leading token at all. - `java.lang.String`
 
   returns: a List of cookie parsed from header line string - `java.util.List<java.net.HttpCookie>`
 
@@ -197,7 +197,7 @@
 (defn to-string
   "Constructs a cookie header string representation of this cookie,
    which is in the format defined by corresponding cookie specification,
-   but without the leading `Cookie:` token.
+   but without the leading \"Cookie:\" token.
 
   returns: a string form of the cookie. The string has the defined format - `java.lang.String`"
   (^java.lang.String [^HttpCookie this]

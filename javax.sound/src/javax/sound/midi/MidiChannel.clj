@@ -1,8 +1,8 @@
 (ns javax.sound.midi.MidiChannel
   "A MidiChannel object represents a single MIDI channel.
   Generally, each MidiChannel method processes a like-named MIDI
-  `channel voice` or `channel mode` message as defined by the MIDI specification. However,
-  MidiChannel adds some `get` methods  that retrieve the value
+  \"channel voice\" or \"channel mode\" message as defined by the MIDI specification. However,
+  MidiChannel adds some \"get\" methods  that retrieve the value
   most recently set by one of the standard MIDI channel messages.  Similarly,
   methods for per-channel solo and mute have been added.
 
@@ -53,11 +53,11 @@
    the channel can synthesize multiple notes simultaneously.
    The default is mono off (poly mode on).
 
-   `Mono` is short for the word `monophonic,` which in this context
-   is opposed to the word `polyphonic` and refers to a single synthesizer
+   \"Mono\" is short for the word \"monophonic,\" which in this context
+   is opposed to the word \"polyphonic\" and refers to a single synthesizer
    voice per MIDI channel.  It
    has nothing to do with how many audio channels there might be
-   (as in `monophonic` versus `stereophonic` recordings).
+   (as in \"monophonic\" versus \"stereophonic\" recordings).
 
    It is possible that the underlying synthesizer
    does not support mono mode. In order
@@ -369,12 +369,12 @@
 
 (defn local-control
   "Turns local control on or off.  The default is for local control
-   to be on.  The `on` setting means that if a device is capable
+   to be on.  The \"on\" setting means that if a device is capable
    of both synthesizing sound and transmitting MIDI messages,
    it will synthesize sound in response to the note-on and
    note-off messages that it itself transmits.  It will also respond
    to messages received from other transmitting devices.
-   The `off` setting means that the synthesizer will ignore its
+   The \"off\" setting means that the synthesizer will ignore its
    own transmitted MIDI messages, but not those received from other devices.
 
    It is possible that the underlying synthesizer

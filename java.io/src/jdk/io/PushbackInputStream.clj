@@ -1,13 +1,13 @@
 (ns jdk.io.PushbackInputStream
   "A PushbackInputStream adds
   functionality to another input stream, namely
-  the  ability to `push back` or `unread`
+  the  ability to \"push back\" or \"unread\"
   one byte. This is useful in situations where
   it is  convenient for a fragment of code
   to read an indefinite number of data bytes
   that  are delimited by a particular byte
   value; after reading the terminating byte,
-  the  code fragment can `unread` it, so that
+  the  code fragment can \"unread\" it, so that
   the next read operation on the input stream
   will reread the byte that was pushed back.
   For example, bytes representing the  characters

@@ -13,7 +13,7 @@
   can be changed using the setCurrentTheme method, refer to it
   for details on changing the theme. Prior to 1.5 the default
   theme was DefaultMetalTheme. The system property
-  `swing.metalTheme` can be set to `steel` to indicate
+  \"swing.metalTheme\" can be set to \"steel\" to indicate
   the default should be DefaultMetalTheme.
 
   Warning:
@@ -448,7 +448,7 @@
 
 (defn get-name
   "Returns the name of this look and feel. This returns
-   `Metal`.
+   \"Metal\".
 
   returns: the name of this look and feel - `java.lang.String`"
   (^java.lang.String [^MetalLookAndFeel this]
@@ -466,7 +466,7 @@
 
 (defn get-description
   "Returns a short description of this look and feel. This returns
-   `The Java(tm) Look and Feel`.
+   \"The Java(tm) Look and Feel\".
 
   returns: a short description for the look and feel - `java.lang.String`"
   (^java.lang.String [^MetalLookAndFeel this]
@@ -501,7 +501,7 @@
 
 (defn get-id
   "Returns an identifier for this look and feel. This returns
-   `Metal`.
+   \"Metal\".
 
   returns: the identifier of this look and feel - `java.lang.String`"
   (^java.lang.String [^MetalLookAndFeel this]

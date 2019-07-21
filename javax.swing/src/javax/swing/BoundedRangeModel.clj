@@ -18,14 +18,14 @@
   ScrollBar.
 
 
-    The minimum and maximum set methods `correct` the other
+    The minimum and maximum set methods \"correct\" the other
     three properties to accommodate their new value argument.  For
     example setting the model's minimum may change its maximum, value,
     and extent properties (in that order), to maintain the constraints
     specified above.
 
 
-    The value and extent set methods `correct` their argument to
+    The value and extent set methods \"correct\" their argument to
     fit within the limits defined by the other three properties.
     For example if value == maximum, setExtent(10)
     would change the extent (back) to zero.
@@ -81,10 +81,10 @@
    maximum - value.
 
    When a BoundedRange model is used with a scrollbar the extent
-   defines the length of the scrollbar knob (aka the `thumb` or
-   `elevator`).  The extent usually represents how much of the
+   defines the length of the scrollbar knob (aka the \"thumb\" or
+   \"elevator\").  The extent usually represents how much of the
    object being scrolled is visible. When used with a slider,
-   the extent determines how much the value can `jump`, for
+   the extent determines how much the value can \"jump\", for
    example when the user presses PgUp or PgDn.
 
    Notifies any listeners if the model changes.
@@ -129,7 +129,7 @@
    do not want individual change events to occur.
 
   value - an int giving the current value - `int`
-  extent - an int giving the amount by which the value can `jump` - `int`
+  extent - an int giving the amount by which the value can \"jump\" - `int`
   min - an int giving the minimum value - `int`
   max - an int giving the maximum value - `int`
   adjusting - a boolean, true if a series of changes are in progress - `boolean`"
@@ -163,8 +163,8 @@
    value+extent.
 
    When a BoundedRange model is used with a scrollbar the value
-   specifies the origin of the scrollbar knob (aka the `thumb` or
-   `elevator`).  The value usually represents the origin of the
+   specifies the origin of the scrollbar knob (aka the \"thumb\" or
+   \"elevator\").  The value usually represents the origin of the
    visible part of the object being scrolled.
 
    Notifies any listeners if the model changes.

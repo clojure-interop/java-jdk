@@ -17,7 +17,7 @@
   if no property has been defined.
 
   The system property that controls which Factory implementation
-  to create is named `javax.xml.parsers.SAXParserFactory`.
+  to create is named \"javax.xml.parsers.SAXParserFactory\".
   This property names a class that is a concrete subclass of this
   abstract class. If no property is defined, a platform default
   will be used.

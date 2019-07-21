@@ -53,7 +53,7 @@
 
   handler - a CallbackHandler for obtaining authentication information, which may be null - `javax.security.auth.callback.CallbackHandler`
 
-  throws: java.lang.SecurityException - if the caller does not pass a security check for SecurityPermission(`authProvider.name`), where name is the value returned by this provider's getName method"
+  throws: java.lang.SecurityException - if the caller does not pass a security check for SecurityPermission(\"authProvider.name\"), where name is the value returned by this provider's getName method"
   ([^AuthProvider this ^javax.security.auth.callback.CallbackHandler handler]
     (-> this (.setCallbackHandler handler))))
 

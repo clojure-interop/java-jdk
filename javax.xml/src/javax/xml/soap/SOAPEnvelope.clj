@@ -63,8 +63,8 @@
   Name object with all three.
 
 
-      Name name = se.createName(`GetLastTradePrice`, `WOMBAT`,
-                                 `http://www.wombat.org/trader`);"
+      Name name = se.createName(\"GetLastTradePrice\", \"WOMBAT\",
+                                 \"http://www.wombat.org/trader\");"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.soap SOAPEnvelope]))
 

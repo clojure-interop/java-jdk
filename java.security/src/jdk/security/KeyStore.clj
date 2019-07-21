@@ -33,7 +33,7 @@
   This type of entry can be used to authenticate other parties.
 
 
-   Each entry in a keystore is identified by an `alias` string. In the
+   Each entry in a keystore is identified by an \"alias\" string. In the
   case of private keys and their associated certificate chains, these strings
   distinguish among the different ways in which the entity may authenticate
   itself. For example, the entity may authenticate itself using different
@@ -63,7 +63,7 @@
   To provide a specific keystore type:
 
 
-       KeyStore ks = KeyStore.getInstance(`JKS`);
+       KeyStore ks = KeyStore.getInstance(\"JKS\");
   The system will return the most preferred implementation of the
   specified keystore type available in the environment.
 
@@ -77,7 +77,7 @@
      // get user password and file input stream
      char[] password = getPassword();
 
-     try (FileInputStream fis = new FileInputStream(`keyStoreName`)) {
+     try (FileInputStream fis = new FileInputStream(\"keyStoreName\")) {
          ks.load(fis, password);
      }
 
@@ -94,17 +94,17 @@
 
      // get my private key
      KeyStore.PrivateKeyEntry pkEntry = (KeyStore.PrivateKeyEntry)
-         ks.getEntry(`privateKeyAlias`, protParam);
+         ks.getEntry(\"privateKeyAlias\", protParam);
      PrivateKey myPrivateKey = pkEntry.getPrivateKey();
 
      // save my secret key
      javax.crypto.SecretKey mySecretKey;
      KeyStore.SecretKeyEntry skEntry =
          new KeyStore.SecretKeyEntry(mySecretKey);
-     ks.setEntry(`secretKeyAlias`, skEntry, protParam);
+     ks.setEntry(\"secretKeyAlias\", skEntry, protParam);
 
      // store away the keystore
-     try (FileOutputStream fos = new FileOutputStream(`newKeyStoreName`)) {
+     try (FileOutputStream fos = new FileOutputStream(\"newKeyStoreName\")) {
          ks.store(fos, password);
      }
 
@@ -153,7 +153,7 @@
 (defn *get-default-type
   "Returns the default keystore type as specified by the
    keystore.type security property, or the string
-   `jks` (acronym for `Java keystore`)
+   \"jks\" (acronym for \"Java keystore\")
    if no such property exists.
 
    The default keystore type can be used by applications that do not
@@ -165,7 +165,7 @@
    keystore.type security property to the desired keystore type.
 
   returns: the default keystore type as specified by the
-   keystore.type security property, or the string `jks`
+   keystore.type security property, or the string \"jks\"
    if no such property exists. - `java.lang.String`"
   (^java.lang.String []
     (KeyStore/getDefaultType )))

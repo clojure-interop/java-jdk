@@ -36,7 +36,7 @@
 
   dir - the path to directory in which to create the file - `java.nio.file.Path`
   prefix - the prefix string to be used in generating the file's name; may be null - `java.lang.String`
-  suffix - the suffix string to be used in generating the file's name; may be null, in which case `.tmp` is used - `java.lang.String`
+  suffix - the suffix string to be used in generating the file's name; may be null, in which case \".tmp\" is used - `java.lang.String`
   attrs - an optional list of file attributes to set atomically when creating the file - `java.nio.file.attribute.FileAttribute`
 
   returns: the path to the newly created file that did not exist before
@@ -322,13 +322,13 @@
    access to a file attribute that is the owner of the file.
 
     Usage Example:
-   Suppose we want to make `joe` the owner of a file:
+   Suppose we want to make \"joe\" the owner of a file:
 
 
        Path path = ...
        UserPrincipalLookupService lookupService =
            provider(path).getUserPrincipalLookupService();
-       UserPrincipal joe = lookupService.lookupPrincipalByName(`joe`);
+       UserPrincipal joe = lookupService.lookupPrincipalByName(\"joe\");
        Files.setOwner(path, joe);
 
   path - The path to the file - `java.nio.file.Path`
@@ -559,7 +559,7 @@
    The existing parameter is the path to an existing file. This
    method creates a new directory entry for the file so that it can be
    accessed using link as the path. On some file systems this is
-   known as creating a `hard link`. Whether the file attributes are
+   known as creating a \"hard link\". Whether the file attributes are
    maintained for the file or for each directory entry is file system
    specific and therefore not specified. Typically, a file system requires
    that all links (directory entries) for a file be on the same file system.
@@ -641,7 +641,7 @@
    character ':' stands for itself.
 
     view-name is the name of a FileAttributeView that identifies a set of file attributes. If not
-   specified then it defaults to `basic`, the name of the file
+   specified then it defaults to \"basic\", the name of the file
    attribute view that identifies the basic set of file attributes common to
    many file systems. attribute-name is the name of the attribute.
 
@@ -652,11 +652,11 @@
 
     Usage Example:
    Suppose we require the user ID of the file owner on a system that
-   supports a `unix` view:
+   supports a \"unix\" view:
 
 
       Path path = ...
-      int uid = (Integer)Files.getAttribute(path, `unix:uid`);
+      int uid = (Integer)Files.getAttribute(path, \"unix:uid\");
 
   path - the path to the file - `java.nio.file.Path`
   attribute - the attribute to read - `java.lang.String`
@@ -988,7 +988,7 @@
    character ':' stands for itself.
 
     view-name is the name of a FileAttributeView that identifies a set of file attributes. If not
-   specified then it defaults to `basic`, the name of the file
+   specified then it defaults to \"basic\", the name of the file
    attribute view that identifies the basic set of file attributes common to
    many file systems. attribute-name is the name of the attribute
    within the set.
@@ -999,11 +999,11 @@
    of the link is set. If the option NOFOLLOW_LINKS is present then symbolic links are not followed.
 
     Usage Example:
-   Suppose we want to set the DOS `hidden` attribute:
+   Suppose we want to set the DOS \"hidden\" attribute:
 
 
       Path path = ...
-      Files.setAttribute(path, `dos:hidden`, true);
+      Files.setAttribute(path, \"dos:hidden\", true);
 
   path - the path to the file - `java.nio.file.Path`
   attribute - the attribute to set - `java.lang.String`
@@ -1251,12 +1251,12 @@
    attributes may not been copied from the original file.
 
     Usage Examples:
-   Suppose we want to rename a file to `newname`, keeping the file in the
+   Suppose we want to rename a file to \"newname\", keeping the file in the
    same directory:
 
 
        Path source = ...
-       Files.move(source, source.resolveSibling(`newname`));
+       Files.move(source, source.resolveSibling(\"newname\"));
    Alternatively, suppose we want to move a file to new directory, keeping
    the same file name, and replacing any existing file of that name in the
    directory:
@@ -1446,11 +1446,11 @@
    of their file names against the given globbing pattern.
 
     For example, suppose we want to iterate over the files ending with
-   `.java` in a directory:
+   \".java\" in a directory:
 
 
        Path dir = ...
-       try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir, `*.java`)) {
+       try (DirectoryStream<Path> stream = Files.newDirectoryStream(dir, \"*.java\")) {
            :
        }
 
@@ -1578,10 +1578,10 @@
 
     This method recognizes the following as line terminators:
 
-      \u000D followed by \u000A,
+      \\u000D followed by \\u000A,
        CARRIAGE RETURN followed by LINE FEED
-      \u000A, LINE FEED
-      \u000D, CARRIAGE RETURN
+      \\u000A, LINE FEED
+      \\u000D, CARRIAGE RETURN
 
     Additional Unicode line terminators may be recognized in future
    releases.

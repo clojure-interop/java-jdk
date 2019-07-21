@@ -9,7 +9,7 @@
   An empty Name has a length of zero.
 
   In the context of javax.annotation.processing.annotation
-  processing, the guarantees for `the same` implementation must
+  processing, the guarantees for \"the same\" implementation must
   include contexts where the API mediated side effects of javax.annotation.processing.processors could be visible
   to each other, including successive annotation processing
   javax.annotation.processing.rounds."

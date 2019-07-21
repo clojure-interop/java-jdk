@@ -64,7 +64,7 @@
     (-> this (.hashCode))))
 
 (defn equals
-  "Indicates whether some other object is `equal to` this one.
+  "Indicates whether some other object is \"equal to\" this one.
 
    The equals method implements an equivalence relation
    on non-null object references:
@@ -113,7 +113,7 @@
 (defn to-string
   "Returns a string representation of the object. In general, the
    toString method returns a string that
-   `textually represents` this object. The result should
+   \"textually represents\" this object. The result should
    be a concise but informative representation that is easy for a
    person to read.
    It is recommended that all subclasses override this method.

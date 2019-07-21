@@ -28,7 +28,7 @@
   start-inclusive - the first index to cover, inclusive - `int`
   end-exclusive - index immediately past the last index to cover - `int`
 
-  returns: a Stream for the array range - `<T> java.util..Stream<T>`
+  returns: a Stream for the array range - `<T> java.util.stream.Stream<T>`
 
   throws: java.lang.ArrayIndexOutOfBoundsException - if startInclusive is negative, endExclusive is less than startInclusive, or endExclusive is greater than the array size"
   ([array ^Integer start-inclusive ^Integer end-exclusive]
@@ -75,7 +75,7 @@
 
 (defn *as-list
   "Returns a fixed-size list backed by the specified array.  (Changes to
-   the returned list `write through` to the array.)  This method acts
+   the returned list \"write through\" to the array.)  This method acts
    as bridge between array-based and collection-based APIs, in
    combination with Collection.toArray().  The returned list is
    serializable and implements RandomAccess.
@@ -84,7 +84,7 @@
    list initialized to contain several elements:
 
 
-       List<String> stooges = Arrays.asList(`Larry`, `Moe`, `Curly`);
+       List<String> stooges = Arrays.asList(\"Larry\", \"Moe\", \"Curly\");
 
   a - the array by which the list will be backed - `T`
 
@@ -146,10 +146,10 @@
 (defn *to-string
   "Returns a string representation of the contents of the specified array.
    The string representation consists of a list of the array's elements,
-   enclosed in square brackets (`[]`).  Adjacent elements are
-   separated by the characters `, ` (a comma followed by a
+   enclosed in square brackets (\"[]\").  Adjacent elements are
+   separated by the characters \", \" (a comma followed by a
    space).  Elements are converted to strings as by
-   String.valueOf(long).  Returns `null` if a
+   String.valueOf(long).  Returns \"null\" if a
    is null.
 
   a - the array whose string representation to return - `long[]`
@@ -159,7 +159,7 @@
     (Arrays/toString a)))
 
 (defn *deep-hash-code
-  "Returns a hash code based on the `deep contents` of the specified
+  "Returns a hash code based on the \"deep contents\" of the specified
    array.  If the array contains other arrays as elements, the
    hash code is based on their contents and so on, ad infinitum.
    It is therefore unacceptable to invoke this method on an array that
@@ -219,8 +219,8 @@
 
    The implementation was adapted from Tim Peters's list sort for Python
    (
-   TimSort).  It uses techniques from Peter McIlroy's `Optimistic
-   Sorting and Information Theoretic Complexity`, in Proceedings of the
+   TimSort).  It uses techniques from Peter McIlroy's \"Optimistic
+   Sorting and Information Theoretic Complexity\", in Proceedings of the
    Fourth Annual ACM-SIAM Symposium on Discrete Algorithms, pp 467-474,
    January 1993.
 
@@ -357,14 +357,14 @@
     (Arrays/copyOf original new-length)))
 
 (defn *deep-to-string
-  "Returns a string representation of the `deep contents` of the specified
+  "Returns a string representation of the \"deep contents\" of the specified
    array.  If the array contains other arrays as elements, the string
    representation contains their contents and so on.  This method is
    designed for converting multidimensional arrays to strings.
 
    The string representation consists of a list of the array's
-   elements, enclosed in square brackets (`[]`).  Adjacent
-   elements are separated by the characters `, ` (a comma
+   elements, enclosed in square brackets (\"[]\").  Adjacent
+   elements are separated by the characters \", \" (a comma
    followed by a space).  Elements are converted to strings as by
    String.valueOf(Object), unless they are themselves
    arrays.
@@ -378,10 +378,10 @@
    To avoid infinite recursion, if the specified array contains itself
    as an element, or contains an indirect reference to itself through one
    or more levels of arrays, the self-reference is converted to the string
-   `[...]`.  For example, an array containing only a reference
-   to itself would be rendered as `[[...]]`.
+   \"[...]\".  For example, an array containing only a reference
+   to itself would be rendered as \"[[...]]\".
 
-   This method returns `null` if the specified array
+   This method returns \"null\" if the specified array
    is null.
 
   a - the array whose string representation to return - `java.lang.Object[]`

@@ -441,7 +441,7 @@
 
   The MediaType instance for Engineering A, 8 1/2 x 11 in.
 
-  type: java.awt.Pagettributes$MediaType"
+  type: java.awt.PageAttributes$MediaType"
   PageAttributes$MediaType/A)
 
 (def *-b

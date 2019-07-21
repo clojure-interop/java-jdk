@@ -19,7 +19,7 @@
    This is an integer-based version of the Julian Day Number.
    Julian Day is a well-known system that represents the count of whole days since day 0,
    which is defined to be January 1, 4713 BCE in the Julian calendar, and -4713-11-24 Gregorian.
-   The field  has `JulianDay` as 'name', and 'DAYS' as 'baseUnit'.
+   The field  has \"JulianDay\" as 'name', and 'DAYS' as 'baseUnit'.
    The field always refers to the local date-time, ignoring the offset or zone.
 
    For date-times, 'JULIAN_DAY.getFrom()' assumes the same value from

@@ -17,7 +17,7 @@
 
   The base class for both standard and custom components
       that use the Swing architecture.
-  A `pluggable look and feel` (L&F) that can be specified by the
+  A \"pluggable look and feel\" (L&F) that can be specified by the
       programmer or (optionally) selected by the user at runtime.
       The look and feel for each component is provided by a
       UI delegate -- an object that descends from
@@ -151,7 +151,7 @@
   "Static Constant.
 
   The comment to display when the cursor is over the component,
-   also known as a `value tip`, `flyover help`, or `flyover label`.
+   also known as a \"value tip\", \"flyover help\", or \"flyover label\".
 
   type: java.lang.String"
   JComponent/TOOL_TIP_TEXT_KEY)
@@ -160,7 +160,7 @@
   "Returns the default locale used to initialize each JComponent's
    locale property upon creation.
 
-   The default locale has `AppContext` scope so that applets (and
+   The default locale has \"AppContext\" scope so that applets (and
    potentially multiple lightweight applications running in a single VM)
    can have their own setting. An applet can safely alter its default
    locale because it will have no affect on other applets (or the browser).
@@ -173,7 +173,7 @@
   "Sets the default locale used to initialize each JComponent's locale
    property upon creation.  The initial value is the VM's default locale.
 
-   The default locale has `AppContext` scope so that applets (and
+   The default locale has \"AppContext\" scope so that applets (and
    potentially multiple lightweight applications running in a single VM)
    can have their own setting. An applet can safely alter its default
    locale because it will have no affect on other applets (or the browser).
@@ -198,7 +198,7 @@
    An opaque component paints every pixel within its
    rectangular bounds. A non-opaque component paints only a subset of
    its pixels or none at all, allowing the pixels underneath it to
-   `show through`.  Therefore, a component that does not fully paint
+   \"show through\".  Therefore, a component that does not fully paint
    its pixels provides a degree of transparency.
 
    Subclasses that guarantee to always completely paint their contents
@@ -263,7 +263,7 @@
     (-> this (.setNextFocusableComponent a-component))))
 
 (defn get-location
-  "Stores the x,y origin of this component into `return value`
+  "Stores the x,y origin of this component into \"return value\"
    rv and returns rv.
    If rv is null a new Point
    is allocated.  This version of getLocation is useful
@@ -318,7 +318,7 @@
     (-> this (.hide))))
 
 (defn compute-visible-rect
-  "Returns the Component's `visible rect rectangle` -  the
+  "Returns the Component's \"visible rect rectangle\" -  the
    intersection of the visible rectangles for this component
    and all of its ancestors.  The return value is stored in
    visibleRect.
@@ -413,7 +413,7 @@
     (-> this (.firePropertyChange property-name old-value new-value))))
 
 (defn put-client-property
-  "Adds an arbitrary key/value `client property` to this component.
+  "Adds an arbitrary key/value \"client property\" to this component.
 
    The get/putClientProperty methods provide access to
    a small per-instance hashtable. Callers can use get/putClientProperty
@@ -422,7 +422,7 @@
    layout manager might store per child constraints this way. For example:
 
 
-   componentA.putClientProperty(`to the left of`, componentB);
+   componentA.putClientProperty(\"to the left of\", componentB);
    If value is null this method will remove the property.
    Changes to client properties are reported with
    PropertyChange events.
@@ -1144,7 +1144,7 @@
 
    You can detect changes in the value of this property by listening for
    property change events on this component with name
-   `paintingForPrint`.
+   \"paintingForPrint\".
 
    Note: This method provides complimentary functionality to that provided
    by other high level Swing printing APIs. However, it deals strictly with
@@ -1236,7 +1236,7 @@
    this ability and its return value will be changed by this method: to
    true immediately before rendering and to false
    immediately after. With each change a property change event is fired on
-   this component with the name `paintingForPrint`.
+   this component with the name \"paintingForPrint\".
 
    This method sets the component's state such that the double buffer
    will not be used: painting will be done directly on the passed in
@@ -1277,7 +1277,7 @@
     (-> this (.requestFocus))))
 
 (defn get-bounds
-  "Stores the bounds of this component into `return value`
+  "Stores the bounds of this component into \"return value\"
    rv and returns rv.
    If rv is null a new Rectangle
    is allocated.  This version of getBounds is useful
@@ -1332,7 +1332,7 @@
    current focus owner will be called before this component requests
    focus. The default is true. Set to false on components such as a
    Cancel button or a scrollbar, which should activate even if the
-   input in the current focus owner is not `passed` by the input
+   input in the current focus owner is not \"passed\" by the input
    verifier for that component.
 
   verify-input-when-focus-target - value for the verifyInputWhenFocusTarget property - `boolean`"
@@ -1412,7 +1412,7 @@
     (-> this (.getListeners listener-type))))
 
 (defn get-visible-rect
-  "Returns the Component's `visible rectangle` -  the
+  "Returns the Component's \"visible rectangle\" -  the
    intersection of this component's visible rectangle,
    new Rectangle(0, 0, getWidth(), getHeight()),
    and all of its ancestors' visible rectangles.
@@ -1525,7 +1525,7 @@
     (-> this (.revalidate))))
 
 (defn get-size
-  "Stores the width/height of this component into `return value`
+  "Stores the width/height of this component into \"return value\"
    rv and returns rv.
    If rv is null a new Dimension
    object is allocated.  This version of getSize

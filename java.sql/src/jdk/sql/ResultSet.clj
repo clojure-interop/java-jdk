@@ -25,7 +25,7 @@
         Statement stmt = con.createStatement(
                                        ResultSet.TYPE_SCROLL_INSENSITIVE,
                                        ResultSet.CONCUR_UPDATABLE);
-        ResultSet rs = stmt.executeQuery(`SELECT a, b FROM TABLE2`);
+        ResultSet rs = stmt.executeQuery(\"SELECT a, b FROM TABLE2\");
         // rs will be scrollable, will not show changes made by others,
         // and will be updatable
   The ResultSet interface provides
@@ -74,7 +74,7 @@
 
 
         rs.absolute(5); // moves the cursor to the fifth row of rs
-        rs.updateString(`NAME`, `AINSWORTH`); // updates the
+        rs.updateString(\"NAME\", \"AINSWORTH\"); // updates the
            // NAME column of row 5 to be AINSWORTH
         rs.updateRow(); // updates the row in the data source
   to insert column values into the insert row.  An updatable
@@ -86,7 +86,7 @@
 
 
         rs.moveToInsertRow(); // moves cursor to the insert row
-        rs.updateString(1, `AINSWORTH`); // updates the
+        rs.updateString(1, \"AINSWORTH\"); // updates the
            // first column of the insert row to be AINSWORTH
         rs.updateInt(2,35); // updates the second column to be 35
         rs.updateBoolean(3, true); // updates the third column to true
@@ -199,10 +199,10 @@
   returns: a Java input stream that delivers the database column value
            as a stream of two-byte Unicode characters;
            if the value is SQL NULL, the value returned is
-           null - `.io.InputStream`
+           null - `java.io.InputStream`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  (^.io.InputStream [^ResultSet this ^Integer column-index]
+  (^java.io.InputStream [^ResultSet this ^Integer column-index]
     (-> this (.getUnicodeStream column-index))))
 
 (defn get-row-id
@@ -1243,10 +1243,10 @@
    a boolean in the Java programming language.
 
    If the designated column has a datatype of CHAR or VARCHAR
-   and contains a `0` or has a datatype of BIT, TINYINT, SMALLINT, INTEGER or BIGINT
+   and contains a \"0\" or has a datatype of BIT, TINYINT, SMALLINT, INTEGER or BIGINT
    and contains  a 0, a value of false is returned.  If the designated column has a datatype
    of CHAR or VARCHAR
-   and contains a `1` or has a datatype of BIT, TINYINT, SMALLINT, INTEGER or BIGINT
+   and contains a \"1\" or has a datatype of BIT, TINYINT, SMALLINT, INTEGER or BIGINT
    and contains  a 1, a value of true is returned.
 
   column-index - the first column is 1, the second is 2, ... - `int`
@@ -1458,7 +1458,7 @@
 
 (defn row-deleted
   "Retrieves whether a row has been deleted.  A deleted row may leave
-   a visible `hole` in a result set.  This method can be used to
+   a visible \"hole\" in a result set.  This method can be used to
    detect holes in a result set.  The value returned depends on whether
    or not this ResultSet object can detect deletions.
 
@@ -1480,10 +1480,10 @@
   scale - the number of digits to the right of the decimal point - `int`
 
   returns: the column value; if the value is SQL NULL, the
-   value returned is null - `.math.BigDecimal`
+   value returned is null - `java.math.BigDecimal`
 
   throws: java.sql.SQLException - if the columnIndex is not valid; if a database access error occurs or this method is called on a closed result set"
-  (^.math.BigDecimal [^ResultSet this ^Integer column-index ^Integer scale]
+  (^java.math.BigDecimal [^ResultSet this ^Integer column-index ^Integer scale]
     (-> this (.getBigDecimal column-index scale)))
   (^java.math.BigDecimal [^ResultSet this ^Integer column-index]
     (-> this (.getBigDecimal column-index))))

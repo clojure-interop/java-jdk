@@ -92,11 +92,11 @@
    syntax:pattern
    where ':' stands for itself.
 
-    A FileSystem implementation supports the `glob` and
-   `regex` syntaxes, and may support others. The value of the syntax
+    A FileSystem implementation supports the \"glob\" and
+   \"regex\" syntaxes, and may support others. The value of the syntax
    component is compared without regard to case.
 
-    When the syntax is `glob` then the String
+    When the syntax is \"glob\" then the String
    representation of the path is matched using a limited pattern language
    that resembles regular expressions but with a simpler syntax. For example:
 
@@ -129,10 +129,10 @@
      /home/gus/data on UNIX platforms
 
 
-     C:\\*
-     Matches C:\foo and C:\bar on the Windows
+     C:\\\\*
+     Matches C:\\foo and C:\\bar on the Windows
      platform (note that the backslash is escaped; as a string literal in the
-     Java Language the pattern would be `C:\\\\*`)
+     Java Language the pattern would be \"C:\\\\\\\\*\")
 
 
 
@@ -149,32 +149,32 @@
       The ? character matches exactly one character of a
      name component.
 
-      The backslash character (\) is used to escape characters
+      The backslash character (\\) is used to escape characters
      that would otherwise be interpreted as special characters. The expression
-     \\ matches a single backslash and `\{` matches a left brace
+     \\\\ matches a single backslash and \"\\{\" matches a left brace
      for example.
 
       The [ ] characters are a bracket expression that
      match a single character of a name component out of a set of characters.
-     For example, [abc] matches `a`, `b`, or `c`.
+     For example, [abc] matches \"a\", \"b\", or \"c\".
      The hyphen (-) may be used to specify a range so [a-z]
-     specifies a range that matches from `a` to `z` (inclusive).
-     These forms can be mixed so [abce-g] matches `a`, `b`,
-     `c`, `e`, `f` or `g`. If the character
-     after the [ is a ! then it is used for negation so [!a-c] matches any character except `a`, `b`, or `c`.
-      Within a bracket expression the *, ? and \
+     specifies a range that matches from \"a\" to \"z\" (inclusive).
+     These forms can be mixed so [abce-g] matches \"a\", \"b\",
+     \"c\", \"e\", \"f\" or \"g\". If the character
+     after the [ is a ! then it is used for negation so [!a-c] matches any character except \"a\", \"b\", or \"c\".
+      Within a bracket expression the *, ? and \\
      characters match themselves. The (-) character matches itself if
      it is the first character within the brackets, or the first character
      after the ! if negating.
 
       The { } characters are a group of subpatterns, where
-     the group matches if any subpattern in the group matches. The `,`
+     the group matches if any subpattern in the group matches. The \",\"
      character is used to separate the subpatterns. Groups cannot be nested.
 
 
       Leading period/dot characters in file name are
      treated as regular characters in match operations. For example,
-     the `*` glob pattern matches file name `.login`.
+     the \"*\" glob pattern matches file name \".login\".
      The Files.isHidden(java.nio.file.Path) method may be used to test whether a file
      is considered hidden.
 
@@ -187,7 +187,7 @@
 
 
 
-    When the syntax is `regex` then the pattern component is a
+    When the syntax is \"regex\" then the pattern component is a
    regular expression as defined by the Pattern
    class.
 
@@ -212,7 +212,7 @@
    store is not accessible, then it is not returned by the iterator.
 
     In the case of the default provider, and a security manager is
-   installed, the security manager is invoked to check RuntimePermission(`getFileStoreAttributes`). If denied, then
+   installed, the security manager is invoked to check RuntimePermission(\"getFileStoreAttributes\"). If denied, then
    no file stores are returned by the iterator. In addition, the security
    manager's SecurityManager.checkRead(String) method is invoked to
    check read access to the file store's top-most directory. If
@@ -228,7 +228,7 @@
            long total = store.getTotalSpace() / 1024;
            long used = (store.getTotalSpace() - store.getUnallocatedSpace()) / 1024;
            long avail = store.getUsableSpace() / 1024;
-           System.out.format(`%-20s %12d %12d %12d%n`, store, total, used, avail);
+           System.out.format(\"%-20s %12d %12d %12d%n\", store, total, used, avail);
        }
 
   returns: An object to iterate over the backing file stores - `java.lang.Iterable<java.nio.file.FileStore>`"
@@ -244,8 +244,8 @@
    of name elements (see Path) and is joined to form a path string.
    The details as to how the Strings are joined is provider specific but
    typically they will be joined using the name-separator as the separator. For example, if the name separator is
-   `/` and getPath(`/foo`,`bar`,`gus`) is invoked, then the
-   path string `/foo/bar/gus` is converted to a Path.
+   \"/\" and getPath(\"/foo\",\"bar\",\"gus\") is invoked, then the
+   path string \"/foo/bar/gus\" is converted to a Path.
    A Path representing an empty path is returned if first
    is the empty string and more does not contain any non-empty
    strings.
@@ -254,7 +254,7 @@
    implementation dependent. In the simplest case, the path string is rejected,
    and InvalidPathException thrown, if the path string contains
    characters that cannot be converted to characters that are legal
-   to the file store. For example, on UNIX systems, the NUL (\u0000)
+   to the file store. For example, on UNIX systems, the NUL (\\u0000)
    character is not allowed to be present in a path. An implementation may
    choose to reject path strings that contain names that are longer than those
    allowed by any file store, and where an implementation supports a complex
@@ -327,11 +327,11 @@
    lookup user or group names.
 
     Usage Example:
-   Suppose we want to make `joe` the owner of a file:
+   Suppose we want to make \"joe\" the owner of a file:
 
 
        UserPrincipalLookupService lookupService = FileSystems.getDefault().getUserPrincipalLookupService();
-       Files.setOwner(path, lookupService.lookupPrincipalByName(`joe`));
+       Files.setOwner(path, lookupService.lookupPrincipalByName(\"joe\"));
 
   returns: The UserPrincipalLookupService for this file system - `java.nio.file.attribute.UserPrincipalLookupService`
 
@@ -374,7 +374,7 @@
    attribute views supported by this FileSystem.
 
     The BasicFileAttributeView is required to be supported and
-   therefore the set contains at least one element, `basic`.
+   therefore the set contains at least one element, \"basic\".
 
     The supportsFileAttributeView(String) method may be used to test if an
    underlying FileStore supports the file attributes identified by a

@@ -130,8 +130,8 @@
            minute of the next day. Thus, 23:59 on Dec 31, 1999 < 00:00 on
            Jan 1, 2000 < 00:01 on Jan 1, 2000.
 
-       Although historically not precise, midnight also belongs to `am`,
-           and noon belongs to `pm`, so on the same day,
+       Although historically not precise, midnight also belongs to \"am\",
+           and noon belongs to \"pm\", so on the same day,
            12:00 am (midnight) < 12:01 am, and 12:00 pm (noon) < 12:01 pm
 
 
@@ -664,7 +664,7 @@
   "Static Constant.
 
   A style specifier for getDisplayNames indicating names in all styles, such as
-   `January` and `Jan`.
+   \"January\" and \"Jan\".
 
   type: int"
   Calendar/ALL_STYLES)
@@ -689,7 +689,7 @@
   "Static Constant.
 
   A style specifier for getDisplayName and getDisplayNames indicating a narrow name used for format. Narrow names
-   are typically single character strings, such as `M` for Monday.
+   are typically single character strings, such as \"M\" for Monday.
 
   type: int"
   Calendar/NARROW_FORMAT)
@@ -698,7 +698,7 @@
   "Static Constant.
 
   A style specifier for getDisplayName and getDisplayNames indicating a narrow name independently. Narrow names
-   are typically single character strings, such as `M` for Monday.
+   are typically single character strings, such as \"M\" for Monday.
 
   type: int"
   Calendar/NARROW_STANDALONE)
@@ -768,9 +768,9 @@
   "Returns an unmodifiable Set containing all calendar types
    supported by Calendar in the runtime environment. The available
    calendar types can be used for the Unicode locale extensions.
-   The Set returned contains at least `gregory`. The
-   calendar types don't include aliases, such as `gregorian` for
-   `gregory`.
+   The Set returned contains at least \"gregory\". The
+   calendar types don't include aliases, such as \"gregorian\" for
+   \"gregory\".
 
   returns: an unmodifiable Set containing all available calendar types - `java.util.Set<java.lang.String>`"
   (^java.util.Set []
@@ -879,7 +879,7 @@
 
 (defn set-lenient
   "Specifies whether or not date/time interpretation is to be lenient.  With
-   lenient interpretation, a date such as `February 942, 1996` will be
+   lenient interpretation, a date such as \"February 942, 1996\" will be
    treated as being equivalent to the 941st day after February 1, 1996.
    With strict (non-lenient) interpretation, such dates will cause an exception to be
    thrown. The default is lenient.
@@ -948,7 +948,7 @@
    For example, if this Calendar is a
    GregorianCalendar and its date is 2005-01-01, then
    the string representation of the MONTH field would be
-   `January` in the long style in an English locale or `Jan` in
+   \"January\" in the long style in an English locale or \"Jan\" in
    the short style. However, no string representation would be
    available for the DAY_OF_MONTH field, and this method
    would return null.
@@ -1075,12 +1075,12 @@
   "Returns a Map containing all names of the calendar
    field in the given style and
    locale and their corresponding field values. For
-   example, if this Calendar is a GregorianCalendar, the returned map would contain `Jan` to
-   JANUARY, `Feb` to FEBRUARY, and so on, in the
+   example, if this Calendar is a GregorianCalendar, the returned map would contain \"Jan\" to
+   JANUARY, \"Feb\" to FEBRUARY, and so on, in the
    short style in an English locale.
 
    Narrow names may not be unique due to use of single characters,
-   such as `S` for Sunday and Saturday. In that case narrow names are not
+   such as \"S\" for Sunday and Saturday. In that case narrow names are not
    included in the returned Map.
 
    The values of other calendar fields may be taken into
@@ -1270,7 +1270,7 @@
 
 (defn get-time
   "Returns a Date object representing this
-   Calendar's time value (millisecond offset from the Epoch`).
+   Calendar's time value (millisecond offset from the Epoch\").
 
   returns: a Date representing the time value. - `java.util.Date`"
   (^java.util.Date [^Calendar this]

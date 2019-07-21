@@ -1,6 +1,6 @@
 (ns javax.swing.plaf.basic.BasicToolBarUI
   "A Basic L&F implementation of ToolBarUI.  This implementation
-  is a `combined` view/controller."
+  is a \"combined\" view/controller."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.plaf.basic BasicToolBarUI]))
 

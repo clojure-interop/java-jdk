@@ -512,7 +512,7 @@
 
    The comparison is based first on the underlying time-line date, then
    on the chronology.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
    For example, the following is the comparator order:
 
@@ -523,7 +523,7 @@
 
    Values #2 and #3 represent the same date on the time-line.
    When two values represent the same date, the chronology ID is compared to distinguish them.
-   This step is needed to make the ordering `consistent with equals`.
+   This step is needed to make the ordering \"consistent with equals\".
 
    If all the date objects being compared are in the same chronology, then the
    additional chronology stage is not required and only the local date is used.

@@ -8,13 +8,13 @@
 
 
 
-    <element name=`RetrievalMethod` type=`ds:RetrievalMethodType`/>
-    <complexType name=`RetrievalMethodType`>
+    <element name=\"RetrievalMethod\" type=\"ds:RetrievalMethodType\"/>
+    <complexType name=\"RetrievalMethodType\">
       <sequence>
-        <element name=`Transforms` type=`ds:TransformsType` minOccurs=`0`/>
+        <element name=\"Transforms\" type=\"ds:TransformsType\" minOccurs=\"0\"/>
       </sequence>
-      <attribute name=`URI` type=`anyURI`/>
-      <attribute name=`Type` type=`anyURI` use=`optional`/>
+      <attribute name=\"URI\" type=\"anyURI\"/>
+      <attribute name=\"Type\" type=\"anyURI\" use=\"optional\"/>
     </complexType>
 
   A RetrievalMethod instance may be created by invoking one of the
@@ -24,9 +24,9 @@
   the type of KeyInfo, and an optional list of Transforms; for example:
 
 
-    KeyInfoFactory factory = KeyInfoFactory.getInstance(`DOM`);
+    KeyInfoFactory factory = KeyInfoFactory.getInstance(\"DOM\");
     RetrievalMethod rm = factory.newRetrievalMethod
-       (`#KeyValue-1`, KeyValue.DSA_TYPE, Collections.singletonList(Transform.BASE64));"
+       (\"#KeyValue-1\", KeyValue.DSA_TYPE, Collections.singletonList(Transform.BASE64));"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.crypto.dsig.keyinfo RetrievalMethod]))
 

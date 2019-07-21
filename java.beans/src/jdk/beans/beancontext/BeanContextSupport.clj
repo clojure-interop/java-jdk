@@ -30,7 +30,7 @@
 
 (defn add-all
   "add Collection to set of Children (Unsupported)
-   implementations must synchronized on the hierarchy lock and `children` protected field
+   implementations must synchronized on the hierarchy lock and \"children\" protected field
 
   c - collection containing elements to be added to this collection - `java.util.Collection`
 
@@ -50,7 +50,7 @@
 
 (defn needs-gui
   "This method is typically called from the environment in order to determine
-   if the implementor `needs` a GUI.
+   if the implementor \"needs\" a GUI.
 
 
    The algorithm used herein tests the BeanContextPeer, and its current children
@@ -247,7 +247,7 @@
 
 (defn retain-all
   "retain only specified children (Unsupported)
-   implementations must synchronized on the hierarchy lock and `children` protected field
+   implementations must synchronized on the hierarchy lock and \"children\" protected field
 
   c - collection containing elements to be retained in this collection - `java.util.Collection`
 
@@ -259,7 +259,7 @@
 
 (defn clear
   "clear the children (Unsupported)
-   implementations must synchronized on the hierarchy lock and `children` protected field
+   implementations must synchronized on the hierarchy lock and \"children\" protected field
 
   throws: java.lang.UnsupportedOperationException - thrown unconditionally by this implementation"
   ([^BeanContextSupport this]
@@ -290,7 +290,7 @@
 
 (defn remove-all
   "remove all specified children (Unsupported)
-   implementations must synchronized on the hierarchy lock and `children` protected field
+   implementations must synchronized on the hierarchy lock and \"children\" protected field
 
   c - collection containing elements to be removed from this collection - `java.util.Collection`
 

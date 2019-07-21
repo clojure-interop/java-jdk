@@ -12,14 +12,14 @@
   but the methods in this class return only standard classes that are
   part of the JMX implementation.
 
-  As an example, suppose you wanted to find all MBeans where the Enabled attribute is true and the Owner attribute is `Duke`. Here is how you could construct the appropriate QueryExp by
+  As an example, suppose you wanted to find all MBeans where the Enabled attribute is true and the Owner attribute is \"Duke\". Here is how you could construct the appropriate QueryExp by
   chaining together method calls:
 
 
 
   QueryExp query =
-      Query.and(Query.eq(Query.attr(`Enabled`), Query.value(true)),
-                Query.eq(Query.attr(`Owner`), Query.value(`Duke`)));"
+      Query.and(Query.eq(Query.attr(\"Enabled\"), Query.value(true)),
+                Query.eq(Query.attr(\"Owner\"), Query.value(\"Duke\")));"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.management Query]))
 
@@ -112,13 +112,13 @@
   Query/DIV)
 
 (defn *lt
-  "Returns a query expression that represents a `less than` constraint on
+  "Returns a query expression that represents a \"less than\" constraint on
    two values.
 
   v-1 - A value expression. - `javax.management.ValueExp`
   v-2 - Another value expression. - `javax.management.ValueExp`
 
-  returns: A `less than` constraint on the arguments.  The
+  returns: A \"less than\" constraint on the arguments.  The
    returned object will be serialized as an instance of the
    non-public class
 
@@ -162,7 +162,7 @@
   v-1 - A value expression. - `javax.management.ValueExp`
   v-2 - Another value expression. - `javax.management.ValueExp`
 
-  returns: A `equal to` constraint on the arguments.  The
+  returns: A \"equal to\" constraint on the arguments.  The
    returned object will be serialized as an instance of the
    non-public class
 
@@ -188,13 +188,13 @@
     (Query/plus value-1 value-2)))
 
 (defn *leq
-  "Returns a query expression that represents a `less than or equal to`
+  "Returns a query expression that represents a \"less than or equal to\"
    constraint on two values.
 
   v-1 - A value expression. - `javax.management.ValueExp`
   v-2 - Another value expression. - `javax.management.ValueExp`
 
-  returns: A `less than or equal to` constraint on the arguments.
+  returns: A \"less than or equal to\" constraint on the arguments.
    The returned object will be serialized as an instance of the
    non-public class
 
@@ -270,13 +270,13 @@
     (Query/initialSubString a s)))
 
 (defn *gt
-  "Returns a query expression that represents a `greater than` constraint on
+  "Returns a query expression that represents a \"greater than\" constraint on
    two values.
 
   v-1 - A value expression. - `javax.management.ValueExp`
   v-2 - Another value expression. - `javax.management.ValueExp`
 
-  returns: A `greater than` constraint on the arguments.  The
+  returns: A \"greater than\" constraint on the arguments.  The
    returned object will be serialized as an instance of the
    non-public class
 
@@ -373,7 +373,7 @@
   "Returns a query expression that represents the constraint that one
    value is between two other values.
 
-  v-1 - A value expression that is `between` v2 and v3. - `javax.management.ValueExp`
+  v-1 - A value expression that is \"between\" v2 and v3. - `javax.management.ValueExp`
   v-2 - Value expression that represents a boundary of the constraint. - `javax.management.ValueExp`
   v-3 - Value expression that represents a boundary of the constraint. - `javax.management.ValueExp`
 
@@ -388,10 +388,10 @@
 (defn *match
   "Returns a query expression that represents a matching constraint on
    a string argument. The matching syntax is consistent with file globbing:
-   supports `?`, `*`, `[`,
-   each of which may be escaped with ``;
-   character classes may use `!` for negation and
-   `-` for range.
+   supports \"?\", \"*\", \"[\",
+   each of which may be escaped with \"\\\";
+   character classes may use \"!\" for negation and
+   \"-\" for range.
    (* for any character sequence,
    ? for a single arbitrary character,
    [...] for a character sequence).
@@ -447,13 +447,13 @@
     (Query/in val value-list)))
 
 (defn *geq
-  "Returns a query expression that represents a `greater than or equal
-   to` constraint on two values.
+  "Returns a query expression that represents a \"greater than or equal
+   to\" constraint on two values.
 
   v-1 - A value expression. - `javax.management.ValueExp`
   v-2 - Another value expression. - `javax.management.ValueExp`
 
-  returns: A `greater than or equal to` constraint on the
+  returns: A \"greater than or equal to\" constraint on the
    arguments.  The returned object will be serialized as an
    instance of the non-public class
 

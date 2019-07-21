@@ -30,8 +30,8 @@
     ...  -- Allows for future expansion --
   }
   Note: the PSSParameterSpec.DEFAULT uses the following:
-      message digest  -- `SHA-1`
-      mask generation function (mgf) -- `MGF1`
+      message digest  -- \"SHA-1\"
+      mask generation function (mgf) -- \"MGF1\"
       parameters for mgf -- MGF1ParameterSpec.SHA1
       SaltLength   -- 20
       TrailerField -- 1"

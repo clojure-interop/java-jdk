@@ -4,7 +4,7 @@
   Templates objects.
 
   The system property that determines which Factory implementation
-  to create is named `javax.xml.transform.TransformerFactory`.
+  to create is named \"javax.xml.transform.TransformerFactory\".
   This property names a concrete subclass of the
   TransformerFactory abstract class. If the property is not
   defined, a platform default is be used."

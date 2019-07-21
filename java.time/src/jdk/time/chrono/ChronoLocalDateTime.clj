@@ -174,12 +174,12 @@
 
    In most cases, there is only one valid offset for a local date-time.
    In the case of an overlap, where clocks are set back, there are two valid offsets.
-   This method uses the earlier offset typically corresponding to `summer`.
+   This method uses the earlier offset typically corresponding to \"summer\".
 
    In the case of a gap, where clocks jump forward, there is no valid offset.
    Instead, the local date-time is adjusted to be later by the length of the gap.
    For a typical one hour daylight savings change, the local date-time will be
-   moved one hour later into the offset typically corresponding to `summer`.
+   moved one hour later into the offset typically corresponding to \"summer\".
 
    To obtain the later offset during an overlap, call
    ChronoZonedDateTime.withLaterOffsetAtOverlap() on the result of this method.
@@ -363,7 +363,7 @@
 
    The comparison is based first on the underlying time-line date-time, then
    on the chronology.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
    For example, the following is the comparator order:
 
@@ -374,7 +374,7 @@
 
    Values #2 and #3 represent the same date-time on the time-line.
    When two values represent the same date-time, the chronology ID is compared to distinguish them.
-   This step is needed to make the ordering `consistent with equals`.
+   This step is needed to make the ordering \"consistent with equals\".
 
    If all the date-time objects being compared are in the same chronology, then the
    additional chronology stage is not required and only the local date-time is used.

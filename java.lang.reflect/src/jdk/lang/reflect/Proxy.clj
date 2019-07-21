@@ -48,7 +48,7 @@
   any of the proxy interfaces is non-public.
 
   The unqualified name of a proxy class is unspecified.  The space
-  of class names that begin with the string `$Proxy`
+  of class names that begin with the string \"$Proxy\"
   should be, however, reserved for proxy classes.
 
   A proxy class extends java.lang.reflect.Proxy.

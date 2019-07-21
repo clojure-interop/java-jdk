@@ -1,7 +1,7 @@
 (ns jdk.beans.PropertyChangeListenerProxy
   "A class which extends the EventListenerProxy
   specifically for adding a PropertyChangeListener
-  with a `bound` property.
+  with a \"bound\" property.
   Instances of this class can be added
   as PropertyChangeListeners to a bean
   which supports firing property change events.

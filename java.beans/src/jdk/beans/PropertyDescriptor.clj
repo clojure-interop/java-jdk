@@ -41,7 +41,7 @@
     (-> this (.setWriteMethod write-method))))
 
 (defn set-constrained
-  "Attempted updates to `Constrained` properties will cause a `VetoableChange`
+  "Attempted updates to \"Constrained\" properties will cause a \"VetoableChange\"
    event to get fired when the property is changed.
 
   constrained - True if this is a constrained property. - `boolean`"
@@ -103,7 +103,7 @@
     (-> this (.hashCode))))
 
 (defn constrained?
-  "Attempted updates to `Constrained` properties will cause a `VetoableChange`
+  "Attempted updates to \"Constrained\" properties will cause a \"VetoableChange\"
    event to get fired when the property is changed.
 
   returns: True if this is a constrained property. - `boolean`"
@@ -111,7 +111,7 @@
     (-> this (.isConstrained))))
 
 (defn bound?
-  "Updates to `bound` properties will cause a `PropertyChange` event to
+  "Updates to \"bound\" properties will cause a \"PropertyChange\" event to
    get fired when the property is changed.
 
   returns: True if this is a bound property. - `boolean`"
@@ -123,7 +123,7 @@
    for this property.
 
   returns: Any explicit PropertyEditor Class that has been registered
-            for this property.  Normally this will return `null`,
+            for this property.  Normally this will return \"null\",
             indicating that no special editor has been registered,
             so the PropertyEditorManager should be used to locate
             a suitable PropertyEditor. - `java.lang.Class<?>`"
@@ -131,7 +131,7 @@
     (-> this (.getPropertyEditorClass))))
 
 (defn set-bound
-  "Updates to `bound` properties will cause a `PropertyChange` event to
+  "Updates to \"bound\" properties will cause a \"PropertyChange\" event to
    get fired when the property is changed.
 
   bound - True if this is a bound property. - `boolean`"

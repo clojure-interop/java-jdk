@@ -6,22 +6,22 @@
   that the action being performed threw a checked exception.  The exception
   thrown by the action can be obtained by calling the
   getException method.  In effect, an
-  PrivilegedActionException is a `wrapper`
+  PrivilegedActionException is a \"wrapper\"
   for an exception thrown by a privileged action.
 
   As of release 1.4, this exception has been retrofitted to conform to
-  the general purpose exception-chaining mechanism.  The `exception thrown
-  by the privileged computation` that is provided at construction time and
+  the general purpose exception-chaining mechanism.  The \"exception thrown
+  by the privileged computation\" that is provided at construction time and
   accessed via the getException() method is now known as the
   cause, and may be accessed via the Throwable.getCause()
-  method, as well as the aforementioned `legacy method.`"
+  method, as well as the aforementioned \"legacy method.\""
   (:refer-clojure :only [require comment defn ->])
   (:import [java.security PrivilegedActionException]))
 
 (defn ->privileged-action-exception
   "Constructor.
 
-  Constructs a new PrivilegedActionException `wrapping`
+  Constructs a new PrivilegedActionException \"wrapping\"
    the specific Exception.
 
   exception - The exception thrown - `java.lang.Exception`"

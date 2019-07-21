@@ -1,6 +1,6 @@
 (ns javax.swing.plaf.metal.MetalSeparatorUI
   "A Metal L&F implementation of SeparatorUI.  This implementation
-  is a `combined` view/controller.
+  is a \"combined\" view/controller.
 
   Warning:
   Serialized objects of this class will not be compatible with

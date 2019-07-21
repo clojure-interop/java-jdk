@@ -78,8 +78,8 @@
 
 (defn get-symbol
   "Gets the symbol of this currency for the specified locale.
-   For example, for the US Dollar, the symbol is `$` if the specified
-   locale is the US, while for other locales it may be `US$`. If no
+   For example, for the US Dollar, the symbol is \"$\" if the specified
+   locale is the US, while for other locales it may be \"US$\". If no
    symbol can be determined, the ISO 4217 currency code is returned.
 
   locale - the locale for which a display name for this currency is needed - `java.util.Locale`

@@ -7,20 +7,20 @@
   either explicit or implicit information and use that information to
   build a BeanInfo object that comprehensively describes the target bean.
 
-  For each class `Foo`, explicit information may be available if there exists
-  a corresponding `FooBeanInfo` class that provides a non-null value when
+  For each class \"Foo\", explicit information may be available if there exists
+  a corresponding \"FooBeanInfo\" class that provides a non-null value when
   queried for the information.   We first look for the BeanInfo class by
   taking the full package-qualified name of the target bean class and
-  appending `BeanInfo` to form a new class name.  If this fails, then
+  appending \"BeanInfo\" to form a new class name.  If this fails, then
   we take the final classname component of this name, and look for that
   class in each of the packages specified in the BeanInfo package search
   path.
 
-  Thus for a class such as `sun.xyz.OurButton` we would first look for a
-  BeanInfo class called `sun.xyz.OurButtonBeanInfo` and if that failed we'd
+  Thus for a class such as \"sun.xyz.OurButton\" we would first look for a
+  BeanInfo class called \"sun.xyz.OurButtonBeanInfo\" and if that failed we'd
   look in each package in the BeanInfo search path for an OurButtonBeanInfo
   class.  With the default search path, this would mean looking for
-  `sun.beans.infos.OurButtonBeanInfo`.
+  \"sun.beans.infos.OurButtonBeanInfo\".
 
   If a class provides explicit BeanInfo about itself then we add that to
   the BeanInfo information we obtained from analyzing any derived classes,
@@ -105,8 +105,8 @@
    case when there is more than one character and both the first and
    second characters are upper case, we leave it alone.
 
-   Thus `FooBah` becomes `fooBah` and `X` becomes `x`, but `URL` stays
-   as `URL`.
+   Thus \"FooBah\" becomes \"fooBah\" and \"X\" becomes \"x\", but \"URL\" stays
+   as \"URL\".
 
   name - The string to be decapitalized. - `java.lang.String`
 
@@ -121,7 +121,7 @@
   returns: The array of package names that will be searched in
             order to find BeanInfo classes. The default value
             for this array is implementation-dependent; e.g.
-            Sun implementation initially sets to {`sun.beans.infos`}. - `java.lang.String[]`"
+            Sun implementation initially sets to {\"sun.beans.infos\"}. - `java.lang.String[]`"
   ([]
     (Introspector/getBeanInfoSearchPath )))
 
@@ -143,7 +143,7 @@
 (defn *flush-caches
   "Flush all of the Introspector's internal caches.  This method is
    not normally required.  It is normally only needed by advanced
-   tools that update existing `Class` objects in-place and need
+   tools that update existing \"Class\" objects in-place and need
    to make the Introspector re-analyze existing Class objects."
   ([]
     (Introspector/flushCaches )))
@@ -151,7 +151,7 @@
 (defn *flush-from-caches
   "Flush the Introspector's internal cached information for a given class.
    This method is not normally required.  It is normally only needed
-   by advanced tools that update existing `Class` objects in-place
+   by advanced tools that update existing \"Class\" objects in-place
    and need to make the Introspector re-analyze an existing Class object.
 
    Note that only the direct state associated with the target Class

@@ -10,7 +10,7 @@
   assuming the hash function disperses the elements properly among the
   buckets.  Iterating over this set requires time proportional to the sum of
   the HashSet instance's size (the number of elements) plus the
-  `capacity` of the backing HashMap instance (the number of
+  \"capacity\" of the backing HashMap instance (the number of
   buckets).  Thus, it's very important not to set the initial capacity too
   high (or the load factor too low) if iteration performance is important.
 
@@ -20,7 +20,7 @@
   This is typically accomplished by synchronizing on some object that
   naturally encapsulates the set.
 
-  If no such object exists, the set should be `wrapped` using the
+  If no such object exists, the set should be \"wrapped\" using the
   Collections.synchronizedSet
   method.  This is best done at creation time, to prevent accidental
   unsynchronized access to the set:

@@ -23,11 +23,11 @@
 
 
   // In this case the look and feel renders the title for the tab.
-  tabbedPane.addTab(`Tab`, myComponent);
+  tabbedPane.addTab(\"Tab\", myComponent);
   // In this case the custom component is responsible for rendering the
   // title of the tab.
   tabbedPane.addTab(null, myComponent);
-  tabbedPane.setTabComponentAt(0, new JLabel(`Tab`));
+  tabbedPane.setTabComponentAt(0, new JLabel(\"Tab\"));
   The latter is typically used when you want a more complex user interaction
   that requires custom components on the tab.  For example, you could
   provide a custom component that animates or one that has widgets for
@@ -347,7 +347,7 @@
   "Returns the name of the UI class that implements the
    L&F for this component.
 
-  returns: the string `TabbedPaneUI` - `java.lang.String`"
+  returns: the string \"TabbedPaneUI\" - `java.lang.String`"
   (^java.lang.String [^JTabbedPane this]
     (-> this (.getUIClassID))))
 

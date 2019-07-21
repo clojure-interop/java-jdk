@@ -5,7 +5,7 @@
   images.
   The specific rules implemented by this class are the basic set
   of 12 rules described in
-  T. Porter and T. Duff, `Compositing Digital Images`, SIGGRAPH 84,
+  T. Porter and T. Duff, \"Compositing Digital Images\", SIGGRAPH 84,
   253-259.
   The rest of this documentation assumes some familiarity with the
   definitions and concepts outlined in that paper.
@@ -87,7 +87,7 @@
   Factor  Definition
   Csr one of the raw color components of the source pixel
   Cdr one of the raw color components of the destination pixel
-  Aac  the `extra` alpha component from the AlphaComposite instance
+  Aac  the \"extra\" alpha component from the AlphaComposite instance
   Asr the raw alpha component of the source pixel
   Adrthe raw alpha component of the destination pixel
   Adf the final alpha component stored in the destination
@@ -163,8 +163,8 @@
        Cdf = Cr / Ar            (if dest is not premultiplied)
 
   Note that since the division is undefined if the resulting alpha
-  is zero, the division in that case is omitted to avoid the `divide
-  by zero` and the color components are left as
+  is zero, the division in that case is omitted to avoid the \"divide
+  by zero\" and the color components are left as
   all zeros.
 
   Performance Considerations

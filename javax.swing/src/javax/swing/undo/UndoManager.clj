@@ -184,7 +184,7 @@
    the value from the next significant edit that will be undone.
    If there are no edits to be undone and end has not
    been invoked this returns the value from the UIManager
-   property `AbstractUndoableEdit.undoText`.
+   property \"AbstractUndoableEdit.undoText\".
 
   returns: a description of the undoable form of this edit - `java.lang.String`"
   (^java.lang.String [^UndoManager this]
@@ -255,7 +255,7 @@
    the value from the next significant edit that will be redone.
    If there are no edits to be redone and end has not
    been invoked this returns the value from the UIManager
-   property `AbstractUndoableEdit.redoText`.
+   property \"AbstractUndoableEdit.redoText\".
 
   returns: a description of the redoable form of this edit - `java.lang.String`"
   (^java.lang.String [^UndoManager this]

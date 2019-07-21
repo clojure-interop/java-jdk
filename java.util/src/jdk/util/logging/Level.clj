@@ -155,8 +155,8 @@
 
    For example:
 
-        `SEVERE`
-        `1000`
+        \"SEVERE\"
+        \"1000\"
 
   name - string to be parsed - `java.lang.String`
 
@@ -198,7 +198,7 @@
 (defn to-string
   "Returns a string representation of this Level.
 
-  returns: the non-localized name of the Level, for example `INFO`. - `java.lang.String`"
+  returns: the non-localized name of the Level, for example \"INFO\". - `java.lang.String`"
   (^java.lang.String [^Level this]
     (-> this (.toString))))
 

@@ -44,7 +44,7 @@
   A MouseEvent object is passed to every
   MouseListener
   or MouseAdapter object which is registered to receive
-  the `interesting` mouse events using the component's
+  the \"interesting\" mouse events using the component's
   addMouseListener method.
   (MouseAdapter objects implement the
   MouseListener interface.) Each such listener object
@@ -197,7 +197,7 @@
 (def *-mouse-clicked
   "Static Constant.
 
-  The `mouse clicked` event. This MouseEvent
+  The \"mouse clicked\" event. This MouseEvent
    occurs when a mouse button is pressed and released.
 
   type: int"
@@ -206,7 +206,7 @@
 (def *-mouse-pressed
   "Static Constant.
 
-  The `mouse pressed` event. This MouseEvent
+  The \"mouse pressed\" event. This MouseEvent
    occurs when a mouse button is pushed down.
 
   type: int"
@@ -215,7 +215,7 @@
 (def *-mouse-released
   "Static Constant.
 
-  The `mouse released` event. This MouseEvent
+  The \"mouse released\" event. This MouseEvent
    occurs when a mouse button is let up.
 
   type: int"
@@ -224,7 +224,7 @@
 (def *-mouse-moved
   "Static Constant.
 
-  The `mouse moved` event. This MouseEvent
+  The \"mouse moved\" event. This MouseEvent
    occurs when the mouse position changes.
 
   type: int"
@@ -233,7 +233,7 @@
 (def *-mouse-entered
   "Static Constant.
 
-  The `mouse entered` event. This MouseEvent
+  The \"mouse entered\" event. This MouseEvent
    occurs when the mouse cursor enters the unobscured part of component's
    geometry.
 
@@ -243,7 +243,7 @@
 (def *-mouse-exited
   "Static Constant.
 
-  The `mouse exited` event. This MouseEvent
+  The \"mouse exited\" event. This MouseEvent
    occurs when the mouse cursor exits the unobscured part of component's
    geometry.
 
@@ -253,7 +253,7 @@
 (def *-mouse-dragged
   "Static Constant.
 
-  The `mouse dragged` event. This MouseEvent
+  The \"mouse dragged\" event. This MouseEvent
    occurs when the mouse position changes while a mouse button is pressed.
 
   type: int"
@@ -262,7 +262,7 @@
 (def *-mouse-wheel
   "Static Constant.
 
-  The `mouse wheel` event.  This is the only MouseWheelEvent.
+  The \"mouse wheel\" event.  This is the only MouseWheelEvent.
    It occurs when a mouse equipped with a wheel has its wheel rotated.
 
   type: int"
@@ -302,16 +302,16 @@
 
 (defn *get-mouse-modifiers-text
   "Returns a String instance describing the modifier keys and
-   mouse buttons that were down during the event, such as `Shift`,
-   or `Ctrl+Shift`. These strings can be localized by changing
+   mouse buttons that were down during the event, such as \"Shift\",
+   or \"Ctrl+Shift\". These strings can be localized by changing
    the awt.properties file.
 
    Note that the InputEvent.ALT_MASK and
    InputEvent.BUTTON2_MASK have equal values,
-   so the `Alt` string is returned for both modifiers.  Likewise,
+   so the \"Alt\" string is returned for both modifiers.  Likewise,
    the InputEvent.META_MASK and
    InputEvent.BUTTON3_MASK have equal values,
-   so the `Meta` string is returned for both modifiers.
+   so the \"Meta\" string is returned for both modifiers.
 
    Note that passing negative parameter is incorrect,
    and will cause the returning an unspecified string.

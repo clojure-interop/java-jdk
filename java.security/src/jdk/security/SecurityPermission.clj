@@ -1,6 +1,6 @@
 (ns jdk.security.SecurityPermission
   "This class is for security permissions.
-  A SecurityPermission contains a name (also referred to as a `target name`)
+  A SecurityPermission contains a name (also referred to as a \"target name\")
   but no actions list; you either have the named permission
   or you don't.
 
@@ -104,8 +104,8 @@
   to it) as the highest-priority provider. This would be possible
   because the Security object (which manages the installed providers)
   currently does not check the integrity or authenticity of a provider
-  before attaching it. The `insertProvider` permission subsumes the
-  `insertProvider.{provider name}` permission (see the section below for
+  before attaching it. The \"insertProvider\" permission subsumes the
+  \"insertProvider.{provider name}\" permission (see the section below for
   more information).
 
 
@@ -125,12 +125,12 @@
 
 
     clearProviderProperties.{provider name}
-    `Clearing` of a Provider so that it no longer contains the properties
+    \"Clearing\" of a Provider so that it no longer contains the properties
   used to look up services implemented by the provider
     This disables the lookup of services implemented by the provider.
   This may thus change the behavior or disable execution of other
   parts of the program that would normally utilize the Provider, as
-  described under the `removeProvider.{provider name}` permission.
+  described under the \"removeProvider.{provider name}\" permission.
 
 
 
@@ -150,7 +150,7 @@
   specifying their names and locations. This
   may change the behavior or disable execution of other
   parts of the program that would normally utilize the Provider, as
-  described under the `removeProvider.{provider name}` permission.
+  described under the \"removeProvider.{provider name}\" permission.
 
 
 
@@ -176,7 +176,7 @@
   Provider.getName() method. Also, there is an equivalent
   level of risk associated with granting code permission to insert a provider
   with a specific name, or any name it chooses. Users should use the
-  `insertProvider` permission instead.
+  \"insertProvider\" permission instead.
   This would allow somebody to introduce a possibly
   malicious provider (e.g., one that discloses the private keys passed
   to it) as the highest-priority provider. This would be possible
@@ -197,7 +197,7 @@
 
     setIdentityPublicKey
     Setting of the public key for an Identity
-    If the identity is marked as `trusted`, this allows an attacker to
+    If the identity is marked as \"trusted\", this allows an attacker to
   introduce a different public key (e.g., its own) that is not trusted
   by the system's identity scope, thereby granting applet or
   application code signed with that public key privileges that
@@ -235,10 +235,10 @@
    printIdentity
    Viewing the name of a principal
   and optionally the scope in which it is used, and whether
-  or not it is considered `trusted` in that scope
+  or not it is considered \"trusted\" in that scope
    The scope that is printed out may be a filename, in which case
   it may convey local system information. For example, here's a sample
-  printout of an identity named `carol`, who is
+  printout of an identity named \"carol\", who is
   marked not trusted in the user's identity database:
     carol[/home/luehe/identitydb.obj][not trusted]
 
@@ -255,11 +255,11 @@
 
     setSignerKeyPair
     Setting of the key pair (public key and private key) for a Signer
-    This would allow an attacker to replace somebody else's (the `target's`)
+    This would allow an attacker to replace somebody else's (the \"target's\")
   keypair with a possibly weaker keypair (e.g., a keypair of a smaller
   keysize).  This also would allow the attacker to listen in on encrypted
   communication between the target and its peers. The target's peers
-  might wrap an encryption session key under the target's `new` public
+  might wrap an encryption session key under the target's \"new\" public
   key, which would allow the attacker (who possesses the corresponding
   private key) to unwrap the session key and decipher the communication
   data encrypted under that session key."

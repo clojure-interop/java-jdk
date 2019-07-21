@@ -82,8 +82,8 @@
   output to file resultFile:
 
 
-    File xsltFile = new File(`a.xslt`);
-    File myFile = new File(`result.xml`);
+    File xsltFile = new File(\"a.xslt\");
+    File myFile = new File(\"result.xml\");
     Transformer xslt = TransformerFactory.newInstance().newTransformer(new StreamSource(xsltFile));
     Source source = sqlxml.getSource(null);
     Result result = new StreamResult(myFile);
@@ -94,12 +94,12 @@
     XPath xpath = XPathFactory.newInstance().newXPath();
     DOMSource domSource = sqlxml.getSource(DOMSource.class);
     Document document = (Document) domSource.getNode();
-    String expression = `/foo/@bar`;
+    String expression = \"/foo/@bar\";
     String barValue = xpath.evaluate(expression, document);
   To set the XML value to be the result of an XSLT transform:
 
 
-    File sourceFile = new File(`source.xml`);
+    File sourceFile = new File(\"source.xml\");
     Transformer xslt = TransformerFactory.newInstance().newTransformer(new StreamSource(xsltFile));
     Source streamSource = new StreamSource(sourceFile);
     Result result = sqlxml.setResult(null);
@@ -110,7 +110,7 @@
 
     Transformer identity = TransformerFactory.newInstance().newTransformer();
     Source source = sqlxml.getSource(null);
-    File myFile = new File(`result.xml`);
+    File myFile = new File(\"result.xml\");
     Result result = new StreamResult(myFile);
     identity.transform(source, result);
   To write the contents of a Source to standard output:

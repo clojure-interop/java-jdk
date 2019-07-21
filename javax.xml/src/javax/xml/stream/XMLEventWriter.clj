@@ -93,7 +93,7 @@
           None
           A namespace declaration is written.  If the
               namespace is a default namespace declaration
-              (isDefault is true) then xmlns=`$namespaceURI`
+              (isDefault is true) then xmlns=\"$namespaceURI\"
               is written and the prefix is optional.  If
               isDefault is false, the prefix must be declared
               and the writer must prepend xmlns to the prefix

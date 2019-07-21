@@ -355,7 +355,7 @@
   "Returns true if the specified object is an instance of
    NumericShaper and shapes identically to this one,
    regardless of the range representations, the bit mask or the
-   enum. For example, the following code produces `true`.
+   enum. For example, the following code produces \"true\".
 
 
    NumericShaper ns1 = NumericShaper.getShaper(NumericShaper.ARABIC);

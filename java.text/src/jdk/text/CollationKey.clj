@@ -33,9 +33,9 @@
   // Create an array of CollationKeys for the Strings to be sorted.
   Collator myCollator = Collator.getInstance();
   CollationKey[] keys = new CollationKey[3];
-  keys[0] = myCollator.getCollationKey(`Tom`);
-  keys[1] = myCollator.getCollationKey(`Dick`);
-  keys[2] = myCollator.getCollationKey(`Harry`);
+  keys[0] = myCollator.getCollationKey(\"Tom\");
+  keys[1] = myCollator.getCollationKey(\"Dick\");
+  keys[2] = myCollator.getCollationKey(\"Harry\");
   sort(keys);
 
   //...

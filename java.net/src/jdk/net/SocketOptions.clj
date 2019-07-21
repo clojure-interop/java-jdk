@@ -14,7 +14,7 @@
 
 (defn set-option
   "Enable/disable the option specified by optID.  If the option
-   is to be enabled, and it takes an option-specific `value`,  this is
+   is to be enabled, and it takes an option-specific \"value\",  this is
    passed in value.  The actual type of value is option-specific,
    and it is an error to pass something that isn't of the expected type:
 
@@ -75,7 +75,7 @@
 
    Object o = s.getOption(SO_LINGER);
    if (o instanceof Integer) {
-       System.out.print(`Linger time is `  ((Integer)o).intValue());
+       System.out.print(\"Linger time is \"  ((Integer)o).intValue());
    } else {
      // the true type of o is java.lang.Boolean(false);
    }

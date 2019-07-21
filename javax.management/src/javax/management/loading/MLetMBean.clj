@@ -44,7 +44,7 @@
   "Finds the resource with the given name.
    A resource is some data (images, audio, text, etc) that can be accessed by class code in a way that is
      independent of the location of the code.
-     The name of a resource is a `/`-separated path name that identifies the resource.
+     The name of a resource is a \"/\"-separated path name that identifies the resource.
 
   name - The resource name - `java.lang.String`
 
@@ -67,7 +67,7 @@
   "Finds all the resources with the given name. A resource is some
    data (images, audio, text, etc) that can be accessed by class
    code in a way that is independent of the location of the code.
-   The name of a resource is a `/`-separated path name that
+   The name of a resource is a \"/\"-separated path name that
    identifies the resource.
 
   name - The resource name. - `java.lang.String`

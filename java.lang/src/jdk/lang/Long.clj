@@ -6,7 +6,7 @@
   a long to a String and a String to a long, as well as other constants and methods useful when dealing
   with a long.
 
-  Implementation note: The implementations of the `bit twiddling`
+  Implementation note: The implementations of the \"bit twiddling\"
   methods (such as highestOneBit and
   numberOfTrailingZeros) are
   based on material from Henry S. Warren, Jr.'s Hacker's
@@ -153,7 +153,7 @@
    16).
 
    If the unsigned magnitude is zero, it is represented by a
-   single zero character '0' ('\u0030');
+   single zero character '0' ('\\u0030');
    otherwise, the first character of the representation of the
    unsigned magnitude will not be the zero character. The
    following characters are used as hexadecimal digits:
@@ -162,9 +162,9 @@
     0123456789abcdef
 
 
-   These are the characters '\u0030' through
-   '\u0039' and  '\u0061' through
-   '\u0066'.  If uppercase letters are desired,
+   These are the characters '\\u0030' through
+   '\\u0039' and  '\\u0061' through
+   '\\u0066'.  If uppercase letters are desired,
    the String.toUpperCase() method may be called
    on the result:
 
@@ -199,7 +199,7 @@
 
 (defn *highest-one-bit
   "Returns a long value with at most a single one-bit, in the
-   position of the highest-order (`leftmost`) one-bit in the specified
+   position of the highest-order (\"leftmost\") one-bit in the specified
    long value.  Returns zero if the specified value has no
    one-bits in its two's complement binary representation, that is, if it
    is equal to zero.
@@ -260,8 +260,8 @@
    except that underscores are not accepted between digits.
 
    The sequence of characters following an optional
-   sign and/or radix specifier (`0x`, `0X`,
-   `#`, or leading zero) is parsed as by the Long.parseLong method with the indicated radix (10, 16, or 8).
+   sign and/or radix specifier (\"0x\", \"0X\",
+   \"#\", or leading zero) is parsed as by the Long.parseLong method with the indicated radix (10, 16, or 8).
    This sequence of characters must represent a positive value or
    a NumberFormatException will be thrown.  The result is
    negated if first character of the specified String is
@@ -298,13 +298,13 @@
 
    If the first argument is negative, the first element of the
    result is the ASCII minus sign '-'
-   ('\u002d'). If the first argument is not
+   ('\\u002d'). If the first argument is not
    negative, no sign character appears in the result.
 
    The remaining characters of the result represent the magnitude
    of the first argument. If the magnitude is zero, it is
    represented by a single zero character '0'
-   ('\u0030'); otherwise, the first character of
+   ('\\u0030'); otherwise, the first character of
    the representation of the magnitude will not be the zero
    character.  The following ASCII characters are used as digits:
 
@@ -312,9 +312,9 @@
      0123456789abcdefghijklmnopqrstuvwxyz
 
 
-   These are '\u0030' through
-   '\u0039' and '\u0061' through
-   '\u007a'. If radix is
+   These are '\\u0030' through
+   '\\u0039' and '\\u0061' through
+   '\\u007a'. If radix is
    N, then the first N of these characters
    are used as radix-N digits in the order shown. Thus,
    the digits for hexadecimal (radix 16) are
@@ -427,7 +427,7 @@
    8).
 
    If the unsigned magnitude is zero, it is represented by a
-   single zero character '0' ('\u0030');
+   single zero character '0' ('\\u0030');
    otherwise, the first character of the representation of the
    unsigned magnitude will not be the zero character. The
    following characters are used as octal digits:
@@ -436,8 +436,8 @@
     01234567
 
 
-   These are the characters '\u0030' through
-   '\u0037'.
+   These are the characters '\\u0030' through
+   '\\u0037'.
 
   i - a long to be converted to a string. - `long`
 
@@ -500,7 +500,7 @@
    The characters in the string must all be digits of the
    specified radix (as determined by whether Character.digit(char, int) returns a nonnegative
    value), except that the first character may be an ASCII plus
-   sign '+' ('\u002B'). The resulting
+   sign '+' ('\\u002B'). The resulting
    integer value is returned.
 
    An exception of type NumberFormatException is
@@ -515,7 +515,7 @@
 
    Any character of the string is not a digit of the specified
    radix, except that the first character may be a plus sign
-   '+' ('\u002B') provided that the
+   '+' ('\\u002B') provided that the
    string is longer than length 1.
 
    The value represented by the string is larger than the
@@ -539,14 +539,14 @@
    string must all be digits of the specified radix (as determined
    by whether Character.digit(char, int) returns
    a nonnegative value), except that the first character may be an
-   ASCII minus sign '-' ('\u002D') to
+   ASCII minus sign '-' ('\\u002D') to
    indicate a negative value or an ASCII plus sign '+'
-   ('\u002B') to indicate a positive value. The
+   ('\\u002B') to indicate a positive value. The
    resulting long value is returned.
 
    Note that neither the character L
-   ('\u004C') nor l
-   ('\u006C') is permitted to appear at the end
+   ('\\u004C') nor l
+   ('\\u006C') is permitted to appear at the end
    of the string as a type indicator, as would be permitted in
    Java programming language source code - except that either
    L or l may appear as a digit for a
@@ -563,7 +563,7 @@
 
    Any character of the string is not a digit of the specified
    radix, except that the first character may be a minus sign
-   '-' ('\u002d') or plus sign '+' ('\u002B') provided that the string is
+   '-' ('\\u002d') or plus sign '+' ('\\u002B') provided that the string is
    longer than length 1.
 
    The value represented by the string is not a value of type
@@ -573,15 +573,15 @@
    Examples:
 
 
-   parseLong(`0`, 10) returns 0L
-   parseLong(`473`, 10) returns 473L
-   parseLong(`+42`, 10) returns 42L
-   parseLong(`-0`, 10) returns 0L
-   parseLong(`-FF`, 16) returns -255L
-   parseLong(`1100110`, 2) returns 102L
-   parseLong(`99`, 8) throws a NumberFormatException
-   parseLong(`Hazelnut`, 10) throws a NumberFormatException
-   parseLong(`Hazelnut`, 36) returns 1356099454469L
+   parseLong(\"0\", 10) returns 0L
+   parseLong(\"473\", 10) returns 473L
+   parseLong(\"+42\", 10) returns 42L
+   parseLong(\"-0\", 10) returns 0L
+   parseLong(\"-FF\", 16) returns -255L
+   parseLong(\"1100110\", 2) returns 102L
+   parseLong(\"99\", 8) throws a NumberFormatException
+   parseLong(\"Hazelnut\", 10) throws a NumberFormatException
+   parseLong(\"Hazelnut\", 36) returns 1356099454469L
 
   s - the String containing the long representation to be parsed. - `java.lang.String`
   radix - the radix to be used while parsing s. - `int`
@@ -620,10 +620,10 @@
    2).
 
    If the unsigned magnitude is zero, it is represented by a
-   single zero character '0' ('\u0030');
+   single zero character '0' ('\\u0030');
    otherwise, the first character of the representation of the
    unsigned magnitude will not be the zero character. The
-   characters '0' ('\u0030') and '1' ('\u0031') are used as binary digits.
+   characters '0' ('\\u0030') and '1' ('\\u0031') are used as binary digits.
 
   i - a long to be converted to a string. - `long`
 
@@ -634,7 +634,7 @@
 
 (defn *number-of-leading-zeros
   "Returns the number of zero bits preceding the highest-order
-   (`leftmost`) one-bit in the two's complement binary representation
+   (\"leftmost\") one-bit in the two's complement binary representation
    of the specified long value.  Returns 64 if the
    specified value has no one-bits in its two's complement representation,
    in other words if it is equal to zero.
@@ -648,7 +648,7 @@
   i - the value whose number of leading zeros is to be computed - `long`
 
   returns: the number of zero bits preceding the highest-order
-       (`leftmost`) one-bit in the two's complement binary representation
+       (\"leftmost\") one-bit in the two's complement binary representation
        of the specified long value, or 64 if the value
        is equal to zero. - `int`"
   (^Integer [^Long i]
@@ -656,7 +656,7 @@
 
 (defn *lowest-one-bit
   "Returns a long value with at most a single one-bit, in the
-   position of the lowest-order (`rightmost`) one-bit in the specified
+   position of the lowest-order (\"rightmost\") one-bit in the specified
    long value.  Returns zero if the specified value has no
    one-bits in its two's complement binary representation, that is, if it
    is equal to zero.
@@ -670,7 +670,7 @@
     (Long/lowestOneBit i)))
 
 (defn *number-of-trailing-zeros
-  "Returns the number of zero bits following the lowest-order (`rightmost`)
+  "Returns the number of zero bits following the lowest-order (\"rightmost\")
    one-bit in the two's complement binary representation of the specified
    long value.  Returns 64 if the specified value has no
    one-bits in its two's complement representation, in other words if it is
@@ -678,7 +678,7 @@
 
   i - the value whose number of trailing zeros is to be computed - `long`
 
-  returns: the number of zero bits following the lowest-order (`rightmost`)
+  returns: the number of zero bits following the lowest-order (\"rightmost\")
        one-bit in the two's complement binary representation of the
        specified long value, or 64 if the value is equal
        to zero. - `int`"
@@ -709,7 +709,7 @@
    value, no leading sign character is printed.
 
    If the magnitude is zero, it is represented by a single zero
-   character '0' ('\u0030'); otherwise,
+   character '0' ('\\u0030'); otherwise,
    the first character of the representation of the magnitude will
    not be the zero character.
 

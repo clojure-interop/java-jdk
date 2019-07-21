@@ -1,7 +1,7 @@
 (ns javax.print.attribute.standard.JobMessageFromOperator
   "Class JobMessageFromOperator is a printing attribute class, a text attribute,
   that provides a message from an operator, system administrator, or
-  `intelligent` process to indicate to the end user the reasons for
+  \"intelligent\" process to indicate to the end user the reasons for
   modification or other management action taken on a job.
 
   A Print Job's attribute set includes zero instances or one instance of a
@@ -55,7 +55,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class JobMessageFromOperator, the
@@ -71,7 +71,7 @@
    instance.
 
    For class JobMessageFromOperator, the
-   category name is `job-message-from-operator`.
+   category name is \"job-message-from-operator\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^JobMessageFromOperator this]

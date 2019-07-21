@@ -14,12 +14,12 @@
   (^Holder []
     (new Holder )))
 
-(defn -value
+(defn value
   "Instance Field.
 
   The value contained in the holder.
 
   type: T"
-  [this]
-  (-> this .-value))
+  ([^Holder this]
+    (-> this .-value)))
 

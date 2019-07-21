@@ -81,8 +81,8 @@
 
 (defn get-simple-name
   "Returns the simple name of a constructor, method, or
-   initializer.  For a constructor, the name `<init>` is
-   returned, for a static initializer, the name `<clinit>`
+   initializer.  For a constructor, the name \"<init>\" is
+   returned, for a static initializer, the name \"<clinit>\"
    is returned, and for an anonymous class or instance
    initializer, an empty name is returned.
 

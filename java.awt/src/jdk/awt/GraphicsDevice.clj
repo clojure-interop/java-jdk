@@ -138,7 +138,7 @@
    vendor of your Java Runtime.  To find out who the vendor is, from
    your program, call the
    getProperty method of the
-   System class with `java.vendor`.
+   System class with \"java.vendor\".
 
   returns: a String that is the identification
    of this GraphicsDevice. - `java.lang.String`"
@@ -216,7 +216,7 @@
    supports full-screen exclusive mode.
    If a SecurityManager is installed, its
    checkPermission method will be called
-   with AWTPermission(`fullScreenExclusive`).
+   with AWTPermission(\"fullScreenExclusive\").
    isFullScreenSupported returns true only if
    that permission is granted.
 
@@ -309,7 +309,7 @@
     (-> this (.getDefaultConfiguration))))
 
 (defn get-best-configuration
-  "Returns the `best` configuration possible that passes the
+  "Returns the \"best\" configuration possible that passes the
    criteria defined in the GraphicsConfigTemplate.
 
   gct - the GraphicsConfigTemplate object used to obtain a valid GraphicsConfiguration - `java.awt.GraphicsConfigTemplate`

@@ -128,7 +128,7 @@
   SheetCollate/COLLATED)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class SheetCollate, the category is class SheetCollate itself.
@@ -142,7 +142,7 @@
   "Get the name of the category of which this attribute value is an
    instance.
 
-   For class SheetCollate, the category name is `sheet-collate`.
+   For class SheetCollate, the category name is \"sheet-collate\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^SheetCollate this]

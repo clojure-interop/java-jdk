@@ -266,7 +266,7 @@
   The job was aborted by the system because the document data's document
    format (doc flavor) is not among those supported by the printer. If the
    client specifies a doc flavor with a MIME type of
-   `application/octet-stream`, the printer may abort the job if
+   \"application/octet-stream\", the printer may abort the job if
    the printer cannot determine the document data's actual format through
    auto-sensing (even if the printer supports the document format if
    specified explicitly). This value must be supported, since a doc flavor
@@ -366,7 +366,7 @@
   JobStateReason/QUEUED_IN_DEVICE)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class JobStateReason and any vendor-defined subclasses, the
@@ -382,7 +382,7 @@
    instance.
 
    For class JobStateReason and any vendor-defined subclasses, the
-   category name is `job-state-reason`.
+   category name is \"job-state-reason\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^JobStateReason this]

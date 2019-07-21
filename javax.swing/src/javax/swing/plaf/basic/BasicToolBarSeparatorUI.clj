@@ -1,6 +1,6 @@
 (ns javax.swing.plaf.basic.BasicToolBarSeparatorUI
   "A Basic L&F implementation of ToolBarSeparatorUI.  This implementation
-  is a `combined` view/controller."
+  is a \"combined\" view/controller."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.plaf.basic BasicToolBarSeparatorUI]))
 

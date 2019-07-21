@@ -3,7 +3,7 @@
   that is bound to an atomic name in a context.
 
   The name is a URL, or a name to be resolved relative to the initial
-  context, or if the first character of the name is `.`, the name
+  context, or if the first character of the name is \".\", the name
   is relative to the context in which the link is bound.
 
   Normal resolution of names in context operations always follow links.
@@ -14,7 +14,7 @@
   number of links that may be involved in any single operation invoked
   by the caller.
 
-  A LinkRef contains a single StringRefAddr, whose type is `LinkAddress`,
+  A LinkRef contains a single StringRefAddr, whose type is \"LinkAddress\",
   and whose contents is the link name. The class name field of the
   Reference is that of this (LinkRef) class.
 

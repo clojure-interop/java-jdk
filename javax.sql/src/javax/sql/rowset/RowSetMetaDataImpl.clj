@@ -170,7 +170,7 @@
   "Sets the suggested column label for use in printouts and
    displays, if any, to label. If label is
    null, the column label is set to an empty string
-   (``).
+   (\"\").
 
   column-index - the first column is 1, the second is 2, and so on; must be between 1 and the number of columns, inclusive - `int`
   label - the column label to be used in printouts and displays; if the column label is null, an empty String is set - `java.lang.String`
@@ -182,7 +182,7 @@
 (defn set-schema-name
   "Sets the designated column's table's schema name, if any, to
    schemaName. If schemaName is null,
-   the schema name is set to an empty string (``).
+   the schema name is set to an empty string (\"\").
 
   column-index - the first column is 1, the second is 2, and so on; must be between 1 and the number of columns, inclusive - `int`
   schema-name - the schema name for the table from which a value in the designated column was derived; may be an empty String or null - `java.lang.String`

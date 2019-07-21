@@ -18,7 +18,7 @@
   assigned from entries in a file myNumbers:
 
 
-       Scanner sc = new Scanner(new File(`myNumbers`));
+       Scanner sc = new Scanner(new File(\"myNumbers\"));
        while (sc.hasNextLong()) {
            long aLong = sc.nextLong();
        }
@@ -27,8 +27,8 @@
   example reads several items in from a string:
 
 
-      String input = `1 fish 2 fish red fish blue fish`;
-      Scanner s = new Scanner(input).useDelimiter(`\\s*fish\\s*`);
+      String input = \"1 fish 2 fish red fish blue fish\";
+      Scanner s = new Scanner(input).useDelimiter(\"\\\\s*fish\\\\s*\");
       System.out.println(s.nextInt());
       System.out.println(s.nextInt());
       System.out.println(s.next());
@@ -47,9 +47,9 @@
   expression to parse all four tokens at once:
 
 
-      String input = `1 fish 2 fish red fish blue fish`;
+      String input = \"1 fish 2 fish red fish blue fish\";
       Scanner s = new Scanner(input);
-      s.findInLine(`(\\d+) fish (\\d+) fish (\\w+) fish (\\w+)`);
+      s.findInLine(\"(\\\\d+) fish (\\\\d+) fish (\\\\w+) fish (\\\\w+)\");
       MatchResult result = s.match();
       for (int i=1; i<=result.groupCount(); i++)
           System.out.println(result.group(i));
@@ -81,9 +81,9 @@
   retrieved or skipped via some other method.
 
   Depending upon the type of delimiting pattern, empty tokens may be
-  returned. For example, the pattern `\\s+` will return no empty
+  returned. For example, the pattern \"\\\\s+\" will return no empty
   tokens since it matches multiple instances of the delimiter. The delimiting
-  pattern `\\s` could return empty tokens since it only passes one
+  pattern \"\\\\s\" could return empty tokens since it only passes one
   space at a time.
 
    A scanner can read text from any object which implements the Readable interface.  If an invocation of the underlying
@@ -210,7 +210,7 @@
                   Exponent?
 
     HexFloat:
-        [-+]? 0[xX][0-9a-fA-F]*\.[0-9a-fA-F]+
+        [-+]? 0[xX][0-9a-fA-F]*\\.[0-9a-fA-F]+
                   ([pP][-+]?[0-9]+)?
 
     NonNumber:
@@ -265,12 +265,12 @@
 
    Since this method seeks to match the specified pattern starting at
    the scanner's current position, patterns that can match a lot of
-   input (`.*`, for example) may cause the scanner to buffer a large
+   input (\".*\", for example) may cause the scanner to buffer a large
    amount of input.
 
    Note that it is possible to skip something without risking a
    NoSuchElementException by using a pattern that can
-   match nothing, e.g., sc.skip(`[ \t]*`).
+   match nothing, e.g., sc.skip(\"[ \\t]*\").
 
   pattern - a string specifying the pattern to skip over - `java.util.regex.Pattern`
 
@@ -283,7 +283,7 @@
 (defn has-next-boolean?
   "Returns true if the next token in this scanner's input can be
    interpreted as a boolean value using a case insensitive pattern
-   created from the string `true|false`.  The scanner does not
+   created from the string \"true|false\".  The scanner does not
    advance past the input that matched.
 
   returns: true if and only if this scanner's next token is a valid
@@ -401,7 +401,7 @@
    negative sign (-) if the locale specific negative prefixes and suffixes
    were present, and passing the resulting string to
    Float.parseFloat. If the token matches
-   the localized NaN or infinity strings, then either `Nan` or `Infinity`
+   the localized NaN or infinity strings, then either \"Nan\" or \"Infinity\"
    is passed to Float.parseFloat as
    appropriate.
 
@@ -475,7 +475,7 @@
 
 
 
-     scanner.useDelimiter(`\\p{javaWhitespace}+`)
+     scanner.useDelimiter(\"\\\\p{javaWhitespace}+\")
             .useLocale(Locale.getDefault(Locale.Category.FORMAT))
             .useRadix(10);
 
@@ -826,7 +826,7 @@
    negative sign (-) if the locale specific negative prefixes and suffixes
    were present, and passing the resulting string to
    Double.parseDouble. If the token matches
-   the localized NaN or infinity strings, then either `Nan` or `Infinity`
+   the localized NaN or infinity strings, then either \"Nan\" or \"Infinity\"
    is passed to Double.parseDouble as
    appropriate.
 

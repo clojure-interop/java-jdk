@@ -75,8 +75,8 @@
   tool is used to set properties, this is the code that the tool would use.
 
 
-     crs.setCommand(`SELECT FIRST_NAME, LAST_NAME, ADDRESS FROM CUSTOMERS`
-                    `WHERE CREDIT_LIMIT > ? AND REGION = ?`);
+     crs.setCommand(\"SELECT FIRST_NAME, LAST_NAME, ADDRESS FROM CUSTOMERS\"
+                    \"WHERE CREDIT_LIMIT > ? AND REGION = ?\");
 
   In this example, the values for CREDIT_LIMIT and
   REGION are placeholder parameters, which are indicated with a
@@ -96,13 +96,13 @@
 
 
      crs.setInt(1, 5000);
-     crs.setString(2, `West`);
+     crs.setString(2, \"West\");
   If the execute method is called at this point, the query
   sent to the DBMS will be:
 
 
-     `SELECT FIRST_NAME, LAST_NAME, ADDRESS FROM CUSTOMERS`
-                    `WHERE CREDIT_LIMIT > 5000 AND REGION = 'West'`
+     \"SELECT FIRST_NAME, LAST_NAME, ADDRESS FROM CUSTOMERS\"
+                    \"WHERE CREDIT_LIMIT > 5000 AND REGION = 'West'\"
   NOTE: Setting Array, Clob, Blob and
   Ref objects as a command parameter, stores these values as
   SerialArray, SerialClob, SerialBlob
@@ -238,7 +238,7 @@
     following types:  BINARY, VARBINARY,
     LONGVARBINARY, CHAR, VARCHAR,
     and LONGVARCHAR.
-    Will not see uncommitted data (make `dirty` reads).
+    Will not see uncommitted data (make \"dirty\" reads).
     Has escape processing turned on.
     Has its connection's type map set to null.
     Has an empty Vector object for storing the values set
@@ -307,7 +307,7 @@
 
 (defn set-fetch-size
   "Sets the fetch size for this RowSet object to the given number of
-   rows.  The fetch size gives a JDBC technology-enabled driver (`JDBC driver`)
+   rows.  The fetch size gives a JDBC technology-enabled driver (\"JDBC driver\")
    a hint as to the
    number of rows that should be fetched from the database when more rows
    are needed for this RowSet object. If the fetch size specified
@@ -939,7 +939,7 @@
    property to null. The Url property is a
    JDBC URL that is used when
    the connection is created using a JDBC technology-enabled driver
-   (`JDBC driver`) and the DriverManager.
+   (\"JDBC driver\") and the DriverManager.
    The correct JDBC URL for the specific driver to be used can be found
    in the driver documentation.  Although there are guidelines for for how
    a JDBC URL is formed,

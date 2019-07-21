@@ -1,12 +1,12 @@
 (ns javax.print.Doc
   "Interface Doc specifies the interface for an object that supplies one piece
-  of print data for a Print Job. `Doc` is a short, easy-to-pronounce term
-  that means `a piece of print data.` The client passes to the Print Job an
+  of print data for a Print Job. \"Doc\" is a short, easy-to-pronounce term
+  that means \"a piece of print data.\" The client passes to the Print Job an
   object that implements interface Doc, and the Print Job calls methods on
   that object to obtain the print data. The Doc interface lets a Print Job:
 
 
-  Determine the format, or `doc flavor` (class DocFlavor),
+  Determine the format, or \"doc flavor\" (class DocFlavor),
   in which the print data is available. A doc flavor designates the print
   data format (a MIME type) and the representation class of the object
   from which the print data comes.
@@ -27,7 +27,7 @@
   return the same object each time the method is called.
   This has implications
   for a Print Job or other caller of a doc object whose print data
-  representation object `consumes` the print data as the caller obtains the
+  representation object \"consumes\" the print data as the caller obtains the
   print data, such as a print data representation object which is a stream.
   Once the Print Job has called getPrintData() and obtained the stream, any further calls to
   getPrintData() will return the same
@@ -44,7 +44,7 @@
   case the objects returned by the doc's methods can be supplied to the doc's
   constructor, be stored in the doc ahead of time, and simply be returned when
   called for. Alternatively, the print data might not exist yet when the doc
-  object is constructed. In this case the doc object might provide a `lazy`
+  object is constructed. In this case the doc object might provide a \"lazy\"
   implementation that generates the print data representation object (and/or
   the print data) only when the Print Job calls for it (when the Print Job
   calls the getPrintData() method).

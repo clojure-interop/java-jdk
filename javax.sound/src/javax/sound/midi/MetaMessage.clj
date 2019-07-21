@@ -44,7 +44,7 @@
 
   Status byte for MetaMessage (0xFF, or 255), which is used
    in MIDI files.  It has the same value as SYSTEM_RESET, which
-   is used in the real-time `MIDI wire` protocol.
+   is used in the real-time \"MIDI wire\" protocol.
 
   type: int"
   MetaMessage/META)

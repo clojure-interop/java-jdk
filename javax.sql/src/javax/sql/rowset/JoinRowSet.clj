@@ -114,13 +114,13 @@
 
       JoinRowSet jrs = new JoinRowSetImpl();
 
-      ResultSet rs1 = stmt.executeQuery(`SELECT * FROM EMPLOYEES`);
+      ResultSet rs1 = stmt.executeQuery(\"SELECT * FROM EMPLOYEES\");
       CachedRowSet empl = new CachedRowSetImpl();
       empl.populate(rs1);
       empl.setMatchColumn(1);
       jrs.addRowSet(empl);
 
-      ResultSet rs2 = stmt.executeQuery(`SELECT * FROM ESSP_BONUS_PLAN`);
+      ResultSet rs2 = stmt.executeQuery(\"SELECT * FROM ESSP_BONUS_PLAN\");
       CachedRowSet bonus = new CachedRowSetImpl();
       bonus.populate(rs2);
       bonus.setMatchColumn(1); // EMP_ID is the first column
@@ -147,7 +147,7 @@
   CachedRowSet object is added to the JoinRowSet object.
 
 
-      ResultSet rs3 = stmt.executeQuery(`SELECT * FROM 401K_CONTRIB`);
+      ResultSet rs3 = stmt.executeQuery(\"SELECT * FROM 401K_CONTRIB\");
       CachedRowSet fourO1k = new CachedRowSetImpl();
       four01k.populate(rs3);
       jrs.addRowSet(four01k, 1);

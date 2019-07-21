@@ -169,7 +169,7 @@
     (-> this (.importStyleSheet url))))
 
 (defn string-to-color
-  "Converts a color string such as `RED` or `#NNNNNN` to a Color.
+  "Converts a color string such as \"RED\" or \"#NNNNNN\" to a Color.
    Note: This will only convert the HTML3.2 color strings
          or a string of length 7;
          otherwise, it will return null.

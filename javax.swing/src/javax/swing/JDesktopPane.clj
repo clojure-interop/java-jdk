@@ -97,7 +97,7 @@
     (-> this (.setComponentZOrder comp index))))
 
 (defn get-drag-mode
-  "Gets the current `dragging style` used by the desktop pane.
+  "Gets the current \"dragging style\" used by the desktop pane.
 
   returns: either Live_DRAG_MODE or
      OUTLINE_DRAG_MODE - `int`"
@@ -136,7 +136,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `DesktopPaneUI` - `java.lang.String`"
+  returns: the string \"DesktopPaneUI\" - `java.lang.String`"
   (^java.lang.String [^JDesktopPane this]
     (-> this (.getUIClassID))))
 
@@ -227,7 +227,7 @@
     (-> this (.removeAll))))
 
 (defn set-drag-mode
-  "Sets the `dragging style` used by the desktop pane.
+  "Sets the \"dragging style\" used by the desktop pane.
    You may want to change to one mode or another for
    performance or aesthetic reasons.
 

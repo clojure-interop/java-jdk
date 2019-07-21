@@ -20,9 +20,9 @@
     = new BufferedWriter(new OutputStreamWriter(System.out));
 
    A surrogate pair is a character represented by a sequence of two
-  char values: A high surrogate in the range '\uD800' to
-  '\uDBFF' followed by a low surrogate in the range '\uDC00' to
-  '\uDFFF'.
+  char values: A high surrogate in the range '\\uD800' to
+  '\\uDBFF' followed by a low surrogate in the range '\\uDC00' to
+  '\\uDFFF'.
 
    A malformed surrogate element is a high surrogate that is not
   followed by a low surrogate or a low surrogate that is not preceded by a

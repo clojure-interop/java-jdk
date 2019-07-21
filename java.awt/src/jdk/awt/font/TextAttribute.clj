@@ -63,7 +63,7 @@
   DIALOG_INPUT, SERIF,
   SANS_SERIF, and MONOSPACED.
 
-  `Default` (use platform default)
+  \"Default\" (use platform default)
 
 
   WEIGHT
@@ -204,7 +204,7 @@
 
   Attribute key for the font name.  Values are instances of
    String.  The default value is
-   `Default`, which causes the platform default font
+   \"Default\", which causes the platform default font
    family to be used.
 
     The Font class defines constants for the logical
@@ -222,10 +222,10 @@
 
    Note: This attribute is unfortunately misnamed, as
    it specifies the face name and not just the family.  Thus
-   values such as `Lucida Sans Bold` will select that face if it
+   values such as \"Lucida Sans Bold\" will select that face if it
    exists.  Note, though, that if the requested face does not
    exist, the default will be used with regular weight.
-   The `Bold` in the name is part of the face name, not a separate
+   The \"Bold\" in the name is part of the face name, not a separate
    request that the font's weight be bold.
 
   type: java.awt.font.TextAttribute"
@@ -613,7 +613,7 @@
    performed.  Each character (Unicode code point) will be
    rendered using the provided GraphicAttribute. Typically, the
    characters to which this attribute is applied should be
-   \uFFFC.
+   \\uFFFC.
 
    The GraphicAttribute determines the logical and visual
    bounds of the text; the actual Font values are ignored.
@@ -940,8 +940,8 @@
    The constant value KERNING_ON is provided.
 
    The default advances of single characters are not
-   appropriate for some character sequences, for example `To` or
-   `AWAY`.  Without kerning the adjacent characters appear to be
+   appropriate for some character sequences, for example \"To\" or
+   \"AWAY\".  Without kerning the adjacent characters appear to be
    separated by too much space.  Kerning causes selected sequences
    of characters to be spaced differently for a more pleasing
    visual appearance.

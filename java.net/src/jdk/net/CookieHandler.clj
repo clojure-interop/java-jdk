@@ -26,7 +26,7 @@
   returns: the system-wide cookie handler; A null return means
           there is no system-wide cookie handler currently set. - `java.net.CookieHandler`
 
-  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`getCookieHandler`)"
+  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(\"getCookieHandler\")"
   (^java.net.CookieHandler []
     (CookieHandler/getDefault )))
 
@@ -37,7 +37,7 @@
 
   c-handler - The HTTP cookie handler, or null to unset. - `java.net.CookieHandler`
 
-  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`setCookieHandler`)"
+  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(\"setCookieHandler\")"
   ([^java.net.CookieHandler c-handler]
     (CookieHandler/setDefault c-handler)))
 
@@ -62,7 +62,7 @@
   request-headers - - a Map from request header field names to lists of field values representing the current request headers - `java.util.Map`
 
   returns: an immutable map from state management headers, with
-              field names `Cookie` or `Cookie2` to a list of
+              field names \"Cookie\" or \"Cookie2\" to a list of
               cookies containing state information - `java.util.Map<java.lang.String,java.util.List<java.lang.String>>`
 
   throws: java.io.IOException - if an I/O error occurs"

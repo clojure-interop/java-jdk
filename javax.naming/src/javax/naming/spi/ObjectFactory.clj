@@ -61,15 +61,15 @@
    scheme id.  For example, invoking getObjectInstance() with
    obj set to null on an LDAP URL context factory would return a
    context that can resolve LDAP URLs
-   such as `ldap://ldap.wiz.com/o=wiz,c=us` and
-   `ldap://ldap.umich.edu/o=umich,c=us`.
+   such as \"ldap://ldap.wiz.com/o=wiz,c=us\" and
+   \"ldap://ldap.umich.edu/o=umich,c=us\".
 
    If obj is a URL string, create an object (typically a context)
    identified by the URL.  For example, suppose this is an LDAP URL context
-   factory.  If obj is `ldap://ldap.wiz.com/o=wiz,c=us`,
+   factory.  If obj is \"ldap://ldap.wiz.com/o=wiz,c=us\",
    getObjectInstance() would return the context named by the distinguished
-   name `o=wiz, c=us` at the LDAP server ldap.wiz.com.  This context can
-   then be used to resolve LDAP names (such as `cn=George`)
+   name \"o=wiz, c=us\" at the LDAP server ldap.wiz.com.  This context can
+   then be used to resolve LDAP names (such as \"cn=George\")
    relative to that context.
 
    If obj is an array of URL strings, the assumption is that the
@@ -102,7 +102,7 @@
    If there are several possible contexts from which the object
    could be named -- as will often be the case -- it is up to
    the caller to select one.  A good rule of thumb is to select the
-   `deepest` context available.
+   \"deepest\" context available.
    If nameCtx is null, name is relative
    to the default initial context.  If no name is being specified, the
    name parameter should be null.

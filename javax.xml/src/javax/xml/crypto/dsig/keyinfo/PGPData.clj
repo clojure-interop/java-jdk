@@ -8,19 +8,19 @@
 
 
 
-     <element name=`PGPData` type=`ds:PGPDataType`/>
-     <complexType name=`PGPDataType`>
+     <element name=\"PGPData\" type=\"ds:PGPDataType\"/>
+     <complexType name=\"PGPDataType\">
        <choice>
          <sequence>
-           <element name=`PGPKeyID` type=`base64Binary`/>
-           <element name=`PGPKeyPacket` type=`base64Binary` minOccurs=`0`/>
-           <any namespace=`##other` processContents=`lax` minOccurs=`0`
-            maxOccurs=`unbounded`/>
+           <element name=\"PGPKeyID\" type=\"base64Binary\"/>
+           <element name=\"PGPKeyPacket\" type=\"base64Binary\" minOccurs=\"0\"/>
+           <any namespace=\"##other\" processContents=\"lax\" minOccurs=\"0\"
+            maxOccurs=\"unbounded\"/>
          </sequence>
          <sequence>
-           <element name=`PGPKeyPacket` type=`base64Binary`/>
-           <any namespace=`##other` processContents=`lax` minOccurs=`0`
-            maxOccurs=`unbounded`/>
+           <element name=\"PGPKeyPacket\" type=\"base64Binary\"/>
+           <any namespace=\"##other\" processContents=\"lax\" minOccurs=\"0\"
+            maxOccurs=\"unbounded\"/>
          </sequence>
        </choice>
      </complexType>

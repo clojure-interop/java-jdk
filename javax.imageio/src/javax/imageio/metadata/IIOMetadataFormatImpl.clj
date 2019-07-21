@@ -7,13 +7,13 @@
 
    In order to supply localized descriptions of elements and
   attributes, a ResourceBundle with a base name of
-  this.getClass().getName()  `Resources` should be
+  this.getClass().getName()  \"Resources\" should be
   supplied via the usual mechanism used by
   ResourceBundle.getBundle.  Briefly, the subclasser
   supplies one or more additional classes according to a naming
   convention (by default, the fully-qualified name of the subclass
   extending IIMetadataFormatImpl, plus the string
-  `Resources`, plus the country, language, and variant codes
+  \"Resources\", plus the country, language, and variant codes
   separated by underscores).  At run time, calls to
   getElementDescription or
   getAttributeDescription will attempt to load such
@@ -57,7 +57,7 @@
   "Static Constant.
 
   A String constant containing the standard format
-   name, `javax_imageio_1.0`.
+   name, \"javax_imageio_1.0\".
 
   type: java.lang.String"
   IIOMetadataFormatImpl/standardMetadataFormatName)
@@ -170,8 +170,8 @@
    Locale, using the fallback mechanism described in
    the comments for ResourceBundle.getBundle.  If a
    ResourceBundle is found, the element name followed
-   by a `/` character followed by the attribute name
-   (elementName  `/`  attrName) will be used as a
+   by a \"/\" character followed by the attribute name
+   (elementName  \"/\"  attrName) will be used as a
    key to its getString method, and the result
    returned.  If no ResourceBundle is found, or no
    such key is present, null will be returned.

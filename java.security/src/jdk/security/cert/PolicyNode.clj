@@ -62,7 +62,7 @@
 
   returns: the String OID of the valid policy
    represented by this node. For the root node, this method always returns
-   the special anyPolicy OID: `2.5.29.32.0`. - `java.lang.String`"
+   the special anyPolicy OID: \"2.5.29.32.0\". - `java.lang.String`"
   (^java.lang.String [^PolicyNode this]
     (-> this (.getValidPolicy))))
 
@@ -83,7 +83,7 @@
   returns: an immutable Set of expected policy
    String OIDs. For the root node, this method
    always returns a Set with one element, the
-   special anyPolicy OID: `2.5.29.32.0`. - `java.util.Set<java.lang.String>`"
+   special anyPolicy OID: \"2.5.29.32.0\". - `java.util.Set<java.lang.String>`"
   (^java.util.Set [^PolicyNode this]
     (-> this (.getExpectedPolicies))))
 

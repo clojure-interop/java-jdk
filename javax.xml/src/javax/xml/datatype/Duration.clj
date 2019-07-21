@@ -165,7 +165,7 @@
    by using a specific time instant as the reference point.
 
    For example, duration of one month normalizes to 31 days
-   given the start time instance `July 8th 2003, 17:40:32`.
+   given the start time instance \"July 8th 2003, 17:40:32\".
 
    Formally, the computation is done as follows:
 
@@ -213,7 +213,7 @@
 
    Any fractional parts of this Duration object
    beyond milliseconds will be simply ignored. For example, if
-   this duration is `P1.23456S`, then 1 is added to SECONDS,
+   this duration is \"P1.23456S\", then 1 is added to SECONDS,
    234 is added to MILLISECONDS, and the rest will be unused.
 
 
@@ -236,12 +236,12 @@
   "Checks if this duration object is strictly longer than
    another Duration object.
 
-   Duration X is `longer` than Y if and only if X>Y
+   Duration X is \"longer\" than Y if and only if X>Y
    as defined in the section 3.2.6.2 of the XML Schema 1.0
    specification.
 
-   For example, `P1D` (one day) > `PT12H` (12 hours) and
-   `P2Y` (two years) > `P23M` (23 months).
+   For example, \"P1D\" (one day) > \"PT12H\" (12 hours) and
+   \"P2Y\" (two years) > \"P23M\" (23 months).
 
   duration - Duration to test this Duration against. - `javax.xml.datatype.Duration`
 
@@ -272,11 +272,11 @@
    For example:
 
 
-   `1 day` - `-3 days` = `4 days`
-   `1 year` - `1 day` = IllegalStateException
-   `-(1 hour,50 minutes)` - `-20 minutes` = `-(1hours,30 minutes)`
-   `15 hours` - `-3 days` = `3 days and 15 hours`
-   `1 year` - `-1 day` = `1 year and 1 day`
+   \"1 day\" - \"-3 days\" = \"4 days\"
+   \"1 year\" - \"1 day\" = IllegalStateException
+   \"-(1 hour,50 minutes)\" - \"-20 minutes\" = \"-(1hours,30 minutes)\"
+   \"15 hours\" - \"-3 days\" = \"3 days and 15 hours\"
+   \"1 year\" - \"-1 day\" = \"1 year and 1 day\"
 
    Since there's no way to meaningfully subtract 1 day from 1 month,
    there are cases where the operation fails in IllegalStateException.
@@ -365,8 +365,8 @@
    For example, for any Calendar value x,
 
 
-   new Duration(`PT10.00099S`).getTimeInMills(x) == 10000.
-   new Duration(`-PT10.00099S`).getTimeInMills(x) == -10000.
+   new Duration(\"PT10.00099S\").getTimeInMills(x) == 10000.
+   new Duration(\"-PT10.00099S\").getTimeInMills(x) == -10000.
 
 
    Note that this method uses the addTo(Calendar) method,
@@ -422,11 +422,11 @@
    For example,
 
 
-   `1 day`  `-3 days` = `-2 days`
-   `1 year`  `1 day` = `1 year and 1 day`
-   `-(1 hour,50 minutes)`  `-20 minutes` = `-(1 hours,70 minutes)`
-   `15 hours`  `-3 days` = `-(2 days,9 hours)`
-   `1 year`  `-1 day` = IllegalStateException
+   \"1 day\"  \"-3 days\" = \"-2 days\"
+   \"1 year\"  \"1 day\" = \"1 year and 1 day\"
+   \"-(1 hour,50 minutes)\"  \"-20 minutes\" = \"-(1 hours,70 minutes)\"
+   \"15 hours\"  \"-3 days\" = \"-(2 days,9 hours)\"
+   \"1 year\"  \"-1 day\" = IllegalStateException
 
    Since there's no way to meaningfully subtract 1 day from 1 month,
    there are cases where the operation fails in
@@ -538,7 +538,7 @@
   "Checks if this duration object has the same duration
    as another Duration object.
 
-   For example, `P1D` (1 day) is equal to `PT24H` (24 hours).
+   For example, \"P1D\" (1 day) is equal to \"PT24H\" (24 hours).
 
    Duration X is equal to Y if and only if time instant
    t+X and t+Y are the same for all the test time instants
@@ -546,13 +546,13 @@
    specification.
 
    Note that there are cases where two Durations are
-   `incomparable` to each other, like one month and 30 days.
+   \"incomparable\" to each other, like one month and 30 days.
    For example,
 
 
-   !new Duration(`P1M`).isShorterThan(new Duration(`P30D`))
-   !new Duration(`P1M`).isLongerThan(new Duration(`P30D`))
-   !new Duration(`P1M`).equals(new Duration(`P30D`))
+   !new Duration(\"P1M\").isShorterThan(new Duration(\"P30D\"))
+   !new Duration(\"P1M\").isLongerThan(new Duration(\"P30D\"))
+   !new Duration(\"P1M\").equals(new Duration(\"P30D\"))
 
   duration - The object to compare this Duration against. - `java.lang.Object`
 

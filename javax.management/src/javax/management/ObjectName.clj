@@ -14,7 +14,7 @@
 
   The domain is a string of characters not including
   the character colon (:).  It is recommended that the domain
-  should not contain the string `//`, which is reserved for future use.
+  should not contain the string \"//\", which is reserved for future use.
 
   If the domain includes at least one occurrence of the wildcard
   characters asterisk (*) or question mark
@@ -47,10 +47,10 @@
   sequence of zero or more characters, while the question mark matches
   any single character.
 
-  A quoted value consists of a quote (`),
+  A quoted value consists of a quote (\"),
   followed by a possibly empty string of characters, followed by
   another quote.  Within the string of characters, the backslash
-  (\) has a special meaning.  It must be followed by
+  (\\) has a special meaning.  It must be followed by
   one of the following characters:
 
 
@@ -58,7 +58,7 @@
   meaning and the two characters represent a single backslash.
 
   The character 'n'.  The two characters represent a newline
-  ('\n' in Java).
+  ('\\n' in Java).
 
   A quote.  The two characters represent a quote, and that quote
   is not considered to terminate the quoted value. An ending closing
@@ -122,10 +122,10 @@
       d:type=Foo,name=Bar and d:type=Fro,name=Bar.
   d:type=F*o,name=Bar will match e.g.
       d:type=Fo,name=Bar and d:type=Frodo,name=Bar.
-  d:type=Foo,name=`B*` will match e.g.
-      d:type=Foo,name=`Bling`. Wildcards are recognized even
+  d:type=Foo,name=\"B*\" will match e.g.
+      d:type=Foo,name=\"Bling\". Wildcards are recognized even
       inside quotes, and like other special characters can be escaped
-      with \.
+      with \\.
 
 
   An ObjectName can be written as a String with the following
@@ -153,14 +153,14 @@
   domain: key1 = value1 , key2 = value2
   represents an ObjectName with two keys.  The name of each key
   contains six characters, of which the first and last are spaces.
-  The value associated with the key ` key1 `
+  The value associated with the key \" key1 \"
   also begins and ends with a space.
 
   In addition to the restrictions on characters spelt out above,
   no part of an ObjectName may contain a newline character
-  ('\n'), whether the domain, a key, or a value, whether
+  ('\\n'), whether the domain, a key, or a value, whether
   quoted or unquoted.  The newline character can be represented in a
-  quoted value with the sequence \n.
+  quoted value with the sequence \\n.
 
   The rules on special characters and quoting apply regardless of
   which constructor is used to make an ObjectName.
@@ -198,7 +198,7 @@
 (def *-wildcard
   "Static Constant.
 
-  Defines the wildcard `*:*` ObjectName.
+  Defines the wildcard \"*:*\" ObjectName.
 
   type: javax.management.ObjectName"
   ObjectName/WILDCARD)
@@ -232,20 +232,20 @@
    s may contain any character.  Appropriate quoting
    ensures that the returned value is legal in an ObjectName.
 
-   The returned value consists of a quote ('`'), a sequence of
+   The returned value consists of a quote ('\"'), a sequence of
    characters corresponding to the characters of s,
    and another quote.  Characters in s appear
    unchanged within the returned value except:
 
 
-   A quote ('`') is replaced by a backslash (\) followed by a quote.
-   An asterisk ('*') is replaced by a backslash (\) followed by an
+   A quote ('\"') is replaced by a backslash (\\) followed by a quote.
+   An asterisk ('*') is replaced by a backslash (\\) followed by an
    asterisk.
-   A question mark ('?') is replaced by a backslash (\) followed by
+   A question mark ('?') is replaced by a backslash (\\) followed by
    a question mark.
-   A backslash ('\') is replaced by two backslashes.
-   A newline character (the character '\n' in Java) is replaced
-   by a backslash followed by the character '\n'.
+   A backslash ('\\') is replaced by two backslashes.
+   A newline character (the character '\\n' in Java) is replaced
+   by a backslash followed by the character '\\n'.
 
   s - the String to be quoted. - `java.lang.String`
 
@@ -269,7 +269,7 @@
 
   returns: the unquoted String. - `java.lang.String`
 
-  throws: java.lang.IllegalArgumentException - if q could not have been returned by the quote(java.lang.String) method, for instance if it does not begin and end with a quote (`)."
+  throws: java.lang.IllegalArgumentException - if q could not have been returned by the quote(java.lang.String) method, for instance if it does not begin and end with a quote (\")."
   (^java.lang.String [^java.lang.String q]
     (ObjectName/unquote q)))
 
@@ -370,8 +370,8 @@
   "Checks whether the object name is a pattern on the key properties.
 
    An object name is a pattern on the key properties if it is a
-   pattern on the key property list (e.g. `d:k=v,*`) or on the
-   property values (e.g. `d:k=*`) or on both (e.g. `d:k=*,*`).
+   pattern on the key property list (e.g. \"d:k=v,*\") or on the
+   property values (e.g. \"d:k=*\") or on both (e.g. \"d:k=*,*\").
 
   returns: True if the name is a property pattern, otherwise false. - `boolean`"
   (^Boolean [^ObjectName this]
@@ -431,8 +431,8 @@
 (defn property-list-pattern?
   "Checks whether the object name is a pattern on the key property list.
 
-   For example, `d:k=v,*` and `d:k=*,*` are key property list patterns
-   whereas `d:k=*` is not.
+   For example, \"d:k=v,*\" and \"d:k=*,*\" are key property list patterns
+   whereas \"d:k=*\" is not.
 
   returns: True if the name is a property list pattern, otherwise false. - `boolean`"
   (^Boolean [^ObjectName this]

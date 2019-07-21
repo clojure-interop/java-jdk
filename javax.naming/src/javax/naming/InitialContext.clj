@@ -40,7 +40,7 @@
 
   The initial context implementation is determined at runtime.
   The default policy uses the environment property
-  `java.naming.factory.initial`,
+  \"java.naming.factory.initial\",
   which contains the class name of the initial context factory.
   An exception to this policy is made when resolving URL strings, as described
   below.
@@ -50,7 +50,7 @@
   any method, a URL context factory for handling that scheme is
   located and used to resolve the URL.  If no such factory is found,
   the initial context specified by
-  `java.naming.factory.initial` is used.  Similarly, when a
+  \"java.naming.factory.initial\" is used.  Similarly, when a
   CompositeName object whose first component is a URL string is
   passed as a name parameter to any method, a URL context factory is
   located and used to resolve the first name component.
@@ -70,7 +70,7 @@
   The application should not have any dependency on when the existence
   of an initial context is determined.
 
-  When the environment property `java.naming.factory.initial` is
+  When the environment property \"java.naming.factory.initial\" is
   non-null, the InitialContext constructor will attempt to create the
   initial context specified therein. At that time, the initial context factory
   involved might throw an exception if a problem is encountered. However,
@@ -152,7 +152,7 @@
    this context.
    Since an initial context may never be named relative
    to any context other than itself, the value of the
-   prefix parameter must be an empty name (``).
+   prefix parameter must be an empty name (\"\").
 
   name - a name relative to this context - `java.lang.String`
   prefix - the name of this context relative to one of its ancestors - `java.lang.String`

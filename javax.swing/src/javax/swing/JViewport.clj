@@ -1,5 +1,5 @@
 (ns javax.swing.JViewport
-  "The `viewport` or `porthole` through which you see the underlying
+  "The \"viewport\" or \"porthole\" through which you see the underlying
   information. When you scroll, what moves is the viewport. It is like
   peering through a camera's viewfinder. Moving the viewfinder upwards
   brings new things into view at the top of the picture and loses
@@ -77,7 +77,7 @@
 
   Draws viewport contents into an offscreen image.
    This was previously the default mode for JTable.
-   This mode may offer advantages over `blit mode`
+   This mode may offer advantages over \"blit mode\"
    in some cases, but it requires a large chunk of extra RAM.
 
   type: int"
@@ -180,7 +180,7 @@
   "Returns a string that specifies the name of the L&F class
    that renders this component.
 
-  returns: the string `ViewportUI` - `java.lang.String`"
+  returns: the string \"ViewportUI\" - `java.lang.String`"
   (^java.lang.String [^JViewport this]
     (-> this (.getUIClassID))))
 
@@ -300,9 +300,9 @@
   "Depending on whether the backingStore is enabled,
    either paint the image through the backing store or paint
    just the recently exposed part, using the backing store
-   to `blit` the remainder.
+   to \"blit\" the remainder.
 
-   The term `blit` is the pronounced version of the PDP-10
+   The term \"blit\" is the pronounced version of the PDP-10
    BLT (BLock Transfer) instruction, which copied a block of
    bits. (In case you were curious.)
 
@@ -331,7 +331,7 @@
 
 (defn to-view-coordinates
   "Converts a size in pixel coordinates to view coordinates.
-   Subclasses of viewport that support `logical coordinates`
+   Subclasses of viewport that support \"logical coordinates\"
    will override this method.
 
   size - a Dimension object using pixel coordinates - `java.awt.Dimension`
@@ -341,7 +341,7 @@
     (-> this (.toViewCoordinates size))))
 
 (defn set-border
-  "The viewport `scrolls` its child (called the `view`) by the
+  "The viewport \"scrolls\" its child (called the \"view\") by the
    normal parent/child clipping (typically the view is moved in
    the opposite direction of the scroll).  A non-null border,
    or non-zero insets, isn't supported, to prevent the geometry

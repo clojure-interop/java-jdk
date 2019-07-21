@@ -32,7 +32,7 @@
   PrinterStateReason object's and the associated
   Severity object's toString() methods,
   concatenated
-  together with a hyphen (`-`) in between, gives the IPP keyword
+  together with a hyphen (\"-\") in between, gives the IPP keyword
   value. The category name returned by getName() gives the IPP
   attribute name."
   (:refer-clojure :only [require comment defn ->])
@@ -73,7 +73,7 @@
     (-> this (.put reason severity))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PrinterStateReasons, the
@@ -89,7 +89,7 @@
    instance.
 
    For class PrinterStateReasons, the
-   category name is `printer-state-reasons`.
+   category name is \"printer-state-reasons\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PrinterStateReasons this]

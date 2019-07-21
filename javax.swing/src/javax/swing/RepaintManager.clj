@@ -16,7 +16,7 @@
 
   Create a new RepaintManager instance. You rarely call this constructor.
    directly. To get the default RepaintManager, use
-   RepaintManager.currentManager(JComponent) (normally `this`)."
+   RepaintManager.currentManager(JComponent) (normally \"this\")."
   (^RepaintManager []
     (new RepaintManager )))
 

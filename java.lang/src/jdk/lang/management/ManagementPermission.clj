@@ -54,7 +54,7 @@
 
   Constructs a new ManagementPermission object.
 
-  name - Permission name. Must be either `monitor` or `control`. - `java.lang.String`
+  name - Permission name. Must be either \"monitor\" or \"control\". - `java.lang.String`
   actions - Must be either null or the empty string. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if name is null."

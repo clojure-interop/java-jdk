@@ -276,7 +276,7 @@
   between pixels, a shape like a rectangle would have no half covered
   pixels, whether or not it is rendered using antialiasing.
    Lines and paths stroked using the BasicStroke
-  object may be `normalized` to provide consistent rendering of the
+  object may be \"normalized\" to provide consistent rendering of the
   outlines when positioned at various points on the drawable and
   whether drawn with aliased or antialiased rendering.  This
   normalization process is controlled by the
@@ -637,7 +637,7 @@
    Composite is a custom object rather than an
    instance of the AlphaComposite class, and if
    there is a security manager, its checkPermission
-   method is called with an AWTPermission(`readDisplayPixels`)
+   method is called with an AWTPermission(\"readDisplayPixels\")
    permission.
 
   comp - the Composite object to be used for rendering - `java.awt.Composite`

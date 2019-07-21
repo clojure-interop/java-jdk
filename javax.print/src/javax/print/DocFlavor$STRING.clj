@@ -9,9 +9,9 @@
   "Constructor.
 
   Constructs a new doc flavor with the given MIME type and a print
-   data representation class name of `java.lang.String`.
+   data representation class name of \"java.lang.String\".
 
-  mime-type - MIME media type string. If it is a text media type, it is assumed to contain a `charset=utf-16` parameter. - `java.lang.String`
+  mime-type - MIME media type string. If it is a text media type, it is assumed to contain a \"charset=utf-16\" parameter. - `java.lang.String`
 
   throws: java.lang.NullPointerException - (unchecked exception) Thrown if mimeType is null."
   (^DocFlavor$STRING [^java.lang.String mime-type]
@@ -20,9 +20,9 @@
 (def *-text-plain
   "Static Constant.
 
-  Doc flavor with MIME type = `text/plain;
-   charset=utf-16`, print data representation class name =
-   `java.lang.String`.
+  Doc flavor with MIME type = \"text/plain;
+   charset=utf-16\", print data representation class name =
+   \"java.lang.String\".
 
   type: javax.print.DocFlavor$STRING"
   DocFlavor$STRING/TEXT_PLAIN)
@@ -30,9 +30,9 @@
 (def *-text-html
   "Static Constant.
 
-  Doc flavor with MIME type = `text/html;
-   charset=utf-16`, print data representation class name =
-   `java.lang.String`.
+  Doc flavor with MIME type = \"text/html;
+   charset=utf-16\", print data representation class name =
+   \"java.lang.String\".
 
   type: javax.print.DocFlavor$STRING"
   DocFlavor$STRING/TEXT_HTML)

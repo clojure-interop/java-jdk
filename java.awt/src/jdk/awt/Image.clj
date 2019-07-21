@@ -195,7 +195,7 @@
    returns null, and the ImageObserver
    object is notified later.
 
-   The property name `comment` should be used to store
+   The property name \"comment\" should be used to store
    an optional comment which can be presented to the application as a
    description of the image, its source, or its author.
 

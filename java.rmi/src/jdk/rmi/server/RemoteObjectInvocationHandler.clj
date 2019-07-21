@@ -56,8 +56,8 @@
    Otherwise, the invoke method is invoked
    on this invocation handler's RemoteRef, passing
    proxy, method, args, and the
-   method hash (defined in section 8.3 of the `Java Remote Method
-   Invocation (RMI) Specification`) for method, and the
+   method hash (defined in section 8.3 of the \"Java Remote Method
+   Invocation (RMI) Specification\") for method, and the
    result is returned.
 
    If an exception is thrown by RemoteRef.invoke and

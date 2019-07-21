@@ -33,8 +33,8 @@
    first character of the name is a '{' character.
    For example, if a URI and local name were obtained from an element
    defined with <xyz:foo
-   xmlns:xyz=`http://xyz.foo.com/yada/baz.html`/>,
-   then the qualified name would be `{http://xyz.foo.com/yada/baz.html}foo`.
+   xmlns:xyz=\"http://xyz.foo.com/yada/baz.html\"/>,
+   then the qualified name would be \"{http://xyz.foo.com/yada/baz.html}foo\".
    Note that no prefix is used.
    An IllegalArgumentException is thrown  if any of the
    argument keys are not recognized and are not namespace qualified.
@@ -73,8 +73,8 @@
    first character of the name is a '{' character.
    For example, if a URI and local name were obtained from an element
    defined with <xyz:foo
-   xmlns:xyz=`http://xyz.foo.com/yada/baz.html`/>,
-   then the qualified name would be `{http://xyz.foo.com/yada/baz.html}foo`.
+   xmlns:xyz=\"http://xyz.foo.com/yada/baz.html\"/>,
+   then the qualified name would be \"{http://xyz.foo.com/yada/baz.html}foo\".
    Note that no prefix is used.
 
    The Properties object that was passed to setOutputProperties(java.util.Properties)
@@ -194,8 +194,8 @@
    first character of the name is a '{' character.
    For example, if a URI and local name were obtained from an element
    defined with <xyz:foo
-   xmlns:xyz=`http://xyz.foo.com/yada/baz.html`/>,
-   then the qualified name would be `{http://xyz.foo.com/yada/baz.html}foo`.
+   xmlns:xyz=\"http://xyz.foo.com/yada/baz.html\"/>,
+   then the qualified name would be \"{http://xyz.foo.com/yada/baz.html}foo\".
    Note that no prefix is used.
 
   name - The name of the parameter, which may begin with a namespace URI in curly braces ({}). - `java.lang.String`
@@ -210,7 +210,7 @@
 
    The properties returned should contain properties set by the user,
    and properties set by the stylesheet, and these properties
-   are `defaulted` by default properties specified by
+   are \"defaulted\" by default properties specified by
    section 16 of the
    XSL Transformations (XSLT) W3C Recommendation.  The properties that
    were specifically set by the user or the stylesheet should be in the base

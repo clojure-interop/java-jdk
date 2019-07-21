@@ -33,7 +33,7 @@
    g param will further constrain the region.
 
    For example, suppose I have a Painter implementation that draws
-   a gradient. The gradient goes from white to black. It `stretches` to fill the
+   a gradient. The gradient goes from white to black. It \"stretches\" to fill the
    painted region. Thus, if I use this Painter to paint a 500 x 500
    region, the far left would be black, the far right would be white, and a smooth
    gradient would be painted between. I could then, without modification, reuse the

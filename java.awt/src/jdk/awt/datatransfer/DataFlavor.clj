@@ -13,13 +13,13 @@
   RFC 2045
   for details on the syntax of a MIME type.
 
-  The JRE data transfer implementation interprets the parameter `class`
+  The JRE data transfer implementation interprets the parameter \"class\"
   of a MIME type as a representation class.
   The representation class reflects the class of the object being
   transferred. In other words, the representation class is the type of
   object returned by Transferable.getTransferData(java.awt.datatransfer.DataFlavor).
   For example, the MIME type of imageFlavor is
-  `image/x-java-image;class=java.awt.Image`,
+  \"image/x-java-image;class=java.awt.Image\",
   the primary type is image, the subtype is
   x-java-image, and the representation class is
   java.awt.Image. When getTransferData is invoked
@@ -35,11 +35,11 @@
   representation class is used. See appropriate documentation for
   DataFlavor's constructors.
 
-  Also, DataFlavor instances with the `text` primary
-  MIME type may have a `charset` parameter. Refer to
+  Also, DataFlavor instances with the \"text\" primary
+  MIME type may have a \"charset\" parameter. Refer to
   RFC 2046 and
-  selectBestTextFlavor(java.awt.datatransfer.DataFlavor[]) for details on `text` MIME types
-  and the `charset` parameter.
+  selectBestTextFlavor(java.awt.datatransfer.DataFlavor[]) for details on \"text\" MIME types
+  and the \"charset\" parameter.
 
   Equality of DataFlavors is determined by the primary type,
   subtype, and representation class. Refer to equals(DataFlavor) for
@@ -48,8 +48,8 @@
   are considered identical:
 
 
-    DataFlavor flavor1 = new DataFlavor(Object.class, `X-test/test; class=<java.lang.Object>; foo=bar`);
-    DataFlavor flavor2 = new DataFlavor(Object.class, `X-test/test; class=<java.lang.Object>; x=y`);
+    DataFlavor flavor1 = new DataFlavor(Object.class, \"X-test/test; class=<java.lang.Object>; foo=bar\");
+    DataFlavor flavor2 = new DataFlavor(Object.class, \"X-test/test; class=<java.lang.Object>; x=y\");
     // The following returns true.
     flavor1.equals(flavor2);
   As mentioned, flavor1 and flavor2 are considered identical.
@@ -73,7 +73,7 @@
    characteristics:
 
    If the mimeType is
-   `application/x-java-serialized-object; class=<representation class>`,
+   \"application/x-java-serialized-object; class=<representation class>\",
    the result is the same as calling
    new DataFlavor(Class:forName(<representation class>).
 
@@ -105,7 +105,7 @@
 
 
        representationClass = java.lang.String
-       mimeType           = `application/x-java-serialized-object`
+       mimeType           = \"application/x-java-serialized-object\"
 
   type: java.awt.datatransfer.DataFlavor"
   DataFlavor/stringFlavor)
@@ -118,7 +118,7 @@
 
 
        representationClass = java.awt.Image
-       mimeType            = `image/x-java-image`
+       mimeType            = \"image/x-java-image\"
 
   type: java.awt.datatransfer.DataFlavor"
   DataFlavor/imageFlavor)
@@ -201,7 +201,7 @@
 
 
        representationClass = String
-       mimeType           = `text/html`
+       mimeType           = \"text/html\"
 
   type: java.awt.datatransfer.DataFlavor"
   []
@@ -217,7 +217,7 @@
 
 
        representationClass = String
-       mimeType           = `text/html`
+       mimeType           = \"text/html\"
 
   type: java.awt.datatransfer.DataFlavor"
   []
@@ -234,7 +234,7 @@
 
 
        representationClass = String
-       mimeType           = `text/html`
+       mimeType           = \"text/html\"
 
   type: java.awt.datatransfer.DataFlavor"
   []
@@ -246,8 +246,8 @@
 
 
        representationClass = java.io.InputStream
-       mimeType            = `text/plain;
-                              charset=<platform default Unicode encoding>`
+       mimeType            = \"text/plain;
+                              charset=<platform default Unicode encoding>\"
    Sun's implementation for Microsoft Windows uses the encoding utf-16le.
    Sun's implementation for Solaris and Linux uses the encoding
    iso-10646-ucs-2.
@@ -260,31 +260,31 @@
 (defn *select-best-text-flavor
   "Selects the best text DataFlavor from an array of
    DataFlavors. Only DataFlavor.stringFlavor, and
-   equivalent flavors, and flavors that have a primary MIME type of `text`,
+   equivalent flavors, and flavors that have a primary MIME type of \"text\",
    are considered for selection.
 
    Flavors are first sorted by their MIME types in the following order:
 
-   `text/sgml`
-   `text/xml`
-   `text/html`
-   `text/rtf`
-   `text/enriched`
-   `text/richtext`
-   `text/uri-list`
-   `text/tab-separated-values`
-   `text/t140`
-   `text/rfc822-headers`
-   `text/parityfec`
-   `text/directory`
-   `text/css`
-   `text/calendar`
-   `application/x-java-serialized-object`
-   `text/plain`
-   `text/<other>`
+   \"text/sgml\"
+   \"text/xml\"
+   \"text/html\"
+   \"text/rtf\"
+   \"text/enriched\"
+   \"text/richtext\"
+   \"text/uri-list\"
+   \"text/tab-separated-values\"
+   \"text/t140\"
+   \"text/rfc822-headers\"
+   \"text/parityfec\"
+   \"text/directory\"
+   \"text/css\"
+   \"text/calendar\"
+   \"application/x-java-serialized-object\"
+   \"text/plain\"
+   \"text/<other>\"
 
-   For example, `text/sgml` will be selected over
-   `text/html`, and DataFlavor.stringFlavor will be chosen
+   For example, \"text/sgml\" will be selected over
+   \"text/html\", and DataFlavor.stringFlavor will be chosen
    over DataFlavor.plainTextFlavor.
 
    If two or more flavors share the best MIME type in the array, then that
@@ -293,28 +293,28 @@
    The following MIME types support, or are treated as though they support,
    the charset parameter:
 
-   `text/sgml`
-   `text/xml`
-   `text/html`
-   `text/enriched`
-   `text/richtext`
-   `text/uri-list`
-   `text/directory`
-   `text/css`
-   `text/calendar`
-   `application/x-java-serialized-object`
-   `text/plain`
+   \"text/sgml\"
+   \"text/xml\"
+   \"text/html\"
+   \"text/enriched\"
+   \"text/richtext\"
+   \"text/uri-list\"
+   \"text/directory\"
+   \"text/css\"
+   \"text/calendar\"
+   \"application/x-java-serialized-object\"
+   \"text/plain\"
 
    The following MIME types do not support, or are treated as though they
    do not support, the charset parameter:
 
-   `text/rtf`
-   `text/tab-separated-values`
-   `text/t140`
-   `text/rfc822-headers`
-   `text/parityfec`
+   \"text/rtf\"
+   \"text/tab-separated-values\"
+   \"text/t140\"
+   \"text/rfc822-headers\"
+   \"text/parityfec\"
 
-   For `text/<other>` MIME types, the first time the JRE needs to
+   For \"text/<other>\" MIME types, the first time the JRE needs to
    determine whether the MIME type supports the charset parameter, it will
    check whether the parameter is explicitly listed in an arbitrarily
    chosen DataFlavor which uses that MIME type. If so, the JRE
@@ -324,10 +324,10 @@
    not support the charset parameter and will not check again. Because
    this check is performed on an arbitrarily chosen
    DataFlavor, developers must ensure that all
-   DataFlavors with a `text/<other>` MIME type specify
+   DataFlavors with a \"text/<other>\" MIME type specify
    the charset parameter if it is supported by that MIME type. Developers
    should never rely on the JRE to substitute the platform's default
-   charset for a `text/<other>` DataFlavor. Failure to adhere to this
+   charset for a \"text/<other>\" DataFlavor. Failure to adhere to this
    restriction will lead to undefined behavior.
 
    If the best MIME type in the array does not support the charset
@@ -350,10 +350,10 @@
    representation is one of the four explicitly listed, then one of those
    flavors will be chosen non-deterministically. If, however, no flavor has
    one of the four specified representations, the flavors will then be
-   sorted by their charsets. Unicode charsets, such as `UTF-16`, `UTF-8`,
-   `UTF-16BE`, `UTF-16LE`, and their aliases, are considered best. After
+   sorted by their charsets. Unicode charsets, such as \"UTF-16\", \"UTF-8\",
+   \"UTF-16BE\", \"UTF-16LE\", and their aliases, are considered best. After
    them, the platform default charset and its aliases are selected.
-   `US-ASCII` and its aliases are worst. All other charsets are chosen in
+   \"US-ASCII\" and its aliases are worst. All other charsets are chosen in
    alphabetical order, but only charsets supported by this implementation
    of the Java platform will be considered.
 
@@ -473,7 +473,7 @@
   "String representation of this DataFlavor and its
    parameters. The resulting String contains the name of
    the DataFlavor class, this flavor's MIME type, and its
-   representation class. If this flavor has a primary MIME type of `text`,
+   representation class. If this flavor has a primary MIME type of \"text\",
    supports the charset parameter, and has an encoded representation, the
    flavor's charset is also included. See selectBestTextFlavor
    for a list of text flavors which support the charset parameter.
@@ -495,7 +495,7 @@
   "Returns whether this DataFlavor is a valid text flavor for
    this implementation of the Java platform. Only flavors equivalent to
    DataFlavor.stringFlavor and DataFlavors with
-   a primary MIME type of `text` can be valid text flavors.
+   a primary MIME type of \"text\" can be valid text flavors.
 
    If this flavor supports the charset parameter, it must be equivalent to
    DataFlavor.stringFlavor, or its representation must be
@@ -523,7 +523,7 @@
 
 (defn get-parameter
   "Returns the human presentable name for this DataFlavor
-   if paramName equals `humanPresentableName`.  Otherwise
+   if paramName equals \"humanPresentableName\".  Otherwise
    returns the MIME type value associated with paramName.
 
   param-name - the parameter name requested - `java.lang.String`
@@ -664,7 +664,7 @@
     (-> this (.isRepresentationClassRemote))))
 
 (defn equals
-  "Indicates whether some other object is `equal to` this one.
+  "Indicates whether some other object is \"equal to\" this one.
 
    The equals method implements an equivalence relation
    on non-null object references:
@@ -706,7 +706,7 @@
    The equals comparison for the DataFlavor class is implemented
    as follows: Two DataFlavors are considered equal if and
    only if their MIME primary type and subtype and representation class are
-   equal. Additionally, if the primary type is `text`, the subtype denotes
+   equal. Additionally, if the primary type is \"text\", the subtype denotes
    a text flavor which supports the charset parameter, and the
    representation class is not java.io.Reader,
    java.lang.String, java.nio.CharBuffer, or

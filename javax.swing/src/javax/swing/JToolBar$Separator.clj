@@ -18,7 +18,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `ToolBarSeparatorUI` - `java.lang.String`"
+  returns: the string \"ToolBarSeparatorUI\" - `java.lang.String`"
   (^java.lang.String [^JToolBar$Separator this]
     (-> this (.getUIClassID))))
 

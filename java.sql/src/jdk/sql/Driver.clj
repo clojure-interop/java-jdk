@@ -17,7 +17,7 @@
   itself and register it with the DriverManager. This means that a
   user can load and register a driver by calling:
 
-  Class.forName(`foo.bah.Driver`)
+  Class.forName(\"foo.bah.Driver\")
 
   A JDBC driver may create a java.sql.DriverAction implementation in order
   to receive notifications when DriverManager.deregisterDriver(java.sql.Driver) has
@@ -27,7 +27,7 @@
 
 (defn connect
   "Attempts to make a database connection to the given URL.
-   The driver should return `null` if it realizes it is the wrong kind
+   The driver should return \"null\" if it realizes it is the wrong kind
    of driver to connect to the given URL.  This will be common, as when
    the JDBC driver manager is asked to connect to a given URL it passes
    the URL to each loaded driver in turn.
@@ -38,7 +38,7 @@
 
    The Properties argument can be used to pass
    arbitrary string tag/value pairs as connection arguments.
-   Normally at least `user` and `password` properties should be
+   Normally at least \"user\" and \"password\" properties should be
    included in the Properties object.
 
    Note: If a property is specified as part of the url and
@@ -47,7 +47,7 @@
    maximum portability, an application should only specify a property once.
 
   url - the URL of the database to which to connect - `java.lang.String`
-  info - a list of arbitrary string tag/value pairs as connection arguments. Normally at least a `user` and `password` property should be included. - `java.util.Properties`
+  info - a list of arbitrary string tag/value pairs as connection arguments. Normally at least a \"user\" and \"password\" property should be included. - `java.util.Properties`
 
   returns: a Connection object that represents a
            connection to the URL - `java.sql.Connection`

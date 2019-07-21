@@ -14,7 +14,7 @@
     if (pservices.length > 0) {
         DocPrintJob pj = pservices[0].createPrintJob();
         try {
-            FileInputStream fis = new FileInputStream(`test.ps`);
+            FileInputStream fis = new FileInputStream(\"test.ps\");
             Doc doc = new SimpleDoc(fis, flavor, null);
             pj.print(doc, aset);
          } catch (FileNotFoundException fe) {
@@ -323,8 +323,8 @@
 (defn get-supported-doc-flavors
   "Determines the print data formats a client can specify when setting
    up a job for this PrintService. A print data format is
-   designated by a `doc
-   flavor` (class DocFlavor)
+   designated by a \"doc
+   flavor\" (class DocFlavor)
    consisting of a MIME type plus a print data representation class.
 
    Note that some doc flavors may not be supported in combination
@@ -376,7 +376,7 @@
 (defn get-attributes
   "Obtains this print service's set of printer description attributes
    giving this Print Service's status. The returned attribute set object
-   is unmodifiable. The returned attribute set object is a `snapshot` of
+   is unmodifiable. The returned attribute set object is a \"snapshot\" of
    this Print Service's attribute set at the time of the
    getAttributes() method call: that is, the returned
    attribute set's contents will not be updated if this print

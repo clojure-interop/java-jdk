@@ -30,7 +30,7 @@
           // we're done; don't expect to send another BIND
           if (response != null) {
               throw new SaslException(
-                  `Protocol error: attempting to send response after completion`);
+                  \"Protocol error: attempting to send response after completion\");
           }
           break;
       }
@@ -39,8 +39,8 @@
   if (sc.isComplete() && res.status == SUCCESS) {
      String qop = (String) sc.getNegotiatedProperty(Sasl.QOP);
      if (qop != null
-         && (qop.equalsIgnoreCase(`auth-int`)
-             || qop.equalsIgnoreCase(`auth-conf`))) {
+         && (qop.equalsIgnoreCase(\"auth-int\")
+             || qop.equalsIgnoreCase(\"auth-conf\"))) {
 
        // Use SaslClient.wrap() and SaslClient.unwrap() for future
        // communication with server
@@ -65,7 +65,7 @@
 
 (defn get-mechanism-name
   "Returns the IANA-registered mechanism name of this SASL client.
-   (e.g. `CRAM-MD5`, `GSSAPI`).
+   (e.g. \"CRAM-MD5\", \"GSSAPI\").
 
   returns: A non-null string representing the IANA-registered mechanism name. - `java.lang.String`"
   (^java.lang.String [^SaslClient this]
@@ -89,7 +89,7 @@
   challenge - The non-null challenge sent from the server. The challenge array may have zero length. - `byte[]`
 
   returns: The possibly null response to send to the server.
-   It is null if the challenge accompanied a `SUCCESS` status and the challenge
+   It is null if the challenge accompanied a \"SUCCESS\" status and the challenge
    only contains data for the client to update its state and no response
    needs to be sent to the server. The response is a zero-length byte
    array if the client is to send a response with no data. - `byte[]`

@@ -13,12 +13,12 @@
   throw a java.lang.SecurityException as a runtime exception.
 
   A SQLPermission object contains
-  a name (also referred to as a `target name`) but no actions
+  a name (also referred to as a \"target name\") but no actions
   list; there is either a named permission or there is not.
   The target name is the name of the permission (see below). The
   naming convention follows the  hierarchical property naming convention.
   In addition, an asterisk
-  may appear at the end of the name, following a `.`, or by itself, to
+  may appear at the end of the name, following a \".\", or by itself, to
   signify a wildcard match. For example: loadLibrary.*
   and * signify a wildcard match,
   while *loadLibrary and a*b do not.

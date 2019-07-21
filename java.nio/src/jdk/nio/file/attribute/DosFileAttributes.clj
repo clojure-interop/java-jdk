@@ -1,6 +1,6 @@
 (ns jdk.nio.file.attribute.DosFileAttributes
   "File attributes associated with a file in a file system that supports
-  legacy `DOS` attributes.
+  legacy \"DOS\" attributes.
 
    Usage Example:
 

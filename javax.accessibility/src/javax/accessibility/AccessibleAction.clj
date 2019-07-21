@@ -13,7 +13,7 @@
 
 (defn get-accessible-action-count
   "Returns the number of accessible actions available in this object
-   If there are more than one, the first one is considered the `default`
+   If there are more than one, the first one is considered the \"default\"
    action of the object.
 
   returns: the zero-based number of Actions in this object - `int`"

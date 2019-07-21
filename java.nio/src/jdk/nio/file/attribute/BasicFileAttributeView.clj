@@ -18,39 +18,39 @@
        Type
 
 
-       `lastModifiedTime`
+       \"lastModifiedTime\"
        FileTime
 
 
-       `lastAccessTime`
+       \"lastAccessTime\"
        FileTime
 
 
-       `creationTime`
+       \"creationTime\"
        FileTime
 
 
-       `size`
+       \"size\"
        Long
 
 
-       `isRegularFile`
+       \"isRegularFile\"
        Boolean
 
 
-       `isDirectory`
+       \"isDirectory\"
        Boolean
 
 
-       `isSymbolicLink`
+       \"isSymbolicLink\"
        Boolean
 
 
-       `isOther`
+       \"isOther\"
        Boolean
 
 
-       `fileKey`
+       \"fileKey\"
        Object
 
 
@@ -67,7 +67,7 @@
 
 (defn name
   "Returns the name of the attribute view. Attribute views of this type
-   have the name `basic`.
+   have the name \"basic\".
 
   returns: the name of the attribute view - `java.lang.String`"
   (^java.lang.String [^BasicFileAttributeView this]

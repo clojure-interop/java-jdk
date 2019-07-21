@@ -20,15 +20,15 @@
   (^BeanContextChildSupport []
     (new BeanContextChildSupport )))
 
-(defn -bean-context-child-peer
+(defn bean-context-child-peer
   "Instance Field.
 
   The BeanContext in which
    this BeanContextChild is nested.
 
   type: java.beans.beancontext.BeanContextChild"
-  [this]
-  (-> this .-beanContextChildPeer))
+  (^java.beans.beancontext.BeanContextChild [^BeanContextChildSupport this]
+    (-> this .-beanContextChildPeer)))
 
 (defn fire-property-change
   "Report a bound property update to any registered listeners. No event is

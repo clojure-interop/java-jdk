@@ -29,7 +29,7 @@
   "Converts a string in JDBC date escape format to
    a Date value.
 
-  s - a String object representing a date in in the format `yyyy-[m]m-[d]d`. The leading zero for mm and dd may also be omitted. - `java.lang.String`
+  s - a String object representing a date in in the format \"yyyy-[m]m-[d]d\". The leading zero for mm and dd may also be omitted. - `java.lang.String`
 
   returns: a java.sql.Date object representing the
            given date - `java.sql.Date`

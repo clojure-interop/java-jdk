@@ -5,21 +5,21 @@
   The XML schema is defined as:
 
 
-  <element name=`Reference` type=`ds:ReferenceType`/>
-  <complexType name=`ReferenceType`>
+  <element name=\"Reference\" type=\"ds:ReferenceType\"/>
+  <complexType name=\"ReferenceType\">
     <sequence>
-      <element ref=`ds:Transforms` minOccurs=`0`/>
-      <element ref=`ds:DigestMethod`/>
-      <element ref=`ds:DigestValue`/>
+      <element ref=\"ds:Transforms\" minOccurs=\"0\"/>
+      <element ref=\"ds:DigestMethod\"/>
+      <element ref=\"ds:DigestValue\"/>
     </sequence>
-    <attribute name=`Id` type=`ID` use=`optional`/>
-    <attribute name=`URI` type=`anyURI` use=`optional`/>
-    <attribute name=`Type` type=`anyURI` use=`optional`/>
+    <attribute name=\"Id\" type=\"ID\" use=\"optional\"/>
+    <attribute name=\"URI\" type=\"anyURI\" use=\"optional\"/>
+    <attribute name=\"Type\" type=\"anyURI\" use=\"optional\"/>
   </complexType>
 
-  <element name=`DigestValue` type=`ds:DigestValueType`/>
-  <simpleType name=`DigestValueType`>
-    <restriction base=`base64Binary`/>
+  <element name=\"DigestValue\" type=\"ds:DigestValueType\"/>
+  <simpleType name=\"DigestValueType\">
+    <restriction base=\"base64Binary\"/>
   </simpleType>
 
   A Reference instance may be created by invoking one of the
@@ -28,9 +28,9 @@
 
 
 
-    XMLSignatureFactory factory = XMLSignatureFactory.getInstance(`DOM`);
+    XMLSignatureFactory factory = XMLSignatureFactory.getInstance(\"DOM\");
     Reference ref = factory.newReference
-      (`http://www.ietf.org/rfc/rfc3275.txt`,
+      (\"http://www.ietf.org/rfc/rfc3275.txt\",
        factory.newDigestMethod(DigestMethod.SHA1, null));"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.crypto.dsig Reference]))

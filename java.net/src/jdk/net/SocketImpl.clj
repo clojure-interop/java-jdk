@@ -3,7 +3,7 @@
   of all classes that actually implement sockets. It is used to
   create both client and server sockets.
 
-  A `plain` socket implements these methods exactly as
+  A \"plain\" socket implements these methods exactly as
   described, without attempting to go through a firewall or proxy."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.net SocketImpl]))

@@ -302,7 +302,7 @@
    submitted concurrently during the course of this method may or
    may not be rejected.
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller is not permitted to modify threads because it does not hold RuntimePermission(`modifyThread`)"
+  throws: java.lang.SecurityException - if a security manager exists and the caller is not permitted to modify threads because it does not hold RuntimePermission(\"modifyThread\")"
   ([^ForkJoinPool this]
     (-> this (.shutdown))))
 
@@ -443,7 +443,7 @@
 
   returns: an empty list - `java.util.List<java.lang.Runnable>`
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller is not permitted to modify threads because it does not hold RuntimePermission(`modifyThread`)"
+  throws: java.lang.SecurityException - if a security manager exists and the caller is not permitted to modify threads because it does not hold RuntimePermission(\"modifyThread\")"
   (^java.util.List [^ForkJoinPool this]
     (-> this (.shutdownNow))))
 

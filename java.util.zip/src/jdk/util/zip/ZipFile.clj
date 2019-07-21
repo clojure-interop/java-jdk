@@ -348,7 +348,7 @@
    Entries appear in the Stream in the order they appear in
    the central directory of the ZIP file.
 
-  returns: an ordered Stream of entries in this ZIP file - `java.util..Stream<? extends java.util.zip.ZipEntry>`
+  returns: an ordered Stream of entries in this ZIP file - `java.util.stream.Stream<? extends java.util.zip.ZipEntry>`
 
   throws: java.lang.IllegalStateException - if the zip file has been closed"
   ([^ZipFile this]

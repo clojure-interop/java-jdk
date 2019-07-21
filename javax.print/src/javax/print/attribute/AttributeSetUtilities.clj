@@ -9,8 +9,8 @@
 
 
   An unmodifiable view U of an AttributeSet S provides a
-  client with `read-only` access to S. Query operations on U
-  `read through` to S; thus, changes in S are reflected in
+  client with \"read-only\" access to S. Query operations on U
+  \"read through\" to S; thus, changes in S are reflected in
   U. However, any attempt to modify U,
    results in an UnmodifiableSetException.
   The unmodifiable view object U will be serializable if the

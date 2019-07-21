@@ -24,7 +24,7 @@
    given a numeric key code and a set of modifiers, specifying
    whether the key is activated when it is pressed or released.
 
-   The `virtual key` constants defined in
+   The \"virtual key\" constants defined in
    java.awt.event.KeyEvent can be
    used to specify the key code. For example:
    java.awt.event.KeyEvent.VK_ENTER

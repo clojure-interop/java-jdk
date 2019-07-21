@@ -5,11 +5,11 @@
 
   As of release 1.4, this exception has been retrofitted to conform to
   the general purpose exception-chaining mechanism.  The
-  `IOException that terminated the print job`
+  \"IOException that terminated the print job\"
   that is provided at construction time and accessed via the
   getIOException() method is now known as the cause,
   and may be accessed via the Throwable.getCause() method,
-  as well as the aforementioned `legacy method.`"
+  as well as the aforementioned \"legacy method.\""
   (:refer-clojure :only [require comment defn ->])
   (:import [java.awt.print PrinterIOException]))
 

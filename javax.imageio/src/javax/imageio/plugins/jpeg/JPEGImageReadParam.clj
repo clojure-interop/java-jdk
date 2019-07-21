@@ -17,7 +17,7 @@
   This class allows the tables to be specified directly from client
   code.  If no tables are specified either in the stream or in a
   JPEGImageReadParam, then the stream is presumed to use
-  the `standard` visually lossless tables.  See JPEGQTable
+  the \"standard\" visually lossless tables.  See JPEGQTable
   and JPEGHuffmanTable for more information
    on the default tables.
 

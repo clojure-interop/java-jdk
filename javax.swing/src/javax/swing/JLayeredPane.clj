@@ -2,7 +2,7 @@
   "JLayeredPane adds depth to a JFC/Swing container,
   allowing components to overlap each other when needed.
   An Integer object specifies each component's depth in the
-  container, where higher-numbered components sit `on top` of other
+  container, where higher-numbered components sit \"on top\" of other
   components.
   For task-oriented documentation and examples of using layered panes see
   How to Use a Layered Pane,

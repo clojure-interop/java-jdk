@@ -56,7 +56,7 @@
 
 
   The property value consists of the provider class name
-  and the device name, separated by the hash mark (`#`).
+  and the device name, separated by the hash mark (\"#\").
   The provider class name is the fully-qualified
   name of a concrete MIDI device provider class. The device name is matched against
   the String returned by the getName
@@ -91,17 +91,17 @@
 
   For example, the property javax.sound.midi.Receiver
   with a value
-  `com.sun.media.sound.MidiProvider#SunMIDI1`
+  \"com.sun.media.sound.MidiProvider#SunMIDI1\"
   will have the following consequences when
   getReceiver is called:
   if the class com.sun.media.sound.MidiProvider exists
   in the list of installed MIDI device providers,
   the first Receiver device with name
-  `SunMIDI1` will be returned. If it cannot
+  \"SunMIDI1\" will be returned. If it cannot
   be found, the first Receiver from that provider
   will be returned, regardless of name.
   If there is none, the first Receiver with name
-  `SunMIDI1` in the list of all devices
+  \"SunMIDI1\" in the list of all devices
   (as returned by getMidiDeviceInfo) will be returned,
   or, if not found, the first Receiver that can
   be found in the list of all devices is returned.
@@ -138,7 +138,7 @@
 
    If the system property
    javax.sound.midi.Sequencer
-   is defined or it is defined in the file `sound.properties`,
+   is defined or it is defined in the file \"sound.properties\",
    it is used to identify the default sequencer.
    For details, refer to the class description.
 
@@ -174,7 +174,7 @@
 
    If the system property
    javax.sound.midi.Transmitter
-   is defined or it is defined in the file `sound.properties`,
+   is defined or it is defined in the file \"sound.properties\",
    it is used to identify the device that provides the default transmitter.
    For details, refer to the class description.
 
@@ -204,7 +204,7 @@
 
    If the system property
    javax.sound.midi.Synthesizer
-   is defined or it is defined in the file `sound.properties`,
+   is defined or it is defined in the file \"sound.properties\",
    it is used to identify the default synthesizer.
    For details, refer to the class description.
 
@@ -222,7 +222,7 @@
 
    If the system property
    javax.sound.midi.Receiver
-   is defined or it is defined in the file `sound.properties`,
+   is defined or it is defined in the file \"sound.properties\",
    it is used to identify the device that provides the default receiver.
    For details, refer to the class description.
 

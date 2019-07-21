@@ -1,12 +1,12 @@
 (ns jdk.awt.font.TextHitInfo
   "The TextHitInfo class represents a character position in a
-  text model, and a bias, or `side,` of the character.  Biases are
+  text model, and a bias, or \"side,\" of the character.  Biases are
   either leading (the left edge, for a left-to-right character)
   or trailing (the right edge, for a left-to-right character).
   Instances of TextHitInfo are used to specify caret and
   insertion positions within text.
 
-  For example, consider the text `abc`.  TextHitInfo.trailing(1)
+  For example, consider the text \"abc\".  TextHitInfo.trailing(1)
   corresponds to the right side of the 'b' in the text.
 
   TextHitInfo is used primarily by TextLayout and

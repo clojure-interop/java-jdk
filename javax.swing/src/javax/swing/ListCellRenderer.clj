@@ -1,5 +1,5 @@
 (ns javax.swing.ListCellRenderer
-  "Identifies components that can be used as `rubber stamps` to paint
+  "Identifies components that can be used as \"rubber stamps\" to paint
   the cells in a JList.  For example, to use a JLabel as a
   ListCellRenderer, you would write something like this:
 
@@ -52,7 +52,7 @@
 (defn get-list-cell-renderer-component
   "Return a component that has been configured to display the specified
    value. That component's paint method is then called to
-   `render` the cell.  If it is necessary to compute the dimensions
+   \"render\" the cell.  If it is necessary to compute the dimensions
    of a list because the list cells do not have a fixed size, this method
    is called to generate a component on which getPreferredSize
    can be invoked.

@@ -21,7 +21,7 @@
 
 
 
-  MessageDigest md = MessageDigest.getInstance(`SHA-256`);
+  MessageDigest md = MessageDigest.getInstance(\"SHA-256\");
 
   try {
       md.update(toChapter1);
@@ -30,7 +30,7 @@
       md.update(toChapter2);
       ...etc.
   } catch (CloneNotSupportedException cnse) {
-      throw new DigestException(`couldn't make digest of partial content`);
+      throw new DigestException(\"couldn't make digest of partial content\");
   }
 
   Note that if a given implementation is not cloneable, it is
@@ -144,7 +144,7 @@
 (defn get-algorithm
   "Returns a string that identifies the algorithm, independent of
    implementation details. The name should be a standard
-   Java Security name (such as `SHA-256`).
+   Java Security name (such as \"SHA-256\").
    See the MessageDigest section in the
    Java Cryptography Architecture Standard Algorithm Name Documentation
    for information about standard algorithm names.

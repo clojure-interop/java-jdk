@@ -8,14 +8,14 @@
 
 
 
-  <element name=`Object` type=`ds:ObjectType`/>
-  <complexType name=`ObjectType` mixed=`true`>
-    <sequence minOccurs=`0` maxOccurs=`unbounded`>
-      <any namespace=`##any` processContents=`lax`/>
+  <element name=\"Object\" type=\"ds:ObjectType\"/>
+  <complexType name=\"ObjectType\" mixed=\"true\">
+    <sequence minOccurs=\"0\" maxOccurs=\"unbounded\">
+      <any namespace=\"##any\" processContents=\"lax\"/>
     </sequence>
-    <attribute name=`Id` type=`ID` use=`optional`/>
-    <attribute name=`MimeType` type=`string` use=`optional`/>
-    <attribute name=`Encoding` type=`anyURI` use=`optional`/>
+    <attribute name=\"Id\" type=\"ID\" use=\"optional\"/>
+    <attribute name=\"MimeType\" type=\"string\" use=\"optional\"/>
+    <attribute name=\"Encoding\" type=\"anyURI\" use=\"optional\"/>
   </complexType>
 
   A XMLObject instance may be created by invoking the
@@ -24,9 +24,9 @@
 
 
 
-    XMLSignatureFactory fac = XMLSignatureFactory.getInstance(`DOM`);
+    XMLSignatureFactory fac = XMLSignatureFactory.getInstance(\"DOM\");
     List content = Collections.singletonList(fac.newManifest(references)));
-    XMLObject object = factory.newXMLObject(content, `object-1`, null, null);
+    XMLObject object = factory.newXMLObject(content, \"object-1\", null, null);
 
   Note that this class is named XMLObject rather than
   Object to avoid naming clashes with the existing

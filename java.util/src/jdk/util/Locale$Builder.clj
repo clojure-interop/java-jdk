@@ -22,7 +22,7 @@
 
 
 
-      Locale aLocale = new Builder().setLanguage(`sr`).setScript(`Latn`).setRegion(`RS`).build();
+      Locale aLocale = new Builder().setLanguage(\"sr\").setScript(\"Latn\").setRegion(\"RS\").build();
 
 
   Builders can be reused; clear() resets all
@@ -226,9 +226,9 @@
    IllformedLocaleException to be thrown, except for the
    following three cases which are accepted for compatibility
    reasons:
-   Locale(`ja`, `JP`, `JP`) is treated as `ja-JP-u-ca-japanese`
-   Locale(`th`, `TH`, `TH`) is treated as `th-TH-u-nu-thai`
-   Locale(`no`, `NO`, `NY`) is treated as `nn-NO`
+   Locale(\"ja\", \"JP\", \"JP\") is treated as \"ja-JP-u-ca-japanese\"
+   Locale(\"th\", \"TH\", \"TH\") is treated as \"th-TH-u-nu-thai\"
+   Locale(\"no\", \"NO\", \"NY\") is treated as \"nn-NO\"
 
   locale - the locale - `java.util.Locale`
 

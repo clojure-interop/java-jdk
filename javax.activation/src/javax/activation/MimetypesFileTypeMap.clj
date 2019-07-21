@@ -25,7 +25,7 @@
   # for example:
   text/plain    txt text TXT
   # this would map file.txt, file.text, and file.TXT to
-  # the mime type `text/plain`"
+  # the mime type \"text/plain\""
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.activation MimetypesFileTypeMap]))
 

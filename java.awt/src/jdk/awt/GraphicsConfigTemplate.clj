@@ -21,7 +21,7 @@
 (def *-required
   "Static Constant.
 
-  Value used for `Enum` (Integer) type.  States that this
+  Value used for \"Enum\" (Integer) type.  States that this
    feature is required for the GraphicsConfiguration
    object.  If this feature is not available, do not select the
    GraphicsConfiguration object.
@@ -32,7 +32,7 @@
 (def *-preferred
   "Static Constant.
 
-  Value used for `Enum` (Integer) type.  States that this
+  Value used for \"Enum\" (Integer) type.  States that this
    feature is desired for the GraphicsConfiguration
    object.  A selection with this feature is preferred over a
    selection that does not include this feature, although both
@@ -44,7 +44,7 @@
 (def *-unnecessary
   "Static Constant.
 
-  Value used for `Enum` (Integer) type.  States that this
+  Value used for \"Enum\" (Integer) type.  States that this
    feature is not necessary for the selection of the
    GraphicsConfiguration object.  A selection
    without this feature is preferred over a selection that
@@ -54,7 +54,7 @@
   GraphicsConfigTemplate/UNNECESSARY)
 
 (defn get-best-configuration
-  "Returns the `best` configuration possible that passes the
+  "Returns the \"best\" configuration possible that passes the
    criteria defined in the GraphicsConfigTemplate.
 
   gc - the array of GraphicsConfiguration objects to choose from. - `java.awt.GraphicsConfiguration[]`

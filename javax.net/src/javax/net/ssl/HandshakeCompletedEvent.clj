@@ -1,7 +1,7 @@
 (ns javax.net.ssl.HandshakeCompletedEvent
   "This event indicates that an SSL handshake completed on a given
   SSL connection.  All of the core information about that handshake's
-  result is captured through an `SSLSession` object.  As a convenience,
+  result is captured through an \"SSLSession\" object.  As a convenience,
   this event class provides direct access to some important session
   attributes.
 
@@ -44,7 +44,7 @@
 
    When multiple certificates are available for use in a
    handshake, the implementation chooses what it considers the
-   `best` certificate chain available, and transmits that to
+   \"best\" certificate chain available, and transmits that to
    the other side.  This method allows the caller to know
    which certificate chain was actually used.
 

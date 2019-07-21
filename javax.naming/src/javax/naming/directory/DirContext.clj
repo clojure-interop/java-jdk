@@ -47,7 +47,7 @@
 
   JNDI support both of these models.
   It is up to the individual service providers to decide where to
-  `store` attributes.
+  \"store\" attributes.
   JNDI clients are safest when they do not make assumptions about
   whether an object's attributes are stored as part of the object, or stored
   within the parent object and associated with the object's name.
@@ -63,18 +63,18 @@
   attribute language codes.
 
   In attribute subclassing, attributes are defined in a class hierarchy.
-  In some directories, for example, the `name` attribute might be the
-  superclass of all name-related attributes, including `commonName` and
-  `surName`.  Asking for the `name` attribute might return both the
-  `commonName` and `surName` attributes.
+  In some directories, for example, the \"name\" attribute might be the
+  superclass of all name-related attributes, including \"commonName\" and
+  \"surName\".  Asking for the \"name\" attribute might return both the
+  \"commonName\" and \"surName\" attributes.
 
   With attribute type synonyms, a directory can assign multiple names to
-  the same attribute. For example, `cn` and `commonName` might both
-  refer to the same attribute. Asking for `cn` might return the
-  `commonName` attribute.
+  the same attribute. For example, \"cn\" and \"commonName\" might both
+  refer to the same attribute. Asking for \"cn\" might return the
+  \"commonName\" attribute.
 
   Some directories support the language codes for attributes.
-  Asking such a directory for the `description` attribute, for example,
+  Asking such a directory for the \"description\" attribute, for example,
   might return all of the following attributes:
 
   description
@@ -86,7 +86,7 @@
 
  Operational Attributes
 
-  Some directories have the notion of `operational attributes` which are
+  Some directories have the notion of \"operational attributes\" which are
   attributes associated with a directory object for administrative
   purposes. An example of operational attributes is the access control
   list for an object.
@@ -206,7 +206,7 @@
   obj - the object to bind; possibly null - `java.lang.Object`
   attrs - the attributes to associate with the binding - `javax.naming.directory.Attributes`
 
-  throws: javax.naming.directory.InvalidAttributesException - if some `mandatory` attributes of the binding are not supplied"
+  throws: javax.naming.directory.InvalidAttributesException - if some \"mandatory\" attributes of the binding are not supplied"
   ([^DirContext this ^javax.naming.Name name ^java.lang.Object obj ^javax.naming.directory.Attributes attrs]
     (-> this (.rebind name obj attrs))))
 
@@ -259,15 +259,15 @@
    named object's class definitions.
 
    One category of information found in directory schemas is
-   class definitions.  An `object class` definition
+   class definitions.  An \"object class\" definition
    specifies the object's type and what attributes (mandatory
    and optional) the object must/can have. Note that the term
-   `object class` being referred to here is in the directory sense
+   \"object class\" being referred to here is in the directory sense
    rather than in the Java sense.
    For example, if the named object is a directory object of
-   `Person` class, getSchemaClassDefinition() would return a
+   \"Person\" class, getSchemaClassDefinition() would return a
    DirContext representing the (directory's) object class
-   definition of `Person`.
+   definition of \"Person\".
 
    The information that can be retrieved from an object class definition
    is directory-dependent.
@@ -356,8 +356,8 @@
    description.
 
   name - the name of the context or object to search - `javax.naming.Name`
-  filter-expr - the filter expression to use for the search. The expression may contain variables of the form `{i}` where i is a nonnegative integer. May not be null. - `java.lang.String`
-  filter-args - the array of arguments to substitute for the variables in filterExpr. The value of filterArgs[i] will replace each occurrence of `{i}`. If null, equivalent to an empty array. - `java.lang.Object[]`
+  filter-expr - the filter expression to use for the search. The expression may contain variables of the form \"{i}\" where i is a nonnegative integer. May not be null. - `java.lang.String`
+  filter-args - the array of arguments to substitute for the variables in filterExpr. The value of filterArgs[i] will replace each occurrence of \"{i}\". If null, equivalent to an empty array. - `java.lang.Object[]`
   cons - the search controls that control the search. If null, the default search controls are used (equivalent to (new SearchControls())). - `javax.naming.directory.SearchControls`
 
   returns: an enumeration of SearchResults of the objects

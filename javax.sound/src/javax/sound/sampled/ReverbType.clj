@@ -24,7 +24,7 @@
   listener an impression of the absorptive nature of the surfaces and objects
   in the room.
   The decay time defines how long the reverberation takes to exponentially
-  decay until it is no longer perceptible (`effective zero`).
+  decay until it is no longer perceptible (\"effective zero\").
   The larger and less absorbent the surfaces, the longer the decay time.
 
   The set of parameters defined here may not include all aspects of reverberation

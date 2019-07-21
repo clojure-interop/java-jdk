@@ -200,16 +200,16 @@
 
 
 
-  cb.put(`text/`);
+  cb.put(\"text/\");
   cb.put(subtype);
-  cb.put(`; charset=`);
+  cb.put(\"; charset=\");
   cb.put(enc);
 
   can, for example, be replaced by the single statement
 
 
 
-  cb.put(`text/`).put(subtype).put(`; charset=`).put(enc);"
+  cb.put(\"text/\").put(subtype).put(\"; charset=\").put(enc);"
   (:refer-clojure :only [require comment defn ->])
   (:import [java.nio CharBuffer]))
 
@@ -476,7 +476,7 @@
 
        dst.put(csq.subSequence(start, end).toString())
 
-  csq - The character sequence from which a subsequence will be appended. If csq is null, then characters will be appended as if csq contained the four characters `null`. - `java.lang.CharSequence`
+  csq - The character sequence from which a subsequence will be appended. If csq is null, then characters will be appended as if csq contained the four characters \"null\". - `java.lang.CharSequence`
   start - The index of the first character in the subsequence - `int`
   end - The index of the character following the last character in the subsequence - `int`
 

@@ -6,7 +6,7 @@
   viewed as hour-minute-second-offset.
   This class stores all time fields, to a precision of nanoseconds,
   as well as a zone offset.
-  For example, the value `13:45.30.123456789+02:00` can be stored
+  For example, the value \"13:45.30.123456789+02:00\" can be stored
   in an OffsetTime.
 
 
@@ -25,7 +25,7 @@
    This is the time of midnight at the start of the day in the maximum offset
    (larger offsets are earlier on the time-line).
    This combines LocalTime.MIN and ZoneOffset.MAX.
-   This could be used by an application as a `far past` date.
+   This could be used by an application as a \"far past\" date.
 
   type: java.time.OffsetTime"
   OffsetTime/MIN)
@@ -37,7 +37,7 @@
    This is the time just before midnight at the end of the day in the minimum offset
    (larger negative offsets are later on the time-line).
    This combines LocalTime.MAX and ZoneOffset.MIN.
-   This could be used by an application as a `far future` date.
+   This could be used by an application as a \"far future\" date.
 
   type: java.time.OffsetTime"
   OffsetTime/MAX)
@@ -779,7 +779,7 @@
   "Compares this OffsetTime to another time.
 
    The comparison is based first on the UTC equivalent instant, then on the local time.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
    For example, the following is the comparator order:
 

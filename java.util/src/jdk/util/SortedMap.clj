@@ -31,9 +31,9 @@
   contract of the Map interface.
 
   All general-purpose sorted map implementation classes should provide four
-  `standard` constructors. It is not possible to enforce this recommendation
+  \"standard\" constructors. It is not possible to enforce this recommendation
   though as required constructors cannot be specified by interfaces. The
-  expected `standard` constructors for all sorted map implementations are:
+  expected \"standard\" constructors for all sorted map implementations are:
 
     A void (no arguments) constructor, which creates an empty sorted map
     sorted according to the natural ordering of its keys.
@@ -58,14 +58,14 @@
   containing all of the key-value mappings in m whose keys are
   between low and high, inclusive:
 
-    SortedMap<String, V> sub = m.subMap(low, high+`\0`);
+    SortedMap<String, V> sub = m.subMap(low, high+\"\\0\");
 
   A similar technique can be used to generate an open range
   (which contains neither endpoint).  The following idiom obtains a
   view containing all of the key-value mappings in m whose keys
   are between low and high, exclusive:
 
-    SortedMap<String, V> sub = m.subMap(low+`\0`, high);
+    SortedMap<String, V> sub = m.subMap(low+\"\\0\", high);
 
   This interface is a member of the
 

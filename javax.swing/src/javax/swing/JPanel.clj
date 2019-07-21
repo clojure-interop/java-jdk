@@ -57,7 +57,7 @@
   "Returns a string that specifies the name of the L&F class
    that renders this component.
 
-  returns: `PanelUI` - `java.lang.String`"
+  returns: \"PanelUI\" - `java.lang.String`"
   (^java.lang.String [^JPanel this]
     (-> this (.getUIClassID))))
 

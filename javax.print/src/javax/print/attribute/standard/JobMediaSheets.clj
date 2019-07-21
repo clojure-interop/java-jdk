@@ -15,7 +15,7 @@
 
   Unlike the JobKOctets and JobImpressions attributes, the JobMediaSheets value must include the
   multiplicative factors contributed by the number of copies specified by the
-  Copies attribute and a `number of copies` instruction embedded
+  Copies attribute and a \"number of copies\" instruction embedded
   in the document data, if any. This difference allows the system administrator
   to control the lower and upper bounds of both (1) the size of the document(s)
   with JobKOctetsSupported and JobImpressionsSupported and (2) the size of the job
@@ -60,7 +60,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class JobMediaSheets and any vendor-defined subclasses, the category
@@ -76,7 +76,7 @@
    instance.
 
    For class JobMediaSheets and any vendor-defined subclasses, the
-   category name is `job-media-sheets`.
+   category name is \"job-media-sheets\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^JobMediaSheets this]

@@ -71,7 +71,7 @@
   synchronized externally.  This is typically accomplished by
   synchronizing on some object that naturally encapsulates the map.
 
-  If no such object exists, the map should be `wrapped` using the
+  If no such object exists, the map should be \"wrapped\" using the
   Collections.synchronizedMap
   method.  This is best done at creation time, to prevent accidental
   unsynchronized access to the map:

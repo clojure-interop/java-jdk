@@ -5,7 +5,7 @@
 (def COMMON
   "Enum Constant.
 
-  Unicode script `Common`.
+  Unicode script \"Common\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/COMMON)
@@ -13,7 +13,7 @@
 (def LATIN
   "Enum Constant.
 
-  Unicode script `Latin`.
+  Unicode script \"Latin\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LATIN)
@@ -21,7 +21,7 @@
 (def GREEK
   "Enum Constant.
 
-  Unicode script `Greek`.
+  Unicode script \"Greek\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GREEK)
@@ -29,7 +29,7 @@
 (def CYRILLIC
   "Enum Constant.
 
-  Unicode script `Cyrillic`.
+  Unicode script \"Cyrillic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CYRILLIC)
@@ -37,7 +37,7 @@
 (def ARMENIAN
   "Enum Constant.
 
-  Unicode script `Armenian`.
+  Unicode script \"Armenian\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/ARMENIAN)
@@ -45,7 +45,7 @@
 (def HEBREW
   "Enum Constant.
 
-  Unicode script `Hebrew`.
+  Unicode script \"Hebrew\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/HEBREW)
@@ -53,7 +53,7 @@
 (def ARABIC
   "Enum Constant.
 
-  Unicode script `Arabic`.
+  Unicode script \"Arabic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/ARABIC)
@@ -61,7 +61,7 @@
 (def SYRIAC
   "Enum Constant.
 
-  Unicode script `Syriac`.
+  Unicode script \"Syriac\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SYRIAC)
@@ -69,7 +69,7 @@
 (def THAANA
   "Enum Constant.
 
-  Unicode script `Thaana`.
+  Unicode script \"Thaana\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/THAANA)
@@ -77,7 +77,7 @@
 (def DEVANAGARI
   "Enum Constant.
 
-  Unicode script `Devanagari`.
+  Unicode script \"Devanagari\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/DEVANAGARI)
@@ -85,7 +85,7 @@
 (def BENGALI
   "Enum Constant.
 
-  Unicode script `Bengali`.
+  Unicode script \"Bengali\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BENGALI)
@@ -93,7 +93,7 @@
 (def GURMUKHI
   "Enum Constant.
 
-  Unicode script `Gurmukhi`.
+  Unicode script \"Gurmukhi\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GURMUKHI)
@@ -101,7 +101,7 @@
 (def GUJARATI
   "Enum Constant.
 
-  Unicode script `Gujarati`.
+  Unicode script \"Gujarati\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GUJARATI)
@@ -109,7 +109,7 @@
 (def ORIYA
   "Enum Constant.
 
-  Unicode script `Oriya`.
+  Unicode script \"Oriya\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/ORIYA)
@@ -117,7 +117,7 @@
 (def TAMIL
   "Enum Constant.
 
-  Unicode script `Tamil`.
+  Unicode script \"Tamil\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAMIL)
@@ -125,7 +125,7 @@
 (def TELUGU
   "Enum Constant.
 
-  Unicode script `Telugu`.
+  Unicode script \"Telugu\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TELUGU)
@@ -133,7 +133,7 @@
 (def KANNADA
   "Enum Constant.
 
-  Unicode script `Kannada`.
+  Unicode script \"Kannada\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KANNADA)
@@ -141,7 +141,7 @@
 (def MALAYALAM
   "Enum Constant.
 
-  Unicode script `Malayalam`.
+  Unicode script \"Malayalam\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MALAYALAM)
@@ -149,7 +149,7 @@
 (def SINHALA
   "Enum Constant.
 
-  Unicode script `Sinhala`.
+  Unicode script \"Sinhala\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SINHALA)
@@ -157,7 +157,7 @@
 (def THAI
   "Enum Constant.
 
-  Unicode script `Thai`.
+  Unicode script \"Thai\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/THAI)
@@ -165,7 +165,7 @@
 (def LAO
   "Enum Constant.
 
-  Unicode script `Lao`.
+  Unicode script \"Lao\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LAO)
@@ -173,7 +173,7 @@
 (def TIBETAN
   "Enum Constant.
 
-  Unicode script `Tibetan`.
+  Unicode script \"Tibetan\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TIBETAN)
@@ -181,7 +181,7 @@
 (def MYANMAR
   "Enum Constant.
 
-  Unicode script `Myanmar`.
+  Unicode script \"Myanmar\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MYANMAR)
@@ -189,7 +189,7 @@
 (def GEORGIAN
   "Enum Constant.
 
-  Unicode script `Georgian`.
+  Unicode script \"Georgian\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GEORGIAN)
@@ -197,7 +197,7 @@
 (def HANGUL
   "Enum Constant.
 
-  Unicode script `Hangul`.
+  Unicode script \"Hangul\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/HANGUL)
@@ -205,7 +205,7 @@
 (def ETHIOPIC
   "Enum Constant.
 
-  Unicode script `Ethiopic`.
+  Unicode script \"Ethiopic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/ETHIOPIC)
@@ -213,7 +213,7 @@
 (def CHEROKEE
   "Enum Constant.
 
-  Unicode script `Cherokee`.
+  Unicode script \"Cherokee\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CHEROKEE)
@@ -221,7 +221,7 @@
 (def CANADIAN_ABORIGINAL
   "Enum Constant.
 
-  Unicode script `Canadian_Aboriginal`.
+  Unicode script \"Canadian_Aboriginal\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CANADIAN_ABORIGINAL)
@@ -229,7 +229,7 @@
 (def OGHAM
   "Enum Constant.
 
-  Unicode script `Ogham`.
+  Unicode script \"Ogham\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OGHAM)
@@ -237,7 +237,7 @@
 (def RUNIC
   "Enum Constant.
 
-  Unicode script `Runic`.
+  Unicode script \"Runic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/RUNIC)
@@ -245,7 +245,7 @@
 (def KHMER
   "Enum Constant.
 
-  Unicode script `Khmer`.
+  Unicode script \"Khmer\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KHMER)
@@ -253,7 +253,7 @@
 (def MONGOLIAN
   "Enum Constant.
 
-  Unicode script `Mongolian`.
+  Unicode script \"Mongolian\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MONGOLIAN)
@@ -261,7 +261,7 @@
 (def HIRAGANA
   "Enum Constant.
 
-  Unicode script `Hiragana`.
+  Unicode script \"Hiragana\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/HIRAGANA)
@@ -269,7 +269,7 @@
 (def KATAKANA
   "Enum Constant.
 
-  Unicode script `Katakana`.
+  Unicode script \"Katakana\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KATAKANA)
@@ -277,7 +277,7 @@
 (def BOPOMOFO
   "Enum Constant.
 
-  Unicode script `Bopomofo`.
+  Unicode script \"Bopomofo\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BOPOMOFO)
@@ -285,7 +285,7 @@
 (def HAN
   "Enum Constant.
 
-  Unicode script `Han`.
+  Unicode script \"Han\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/HAN)
@@ -293,7 +293,7 @@
 (def YI
   "Enum Constant.
 
-  Unicode script `Yi`.
+  Unicode script \"Yi\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/YI)
@@ -301,7 +301,7 @@
 (def OLD_ITALIC
   "Enum Constant.
 
-  Unicode script `Old_Italic`.
+  Unicode script \"Old_Italic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OLD_ITALIC)
@@ -309,7 +309,7 @@
 (def GOTHIC
   "Enum Constant.
 
-  Unicode script `Gothic`.
+  Unicode script \"Gothic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GOTHIC)
@@ -317,7 +317,7 @@
 (def DESERET
   "Enum Constant.
 
-  Unicode script `Deseret`.
+  Unicode script \"Deseret\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/DESERET)
@@ -325,7 +325,7 @@
 (def INHERITED
   "Enum Constant.
 
-  Unicode script `Inherited`.
+  Unicode script \"Inherited\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/INHERITED)
@@ -333,7 +333,7 @@
 (def TAGALOG
   "Enum Constant.
 
-  Unicode script `Tagalog`.
+  Unicode script \"Tagalog\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAGALOG)
@@ -341,7 +341,7 @@
 (def HANUNOO
   "Enum Constant.
 
-  Unicode script `Hanunoo`.
+  Unicode script \"Hanunoo\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/HANUNOO)
@@ -349,7 +349,7 @@
 (def BUHID
   "Enum Constant.
 
-  Unicode script `Buhid`.
+  Unicode script \"Buhid\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BUHID)
@@ -357,7 +357,7 @@
 (def TAGBANWA
   "Enum Constant.
 
-  Unicode script `Tagbanwa`.
+  Unicode script \"Tagbanwa\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAGBANWA)
@@ -365,7 +365,7 @@
 (def LIMBU
   "Enum Constant.
 
-  Unicode script `Limbu`.
+  Unicode script \"Limbu\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LIMBU)
@@ -373,7 +373,7 @@
 (def TAI_LE
   "Enum Constant.
 
-  Unicode script `Tai_Le`.
+  Unicode script \"Tai_Le\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAI_LE)
@@ -381,7 +381,7 @@
 (def LINEAR_B
   "Enum Constant.
 
-  Unicode script `Linear_B`.
+  Unicode script \"Linear_B\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LINEAR_B)
@@ -389,7 +389,7 @@
 (def UGARITIC
   "Enum Constant.
 
-  Unicode script `Ugaritic`.
+  Unicode script \"Ugaritic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/UGARITIC)
@@ -397,7 +397,7 @@
 (def SHAVIAN
   "Enum Constant.
 
-  Unicode script `Shavian`.
+  Unicode script \"Shavian\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SHAVIAN)
@@ -405,7 +405,7 @@
 (def OSMANYA
   "Enum Constant.
 
-  Unicode script `Osmanya`.
+  Unicode script \"Osmanya\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OSMANYA)
@@ -413,7 +413,7 @@
 (def CYPRIOT
   "Enum Constant.
 
-  Unicode script `Cypriot`.
+  Unicode script \"Cypriot\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CYPRIOT)
@@ -421,7 +421,7 @@
 (def BRAILLE
   "Enum Constant.
 
-  Unicode script `Braille`.
+  Unicode script \"Braille\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BRAILLE)
@@ -429,7 +429,7 @@
 (def BUGINESE
   "Enum Constant.
 
-  Unicode script `Buginese`.
+  Unicode script \"Buginese\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BUGINESE)
@@ -437,7 +437,7 @@
 (def COPTIC
   "Enum Constant.
 
-  Unicode script `Coptic`.
+  Unicode script \"Coptic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/COPTIC)
@@ -445,7 +445,7 @@
 (def NEW_TAI_LUE
   "Enum Constant.
 
-  Unicode script `New_Tai_Lue`.
+  Unicode script \"New_Tai_Lue\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/NEW_TAI_LUE)
@@ -453,7 +453,7 @@
 (def GLAGOLITIC
   "Enum Constant.
 
-  Unicode script `Glagolitic`.
+  Unicode script \"Glagolitic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/GLAGOLITIC)
@@ -461,7 +461,7 @@
 (def TIFINAGH
   "Enum Constant.
 
-  Unicode script `Tifinagh`.
+  Unicode script \"Tifinagh\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TIFINAGH)
@@ -469,7 +469,7 @@
 (def SYLOTI_NAGRI
   "Enum Constant.
 
-  Unicode script `Syloti_Nagri`.
+  Unicode script \"Syloti_Nagri\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SYLOTI_NAGRI)
@@ -477,7 +477,7 @@
 (def OLD_PERSIAN
   "Enum Constant.
 
-  Unicode script `Old_Persian`.
+  Unicode script \"Old_Persian\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OLD_PERSIAN)
@@ -485,7 +485,7 @@
 (def KHAROSHTHI
   "Enum Constant.
 
-  Unicode script `Kharoshthi`.
+  Unicode script \"Kharoshthi\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KHAROSHTHI)
@@ -493,7 +493,7 @@
 (def BALINESE
   "Enum Constant.
 
-  Unicode script `Balinese`.
+  Unicode script \"Balinese\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BALINESE)
@@ -501,7 +501,7 @@
 (def CUNEIFORM
   "Enum Constant.
 
-  Unicode script `Cuneiform`.
+  Unicode script \"Cuneiform\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CUNEIFORM)
@@ -509,7 +509,7 @@
 (def PHOENICIAN
   "Enum Constant.
 
-  Unicode script `Phoenician`.
+  Unicode script \"Phoenician\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/PHOENICIAN)
@@ -517,7 +517,7 @@
 (def PHAGS_PA
   "Enum Constant.
 
-  Unicode script `Phags_Pa`.
+  Unicode script \"Phags_Pa\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/PHAGS_PA)
@@ -525,7 +525,7 @@
 (def NKO
   "Enum Constant.
 
-  Unicode script `Nko`.
+  Unicode script \"Nko\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/NKO)
@@ -533,7 +533,7 @@
 (def SUNDANESE
   "Enum Constant.
 
-  Unicode script `Sundanese`.
+  Unicode script \"Sundanese\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SUNDANESE)
@@ -541,7 +541,7 @@
 (def BATAK
   "Enum Constant.
 
-  Unicode script `Batak`.
+  Unicode script \"Batak\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BATAK)
@@ -549,7 +549,7 @@
 (def LEPCHA
   "Enum Constant.
 
-  Unicode script `Lepcha`.
+  Unicode script \"Lepcha\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LEPCHA)
@@ -557,7 +557,7 @@
 (def OL_CHIKI
   "Enum Constant.
 
-  Unicode script `Ol_Chiki`.
+  Unicode script \"Ol_Chiki\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OL_CHIKI)
@@ -565,7 +565,7 @@
 (def VAI
   "Enum Constant.
 
-  Unicode script `Vai`.
+  Unicode script \"Vai\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/VAI)
@@ -573,7 +573,7 @@
 (def SAURASHTRA
   "Enum Constant.
 
-  Unicode script `Saurashtra`.
+  Unicode script \"Saurashtra\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SAURASHTRA)
@@ -581,7 +581,7 @@
 (def KAYAH_LI
   "Enum Constant.
 
-  Unicode script `Kayah_Li`.
+  Unicode script \"Kayah_Li\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KAYAH_LI)
@@ -589,7 +589,7 @@
 (def REJANG
   "Enum Constant.
 
-  Unicode script `Rejang`.
+  Unicode script \"Rejang\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/REJANG)
@@ -597,7 +597,7 @@
 (def LYCIAN
   "Enum Constant.
 
-  Unicode script `Lycian`.
+  Unicode script \"Lycian\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LYCIAN)
@@ -605,7 +605,7 @@
 (def CARIAN
   "Enum Constant.
 
-  Unicode script `Carian`.
+  Unicode script \"Carian\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CARIAN)
@@ -613,7 +613,7 @@
 (def LYDIAN
   "Enum Constant.
 
-  Unicode script `Lydian`.
+  Unicode script \"Lydian\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LYDIAN)
@@ -621,7 +621,7 @@
 (def CHAM
   "Enum Constant.
 
-  Unicode script `Cham`.
+  Unicode script \"Cham\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CHAM)
@@ -629,7 +629,7 @@
 (def TAI_THAM
   "Enum Constant.
 
-  Unicode script `Tai_Tham`.
+  Unicode script \"Tai_Tham\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAI_THAM)
@@ -637,7 +637,7 @@
 (def TAI_VIET
   "Enum Constant.
 
-  Unicode script `Tai_Viet`.
+  Unicode script \"Tai_Viet\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAI_VIET)
@@ -645,7 +645,7 @@
 (def AVESTAN
   "Enum Constant.
 
-  Unicode script `Avestan`.
+  Unicode script \"Avestan\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/AVESTAN)
@@ -653,7 +653,7 @@
 (def EGYPTIAN_HIEROGLYPHS
   "Enum Constant.
 
-  Unicode script `Egyptian_Hieroglyphs`.
+  Unicode script \"Egyptian_Hieroglyphs\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/EGYPTIAN_HIEROGLYPHS)
@@ -661,7 +661,7 @@
 (def SAMARITAN
   "Enum Constant.
 
-  Unicode script `Samaritan`.
+  Unicode script \"Samaritan\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SAMARITAN)
@@ -669,7 +669,7 @@
 (def MANDAIC
   "Enum Constant.
 
-  Unicode script `Mandaic`.
+  Unicode script \"Mandaic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MANDAIC)
@@ -677,7 +677,7 @@
 (def LISU
   "Enum Constant.
 
-  Unicode script `Lisu`.
+  Unicode script \"Lisu\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/LISU)
@@ -685,7 +685,7 @@
 (def BAMUM
   "Enum Constant.
 
-  Unicode script `Bamum`.
+  Unicode script \"Bamum\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BAMUM)
@@ -693,7 +693,7 @@
 (def JAVANESE
   "Enum Constant.
 
-  Unicode script `Javanese`.
+  Unicode script \"Javanese\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/JAVANESE)
@@ -701,7 +701,7 @@
 (def MEETEI_MAYEK
   "Enum Constant.
 
-  Unicode script `Meetei_Mayek`.
+  Unicode script \"Meetei_Mayek\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MEETEI_MAYEK)
@@ -709,7 +709,7 @@
 (def IMPERIAL_ARAMAIC
   "Enum Constant.
 
-  Unicode script `Imperial_Aramaic`.
+  Unicode script \"Imperial_Aramaic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/IMPERIAL_ARAMAIC)
@@ -717,7 +717,7 @@
 (def OLD_SOUTH_ARABIAN
   "Enum Constant.
 
-  Unicode script `Old_South_Arabian`.
+  Unicode script \"Old_South_Arabian\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OLD_SOUTH_ARABIAN)
@@ -725,7 +725,7 @@
 (def INSCRIPTIONAL_PARTHIAN
   "Enum Constant.
 
-  Unicode script `Inscriptional_Parthian`.
+  Unicode script \"Inscriptional_Parthian\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/INSCRIPTIONAL_PARTHIAN)
@@ -733,7 +733,7 @@
 (def INSCRIPTIONAL_PAHLAVI
   "Enum Constant.
 
-  Unicode script `Inscriptional_Pahlavi`.
+  Unicode script \"Inscriptional_Pahlavi\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/INSCRIPTIONAL_PAHLAVI)
@@ -741,7 +741,7 @@
 (def OLD_TURKIC
   "Enum Constant.
 
-  Unicode script `Old_Turkic`.
+  Unicode script \"Old_Turkic\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/OLD_TURKIC)
@@ -749,7 +749,7 @@
 (def BRAHMI
   "Enum Constant.
 
-  Unicode script `Brahmi`.
+  Unicode script \"Brahmi\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/BRAHMI)
@@ -757,7 +757,7 @@
 (def KAITHI
   "Enum Constant.
 
-  Unicode script `Kaithi`.
+  Unicode script \"Kaithi\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/KAITHI)
@@ -765,7 +765,7 @@
 (def MEROITIC_HIEROGLYPHS
   "Enum Constant.
 
-  Unicode script `Meroitic Hieroglyphs`.
+  Unicode script \"Meroitic Hieroglyphs\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MEROITIC_HIEROGLYPHS)
@@ -773,7 +773,7 @@
 (def MEROITIC_CURSIVE
   "Enum Constant.
 
-  Unicode script `Meroitic Cursive`.
+  Unicode script \"Meroitic Cursive\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MEROITIC_CURSIVE)
@@ -781,7 +781,7 @@
 (def SORA_SOMPENG
   "Enum Constant.
 
-  Unicode script `Sora Sompeng`.
+  Unicode script \"Sora Sompeng\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SORA_SOMPENG)
@@ -789,7 +789,7 @@
 (def CHAKMA
   "Enum Constant.
 
-  Unicode script `Chakma`.
+  Unicode script \"Chakma\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/CHAKMA)
@@ -797,7 +797,7 @@
 (def SHARADA
   "Enum Constant.
 
-  Unicode script `Sharada`.
+  Unicode script \"Sharada\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/SHARADA)
@@ -805,7 +805,7 @@
 (def TAKRI
   "Enum Constant.
 
-  Unicode script `Takri`.
+  Unicode script \"Takri\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/TAKRI)
@@ -813,7 +813,7 @@
 (def MIAO
   "Enum Constant.
 
-  Unicode script `Miao`.
+  Unicode script \"Miao\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/MIAO)
@@ -821,7 +821,7 @@
 (def UNKNOWN
   "Enum Constant.
 
-  Unicode script `Unknown`.
+  Unicode script \"Unknown\".
 
   type: java.lang.Character$UnicodeScript"
   Character$UnicodeScript/UNKNOWN)

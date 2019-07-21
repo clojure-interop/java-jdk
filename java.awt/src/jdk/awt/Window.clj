@@ -85,7 +85,7 @@
    is showing on the screen.
 
    If there is a security manager set, it is invoked to check
-   AWTPermission(`showWindowWithoutWarningBanner`). If that
+   AWTPermission(\"showWindowWithoutWarningBanner\"). If that
    check fails with a SecurityException then a warning banner
    is created.
 
@@ -551,7 +551,7 @@
     When this method is called on a window with a value of
    true, and the window is visible and the platform
    supports always-on-top for this window, the window is immediately
-   brought forward, `sticking` it in the top-most position. If the
+   brought forward, \"sticking\" it in the top-most position. If the
    window isn`t currently visible, this method sets the always-on-top
    state to true but does not bring the window forward.
    When the window is later shown, it will be always-on-top.
@@ -571,7 +571,7 @@
    support always-on-top windows, calling this method has no effect.
 
    If a SecurityManager is installed, the calling thread must be
-   granted the AWTPermission `setWindowAlwaysOnTop` in
+   granted the AWTPermission \"setWindowAlwaysOnTop\" in
    order to set the value of this property. If this
    permission is not granted, this method will throw a
    SecurityException, and the current value of the property will
@@ -808,7 +808,7 @@
    window is shown on the screen.
 
    This behavior can also be enabled by setting the System Property
-   `java.awt.Window.locationByPlatform` to `true`, though calls to this method
+   \"java.awt.Window.locationByPlatform\" to \"true\", though calls to this method
    take precedence.
 
    Calls to setVisible, setLocation and
@@ -1232,25 +1232,25 @@
    property. The specified property may be user-defined, or one of the
    following:
 
-      this Window's font (`font`)
-      this Window's background color (`background`)
-      this Window's foreground color (`foreground`)
-      this Window's focusability (`focusable`)
+      this Window's font (\"font\")
+      this Window's background color (\"background\")
+      this Window's foreground color (\"foreground\")
+      this Window's focusability (\"focusable\")
       this Window's focus traversal keys enabled state
-          (`focusTraversalKeysEnabled`)
+          (\"focusTraversalKeysEnabled\")
       this Window's Set of FORWARD_TRAVERSAL_KEYS
-          (`forwardFocusTraversalKeys`)
+          (\"forwardFocusTraversalKeys\")
       this Window's Set of BACKWARD_TRAVERSAL_KEYS
-          (`backwardFocusTraversalKeys`)
+          (\"backwardFocusTraversalKeys\")
       this Window's Set of UP_CYCLE_TRAVERSAL_KEYS
-          (`upCycleFocusTraversalKeys`)
+          (\"upCycleFocusTraversalKeys\")
       this Window's Set of DOWN_CYCLE_TRAVERSAL_KEYS
-          (`downCycleFocusTraversalKeys`)
-      this Window's focus traversal policy (`focusTraversalPolicy`)
+          (\"downCycleFocusTraversalKeys\")
+      this Window's focus traversal policy (\"focusTraversalPolicy\")
 
-      this Window's focusable Window state (`focusableWindowState`)
+      this Window's focusable Window state (\"focusableWindowState\")
 
-      this Window's always-on-top state(`alwaysOnTop`)
+      this Window's always-on-top state(\"alwaysOnTop\")
 
    Note that if this Window is inheriting a bound property, then no
    event will be fired in response to a change in the inherited property.
@@ -1278,7 +1278,7 @@
    somewhere in the visible area of the window. A window is
    insecure if there is a security manager and the security
    manager denies
-   AWTPermission(`showWindowWithoutWarningBanner`).
+   AWTPermission(\"showWindowWithoutWarningBanner\").
 
    If the window is secure, then getWarningString
    returns null. If the window is insecure, this

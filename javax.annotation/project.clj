@@ -1,4 +1,4 @@
-(defproject clojure-interop/javax.annotation "1.0.4"
+(defproject clojure-interop/javax.annotation "1.0.5"
   :description "Clojure to Java Interop Bindings for javax.annotation"
   :url "https://github.com/clojure-interop/java-jdk"
   :license {:name "Eclipse Public License"

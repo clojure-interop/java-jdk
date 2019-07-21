@@ -97,8 +97,8 @@
 
 
    public Foo(Bar bar, Baz baz) {
-       this.bar = Objects.requireNonNull(bar, `bar must not be null`);
-       this.baz = Objects.requireNonNull(baz, `baz must not be null`);
+       this.bar = Objects.requireNonNull(bar, \"bar must not be null\");
+       this.baz = Objects.requireNonNull(baz, \"baz must not be null\");
    }
 
   obj - the object reference to check for nullity - `T`

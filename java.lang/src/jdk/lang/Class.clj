@@ -21,8 +21,8 @@
 
 
       void printClassName(Object obj) {
-          System.out.println(`The class of `  obj
-                             ` is `  obj.getClass().getName());
+          System.out.println(\"The class of \"  obj
+                             \" is \"  obj.getClass().getName());
       }
 
    It is also possible to get the Class object for a named
@@ -31,7 +31,7 @@
   For example:
 
 
-      System.out.println(`The name of class Foo is: `+Foo.class.getName());"
+      System.out.println(\"The name of class Foo is: \"+Foo.class.getName());"
   (:refer-clojure :only [require comment defn ->])
   (:import [java.lang Class]))
 
@@ -59,13 +59,13 @@
     For example, in an instance method the expression:
 
 
-    Class.forName(`Foo`)
+    Class.forName(\"Foo\")
 
 
    is equivalent to:
 
 
-    Class.forName(`Foo`, true, this.getClass().getClassLoader())
+    Class.forName(\"Foo\", true, this.getClass().getClassLoader())
 
 
    Note that this method throws errors related to loading, linking or
@@ -77,7 +77,7 @@
     If the loader is null, and a security
    manager is present, and the caller's class loader is not null, then this
    method calls the security manager's checkPermission method
-   with a RuntimePermission(`getClassLoader`) permission to
+   with a RuntimePermission(\"getClassLoader\") permission to
    ensure it's ok to access the bootstrap class loader.
 
   name - fully qualified name of the desired class - `java.lang.String`
@@ -232,7 +232,7 @@
 
 
     If the name begins with a '/'
-   ('\u002f'), then the absolute name of the resource is the
+   ('\\u002f'), then the absolute name of the resource is the
    portion of the name following the '/'.
 
     Otherwise, the absolute name is of the following form:
@@ -243,7 +243,7 @@
 
     Where the modified_package_name is the package name of this
    object with '/' substituted for '.'
-   ('\u002e').
+   ('\\u002e').
 
   name - name of the desired resource - `java.lang.String`
 
@@ -264,7 +264,7 @@
   "Returns the ProtectionDomain of this class.  If there is a
    security manager installed, this method first calls the security
    manager's checkPermission method with a
-   RuntimePermission(`getProtectionDomain`) permission to
+   RuntimePermission(\"getProtectionDomain\") permission to
    ensure it's ok to get the
    ProtectionDomain.
 
@@ -329,7 +329,7 @@
   returns: the array of Constructor objects representing all the
             declared constructors of this class - `java.lang.reflect.Constructor<?>[]`
 
-  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the declared constructors within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
+  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(\"accessDeclaredMembers\") denies access to the declared constructors within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
   ([^Class this]
     (-> this (.getDeclaredConstructors))))
 
@@ -373,7 +373,7 @@
 
 
     If the name begins with a '/'
-   ('\u002f'), then the absolute name of the resource is the
+   ('\\u002f'), then the absolute name of the resource is the
    portion of the name following the '/'.
 
     Otherwise, the absolute name is of the following form:
@@ -384,7 +384,7 @@
 
     Where the modified_package_name is the package name of this
    object with '/' substituted for '.'
-   ('\u002e').
+   ('\\u002e').
 
   name - name of the desired resource - `java.lang.String`
 
@@ -494,12 +494,12 @@
 
 (defn to-string
   "Converts the object to a string. The string representation is the
-   string `class` or `interface`, followed by a space, and then by the
+   string \"class\" or \"interface\", followed by a space, and then by the
    fully qualified name of the class in the format returned by
    getName.  If this Class object represents a
    primitive type, this method returns the name of the primitive type.  If
    this Class object represents void this method returns
-   `void`.
+   \"void\".
 
   returns: a string representation of this class object. - `java.lang.String`"
   (^java.lang.String [^Class this]
@@ -636,13 +636,13 @@
 
 
    String.class.getName()
-       returns `java.lang.String`
+       returns \"java.lang.String\"
    byte.class.getName()
-       returns `byte`
+       returns \"byte\"
    (new Object[3]).getClass().getName()
-       returns `[Ljava.lang.Object;`
+       returns \"[Ljava.lang.Object;\"
    (new int[3][4][5][6][7][8][9]).getClass().getName()
-       returns `[[[[[[[I`
+       returns \"[[[[[[[I\"
 
   returns: the name of the class or interface
             represented by this object. - `java.lang.String`"
@@ -669,7 +669,7 @@
   returns: the immediately enclosing constructor of the underlying class, if
        that class is a local or anonymous class; otherwise null. - `java.lang.reflect.Constructor<?>`
 
-  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of the enclosing class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the constructors within the enclosing class the caller's class loader is not the same as or an ancestor of the class loader for the enclosing class and invocation of s.checkPackageAccess() denies access to the package of the enclosing class"
+  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of the enclosing class and invocation of s.checkPermission method with RuntimePermission(\"accessDeclaredMembers\") denies access to the constructors within the enclosing class the caller's class loader is not the same as or an ancestor of the class loader for the enclosing class and invocation of s.checkPackageAccess() denies access to the package of the enclosing class"
   (^java.lang.reflect.Constructor [^Class this]
     (-> this (.getEnclosingConstructor))))
 
@@ -736,7 +736,7 @@
    not null and the caller's class loader is not the same as or an ancestor of
    the class loader for the class whose class loader is requested, then
    this method calls the security manager's checkPermission
-   method with a RuntimePermission(`getClassLoader`)
+   method with a RuntimePermission(\"getClassLoader\")
    permission to ensure it's ok to access the class loader for the class.
 
    If this object
@@ -795,7 +795,7 @@
   returns: the immediately enclosing method of the underlying class, if
        that class is a local or anonymous class; otherwise null. - `java.lang.reflect.Method`
 
-  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of the enclosing class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the methods within the enclosing class the caller's class loader is not the same as or an ancestor of the class loader for the enclosing class and invocation of s.checkPackageAccess() denies access to the package of the enclosing class"
+  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of the enclosing class and invocation of s.checkPermission method with RuntimePermission(\"accessDeclaredMembers\") denies access to the methods within the enclosing class the caller's class loader is not the same as or an ancestor of the class loader for the enclosing class and invocation of s.checkPackageAccess() denies access to the package of the enclosing class"
   (^java.lang.reflect.Method [^Class this]
     (-> this (.getEnclosingMethod))))
 
@@ -1009,7 +1009,7 @@
    order. If parameterTypes is null, it is
    treated as if it were an empty array.
 
-    If the name is `<init>` or `<clinit>` a
+    If the name is \"<init>\" or \"<clinit>\" a
    NoSuchMethodException is raised. Otherwise, the method to
    be reflected is determined by the algorithm that follows.  Let C be the
    class or interface represented by this object:
@@ -1056,7 +1056,7 @@
   returns: the Method object that matches the specified
            name and parameterTypes - `java.lang.reflect.Method`
 
-  throws: java.lang.NoSuchMethodException - if a matching method is not found or if the name is `<init>`or `<clinit>`."
+  throws: java.lang.NoSuchMethodException - if a matching method is not found or if the name is \"<init>\"or \"<clinit>\"."
   (^java.lang.reflect.Method [^Class this ^java.lang.String name ^java.lang.Class parameter-types]
     (-> this (.getMethod name parameter-types))))
 
@@ -1071,7 +1071,7 @@
    parameter types is declared in a class, and one of these methods has a
    return type that is more specific than any of the others, that method is
    returned; otherwise one of the methods is chosen arbitrarily.  If the
-   name is `<init>`or `<clinit>` a NoSuchMethodException
+   name is \"<init>\"or \"<clinit>\" a NoSuchMethodException
    is raised.
 
     If this Class object represents an array type, then this
@@ -1105,7 +1105,7 @@
   returns: the array of Field objects representing all the
             declared fields of this class - `java.lang.reflect.Field[]`
 
-  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the declared fields within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
+  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(\"accessDeclaredMembers\") denies access to the declared fields within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
   ([^Class this]
     (-> this (.getDeclaredFields))))
 
@@ -1191,7 +1191,7 @@
   returns: the array of Class objects representing all the
            declared members of this class - `java.lang.Class<?>[]`
 
-  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the declared classes within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
+  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(\"accessDeclaredMembers\") denies access to the declared classes within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
   ([^Class this]
     (-> this (.getDeclaredClasses))))
 
@@ -1221,7 +1221,7 @@
   returns: the array of Method objects representing all the
             declared methods of this class - `java.lang.reflect.Method[]`
 
-  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(`accessDeclaredMembers`) denies access to the declared methods within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
+  throws: java.lang.SecurityException - If a security manager, s, is present and any of the following conditions is met: the caller's class loader is not the same as the class loader of this class and invocation of s.checkPermission method with RuntimePermission(\"accessDeclaredMembers\") denies access to the declared methods within this class the caller's class loader is not the same as or an ancestor of the class loader for the current class and invocation of s.checkPackageAccess() denies access to the package of this class"
   ([^Class this]
     (-> this (.getDeclaredMethods))))
 
@@ -1240,8 +1240,8 @@
    anonymous.
 
    The simple name of an array is the simple name of the
-   component type with `[]` appended.  In particular the simple
-   name of an array whose component type is anonymous is `[]`.
+   component type with \"[]\" appended.  In particular the simple
+   name of an array whose component type is anonymous is \"[]\".
 
   returns: the simple name of the underlying class - `java.lang.String`"
   (^java.lang.String [^Class this]
@@ -1253,7 +1253,7 @@
    is valid, and throws a ClassCastException if it is not.  If
    this method succeeds, it always returns a reference to this class object.
 
-   This method is useful when a client needs to `narrow` the type of
+   This method is useful when a client needs to \"narrow\" the type of
    a Class object to pass it to an API that restricts the
    Class objects that it is willing to accept.  A cast would
    generate a compile-time warning, as the correctness of the cast
@@ -1265,7 +1265,7 @@
   returns: this Class object, cast to represent a subclass of
       the specified class object. - `<U> java.lang.Class<? extends U>`
 
-  throws: java.lang.ClassCastException - if this Class object does not represent a subclass of the specified class (here `subclass` includes the class itself)."
+  throws: java.lang.ClassCastException - if this Class object does not represent a subclass of the specified class (here \"subclass\" includes the class itself)."
   ([^Class this ^java.lang.Class clazz]
     (-> this (.asSubclass clazz))))
 

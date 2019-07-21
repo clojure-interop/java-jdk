@@ -60,7 +60,7 @@
   etc. If a ThreadFactory fails to create a thread when asked
   by returning null from newThread, the executor will
   continue, but might not be able to execute any tasks. Threads
-  should possess the `modifyThread` RuntimePermission. If
+  should possess the \"modifyThread\" RuntimePermission. If
   worker threads or other threads using the pool do not possess this
   permission, service may be degraded: configuration changes may not
   take effect in a timely manner, and a shutdown pool may remain in a
@@ -455,7 +455,7 @@
    complete execution.  Use awaitTermination
    to do that.
 
-  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
+  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(\"modifyThread\"), or the security manager's checkAccess method denies access."
   ([^ThreadPoolExecutor this]
     (-> this (.shutdown))))
 
@@ -610,7 +610,7 @@
 
   returns: list of tasks that never commenced execution - `java.util.List<java.lang.Runnable>`
 
-  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
+  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(\"modifyThread\"), or the security manager's checkAccess method denies access."
   (^java.util.List [^ThreadPoolExecutor this]
     (-> this (.shutdownNow))))
 

@@ -351,7 +351,7 @@
    of day around the world. Thus, an offset of +10:00 comes before an
    offset of +09:00 and so on down to -18:00.
 
-   The comparison is `consistent with equals`, as defined by Comparable.
+   The comparison is \"consistent with equals\", as defined by Comparable.
 
   other - the other date to compare to, not null - `java.time.ZoneOffset`
 

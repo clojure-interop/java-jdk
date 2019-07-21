@@ -30,7 +30,7 @@
 
 
      jComponent.putClientProperty(documentBaseKey,
-                                  xxx.class.getResource(`resources/`));
+                                  xxx.class.getResource(\"resources/\"));
 
   type: java.lang.String"
   BasicHTML/documentBaseKey)

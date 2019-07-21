@@ -75,10 +75,10 @@
   result is not returned, some digit positions of the exact result
   are discarded.  When rounding increases the magnitude of the
   returned result, it is possible for a new digit position to be
-  created by a carry propagating to a leading `9` digit.
+  created by a carry propagating to a leading \"9\" digit.
   For example, rounding the value 999.9 to three digits rounding up
   would be numerically equal to one thousand, represented as
-  100×101.  In such cases, the new `1` is
+  100×101.  In such cases, the new \"1\" is
   the leading digit position of the returned result.
 
   Besides a logical exact result, each arithmetic operation has a
@@ -147,13 +147,13 @@
 
   For the sake of brevity and clarity, pseudo-code is used
   throughout the descriptions of BigDecimal methods.  The
-  pseudo-code expression (i  j) is shorthand for `a
+  pseudo-code expression (i  j) is shorthand for \"a
   BigDecimal whose value is that of the BigDecimal
   i added to that of the BigDecimal
-  j.` The pseudo-code expression (i == j) is
-  shorthand for `true if and only if the
+  j.\" The pseudo-code expression (i == j) is
+  shorthand for \"true if and only if the
   BigDecimal i represents the same value as the
-  BigDecimal j.` Other pseudo-code expressions
+  BigDecimal j.\" Other pseudo-code expressions
   are interpreted similarly.  Square brackets are used to represent
   the particular BigInteger and scale pair defining a
   BigDecimal value; for example [19, 2] is the
@@ -272,7 +272,7 @@
 (def *-round-half-up
   "Static Constant.
 
-  Rounding mode to round towards `nearest neighbor`
+  Rounding mode to round towards \"nearest neighbor\"
    unless both neighbors are equidistant, in which case round up.
    Behaves as for ROUND_UP if the discarded fraction is
    ≥ 0.5; otherwise, behaves as for ROUND_DOWN.  Note
@@ -285,7 +285,7 @@
 (def *-round-half-down
   "Static Constant.
 
-  Rounding mode to round towards `nearest neighbor`
+  Rounding mode to round towards \"nearest neighbor\"
    unless both neighbors are equidistant, in which case round
    down.  Behaves as for ROUND_UP if the discarded
    fraction is > 0.5; otherwise, behaves as for
@@ -297,7 +297,7 @@
 (def *-round-half-even
   "Static Constant.
 
-  Rounding mode to round towards the `nearest neighbor`
+  Rounding mode to round towards the \"nearest neighbor\"
    unless both neighbors are equidistant, in which case, round
    towards the even neighbor.  Behaves as for
    ROUND_HALF_UP if the digit to the left of the
@@ -323,7 +323,7 @@
 (defn *value-of
   "Translates a long unscaled value and an
    int scale into a BigDecimal.  This
-   `static factory method` is provided in preference to
+   \"static factory method\" is provided in preference to
    a (long, int) constructor because it
    allows for reuse of frequently used BigDecimal values..
 
@@ -400,7 +400,7 @@
    The Java™ Language Specification:
    any fractional part of this
    BigDecimal will be discarded, and if the resulting
-   `BigInteger` is too big to fit in a
+   \"BigInteger\" is too big to fit in a
    long, only the low-order 64 bits are returned.
    Note that this conversion can lose information about the
    overall magnitude and precision of this BigDecimal value as well
@@ -648,12 +648,12 @@
    adjusted exponent converted to a character form.  The latter is
    in base ten, using the characters '0' through
    '9' with no leading zeros, and is always prefixed by a
-   sign character '-' ('\u002D') if the
+   sign character '-' ('\\u002D') if the
    adjusted exponent is negative, '+'
-   ('\u002B') otherwise).
+   ('\\u002B') otherwise).
 
    Finally, the entire string is prefixed by a minus sign
-   character '-' ('\u002D') if the unscaled
+   character '-' ('\\u002D') if the unscaled
    value is less than zero.  No sign character is prefixed if the
    unscaled value is zero or positive.
 
@@ -662,14 +662,14 @@
    on the left, the resulting string is shown on the right.
 
 
-   [123,0]      `123`
-   [-123,0]     `-123`
-   [123,-1]     `1.23E+3`
-   [123,-3]     `1.23E+5`
-   [123,1]      `12.3`
-   [123,5]      `0.00123`
-   [123,10]     `1.23E-8`
-   [-123,12]    `-1.23E-10`
+   [123,0]      \"123\"
+   [-123,0]     \"-123\"
+   [123,-1]     \"1.23E+3\"
+   [123,-3]     \"1.23E+5\"
+   [123,1]      \"12.3\"
+   [123,5]      \"0.00123\"
+   [123,10]     \"1.23E-8\"
+   [-123,12]    \"-1.23E-10\"
 
    Notes:
 
@@ -763,7 +763,7 @@
    in the result.
 
    The entire string is prefixed by a minus sign character '-'
-   ('\u002D') if the unscaled value is less than
+   ('\\u002D') if the unscaled value is less than
    zero. No sign character is prefixed if the unscaled value is
    zero or positive.
 
@@ -919,7 +919,7 @@
    The Java™ Language Specification:
    any fractional part of this
    BigDecimal will be discarded, and if the resulting
-   `BigInteger` is too big to fit in an
+   \"BigInteger\" is too big to fit in an
    int, only the low-order 32 bits are returned.
    Note that this conversion can lose information about the
    overall magnitude and precision of this BigDecimal

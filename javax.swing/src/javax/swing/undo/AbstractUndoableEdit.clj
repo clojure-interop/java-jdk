@@ -64,13 +64,13 @@
    AbstractUndoableEdit.undoText and returns
    that value followed by a space, followed by
    getPresentationName.
-   If getPresentationName returns ``,
+   If getPresentationName returns \"\",
    then the defaults value is returned alone.
 
   returns: the value from the defaults table with key
       AbstractUndoableEdit.undoText, followed
       by a space, followed by getPresentationName
-      unless getPresentationName is `` in which
+      unless getPresentationName is \"\" in which
       case, the defaults value is returned alone. - `java.lang.String`"
   (^java.lang.String [^AbstractUndoableEdit this]
     (-> this (.getUndoPresentationName))))
@@ -96,14 +96,14 @@
     (-> this (.canRedo))))
 
 (defn get-presentation-name
-  "This default implementation returns ``. Used by
+  "This default implementation returns \"\". Used by
    getUndoPresentationName and
    getRedoPresentationName to
    construct the strings they return. Subclasses should override to
    return an appropriate description of the operation this edit
    represents.
 
-  returns: the empty string `` - `java.lang.String`"
+  returns: the empty string \"\" - `java.lang.String`"
   (^java.lang.String [^AbstractUndoableEdit this]
     (-> this (.getPresentationName))))
 
@@ -121,13 +121,13 @@
    AbstractUndoableEdit.redoText and returns
    that value followed by a space, followed by
    getPresentationName.
-   If getPresentationName returns ``,
+   If getPresentationName returns \"\",
    then the defaults value is returned alone.
 
   returns: the value from the defaults table with key
       AbstractUndoableEdit.redoText, followed
       by a space, followed by getPresentationName
-      unless getPresentationName is `` in which
+      unless getPresentationName is \"\" in which
       case, the defaults value is returned alone. - `java.lang.String`"
   (^java.lang.String [^AbstractUndoableEdit this]
     (-> this (.getRedoPresentationName))))

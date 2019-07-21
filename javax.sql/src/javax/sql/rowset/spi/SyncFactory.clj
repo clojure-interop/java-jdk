@@ -117,11 +117,11 @@
      import javax.naming.*;
 
      Hashtable svrEnv = new  Hashtable();
-     srvEnv.put(Context.INITIAL_CONTEXT_FACTORY, `CosNaming`);
+     srvEnv.put(Context.INITIAL_CONTEXT_FACTORY, \"CosNaming\");
 
      Context ctx = new InitialContext(svrEnv);
      com.fred.providers.MyProvider = new MyProvider();
-     ctx.rebind(`providers/MyProvider`, syncProvider);
+     ctx.rebind(\"providers/MyProvider\", syncProvider);
 
   Next, an application will register the JNDI context with the
   SyncFactory instance.  This allows the SyncFactory
@@ -130,8 +130,8 @@
 
 
      Hashtable appEnv = new Hashtable();
-     appEnv.put(Context.INITIAL_CONTEXT_FACTORY, `CosNaming`);
-     appEnv.put(Context.PROVIDER_URL, `iiop://hostname/providers`);
+     appEnv.put(Context.INITIAL_CONTEXT_FACTORY, \"CosNaming\");
+     appEnv.put(Context.PROVIDER_URL, \"iiop://hostname/providers\");
      Context ctx = new InitialContext(appEnv);
 
      SyncFactory.registerJNDIContext(ctx);
@@ -147,7 +147,7 @@
 
 
      Hashtable env = new Hashtable();
-     env.put(SyncFactory.ROWSET_SYNC_PROVIDER, `com.fred.providers.MyProvider`);
+     env.put(SyncFactory.ROWSET_SYNC_PROVIDER, \"com.fred.providers.MyProvider\");
      CachedRowSet crs = new com.sun.rowset.CachedRowSetImpl(env);
   Further details on these mechanisms are available in the
   javax.sql.rowset.spi package specification."
@@ -194,7 +194,7 @@
 
    SyncProvider p = new MySyncProvider();
    InitialContext ic = new InitialContext();
-   ic.bind (`jdbc/rowset/MySyncProvider`, p);
+   ic.bind (\"jdbc/rowset/MySyncProvider\", p);
 
    Furthermore, an initial JNDI context should be set with the
    SyncFactory using the setJNDIContext method.

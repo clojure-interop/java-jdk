@@ -23,13 +23,13 @@
   (^InterruptedIOException []
     (new InterruptedIOException )))
 
-(defn -bytes-transferred
+(defn bytes-transferred
   "Instance Field.
 
   Reports how many bytes had been transferred as part of the I/O
    operation before it was interrupted.
 
   type: int"
-  [this]
-  (-> this .-bytesTransferred))
+  (^Integer [^InterruptedIOException this]
+    (-> this .-bytesTransferred)))
 

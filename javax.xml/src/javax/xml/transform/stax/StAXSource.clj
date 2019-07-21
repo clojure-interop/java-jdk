@@ -92,7 +92,7 @@
    the system identifier of the XML source.
 
    The system identifier may be null or
-   an empty `` String.
+   an empty \"\" String.
 
   returns: System identifier used by this StAXSource. - `java.lang.String`"
   (^java.lang.String [^StAXSource this]

@@ -1,7 +1,7 @@
 (ns javax.sound.sampled.Line
   "The Line interface represents a mono or multi-channel
   audio feed. A line is an element of the digital audio
-  `pipeline,` such as a mixer, an input or output port,
+  \"pipeline,\" such as a mixer, an input or output port,
   or a data path into or out of a mixer.
 
   A line can have controls, such as gain, pan, and reverb.

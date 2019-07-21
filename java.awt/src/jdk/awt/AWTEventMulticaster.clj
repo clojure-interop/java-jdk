@@ -17,7 +17,7 @@
           actionListener = AWTEventMulticaster.remove(actionListener, l);
       }
       public void processEvent(AWTEvent e) {
-          // when event occurs which causes `action` semantic
+          // when event occurs which causes \"action\" semantic
           ActionListener listener = actionListener;
           if (listener != null) {
               listener.actionPerformed(new ActionEvent());

@@ -317,7 +317,7 @@
 (defn set-disabled-text-color
   "Sets the current color used to render the
    disabled text.  Setting the color fires off a
-   PropertyChange event (`disabledTextColor`).
+   PropertyChange event (\"disabledTextColor\").
 
   c - the color - `java.awt.Color`"
   ([^JTextComponent this ^java.awt.Color c]
@@ -346,7 +346,7 @@
   "Associates the editor with a text document.
    The currently registered factory is used to build a view for
    the document, which gets displayed by the editor after revalidation.
-   A PropertyChange event (`document`) is propagated to each listener.
+   A PropertyChange event (\"document\") is propagated to each listener.
 
   doc - the document to display/edit - `javax.swing.text.Document`"
   ([^JTextComponent this ^javax.swing.text.Document doc]
@@ -396,7 +396,7 @@
    it is that Border object's responsibility to create the
    appropriate margin space (else this property will effectively
    be ignored).  This causes a redraw of the component.
-   A PropertyChange event (`margin`) is sent to all listeners.
+   A PropertyChange event (\"margin\") is sent to all listeners.
 
   m - the space between the border and the text - `java.awt.Insets`"
   ([^JTextComponent this ^java.awt.Insets m]
@@ -422,7 +422,7 @@
   orientation - either SwingConstants.VERTICAL or SwingConstants.HORIZONTAL - `int`
   direction - less than zero to scroll up/left, greater than zero for down/right - `int`
 
-  returns: the `block` increment for scrolling in the specified direction - `int`
+  returns: the \"block\" increment for scrolling in the specified direction - `int`
 
   throws: java.lang.IllegalArgumentException - for an invalid orientation"
   (^Integer [^JTextComponent this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
@@ -455,7 +455,7 @@
   "Sets the caret to be used.  By default this will be set
    by the UI that gets installed.  This can be changed to
    a custom caret if desired.  Setting the caret results in a
-   PropertyChange event (`caret`) being fired.
+   PropertyChange event (\"caret\") being fired.
 
   c - the caret - `javax.swing.text.Caret`"
   ([^JTextComponent this ^javax.swing.text.Caret c]
@@ -513,7 +513,7 @@
    the ALT key is used as a modifier on Windows and the CTRL+ALT
    combination is used on Mac.  By default, there is no focus
    accelerator key.  Any previous key accelerator setting will be
-   superseded.  A '\0' key setting will be registered, and has the
+   superseded.  A '\\0' key setting will be registered, and has the
    effect of turning off the focus accelerator.  When the new key
    is set, a PropertyChange event (FOCUS_ACCELERATOR_KEY) will be fired.
 
@@ -589,7 +589,7 @@
   orientation - either SwingConstants.VERTICAL or SwingConstants.HORIZONTAL - `int`
   direction - less than zero to scroll up/left, greater than zero for down/right - `int`
 
-  returns: the `unit` increment for scrolling in the specified direction - `int`
+  returns: the \"unit\" increment for scrolling in the specified direction - `int`
 
   throws: java.lang.IllegalArgumentException - for an invalid orientation"
   (^Integer [^JTextComponent this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
@@ -617,7 +617,7 @@
    by the UI that gets installed.  This can be changed to
    a custom highlighter if desired.  The highlighter can be set to
    null to disable it.
-   A PropertyChange event (`highlighter`) is fired
+   A PropertyChange event (\"highlighter\") is fired
    when a new highlighter is installed.
 
   h - the highlighter - `javax.swing.text.Highlighter`"
@@ -635,7 +635,7 @@
    has returned and has allowed for the location to be shown.
 
    When this property changes, a property change event with
-   name `dropLocation` is fired by the component.
+   name \"dropLocation\" is fired by the component.
 
   returns: the drop location - `javax.swing.text.JTextComponent$DropLocation`"
   (^javax.swing.text.JTextComponent$DropLocation [^JTextComponent this]
@@ -655,7 +655,7 @@
   "Sets the keymap to use for binding events to
    actions.  Setting to null effectively disables
    keyboard input.
-   A PropertyChange event (`keymap`) is fired when a new keymap
+   A PropertyChange event (\"keymap\") is fired when a new keymap
    is installed.
 
   map - the keymap - `javax.swing.text.Keymap`"
@@ -836,7 +836,7 @@
   "Sets the current color used to render the selected text.
    Setting the color to null is the same as
    Color.black. Setting the color results in a
-   PropertyChange event (`selectedTextColor`) being fired.
+   PropertyChange event (\"selectedTextColor\") being fired.
 
   c - the color - `java.awt.Color`"
   ([^JTextComponent this ^java.awt.Color c]
@@ -894,7 +894,7 @@
 
 (defn get-focus-accelerator
   "Returns the key accelerator that will cause the receiving
-   text component to get the focus.  Return '\0' if no focus
+   text component to get the focus.  Return '\\0' if no focus
    accelerator has been set.
 
   returns: the key - `char`"
@@ -904,7 +904,7 @@
 (defn set-editable
   "Sets the specified boolean to indicate whether or not this
    TextComponent should be editable.
-   A PropertyChange event (`editable`) is fired when the
+   A PropertyChange event (\"editable\") is fired when the
    state is changed.
 
   b - the boolean to be set - `boolean`"
@@ -1008,8 +1008,8 @@
 
 
 
-   textComponent.print(new MessageFormat(`My text component header`),
-       new MessageFormat(`Footer. Page - {0}`), true, null, null, true);
+   textComponent.print(new MessageFormat(\"My text component header\"),
+       new MessageFormat(\"Footer. Page - {0}\"), true, null, null, true);
 
    Executing this code off the Event Dispatch Thread
    performs printing on the background.
@@ -1053,7 +1053,7 @@
 (defn set-caret-color
   "Sets the current color used to render the caret.
    Setting to null effectively restores the default color.
-   Setting the color results in a PropertyChange event (`caretColor`)
+   Setting the color results in a PropertyChange event (\"caretColor\")
    being fired.
 
   c - the color - `java.awt.Color`"
@@ -1137,7 +1137,7 @@
   "Sets the current color used to render the selection.
    Setting the color to null is the same as setting
    Color.white.  Setting the color results in a
-   PropertyChange event (`selectionColor`).
+   PropertyChange event (\"selectionColor\").
 
   c - the color - `java.awt.Color`"
   ([^JTextComponent this ^java.awt.Color c]

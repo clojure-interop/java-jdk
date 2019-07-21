@@ -14,7 +14,7 @@
   "Returns the default SSL socket factory.
 
    The first time this method is called, the security property
-   `ssl.SocketFactory.provider` is examined. If it is non-null, a class by
+   \"ssl.SocketFactory.provider\" is examined. If it is non-null, a class by
    that name is loaded and instantiated. If that is successful and the
    object is an instance of SSLSocketFactory, it is made the default SSL
    socket factory.

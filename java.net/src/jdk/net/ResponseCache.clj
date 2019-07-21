@@ -34,7 +34,7 @@
 
   returns: the system-wide ResponseCache - `java.net.ResponseCache`
 
-  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`getResponseCache`)"
+  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(\"getResponseCache\")"
   (^java.net.ResponseCache []
     (ResponseCache/getDefault )))
 
@@ -45,7 +45,7 @@
 
   response-cache - The response cache, or null to unset the cache. - `java.net.ResponseCache`
 
-  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`setResponseCache`)"
+  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(\"setResponseCache\")"
   ([^java.net.ResponseCache response-cache]
     (ResponseCache/setDefault response-cache)))
 

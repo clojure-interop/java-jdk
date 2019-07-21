@@ -61,8 +61,8 @@
 
    If this constructor was declared to take a variable number of
    arguments, instead of denoting the last parameter as
-   `Type[]`, it is denoted as
-   `Type...`.
+   \"Type[]\", it is denoted as
+   \"Type...\".
 
    A space is used to separate access modifiers from one another
    and from the type parameters or return type.  If there are no
@@ -70,7 +70,7 @@
    parameter list is present, a space separates the list from the
    class name.  If the constructor is declared to throw
    exceptions, the parameter list is followed by a space, followed
-   by the word `throws` followed by a
+   by the word \"throws\" followed by a
    comma-separated list of the thrown exception types.
 
    The only possible modifiers for constructors are the access
@@ -296,7 +296,7 @@
    represent the annotations on the formal parameters, in
    declaration order, of the Executable represented by
    this object.  Synthetic and mandated parameters (see
-   explanation below), such as the outer `this` parameter to an
+   explanation below), such as the outer \"this\" parameter to an
    inner class constructor will be represented in the returned
    array.  If the executable has no parameters (meaning no formal,
    no synthetic, and no mandated parameters), a zero-length array
@@ -308,9 +308,9 @@
    effect on the arrays returned to other callers.
 
    A compiler may add extra parameters that are implicitly
-   declared in source (`mandated`), as well as parameters that
+   declared in source (\"mandated\"), as well as parameters that
    are neither implicitly nor explicitly declared in source
-   (`synthetic`) to the parameter list for a method.  See Parameter for more information.
+   (\"synthetic\") to the parameter list for a method.  See Parameter for more information.
 
   returns: an array of arrays that represent the annotations on
       the formal and implicit parameters, in declaration order, of

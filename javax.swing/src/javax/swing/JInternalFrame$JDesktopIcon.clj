@@ -81,7 +81,7 @@
   "Returns the name of the look-and-feel
    class that renders this component.
 
-  returns: the string `DesktopIconUI` - `java.lang.String`"
+  returns: the string \"DesktopIconUI\" - `java.lang.String`"
   (^java.lang.String [^JInternalFrame$JDesktopIcon this]
     (-> this (.getUIClassID))))
 

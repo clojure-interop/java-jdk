@@ -99,8 +99,8 @@
    reasonable chance of success based on a brief inspection of the
    stream contents.  If the source is an
    ImageInputStream, implementations will commonly
-   check the first several bytes of the stream for a `magic
-   number` associated with the format.  Once actual reading has
+   check the first several bytes of the stream for a \"magic
+   number\" associated with the format.  Once actual reading has
    commenced, the reader may still indicate failure at any time
    prior to the completion of decoding.
 
@@ -112,7 +112,7 @@
    mark/reset pair should be used to
    preserve the stream position.
 
-    Formats such as `raw,` which can potentially attempt
+    Formats such as \"raw,\" which can potentially attempt
    to read nearly any stream, should return false
    in order to avoid being invoked in preference to a closer
    match.
@@ -182,7 +182,7 @@
    length.
 
     The first item in the array must be the name of the service
-   provider for the `preferred` writer, as it will be used to
+   provider for the \"preferred\" writer, as it will be used to
    instantiate the ImageWriter returned by
    ImageIO.getImageWriter(ImageReader).
 

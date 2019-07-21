@@ -36,8 +36,8 @@
 
   state - the state whose label will be returned - `boolean`
 
-  returns: the label for the specified state, such as `true` or `on`
-   for true, or `false` or `off` for false. - `java.lang.String`"
+  returns: the label for the specified state, such as \"true\" or \"on\"
+   for true, or \"false\" or \"off\" for false. - `java.lang.String`"
   (^java.lang.String [^BooleanControl this ^Boolean state]
     (-> this (.getStateLabel state))))
 

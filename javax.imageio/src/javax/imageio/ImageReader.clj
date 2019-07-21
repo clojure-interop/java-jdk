@@ -11,7 +11,7 @@
   and presentation of available format readers and writers.
 
    When an input source is set (using the setInput
-  method), it may be marked as `seek forward only`.  This setting
+  method), it may be marked as \"seek forward only\".  This setting
   means that images contained within the input source will only be
   read in order, possibly allowing the reader to avoid caching
   portions of the input containing data associated with images that
@@ -163,7 +163,7 @@
    type will be returned.
 
     The first element of the iterator should be the most
-   `natural` type for decoding the image with as little loss as
+   \"natural\" type for decoding the image with as little loss as
    possible.  For example, for a JPEG image the first entry should
    be an RGB image, even though the image data is stored
    internally in a YCbCr color space.
@@ -741,7 +741,7 @@
 (defn get-raw-image-type
   "Returns an ImageTypeSpecifier indicating the
    SampleModel and ColorModel which most
-   closely represents the `raw` internal format of the image.  For
+   closely represents the \"raw\" internal format of the image.  For
    example, for a JPEG image the raw type might have a YCbCr color
    space even though the image would conventionally be transformed
    into an RGB color space prior to display.  The returned value

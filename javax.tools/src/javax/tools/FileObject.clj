@@ -69,8 +69,8 @@
   "Gets a user-friendly name for this file object.  The exact
    value returned is not specified but implementations should take
    care to preserve names as given by the user.  For example, if
-   the user writes the filename `BobsApp\Test.java` on
-   the command line, this method should return `BobsApp\Test.java` whereas the toUri
+   the user writes the filename \"BobsApp\\Test.java\" on
+   the command line, this method should return \"BobsApp\\Test.java\" whereas the toUri
    method might return file:///C:/Documents%20and%20Settings/UncleBob/BobsApp/Test.java.
 
   returns: a user-friendly name - `java.lang.String`"

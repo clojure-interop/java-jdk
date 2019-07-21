@@ -4,7 +4,7 @@
 
    The first invocation of any of the methods defined by this class causes
   the default provider to be loaded. The default
-  provider, identified by the URI scheme `file`, creates the FileSystem
+  provider, identified by the URI scheme \"file\", creates the FileSystem
   that provides access to the file systems accessible to the Java virtual
   machine. If the process of loading or initializing the default provider fails
   then an unspecified error is thrown.
@@ -58,20 +58,20 @@
     If the system property java.nio.file.spi.DefaultFileSystemProvider
    is defined then it is taken to be a list of one or more fully-qualified
    names of concrete provider classes identified by the URI scheme
-   `file`. Where the property is a list of more than one name then
+   \"file\". Where the property is a list of more than one name then
    the names are separated by a comma. Each class is loaded, using the system
    class loader, and instantiated by invoking a one argument constructor
    whose formal parameter type is FileSystemProvider. The providers
    are loaded and instantiated in the order they are listed in the property.
-   If this process fails or a provider's scheme is not equal to `file`
+   If this process fails or a provider's scheme is not equal to \"file\"
    then an unspecified error is thrown. URI schemes are normally compared
    without regard to case but for the default provider, the scheme is
-   required to be `file`. The first provider class is instantiated
+   required to be \"file\". The first provider class is instantiated
    by invoking it with a reference to the system-default provider.
    The second provider class is instantiated by invoking it with a reference
    to the first provider instance. The third provider class is instantiated
    by invoking it with a reference to the second instance, and so on. The
-   last provider to be instantiated becomes the default provider; its getFileSystem method is invoked with the URI `file:///` to
+   last provider to be instantiated becomes the default provider; its getFileSystem method is invoked with the URI \"file:///\" to
    get a reference to the default file system.
 
     Subsequent invocations of this method return the file system that was

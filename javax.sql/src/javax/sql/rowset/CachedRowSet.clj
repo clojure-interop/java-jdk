@@ -90,7 +90,7 @@
 
 
            CachedRowSetImpl crs2 = new CachedRowSetImpl(
-                                  `com.fred.providers.HighAvailabilityProvider`);
+                                  \"com.fred.providers.HighAvailabilityProvider\");
       Setting the SyncProvider using the CachedRowSet
           method setSyncProvider
        The following line of code resets the SyncProvider object
@@ -98,7 +98,7 @@
        default constructor.
 
 
-            crs.setSyncProvider(`com.fred.providers.HighAvailabilityProvider`);
+            crs.setSyncProvider(\"com.fred.providers.HighAvailabilityProvider\");
 
   See the comments for SyncFactory and SyncProvider for
   more details.
@@ -123,17 +123,17 @@
          int id = crs.getInt(2);
          Clob comment = crs.getClob(3);
          short dept = crs.getShort(4);
-         System.out.println(name  `  `  id  `  `  comment  `  `  dept);
+         System.out.println(name  \"  \"  id  \"  \"  comment  \"  \"  dept);
      }
 
 
 
      while (crs.next()) {
-         String name = crs.getString(`NAME`);
-         int id = crs.getInt(`ID`);
-         Clob comment = crs.getClob(`COM`);
-         short dept = crs.getShort(`DEPT`);
-         System.out.println(name  `  `  id  `  `  comment  `  `  dept);
+         String name = crs.getString(\"NAME\");
+         int id = crs.getInt(\"ID\");
+         Clob comment = crs.getClob(\"COM\");
+         short dept = crs.getShort(\"DEPT\");
+         System.out.println(name  \"  \"  id  \"  \"  comment  \"  \"  dept);
      }
   2.1 Retrieving RowSetMetaData
   An application can get information about the columns in a CachedRowSet
@@ -198,10 +198,10 @@
 
 
       crs.moveToInsertRow();
-      crs.updateString(`Name`, `Shakespeare`);
-      crs.updateInt(`ID`, 10098347);
-      crs.updateShort(`Age`, 58);
-      crs.updateInt(`Sal`, 150000);
+      crs.updateString(\"Name\", \"Shakespeare\");
+      crs.updateInt(\"ID\", 10098347);
+      crs.updateShort(\"Age\", 58);
+      crs.updateInt(\"Sal\", 150000);
       crs.insertRow();
       crs.moveToCurrentRow();
       crs.acceptChanges();
@@ -234,7 +234,7 @@
 
   A writer is made available through an implementation of the
   SyncProvider interface, as discussed in section 1,
-  `Creating a CachedRowSet Object.`
+  \"Creating a CachedRowSet Object.\"
   The default reference implementation provider, RIOptimisticProvider,
   has its writer implemented to use an optimistic concurrency control
   mechanism. That is, it maintains no locks in the underlying database while
@@ -305,7 +305,7 @@
   As a result, it can be especially suitable for sending data to a thin client
   such as a PDA, where it would be inappropriate to use a JDBC driver
   due to resource limitations or security considerations.
-  Thus, a CachedRowSet object provides a means to `get rows in`
+  Thus, a CachedRowSet object provides a means to \"get rows in\"
   without the need to implement the full JDBC API.
 
   7.0 Scrolling and Updating
@@ -314,7 +314,7 @@
   do not provide these capabilities themselves.  In other words, a
   CachedRowSet object can be used to augment the
   capabilities of a JDBC technology-enabled driver (hereafter called a
-  `JDBC driver`) when the DBMS does not provide full support for scrolling and
+  \"JDBC driver\") when the DBMS does not provide full support for scrolling and
   updating. To achieve the effect of making a non-scrollble and read-only
   ResultSet object scrollable and updatable, a programmer
   simply needs to create a CachedRowSet object populated
@@ -323,7 +323,7 @@
   Statement object.
 
 
-     ResultSet rs = stmt.executeQuery(`SELECT * FROM EMPLOYEES`);
+     ResultSet rs = stmt.executeQuery(\"SELECT * FROM EMPLOYEES\");
      CachedRowSetImpl crs = new CachedRowSetImpl();
      crs.populate(rs);
 
@@ -392,8 +392,8 @@
   tool is used to set properties, this is the code that the tool would use.
 
 
-     crs.setCommand(`SELECT FIRST_NAME, LAST_NAME, ADDRESS FROM CUSTOMERS `
-                    `WHERE CREDIT_LIMIT > ? AND REGION = ?`);
+     crs.setCommand(\"SELECT FIRST_NAME, LAST_NAME, ADDRESS FROM CUSTOMERS \"
+                    \"WHERE CREDIT_LIMIT > ? AND REGION = ?\");
 
   The values that will be used to set the command's placeholder parameters are
   contained in the RowSet object's params field, which is a
@@ -405,14 +405,14 @@
 
 
      crs.setInt(1, 5000);
-     crs.setString(2, `West`);
+     crs.setString(2, \"West\");
 
   The params field now contains two elements, each of which is
   an array two elements long.  The first element is the parameter number;
   the second is the value to be set.
   In this case, the first element of params is
   1, 5000, and the second element is 2,
-  `West`.  When an application calls the method
+  \"West\".  When an application calls the method
   execute, it will in turn call on this RowSet object's reader,
   which will in turn invoke its readData method. As part of
   its implementation, readData will get the values in
@@ -431,9 +431,9 @@
      //        pstmt.setObject(i  1, params[i]);
      //    }
 
-  At this point, the command for crs is the query `SELECT
+  At this point, the command for crs is the query \"SELECT
   FIRST_NAME, LAST_NAME, ADDRESS FROM CUSTOMERS WHERE CREDIT_LIMIT > 5000
-  AND REGION = `West`.  After the readData method executes
+  AND REGION = \"West\".  After the readData method executes
   this command with the following line of code, it will have the data from
   rs with which to populate crs.
 
@@ -450,10 +450,10 @@
   table CUSTOMERS.
 
 
-     crs.setCommand(`SELECT FIRST_NAME, LAST_NAME, ADDRESS FROM CUSTOMERS`
-                    `WHERE CREDIT_LIMIT > ? AND REGION = ?`);
+     crs.setCommand(\"SELECT FIRST_NAME, LAST_NAME, ADDRESS FROM CUSTOMERS\"
+                    \"WHERE CREDIT_LIMIT > ? AND REGION = ?\");
      crs.setInt(1, 5000);
-     crs.setString(2, `West`);
+     crs.setString(2, \"West\");
      crs.execute();
 
   10.0 Paging Data
@@ -648,7 +648,7 @@
 
        RowSetReader rowsetReader = null;
        SyncProvider provider =
-           SyncFactory.getInstance(`javax.sql.rowset.provider.RIOptimisticProvider`);
+           SyncFactory.getInstance(\"javax.sql.rowset.provider.RIOptimisticProvider\");
            if (provider instanceof RIOptimisticProvider) {
                rowsetReader = provider.getRowSetReader();
            }

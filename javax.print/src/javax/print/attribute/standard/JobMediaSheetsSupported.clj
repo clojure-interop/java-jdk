@@ -7,7 +7,7 @@
 
   IPP Compatibility: The JobMediaSheetsSupported attribute's canonical
   array form gives the lower and upper bound for the range of values to be
-  included in an IPP `job-media-sheets-supported` attribute. See class SetOfIntegerSyntax for an
+  included in an IPP \"job-media-sheets-supported\" attribute. See class SetOfIntegerSyntax for an
   explanation of canonical array form. The category name returned by
   getName() gives the IPP attribute name."
   (:refer-clojure :only [require comment defn ->])
@@ -48,7 +48,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class JobMediaSheetsSupported, the
@@ -64,7 +64,7 @@
    instance.
 
    For class JobMediaSheetsSupported, the
-   category name is `job-media-sheets-supported`.
+   category name is \"job-media-sheets-supported\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^JobMediaSheetsSupported this]

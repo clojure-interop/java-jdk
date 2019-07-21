@@ -7,15 +7,15 @@
   is defined as:
 
 
-  <element name=`Signature` type=`ds:SignatureType`/>
-  <complexType name=`SignatureType`>
+  <element name=\"Signature\" type=\"ds:SignatureType\"/>
+  <complexType name=\"SignatureType\">
      <sequence>
-       <element ref=`ds:SignedInfo`/>
-       <element ref=`ds:SignatureValue`/>
-       <element ref=`ds:KeyInfo` minOccurs=`0`/>
-       <element ref=`ds:Object` minOccurs=`0` maxOccurs=`unbounded`/>
+       <element ref=\"ds:SignedInfo\"/>
+       <element ref=\"ds:SignatureValue\"/>
+       <element ref=\"ds:KeyInfo\" minOccurs=\"0\"/>
+       <element ref=\"ds:Object\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>
      </sequence>
-     <attribute name=`Id` type=`ID` use=`optional`/>
+     <attribute name=\"Id\" type=\"ID\" use=\"optional\"/>
   </complexType>
 
   An XMLSignature instance may be created by invoking one of the

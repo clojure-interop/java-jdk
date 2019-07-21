@@ -8,16 +8,16 @@
 
 
   List lst = new List(4, false);
-  lst.add(`Mercury`);
-  lst.add(`Venus`);
-  lst.add(`Earth`);
-  lst.add(`JavaSoft`);
-  lst.add(`Mars`);
-  lst.add(`Jupiter`);
-  lst.add(`Saturn`);
-  lst.add(`Uranus`);
-  lst.add(`Neptune`);
-  lst.add(`Pluto`);
+  lst.add(\"Mercury\");
+  lst.add(\"Venus\");
+  lst.add(\"Earth\");
+  lst.add(\"JavaSoft\");
+  lst.add(\"Mars\");
+  lst.add(\"Jupiter\");
+  lst.add(\"Saturn\");
+  lst.add(\"Uranus\");
+  lst.add(\"Neptune\");
+  lst.add(\"Pluto\");
   cnt.add(lst);
 
   where cnt is a container, produces the following
@@ -405,7 +405,7 @@
    the number of items in the list, then the item is added
    to the end of the list.
 
-  item - the item to be added; if this parameter is null then the item is treated as an empty string, `` - `java.lang.String`
+  item - the item to be added; if this parameter is null then the item is treated as an empty string, \"\" - `java.lang.String`
   index - the position at which to add the item - `int`"
   ([^List this ^java.lang.String item ^Integer index]
     (-> this (.add item index)))

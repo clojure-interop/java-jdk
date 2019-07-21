@@ -11,8 +11,8 @@
 
         XMLEncoder e = new XMLEncoder(
                            new BufferedOutputStream(
-                               new FileOutputStream(`Test.xml`)));
-        e.writeObject(new JButton(`Hello, world`));
+                               new FileOutputStream(\"Test.xml\")));
+        e.writeObject(new JButton(\"Hello, world\"));
         e.close();
   Despite the similarity of their APIs, the XMLEncoder
   class is exclusively designed for the purpose of archiving graphs
@@ -50,30 +50,30 @@
   some user interface components from the swing toolkit:
 
 
-  <?xml version=`1.0` encoding=`UTF-8`?>
-  <java version=`1.0` class=`java.beans.XMLDecoder`>
-  <object class=`javax.swing.JFrame`>
-    <void property=`name`>
+  <?xml version=\"1.0\" encoding=\"UTF-8\"?>
+  <java version=\"1.0\" class=\"java.beans.XMLDecoder\">
+  <object class=\"javax.swing.JFrame\">
+    <void property=\"name\">
       <string>frame1</string>
     </void>
-    <void property=`bounds`>
-      <object class=`java.awt.Rectangle`>
+    <void property=\"bounds\">
+      <object class=\"java.awt.Rectangle\">
         <int>0</int>
         <int>0</int>
         <int>200</int>
         <int>200</int>
       </object>
     </void>
-    <void property=`contentPane`>
-      <void method=`add`>
-        <object class=`javax.swing.JButton`>
-          <void property=`label`>
+    <void property=\"contentPane\">
+      <void method=\"add\">
+        <object class=\"javax.swing.JButton\">
+          <void property=\"label\">
             <string>Hello</string>
           </void>
         </object>
       </void>
     </void>
-    <void property=`visible`>
+    <void property=\"visible\">
       <boolean>true</boolean>
     </void>
   </object>
@@ -83,29 +83,29 @@
 
   Each element represents a method call.
 
-  The `object` tag denotes an expression whose value is
+  The \"object\" tag denotes an expression whose value is
   to be used as the argument to the enclosing element.
 
-  The `void` tag denotes a statement which will
+  The \"void\" tag denotes a statement which will
   be executed, but whose result will not be used as an
   argument to the enclosing method.
 
   Elements which contain elements use those elements as arguments,
-  unless they have the tag: `void`.
+  unless they have the tag: \"void\".
 
-  The name of the method is denoted by the `method` attribute.
+  The name of the method is denoted by the \"method\" attribute.
 
-  XML's standard `id` and `idref` attributes are used to make
+  XML's standard \"id\" and \"idref\" attributes are used to make
   references to previous expressions - so as to deal with
   circularities in the object graph.
 
-  The `class` attribute is used to specify the target of a static
+  The \"class\" attribute is used to specify the target of a static
   method or constructor explicitly; its value being the fully
   qualified name of the class.
 
-  Elements with the `void` tag are executed using
+  Elements with the \"void\" tag are executed using
   the outer context as the target if no target is defined
-  by a `class` attribute.
+  by a \"class\" attribute.
 
   Java's String class is treated specially and is
   written <string>Hello, world</string> where
@@ -119,7 +119,7 @@
 
 
 
-  The default method name is `new`.
+  The default method name is \"new\".
 
   A reference to a java class is written in the form
    <class>javax.swing.JButton</class>.
@@ -129,32 +129,32 @@
   instance of the Integer class could be written:
   <int>123</int>. Note that the XMLEncoder class
   uses Java's reflection package in which the conversion between
-  Java's primitive types and their associated `wrapper classes`
+  Java's primitive types and their associated \"wrapper classes\"
   is handled internally. The API for the XMLEncoder class
   itself deals only with Objects.
 
   In an element representing a nullary method whose name
-  starts with `get`, the `method` attribute is replaced
-  with a `property` attribute whose value is given by removing
-  the `get` prefix and decapitalizing the result.
+  starts with \"get\", the \"method\" attribute is replaced
+  with a \"property\" attribute whose value is given by removing
+  the \"get\" prefix and decapitalizing the result.
 
   In an element representing a monadic method whose name
-  starts with `set`, the `method` attribute is replaced
-  with a `property` attribute whose value is given by removing
-  the `set` prefix and decapitalizing the result.
+  starts with \"set\", the \"method\" attribute is replaced
+  with a \"property\" attribute whose value is given by removing
+  the \"set\" prefix and decapitalizing the result.
 
-  In an element representing a method named `get` taking one
-  integer argument, the `method` attribute is replaced
-  with an `index` attribute whose value the value of the
+  In an element representing a method named \"get\" taking one
+  integer argument, the \"method\" attribute is replaced
+  with an \"index\" attribute whose value the value of the
   first argument.
 
-  In an element representing a method named `set` taking two arguments,
-  the first of which is an integer, the `method` attribute is replaced
-  with an `index` attribute whose value the value of the
+  In an element representing a method named \"set\" taking two arguments,
+  the first of which is an integer, the \"method\" attribute is replaced
+  with an \"index\" attribute whose value the value of the
   first argument.
 
-  A reference to an array is written using the `array`
-  tag. The `class` and `length` attributes specify the
+  A reference to an array is written using the \"array\"
+  tag. The \"class\" and \"length\" attributes specify the
   sub-type of the array and its length respectively.
 
 

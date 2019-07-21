@@ -27,7 +27,7 @@
    won't be blocked by  application-modal or toolkit-modal dialogs. Also,
    it isn't blocked by document-modal dialogs from outside of its
    child hierarchy.
-   The `toolkitModality` AWTPermission must be granted
+   The \"toolkitModality\" AWTPermission must be granted
    for this exclusion. If an exclusion property is being changed to
    TOOLKIT_EXCLUDE and this permission is not granted, a
    SecurityEcxeption will be thrown, and the exclusion

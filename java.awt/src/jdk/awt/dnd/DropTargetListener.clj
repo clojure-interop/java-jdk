@@ -5,7 +5,7 @@
   notification of DnD operations that involve
   the subject DropTarget. Methods of
   this interface may be implemented to provide
-  `drag under` visual feedback to the user throughout
+  \"drag under\" visual feedback to the user throughout
   the Drag and Drop operation.
 
   Create a listener object by implementing the interface and then register it

@@ -1,5 +1,5 @@
 (ns jdk.beans.BeanDescriptor
-  "A BeanDescriptor provides global information about a `bean`,
+  "A BeanDescriptor provides global information about a \"bean\",
   including its Java class, its displayName, etc.
 
   This is one of the kinds of descriptor returned by a BeanInfo object,

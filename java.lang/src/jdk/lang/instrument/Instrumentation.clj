@@ -177,8 +177,8 @@
   "Specifies a JAR file with instrumentation classes to be defined by the
    bootstrap class loader.
 
-    When the virtual machine's built-in class loader, known as the `bootstrap
-   class loader`, unsuccessfully searches for a class, the entries in the JAR file will be searched as well.
+    When the virtual machine's built-in class loader, known as the \"bootstrap
+   class loader\", unsuccessfully searches for a class, the entries in the JAR file will be searched as well.
 
     This method may be used multiple times to add multiple JAR files to be
    searched in the order that this method was invoked.
@@ -353,10 +353,10 @@
      native boolean wrapped_foo(int x);
 
    Where foo becomes a wrapper for the actual native
-   method with the appended prefix `wrapped_`.  Note that
-   `wrapped_` would be a poor choice of prefix since it
+   method with the appended prefix \"wrapped_\".  Note that
+   \"wrapped_\" would be a poor choice of prefix since it
    might conceivably form the name of an existing method
-   thus something like `$$$MyAgentWrapped$$$_` would be
+   thus something like \"$$$MyAgentWrapped$$$_\" would be
    better but would make these examples less readable.
 
    The wrapper will allow data to be collected on the native

@@ -32,7 +32,7 @@
       Path file = ...
       PosixFileAttributes attrs = Files.getFileAttributeView(file, PosixFileAttributeView.class)
           .readAttributes();
-      System.out.format(`%s %s%n`,
+      System.out.format(\"%s %s%n\",
           attrs.owner().getName(),
           PosixFilePermissions.toString(attrs.permissions()));
 
@@ -47,11 +47,11 @@
        Type
 
 
-       `permissions`
+       \"permissions\"
        Set<PosixFilePermission>
 
 
-       `group`
+       \"group\"
        GroupPrincipal
 
 
@@ -69,7 +69,7 @@
    Implementations supporting this attribute view may also support setting
   the initial permissions when creating a file or directory. The
   initial permissions are provided to the createFile
-  or createDirectory methods as a FileAttribute with name `posix:permissions`
+  or createDirectory methods as a FileAttribute with name \"posix:permissions\"
   and a value that is the set of permissions. The
   following example uses the asFileAttribute method to construct a FileAttribute when creating a
   file:
@@ -96,7 +96,7 @@
 
 (defn name
   "Returns the name of the attribute view. Attribute views of this type
-   have the name `posix`.
+   have the name \"posix\".
 
   returns: the name of the attribute view - `java.lang.String`"
   (^java.lang.String [^PosixFileAttributeView this]

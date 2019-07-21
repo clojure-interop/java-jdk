@@ -23,7 +23,7 @@
 
    First, if there is a security manager, its
    checkPermission method is called with a
-   ReflectPermission(`suppressAccessChecks`) permission.
+   ReflectPermission(\"suppressAccessChecks\") permission.
 
    A SecurityException is raised if flag is
    true but accessibility of any of the elements of the input
@@ -93,7 +93,7 @@
 
    First, if there is a security manager, its
    checkPermission method is called with a
-   ReflectPermission(`suppressAccessChecks`) permission.
+   ReflectPermission(\"suppressAccessChecks\") permission.
 
    A SecurityException is raised if flag is
    true but accessibility of this object may not be changed

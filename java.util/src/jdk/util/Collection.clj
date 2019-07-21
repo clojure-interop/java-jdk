@@ -13,7 +13,7 @@
 
   All general-purpose Collection implementation classes (which
   typically implement Collection indirectly through one of its
-  subinterfaces) should provide two `standard` constructors: a void (no
+  subinterfaces) should provide two \"standard\" constructors: a void (no
   arguments) constructor, which creates an empty collection, and a
   constructor with a single argument of type Collection, which
   creates a new collection with the same elements as its argument.  In
@@ -23,7 +23,7 @@
   constructors) but all of the general-purpose Collection
   implementations in the Java platform libraries comply.
 
-  The `destructive` methods contained in this interface, that is, the
+  The \"destructive\" methods contained in this interface, that is, the
   methods that modify the collection on which they operate, are specified to
   throw UnsupportedOperationException if this collection does not
   support the operation.  If this is the case, these methods may, but are not
@@ -45,7 +45,7 @@
   operation on an ineligible element whose completion would not result in
   the insertion of an ineligible element into the collection may throw an
   exception or it may succeed, at the option of the implementation.
-  Such exceptions are marked as `optional` in the specification for this
+  Such exceptions are marked as \"optional\" in the specification for this
   interface.
 
   It is up to each collection to determine its own synchronization
@@ -59,9 +59,9 @@
   Many methods in Collections Framework interfaces are defined in
   terms of the equals method.  For example,
   the specification for the contains(Object o)
-  method says: `returns true if and only if this collection
+  method says: \"returns true if and only if this collection
   contains at least one element e such that
-  (o==null ? e==null : o.equals(e)).`  This specification should
+  (o==null ? e==null : o.equals(e)).\"  This specification should
   not be construed to imply that invoking Collection.contains
   with a non-null argument o will cause o.equals(e) to be
   invoked for any element e.  Implementations are free to implement
@@ -110,7 +110,7 @@
    CONCURRENT, or late-binding. (See spliterator()
    for details.)
 
-  returns: a sequential Stream over the elements in this collection - `default java.util..Stream<E>`"
+  returns: a sequential Stream over the elements in this collection - `default java.util.stream.Stream<E>`"
   ([^Collection this]
     (-> this (.stream))))
 
@@ -358,13 +358,13 @@
 
    While the Collection interface adds no stipulations to the
    general contract for the Object.equals, programmers who
-   implement the Collection interface `directly` (in other words,
+   implement the Collection interface \"directly\" (in other words,
    create a class that is a Collection but is not a Set
    or a List) must exercise care if they choose to override the
    Object.equals.  It is not necessary to do so, and the simplest
    course of action is to rely on Object's implementation, but
-   the implementor may wish to implement a `value comparison` in place of
-   the default `reference comparison.`  (The List and
+   the implementor may wish to implement a \"value comparison\" in place of
+   the default \"reference comparison.\"  (The List and
    Set interfaces mandate such value comparisons.)
 
    The general contract for the Object.equals method states that

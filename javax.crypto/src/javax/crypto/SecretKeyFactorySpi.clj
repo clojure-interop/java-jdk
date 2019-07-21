@@ -7,7 +7,7 @@
 
    A provider should document all the key specifications supported by its
   secret key factory.
-  For example, the DES secret-key factory supplied by the `SunJCE` provider
+  For example, the DES secret-key factory supplied by the \"SunJCE\" provider
   supports DESKeySpec as a transparent representation of DES
   keys, and that provider's secret-key factory for Triple DES keys supports
   DESedeKeySpec as a transparent representation of Triple DES

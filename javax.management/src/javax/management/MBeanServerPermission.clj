@@ -25,8 +25,8 @@
      comma-separated operations.  Spaces are allowed at the beginning and
      end of the name and before and after commas.
 
-     MBeanServerPermission(`createMBeanServer`) implies
-     MBeanServerPermission(`newMBeanServer`)."
+     MBeanServerPermission(\"createMBeanServer\") implies
+     MBeanServerPermission(\"newMBeanServer\")."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.management MBeanServerPermission]))
 
@@ -52,7 +52,7 @@
     (-> this (.hashCode))))
 
 (defn implies
-  "Checks if this MBeanServerPermission object `implies` the specified
+  "Checks if this MBeanServerPermission object \"implies\" the specified
    permission.
 
    More specifically, this method returns true if:

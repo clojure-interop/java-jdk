@@ -10,14 +10,14 @@
 
 
 
-  `ca` → the first key is key('c') and second key is key('a').
-  `cha` → the first key is key('ch') and second key is key('a').
+  \"ca\" → the first key is key('c') and second key is key('a').
+  \"cha\" → the first key is key('ch') and second key is key('a').
 
   And in German,
 
 
 
-  `�b` → the first key is key('a'), the second key is key('e'), and
+  \"�b\" → the first key is key('a'), the second key is key('e'), and
   the third key is key('b').
 
   The key of a character is an integer composed of primary order(short),
@@ -33,7 +33,7 @@
 
 
 
-   String testString = `This is a test`;
+   String testString = \"This is a test\";
    Collator col = Collator.getInstance();
    if (col instanceof RuleBasedCollator) {
        RuleBasedCollator ruleBasedCollator = (RuleBasedCollator)col;
@@ -103,9 +103,9 @@
   "Get the next collation element in the string.  This iterator iterates
    over a sequence of collation elements that were built from the string.
    Because there isn't necessarily a one-to-one mapping from characters to
-   collation elements, this doesn't mean the same thing as `return the
+   collation elements, this doesn't mean the same thing as \"return the
    collation element [or ordering priority] of the next character in the
-   string`.
+   string\".
    This function returns the collation element that the iterator is currently
    pointing to and then updates the internal pointer to point to the next element.
    previous() updates the pointer first and then returns the element.  This
@@ -121,9 +121,9 @@
   "Get the previous collation element in the string.  This iterator iterates
    over a sequence of collation elements that were built from the string.
    Because there isn't necessarily a one-to-one mapping from characters to
-   collation elements, this doesn't mean the same thing as `return the
+   collation elements, this doesn't mean the same thing as \"return the
    collation element [or ordering priority] of the previous character in the
-   string`.
+   string\".
    This function updates the iterator's internal pointer to point to the
    collation element preceding the one it's currently pointing to and then
    returns that element, while next() returns the current element and then

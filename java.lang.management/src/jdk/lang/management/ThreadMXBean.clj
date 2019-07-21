@@ -92,8 +92,8 @@
    in a cycle.
 
    More formally, a thread is monitor deadlocked if it is
-   part of a cycle in the relation `is waiting for an object monitor
-   owned by`.  In the simplest case, thread A is blocked waiting
+   part of a cycle in the relation \"is waiting for an object monitor
+   owned by\".  In the simplest case, thread A is blocked waiting
    for a monitor owned by thread B, and thread B is blocked waiting
    for a monitor owned by thread A.
 
@@ -109,7 +109,7 @@
   returns: an array of IDs of the threads that are monitor
    deadlocked, if any; null otherwise. - `long[]`
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`monitor`)."
+  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(\"monitor\")."
   ([^ThreadMXBean this]
     (-> this (.findMonitorDeadlockedThreads))))
 
@@ -157,7 +157,7 @@
   "Resets the peak thread count to the current number of
    live threads.
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(\"control\")."
   ([^ThreadMXBean this]
     (-> this (.resetPeakThreadCount))))
 
@@ -178,7 +178,7 @@
    deadlocked waiting for object monitors or ownable synchronizers, if any;
    null otherwise. - `long[]`
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`monitor`)."
+  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(\"monitor\")."
   ([^ThreadMXBean this]
     (-> this (.findDeadlockedThreads))))
 
@@ -321,7 +321,7 @@
    information about a thread whose ID is in the corresponding
    element of the input array of IDs. - `java.lang.management.ThreadInfo[]`
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`monitor`)."
+  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(\"monitor\")."
   ([^ThreadMXBean this ids ^Boolean locked-monitors ^Boolean locked-synchronizers]
     (-> this (.getThreadInfo ids locked-monitors locked-synchronizers)))
   (^java.lang.management.ThreadInfo [^ThreadMXBean this ^Long id ^Integer max-depth]
@@ -375,7 +375,7 @@
 
   returns: an array of ThreadInfo for all live threads. - `java.lang.management.ThreadInfo[]`
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`monitor`)."
+  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(\"monitor\")."
   ([^ThreadMXBean this ^Boolean locked-monitors ^Boolean locked-synchronizers]
     (-> this (.dumpAllThreads locked-monitors locked-synchronizers))))
 
@@ -426,7 +426,7 @@
 
   returns: an array of long, each is a thread ID. - `long[]`
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`monitor`)."
+  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(\"monitor\")."
   ([^ThreadMXBean this]
     (-> this (.getAllThreadIds))))
 

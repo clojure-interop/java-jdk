@@ -44,7 +44,7 @@
 
 
 
-       FileInputStream fis = new FileInputStream(`t.tmp`);
+       FileInputStream fis = new FileInputStream(\"t.tmp\");
        ObjectInputStream ois = new ObjectInputStream(fis);
 
        int i = ois.readInt();
@@ -111,7 +111,7 @@
   party, and the receiver's version extends classes that are not extended by
   the sender's version.  This may also occur if the serialization stream has
   been tampered; hence, readObjectNoData is useful for initializing
-  deserialized objects properly despite a `hostile` or incomplete source
+  deserialized objects properly despite a \"hostile\" or incomplete source
   stream.
 
   Serialization does not read or assign values to the fields of any object
@@ -161,7 +161,7 @@
    has written and flushed the header.
 
    If a security manager is installed, this constructor will check for
-   the `enableSubclassImplementation` SerializablePermission when invoked
+   the \"enableSubclassImplementation\" SerializablePermission when invoked
    directly or indirectly by the constructor of a subclass which overrides
    the ObjectInputStream.readFields or ObjectInputStream.readUnshared
    methods.
@@ -264,7 +264,7 @@
     (-> this (.readFields))))
 
 (defn read-unshared
-  "Reads an `unshared` object from the ObjectInputStream.  This method is
+  "Reads an \"unshared\" object from the ObjectInputStream.  This method is
    identical to readObject, except that it prevents subsequent calls to
    readObject and readUnshared from returning additional references to the
    deserialized instance obtained via this call.  Specifically:
@@ -293,7 +293,7 @@
 
    ObjectInputStream subclasses which override this method can only be
    constructed in security contexts possessing the
-   `enableSubclassImplementation` SerializablePermission; any attempt to
+   \"enableSubclassImplementation\" SerializablePermission; any attempt to
    instantiate such a subclass without this permission will cause a
    SecurityException to be thrown.
 

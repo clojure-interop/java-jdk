@@ -68,7 +68,7 @@
    Future versions of this API may accept additional types,
    such as abstract classes with single abstract methods.
    Future versions of this API may also equip wrapper instances
-   with one or more additional public `marker` interfaces.
+   with one or more additional public \"marker\" interfaces.
 
    If a security manager is installed, this method is caller sensitive.
    During any invocation of the target method handle via the returned wrapper,

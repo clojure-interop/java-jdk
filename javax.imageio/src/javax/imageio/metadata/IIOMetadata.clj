@@ -11,7 +11,7 @@
   below.  A single plug-in may support multiple metadata formats,
   whose names maybe determined by calling
   getMetadataFormatNames.  The plug-in may also support
-  a single special format, referred to as the `native` format, which
+  a single special format, referred to as the \"native\" format, which
   is designed to encode its metadata losslessly.  This format will
   typically be designed specifically to work with a specific file
   format, so that images may be loaded and saved in the same format
@@ -240,13 +240,13 @@
     (-> this (.getExtraMetadataFormatNames))))
 
 (defn get-native-metadata-format-name
-  "Returns the name of the `native` metadata format for this
+  "Returns the name of the \"native\" metadata format for this
    plug-in, which typically allows for lossless encoding and
    transmission of the metadata stored in the format handled by
    this plug-in.  If no such format is supported,
    nullwill be returned.
 
-    The structure and contents of the `native` metadata format
+    The structure and contents of the \"native\" metadata format
    are defined by the plug-in that created this
    IIOMetadata object.  Plug-ins for simple formats
    will usually create a dummy node for the root, and then a

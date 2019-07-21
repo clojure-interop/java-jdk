@@ -1,7 +1,7 @@
 (ns jdk.awt.CheckboxMenuItem
   "This class represents a check box that can be included in a menu.
   Selecting the check box in the menu changes its state from
-  `on` to `off` or from `off` to `on.`
+  \"on\" to \"off\" or from \"off\" to \"on.\"
 
   The following picture depicts a menu which contains an instance
   of CheckBoxMenuItem:
@@ -9,7 +9,7 @@
 
 
   The item labeled Check shows a check box menu item
-  in its `off` state.
+  in its \"off\" state.
 
   When a check box menu item is selected, AWT sends an item event to
   the item. Since the event is an instance of ItemEvent,
@@ -26,7 +26,7 @@
   Create a check box menu item with the specified label and state.
 
   label - a string label for the check box menu item, or null for an unlabeled menu item. - `java.lang.String`
-  state - the initial state of the menu item, where true indicates `on` and false indicates `off.` - `boolean`
+  state - the initial state of the menu item, where true indicates \"on\" and false indicates \"off.\" - `boolean`
 
   throws: java.awt.HeadlessException - if GraphicsEnvironment.isHeadless() returns true"
   (^CheckboxMenuItem [^java.lang.String label ^Boolean state]
@@ -59,8 +59,8 @@
 
 (defn set-state
   "Sets this check box menu item to the specified state.
-   The boolean value true indicates `on` while
-   false indicates `off.`
+   The boolean value true indicates \"on\" while
+   false indicates \"off.\"
 
    Note that this method should be primarily used to
    initialize the state of the check box menu item.
@@ -75,11 +75,11 @@
 
 (defn get-state?
   "Determines whether the state of this check box menu item
-   is `on` or `off.`
+   is \"on\" or \"off.\"
 
   returns: the state of this check box menu item, where
-                       true indicates `on` and
-                       false indicates `off` - `boolean`"
+                       true indicates \"on\" and
+                       false indicates \"off\" - `boolean`"
   (^Boolean [^CheckboxMenuItem this]
     (-> this (.getState))))
 

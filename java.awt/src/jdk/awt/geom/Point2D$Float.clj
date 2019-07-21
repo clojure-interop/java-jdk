@@ -17,23 +17,23 @@
   (^Point2D$Float []
     (new Point2D$Float )))
 
-(defn -x
+(defn x
   "Instance Field.
 
   The X coordinate of this Point2D.
 
   type: float"
-  [this]
-  (-> this .-x))
+  (^Float [^Point2D$Float this]
+    (-> this .-x)))
 
-(defn -y
+(defn y
   "Instance Field.
 
   The Y coordinate of this Point2D.
 
   type: float"
-  [this]
-  (-> this .-y))
+  (^Float [^Point2D$Float this]
+    (-> this .-y)))
 
 (defn get-x
   "Returns the X coordinate of this Point2D in

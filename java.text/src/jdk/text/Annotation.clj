@@ -12,8 +12,8 @@
 
 
   An example is grammatical information attached to a sentence:
-  For the previous sentence, you can say that `an example`
-  is the subject, but you cannot say the same about `an`, `example`, or `exam`.
+  For the previous sentence, you can say that \"an example\"
+  is the subject, but you cannot say the same about \"an\", \"example\", or \"exam\".
   When the text is changed, the grammatical information typically becomes invalid.
   Another example is Japanese reading information (yomi).
 

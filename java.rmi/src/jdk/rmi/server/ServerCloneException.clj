@@ -3,11 +3,11 @@
   during the cloning of a UnicastRemoteObject.
 
   As of release 1.4, this exception has been retrofitted to conform to
-  the general purpose exception-chaining mechanism.  The `nested exception`
+  the general purpose exception-chaining mechanism.  The \"nested exception\"
   that may be provided at construction time and accessed via the public
   detail field is now known as the cause, and may be
   accessed via the Throwable.getCause() method, as well as
-  the aforementioned `legacy field.`
+  the aforementioned \"legacy field.\"
 
   Invoking the method Throwable.initCause(Throwable) on an
   instance of ServerCloneException always throws IllegalStateException."
@@ -27,7 +27,7 @@
   (^ServerCloneException [^java.lang.String s]
     (new ServerCloneException s)))
 
-(defn -detail
+(defn detail
   "Instance Field.
 
   The cause of the exception.
@@ -37,8 +37,8 @@
    obtaining this information.
 
   type: java.lang.Exception"
-  [this]
-  (-> this .-detail))
+  (^java.lang.Exception [^ServerCloneException this]
+    (-> this .-detail)))
 
 (defn get-message
   "Returns the detail message, including the message from the cause, if

@@ -6,7 +6,7 @@
   most often used for scrolling, though other uses are possible.
 
   A MouseWheelEvent object is passed to every MouseWheelListener
-  object which registered to receive the `interesting` mouse events using the
+  object which registered to receive the \"interesting\" mouse events using the
   component's addMouseWheelListener method.  Each such listener
   object gets a MouseEvent containing the mouse event.
 
@@ -39,20 +39,20 @@
 
   Platforms offer customization of the amount of scrolling that
   should take place when the mouse wheel is moved.  The two most
-  common settings are to scroll a certain number of `units`
-  (commonly lines of text in a text-based component) or an entire `block`
+  common settings are to scroll a certain number of \"units\"
+  (commonly lines of text in a text-based component) or an entire \"block\"
   (similar to page-up/page-down).  The MouseWheelEvent offers
   methods for conforming to the underlying platform settings.  These
   platform settings can be changed at any time by the user.  MouseWheelEvents
   reflect the most recent settings.
 
   The MouseWheelEvent class includes methods for
-  getting the number of `clicks` by which the mouse wheel is rotated.
+  getting the number of \"clicks\" by which the mouse wheel is rotated.
   The getWheelRotation() method returns the integer number
-  of `clicks` corresponding to the number of notches by which the wheel was
+  of \"clicks\" corresponding to the number of notches by which the wheel was
   rotated. In addition to this method, the MouseWheelEvent
   class provides the getPreciseWheelRotation() method which returns
-  a double number of `clicks` in case a partial rotation occurred.
+  a double number of \"clicks\" in case a partial rotation occurred.
   The getPreciseWheelRotation() method is useful if a mouse supports
   a high-resolution wheel, such as a freely rotating wheel with no
   notches. Applications can benefit by using this method to process
@@ -87,8 +87,8 @@
   popup-trigger - a boolean value, true if this event is a trigger for a popup-menu - `boolean`
   scroll-type - the type of scrolling which should take place in response to this event; valid values are WHEEL_UNIT_SCROLL and WHEEL_BLOCK_SCROLL - `int`
   scroll-amount - for scrollType WHEEL_UNIT_SCROLL, the number of units to be scrolled - `int`
-  wheel-rotation - the integer number of `clicks` by which the mouse wheel was rotated - `int`
-  precise-wheel-rotation - the double number of `clicks` by which the mouse wheel was rotated - `double`
+  wheel-rotation - the integer number of \"clicks\" by which the mouse wheel was rotated - `int`
+  precise-wheel-rotation - the double number of \"clicks\" by which the mouse wheel was rotated - `double`
 
   throws: java.lang.IllegalArgumentException - if source is null"
   (^MouseWheelEvent [^java.awt.Component source ^Integer id ^Long when ^Integer modifiers ^Integer x ^Integer y ^Integer x-abs ^Integer y-abs ^Integer click-count ^Boolean popup-trigger ^Integer scroll-type ^Integer scroll-amount ^Integer wheel-rotation ^Double precise-wheel-rotation]
@@ -101,7 +101,7 @@
 (def *-wheel-unit-scroll
   "Static Constant.
 
-  Constant representing scrolling by `units` (like scrolling with the
+  Constant representing scrolling by \"units\" (like scrolling with the
    arrow keys)
 
   type: int"
@@ -110,7 +110,7 @@
 (def *-wheel-block-scroll
   "Static Constant.
 
-  Constant representing scrolling by a `block` (like scrolling
+  Constant representing scrolling by a \"block\" (like scrolling
    with page-up, page-down keys)
 
   type: int"
@@ -142,9 +142,9 @@
     (-> this (.getScrollAmount))))
 
 (defn get-wheel-rotation
-  "Returns the number of `clicks` the mouse wheel was rotated, as an integer.
+  "Returns the number of \"clicks\" the mouse wheel was rotated, as an integer.
    A partial rotation may occur if the mouse supports a high-resolution wheel.
-   In this case, the method returns zero until a full `click` has been accumulated.
+   In this case, the method returns zero until a full \"click\" has been accumulated.
 
   returns: negative values if the mouse wheel was rotated up/away from
    the user, and positive values if the mouse wheel was rotated down/
@@ -153,9 +153,9 @@
     (-> this (.getWheelRotation))))
 
 (defn get-precise-wheel-rotation
-  "Returns the number of `clicks` the mouse wheel was rotated, as a double.
+  "Returns the number of \"clicks\" the mouse wheel was rotated, as a double.
    A partial rotation may occur if the mouse supports a high-resolution wheel.
-   In this case, the return value will include a fractional `click`.
+   In this case, the return value will include a fractional \"click\".
 
   returns: negative values if the mouse wheel was rotated up or away from
    the user, and positive values if the mouse wheel was rotated down or

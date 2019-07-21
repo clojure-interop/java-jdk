@@ -32,7 +32,7 @@
 
    First, if there is a security manager, its checkPermission
    method is called with a
-   NetPermission(`setDefaultAuthenticator`) permission.
+   NetPermission(\"setDefaultAuthenticator\") permission.
    This may result in a java.lang.SecurityException.
 
   a - The authenticator to be set. If a is null then any previously set authenticator is removed. - `java.net.Authenticator`
@@ -47,7 +47,7 @@
 
    First, if there is a security manager, its checkPermission
    method is called with a
-   NetPermission(`requestPasswordAuthentication`) permission.
+   NetPermission(\"requestPasswordAuthentication\") permission.
    This may result in a java.lang.SecurityException.
 
   host - The hostname of the site requesting authentication. - `java.lang.String`

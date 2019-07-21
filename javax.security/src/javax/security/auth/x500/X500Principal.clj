@@ -1,7 +1,7 @@
 (ns javax.security.auth.x500.X500Principal
   " This class represents an X.500 Principal.
   X500Principals are represented by distinguished names such as
-  `CN=Duke, OU=JavaSoft, O=Sun Microsystems, C=US`.
+  \"CN=Duke, OU=JavaSoft, O=Sun Microsystems, C=US\".
 
    This class can be instantiated by using a string representation
   of the distinguished name, or by using the ASN.1 DER encoded byte
@@ -31,7 +31,7 @@
 
   Creates an X500Principal from a string representation of
    an X.500 distinguished name (ex:
-   `CN=Duke, OU=JavaSoft, O=Sun Microsystems, C=US`).
+   \"CN=Duke, OU=JavaSoft, O=Sun Microsystems, C=US\").
    The distinguished name must be specified using the grammar defined in
    RFC 1779 or RFC 2253 (either format is acceptable).
 
@@ -89,7 +89,7 @@
 (defn get-name
   "Returns a string representation of the X.500 distinguished name
    using the specified format. Valid values for the format are
-   `RFC1779` and `RFC2253` (case insensitive). `CANONICAL` is not
+   \"RFC1779\" and \"RFC2253\" (case insensitive). \"CANONICAL\" is not
    permitted and an IllegalArgumentException will be thrown.
 
    This method returns Strings in the format as specified in

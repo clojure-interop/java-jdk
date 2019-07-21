@@ -7,10 +7,10 @@
 (defn get-output-stream
   "Deprecated. no replacement
 
-  returns: output stream for arguments/results - `.io.ObjectOutput`
+  returns: output stream for arguments/results - `java.io.ObjectOutput`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^.io.ObjectOutput [^RemoteCall this]
+  (^java.io.ObjectOutput [^RemoteCall this]
     (-> this (.getOutputStream))))
 
 (defn release-output-stream
@@ -23,10 +23,10 @@
 (defn get-input-stream
   "Deprecated. no replacement
 
-  returns: input stream for reading arguments/results - `.io.ObjectInput`
+  returns: input stream for reading arguments/results - `java.io.ObjectInput`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^.io.ObjectInput [^RemoteCall this]
+  (^java.io.ObjectInput [^RemoteCall this]
     (-> this (.getInputStream))))
 
 (defn release-input-stream
@@ -41,10 +41,10 @@
 
   success - If true, indicates normal return, else indicates exceptional return. - `boolean`
 
-  returns: output stream for writing call result - `.io.ObjectOutput`
+  returns: output stream for writing call result - `java.io.ObjectOutput`
 
   throws: java.io.IOException - if an I/O error occurs."
-  (^.io.ObjectOutput [^RemoteCall this ^Boolean success]
+  (^java.io.ObjectOutput [^RemoteCall this ^Boolean success]
     (-> this (.getResultStream success))))
 
 (defn execute-call

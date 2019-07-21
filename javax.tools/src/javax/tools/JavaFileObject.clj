@@ -22,7 +22,7 @@
    simple name and kind.  A simple name is a single identifier
    (not qualified) as defined in
    The Java™ Language Specification,
-   section 6.2 `Names and Identifiers`.
+   section 6.2 \"Names and Identifiers\".
 
   simple-name - a simple name of a class - `java.lang.String`
   kind - a kind - `javax.tools.JavaFileObject$Kind`

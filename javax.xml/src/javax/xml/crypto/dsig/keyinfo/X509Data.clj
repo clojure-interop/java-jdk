@@ -8,24 +8,24 @@
 
 
 
-     <element name=`X509Data` type=`ds:X509DataType`/>
-     <complexType name=`X509DataType`>
-         <sequence maxOccurs=`unbounded`>
+     <element name=\"X509Data\" type=\"ds:X509DataType\"/>
+     <complexType name=\"X509DataType\">
+         <sequence maxOccurs=\"unbounded\">
            <choice>
-             <element name=`X509IssuerSerial` type=`ds:X509IssuerSerialType`/>
-             <element name=`X509SKI` type=`base64Binary`/>
-             <element name=`X509SubjectName` type=`string`/>
-             <element name=`X509Certificate` type=`base64Binary`/>
-             <element name=`X509CRL` type=`base64Binary`/>
-             <any namespace=`##other` processContents=`lax`/>
+             <element name=\"X509IssuerSerial\" type=\"ds:X509IssuerSerialType\"/>
+             <element name=\"X509SKI\" type=\"base64Binary\"/>
+             <element name=\"X509SubjectName\" type=\"string\"/>
+             <element name=\"X509Certificate\" type=\"base64Binary\"/>
+             <element name=\"X509CRL\" type=\"base64Binary\"/>
+             <any namespace=\"##other\" processContents=\"lax\"/>
            </choice>
          </sequence>
      </complexType>
 
-     <complexType name=`X509IssuerSerialType`>
+     <complexType name=\"X509IssuerSerialType\">
        <sequence>
-         <element name=`X509IssuerName` type=`string`/>
-         <element name=`X509SerialNumber` type=`integer`/>
+         <element name=\"X509IssuerName\" type=\"string\"/>
+         <element name=\"X509SerialNumber\" type=\"integer\"/>
        </sequence>
      </complexType>
 
@@ -35,9 +35,9 @@
   XMLStructures representing X.509 content; for example:
 
 
-    KeyInfoFactory factory = KeyInfoFactory.getInstance(`DOM`);
+    KeyInfoFactory factory = KeyInfoFactory.getInstance(\"DOM\");
     X509Data x509Data = factory.newX509Data
-        (Collections.singletonList(`cn=Alice`));"
+        (Collections.singletonList(\"cn=Alice\"));"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.crypto.dsig.keyinfo X509Data]))
 

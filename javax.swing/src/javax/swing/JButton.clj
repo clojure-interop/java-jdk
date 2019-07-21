@@ -1,5 +1,5 @@
 (ns javax.swing.JButton
-  "An implementation of a `push` button.
+  "An implementation of a \"push\" button.
 
   Buttons can be configured, and to some degree controlled, by
   Actions.  Using an
@@ -52,7 +52,7 @@
   "Returns a string that specifies the name of the L&F class
    that renders this component.
 
-  returns: the string `ButtonUI` - `java.lang.String`"
+  returns: the string \"ButtonUI\" - `java.lang.String`"
   (^java.lang.String [^JButton this]
     (-> this (.getUIClassID))))
 

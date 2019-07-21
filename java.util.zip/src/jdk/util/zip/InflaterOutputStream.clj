@@ -1,6 +1,6 @@
 (ns jdk.util.zip.InflaterOutputStream
   "Implements an output stream filter for uncompressing data stored in the
-  `deflate` compression format."
+  \"deflate\" compression format."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util.zip InflaterOutputStream]))
 
@@ -11,7 +11,7 @@
    buffer size.
 
   out - output stream to write the uncompressed data to - `java.io.OutputStream`
-  infl - decompressor (`inflater`) for this stream - `java.util.zip.Inflater`
+  infl - decompressor (\"inflater\") for this stream - `java.util.zip.Inflater`
   buf-len - decompression buffer size - `int`
 
   throws: java.lang.IllegalArgumentException - if bufLen <= 0"

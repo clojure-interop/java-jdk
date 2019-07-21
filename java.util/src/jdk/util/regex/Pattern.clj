@@ -11,8 +11,8 @@
 
 
 
-  Pattern p = Pattern.compile(`a*b`);
-  Matcher m = p.matcher(`aaaaab`);
+  Pattern p = Pattern.compile(\"a*b\");
+  Matcher m = p.matcher(\"aaaaab\");
   boolean b = m.matches();
 
    A matches method is defined by this class as a
@@ -22,7 +22,7 @@
 
 
 
-  boolean b = Pattern.matches(`a*b`, `aaaaab`);
+  boolean b = Pattern.matches(\"a*b\", \"aaaaab\");
 
   is equivalent to the three statements above, though for repeated matches it
   is less efficient since it does not allow the compiled pattern to be reused.
@@ -46,40 +46,40 @@
 
   x
       The character x
-  \\
+  \\\\
       The backslash character
-  \0n
+  \\0n
       The character with octal value 0n
           (0 <= n <= 7)
-  \0nn
+  \\0nn
       The character with octal value 0nn
           (0 <= n <= 7)
-  \0mnn
+  \\0mnn
       The character with octal value 0mnn
           (0 <= m <= 3,
           0 <= n <= 7)
-  \xhh
+  \\xhh
       The character with hexadecimal value 0xhh
-  \uhhhh
+  \\uhhhh
       The character with hexadecimal value 0xhhhh
-  \x{h...h}
+  \\x{h...h}
       The character with hexadecimal value 0xh...h
           (Character.MIN_CODE_POINT
            <= 0xh...h <=
            Character.MAX_CODE_POINT)
-  \t
-      The tab character ('\u0009')
-  \n
-      The newline (line feed) character ('\u000A')
-  \r
-      The carriage-return character ('\u000D')
-  \f
-      The form-feed character ('\u000C')
-  \a
-      The alert (bell) character ('\u0007')
-  \e
-      The escape character ('\u001B')
-  \cx
+  \\t
+      The tab character ('\\u0009')
+  \\n
+      The newline (line feed) character ('\\u000A')
+  \\r
+      The carriage-return character ('\\u000D')
+  \\f
+      The form-feed character ('\\u000C')
+  \\a
+      The alert (bell) character ('\\u0007')
+  \\e
+      The escape character ('\\u001B')
+  \\cx
       The control character corresponding to x
 
 
@@ -109,87 +109,87 @@
 
   .
       Any character (may or may not match line terminators)
-  \d
+  \\d
       A digit: [0-9]
-  \D
+  \\D
       A non-digit: [^0-9]
-  \h
+  \\h
       A horizontal whitespace character:
-      [ \t\xA0\u1680\u180e\u2000-\u200a\u202f\u205f\u3000]
-  \H
-      A non-horizontal whitespace character: [^\h]
-  \s
-      A whitespace character: [ \t\n\x0B\f\r]
-  \S
-      A non-whitespace character: [^\s]
-  \v
-      A vertical whitespace character: [\n\x0B\f\r\x85\u2028\u2029]
+      [ \\t\\xA0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000]
+  \\H
+      A non-horizontal whitespace character: [^\\h]
+  \\s
+      A whitespace character: [ \\t\\n\\x0B\\f\\r]
+  \\S
+      A non-whitespace character: [^\\s]
+  \\v
+      A vertical whitespace character: [\\n\\x0B\\f\\r\\x85\\u2028\\u2029]
 
-  \V
-      A non-vertical whitespace character: [^\v]
-  \w
+  \\V
+      A non-vertical whitespace character: [^\\v]
+  \\w
       A word character: [a-zA-Z_0-9]
-  \W
-      A non-word character: [^\w]
+  \\W
+      A non-word character: [^\\w]
 
   POSIX character classes (US-ASCII only)
 
-  \p{Lower}
+  \\p{Lower}
       A lower-case alphabetic character: [a-z]
-  \p{Upper}
+  \\p{Upper}
       An upper-case alphabetic character:[A-Z]
-  \p{ASCII}
-      All ASCII:[\x00-\x7F]
-  \p{Alpha}
-      An alphabetic character:[\p{Lower}\p{Upper}]
-  \p{Digit}
+  \\p{ASCII}
+      All ASCII:[\\x00-\\x7F]
+  \\p{Alpha}
+      An alphabetic character:[\\p{Lower}\\p{Upper}]
+  \\p{Digit}
       A decimal digit: [0-9]
-  \p{Alnum}
-      An alphanumeric character:[\p{Alpha}\p{Digit}]
-  \p{Punct}
-      Punctuation: One of !`#$%&'()*+,-./:;<=>?@[\]^_`{|}~
-       <code>[\!`#\$%&amp;'\(\)\*\+,\-\./:;\&lt;=\&gt;\?@\[\\\]\^_`\{\|\}~]</code>
-           <code>[\X21-\X2F\X31-\X40\X5B-\X60\X7B-\X7E]</code>
-  \p{Graph}
-      A visible character: [\p{Alnum}\p{Punct}]
-  \p{Print}
-      A printable character: [\p{Graph}\x20]
-  \p{Blank}
-      A space or a tab: [ \t]
-  \p{Cntrl}
-      A control character: [\x00-\x1F\x7F]
-  \p{XDigit}
+  \\p{Alnum}
+      An alphanumeric character:[\\p{Alpha}\\p{Digit}]
+  \\p{Punct}
+      Punctuation: One of !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~
+       <code>[\\!\"#\\$%&amp;'\\(\\)\\*\\+,\\-\\./:;\\&lt;=\\&gt;\\?@\\[\\\\\\]\\^_`\\{\\|\\}~]</code>
+           <code>[\\X21-\\X2F\\X31-\\X40\\X5B-\\X60\\X7B-\\X7E]</code>
+  \\p{Graph}
+      A visible character: [\\p{Alnum}\\p{Punct}]
+  \\p{Print}
+      A printable character: [\\p{Graph}\\x20]
+  \\p{Blank}
+      A space or a tab: [ \\t]
+  \\p{Cntrl}
+      A control character: [\\x00-\\x1F\\x7F]
+  \\p{XDigit}
       A hexadecimal digit: [0-9a-fA-F]
-  \p{Space}
-      A whitespace character: [ \t\n\x0B\f\r]
+  \\p{Space}
+      A whitespace character: [ \\t\\n\\x0B\\f\\r]
 
 
   java.lang.Character classes (simple java character type)
 
-  \p{javaLowerCase}
+  \\p{javaLowerCase}
       Equivalent to java.lang.Character.isLowerCase()
-  \p{javaUpperCase}
+  \\p{javaUpperCase}
       Equivalent to java.lang.Character.isUpperCase()
-  \p{javaWhitespace}
+  \\p{javaWhitespace}
       Equivalent to java.lang.Character.isWhitespace()
-  \p{javaMirrored}
+  \\p{javaMirrored}
       Equivalent to java.lang.Character.isMirrored()
 
 
   Classes for Unicode scripts, blocks, categories and binary properties
-  \p{IsLatin}
+  \\p{IsLatin}
       A Latin script character (script)
-  \p{InGreek}
+  \\p{InGreek}
       A character in the Greek block (block)
-  \p{Lu}
+  \\p{Lu}
       An uppercase letter (category)
-  \p{IsAlphabetic}
+  \\p{IsAlphabetic}
       An alphabetic character (binary property)
-  \p{Sc}
+  \\p{Sc}
       A currency symbol
-  \P{InGreek}
+  \\P{InGreek}
       Any character except one in the Greek block (negation)
-  [\p{L}&&[^\p{Lu}]]
+  [\\p{L}&&[^\\p{Lu}]]
       Any letter except an uppercase letter (subtraction)
 
 
@@ -199,25 +199,25 @@
       The beginning of a line
   $
       The end of a line
-  \b
+  \\b
       A word boundary
-  \B
+  \\B
       A non-word boundary
-  \A
+  \\A
       The beginning of the input
-  \G
+  \\G
       The end of the previous match
-  \Z
+  \\Z
       The end of the input but for the final
           terminator, if any
-  \z
+  \\z
       The end of the input
 
 
   Linebreak matcher
-  \R
+  \\R
       Any Unicode linebreak sequence, is equivalent to
-      \u000D\u000A|[\u000A\u000B\u000C\u000D\u0085\u2028\u2029]
+      \\u000D\\u000A|[\\u000A\\u000B\\u000C\\u000D\\u0085\\u2028\\u2029]
 
 
 
@@ -281,24 +281,24 @@
 
   Back references
 
-  \n
+  \\n
       Whatever the nth
       capturing group matched
 
-  \k<name>
+  \\k<name>
       Whatever the
-      named-capturing group `name` matched
+      named-capturing group \"name\" matched
 
 
   Quotation
 
-  \
+  \\
       Nothing, but quotes the following character
-  \Q
-      Nothing, but quotes all characters until \E
-  \E
-      Nothing, but ends quoting started by \Q
-       Metachars: !$()*+.<>?[\]^{|}
+  \\Q
+      Nothing, but quotes all characters until \\E
+  \\E
+      Nothing, but ends quoting started by \\Q
+       Metachars: !$()*+.<>?[\\]^{|}
 
 
   Special constructs (named-capturing and non-capturing)
@@ -335,10 +335,10 @@
 
   Backslashes, escapes, and quoting
 
-   The backslash character ('\') serves to introduce escaped
+   The backslash character ('\\') serves to introduce escaped
   constructs, as defined in the table above, as well as to quote characters
   that otherwise would be interpreted as unescaped constructs.  Thus the
-  expression \\ matches a single backslash and \{ matches a
+  expression \\\\ matches a single backslash and \\{ matches a
   left brace.
 
    It is an error to use a backslash prior to any alphabetic character that
@@ -354,11 +354,11 @@
   It is therefore necessary to double backslashes in string
   literals that represent regular expressions to protect them from
   interpretation by the Java bytecode compiler.  The string literal
-  `\b`, for example, matches a single backspace character when
-  interpreted as a regular expression, while `\\b` matches a
-  word boundary.  The string literal `\(hello\)` is illegal
+  \"\\b\", for example, matches a single backspace character when
+  interpreted as a regular expression, while \"\\\\b\" matches a
+  word boundary.  The string literal \"\\(hello\\)\" is illegal
   and leads to a compile-time error; in order to match the string
-  (hello) the string literal `\\(hello\\)`
+  (hello) the string literal \"\\\\(hello\\\\)\"
   must be used.
 
   Character Classes
@@ -377,7 +377,7 @@
 
        1
          Literal escape
-         \x
+         \\x
       2
          Grouping
          [...]
@@ -406,18 +406,18 @@
 
 
 
-     A newline (line feed) character ('\n'),
+     A newline (line feed) character ('\\n'),
 
      A carriage-return character followed immediately by a newline
-    character (`\r\n`),
+    character (\"\\r\\n\"),
 
-     A standalone carriage-return character ('\r'),
+     A standalone carriage-return character ('\\r'),
 
-     A next-line character ('\u0085'),
+     A next-line character ('\\u0085'),
 
-     A line-separator character ('\u2028'), or
+     A line-separator character ('\\u2028'), or
 
-     A paragraph-separator character ('\u2029).
+     A paragraph-separator character ('\\u2029).
 
 
   If UNIX_LINES mode is activated, then the only line terminators
@@ -459,17 +459,17 @@
   may also be retrieved from the matcher once the match operation is complete.
 
   Group name
-  A capturing group can also be assigned a `name`, a named-capturing group,
-  and then be back-referenced later by the `name`. Group names are composed of
+  A capturing group can also be assigned a \"name\", a named-capturing group,
+  and then be back-referenced later by the \"name\". Group names are composed of
   the following characters. The first character must be a letter.
 
 
      The uppercase letters 'A' through 'Z'
-         ('\u0041' through '\u005a'),
+         ('\\u0041' through '\\u005a'),
      The lowercase letters 'a' through 'z'
-         ('\u0061' through '\u007a'),
+         ('\\u0061' through '\\u007a'),
      The digits '0' through '9'
-         ('\u0030' through '\u0039'),
+         ('\\u0030' through '\\u0039'),
 
 
    A named-capturing group is still numbered as described in
@@ -479,8 +479,8 @@
   that the group most recently matched.  If a group is evaluated a second time
   because of quantification then its previously-captured value, if any, will
   be retained if the second evaluation fails.  Matching the string
-  `aba` against the expression (a(b)?)+, for example, leaves
-  group two set to `b`.  All captured input is discarded at the
+  \"aba\" against the expression (a(b)?)+, for example, leaves
+  group two set to \"b\".  All captured input is discarded at the
   beginning of each match.
 
    Groups beginning with (? are either pure, non-capturing groups
@@ -493,26 +493,26 @@
   Standard #18: Unicode Regular Expression, plus RL2.1
   Canonical Equivalents.
 
-  Unicode escape sequences such as \u2014 in Java source code
+  Unicode escape sequences such as \\u2014 in Java source code
   are processed as described in section 3.3 of
   The Java™ Language Specification.
   Such escape sequences are also implemented directly by the regular-expression
   parser so that Unicode escapes can be used in expressions that are read from
-  files or from the keyboard.  Thus the strings `\u2014` and
-  `\\u2014`, while not equal, compile into the same pattern, which
+  files or from the keyboard.  Thus the strings \"\\u2014\" and
+  \"\\\\u2014\", while not equal, compile into the same pattern, which
   matches the character with hexadecimal value 0x2014.
 
   A Unicode character can also be represented in a regular-expression by
   using its Hex notation(hexadecimal code point value) directly as described in construct
-  \x{...}, for example a supplementary character U+2011F
-  can be specified as \x{2011F}, instead of two consecutive
+  \\x{...}, for example a supplementary character U+2011F
+  can be specified as \\x{2011F}, instead of two consecutive
   Unicode escape sequences of the surrogate pair
-  \uD840\uDD1F.
+  \\uD840\\uDD1F.
 
   Unicode scripts, blocks, categories and binary properties are written with
-  the \p and \P constructs as in Perl.
-  \p{prop} matches if
-  the input has the property prop, while \P{prop}
+  the \\p and \\P constructs as in Perl.
+  \\p{prop} matches if
+  the input has the property prop, while \\P{prop}
   does not match if the input has that property.
 
   Scripts, blocks, categories and binary properties can be used both inside
@@ -538,7 +538,7 @@
 
 
   Categories may be specified with the optional prefix Is:
-  Both \p{L} and \p{IsL} denote the category of Unicode
+  Both \\p{L} and \\p{IsL} denote the category of Unicode
   letters. Same as scripts and blocks, categories can also be specified
   by using the keyword general_category (or its short form
   gc) as in general_category=Lu or gc=Lu.
@@ -580,50 +580,50 @@
   Classes
   Matches
 
-  \p{Lower}
-      A lowercase character:\p{IsLowercase}
-  \p{Upper}
-      An uppercase character:\p{IsUppercase}
-  \p{ASCII}
-      All ASCII:[\x00-\x7F]
-  \p{Alpha}
-      An alphabetic character:\p{IsAlphabetic}
-  \p{Digit}
+  \\p{Lower}
+      A lowercase character:\\p{IsLowercase}
+  \\p{Upper}
+      An uppercase character:\\p{IsUppercase}
+  \\p{ASCII}
+      All ASCII:[\\x00-\\x7F]
+  \\p{Alpha}
+      An alphabetic character:\\p{IsAlphabetic}
+  \\p{Digit}
       A decimal digit character:p{IsDigit}
-  \p{Alnum}
-      An alphanumeric character:[\p{IsAlphabetic}\p{IsDigit}]
-  \p{Punct}
+  \\p{Alnum}
+      An alphanumeric character:[\\p{IsAlphabetic}\\p{IsDigit}]
+  \\p{Punct}
       A punctuation character:p{IsPunctuation}
-  \p{Graph}
-      A visible character: [^\p{IsWhite_Space}\p{gc=Cc}\p{gc=Cs}\p{gc=Cn}]
-  \p{Print}
-      A printable character: [\p{Graph}\p{Blank}&&[^\p{Cntrl}]]
-  \p{Blank}
-      A space or a tab: [\p{IsWhite_Space}&&[^\p{gc=Zl}\p{gc=Zp}\x0a\x0b\x0c\x0d\x85]]
-  \p{Cntrl}
-      A control character: \p{gc=Cc}
-  \p{XDigit}
-      A hexadecimal digit: [\p{gc=Nd}\p{IsHex_Digit}]
-  \p{Space}
-      A whitespace character:\p{IsWhite_Space}
-  \d
-      A digit: \p{IsDigit}
-  \D
-      A non-digit: [^\d]
-  \s
-      A whitespace character: \p{IsWhite_Space}
-  \S
-      A non-whitespace character: [^\s]
-  \w
-      A word character: [\p{Alpha}\p{gc=Mn}\p{gc=Me}\p{gc=Mc}\p{Digit}\p{gc=Pc}\p{IsJoin_Control}]
-  \W
-      A non-word character: [^\w]
+  \\p{Graph}
+      A visible character: [^\\p{IsWhite_Space}\\p{gc=Cc}\\p{gc=Cs}\\p{gc=Cn}]
+  \\p{Print}
+      A printable character: [\\p{Graph}\\p{Blank}&&[^\\p{Cntrl}]]
+  \\p{Blank}
+      A space or a tab: [\\p{IsWhite_Space}&&[^\\p{gc=Zl}\\p{gc=Zp}\\x0a\\x0b\\x0c\\x0d\\x85]]
+  \\p{Cntrl}
+      A control character: \\p{gc=Cc}
+  \\p{XDigit}
+      A hexadecimal digit: [\\p{gc=Nd}\\p{IsHex_Digit}]
+  \\p{Space}
+      A whitespace character:\\p{IsWhite_Space}
+  \\d
+      A digit: \\p{IsDigit}
+  \\D
+      A non-digit: [^\\d]
+  \\s
+      A whitespace character: \\p{IsWhite_Space}
+  \\S
+      A non-whitespace character: [^\\s]
+  \\w
+      A word character: [\\p{Alpha}\\p{gc=Mn}\\p{gc=Me}\\p{gc=Mc}\\p{Digit}\\p{gc=Pc}\\p{IsJoin_Control}]
+  \\W
+      A non-word character: [^\\w]
 
 
 
   Categories that behave like the java.lang.Character
   boolean ismethodname methods (except for the deprecated ones) are
-  available through the same \p{prop} syntax where
+  available through the same \\p{prop} syntax where
   the specified property has the name javamethodname.
 
    Comparison to Perl 5
@@ -635,18 +635,18 @@
 
 
       Predefined character classes (Unicode character)
-     \X    Match Unicode
+     \\X    Match Unicode
 
      extended grapheme cluster
 
 
-      The backreference constructs, \g{n} for
+      The backreference constructs, \\g{n} for
      the nthcapturing group and
-     \g{name} for
+     \\g{name} for
      named-capturing group.
 
 
-      The named character construct, \N{name}
+      The named character construct, \\N{name}
      for a Unicode character by its name.
 
 
@@ -660,8 +660,8 @@
 
       The embedded comment syntax (?#comment), and
 
-      The preprocessing operations \l \u,
-     \L, and \U.
+      The preprocessing operations \\l \\u,
+     \\L, and \\U.
 
 
 
@@ -678,12 +678,12 @@
 
 
 
-      In Perl, \1 through \9 are always interpreted
+      In Perl, \\1 through \\9 are always interpreted
      as back references; a backslash-escaped number greater than 9 is
      treated as a back reference if at least that many subexpressions exist,
      otherwise it is interpreted, if possible, as an octal escape.  In this
      class octal escapes must always begin with a zero. In this class,
-     \1 through \9 are always interpreted as back
+     \\1 through \\9 are always interpreted as back
      references, and a larger number is accepted as a back reference if at
      least that many subexpressions exist at that point in the regular
      expression, otherwise the parser will drop digits until the number is
@@ -716,7 +716,7 @@
 
   Enables Unix lines mode.
 
-    In this mode, only the '\n' line terminator is recognized
+    In this mode, only the '\\n' line terminator is recognized
    in the behavior of ., ^, and $.
 
     Unix lines mode can also be enabled via the embedded flag
@@ -802,7 +802,7 @@
 
     Dotall mode can also be enabled via the embedded flag
    expression (?s).  (The s is a mnemonic for
-   `single-line` mode, which is what this is called in Perl.)
+   \"single-line\" mode, which is what this is called in Perl.)
 
   type: int"
   Pattern/DOTALL)
@@ -833,8 +833,8 @@
 
     When this flag is specified then two characters will be considered
    to match if, and only if, their full canonical decompositions match.
-   The expression `a\u030A`, for example, will match the
-   string `\u00E5` when this flag is specified.  By default,
+   The expression \"a\\u030A\", for example, will match the
+   string \"\\u00E5\" when this flag is specified.  By default,
    matching does not take canonical equivalence into account.
 
     There is no embedded flag character for enabling canonical
@@ -987,7 +987,7 @@
    the pattern will be applied as many times as possible, the array can
    have any length, and trailing empty strings will be discarded.
 
-    The input `boo:and:foo`, for example, yields the following
+    The input \"boo:and:foo\", for example, yields the following
    results with these parameters:
 
 
@@ -996,22 +996,22 @@
        Result
    :
        2
-       { `boo`, `and:foo` }
+       { \"boo\", \"and:foo\" }
    :
        5
-       { `boo`, `and`, `foo` }
+       { \"boo\", \"and\", \"foo\" }
    :
        -2
-       { `boo`, `and`, `foo` }
+       { \"boo\", \"and\", \"foo\" }
    o
        5
-       { `b`, ``, `:and:f`, ``, `` }
+       { \"b\", \"\", \":and:f\", \"\", \"\" }
    o
        -2
-       { `b`, ``, `:and:f`, ``, `` }
+       { \"b\", \"\", \":and:f\", \"\", \"\" }
    o
        0
-       { `b`, ``, `:and:f` }
+       { \"b\", \"\", \":and:f\" }
 
   input - The character sequence to be split - `java.lang.CharSequence`
   limit - The result threshold, as described above - `int`

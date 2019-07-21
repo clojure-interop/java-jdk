@@ -13,16 +13,16 @@
 
 
 
-      basic-language-range    = (1*8ALPHA *(`-` 1*8alphanum)) / `*`
-      extended-language-range = (1*8ALPHA / `*`)
-                                *(`-` (1*8alphanum / `*`))
+      basic-language-range    = (1*8ALPHA *(\"-\" 1*8alphanum)) / \"*\"
+      extended-language-range = (1*8ALPHA / \"*\")
+                                *(\"-\" (1*8alphanum / \"*\"))
       alphanum                = ALPHA / DIGIT
 
-  For example, `en` (English), `ja-JP` (Japanese, Japan),
-  `*` (special language range which matches any language tag) are
-  basic language ranges, whereas `*-CH` (any languages,
-  Switzerland), `es-*` (Spanish, any regions), and
-  `zh-Hant-*` (Traditional Chinese, any regions) are extended
+  For example, \"en\" (English), \"ja-JP\" (Japanese, Japan),
+  \"*\" (special language range which matches any language tag) are
+  basic language ranges, whereas \"*-CH\" (any languages,
+  Switzerland), \"es-*\" (Spanish, any regions), and
+  \"zh-Hant-*\" (Traditional Chinese, any regions) are extended
   language ranges."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util Locale$LanguageRange]))
@@ -67,7 +67,7 @@
    This method is equivalent to
    mapEquivalents(parse(ranges), map).
 
-  ranges - a list of comma-separated language ranges or a list of language ranges in the form of the `Accept-Language` header defined in RFC 2616 - `java.lang.String`
+  ranges - a list of comma-separated language ranges or a list of language ranges in the form of the \"Accept-Language\" header defined in RFC 2616 - `java.lang.String`
   map - a map containing information to customize language ranges - `java.util.Map`
 
   returns: a Language Priority List with customization. The list is
@@ -93,31 +93,31 @@
 
     An example of map:
       Key                            Value
-        `zh` (Chinese)                 `zh`,
-                                       `zh-Hans`(Simplified Chinese)
-        `zh-HK` (Chinese, Hong Kong)   `zh-HK`
-        `zh-TW` (Chinese, Taiwan)      `zh-TW`
+        \"zh\" (Chinese)                 \"zh\",
+                                       \"zh-Hans\"(Simplified Chinese)
+        \"zh-HK\" (Chinese, Hong Kong)   \"zh-HK\"
+        \"zh-TW\" (Chinese, Taiwan)      \"zh-TW\"
 
    The customization is performed after modification using the IANA
    Language Subtag Registry.
 
    For example, if a user's Language Priority List consists of five
-   language ranges (`zh`, `zh-CN`, `en`,
-   `zh-TW`, and `zh-HK`), the newly generated Language
+   language ranges (\"zh\", \"zh-CN\", \"en\",
+   \"zh-TW\", and \"zh-HK\"), the newly generated Language
    Priority List which is customized using the above map example will
-   consists of `zh`, `zh-Hans`, `zh-CN`,
-   `zh-Hans-CN`, `en`, `zh-TW`, and
-   `zh-HK`.
+   consists of \"zh\", \"zh-Hans\", \"zh-CN\",
+   \"zh-Hans-CN\", \"en\", \"zh-TW\", and
+   \"zh-HK\".
 
-   `zh-HK` and `zh-TW` aren't converted to
-   `zh-Hans-HK` nor `zh-Hans-TW` even if they are
+   \"zh-HK\" and \"zh-TW\" aren't converted to
+   \"zh-Hans-HK\" nor \"zh-Hans-TW\" even if they are
    included in the Language Priority List. In this example, mapping
    is used to clearly distinguish Simplified Chinese and Traditional
    Chinese.
 
-   If the `zh`-to-`zh` mapping isn't included in the
+   If the \"zh\"-to-\"zh\" mapping isn't included in the
    map, a simple replacement will be performed and the customized list
-   won't include `zh` and `zh-CN`.
+   won't include \"zh\" and \"zh-CN\".
 
   priority-list - user's Language Priority List - `java.util.List`
   map - a map containing information to customize language ranges - `java.util.Map`

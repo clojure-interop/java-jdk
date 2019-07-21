@@ -25,8 +25,8 @@
   finding the first day of next month
   finding the first or last day of the year
   finding the first day of next year
-  finding the first or last day-of-week within a month, such as `first Wednesday in June`
-  finding the next or previous day-of-week, such as `next Thursday`"
+  finding the first or last day-of-week within a month, such as \"first Wednesday in June\"
+  finding the next or previous day-of-week, such as \"next Thursday\""
   (:refer-clojure :only [require comment defn ->])
   (:import [java.time.temporal TemporalAdjusters]))
 
@@ -70,7 +70,7 @@
     (TemporalAdjusters/nextOrSame day-of-week)))
 
 (defn *first-day-of-next-month
-  "Returns the `first day of next month` adjuster, which returns a new date set to
+  "Returns the \"first day of next month\" adjuster, which returns a new date set to
    the first day of the next month.
 
    The ISO calendar system behaves as follows:
@@ -88,7 +88,7 @@
     (TemporalAdjusters/firstDayOfNextMonth )))
 
 (defn *first-day-of-month
-  "Returns the `first day of month` adjuster, which returns a new date set to
+  "Returns the \"first day of month\" adjuster, which returns a new date set to
    the first day of the current month.
 
    The ISO calendar system behaves as follows:
@@ -106,7 +106,7 @@
     (TemporalAdjusters/firstDayOfMonth )))
 
 (defn *first-day-of-year
-  "Returns the `first day of year` adjuster, which returns a new date set to
+  "Returns the \"first day of year\" adjuster, which returns a new date set to
    the first day of the current year.
 
    The ISO calendar system behaves as follows:
@@ -144,7 +144,7 @@
     (TemporalAdjusters/ofDateAdjuster date-based-adjuster)))
 
 (defn *last-day-of-year
-  "Returns the `last day of year` adjuster, which returns a new date set to
+  "Returns the \"last day of year\" adjuster, which returns a new date set to
    the last day of the current year.
 
    The ISO calendar system behaves as follows:
@@ -221,7 +221,7 @@
     (TemporalAdjusters/previous day-of-week)))
 
 (defn *last-day-of-month
-  "Returns the `last day of month` adjuster, which returns a new date set to
+  "Returns the \"last day of month\" adjuster, which returns a new date set to
    the last day of the current month.
 
    The ISO calendar system behaves as follows:
@@ -261,7 +261,7 @@
     (TemporalAdjusters/lastInMonth day-of-week)))
 
 (defn *first-day-of-next-year
-  "Returns the `first day of next year` adjuster, which returns a new date set to
+  "Returns the \"first day of next year\" adjuster, which returns a new date set to
    the first day of the next year.
 
    The ISO calendar system behaves as follows:

@@ -68,7 +68,7 @@
 
   returns: the newly created MBeanServer. - `javax.management.MBeanServer`
 
-  throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanServerPermission(`createMBeanServer`)."
+  throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanServerPermission(\"createMBeanServer\")."
   (^javax.management.MBeanServer [^java.lang.String domain]
     (MBeanServerFactory/createMBeanServer domain))
   (^javax.management.MBeanServer []
@@ -90,7 +90,7 @@
 
   returns: the newly created MBeanServer. - `javax.management.MBeanServer`
 
-  throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanServerPermission(`newMBeanServer`)."
+  throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanServerPermission(\"newMBeanServer\")."
   (^javax.management.MBeanServer [^java.lang.String domain]
     (MBeanServerFactory/newMBeanServer domain))
   (^javax.management.MBeanServer []
@@ -106,7 +106,7 @@
 
   returns: A list of MBeanServer objects. - `java.util.ArrayList<javax.management.MBeanServer>`
 
-  throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanServerPermission(`findMBeanServer`)."
+  throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanServerPermission(\"findMBeanServer\")."
   (^java.util.ArrayList [^java.lang.String agent-id]
     (MBeanServerFactory/findMBeanServer agent-id)))
 
@@ -118,7 +118,7 @@
 
   returns: The Class Loader Repository used by the given MBeanServer. - `javax.management.loading.ClassLoaderRepository`
 
-  throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanPermission(`getClassLoaderRepository`)."
+  throws: java.lang.SecurityException - if there is a SecurityManager and the caller's permissions do not include or imply MBeanPermission(\"getClassLoaderRepository\")."
   (^javax.management.loading.ClassLoaderRepository [^javax.management.MBeanServer server]
     (MBeanServerFactory/getClassLoaderRepository server)))
 

@@ -216,7 +216,7 @@
    the ObjectName for a GarbageCollectorMXBean.
    The unique ObjectName for a GarbageCollectorMXBean
    can be formed by appending this string with
-   `,name=collector's name`.
+   \",name=collector's name\".
 
   type: java.lang.String"
   ManagementFactory/GARBAGE_COLLECTOR_MXBEAN_DOMAIN_TYPE)
@@ -228,7 +228,7 @@
    the ObjectName for a MemoryManagerMXBean.
    The unique ObjectName for a MemoryManagerMXBean
    can be formed by appending this string with
-   `,name=manager's name`.
+   \",name=manager's name\".
 
   type: java.lang.String"
   ManagementFactory/MEMORY_MANAGER_MXBEAN_DOMAIN_TYPE)

@@ -12,7 +12,7 @@
   Create a CommandEnvironment with all the necessary
    information.
 
-  cmdpath - the name of the java executable, including the full path, or null, meaning `use rmid's default`. The named program must be able to accept multiple -Dpropname=value options (as documented for the `java` tool) - `java.lang.String`
+  cmdpath - the name of the java executable, including the full path, or null, meaning \"use rmid's default\". The named program must be able to accept multiple -Dpropname=value options (as documented for the \"java\" tool) - `java.lang.String`
   argv - extra options which will be used in creating the ActivationGroup. Null has the same effect as an empty list. - `java.lang.String[]`"
   (^ActivationGroupDesc$CommandEnvironment [^java.lang.String cmdpath argv]
     (new ActivationGroupDesc$CommandEnvironment cmdpath argv)))

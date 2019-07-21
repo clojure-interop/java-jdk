@@ -9,9 +9,9 @@
   look and feel, using the following property names in the
   Defaults Table:
 
-  `TitledBorder.border`
-  `TitledBorder.font`
-  `TitledBorder.titleColor`
+  \"TitledBorder.border\"
+  \"TitledBorder.font\"
+  \"TitledBorder.titleColor\"
 
 
   Warning:

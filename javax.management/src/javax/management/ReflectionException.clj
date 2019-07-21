@@ -1,6 +1,6 @@
 (ns javax.management.ReflectionException
   "Represents exceptions thrown in the MBean server when using the
-  java.lang.reflect classes to invoke methods on MBeans. It `wraps` the
+  java.lang.reflect classes to invoke methods on MBeans. It \"wraps\" the
   actual java.lang.Exception thrown."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.management ReflectionException]))

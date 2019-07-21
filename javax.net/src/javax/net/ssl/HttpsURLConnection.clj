@@ -14,7 +14,7 @@
   However, the implementations can be replaced on a per-class (static) or
   per-instance basis.  All new HttpsURLConnections instances
   will be assigned
-  the `default` static values at instance creation, but they can be overriden
+  the \"default\" static values at instance creation, but they can be overriden
   by calling the appropriate per-instance set method(s) before
   connecting."
   (:refer-clojure :only [require comment defn ->])
@@ -160,7 +160,7 @@
 
    When multiple certificates are available for use in a
    handshake, the implementation chooses what it considers the
-   `best` certificate chain available, and transmits that to
+   \"best\" certificate chain available, and transmits that to
    the other side.  This method allows the caller to know
    which certificate chain was actually sent.
 

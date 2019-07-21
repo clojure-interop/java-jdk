@@ -64,7 +64,7 @@
 
 
    MethodHandle getTarget, invoker, result;
-   getTarget = MethodHandles.publicLookup().bind(this, `getTarget`, MethodType.methodType(MethodHandle.class));
+   getTarget = MethodHandles.publicLookup().bind(this, \"getTarget\", MethodType.methodType(MethodHandle.class));
    invoker = MethodHandles.exactInvoker(this.type());
    result = MethodHandles.foldArguments(invoker, getTarget)
 

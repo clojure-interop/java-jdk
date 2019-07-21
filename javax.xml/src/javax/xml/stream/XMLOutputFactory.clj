@@ -29,7 +29,7 @@
   The following paragraphs describe the namespace and prefix repair algorithm:
 
   The property can be set with the following code line:
-  setProperty(`javax.xml.stream.isRepairingNamespaces`,new Boolean(true|false));
+  setProperty(\"javax.xml.stream.isRepairingNamespaces\",new Boolean(true|false));
 
   This property specifies that the writer default namespace prefix declarations.
   The default value is false.
@@ -108,13 +108,13 @@
      Use the value of the system property identified by factoryId.
 
 
-     Use the properties file `lib/stax.properties` in the JRE directory.
+     Use the properties file \"lib/stax.properties\" in the JRE directory.
        This configuration file is in standard java.util.Properties format
        and contains the fully qualified name of the implementation class
        with the key being the given factoryId.
 
 
-     If factoryId is `javax.xml.stream.XMLOutputFactory`,
+     If factoryId is \"javax.xml.stream.XMLOutputFactory\",
      use the service-provider loading facilities, defined by the
      ServiceLoader class, to attempt to locate and load
      an implementation of the service using the specified ClassLoader.

@@ -15,7 +15,7 @@
   by the registry. Both host and port are optional.
   If host is omitted, the host defaults to the local host. If
   port is omitted, then the port defaults to 1099, the
-  `well-known` port that RMI's registry, rmiregistry, uses.
+  \"well-known\" port that RMI's registry, rmiregistry, uses.
 
   Binding a name for a remote object is associating or
   registering a name for a remote object that can be used at a later time to

@@ -6,7 +6,7 @@
   blue compents:
 
 
-       Image src = getImage(`doc:///demo/images/duke/T1.gif`);
+       Image src = getImage(\"doc:///demo/images/duke/T1.gif\");
        ImageFilter colorfilter = new RedBlueSwapFilter();
        Image img = createImage(new FilteredImageSource(src.getSource(),
                                                        colorfilter));"

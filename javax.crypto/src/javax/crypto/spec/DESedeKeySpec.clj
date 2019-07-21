@@ -1,5 +1,5 @@
 (ns javax.crypto.spec.DESedeKeySpec
-  "This class specifies a DES-EDE (`triple-DES`) key."
+  "This class specifies a DES-EDE (\"triple-DES\") key."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.crypto.spec DESedeKeySpec]))
 

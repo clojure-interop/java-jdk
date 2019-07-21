@@ -54,11 +54,11 @@
 
 
 
-        XMLConstants.W3C_XML_SCHEMA_NS_URI (`http://www.w3.org/2001/XMLSchema`)
+        XMLConstants.W3C_XML_SCHEMA_NS_URI (\"http://www.w3.org/2001/XMLSchema\")
         W3C XML Schema 1.0
 
 
-        XMLConstants.RELAXNG_NS_URI (`http://relaxng.org/ns/structure/1.0`)
+        XMLConstants.RELAXNG_NS_URI (\"http://relaxng.org/ns/structure/1.0\")
         RELAX NG 1.0"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.validation SchemaFactory]))
@@ -127,7 +127,7 @@
 
    SchemaFactory uses a LSResourceResolver
    when it needs to locate external resources while parsing schemas,
-   although exactly what constitutes `locating external resources` is
+   although exactly what constitutes \"locating external resources\" is
    up to each schema language. For example, for W3C XML Schema,
    this includes files <include>d or <import>ed,
    and DTD referenced from schema files, etc.

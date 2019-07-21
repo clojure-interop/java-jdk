@@ -61,8 +61,8 @@
 
 
   JEditorPane p = new JEditorPane();
-  p.setContentType(`text/html`);
-  p.setText(`...`); // Document text is provided below.
+  p.setContentType(\"text/html\");
+  p.setText(\"...\"); // Document text is provided below.
   HTMLDocument d = (HTMLDocument) p.getDocument();
 
   With the following HTML content:
@@ -72,13 +72,13 @@
   <html>
     <head>
       <title>An example HTMLDocument</title>
-      <style type=`text/css`>
+      <style type=\"text/css\">
         div { background-color: silver; }
         ul { color: red; }
       </style>
     </head>
     <body>
-      <div id=`BOX`>
+      <div id=\"BOX\">
         <p>Paragraph 1</p>
         <p>Paragraph 2</p>
       </div>
@@ -95,7 +95,7 @@
 
   A convenient shortcut for locating elements is the method getElement(String); returns an element whose ID
   attribute matches the specified value.  For example,
-  d.getElement(`BOX`) returns the DIV
+  d.getElement(\"BOX\") returns the DIV
   element.
 
   The getIterator(HTML.Tag t) method can also be used for
@@ -108,10 +108,10 @@
   of any non-leaf element by using the methods
   insertAfterStart and insertBeforeEnd.
   For example, if e is the DIV element,
-  d.insertAfterStart(e, `<ul><li>List
-  Item</li></ul>`) inserts the list before the first
-  paragraph, and d.insertBeforeEnd(e, `<ul><li>List
-  Item</li></ul>`) inserts the list after the last
+  d.insertAfterStart(e, \"<ul><li>List
+  Item</li></ul>\") inserts the list before the first
+  paragraph, and d.insertBeforeEnd(e, \"<ul><li>List
+  Item</li></ul>\") inserts the list after the last
   paragraph.  The DIV block becomes the parent of the
   newly inserted elements.
 
@@ -119,9 +119,9 @@
   using the methods insertBeforeStart and
   insertAfterEnd.  For example, if e is the
   DIV element, d.insertBeforeStart(e,
-  `<ul><li>List Item</li></ul>`) inserts the list
+  \"<ul><li>List Item</li></ul>\") inserts the list
   before the DIV element, and d.insertAfterEnd(e,
-  `<ul><li>List Item</li></ul>`) inserts the list
+  \"<ul><li>List Item</li></ul>\") inserts the list
   after the DIV element.  The newly inserted elements
   become siblings of the DIV element.
 
@@ -130,10 +130,10 @@
   Elements and all their descendants can be replaced by using the
   methods setInnerHTML and setOuterHTML.
   For example, if e is the DIV element,
-  d.setInnerHTML(e, `<ul><li>List
-  Item</li></ul>`) replaces all children paragraphs with
-  the list, and d.setOuterHTML(e, `<ul><li>List
-  Item</li></ul>`) replaces the DIV element
+  d.setInnerHTML(e, \"<ul><li>List
+  Item</li></ul>\") replaces all children paragraphs with
+  the list, and d.setOuterHTML(e, \"<ul><li>List
+  Item</li></ul>\") replaces the DIV element
   itself.  In latter case the parent of the list is the
   BODY element.
 
@@ -263,19 +263,19 @@
        <body>
          |
        <div>
-        /  \
+        /  \\
       <p>   <p>
 
    Invoking insertBeforeStart(elem,
-   `<ul><li>`) results in the following structure
+   \"<ul><li>\") results in the following structure
    (new elements are in red).
 
 
 
           <body>
-           /  \
+           /  \\
         <ul> <div>
-         /    /  \
+         /    /  \\
        <li> <p>  <p>
 
    Unlike the insertAfterStart method, new
@@ -334,7 +334,7 @@
    If you try to replace the element at length you will most
    likely end up with two elements, eg
    setOuterHTML(getCharacterElement (getLength()),
-   `blah`) will result in two leaf elements at the end, one
+   \"blah\") will result in two leaf elements at the end, one
    representing 'blah', and the other representing the end
    element.
 
@@ -346,10 +346,10 @@
        <body>
          |
        <div>
-        /  \
+        /  \\
       <p>   <p>
 
-   Invoking setOuterHTML(elem, `<ul><li>`)
+   Invoking setOuterHTML(elem, \"<ul><li>\")
    results in the following structure (new elements are in red).
 
 
@@ -357,7 +357,7 @@
       <body>
         |
        <ul>
-         \
+         \\
          <li>
 
    If either elem or htmlText
@@ -531,18 +531,18 @@
        <body>
          |
        <div>
-        /  \
+        /  \\
       <p>   <p>
 
-   Invoking insertAfterEnd(elem, `<ul><li>`)
+   Invoking insertAfterEnd(elem, \"<ul><li>\")
    results in the following structure (new elements are in red).
 
 
 
           <body>
-           /  \
+           /  \\
         <div> <ul>
-         / \    \
+         / \\    \\
        <p> <p>  <li>
 
    Unlike the insertBeforeEnd method, new elements
@@ -599,11 +599,11 @@
        <body>
          |
        <div>
-        /  \
+        /  \\
       <p>   <p>
 
    Invoking insertAfterStart(elem,
-   `<ul><li>`) results in the following structure
+   \"<ul><li>\") results in the following structure
    (new elements are in red).
 
 
@@ -611,7 +611,7 @@
           <body>
             |
           <div>
-         /  |  \
+         /  |  \\
       <ul> <p> <p>
        /
     <li>
@@ -662,10 +662,10 @@
        <body>
          |
        <div>
-        /  \
+        /  \\
       <p>   <p>
 
-   Invoking insertBeforeEnd(elem, `<ul><li>`)
+   Invoking insertBeforeEnd(elem, \"<ul><li>\")
    results in the following structure (new elements are in red).
 
 
@@ -673,9 +673,9 @@
           <body>
             |
           <div>
-         /  |  \
+         /  |  \\
        <p> <p> <ul>
-                 \
+                 \\
                  <li>
 
    Unlike the insertAfterEnd method, new elements
@@ -714,10 +714,10 @@
        <body>
          |
        <div>
-        /  \
+        /  \\
       <p>   <p>
 
-   Invoking setInnerHTML(elem, `<ul><li>`)
+   Invoking setInnerHTML(elem, \"<ul><li>\")
    results in the following structure (new elements are in red).
 
 
@@ -725,9 +725,9 @@
        <body>
          |
        <div>
-           \
+           \\
            <ul>
-             \
+             \\
              <li>
 
    Parameter elem must not be a leaf element,

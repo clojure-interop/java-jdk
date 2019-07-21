@@ -17,7 +17,7 @@
   are expanded, but may or may not be displayed. A displayed node
   is both viewable and in the display area, where it can be seen.
 
-  The following JTree methods use `visible` to mean `displayed`:
+  The following JTree methods use \"visible\" to mean \"displayed\":
 
   isRootVisible()
   setRootVisible()
@@ -26,8 +26,8 @@
   getVisibleRowCount()
   setVisibleRowCount()
 
-  The next group of JTree methods use `visible` to mean
-  `viewable` (under an expanded parent):
+  The next group of JTree methods use \"visible\" to mean
+  \"viewable\" (under an expanded parent):
 
   isVisible()
   makeVisible()
@@ -344,7 +344,7 @@
 (defn add-tree-selection-listener
   "Adds a listener for TreeSelection events.
 
-  tsl - the TreeSelectionListener that will be notified when a node is selected or deselected (a `negative selection`) - `javax.swing.event.TreeSelectionListener`"
+  tsl - the TreeSelectionListener that will be notified when a node is selected or deselected (a \"negative selection\") - `javax.swing.event.TreeSelectionListener`"
   ([^JTree this ^javax.swing.event.TreeSelectionListener tsl]
     (-> this (.addTreeSelectionListener tsl))))
 
@@ -422,7 +422,7 @@
 (defn add-tree-expansion-listener
   "Adds a listener for TreeExpansion events.
 
-  tel - a TreeExpansionListener that will be notified when a tree node is expanded or collapsed (a `negative expansion`) - `javax.swing.event.TreeExpansionListener`"
+  tel - a TreeExpansionListener that will be notified when a tree node is expanded or collapsed (a \"negative expansion\") - `javax.swing.event.TreeExpansionListener`"
   ([^JTree this ^javax.swing.event.TreeExpansionListener tel]
     (-> this (.addTreeExpansionListener tel))))
 
@@ -482,7 +482,7 @@
   orientation - either SwingConstants.VERTICAL or SwingConstants.HORIZONTAL - `int`
   direction - less than zero to scroll up/left, greater than zero for down/right. - `int`
 
-  returns: the `block` increment for scrolling in the specified direction - `int`"
+  returns: the \"block\" increment for scrolling in the specified direction - `int`"
   (^Integer [^JTree this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableBlockIncrement visible-rect orientation direction))))
 
@@ -648,7 +648,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `TreeUI` - `java.lang.String`"
+  returns: the string \"TreeUI\" - `java.lang.String`"
   (^java.lang.String [^JTree this]
     (-> this (.getUIClassID))))
 
@@ -735,7 +735,7 @@
   orientation - either SwingConstants.VERTICAL or SwingConstants.HORIZONTAL - `int`
   direction - less than zero to scroll up/left, greater than zero for down/right - `int`
 
-  returns: the `unit` increment for scrolling in the specified direction - `int`"
+  returns: the \"unit\" increment for scrolling in the specified direction - `int`"
   (^Integer [^JTree this ^java.awt.Rectangle visible-rect ^Integer orientation ^Integer direction]
     (-> this (.getScrollableUnitIncrement visible-rect orientation direction))))
 
@@ -879,7 +879,7 @@
    has returned and has allowed for the location to be shown.
 
    When this property changes, a property change event with
-   name `dropLocation` is fired by the component.
+   name \"dropLocation\" is fired by the component.
 
   returns: the drop location - `javax.swing.JTree$DropLocation`"
   (^javax.swing.JTree$DropLocation [^JTree this]
@@ -1021,7 +1021,7 @@
 (defn add-tree-will-expand-listener
   "Adds a listener for TreeWillExpand events.
 
-  tel - a TreeWillExpandListener that will be notified when a tree node will be expanded or collapsed (a `negative expansion`) - `javax.swing.event.TreeWillExpandListener`"
+  tel - a TreeWillExpandListener that will be notified when a tree node will be expanded or collapsed (a \"negative expansion\") - `javax.swing.event.TreeWillExpandListener`"
   ([^JTree this ^javax.swing.event.TreeWillExpandListener tel]
     (-> this (.addTreeWillExpandListener tel))))
 

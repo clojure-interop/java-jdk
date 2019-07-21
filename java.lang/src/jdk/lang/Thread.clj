@@ -193,8 +193,8 @@
 
    If there is a security manager, then the security manager's
    checkPermission method is called with a
-   RuntimePermission(`getStackTrace`) permission as well as
-   RuntimePermission(`modifyThreadGroup`) permission
+   RuntimePermission(\"getStackTrace\") permission as well as
+   RuntimePermission(\"modifyThreadGroup\") permission
    to see if it is ok to get the stack trace of all threads.
 
   returns: a Map from Thread to an array of
@@ -253,7 +253,7 @@
    By setting the default uncaught exception handler, an application
    can change the way in which uncaught exceptions are handled (such as
    logging to a specific device, or file) for those threads that would
-   already accept whatever `default` behavior the system
+   already accept whatever \"default\" behavior the system
    provided.
 
    Note that the default uncaught exception handler should not usually
@@ -262,7 +262,7 @@
 
   eh - the object to use as the default uncaught exception handler. If null then there is no default handler. - `java.lang.Thread$UncaughtExceptionHandler`
 
-  throws: java.lang.SecurityException - if a security manager is present and it denies RuntimePermission (`setDefaultUncaughtExceptionHandler`)"
+  throws: java.lang.SecurityException - if a security manager is present and it denies RuntimePermission (\"setDefaultUncaughtExceptionHandler\")"
   ([^java.lang.Thread$UncaughtExceptionHandler eh]
     (Thread/setDefaultUncaughtExceptionHandler eh)))
 
@@ -376,7 +376,7 @@
    when loading classes and resources.
 
    If a security manager is present, its checkPermission
-   method is invoked with a RuntimePermission(`setContextClassLoader`) permission to see if setting the context
+   method is invoked with a RuntimePermission(\"setContextClassLoader\") permission to see if setting the context
    ClassLoader is permitted.
 
   cl - the context ClassLoader for this Thread, or null indicating the system class loader (or, failing that, the bootstrap class loader) - `java.lang.ClassLoader`
@@ -415,7 +415,7 @@
    If there is a security manager, and this thread is not
    the current thread, then the security manager's
    checkPermission method is called with a
-   RuntimePermission(`getStackTrace`) permission
+   RuntimePermission(\"getStackTrace\") permission
    to see if it's ok to get the stack trace.
 
    Some virtual machines may, under some circumstances, omit one
@@ -456,7 +456,7 @@
      thread can access this resource until the target thread is resumed. If
      the thread that would resume the target thread attempts to lock this
      monitor prior to calling resume, deadlock results.  Such
-     deadlocks typically manifest themselves as `frozen` processes.
+     deadlocks typically manifest themselves as \"frozen\" processes.
      For more information, see
      Why
      are Thread.stop, Thread.suspend and Thread.resume Deprecated?.
@@ -548,7 +548,7 @@
    If a security manager is present, and the invoker's class loader is not
    null and is not the same as or an ancestor of the context class
    loader, then this method invokes the security manager's checkPermission
-   method with a RuntimePermission(`getClassLoader`) permission to verify that retrieval of the context
+   method with a RuntimePermission(\"getClassLoader\") permission to verify that retrieval of the context
    class loader is permitted.
 
   returns: the context ClassLoader for this Thread, or null
@@ -569,7 +569,7 @@
        destroyed, no thread could ever access this resource again.
        If another thread ever attempted to lock this resource, deadlock
        would result. Such deadlocks typically manifest themselves as
-       `frozen` processes. For more information, see
+       \"frozen\" processes. For more information, see
 
        Why are Thread.stop, Thread.suspend and Thread.resume Deprecated?.
 

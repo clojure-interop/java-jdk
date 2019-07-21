@@ -51,9 +51,9 @@
    need to act in the SSL client mode on newly accepted
    connections. For example, FTP clients acquire server sockets
    and listen there for reverse connections from the server. An
-   FTP client would use an SSLServerSocket in `client` mode to
+   FTP client would use an SSLServerSocket in \"client\" mode to
    accept the reverse connection while the FTP server uses an
-   SSLSocket with `client` mode disabled to initiate the
+   SSLSocket with \"client\" mode disabled to initiate the
    connection. During the resulting handshake, existing SSL
    sessions may be reused.
 

@@ -1,7 +1,7 @@
 (ns javax.print.attribute.standard.PrinterLocation
   "Class PrinterLocation is a printing attribute class, a text attribute, that
   identifies the location of the device. This could include things like:
-  `in Room 123A, second floor of building XYZ`.
+  \"in Room 123A, second floor of building XYZ\".
 
   IPP Compatibility: The string value gives the IPP name value. The
   locale gives the IPP natural language. The category name returned by
@@ -46,7 +46,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PrinterLocation, the
@@ -62,7 +62,7 @@
    instance.
 
    For class PrinterLocation, the
-   category name is `printer-location`.
+   category name is \"printer-location\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PrinterLocation this]

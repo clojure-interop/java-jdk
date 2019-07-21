@@ -7,7 +7,7 @@
   are inserted at the tail of the queue, and the queue retrieval
   operations obtain elements at the head of the queue.
 
-  This is a classic `bounded buffer`, in which a
+  This is a classic \"bounded buffer\", in which a
   fixed-sized array holds elements inserted by producers and
   extracted by consumers.  Once created, the capacity cannot be
   changed.  Attempts to put an element into a full queue

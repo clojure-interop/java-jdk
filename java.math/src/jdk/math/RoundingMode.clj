@@ -112,7 +112,7 @@
 (def HALF_UP
   "Enum Constant.
 
-  Rounding mode to round towards `nearest neighbor`
+  Rounding mode to round towards \"nearest neighbor\"
    unless both neighbors are equidistant, in which case round up.
    Behaves as for RoundingMode.UP if the discarded
    fraction is ≥ 0.5; otherwise, behaves as for
@@ -141,7 +141,7 @@
 (def HALF_DOWN
   "Enum Constant.
 
-  Rounding mode to round towards `nearest neighbor`
+  Rounding mode to round towards \"nearest neighbor\"
    unless both neighbors are equidistant, in which case round
    down.  Behaves as for RoundingMode.UP if the discarded
    fraction is > 0.5; otherwise, behaves as for
@@ -169,7 +169,7 @@
 (def HALF_EVEN
   "Enum Constant.
 
-  Rounding mode to round towards the `nearest neighbor`
+  Rounding mode to round towards the \"nearest neighbor\"
    unless both neighbors are equidistant, in which case, round
    towards the even neighbor.  Behaves as for
    RoundingMode.HALF_UP if the digit to the left of the
@@ -177,7 +177,7 @@
    RoundingMode.HALF_DOWN if it's even.  Note that this
    is the rounding mode that statistically minimizes cumulative
    error when applied repeatedly over a sequence of calculations.
-   It is sometimes known as `Banker's rounding,` and is
+   It is sometimes known as \"Banker's rounding,\" and is
    chiefly used in the USA.  This rounding mode is analogous to
    the rounding policy used for float and double
    arithmetic in Java.

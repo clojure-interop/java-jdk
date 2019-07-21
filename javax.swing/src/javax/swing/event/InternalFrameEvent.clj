@@ -48,7 +48,7 @@
 (def *-internal-frame-opened
   "Static Constant.
 
-  The `window opened` event.  This event is delivered only
+  The \"window opened\" event.  This event is delivered only
    the first time the internal frame is made visible.
 
   type: int"
@@ -57,7 +57,7 @@
 (def *-internal-frame-closing
   "Static Constant.
 
-  The `window is closing` event. This event is delivered when
+  The \"window is closing\" event. This event is delivered when
    the user attempts to close the internal frame, such as by
    clicking the internal frame's close button,
    or when a program attempts to close the internal frame
@@ -69,7 +69,7 @@
 (def *-internal-frame-closed
   "Static Constant.
 
-  The `window closed` event. This event is delivered after
+  The \"window closed\" event. This event is delivered after
    the internal frame has been closed as the result of a call to
    the setClosed or
    dispose method.
@@ -80,7 +80,7 @@
 (def *-internal-frame-iconified
   "Static Constant.
 
-  The `window iconified` event.
+  The \"window iconified\" event.
    This event indicates that the internal frame
    was shrunk down to a small icon.
 
@@ -90,7 +90,7 @@
 (def *-internal-frame-deiconified
   "Static Constant.
 
-  The `window deiconified` event type. This event indicates that the
+  The \"window deiconified\" event type. This event indicates that the
    internal frame has been restored to its normal size.
 
   type: int"
@@ -99,7 +99,7 @@
 (def *-internal-frame-activated
   "Static Constant.
 
-  The `window activated` event type. This event indicates that keystrokes
+  The \"window activated\" event type. This event indicates that keystrokes
    and mouse clicks are directed towards this internal frame.
 
   type: int"
@@ -108,7 +108,7 @@
 (def *-internal-frame-deactivated
   "Static Constant.
 
-  The `window deactivated` event type. This event indicates that keystrokes
+  The \"window deactivated\" event type. This event indicates that keystrokes
    and mouse clicks are no longer directed to the internal frame.
 
   type: int"

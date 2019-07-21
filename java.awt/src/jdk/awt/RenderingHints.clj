@@ -280,7 +280,7 @@
    Note:A font designer will typically carefully hint a font for
    the most common user interface point sizes. Consequently the 'gasp'
    table will likely specify to use only hinting at those sizes and not
-   `smoothing`. So in many cases the resulting text display is
+   \"smoothing\". So in many cases the resulting text display is
    equivalent to VALUE_TEXT_ANTIALIAS_OFF.
    This may be unexpected but is correct.
 
@@ -786,7 +786,7 @@
    appear more uniform in width and spacing.
 
    If an implementation performs any type of modification or
-   `normalization` of a path, it should never move the coordinates
+   \"normalization\" of a path, it should never move the coordinates
    by more than half a pixel in any direction.
 
    The allowable values for this hint are

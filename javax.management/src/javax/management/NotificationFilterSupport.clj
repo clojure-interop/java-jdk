@@ -15,10 +15,10 @@
 
 
   NotificationFilterSupport myFilter = new NotificationFilterSupport();
-  myFilter.enableType(`my_example.my_type`);
+  myFilter.enableType(\"my_example.my_type\");
   myBroadcaster.addListener(myListener, myFilter, null);
 
-  The listener myListener will only receive notifications the type of which equals/starts with `my_example.my_type`."
+  The listener myListener will only receive notifications the type of which equals/starts with \"my_example.my_type\"."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.management NotificationFilterSupport]))
 
@@ -49,15 +49,15 @@
 
 
 
-   // Enables all notifications the type of which starts with `my_example` to be sent.
-   myFilter.enableType(`my_example`);
-   // Enables all notifications the type of which is `my_example.my_type` to be sent.
-   myFilter.enableType(`my_example.my_type`);
+   // Enables all notifications the type of which starts with \"my_example\" to be sent.
+   myFilter.enableType(\"my_example\");
+   // Enables all notifications the type of which is \"my_example.my_type\" to be sent.
+   myFilter.enableType(\"my_example.my_type\");
 
 
    Note that:
 
-   myFilter.enableType(`my_example.*`);
+   myFilter.enableType(\"my_example.*\");
 
    will no match any notification type.
 

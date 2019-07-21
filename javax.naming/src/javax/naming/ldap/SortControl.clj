@@ -15,13 +15,13 @@
       LdapContext ctx = new InitialLdapContext();
 
       // Activate sorting
-      String sortKey = `cn`;
+      String sortKey = \"cn\";
       ctx.setRequestControls(new Control[]{
           new SortControl(sortKey, Control.CRITICAL) });
 
       // Perform a search
       NamingEnumeration results =
-          ctx.search(``, `(objectclass=*)`, new SearchControls());
+          ctx.search(\"\", \"(objectclass=*)\", new SearchControls());
 
       // Iterate over search results
       while (results != null && results.hasMore()) {

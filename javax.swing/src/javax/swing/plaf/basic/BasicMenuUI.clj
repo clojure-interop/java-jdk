@@ -1,6 +1,6 @@
 (ns javax.swing.plaf.basic.BasicMenuUI
   "A default L&F implementation of MenuUI.  This implementation
-  is a `combined` view/controller."
+  is a \"combined\" view/controller."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.plaf.basic BasicMenuUI]))
 

@@ -75,7 +75,7 @@
         pool.shutdownNow(); // Cancel currently executing tasks
         // Wait a while for tasks to respond to being cancelled
         if (!pool.awaitTermination(60, TimeUnit.SECONDS))
-            System.err.println(`Pool did not terminate`);
+            System.err.println(\"Pool did not terminate\");
       }
     } catch (InterruptedException ie) {
       // (Re-)Cancel if current thread also interrupted
@@ -103,7 +103,7 @@
    complete execution.  Use awaitTermination
    to do that.
 
-  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
+  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(\"modifyThread\"), or the security manager's checkAccess method denies access."
   ([^ExecutorService this]
     (-> this (.shutdown))))
 
@@ -123,7 +123,7 @@
 
   returns: list of tasks that never commenced execution - `java.util.List<java.lang.Runnable>`
 
-  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(`modifyThread`), or the security manager's checkAccess method denies access."
+  throws: java.lang.SecurityException - if a security manager exists and shutting down this ExecutorService may manipulate threads that the caller is not permitted to modify because it does not hold RuntimePermission(\"modifyThread\"), or the security manager's checkAccess method denies access."
   (^java.util.List [^ExecutorService this]
     (-> this (.shutdownNow))))
 

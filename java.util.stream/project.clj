@@ -1,4 +1,4 @@
-(defproject clojure-interop/java.util.stream "1.0.4"
+(defproject clojure-interop/java.util.stream "1.0.5"
   :description "Clojure to Java Interop Bindings for java.util.stream"
   :url "https://github.com/clojure-interop/java-jdk"
   :license {:name "Eclipse Public License"

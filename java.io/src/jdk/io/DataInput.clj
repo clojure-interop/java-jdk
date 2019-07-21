@@ -35,8 +35,8 @@
 
 
 
-          All characters in the range '\u0001' to
-          '\u007F' are represented by a single byte:
+          All characters in the range '\\u0001' to
+          '\\u007F' are represented by a single byte:
 
 
 
@@ -49,8 +49,8 @@
 
 
 
-          The null character '\u0000' and characters
-          in the range '\u0080' to '\u07FF' are
+          The null character '\\u0000' and characters
+          in the range '\\u0080' to '\\u07FF' are
           represented by a pair of bytes:
 
 
@@ -72,8 +72,8 @@
 
 
 
-          char values in the range '\u0800'
-          to '\uFFFF' are represented by three bytes:
+          char values in the range '\\u0800'
+          to '\\uFFFF' are represented by three bytes:
 
 
 
@@ -105,7 +105,7 @@
   The differences between this format and the
   standard UTF-8 format are the following:
 
-  The null byte '\u0000' is encoded in 2-byte format
+  The null byte '\\u0000' is encoded in 2-byte format
       rather than 1-byte, so that the encoded strings never have
       embedded nulls.
   Only the 1-byte, 2-byte, and 3-byte formats are used.
@@ -362,8 +362,8 @@
 
    If the first byte of a group
    matches the bit pattern 0xxxxxxx
-   (where x means `may be 0
-   or 1`), then the group consists
+   (where x means \"may be 0
+   or 1\"), then the group consists
    of just that byte. The byte is zero-extended
    to form a character.
 
@@ -459,21 +459,21 @@
    before even one byte can be read, then null
    is returned. Otherwise, each byte that is
    read is converted to type char
-   by zero-extension. If the character '\n'
+   by zero-extension. If the character '\\n'
    is encountered, it is discarded and reading
-   ceases. If the character '\r'
+   ceases. If the character '\\r'
    is encountered, it is discarded and, if
    the following byte converts  to the
-   character '\n', then that is
+   character '\\n', then that is
    discarded also; reading then ceases. If
    end of file is encountered before either
-   of the characters '\n' and
-   '\r' is encountered, reading
+   of the characters '\\n' and
+   '\\r' is encountered, reading
    ceases. Once reading has ceased, a String
    is returned that contains all the characters
    read and not discarded, taken in order.
    Note that every character in this string
-   will have a value less than \u0100,
+   will have a value less than \\u0100,
    that is, (char)256.
 
   returns: the next line of text from the input stream,

@@ -26,9 +26,9 @@
     addresses, it will be common for addresses to contain long
     strings of zero bits. In order to make writing addresses
     containing zero bits easier, a special syntax is available to
-    compress the zeros. The use of `::` indicates multiple groups
-    of 16-bits of zeros. The `::` can only appear once in an address.
-    The `::` can also be used to compress the leading and/or trailing
+    compress the zeros. The use of \"::\" indicates multiple groups
+    of 16-bits of zeros. The \"::\" can only appear once in an address.
+    The \"::\" can also be used to compress the leading and/or trailing
     zeros in an address. For example,
 
 
@@ -47,10 +47,10 @@
     ::129.144.52.38
 
 
-     where `::FFFF:d.d.d.d` and `::d.d.d.d` are, respectively, the
+     where \"::FFFF:d.d.d.d\" and \"::d.d.d.d\" are, respectively, the
     general forms of an IPv4-mapped IPv6 address and an
     IPv4-compatible IPv6 address. Note that the IPv4 portion must be
-    in the `d.d.d.d` form. The following forms are invalid:
+    in the \"d.d.d.d\" form. The following forms are invalid:
 
 
     ::FFFF:d.d.d
@@ -72,8 +72,8 @@
     ::255.255.0.d
 
 
-     while `::d` corresponds to the general IPv6 address
-    `0:0:0:0:0:0:0:d`.
+     while \"::d\" corresponds to the general IPv6 address
+    \"0:0:0:0:0:0:0:d\".
 
 
    For methods that return a textual representation as output
@@ -174,7 +174,7 @@
 (defn get-host-address
   "Returns the IP address string in textual presentation. If the instance
    was created specifying a scope identifier then the scope id is appended
-   to the IP address preceded by a `%` (per-cent) character. This can be
+   to the IP address preceded by a \"%\" (per-cent) character. This can be
    either a numeric value or a string, depending on which was used to create
    the instance.
 

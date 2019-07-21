@@ -32,7 +32,7 @@
    For more information including algorithms used to create UUIDs,
   see  RFC 4122: A
   Universally Unique IDentifier (UUID) URN Namespace, section 4.2
-  `Algorithms for Creating a Time-Based UUID`."
+  \"Algorithms for Creating a Time-Based UUID\"."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util UUID]))
 
@@ -127,9 +127,9 @@
     The UUID string representation is as described by this BNF:
 
 
-   UUID                   = <time_low> `-` <time_mid> `-`
-                            <time_high_and_version> `-`
-                            <variant_and_sequence> `-`
+   UUID                   = <time_low> \"-\" <time_mid> \"-\"
+                            <time_high_and_version> \"-\"
+                            <variant_and_sequence> \"-\"
                             <node>
    time_low               = 4*<hexOctet>
    time_mid               = 2*<hexOctet>
@@ -138,9 +138,9 @@
    node                   = 6*<hexOctet>
    hexOctet               = <hexDigit><hexDigit>
    hexDigit               =
-         `0` | `1` | `2` | `3` | `4` | `5` | `6` | `7` | `8` | `9`
-         | `a` | `b` | `c` | `d` | `e` | `f`
-         | `A` | `B` | `C` | `D` | `E` | `F`
+         \"0\" | \"1\" | \"2\" | \"3\" | \"4\" | \"5\" | \"6\" | \"7\" | \"8\" | \"9\"
+         | \"a\" | \"b\" | \"c\" | \"d\" | \"e\" | \"f\"
+         | \"A\" | \"B\" | \"C\" | \"D\" | \"E\" | \"F\"
 
   returns: A string representation of this UUID - `java.lang.String`"
   (^java.lang.String [^UUID this]

@@ -2,7 +2,7 @@
   "This class defines web service permissions.
 
   Web service Permissions are identified by name (also referred to as
-  a `target name`) alone. There are no actions associated
+  a \"target name\") alone. There are no actions associated
   with them.
 
   The following permission target name is defined:

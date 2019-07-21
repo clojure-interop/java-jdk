@@ -15,7 +15,7 @@
   An autoscrolling gesture is initiated by the user by keeping the drag
   cursor motionless with a border region of the Component,
   referred to as
-  the `autoscrolling region`, for a predefined period of time, this will
+  the \"autoscrolling region\", for a predefined period of time, this will
   result in repeated scroll requests to the Component
   until the drag Cursor resumes its motion."
   (:refer-clojure :only [require comment defn ->])

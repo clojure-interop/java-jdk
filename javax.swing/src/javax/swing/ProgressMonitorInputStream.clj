@@ -6,7 +6,7 @@
   InputStream in = new BufferedInputStream(
                            new ProgressMonitorInputStream(
                                    parentComponent,
-                                   `Reading `  fileName,
+                                   \"Reading \"  fileName,
                                    new FileInputStream(fileName)));
   This creates a progress monitor to monitor the progress of reading
   the input stream.  If it's taking a while, a ProgressDialog will

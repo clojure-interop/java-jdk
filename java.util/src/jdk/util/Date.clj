@@ -18,7 +18,7 @@
   Nearly all modern operating systems assume that 1 day =
   24 × 60 × 60 = 86400 seconds
   in all cases. In UTC, however, about once every year or two there
-  is an extra second, called a `leap second.` The leap
+  is an extra second, called a \"leap second.\" The leap
   second is always added as the last second of the day, and always
   on December 31 or June 30. For example, the last minute of the
   year 1995 was 61 seconds long, thanks to an added leap second.
@@ -27,8 +27,8 @@
 
   Some computer standards are defined in terms of Greenwich mean
   time (GMT), which is equivalent to universal time (UT).  GMT is
-  the `civil` name for the standard; UT is the
-  `scientific` name for the same standard. The
+  the \"civil\" name for the standard; UT is the
+  \"scientific\" name for the same standard. The
   distinction between UTC and UT is that UTC is based on an atomic
   clock and UT is based on astronomical observations, which for all
   practical purposes is an invisibly fine hair to split. Because the
@@ -46,7 +46,7 @@
 
       http://tycho.usno.navy.mil
 
-  and their definitions of `Systems of Time` at:
+  and their definitions of \"Systems of Time\" at:
 
 
       http://tycho.usno.navy.mil/systime.html

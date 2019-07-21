@@ -41,10 +41,10 @@
       FilteredRowSet frs = new FilteredRowSetImpl();
       frs.populate(rs);
 
-      Range name = new Range(`Alpha`, `Bravo`, `columnName`);
+      Range name = new Range(\"Alpha\", \"Bravo\", \"columnName\");
       frs.setFilter(name);
 
-      frs.next() // only names from `Alpha` to `Bravo` will be returned
+      frs.next() // only names from \"Alpha\" to \"Bravo\" will be returned
   In the example above, we initialize a Range object which
   implements the Predicate interface. This object expresses
   the following constraints: All rows outputted or modified from this

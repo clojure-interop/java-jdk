@@ -333,7 +333,7 @@
 (defn charset
   "Returns the charset that created this encoder.
 
-  returns: This encoder's charset - `java.nio..Charset`"
-  (^java.nio..Charset [^CharsetEncoder this]
+  returns: This encoder's charset - `java.nio.charset.Charset`"
+  (^java.nio.charset.Charset [^CharsetEncoder this]
     (-> this (.charset))))
 

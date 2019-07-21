@@ -161,7 +161,7 @@
   A pattern is used to create a Formatter using the
   ofPattern(String) and ofPattern(String, Locale) methods.
   For example,
-  `d MMM uuuu` will format 2011-12-03 as '3 Dec 2011'.
+  \"d MMM uuuu\" will format 2011-12-03 as '3 Dec 2011'.
   A formatter created from a pattern can be used as many times as necessary,
   it is immutable and is thread-safe.
 
@@ -169,7 +169,7 @@
 
 
    LocalDate date = LocalDate.now();
-   DateTimeFormatter formatter = DateTimeFormatter.ofPattern(`yyyy MM dd`);
+   DateTimeFormatter formatter = DateTimeFormatter.ofPattern(\"yyyy MM dd\");
    String text = date.format(formatter);
    LocalDate parsedDate = LocalDate.parse(text, formatter);
 
@@ -810,7 +810,7 @@
     This is pre-padded by zero to ensure two digits.
    A space
    The offset ID without colons or seconds.
-    An offset of zero uses `GMT`. North American zone names and military zone names are not handled.
+    An offset of zero uses \"GMT\". North American zone names and military zone names are not handled.
 
 
    Parsing is case insensitive.
@@ -948,15 +948,15 @@
    is parsed, then the excess days are added to the date part.
    As a result, this query will return a zero period.
 
-   The SMART behaviour handles the common `end of day` 24:00 value.
+   The SMART behaviour handles the common \"end of day\" 24:00 value.
    Processing in LENIENT mode also produces the same result:
 
 
     Text to parse        Parsed object                         Excess days
-    `2012-12-03T00:00`   LocalDateTime.of(2012, 12, 3, 0, 0)   ZERO
-    `2012-12-03T24:00`   LocalDateTime.of(2012, 12, 4, 0, 0)   ZERO
-    `00:00`              LocalTime.of(0, 0)                    ZERO
-    `24:00`              LocalTime.of(0, 0)                    Period.ofDays(1)
+    \"2012-12-03T00:00\"   LocalDateTime.of(2012, 12, 3, 0, 0)   ZERO
+    \"2012-12-03T24:00\"   LocalDateTime.of(2012, 12, 4, 0, 0)   ZERO
+    \"00:00\"              LocalTime.of(0, 0)                    ZERO
+    \"24:00\"              LocalTime.of(0, 0)                    Period.ofDays(1)
    The query can be used as follows:
 
 
@@ -975,7 +975,7 @@
    access to additional information from the parse. The query always returns
    a non-null boolean, true if parsing saw a leap-second, false if not.
 
-   Instant parsing handles the special `leap second` time of '23:59:60'.
+   Instant parsing handles the special \"leap second\" time of '23:59:60'.
    Leap seconds occur at '23:59:60' in the UTC time-zone, but at other
    local times in different time-zones. To avoid this potential ambiguity,
    the handling of leap-seconds is limited to

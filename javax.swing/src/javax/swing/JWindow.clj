@@ -2,7 +2,7 @@
   "A JWindow is a container that can be displayed anywhere on the
   user's desktop. It does not have the title bar, window-management buttons,
   or other trimmings associated with a JFrame, but it is still a
-  `first-class citizen` of the user's desktop, and can exist anywhere
+  \"first-class citizen\" of the user's desktop, and can exist anywhere
   on it.
 
   The JWindow component contains a JRootPane

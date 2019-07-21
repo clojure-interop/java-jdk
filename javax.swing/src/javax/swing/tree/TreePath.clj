@@ -5,7 +5,7 @@
   example, a file on the file system is uniquely identified based on
   the array of parent directories and the name of the file. The path
   /tmp/foo/bar could be represented by a TreePath as
-  new TreePath(new Object[] {`tmp`, `foo`, `bar`}).
+  new TreePath(new Object[] {\"tmp\", \"foo\", \"bar\"}).
 
   TreePath is used extensively by JTree and related classes.
   For example, JTree represents the selection as an array of

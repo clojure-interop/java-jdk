@@ -1,7 +1,7 @@
 (ns javax.net.ssl.SSLSocket
   "This class extends Sockets and provides secure
-  socket using protocols such as the `Secure
-  Sockets Layer` (SSL) or IETF `Transport Layer Security` (TLS) protocols.
+  socket using protocols such as the \"Secure
+  Sockets Layer\" (SSL) or IETF \"Transport Layer Security\" (TLS) protocols.
 
   Such sockets are normal stream sockets, but they
   add a layer of security protections over the underlying network transport
@@ -22,7 +22,7 @@
 
 
 
-  These kinds of protection are specified by a `cipher suite`, which
+  These kinds of protection are specified by a \"cipher suite\", which
   is a combination of cryptographic algorithms used by a given SSL connection.
   During the negotiation process, the two endpoints must agree on
   a ciphersuite that is available in both environments.
@@ -30,8 +30,8 @@
   be established, and no data can be exchanged.
 
    The cipher suite used is established by a negotiation process
-  called `handshaking`.  The goal of this
-  process is to create or rejoin a `session`, which may protect many
+  called \"handshaking\".  The goal of this
+  process is to create or rejoin a \"session\", which may protect many
   connections over time.  After handshaking has completed, you can access
   session attributes by using the getSession method.
   The initial handshake on this connection can be initiated in
@@ -161,7 +161,7 @@
    Servers normally authenticate themselves, and clients
    are not required to do so.
 
-  mode - true if the socket should start its handshaking in `client` mode - `boolean`
+  mode - true if the socket should start its handshaking in \"client\" mode - `boolean`
 
   throws: java.lang.IllegalArgumentException - if a mode change is attempted after the initial handshake has begun."
   ([^SSLSocket this ^Boolean mode]
@@ -181,7 +181,7 @@
    handshaking.
 
   returns: true if the socket should do handshaking
-            in `client` mode - `boolean`"
+            in \"client\" mode - `boolean`"
   (^Boolean [^SSLSocket this]
     (-> this (.getUseClientMode))))
 
@@ -229,7 +229,7 @@
 
    If an error occurs during the initial handshake, this method
    returns an invalid session object which reports an invalid
-   cipher suite of `SSL_NULL_WITH_NULL_NULL`.
+   cipher suite of \"SSL_NULL_WITH_NULL_NULL\".
 
   returns: the SSLSession - `javax.net.ssl.SSLSession`"
   (^javax.net.ssl.SSLSession [^SSLSocket this]

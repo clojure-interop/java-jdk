@@ -11,7 +11,7 @@
 
 
 
-  new TextArea(`Hello`, 5, 40);"
+  new TextArea(\"Hello\", 5, 40);"
   (:refer-clojure :only [require comment defn ->])
   (:import [java.awt TextArea]))
 
@@ -37,7 +37,7 @@
    this text area being created with scrollbar visibility equal to
    the default value of SCROLLBARS_BOTH.
 
-  text - the text to be displayed; if text is null, the empty string `` will be displayed - `java.lang.String`
+  text - the text to be displayed; if text is null, the empty string \"\" will be displayed - `java.lang.String`
   rows - the number of rows; if rows is less than 0, rows is set to 0 - `int`
   columns - the number of columns; if columns is less than 0, columns is set to 0 - `int`
   scrollbars - a constant that determines what scrollbars are created to view the text area - `int`

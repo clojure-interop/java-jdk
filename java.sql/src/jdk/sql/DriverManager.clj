@@ -6,7 +6,7 @@
   connecting to a data source.
 
   As part of its initialization, the DriverManager class will
-  attempt to load the driver classes referenced in the `jdbc.drivers`
+  attempt to load the driver classes referenced in the \"jdbc.drivers\"
   system property. This allows a user to customize the JDBC Drivers
   used by their applications. For example in your
   ~/.hotjava/properties file you might specify:
@@ -38,7 +38,7 @@
   logging stream can be set only if the proper
   permission has been granted.  Normally this will be done with
   the tool PolicyTool, which can be used to grant permission
-  java.sql.SQLPermission `setLog`."
+  java.sql.SQLPermission \"setLog\"."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.sql DriverManager]))
 

@@ -60,12 +60,12 @@
 
    For example, suppose there is a FilePermissionCollection in this
    Permissions object, and it contains one FilePermission that specifies
-   `read` access for  all files in all subdirectories of the `/tmp`
-   directory, and another FilePermission that specifies `write` access
-   for all files in the `/tmp/scratch/foo` directory.
+   \"read\" access for  all files in all subdirectories of the \"/tmp\"
+   directory, and another FilePermission that specifies \"write\" access
+   for all files in the \"/tmp/scratch/foo\" directory.
    Then if the implies method
-   is called with a permission specifying both `read` and `write` access
-   to files in the `/tmp/scratch/foo` directory, true is
+   is called with a permission specifying both \"read\" and \"write\" access
+   to files in the \"/tmp/scratch/foo\" directory, true is
    returned.
 
    Additionally, if this PermissionCollection contains the
@@ -73,7 +73,7 @@
 
   permission - the Permission object to check. - `java.security.Permission`
 
-  returns: true if `permission` is implied by the permissions in the
+  returns: true if \"permission\" is implied by the permissions in the
    PermissionCollection it
    belongs to, false if not. - `boolean`"
   (^Boolean [^Permissions this ^java.security.Permission permission]

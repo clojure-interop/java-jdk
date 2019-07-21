@@ -57,7 +57,7 @@
 (defn get-id
   "Retrieves the StartTLS request's object identifier string.
 
-  returns: The object identifier string, `1.3.6.1.4.1.1466.20037`. - `java.lang.String`"
+  returns: The object identifier string, \"1.3.6.1.4.1.1466.20037\". - `java.lang.String`"
   (^java.lang.String [^StartTlsRequest this]
     (-> this (.getID))))
 
@@ -101,7 +101,7 @@
    an implementation-specific way to locate an implementation.
    If none is found, a NamingException is thrown.
 
-  id - The object identifier of the extended response. Its value must be `1.3.6.1.4.1.1466.20037` or null. Both values are equivalent. - `java.lang.String`
+  id - The object identifier of the extended response. Its value must be \"1.3.6.1.4.1.1466.20037\" or null. Both values are equivalent. - `java.lang.String`
   ber-value - The possibly null ASN.1 BER encoded value of the extended response. This is the raw BER bytes including the tag and length of the response value. It does not include the response OID. Its value is ignored because a Start TLS response is not expected to contain any response value. - `byte[]`
   offset - The starting position in berValue of the bytes to use. Its value is ignored because a Start TLS response is not expected to contain any response value. - `int`
   length - The number of bytes in berValue to use. Its value is ignored because a Start TLS response is not expected to contain any response value. - `int`

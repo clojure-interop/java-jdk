@@ -7,37 +7,37 @@
 
 
 
-     <element name=`KeyValue` type=`ds:KeyValueType`/>
-     <complexType name=`KeyValueType` mixed=`true`>
+     <element name=\"KeyValue\" type=\"ds:KeyValueType\"/>
+     <complexType name=\"KeyValueType\" mixed=\"true\">
        <choice>
-         <element ref=`ds:DSAKeyValue`/>
-         <element ref=`ds:RSAKeyValue`/>
-         <any namespace=`##other` processContents=`lax`/>
+         <element ref=\"ds:DSAKeyValue\"/>
+         <element ref=\"ds:RSAKeyValue\"/>
+         <any namespace=\"##other\" processContents=\"lax\"/>
        </choice>
      </complexType>
 
-     <element name=`DSAKeyValue` type=`ds:DSAKeyValueType`/>
-     <complexType name=`DSAKeyValueType`>
+     <element name=\"DSAKeyValue\" type=\"ds:DSAKeyValueType\"/>
+     <complexType name=\"DSAKeyValueType\">
        <sequence>
-         <sequence minOccurs=`0`>
-           <element name=`P` type=`ds:CryptoBinary`/>
-           <element name=`Q` type=`ds:CryptoBinary`/>
+         <sequence minOccurs=\"0\">
+           <element name=\"P\" type=\"ds:CryptoBinary\"/>
+           <element name=\"Q\" type=\"ds:CryptoBinary\"/>
          </sequence>
-         <element name=`G` type=`ds:CryptoBinary` minOccurs=`0`/>
-         <element name=`Y` type=`ds:CryptoBinary`/>
-         <element name=`J` type=`ds:CryptoBinary` minOccurs=`0`/>
-         <sequence minOccurs=`0`>
-           <element name=`Seed` type=`ds:CryptoBinary`/>
-           <element name=`PgenCounter` type=`ds:CryptoBinary`/>
+         <element name=\"G\" type=\"ds:CryptoBinary\" minOccurs=\"0\"/>
+         <element name=\"Y\" type=\"ds:CryptoBinary\"/>
+         <element name=\"J\" type=\"ds:CryptoBinary\" minOccurs=\"0\"/>
+         <sequence minOccurs=\"0\">
+           <element name=\"Seed\" type=\"ds:CryptoBinary\"/>
+           <element name=\"PgenCounter\" type=\"ds:CryptoBinary\"/>
          </sequence>
        </sequence>
      </complexType>
 
-     <element name=`RSAKeyValue` type=`ds:RSAKeyValueType`/>
-     <complexType name=`RSAKeyValueType`>
+     <element name=\"RSAKeyValue\" type=\"ds:RSAKeyValueType\"/>
+     <complexType name=\"RSAKeyValueType\">
        <sequence>
-         <element name=`Modulus` type=`ds:CryptoBinary`/>
-         <element name=`Exponent` type=`ds:CryptoBinary`/>
+         <element name=\"Modulus\" type=\"ds:CryptoBinary\"/>
+         <element name=\"Exponent\" type=\"ds:CryptoBinary\"/>
        </sequence>
      </complexType>
   A KeyValue instance may be created by invoking the
@@ -49,8 +49,8 @@
 
 
   KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
-  PublicKey dsaPublicKey = keyStore.getCertificate(`myDSASigningCert`).getPublicKey();
-  KeyInfoFactory factory = KeyInfoFactory.getInstance(`DOM`);
+  PublicKey dsaPublicKey = keyStore.getCertificate(\"myDSASigningCert\").getPublicKey();
+  KeyInfoFactory factory = KeyInfoFactory.getInstance(\"DOM\");
   KeyValue keyValue = factory.newKeyValue(dsaPublicKey);
 
   This class returns the DSAKeyValue and

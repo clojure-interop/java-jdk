@@ -65,13 +65,13 @@
                 System.out.println(toc.getMessage());
                 break;
             case TextOutputCallback.ERROR:
-                System.out.println(`ERROR: `  toc.getMessage());
+                System.out.println(\"ERROR: \"  toc.getMessage());
                 break;
             case TextOutputCallback.WARNING:
-                System.out.println(`WARNING: `  toc.getMessage());
+                System.out.println(\"WARNING: \"  toc.getMessage());
                 break;
             default:
-                throw new IOException(`Unsupported message type: `
+                throw new IOException(\"Unsupported message type: \"
                                     toc.getMessageType());
             }
 
@@ -96,7 +96,7 @@
 
         } else {
             throw new UnsupportedCallbackException
-                    (callbacks[i], `Unrecognized Callback`);
+                    (callbacks[i], \"Unrecognized Callback\");
         }
      }
    }

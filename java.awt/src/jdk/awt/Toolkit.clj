@@ -41,7 +41,7 @@
 
   Most applications should not call any of the methods in this
   class directly. The methods defined by Toolkit are
-  the `glue` that joins the platform-independent classes in the
+  the \"glue\" that joins the platform-independent classes in the
   java.awt package with their counterparts in
   java.awt.peer. Some methods defined by
   Toolkit query the native operating system directly."
@@ -56,13 +56,13 @@
 (defn *get-default-toolkit
   "Gets the default toolkit.
 
-   If a system property named `java.awt.headless` is set
+   If a system property named \"java.awt.headless\" is set
    to true then the headless implementation
    of Toolkit is used.
 
-   If there is no `java.awt.headless` or it is set to
+   If there is no \"java.awt.headless\" or it is set to
    false and there is a system property named
-   `awt.toolkit`,
+   \"awt.toolkit\",
    that property is treated as the name of a class that is a subclass
    of Toolkit;
    otherwise the default platform-specific implementation of
@@ -71,8 +71,8 @@
    Also loads additional classes into the VM, using the property
    'assistive_technologies' specified in the Sun reference
    implementation by a line in the 'accessibility.properties'
-   file.  The form is `assistive_technologies=...` where
-   the `...` is a comma-separated list of assistive technology
+   file.  The form is \"assistive_technologies=...\" where
+   the \"...\" is a comma-separated list of assistive technology
    classes to load.  Each class is loaded in the order given
    and a single instance of each is created using
    Class.forName(class).newInstance().  This is done just after
@@ -152,7 +152,7 @@
    Alternatively, the property could be set in the application by using the following code:
 
 
-   System.setProperty(`sun.awt.enableExtraMouseButtons`, `true`);
+   System.setProperty(\"sun.awt.enableExtraMouseButtons\", \"true\");
    before the Toolkit class initialization.
    If not set by the time of the Toolkit class initialization, this property will be
    initialized with true.
@@ -203,7 +203,7 @@
 
    First, if there is a security manager, its checkPermission
    method is called with an
-   AWTPermission(`listenToAllAWTEvents`) permission.
+   AWTPermission(\"listenToAllAWTEvents\") permission.
    This may result in a SecurityException.
 
    eventMask is a bitmask of event types to receive.
@@ -300,7 +300,7 @@
 
    Each actual implementation of this method should first check if there
    is a security manager installed. If there is, the method should call
-   the security manager's checkPermission method to check AWTPermission(`accessClipboard`).
+   the security manager's checkPermission method to check AWTPermission(\"accessClipboard\").
 
   returns: the system selection as a Clipboard, or
            null if the native platform does not support a
@@ -342,7 +342,7 @@
    re-layout their components on every native resize event and
    the validate() method will be invoked each time.
    The OS/WM support can be queried using
-   the getDesktopProperty(`awt.dynamicLayoutSupported`) method.
+   the getDesktopProperty(\"awt.dynamicLayoutSupported\") method.
 
   returns: true if dynamic layout of Containers on resize is
               currently active, false otherwise. - `boolean`
@@ -362,10 +362,10 @@
    implementation of checkPrintJobAccess is used (that is,
    that method is not overriden), then this results in a call to the
    security manager's checkPermission method with a
-   RuntimePermission(`queuePrintJob`) permission.
+   RuntimePermission(\"queuePrintJob\") permission.
 
   frame - the parent of the print dialog. May not be null. - `java.awt.Frame`
-  jobtitle - the title of the PrintJob. A null title is equivalent to ``. - `java.lang.String`
+  jobtitle - the title of the PrintJob. A null title is equivalent to \"\". - `java.lang.String`
   job-attributes - a set of job attributes which will control the PrintJob. The attributes will be updated to reflect the user's choices as outlined in the JobAttributes documentation. May be null. - `java.awt.JobAttributes`
   page-attributes - a set of page attributes which will control the PrintJob. The attributes will be applied to every page in the job. The attributes will be updated to reflect the user's choices as outlined in the PageAttributes documentation. May be null. - `java.awt.PageAttributes`
 
@@ -383,7 +383,7 @@
 
    First, if there is a security manager, its checkPermission
    method is called with an
-   AWTPermission(`listenToAllAWTEvents`) permission.
+   AWTPermission(\"listenToAllAWTEvents\") permission.
    This may result in a SecurityException.
 
    Note:  event listener use is not recommended for normal
@@ -414,7 +414,7 @@
 
     If there is a security manager then its
    checkPermission method
-   is called to check AWTPermission(`accessEventQueue`).
+   is called to check AWTPermission(\"accessEventQueue\").
 
   returns: the EventQueue object - `java.awt.EventQueue`
 
@@ -484,7 +484,7 @@
    This method does not change support or settings of the underlying
    operating system or
    window manager.  The OS/WM support can be
-   queried using getDesktopProperty(`awt.dynamicLayoutSupported`) method.
+   queried using getDesktopProperty(\"awt.dynamicLayoutSupported\") method.
 
   dynamic - If true, Containers should re-layout their components as the Container is being resized. If false, the layout will be validated after resizing is completed. - `boolean`
 
@@ -551,7 +551,7 @@
   "Returns whether Toolkit supports this state for
    Frames.  This method tells whether the UI
    concept of, say, maximization or iconification is
-   supported.  It will always return false for `compound` states
+   supported.  It will always return false for \"compound\" states
    like Frame.ICONIFIED|Frame.MAXIMIZED_VERT.
    In other words, the rule of thumb is that only queries with a
    single frame state constant as an argument are meaningful.
@@ -624,7 +624,7 @@
 
    Each actual implementation of this method should first check if there
    is a security manager installed. If there is, the method should call
-   the security manager's checkPermission method to check AWTPermission(`accessClipboard`).
+   the security manager's checkPermission method to check AWTPermission(\"accessClipboard\").
 
   returns: the system Clipboard - `java.awt.datatransfer.Clipboard`
 
@@ -681,7 +681,7 @@
    types specified in the eventMask argument.
    If there is a security manager, its checkPermission
    method is called with an
-   AWTPermission(`listenToAllAWTEvents`) permission.
+   AWTPermission(\"listenToAllAWTEvents\") permission.
    This may result in a SecurityException.
    Listeners can be returned
    within AWTEventListenerProxy objects, which also contain
@@ -748,7 +748,7 @@
 
 (defn get-locking-key-state?
   "Returns whether the given locking key on the keyboard is currently in
-   its `on` state.
+   its \"on\" state.
    Valid key codes are
    VK_CAPS_LOCK,
    VK_NUM_LOCK,

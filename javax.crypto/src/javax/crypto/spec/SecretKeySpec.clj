@@ -52,7 +52,7 @@
 (defn get-format
   "Returns the name of the encoding format for this secret key.
 
-  returns: the string `RAW`. - `java.lang.String`"
+  returns: the string \"RAW\". - `java.lang.String`"
   (^java.lang.String [^SecretKeySpec this]
     (-> this (.getFormat))))
 

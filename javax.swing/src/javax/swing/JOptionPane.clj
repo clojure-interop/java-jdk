@@ -163,43 +163,43 @@
 
   Show an error dialog that displays the message, 'alert':
 
-  JOptionPane.showMessageDialog(null, `alert`, `alert`, JOptionPane.ERROR_MESSAGE);
+  JOptionPane.showMessageDialog(null, \"alert\", \"alert\", JOptionPane.ERROR_MESSAGE);
 
   Show an internal information dialog with the message, 'information':
 
 
-  JOptionPane.showInternalMessageDialog(frame, `information`,
-              `information`, JOptionPane.INFORMATION_MESSAGE);
+  JOptionPane.showInternalMessageDialog(frame, \"information\",
+              \"information\", JOptionPane.INFORMATION_MESSAGE);
   Show an information panel with the options yes/no and message 'choose one':
 
 
  JOptionPane.showConfirmDialog(null,
-              `choose one`, `choose one`, JOptionPane.YES_NO_OPTION);
+              \"choose one\", \"choose one\", JOptionPane.YES_NO_OPTION);
   Show an internal information dialog with the options yes/no/cancel and
   message 'please choose one' and title information:
 
 
  JOptionPane.showInternalConfirmDialog(frame,
-              `please choose one`, `information`,
+              \"please choose one\", \"information\",
               JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE);
   Show a warning dialog with the options OK, CANCEL, title 'Warning', and
   message 'Click OK to continue':
 
 
-  Object[] options = { `OK`, `CANCEL` };
-  JOptionPane.showOptionDialog(null, `Click OK to continue`, `Warning`,
+  Object[] options = { \"OK\", \"CANCEL\" };
+  JOptionPane.showOptionDialog(null, \"Click OK to continue\", \"Warning\",
               JOptionPane.DEFAULT_OPTION, JOptionPane.WARNING_MESSAGE,
               null, options, options[0]);
   Show a dialog asking the user to type in a String:
 
-  String inputValue = JOptionPane.showInputDialog(`Please input a value`);
+  String inputValue = JOptionPane.showInputDialog(\"Please input a value\");
 
   Show a dialog asking the user to select a String:
 
 
-  Object[] possibleValues = { `First`, `Second`, `Third` };
+  Object[] possibleValues = { \"First\", \"Second\", \"Third\" };
   Object selectedValue = JOptionPane.showInputDialog(null,
-              `Choose one`, `Input`,
+              \"Choose one\", \"Input\",
               JOptionPane.INFORMATION_MESSAGE, null,
               possibleValues, possibleValues[0]);
 
@@ -831,7 +831,7 @@
   "Returns the name of the UI class that implements the
    L&F for this component.
 
-  returns: the string `OptionPaneUI` - `java.lang.String`"
+  returns: the string \"OptionPaneUI\" - `java.lang.String`"
   (^java.lang.String [^JOptionPane this]
     (-> this (.getUIClassID))))
 

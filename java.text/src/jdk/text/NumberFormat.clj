@@ -27,7 +27,7 @@
 
   NumberFormat nf = NumberFormat.getInstance();
   for (int i = 0; i < myNumber.length; +i) {
-      output.println(nf.format(myNumber[i])  `; `);
+      output.println(nf.format(myNumber[i])  \"; \");
   }
 
   To format a number for a different Locale, specify it in the
@@ -66,17 +66,17 @@
   the detailed description for each these control methods,
 
   setParseIntegerOnly : only affects parsing, e.g.
-  if true,  `3456.78` → 3456 (and leaves the parse position just after index 6)
-  if false, `3456.78` → 3456.78 (and leaves the parse position just after index 8)
+  if true,  \"3456.78\" → 3456 (and leaves the parse position just after index 6)
+  if false, \"3456.78\" → 3456.78 (and leaves the parse position just after index 8)
   This is independent of formatting.  If you want to not show a decimal point
   where there might be no digits after the decimal point, use
   setDecimalSeparatorAlwaysShown.
 
   setDecimalSeparatorAlwaysShown : only affects formatting, and only where
   there might be no digits after the decimal point, such as with a pattern
-  like `#,##0.##`, e.g.,
-  if true,  3456.00 → `3,456.`
-  if false, 3456.00 → `3456`
+  like \"#,##0.##\", e.g.,
+  if true,  3456.00 → \"3,456.\"
+  if false, 3456.00 → \"3456\"
   This is independent of parsing.  If you want parsing to stop at the decimal
   point, use setParseIntegerOnly.
 
@@ -104,7 +104,7 @@
        (desiredPixelWidth - widthToAlignmentPoint) before drawing the text.
        It also works where there is no decimal, but possibly additional
        characters at the end, e.g., with parentheses in negative
-       numbers: `(12)` for -12.
+       numbers: \"(12)\" for -12.
 
 
   Synchronization
@@ -349,7 +349,7 @@
   "Returns a Long if possible (e.g., within the range [Long.MIN_VALUE,
    Long.MAX_VALUE] and with no decimals), otherwise a Double.
    If IntegerOnly is set, will stop at a decimal
-   point (or equivalent; e.g., for rational numbers `1 2/3`, will stop
+   point (or equivalent; e.g., for rational numbers \"1 2/3\", will stop
    after the 1).
    Does not throw an exception; if no object can be parsed, index is
    unchanged!
@@ -384,8 +384,8 @@
 (defn parse-integer-only?
   "Returns true if this format will parse numbers as integers only.
    For example in the English locale, with ParseIntegerOnly true, the
-   string `1234.` would be parsed as the integer value 1234 and parsing
-   would stop at the `.` character.  Of course, the exact format accepted
+   string \"1234.\" would be parsed as the integer value 1234 and parsing
+   would stop at the \".\" character.  Of course, the exact format accepted
    by the parse operation is locale dependant and determined by sub-classes
    of NumberFormat.
 
@@ -417,7 +417,7 @@
 (defn grouping-used?
   "Returns true if grouping is used in this format. For example, in the
    English locale, with grouping on, the number 1234567 might be formatted
-   as `1,234,567`. The grouping separator as well as the size of each group
+   as \"1,234,567\". The grouping separator as well as the size of each group
    is locale dependant and is determined by sub-classes of NumberFormat.
 
   returns: true if grouping is used;

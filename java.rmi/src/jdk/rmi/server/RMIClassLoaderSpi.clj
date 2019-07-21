@@ -88,7 +88,7 @@
 
    If there is a security manger, its checkPermission
    method will be invoked with a
-   RuntimePermission(`getClassLoader`) permission;
+   RuntimePermission(\"getClassLoader\") permission;
    this could result in a SecurityException.
    The implementation of this method may also perform further security
    checks to verify that the calling context has permission to connect

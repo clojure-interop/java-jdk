@@ -48,48 +48,48 @@
 
 
   For the invoke method, the caller's
-  permissions must imply MBeanPermission(className, operationName, name, `invoke`).
+  permissions must imply MBeanPermission(className, operationName, name, \"invoke\").
 
   For the getAttribute method, the
-  caller's permissions must imply MBeanPermission(className, attribute, name, `getAttribute`).
+  caller's permissions must imply MBeanPermission(className, attribute, name, \"getAttribute\").
 
   For the getAttributes method, the
-  caller's permissions must imply MBeanPermission(className, null, name, `getAttribute`).
-  Additionally, for each attribute a in the AttributeList, if the caller's permissions do not imply MBeanPermission(className, a, name, `getAttribute`), the
+  caller's permissions must imply MBeanPermission(className, null, name, \"getAttribute\").
+  Additionally, for each attribute a in the AttributeList, if the caller's permissions do not imply MBeanPermission(className, a, name, \"getAttribute\"), the
   MBean server will behave as if that attribute had not been in the
   supplied list.
 
   For the setAttribute method, the
-  caller's permissions must imply MBeanPermission(className, attrName, name, `setAttribute`), where
+  caller's permissions must imply MBeanPermission(className, attrName, name, \"setAttribute\"), where
   attrName is attribute.getName().
 
   For the setAttributes method, the
-  caller's permissions must imply MBeanPermission(className, null, name, `setAttribute`).
-  Additionally, for each attribute a in the AttributeList, if the caller's permissions do not imply MBeanPermission(className, a, name, `setAttribute`), the
+  caller's permissions must imply MBeanPermission(className, null, name, \"setAttribute\").
+  Additionally, for each attribute a in the AttributeList, if the caller's permissions do not imply MBeanPermission(className, a, name, \"setAttribute\"), the
   MBean server will behave as if that attribute had not been in the
   supplied list.
 
   For the addNotificationListener methods,
   the caller's permissions must imply MBeanPermission(className, null, name,
-  `addNotificationListener`).
+  \"addNotificationListener\").
 
   For the removeNotificationListener methods,
   the caller's permissions must imply MBeanPermission(className, null, name,
-  `removeNotificationListener`).
+  \"removeNotificationListener\").
 
   For the getMBeanInfo method, the
-  caller's permissions must imply MBeanPermission(className, null, name, `getMBeanInfo`).
+  caller's permissions must imply MBeanPermission(className, null, name, \"getMBeanInfo\").
 
   For the getObjectInstance method,
-  the caller's permissions must imply MBeanPermission(className, null, name, `getObjectInstance`).
+  the caller's permissions must imply MBeanPermission(className, null, name, \"getObjectInstance\").
 
   For the isInstanceOf method, the
-  caller's permissions must imply MBeanPermission(className, null, name, `isInstanceOf`).
+  caller's permissions must imply MBeanPermission(className, null, name, \"isInstanceOf\").
 
   For the queryMBeans method, the
-  caller's permissions must imply MBeanPermission(null, null, null, `queryMBeans`).
+  caller's permissions must imply MBeanPermission(null, null, null, \"queryMBeans\").
   Additionally, for each MBean n that matches name,
-  if the caller's permissions do not imply MBeanPermission(className, null, n, `queryMBeans`), the
+  if the caller's permissions do not imply MBeanPermission(className, null, n, \"queryMBeans\"), the
   MBean server will behave as if that MBean did not exist.
 
   Certain query elements perform operations on the MBean server.
@@ -99,44 +99,44 @@
 
   For the queryNames method, the checks
   are the same as for queryMBeans except that
-  `queryNames` is used instead of
-  `queryMBeans` in the MBeanPermission
-  objects.  Note that a `queryMBeans` permission implies
-  the corresponding `queryNames` permission.
+  \"queryNames\" is used instead of
+  \"queryMBeans\" in the MBeanPermission
+  objects.  Note that a \"queryMBeans\" permission implies
+  the corresponding \"queryNames\" permission.
 
   For the getDomains method, the caller's
-  permissions must imply MBeanPermission(null, null, null, `getDomains`).  Additionally,
+  permissions must imply MBeanPermission(null, null, null, \"getDomains\").  Additionally,
   for each domain d in the returned array, if the caller's
-  permissions do not imply MBeanPermission(null, null, new ObjectName(`d:x=x`),
-  `getDomains`), the domain is eliminated from the array.  Here,
+  permissions do not imply MBeanPermission(null, null, new ObjectName(\"d:x=x\"),
+  \"getDomains\"), the domain is eliminated from the array.  Here,
   x=x is any key=value pair, needed to
   satisfy ObjectName's constructor but not otherwise relevant.
 
   For the getClassLoader method, the
   caller's permissions must imply MBeanPermission(className, null, loaderName,
-  `getClassLoader`).
+  \"getClassLoader\").
 
   For the getClassLoaderFor method,
   the caller's permissions must imply MBeanPermission(className, null, mbeanName,
-  `getClassLoaderFor`).
+  \"getClassLoaderFor\").
 
   For the getClassLoaderRepository method, the caller's permissions must
-  imply MBeanPermission(null, null, null, `getClassLoaderRepository`).
+  imply MBeanPermission(null, null, null, \"getClassLoaderRepository\").
 
   For the deprecated deserialize methods, the
   required permissions are the same as for the methods that replace
   them.
 
   For the instantiate methods, the caller's
-  permissions must imply MBeanPermission(className, null, null, `instantiate`),
+  permissions must imply MBeanPermission(className, null, null, \"instantiate\"),
   where className is the name of the class which is to
   be instantiated.
 
   For the registerMBean method, the
-  caller's permissions must imply MBeanPermission(className, null, name, `registerMBean`).
+  caller's permissions must imply MBeanPermission(className, null, name, \"registerMBean\").
 
   If the MBeanPermission check succeeds, the MBean's
-  class is validated by checking that its ProtectionDomain implies MBeanTrustPermission(`register`).
+  class is validated by checking that its ProtectionDomain implies MBeanTrustPermission(\"register\").
 
   Finally, if the name argument is null, another
   MBeanPermission check is made using the
@@ -148,7 +148,7 @@
   registerMBean.
 
   For the unregisterMBean method,
-  the caller's permissions must imply MBeanPermission(className, null, name, `unregisterMBean`)."
+  the caller's permissions must imply MBeanPermission(className, null, name, \"unregisterMBean\")."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.management MBeanServer]))
 
@@ -484,12 +484,12 @@
   loader-name - The name of the class loader to be used for loading the specified class. If null, the MBean Server's class loader will be used. - `javax.management.ObjectName`
   data - The byte array to be de-sererialized. - `byte[]`
 
-  returns: The de-serialized object stream. - `.io.ObjectInputStream`
+  returns: The de-serialized object stream. - `java.io.ObjectInputStream`
 
   throws: javax.management.InstanceNotFoundException - The specified class loader MBean is not found."
-  (^.io.ObjectInputStream [^MBeanServer this ^java.lang.String class-name ^javax.management.ObjectName loader-name data]
+  (^java.io.ObjectInputStream [^MBeanServer this ^java.lang.String class-name ^javax.management.ObjectName loader-name data]
     (-> this (.deserialize class-name loader-name data)))
-  (^.io.ObjectInputStream [^MBeanServer this ^javax.management.ObjectName name data]
+  (^java.io.ObjectInputStream [^MBeanServer this ^javax.management.ObjectName name data]
     (-> this (.deserialize name data))))
 
 (defn register-m-bean

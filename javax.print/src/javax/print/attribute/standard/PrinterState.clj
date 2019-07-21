@@ -49,7 +49,7 @@
   PrinterState/STOPPED)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PrinterState, the category is class PrinterState itself.
@@ -63,7 +63,7 @@
   "Get the name of the category of which this attribute value is an
    instance.
 
-   For class PrinterState, the category name is `printer-state`.
+   For class PrinterState, the category name is \"printer-state\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PrinterState this]

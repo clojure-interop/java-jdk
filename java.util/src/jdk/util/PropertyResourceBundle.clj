@@ -16,15 +16,15 @@
 
 
   The following example shows a member of a resource
-  bundle family with the base name `MyResources`.
-  The text defines the bundle `MyResources_de`,
+  bundle family with the base name \"MyResources\".
+  The text defines the bundle \"MyResources_de\",
   the German member of the bundle family.
   This member is based on PropertyResourceBundle, and the text
-  therefore is the content of the file `MyResources_de.properties`
+  therefore is the content of the file \"MyResources_de.properties\"
   (a related example shows
   how you can add bundles to this family that are implemented as subclasses
   of ListResourceBundle).
-  The keys in this example are of the form `s1` etc. The actual
+  The keys in this example are of the form \"s1\" etc. The actual
   keys are entirely up to your choice, so long as they are the same as
   the keys you use in your program to retrieve the objects from the bundle.
   Keys are case-sensitive.
@@ -32,7 +32,7 @@
 
 
   # MessageFormat pattern
-  s1=Die Platte `{1}` enthält {0}.
+  s1=Die Platte \\\"{1}\\\" enthält {0}.
 
   # location of {0} in pattern
   s2=1

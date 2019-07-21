@@ -113,30 +113,30 @@
 
    The Locale class provide access to a range of information useful
    for localizing an application. This includes the language and region,
-   such as `en-GB` for English as used in Great Britain.
+   such as \"en-GB\" for English as used in Great Britain.
 
    The Locale class also supports an extension mechanism that
    can be used to identify a calendar system. The mechanism is a form
-   of key-value pairs, where the calendar system has the key `ca`.
-   For example, the locale `en-JP-u-ca-japanese` represents the English
+   of key-value pairs, where the calendar system has the key \"ca\".
+   For example, the locale \"en-JP-u-ca-japanese\" represents the English
    language as used in Japan with the Japanese calendar system.
 
    This method finds the desired calendar system by in a manner equivalent
-   to passing `ca` to Locale.getUnicodeLocaleType(String).
-   If the `ca` key is not present, then IsoChronology is returned.
+   to passing \"ca\" to Locale.getUnicodeLocaleType(String).
+   If the \"ca\" key is not present, then IsoChronology is returned.
 
    Note that the behavior of this method differs from the older
    Calendar.getInstance(Locale) method.
-   If that method receives a locale of `th_TH` it will return BuddhistCalendar.
+   If that method receives a locale of \"th_TH\" it will return BuddhistCalendar.
    By contrast, this method will return IsoChronology.
-   Passing the locale `th-TH-u-ca-buddhist` into either method will
+   Passing the locale \"th-TH-u-ca-buddhist\" into either method will
    result in the Thai Buddhist calendar system and is therefore the
    recommended approach going forward for Thai calendar system localization.
 
    A similar, but simpler, situation occurs for the Japanese calendar system.
-   The locale `jp_JP_JP` has previously been used to access the calendar.
-   However, unlike the Thai locale, `ja_JP_JP` is automatically converted by
-   Locale to the modern and recommended form of `ja-JP-u-ca-japanese`.
+   The locale \"jp_JP_JP\" has previously been used to access the calendar.
+   However, unlike the Thai locale, \"ja_JP_JP\" is automatically converted by
+   Locale to the modern and recommended form of \"ja-JP-u-ca-japanese\".
    Thus, there is no difference in behavior between this method and
    Calendar#getInstance(Locale).
 
@@ -344,7 +344,7 @@
    Unicode Locale Data Markup Language (LDML) specifications
    to uniquely identification a calendar.
    The getCalendarType is the concatenation of the CLDR calendar type
-   and the variant, if applicable, is appended separated by `-`.
+   and the variant, if applicable, is appended separated by \"-\".
    The calendar type is used to lookup the Chronology using of(String).
 
   returns: the calendar system type, null if the calendar is not defined by CLDR/LDML - `java.lang.String`"
@@ -443,7 +443,7 @@
 
    The comparison order first by the chronology ID string, then by any
    additional information specific to the subclass.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
   other - the other chronology to compare to, not null - `java.time.chrono.Chronology`
 

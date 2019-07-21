@@ -93,7 +93,7 @@
     (-> this (.getWidth units))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class MediaPrintableArea, the category is
@@ -109,7 +109,7 @@
    given units.
 
   units - Unit conversion factor, e.g. INCH or MM. - `int`
-  units-name - Units name string, e.g. `in` or `mm`. If null, no units name is appended to the result. - `java.lang.String`
+  units-name - Units name string, e.g. \"in\" or \"mm\". If null, no units name is appended to the result. - `java.lang.String`
 
   returns: String version of this two-dimensional size attribute. - `java.lang.String`
 
@@ -124,7 +124,7 @@
    instance.
 
    For class MediaPrintableArea,
-   the category name is `media-printable-area`.
+   the category name is \"media-printable-area\".
    This is not an IPP V1.1 attribute.
 
   returns: Attribute category name. - `java.lang.String`"

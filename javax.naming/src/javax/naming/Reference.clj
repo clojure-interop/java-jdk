@@ -8,7 +8,7 @@
   A Reference consists of an ordered list of addresses and class information
   about the object being referenced.
   Each address in the list identifies a communications endpoint
-  for the same conceptual object.  The `communications endpoint`
+  for the same conceptual object.  The \"communications endpoint\"
   is information that indicates how to contact the object. It could
   be, for example, a network address, a location in memory on the
   local machine, another process on the same machine, etc.
@@ -59,7 +59,7 @@
   "Retrieves the class name of the object to which this reference refers.
 
   returns: The non-null fully-qualified class name of the object.
-           (e.g. `java.lang.String`) - `java.lang.String`"
+           (e.g. \"java.lang.String\") - `java.lang.String`"
   (^java.lang.String [^Reference this]
     (-> this (.getClassName))))
 
@@ -113,7 +113,7 @@
    to which this reference refers.
 
   returns: The possibly null fully-qualified class name of the factory.
-           (e.g. `java.lang.String`) - `java.lang.String`"
+           (e.g. \"java.lang.String\") - `java.lang.String`"
   (^java.lang.String [^Reference this]
     (-> this (.getFactoryClassName))))
 

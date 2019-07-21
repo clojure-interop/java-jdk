@@ -6,7 +6,7 @@
   quarter-of-year, can be obtained.
 
   This class does not store or represent a day, time or time-zone.
-  For example, the value `October 2007` can be stored in a YearMonth.
+  For example, the value \"October 2007\" can be stored in a YearMonth.
 
   The ISO-8601 calendar system is the modern civil calendar system used today
   in most of the world. It is equivalent to the proleptic Gregorian calendar
@@ -612,7 +612,7 @@
   "Compares this year-month to another year-month.
 
    The comparison is based first on the value of the year, then on the value of the month.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
   other - the other year-month to compare to, not null - `java.time.YearMonth`
 

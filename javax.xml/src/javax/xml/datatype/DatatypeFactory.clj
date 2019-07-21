@@ -5,7 +5,7 @@
   that uses the following implementation resolution mechanisms to determine an implementation:
 
 
-       If the system property specified by DATATYPEFACTORY_PROPERTY, `javax.xml.datatype.DatatypeFactory`,
+       If the system property specified by DATATYPEFACTORY_PROPERTY, \"javax.xml.datatype.DatatypeFactory\",
        exists, a class with the name of the property value is instantiated.
        Any Exception thrown during the instantiation process is wrapped as a DatatypeConfigurationException.
 

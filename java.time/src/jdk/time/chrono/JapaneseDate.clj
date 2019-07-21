@@ -12,7 +12,7 @@
   Only Meiji and later eras are supported;
   dates before Meiji 6, January 1 are not supported.
 
-  For example, the Japanese year `Heisei 24` corresponds to ISO year `2012`.
+  For example, the Japanese year \"Heisei 24\" corresponds to ISO year \"2012\".
   Calling japaneseDate.get(YEAR_OF_ERA) will return 24.
   Calling japaneseDate.get(YEAR) will return 2012.
   Calling japaneseDate.get(ERA) will return 2, corresponding to

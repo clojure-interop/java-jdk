@@ -46,32 +46,32 @@
 
   Within a String, a pair of single quotes can be used to
   quote any arbitrary characters except single quotes. For example,
-  pattern string `'{0}'` represents string
-  `{0}`, not a FormatElement. A single quote itself
+  pattern string \"'{0}'\" represents string
+  \"{0}\", not a FormatElement. A single quote itself
   must be represented by doubled single quotes '' throughout a
-  String.  For example, pattern string `'{''}'` is
+  String.  For example, pattern string \"'{''}'\" is
   interpreted as a sequence of '{ (start of quoting and a
   left curly brace), '' (a single quote), and
   }' (a right curly brace and end of quoting),
   not '{' and '}' (quoted left and
-  right curly braces): representing string `{'}`,
-  not `{}`.
+  right curly braces): representing string \"{'}\",
+  not \"{}\".
 
   A SubformatPattern is interpreted by its corresponding
   subformat, and subformat-dependent pattern rules apply. For example,
-  pattern string `{1,number,$'#',##}`
+  pattern string \"{1,number,$'#',##}\"
   (SubformatPattern with underline) will produce a number format
-  with the pound-sign quoted, with a result such as: `$#31,45`. Refer to each Format subclass documentation for
+  with the pound-sign quoted, with a result such as: \"$#31,45\". Refer to each Format subclass documentation for
   details.
 
   Any unmatched quote is treated as closed at the end of the given
-  pattern. For example, pattern string `'{0}` is treated as
-  pattern `'{0}'`.
+  pattern. For example, pattern string \"'{0}\" is treated as
+  pattern \"'{0}'\".
 
   Any curly braces within an unquoted pattern must be balanced. For
-  example, `ab {0} de` and `ab '}' de` are
-  valid patterns, but `ab {0'}' de`, `ab } de`
-  and `''{''` are not.
+  example, \"ab {0} de\" and \"ab '}' de\" are
+  valid patterns, but \"ab {0'}' de\", \"ab } de\"
+  and \"''{''\" are not.
 
   Warning:The rules for using quotes within message
   format patterns unfortunately have shown to be somewhat confusing.
@@ -176,10 +176,10 @@
 
 
   int planet = 7;
-  String event = `a disturbance in the Force`;
+  String event = \"a disturbance in the Force\";
 
   String result = MessageFormat.format(
-      `At {1,time} on {1,date}, there was {2} on planet {0,number,integer}.`,
+      \"At {1,time} on {1,date}, there was {2} on planet {0,number,integer}.\",
       planet, new Date(), event);
   The output is:
 
@@ -192,42 +192,42 @@
 
 
   int fileCount = 1273;
-  String diskName = `MyDisk`;
+  String diskName = \"MyDisk\";
   Object[] testArgs = {new Long(fileCount), diskName};
 
   MessageFormat form = new MessageFormat(
-      `The disk `{1}` contains {0} file(s).`);
+      \"The disk \\\"{1}\\\" contains {0} file(s).\");
 
   System.out.println(form.format(testArgs));
   The output with different values for fileCount:
 
 
-  The disk `MyDisk` contains 0 file(s).
-  The disk `MyDisk` contains 1 file(s).
-  The disk `MyDisk` contains 1,273 file(s).
+  The disk \"MyDisk\" contains 0 file(s).
+  The disk \"MyDisk\" contains 1 file(s).
+  The disk \"MyDisk\" contains 1,273 file(s).
 
 
   For more sophisticated patterns, you can use a ChoiceFormat
   to produce correct forms for singular and plural:
 
 
-  MessageFormat form = new MessageFormat(`The disk `{1}` contains {0}.`);
+  MessageFormat form = new MessageFormat(\"The disk \\\"{1}\\\" contains {0}.\");
   double[] filelimits = {0,1,2};
-  String[] filepart = {`no files`,`one file`,`{0,number} files`};
+  String[] filepart = {\"no files\",\"one file\",\"{0,number} files\"};
   ChoiceFormat fileform = new ChoiceFormat(filelimits, filepart);
   form.setFormatByArgumentIndex(0, fileform);
 
   int fileCount = 1273;
-  String diskName = `MyDisk`;
+  String diskName = \"MyDisk\";
   Object[] testArgs = {new Long(fileCount), diskName};
 
   System.out.println(form.format(testArgs));
   The output with different values for fileCount:
 
 
-  The disk `MyDisk` contains no files.
-  The disk `MyDisk` contains one file.
-  The disk `MyDisk` contains 1,273 files.
+  The disk \"MyDisk\" contains no files.
+  The disk \"MyDisk\" contains one file.
+  The disk \"MyDisk\" contains 1,273 files.
 
 
   You can create the ChoiceFormat programmatically, as in the
@@ -236,7 +236,7 @@
 
 
   form.applyPattern(
-     `There {0,choice,0#are no files|1#is one file|1<are {0,number,integer} files}.`);
+     \"There {0,choice,0#are no files|1#is one file|1<are {0,number,integer} files}.\");
 
 
   Note: As we see above, the string produced
@@ -250,10 +250,10 @@
   will be the final result of the parsing.  For example,
 
 
-  MessageFormat mf = new MessageFormat(`{0,number,#.##}, {0,number,#.#}`);
+  MessageFormat mf = new MessageFormat(\"{0,number,#.##}, {0,number,#.#}\");
   Object[] objs = {new Double(3.1415)};
   String result = mf.format( objs );
-  // result now equals `3.14, 3.1`
+  // result now equals \"3.14, 3.1\"
   objs = null;
   objs = mf.parse(result, new ParsePosition(0));
   // objs now equals {new Double(3.1)}
@@ -264,10 +264,10 @@
   example,
 
 
-  MessageFormat mf = new MessageFormat(`{0}, {0}, {0}`);
-  String forParsing = `x, y, z`;
+  MessageFormat mf = new MessageFormat(\"{0}, {0}, {0}\");
+  String forParsing = \"x, y, z\";
   Object[] objs = mf.parse(forParsing, new ParsePosition(0));
-  // result now equals {new String(`z`)}
+  // result now equals {new String(\"z\")}
 
   Synchronization
 
@@ -506,22 +506,22 @@
 
    If one of the arguments does not occur in the pattern.
    If the format of an argument loses information, such as
-       with a choice format where a large number formats to `many`.
+       with a choice format where a large number formats to \"many\".
    Does not yet handle recursion (where
        the substituted strings contain {n} references.)
    Will not always find a match (or the correct match)
        if some part of the parse is ambiguous.
-       For example, if the pattern `{1},{2}` is used with the
-       string arguments {`a,b`, `c`}, it will format as `a,b,c`.
-       When the result is parsed, it will return {`a`, `b,c`}.
+       For example, if the pattern \"{1},{2}\" is used with the
+       string arguments {\"a,b\", \"c\"}, it will format as \"a,b,c\".
+       When the result is parsed, it will return {\"a\", \"b,c\"}.
    If a single argument is parsed more than once in the string,
        then the later parse wins.
 
    When the parse fails, use ParsePosition.getErrorIndex() to find out
    where in the string the parsing failed.  The returned error
    index is the starting offset of the sub-patterns that the string
-   is comparing with.  For example, if the parsing string `AAA {0} BBB`
-   is comparing against the pattern `AAD {0} BBB`, the error index is
+   is comparing with.  For example, if the parsing string \"AAA {0} BBB\"
+   is comparing against the pattern \"AAD {0} BBB\", the error index is
    0. When an error occurs, the call to this method will return null.
    If the source is null, return an empty array.
 
@@ -609,11 +609,11 @@
 
          any
          unavailable
-         `{`  argumentIndex  `}`
+         \"{\"  argumentIndex  \"}\"
 
          any
          null
-         `null`
+         \"null\"
 
          instanceof ChoiceFormat
          any

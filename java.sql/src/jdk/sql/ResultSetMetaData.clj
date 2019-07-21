@@ -7,7 +7,7 @@
   can be used in a WHERE clause.
 
 
-      ResultSet rs = stmt.executeQuery(`SELECT a, b, c FROM TABLE2`);
+      ResultSet rs = stmt.executeQuery(\"SELECT a, b, c FROM TABLE2\");
       ResultSetMetaData rsmd = rs.getMetaData();
       int numberOfColumns = rsmd.getColumnCount();
       boolean b = rsmd.isSearchable(1);"
@@ -19,7 +19,7 @@
 
   column - the first column is 1, the second is 2, ... - `int`
 
-  returns: table name or `` if not applicable - `java.lang.String`
+  returns: table name or \"\" if not applicable - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
   (^java.lang.String [^ResultSetMetaData this ^Integer column]
@@ -62,7 +62,7 @@
   column - the first column is 1, the second is 2, ... - `int`
 
   returns: the name of the catalog for the table in which the given column
-            appears or `` if not applicable - `java.lang.String`
+            appears or \"\" if not applicable - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
   (^java.lang.String [^ResultSetMetaData this ^Integer column]
@@ -127,7 +127,7 @@
 
   column - the first column is 1, the second is 2, ... - `int`
 
-  returns: schema name or `` if not applicable - `java.lang.String`
+  returns: schema name or \"\" if not applicable - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
   (^java.lang.String [^ResultSetMetaData this ^Integer column]

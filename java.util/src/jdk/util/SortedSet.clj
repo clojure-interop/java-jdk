@@ -30,7 +30,7 @@
   contract of the Set interface.
 
   All general-purpose sorted set implementation classes should
-  provide four `standard` constructors: 1) A void (no arguments)
+  provide four \"standard\" constructors: 1) A void (no arguments)
   constructor, which creates an empty sorted set sorted according to
   the natural ordering of its elements.  2) A constructor with a
   single argument of type Comparator, which creates an empty
@@ -54,14 +54,14 @@
   containing all of the strings in s from low to
   high, inclusive:
 
-    SortedSet<String> sub = s.subSet(low, high+`\0`);
+    SortedSet<String> sub = s.subSet(low, high+\"\\0\");
 
   A similar technique can be used to generate an open range (which
   contains neither endpoint).  The following idiom obtains a view
   containing all of the Strings in s from low to
   high, exclusive:
 
-    SortedSet<String> sub = s.subSet(low+`\0`, high);
+    SortedSet<String> sub = s.subSet(low+\"\\0\", high);
 
   This interface is a member of the
 

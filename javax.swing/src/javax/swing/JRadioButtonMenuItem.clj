@@ -57,7 +57,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `RadioButtonMenuItemUI` - `java.lang.String`"
+  returns: the string \"RadioButtonMenuItemUI\" - `java.lang.String`"
   (^java.lang.String [^JRadioButtonMenuItem this]
     (-> this (.getUIClassID))))
 

@@ -34,7 +34,7 @@
        CIEXYZ
        viewing illuminance: 200 lux
        viewing white point: CIE D50
-       media white point: `that of a perfectly reflecting diffuser` -- D50
+       media white point: \"that of a perfectly reflecting diffuser\" -- D50
        media black point: 0 lux or 0 Reflectance
        flare: 1 percent
        surround: 20percent of the media white point

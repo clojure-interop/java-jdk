@@ -9,7 +9,7 @@
   automatically; this means that the flush method is
   automatically invoked after a byte array is written, one of the
   println methods is invoked, or a newline character or byte
-  ('\n') is written.
+  ('\\n') is written.
 
    All characters printed by a PrintStream are converted into
   bytes using the platform's default character encoding.  The PrintWriter class should be used in situations that require writing
@@ -23,7 +23,7 @@
   Creates a new print stream.
 
   out - The output stream to which values and objects will be printed - `java.io.OutputStream`
-  auto-flush - A boolean; if true, the output buffer will be flushed whenever a byte array is written, one of the println methods is invoked, or a newline character or byte ('\n') is written - `boolean`
+  auto-flush - A boolean; if true, the output buffer will be flushed whenever a byte array is written, one of the println methods is invoked, or a newline character or byte ('\\n') is written - `boolean`
   encoding - The name of a supported character encoding - `java.lang.String`
 
   throws: java.io.UnsupportedEncodingException - If the named encoding is not supported"
@@ -92,7 +92,7 @@
 
        out.print(csq.subSequence(start, end).toString())
 
-  csq - The character sequence from which a subsequence will be appended. If csq is null, then characters will be appended as if csq contained the four characters `null`. - `java.lang.CharSequence`
+  csq - The character sequence from which a subsequence will be appended. If csq is null, then characters will be appended as if csq contained the four characters \"null\". - `java.lang.CharSequence`
   start - The index of the first character in the subsequence - `int`
   end - The index of the character following the last character in the subsequence - `int`
 

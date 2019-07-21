@@ -4,12 +4,12 @@
 
 
   Some schema languages, such as W3C XML Schema, encourages a validator
-  to report the `type` it assigns to each attribute/element.
+  to report the \"type\" it assigns to each attribute/element.
   Those applications who wish to access this type information can invoke
-  methods defined on this `interface` to access such type information.
+  methods defined on this \"interface\" to access such type information.
 
 
-  Implementation of this `interface` can be obtained through the
+  Implementation of this \"interface\" can be obtained through the
   ValidatorHandler.getTypeInfoProvider() method."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.xml.validation TypeInfoProvider]))
@@ -76,7 +76,7 @@
    to be ID.
 
 
-   Exacly how an attribute is `determined to be ID` is up to the
+   Exacly how an attribute is \"determined to be ID\" is up to the
    schema language. In case of W3C XML Schema, this means
    that the actual type of the attribute is the built-in ID type
    or its derived type.

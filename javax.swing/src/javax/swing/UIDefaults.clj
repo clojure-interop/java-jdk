@@ -133,7 +133,7 @@
   "Puts all of the key/value pairs in the database and
    unconditionally generates one PropertyChangeEvent.
    The events oldValue and newValue will be null and its
-   propertyName will be `UIDefaults`.  The key/value pairs are
+   propertyName will be \"UIDefaults\".  The key/value pairs are
    added for all locales.
 
   key-value-list - an array of key/value pairs - `java.lang.Object[]`"

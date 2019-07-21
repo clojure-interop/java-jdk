@@ -3,22 +3,22 @@
   of a pathname and a set of actions valid for that pathname.
 
   Pathname is the pathname of the file or directory granted the specified
-  actions. A pathname that ends in `/*` (where `/` is
+  actions. A pathname that ends in \"/*\" (where \"/\" is
   the file separator character, File.separatorChar) indicates
   all the files and directories contained in that directory. A pathname
-  that ends with `/-` indicates (recursively) all files
+  that ends with \"/-\" indicates (recursively) all files
   and subdirectories contained in that directory. A pathname consisting of
-  the special token `<<ALL FILES>>` matches any file.
+  the special token \"<<ALL FILES>>\" matches any file.
 
-  Note: A pathname consisting of a single `*` indicates all the files
-  in the current directory, while a pathname consisting of a single `-`
+  Note: A pathname consisting of a single \"*\" indicates all the files
+  in the current directory, while a pathname consisting of a single \"-\"
   indicates all the files in the current directory and
   (recursively) all files and subdirectories contained in the current
   directory.
 
   The actions to be granted are passed to the constructor in a string containing
   a list of one or more comma-separated keywords. The possible keywords are
-  `read`, `write`, `execute`, `delete`, and `readlink`. Their meaning is
+  \"read\", \"write\", \"execute\", \"delete\", and \"readlink\". Their meaning is
   defined as follows:
 
 
@@ -40,7 +40,7 @@
 
   Be careful when granting FilePermissions. Think about the implications
   of granting read and especially write access to various files and
-  directories. The `<<ALL FILES>>` permission with write action is
+  directories. The \"<<ALL FILES>>\" permission with write action is
   especially dangerous. This grants permission to write to the entire
   file system. One thing this effectively allows is replacement of the
   system binary, including the JVM runtime environment.
@@ -58,17 +58,17 @@
    path is the pathname of a file or directory, and actions
    contains a comma-separated list of the desired actions granted on the
    file or directory. Possible actions are
-   `read`, `write`, `execute`, `delete`, and `readlink`.
+   \"read\", \"write\", \"execute\", \"delete\", and \"readlink\".
 
-   A pathname that ends in `/*` (where `/` is
+   A pathname that ends in \"/*\" (where \"/\" is
    the file separator character, File.separatorChar)
    indicates all the files and directories contained in that directory.
-   A pathname that ends with `/-` indicates (recursively) all files and
+   A pathname that ends with \"/-\" indicates (recursively) all files and
    subdirectories contained in that directory. The special pathname
-   `<<ALL FILES>>` matches any file.
+   \"<<ALL FILES>>\" matches any file.
 
-   A pathname consisting of a single `*` indicates all the files
-   in the current directory, while a pathname consisting of a single `-`
+   A pathname consisting of a single \"*\" indicates all the files
+   in the current directory, while a pathname consisting of a single \"-\"
    indicates all the files in the current directory and
    (recursively) all files and subdirectories contained in the current
    directory.
@@ -83,7 +83,7 @@
     (new FilePermission path actions)))
 
 (defn implies
-  "Checks if this FilePermission object `implies` the specified permission.
+  "Checks if this FilePermission object \"implies\" the specified permission.
 
    More specifically, this method returns true if:
 
@@ -91,9 +91,9 @@
     p's actions are a proper subset of this
    object's actions, and
     p's pathname is implied by this object's
-        pathname. For example, `/tmp/*` implies `/tmp/foo`, since
-        `/tmp/*` encompasses all files in the `/tmp` directory,
-        including the one named `foo`.
+        pathname. For example, \"/tmp/*\" implies \"/tmp/foo\", since
+        \"/tmp/*\" encompasses all files in the \"/tmp\" directory,
+        including the one named \"foo\".
 
   p - the permission to check against. - `java.security.Permission`
 
@@ -123,11 +123,11 @@
     (-> this (.hashCode))))
 
 (defn get-actions
-  "Returns the `canonical string representation` of the actions.
+  "Returns the \"canonical string representation\" of the actions.
    That is, this method always returns present actions in the following order:
    read, write, execute, delete, readlink. For example, if this FilePermission
    object allows both write and read actions, a call to getActions
-   will return the string `read,write`.
+   will return the string \"read,write\".
 
   returns: the canonical string representation of the actions. - `java.lang.String`"
   (^java.lang.String [^FilePermission this]
@@ -144,20 +144,20 @@
 
    For example, if you have two FilePermissions:
 
-     `/tmp/-`, `read`
-     `/tmp/scratch/foo`, `write`
+     \"/tmp/-\", \"read\"
+     \"/tmp/scratch/foo\", \"write\"
 
 
    and you are calling the implies method with the FilePermission:
 
 
 
-     `/tmp/scratch/foo`, `read,write`,
+     \"/tmp/scratch/foo\", \"read,write\",
 
    then the implies function must
-   take into account both the `/tmp/-` and `/tmp/scratch/foo`
-   permissions, so the effective permission is `read,write`,
-   and implies returns true. The `implies` semantics for
+   take into account both the \"/tmp/-\" and \"/tmp/scratch/foo\"
+   permissions, so the effective permission is \"read,write\",
+   and implies returns true. The \"implies\" semantics for
    FilePermissions are handled properly by the PermissionCollection object
    returned by this newPermissionCollection method.
 

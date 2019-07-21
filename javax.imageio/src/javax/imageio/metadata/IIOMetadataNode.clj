@@ -12,8 +12,8 @@
   In particular, the implementation is tuned for simple uses and may
   not perform well for intensive processing.
 
-   Namespaces are ignored in this implementation.  The terms `tag
-  name` and `node name` are always considered to be synonymous.
+   Namespaces are ignored in this implementation.  The terms \"tag
+  name\" and \"node name\" are always considered to be synonymous.
 
   Note:
   The DOM Level 3 specification added a number of new methods to the
@@ -67,7 +67,7 @@
 (defn get-elements-by-tag-name
   "Description copied from interface: Element
 
-  name - The name of the tag to match on. The special value `*` matches all tags. - `java.lang.String`
+  name - The name of the tag to match on. The special value \"*\" matches all tags. - `java.lang.String`
 
   returns: A list of matching Element nodes. - `org.w3c.dom.NodeList`"
   (^org.w3c.dom.NodeList [^IIOMetadataNode this ^java.lang.String name]
@@ -113,7 +113,7 @@
   "This DOM Level 3 method is not supported for IIOMetadataNode
    and will throw a DOMException.
 
-  feature - The name of the feature requested. Note that any plus sign `+` prepended to the name of the feature will be ignored since it is not significant in the context of this method. - `java.lang.String`
+  feature - The name of the feature requested. Note that any plus sign \"+\" prepended to the name of the feature will be ignored since it is not significant in the context of this method. - `java.lang.String`
   version - This is the version number of the feature to test. - `java.lang.String`
 
   returns: Returns an object which implements the specialized APIs of
@@ -338,8 +338,8 @@
 (defn get-elements-by-tag-name-ns
   "Equivalent to getElementsByTagName(localName).
 
-  namespace-uri - The namespace URI of the elements to match on. The special value `*` matches all namespaces. - `java.lang.String`
-  local-name - The local name of the elements to match on. The special value `*` matches all local names. - `java.lang.String`
+  namespace-uri - The namespace URI of the elements to match on. The special value \"*\" matches all namespaces. - `java.lang.String`
+  local-name - The local name of the elements to match on. The special value \"*\" matches all local names. - `java.lang.String`
 
   returns: A new NodeList object containing all the matched
      Elements. - `org.w3c.dom.NodeList`"

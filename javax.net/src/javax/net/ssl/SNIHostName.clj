@@ -3,9 +3,9 @@
   host_name in a Server Name
   Indication (SNI) extension.
 
-  As described in section 3, `Server Name Indication`, of
+  As described in section 3, \"Server Name Indication\", of
   TLS Extensions (RFC 6066),
-  `HostName` contains the fully qualified DNS hostname of the server, as
+  \"HostName\" contains the fully qualified DNS hostname of the server, as
   understood by the client.  The encoded server name value of a hostname is
   represented as a byte string using ASCII encoding without a trailing dot.
   This allows the support of Internationalized Domain Names (IDN) through
@@ -57,13 +57,13 @@
 
 
        SNIMatcher matcher =
-           SNIHostName.createSNIMatcher(`www\\.example\\.com`);
-   will accept the hostname `www.example.com`.
+           SNIHostName.createSNIMatcher(\"www\\\\.example\\\\.com\");
+   will accept the hostname \"www.example.com\".
 
 
        SNIMatcher matcher =
-           SNIHostName.createSNIMatcher(`www\\.example\\.(com|org)`);
-   will accept hostnames `www.example.com` and `www.example.org`.
+           SNIHostName.createSNIMatcher(\"www\\\\.example\\\\.(com|org)\");
+   will accept hostnames \"www.example.com\" and \"www.example.org\".
 
   regex - the regular expression pattern representing the hostname(s) to match - `java.lang.String`
 
@@ -122,17 +122,17 @@
    to change, but the following may be regarded as typical:
 
 
-       `type=host_name (0), value= <hostname>`
-   The `<hostname>` is an ASCII representation of the hostname,
+       \"type=host_name (0), value= <hostname>\"
+   The \"<hostname>\" is an ASCII representation of the hostname,
    which may contains A-labels.  For example, a returned value of an pseudo
    hostname may look like:
 
 
-       `type=host_name (0), value=www.example.com`
+       \"type=host_name (0), value=www.example.com\"
    or
 
 
-       `type=host_name (0), value=xn--fsqu00a.xn--0zwm56d`
+       \"type=host_name (0), value=xn--fsqu00a.xn--0zwm56d\"
 
    Please NOTE that the exact details of the representation are unspecified
    and subject to change.

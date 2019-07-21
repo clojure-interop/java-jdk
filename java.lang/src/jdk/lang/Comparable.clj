@@ -21,7 +21,7 @@
 
   It is strongly recommended (though not required) that natural orderings be
   consistent with equals.  This is so because sorted sets (and sorted maps)
-  without explicit comparators behave `strangely` when they are used with
+  without explicit comparators behave \"strangely\" when they are used with
   elements (or keys) whose natural ordering is inconsistent with equals.  In
   particular, such a sorted set (or sorted map) violates the general contract
   for set (or map), which is defined in terms of the equals
@@ -84,8 +84,8 @@
    (x.compareTo(y)==0) == (x.equals(y)).  Generally speaking, any
    class that implements the Comparable interface and violates
    this condition should clearly indicate this fact.  The recommended
-   language is `Note: this class has a natural ordering that is
-   inconsistent with equals.`
+   language is \"Note: this class has a natural ordering that is
+   inconsistent with equals.\"
 
    In the foregoing description, the notation
    sgn(expression) designates the mathematical

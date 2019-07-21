@@ -6,7 +6,7 @@
   "Enum Constant.
 
   Full text, typically the full description.
-   For example, day-of-week Monday might output `Monday`.
+   For example, day-of-week Monday might output \"Monday\".
 
   type: java.time.format.TextStyle"
   TextStyle/FULL)
@@ -15,7 +15,7 @@
   "Enum Constant.
 
   Full text for stand-alone use, typically the full description.
-   For example, day-of-week Monday might output `Monday`.
+   For example, day-of-week Monday might output \"Monday\".
 
   type: java.time.format.TextStyle"
   TextStyle/FULL_STANDALONE)
@@ -24,7 +24,7 @@
   "Enum Constant.
 
   Short text, typically an abbreviation.
-   For example, day-of-week Monday might output `Mon`.
+   For example, day-of-week Monday might output \"Mon\".
 
   type: java.time.format.TextStyle"
   TextStyle/SHORT)
@@ -33,7 +33,7 @@
   "Enum Constant.
 
   Short text for stand-alone use, typically an abbreviation.
-   For example, day-of-week Monday might output `Mon`.
+   For example, day-of-week Monday might output \"Mon\".
 
   type: java.time.format.TextStyle"
   TextStyle/SHORT_STANDALONE)
@@ -42,7 +42,7 @@
   "Enum Constant.
 
   Narrow text, typically a single letter.
-   For example, day-of-week Monday might output `M`.
+   For example, day-of-week Monday might output \"M\".
 
   type: java.time.format.TextStyle"
   TextStyle/NARROW)
@@ -51,7 +51,7 @@
   "Enum Constant.
 
   Narrow text for stand-alone use, typically a single letter.
-   For example, day-of-week Monday might output `M`.
+   For example, day-of-week Monday might output \"M\".
 
   type: java.time.format.TextStyle"
   TextStyle/NARROW_STANDALONE)

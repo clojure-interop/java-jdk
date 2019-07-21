@@ -92,7 +92,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `PasswordFieldUI` - `java.lang.String`"
+  returns: the string \"PasswordFieldUI\" - `java.lang.String`"
   (^java.lang.String [^JPasswordField this]
     (-> this (.getUIClassID))))
 

@@ -14,7 +14,7 @@
 
 
   BufferedReader in
-    = new BufferedReader(new FileReader(`foo.in`));
+    = new BufferedReader(new FileReader(\"foo.in\"));
 
   will buffer the input from the specified file.  Without buffering, each
   invocation of read() or readLine() could cause bytes to be read from the
@@ -174,7 +174,7 @@
 
 (defn read-line
   "Reads a line of text.  A line is considered to be terminated by any one
-   of a line feed ('\n'), a carriage return ('\r'), or a carriage return
+   of a line feed ('\\n'), a carriage return ('\\r'), or a carriage return
    followed immediately by a linefeed.
 
   returns: A String containing the contents of the line, not including

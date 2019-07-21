@@ -22,21 +22,21 @@
   (^JTextComponent$KeyBinding [^javax.swing.KeyStroke key ^java.lang.String action-name]
     (new JTextComponent$KeyBinding key action-name)))
 
-(defn -key
+(defn key
   "Instance Field.
 
   The key.
 
   type: javax.swing.KeyStroke"
-  [this]
-  (-> this .-key))
+  (^javax.swing.KeyStroke [^JTextComponent$KeyBinding this]
+    (-> this .-key)))
 
-(defn -action-name
+(defn action-name
   "Instance Field.
 
   The name of the action for the key.
 
   type: java.lang.String"
-  [this]
-  (-> this .-actionName))
+  (^java.lang.String [^JTextComponent$KeyBinding this]
+    (-> this .-actionName)))
 

@@ -91,7 +91,7 @@
   component.
 
 
-  Say we want to find the `Meaning of Life` and display the result in
+  Say we want to find the \"Meaning of Life\" and display the result in
   a JLabel.
 
 
@@ -145,7 +145,7 @@
        @Override
       protected void process(List<Integer> chunks) {
           for (int number : chunks) {
-              textArea.append(number  `\n`);
+              textArea.append(number  \"\\n\");
           }
       }
   }
@@ -156,7 +156,7 @@
   task.addPropertyChangeListener(
       new PropertyChangeListener() {
           public  void propertyChange(PropertyChangeEvent evt) {
-              if (`progress`.equals(evt.getPropertyName())) {
+              if (\"progress\".equals(evt.getPropertyName())) {
                   progressBar.setValue((Integer)evt.getNewValue());
               }
           }

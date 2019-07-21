@@ -30,7 +30,7 @@
   you enable this property via the client property
   JTree.lineStyle. For example, to switch to
   Horizontal style you would do:
-  tree.putClientProperty(`JTree.lineStyle`, `Horizontal`);
+  tree.putClientProperty(\"JTree.lineStyle\", \"Horizontal\");
 
   The default is Angled."
   (:refer-clojure :only [require comment defn ->])

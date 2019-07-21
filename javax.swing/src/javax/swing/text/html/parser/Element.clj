@@ -6,78 +6,78 @@
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.text.html.parser Element]))
 
-(defn -index
+(defn index
   "Instance Field.
 
   type: int"
-  [this]
-  (-> this .-index))
+  (^Integer [^Element this]
+    (-> this .-index)))
 
-(defn -name
+(defn name
   "Instance Field.
 
   type: java.lang.String"
-  [this]
-  (-> this .-name))
+  (^java.lang.String [^Element this]
+    (-> this .-name)))
 
-(defn -o-start
+(defn o-start
   "Instance Field.
 
   type: boolean"
-  [this]
-  (-> this .-oStart))
+  (^Boolean [^Element this]
+    (-> this .-oStart)))
 
-(defn -o-end
+(defn o-end
   "Instance Field.
 
   type: boolean"
-  [this]
-  (-> this .-oEnd))
+  (^Boolean [^Element this]
+    (-> this .-oEnd)))
 
-(defn -inclusions
+(defn inclusions
   "Instance Field.
 
   type: java.util.BitSet"
-  [this]
-  (-> this .-inclusions))
+  (^java.util.BitSet [^Element this]
+    (-> this .-inclusions)))
 
-(defn -exclusions
+(defn exclusions
   "Instance Field.
 
   type: java.util.BitSet"
-  [this]
-  (-> this .-exclusions))
+  (^java.util.BitSet [^Element this]
+    (-> this .-exclusions)))
 
-(defn -type
+(defn type
   "Instance Field.
 
   type: int"
-  [this]
-  (-> this .-type))
+  (^Integer [^Element this]
+    (-> this .-type)))
 
-(defn -content
+(defn content
   "Instance Field.
 
   type: javax.swing.text.html.parser.ContentModel"
-  [this]
-  (-> this .-content))
+  (^javax.swing.text.html.parser.ContentModel [^Element this]
+    (-> this .-content)))
 
-(defn -atts
+(defn atts
   "Instance Field.
 
   type: javax.swing.text.html.parser.AttributeList"
-  [this]
-  (-> this .-atts))
+  (^javax.swing.text.html.parser.AttributeList [^Element this]
+    (-> this .-atts)))
 
-(defn -data
+(defn data
   "Instance Field.
 
   A field to store user data. Mostly used to store
    style sheets.
 
   type: java.lang.Object"
-  [this]
-  (-> this .-data))
+  (^java.lang.Object [^Element this]
+    (-> this .-data)))
 
 (defn *name-2type
   "nm - `java.lang.String`

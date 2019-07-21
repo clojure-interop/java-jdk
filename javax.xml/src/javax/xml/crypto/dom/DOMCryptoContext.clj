@@ -85,7 +85,7 @@
 (defn set-default-namespace-prefix
   "Description copied from interface: XMLCryptoContext
 
-  default-prefix - the default namespace prefix, or null to remove the current setting. Specify the empty string (``) to bind no prefix. - `java.lang.String`"
+  default-prefix - the default namespace prefix, or null to remove the current setting. Specify the empty string (\"\") to bind no prefix. - `java.lang.String`"
   ([^DOMCryptoContext this ^java.lang.String default-prefix]
     (-> this (.setDefaultNamespacePrefix default-prefix))))
 
@@ -148,7 +148,7 @@
   returns: the prefix that is associated with the specified namespace URI,
       or defaultPrefix if the URI is not registered. If
       the namespace URI is registered but has no prefix, an empty string
-      (``) is returned. - `java.lang.String`
+      (\"\") is returned. - `java.lang.String`
 
   throws: java.lang.NullPointerException - if namespaceURI is null"
   (^java.lang.String [^DOMCryptoContext this ^java.lang.String namespace-uri ^java.lang.String default-prefix]
@@ -184,7 +184,7 @@
    to the specified prefix.
 
   namespace-uri - a namespace URI - `java.lang.String`
-  prefix - a namespace prefix (or null to remove any existing mapping). Specifying the empty string (``) binds no prefix to the namespace URI. - `java.lang.String`
+  prefix - a namespace prefix (or null to remove any existing mapping). Specifying the empty string (\"\") binds no prefix to the namespace URI. - `java.lang.String`
 
   returns: the previous prefix associated with the specified namespace
       URI, or null if there was none - `java.lang.String`

@@ -44,7 +44,7 @@
    toolkit; thus, a toolkit-modal dialog displayed by an applet may affect
    other applets and all windows of the browser instance which embeds the
    Java runtime environment for this toolkit.
-   Special AWTPermission `toolkitModality` must be granted to use
+   Special AWTPermission \"toolkitModality\" must be granted to use
    toolkit-modal dialogs. If a TOOLKIT_MODAL dialog is being created
    and this permission is not granted, a SecurityException will be
    thrown, and no dialog will be created. If a modality type is being changed

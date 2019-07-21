@@ -61,7 +61,7 @@
    formatting.
 
    If there are no parameters, no formatter is used.
-   Otherwise, if the string contains `{0` then
+   Otherwise, if the string contains \"{0\" then
        java.text.MessageFormat  is used to format the string.
    Otherwise no formatting is performed.
 

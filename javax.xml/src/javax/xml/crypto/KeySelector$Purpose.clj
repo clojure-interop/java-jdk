@@ -36,8 +36,8 @@
   KeySelector$Purpose/DECRYPT)
 
 (defn to-string
-  "Returns a string representation of this purpose (`sign`,
-   `verify`, `encrypt`, or `decrypt`).
+  "Returns a string representation of this purpose (\"sign\",
+   \"verify\", \"encrypt\", or \"decrypt\").
 
   returns: a string representation of this purpose - `java.lang.String`"
   (^java.lang.String [^KeySelector$Purpose this]

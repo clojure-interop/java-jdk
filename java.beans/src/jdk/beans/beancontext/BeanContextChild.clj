@@ -26,7 +26,7 @@
   "Objects that implement this interface,
    shall fire a java.beans.PropertyChangeEvent, with parameters:
 
-   propertyName `beanContext`, oldValue (the previous nesting
+   propertyName \"beanContext\", oldValue (the previous nesting
    BeanContext instance, or null),
    newValue (the current nesting
    BeanContext instance, or null).

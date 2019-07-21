@@ -163,18 +163,18 @@
    Indications when creating SSLSocket/SSLEngines.
    In the following examples, the server name could be represented by an
    instance of SNIHostName which has been initialized with the
-   hostname `www.example.com` and type
+   hostname \"www.example.com\" and type
    StandardConstants.SNI_HOST_NAME.
 
 
 
        Socket socket =
-           sslSocketFactory.createSocket(`www.example.com`, 443);
+           sslSocketFactory.createSocket(\"www.example.com\", 443);
    or
 
 
        SSLEngine engine =
-           sslContext.createSSLEngine(`www.example.com`, 443);
+           sslContext.createSSLEngine(\"www.example.com\", 443);
 
   returns: null or an immutable list of non-null SNIServerNames - `java.util.List<javax.net.ssl.SNIServerName>`"
   (^java.util.List [^SSLParameters this]

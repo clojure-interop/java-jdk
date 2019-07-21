@@ -4,17 +4,17 @@
   follow the same naming convention as BasicPermission.
 
   The name for a BasicPermission is the name of the given permission
-  (for example, `exit`,
-  `setFactory`, `print.queueJob`, etc). The naming
+  (for example, \"exit\",
+  \"setFactory\", \"print.queueJob\", etc). The naming
   convention follows the  hierarchical property naming convention.
-  An asterisk may appear by itself, or if immediately preceded by a `.`
+  An asterisk may appear by itself, or if immediately preceded by a \".\"
   may appear at the end of the name, to signify a wildcard match.
-  For example, `*` and `java.*` signify a wildcard match, while `*java`, `a*b`,
-  and `java*` do not.
+  For example, \"*\" and \"java.*\" signify a wildcard match, while \"*java\", \"a*b\",
+  and \"java*\" do not.
 
   The action string (inherited from Permission) is unused.
   Thus, BasicPermission is commonly used as the base class for
-  `named` permissions
+  \"named\" permissions
   (ones that contain a name but no actions list; you either have the
   named permission or you don't.)
   Subclasses may implement actions on top of BasicPermission,
@@ -39,7 +39,7 @@
     (new BasicPermission name)))
 
 (defn implies
-  "Checks if the specified permission is `implied` by
+  "Checks if the specified permission is \"implied\" by
    this object.
 
    More specifically, this method returns true if:
@@ -47,7 +47,7 @@
     p's class is the same as this object's class, and
     p's name equals or (in the case of wildcards)
         is implied by this object's
-        name. For example, `a.b.*` implies `a.b.c`.
+        name. For example, \"a.b.*\" implies \"a.b.c\".
 
   p - the permission to check against. - `java.security.Permission`
 
@@ -80,10 +80,10 @@
 
 (defn get-actions
   "Returns the canonical string representation of the actions,
-   which currently is the empty string ``, since there are no actions for
+   which currently is the empty string \"\", since there are no actions for
    a BasicPermission.
 
-  returns: the empty string ``. - `java.lang.String`"
+  returns: the empty string \"\". - `java.lang.String`"
   (^java.lang.String [^BasicPermission this]
     (-> this (.getActions))))
 

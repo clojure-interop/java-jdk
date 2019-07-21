@@ -37,7 +37,7 @@
   JobSheets/STANDARD)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class JobSheets and any vendor-defined subclasses, the category is
@@ -53,7 +53,7 @@
    instance.
 
    For class JobSheets and any vendor-defined subclasses, the category
-   name is `job-sheets`.
+   name is \"job-sheets\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^JobSheets this]

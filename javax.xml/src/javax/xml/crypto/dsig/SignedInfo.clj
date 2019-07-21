@@ -5,14 +5,14 @@
   The XML Schema Definition is defined as:
 
 
-  <element name=`SignedInfo` type=`ds:SignedInfoType`/>
-  <complexType name=`SignedInfoType`>
+  <element name=\"SignedInfo\" type=\"ds:SignedInfoType\"/>
+  <complexType name=\"SignedInfoType\">
     <sequence>
-      <element ref=`ds:CanonicalizationMethod`/>
-      <element ref=`ds:SignatureMethod`/>
-      <element ref=`ds:Reference` maxOccurs=`unbounded`/>
+      <element ref=\"ds:CanonicalizationMethod\"/>
+      <element ref=\"ds:SignatureMethod\"/>
+      <element ref=\"ds:Reference\" maxOccurs=\"unbounded\"/>
     </sequence>
-    <attribute name=`Id` type=`ID` use=`optional`/>
+    <attribute name=\"Id\" type=\"ID\" use=\"optional\"/>
   </complexType>
 
   A SignedInfo instance may be created by invoking one of the

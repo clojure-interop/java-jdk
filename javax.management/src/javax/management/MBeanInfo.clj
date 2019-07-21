@@ -6,7 +6,7 @@
 
   Usually the MBeanInfo for any given MBean does
   not change over the lifetime of that MBean.  Dynamic MBeans can change their
-  MBeanInfo and in that case it is recommended that they emit a Notification with a type of `jmx.mbean.info.changed` and a userData that is the new MBeanInfo.  This is not required, but
+  MBeanInfo and in that case it is recommended that they emit a Notification with a type of \"jmx.mbean.info.changed\" and a userData that is the new MBeanInfo.  This is not required, but
   provides a conventional way for clients of the MBean to discover the change.
   See also the immutableInfo and
   infoTimeout fields in the MBeanInfo Descriptor.
@@ -157,7 +157,7 @@
    are equal if and only if they return equal values for getClassName(), for getDescription(), and for
    getDescriptor(), and the
    arrays returned by the two objects for getAttributes(), getOperations(), getConstructors(), and getNotifications() are
-   pairwise equal.  Here `equal` means Object.equals(Object), not identity.
+   pairwise equal.  Here \"equal\" means Object.equals(Object), not identity.
 
    If two MBeanInfo objects return the same values in one of
    their arrays but in a different order then they are not equal.

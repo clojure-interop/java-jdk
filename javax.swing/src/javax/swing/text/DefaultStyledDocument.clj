@@ -145,9 +145,9 @@
    Element removal results in two events being fired, the
    DocumentEvent for changes in element structure and UndoableEditEvent for changes in document content.
 
-   If the element contains end-of-content mark (the last `\n` character in document), this character is not removed;
+   If the element contains end-of-content mark (the last \"\\n\" character in document), this character is not removed;
    instead, preceding leaf element is extended to cover the
-   character.  If the last leaf already ends with `\n`, it is
+   character.  If the last leaf already ends with \"\\n\", it is
    included in content removal.
 
    If the element is null, NullPointerException is

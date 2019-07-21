@@ -4,7 +4,7 @@
   class adds formatting and
   parsing operations to support the JDBC escape syntax for time
   values.
-  The date components should be set to the `zero epoch`
+  The date components should be set to the \"zero epoch\"
   value of January 1, 1970 and should not be accessed."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.sql Time]))
@@ -26,7 +26,7 @@
 (defn *value-of
   "Converts a string in JDBC time escape format to a Time value.
 
-  s - time in format `hh:mm:ss` - `java.lang.String`
+  s - time in format \"hh:mm:ss\" - `java.lang.String`
 
   returns: a corresponding Time object - `java.sql.Time`"
   (^java.sql.Time [^java.lang.String s]

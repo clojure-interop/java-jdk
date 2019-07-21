@@ -84,79 +84,88 @@
   type: int"
   GlyphJustificationInfo/PRIORITY_NONE)
 
-(def -weight
+(defn weight
   "Instance Constant.
 
   The weight of this glyph.
 
   type: float"
-  (-> this .-weight))
+  (^Float [^GlyphJustificationInfo this]
+    (-> this .-weight)))
 
-(def -grow-priority
+(defn grow-priority
   "Instance Constant.
 
   The priority level of this glyph as it is growing.
 
   type: int"
-  (-> this .-growPriority))
+  (^Integer [^GlyphJustificationInfo this]
+    (-> this .-growPriority)))
 
-(def -grow-absorb
+(defn grow-absorb
   "Instance Constant.
 
   If true, this glyph absorbs all extra
    space at this and lower priority levels when it grows.
 
   type: boolean"
-  (-> this .-growAbsorb))
+  (^Boolean [^GlyphJustificationInfo this]
+    (-> this .-growAbsorb)))
 
-(def -grow-left-limit
+(defn grow-left-limit
   "Instance Constant.
 
   The maximum amount by which the left side of this glyph can grow.
 
   type: float"
-  (-> this .-growLeftLimit))
+  (^Float [^GlyphJustificationInfo this]
+    (-> this .-growLeftLimit)))
 
-(def -grow-right-limit
+(defn grow-right-limit
   "Instance Constant.
 
   The maximum amount by which the right side of this glyph can grow.
 
   type: float"
-  (-> this .-growRightLimit))
+  (^Float [^GlyphJustificationInfo this]
+    (-> this .-growRightLimit)))
 
-(def -shrink-priority
+(defn shrink-priority
   "Instance Constant.
 
   The priority level of this glyph as it is shrinking.
 
   type: int"
-  (-> this .-shrinkPriority))
+  (^Integer [^GlyphJustificationInfo this]
+    (-> this .-shrinkPriority)))
 
-(def -shrink-absorb
+(defn shrink-absorb
   "Instance Constant.
 
   If true,this glyph absorbs all remaining shrinkage at
    this and lower priority levels as it shrinks.
 
   type: boolean"
-  (-> this .-shrinkAbsorb))
+  (^Boolean [^GlyphJustificationInfo this]
+    (-> this .-shrinkAbsorb)))
 
-(def -shrink-left-limit
+(defn shrink-left-limit
   "Instance Constant.
 
   The maximum amount by which the left side of this glyph can shrink
    (a positive number).
 
   type: float"
-  (-> this .-shrinkLeftLimit))
+  (^Float [^GlyphJustificationInfo this]
+    (-> this .-shrinkLeftLimit)))
 
-(def -shrink-right-limit
+(defn shrink-right-limit
   "Instance Constant.
 
   The maximum amount by which the right side of this glyph can shrink
    (a positive number).
 
   type: float"
-  (-> this .-shrinkRightLimit))
+  (^Float [^GlyphJustificationInfo this]
+    (-> this .-shrinkRightLimit)))
 

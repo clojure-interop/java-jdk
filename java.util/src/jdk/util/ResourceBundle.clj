@@ -18,24 +18,24 @@
   Resource bundles belong to families whose members share a common base
   name, but whose names also have additional components that identify
   their locales. For example, the base name of a family of resource
-  bundles might be `MyResources`. The family should have a default
+  bundles might be \"MyResources\". The family should have a default
   resource bundle which simply has the same name as its family -
-  `MyResources` - and will be used as the bundle of last resort if a
+  \"MyResources\" - and will be used as the bundle of last resort if a
   specific locale is not supported. The family can then provide as
   many locale-specific members as needed, for example a German one
-  named `MyResources_de`.
+  named \"MyResources_de\".
 
 
   Each resource bundle in a family contains the same items, but the items have
   been translated for the locale represented by that resource bundle.
-  For example, both `MyResources` and `MyResources_de` may have a
+  For example, both \"MyResources\" and \"MyResources_de\" may have a
   String that's used on a button for canceling operations.
-  In `MyResources` the String may contain `Cancel` and in
-  `MyResources_de` it may contain `Abbrechen`.
+  In \"MyResources\" the String may contain \"Cancel\" and in
+  \"MyResources_de\" it may contain \"Abbrechen\".
 
 
   If there are different resources for different countries, you
-  can make specializations: for example, `MyResources_de_CH` contains objects for
+  can make specializations: for example, \"MyResources_de_CH\" contains objects for
   the German language (de) in Switzerland (CH). If you want to only
   modify some of the resources
   in the specialization, you can do so.
@@ -49,7 +49,7 @@
 
 
   ResourceBundle myResources =
-       ResourceBundle.getBundle(`MyResources`, currentLocale);
+       ResourceBundle.getBundle(\"MyResources\", currentLocale);
 
 
 
@@ -63,29 +63,29 @@
   public class MyResources extends ListResourceBundle {
       protected Object[][] getContents() {
           return new Object[][] {
-              // LOCALIZE THE SECOND STRING OF EACH ARRAY (e.g., `OK`)
-              {`OkKey`, `OK`},
-              {`CancelKey`, `Cancel`},
+              // LOCALIZE THE SECOND STRING OF EACH ARRAY (e.g., \"OK\")
+              {\"OkKey\", \"OK\"},
+              {\"CancelKey\", \"Cancel\"},
               // END OF MATERIAL TO LOCALIZE
          };
       }
   }
 
   Keys are always Strings.
-  In this example, the keys are `OkKey` and `CancelKey`.
+  In this example, the keys are \"OkKey\" and \"CancelKey\".
   In the above example, the values
-  are also Strings--`OK` and `Cancel`--but
+  are also Strings--\"OK\" and \"Cancel\"--but
   they don't have to be. The values can be any type of object.
 
 
   You retrieve an object from resource bundle using the appropriate
-  getter method. Because `OkKey` and `CancelKey`
+  getter method. Because \"OkKey\" and \"CancelKey\"
   are both strings, you would use getString to retrieve them:
 
 
 
-  button1 = new Button(myResources.getString(`OkKey`));
-  button2 = new Button(myResources.getString(`CancelKey`));
+  button1 = new Button(myResources.getString(\"OkKey\"));
+  button2 = new Button(myResources.getString(\"CancelKey\"));
 
   The getter methods all require the key as an argument and return
   the object if found. If the object is not found, the getter method
@@ -100,7 +100,7 @@
 
 
 
-  int[] myIntegers = (int[]) myResources.getObject(`intList`);
+  int[] myIntegers = (int[]) myResources.getObject(\"intList\");
 
 
 
@@ -160,7 +160,7 @@
   subclass, MyResources, that manages two resources (for a larger number of
   resources you would probably use a Map).
   Notice that you don't need to supply a value if
-  a `parent-level` ResourceBundle handles the same
+  a \"parent-level\" ResourceBundle handles the same
   key with the same value (as for the okKey below).
 
 
@@ -168,8 +168,8 @@
   // default (English language, United States)
   public class MyResources extends ResourceBundle {
       public Object handleGetObject(String key) {
-          if (key.equals(`okKey`)) return `Ok`;
-          if (key.equals(`cancelKey`)) return `Cancel`;
+          if (key.equals(\"okKey\")) return \"Ok\";
+          if (key.equals(\"cancelKey\")) return \"Cancel\";
           return null;
       }
 
@@ -180,7 +180,7 @@
       // Overrides handleKeySet() so that the getKeys() implementation
       // can rely on the keySet() value.
       protected Set<String> handleKeySet() {
-          return new HashSet<String>(Arrays.asList(`okKey`, `cancelKey`));
+          return new HashSet<String>(Arrays.asList(\"okKey\", \"cancelKey\"));
       }
   }
 
@@ -188,12 +188,12 @@
   public class MyResources_de extends MyResources {
       public Object handleGetObject(String key) {
           // don't need okKey, since parent level handles it.
-          if (key.equals(`cancelKey`)) return `Abbrechen`;
+          if (key.equals(\"cancelKey\")) return \"Abbrechen\";
           return null;
       }
 
       protected Set<String> handleKeySet() {
-          return new HashSet<String>(Arrays.asList(`cancelKey`));
+          return new HashSet<String>(Arrays.asList(\"cancelKey\"));
       }
   }
 
@@ -233,9 +233,9 @@
 
    The control.getFormats method is called to get resource bundle formats
    to produce bundle or resource names. The strings
-   `java.class` and `java.properties`
+   \"java.class\" and \"java.properties\"
    designate class-based and java.util.property-based resource bundles, respectively. Other strings
-   starting with `java.` are reserved for future extensions
+   starting with \"java.\" are reserved for future extensions
    and must not be used for application-defined formats. Other strings
    designate application-defined formats.
 
@@ -250,9 +250,9 @@
    candidate locales and formats until the newBundle method
    returns a ResourceBundle instance or the iteration has
    used up all the combinations. For example, if the candidate locales
-   are Locale(`de`, `DE`), Locale(`de`) and
-   Locale(``) and the formats are `java.class`
-   and `java.properties`, then the following is the
+   are Locale(\"de\", \"DE\"), Locale(\"de\") and
+   Locale(\"\") and the formats are \"java.class\"
+   and \"java.properties\", then the following is the
    sequence of locale-format combinations to be used to call
    control.newBundle.
 
@@ -265,31 +265,31 @@
 
 
 
-   Locale(`de`, `DE`)
+   Locale(\"de\", \"DE\")
 
    java.class
 
 
 
-   Locale(`de`, `DE`)
+   Locale(\"de\", \"DE\")
    java.properties
 
 
 
-   Locale(`de`)
+   Locale(\"de\")
    java.class
 
 
-   Locale(`de`)
+   Locale(\"de\")
    java.properties
 
 
-   Locale(``)
+   Locale(\"\")
 
    java.class
 
 
-   Locale(``)
+   Locale(\"\")
    java.properties
 
 
@@ -298,10 +298,10 @@
 
    If the previous step has found no resource bundle, proceed to
    Step 6. If a bundle has been found that is a base bundle (a bundle
-   for Locale(``)), and the candidate locale list only contained
-   Locale(``), return the bundle to the caller. If a bundle
+   for Locale(\"\")), and the candidate locale list only contained
+   Locale(\"\"), return the bundle to the caller. If a bundle
    has been found that is a base bundle, but the candidate locale list
-   contained locales other than Locale(``), put the bundle on hold and
+   contained locales other than Locale(\"\"), put the bundle on hold and
    proceed to Step 6. If a bundle has been found that is not a base
    bundle, proceed to Step 7.
 
@@ -363,7 +363,7 @@
 
    At this point, getBundle finds
    foo/bar/Messages.properties, which is put on hold
-   because it's the base bundle.  getBundle calls control.getFallbackLocale(`foo.bar.Messages`, Locale.ITALY) which
+   because it's the base bundle.  getBundle calls control.getFallbackLocale(\"foo.bar.Messages\", Locale.ITALY) which
    returns Locale.FRENCH. Next, getBundle
    tries loading a bundle in the following sequence.
 

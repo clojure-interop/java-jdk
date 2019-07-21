@@ -103,7 +103,7 @@
   "Causes a flush on the target Handler.
 
    Note that the current contents of the MemoryHandler
-   buffer are not written out.  That requires a `push`."
+   buffer are not written out.  That requires a \"push\"."
   ([^MemoryHandler this]
     (-> this (.flush))))
 
@@ -111,7 +111,7 @@
   "Close the Handler and free all associated resources.
    This will also close the target Handler.
 
-  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(\"control\")."
   ([^MemoryHandler this]
     (-> this (.close))))
 
@@ -122,7 +122,7 @@
 
   new-level - the new value of the pushLevel - `java.util.logging.Level`
 
-  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(\"control\")."
   ([^MemoryHandler this ^java.util.logging.Level new-level]
     (-> this (.setPushLevel new-level))))
 
@@ -139,7 +139,7 @@
 
    This method checks if the LogRecord has an appropriate level and
    whether it satisfies any Filter.  However it does not
-   check whether the LogRecord would result in a `push` of the
+   check whether the LogRecord would result in a \"push\" of the
    buffer contents. It will return false if the LogRecord is null.
 
   record - a LogRecord - `java.util.logging.LogRecord`

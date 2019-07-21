@@ -17,9 +17,9 @@
    A transformation is of the form:
 
 
-  `algorithm/mode/padding` or
+  \"algorithm/mode/padding\" or
 
-  `algorithm`
+  \"algorithm\"
 
 
    (in the latter case,
@@ -28,14 +28,14 @@
 
 
 
-      Cipher c = Cipher.getInstance(`AES/CBC/PKCS5Padding`);
+      Cipher c = Cipher.getInstance(\"AES/CBC/PKCS5Padding\");
 
   Using modes such as CFB and OFB, block
   ciphers can encrypt data in units smaller than the cipher's actual
   block size.  When requesting such a mode, you may optionally specify
   the number of bits to be processed at a time by appending this number
-  to the mode name as shown in the `AES/CFB8/NoPadding` and
-  `AES/OFB32/PKCS5Padding` transformations. If no such
+  to the mode name as shown in the \"AES/CFB8/NoPadding\" and
+  \"AES/OFB32/PKCS5Padding\" transformations. If no such
   number is specified, a provider-specific default is used.
   Thus, block ciphers can be turned into byte-oriented stream ciphers by
   using an 8 bit mode such as CFB8 or OFB8.
@@ -143,7 +143,7 @@
 (def *-public-key
   "Static Constant.
 
-  Constant used to indicate the to-be-unwrapped key is a `public key`.
+  Constant used to indicate the to-be-unwrapped key is a \"public key\".
 
   type: int"
   Cipher/PUBLIC_KEY)
@@ -151,7 +151,7 @@
 (def *-private-key
   "Static Constant.
 
-  Constant used to indicate the to-be-unwrapped key is a `private key`.
+  Constant used to indicate the to-be-unwrapped key is a \"private key\".
 
   type: int"
   Cipher/PRIVATE_KEY)
@@ -159,7 +159,7 @@
 (def *-secret-key
   "Static Constant.
 
-  Constant used to indicate the to-be-unwrapped key is a `secret key`.
+  Constant used to indicate the to-be-unwrapped key is a \"secret key\".
 
   type: int"
   Cipher/SECRET_KEY)

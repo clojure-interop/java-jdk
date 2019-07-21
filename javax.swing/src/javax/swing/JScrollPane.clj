@@ -16,9 +16,9 @@
 
 
   The JViewport provides a window,
-  or `viewport` onto a data
+  or \"viewport\" onto a data
   source -- for example, a text file. That data source is the
-  `scrollable client` (aka data model) displayed by the
+  \"scrollable client\" (aka data model) displayed by the
   JViewport view.
   A JScrollPane basically consists of JScrollBars,
   a JViewport, and the wiring between them,
@@ -40,7 +40,7 @@
   of the corner, leaving a rectangular space which is, by default, empty.
   These spaces can potentially exist in any number of the four corners.
   In the previous diagram, the top right space is present and identified
-  by the label `corner component`.
+  by the label \"corner component\".
 
   Any number of these empty spaces can be replaced by using the
   setCorner method to add a component to a particular corner.
@@ -198,7 +198,7 @@
   "Returns the suffix used to construct the name of the L&F class used to
    render this component.
 
-  returns: the string `ScrollPaneUI` - `java.lang.String`"
+  returns: the string \"ScrollPaneUI\" - `java.lang.String`"
   (^java.lang.String [^JScrollPane this]
     (-> this (.getUIClassID))))
 
@@ -341,7 +341,7 @@
    ScrollPaneConstants.UPPER_TRAILING_CORNER
 
 
-   Although `corner` doesn't match any beans property
+   Although \"corner\" doesn't match any beans property
    signature, PropertyChange events are generated with the
    property name set to the corner key.
 

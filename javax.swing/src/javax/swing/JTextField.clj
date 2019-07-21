@@ -171,7 +171,7 @@
   "Associates the editor with a text document.
    The currently registered factory is used to build a view for
    the document, which gets displayed by the editor after revalidation.
-   A PropertyChange event (`document`) is propagated to each listener.
+   A PropertyChange event (\"document\") is propagated to each listener.
 
   doc - the document to display/edit - `javax.swing.text.Document`"
   ([^JTextField this ^javax.swing.text.Document doc]
@@ -223,7 +223,7 @@
 (defn get-ui-class-id
   "Gets the class ID for a UI.
 
-  returns: the string `TextFieldUI` - `java.lang.String`"
+  returns: the string \"TextFieldUI\" - `java.lang.String`"
   (^java.lang.String [^JTextField this]
     (-> this (.getUIClassID))))
 
@@ -357,7 +357,7 @@
 
    invalidate and repaint are called when the
    alignment is set,
-   and a PropertyChange event (`horizontalAlignment`) is fired.
+   and a PropertyChange event (\"horizontalAlignment\") is fired.
 
   alignment - the alignment - `int`
 

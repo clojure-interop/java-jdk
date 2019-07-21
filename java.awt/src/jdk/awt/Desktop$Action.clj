@@ -5,7 +5,7 @@
 (def OPEN
   "Enum Constant.
 
-  Represents an `open` action.
+  Represents an \"open\" action.
 
   type: java.awt.Desktop$Action"
   Desktop$Action/OPEN)
@@ -13,7 +13,7 @@
 (def EDIT
   "Enum Constant.
 
-  Represents an `edit` action.
+  Represents an \"edit\" action.
 
   type: java.awt.Desktop$Action"
   Desktop$Action/EDIT)
@@ -21,7 +21,7 @@
 (def PRINT
   "Enum Constant.
 
-  Represents a `print` action.
+  Represents a \"print\" action.
 
   type: java.awt.Desktop$Action"
   Desktop$Action/PRINT)
@@ -29,7 +29,7 @@
 (def MAIL
   "Enum Constant.
 
-  Represents a `mail` action.
+  Represents a \"mail\" action.
 
   type: java.awt.Desktop$Action"
   Desktop$Action/MAIL)
@@ -37,7 +37,7 @@
 (def BROWSE
   "Enum Constant.
 
-  Represents a `browse` action.
+  Represents a \"browse\" action.
 
   type: java.awt.Desktop$Action"
   Desktop$Action/BROWSE)

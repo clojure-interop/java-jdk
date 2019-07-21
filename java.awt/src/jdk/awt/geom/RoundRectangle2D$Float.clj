@@ -21,59 +21,59 @@
   (^RoundRectangle2D$Float []
     (new RoundRectangle2D$Float )))
 
-(defn -x
+(defn x
   "Instance Field.
 
   The X coordinate of this RoundRectangle2D.
 
   type: float"
-  [this]
-  (-> this .-x))
+  (^Float [^RoundRectangle2D$Float this]
+    (-> this .-x)))
 
-(defn -y
+(defn y
   "Instance Field.
 
   The Y coordinate of this RoundRectangle2D.
 
   type: float"
-  [this]
-  (-> this .-y))
+  (^Float [^RoundRectangle2D$Float this]
+    (-> this .-y)))
 
-(defn -width
+(defn width
   "Instance Field.
 
   The width of this RoundRectangle2D.
 
   type: float"
-  [this]
-  (-> this .-width))
+  (^Float [^RoundRectangle2D$Float this]
+    (-> this .-width)))
 
-(defn -height
+(defn height
   "Instance Field.
 
   The height of this RoundRectangle2D.
 
   type: float"
-  [this]
-  (-> this .-height))
+  (^Float [^RoundRectangle2D$Float this]
+    (-> this .-height)))
 
-(defn -arcwidth
+(defn arcwidth
   "Instance Field.
 
   The width of the arc that rounds off the corners.
 
   type: float"
-  [this]
-  (-> this .-arcwidth))
+  (^Float [^RoundRectangle2D$Float this]
+    (-> this .-arcwidth)))
 
-(defn -archeight
+(defn archeight
   "Instance Field.
 
   The height of the arc that rounds off the corners.
 
   type: float"
-  [this]
-  (-> this .-archeight))
+  (^Float [^RoundRectangle2D$Float this]
+    (-> this .-archeight)))
 
 (defn get-width
   "Returns the width of the framing rectangle in

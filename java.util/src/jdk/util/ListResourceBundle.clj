@@ -13,13 +13,13 @@
 
 
   The following example shows two members of a resource
-  bundle family with the base name `MyResources`.
-  `MyResources` is the default member of the bundle family, and
-  `MyResources_fr` is the French member.
+  bundle family with the base name \"MyResources\".
+  \"MyResources\" is the default member of the bundle family, and
+  \"MyResources_fr\" is the French member.
   These members are based on ListResourceBundle
   (a related example shows
   how you can add a bundle to this family that's based on a properties file).
-  The keys in this example are of the form `s1` etc. The actual
+  The keys in this example are of the form \"s1\" etc. The actual
   keys are entirely up to your choice, so long as they are the same as
   the keys you use in your program to retrieve the objects from the bundle.
   Keys are case-sensitive.
@@ -30,14 +30,14 @@
       protected Object[][] getContents() {
           return new Object[][] {
           // LOCALIZE THIS
-              {`s1`, `The disk `{1}` contains {0}.`},  // MessageFormat pattern
-              {`s2`, `1`},                               // location of {0} in pattern
-              {`s3`, `My Disk`},                         // sample disk name
-              {`s4`, `no files`},                        // first ChoiceFormat choice
-              {`s5`, `one file`},                        // second ChoiceFormat choice
-              {`s6`, `{0,number} files`},                // third ChoiceFormat choice
-              {`s7`, `3 Mar 96`},                        // sample date
-              {`s8`, new Dimension(1,5)}                 // real object, not just string
+              {\"s1\", \"The disk \\\"{1}\\\" contains {0}.\"},  // MessageFormat pattern
+              {\"s2\", \"1\"},                               // location of {0} in pattern
+              {\"s3\", \"My Disk\"},                         // sample disk name
+              {\"s4\", \"no files\"},                        // first ChoiceFormat choice
+              {\"s5\", \"one file\"},                        // second ChoiceFormat choice
+              {\"s6\", \"{0,number} files\"},                // third ChoiceFormat choice
+              {\"s7\", \"3 Mar 96\"},                        // sample date
+              {\"s8\", new Dimension(1,5)}                 // real object, not just string
           // END OF MATERIAL TO LOCALIZE
           };
       }
@@ -47,14 +47,14 @@
       protected Object[][] getContents() {
           return new Object[][] {
           // LOCALIZE THIS
-              {`s1`, `Le disque `{1}` {0}.`},          // MessageFormat pattern
-              {`s2`, `1`},                               // location of {0} in pattern
-              {`s3`, `Mon disque`},                      // sample disk name
-              {`s4`, `ne contient pas de fichiers`},     // first ChoiceFormat choice
-              {`s5`, `contient un fichier`},             // second ChoiceFormat choice
-              {`s6`, `contient {0,number} fichiers`},    // third ChoiceFormat choice
-              {`s7`, `3 mars 1996`},                     // sample date
-              {`s8`, new Dimension(1,3)}                 // real object, not just string
+              {\"s1\", \"Le disque \\\"{1}\\\" {0}.\"},          // MessageFormat pattern
+              {\"s2\", \"1\"},                               // location of {0} in pattern
+              {\"s3\", \"Mon disque\"},                      // sample disk name
+              {\"s4\", \"ne contient pas de fichiers\"},     // first ChoiceFormat choice
+              {\"s5\", \"contient un fichier\"},             // second ChoiceFormat choice
+              {\"s6\", \"contient {0,number} fichiers\"},    // third ChoiceFormat choice
+              {\"s7\", \"3 mars 1996\"},                     // sample date
+              {\"s8\", new Dimension(1,3)}                 // real object, not just string
           // END OF MATERIAL TO LOCALIZE
           };
       }

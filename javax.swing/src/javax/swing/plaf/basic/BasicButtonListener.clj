@@ -88,7 +88,7 @@
     (-> this (.mouseDragged e))))
 
 (defn install-keyboard-actions
-  "Register default key actions: pressing space to `click` a
+  "Register default key actions: pressing space to \"click\" a
    button and registring the keyboard mnemonic (if any).
 
   c - `javax.swing.JComponent`"

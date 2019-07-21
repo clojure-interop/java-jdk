@@ -1,6 +1,6 @@
 (ns jdk.beans.PropertyChangeEvent
-  "A `PropertyChange` event gets delivered whenever a bean changes a `bound`
-  or `constrained` property.  A PropertyChangeEvent object is sent as an
+  "A \"PropertyChange\" event gets delivered whenever a bean changes a \"bound\"
+  or \"constrained\" property.  A PropertyChangeEvent object is sent as an
   argument to the PropertyChangeListener and VetoableChangeListener methods.
 
   Normally PropertyChangeEvents are accompanied by the name and the old
@@ -63,7 +63,7 @@
     (-> this (.setPropagationId propagation-id))))
 
 (defn get-propagation-id
-  "The `propagationId` field is reserved for future use.  In Beans 1.0
+  "The \"propagationId\" field is reserved for future use.  In Beans 1.0
    the sole requirement is that if a listener catches a PropertyChangeEvent
    and then fires a PropertyChangeEvent of its own, then it should
    make sure that it propagates the propagationId field from its

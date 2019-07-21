@@ -18,12 +18,12 @@
       portrange = portnumber | -portnumber | portnumber-[portnumber] | *
       hostrange = ([*.] dnsname) | IPv4address | IPv6address
   dnsname is a standard DNS host or domain name, ie. one or more labels
-  separated by `.`. IPv4address is a standard literal IPv4 address and
+  separated by \".\". IPv4address is a standard literal IPv4 address and
   IPv6address is as defined in
   RFC 2732. Literal IPv6 addresses must however, be enclosed in '[]' characters.
-  The dnsname specification can be preceded by `*.` which means
+  The dnsname specification can be preceded by \"*.\" which means
   the name will match any hostname whose right-most domain labels are the same as
-  this name. For example, `*.oracle.com` matches `foo.bar.oracle.com`
+  this name. For example, \"*.oracle.com\" matches \"foo.bar.oracle.com\"
 
   portrange is used to specify a port number, or a bounded or unbounded range of ports
   that this permission applies to. If portrange is absent or invalid, then a default
@@ -45,7 +45,7 @@
     A url which identifies a specific (single) resource
 
   http://www.oracle.com/a/b/*
-    The '*' character refers to all resources in the same `directory` - in
+    The '*' character refers to all resources in the same \"directory\" - in
         other words all resources with the same number of path components, and
         which only differ in the final path component, represented by the '*'.
 
@@ -62,7 +62,7 @@
   the only character in that segment. Any query or fragment components of the
   url are ignored when constructing URLPermissions.
 
-  As a special case, urls of the form, `scheme:*` are accepted to
+  As a special case, urls of the form, \"scheme:*\" are accepted to
   mean any url of the given scheme.
 
   The scheme and authority components of the url string are handled
@@ -78,9 +78,9 @@
   Some examples are:
 
 
-          `POST,GET,DELETE`
-          `GET:X-Foo-Request,X-Bar-Request`
-          `POST,GET:Header1,Header2`
+          \"POST,GET,DELETE\"
+          \"GET:X-Foo-Request,X-Bar-Request\"
+          \"POST,GET:Header1,Header2\"
   The first example specifies the methods: POST, GET and DELETE, but no request headers.
   The second example specifies one request method and two headers. The third
   example specifies two request methods, and two headers.
@@ -123,7 +123,7 @@
    header list, in the form:
 
 
-        `method-names : header-names`
+        \"method-names : header-names\"
 
    where method-names is the list of methods separated by commas
    and header-names is the list of permitted headers separated by commas.
@@ -141,15 +141,15 @@
 
    if 'p' is not an instance of URLPermission return false
    if any of p's methods are not in this's method list, and if
-       this's method list is not equal to `*`, then return false.
+       this's method list is not equal to \"*\", then return false.
    if any of p's headers are not in this's request header list, and if
-       this's request header list is not equal to `*`, then return false.
+       this's request header list is not equal to \"*\", then return false.
    if this's url scheme is not equal to p's url scheme return false
    if the scheme specific part of this's url is '*' return true
    if the set of hosts defined by p's url hostrange is not a subset of
-       this's url hostrange then return false. For example, `*.foo.oracle.com`
-       is a subset of `*.oracle.com`. `foo.bar.oracle.com` is not
-       a subset of `*.foo.oracle.com`
+       this's url hostrange then return false. For example, \"*.foo.oracle.com\"
+       is a subset of \"*.oracle.com\". \"foo.bar.oracle.com\" is not
+       a subset of \"*.foo.oracle.com\"
    if the portrange defined by p's url is not a subset of the
        portrange defined by this's url then return false.
    if the path or paths specified by p's url are contained in the

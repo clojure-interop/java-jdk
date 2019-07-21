@@ -14,14 +14,14 @@
 
 
         JAXBResult result = new JAXBResult(
-          JAXBContext.newInstance(`org.acme.foo`) );
+          JAXBContext.newInstance(\"org.acme.foo\") );
 
         // set up XSLT transformation
         TransformerFactory tf = TransformerFactory.newInstance();
-        Transformer t = tf.newTransformer(new StreamSource(`test.xsl`));
+        Transformer t = tf.newTransformer(new StreamSource(\"test.xsl\"));
 
         // run transformation
-        t.transform(new StreamSource(`document.xml`),result);
+        t.transform(new StreamSource(\"document.xml\"),result);
 
         // obtain the unmarshalled content tree
         Object o = result.getResult();

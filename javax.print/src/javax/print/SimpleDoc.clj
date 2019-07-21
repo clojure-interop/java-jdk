@@ -1,7 +1,7 @@
 (ns javax.print.SimpleDoc
   "This class is an implementation of interface Doc that can
   be used in many common printing requests.
-  It can handle all of the presently defined `pre-defined` doc flavors
+  It can handle all of the presently defined \"pre-defined\" doc flavors
   defined as static variables in the DocFlavor class.
 
   In particular this class implements certain required semantics of the

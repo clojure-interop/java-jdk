@@ -50,7 +50,7 @@
     (-> this (.setEnvironment environment))))
 
 (defn get-remaining-new-name
-  "Retrieves the `remaining new name` field of this exception, which is
+  "Retrieves the \"remaining new name\" field of this exception, which is
    used when this exception is thrown during a rename() operation.
 
   returns: The possibly null part of the new name that has not been resolved.
@@ -60,12 +60,12 @@
     (-> this (.getRemainingNewName))))
 
 (defn set-remaining-new-name
-  "Sets the `remaining new name` field of this exception.
+  "Sets the \"remaining new name\" field of this exception.
    This is the value returned by getRemainingNewName().
 
    newName is a composite name. If the intent is to set
    this field using a compound name or string, you must
-   `stringify` the compound name, and create a composite
+   \"stringify\" the compound name, and create a composite
    name with a single component using the string. You can then
    invoke this method using the resulting composite name.
 
@@ -73,7 +73,7 @@
    Subsequent changes to name does not
    affect the copy in this NamingException and vice versa.
 
-  new-name - The possibly null name to set the `remaining new name` to. If null, it sets the remaining name field to null. - `javax.naming.Name`"
+  new-name - The possibly null name to set the \"remaining new name\" to. If null, it sets the remaining name field to null. - `javax.naming.Name`"
   ([^CannotProceedException this ^javax.naming.Name new-name]
     (-> this (.setRemainingNewName new-name))))
 

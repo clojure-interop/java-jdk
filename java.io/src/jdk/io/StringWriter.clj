@@ -44,7 +44,7 @@
 
        out.write(csq.subSequence(start, end).toString())
 
-  csq - The character sequence from which a subsequence will be appended. If csq is null, then characters will be appended as if csq contained the four characters `null`. - `java.lang.CharSequence`
+  csq - The character sequence from which a subsequence will be appended. If csq is null, then characters will be appended as if csq contained the four characters \"null\". - `java.lang.CharSequence`
   start - The index of the first character in the subsequence - `int`
   end - The index of the character following the last character in the subsequence - `int`
 

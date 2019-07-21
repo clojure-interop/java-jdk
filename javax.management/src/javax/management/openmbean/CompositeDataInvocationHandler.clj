@@ -26,8 +26,8 @@
     CompositeData cd =
         new CompositeDataSupport(
             someCompositeType,
-            new String[] {`number`, `name`},
-            new Object[] {5, `five`}
+            new String[] {\"number\", \"name\"},
+            new Object[] {5, \"five\"}
         );
 
 

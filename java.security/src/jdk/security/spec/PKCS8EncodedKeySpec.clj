@@ -45,7 +45,7 @@
   "Returns the name of the encoding format associated with this
    key specification.
 
-  returns: the string `PKCS#8`. - `java.lang.String`"
+  returns: the string \"PKCS#8\". - `java.lang.String`"
   (^java.lang.String [^PKCS8EncodedKeySpec this]
     (-> this (.getFormat))))
 

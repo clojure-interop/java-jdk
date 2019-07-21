@@ -1,6 +1,6 @@
 (ns jdk.awt.datatransfer.SystemFlavorMap
-  "The SystemFlavorMap is a configurable map between `natives` (Strings), which
-  correspond to platform-specific data formats, and `flavors` (DataFlavors),
+  "The SystemFlavorMap is a configurable map between \"natives\" (Strings), which
+  correspond to platform-specific data formats, and \"flavors\" (DataFlavors),
   which correspond to platform-independent MIME types. This mapping is used
   by the data transfer subsystem to transfer data between Java and native
   applications, and between Java applications in separate VMs."

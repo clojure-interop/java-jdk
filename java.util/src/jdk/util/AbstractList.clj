@@ -1,7 +1,7 @@
 (ns jdk.util.AbstractList
   "This class provides a skeletal implementation of the List
   interface to minimize the effort required to implement this interface
-  backed by a `random access` data store (such as an array).  For sequential
+  backed by a \"random access\" data store (such as an array).  For sequential
   access data (such as a linked list), AbstractSequentialList should
   be used in preference to this class.
 
@@ -21,7 +21,7 @@
 
   Unlike the other abstract collection implementations, the programmer does
   not have to provide an iterator implementation; the iterator and
-  list iterator are implemented by this class, on top of the `random access`
+  list iterator are implemented by this class, on top of the \"random access\"
   methods:
   get(int),
   set(int, E),
@@ -168,7 +168,7 @@
    addAll(Collection c) method merely returns addAll(size,
    c).
 
-   The listIterator(int) method returns a `wrapper object`
+   The listIterator(int) method returns a \"wrapper object\"
    over a list iterator on the backing list, which is created with the
    corresponding method on the backing list.  The iterator method
    merely returns listIterator(), and the size method

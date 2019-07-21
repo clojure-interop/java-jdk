@@ -51,7 +51,7 @@
 
 (defn get-name
   "Return a short string that identifies this look and feel. This
-   String will be the unquoted String `Nimbus`.
+   String will be the unquoted String \"Nimbus\".
 
   returns: a short string identifying this look and feel. - `java.lang.String`"
   (^java.lang.String [^NimbusLookAndFeel this]
@@ -82,28 +82,28 @@
 
 
 
-       laf.register(NimbusFooUI.FOO_REGION, `Foo`);
+       laf.register(NimbusFooUI.FOO_REGION, \"Foo\");
 
    In this case, I could then register properties for this component with
    UIDefaults in the following manner:
 
 
 
-       UIManager.put(`Foo.background`, new ColorUIResource(Color.BLACK));
-       UIManager.put(`Foo.Enabled.backgroundPainter`, new FooBackgroundPainter());
+       UIManager.put(\"Foo.background\", new ColorUIResource(Color.BLACK));
+       UIManager.put(\"Foo.Enabled.backgroundPainter\", new FooBackgroundPainter());
 
    It is also possible to register a named component with Nimbus.
    For example, suppose you wanted to style the background of a JPanel
-   named `MyPanel` differently from other JPanels. You could accomplish this
+   named \"MyPanel\" differently from other JPanels. You could accomplish this
    by doing the following:
 
 
 
-       laf.register(Region.PANEL, ``MyPanel``);
-       UIManager.put(``MyPanel`.background`, new ColorUIResource(Color.RED));
+       laf.register(Region.PANEL, \"\\\"MyPanel\\\"\");
+       UIManager.put(\"\\\"MyPanel\\\".background\", new ColorUIResource(Color.RED));
 
   region - The Synth Region that is being registered. Such as Button, or ScrollBarThumb, or NimbusFooUI.FOO_REGION. - `javax.swing.plaf.synth.Region`
-  prefix - The UIDefault prefix. For example, could be ComboBox, or if a named components, `MyComboBox`, or even something like ToolBar.`MyComboBox`.`ComboBox.arrowButton` - `java.lang.String`"
+  prefix - The UIDefault prefix. For example, could be ComboBox, or if a named components, \"MyComboBox\", or even something like ToolBar.\"MyComboBox\".\"ComboBox.arrowButton\" - `java.lang.String`"
   ([^NimbusLookAndFeel this ^javax.swing.plaf.synth.Region region ^java.lang.String prefix]
     (-> this (.register region prefix))))
 
@@ -126,7 +126,7 @@
 
 (defn get-id
   "Return a string that identifies this look and feel. This String will
-   be the unquoted String `Nimbus`.
+   be the unquoted String \"Nimbus\".
 
   returns: a short string identifying this look and feel. - `java.lang.String`"
   (^java.lang.String [^NimbusLookAndFeel this]

@@ -112,7 +112,7 @@
    This implementation obtains this preference node's lock, checks that
    the node has not been removed, constructs a TreeSet initialized
    to the names of children already cached (the children in this node's
-   `child-cache`), invokes childrenNamesSpi(), and adds all of the
+   \"child-cache\"), invokes childrenNamesSpi(), and adds all of the
    returned child-names into the set.  The elements of the tree set are
    dumped into a String array using the toArray method,
    and this array is returned.
@@ -213,10 +213,10 @@
 
    This implementation calls a recursive helper method that locks this
    node, invokes flushSpi() on it, unlocks this node, and recursively
-   invokes this method on each `cached child.`  A cached child is a child
+   invokes this method on each \"cached child.\"  A cached child is a child
    of this node that has been created in this VM and not subsequently
    removed.  In effect, this method does a depth first traversal of the
-   `cached subtree` rooted at this node, calling flushSpi() on each node in
+   \"cached subtree\" rooted at this node, calling flushSpi() on each node in
    the subTree while only that node is locked. Note that flushSpi() is
    invoked top-down.
 
@@ -307,10 +307,10 @@
 
    This implementation calls a recursive helper method that locks this
    node, invokes syncSpi() on it, unlocks this node, and recursively
-   invokes this method on each `cached child.`  A cached child is a child
+   invokes this method on each \"cached child.\"  A cached child is a child
    of this node that has been created in this VM and not subsequently
    removed.  In effect, this method does a depth first traversal of the
-   `cached subtree` rooted at this node, calling syncSpi() on each node in
+   \"cached subtree\" rooted at this node, calling syncSpi() on each node in
    the subTree while only that node is locked. Note that syncSpi() is
    invoked top-down.
 
@@ -360,7 +360,7 @@
    event for processing by the event dispatch thread.
 
    Note that the helper method is always invoked with all ancestors up
-   to the `closest non-removed ancestor` locked.
+   to the \"closest non-removed ancestor\" locked.
 
   throws: java.lang.IllegalStateException - if this node (or an ancestor) has already been removed with the removeNode() method."
   ([^AbstractPreferences this]
@@ -458,10 +458,10 @@
 
    This implementation invokes get(key,
    null).  If the return value is non-null, it is compared with
-   `true` using String.equalsIgnoreCase(String).  If the
+   \"true\" using String.equalsIgnoreCase(String).  If the
    comparison returns true, this invocation returns
    true.  Otherwise, the original return value is compared with
-   `false`, again using String.equalsIgnoreCase(String).
+   \"false\", again using String.equalsIgnoreCase(String).
    If the comparison returns true, this invocation returns
    false.  Otherwise, this invocation returns def.
 
@@ -581,12 +581,12 @@
    Preferences.node(String).
 
    This implementation obtains this preference node's lock and checks
-   that the node has not been removed.  If path is ``,
-   this node is returned; if path is `/`, this node's
+   that the node has not been removed.  If path is \"\",
+   this node is returned; if path is \"/\", this node's
    root is returned.  If the first character in path is
    not '/', the implementation breaks path into
    tokens and recursively traverses the path from this node to the
-   named node, `consuming` a name and a slash from path at
+   named node, \"consuming\" a name and a slash from path at
    each step of the traversal.  At each step, the current node is locked
    and the node's child-cache is checked for the named node.  If it is
    not found, the name is checked to make sure its length does not
@@ -599,8 +599,8 @@
 
    When there are no more tokens, the last value found in the
    child-cache or returned by childSpi is returned by this
-   method.  If during the traversal, two `/` tokens occur
-   consecutively, or the final token is `/` (rather than a name),
+   method.  If during the traversal, two \"/\" tokens occur
+   consecutively, or the final token is \"/\" (rather than a name),
    an appropriate IllegalArgumentException is thrown.
 
     If the first character of path is '/'

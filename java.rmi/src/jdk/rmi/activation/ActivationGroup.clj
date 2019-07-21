@@ -1,6 +1,6 @@
 (ns jdk.rmi.activation.ActivationGroup
   "An ActivationGroup is responsible for creating new
-  instances of `activatable` objects in its group, informing its
+  instances of \"activatable\" objects in its group, informing its
   ActivationMonitor when either: its object's become
   active or inactive, or the group as a whole becomes inactive.
 
@@ -126,7 +126,7 @@
    system is not set via this call, then the getSystem
    method attempts to obtain a reference to the
    ActivationSystem by looking up the name
-   `java.rmi.activation.ActivationSystem` in the Activator's
+   \"java.rmi.activation.ActivationSystem\" in the Activator's
    registry. By default, the port number used to look up the
    activation system is defined by
    ActivationSystem.SYSTEM_PORT. This port can be overridden
@@ -148,7 +148,7 @@
    activation system is not set via the setSystem
    method, then the getSystem method attempts to
    obtain a reference to the ActivationSystem by
-   looking up the name `java.rmi.activation.ActivationSystem` in
+   looking up the name \"java.rmi.activation.ActivationSystem\" in
    the Activator's registry. By default, the port number used to
    look up the activation system is defined by
    ActivationSystem.SYSTEM_PORT. This port can be

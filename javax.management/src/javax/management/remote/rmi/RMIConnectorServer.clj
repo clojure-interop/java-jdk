@@ -15,7 +15,7 @@
 
   url - the URL defining how to create the connector server. Cannot be null. - `javax.management.remote.JMXServiceURL`
   environment - attributes governing the creation and storing of the RMI object. Can be null, which is equivalent to an empty Map. - `java.util.Map`
-  rmi-server-impl - An implementation of the RMIServer interface, consistent with the protocol type specified in url. If this parameter is non null, the protocol type specified by url is not constrained, and is assumed to be valid. Otherwise, only `rmi` and `iiop` will be recognized. - `javax.management.remote.rmi.RMIServerImpl`
+  rmi-server-impl - An implementation of the RMIServer interface, consistent with the protocol type specified in url. If this parameter is non null, the protocol type specified by url is not constrained, and is assumed to be valid. Otherwise, only \"rmi\" and \"iiop\" will be recognized. - `javax.management.remote.rmi.RMIServerImpl`
   mbean-server - the MBean server to which the new connector server is attached, or null if it will be attached by being registered as an MBean in the MBean server. - `javax.management.MBeanServer`
 
   throws: java.lang.IllegalArgumentException - if url is null."
@@ -32,8 +32,8 @@
   Name of the attribute that specifies whether the RMIServer stub that represents an RMI connector server should
    override an existing stub at the same address.  The value
    associated with this attribute, if any, should be a string that
-   is equal, ignoring case, to `true` or
-   `false`.  The default value is false.
+   is equal, ignoring case, to \"true\" or
+   \"false\".  The default value is false.
 
   type: java.lang.String"
   RMIConnectorServer/JNDI_REBIND_ATTRIBUTE)

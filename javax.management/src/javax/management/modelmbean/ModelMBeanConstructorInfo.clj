@@ -13,9 +13,9 @@
   nameString
       Constructor name.
   descriptorTypeString
-      Must be `operation`.
+      Must be \"operation\".
   roleString
-      Must be `constructor`.
+      Must be \"constructor\".
   displayNameString
       Human readable name of constructor.
   visibilityNumber
@@ -41,9 +41,9 @@
   name - The name of the constructor. - `java.lang.String`
   description - A human readable description of the constructor. - `java.lang.String`
   signature - MBeanParameterInfo objects describing the parameters(arguments) of the constructor. - `javax.management.MBeanParameterInfo[]`
-  descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the MBeanConstructorInfo. If it is null then a default descriptor will be created. If the descriptor does not contain the field `displayName` this field is added in the descriptor with its default value. - `javax.management.Descriptor`
+  descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the MBeanConstructorInfo. If it is null then a default descriptor will be created. If the descriptor does not contain the field \"displayName\" this field is added in the descriptor with its default value. - `javax.management.Descriptor`
 
-  throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field `name` is not equal to name parameter, or descriptor field `descriptorType` is not equal to `operation` or descriptor field `role` is present but not equal to `constructor`."
+  throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field \"name\" is not equal to name parameter, or descriptor field \"descriptorType\" is not equal to \"operation\" or descriptor field \"role\" is present but not equal to \"constructor\"."
   (^ModelMBeanConstructorInfo [^java.lang.String name ^java.lang.String description signature ^javax.management.Descriptor descriptor]
     (new ModelMBeanConstructorInfo name description signature descriptor))
   (^ModelMBeanConstructorInfo [^java.lang.String description ^java.lang.reflect.Constructor constructor-method ^javax.management.Descriptor descriptor]
@@ -77,7 +77,7 @@
 
   in-descriptor - replaces the Descriptor associated with the ModelMBeanConstructor. If the descriptor does not contain all the following fields, the missing ones are added with their default values: displayName, name, role, descriptorType. - `javax.management.Descriptor`
 
-  throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field `name` is present but not equal to name parameter, or descriptor field `descriptorType` is present but not equal to `operation` or descriptor field `role` is present but not equal to `constructor`."
+  throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field \"name\" is present but not equal to name parameter, or descriptor field \"descriptorType\" is present but not equal to \"operation\" or descriptor field \"role\" is present but not equal to \"constructor\"."
   ([^ModelMBeanConstructorInfo this ^javax.management.Descriptor in-descriptor]
     (-> this (.setDescriptor in-descriptor))))
 

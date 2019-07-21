@@ -51,7 +51,7 @@
     (-> this (.getRootPane))))
 
 (defn set-content-pane
-  "The `contentPane` is the primary container for application
+  "The \"contentPane\" is the primary container for application
    specific components.  Applications should add children to
    the contentPane, set its layout manager, and so on.
 

@@ -4,7 +4,7 @@
 
   Servers can use Server Name Indication (SNI) information to decide if
   specific SSLSocket or SSLEngine instances should accept
-  a connection.  For example, when multiple `virtual` or `name-based`
+  a connection.  For example, when multiple \"virtual\" or \"name-based\"
   servers are hosted on a single underlying network address, the server
   application can use SNI information to determine whether this server is
   the exact server that the client wants to access.  Instances of this

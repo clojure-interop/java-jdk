@@ -18,7 +18,7 @@
 
   In addition to Stream, which is a stream of object references,
   there are primitive specializations for IntStream, LongStream,
-  and DoubleStream, all of which are referred to as `streams` and
+  and DoubleStream, all of which are referred to as \"streams\" and
   conform to the characteristics and restrictions described here.
 
   To perform a computation, stream
@@ -43,7 +43,7 @@
   functionality, the BaseStream.iterator() and BaseStream.spliterator() operations
   can be used to perform a controlled traversal.
 
-  A stream pipeline, like the `widgets` example above, can be viewed as
+  A stream pipeline, like the \"widgets\" example above, can be viewed as
   a query on the stream source.  Unless the source was explicitly
   designed for concurrent modification (such as a ConcurrentHashMap),
   unpredictable or erroneous behavior may result from modifying the stream
@@ -68,7 +68,7 @@
   non-null.
 
   A stream should be operated on (invoking an intermediate or terminal stream
-  operation) only once.  This rules out, for example, `forked` streams, where
+  operation) only once.  This rules out, for example, \"forked\" streams, where
   the same source feeds two or more pipelines, or multiple traversals of the
   same stream.  A stream implementation may throw IllegalStateException
   if it detects that the stream is being reused. However, since some stream

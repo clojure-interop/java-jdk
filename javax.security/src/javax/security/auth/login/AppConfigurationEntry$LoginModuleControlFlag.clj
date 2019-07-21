@@ -39,7 +39,7 @@
 (defn to-string
   "Return a String representation of this controlFlag.
 
-    The String has the format, `LoginModuleControlFlag: flag`,
+    The String has the format, \"LoginModuleControlFlag: flag\",
    where flag is either required, requisite,
    sufficient, or optional.
 

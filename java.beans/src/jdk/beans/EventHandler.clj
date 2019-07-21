@@ -68,7 +68,7 @@
 
 
  myButton.addActionListener(
-     (ActionListener)EventHandler.create(ActionListener.class, frame, `toFront`));
+     (ActionListener)EventHandler.create(ActionListener.class, frame, \"toFront\"));
 
 
   When myButton is pressed, the statement
@@ -94,12 +94,12 @@
   and use it to set the value of a property in the target object.
   In the following example we create an ActionListener that
   sets the nextFocusableComponent property of the target
-  (myButton) object to the value of the `source` property of the event.
+  (myButton) object to the value of the \"source\" property of the event.
 
 
 
 
- EventHandler.create(ActionListener.class, myButton, `nextFocusableComponent`, `source`)
+ EventHandler.create(ActionListener.class, myButton, \"nextFocusableComponent\", \"source\")
 
 
   This would correspond to the following inner class implementation:
@@ -123,7 +123,7 @@
 
 
 
- EventHandler.create(ActionListener.class, target, `doActionEvent`, ``)
+ EventHandler.create(ActionListener.class, target, \"doActionEvent\", \"\")
 
 
   This would correspond to the following inner class implementation:
@@ -144,14 +144,14 @@
   source of the event object and set this value as
   the value of a property of the target object.
   In the following example we create an ActionListener that
-  sets the `label` property of the target
-  object to the value of the `text` property of the
-  source (the value of the `source` property) of the event.
+  sets the \"label\" property of the target
+  object to the value of the \"text\" property of the
+  source (the value of the \"source\" property) of the event.
 
 
 
 
- EventHandler.create(ActionListener.class, myButton, `label`, `source.text`)
+ EventHandler.create(ActionListener.class, myButton, \"label\", \"source.text\")
 
 
   This would correspond to the following inner class implementation:
@@ -167,9 +167,9 @@
  }
 
 
-  The event property may be `qualified` with an arbitrary number
-  of property prefixes delimited with the `.` character. The `qualifying`
-  names that appear before the `.` characters are taken as the names of
+  The event property may be \"qualified\" with an arbitrary number
+  of property prefixes delimited with the \".\" character. The \"qualifying\"
+  names that appear before the \".\" characters are taken as the names of
   properties that should be applied, left-most first, to
   the event object.
 
@@ -178,7 +178,7 @@
 
 
 
- EventHandler.create(ActionListener.class, target, `a`, `b.c.d`)
+ EventHandler.create(ActionListener.class, target, \"a\", \"b.c.d\")
 
 
   might be written as the following inner class
@@ -195,12 +195,12 @@
      }
  }
 
-  The target property may also be `qualified` with an arbitrary number
-  of property prefixs delimited with the `.` character.  For example, the
+  The target property may also be \"qualified\" with an arbitrary number
+  of property prefixs delimited with the \".\" character.  For example, the
   following action listener:
 
 
-    EventHandler.create(ActionListener.class, target, `a.b`, `c.d`)
+    EventHandler.create(ActionListener.class, target, \"a.b\", \"c.d\")
   might be written as the following inner class
   (assuming all the properties had canonical getter methods and
   returned the appropriate types):
@@ -273,13 +273,13 @@
    where propertyName matches a method or
    property.  For example, to extract the point
    property from a MouseEvent, you could use either
-   `point` or `getPoint` as the
-   eventPropertyName.  To extract the `text` property from
+   \"point\" or \"getPoint\" as the
+   eventPropertyName.  To extract the \"text\" property from
    a MouseEvent with a JLabel source use any
    of the following as eventPropertyName:
-   `source.text`,
-   `getSource.text` `getSource.getText` or
-   `source.getText`.  If a method can not be found, or an
+   \"source.text\",
+   \"getSource.text\" \"getSource.getText\" or
+   \"source.getText\".  If a method can not be found, or an
    exception is generated as part of invoking a method a
    RuntimeException will be thrown at dispatch time.  For
    example, if the incoming event object is null, and
@@ -301,7 +301,7 @@
 
 
 
-  EventHandler.create(MouseListener.class, target, `origin`, `point`, `mousePressed`);
+  EventHandler.create(MouseListener.class, target, \"origin\", \"point\", \"mousePressed\");
 
 
    This is comparable to writing a MouseListener in which all

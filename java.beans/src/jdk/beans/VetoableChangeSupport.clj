@@ -29,7 +29,7 @@
 
       public void setValue(String newValue) throws PropertyVetoException {
           String oldValue = this.value;
-          this.vcs.fireVetoableChange(`value`, oldValue, newValue);
+          this.vcs.fireVetoableChange(\"value\", oldValue, newValue);
           this.value = newValue;
       }
 
@@ -109,7 +109,7 @@
 
    Any listener can throw a PropertyVetoException to veto the update.
    If one of the listeners vetoes the update, this method passes
-   a new `undo` PropertyChangeEvent that reverts to the old value
+   a new \"undo\" PropertyChangeEvent that reverts to the old value
    to all listeners that already confirmed this update
    and throws the PropertyVetoException again.
 

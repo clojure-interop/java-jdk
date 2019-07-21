@@ -10,7 +10,7 @@
   remote user's digital signature), that system not only checks the
   certificate signature and validity but also acquires a suitably-
   recent CRL and checks that the certificate serial number is not on
-  that CRL.  The meaning of `suitably-recent` may vary with local
+  that CRL.  The meaning of \"suitably-recent\" may vary with local
   policy, but it usually means the most recently-issued CRL.  A CA
   issues a new CRL on a regular periodic basis (e.g., hourly, daily, or
   weekly).  Entries are added to CRLs as revocations occur, and an
@@ -52,8 +52,8 @@
   example of how to instantiate an X.509 CRL:
 
 
-  try (InputStream inStream = new FileInputStream(`fileName-of-crl`)) {
-      CertificateFactory cf = CertificateFactory.getInstance(`X.509`);
+  try (InputStream inStream = new FileInputStream(\"fileName-of-crl\")) {
+      CertificateFactory cf = CertificateFactory.getInstance(\"X.509\");
       X509CRL crl = (X509CRL)cf.generateCRL(inStream);
   }"
   (:refer-clojure :only [require comment defn ->])
@@ -227,7 +227,7 @@
 
 (defn get-sig-alg-name
   "Gets the signature algorithm name for the CRL
-   signature algorithm. An example is the string `SHA256withRSA`.
+   signature algorithm. An example is the string \"SHA256withRSA\".
    The ASN.1 definition for this is:
 
 
@@ -279,7 +279,7 @@
   "Gets the signature algorithm OID string from the CRL.
    An OID is represented by a set of nonnegative whole numbers separated
    by periods.
-   For example, the string `1.2.840.10040.4.3` identifies the SHA-1
+   For example, the string \"1.2.840.10040.4.3\" identifies the SHA-1
    with DSA signature algorithm defined in
    RFC 3279: Algorithms and
    Identifiers for the Internet X.509 Public Key Infrastructure Certificate

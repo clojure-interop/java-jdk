@@ -15,10 +15,10 @@
   named java.nio.charset.spi.CharsetProvider in the resource
   directory META-INF/services.  The file should contain a list of
   fully-qualified concrete charset-provider class names, one per line.  A line
-  is terminated by any one of a line feed ('\n'), a carriage return
-  ('\r'), or a carriage return followed immediately by a line feed.
+  is terminated by any one of a line feed ('\\n'), a carriage return
+  ('\\r'), or a carriage return followed immediately by a line feed.
   Space and tab characters surrounding each name, as well as blank lines, are
-  ignored.  The comment character is '#' ('\u0023'); on
+  ignored.  The comment character is '#' ('\\u0023'); on
   each line all characters following the first comment character are ignored.
   The file must be encoded in UTF-8.
 

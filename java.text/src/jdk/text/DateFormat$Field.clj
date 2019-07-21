@@ -127,7 +127,7 @@
   "Static Constant.
 
   Constant identifying the time of day indicator
-   (e.g. `a.m.` or `p.m.`) field.
+   (e.g. \"a.m.\" or \"p.m.\") field.
 
   type: java.text.DateFormat$Field"
   DateFormat$Field/AM_PM)

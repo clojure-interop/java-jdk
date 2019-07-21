@@ -69,7 +69,7 @@
   party, and the receiver's version extends classes that are not extended by
   the sender's version.  This may also occur if the serialization stream has
   been tampered; hence, readObjectNoData is useful for initializing
-  deserialized objects properly despite a `hostile` or incomplete source
+  deserialized objects properly despite a \"hostile\" or incomplete source
   stream.
 
   Serializable classes that need to designate an alternative object to be
@@ -105,7 +105,7 @@
   serialVersionUID than that of the corresponding sender's class, then
   deserialization will result in an InvalidClassException.  A
   serializable class can declare its own serialVersionUID explicitly by
-  declaring a field named `serialVersionUID` that must be static,
+  declaring a field named \"serialVersionUID\" that must be static,
   final, and of type long:
 
 

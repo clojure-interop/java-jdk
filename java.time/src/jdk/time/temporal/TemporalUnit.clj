@@ -92,8 +92,8 @@
   "Returns a copy of the specified temporal object with the specified period added.
 
    The period added is a multiple of this unit. For example, this method
-   could be used to add `3 days` to a date by calling this method on the
-   instance representing `days`, passing the date and the period `3`.
+   could be used to add \"3 days\" to a date by calling this method on the
+   instance representing \"days\", passing the date and the period \"3\".
    The period to be added may be negative, which is equivalent to subtraction.
 
    There are two equivalent ways of using this method.

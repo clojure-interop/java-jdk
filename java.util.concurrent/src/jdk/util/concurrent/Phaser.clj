@@ -106,7 +106,7 @@
 
 
   void runTasks(List<Runnable> tasks) {
-    final Phaser phaser = new Phaser(1); // `1` to register self
+    final Phaser phaser = new Phaser(1); // \"1\" to register self
     // create and start threads
     for (final Runnable task : tasks) {
       phaser.register();
@@ -294,8 +294,8 @@
 
 (defn to-string
   "Returns a string identifying this phaser, as well as its
-   state.  The state, in brackets, includes the String `phase = ` followed by the phase number, `parties = `
-   followed by the number of registered parties, and `arrived = ` followed by the number of arrived parties.
+   state.  The state, in brackets, includes the String \"phase = \" followed by the phase number, \"parties = \"
+   followed by the number of registered parties, and \"arrived = \" followed by the number of arrived parties.
 
   returns: a string identifying this phaser, as well as its state - `java.lang.String`"
   (^java.lang.String [^Phaser this]

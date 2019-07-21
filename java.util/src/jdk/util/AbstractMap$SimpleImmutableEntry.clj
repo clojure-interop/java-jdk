@@ -89,7 +89,7 @@
 (defn to-string
   "Returns a String representation of this map entry.  This
    implementation returns the string representation of this
-   entry's key followed by the equals character (`=`)
+   entry's key followed by the equals character (\"=\")
    followed by the string representation of this entry's value.
 
   returns: a String representation of this map entry - `java.lang.String`"

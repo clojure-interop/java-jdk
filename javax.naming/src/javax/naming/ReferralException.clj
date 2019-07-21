@@ -6,7 +6,7 @@
   A service provider provides
   a subclass of ReferralException by providing implementations
   for getReferralInfo() and getReferralContext() (and appropriate
-  constructors and/or corresponding `set` methods).
+  constructors and/or corresponding \"set\" methods).
 
   The following code sample shows how ReferralException can be used.
   while (true) {

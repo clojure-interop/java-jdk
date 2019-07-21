@@ -32,31 +32,31 @@
       bytecode behavior
 
 
-      lookup.findGetter(C.class,`f`,FT.class)
+      lookup.findGetter(C.class,\"f\",FT.class)
       FT f;(T) this.f;
 
 
-      lookup.findStaticGetter(C.class,`f`,FT.class)
+      lookup.findStaticGetter(C.class,\"f\",FT.class)
       staticFT f;(T) C.f;
 
 
-      lookup.findSetter(C.class,`f`,FT.class)
+      lookup.findSetter(C.class,\"f\",FT.class)
       FT f;this.f = x;
 
 
-      lookup.findStaticSetter(C.class,`f`,FT.class)
+      lookup.findStaticSetter(C.class,\"f\",FT.class)
       staticFT f;C.f = arg;
 
 
-      lookup.findVirtual(C.class,`m`,MT)
+      lookup.findVirtual(C.class,\"m\",MT)
       T m(A*);(T) this.m(arg*);
 
 
-      lookup.findStatic(C.class,`m`,MT)
+      lookup.findStatic(C.class,\"m\",MT)
       staticT m(A*);(T) C.m(arg*);
 
 
-      lookup.findSpecial(C.class,`m`,MT,this.class)
+      lookup.findSpecial(C.class,\"m\",MT,this.class)
       T m(A*);(T) super.m(arg*);
 
 
@@ -204,7 +204,7 @@
   (See the Java Virtual Machine Specification, section 4.10.1.9.)
 
   The JVM represents constructors and static initializer blocks as internal methods
-  with special names (`<init>` and `<clinit>`).
+  with special names (\"<init>\" and \"<clinit>\").
   The internal syntax of invocation instructions allows them to refer to such internal
   methods as if they were normal methods, but the JVM bytecode verifier rejects them.
   A lookup of such an internal method will produce a NoSuchMethodException.
@@ -295,7 +295,7 @@
       If the retrieved member is not public and
       lookc is not present, then
       smgr.checkPermission
-      with RuntimePermission(`accessDeclaredMembers`) is called.
+      with RuntimePermission(\"accessDeclaredMembers\") is called.
   Step 3:
       If the retrieved member is not public,
       and if lookc is not present,
@@ -424,7 +424,7 @@
   ...
   MethodHandle MH_newArrayList = publicLookup().findConstructor(
     ArrayList.class, methodType(void.class, Collection.class));
-  Collection orig = Arrays.asList(`x`, `y`);
+  Collection orig = Arrays.asList(\"x\", \"y\");
   Collection copy = (ArrayList) MH_newArrayList.invokeExact(orig);
   assert(orig != copy);
   assertEquals(orig, copy);
@@ -432,8 +432,8 @@
   MethodHandle MH_newProcessBuilder = publicLookup().findConstructor(
     ProcessBuilder.class, methodType(void.class, String[].class));
   ProcessBuilder pb = (ProcessBuilder)
-    MH_newProcessBuilder.invoke(`x`, `y`, `z`);
-  assertEquals(`[x, y, z]`, pb.command().toString());
+    MH_newProcessBuilder.invoke(\"x\", \"y\", \"z\");
+  assertEquals(\"[x, y, z]\", pb.command().toString());
 
   refc - the class or interface from which the method is accessed - `java.lang.Class`
   type - the type of the method, with the receiver argument omitted, and a void return type - `java.lang.invoke.MethodType`
@@ -570,26 +570,26 @@
   import static java.lang.invoke.MethodType.*;
   ...
   MethodHandle MH_concat = publicLookup().findVirtual(String.class,
-    `concat`, methodType(String.class, String.class));
+    \"concat\", methodType(String.class, String.class));
   MethodHandle MH_hashCode = publicLookup().findVirtual(Object.class,
-    `hashCode`, methodType(int.class));
+    \"hashCode\", methodType(int.class));
   MethodHandle MH_hashCode_String = publicLookup().findVirtual(String.class,
-    `hashCode`, methodType(int.class));
-  assertEquals(`xy`, (String) MH_concat.invokeExact(`x`, `y`));
-  assertEquals(`xy`.hashCode(), (int) MH_hashCode.invokeExact((Object)`xy`));
-  assertEquals(`xy`.hashCode(), (int) MH_hashCode_String.invokeExact(`xy`));
+    \"hashCode\", methodType(int.class));
+  assertEquals(\"xy\", (String) MH_concat.invokeExact(\"x\", \"y\"));
+  assertEquals(\"xy\".hashCode(), (int) MH_hashCode.invokeExact((Object)\"xy\"));
+  assertEquals(\"xy\".hashCode(), (int) MH_hashCode_String.invokeExact(\"xy\"));
   // interface method:
   MethodHandle MH_subSequence = publicLookup().findVirtual(CharSequence.class,
-    `subSequence`, methodType(CharSequence.class, int.class, int.class));
-  assertEquals(`def`, MH_subSequence.invoke(`abcdefghi`, 3, 6).toString());
-  // constructor `internal method` must be accessed differently:
+    \"subSequence\", methodType(CharSequence.class, int.class, int.class));
+  assertEquals(\"def\", MH_subSequence.invoke(\"abcdefghi\", 3, 6).toString());
+  // constructor \"internal method\" must be accessed differently:
   MethodType MT_newString = methodType(void.class); //()V for new String()
-  try { assertEquals(`impossible`, lookup()
-          .findVirtual(String.class, `<init>`, MT_newString));
+  try { assertEquals(\"impossible\", lookup()
+          .findVirtual(String.class, \"<init>\", MT_newString));
    } catch (NoSuchMethodException ex) { } // OK
   MethodHandle MH_newString = publicLookup()
     .findConstructor(String.class, MT_newString);
-  assertEquals(``, (String) MH_newString.invokeExact());
+  assertEquals(\"\", (String) MH_newString.invokeExact());
 
   refc - the class or interface from which the method is accessed - `java.lang.Class`
   name - the name of the method - `java.lang.String`
@@ -609,10 +609,10 @@
    of a slash and a keyword.  The keyword represents the strongest
    allowed access, and is chosen as follows:
 
-   If no access is allowed, the suffix is `/noaccess`.
-   If only public access is allowed, the suffix is `/public`.
-   If only public and package access are allowed, the suffix is `/package`.
-   If only public, package, and private access are allowed, the suffix is `/private`.
+   If no access is allowed, the suffix is \"/noaccess\".
+   If only public access is allowed, the suffix is \"/public\".
+   If only public and package access are allowed, the suffix is \"/package\".
+   If only public, package, and private access are allowed, the suffix is \"/private\".
 
    If none of the above cases apply, it is the case that full
    access (public, package, private, and protected) is allowed.
@@ -798,7 +798,7 @@
    variable arity if and only if
    the method's variable arity modifier bit (0x0080) is set.
 
-   (Note:  JVM internal methods named `<init>` are not visible to this API,
+   (Note:  JVM internal methods named \"<init>\" are not visible to this API,
    even though the invokespecial instruction can refer to them
    in special circumstances.  Use findConstructor
    to access instance initialization methods in a safe manner.)
@@ -809,7 +809,7 @@
   import static java.lang.invoke.MethodType.*;
   ...
   static class Listie extends ArrayList {
-    public String toString() { return `[wee Listie]`; }
+    public String toString() { return \"[wee Listie]\"; }
     static Lookup lookup() { return MethodHandles.lookup(); }
   }
   ...
@@ -817,27 +817,27 @@
   MethodHandle MH_newListie = Listie.lookup()
     .findConstructor(Listie.class, methodType(void.class));
   Listie l = (Listie) MH_newListie.invokeExact();
-  try { assertEquals(`impossible`, Listie.lookup().findSpecial(
-          Listie.class, `<init>`, methodType(void.class), Listie.class));
+  try { assertEquals(\"impossible\", Listie.lookup().findSpecial(
+          Listie.class, \"<init>\", methodType(void.class), Listie.class));
    } catch (NoSuchMethodException ex) { } // OK
   // access to super and self methods via invokeSpecial:
   MethodHandle MH_super = Listie.lookup().findSpecial(
-    ArrayList.class, `toString` , methodType(String.class), Listie.class);
+    ArrayList.class, \"toString\" , methodType(String.class), Listie.class);
   MethodHandle MH_this = Listie.lookup().findSpecial(
-    Listie.class, `toString` , methodType(String.class), Listie.class);
+    Listie.class, \"toString\" , methodType(String.class), Listie.class);
   MethodHandle MH_duper = Listie.lookup().findSpecial(
-    Object.class, `toString` , methodType(String.class), Listie.class);
-  assertEquals(`[]`, (String) MH_super.invokeExact(l));
-  assertEquals(``+l, (String) MH_this.invokeExact(l));
-  assertEquals(`[]`, (String) MH_duper.invokeExact(l)); // ArrayList method
-  try { assertEquals(`inaccessible`, Listie.lookup().findSpecial(
-          String.class, `toString`, methodType(String.class), Listie.class));
+    Object.class, \"toString\" , methodType(String.class), Listie.class);
+  assertEquals(\"[]\", (String) MH_super.invokeExact(l));
+  assertEquals(\"\"+l, (String) MH_this.invokeExact(l));
+  assertEquals(\"[]\", (String) MH_duper.invokeExact(l)); // ArrayList method
+  try { assertEquals(\"inaccessible\", Listie.lookup().findSpecial(
+          String.class, \"toString\", methodType(String.class), Listie.class));
    } catch (IllegalAccessException ex) { } // OK
-  Listie subl = new Listie() { public String toString() { return `[subclass]`; } };
-  assertEquals(``+l, (String) MH_this.invokeExact(subl)); // Listie method
+  Listie subl = new Listie() { public String toString() { return \"[subclass]\"; } };
+  assertEquals(\"\"+l, (String) MH_this.invokeExact(subl)); // Listie method
 
   refc - the class or interface from which the method is accessed - `java.lang.Class`
-  name - the name of the method (which must not be `<init>`) - `java.lang.String`
+  name - the name of the method (which must not be \"<init>\") - `java.lang.String`
   type - the type of the method, with the receiver argument omitted - `java.lang.invoke.MethodType`
   special-caller - the proposed calling class to perform the invokespecial - `java.lang.Class`
 
@@ -906,8 +906,8 @@
   import static java.lang.invoke.MethodType.*;
   ...
   MethodHandle MH_asList = publicLookup().findStatic(Arrays.class,
-    `asList`, methodType(List.class, Object[].class));
-  assertEquals(`[x, y]`, MH_asList.invoke(`x`, `y`).toString());
+    \"asList\", methodType(List.class, Object[].class));
+  assertEquals(\"[x, y]\", MH_asList.invoke(\"x\", \"y\").toString());
 
   refc - the class from which the method is accessed - `java.lang.Class`
   name - the name of the method - `java.lang.String`
@@ -971,9 +971,9 @@
 
   requested-lookup-class - the desired lookup class for the new lookup object - `java.lang.Class`
 
-  returns: a lookup object which reports the desired lookup class - `java.lang.voke.MethodHandles$Lookup`
+  returns: a lookup object which reports the desired lookup class - `java.lang.invoke.MethodHandles$Lookup`
 
   throws: java.lang.NullPointerException - if the argument is null"
-  (^java.lang.voke.MethodHandles$Lookup [^MethodHandles$Lookup this ^java.lang.Class requested-lookup-class]
+  (^java.lang.invoke.MethodHandles$Lookup [^MethodHandles$Lookup this ^java.lang.Class requested-lookup-class]
     (-> this (.in requested-lookup-class))))
 

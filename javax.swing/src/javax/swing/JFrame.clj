@@ -70,7 +70,7 @@
    This constructor sets the component's locale property to the value
    returned by JComponent.getDefaultLocale.
 
-  title - the title to be displayed in the frame's border. A null value is treated as an empty string, ``. - `java.lang.String`
+  title - the title to be displayed in the frame's border. A null value is treated as an empty string, \"\". - `java.lang.String`
   gc - the GraphicsConfiguration that is used to construct the new JFrame with; if gc is null, the system default GraphicsConfiguration is assumed - `java.awt.GraphicsConfiguration`
 
   throws: java.lang.IllegalArgumentException - if gc is not from a screen device. This exception is always thrown when GraphicsEnvironment.isHeadless() returns true."
@@ -147,7 +147,7 @@
 
 (defn set-default-close-operation
   "Sets the operation that will happen by default when
-   the user initiates a `close` on this frame.
+   the user initiates a \"close\" on this frame.
    You must specify one of the following choices:
 
 
@@ -177,7 +177,7 @@
 
    The value is set to HIDE_ON_CLOSE by default. Changes
    to the value of this property cause the firing of a property
-   change event, with property name `defaultCloseOperation`.
+   change event, with property name \"defaultCloseOperation\".
 
    Note: When the last displayable window within the
    Java virtual machine (VM) is disposed of, the VM may
@@ -370,7 +370,7 @@
 
 (defn get-default-close-operation
   "Returns the operation that occurs when the user
-   initiates a `close` on this frame.
+   initiates a \"close\" on this frame.
 
   returns: an integer indicating the window-close operation - `int`"
   (^Integer [^JFrame this]

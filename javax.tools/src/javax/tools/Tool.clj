@@ -14,9 +14,9 @@
    Any diagnostics generated will be written to either out
    or err in some unspecified format.
 
-  in - `standard` input; use System.in if null - `java.io.InputStream`
-  out - `standard` output; use System.out if null - `java.io.OutputStream`
-  err - `standard` error; use System.err if null - `java.io.OutputStream`
+  in - \"standard\" input; use System.in if null - `java.io.InputStream`
+  out - \"standard\" output; use System.out if null - `java.io.OutputStream`
+  err - \"standard\" error; use System.err if null - `java.io.OutputStream`
   arguments - arguments to pass to the tool - `java.lang.String`
 
   returns: 0 for success; nonzero otherwise - `int`

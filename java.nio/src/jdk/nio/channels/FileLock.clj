@@ -162,8 +162,8 @@
    method.
 
   returns: The file channel, or null if the file lock was not
-            acquired by a file channel. - `java.nio.s.FileChannel`"
-  (^java.nio.s.FileChannel [^FileLock this]
+            acquired by a file channel. - `java.nio.channels.FileChannel`"
+  (^java.nio.channels.FileChannel [^FileLock this]
     (-> this (.channel))))
 
 (defn size

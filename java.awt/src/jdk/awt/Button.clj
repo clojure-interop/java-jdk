@@ -1,7 +1,7 @@
 (ns jdk.awt.Button
   "This class creates a labeled button. The application can cause
   some action to happen when the button is pushed. This image
-  depicts three views of a `Quit` button as it appears
+  depicts three views of a \"Quit\" button as it appears
   under the Solaris operating system:
 
 

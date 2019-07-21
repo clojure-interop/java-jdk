@@ -90,7 +90,7 @@
 
 (defn show-status
   "Requests that the argument string be displayed in the
-   `status window`. Many browsers and applet viewers
+   \"status window\". Many browsers and applet viewers
    provide such a window, where the application can inform users of
    its current state.
 
@@ -107,15 +107,15 @@
 
 
    Target ArgumentDescription
-   `_self`  Show in the window and frame that
+   \"_self\"  Show in the window and frame that
                                      contain the applet.
-   `_parent`Show in the applet's parent frame. If
+   \"_parent\"Show in the applet's parent frame. If
                                      the applet's frame has no parent frame,
-                                     acts the same as `_self`.
-   `_top`   Show in the top-level frame of the applet's
+                                     acts the same as \"_self\".
+   \"_top\"   Show in the top-level frame of the applet's
                                      window. If the applet's frame is the
-                                     top-level frame, acts the same as `_self`.
-   `_blank` Show in a new, unnamed
+                                     top-level frame, acts the same as \"_self\".
+   \"_blank\" Show in a new, unnamed
                                      top-level window.
    nameShow in the frame or window named name. If
                           a target named name does not already exist, a

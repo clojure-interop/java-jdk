@@ -321,7 +321,7 @@
    (the default case). Otherwise, it sets the minimum, maximum and preferred
    widths of this column to the widths of the minimum, maximum and preferred
    sizes of the Component delivered by the header renderer.
-   The transient `width` property of this TableColumn is also set to the
+   The transient \"width\" property of this TableColumn is also set to the
    preferred width. Note this method is not used internally by the table
    package."
   ([^TableColumn this]

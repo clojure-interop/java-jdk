@@ -10,7 +10,7 @@
   DatatypeConstants.GMONTH, and
   DatatypeConstants.GDAY
   defined in the XML Namespace
-  `http://www.w3.org/2001/XMLSchema`.
+  \"http://www.w3.org/2001/XMLSchema\".
   These datatypes are normatively defined in
   W3C XML Schema 1.0 Part 2, Section 3.2.7-14.
 
@@ -436,7 +436,7 @@
   "Return the lexical representation of this instance.
    The format is specified in
    XML Schema 1.0 Part 2, Section 3.2.[7-14].1,
-   Lexical Representation`.
+   Lexical Representation\".
 
    Specific target lexical representation format is determined by
    getXMLSchemaType().

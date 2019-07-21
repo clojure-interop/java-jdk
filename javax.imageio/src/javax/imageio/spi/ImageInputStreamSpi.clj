@@ -4,7 +4,7 @@
   provider interfaces, see the class comment for the
   IIORegistry class.
 
-   This interface allows arbitrary objects to be `wrapped` by
+   This interface allows arbitrary objects to be \"wrapped\" by
   instances of ImageInputStream.  For example,
   a particular ImageInputStreamSpi might allow
   a generic InputStream to be used as an input source;
@@ -36,7 +36,7 @@
 (defn get-input-class
   "Returns a Class object representing the class or
    interface type that must be implemented by an input source in
-   order to be `wrapped` in an ImageInputStream via
+   order to be \"wrapped\" in an ImageInputStream via
    the createInputStreamInstance method.
 
     Typical return values might include

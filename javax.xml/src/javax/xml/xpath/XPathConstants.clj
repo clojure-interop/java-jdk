@@ -56,7 +56,7 @@
 (def *-dom-object-model
   "Static Constant.
 
-  The URI for the DOM object model, `http://java.sun.com/jaxp/xpath/dom`.
+  The URI for the DOM object model, \"http://java.sun.com/jaxp/xpath/dom\".
 
   type: java.lang.String"
   XPathConstants/DOM_OBJECT_MODEL)

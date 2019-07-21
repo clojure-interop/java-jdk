@@ -9,12 +9,12 @@
   specialized forms of the method available:
 
 
-    JAXBContext.newInstance( `com.acme.foo:com.acme.bar` )
+    JAXBContext.newInstance( \"com.acme.foo:com.acme.bar\" )
     The JAXBContext instance is initialized from a list of colon
     separated Java package names. Each java package contains
     JAXB mapped classes, schema-derived classes and/or user annotated
     classes. Additionally, the java package may contain JAXB package annotations
-    that must be processed. (see JLS, Section 7.4.1 `Named Packages`).
+    that must be processed. (see JLS, Section 7.4.1 \"Named Packages\").
 
     JAXBContext.newInstance( com.acme.foo.Foo.class )
      The JAXBContext instance is initialized with class(es)
@@ -73,11 +73,11 @@
 
 
 
-         JAXBContext jc = JAXBContext.newInstance( `com.acme.foo:com.acme.bar` );
+         JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo:com.acme.bar\" );
          Unmarshaller u = jc.createUnmarshaller();
-         FooObject fooObj = (FooObject)u.unmarshal( new File( `foo.xml` ) ); // ok
-         BarObject barObj = (BarObject)u.unmarshal( new File( `bar.xml` ) ); // ok
-         BazObject bazObj = (BazObject)u.unmarshal( new File( `baz.xml` ) ); // error, `com.acme.baz` not in contextPath
+         FooObject fooObj = (FooObject)u.unmarshal( new File( \"foo.xml\" ) ); // ok
+         BarObject barObj = (BarObject)u.unmarshal( new File( \"bar.xml\" ) ); // ok
+         BazObject bazObj = (BazObject)u.unmarshal( new File( \"baz.xml\" ) ); // error, \"com.acme.baz\" not in contextPath
 
 
   The client application may also generate Java content trees explicitly rather
@@ -134,11 +134,11 @@
 
 
 
-         JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+         JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
 
          // unmarshal from foo.xml
          Unmarshaller u = jc.createUnmarshaller();
-         FooObject fooObj = (FooObject)u.unmarshal( new File( `foo.xml` ) );
+         FooObject fooObj = (FooObject)u.unmarshal( new File( \"foo.xml\" ) );
 
          // marshal to System.out
          Marshaller m = jc.createMarshaller();

@@ -134,7 +134,7 @@
   "Returns the suffix used to construct the name of the look and feel
    (L&F) class used to render this component.
 
-  returns: the string `SpinnerUI` - `java.lang.String`"
+  returns: the string \"SpinnerUI\" - `java.lang.String`"
   (^java.lang.String [^JSpinner this]
     (-> this (.getUIClassID))))
 
@@ -239,7 +239,7 @@
 (defn set-model
   "Changes the model that represents the value of this spinner.
    If the editor property has not been explicitly set,
-   the editor property is (implicitly) set after the `model`
+   the editor property is (implicitly) set after the \"model\"
    PropertyChangeEvent has been fired.  The editor
    property is set to the value returned by createEditor,
    as in:

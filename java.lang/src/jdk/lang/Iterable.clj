@@ -1,6 +1,6 @@
 (ns jdk.lang.Iterable
   "Implementing this interface allows an object to be the target of
-  the `for-each loop` statement. See
+  the \"for-each loop\" statement. See
 
   For-each Loop"
   (:refer-clojure :only [require comment defn ->])

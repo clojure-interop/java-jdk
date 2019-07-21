@@ -1,6 +1,6 @@
 (ns jdk.rmi.activation.ActivationInstantiator
   "An ActivationInstantiator is responsible for creating
-  instances of `activatable` objects. A concrete subclass of
+  instances of \"activatable\" objects. A concrete subclass of
   ActivationGroup implements the newInstance
   method to handle creating objects within the group."
   (:refer-clojure :only [require comment defn ->])
@@ -19,7 +19,7 @@
    descriptor (using the getLocation method),
 
     creating an instance of the class by invoking the special
-   `activation` constructor of the object's class that takes two
+   \"activation\" constructor of the object's class that takes two
    arguments: the object's ActivationID, and the
    MarshalledObject containing object specific
    initialization data, and

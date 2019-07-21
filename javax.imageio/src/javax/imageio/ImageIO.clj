@@ -103,7 +103,7 @@
    registered ImageWriters that claim to be able to
    encode files with the given MIME type.
 
-  mime-type - a String containing a file suffix (e.g., `image/jpeg` or `image/x-bmp`). - `java.lang.String`
+  mime-type - a String containing a file suffix (e.g., \"image/jpeg\" or \"image/x-bmp\"). - `java.lang.String`
 
   returns: an Iterator containing ImageWriters. - `java.util.Iterator<javax.imageio.ImageWriter>`
 
@@ -147,7 +147,7 @@
    registered ImageReaders that claim to be able to
    decode files with the given MIME type.
 
-  mime-type - a String containing a file suffix (e.g., `image/jpeg` or `image/x-bmp`). - `java.lang.String`
+  mime-type - a String containing a file suffix (e.g., \"image/jpeg\" or \"image/x-bmp\"). - `java.lang.String`
 
   returns: an Iterator containing
    ImageReaders. - `java.util.Iterator<javax.imageio.ImageReader>`
@@ -237,7 +237,7 @@
    registered ImageWriters that claim to be able to
    encode files with the given suffix.
 
-  file-suffix - a String containing a file suffix (e.g., `jpg` or `tiff`). - `java.lang.String`
+  file-suffix - a String containing a file suffix (e.g., \"jpg\" or \"tiff\"). - `java.lang.String`
 
   returns: an Iterator containing ImageWriters. - `java.util.Iterator<javax.imageio.ImageWriter>`
 
@@ -250,7 +250,7 @@
    registered ImageReaders that claim to be able to
    decode files with the given suffix.
 
-  file-suffix - a String containing a file suffix (e.g., `jpg` or `tiff`). - `java.lang.String`
+  file-suffix - a String containing a file suffix (e.g., \"jpg\" or \"tiff\"). - `java.lang.String`
 
   returns: an Iterator containing
    ImageReaders. - `java.util.Iterator<javax.imageio.ImageReader>`
@@ -276,7 +276,7 @@
    registered ImageReaders that claim to be able to
    decode the named format.
 
-  format-name - a String containing the informal name of a format (e.g., `jpeg` or `tiff`. - `java.lang.String`
+  format-name - a String containing the informal name of a format (e.g., \"jpeg\" or \"tiff\". - `java.lang.String`
 
   returns: an Iterator containing
    ImageReaders. - `java.util.Iterator<javax.imageio.ImageReader>`
@@ -293,7 +293,7 @@
    given ImageWriter is not registered.  This method
    is provided principally for symmetry with
    getImageWriter(ImageReader).  Note that this
-   method returns the `preferred` reader, which is the first in
+   method returns the \"preferred\" reader, which is the first in
    the list returned by
    javax.imageio.spi.ImageWriterSpi.getImageReaderSpiNames().
 
@@ -349,7 +349,7 @@
    registered ImageWriters that claim to be able to
    encode the named format.
 
-  format-name - a String containing the informal name of a format (e.g., `jpeg` or `tiff`. - `java.lang.String`
+  format-name - a String containing the informal name of a format (e.g., \"jpeg\" or \"tiff\". - `java.lang.String`
 
   returns: an Iterator containing
    ImageWriters. - `java.util.Iterator<javax.imageio.ImageWriter>`
@@ -374,7 +374,7 @@
    back out preserving all metadata, without having to understand
    anything about the structure of the metadata, or even about
    the image format.  Note that this method returns the
-   `preferred` writer, which is the first in the list returned by
+   \"preferred\" writer, which is the first in the list returned by
    javax.imageio.spi.ImageReaderSpi.getImageWriterSpiNames().
 
   reader - an instance of a registered ImageReader. - `javax.imageio.ImageReader`

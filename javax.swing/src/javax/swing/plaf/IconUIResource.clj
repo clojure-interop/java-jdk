@@ -4,7 +4,7 @@
   to wrap any icons specified as defaults.
 
   This class delegates all method invocations to the
-  Icon `delegate` object specified at construction.
+  Icon \"delegate\" object specified at construction.
 
   Warning:
   Serialized objects of this class will not be compatible with

@@ -49,7 +49,7 @@
    Without this mechanism, the provider would be returning
    controls that only contained data in BER encoded format.
 
-   Typically, ctl is a `basic` control containing
+   Typically, ctl is a \"basic\" control containing
    BER encoded data. The factory is used to create a specialized
    control implementation, usually by decoding the BER encoded data,
    that provides methods to access that data in a type-safe and friendly

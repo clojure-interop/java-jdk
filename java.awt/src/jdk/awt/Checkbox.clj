@@ -1,8 +1,8 @@
 (ns jdk.awt.Checkbox
   "A check box is a graphical component that can be in either an
-  `on` (true) or `off` (false) state.
+  \"on\" (true) or \"off\" (false) state.
   Clicking on a check box changes its state from
-  `on` to `off,` or from `off` to `on.`
+  \"on\" to \"off,\" or from \"off\" to \"on.\"
 
   The following code example creates a set of check boxes in
   a grid layout:
@@ -10,27 +10,27 @@
 
 
   setLayout(new GridLayout(3, 1));
-  add(new Checkbox(`one`, null, true));
-  add(new Checkbox(`two`));
-  add(new Checkbox(`three`));
+  add(new Checkbox(\"one\", null, true));
+  add(new Checkbox(\"two\"));
+  add(new Checkbox(\"three\"));
 
   This image depicts the check boxes and grid layout
   created by this code example:
 
 
 
-  The button labeled one is in the `on` state, and the
-  other two are in the `off` state. In this example, which uses the
+  The button labeled one is in the \"on\" state, and the
+  other two are in the \"off\" state. In this example, which uses the
   GridLayout class, the states of the three check
   boxes are set independently.
 
   Alternatively, several check boxes can be grouped together under
   the control of a single object, using the
   CheckboxGroup class.
-  In a check box group, at most one button can be in the `on`
+  In a check box group, at most one button can be in the \"on\"
   state at any given time. Clicking on a check box to turn it on
   forces any other check box in the same group that is on
-  into the `off` state."
+  into the \"off\" state."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.awt Checkbox]))
 
@@ -77,8 +77,8 @@
 
 (defn set-state
   "Sets the state of this check box to the specified state.
-   The boolean value true indicates the `on` state,
-   and false indicates the `off` state.
+   The boolean value true indicates the \"on\" state,
+   and false indicates the \"off\" state.
 
    Note that this method should be primarily used to
    initialize the state of the checkbox.  Programmatically
@@ -99,9 +99,9 @@
     (-> this (.getCheckboxGroup))))
 
 (defn get-state?
-  "Determines whether this check box is in the `on` or `off` state.
-   The boolean value true indicates the `on` state,
-   and false indicates the `off` state.
+  "Determines whether this check box is in the \"on\" or \"off\" state.
+   The boolean value true indicates the \"on\" state,
+   and false indicates the \"off\" state.
 
   returns: the state of this check box, as a boolean value - `boolean`"
   (^Boolean [^Checkbox this]

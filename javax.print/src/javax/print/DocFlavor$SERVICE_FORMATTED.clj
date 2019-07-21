@@ -9,7 +9,7 @@
   "Constructor.
 
   Constructs a new doc flavor with a MIME type of
-   `application/x-java-jvm-local-objectref` indicating
+   \"application/x-java-jvm-local-objectref\" indicating
    service formatted print data and the given print data
    representation class name.
 
@@ -24,7 +24,7 @@
 
   Service formatted print data doc flavor with print data
    representation class name =
-   `java.awt.image.renderable.RenderableImage`
+   \"java.awt.image.renderable.RenderableImage\"
    (renderable image object).
 
   type: javax.print.DocFlavor$SERVICE_FORMATTED"
@@ -34,7 +34,7 @@
   "Static Constant.
 
   Service formatted print data doc flavor with print data
-   representation class name = `java.awt.print.Printable`
+   representation class name = \"java.awt.print.Printable\"
    (printable object).
 
   type: javax.print.DocFlavor$SERVICE_FORMATTED"
@@ -44,7 +44,7 @@
   "Static Constant.
 
   Service formatted print data doc flavor with print data
-   representation class name = `java.awt.print.Pageable`
+   representation class name = \"java.awt.print.Pageable\"
    (pageable object).
 
   type: javax.print.DocFlavor$SERVICE_FORMATTED"

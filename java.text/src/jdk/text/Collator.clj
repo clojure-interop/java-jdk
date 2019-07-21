@@ -26,10 +26,10 @@
 
   // Compare two strings in the default locale
   Collator myCollator = Collator.getInstance();
-  if( myCollator.compare(`abc`, `ABC`) < 0 )
-      System.out.println(`abc is less than ABC`);
+  if( myCollator.compare(\"abc\", \"ABC\") < 0 )
+      System.out.println(\"abc is less than ABC\");
   else
-      System.out.println(`abc is greater than or equal to ABC`);
+      System.out.println(\"abc is greater than or equal to ABC\");
 
 
 
@@ -38,9 +38,9 @@
   comparisons. Four strengths are provided: PRIMARY,
   SECONDARY, TERTIARY, and IDENTICAL.
   The exact assignment of strengths to language features is
-  locale dependant.  For example, in Czech, `e` and `f` are considered
-  primary differences, while `e` and `ě` are secondary differences,
-  `e` and `E` are tertiary differences and `e` and `e` are identical.
+  locale dependant.  For example, in Czech, \"e\" and \"f\" are considered
+  primary differences, while \"e\" and \"ě\" are secondary differences,
+  \"e\" and \"E\" are tertiary differences and \"e\" and \"e\" are identical.
   The following shows how both case and accents could be ignored for
   US English.
 
@@ -49,8 +49,8 @@
   //Get the Collator for US English and set its strength to PRIMARY
   Collator usCollator = Collator.getInstance(Locale.US);
   usCollator.setStrength(Collator.PRIMARY);
-  if( usCollator.compare(`abc`, `ABC`) == 0 ) {
-      System.out.println(`Strings are equivalent`);
+  if( usCollator.compare(\"abc\", \"ABC\") == 0 ) {
+      System.out.println(\"Strings are equivalent\");
   }
 
 
@@ -76,7 +76,7 @@
   Collator strength value.  When set, only PRIMARY differences are
    considered significant during comparison. The assignment of strengths
    to language features is locale dependant. A common example is for
-   different base letters (`a` vs `b`) to be considered a PRIMARY difference.
+   different base letters (\"a\" vs \"b\") to be considered a PRIMARY difference.
 
   type: int"
   Collator/PRIMARY)
@@ -87,7 +87,7 @@
   Collator strength value.  When set, only SECONDARY and above differences are
    considered significant during comparison. The assignment of strengths
    to language features is locale dependant. A common example is for
-   different accented forms of the same base letter (`a` vs `�`) to be
+   different accented forms of the same base letter (\"a\" vs \"�\") to be
    considered a SECONDARY difference.
 
   type: int"
@@ -99,7 +99,7 @@
   Collator strength value.  When set, only TERTIARY and above differences are
    considered significant during comparison. The assignment of strengths
    to language features is locale dependant. A common example is for
-   case differences (`a` vs `A`) to be considered a TERTIARY difference.
+   case differences (\"a\" vs \"A\") to be considered a TERTIARY difference.
 
   type: int"
   Collator/TERTIARY)
@@ -110,10 +110,10 @@
   Collator strength value.  When set, all differences are
    considered significant during comparison. The assignment of strengths
    to language features is locale dependant. A common example is for control
-   characters (`\u0001` vs `\u0002`) to be considered equal at the
+   characters (\"\\u0001\" vs \"\\u0002\") to be considered equal at the
    PRIMARY, SECONDARY, and TERTIARY levels but different at the IDENTICAL
    level.  Additionally, differences between pre-composed accents such as
-   `\u00C0` (A-grave) and combining accents such as `A\u0300`
+   \"\\u00C0\" (A-grave) and combining accents such as \"A\\u0300\"
    (A, combining-grave) will be considered significant at the IDENTICAL
    level if decomposition is set to NO_DECOMPOSITION.
 

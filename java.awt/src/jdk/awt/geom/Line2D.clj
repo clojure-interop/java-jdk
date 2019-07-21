@@ -36,8 +36,8 @@
    because of floating point rounding issues.
    If the point is colinear with the line segment, but
    not between the end points, then the value will be -1 if the point
-   lies `beyond (x1,y1)` or 1 if the point lies
-   `beyond (x2,y2)`.
+   lies \"beyond (x1,y1)\" or 1 if the point lies
+   \"beyond (x2,y2)\".
 
   x-1 - the X coordinate of the start point of the specified line segment - `double`
   y-1 - the Y coordinate of the start point of the specified line segment - `double`

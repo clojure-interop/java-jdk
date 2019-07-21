@@ -119,7 +119,7 @@
 
 (defn property-change
   "Called by the JFormattedTextField
-   PropertyChangeListener.  When the `value`
+   PropertyChangeListener.  When the \"value\"
    property changes, which implies that the user has typed a new
    number, we set the value of the spinners model.
 

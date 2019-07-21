@@ -22,7 +22,7 @@
   attributes.
 
 
-  ctx.rebind(`inky`, printer, printerAttrs);
+  ctx.rebind(\"inky\", printer, printerAttrs);
   An LDAP service provider for ctx uses a DirStateFactory
   (indirectly via DirectoryManager.getStateToBind())
   and gives it printer and printerAttrs. A factory for
@@ -67,7 +67,7 @@
 
    The name and nameCtx parameters may
    optionally be used to specify the name of the object being created.
-   See the description of `Name and Context Parameters` in
+   See the description of \"Name and Context Parameters\" in
    ObjectFactory.getObjectInstance()
    for details.
    If a factory uses nameCtx it should synchronize its use

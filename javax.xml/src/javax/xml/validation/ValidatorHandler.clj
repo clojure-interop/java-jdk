@@ -162,7 +162,7 @@
 
    ValidatorHandler uses a LSResourceResolver
    when it needs to locate external resources while a validation,
-   although exactly what constitutes `locating external resources` is
+   although exactly what constitutes \"locating external resources\" is
    up to each schema language.
 
 

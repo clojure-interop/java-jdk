@@ -15,7 +15,7 @@
 
    The authentication type is determined by the actual certificate
    used. For instance, if RSAPublicKey is used, the authType
-   should be `RSA`. Checking is case-sensitive.
+   should be \"RSA\". Checking is case-sensitive.
 
   chain - the peer certificate chain - `java.security.cert.X509Certificate[]`
   auth-type - the authentication type based on the client certificate - `java.lang.String`
@@ -31,8 +31,8 @@
    authentication based on the authentication type.
 
    The authentication type is the key exchange algorithm portion
-   of the cipher suites represented as a String, such as `RSA`,
-   `DHE_DSS`. Note: for some exportable cipher suites, the key
+   of the cipher suites represented as a String, such as \"RSA\",
+   \"DHE_DSS\". Note: for some exportable cipher suites, the key
    exchange algorithm is determined at run time during the
    handshake. For instance, for TLS_RSA_EXPORT_WITH_RC4_40_MD5,
    the authType should be RSA_EXPORT when an ephemeral RSA key is

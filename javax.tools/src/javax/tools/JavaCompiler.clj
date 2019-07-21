@@ -97,7 +97,7 @@
         compiler.getTask(null, fileManager, diagnostics, null, null, compilationUnits).call();
 
         for ( Diagnostic<? extends JavaFileObject> diagnostic : diagnostics.getDiagnostics())
-            System.out.format(`Error on line %d in %s%n`,
+            System.out.format(\"Error on line %d in %s%n\",
                               diagnostic.getLineNumber(),
                               diagnostic.getSource().toUri());
 
@@ -126,9 +126,9 @@
         StandardJavaFileManager stdFileManager = compiler.getStandardFileManager(null, null, null);
         JavaFileManager fileManager = new ForwardingJavaFileManager(stdFileManager) {
             public void flush() throws IOException {
-                logger.entering(StandardJavaFileManager.class.getName(), `flush`);
+                logger.entering(StandardJavaFileManager.class.getName(), \"flush\");
                 super.flush();
-                logger.exiting(StandardJavaFileManager.class.getName(), `flush`);
+                logger.exiting(StandardJavaFileManager.class.getName(), \"flush\");
             }
         };
         compiler.getTask(null, fileManager, null, null, null, compilationUnits).call();
@@ -149,7 +149,7 @@
           */
         public class JavaSourceFromString extends SimpleJavaFileObject {
             /**
-             * The source code of this `file`.
+             * The source code of this \"file\".
               */
             final String code;
 
@@ -159,7 +159,7 @@
              *  @param code the source code for the compilation unit represented by this file object
               */
             JavaSourceFromString(String name, String code) {
-                super(URI.create(`string:///`  name.replace('.','/')  Kind.SOURCE.extension),
+                super(URI.create(\"string:///\"  name.replace('.','/')  Kind.SOURCE.extension),
                       Kind.SOURCE);
                 this.code = code;
             }

@@ -31,8 +31,8 @@
     ...  -- Allows for future expansion --
   }
   Note: the OAEPParameterSpec.DEFAULT uses the following:
-      message digest  -- `SHA-1`
-      mask generation function (mgf) -- `MGF1`
+      message digest  -- \"SHA-1\"
+      mask generation function (mgf) -- \"MGF1\"
       parameters for mgf -- MGF1ParameterSpec.SHA1
       source of encoding input -- PSource.PSpecified.DEFAULT"
   (:refer-clojure :only [require comment defn ->])

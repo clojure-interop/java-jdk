@@ -13,8 +13,8 @@
   The object that implements the ActionListener interface
   gets this ActionEvent when the event occurs. The listener
   is therefore spared the details of processing individual mouse movements
-  and mouse clicks, and can instead process a `meaningful` (semantic)
-  event like `button pressed`.
+  and mouse clicks, and can instead process a \"meaningful\" (semantic)
+  event like \"button pressed\".
 
   An unspecified behavior will be caused if the id parameter
   of any particular ActionEvent instance is not
@@ -110,9 +110,9 @@
 
 (defn get-action-command
   "Returns the command string associated with this action.
-   This string allows a `modal` component to specify one of several
+   This string allows a \"modal\" component to specify one of several
    commands, depending on its state. For example, a single button might
-   toggle between `show details` and `hide details`. The source object
+   toggle between \"show details\" and \"hide details\". The source object
    and the event would be the same in each case, but the command string
    would identify the intended action.
 

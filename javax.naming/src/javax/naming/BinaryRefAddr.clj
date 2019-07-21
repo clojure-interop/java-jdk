@@ -74,7 +74,7 @@
   "Generates the string representation of this address.
    The string consists of the address's type and contents with labels.
    The first 32 bytes of contents are displayed (in hexadecimal).
-   If there are more than 32 bytes, `...` is used to indicate more.
+   If there are more than 32 bytes, \"...\" is used to indicate more.
    This string is meant to used for debugging purposes and not
    meant to be interpreted programmatically.
 

@@ -21,11 +21,11 @@
   a specified point.
 
   For example, if z refers to a string buffer object
-  whose current contents are `start`, then
-  the method call z.append(`le`) would cause the string
-  buffer to contain `startle`, whereas
-  z.insert(4, `le`) would alter the string buffer to
-  contain `starlet`.
+  whose current contents are \"start\", then
+  the method call z.append(\"le\") would cause the string
+  buffer to contain \"startle\", whereas
+  z.insert(4, \"le\") would alter the string buffer to
+  contain \"starlet\".
 
   In general, if sb refers to an instance of a StringBuffer,
   then sb.append(x) has the same effect as
@@ -150,7 +150,7 @@
    Note that the reverse operation may result in producing
    surrogate pairs that were unpaired low-surrogates and
    high-surrogates before the operation. For example, reversing
-   `\uDC00\uD800` produces `\uD800\uDC00` which is
+   \"\\uDC00\\uD800\" produces \"\\uD800\\uDC00\" which is
    a valid surrogate pair.
 
   returns: a reference to this object. - `java.lang.StringBuffer`"
@@ -177,14 +177,14 @@
    index k in the new character sequence is the same as the
    character at index k in the old sequence if k is less
    than the length of the old character sequence; otherwise, it is the
-   null character '\u0000'.
+   null character '\\u0000'.
 
    In other words, if the newLength argument is less than
    the current length, the length is changed to the specified length.
 
    If the newLength argument is greater than or equal
    to the current length, sufficient null characters
-   ('\u0000') are appended so that
+   ('\\u0000') are appended so that
    length becomes the newLength argument.
 
    The newLength argument must be greater than or equal
@@ -378,7 +378,7 @@
 
    If s is null, then this method appends
    characters as if the s parameter was a sequence containing the four
-   characters `null`.
+   characters \"null\".
 
   s - the sequence to append. - `java.lang.CharSequence`
   start - the starting index of the subsequence to be appended. - `int`

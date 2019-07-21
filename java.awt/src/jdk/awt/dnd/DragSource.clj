@@ -164,7 +164,7 @@
    the implementation of the Java platform, this method returns the value of
    that property; otherwise this method returns some default value.
    The pertinent desktop property can be queried using
-   java.awt.Toolkit.getDesktopProperty(`DnD.gestureMotionThreshold`).
+   java.awt.Toolkit.getDesktopProperty(\"DnD.gestureMotionThreshold\").
 
   returns: the drag gesture motion threshold - `int`"
   (^Integer []

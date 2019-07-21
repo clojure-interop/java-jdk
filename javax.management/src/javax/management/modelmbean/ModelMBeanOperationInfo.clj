@@ -14,11 +14,11 @@
   nameString
       Operation name.
   descriptorTypeString
-      Must be `operation`.
+      Must be \"operation\".
   classString
       Class where method is defined (fully qualified).
   roleString
-      Must be `operation`, `getter`, or `setter`.
+      Must be \"operation\", \"getter\", or \"setter\".
   targetObjectObject
       Object on which to execute this method.
   targetTypeString
@@ -63,9 +63,9 @@
   signature - MBeanParameterInfo objects describing the parameters(arguments) of the method. - `javax.management.MBeanParameterInfo[]`
   type - The type of the method's return value. - `java.lang.String`
   impact - The impact of the method, one of INFO, ACTION, ACTION_INFO, UNKNOWN. - `int`
-  descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the MBeanOperationInfo. If it is null then a default descriptor will be created. If the descriptor does not contain fields `displayName` or `role`, the missing ones are added with their default values. - `javax.management.Descriptor`
+  descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the MBeanOperationInfo. If it is null then a default descriptor will be created. If the descriptor does not contain fields \"displayName\" or \"role\", the missing ones are added with their default values. - `javax.management.Descriptor`
 
-  throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid; or descriptor field `name` is not equal to operation name; or descriptor field `DescriptorType` is not equal to `operation`; or descriptor optional field `role` is present but not equal to `operation`, `getter`, or `setter`."
+  throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid; or descriptor field \"name\" is not equal to operation name; or descriptor field \"DescriptorType\" is not equal to \"operation\"; or descriptor optional field \"role\" is present but not equal to \"operation\", \"getter\", or \"setter\"."
   (^ModelMBeanOperationInfo [^java.lang.String name ^java.lang.String description signature ^java.lang.String type ^Integer impact ^javax.management.Descriptor descriptor]
     (new ModelMBeanOperationInfo name description signature type impact descriptor))
   (^ModelMBeanOperationInfo [^java.lang.String name ^java.lang.String description signature ^java.lang.String type ^Integer impact]

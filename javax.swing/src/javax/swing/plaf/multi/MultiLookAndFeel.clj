@@ -60,7 +60,7 @@
   "Returns a string, suitable for use in menus,
    that identifies this look and feel.
 
-  returns: a string such as `Multiplexing Look and Feel` - `java.lang.String`"
+  returns: a string such as \"Multiplexing Look and Feel\" - `java.lang.String`"
   (^java.lang.String [^MultiLookAndFeel this]
     (-> this (.getName))))
 
@@ -68,14 +68,14 @@
   "Returns a string, suitable for use by applications/services,
    that identifies this look and feel.
 
-  returns: `Multiplex` - `java.lang.String`"
+  returns: \"Multiplex\" - `java.lang.String`"
   (^java.lang.String [^MultiLookAndFeel this]
     (-> this (.getID))))
 
 (defn get-description
   "Returns a one-line description of this look and feel.
 
-  returns: a descriptive string such as `Allows multiple UI instances per component instance` - `java.lang.String`"
+  returns: a descriptive string such as \"Allows multiple UI instances per component instance\" - `java.lang.String`"
   (^java.lang.String [^MultiLookAndFeel this]
     (-> this (.getDescription))))
 
@@ -101,9 +101,9 @@
    For this look and feel,
    the defaults consist solely of
    mappings of UI class IDs
-   (such as `ButtonUI`)
+   (such as \"ButtonUI\")
    to ComponentUI class names
-   (such as `javax.swing.plaf.multi.MultiButtonUI`).
+   (such as \"javax.swing.plaf.multi.MultiButtonUI\").
 
   returns: an initialized UIDefaults object - `javax.swing.UIDefaults`"
   (^javax.swing.UIDefaults [^MultiLookAndFeel this]

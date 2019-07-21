@@ -1,7 +1,7 @@
 (ns javax.security.auth.AuthPermission
   "This class is for authentication permissions.
   An AuthPermission contains a name
-  (also referred to as a `target name`)
+  (also referred to as a \"target name\")
   but no actions list; you either have the named permission
   or you don't.
 

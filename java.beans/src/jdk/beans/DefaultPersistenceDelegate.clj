@@ -9,7 +9,7 @@
 
   The key assumptions are that the class has a nullary constructor
   and that its state is accurately represented by matching pairs
-  of `setter` and `getter` methods in the order they are returned
+  of \"setter\" and \"getter\" methods in the order they are returned
   by the Introspector.
   In addition to providing code-free persistence for JavaBeans,
   the DefaultPersistenceDelegate provides a convenient means
@@ -36,7 +36,7 @@
 
 
 
-       new DefaultPersistenceDelegate(new String[]{`name`, `style`, `size`});
+       new DefaultPersistenceDelegate(new String[]{\"name\", \"style\", \"size\"});
 
   constructor-property-names - The property names for the arguments of this constructor. - `java.lang.String[]`"
   (^DefaultPersistenceDelegate [constructor-property-names]

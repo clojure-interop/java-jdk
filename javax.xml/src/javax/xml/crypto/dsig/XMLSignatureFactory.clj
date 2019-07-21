@@ -11,7 +11,7 @@
   mechanism type desired, for example:
 
 
-  XMLSignatureFactory factory = XMLSignatureFactory.getInstance(`DOM`);
+  XMLSignatureFactory factory = XMLSignatureFactory.getInstance(\"DOM\");
 
 
   The objects that this factory produces will be based
@@ -28,7 +28,7 @@
   DOM mechanism would be specified in the Provider subclass as:
 
 
-      put(`XMLSignatureFactory.DOM`, `org.example.DOMXMLSignatureFactory`);
+      put(\"XMLSignatureFactory.DOM\", \"org.example.DOMXMLSignatureFactory\");
 
   An implementation MUST minimally support the default mechanism type: DOM.
 
@@ -95,7 +95,7 @@
 
 (defn *get-instance
   "Returns an XMLSignatureFactory that supports the
-   requested XML processing mechanism and representation type (ex: `DOM`),
+   requested XML processing mechanism and representation type (ex: \"DOM\"),
    as supplied by the specified provider. Note that the specified
    Provider object does not have to be registered in the
    provider list.
@@ -290,7 +290,7 @@
 
 (defn get-mechanism-type
   "Returns the type of the XML processing mechanism and representation
-   supported by this XMLSignatureFactory (ex: `DOM`).
+   supported by this XMLSignatureFactory (ex: \"DOM\").
 
   returns: the XML processing mechanism type supported by this
       XMLSignatureFactory - `java.lang.String`"

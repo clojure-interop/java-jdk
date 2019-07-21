@@ -40,7 +40,7 @@
 
 (defn get-component
   "This method returns the Component
-   that is to be `observed` by the
+   that is to be \"observed\" by the
    DragGestureRecognizer
    for drag initiating gestures.
 

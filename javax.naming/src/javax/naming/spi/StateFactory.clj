@@ -20,7 +20,7 @@
   updated and rebound:
 
 
-  ctx.rebind(`inky`, printer);
+  ctx.rebind(\"inky\", printer);
   The service provider for ctx uses a state factory
   to obtain the state of printer for binding into its namespace.
   A state factory for the Printer type object might return
@@ -66,7 +66,7 @@
 
    The name and nameCtx parameters may
    optionally be used to specify the name of the object being created.
-   See the description of `Name and Context Parameters` in
+   See the description of \"Name and Context Parameters\" in
    ObjectFactory.getObjectInstance()
    for details.
    If a factory uses nameCtx it should synchronize its use

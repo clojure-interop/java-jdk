@@ -4,12 +4,12 @@
   This interface is implemented by driver vendors to let users know the capabilities
   of a Database Management System (DBMS) in combination with
   the driver based on JDBC™ technology
-  (`JDBC driver`) that is used with it.  Different relational DBMSs often support
+  (\"JDBC driver\") that is used with it.  Different relational DBMSs often support
   different features, implement features in different ways, and use different
   data types.  In addition, a driver may implement a feature on top of what the
   DBMS offers.  Information returned by methods in this interface applies
   to the capabilities of a particular driver and a particular DBMS working
-  together. Note that as used in this documentation, the term `database` is
+  together. Note that as used in this documentation, the term \"database\" is
   used generically to refer to both the driver and DBMS.
 
   A user for this interface is commonly a tool that needs to discover how to
@@ -34,8 +34,8 @@
 
   Some DatabaseMetaData methods take arguments that are
   String patterns.  These arguments all have names such as fooPattern.
-  Within a pattern String, `%` means match any substring of 0 or more
-  characters, and `_` means match any one character. Only metadata
+  Within a pattern String, \"%\" means match any substring of 0 or more
+  characters, and \"_\" means match any one character. Only metadata
   entries matching the search pattern are returned. If a search pattern
   argument is set to null, that argument's criterion will
   be dropped from the search."
@@ -133,8 +133,8 @@
    A user may not have permission to execute any of the functions that are
    returned by getFunctions
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   function-name-pattern - a function name pattern; must match the function name as it is stored in the database - `java.lang.String`
 
   returns: ResultSet - each row is a function description - `java.sql.ResultSet`
@@ -236,8 +236,8 @@
          importedKeyInitiallyImmediate - see SQL92 for definition
          importedKeyNotDeferrable - see SQL92 for definition
 
-  catalog - a catalog name; must match the catalog name as it is stored in this database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema - a schema name; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in this database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema - a schema name; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table - a table name; must match the table name as it is stored in this database - `java.lang.String`
 
   returns: a ResultSet object in which each row is a
@@ -348,7 +348,7 @@
     (-> this (.supportsBatchUpdates))))
 
 (defn get-extra-name-characters
-  "Retrieves all the `extra` characters that can be used in unquoted
+  "Retrieves all the \"extra\" characters that can be used in unquoted
    identifier names (those beyond a-z, A-Z, 0-9 and _).
 
   returns: the string containing the extra characters - `java.lang.String`
@@ -412,7 +412,7 @@
          typeNullableUnknown - nullability unknown
 
     CASE_SENSITIVE boolean=> is it case sensitive.
-    SEARCHABLE short => can you use `WHERE` based on this type:
+    SEARCHABLE short => can you use \"WHERE\" based on this type:
 
          typePredNone - No support
          typePredChar - Only supported with WHERE .. LIKE
@@ -519,9 +519,9 @@
     (-> this (.storesMixedCaseIdentifiers))))
 
 (defn get-procedure-term
-  "Retrieves the database vendor's preferred term for `procedure`.
+  "Retrieves the database vendor's preferred term for \"procedure\".
 
-  returns: the vendor term for `procedure` - `java.lang.String`
+  returns: the vendor term for \"procedure\" - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
   (^java.lang.String [^DatabaseMetaData this]
@@ -552,8 +552,8 @@
     represent the second column within the primary key).
     PK_NAME String => primary key name (may be null)
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema - a schema name; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema - a schema name; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table - a table name; must match the table name as it is stored in the database - `java.lang.String`
 
   returns: ResultSet - each row is a primary key column description - `java.sql.ResultSet`
@@ -597,7 +597,7 @@
 
 (defn get-identifier-quote-string
   "Retrieves the string used to quote SQL identifiers.
-   This method returns a space ` ` if identifier quoting is not supported.
+   This method returns a space \" \" if identifier quoting is not supported.
 
   returns: the quoting string or a space if quoting is not supported - `java.lang.String`
 
@@ -647,7 +647,7 @@
     TABLE_SCHEM String => schema name
     TABLE_CATALOG String => catalog name (may be null)
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database;`` retrieves those without a catalog; null means catalog name should not be used to narrow down the search. - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database;\"\" retrieves those without a catalog; null means catalog name should not be used to narrow down the search. - `java.lang.String`
   schema-pattern - a schema name; must match the schema name as it is stored in the database; null means schema name should not be used to narrow down the search. - `java.lang.String`
 
   returns: a ResultSet object in which each row is a
@@ -773,8 +773,8 @@
    this is the length in bytes. Null is returned for data types where the
    column size is not applicable.
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table-name-pattern - a table name pattern; must match the table name as it is stored in the database - `java.lang.String`
   column-name-pattern - a column name pattern; must match the column name as it is stored in the database - `java.lang.String`
 
@@ -809,9 +809,9 @@
 
    The table type is:
 
-    TABLE_TYPE String => table type.  Typical types are `TABLE`,
-                    `VIEW`, `SYSTEM TABLE`, `GLOBAL TEMPORARY`,
-                    `LOCAL TEMPORARY`, `ALIAS`, `SYNONYM`.
+    TABLE_TYPE String => table type.  Typical types are \"TABLE\",
+                    \"VIEW\", \"SYSTEM TABLE\", \"GLOBAL TEMPORARY\",
+                    \"LOCAL TEMPORARY\", \"ALIAS\", \"SYNONYM\".
 
   returns: a ResultSet object in which each row has a
            single String column that is a table type - `java.sql.ResultSet`
@@ -832,25 +832,25 @@
     TABLE_CAT String => table catalog (may be null)
     TABLE_SCHEM String => table schema (may be null)
     TABLE_NAME String => table name
-    TABLE_TYPE String => table type.  Typical types are `TABLE`,
-                    `VIEW`, `SYSTEM TABLE`, `GLOBAL TEMPORARY`,
-                    `LOCAL TEMPORARY`, `ALIAS`, `SYNONYM`.
+    TABLE_TYPE String => table type.  Typical types are \"TABLE\",
+                    \"VIEW\", \"SYSTEM TABLE\", \"GLOBAL TEMPORARY\",
+                    \"LOCAL TEMPORARY\", \"ALIAS\", \"SYNONYM\".
     REMARKS String => explanatory comment on the table
     TYPE_CAT String => the types catalog (may be null)
     TYPE_SCHEM String => the types schema (may be null)
     TYPE_NAME String => type name (may be null)
     SELF_REFERENCING_COL_NAME String => name of the designated
-                    `identifier` column of a typed table (may be null)
+                    \"identifier\" column of a typed table (may be null)
     REF_GENERATION String => specifies how values in
                     SELF_REFERENCING_COL_NAME are created. Values are
-                    `SYSTEM`, `USER`, `DERIVED`. (may be null)
+                    \"SYSTEM\", \"USER\", \"DERIVED\". (may be null)
 
 
    Note: Some databases may not return information for
    all tables.
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table-name-pattern - a table name pattern; must match the table name as it is stored in the database - `java.lang.String`
   types - a list of table types, which must be from the list of table types returned from getTableTypes(),to include; null returns all types - `java.lang.String[]`
 
@@ -932,8 +932,8 @@
    this is the length in bytes. Null is returned for data types where the
    column size is not applicable.
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema - a schema name; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema - a schema name; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table - a table name; must match the table name as it is stored in the database - `java.lang.String`
 
   returns: a ResultSet object in which each row is a
@@ -1025,11 +1025,11 @@
     GRANTEE String => grantee of access
     PRIVILEGE String => name of access (SELECT,
         INSERT, UPDATE, REFRENCES, ...)
-    IS_GRANTABLE String => `YES` if grantee is permitted
-        to grant to others; `NO` if not; null if unknown
+    IS_GRANTABLE String => \"YES\" if grantee is permitted
+        to grant to others; \"NO\" if not; null if unknown
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema - a schema name; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema - a schema name; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table - a table name; must match the table name as it is stored in the database - `java.lang.String`
   column-name-pattern - a column name pattern; must match the column name as it is stored in the database - `java.lang.String`
 
@@ -1098,8 +1098,8 @@
          importedKeyInitiallyImmediate - see SQL92 for definition
          importedKeyNotDeferrable - see SQL92 for definition
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema - a schema name; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema - a schema name; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table - a table name; must match the table name as it is stored in the database - `java.lang.String`
 
   returns: ResultSet - each row is a primary key column description - `java.sql.ResultSet`
@@ -1232,9 +1232,9 @@
     (-> this (.getClientInfoProperties))))
 
 (defn get-schema-term
-  "Retrieves the database vendor's preferred term for `schema`.
+  "Retrieves the database vendor's preferred term for \"schema\".
 
-  returns: the vendor term for `schema` - `java.lang.String`
+  returns: the vendor term for \"schema\" - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
   (^java.lang.String [^DatabaseMetaData this]
@@ -1286,8 +1286,8 @@
    this is the length in bytes. Null is returned for data types where the
    column size is not applicable.
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema - a schema name; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema - a schema name; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table - a table name; must match the table name as it is stored in the database - `java.lang.String`
   scope - the scope of interest; use same values as SCOPE - `int`
   nullable - include columns that are nullable. - `boolean`
@@ -1484,8 +1484,8 @@
    Note: If the driver does not support type hierarchies, an
    empty result set is returned.
 
-  catalog - a catalog name; `` retrieves those without a catalog; null means drop catalog name from the selection criteria - `java.lang.String`
-  schema-pattern - a schema name pattern; `` retrieves those without a schema - `java.lang.String`
+  catalog - a catalog name; \"\" retrieves those without a catalog; null means drop catalog name from the selection criteria - `java.lang.String`
+  schema-pattern - a schema name pattern; \"\" retrieves those without a schema - `java.lang.String`
   table-name-pattern - a table name pattern; may be a fully-qualified name - `java.lang.String`
 
   returns: a ResultSet object in which each row is a type description - `java.sql.ResultSet`
@@ -1545,8 +1545,8 @@
    A user may not have permissions to execute any of the procedures that are
    returned by getProcedures
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   procedure-name-pattern - a procedure name pattern; must match the procedure name as it is stored in the database - `java.lang.String`
 
   returns: ResultSet - each row is a procedure description - `java.sql.ResultSet`
@@ -1639,8 +1639,8 @@
         within index; zero when TYPE is tableIndexStatistic
     COLUMN_NAME String => column name; null when TYPE is
         tableIndexStatistic
-    ASC_OR_DESC String => column sort sequence, `A` => ascending,
-        `D` => descending, may be null if sort sequence is not supported;
+    ASC_OR_DESC String => column sort sequence, \"A\" => ascending,
+        \"D\" => descending, may be null if sort sequence is not supported;
         null when TYPE is tableIndexStatistic
     CARDINALITY long => When TYPE is tableIndexStatistic, then
         this is the number of rows in the table; otherwise, it is the
@@ -1651,8 +1651,8 @@
     FILTER_CONDITION String => Filter condition, if any.
         (may be null)
 
-  catalog - a catalog name; must match the catalog name as it is stored in this database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema - a schema name; must match the schema name as it is stored in this database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in this database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema - a schema name; must match the schema name as it is stored in this database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table - a table name; must match the table name as it is stored in this database - `java.lang.String`
   unique - when true, return only indices for unique values; when false, return indices regardless of whether unique or not - `boolean`
   approximate - when true, result is allowed to reflect approximate or out of data values; when false, results are requested to be accurate - `boolean`
@@ -1752,8 +1752,8 @@
    Note: If the driver does not support UDTs, an empty
    result set is returned.
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema-pattern - a schema pattern name; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema-pattern - a schema pattern name; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   type-name-pattern - a type name pattern; must match the type name as it is stored in the database; may be a fully qualified name - `java.lang.String`
   types - a list of user-defined types (JAVA_OBJECT, STRUCT, or DISTINCT) to include; null returns all types - `int[]`
 
@@ -2021,8 +2021,8 @@
    this is the length in bytes. Null is returned for data types where the
    column size is not applicable.
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table-name-pattern - a table name pattern; must match the table name as it is stored in the database - `java.lang.String`
   column-name-pattern - a column name pattern; must match the column name as it is stored in the database - `java.lang.String`
 
@@ -2062,9 +2062,9 @@
     (-> this (.nullsAreSortedAtEnd))))
 
 (defn get-catalog-term
-  "Retrieves the database vendor's preferred term for `catalog`.
+  "Retrieves the database vendor's preferred term for \"catalog\".
 
-  returns: the vendor term for `catalog` - `java.lang.String`
+  returns: the vendor term for \"catalog\" - `java.lang.String`
 
   throws: java.sql.SQLException - if a database access error occurs"
   (^java.lang.String [^DatabaseMetaData this]
@@ -2156,8 +2156,8 @@
    this is the length in bytes. Null is returned for data types where the
    column size is not applicable.
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   procedure-name-pattern - a procedure name pattern; must match the procedure name as it is stored in the database - `java.lang.String`
   column-name-pattern - a column name pattern; must match the column name as it is stored in the database - `java.lang.String`
 
@@ -2299,11 +2299,11 @@
          importedKeyInitiallyImmediate - see SQL92 for definition
          importedKeyNotDeferrable - see SQL92 for definition
 
-  parent-catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means drop catalog name from the selection criteria - `java.lang.String`
-  parent-schema - a schema name; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means drop schema name from the selection criteria - `java.lang.String`
+  parent-catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means drop catalog name from the selection criteria - `java.lang.String`
+  parent-schema - a schema name; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means drop schema name from the selection criteria - `java.lang.String`
   parent-table - the name of the table that exports the key; must match the table name as it is stored in the database - `java.lang.String`
-  foreign-catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means drop catalog name from the selection criteria - `java.lang.String`
-  foreign-schema - a schema name; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means drop schema name from the selection criteria - `java.lang.String`
+  foreign-catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means drop catalog name from the selection criteria - `java.lang.String`
+  foreign-schema - a schema name; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means drop schema name from the selection criteria - `java.lang.String`
   foreign-table - the name of the table that imports the key; must match the table name as it is stored in the database - `java.lang.String`
 
   returns: ResultSet - each row is a foreign key column description - `java.sql.ResultSet`
@@ -2572,8 +2572,8 @@
         Ref type,SQL type from java.sql.Types (null if DATA_TYPE
         isn't DISTINCT or user-generated REF)
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   type-name-pattern - a type name pattern; must match the type name as it is stored in the database - `java.lang.String`
   attribute-name-pattern - an attribute name pattern; must match the attribute name as it is declared in the database - `java.lang.String`
 
@@ -2606,11 +2606,11 @@
     GRANTEE String => grantee of access
     PRIVILEGE String => name of access (SELECT,
         INSERT, UPDATE, REFRENCES, ...)
-    IS_GRANTABLE String => `YES` if grantee is permitted
-        to grant to others; `NO` if not; null if unknown
+    IS_GRANTABLE String => \"YES\" if grantee is permitted
+        to grant to others; \"NO\" if not; null if unknown
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   table-name-pattern - a table name pattern; must match the table name as it is stored in the database - `java.lang.String`
 
   returns: ResultSet - each row is a table privilege description - `java.sql.ResultSet`
@@ -2798,8 +2798,8 @@
    this is the length in bytes. Null is returned for data types where the
    column size is not applicable.
 
-  catalog - a catalog name; must match the catalog name as it is stored in the database; `` retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
-  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; `` retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
+  catalog - a catalog name; must match the catalog name as it is stored in the database; \"\" retrieves those without a catalog; null means that the catalog name should not be used to narrow the search - `java.lang.String`
+  schema-pattern - a schema name pattern; must match the schema name as it is stored in the database; \"\" retrieves those without a schema; null means that the schema name should not be used to narrow the search - `java.lang.String`
   function-name-pattern - a procedure name pattern; must match the function name as it is stored in the database - `java.lang.String`
   column-name-pattern - a parameter name pattern; must match the parameter or column name as it is stored in the database - `java.lang.String`
 
@@ -2848,8 +2848,8 @@
    Note: If the driver does not support type hierarchies, an
    empty result set is returned.
 
-  catalog - a catalog name; `` retrieves those without a catalog; null means drop catalog name from the selection criteria - `java.lang.String`
-  schema-pattern - a schema name pattern; `` retrieves those without a schema - `java.lang.String`
+  catalog - a catalog name; \"\" retrieves those without a catalog; null means drop catalog name from the selection criteria - `java.lang.String`
+  schema-pattern - a schema name pattern; \"\" retrieves those without a schema - `java.lang.String`
   type-name-pattern - a UDT name pattern; may be a fully-qualified name - `java.lang.String`
 
   returns: a ResultSet object in which a row gives information

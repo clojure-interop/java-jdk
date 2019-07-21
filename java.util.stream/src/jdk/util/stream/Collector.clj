@@ -8,8 +8,8 @@
   Examples of mutable reduction operations include:
   accumulating elements into a Collection; concatenating
   strings using a StringBuilder; computing summary information about
-  elements such as sum, min, max, or average; computing `pivot table` summaries
-  such as `maximum valued transaction by seller`, etc.  The class Collectors
+  elements such as sum, min, max, or average; computing \"pivot table\" summaries
+  such as \"maximum valued transaction by seller\", etc.  The class Collectors
   provides implementations of many common mutable reductions.
 
   A Collector is specified by four functions that work together to

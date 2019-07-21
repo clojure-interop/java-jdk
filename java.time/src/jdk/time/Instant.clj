@@ -117,7 +117,7 @@
   "Static Constant.
 
   The minimum supported Instant, '-1000000000-01-01T00:00Z'.
-   This could be used by an application as a `far past` instant.
+   This could be used by an application as a \"far past\" instant.
 
    This is one year earlier than the minimum LocalDateTime.
    This provides sufficient values to handle the range of ZoneOffset
@@ -132,7 +132,7 @@
   "Static Constant.
 
   The maximum supported Instant, '1000000000-12-31T23:59:59.999999999Z'.
-   This could be used by an application as a `far future` instant.
+   This could be used by an application as a \"far future\" instant.
 
    This is one year later than the maximum LocalDateTime.
    This provides sufficient values to handle the range of ZoneOffset
@@ -751,7 +751,7 @@
   "Compares this instant to the specified instant.
 
    The comparison is based on the time-line position of the instants.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
   other-instant - the other instant to compare to, not null - `java.time.Instant`
 

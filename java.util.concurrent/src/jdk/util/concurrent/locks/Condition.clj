@@ -10,7 +10,7 @@
 
   Conditions (also known as condition queues or
   condition variables) provide a means for one thread to
-  suspend execution (to `wait`) until notified by another
+  suspend execution (to \"wait\") until notified by another
   thread that some state condition may now be true.  Because access
   to this shared state information occurs in different threads, it
   must be protected, so a lock of some form is associated with the
@@ -100,8 +100,8 @@
 
   Implementation Considerations
 
-  When waiting upon a Condition, a `spurious
-  wakeup` is permitted to occur, in
+  When waiting upon a Condition, a \"spurious
+  wakeup\" is permitted to occur, in
   general, as a concession to the underlying platform semantics.
   This has little practical impact on most application programs as a
   Condition should always be waited upon in a loop, testing
@@ -168,7 +168,7 @@
    thread to be awakened; or
    Some other thread invokes the signalAll() method for this
    Condition; or
-   A `spurious wakeup` occurs.
+   A \"spurious wakeup\" occurs.
 
 
    In all cases, before this method can return the current thread must
@@ -208,7 +208,7 @@
    Some other thread interrupts the
    current thread, and interruption of thread suspension is supported; or
    The specified waiting time elapses; or
-   A `spurious wakeup` occurs.
+   A \"spurious wakeup\" occurs.
 
 
    In all cases, before this method can return the current thread must
@@ -301,7 +301,7 @@
    Some other thread interrupts the
    current thread, and interruption of thread suspension is supported; or
    The specified deadline elapses; or
-   A `spurious wakeup` occurs.
+   A \"spurious wakeup\" occurs.
 
 
    In all cases, before this method can return the current thread must

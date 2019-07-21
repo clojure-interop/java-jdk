@@ -8,22 +8,22 @@
   Bézier curves, which are lines and quadratic or cubic
   Bézier splines.
 
-  Multiple subpaths can be expressed by using a `MOVETO` segment to
+  Multiple subpaths can be expressed by using a \"MOVETO\" segment to
   create a discontinuity in the geometry to move from the end of
   one subpath to the beginning of the next.
 
   Each subpath can be closed manually by ending the last segment in
-  the subpath on the same coordinate as the beginning `MOVETO` segment
-  for that subpath or by using a `CLOSE` segment to append a line
+  the subpath on the same coordinate as the beginning \"MOVETO\" segment
+  for that subpath or by using a \"CLOSE\" segment to append a line
   segment from the last point back to the first.
   Be aware that manually closing an outline as opposed to using a
-  `CLOSE` segment to close the path might result in different line
+  \"CLOSE\" segment to close the path might result in different line
   style decorations being used at the end points of the subpath.
   For example, the BasicStroke object
-  uses a line `JOIN` decoration to connect the first and last points
-  if a `CLOSE` segment is encountered, whereas simply ending the path
+  uses a line \"JOIN\" decoration to connect the first and last points
+  if a \"CLOSE\" segment is encountered, whereas simply ending the path
   on the same coordinate as the beginning coordinate results in line
-  `CAP` decorations being used at the ends."
+  \"CAP\" decorations being used at the ends."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.awt.geom PathIterator]))
 

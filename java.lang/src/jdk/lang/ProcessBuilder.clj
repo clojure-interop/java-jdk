@@ -105,7 +105,7 @@
 
 
 
-  Process p = new ProcessBuilder(`myCommand`, `myArg`).start();
+  Process p = new ProcessBuilder(\"myCommand\", \"myArg\").start();
 
   Here is an example that starts a process with a modified working
   directory and environment, and redirects standard output and error
@@ -114,13 +114,13 @@
 
 
   ProcessBuilder pb =
-    new ProcessBuilder(`myCommand`, `myArg1`, `myArg2`);
+    new ProcessBuilder(\"myCommand\", \"myArg1\", \"myArg2\");
   Map<String, String> env = pb.environment();
-  env.put(`VAR1`, `myValue`);
-  env.remove(`OTHERVAR`);
-  env.put(`VAR2`, env.get(`VAR1`)  `suffix`);
-  pb.directory(new File(`myDir`));
-  File log = new File(`log`);
+  env.put(\"VAR1\", \"myValue\");
+  env.remove(\"OTHERVAR\");
+  env.put(\"VAR2\", env.get(\"VAR1\")  \"suffix\");
+  pb.directory(new File(\"myDir\"));
+  File log = new File(\"log\");
   pb.redirectErrorStream(true);
   pb.redirectOutput(Redirect.appendTo(log));
   Process p = pb.start();
@@ -397,7 +397,7 @@
    If a security manager exists, its
    checkPermission method
    is called with a
-   RuntimePermission(`getenv.*`) permission.
+   RuntimePermission(\"getenv.*\") permission.
    This may result in a SecurityException being thrown.
 
    When passing information to a Java subprocess,

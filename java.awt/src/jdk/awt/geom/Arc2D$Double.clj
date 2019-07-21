@@ -25,63 +25,63 @@
   (^Arc2D$Double []
     (new Arc2D$Double )))
 
-(defn -x
+(defn x
   "Instance Field.
 
   The X coordinate of the upper-left corner of the framing
    rectangle of the arc.
 
   type: double"
-  [this]
-  (-> this .-x))
+  (^Double [^Arc2D$Double this]
+    (-> this .-x)))
 
-(defn -y
+(defn y
   "Instance Field.
 
   The Y coordinate of the upper-left corner of the framing
    rectangle of the arc.
 
   type: double"
-  [this]
-  (-> this .-y))
+  (^Double [^Arc2D$Double this]
+    (-> this .-y)))
 
-(defn -width
+(defn width
   "Instance Field.
 
   The overall width of the full ellipse of which this arc is
    a partial section (not considering the angular extents).
 
   type: double"
-  [this]
-  (-> this .-width))
+  (^Double [^Arc2D$Double this]
+    (-> this .-width)))
 
-(defn -height
+(defn height
   "Instance Field.
 
   The overall height of the full ellipse of which this arc is
    a partial section (not considering the angular extents).
 
   type: double"
-  [this]
-  (-> this .-height))
+  (^Double [^Arc2D$Double this]
+    (-> this .-height)))
 
-(defn -start
+(defn start
   "Instance Field.
 
   The starting angle of the arc in degrees.
 
   type: double"
-  [this]
-  (-> this .-start))
+  (^Double [^Arc2D$Double this]
+    (-> this .-start)))
 
-(defn -extent
+(defn extent
   "Instance Field.
 
   The angular extent of the arc in degrees.
 
   type: double"
-  [this]
-  (-> this .-extent))
+  (^Double [^Arc2D$Double this]
+    (-> this .-extent)))
 
 (defn get-angle-start
   "Returns the starting angle of the arc.

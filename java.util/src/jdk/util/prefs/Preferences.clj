@@ -10,7 +10,7 @@
   There are two separate trees of preference nodes, one for user
   preferences and one for system preferences.  Each user has a separate user
   preference tree, and all users in a given system share the same system
-  preference tree.  The precise description of `user` and `system` will vary
+  preference tree.  The precise description of \"user\" and \"system\" will vary
   from implementation to implementation.  Typical information stored in the
   user preference tree might include font choice, color choice, or preferred
   window location and size for a particular application.  Typical information
@@ -23,15 +23,15 @@
   a unique absolute path name, and a path name relative to each
   ancestor including itself.
 
-  The root node has a node name of the empty string (``).  Every other
+  The root node has a node name of the empty string (\"\").  Every other
   node has an arbitrary node name, specified at the time it is created.  The
   only restrictions on this name are that it cannot be the empty string, and
   it cannot contain the slash character ('/').
 
-  The root node has an absolute path name of `/`.  Children of
-  the root node have absolute path names of `/`  <node
+  The root node has an absolute path name of \"/\".  Children of
+  the root node have absolute path names of \"/\"  <node
   name>.  All other nodes have absolute path names of <parent's
-  absolute path name>  `/`  <node name>.
+  absolute path name>  \"/\"  <node name>.
   Note that all absolute path names begin with the slash character.
 
   A node n's path name relative to its ancestor a
@@ -83,21 +83,21 @@
   data.
 
   This class contains an export/import facility, allowing preferences
-  to be `exported` to an XML document, and XML documents representing
-  preferences to be `imported` back into the system.  This facility
+  to be \"exported\" to an XML document, and XML documents representing
+  preferences to be \"imported\" back into the system.  This facility
   may be used to back up all or part of a preference tree, and
   subsequently restore from the backup.
 
   The XML document has the following DOCTYPE declaration:
 
 
-  <!DOCTYPE preferences SYSTEM `http://java.sun.com/dtd/preferences.dtd`>
+  <!DOCTYPE preferences SYSTEM \"http://java.sun.com/dtd/preferences.dtd\">
   Note that the system URI (http://java.sun.com/dtd/preferences.dtd) is
   not accessed when exporting or importing preferences; it merely
   serves as a string to uniquely identify the DTD, which is:
 
 
-     <?xml version=`1.0` encoding=`UTF-8`?>
+     <?xml version=\"1.0\" encoding=\"UTF-8\"?>
 
      <!-- DTD for a Preferences tree. -->
 
@@ -107,7 +107,7 @@
 
      <!-- The preferences element contains an optional version attribute,
            which specifies version of DTD. -->
-     <!ATTLIST preferences EXTERNAL_XML_VERSION CDATA `0.0` >
+     <!ATTLIST preferences EXTERNAL_XML_VERSION CDATA \"0.0\" >
 
      <!-- The root element has a map representing the root's preferences
           (if any), and one node for each child of the root (if any). -->
@@ -209,7 +209,7 @@
    associated preference node is <unnamed>.  This node
    is not intended for long term use, but for convenience in the early
    development of programs that do not yet belong to a package, and
-   for `throwaway` programs.  Valuable data should not be stored
+   for \"throwaway\" programs.  Valuable data should not be stored
    at this node as it is shared by all programs that use it.
 
    A class Foo wishing to access preferences pertaining to its
@@ -250,7 +250,7 @@
    associated preference node is <unnamed>.  This node
    is not intended for long term use, but for convenience in the early
    development of programs that do not yet belong to a package, and
-   for `throwaway` programs.  Valuable data should not be stored
+   for \"throwaway\" programs.  Valuable data should not be stored
    at this node as it is shared by all programs that use it.
 
    A class Foo wishing to access preferences pertaining to its
@@ -283,7 +283,7 @@
 
   returns: the root preference node for the calling user. - `java.util.prefs.Preferences`
 
-  throws: java.lang.SecurityException - If a security manager is present and it denies RuntimePermission(`preferences`)."
+  throws: java.lang.SecurityException - If a security manager is present and it denies RuntimePermission(\"preferences\")."
   (^java.util.prefs.Preferences []
     (Preferences/userRoot )))
 
@@ -292,7 +292,7 @@
 
   returns: the root preference node for the system. - `java.util.prefs.Preferences`
 
-  throws: java.lang.SecurityException - If a security manager is present and it denies RuntimePermission(`preferences`)."
+  throws: java.lang.SecurityException - If a security manager is present and it denies RuntimePermission(\"preferences\")."
   (^java.util.prefs.Preferences []
     (Preferences/systemRoot )))
 
@@ -308,7 +308,7 @@
    The XML document must have the following DOCTYPE declaration:
 
 
-   <!DOCTYPE preferences SYSTEM `http://java.sun.com/dtd/preferences.dtd`>
+   <!DOCTYPE preferences SYSTEM \"http://java.sun.com/dtd/preferences.dtd\">
    (This method is designed for use in conjunction with
    exportNode(OutputStream) and
    exportSubtree(OutputStream).
@@ -370,7 +370,7 @@
 (defn put-boolean
   "Associates a string representing the specified boolean value with the
    specified key in this preference node.  The associated string is
-   `true` if the value is true, and `false` if it is
+   \"true\" if the value is true, and \"false\" if it is
    false.  This method is intended for use in conjunction with
    getBoolean(java.lang.String, boolean).
 
@@ -389,14 +389,14 @@
    The XML document will have the following DOCTYPE declaration:
 
 
-   <!DOCTYPE preferences SYSTEM `http://java.sun.com/dtd/preferences.dtd`>
+   <!DOCTYPE preferences SYSTEM \"http://java.sun.com/dtd/preferences.dtd\">
    The UTF-8 character encoding will be used.
 
    This method is an exception to the general rule that the results of
    concurrently executing multiple methods in this class yields
    results equivalent to some serial execution.  If the preferences
    at this node are modified concurrently with an invocation of this
-   method, the exported preferences comprise a `fuzzy snapshot` of the
+   method, the exported preferences comprise a \"fuzzy snapshot\" of the
    preferences contained in the node; some of the concurrent modifications
    may be reflected in the exported data while others may not.
 
@@ -425,8 +425,8 @@
 
    If this node (or an ancestor) has already been removed with the
    removeNode() method, it is legal to invoke this method,
-   but only with the path name ``; the invocation will return
-   false.  Thus, the idiom p.nodeExists(``) may be
+   but only with the path name \"\"; the invocation will return
+   false.  Thus, the idiom p.nodeExists(\"\") may be
    used to test whether p has been removed.
 
   path-name - the path name of the node whose existence is to be checked. - `java.lang.String`
@@ -479,8 +479,8 @@
 
 (defn to-string
   "Returns a string representation of this preferences node,
-   as if computed by the expression:(this.isUserNode() ? `User` :
-   `System`)  ` Preference Node: `  this.absolutePath().
+   as if computed by the expression:(this.isUserNode() ? \"User\" :
+   \"System\")  \" Preference Node: \"  this.absolutePath().
 
   returns: a string representation of the object. - `java.lang.String`"
   (^java.lang.String [^Preferences this]
@@ -623,7 +623,7 @@
    any preferences contained in the removed nodes.  Once a node has been
    removed, attempting any method other than name(),
    absolutePath(), isUserNode(), flush() or
-   nodeExists(``) on the corresponding
+   nodeExists(\"\") on the corresponding
    Preferences instance will fail with an
    IllegalStateException.  (The methods defined on Object
    can still be invoked on a node after it has been removed; they will not
@@ -663,7 +663,7 @@
 
    If this implementation supports stored defaults, and there is
    such a default for the specified preference, the stored default will be
-   `exposed` by this call, in the sense that it will be returned
+   \"exposed\" by this call, in the sense that it will be returned
    by a succeeding call to get.
 
   key - key whose mapping is to be removed from the preference node. - `java.lang.String`
@@ -702,7 +702,7 @@
    The XML document will have the following DOCTYPE declaration:
 
 
-   <!DOCTYPE preferences SYSTEM `http://java.sun.com/dtd/preferences.dtd`>
+   <!DOCTYPE preferences SYSTEM \"http://java.sun.com/dtd/preferences.dtd\">
    The UTF-8 character encoding will be used.
 
    This method is an exception to the general rule that the results of
@@ -710,7 +710,7 @@
    results equivalent to some serial execution.  If the preferences
    or nodes in the subtree rooted at this node are modified concurrently
    with an invocation of this method, the exported preferences comprise a
-   `fuzzy snapshot` of the subtree; some of the concurrent modifications
+   \"fuzzy snapshot\" of the subtree; some of the concurrent modifications
    may be reflected in the exported data while others may not.
 
   os - the output stream on which to emit the XML document. - `java.io.OutputStream`
@@ -774,20 +774,20 @@
 (defn get-boolean?
   "Returns the boolean value represented by the string associated with the
    specified key in this preference node.  Valid strings
-   are `true`, which represents true, and `false`, which
-   represents false.  Case is ignored, so, for example, `TRUE`
-   and `False` are also valid.  This method is intended for use in
+   are \"true\", which represents true, and \"false\", which
+   represents false.  Case is ignored, so, for example, \"TRUE\"
+   and \"False\" are also valid.  This method is intended for use in
    conjunction with putBoolean(java.lang.String, boolean).
 
    Returns the specified default if there is no value
    associated with the key, the backing store is inaccessible, or if the
-   associated value is something other than `true` or
-   `false`, ignoring case.
+   associated value is something other than \"true\" or
+   \"false\", ignoring case.
 
    If the implementation supports stored defaults and such a
    default exists and is accessible, it is used in preference to the
    specified default, unless the stored default is something other than
-   `true` or `false`, ignoring case, in which case the
+   \"true\" or \"false\", ignoring case, in which case the
    specified default is used.
 
   key - key whose associated value is to be returned as a boolean. - `java.lang.String`
@@ -809,7 +809,7 @@
 
    If this implementation supports stored defaults, and this
    node in the preferences hierarchy contains any such defaults,
-   the stored defaults will be `exposed` by this call, in the sense that
+   the stored defaults will be \"exposed\" by this call, in the sense that
    they will be returned by succeeding calls to get.
 
   throws: java.util.prefs.BackingStoreException - if this operation cannot be completed due to a failure in the backing store, or inability to communicate with it."

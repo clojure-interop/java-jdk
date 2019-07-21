@@ -44,7 +44,7 @@
 
    A persistence delegate is then looked up by the name
    composed of the the fully qualified name of the given type
-   and the `PersistenceDelegate` postfix.
+   and the \"PersistenceDelegate\" postfix.
    For example, a persistence delegate for the Bean class
    should be named BeanPersistenceDelegate
    and located in the same package.
@@ -79,13 +79,13 @@
    the Proxy.newProxyInstance(java.lang.ClassLoader, java.lang.Class<?>[], java.lang.reflect.InvocationHandler) method.
 
    If the BeanInfo for this type has a BeanDescriptor
-   which defined a `persistenceDelegate` attribute,
+   which defined a \"persistenceDelegate\" attribute,
    the value of this named attribute is returned.
 
    In all other cases the default persistence delegate is returned.
    The default persistence delegate assumes the type is a JavaBean,
    implying that it has a default constructor and that its state
-   may be characterized by the matching pairs of `setter` and `getter`
+   may be characterized by the matching pairs of \"setter\" and \"getter\"
    methods returned by the Introspector class.
    The default constructor is the constructor with the greatest number
    of parameters that has the ConstructorProperties annotation.
@@ -103,9 +103,9 @@
    }
    public class Bar {
        public Bar() { ... }
-       @ConstructorProperties({`x`})
+       @ConstructorProperties({\"x\"})
        public Bar(int x) { ... }
-       @ConstructorProperties({`x`, `y`})
+       @ConstructorProperties({\"x\", \"y\"})
        public Bar(int x, int y) { ... }
    }
 
@@ -153,7 +153,7 @@
    in terms of the callers environment, i.e. the
    target and all arguments should be part of the
    object graph being written. These expressions
-   represent a series of `what happened` expressions
+   represent a series of \"what happened\" expressions
    which tell the output stream how to produce an
    object graph like the original.
 

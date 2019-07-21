@@ -20,14 +20,14 @@
   arrangement of the data.
   These include the number of channels, sample rate, sample size, byte order, frame rate, and frame size.
   Sounds may have different numbers of audio channels: one for mono, two for stereo.
-  The sample rate measures how many `snapshots` (samples) of the sound pressure are taken per second, per channel.
+  The sample rate measures how many \"snapshots\" (samples) of the sound pressure are taken per second, per channel.
   (If the sound is stereo rather than mono, two samples are actually measured at each instant of time: one for the left channel,
   and another for the right channel; however, the sample rate still measures the number per channel, so the rate is the same
   regardless of the number of channels.   This is the standard use of the term.)
   The sample size indicates how many bits are used to store each snapshot; 8 and 16 are typical values.
   For 16-bit samples (or any other sample size larger than a byte),
   byte order is important; the bytes in each sample are arranged in
-  either the `little-endian` or `big-endian` style.
+  either the \"little-endian\" or \"big-endian\" style.
   For encodings like PCM, a frame consists of the set of samples for all channels at a given
   point in time, and so the size of a frame (in bytes) is always equal to the size of a sample (in bytes) times
   the number of channels.  However, with some other sorts of encodings a frame can contain
@@ -60,18 +60,18 @@
     Description
 
 
-    `bitrate`
+    \"bitrate\"
     Integer
     average bit rate in bits per second
 
 
-    `vbr`
+    \"vbr\"
     Boolean
     true, if the file is encoded in variable bit
         rate (VBR)
 
 
-    `quality`
+    \"quality\"
     Integer
     encoding/conversion quality, 1..100
 
@@ -140,7 +140,7 @@
 
 (defn to-string
   "Returns a string that describes the format, such as:
-   `PCM SIGNED 22050 Hz 16 bit mono big-endian`.  The contents of the string
+   \"PCM SIGNED 22050 Hz 16 bit mono big-endian\".  The contents of the string
    may vary between implementations of Java Sound.
 
   returns: a string that describes the format parameters - `java.lang.String`"

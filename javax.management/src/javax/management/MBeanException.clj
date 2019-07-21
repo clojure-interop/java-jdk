@@ -1,6 +1,6 @@
 (ns javax.management.MBeanException
-  "Represents `user defined` exceptions thrown by MBean methods
-  in the agent. It `wraps` the actual `user defined` exception thrown.
+  "Represents \"user defined\" exceptions thrown by MBean methods
+  in the agent. It \"wraps\" the actual \"user defined\" exception thrown.
   This exception will be built by the MBeanServer when a call to an
   MBean method results in an unknown exception."
   (:refer-clojure :only [require comment defn ->])

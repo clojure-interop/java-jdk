@@ -17,8 +17,8 @@
   an active connection:
 
 
-    PreparedStatement pstmt = con.prepareStatement(`UPDATE EMPLOYEES
-                                      SET SALARY = ? WHERE ID = ?`);
+    PreparedStatement pstmt = con.prepareStatement(\"UPDATE EMPLOYEES
+                                      SET SALARY = ? WHERE ID = ?\");
     pstmt.setBigDecimal(1, 153833.00)
     pstmt.setInt(2, 110592)"
   (:refer-clojure :only [require comment defn ->])

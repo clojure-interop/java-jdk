@@ -18,7 +18,7 @@
     (new FeatureDescriptor )))
 
 (defn expert?
-  "The `expert` flag is used to distinguish between those features that are
+  "The \"expert\" flag is used to distinguish between those features that are
    intended for expert users from those that are intended for normal users.
 
   returns: True if this feature is intended for use by experts only. - `boolean`"
@@ -35,7 +35,7 @@
     (-> this (.attributeNames))))
 
 (defn set-preferred
-  "The `preferred` flag is used to identify features that are particularly
+  "The \"preferred\" flag is used to identify features that are particularly
    important for presenting to humans.
 
   preferred - True if this feature should be preferentially shown to human users. - `boolean`"
@@ -82,7 +82,7 @@
     (-> this (.getValue attribute-name))))
 
 (defn set-expert
-  "The `expert` flag is used to distinguish between features that are
+  "The \"expert\" flag is used to distinguish between features that are
    intended for expert users from those that are intended for normal users.
 
   expert - True if this feature is intended for use by experts only. - `boolean`"
@@ -105,7 +105,7 @@
     (-> this (.getName))))
 
 (defn set-hidden
-  "The `hidden` flag is used to identify features that are intended only
+  "The \"hidden\" flag is used to identify features that are intended only
    for tool use, and which should not be exposed to humans.
 
   hidden - True if this feature should be hidden from human users. - `boolean`"
@@ -113,7 +113,7 @@
     (-> this (.setHidden hidden))))
 
 (defn hidden?
-  "The `hidden` flag is used to identify features that are intended only
+  "The \"hidden\" flag is used to identify features that are intended only
    for tool use, and which should not be exposed to humans.
 
   returns: True if this feature should be hidden from human users. - `boolean`"
@@ -129,7 +129,7 @@
     (-> this (.setValue attribute-name value))))
 
 (defn preferred?
-  "The `preferred` flag is used to identify features that are particularly
+  "The \"preferred\" flag is used to identify features that are particularly
    important for presenting to humans.
 
   returns: True if this feature should be preferentially shown to human users. - `boolean`"

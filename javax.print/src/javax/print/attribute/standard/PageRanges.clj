@@ -11,7 +11,7 @@
   driver and this attribute would not be required. However, when printing an
   archived document which has already been formatted, the end user may elect to
   print just a subset of the pages contained in the document. In this case, if
-  a page range of `n-m` is specified, the first page
+  a page range of \"n-m\" is specified, the first page
   to be printed will be page n. All subsequent pages of the document
   will be printed through and including page m.
 
@@ -60,7 +60,7 @@
 
   IPP Compatibility: The PageRanges attribute's canonical array form
   gives the lower and upper bound for each range of pages to be included in
-  and IPP `page-ranges` attribute. See class SetOfIntegerSyntax for an
+  and IPP \"page-ranges\" attribute. See class SetOfIntegerSyntax for an
   explanation of canonical array form. The category name returned by
   getName() gives the IPP attribute name."
   (:refer-clojure :only [require comment defn ->])
@@ -102,7 +102,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class PageRanges, the category is class PageRanges itself.
@@ -116,7 +116,7 @@
   "Get the name of the category of which this attribute value is an
    instance.
 
-   For class PageRanges, the category name is `page-ranges`.
+   For class PageRanges, the category name is \"page-ranges\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^PageRanges this]

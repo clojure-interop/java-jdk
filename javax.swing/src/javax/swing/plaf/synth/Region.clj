@@ -29,10 +29,10 @@
   accomplishes the same thing:
 
 
-  <style id=`splitPaneStyle`>
+  <style id=\"splitPaneStyle\">
     ...
   </style>
-  <bind style=`splitPaneStyle` type=`region` key=`SplitPane`/>"
+  <bind style=\"splitPaneStyle\" type=\"region\" key=\"SplitPane\"/>"
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.plaf.synth Region]))
 

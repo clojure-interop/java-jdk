@@ -89,10 +89,10 @@
 
 
    ArrayType<String[][][]> t = new ArrayType<String[][][]>(3, SimpleType.STRING);
-   System.out.println(`array class name       = `  t.getClassName());
-   System.out.println(`element class name     = `  t.getElementOpenType().getClassName());
-   System.out.println(`array type name        = `  t.getTypeName());
-   System.out.println(`array type description = `  t.getDescription());
+   System.out.println(\"array class name       = \"  t.getClassName());
+   System.out.println(\"element class name     = \"  t.getElementOpenType().getClassName());
+   System.out.println(\"array type name        = \"  t.getTypeName());
+   System.out.println(\"array type description = \"  t.getDescription());
    would produce the following output:
 
 
@@ -107,10 +107,10 @@
    ArrayType<String[]> t1 = new ArrayType<String[]>(1, SimpleType.STRING);
    ArrayType<String[][]> t2 = new ArrayType<String[][]>(1, t1);
    ArrayType<String[][][]> t3 = new ArrayType<String[][][]>(1, t2);
-   System.out.println(`array class name       = `  t3.getClassName());
-   System.out.println(`element class name     = `  t3.getElementOpenType().getClassName());
-   System.out.println(`array type name        = `  t3.getTypeName());
-   System.out.println(`array type description = `  t3.getDescription());
+   System.out.println(\"array class name       = \"  t3.getClassName());
+   System.out.println(\"element class name     = \"  t3.getElementOpenType().getClassName());
+   System.out.println(\"array type name        = \"  t3.getTypeName());
+   System.out.println(\"array type description = \"  t3.getDescription());
 
   dimension - the dimension of arrays described by this ArrayType instance; must be greater than or equal to 1. - `int`
   element-type - the open type of element values contained in the arrays described by this ArrayType instance; must be an instance of either SimpleType, CompositeType, TabularType or another ArrayType with a SimpleType, CompositeType or TabularType as its elementType. - `javax.management.openmbean.OpenType`
@@ -134,10 +134,10 @@
    ArrayType<String[]> t1 = ArrayType.getArrayType(SimpleType.STRING);
    ArrayType<String[][]> t2 = ArrayType.getArrayType(t1);
    ArrayType<String[][][]> t3 = ArrayType.getArrayType(t2);
-   System.out.println(`array class name       = `  t3.getClassName());
-   System.out.println(`element class name     = `  t3.getElementOpenType().getClassName());
-   System.out.println(`array type name        = `  t3.getTypeName());
-   System.out.println(`array type description = `  t3.getDescription());
+   System.out.println(\"array class name       = \"  t3.getClassName());
+   System.out.println(\"element class name     = \"  t3.getElementOpenType().getClassName());
+   System.out.println(\"array type name        = \"  t3.getTypeName());
+   System.out.println(\"array type description = \"  t3.getDescription());
    would produce the following output:
 
 
@@ -164,10 +164,10 @@
 
 
    ArrayType<int[][][]> t = ArrayType.getPrimitiveArrayType(int[][][].class);
-   System.out.println(`array class name       = `  t.getClassName());
-   System.out.println(`element class name     = `  t.getElementOpenType().getClassName());
-   System.out.println(`array type name        = `  t.getTypeName());
-   System.out.println(`array type description = `  t.getDescription());
+   System.out.println(\"array class name       = \"  t.getClassName());
+   System.out.println(\"element class name     = \"  t.getElementOpenType().getClassName());
+   System.out.println(\"array type name        = \"  t.getTypeName());
+   System.out.println(\"array type description = \"  t.getDescription());
    would produce the following output:
 
 

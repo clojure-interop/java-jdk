@@ -383,7 +383,7 @@
   "Resets the peak memory usage statistic of this memory pool
    to the current memory usage.
 
-  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists and the caller does not have ManagementPermission(\"control\")."
   ([^MemoryPoolMXBean this]
     (-> this (.resetPeakUsage))))
 

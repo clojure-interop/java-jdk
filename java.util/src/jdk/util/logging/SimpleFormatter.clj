@@ -62,14 +62,14 @@
 
    Some example formats:
 
-    java.util.logging.SimpleFormatter.format=`%4$s: %5$s [%1$tc]%n`
+    java.util.logging.SimpleFormatter.format=\"%4$s: %5$s [%1$tc]%n\"
        This prints 1 line with the log level (4$),
        the log message (5$) and the timestamp (1$) in
        a square bracket.
 
 
        WARNING: warning message [Tue Mar 22 13:11:31 PDT 2011]
-    java.util.logging.SimpleFormatter.format=`%1$tc %2$s%n%4$s: %5$s%6$s%n`
+    java.util.logging.SimpleFormatter.format=\"%1$tc %2$s%n%4$s: %5$s%6$s%n\"
        This prints 2 lines where the first line includes
        the timestamp (1$) and the source (2$);
        the second line includes the log level (4$) and
@@ -83,7 +83,7 @@
                at MyClass.mash(MyClass.java:9)
                at MyClass.crunch(MyClass.java:6)
                at MyClass.main(MyClass.java:3)
-    java.util.logging.SimpleFormatter.format=`%1$tb %1$td, %1$tY %1$tl:%1$tM:%1$tS %1$Tp %2$s%n%4$s: %5$s%n`
+    java.util.logging.SimpleFormatter.format=\"%1$tb %1$td, %1$tY %1$tl:%1$tM:%1$tS %1$Tp %2$s%n%4$s: %5$s%n\"
         This prints 2 lines similar to the example above
            with a different date/time formatting and does not print
            the throwable and its backtrace:

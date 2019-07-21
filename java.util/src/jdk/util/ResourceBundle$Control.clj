@@ -23,9 +23,9 @@
   ResourceBundle.getBundle invocations for the same base
   bundle. Otherwise, the ResourceBundle.getBundle methods
   may return unintended bundles. For example, if only
-  `java.class` is returned by the getFormats
+  \"java.class\" is returned by the getFormats
   method for the first call to ResourceBundle.getBundle
-  and only `java.properties` for the second call, then the
+  and only \"java.properties\" for the second call, then the
   second call will return the class-based one that has been cached
   during the first call.
 
@@ -52,7 +52,7 @@
   import static java.util.ResourceBundle.Control.*;
   ...
   ResourceBundle bundle =
-    ResourceBundle.getBundle(`MyResources`, new Locale(`fr`, `CH`),
+    ResourceBundle.getBundle(\"MyResources\", new Locale(\"fr\", \"CH\"),
                              ResourceBundle.Control.getControl(FORMAT_PROPERTIES));
 
   Given the resource bundles in the example in
@@ -70,12 +70,12 @@
 
 
 
-  ResourceBundle rb = ResourceBundle.getBundle(`Messages`,
+  ResourceBundle rb = ResourceBundle.getBundle(\"Messages\",
       new ResourceBundle.Control() {
           public List<String> getFormats(String baseName) {
               if (baseName == null)
                   throw new NullPointerException();
-              return Arrays.asList(`xml`);
+              return Arrays.asList(\"xml\");
           }
           public ResourceBundle newBundle(String baseName,
                                           Locale locale,
@@ -89,7 +89,7 @@
                     || format == null || loader == null)
                   throw new NullPointerException();
               ResourceBundle bundle = null;
-              if (format.equals(`xml`)) {
+              if (format.equals(\"xml\")) {
                   String bundleName = toBundleName(baseName, locale);
                   String resourceName = toResourceName(bundleName, format);
                   InputStream stream = null;
@@ -139,7 +139,7 @@
   "Static Constant.
 
   The default format List, which contains the strings
-   `java.class` and `java.properties`, in
+   \"java.class\" and \"java.properties\", in
    this order. This List is unmodifiable.
 
   type: java.util.List<java.lang.String>"
@@ -149,7 +149,7 @@
   "Static Constant.
 
   The class-only format List containing
-   `java.class`. This List is unmodifiable.
+   \"java.class\". This List is unmodifiable.
 
   type: java.util.List<java.lang.String>"
   ResourceBundle$Control/FORMAT_CLASS)
@@ -158,7 +158,7 @@
   "Static Constant.
 
   The properties-only format List containing
-   `java.properties`. This List is
+   \"java.properties\". This List is
    unmodifiable.
 
   type: java.util.List<java.lang.String>"
@@ -226,9 +226,9 @@
    factory method tries to load resource bundles with formats in the
    order specified by the list. The list returned by this method
    must have at least one String. The predefined
-   formats are `java.class` for class-based resource
-   bundles and `java.properties` for java.util.properties-based ones. Strings starting
-   with `java.` are reserved for future extensions and
+   formats are \"java.class\" for class-based resource
+   bundles and \"java.properties\" for java.util.properties-based ones. Strings starting
+   with \"java.\" are reserved for future extensions and
    must not be used by application-defined formats.
 
    It is not a requirement to return an immutable (unmodifiable)
@@ -282,8 +282,8 @@
    respectively represent non-empty language, script, country, and
    variant.  For example, [L, C] represents a
    Locale that has non-empty values only for language and
-   country.  The form L(`xx`) represents the (non-empty)
-   language value is `xx`.  For all cases, Locales whose
+   country.  The form L(\"xx\") represents the (non-empty)
+   language value is \"xx\".  For all cases, Locales whose
    final component values are empty strings are omitted.
 
    For an input Locale with an empty script value,
@@ -332,68 +332,68 @@
 
 
    Special cases for Chinese.  When an input Locale has the
-   language `zh` (Chinese) and an empty script value, either `Hans` (Simplified) or
-   `Hant` (Traditional) might be supplied, depending on the country.
-   When the country is `CN` (China) or `SG` (Singapore), `Hans` is supplied.
-   When the country is `HK` (Hong Kong SAR China), `MO` (Macau SAR China),
-   or `TW` (Taiwan), `Hant` is supplied.  For all other countries or when the country
-   is empty, no script is supplied.  For example, for Locale(`zh`, `CN`)
+   language \"zh\" (Chinese) and an empty script value, either \"Hans\" (Simplified) or
+   \"Hant\" (Traditional) might be supplied, depending on the country.
+   When the country is \"CN\" (China) or \"SG\" (Singapore), \"Hans\" is supplied.
+   When the country is \"HK\" (Hong Kong SAR China), \"MO\" (Macau SAR China),
+   or \"TW\" (Taiwan), \"Hant\" is supplied.  For all other countries or when the country
+   is empty, no script is supplied.  For example, for Locale(\"zh\", \"CN\")
    , the candidate list will be:
 
-    [L(`zh`), S(`Hans`), C(`CN`)]
-    [L(`zh`), S(`Hans`)]
-    [L(`zh`), C(`CN`)]
-    [L(`zh`)]
+    [L(\"zh\"), S(\"Hans\"), C(\"CN\")]
+    [L(\"zh\"), S(\"Hans\")]
+    [L(\"zh\"), C(\"CN\")]
+    [L(\"zh\")]
     Locale.ROOT
 
 
-   For Locale(`zh`, `TW`), the candidate list will be:
+   For Locale(\"zh\", \"TW\"), the candidate list will be:
 
-    [L(`zh`), S(`Hant`), C(`TW`)]
-    [L(`zh`), S(`Hant`)]
-    [L(`zh`), C(`TW`)]
-    [L(`zh`)]
+    [L(\"zh\"), S(\"Hant\"), C(\"TW\")]
+    [L(\"zh\"), S(\"Hant\")]
+    [L(\"zh\"), C(\"TW\")]
+    [L(\"zh\")]
     Locale.ROOT
 
 
-   Special cases for Norwegian.  Both Locale(`no`, `NO`,
-   `NY`) and Locale(`nn`, `NO`) represent Norwegian
-   Nynorsk.  When a locale's language is `nn`, the standard candidate
-   list is generated up to [L(`nn`)], and then the following
+   Special cases for Norwegian.  Both Locale(\"no\", \"NO\",
+   \"NY\") and Locale(\"nn\", \"NO\") represent Norwegian
+   Nynorsk.  When a locale's language is \"nn\", the standard candidate
+   list is generated up to [L(\"nn\")], and then the following
    candidates are added:
 
-    [L(`no`), C(`NO`), V(`NY`)]
-    [L(`no`), C(`NO`)]
-    [L(`no`)]
+    [L(\"no\"), C(\"NO\"), V(\"NY\")]
+    [L(\"no\"), C(\"NO\")]
+    [L(\"no\")]
     Locale.ROOT
 
 
-   If the locale is exactly Locale(`no`, `NO`, `NY`), it is first
-   converted to Locale(`nn`, `NO`) and then the above procedure is
+   If the locale is exactly Locale(\"no\", \"NO\", \"NY\"), it is first
+   converted to Locale(\"nn\", \"NO\") and then the above procedure is
    followed.
 
-   Also, Java treats the language `no` as a synonym of Norwegian
-   Bokmål `nb`.  Except for the single case Locale(`no`,
-   `NO`, `NY`) (handled above), when an input Locale
-   has language `no` or `nb`, candidate Locales with
-   language code `no` and `nb` are interleaved, first using the
+   Also, Java treats the language \"no\" as a synonym of Norwegian
+   Bokmål \"nb\".  Except for the single case Locale(\"no\",
+   \"NO\", \"NY\") (handled above), when an input Locale
+   has language \"no\" or \"nb\", candidate Locales with
+   language code \"no\" and \"nb\" are interleaved, first using the
    requested language, then using its synonym. For example,
-   Locale(`nb`, `NO`, `POSIX`) generates the following
+   Locale(\"nb\", \"NO\", \"POSIX\") generates the following
    candidate list:
 
 
-    [L(`nb`), C(`NO`), V(`POSIX`)]
-    [L(`no`), C(`NO`), V(`POSIX`)]
-    [L(`nb`), C(`NO`)]
-    [L(`no`), C(`NO`)]
-    [L(`nb`)]
-    [L(`no`)]
+    [L(\"nb\"), C(\"NO\"), V(\"POSIX\")]
+    [L(\"no\"), C(\"NO\"), V(\"POSIX\")]
+    [L(\"nb\"), C(\"NO\")]
+    [L(\"no\"), C(\"NO\")]
+    [L(\"nb\")]
+    [L(\"no\")]
     Locale.ROOT
 
 
-   Locale(`no`, `NO`, `POSIX`) would generate the same list
-   except that locales with `no` would appear before the corresponding
-   locales with `nb`.
+   Locale(\"no\", \"NO\", \"POSIX\") would generate the same list
+   except that locales with \"no\" would appear before the corresponding
+   locales with \"nb\".
 
 
    The default implementation uses an ArrayList that
@@ -401,17 +401,17 @@
    caller. However, a subclass must not modify it after it has
    been returned by getCandidateLocales.
 
-   For example, if the given baseName is `Messages`
+   For example, if the given baseName is \"Messages\"
    and the given locale is
-   Locale(`ja`, ``, `XX`), then a
+   Locale(\"ja\", \"\", \"XX\"), then a
    List of Locales:
 
 
-       Locale(`ja`, ``, `XX`)
-       Locale(`ja`)
+       Locale(\"ja\", \"\", \"XX\")
+       Locale(\"ja\")
        Locale.ROOT
-   is returned. And if the resource bundles for the `ja` and
-   `` Locales are found, then the runtime resource
+   is returned. And if the resource bundles for the \"ja\" and
+   \"\" Locales are found, then the runtime resource
    lookup path (parent chain) is:
 
 
@@ -477,16 +477,16 @@
    The bundle name is obtained by calling toBundleName(baseName,
    locale).
 
-   If format is `java.class`, the
+   If format is \"java.class\", the
    Class specified by the bundle name is loaded by calling
    ClassLoader.loadClass(String). Then, a
    ResourceBundle is instantiated by calling Class.newInstance().  Note that the reload flag is
    ignored for loading class-based resource bundles in this default
    implementation.
 
-   If format is `java.properties`,
+   If format is \"java.properties\",
    toResourceName(bundlename,
-   `properties`) is called to get the resource name.
+   \"properties\") is called to get the resource name.
    If reload is true, load.getResource is called
    to get a URL for creating a URLConnection. This URLConnection is used to
    disable the
@@ -496,8 +496,8 @@
    Otherwise, loader.getResourceAsStream is called to get an InputStream. Then, a PropertyResourceBundle is constructed with the
    InputStream.
 
-   If format is neither `java.class`
-   nor `java.properties`, an
+   If format is neither \"java.class\"
+   nor \"java.properties\", an
    IllegalArgumentException is thrown.
 
   base-name - the base bundle name of the resource bundle, a fully qualified class name - `java.lang.String`
@@ -576,8 +576,8 @@
    returned. Otherwise, false is returned. This
    implementation assumes that the given format is the
    same string as its file suffix if it's not one of the default
-   formats, `java.class` or
-   `java.properties`.
+   formats, \"java.class\" or
+   \"java.properties\".
 
   base-name - the base bundle name of the resource bundle, a fully qualified class name - `java.lang.String`
   locale - the locale for which the resource bundle should be instantiated - `java.util.Locale`
@@ -602,7 +602,7 @@
    This implementation returns the following value:
 
 
-       baseName  `_`  language  `_`  script  `_`  country  `_`  variant
+       baseName  \"_\"  language  \"_\"  script  \"_\"  country  \"_\"  variant
    where language, script, country,
    and variant are the language, script, country, and variant
    values of locale, respectively. Final component values that
@@ -612,11 +612,11 @@
    is returned.
 
    For example, if baseName is
-   `baseName` and locale is
-   Locale(`ja`, ``, `XX`), then
-   `baseName_ja_ _XX` is returned. If the given
-   locale is Locale(`en`), then
-   `baseName_en` is returned.
+   \"baseName\" and locale is
+   Locale(\"ja\", \"\", \"XX\"), then
+   \"baseName_ja_ _XX\" is returned. If the given
+   locale is Locale(\"en\"), then
+   \"baseName_en\" is returned.
 
    Overriding this method allows applications to use different
    conventions in the organization and packaging of localized
@@ -638,9 +638,9 @@
    bundleName with '/' and appending a
    '.' and the given file suffix. For
    example, if bundleName is
-   `foo.bar.MyResources_ja_JP` and suffix
-   is `properties`, then
-   `foo/bar/MyResources_ja_JP.properties` is returned.
+   \"foo.bar.MyResources_ja_JP\" and suffix
+   is \"properties\", then
+   \"foo/bar/MyResources_ja_JP.properties\" is returned.
 
   bundle-name - the bundle name - `java.lang.String`
   suffix - the file type suffix - `java.lang.String`

@@ -76,7 +76,7 @@
   only some of the elements in c.
 
   A BlockingQueue does not intrinsically support
-  any kind of `close` or `shutdown` operation to
+  any kind of \"close\" or \"shutdown\" operation to
   indicate that no more items will be added.  The needs and usage of
   such features tend to be implementation-dependent. For example, a
   common tactic is for producers to insert special

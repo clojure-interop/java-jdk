@@ -23,9 +23,9 @@
    A transformation is of the form:
 
 
-  `algorithm/mode/padding` or
+  \"algorithm/mode/padding\" or
 
-  `algorithm`
+  \"algorithm\"
 
 
    (in the latter case,
@@ -34,7 +34,7 @@
 
 
 
-      Cipher c = Cipher.getInstance(`AES/CBC/PKCS5Padding`);
+      Cipher c = Cipher.getInstance(\"AES/CBC/PKCS5Padding\");
 
   A provider may supply a separate class for each combination
   of algorithm/mode/padding, or may decide to provide more generic
@@ -55,29 +55,29 @@
 
 
 
-      // provider's subclass of `CipherSpi` implements `algName` with
+      // provider's subclass of \"CipherSpi\" implements \"algName\" with
       // pluggable mode and padding
       Cipher.algName
 
 
 
 
-      // provider's subclass of `CipherSpi` implements `algName` in the
-      // specified `mode`, with pluggable padding
+      // provider's subclass of \"CipherSpi\" implements \"algName\" in the
+      // specified \"mode\", with pluggable padding
       Cipher.algName/mode
 
 
 
 
-      // provider's subclass of `CipherSpi` implements `algName` with the
-      // specified `padding`, with pluggable mode
+      // provider's subclass of \"CipherSpi\" implements \"algName\" with the
+      // specified \"padding\", with pluggable mode
       Cipher.algName//padding
 
 
 
 
-      // provider's subclass of `CipherSpi` implements `algName` with the
-      // specified `mode` and `padding`
+      // provider's subclass of \"CipherSpi\" implements \"algName\" with the
+      // specified \"mode\" and \"padding\"
       Cipher.algName/mode/padding
 
 
@@ -132,12 +132,12 @@
   The getInstance factory method of the Cipher
   engine class follows these rules in order to instantiate a provider's
   implementation of CipherSpi for a
-  transformation of the form `algorithm`:
+  transformation of the form \"algorithm\":
 
 
 
   Check if the provider has registered a subclass of CipherSpi
-  for the specified `algorithm`.
+  for the specified \"algorithm\".
   If the answer is YES, instantiate this
   class, for whose mode and padding scheme default values (as supplied by
   the provider) are used.
@@ -148,30 +148,30 @@
   The getInstance factory method of the Cipher
   engine class follows these rules in order to instantiate a provider's
   implementation of CipherSpi for a
-  transformation of the form `algorithm/mode/padding`:
+  transformation of the form \"algorithm/mode/padding\":
 
 
 
   Check if the provider has registered a subclass of CipherSpi
-  for the specified `algorithm/mode/padding` transformation.
+  for the specified \"algorithm/mode/padding\" transformation.
   If the answer is YES, instantiate it.
   If the answer is NO, go to the next step.
 
   Check if the provider has registered a subclass of CipherSpi
-  for the sub-transformation `algorithm/mode`.
+  for the sub-transformation \"algorithm/mode\".
   If the answer is YES, instantiate it, and call
   engineSetPadding(padding) on the new instance.
   If the answer is NO, go to the next step.
 
   Check if the provider has registered a subclass of CipherSpi
-  for the sub-transformation `algorithm//padding` (note the double
+  for the sub-transformation \"algorithm//padding\" (note the double
   slashes).
   If the answer is YES, instantiate it, and call
   engineSetMode(mode) on the new instance.
   If the answer is NO, go to the next step.
 
   Check if the provider has registered a subclass of CipherSpi
-  for the sub-transformation `algorithm`.
+  for the sub-transformation \"algorithm\".
   If the answer is YES, instantiate it, and call
   engineSetMode(mode) and
   engineSetPadding(padding) on the new instance.

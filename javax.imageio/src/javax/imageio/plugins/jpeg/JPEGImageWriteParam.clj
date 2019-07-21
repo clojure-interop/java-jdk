@@ -14,7 +14,7 @@
 
    In either case, the quality setting in an ImageWriteParam
   has the same meaning as for the underlying library: 1.00 means a
-  quantization table of all 1's, 0.75 means the `standard`, visually
+  quantization table of all 1's, 0.75 means the \"standard\", visually
   lossless quantization table, and 0.00 means aquantization table of
   all 255's.
 
@@ -29,7 +29,7 @@
   If no tables are specified in the metadata, then an abbreviated
   stream is written.  If no tables are included in the metadata and
   no tables are specified in a JPEGImageWriteParam, then
-  an abbreviated stream is encoded using the `standard` visually
+  an abbreviated stream is encoded using the \"standard\" visually
   lossless tables.  This class is necessary for specifying tables
   when an abbreviated stream must be written without writing any tables
   to a stream first.  In order to use this class, the metadata object
@@ -64,7 +64,7 @@
   Constructs a JPEGImageWriteParam.  Tiling is not
    supported.  Progressive encoding is supported. The default
    progressive mode is MODE_DISABLED.  A single form of compression,
-   named `JPEG`, is supported.  The default compression quality is
+   named \"JPEG\", is supported.  The default compression quality is
    0.75.
 
   locale - a Locale to be used by the superclass to localize compression type names and quality descriptions, or null. - `java.util.Locale`"

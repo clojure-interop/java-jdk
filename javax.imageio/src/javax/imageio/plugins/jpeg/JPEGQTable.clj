@@ -1,7 +1,7 @@
 (ns javax.imageio.plugins.jpeg.JPEGQTable
   "A class encapsulating a single JPEG quantization table.
   The elements appear in natural order (as opposed to zig-zag order).
-  Static variables are provided for the `standard` tables taken from
+  Static variables are provided for the \"standard\" tables taken from
    Annex K of the JPEG specification, as well as the default tables
   conventionally used for visually lossless encoding.
 
@@ -29,7 +29,7 @@
 
   The sample luminance quantization table given in the JPEG
    specification, table K.1. According to the specification,
-   these values produce `good` quality output.
+   these values produce \"good\" quality output.
 
   type: javax.imageio.plugins.jpeg.JPEGQTable"
   JPEGQTable/K1Luminance)
@@ -39,8 +39,8 @@
 
   The sample luminance quantization table given in the JPEG
    specification, table K.1, with all elements divided by 2.
-   According to the specification, these values produce `very good`
-   quality output. This is the table usually used for `visually lossless`
+   According to the specification, these values produce \"very good\"
+   quality output. This is the table usually used for \"visually lossless\"
    encoding, and is the default luminance table used if the default
    tables and quality settings are used.
 
@@ -52,7 +52,7 @@
 
   The sample chrominance quantization table given in the JPEG
    specification, table K.2. According to the specification,
-   these values produce `good` quality output.
+   these values produce \"good\" quality output.
 
   type: javax.imageio.plugins.jpeg.JPEGQTable"
   JPEGQTable/K2Chrominance)
@@ -62,8 +62,8 @@
 
   The sample chrominance quantization table given in the JPEG
    specification, table K.1, with all elements divided by 2.
-   According to the specification, these values produce `very good`
-   quality output. This is the table usually used for `visually lossless`
+   According to the specification, these values produce \"very good\"
+   quality output. This is the table usually used for \"visually lossless\"
    encoding, and is the default chrominance table used if the default
    tables and quality settings are used.
 

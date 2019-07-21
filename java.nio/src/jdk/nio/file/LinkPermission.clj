@@ -32,7 +32,7 @@
 
   Constructs a LinkPermission with the specified name.
 
-  name - the name of the permission; must be `hard` or `symbolic`. - `java.lang.String`
+  name - the name of the permission; must be \"hard\" or \"symbolic\". - `java.lang.String`
   actions - the actions for the permission; must be the empty string or null - `java.lang.String`
 
   throws: java.lang.IllegalArgumentException - if name is empty or invalid, or actions is a non-empty string"

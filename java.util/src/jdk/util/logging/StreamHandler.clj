@@ -61,7 +61,7 @@
 
   encoding - The name of a supported character encoding. May be null, to indicate the default platform encoding. - `java.lang.String`
 
-  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(\"control\")."
   ([^StreamHandler this ^java.lang.String encoding]
     (-> this (.setEncoding encoding))))
 
@@ -76,7 +76,7 @@
    the result to the current output stream.
 
    If this is the first LogRecord to be written to a given
-   OutputStream, the Formatter's `head` string is
+   OutputStream, the Formatter's \"head\" string is
    written to the stream before the LogRecord is written.
 
   record - description of the log event. A null record is silently ignored and is not published - `java.util.logging.LogRecord`"
@@ -104,12 +104,12 @@
 (defn close
   "Close the current output stream.
 
-   The Formatter's `tail` string is written to the stream before it
-   is closed.  In addition, if the Formatter's `head` string has not
+   The Formatter's \"tail\" string is written to the stream before it
+   is closed.  In addition, if the Formatter's \"head\" string has not
    yet been written to the stream, it will be written before the
-   `tail` string.
+   \"tail\" string.
 
-  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(`control`)."
+  throws: java.lang.SecurityException - if a security manager exists and if the caller does not have LoggingPermission(\"control\")."
   ([^StreamHandler this]
     (-> this (.close))))
 

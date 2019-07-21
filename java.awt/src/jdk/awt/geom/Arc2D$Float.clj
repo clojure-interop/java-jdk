@@ -25,27 +25,27 @@
   (^Arc2D$Float []
     (new Arc2D$Float )))
 
-(defn -x
+(defn x
   "Instance Field.
 
   The X coordinate of the upper-left corner of the framing
    rectangle of the arc.
 
   type: float"
-  [this]
-  (-> this .-x))
+  (^Float [^Arc2D$Float this]
+    (-> this .-x)))
 
-(defn -y
+(defn y
   "Instance Field.
 
   The Y coordinate of the upper-left corner of the framing
    rectangle of the arc.
 
   type: float"
-  [this]
-  (-> this .-y))
+  (^Float [^Arc2D$Float this]
+    (-> this .-y)))
 
-(defn -width
+(defn width
   "Instance Field.
 
   The overall width of the full ellipse of which this arc is
@@ -53,10 +53,10 @@
    angular extents).
 
   type: float"
-  [this]
-  (-> this .-width))
+  (^Float [^Arc2D$Float this]
+    (-> this .-width)))
 
-(defn -height
+(defn height
   "Instance Field.
 
   The overall height of the full ellipse of which this arc is
@@ -64,26 +64,26 @@
    angular extents).
 
   type: float"
-  [this]
-  (-> this .-height))
+  (^Float [^Arc2D$Float this]
+    (-> this .-height)))
 
-(defn -start
+(defn start
   "Instance Field.
 
   The starting angle of the arc in degrees.
 
   type: float"
-  [this]
-  (-> this .-start))
+  (^Float [^Arc2D$Float this]
+    (-> this .-start)))
 
-(defn -extent
+(defn extent
   "Instance Field.
 
   The angular extent of the arc in degrees.
 
   type: float"
-  [this]
-  (-> this .-extent))
+  (^Float [^Arc2D$Float this]
+    (-> this .-extent)))
 
 (defn get-angle-start
   "Returns the starting angle of the arc.

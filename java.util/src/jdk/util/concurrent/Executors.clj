@@ -7,7 +7,7 @@
          set up with commonly useful configuration settings.
      Methods that create and return a ScheduledExecutorService
          set up with commonly useful configuration settings.
-     Methods that create and return a `wrapped` ExecutorService, that
+     Methods that create and return a \"wrapped\" ExecutorService, that
          disables reconfiguration by making implementation-specific methods
          inaccessible.
      Methods that create and return a ThreadFactory
@@ -21,7 +21,7 @@
 (defn *unconfigurable-executor-service
   "Returns an object that delegates all defined ExecutorService methods to the given executor, but not any
    other methods that might otherwise be accessible using
-   casts. This provides a way to safely `freeze` configuration and
+   casts. This provides a way to safely \"freeze\" configuration and
    disallow tuning of a given concrete implementation.
 
   executor - the underlying implementation - `java.util.concurrent.ExecutorService`
@@ -102,7 +102,7 @@
 (defn *unconfigurable-scheduled-executor-service
   "Returns an object that delegates all defined ScheduledExecutorService methods to the given executor, but
    not any other methods that might otherwise be accessible using
-   casts. This provides a way to safely `freeze` configuration and
+   casts. This provides a way to safely \"freeze\" configuration and
    disallow tuning of a given concrete implementation.
 
   executor - the underlying implementation - `java.util.concurrent.ScheduledExecutorService`

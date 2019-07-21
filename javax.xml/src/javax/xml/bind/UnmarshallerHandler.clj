@@ -7,7 +7,7 @@
 
 
 
-        JAXBContext context = JAXBContext.newInstance( `org.acme.foo` );
+        JAXBContext context = JAXBContext.newInstance( \"org.acme.foo\" );
 
         Unmarshaller unmarshaller = context.createUnmarshaller();
 

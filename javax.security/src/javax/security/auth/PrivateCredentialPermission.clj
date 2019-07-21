@@ -5,16 +5,16 @@
 
    The target name of this Permission specifies
   a Credential class name, and a Set of Principals.
-  The only valid value for this Permission's actions is, `read`.
+  The only valid value for this Permission's actions is, \"read\".
   The target name must abide by the following syntax:
 
 
 
-       CredentialClass {PrincipalClass `PrincipalName`}*
+       CredentialClass {PrincipalClass \"PrincipalName\"}*
 
   For example, the following permission grants access to the
   com.sun.PrivateCredential owned by Subjects which have
-  a com.sun.Principal with the name, `duke`.  Note that although
+  a com.sun.Principal with the name, \"duke\".  Note that although
   this example, as well as all the examples below, do not contain
   Codebase, SignedBy, or Principal information in the grant statement
   (for simplicity reasons), actual policy configurations should
@@ -24,14 +24,14 @@
 
      grant {
        permission javax.security.auth.PrivateCredentialPermission
-               `com.sun.PrivateCredential com.sun.Principal `duke``,
-               `read`;
+               \"com.sun.PrivateCredential com.sun.Principal \\\"duke\\\"\",
+               \"read\";
      };
 
-  If CredentialClass is `*`, then access is granted to
+  If CredentialClass is \"*\", then access is granted to
   all private Credentials belonging to the specified
   Subject.
-  If `PrincipalName` is `*`, then access is granted to the
+  If \"PrincipalName\" is \"*\", then access is granted to the
   specified Credential owned by any Subject that has the
   specified Principal (the actual PrincipalName doesn't matter).
   For example, the following grants access to the
@@ -42,11 +42,11 @@
 
      grant {
        permission javax.security.auth.PrivateCredentialPermission
-               `a.b.Credential a.b.Principal `*``,
-               `read`;
+               \"a.b.Credential a.b.Principal \"*\"\",
+               \"read\";
      };
 
-  If both the PrincipalClass and `PrincipalName` are `*`,
+  If both the PrincipalClass and \"PrincipalName\" are \"*\",
   then access is granted to the specified Credential owned by
   any Subject.
 
@@ -56,14 +56,14 @@
 
      grant {
        permission javax.security.auth.PrivateCredentialPermission
-               `a.b.Credential a.b.Principal `duke` c.d.Principal `dukette``,
-               `read`;
+               \"a.b.Credential a.b.Principal \"duke\" c.d.Principal \"dukette\"\",
+               \"read\";
      };
 
-  The above grants access to the private Credential, `a.b.Credential`,
+  The above grants access to the private Credential, \"a.b.Credential\",
   belonging to a Subject with at least two associated Principals:
-  `a.b.Principal` with the name, `duke`, and `c.d.Principal`, with the name,
-  `dukette`."
+  \"a.b.Principal\" with the name, \"duke\", and \"c.d.Principal\", with the name,
+  \"dukette\"."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.security.auth PrivateCredentialPermission]))
 
@@ -77,7 +77,7 @@
   name - the name specifying the Credential class and Principal Set. - `java.lang.String`
   actions - the actions specifying that the Credential can be read. - `java.lang.String`
 
-  throws: java.lang.IllegalArgumentException - if name does not conform to the correct syntax or if actions is not `read`."
+  throws: java.lang.IllegalArgumentException - if name does not conform to the correct syntax or if actions is not \"read\"."
   (^PrivateCredentialPermission [^java.lang.String name ^java.lang.String actions]
     (new PrivateCredentialPermission name actions)))
 
@@ -121,9 +121,9 @@
             target name.  For example:
 
 
-    [* P1 `duke`] implies [a.b.Credential P1 `duke`].
-    [C1 P1 `duke`] implies [C1 P1 `duke` P2 `dukette`].
-    [C1 P2 `dukette`] implies [C1 P1 `duke` P2 `dukette`].
+    [* P1 \"duke\"] implies [a.b.Credential P1 \"duke\"].
+    [C1 P1 \"duke\"] implies [C1 P1 \"duke\" P2 \"dukette\"].
+    [C1 P2 \"dukette\"] implies [C1 P1 \"duke\" P2 \"dukette\"].
 
   p - the Permission to check against. - `java.security.Permission`
 
@@ -157,10 +157,10 @@
     (-> this (.hashCode))))
 
 (defn get-actions
-  "Returns the `canonical string representation` of the actions.
-   This method always returns the String, `read`.
+  "Returns the \"canonical string representation\" of the actions.
+   This method always returns the String, \"read\".
 
-  returns: the actions (always returns `read`). - `java.lang.String`"
+  returns: the actions (always returns \"read\"). - `java.lang.String`"
   (^java.lang.String [^PrivateCredentialPermission this]
     (-> this (.getActions))))
 

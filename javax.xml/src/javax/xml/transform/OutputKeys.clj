@@ -9,11 +9,11 @@
 (def *-method
   "Static Constant.
 
-  method = `xml` | `html` | `text` | expanded name.
+  method = \"xml\" | \"html\" | \"text\" | expanded name.
 
    The value of the method property identifies the overall method that
    should be used for outputting the result tree.  Other non-namespaced
-   values may be used, such as `xhtml`, but, if accepted, the handling
+   values may be used, such as \"xhtml\", but, if accepted, the handling
    of such values is implementation defined.  If any of the method values
    are not accepted and are not namespace qualified,
    then Transformer.setOutputProperty(java.lang.String, java.lang.String)
@@ -30,13 +30,13 @@
 
    version specifies the version of the output
    method.
-   When the output method is `xml`, the version value specifies the
+   When the output method is \"xml\", the version value specifies the
    version of XML to be used for outputting the result tree. The default
    value for the xml output method is 1.0. When the output method is
-   `html`, the version value indicates the version of the HTML.
+   \"html\", the version value indicates the version of the HTML.
    The default value for the xml output method is 4.0, which specifies
    that the result should be output as HTML conforming to the HTML 4.0
-   Recommendation [HTML].  If the output method is `text`, the version
+   Recommendation [HTML].  If the output method is \"text\", the version
    property is ignored.
 
   type: java.lang.String"
@@ -63,7 +63,7 @@
 (def *-omit-xml-declaration
   "Static Constant.
 
-  omit-xml-declaration = `yes` | `no`.
+  omit-xml-declaration = \"yes\" | \"no\".
 
    omit-xml-declaration specifies whether the XSLT
    processor should output an XML declaration; the value must be
@@ -75,7 +75,7 @@
 (def *-standalone
   "Static Constant.
 
-  standalone = `yes` | `no`.
+  standalone = \"yes\" | \"no\".
 
    standalone specifies whether the Transformer
    should output a standalone document declaration; the value must be
@@ -143,7 +143,7 @@
 (def *-indent
   "Static Constant.
 
-  indent = `yes` | `no`.
+  indent = \"yes\" | \"no\".
 
    indent specifies whether the Transformer may
    add additional whitespace when outputting the result tree; the value

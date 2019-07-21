@@ -10,9 +10,9 @@
   within the Subject.  Principals simply bind names to a
   Subject.  For example, a Subject that happens
   to be a person, Alice, might have two Principals:
-  one which binds `Alice Bar`, the name on her driver license,
+  one which binds \"Alice Bar\", the name on her driver license,
   to the Subject, and another which binds,
-  `999-99-9999`, the number on her student identification card,
+  \"999-99-9999\", the number on her student identification card,
   to the Subject.  Both Principals refer to the same
   Subject even though each has a different name.
 
@@ -67,11 +67,11 @@
    by ensuring that callers have sufficient permissions.
 
     To modify the Principals Set, the caller must have
-   AuthPermission(`modifyPrincipals`).
+   AuthPermission(\"modifyPrincipals\").
    To modify the public credential Set, the caller must have
-   AuthPermission(`modifyPublicCredentials`).
+   AuthPermission(\"modifyPublicCredentials\").
    To modify the private credential Set, the caller must have
-   AuthPermission(`modifyPrivateCredentials`).
+   AuthPermission(\"modifyPrivateCredentials\").
 
   read-only - true if the Subject is to be read-only, and false otherwise. - `boolean`
   principals - the Set of Principals to be associated with this Subject. - `java.util.Set`

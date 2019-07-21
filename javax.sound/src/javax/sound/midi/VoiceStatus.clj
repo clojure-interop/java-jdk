@@ -30,7 +30,7 @@
   If the voice is not currently processing a MIDI note, it
   is considered inactive.  A voice is inactive when it has
   been given no note-on commands, or when every note-on command received has
-  been terminated by a corresponding note-off (or by an `all notes off`
+  been terminated by a corresponding note-off (or by an \"all notes off\"
   message).  For example, this happens when a synthesizer capable of playing 16
   simultaneous notes is told to play a four-note chord; only
   four voices are active in this case (assuming no earlier notes are still playing).
@@ -56,7 +56,7 @@
   (^VoiceStatus []
     (new VoiceStatus )))
 
-(defn -active
+(defn active
   "Instance Field.
 
   Indicates whether the voice is currently processing a MIDI note.
@@ -64,10 +64,10 @@
    active and inactive voices.
 
   type: boolean"
-  [this]
-  (-> this .-active))
+  (^Boolean [^VoiceStatus this]
+    (-> this .-active)))
 
-(defn -channel
+(defn channel
   "Instance Field.
 
   The MIDI channel on which this voice is playing.  The value is a
@@ -75,10 +75,10 @@
    unspecified if the voice is inactive.
 
   type: int"
-  [this]
-  (-> this .-channel))
+  (^Integer [^VoiceStatus this]
+    (-> this .-channel)))
 
-(defn -bank
+(defn bank
   "Instance Field.
 
   The bank number of the instrument that this voice is currently using.
@@ -88,10 +88,10 @@
    unspecified if the voice is inactive.
 
   type: int"
-  [this]
-  (-> this .-bank))
+  (^Integer [^VoiceStatus this]
+    (-> this .-bank)))
 
-(defn -program
+(defn program
   "Instance Field.
 
   The program number of the instrument that this voice is currently using.
@@ -99,10 +99,10 @@
    unspecified if the voice is inactive.
 
   type: int"
-  [this]
-  (-> this .-program))
+  (^Integer [^VoiceStatus this]
+    (-> this .-program)))
 
-(defn -note
+(defn note
   "Instance Field.
 
   The MIDI note that this voice is playing.  The range for an active voice
@@ -110,10 +110,10 @@
    The value is unspecified if the voice is inactive.
 
   type: int"
-  [this]
-  (-> this .-note))
+  (^Integer [^VoiceStatus this]
+    (-> this .-note)))
 
-(defn -volume
+(defn volume
   "Instance Field.
 
   The current MIDI volume level for the voice.
@@ -127,6 +127,6 @@
    shape of the amplitude envelope it produces.
 
   type: int"
-  [this]
-  (-> this .-volume))
+  (^Integer [^VoiceStatus this]
+    (-> this .-volume)))
 

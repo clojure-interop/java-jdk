@@ -5,10 +5,10 @@
   Media may be specified in different ways.
 
    it may be specified by paper source - eg paper tray
-   it may be specified by a standard size - eg `A4`
-   it may be specified by a name - eg `letterhead`
+   it may be specified by a standard size - eg \"A4\"
+   it may be specified by a name - eg \"letterhead\"
 
-  Each of these corresponds to the IPP `media` attribute.
+  Each of these corresponds to the IPP \"media\" attribute.
   The current API does not support describing media by characteristics
   (eg colour, opacity).
   This may be supported in a later revision of the specification.
@@ -42,7 +42,7 @@
     (-> this (.equals object))))
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class Media and any vendor-defined subclasses, the category is
@@ -58,7 +58,7 @@
    instance.
 
    For class Media and any vendor-defined subclasses, the category name is
-   `media`.
+   \"media\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^Media this]

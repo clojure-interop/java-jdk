@@ -47,12 +47,12 @@
    example, if an applet is specified as
 
 
-   <applet code=`Clock` width=50 height=50>
-   <param name=Color value=`blue`>
+   <applet code=\"Clock\" width=50 height=50>
+   <param name=Color value=\"blue\">
    </applet>
 
-   then a call to getParameter(`Color`) returns the
-   value `blue`.
+   then a call to getParameter(\"Color\") returns the
+   value \"blue\".
 
   name - a parameter name. - `java.lang.String`
 

@@ -17,10 +17,10 @@
   by this class may have methods added to it in the future to
   accommodate new, currently unknown, language structures added to
   future versions of the Java™ programming language.
-  Therefore, methods whose names begin with `visit` may be
+  Therefore, methods whose names begin with \"visit\" may be
   added to this class in the future; to avoid incompatibilities,
   classes which extend this class should not declare any instance
-  methods with names beginning with `visit`.
+  methods with names beginning with \"visit\".
 
   When such a new visit method is added, the default
   implementation in this class will be to call the visitUnknown method.  A new simple type visitor

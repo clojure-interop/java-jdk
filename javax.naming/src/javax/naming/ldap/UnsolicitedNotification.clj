@@ -20,7 +20,7 @@
    sent by the server.
 
   returns: A possibly null exception as constructed using information
-   sent by the server. If null, a `success` status was indicated by
+   sent by the server. If null, a \"success\" status was indicated by
    the server. - `javax.naming.NamingException`"
   (^javax.naming.NamingException [^UnsolicitedNotification this]
     (-> this (.getException))))

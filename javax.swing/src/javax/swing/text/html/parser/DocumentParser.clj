@@ -41,7 +41,7 @@
   p tag, and the implied end p, html and body tags will all have the same
   position.
   As html skips whitespace the position for text will be the position
-  of the first valid character, eg in the string '\n\n\nblah'
+  of the first valid character, eg in the string '\\n\\n\\nblah'
   the text 'blah' will have a position of 3, the newlines are skipped.
 
   For attributes that do not have a value, eg in the html
@@ -59,7 +59,7 @@
 
   Once the stream has been parsed, the callback is notified of the most
   likely end of line string. The end of line string will be one of
-  \n, \r or \r\n, which ever is encountered the most in parsing the
+  \\n, \\r or \\r\\n, which ever is encountered the most in parsing the
   stream."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.text.html.parser DocumentParser]))

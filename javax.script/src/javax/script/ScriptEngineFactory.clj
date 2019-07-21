@@ -33,12 +33,12 @@
 
 
    public String getProgram(String... statements) {
-        String retval = `<?\n`;
+        String retval = \"<?\\n\";
         int len = statements.length;
         for (int i = 0; i < len; i++) {
-            retval = statements[i]  `;\n`;
+            retval = statements[i]  \";\\n\";
         }
-        return retval = `?>`;
+        return retval = \"?>\";
    }
 
   statements - The statements to be executed. May be return values of calls to the getMethodCallSyntax and getOutputStatement methods. - `java.lang.String`
@@ -65,7 +65,7 @@
 
 
    public String getOutputStatement(String toDisplay) {
-        return `print(`  toDisplay  `)`;
+        return \"print(\"  toDisplay  \")\";
    }
 
   to-display - The String to be displayed by the returned statement. - `java.lang.String`
@@ -95,14 +95,14 @@
 
    null - The engine implementation is not thread safe, and cannot
    be used to execute scripts concurrently on multiple threads.
-   `MULTITHREADED` - The engine implementation is internally
+   \"MULTITHREADED\" - The engine implementation is internally
    thread-safe and scripts may execute concurrently although effects of script execution
    on one thread may be visible to scripts on other threads.
-   `THREAD-ISOLATED` - The implementation satisfies the requirements
-   of `MULTITHREADED`, and also, the engine maintains independent values
+   \"THREAD-ISOLATED\" - The implementation satisfies the requirements
+   of \"MULTITHREADED\", and also, the engine maintains independent values
    for symbols in scripts executing on different threads.
-   `STATELESS` - The implementation satisfies the requirements of
-   `THREAD-ISOLATED`.  In addition, script executions do not alter the
+   \"STATELESS\" - The implementation satisfies the requirements of
+   \"THREAD-ISOLATED\".  In addition, script executions do not alter the
    mappings in the Bindings which is the engine scope of the
    ScriptEngine.  In particular, the keys in the Bindings
    and their associated values are the same before and after the execution of the script.
@@ -137,14 +137,14 @@
    public String getMethodCallSyntax(String obj,
                                      String m, String... args) {
         String ret = obj;
-        ret = `.`  m  `(`;
+        ret = \".\"  m  \"(\";
         for (int i = 0; i < args.length; i++) {
             ret = args[i];
             if (i < args.length - 1) {
-                ret = `,`;
+                ret = \",\";
             }
         }
-        ret = `)`;
+        ret = \")\";
         return ret;
    }
 
@@ -186,7 +186,7 @@
   "Returns an immutable list of  short names for the ScriptEngine, which may be used to
    identify the ScriptEngine by the ScriptEngineManager.
    For instance, an implementation based on the Mozilla Rhino Javascript engine might
-   return list containing {`javascript`, `rhino`}.
+   return list containing {\"javascript\", \"rhino\"}.
 
   returns: an immutable list of short names - `java.util.List<java.lang.String>`"
   (^java.util.List [^ScriptEngineFactory this]

@@ -43,7 +43,7 @@
 
 
        java.util.Map map = con.getTypeMap();
-       map.put(`mySchemaName.ATHLETES`, Class.forName(`Athletes`));
+       map.put(\"mySchemaName.ATHLETES\", Class.forName(\"Athletes\"));
        con.setTypeMap(map);"
   (:refer-clojure :only [require comment defn ->])
   (:import [java.sql Connection]))
@@ -83,7 +83,7 @@
 
 
         Map myMap<String,Class<?>> = new HashMap<String,Class<?>>();
-        myMap.put(`mySchemaName.ATHLETES`, Athletes.class);
+        myMap.put(\"mySchemaName.ATHLETES\", Athletes.class);
         con.setTypeMap(myMap);
 
   map - the java.util.Map object to install as the replacement for this Connection object's default type map - `java.util.Map`
@@ -571,7 +571,7 @@
 
 
         Map<String,Class<?>> myMap = con.getTypeMap();
-        myMap.put(`mySchemaName.ATHLETES`, Athletes.class);
+        myMap.put(\"mySchemaName.ATHLETES\", Athletes.class);
         con.setTypeMap(myMap);
 
   returns: the java.util.Map object associated

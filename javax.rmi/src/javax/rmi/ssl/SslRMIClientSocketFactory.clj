@@ -62,7 +62,7 @@
     (-> this (.createSocket host port))))
 
 (defn equals
-  "Indicates whether some other object is `equal to` this one.
+  "Indicates whether some other object is \"equal to\" this one.
 
    Because all instances of this class are functionally equivalent
    (they all use the default

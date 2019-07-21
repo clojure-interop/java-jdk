@@ -26,7 +26,7 @@
 
 
    SOAPFault fault = ...;
-   fault.addFaultReasonText(`Version Mismatch`, Locale.ENGLISH);
+   fault.addFaultReasonText(\"Version Mismatch\", Locale.ENGLISH);
 
   text - -- reason message string - `java.lang.String`
   locale - -- Locale object representing the locale of the message - `java.util.Locale`
@@ -135,7 +135,7 @@
 (defn get-fault-code-as-name
   "Gets the mandatory SOAP 1.1 fault code for this
    SOAPFault object as a SAAJ Name object.
-   The SOAP 1.1 specification requires the value of the `faultcode`
+   The SOAP 1.1 specification requires the value of the \"faultcode\"
    element to be of type QName. This method returns the content of the
    element as a QName in the form of a SAAJ Name object. This method
    should be used instead of the getFaultCode method since
@@ -300,9 +300,9 @@
 
    SOAPEnvelope se = ...;
    // Create a qualified name in the SOAP namespace with a localName
-   // of `Client`. Note that prefix parameter is optional and is null
+   // of \"Client\". Note that prefix parameter is optional and is null
    // here which causes the implementation to use an appropriate prefix.
-   Name qname = se.createName(`Client`, null,
+   Name qname = se.createName(\"Client\", null,
                               SOAPConstants.URI_NS_SOAP_ENVELOPE);
    SOAPFault fault = ...;
    fault.setFaultCode(qname);

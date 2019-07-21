@@ -246,21 +246,21 @@
     -------  -----  --------------------------
       O       1      appendLocalizedOffsetPrefixed(TextStyle.SHORT);
       OOOO    4      appendLocalizedOffsetPrefixed(TextStyle.FULL);
-      X       1      appendOffset(`+HHmm`,`Z`)
-      XX      2      appendOffset(`+HHMM`,`Z`)
-      XXX     3      appendOffset(`+HH:MM`,`Z`)
-      XXXX    4      appendOffset(`+HHMMss`,`Z`)
-      XXXXX   5      appendOffset(`+HH:MM:ss`,`Z`)
-      x       1      appendOffset(`+HHmm`,`+00`)
-      xx      2      appendOffset(`+HHMM`,`+0000`)
-      xxx     3      appendOffset(`+HH:MM`,`+00:00`)
-      xxxx    4      appendOffset(`+HHMMss`,`+0000`)
-      xxxxx   5      appendOffset(`+HH:MM:ss`,`+00:00`)
-      Z       1      appendOffset(`+HHMM`,`+0000`)
-      ZZ      2      appendOffset(`+HHMM`,`+0000`)
-      ZZZ     3      appendOffset(`+HHMM`,`+0000`)
+      X       1      appendOffset(\"+HHmm\",\"Z\")
+      XX      2      appendOffset(\"+HHMM\",\"Z\")
+      XXX     3      appendOffset(\"+HH:MM\",\"Z\")
+      XXXX    4      appendOffset(\"+HHMMss\",\"Z\")
+      XXXXX   5      appendOffset(\"+HH:MM:ss\",\"Z\")
+      x       1      appendOffset(\"+HHmm\",\"+00\")
+      xx      2      appendOffset(\"+HHMM\",\"+0000\")
+      xxx     3      appendOffset(\"+HH:MM\",\"+00:00\")
+      xxxx    4      appendOffset(\"+HHMMss\",\"+0000\")
+      xxxxx   5      appendOffset(\"+HH:MM:ss\",\"+00:00\")
+      Z       1      appendOffset(\"+HHMM\",\"+0000\")
+      ZZ      2      appendOffset(\"+HHMM\",\"+0000\")
+      ZZZ     3      appendOffset(\"+HHMM\",\"+0000\")
       ZZZZ    4      appendLocalizedOffset(TextStyle.FULL);
-      ZZZZZ   5      appendOffset(`+HH:MM:ss`,`Z`)
+      ZZZZZ   5      appendOffset(\"+HH:MM:ss\",\"Z\")
 
    Modifiers: Pattern letters that modify the rest of the pattern:
 
@@ -584,15 +584,15 @@
    For example, the following will parse:
 
 
-     `Europe/London`           -- ZoneId.of(`Europe/London`)
-     `Z`                       -- ZoneOffset.UTC
-     `UT`                      -- ZoneId.of(`UT`)
-     `UTC`                     -- ZoneId.of(`UTC`)
-     `GMT`                     -- ZoneId.of(`GMT`)
-     `+01:30`                  -- ZoneOffset.of(`+01:30`)
-     `UT+01:30`                -- ZoneOffset.of(`UT+01:30`)
-     `UTC+01:30`               -- ZoneOffset.of(`UTC+01:30`)
-     `GMT+01:30`               -- ZoneOffset.of(`GMT+01:30`)
+     \"Europe/London\"           -- ZoneId.of(\"Europe/London\")
+     \"Z\"                       -- ZoneOffset.UTC
+     \"UT\"                      -- ZoneId.of(\"UT\")
+     \"UTC\"                     -- ZoneId.of(\"UTC\")
+     \"GMT\"                     -- ZoneId.of(\"GMT\")
+     \"+01:30\"                  -- ZoneOffset.of(\"+01:30\")
+     \"UT+01:30\"                -- ZoneOffset.of(\"UT+01:30\")
+     \"UTC+01:30\"               -- ZoneOffset.of(\"UTC+01:30\")
+     \"GMT+01:30\"               -- ZoneOffset.of(\"GMT+01:30\")
 
    Note that this method is identical to appendZoneId() except
    in the mechanism used to obtain the zone.
@@ -652,7 +652,7 @@
   "Appends the zone offset, such as '+01:00', to the formatter.
 
    This appends an instruction to format/parse the offset ID to the builder.
-   This is equivalent to calling appendOffset(`+HH:MM:ss`, `Z`).
+   This is equivalent to calling appendOffset(\"+HH:MM:ss\", \"Z\").
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
   (^java.time.format.DateTimeFormatterBuilder [^DateTimeFormatterBuilder this]
@@ -691,15 +691,15 @@
    For example, the following will parse:
 
 
-     `Europe/London`           -- ZoneId.of(`Europe/London`)
-     `Z`                       -- ZoneOffset.UTC
-     `UT`                      -- ZoneId.of(`UT`)
-     `UTC`                     -- ZoneId.of(`UTC`)
-     `GMT`                     -- ZoneId.of(`GMT`)
-     `+01:30`                  -- ZoneOffset.of(`+01:30`)
-     `UT+01:30`                -- ZoneOffset.of(`+01:30`)
-     `UTC+01:30`               -- ZoneOffset.of(`+01:30`)
-     `GMT+01:30`               -- ZoneOffset.of(`+01:30`)
+     \"Europe/London\"           -- ZoneId.of(\"Europe/London\")
+     \"Z\"                       -- ZoneOffset.UTC
+     \"UT\"                      -- ZoneId.of(\"UT\")
+     \"UTC\"                     -- ZoneId.of(\"UTC\")
+     \"GMT\"                     -- ZoneId.of(\"GMT\")
+     \"+01:30\"                  -- ZoneOffset.of(\"+01:30\")
+     \"UT+01:30\"                -- ZoneOffset.of(\"+01:30\")
+     \"UTC+01:30\"               -- ZoneOffset.of(\"+01:30\")
+     \"GMT+01:30\"               -- ZoneOffset.of(\"+01:30\")
 
    Note that this method is identical to appendZoneId() except
    in the mechanism used to obtain the zone.
@@ -773,15 +773,15 @@
    For example, the following will parse:
 
 
-     `Europe/London`           -- ZoneId.of(`Europe/London`)
-     `Z`                       -- ZoneOffset.UTC
-     `UT`                      -- ZoneId.of(`UT`)
-     `UTC`                     -- ZoneId.of(`UTC`)
-     `GMT`                     -- ZoneId.of(`GMT`)
-     `+01:30`                  -- ZoneOffset.of(`+01:30`)
-     `UT+01:30`                -- ZoneOffset.of(`+01:30`)
-     `UTC+01:30`               -- ZoneOffset.of(`+01:30`)
-     `GMT+01:30`               -- ZoneOffset.of(`+01:30`)
+     \"Europe/London\"           -- ZoneId.of(\"Europe/London\")
+     \"Z\"                       -- ZoneOffset.UTC
+     \"UT\"                      -- ZoneId.of(\"UT\")
+     \"UTC\"                     -- ZoneId.of(\"UTC\")
+     \"GMT\"                     -- ZoneId.of(\"GMT\")
+     \"+01:30\"                  -- ZoneOffset.of(\"+01:30\")
+     \"UT+01:30\"                -- ZoneOffset.of(\"+01:30\")
+     \"UTC+01:30\"               -- ZoneOffset.of(\"+01:30\")
+     \"GMT+01:30\"               -- ZoneOffset.of(\"+01:30\")
 
   returns: this, for chaining, not null - `java.time.format.DateTimeFormatterBuilder`"
   (^java.time.format.DateTimeFormatterBuilder [^DateTimeFormatterBuilder this]
@@ -928,10 +928,10 @@
    +HHMMSS - hour, minute and second, no colon
    +HH:MM:SS - hour, minute and second, with colon
 
-   The `no offset` text controls what text is printed when the total amount of
+   The \"no offset\" text controls what text is printed when the total amount of
    the offset fields to be output is zero.
    Example values would be 'Z', '+00:00', 'UTC' or 'GMT'.
-   Three formats are accepted for parsing UTC - the `no offset` text, and the
+   Three formats are accepted for parsing UTC - the \"no offset\" text, and the
    plus and minus versions of zero defined by the pattern.
 
   pattern - the pattern to use, not null - `java.lang.String`
@@ -968,9 +968,9 @@
 
    For example, a base value of 1980 and a width of 2 will have
    valid values from 1980 to 2079.
-   During parsing, the text `12` will result in the value 2012 as that
-   is the value within the range where the last two characters are `12`.
-   By contrast, parsing the text `1915` will result in the value 1915.
+   During parsing, the text \"12\" will result in the value 2012 as that
+   is the value within the range where the last two characters are \"12\".
+   By contrast, parsing the text \"1915\" will result in the value 1915.
 
   field - the field to append, not null - `java.time.temporal.TemporalField`
   width - the field width of the printed and parsed field, from 1 to 10 - `int`
@@ -1004,7 +1004,7 @@
 
    During parsing, either the textual zone name, the zone ID or the offset
    is accepted. Many textual zone names are not unique, such as CST can be
-   for both `Central Standard Time` and `China Standard Time`. In this
+   for both \"Central Standard Time\" and \"China Standard Time\". In this
    situation, the zone id will be determined by the region information from
    formatter's  locale and the standard
    zone id for that area, for example, America/New_York for the America Eastern

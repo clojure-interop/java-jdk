@@ -110,7 +110,7 @@
 
       int i = 0;
       for (char c = styledText.first(); c != styledText.DONE; c = styledText.next()) {
-          if (c == '\t') {
+          if (c == '\\t') {
               tabLocations[i++] = styledText.getIndex();
           }
       }

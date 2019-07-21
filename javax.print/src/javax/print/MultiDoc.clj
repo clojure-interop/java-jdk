@@ -1,12 +1,12 @@
 (ns javax.print.MultiDoc
   "Interface MultiDoc specifies the interface for an object that supplies more
-  than one piece of print data for a Print Job. `Doc` is a short,
-  easy-to-pronounce term that means `a piece of print data,` and a `multidoc`
+  than one piece of print data for a Print Job. \"Doc\" is a short,
+  easy-to-pronounce term that means \"a piece of print data,\" and a \"multidoc\"
   is a group of several docs. The client passes to the Print Job an object
   that implements interface MultiDoc, and the Print Job calls methods on
    that object to obtain the print data.
 
-  Interface MultiDoc provides an abstraction similar to a `linked list` of
+  Interface MultiDoc provides an abstraction similar to a \"linked list\" of
   docs. A multidoc object is like a node in the linked list, containing the
   current doc in the list and a pointer to the next node (multidoc) in the
   list. The Print Job can call the multidoc's getDoc() method to get the current doc. When it's ready to go

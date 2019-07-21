@@ -6,13 +6,13 @@
 
 
 
-    <element name=`DigestMethod` type=`ds:DigestMethodType`/>
-      <complexType name=`DigestMethodType` mixed=`true`>
+    <element name=\"DigestMethod\" type=\"ds:DigestMethodType\"/>
+      <complexType name=\"DigestMethodType\" mixed=\"true\">
         <sequence>
-          <any namespace=`##any` minOccurs=`0` maxOccurs=`unbounded`/>
+          <any namespace=\"##any\" minOccurs=\"0\" maxOccurs=\"unbounded\"/>
             <!-- (0,unbounded) elements from (1,1) namespace -->
         </sequence>
-        <attribute name=`Algorithm` type=`anyURI` use=`required`/>
+        <attribute name=\"Algorithm\" type=\"anyURI\" use=\"required\"/>
       </complexType>
 
   A DigestMethod instance may be created by invoking the

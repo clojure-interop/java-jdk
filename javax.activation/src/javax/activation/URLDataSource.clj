@@ -26,7 +26,7 @@
    Note: this method attempts to call the openConnection
    method on the URL. If this method fails, or if a content type is not
    returned from the URLConnection, getContentType returns
-   `application/octet-stream` as the content type.
+   \"application/octet-stream\" as the content type.
 
   returns: the content type. - `java.lang.String`"
   (^java.lang.String [^URLDataSource this]

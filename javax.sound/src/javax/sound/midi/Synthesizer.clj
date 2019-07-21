@@ -26,7 +26,7 @@
   isSoundbankSupported method of
   Synthesizer.
 
-  `Loading` an instrument means that that instrument becomes available for
+  \"Loading\" an instrument means that that instrument becomes available for
   synthesizing notes.  The instrument is loaded into the bank and
   program location specified by its Patch object.  Loading does
   not necessarily mean that subsequently played notes will immediately have

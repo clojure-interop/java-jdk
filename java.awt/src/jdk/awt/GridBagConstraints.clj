@@ -373,7 +373,7 @@
   type: int"
   GridBagConstraints/BELOW_BASELINE_TRAILING)
 
-(defn -gridx
+(defn gridx
   "Instance Field.
 
   Specifies the cell containing the leading edge of the component's
@@ -390,10 +390,10 @@
    gridx should be a non-negative value.
 
   type: int"
-  [this]
-  (-> this .-gridx))
+  (^Integer [^GridBagConstraints this]
+    (-> this .-gridx)))
 
-(defn -gridy
+(defn gridy
   "Instance Field.
 
   Specifies the cell at the top of the component's display area,
@@ -406,10 +406,10 @@
    gridy should be a non-negative value.
 
   type: int"
-  [this]
-  (-> this .-gridy))
+  (^Integer [^GridBagConstraints this]
+    (-> this .-gridy)))
 
-(defn -gridwidth
+(defn gridwidth
   "Instance Field.
 
   Specifies the number of cells in a row for the component's
@@ -426,10 +426,10 @@
    value is 1.
 
   type: int"
-  [this]
-  (-> this .-gridwidth))
+  (^Integer [^GridBagConstraints this]
+    (-> this .-gridwidth)))
 
-(defn -gridheight
+(defn gridheight
   "Instance Field.
 
   Specifies the number of cells in a column for the component's
@@ -446,10 +446,10 @@
    default value is 1.
 
   type: int"
-  [this]
-  (-> this .-gridheight))
+  (^Integer [^GridBagConstraints this]
+    (-> this .-gridheight)))
 
-(defn -weightx
+(defn weightx
   "Instance Field.
 
   Specifies how to distribute extra horizontal space.
@@ -468,10 +468,10 @@
    weightx should be a non-negative value.
 
   type: double"
-  [this]
-  (-> this .-weightx))
+  (^Double [^GridBagConstraints this]
+    (-> this .-weightx)))
 
-(defn -weighty
+(defn weighty
   "Instance Field.
 
   Specifies how to distribute extra vertical space.
@@ -490,10 +490,10 @@
    weighty should be a non-negative value.
 
   type: double"
-  [this]
-  (-> this .-weighty))
+  (^Double [^GridBagConstraints this]
+    (-> this .-weighty)))
 
-(defn -anchor
+(defn anchor
   "Instance Field.
 
   This field is used when the component is smaller than its
@@ -523,10 +523,10 @@
    The default value is CENTER.
 
   type: int"
-  [this]
-  (-> this .-anchor))
+  (^Integer [^GridBagConstraints this]
+    (-> this .-anchor)))
 
-(defn -fill
+(defn fill
   "Instance Field.
 
   This field is used when the component's display area is larger
@@ -552,10 +552,10 @@
    The default value is NONE.
 
   type: int"
-  [this]
-  (-> this .-fill))
+  (^Integer [^GridBagConstraints this]
+    (-> this .-fill)))
 
-(defn -insets
+(defn insets
   "Instance Field.
 
   This field specifies the external padding of the component, the
@@ -565,10 +565,10 @@
    The default value is new Insets(0, 0, 0, 0).
 
   type: java.awt.Insets"
-  [this]
-  (-> this .-insets))
+  (^java.awt.Insets [^GridBagConstraints this]
+    (-> this .-insets)))
 
-(defn -ipadx
+(defn ipadx
   "Instance Field.
 
   This field specifies the internal padding of the component, how much
@@ -579,10 +579,10 @@
    The default value is 0.
 
   type: int"
-  [this]
-  (-> this .-ipadx))
+  (^Integer [^GridBagConstraints this]
+    (-> this .-ipadx)))
 
-(defn -ipady
+(defn ipady
   "Instance Field.
 
   This field specifies the internal padding, that is, how much
@@ -593,8 +593,8 @@
    The default value is 0.
 
   type: int"
-  [this]
-  (-> this .-ipady))
+  (^Integer [^GridBagConstraints this]
+    (-> this .-ipady)))
 
 (defn clone
   "Creates a copy of this grid bag constraint.

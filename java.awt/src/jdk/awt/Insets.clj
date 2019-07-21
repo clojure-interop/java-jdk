@@ -19,7 +19,7 @@
   (^Insets [^Integer top ^Integer left ^Integer bottom ^Integer right]
     (new Insets top left bottom right)))
 
-(defn -top
+(defn top
   "Instance Field.
 
   The inset from the top.
@@ -27,10 +27,10 @@
    to yield a new location for the Top.
 
   type: int"
-  [this]
-  (-> this .-top))
+  (^Integer [^Insets this]
+    (-> this .-top)))
 
-(defn -left
+(defn left
   "Instance Field.
 
   The inset from the left.
@@ -38,10 +38,10 @@
    to yield a new location for the Left edge.
 
   type: int"
-  [this]
-  (-> this .-left))
+  (^Integer [^Insets this]
+    (-> this .-left)))
 
-(defn -bottom
+(defn bottom
   "Instance Field.
 
   The inset from the bottom.
@@ -49,10 +49,10 @@
    to yield a new location for the Bottom.
 
   type: int"
-  [this]
-  (-> this .-bottom))
+  (^Integer [^Insets this]
+    (-> this .-bottom)))
 
-(defn -right
+(defn right
   "Instance Field.
 
   The inset from the right.
@@ -60,8 +60,8 @@
    to yield a new location for the Right edge.
 
   type: int"
-  [this]
-  (-> this .-right))
+  (^Integer [^Insets this]
+    (-> this .-right)))
 
 (defn set
   "Set top, left, bottom, and right to the specified values

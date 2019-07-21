@@ -85,7 +85,7 @@
 (defn get-ui-class-id
   "Returns the name of the L&F class that renders this component.
 
-  returns: the string `MenuBarUI` - `java.lang.String`"
+  returns: the string \"MenuBarUI\" - `java.lang.String`"
   (^java.lang.String [^JMenuBar this]
     (-> this (.getUIClassID))))
 
@@ -234,7 +234,7 @@
 
 (defn set-help-menu
   "Sets the help menu that appears when the user selects the
-   `help` option in the menu bar. This method is not yet implemented
+   \"help\" option in the menu bar. This method is not yet implemented
    and will throw an exception.
 
   menu - the JMenu that delivers help to the user - `javax.swing.JMenu`"

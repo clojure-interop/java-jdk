@@ -40,12 +40,12 @@
 
   Construct a DropTargetDragEvent given the
    DropTargetContext for this operation,
-   the location of the `Drag` Cursor's hotspot
+   the location of the \"Drag\" Cursor's hotspot
    in the Component's coordinates, the
    user drop action, and the source drop actions.
 
   dtc - The DropTargetContext for this operation - `java.awt.dnd.DropTargetContext`
-  cursor-locn - The location of the `Drag` Cursor's hotspot in Component coordinates - `java.awt.Point`
+  cursor-locn - The location of the \"Drag\" Cursor's hotspot in Component coordinates - `java.awt.Point`
   drop-action - The user drop action - `int`
   src-actions - The source drop actions - `int`
 

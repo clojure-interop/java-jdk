@@ -5,7 +5,7 @@
   (:import [javax.xml.stream.events Namespace]))
 
 (defn get-prefix
-  "Gets the prefix, returns `` if this is a default
+  "Gets the prefix, returns \"\" if this is a default
    namespace declaration.
 
   returns: `java.lang.String`"

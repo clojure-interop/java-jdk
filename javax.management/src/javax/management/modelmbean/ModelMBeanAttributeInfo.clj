@@ -13,7 +13,7 @@
   nameString
       Attribute name.
   descriptorTypeString
-      Must be `attribute`.
+      Must be \"attribute\".
   valueObject
       Current (cached) value for attribute.
   defaultObject
@@ -25,16 +25,16 @@
   setMethodString
       Name of operation descriptor for set method.
   protocolMapDescriptor
-      See the section `Protocol Map Support` in the JMX specification
+      See the section \"Protocol Map Support\" in the JMX specification
           document.  Mappings must be appropriate for the attribute and entries
           can be updated or augmented at runtime.
   persistPolicyString
       One of: OnUpdate|OnTimer|NoMoreOftenThan|OnUnregister|Always|Never.
-          See the section `MBean Descriptor Fields` in the JMX specification
+          See the section \"MBean Descriptor Fields\" in the JMX specification
           document.
   persistPeriodNumber
       Frequency of persist cycle in seconds. Used when persistPolicy is
-          `OnTimer` or `NoMoreOftenThan`.
+          \"OnTimer\" or \"NoMoreOftenThan\".
   currencyTimeLimitNumber
       How long value is valid: <0 never,
           =0 always, >0 seconds.
@@ -71,10 +71,10 @@
   description - A human readable description of the attribute. - `java.lang.String`
   is-readable - True if the attribute has a getter method, false otherwise. - `boolean`
   is-writable - True if the attribute has a setter method, false otherwise. - `boolean`
-  is-is - True if the attribute has an `is` getter, false otherwise. - `boolean`
-  descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the Attribute. If it is null then a default descriptor will be created. If the descriptor does not contain the field `displayName` this field is added in the descriptor with its default value. - `javax.management.Descriptor`
+  is-is - True if the attribute has an \"is\" getter, false otherwise. - `boolean`
+  descriptor - An instance of Descriptor containing the appropriate metadata for this instance of the Attribute. If it is null then a default descriptor will be created. If the descriptor does not contain the field \"displayName\" this field is added in the descriptor with its default value. - `javax.management.Descriptor`
 
-  throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field `name` is not equal to name parameter, or descriptor field `descriptorType` is not equal to `attribute`."
+  throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException. The descriptor is invalid, or descriptor field \"name\" is not equal to name parameter, or descriptor field \"descriptorType\" is not equal to \"attribute\"."
   (^ModelMBeanAttributeInfo [^java.lang.String name ^java.lang.String type ^java.lang.String description ^Boolean is-readable ^Boolean is-writable ^Boolean is-is ^javax.management.Descriptor descriptor]
     (new ModelMBeanAttributeInfo name type description is-readable is-writable is-is descriptor))
   (^ModelMBeanAttributeInfo [^java.lang.String name ^java.lang.String type ^java.lang.String description ^Boolean is-readable ^Boolean is-writable ^Boolean is-is]

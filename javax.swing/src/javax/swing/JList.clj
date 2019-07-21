@@ -10,7 +10,7 @@
 
   // Create a JList that displays strings from an array
 
-  String[] data = {`one`, `two`, `three`, `four`};
+  String[] data = {\"one\", \"two\", \"three\", \"four\"};
   JList<String> myList = new JList<String>(data);
 
   // Create a JList that displays the superclasses of JList.class, by
@@ -23,7 +23,7 @@
   }
   JList<Class<?>> myList = new JList<Class<?>>(superClasses);
 
-  // The automatically created model is stored in JList's `model`
+  // The automatically created model is stored in JList's \"model\"
   // property, which you can retrieve
 
   ListModel<Class<?>> model = myList.getModel();
@@ -56,7 +56,7 @@
 
   ListModel<String> bigData = new AbstractListModel<String>() {
       public int getSize() { return Short.MAX_VALUE; }
-      public String getElementAt(int index) { return `Index `  index; }
+      public String getElementAt(int index) { return \"Index \"  index; }
   };
 
   The selection state of a JList is managed by another separate
@@ -91,7 +91,7 @@
   Painting of cells in a JList is handled by a delegate called a
   cell renderer, installed on the list as the cellRenderer property.
   The renderer provides a java.awt.Component that is used
-  like a `rubber stamp` to paint the cells. Each time a cell needs to be
+  like a \"rubber stamp\" to paint the cells. Each time a cell needs to be
   painted, the list's ListUI asks the cell renderer for the component,
   moves it into place, and has it paint the contents of the cell by way of its
   paint method. A default cell renderer, which uses a JLabel
@@ -102,8 +102,8 @@
    // Display an icon and a string for each object in the list.
 
   class MyCellRenderer extends JLabel implements ListCellRenderer<Object> {
-      final static ImageIcon longIcon = new ImageIcon(`long.gif`);
-      final static ImageIcon shortIcon = new ImageIcon(`short.gif`);
+      final static ImageIcon longIcon = new ImageIcon(\"long.gif\");
+      final static ImageIcon shortIcon = new ImageIcon(\"short.gif\");
 
       // This is the only method defined by ListCellRenderer.
       // We just reconfigure the JLabel each time we're called.
@@ -152,7 +152,7 @@
   // compute values for the fixedCellWidth and fixedCellHeight
   // properties.
 
-  bigDataList.setPrototypeCellValue(`Index 1234567890`);
+  bigDataList.setPrototypeCellValue(\"Index 1234567890\");
 
   JList doesn't implement scrolling directly. To create a list that
   scrolls, make it the viewport view of a JScrollPane. For example:
@@ -174,7 +174,7 @@
       public void mouseClicked(MouseEvent e) {
           if (e.getClickCount() == 2) {
               int index = list.locationToIndex(e.getPoint());
-              System.out.println(`Double clicked on Item `  index);
+              System.out.println(\"Double clicked on Item \"  index);
            }
       }
   };
@@ -229,7 +229,7 @@
 (def *-vertical-wrap
   "Static Constant.
 
-  Indicates a `newspaper style` layout with cells flowing vertically
+  Indicates a \"newspaper style\" layout with cells flowing vertically
    then horizontally.
 
   type: int"
@@ -238,7 +238,7 @@
 (def *-horizontal-wrap
   "Static Constant.
 
-  Indicates a `newspaper style` layout with cells flowing horizontally
+  Indicates a \"newspaper style\" layout with cells flowing horizontally
    then vertically.
 
   type: int"
@@ -485,7 +485,7 @@
   orientation - SwingConstants.HORIZONTAL or SwingConstants.VERTICAL - `int`
   direction - less or equal to zero to scroll up/back, greater than zero for down/forward - `int`
 
-  returns: the `block` increment for scrolling in the specified direction;
+  returns: the \"block\" increment for scrolling in the specified direction;
            always positive - `int`
 
   throws: java.lang.IllegalArgumentException - if visibleRect is null, or orientation isn't one of SwingConstants.VERTICAL or SwingConstants.HORIZONTAL"
@@ -553,11 +553,11 @@
     (-> this (.setFixedCellHeight height))))
 
 (defn get-ui-class-id
-  "Returns `ListUI`, the UIDefaults key used to look
+  "Returns \"ListUI\", the UIDefaults key used to look
    up the name of the javax.swing.plaf.ListUI class that defines
    the look and feel for this component.
 
-  returns: the string `ListUI` - `java.lang.String`"
+  returns: the string \"ListUI\" - `java.lang.String`"
   (^java.lang.String [^JList this]
     (-> this (.getUIClassID))))
 
@@ -645,7 +645,7 @@
   orientation - SwingConstants.HORIZONTAL or SwingConstants.VERTICAL - `int`
   direction - less or equal to zero to scroll up/back, greater than zero for down/forward - `int`
 
-  returns: the `unit` increment for scrolling in the specified direction;
+  returns: the \"unit\" increment for scrolling in the specified direction;
            always positive - `int`
 
   throws: java.lang.IllegalArgumentException - if visibleRect is null, or orientation isn't one of SwingConstants.VERTICAL or SwingConstants.HORIZONTAL"
@@ -692,9 +692,9 @@
 (defn get-layout-orientation
   "Returns the layout orientation property for the list: VERTICAL
    if the layout is a single column of cells, VERTICAL_WRAP if the
-   layout is `newspaper style` with the content flowing vertically then
-   horizontally, or HORIZONTAL_WRAP if the layout is `newspaper
-   style` with the content flowing horizontally then vertically.
+   layout is \"newspaper style\" with the content flowing vertically then
+   horizontally, or HORIZONTAL_WRAP if the layout is \"newspaper
+   style\" with the content flowing horizontally then vertically.
 
   returns: the value of the layoutOrientation property - `int`"
   (^Integer [^JList this]
@@ -721,7 +721,7 @@
    has returned and has allowed for the location to be shown.
 
    When this property changes, a property change event with
-   name `dropLocation` is fired by the component.
+   name \"dropLocation\" is fired by the component.
 
    By default, responsibility for listening for changes to this property
    and indicating the drop location visually lies with the list's
@@ -1149,7 +1149,7 @@
     (-> this (.getSelectedValue))))
 
 (defn get-prototype-cell-value
-  "Returns the `prototypical` cell value -- a value used to calculate a
+  "Returns the \"prototypical\" cell value -- a value used to calculate a
    fixed width and height for cells. This can be null if there
    is no such value.
 
@@ -1158,7 +1158,7 @@
     (-> this (.getPrototypeCellValue))))
 
 (defn set-model
-  "Sets the model that represents the contents or `value` of the
+  "Sets the model that represents the contents or \"value\" of the
    list, notifies property change listeners, and then clears the
    list's selection.
 
@@ -1189,7 +1189,7 @@
      Only one list index can be selected at a time. In this mode,
      setSelectionInterval and addSelectionInterval are
      equivalent, both replacing the current selection with the index
-     represented by the second argument (the `lead`).
+     represented by the second argument (the \"lead\").
    ListSelectionModel.SINGLE_INTERVAL_SELECTION -
      Only one contiguous interval can be selected at a time.
      In this mode, addSelectionInterval behaves like

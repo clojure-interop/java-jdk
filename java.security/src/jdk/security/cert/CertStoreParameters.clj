@@ -19,10 +19,10 @@
 (defn clone
   "Makes a copy of this CertStoreParameters.
 
-   The precise meaning of `copy` may depend on the class of
+   The precise meaning of \"copy\" may depend on the class of
    the CertStoreParameters object. A typical implementation
-   performs a `deep copy` of this object, but this is not an absolute
-   requirement. Some implementations may perform a `shallow copy` of some
+   performs a \"deep copy\" of this object, but this is not an absolute
+   requirement. Some implementations may perform a \"shallow copy\" of some
    or all of the fields of this object.
 
    Note that the CertStore.getInstance methods make a copy

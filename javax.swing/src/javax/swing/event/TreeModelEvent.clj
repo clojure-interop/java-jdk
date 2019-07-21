@@ -42,7 +42,7 @@
    insert-locations as you go, then convert the Vector to an
    array of int to create the event. When the postition-index
    equals zero, the node is inserted at the beginning of the list. When the
-   position index equals the size of the list, the node is `inserted` at
+   position index equals the size of the list, the node is \"inserted\" at
    (appended to) the end of the list.
 
    For deletes, the indexes represent the initial state of the tree,

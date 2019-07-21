@@ -1,6 +1,6 @@
 (ns jdk.beans.IndexedPropertyChangeEvent
-  "An `IndexedPropertyChange` event gets delivered whenever a component that
-  conforms to the JavaBeans™ specification (a `bean`) changes a bound
+  "An \"IndexedPropertyChange\" event gets delivered whenever a component that
+  conforms to the JavaBeans™ specification (a \"bean\") changes a bound
   indexed property. This class is an extension of PropertyChangeEvent
   but contains the index of the property that has changed.
 

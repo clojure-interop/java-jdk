@@ -1,7 +1,7 @@
 (ns jdk.util.EventObject
   " The root class from which all event state objects shall be derived.
 
-  All Events are constructed with a reference to the object, the `source`,
+  All Events are constructed with a reference to the object, the \"source\",
   that is logically deemed to be the object upon which the Event in question
   initially occurred upon."
   (:refer-clojure :only [require comment defn ->])

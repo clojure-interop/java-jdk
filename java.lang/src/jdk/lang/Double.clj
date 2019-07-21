@@ -226,9 +226,9 @@
    a FloatValue, then a NumberFormatException
    is thrown. Otherwise, s is regarded as
    representing an exact decimal value in the usual
-   `computerized scientific notation` or as an exact
+   \"computerized scientific notation\" or as an exact
    hexadecimal value; this exact numerical value is then
-   conceptually converted to an `infinitely precise`
+   conceptually converted to an \"infinitely precise\"
    binary value that is then rounded to type double
    by the usual round-to-nearest rule of IEEE 754 floating-point
    arithmetic, which includes preserving the sign of a zero
@@ -272,16 +272,16 @@
 
 
 
-    final String Digits     = `(\\p{Digit}+)`;
-    final String HexDigits  = `(\\p{XDigit}+)`;
+    final String Digits     = \"(\\\\p{Digit}+)\";
+    final String HexDigits  = \"(\\\\p{XDigit}+)\";
     // an exponent is 'e' or 'E' followed by an optionally
     // signed decimal integer.
-    final String Exp        = `[eE][+-]?`+Digits;
+    final String Exp        = \"[eE][+-]?\"+Digits;
     final String fpRegex    =
-        (`[\\x00-\\x20]*`+  // Optional leading `whitespace`
-         `[+-]?(`  // Optional sign character
-         `NaN|`            // `NaN` string
-         `Infinity|`       // `Infinity` string
+        (\"[\\\\x00-\\\\x20]*\"+  // Optional leading \"whitespace\"
+         \"[+-]?(\"  // Optional sign character
+         \"NaN|\"            // \"NaN\" string
+         \"Infinity|\"       // \"Infinity\" string
 
          // A decimal floating-point string representing a finite positive
          // number without a leading sign has at most five basic pieces:
@@ -294,22 +294,22 @@
          // The Java Language Specification.
 
          // Digits ._opt Digits_opt ExponentPart_opt FloatTypeSuffix_opt
-         `(((`+Digits+`(\\.)?(`+Digits+`?)(`+Exp+`)?)|`+
+         \"(((\"+Digits+\"(\\\\.)?(\"+Digits+\"?)(\"+Exp+\")?)|\"+
 
          // . Digits ExponentPart_opt FloatTypeSuffix_opt
-         `(\\.(`+Digits+`)(`+Exp+`)?)|`+
+         \"(\\\\.(\"+Digits+\")(\"+Exp+\")?)|\"+
 
          // Hexadecimal strings
-         `((`
+         \"((\"
           // 0[xX] HexDigits ._opt BinaryExponent FloatTypeSuffix_opt
-          `(0[xX]`  HexDigits  `(\\.)?)|`
+          \"(0[xX]\"  HexDigits  \"(\\\\.)?)|\"
 
           // 0[xX] HexDigits_opt . HexDigits BinaryExponent FloatTypeSuffix_opt
-          `(0[xX]`  HexDigits  `?(\\.)`  HexDigits  `)`
+          \"(0[xX]\"  HexDigits  \"?(\\\\.)\"  HexDigits  \")\"
 
-          `)[pP][+-]?`  Digits  `))`
-         `[fFdD]?))`
-         `[\\x00-\\x20]*`);// Optional trailing `whitespace`
+          \")[pP][+-]?\"  Digits  \"))\"
+         \"[fFdD]?))\"
+         \"[\\\\x00-\\\\x20]*\");// Optional trailing \"whitespace\"
 
     if (Pattern.matches(fpRegex, myString))
         Double.valueOf(myString); // Will not throw NumberFormatException
@@ -333,44 +333,44 @@
 
 
    If the argument is NaN, the result is the string
-       `NaN`.
+       \"NaN\".
    Otherwise, the result is a string that represents the sign
    and magnitude of the argument. If the sign is negative, the
    first character of the result is '-'
-   ('\u002D'); if the sign is positive, no sign
+   ('\\u002D'); if the sign is positive, no sign
    character appears in the result. As for the magnitude m:
 
 
    If m is infinity, it is represented by the string
-   `Infinity`; thus, positive infinity produces the
-   result `Infinity` and negative infinity produces
-   the result `-Infinity`.
+   \"Infinity\"; thus, positive infinity produces the
+   result \"Infinity\" and negative infinity produces
+   the result \"-Infinity\".
 
    If m is zero, it is represented by the string
-   `0x0.0p0`; thus, negative zero produces the result
-   `-0x0.0p0` and positive zero produces the result
-   `0x0.0p0`.
+   \"0x0.0p0\"; thus, negative zero produces the result
+   \"-0x0.0p0\" and positive zero produces the result
+   \"0x0.0p0\".
 
    If m is a double value with a
    normalized representation, substrings are used to represent the
    significand and exponent fields.  The significand is
-   represented by the characters `0x1.`
+   represented by the characters \"0x1.\"
    followed by a lowercase hexadecimal representation of the rest
    of the significand as a fraction.  Trailing zeros in the
    hexadecimal representation are removed unless all the digits
    are zero, in which case a single zero is used. Next, the
-   exponent is represented by `p` followed
+   exponent is represented by \"p\" followed
    by a decimal string of the unbiased exponent as if produced by
    a call to Integer.toString on the
    exponent value.
 
    If m is a double value with a subnormal
    representation, the significand is represented by the
-   characters `0x0.` followed by a
+   characters \"0x0.\" followed by a
    hexadecimal representation of the rest of the significand as a
    fraction.  Trailing zeros in the hexadecimal representation are
    removed. Next, the exponent is represented by
-   `p-1022`.  Note that there must be at
+   \"p-1022\".  Note that there must be at
    least one nonzero digit in a subnormal significand.
 
 
@@ -403,8 +403,8 @@
 
 (defn *double-to-raw-long-bits
   "Returns a representation of the specified floating-point value
-   according to the IEEE 754 floating-point `double
-   format` bit layout, preserving Not-a-Number (NaN) values.
+   according to the IEEE 754 floating-point \"double
+   format\" bit layout, preserving Not-a-Number (NaN) values.
 
    Bit 63 (the bit that is selected by the mask
    0x8000000000000000L) represents the sign of the
@@ -425,7 +425,7 @@
    integer representing the actual NaN value.  Unlike the
    doubleToLongBits method,
    doubleToRawLongBits does not collapse all the bit
-   patterns encoding a NaN to a single `canonical` NaN
+   patterns encoding a NaN to a single \"canonical\" NaN
    value.
 
    In all cases, the result is a long integer that,
@@ -451,8 +451,8 @@
 
 (defn *double-to-long-bits
   "Returns a representation of the specified floating-point value
-   according to the IEEE 754 floating-point `double
-   format` bit layout.
+   according to the IEEE 754 floating-point \"double
+   format\" bit layout.
 
    Bit 63 (the bit that is selected by the mask
    0x8000000000000000L) represents the sign of the
@@ -476,7 +476,7 @@
    given to the longBitsToDouble(long) method, will produce a
    floating-point value the same as the argument to
    doubleToLongBits (except all NaN values are
-   collapsed to a single `canonical` NaN value).
+   collapsed to a single \"canonical\" NaN value).
 
   value - a double precision floating-point number. - `double`
 
@@ -500,41 +500,41 @@
    argument. All characters mentioned below are ASCII characters.
 
    If the argument is NaN, the result is the string
-       `NaN`.
+       \"NaN\".
    Otherwise, the result is a string that represents the sign and
    magnitude (absolute value) of the argument. If the sign is negative,
    the first character of the result is '-'
-   ('\u002D'); if the sign is positive, no sign character
+   ('\\u002D'); if the sign is positive, no sign character
    appears in the result. As for the magnitude m:
 
    If m is infinity, it is represented by the characters
-   `Infinity`; thus, positive infinity produces the result
-   `Infinity` and negative infinity produces the result
-   `-Infinity`.
+   \"Infinity\"; thus, positive infinity produces the result
+   \"Infinity\" and negative infinity produces the result
+   \"-Infinity\".
 
    If m is zero, it is represented by the characters
-   `0.0`; thus, negative zero produces the result
-   `-0.0` and positive zero produces the result
-   `0.0`.
+   \"0.0\"; thus, negative zero produces the result
+   \"-0.0\" and positive zero produces the result
+   \"0.0\".
 
    If m is greater than or equal to 10-3 but less
    than 107, then it is represented as the integer part of
    m, in decimal form with no leading zeroes, followed by
-   '.' ('\u002E'), followed by one or
+   '.' ('\\u002E'), followed by one or
    more decimal digits representing the fractional part of m.
 
    If m is less than 10-3 or greater than or
    equal to 107, then it is represented in so-called
-   `computerized scientific notation.` Let n be the unique
+   \"computerized scientific notation.\" Let n be the unique
    integer such that 10n ≤ m <
    10n+1; then let a be the
    mathematically exact quotient of m and
    10n so that 1 ≤ a < 10. The
    magnitude is then represented as the integer part of a,
    as a single decimal digit, followed by '.'
-   ('\u002E'), followed by decimal digits
+   ('\\u002E'), followed by decimal digits
    representing the fractional part of a, followed by the
-   letter 'E' ('\u0045'), followed
+   letter 'E' ('\\u0045'), followed
    by a representation of n as a decimal integer, as
    produced by the method Integer.toString(int).
 
@@ -576,7 +576,7 @@
    bit representation.
    The argument is considered to be a representation of a
    floating-point value according to the IEEE 754 floating-point
-   `double format` bit layout.
+   \"double format\" bit layout.
 
    If the argument is 0x7ff0000000000000L, the result
    is positive infinity.

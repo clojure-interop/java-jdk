@@ -1,5 +1,5 @@
 (ns javax.crypto.Mac
-  "This class provides the functionality of a `Message Authentication Code`
+  "This class provides the functionality of a \"Message Authentication Code\"
   (MAC) algorithm.
 
    A MAC provides a way to check

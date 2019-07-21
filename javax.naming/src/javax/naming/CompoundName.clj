@@ -13,17 +13,17 @@
   The syntax of a compound name is specified using a set of properties:
 
    jndi.syntax.direction
-   Direction for parsing (`right_to_left`, `left_to_right`, `flat`).
-       If unspecified, defaults to `flat`, which means the namespace is flat
+   Direction for parsing (\"right_to_left\", \"left_to_right\", \"flat\").
+       If unspecified, defaults to \"flat\", which means the namespace is flat
        with no hierarchical structure.
 
    jndi.syntax.separator
    Separator between atomic name components.
-       Required unless direction is `flat`.
+       Required unless direction is \"flat\".
 
    jndi.syntax.ignorecase
-   If present, `true` means ignore the case when comparing name
-       components. If its value is not `true`, or if the property is not
+   If present, \"true\" means ignore the case when comparing name
+       components. If its value is not \"true\", or if the property is not
        present, case is considered when comparing name components.
 
    jndi.syntax.escape
@@ -44,16 +44,16 @@
    Alternative set of begin/end quotes.
 
    jndi.syntax.trimblanks
-   If present, `true` means trim any leading and trailing whitespaces
+   If present, \"true\" means trim any leading and trailing whitespaces
        in a name component for comparison purposes. If its value is not
-       `true`, or if the property is not present, blanks are significant.
+       \"true\", or if the property is not present, blanks are significant.
    jndi.syntax.separator.ava
    If present, specifies the string that separates
        attribute-value-assertions when specifying multiple attribute/value
-       pairs. (e.g. `,`  in age=65,gender=male).
+       pairs. (e.g. \",\"  in age=65,gender=male).
    jndi.syntax.separator.typeval
    If present, specifies the string that separators attribute
-               from value (e.g. `=` in `age=65`)
+               from value (e.g. \"=\" in \"age=65\")
 
   These properties are interpreted according to the following rules:
 
@@ -249,9 +249,9 @@
 
 (defn hash-code
   "Computes the hash code of this compound name.
-   The hash code is the sum of the hash codes of the `canonicalized`
+   The hash code is the sum of the hash codes of the \"canonicalized\"
    forms of individual components of this compound name.
-   Each component is `canonicalized` according to the
+   Each component is \"canonicalized\" according to the
    compound name's syntax before its hash code is computed.
    For a case-insensitive name, for example, the uppercased form of
    a name has the same hash code as its lowercased equivalent.
@@ -311,9 +311,9 @@
    compound name and that comparison of individual components is
    affected by the jndi.syntax.ignorecase and jndi.syntax.trimblanks
    properties, identical to how they affect equals().
-   If this compound name is `lexicographically` lesser than obj,
+   If this compound name is \"lexicographically\" lesser than obj,
    a negative number is returned.
-   If this compound name is `lexicographically` greater than obj,
+   If this compound name is \"lexicographically\" greater than obj,
    a positive number is returned.
 
    Implementation note: Currently the syntax properties of the two compound
@@ -359,7 +359,7 @@
 (defn equals
   "Determines whether obj is syntactically equal to this compound name.
    If obj is null or not a CompoundName, false is returned.
-   Two compound names are equal if each component in one is `equal`
+   Two compound names are equal if each component in one is \"equal\"
    to the corresponding component in the other.
 
    Equality is also defined in terms of the syntax of this compound name.

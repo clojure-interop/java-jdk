@@ -18,7 +18,7 @@
    Application code can directly subclass Policy to provide a custom
   implementation.  In addition, an instance of a Policy object can be
   constructed by invoking one of the getInstance factory methods
-  with a standard type.  The default policy type is `JavaPolicy`.
+  with a standard type.  The default policy type is \"JavaPolicy\".
 
    Once a Policy instance has been installed (either by default, or by
   calling setPolicy), the Java runtime invokes its
@@ -59,7 +59,7 @@
    as it may be changed by a call to setPolicy.
    This method first calls
    SecurityManager.checkPermission with a
-   SecurityPermission(`getPolicy`) permission
+   SecurityPermission(\"getPolicy\") permission
    to ensure it's ok to get the Policy object.
 
   returns: the installed Policy. - `java.security.Policy`
@@ -71,7 +71,7 @@
 (defn *set-policy
   "Sets the system-wide Policy object. This method first calls
    SecurityManager.checkPermission with a
-   SecurityPermission(`setPolicy`)
+   SecurityPermission(\"setPolicy\")
    permission to ensure it's ok to set the Policy.
 
   p - the new system Policy object. - `java.security.Policy`
@@ -171,7 +171,7 @@
   domain - the ProtectionDomain to test - `java.security.ProtectionDomain`
   permission - the Permission object to be tested for implication. - `java.security.Permission`
 
-  returns: true if `permission` is a proper subset of a permission
+  returns: true if \"permission\" is a proper subset of a permission
    granted to this ProtectionDomain. - `boolean`"
   (^Boolean [^Policy this ^java.security.ProtectionDomain domain ^java.security.Permission permission]
     (-> this (.implies domain permission))))

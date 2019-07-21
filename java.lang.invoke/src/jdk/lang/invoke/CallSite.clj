@@ -4,7 +4,7 @@
   An invokedynamic instruction linked to a CallSite delegates
   all calls to the site's current target.
   A CallSite may be associated with several invokedynamic
-  instructions, or it may be `free floating`, associated with none.
+  instructions, or it may be \"free floating\", associated with none.
   In any case, it may be invoked through an associated method handle
   called its dynamic invoker.
 
@@ -33,7 +33,7 @@
 
  static void test() throws Throwable {
      // THE FOLLOWING LINE IS PSEUDOCODE FOR A JVM INSTRUCTION
-     InvokeDynamic[#bootstrapDynamic].baz(`baz arg`, 2, 3.14);
+     InvokeDynamic[#bootstrapDynamic].baz(\"baz arg\", 2, 3.14);
  }
  private static void printArgs(Object... args) {
    System.out.println(java.util.Arrays.deepToString(args));
@@ -43,7 +43,7 @@
    MethodHandles.Lookup lookup = MethodHandles.lookup();
    Class thisClass = lookup.lookupClass();  // (who am I?)
    printArgs = lookup.findStatic(thisClass,
-       `printArgs`, MethodType.methodType(void.class, Object[].class));
+       \"printArgs\", MethodType.methodType(void.class, Object[].class));
  }
  private static CallSite bootstrapDynamic(MethodHandles.Lookup caller, String name, MethodType type) {
    // ignore caller and name, but match the type:
@@ -95,7 +95,7 @@
 
 
    MethodHandle getTarget, invoker, result;
-   getTarget = MethodHandles.publicLookup().bind(this, `getTarget`, MethodType.methodType(MethodHandle.class));
+   getTarget = MethodHandles.publicLookup().bind(this, \"getTarget\", MethodType.methodType(MethodHandle.class));
    invoker = MethodHandles.exactInvoker(this.type());
    result = MethodHandles.foldArguments(invoker, getTarget)
 

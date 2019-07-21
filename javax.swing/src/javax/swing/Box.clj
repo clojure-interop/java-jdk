@@ -127,7 +127,7 @@
     (Box/createVerticalStrut height)))
 
 (defn *create-glue
-  "Creates an invisible `glue` component
+  "Creates an invisible \"glue\" component
    that can be useful in a Box
    whose visible components have a maximum width
    (for a horizontal box)

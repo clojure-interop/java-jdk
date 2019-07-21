@@ -96,7 +96,7 @@
   "Provides the String representation of the encoding.  This String is
    the same name that was passed to the constructor.  For the predefined encodings, the name
    is similar to the encoding's variable (field) name.  For example, PCM_SIGNED.toString() returns
-   the name `pcm_signed`.
+   the name \"pcm_signed\".
 
   returns: the encoding name - `java.lang.String`"
   (^java.lang.String [^AudioFormat$Encoding this]

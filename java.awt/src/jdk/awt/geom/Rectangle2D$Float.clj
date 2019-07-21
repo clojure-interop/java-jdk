@@ -19,41 +19,41 @@
   (^Rectangle2D$Float []
     (new Rectangle2D$Float )))
 
-(defn -x
+(defn x
   "Instance Field.
 
   The X coordinate of this Rectangle2D.
 
   type: float"
-  [this]
-  (-> this .-x))
+  (^Float [^Rectangle2D$Float this]
+    (-> this .-x)))
 
-(defn -y
+(defn y
   "Instance Field.
 
   The Y coordinate of this Rectangle2D.
 
   type: float"
-  [this]
-  (-> this .-y))
+  (^Float [^Rectangle2D$Float this]
+    (-> this .-y)))
 
-(defn -width
+(defn width
   "Instance Field.
 
   The width of this Rectangle2D.
 
   type: float"
-  [this]
-  (-> this .-width))
+  (^Float [^Rectangle2D$Float this]
+    (-> this .-width)))
 
-(defn -height
+(defn height
   "Instance Field.
 
   The height of this Rectangle2D.
 
   type: float"
-  [this]
-  (-> this .-height))
+  (^Float [^Rectangle2D$Float this]
+    (-> this .-height)))
 
 (defn set-rect
   "Sets the location and size of this Rectangle2D

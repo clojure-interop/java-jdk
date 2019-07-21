@@ -4,7 +4,7 @@
   It is used to identify the local interface on which a multicast group
   is joined.
 
-  Interfaces are normally known by names such as `le0`."
+  Interfaces are normally known by names such as \"le0\"."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.net NetworkInterface]))
 
@@ -71,12 +71,12 @@
   "Returns the hardware address (usually MAC) of the interface if it
    has one and if it can be accessed given the current privileges.
    If a security manager is set, then the caller must have
-   the permission NetPermission(`getNetworkInformation`).
+   the permission NetPermission(\"getNetworkInformation\").
 
   returns: a byte array containing the address, or null if
             the address doesn't exist, is not accessible or a security
             manager is set and the caller does not have the permission
-            NetPermission(`getNetworkInformation`) - `byte[]`
+            NetPermission(\"getNetworkInformation\") - `byte[]`
 
   throws: java.net.SocketException - if an I/O error occurs."
   ([^NetworkInterface this]
@@ -152,7 +152,7 @@
    method is called for each InetAddress. Only InetAddresses where
    the checkConnect doesn't throw a SecurityException
    will be returned in the Enumeration. However, if the caller has the
-   NetPermission(`getNetworkInformation`) permission, then all
+   NetPermission(\"getNetworkInformation\") permission, then all
    InetAddresses are returned.
 
   returns: an Enumeration object with all or a subset of the InetAddresses

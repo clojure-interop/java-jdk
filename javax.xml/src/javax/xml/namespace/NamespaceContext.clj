@@ -7,10 +7,10 @@
         Namespace name expressed as a URI to which the prefix is bound
     prefix: syntactically, this is the part of the attribute name
         following the XMLConstants.XMLNS_ATTRIBUTE
-        (`xmlns`) in the Namespace declaration
+        (\"xmlns\") in the Namespace declaration
 
   example:
-  <element xmlns:prefix=`http://Namespace-name-URI`>
+  <element xmlns:prefix=\"http://Namespace-name-URI\">
 
   All get*(*) methods operate in the current scope
   for Namespace URI and prefix resolution.
@@ -18,19 +18,19 @@
   Note that a Namespace URI can be bound to
   multiple prefixes in the current scope.  This can
   occur when multiple XMLConstants.XMLNS_ATTRIBUTE
-  (`xmlns`) Namespace declarations occur in the same Start-Tag and
+  (\"xmlns\") Namespace declarations occur in the same Start-Tag and
   refer to the same Namespace URI. e.g.
 
 
-  <element xmlns:prefix1=`http://Namespace-name-URI`
-           xmlns:prefix2=`http://Namespace-name-URI`>
+  <element xmlns:prefix1=\"http://Namespace-name-URI\"
+           xmlns:prefix2=\"http://Namespace-name-URI\">
   This can also occur when the same Namespace URI is used in multiple
-  XMLConstants.XMLNS_ATTRIBUTE (`xmlns`) Namespace
+  XMLConstants.XMLNS_ATTRIBUTE (\"xmlns\") Namespace
   declarations in the logical parent element hierarchy.  e.g.
 
 
-  <parent xmlns:prefix1=`http://Namespace-name-URI`>
-    <child xmlns:prefix2=`http://Namespace-name-URI`>
+  <parent xmlns:prefix1=\"http://Namespace-name-URI\">
+    <child xmlns:prefix2=\"http://Namespace-name-URI\">
       ...
     </child>
   </parent>
@@ -62,9 +62,9 @@
 
 
 
-         DEFAULT_NS_PREFIX (``)
+         DEFAULT_NS_PREFIX (\"\")
          default Namespace URI in the current scope or
-           XMLConstants.NULL_NS_URI(``)
+           XMLConstants.NULL_NS_URI(\"\")
 
            when there is no default Namespace URI in the current scope
 
@@ -75,19 +75,19 @@
 
          unbound prefix
 
-           XMLConstants.NULL_NS_URI(``)
+           XMLConstants.NULL_NS_URI(\"\")
 
 
 
 
-         XMLConstants.XML_NS_PREFIX (`xml`)
+         XMLConstants.XML_NS_PREFIX (\"xml\")
          XMLConstants.XML_NS_URI
-             (`http://www.w3.org/XML/1998/namespace`)
+             (\"http://www.w3.org/XML/1998/namespace\")
 
 
-         XMLConstants.XMLNS_ATTRIBUTE (`xmlns`)
+         XMLConstants.XMLNS_ATTRIBUTE (\"xmlns\")
          XMLConstants.XMLNS_ATTRIBUTE_NS_URI
-           (`http://www.w3.org/2000/xmlns/`)
+           (\"http://www.w3.org/2000/xmlns/\")
 
 
          null
@@ -127,7 +127,7 @@
 
 
          <default Namespace URI>
-         XMLConstants.DEFAULT_NS_PREFIX (``)
+         XMLConstants.DEFAULT_NS_PREFIX (\"\")
 
 
 
@@ -143,13 +143,13 @@
 
 
          XMLConstants.XML_NS_URI
-             (`http://www.w3.org/XML/1998/namespace`)
-         XMLConstants.XML_NS_PREFIX (`xml`)
+             (\"http://www.w3.org/XML/1998/namespace\")
+         XMLConstants.XML_NS_PREFIX (\"xml\")
 
 
          XMLConstants.XMLNS_ATTRIBUTE_NS_URI
-             (`http://www.w3.org/2000/xmlns/`)
-         XMLConstants.XMLNS_ATTRIBUTE (`xmlns`)
+             (\"http://www.w3.org/2000/xmlns/\")
+         XMLConstants.XMLNS_ATTRIBUTE (\"xmlns\")
 
 
          null
@@ -208,15 +208,15 @@
 
 
          XMLConstants.XML_NS_URI
-             (`http://www.w3.org/XML/1998/namespace`)
+             (\"http://www.w3.org/XML/1998/namespace\")
          Iterator with one element set to
-           XMLConstants.XML_NS_PREFIX (`xml`)
+           XMLConstants.XML_NS_PREFIX (\"xml\")
 
 
          XMLConstants.XMLNS_ATTRIBUTE_NS_URI
-             (`http://www.w3.org/2000/xmlns/`)
+             (\"http://www.w3.org/2000/xmlns/\")
          Iterator with one element set to
-           XMLConstants.XMLNS_ATTRIBUTE (`xmlns`)
+           XMLConstants.XMLNS_ATTRIBUTE (\"xmlns\")
 
 
          null

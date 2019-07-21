@@ -21,7 +21,7 @@
   is particularly useful if the user want to use a 3rd party ISV
   editor with JTable, but the ISV didn't implement the
   CellEditor interface.  The user can simply create an object
-  that contains an instance of the 3rd party editor object and `translate`
+  that contains an instance of the 3rd party editor object and \"translate\"
   the CellEditor API into the 3rd party editor's API."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing CellEditor]))

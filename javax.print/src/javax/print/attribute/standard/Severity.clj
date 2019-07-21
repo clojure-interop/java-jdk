@@ -17,11 +17,11 @@
   PrinterState also changed.
 
   IPP Compatibility:
-  Severity.toString() returns either `error`, `warning`, or
-  `report`.  The string values returned by
+  Severity.toString() returns either \"error\", \"warning\", or
+  \"report\".  The string values returned by
   each individual PrinterStateReason and
   associated Severity object's toString()
-  methods, concatenated together with a hyphen (`-`) in
+  methods, concatenated together with a hyphen (\"-\") in
   between, gives the IPP keyword value for a PrinterStateReasons.
   The category name returned by getName() gives the IPP
   attribute name."
@@ -32,7 +32,7 @@
   "Static Constant.
 
   Indicates that the PrinterStateReason is a
-   `report` (least severe). An implementation may choose to omit some or
+   \"report\" (least severe). An implementation may choose to omit some or
    all reports.
    Some reports specify finer granularity about the printer state;
    others serve as a precursor to a warning. A report must contain nothing
@@ -45,7 +45,7 @@
   "Static Constant.
 
   Indicates that the PrinterStateReason is a
-   `warning.` An implementation may choose to omit some or all warnings.
+   \"warning.\" An implementation may choose to omit some or all warnings.
    Warnings serve as a precursor to an error. A warning must contain
    nothing  that prevents a job from completing, though in some cases the
    output may be of lower quality.
@@ -57,7 +57,7 @@
   "Static Constant.
 
   Indicates that the PrinterStateReason is an
-   `error` (most severe). An implementation must include all errors.
+   \"error\" (most severe). An implementation must include all errors.
    If this attribute contains one or more errors, the printer's
    PrinterState must be STOPPED.
 
@@ -65,7 +65,7 @@
   Severity/ERROR)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class Severity, the category is class Severity itself.
@@ -79,7 +79,7 @@
   "Get the name of the category of which this attribute value is an
    instance.
 
-   For class Severit, the category name is `severity`.
+   For class Severit, the category name is \"severity\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^Severity this]

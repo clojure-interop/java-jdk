@@ -73,9 +73,9 @@
    would cause an exception to be thrown:
 
 
-   String[] values = {`one`, `two`, `free`, `four`};
+   String[] values = {\"one\", \"two\", \"free\", \"four\"};
    SpinnerModel model = new SpinnerListModel(values);
-   model.setValue(`TWO`);
+   model.setValue(\"TWO\");
 
   elt - the sequence element that will be model's current value - `java.lang.Object`
 

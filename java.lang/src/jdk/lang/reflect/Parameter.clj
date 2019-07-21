@@ -86,7 +86,7 @@
    recommended by The Java™ Language
    Specification, followed by the fully- qualified type of
    the parameter (excluding the last [] if the parameter is
-   variable arity), followed by `...` if the parameter is variable
+   variable arity), followed by \"...\" if the parameter is variable
    arity, followed by a space, followed by the name of the
    parameter.
 
@@ -195,7 +195,7 @@
    The difference between this method and AnnotatedElement.getAnnotation(Class)
    is that this method detects if its argument is a repeatable
    annotation type (JLS 9.6), and if so, attempts to find one or
-   more annotations of that type by `looking through` a container
+   more annotations of that type by \"looking through\" a container
    annotation.
 
    The caller of this method is free to modify the returned array; it will

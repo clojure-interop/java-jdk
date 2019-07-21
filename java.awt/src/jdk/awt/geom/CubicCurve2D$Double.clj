@@ -23,85 +23,85 @@
   (^CubicCurve2D$Double []
     (new CubicCurve2D$Double )))
 
-(defn -x-1
+(defn x-1
   "Instance Field.
 
   The X coordinate of the start point
    of the cubic curve segment.
 
   type: double"
-  [this]
-  (-> this .-x1))
+  (^Double [^CubicCurve2D$Double this]
+    (-> this .-x1)))
 
-(defn -y-1
+(defn y-1
   "Instance Field.
 
   The Y coordinate of the start point
    of the cubic curve segment.
 
   type: double"
-  [this]
-  (-> this .-y1))
+  (^Double [^CubicCurve2D$Double this]
+    (-> this .-y1)))
 
-(defn -ctrlx-1
+(defn ctrlx-1
   "Instance Field.
 
   The X coordinate of the first control point
    of the cubic curve segment.
 
   type: double"
-  [this]
-  (-> this .-ctrlx1))
+  (^Double [^CubicCurve2D$Double this]
+    (-> this .-ctrlx1)))
 
-(defn -ctrly-1
+(defn ctrly-1
   "Instance Field.
 
   The Y coordinate of the first control point
    of the cubic curve segment.
 
   type: double"
-  [this]
-  (-> this .-ctrly1))
+  (^Double [^CubicCurve2D$Double this]
+    (-> this .-ctrly1)))
 
-(defn -ctrlx-2
+(defn ctrlx-2
   "Instance Field.
 
   The X coordinate of the second control point
    of the cubic curve segment.
 
   type: double"
-  [this]
-  (-> this .-ctrlx2))
+  (^Double [^CubicCurve2D$Double this]
+    (-> this .-ctrlx2)))
 
-(defn -ctrly-2
+(defn ctrly-2
   "Instance Field.
 
   The Y coordinate of the second control point
    of the cubic curve segment.
 
   type: double"
-  [this]
-  (-> this .-ctrly2))
+  (^Double [^CubicCurve2D$Double this]
+    (-> this .-ctrly2)))
 
-(defn -x-2
+(defn x-2
   "Instance Field.
 
   The X coordinate of the end point
    of the cubic curve segment.
 
   type: double"
-  [this]
-  (-> this .-x2))
+  (^Double [^CubicCurve2D$Double this]
+    (-> this .-x2)))
 
-(defn -y-2
+(defn y-2
   "Instance Field.
 
   The Y coordinate of the end point
    of the cubic curve segment.
 
   type: double"
-  [this]
-  (-> this .-y2))
+  (^Double [^CubicCurve2D$Double this]
+    (-> this .-y2)))
 
 (defn get-x-1
   "Returns the X coordinate of the start point in double precision.

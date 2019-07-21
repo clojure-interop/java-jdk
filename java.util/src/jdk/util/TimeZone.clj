@@ -11,11 +11,11 @@
 
   You can also get a TimeZone using getTimeZone
   along with a time zone ID. For instance, the time zone ID for the
-  U.S. Pacific Time zone is `America/Los_Angeles`. So, you can get a
+  U.S. Pacific Time zone is \"America/Los_Angeles\". So, you can get a
   U.S. Pacific Time TimeZone object with:
 
 
-  TimeZone tz = TimeZone.getTimeZone(`America/Los_Angeles`);
+  TimeZone tz = TimeZone.getTimeZone(\"America/Los_Angeles\");
   You can use the getAvailableIDs method to iterate through
   all the supported time zone IDs. You can then choose a
   supported ID to get a TimeZone.
@@ -40,13 +40,13 @@
           0 1 2 3 4 5 6 7 8 9
 
   Hours must be between 0 to 23 and Minutes must be
-  between 00 to 59.  For example, `GMT+10` and `GMT+0010` mean ten
+  between 00 to 59.  For example, \"GMT+10\" and \"GMT+0010\" mean ten
   hours and ten minutes ahead of GMT, respectively.
 
   The format is locale independent and digits must be taken from the
   Basic Latin block of the Unicode standard. No daylight saving time
   transition schedule can be specified with a custom time zone ID. If
-  the specified string doesn't match the syntax, `GMT`
+  the specified string doesn't match the syntax, \"GMT\"
   is used.
 
   When creating a TimeZone, the specified custom time
@@ -63,15 +63,15 @@
           Digit Digit
   Digit: one of
           0 1 2 3 4 5 6 7 8 9
-  For example, TimeZone.getTimeZone(`GMT-8`).getID() returns `GMT-08:00`.
+  For example, TimeZone.getTimeZone(\"GMT-8\").getID() returns \"GMT-08:00\".
 
   Three-letter time zone IDs
 
   For compatibility with JDK 1.1.x, some other three-letter time zone IDs
-  (such as `PST`, `CTT`, `AST`) are also supported. However, their
+  (such as \"PST\", \"CTT\", \"AST\") are also supported. However, their
   use is deprecated because the same abbreviation is often used
-  for multiple time zones (for example, `CST` could be U.S. `Central Standard
-  Time` and `China Standard Time`), and the Java platform can then only
+  for multiple time zones (for example, \"CST\" could be U.S. \"Central Standard
+  Time\" and \"China Standard Time\"), and the Java platform can then only
   recognize one of them."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.util TimeZone]))
@@ -88,7 +88,7 @@
   "Static Constant.
 
   A style specifier for getDisplayName() indicating
-   a short name, such as `PST.`
+   a short name, such as \"PST.\"
 
   type: int"
   TimeZone/SHORT)
@@ -97,7 +97,7 @@
   "Static Constant.
 
   A style specifier for getDisplayName() indicating
-   a long name, such as `Pacific Standard Time.`
+   a long name, such as \"Pacific Standard Time.\"
 
   type: int"
   TimeZone/LONG)
@@ -105,7 +105,7 @@
 (defn *get-time-zone
   "Gets the TimeZone for the given ID.
 
-  id - the ID for a TimeZone, either an abbreviation such as `PST`, a full name such as `America/Los_Angeles`, or a custom ID such as `GMT-8:00`. Note that the support of abbreviations is for JDK 1.1.x compatibility only and full names should be used. - `java.lang.String`
+  id - the ID for a TimeZone, either an abbreviation such as \"PST\", a full name such as \"America/Los_Angeles\", or a custom ID such as \"GMT-8:00\". Note that the support of abbreviations is for JDK 1.1.x compatibility only and full names should be used. - `java.lang.String`
 
   returns: the specified TimeZone, or the GMT zone if the given ID
    cannot be understood. - `java.util.TimeZone`"
@@ -118,7 +118,7 @@
   raw-offset - the given time zone GMT offset in milliseconds. - `int`
 
   returns: an array of IDs, where the time zone for that ID has
-   the specified GMT offset. For example, `America/Phoenix` and `America/Denver`
+   the specified GMT offset. For example, \"America/Phoenix\" and \"America/Denver\"
    both have GMT-07:00, but differ in daylight saving behavior. - `java.lang.String[]`"
   ([^Integer raw-offset]
     (TimeZone/getAvailableIDs raw-offset))
@@ -156,7 +156,7 @@
 
   zone - the new default TimeZone, or null - `java.util.TimeZone`
 
-  throws: java.lang.SecurityException - if the security manager's checkPermission denies PropertyPermission(`user.timezone`, `write`)"
+  throws: java.lang.SecurityException - if the security manager's checkPermission denies PropertyPermission(\"user.timezone\", \"write\")"
   ([^java.util.TimeZone zone]
     (TimeZone/setDefault zone)))
 

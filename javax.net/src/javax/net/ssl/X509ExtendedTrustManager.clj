@@ -10,9 +10,9 @@
   verification checks were done at the layer over TLS.  This class allows
   for the checking to be done during a single call to this class.
 
-  RFC 2830 defines the server identification specification for the `LDAPS`
+  RFC 2830 defines the server identification specification for the \"LDAPS\"
   algorithm. RFC 2818 defines both the server identification and the
-  client identification specification for the `HTTPS` algorithm."
+  client identification specification for the \"HTTPS\" algorithm."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.net.ssl X509ExtendedTrustManager]))
 
@@ -28,7 +28,7 @@
 
    The authentication type is determined by the actual certificate
    used. For instance, if RSAPublicKey is used, the authType
-   should be `RSA`. Checking is case-sensitive.
+   should be \"RSA\". Checking is case-sensitive.
 
    If the socket parameter is an instance of
    SSLSocket, and the endpoint identification
@@ -59,8 +59,8 @@
    authentication type and ssl parameters.
 
    The authentication type is the key exchange algorithm portion
-   of the cipher suites represented as a String, such as `RSA`,
-   `DHE_DSS`. Note: for some exportable cipher suites, the key
+   of the cipher suites represented as a String, such as \"RSA\",
+   \"DHE_DSS\". Note: for some exportable cipher suites, the key
    exchange algorithm is determined at run time during the
    handshake. For instance, for TLS_RSA_EXPORT_WITH_RC4_40_MD5,
    the authType should be RSA_EXPORT when an ephemeral RSA key is

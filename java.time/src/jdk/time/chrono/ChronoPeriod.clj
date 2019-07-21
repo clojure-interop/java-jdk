@@ -33,8 +33,8 @@
    multiplied by the specified scalar.
 
    This returns a period with each supported unit individually multiplied.
-   For example, a period of `2 years, -3 months and 4 days` multiplied by
-   3 will return `6 years, -9 months and 12 days`.
+   For example, a period of \"2 years, -3 months and 4 days\" multiplied by
+   3 will return \"6 years, -9 months and 12 days\".
    No normalization is performed.
 
   scalar - the scalar to multiply by, not null - `int`
@@ -135,8 +135,8 @@
   "Returns a new instance with each amount in this period negated.
 
    This returns a period with each supported unit individually negated.
-   For example, a period of `2 years, -3 months and 4 days` will be
-   negated to `-2 years, 3 months and -4 days`.
+   For example, a period of \"2 years, -3 months and 4 days\" will be
+   negated to \"-2 years, 3 months and -4 days\".
    No normalization is performed.
 
   returns: a ChronoPeriod based on this period with the amounts negated, not null - `default java.time.chrono.ChronoPeriod`
@@ -150,8 +150,8 @@
 
    The process of normalization is specific to each calendar system.
    For example, in the ISO calendar system, the years and months are
-   normalized but the days are not, such that `15 months` would be
-   normalized to `1 year and 3 months`.
+   normalized but the days are not, such that \"15 months\" would be
+   normalized to \"1 year and 3 months\".
 
    This instance is immutable and unaffected by this method call.
 
@@ -249,8 +249,8 @@
 
    Compares this period with another ensuring that the type, each amount and
    the chronology are the same.
-   Note that this means that a period of `15 Months` is not equal to a period
-   of `1 Year and 3 Months`.
+   Note that this means that a period of \"15 Months\" is not equal to a period
+   of \"1 Year and 3 Months\".
 
   obj - the object to check, null returns false - `java.lang.Object`
 

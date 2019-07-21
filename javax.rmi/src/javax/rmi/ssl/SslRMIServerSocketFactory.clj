@@ -86,7 +86,7 @@
     (-> this (.createServerSocket port))))
 
 (defn equals
-  "Indicates whether some other object is `equal to` this one.
+  "Indicates whether some other object is \"equal to\" this one.
 
    Two SslRMIServerSocketFactory objects are equal
    if they have been constructed with the same SSL context and

@@ -9,12 +9,12 @@
 
 
   The first two items are simple menu items, labeled
-  `Basic` and `Simple`.
+  \"Basic\" and \"Simple\".
   Following these two items is a separator, which is itself
-  a menu item, created with the label `-`.
+  a menu item, created with the label \"-\".
   Next is an instance of CheckboxMenuItem
-  labeled `Check`. The final menu item is a
-  submenu labeled `More Examples`,
+  labeled \"Check\". The final menu item is a
+  submenu labeled \"More Examples\",
   and this submenu is an instance of Menu.
 
   When a menu item is selected, AWT sends an action event to
@@ -36,7 +36,7 @@
   "Constructor.
 
   Create a menu item with an associated keyboard shortcut.
-   Note that use of `-` in a label is reserved to indicate
+   Note that use of \"-\" in a label is reserved to indicate
    a separator between menu items. By default, all menu
    items except for separators are enabled.
 

@@ -49,7 +49,7 @@
 
 (defn get-units
   "Obtains the label for the units in which the control's values are expressed,
-   such as `dB` or `frames per second.`
+   such as \"dB\" or \"frames per second.\"
 
   returns: the units label, or a zero-length string if no label - `java.lang.String`"
   (^java.lang.String [^FloatControl this]
@@ -70,7 +70,7 @@
     (-> this (.getValue))))
 
 (defn get-max-label
-  "Obtains the label for the maximum value, such as `Right` or `Full.`
+  "Obtains the label for the maximum value, such as \"Right\" or \"Full.\"
 
   returns: the maximum value label, or a zero-length string if no label      * has been set - `java.lang.String`"
   (^java.lang.String [^FloatControl this]
@@ -107,7 +107,7 @@
     (-> this (.setValue new-value))))
 
 (defn get-mid-label
-  "Obtains the label for the mid-point value, such as `Center` or `Default.`
+  "Obtains the label for the mid-point value, such as \"Center\" or \"Default.\"
 
   returns: the mid-point value label, or a zero-length string if no label    * has been set - `java.lang.String`"
   (^java.lang.String [^FloatControl this]
@@ -121,7 +121,7 @@
     (-> this (.getMaximum))))
 
 (defn get-min-label
-  "Obtains the label for the minimum value, such as `Left` or `Off.`
+  "Obtains the label for the minimum value, such as \"Left\" or \"Off.\"
 
   returns: the minimum value label, or a zero-length string if no label      * has been set - `java.lang.String`"
   (^java.lang.String [^FloatControl this]

@@ -68,7 +68,7 @@
   Chromaticity/COLOR)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class Chromaticity, the category is the class Chromaticity itself.
@@ -82,7 +82,7 @@
   "Get the name of the category of which this attribute value is an
    instance.
 
-   For class Chromaticity, the category name is `chromaticity`.
+   For class Chromaticity, the category name is \"chromaticity\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^Chromaticity this]

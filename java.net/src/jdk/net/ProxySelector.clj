@@ -33,7 +33,7 @@
 
   returns: the system-wide ProxySelector - `java.net.ProxySelector`
 
-  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`getProxySelector`)"
+  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(\"getProxySelector\")"
   (^java.net.ProxySelector []
     (ProxySelector/getDefault )))
 
@@ -44,7 +44,7 @@
 
   ps - The HTTP proxy selector, or null to unset the proxy selector. - `java.net.ProxySelector`
 
-  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(`setProxySelector`)"
+  throws: java.lang.SecurityException - If a security manager has been installed and it denies NetPermission(\"setProxySelector\")"
   ([^java.net.ProxySelector ps]
     (ProxySelector/setDefault ps)))
 

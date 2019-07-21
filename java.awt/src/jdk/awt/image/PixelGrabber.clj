@@ -18,11 +18,11 @@
        try {
            pg.grabPixels();
        } catch (InterruptedException e) {
-           System.err.println(`interrupted waiting for pixels!`);
+           System.err.println(\"interrupted waiting for pixels!\");
            return;
        }
        if ((pg.getStatus() & ImageObserver.ABORT) != 0) {
-           System.err.println(`image fetch aborted or errored`);
+           System.err.println(\"image fetch aborted or errored\");
            return;
        }
        for (int j = 0; j < h; j++) {
@@ -172,7 +172,7 @@
    same implementation, but getStatus is the
    preferred method because it conforms to the convention of
    naming information-retrieval methods with the form
-   `getXXX`.
+   \"getXXX\".
 
   returns: the bitwise OR of all relevant ImageObserver flags - `int`"
   (^Integer [^PixelGrabber this]

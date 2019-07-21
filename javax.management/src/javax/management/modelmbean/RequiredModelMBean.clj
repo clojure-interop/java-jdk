@@ -126,9 +126,9 @@
 
    RequiredModelMBean may always send also two additional notifications:
 
-      One with descriptor `name=GENERIC,descriptorType=notification,log=T,severity=6,displayName=jmx.modelmbean.generic`
+      One with descriptor \"name=GENERIC,descriptorType=notification,log=T,severity=6,displayName=jmx.modelmbean.generic\"
       Second is a standard attribute change notification
-          with descriptor `name=ATTRIBUTE_CHANGE,descriptorType=notification,log=T,severity=6,displayName=jmx.attribute.change`
+          with descriptor \"name=ATTRIBUTE_CHANGE,descriptorType=notification,log=T,severity=6,displayName=jmx.attribute.change\"
 
    Thus these two notifications are always added to those specified
    by the application.
@@ -154,7 +154,7 @@
    (MBeanInfo and Descriptors).
 
   mr - Object that is the managed resource - `java.lang.Object`
-  mr-type - The type of reference for the managed resource. Can be: `ObjectReference`, `Handle`, `IOR`, `EJBHandle`, or `RMIReference`. In this implementation only `ObjectReference` is supported. - `java.lang.String`
+  mr-type - The type of reference for the managed resource. Can be: \"ObjectReference\", \"Handle\", \"IOR\", \"EJBHandle\", or \"RMIReference\". In this implementation only \"ObjectReference\" is supported. - `java.lang.String`
 
   throws: javax.management.MBeanException - The initializer of the object has thrown an exception."
   ([^RequiredModelMBean this ^java.lang.Object mr ^java.lang.String mr-type]
@@ -238,7 +238,7 @@
    with this type if one of the following is true:
 
    the value is null;
-   the declared name is a primitive type name (such as `int`)
+   the declared name is a primitive type name (such as \"int\")
        and the value is an instance of the corresponding wrapper
        type (such as java.lang.Integer);
    the name of the value's class is identical to the declared name;
@@ -247,7 +247,7 @@
 
 
    In this implementation, in every case where the getMethod needs to
-   be called, because the method is invoked through the standard `invoke`
+   be called, because the method is invoked through the standard \"invoke\"
    method and thus needs operationInfo, an operation must be specified
    for that getMethod so that the invocation works correctly.
 
@@ -326,19 +326,19 @@
    guide storing the attribute in a persistent store.
    Store the MBean if 'persistPolicy' field is:
 
-    != `never`
-    = `always`
-    = `onUpdate`
-    = `onTimer` and now > 'lastPersistTime'  'persistPeriod'
-    = `NoMoreOftenThan` and now > 'lastPersistTime'
+    != \"never\"
+    = \"always\"
+    = \"onUpdate\"
+    = \"onTimer\" and now > 'lastPersistTime'  'persistPeriod'
+    = \"NoMoreOftenThan\" and now > 'lastPersistTime'
            'persistPeriod'
 
    Do not store the MBean if 'persistPolicy' field is:
 
-    = `never`
-    = = `onTimer` && now < 'lastPersistTime'  'persistPeriod'
-    = `onUnregister`
-    = = `NoMoreOftenThan` and now < 'lastPersistTime'
+    = \"never\"
+    = = \"onTimer\" && now < 'lastPersistTime'  'persistPeriod'
+    = \"onUnregister\"
+    = = \"NoMoreOftenThan\" and now < 'lastPersistTime'
           'persistPeriod'
 
 
@@ -442,7 +442,7 @@
   "Description copied from interface: ModelMBeanNotificationBroadcaster
 
   in-old-val - The original value for the Attribute - `javax.management.Attribute`
-  in-new-val - The current value for the Attribute The constructed attributeChangeNotification will be: type `jmx.attribute.change` source this ModelMBean instance sequence 1 attributeName oldValue.getName() attributeType oldValue's class attributeOldValue oldValue.getValue() attributeNewValue newValue.getValue() - `javax.management.Attribute`
+  in-new-val - The current value for the Attribute The constructed attributeChangeNotification will be: type \"jmx.attribute.change\" source this ModelMBean instance sequence 1 attributeName oldValue.getName() attributeType oldValue's class attributeOldValue oldValue.getValue() attributeNewValue newValue.getValue() - `javax.management.Attribute`
 
   throws: javax.management.MBeanException - Wraps a distributed communication Exception."
   ([^RequiredModelMBean this ^javax.management.Attribute in-old-val ^javax.management.Attribute in-new-val]
@@ -464,18 +464,18 @@
 
 
 
-    != `never`
-     = `always`
-     = `onTimer` and now > 'lastPersistTime'  'persistPeriod'
-     = `NoMoreOftenThan` and now > 'lastPersistTime'  'persistPeriod'
-     = `onUnregister`
+    != \"never\"
+     = \"always\"
+     = \"onTimer\" and now > 'lastPersistTime'  'persistPeriod'
+     = \"NoMoreOftenThan\" and now > 'lastPersistTime'  'persistPeriod'
+     = \"onUnregister\"
 
    Do not store the MBean if 'persistPolicy' field is:
 
 
-      = `never`
-      = `onUpdate`
-      = `onTimer` && now < 'lastPersistTime'  'persistPeriod'
+      = \"never\"
+      = \"onUpdate\"
+      = \"onTimer\" && now < 'lastPersistTime'  'persistPeriod'
 
   throws: javax.management.MBeanException - Wraps another exception, or persistence is not supported"
   ([^RequiredModelMBean this]

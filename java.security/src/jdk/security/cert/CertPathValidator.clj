@@ -22,7 +22,7 @@
 
 
 
-  CertPathValidator cpv = CertPathValidator.getInstance(`PKIX`);
+  CertPathValidator cpv = CertPathValidator.getInstance(\"PKIX\");
   PKIXRevocationChecker rc = (PKIXRevocationChecker)cpv.getRevocationChecker();
   rc.setOptions(EnumSet.of(Option.SOFT_FAIL));
   params.addCertPathChecker(rc);
@@ -82,7 +82,7 @@
 (defn *get-default-type
   "Returns the default CertPathValidator type as specified by
    the certpathvalidator.type security property, or the string
-   `PKIX` if no such property exists.
+   \"PKIX\" if no such property exists.
 
    The default CertPathValidator type can be used by
    applications that do not want to use a hard-coded type when calling one
@@ -95,7 +95,7 @@
 
   returns: the default CertPathValidator type as specified
    by the certpathvalidator.type security property, or the string
-   `PKIX` if no such property exists. - `java.lang.String`"
+   \"PKIX\" if no such property exists. - `java.lang.String`"
   (^java.lang.String []
     (CertPathValidator/getDefaultType )))
 

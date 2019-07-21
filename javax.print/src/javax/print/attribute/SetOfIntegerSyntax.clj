@@ -4,18 +4,18 @@
   integers. This includes attributes whose value is a single range of integers
   and attributes whose value is a set of ranges of integers.
 
-  You can construct an instance of SetOfIntegerSyntax by giving it in `string
-  form.` The string consists of zero or more comma-separated integer groups.
+  You can construct an instance of SetOfIntegerSyntax by giving it in \"string
+  form.\" The string consists of zero or more comma-separated integer groups.
   Each integer group consists of either one integer, two integers separated by
   a hyphen (-), or two integers separated by a colon
   (:). Each integer consists of one or more decimal digits
   (0 through 9). Whitespace characters cannot
   appear within an integer but are otherwise ignored. For example:
-  ``, `1`, `5-10`, `1:2,
-  4`.
+  \"\", \"1\", \"5-10\", \"1:2,
+  4\".
 
   You can also construct an instance of SetOfIntegerSyntax by giving it in
-  `array form.` Array form consists of an array of zero or more integer groups
+  \"array form.\" Array form consists of an array of zero or more integer groups
   where each integer group is a length-1 or length-2 array of
   ints; for example, int[0][],
   int[][]{{1}}, int[][]{{5,10}},
@@ -33,8 +33,8 @@
   allowed to overlap. The union of all the ranges gives the set's contents.
   Once a SetOfIntegerSyntax instance is constructed, its value is immutable.
 
-  The SetOfIntegerSyntax object's value is actually stored in `canonical
-  array form.` This is the same as array form, except there are no null ranges;
+  The SetOfIntegerSyntax object's value is actually stored in \"canonical
+  array form.\" This is the same as array form, except there are no null ranges;
   the members of the set are represented in as few ranges as possible (i.e.,
   overlapping ranges are coalesced); the ranges appear in ascending order; and
   each range is always represented as a length-two array of ints
@@ -49,7 +49,7 @@
 
 (defn get-members
   "Obtain this set-of-integer attribute's members in canonical array form.
-   The returned array is `safe;` the client may alter it without affecting
+   The returned array is \"safe;\" the client may alter it without affecting
    this set-of-integer attribute.
 
   returns: This set-of-integer attribute's members in canonical array form. - `int[][]`"
@@ -124,9 +124,9 @@
   "Returns a string value corresponding to this set-of-integer attribute.
    The string value is a zero-length string if this set is empty. Otherwise,
    the string value is a comma-separated list of the ranges in the canonical
-   array form, where each range is represented as `i` if
+   array form, where each range is represented as \"i\" if
    the lower bound equals the upper bound or
-   `i-j` otherwise.
+   \"i-j\" otherwise.
 
   returns: a string representation of the object. - `java.lang.String`"
   (^java.lang.String [^SetOfIntegerSyntax this]

@@ -30,7 +30,7 @@
     (-> this (.accept f))))
 
 (defn get-description
-  "The description of this filter. For example: `JPG and GIF Images`
+  "The description of this filter. For example: \"JPG and GIF Images\"
 
   returns: `java.lang.String`"
   (^java.lang.String [^FileFilter this]

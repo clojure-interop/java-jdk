@@ -1,7 +1,7 @@
 (ns jdk.security.cert.TrustAnchor
   "A trust anchor or most-trusted Certification Authority (CA).
 
-  This class represents a `most-trusted CA`, which is used as a trust anchor
+  This class represents a \"most-trusted CA\", which is used as a trust anchor
   for validating X.509 certification paths. A most-trusted CA includes the
   public key of the CA, the CA's name, and any constraints upon the set of
   paths which may be validated using this key. These parameters can be

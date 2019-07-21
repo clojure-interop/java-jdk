@@ -4,7 +4,7 @@
   right. If syncAllWidths is true, the widths of each
   component will be set to the largest preferred size width.
 
-  This class should be treated as a `protected` inner class.
+  This class should be treated as a \"protected\" inner class.
   Instantiate it only within subclasses of BasicOptionPaneUI."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.plaf.basic BasicOptionPaneUI$ButtonAreaLayout]))

@@ -9,9 +9,9 @@
 
 
 
-        JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+        JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
         Unmarshaller u = jc.createUnmarshaller();
-        Object o = u.unmarshal( new File( `nosferatu.xml` ) );
+        Object o = u.unmarshal( new File( \"nosferatu.xml\" ) );
 
 
 
@@ -20,8 +20,8 @@
 
 
 
-        InputStream is = new FileInputStream( `nosferatu.xml` );
-        JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+        InputStream is = new FileInputStream( \"nosferatu.xml\" );
+        JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
         Unmarshaller u = jc.createUnmarshaller();
         Object o = u.unmarshal( is );
 
@@ -31,9 +31,9 @@
 
 
 
-        JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+        JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
         Unmarshaller u = jc.createUnmarshaller();
-        URL url = new URL( `http://beaker.east/nosferatu.xml` );
+        URL url = new URL( \"http://beaker.east/nosferatu.xml\" );
         Object o = u.unmarshal( url );
 
 
@@ -43,9 +43,9 @@
 
 
 
-        JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+        JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
         Unmarshaller u = jc.createUnmarshaller();
-        StringBuffer xmlStr = new StringBuffer( `<?xml version=`1.0`?>...` );
+        StringBuffer xmlStr = new StringBuffer( \"<?xml version=\"1.0\"?>...\" );
         Object o = u.unmarshal( new StreamSource( new StringReader( xmlStr.toString() ) ) );
 
 
@@ -54,13 +54,13 @@
 
 
 
-        JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+        JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
         Unmarshaller u = jc.createUnmarshaller();
 
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         dbf.setNamespaceAware(true);
         DocumentBuilder db = dbf.newDocumentBuilder();
-        Document doc = db.parse(new File( `nosferatu.xml`));
+        Document doc = db.parse(new File( \"nosferatu.xml\"));
 
         Object o = u.unmarshal( doc );
 
@@ -73,14 +73,14 @@
 
         // configure a validating SAX2.0 parser (Xerces2)
         static final String JAXP_SCHEMA_LANGUAGE =
-            `http://java.sun.com/xml/jaxp/properties/schemaLanguage`;
+            \"http://java.sun.com/xml/jaxp/properties/schemaLanguage\";
         static final String JAXP_SCHEMA_LOCATION =
-            `http://java.sun.com/xml/jaxp/properties/schemaSource`;
+            \"http://java.sun.com/xml/jaxp/properties/schemaSource\";
         static final String W3C_XML_SCHEMA =
-            `http://www.w3.org/2001/XMLSchema`;
+            \"http://www.w3.org/2001/XMLSchema\";
 
-        System.setProperty( `javax.xml.parsers.SAXParserFactory`,
-                            `org.apache.xerces.jaxp.SAXParserFactoryImpl` );
+        System.setProperty( \"javax.xml.parsers.SAXParserFactory\",
+                            \"org.apache.xerces.jaxp.SAXParserFactoryImpl\" );
 
         SAXParserFactory spf = SAXParserFactory.newInstance();
         spf.setNamespaceAware(true);
@@ -89,17 +89,17 @@
 
         try {
             saxParser.setProperty(JAXP_SCHEMA_LANGUAGE, W3C_XML_SCHEMA);
-            saxParser.setProperty(JAXP_SCHEMA_LOCATION, `http://....`);
+            saxParser.setProperty(JAXP_SCHEMA_LOCATION, \"http://....\");
         } catch (SAXNotRecognizedException x) {
             // exception handling omitted
         }
 
         XMLReader xmlReader = saxParser.getXMLReader();
         SAXSource source =
-            new SAXSource( xmlReader, new InputSource( `http://...` ) );
+            new SAXSource( xmlReader, new InputSource( \"http://...\" ) );
 
         // Setup JAXB to unmarshal
-        JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+        JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
         Unmarshaller u = jc.createUnmarshaller();
         ValidationEventCollector vec = new ValidationEventCollector();
         u.setEventHandler( vec );
@@ -122,7 +122,7 @@
 
 
 
-        JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+        JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
         Unmarshaller u = jc.createUnmarshaller();
 
         javax.xml.stream.XMLStreamReader xmlStreamReader =
@@ -136,7 +136,7 @@
 
 
 
-        JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+        JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
         Unmarshaller u = jc.createUnmarshaller();
 
         javax.xml.stream.XMLEventReader xmlEventReader =
@@ -253,26 +253,26 @@
 
         Schema fragment for example
         <xs:schema>
-           <xs:complexType name=`FooType`>...<\xs:complexType>
-           <!-- global element declaration `PurchaseOrder` -->
-           <xs:element name=`PurchaseOrder`>
+           <xs:complexType name=\"FooType\">...<\\xs:complexType>
+           <!-- global element declaration \"PurchaseOrder\" -->
+           <xs:element name=\"PurchaseOrder\">
                <xs:complexType>
                   <xs:sequence>
-                     <!-- local element declaration `foo` -->
-                     <xs:element name=`foo` type=`FooType`/>
+                     <!-- local element declaration \"foo\" -->
+                     <xs:element name=\"foo\" type=\"FooType\"/>
                      ...
                   </xs:sequence>
                </xs:complexType>
            </xs:element>
         </xs:schema>
 
-        JAXBContext jc = JAXBContext.newInstance( `com.acme.foo` );
+        JAXBContext jc = JAXBContext.newInstance( \"com.acme.foo\" );
         Unmarshaller u = jc.createUnmarshaller();
 
         DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
         dbf.setNamespaceAware(true);
         DocumentBuilder db = dbf.newDocumentBuilder();
-        Document doc = db.parse(new File( `nosferatu.xml`));
+        Document doc = db.parse(new File( \"nosferatu.xml\"));
         Element  fooSubtree = ...; // traverse DOM till reach xml element foo, constrained by a
                                    // local element declaration in schema.
 

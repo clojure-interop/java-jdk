@@ -25,7 +25,7 @@
   (^Segment []
     (new Segment )))
 
-(defn -array
+(defn array
   "Instance Field.
 
   This is the array containing the text of
@@ -33,28 +33,28 @@
    it is available only for efficiency.
 
   type: char[]"
-  [this]
-  (-> this .-array))
+  ([^Segment this]
+    (-> this .-array)))
 
-(defn -offset
+(defn offset
   "Instance Field.
 
   This is the offset into the array that
    the desired text begins.
 
   type: int"
-  [this]
-  (-> this .-offset))
+  (^Integer [^Segment this]
+    (-> this .-offset)))
 
-(defn -count
+(defn count
   "Instance Field.
 
   This is the number of array elements that
    make up the text of interest.
 
   type: int"
-  [this]
-  (-> this .-count))
+  (^Integer [^Segment this]
+    (-> this .-count)))
 
 (defn next
   "Increments the iterator's index by one and returns the character

@@ -5,8 +5,8 @@
    the object's fully-qualified class name,
    the object's code location (the location of the class), a codebase URL
   path,
-   the object's restart `mode`, and,
-   a `marshalled` object that can contain object specific
+   the object's restart \"mode\", and,
+   a \"marshalled\" object that can contain object specific
   initialization data.
 
   A descriptor registered with the activation system can be used to
@@ -67,15 +67,15 @@
     (-> this (.getLocation))))
 
 (defn get-data
-  "Returns a `marshalled object` containing intialization/activation
+  "Returns a \"marshalled object\" containing intialization/activation
    data for the object specified by this descriptor.
 
-  returns: the object specific `initialization` data - `java.rmi.MarshalledObject<?>`"
+  returns: the object specific \"initialization\" data - `java.rmi.MarshalledObject<?>`"
   (^java.rmi.MarshalledObject [^ActivationDesc this]
     (-> this (.getData))))
 
 (defn get-restart-mode?
-  "Returns the `restart` mode of the object associated with
+  "Returns the \"restart\" mode of the object associated with
    this activation descriptor.
 
   returns: true if the activatable object associated with this

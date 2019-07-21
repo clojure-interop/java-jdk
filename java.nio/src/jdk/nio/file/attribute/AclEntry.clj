@@ -11,7 +11,7 @@
      grants or denies access.
 
       The principal component, sometimes called the
-     `who` component, is a UserPrincipal corresponding to the identity
+     \"who\" component, is a UserPrincipal corresponding to the identity
      that the entry grants or denies access
 
 

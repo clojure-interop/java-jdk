@@ -113,19 +113,19 @@
 
 
        YYYY-MM-DDThh:mm:ss[.s+]Z
-   where `[.s+]` represents a dot followed by one of more digits
+   where \"[.s+]\" represents a dot followed by one of more digits
    for the decimal fraction of a second. It is only present when the decimal
-   fraction of a second is not zero. For example, FileTime.fromMillis(1234567890000L).toString() yields `2009-02-13T23:31:30Z`, and FileTime.fromMillis(1234567890123L).toString()
-   yields `2009-02-13T23:31:30.123Z`.
+   fraction of a second is not zero. For example, FileTime.fromMillis(1234567890000L).toString() yields \"2009-02-13T23:31:30Z\", and FileTime.fromMillis(1234567890123L).toString()
+   yields \"2009-02-13T23:31:30.123Z\".
 
     A FileTime is primarily intended to represent the value of a
    file's time stamp. Where used to represent extreme values, where
-   the year is less than `0001` or greater than `9999` then
+   the year is less than \"0001\" or greater than \"9999\" then
    this method deviates from ISO 8601 in the same manner as the
    XML Schema
    language. That is, the year may be expanded to more than four digits
    and may be negative-signed. If more than four digits then leading zeros
-   are not present. The year before `0001` is `-0001`.
+   are not present. The year before \"0001\" is \"-0001\".
 
   returns: the string representation of this file time - `java.lang.String`"
   (^java.lang.String [^FileTime this]

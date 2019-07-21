@@ -7,7 +7,7 @@
   or archiving.
   The output format must be declared as a mime type.
   This is equivalent to an output document flavor where the
-  representation class is always `java.io.OutputStream`
+  representation class is always \"java.io.OutputStream\"
   An instance of the StreamPrintService class is
   obtained from a StreamPrintServiceFactory instance.
 

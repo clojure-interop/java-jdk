@@ -5,7 +5,7 @@
   LocalTime is an immutable date-time object that represents a time,
   often viewed as hour-minute-second.
   Time is represented to nanosecond precision.
-  For example, the value `13:45.30.123456789` can be stored in a LocalTime.
+  For example, the value \"13:45.30.123456789\" can be stored in a LocalTime.
 
   This class does not store or represent a date or time-zone.
   Instead, it is a description of the local time as seen on a wall clock.
@@ -799,7 +799,7 @@
   "Compares this time to another time.
 
    The comparison is based on the time-line position of the local times within a day.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
   other - the other time to compare to, not null - `java.time.LocalTime`
 

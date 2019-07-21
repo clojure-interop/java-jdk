@@ -53,7 +53,7 @@
 
 
   The property value consists of the provider class name
-  and the mixer name, separated by the hash mark (`#`).
+  and the mixer name, separated by the hash mark (\"#\").
   The provider class name is the fully-qualified
   name of a concrete mixer provider class. The mixer name is matched against
   the String returned by the getName
@@ -83,19 +83,19 @@
 
   For example, the property javax.sound.sampled.Clip
   with a value
-  `com.sun.media.sound.MixerProvider#SunClip`
+  \"com.sun.media.sound.MixerProvider#SunClip\"
   will have the following consequences when
   getLine is called requesting a Clip
   instance:
   if the class com.sun.media.sound.MixerProvider exists
   in the list of installed mixer providers,
   the first Clip from the first mixer with name
-  `SunClip` will be returned. If it cannot
+  \"SunClip\" will be returned. If it cannot
   be found, the first Clip from the first mixer
   of the specified provider will be returned, regardless of name.
   If there is none, the first Clip from the first
   Mixer with name
-  `SunClip` in the list of all mixers
+  \"SunClip\" in the list of all mixers
   (as returned by getMixerInfo) will be returned,
   or, if not found, the first Clip of the first
   Mixerthat can be found in the list of all
@@ -308,7 +308,7 @@
    javax.sound.sampled.Port,
    javax.sound.sampled.SourceDataLine and
    javax.sound.sampled.TargetDataLine are defined
-   or they are defined in the file `sound.properties`,
+   or they are defined in the file \"sound.properties\",
    they are used to retrieve default lines.
    For details, refer to the class description.
 

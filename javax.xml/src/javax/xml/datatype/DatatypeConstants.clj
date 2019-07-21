@@ -134,7 +134,7 @@
 (def *-field-undefined
   "Static Constant.
 
-  Designation that an `int` field is not set.
+  Designation that an \"int\" field is not set.
 
   type: int"
   DatatypeConstants/FIELD_UNDEFINED)

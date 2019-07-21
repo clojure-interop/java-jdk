@@ -7,8 +7,8 @@
   some of the numeric functions in this package require that they
   produce the same results as certain published algorithms. These
   algorithms are available from the well-known network library
-  netlib as the package `Freely Distributable Math
-  Library,` fdlibm. These
+  netlib as the package \"Freely Distributable Math
+  Library,\" fdlibm. These
   algorithms, which are written in the C programming language, are
   then to be understood as executed with all floating-point
   operations following the rules of Java floating-point arithmetic.
@@ -16,7 +16,7 @@
   The Java math library is defined with respect to
   fdlibm version 5.3. Where fdlibm provides
   more than one definition for a function (such as
-  acos), use the `IEEE 754 core function` version
+  acos), use the \"IEEE 754 core function\" version
   (residing in a file whose name begins with the letter
   e).  The methods which require fdlibm
   semantics are sin, cos, tan,

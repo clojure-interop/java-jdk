@@ -91,7 +91,7 @@
    property must hold: locationFor(x) ==
    locationFor(y) if and only if x.equals(y).
    The returned location will be an output location if and only if
-   name ends with `_OUTPUT`.
+   name ends with \"_OUTPUT\".
 
   name - a name - `java.lang.String`
 

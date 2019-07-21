@@ -359,7 +359,7 @@
    caret blinking. Setting it to false turns it completely off.
    To determine whether the blinking is active, you should call
    isActive. In effect, isActive is an
-   appropriate corresponding `getter` method for this one.
+   appropriate corresponding \"getter\" method for this one.
    isVisible can be used to fetch the current
    visibility status of the caret, meaning whether or not it is currently
    painted. This status will change as the caret blinks on and off.

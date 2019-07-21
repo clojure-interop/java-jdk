@@ -10,7 +10,7 @@
   As such, historical years must be treated with caution.
 
   This class does not store or represent a month, day, time or time-zone.
-  For example, the value `2007` can be stored in a Year.
+  For example, the value \"2007\" can be stored in a Year.
 
   Years represented by this class follow the ISO-8601 standard and use
   the proleptic numbering system. Year 1 is preceded by year 0, then by year -1.
@@ -581,7 +581,7 @@
   "Compares this year to another year.
 
    The comparison is based on the value of the year.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
   other - the other year to compare to, not null - `java.time.Year`
 

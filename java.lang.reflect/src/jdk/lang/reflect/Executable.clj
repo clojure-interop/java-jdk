@@ -249,7 +249,7 @@
    The difference between this method and AnnotatedElement.getAnnotation(Class)
    is that this method detects if its argument is a repeatable
    annotation type (JLS 9.6), and if so, attempts to find one or
-   more annotations of that type by `looking through` a container
+   more annotations of that type by \"looking through\" a container
    annotation.
 
    The caller of this method is free to modify the returned array; it will
@@ -278,7 +278,7 @@
    represent the annotations on the formal parameters, in
    declaration order, of the Executable represented by
    this object.  Synthetic and mandated parameters (see
-   explanation below), such as the outer `this` parameter to an
+   explanation below), such as the outer \"this\" parameter to an
    inner class constructor will be represented in the returned
    array.  If the executable has no parameters (meaning no formal,
    no synthetic, and no mandated parameters), a zero-length array
@@ -290,9 +290,9 @@
    effect on the arrays returned to other callers.
 
    A compiler may add extra parameters that are implicitly
-   declared in source (`mandated`), as well as parameters that
+   declared in source (\"mandated\"), as well as parameters that
    are neither implicitly nor explicitly declared in source
-   (`synthetic`) to the parameter list for a method.  See Parameter for more information.
+   (\"synthetic\") to the parameter list for a method.  See Parameter for more information.
 
   returns: an array of arrays that represent the annotations on
       the formal and implicit parameters, in declaration order, of

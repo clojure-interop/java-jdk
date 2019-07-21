@@ -45,12 +45,12 @@
    nameString
        MBean name.
    descriptorTypeString
-       Must be `mbean`.
+       Must be \"mbean\".
    displayNameString
        Name of MBean to be used in displays.
    persistPolicyString
        One of: OnUpdate|OnTimer|NoMoreOftenThan|OnUnregister|Always|Never.
-           See the section `MBean Descriptor Fields` in the JMX specification
+           See the section \"MBean Descriptor Fields\" in the JMX specification
            document.
    persistLocationString
        The fully qualified directory name where the MBean should be
@@ -78,8 +78,8 @@
 
 
 
-   The default descriptor is: name=className,descriptorType=`mbean`, displayName=className,
-    persistPolicy=`never`,log=`F`,visibility=`1`
+   The default descriptor is: name=className,descriptorType=\"mbean\", displayName=className,
+    persistPolicy=\"never\",log=\"F\",visibility=\"1\"
    If the descriptor does not contain all these fields, they will be added with these default values.
 
    Note: because of inconsistencies in previous versions of
@@ -100,8 +100,8 @@
    metadata about the MBean and default policies for persistence and caching. This operation
    does a complete replacement of the descriptor, no merging is done. If the descriptor to
    set to is null then the default descriptor will be created.
-   The default descriptor is: name=className,descriptorType=`mbean`, displayName=className,
-    persistPolicy=`never`,log=`F`,visibility=`1`
+   The default descriptor is: name=className,descriptorType=\"mbean\", displayName=className,
+    persistPolicy=\"never\",log=\"F\",visibility=\"1\"
    If the descriptor does not contain all these fields, they will be added with these default values.
 
    See getMBeanDescriptor method javadoc for description of valid field names.
@@ -147,7 +147,7 @@
   "Returns a Descriptor array consisting of all
    Descriptors for the ModelMBeanInfo of type inDescriptorType.
 
-  in-descriptor-type - value of descriptorType field that must be set for the descriptor to be returned. Must be `mbean`, `attribute`, `operation`, `constructor` or `notification`. If it is null or empty then all types will be returned. - `java.lang.String`
+  in-descriptor-type - value of descriptorType field that must be set for the descriptor to be returned. Must be \"mbean\", \"attribute\", \"operation\", \"constructor\" or \"notification\". If it is null or empty then all types will be returned. - `java.lang.String`
 
   returns: Descriptor array containing all descriptors for the ModelMBean if type inDescriptorType. - `javax.management.Descriptor[]`
 
@@ -162,9 +162,9 @@
    In addition to any notification specified by the application,
    a ModelMBean may always send also two additional notifications:
 
-    One with descriptor name `GENERIC` and displayName `jmx.modelmbean.generic`
+    One with descriptor name \"GENERIC\" and displayName \"jmx.modelmbean.generic\"
     Second is a standard attribute change notification
-        with descriptor name `ATTRIBUTE_CHANGE` and displayName `jmx.attribute.change`
+        with descriptor name \"ATTRIBUTE_CHANGE\" and displayName \"jmx.attribute.change\"
 
    Thus any implementation of ModelMBeanInfo should always add those two notifications
    in addition to those specified by the application.
@@ -199,7 +199,7 @@
    specified descriptor.
 
   in-descriptor - The descriptor to be set in the ModelMBean. It must NOT be null. All descriptors must have name and descriptorType fields. - `javax.management.Descriptor`
-  in-descriptor-type - The type of the descriptor being set. If this is null then the descriptorType field in the descriptor is used. If specified this value must be set in the descriptorType field in the descriptor. Must be `mbean`,`attribute`, `constructor`, `operation`, or `notification`. - `java.lang.String`
+  in-descriptor-type - The type of the descriptor being set. If this is null then the descriptorType field in the descriptor is used. If specified this value must be set in the descriptorType field in the descriptor. Must be \"mbean\",\"attribute\", \"constructor\", \"operation\", or \"notification\". - `java.lang.String`
 
   throws: javax.management.RuntimeOperationsException - Wraps an IllegalArgumentException for illegal or null arguments or if the name field of the descriptor is not found in the corresponding MBeanAttributeInfo or MBeanConstructorInfo or MBeanNotificationInfo or MBeanOperationInfo."
   ([^ModelMBeanInfo this ^javax.management.Descriptor in-descriptor ^java.lang.String in-descriptor-type]

@@ -5,7 +5,7 @@
   OffsetDateTime is an immutable representation of a date-time with an offset.
   This class stores all date and time fields, to a precision of nanoseconds,
   as well as the offset from UTC/Greenwich. For example, the value
-  `2nd October 2007 at 13:45.30.123456789 02:00` can be stored in an OffsetDateTime.
+  \"2nd October 2007 at 13:45.30.123456789 02:00\" can be stored in an OffsetDateTime.
 
   OffsetDateTime, ZonedDateTime and Instant all store an instant
   on the time-line to nanosecond precision.
@@ -34,7 +34,7 @@
    This is the local date-time of midnight at the start of the minimum date
    in the maximum offset (larger offsets are earlier on the time-line).
    This combines LocalDateTime.MIN and ZoneOffset.MAX.
-   This could be used by an application as a `far past` date-time.
+   This could be used by an application as a \"far past\" date-time.
 
   type: java.time.OffsetDateTime"
   OffsetDateTime/MIN)
@@ -46,7 +46,7 @@
    This is the local date-time just before midnight at the end of the maximum date
    in the minimum offset (larger negative offsets are later on the time-line).
    This combines LocalDateTime.MAX and ZoneOffset.MIN.
-   This could be used by an application as a `far future` date-time.
+   This could be used by an application as a \"far future\" date-time.
 
   type: java.time.OffsetDateTime"
   OffsetDateTime/MAX)
@@ -1167,7 +1167,7 @@
   "Compares this date-time to another date-time.
 
    The comparison is based on the instant then on the local date-time.
-   It is `consistent with equals`, as defined by Comparable.
+   It is \"consistent with equals\", as defined by Comparable.
 
    For example, the following is the comparator order:
 

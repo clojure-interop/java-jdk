@@ -20,7 +20,7 @@
   application fails to be launched, an exception is thrown.
 
    An application is registered to a URI or file type; for
-  example, the `sxi` file extension is typically registered
+  example, the \"sxi\" file extension is typically registered
   to StarOffice.  The mechanism of registering, accessing, and
   launching the associated application is platform-dependent.
 
@@ -129,8 +129,8 @@
    client, filling the message fields specified by a mailto: URI.
 
     A mailto: URI can specify message fields
-   including `to`, `cc`, `subject`,
-   `body`, etc.  See The mailto URL
+   including \"to\", \"cc\", \"subject\",
+   \"body\", etc.  See The mailto URL
    scheme (RFC 2368) for the mailto: URI specification
    details.
 

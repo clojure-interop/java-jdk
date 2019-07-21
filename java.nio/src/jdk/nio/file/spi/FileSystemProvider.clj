@@ -5,7 +5,7 @@
    A file system provider is a concrete implementation of this class that
   implements the abstract methods defined by this class. A provider is
   identified by a URI scheme. The default provider
-  is identified by the URI scheme `file`. It creates the FileSystem that
+  is identified by the URI scheme \"file\". It creates the FileSystem that
   provides access to the file systems accessible to the Java virtual machine.
   The FileSystems class defines how file system providers are located
   and loaded. The default provider is typically a system-default provider but
@@ -16,8 +16,8 @@
    A provider is a factory for one or more FileSystem instances. Each
   file system is identified by a URI where the URI's scheme matches
   the provider's scheme. The default file system, for example,
-  is identified by the URI `file:///`. A memory-based file system,
-  for example, may be identified by a URI such as `memory:///?name=logfs`.
+  is identified by the URI \"file:///\". A memory-based file system,
+  for example, may be identified by a URI such as \"memory:///?name=logfs\".
   The newFileSystem method may be used to create a file
   system, and the getFileSystem method may be used to
   obtain a reference to an existing file system created by the provider. Where
@@ -82,7 +82,7 @@
    method. File systems created the newFileSystem(Path,Map) method are not returned by this method.
    The file system is identified by its URI. Its exact form
    is highly provider dependent. In the case of the default provider the URI's
-   path component is `/` and the authority, query and fragment components
+   path component is \"/\" and the authority, query and fragment components
    are undefined (Undefined components are represented by null).
 
     Once a file system created by this provider is closed it is provider-dependent if this
@@ -200,7 +200,7 @@
    already exists or is constructed automatically.
 
     The exact form of the URI is file system provider dependent. In the
-   case of the default provider, the URI scheme is `file` and the
+   case of the default provider, the URI scheme is \"file\" and the
    given URI has a non-empty path component, and undefined query, and
    fragment components. The resulting Path is associated with the
    default default FileSystem.

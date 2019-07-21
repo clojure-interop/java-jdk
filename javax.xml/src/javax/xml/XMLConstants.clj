@@ -8,7 +8,7 @@
 
   Namespace URI to use to represent that there is no Namespace.
 
-   Defined by the Namespace specification to be ``.
+   Defined by the Namespace specification to be \"\".
 
   type: java.lang.String"
   XMLConstants/NULL_NS_URI)
@@ -18,7 +18,7 @@
 
   Prefix to use to represent the default XML Namespace.
 
-   Defined by the XML specification to be ``.
+   Defined by the XML specification to be \"\".
 
   type: java.lang.String"
   XMLConstants/DEFAULT_NS_PREFIX)
@@ -29,7 +29,7 @@
   The official XML Namespace name URI.
 
    Defined by the XML specification to be
-   `http://www.w3.org/XML/1998/namespace`.
+   \"http://www.w3.org/XML/1998/namespace\".
 
   type: java.lang.String"
   XMLConstants/XML_NS_URI)
@@ -39,7 +39,7 @@
 
   The official XML Namespace prefix.
 
-   Defined by the XML specification to be `xml`.
+   Defined by the XML specification to be \"xml\".
 
   type: java.lang.String"
   XMLConstants/XML_NS_PREFIX)
@@ -51,7 +51,7 @@
    declarations, XMLConstants.XMLNS_ATTRIBUTE, Namespace name URI.
 
    Defined by the XML specification to be
-   `http://www.w3.org/2000/xmlns/`.
+   \"http://www.w3.org/2000/xmlns/\".
 
   type: java.lang.String"
   XMLConstants/XMLNS_ATTRIBUTE_NS_URI)
@@ -64,7 +64,7 @@
 
    It is NOT valid to use as a
    prefix.  Defined by the XML specification to be
-   `xmlns`.
+   \"xmlns\".
 
   type: java.lang.String"
   XMLConstants/XMLNS_ATTRIBUTE)
@@ -74,7 +74,7 @@
 
   W3C XML Schema Namespace URI.
 
-   Defined to be `http://www.w3.org/2001/XMLSchema`.
+   Defined to be \"http://www.w3.org/2001/XMLSchema\".
 
   type: java.lang.String"
   XMLConstants/W3C_XML_SCHEMA_NS_URI)
@@ -84,7 +84,7 @@
 
   W3C XML Schema Instance Namespace URI.
 
-   Defined to be `http://www.w3.org/2001/XMLSchema-instance`.
+   Defined to be \"http://www.w3.org/2001/XMLSchema-instance\".
 
   type: java.lang.String"
   XMLConstants/W3C_XML_SCHEMA_INSTANCE_NS_URI)
@@ -94,7 +94,7 @@
 
   W3C XPath Datatype Namespace URI.
 
-   Defined to be `http://www.w3.org/2003/11/xpath-datatypes`.
+   Defined to be \"http://www.w3.org/2003/11/xpath-datatypes\".
 
   type: java.lang.String"
   XMLConstants/W3C_XPATH_DATATYPE_NS_URI)
@@ -104,7 +104,7 @@
 
   XML Document Type Declaration Namespace URI as an arbitrary value.
 
-   Since not formally defined by any existing standard, arbitrarily define to be `http://www.w3.org/TR/REC-xml`.
+   Since not formally defined by any existing standard, arbitrarily define to be \"http://www.w3.org/TR/REC-xml\".
 
   type: java.lang.String"
   XMLConstants/XML_DTD_NS_URI)
@@ -114,7 +114,7 @@
 
   RELAX NG Namespace URI.
 
-   Defined to be `http://relaxng.org/ns/structure/1.0`.
+   Defined to be \"http://relaxng.org/ns/structure/1.0\".
 
   type: java.lang.String"
   XMLConstants/RELAXNG_NS_URI)
@@ -150,19 +150,19 @@
 
 
    Value:  a list of protocols separated by comma. A protocol is the scheme portion of a
-   URI, or in the case of the JAR protocol, `jar` plus the scheme portion
+   URI, or in the case of the JAR protocol, \"jar\" plus the scheme portion
    separated by colon.
    A scheme is defined as:
 
 
-   scheme = alpha *( alpha | digit | `+` | `-` | `.` )
+   scheme = alpha *( alpha | digit | \"+\" | \"-\" | \".\" )
    where alpha = a-z and A-Z.
 
    And the JAR protocol:
 
    jar[:scheme]
 
-   Protocols including the keyword `jar` are case-insensitive. Any whitespaces as defined by
+   Protocols including the keyword \"jar\" are case-insensitive. Any whitespaces as defined by
    Character.isSpaceChar(char) in the value will be ignored.
    Examples of protocols are file, http, jar:file.
 
@@ -176,7 +176,7 @@
 
        an empty string to deny all access to external references;
        a specific protocol, such as file, to give permission to only the protocol;
-       the keyword `all` to grant  permission to all protocols.
+       the keyword \"all\" to grant  permission to all protocols.
 
         When FEATURE_SECURE_PROCESSING is enabled,  it is recommended that implementations
         restrict external connections by default, though this may cause problems for applications
@@ -185,7 +185,7 @@
 
 
 
-   Granting all access:  the keyword `all` grants permission to all protocols.
+   Granting all access:  the keyword \"all\" grants permission to all protocols.
 
 
    System Property: The value of this property can be set or overridden by
@@ -214,19 +214,19 @@
 
 
    Value: a list of protocols separated by comma. A protocol is the scheme portion of a
-   URI, or in the case of the JAR protocol, `jar` plus the scheme portion
+   URI, or in the case of the JAR protocol, \"jar\" plus the scheme portion
    separated by colon.
    A scheme is defined as:
 
 
-   scheme = alpha *( alpha | digit | `+` | `-` | `.` )
+   scheme = alpha *( alpha | digit | \"+\" | \"-\" | \".\" )
    where alpha = a-z and A-Z.
 
    And the JAR protocol:
 
    jar[:scheme]
 
-   Protocols including the keyword `jar` are case-insensitive. Any whitespaces as defined by
+   Protocols including the keyword \"jar\" are case-insensitive. Any whitespaces as defined by
    Character.isSpaceChar(char) in the value will be ignored.
    Examples of protocols are file, http, jar:file.
 
@@ -240,7 +240,7 @@
 
        an empty string to deny all access to external references;
        a specific protocol, such as file, to give permission to only the protocol;
-       the keyword `all` to grant  permission to all protocols.
+       the keyword \"all\" to grant  permission to all protocols.
 
         When FEATURE_SECURE_PROCESSING is enabled,  it is recommended that implementations
         restrict external connections by default, though this may cause problems for applications
@@ -248,7 +248,7 @@
 
 
 
-   Granting all access:  the keyword `all` grants permission to all protocols.
+   Granting all access:  the keyword \"all\" grants permission to all protocols.
 
 
 
@@ -280,19 +280,19 @@
 
 
    Value: a list of protocols separated by comma. A protocol is the scheme portion of a
-   URI, or in the case of the JAR protocol, `jar` plus the scheme portion
+   URI, or in the case of the JAR protocol, \"jar\" plus the scheme portion
    separated by colon.
    A scheme is defined as:
 
 
-   scheme = alpha *( alpha | digit | `+` | `-` | `.` )
+   scheme = alpha *( alpha | digit | \"+\" | \"-\" | \".\" )
    where alpha = a-z and A-Z.
 
    And the JAR protocol:
 
    jar[:scheme]
 
-   Protocols including the keyword `jar` are case-insensitive. Any whitespaces as defined by
+   Protocols including the keyword \"jar\" are case-insensitive. Any whitespaces as defined by
    Character.isSpaceChar(char) in the value will be ignored.
    Examples of protocols are file, http, jar:file.
 
@@ -306,7 +306,7 @@
 
        an empty string to deny all access to external references;
        a specific protocol, such as file, to give permission to only the protocol;
-       the keyword `all` to grant  permission to all protocols.
+       the keyword \"all\" to grant  permission to all protocols.
 
         When FEATURE_SECURE_PROCESSING is enabled,  it is recommended that implementations
         restrict external connections by default, though this may cause problems for applications
@@ -314,7 +314,7 @@
 
 
 
-   Granting all access:  the keyword `all` grants permission to all protocols.
+   Granting all access:  the keyword \"all\" grants permission to all protocols.
 
 
 

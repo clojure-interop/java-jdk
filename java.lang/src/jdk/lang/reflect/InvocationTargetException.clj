@@ -3,11 +3,11 @@
   an exception thrown by an invoked method or constructor.
 
   As of release 1.4, this exception has been retrofitted to conform to
-  the general purpose exception-chaining mechanism.  The `target exception`
+  the general purpose exception-chaining mechanism.  The \"target exception\"
   that is provided at construction time and accessed via the
   getTargetException() method is now known as the cause,
   and may be accessed via the Throwable.getCause() method,
-  as well as the aforementioned `legacy method.`"
+  as well as the aforementioned \"legacy method.\""
   (:refer-clojure :only [require comment defn ->])
   (:import [java.lang.reflect InvocationTargetException]))
 

@@ -23,24 +23,24 @@
   "Captures the current state of this MBean instance and
    writes it out to the persistent store.  The state stored could include
    attribute and operation values. If one of these methods of persistence is
-   not supported a `serviceNotFound` exception will be thrown.
+   not supported a \"serviceNotFound\" exception will be thrown.
 
    Persistence policy from the MBean and attribute descriptor is used to guide execution
    of this method. The MBean should be stored if 'persistPolicy' field is:
 
 
-    != `never`
-     = `always`
-     = `onTimer` and now > 'lastPersistTime'  'persistPeriod'
-     = `NoMoreOftenThan` and now > 'lastPersistTime'  'persistPeriod'
-     = `onUnregister`
+    != \"never\"
+     = \"always\"
+     = \"onTimer\" and now > 'lastPersistTime'  'persistPeriod'
+     = \"NoMoreOftenThan\" and now > 'lastPersistTime'  'persistPeriod'
+     = \"onUnregister\"
 
    Do not store the MBean if 'persistPolicy' field is:
 
 
-      = `never`
-      = `onUpdate`
-      = `onTimer` && now < 'lastPersistTime'  'persistPeriod'
+      = \"never\"
+      = \"onUpdate\"
+      = \"onTimer\" && now < 'lastPersistTime'  'persistPeriod'
 
   throws: javax.management.MBeanException - Wraps another exception or persistence is not supported"
   ([^PersistentMBean this]

@@ -102,7 +102,7 @@
   to be persisted in the RowSet object and also in the data source.
 
 
-      resolver.setResolvedValue(`DEPT`, 8390426);
+      resolver.setResolvedValue(\"DEPT\", 8390426);
   In the preceding line of code,
   the column name designates the column in the RowSet object
   that is to be set with the given value. The column number can also be used to

@@ -14,7 +14,7 @@
   a second, or at most a few seconds.  These audio samples may be
   used by a Synthesizer to synthesize sound in response to MIDI
   commands, or extracted for use by an application.
-  (The terminology reflects musicians' use of the word `sample` to refer
+  (The terminology reflects musicians' use of the word \"sample\" to refer
   collectively to a series of contiguous audio samples or frames, rather than
   to a single, instantaneous sample.)
   The data class for an audio sample will be an object

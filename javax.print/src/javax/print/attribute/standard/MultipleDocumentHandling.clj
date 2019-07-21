@@ -31,10 +31,10 @@
   specify two variations of this possibility.
 
 
-  In the detailed explanations below, if `a` represents an
+  In the detailed explanations below, if \"a\" represents an
   instance of document data, then the result of processing the data in
-  document `a` is a sequence of media sheets represented by
-  `a(*)`.
+  document \"a\" is a sequence of media sheets represented by
+  \"a(*)\".
 
   The standard MultipleDocumentHandling values are:
 
@@ -158,7 +158,7 @@
   MultipleDocumentHandling/SINGLE_DOCUMENT_NEW_SHEET)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class MultipleDocumentHandling and any vendor-defined subclasses,
@@ -174,7 +174,7 @@
    instance.
 
    For class MultipleDocumentHandling and any vendor-defined subclasses,
-   the category name is `multiple-document-handling`.
+   the category name is \"multiple-document-handling\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^MultipleDocumentHandling this]

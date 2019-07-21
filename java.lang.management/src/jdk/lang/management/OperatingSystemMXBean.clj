@@ -26,7 +26,7 @@
 
 (defn get-name
   "Returns the operating system name.
-   This method is equivalent to System.getProperty(`os.name`).
+   This method is equivalent to System.getProperty(\"os.name\").
 
   returns: the operating system name. - `java.lang.String`
 
@@ -36,7 +36,7 @@
 
 (defn get-arch
   "Returns the operating system architecture.
-   This method is equivalent to System.getProperty(`os.arch`).
+   This method is equivalent to System.getProperty(\"os.arch\").
 
   returns: the operating system architecture. - `java.lang.String`
 
@@ -46,7 +46,7 @@
 
 (defn get-version
   "Returns the operating system version.
-   This method is equivalent to System.getProperty(`os.version`).
+   This method is equivalent to System.getProperty(\"os.version\").
 
   returns: the operating system version. - `java.lang.String`
 

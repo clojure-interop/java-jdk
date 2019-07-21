@@ -9,7 +9,7 @@
   the call may or may not have reached the server.  If the call did reach the
   server, parameters may have been deserialized.  A call may not be
   retransmitted after a MarshalException and reliably preserve
-  `at most once` call semantics."
+  \"at most once\" call semantics."
   (:refer-clojure :only [require comment defn ->])
   (:import [java.rmi MarshalException]))
 

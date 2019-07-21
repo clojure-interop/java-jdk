@@ -20,8 +20,8 @@
   G H I       I H G       C F I       I F C
   (In the header, the two-letter abbreviation represents the item direction
   in the first letter, and the line direction in the second. For example,
-  LT means `items left-to-right, lines top-to-bottom`,
-  TL means `items top-to-bottom, lines left-to-right`, and so on.)
+  LT means \"items left-to-right, lines top-to-bottom\",
+  TL means \"items top-to-bottom, lines left-to-right\", and so on.)
 
   The orientations are:
 

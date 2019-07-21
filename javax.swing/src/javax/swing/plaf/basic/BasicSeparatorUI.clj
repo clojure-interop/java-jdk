@@ -1,6 +1,6 @@
 (ns javax.swing.plaf.basic.BasicSeparatorUI
   "A Basic L&F implementation of SeparatorUI.  This implementation
-  is a `combined` view/controller."
+  is a \"combined\" view/controller."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.plaf.basic BasicSeparatorUI]))
 

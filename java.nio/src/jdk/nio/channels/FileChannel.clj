@@ -77,13 +77,13 @@
   seen by the originating object, and vice versa.
 
     At various points this class specifies that an
-  instance that is `open for reading,` `open for writing,` or `open for
-  reading and writing` is required.  A channel obtained via the getChannel method of a FileInputStream instance will be open for reading.  A channel
+  instance that is \"open for reading,\" \"open for writing,\" or \"open for
+  reading and writing\" is required.  A channel obtained via the getChannel method of a FileInputStream instance will be open for reading.  A channel
   obtained via the getChannel
   method of a FileOutputStream instance will be open for
   writing.  Finally, a channel obtained via the getChannel method of a RandomAccessFile instance will be open for reading if the instance
-  was created with mode `r` and will be open for reading and writing
-  if the instance was created with mode `rw`.
+  was created with mode \"r\" and will be open for reading and writing
+  if the instance was created with mode \"rw\".
 
    A file channel that is open for writing may be in
   append mode, for example if it was obtained from a file-output stream

@@ -18,8 +18,8 @@
   have one-to-one correspondence. For example, the character 'á'
   LATIN SMALL LETTER A WITH ACUTE, can be represented by
   two glyphs: one for 'a' and one for '´'. On the other hand, the
-  two-character string `fi` can be represented by a single glyph, an
-  `fi` ligature. In complex writing systems, such as Arabic or the South
+  two-character string \"fi\" can be represented by a single glyph, an
+  \"fi\" ligature. In complex writing systems, such as Arabic or the South
   and South-East Asian writing systems, the relationship between characters
   and glyphs can be more complicated and involve context-dependent selection
   of glyphs as well as glyph reordering.
@@ -169,10 +169,10 @@
    select the most appropriate face from the family. When a font face
    name is specified, the face's style and the style argument are
    merged to locate the best matching font from the same family.
-   For example if face name `Arial Bold` is specified with style
+   For example if face name \"Arial Bold\" is specified with style
    Font.ITALIC, the font system looks for a face in the
-   `Arial` family that is bold and italic, and may associate the font
-   instance with the physical font face `Arial Bold Italic`.
+   \"Arial\" family that is bold and italic, and may associate the font
+   instance with the physical font face \"Arial Bold Italic\".
    The style argument is merged with the specified face's style, not
    added or subtracted.
    This means, specifying a bold face and a bold style does not
@@ -192,10 +192,10 @@
    logical font, i.e. is interpreted as a physical font face or family, and
    this cannot be mapped by the implementation to a physical font or a
    compatible alternative, then the font system will map the Font
-   instance to `Dialog`, such that for example, the family as reported
-   by getFamily will be `Dialog`.
+   instance to \"Dialog\", such that for example, the family as reported
+   by getFamily will be \"Dialog\".
 
-  name - the font name. This can be a font face name or a font family name, and may represent either a logical font or a physical font found in this GraphicsEnvironment. The family names for logical fonts are: Dialog, DialogInput, Monospaced, Serif, or SansSerif. Pre-defined String constants exist for all of these names, for example, DIALOG. If name is null, the logical font name of the new Font as returned by getName() is set to the name `Default`. - `java.lang.String`
+  name - the font name. This can be a font face name or a font family name, and may represent either a logical font or a physical font found in this GraphicsEnvironment. The family names for logical fonts are: Dialog, DialogInput, Monospaced, Serif, or SansSerif. Pre-defined String constants exist for all of these names, for example, DIALOG. If name is null, the logical font name of the new Font as returned by getName() is set to the name \"Default\". - `java.lang.String`
   style - the style constant for the Font The style argument is an integer bitmask that may be PLAIN, or a bitwise union of BOLD and/or ITALIC (for example, ITALIC or BOLD|ITALIC). If the style argument does not conform to one of the expected integer bitmasks then the style is set to PLAIN. - `int`
   size - the point size of the Font - `int`"
   (^Font [^java.lang.String name ^Integer style ^Integer size]
@@ -207,7 +207,7 @@
   "Static Constant.
 
   A String constant for the canonical family name of the
-   logical font `Dialog`. It is useful in Font construction
+   logical font \"Dialog\". It is useful in Font construction
    to provide compile-time verification of the name.
 
   type: java.lang.String"
@@ -217,7 +217,7 @@
   "Static Constant.
 
   A String constant for the canonical family name of the
-   logical font `DialogInput`. It is useful in Font construction
+   logical font \"DialogInput\". It is useful in Font construction
    to provide compile-time verification of the name.
 
   type: java.lang.String"
@@ -227,7 +227,7 @@
   "Static Constant.
 
   A String constant for the canonical family name of the
-   logical font `SansSerif`. It is useful in Font construction
+   logical font \"SansSerif\". It is useful in Font construction
    to provide compile-time verification of the name.
 
   type: java.lang.String"
@@ -237,7 +237,7 @@
   "Static Constant.
 
   A String constant for the canonical family name of the
-   logical font `Serif`. It is useful in Font construction
+   logical font \"Serif\". It is useful in Font construction
    to provide compile-time verification of the name.
 
   type: java.lang.String"
@@ -247,7 +247,7 @@
   "Static Constant.
 
   A String constant for the canonical family name of the
-   logical font `Monospaced`. It is useful in Font construction
+   logical font \"Monospaced\". It is useful in Font construction
    to provide compile-time verification of the name.
 
   type: java.lang.String"
@@ -432,14 +432,14 @@
 
    in which style is one of the four
    case-insensitive strings:
-   `PLAIN`, `BOLD`, `BOLDITALIC`, or
-   `ITALIC`, and pointsize is a positive decimal integer
+   \"PLAIN\", \"BOLD\", \"BOLDITALIC\", or
+   \"ITALIC\", and pointsize is a positive decimal integer
    representation of the point size.
    For example, if you want a font that is Arial, bold, with
    a point size of 18, you would call this method with:
-   `Arial-BOLD-18`.
+   \"Arial-BOLD-18\".
    This is equivalent to calling the Font constructor :
-   new Font(`Arial`, Font.BOLD, 18);
+   new Font(\"Arial\", Font.BOLD, 18);
    and the values are interpreted as specified by that constructor.
 
    A valid trailing decimal field is always interpreted as the pointsize.
@@ -472,12 +472,12 @@
    specify a valid style, the returned Font has a style of PLAIN.
    If you do not specify a valid font name in
    the str argument, this method will return
-   a font with the family name `Dialog`.
+   a font with the family name \"Dialog\".
    To determine what font family names are available on
    your system, use the
    GraphicsEnvironment.getAvailableFontFamilyNames() method.
    If str is null, a new Font
-   is returned with the family name `Dialog`, a size of 12 and a
+   is returned with the family name \"Dialog\", a size of 12 and a
    PLAIN style.
 
   str - the name of the font, or null - `java.lang.String`

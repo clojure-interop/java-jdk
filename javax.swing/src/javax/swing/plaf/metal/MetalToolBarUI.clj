@@ -1,6 +1,6 @@
 (ns javax.swing.plaf.metal.MetalToolBarUI
   "A Metal Look and Feel implementation of ToolBarUI.  This implementation
-  is a `combined` view/controller."
+  is a \"combined\" view/controller."
   (:refer-clojure :only [require comment defn ->])
   (:import [javax.swing.plaf.metal MetalToolBarUI]))
 

@@ -30,7 +30,7 @@
   The file contains a list of fully-qualified binary names of concrete
   provider classes, one per line.  Space and tab characters surrounding each
   name, as well as blank lines, are ignored.  The comment character is
-  '#' ('\u0023',
+  '#' ('\\u0023',
   NUMBER SIGN); on
   each line all characters following the first comment character are ignored.
   The file must be encoded in UTF-8.

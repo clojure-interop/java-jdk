@@ -87,21 +87,21 @@
    examples may be regarded as typical:
 
 
-     `MyClass.mash(MyClass.java:9)` - Here, `MyClass`
+     \"MyClass.mash(MyClass.java:9)\" - Here, \"MyClass\"
      is the fully-qualified name of the class containing the
      execution point represented by this stack trace element,
-     `mash` is the name of the method containing the execution
-     point, `MyClass.java` is the source file containing the
-     execution point, and `9` is the line number of the source
+     \"mash\" is the name of the method containing the execution
+     point, \"MyClass.java\" is the source file containing the
+     execution point, and \"9\" is the line number of the source
      line containing the execution point.
 
-     `MyClass.mash(MyClass.java)` - As above, but the line
+     \"MyClass.mash(MyClass.java)\" - As above, but the line
      number is unavailable.
 
-     `MyClass.mash(Unknown Source)` - As above, but neither
+     \"MyClass.mash(Unknown Source)\" - As above, but neither
      the file name nor the line  number are available.
 
-     `MyClass.mash(Native Method)` - As above, but neither
+     \"MyClass.mash(Native Method)\" - As above, but neither
      the file name nor the line  number are available, and the method
      containing the execution point is known to be a native method.
 

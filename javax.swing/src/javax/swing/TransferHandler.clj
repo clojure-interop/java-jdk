@@ -16,7 +16,7 @@
   a component property simply by specifying the name of the property in
   the constructor.  For example, to transfer the foreground color from
   one component to another either via the clipboard or a drag and drop operation
-  a TransferHandler can be constructed with the string `foreground`.  The
+  a TransferHandler can be constructed with the string \"foreground\".  The
   built in support will use the color returned by getForeground as the source
   of the transfer, and setForeground for the target of a transfer.
 
@@ -49,7 +49,7 @@
 (def *-copy
   "Static Constant.
 
-  An int representing a `copy` transfer action.
+  An int representing a \"copy\" transfer action.
    This value is used when data is copied to a clipboard
    or copied elsewhere in a drag and drop operation.
 
@@ -59,7 +59,7 @@
 (def *-move
   "Static Constant.
 
-  An int representing a `move` transfer action.
+  An int representing a \"move\" transfer action.
    This value is used when data is moved to a clipboard (i.e. a cut)
    or moved elsewhere in a drag and drop operation.
 
@@ -70,7 +70,7 @@
   "Static Constant.
 
   An int representing a source action capability of either
-   `copy` or `move`.
+   \"copy\" or \"move\".
 
   type: int"
   TransferHandler/COPY_OR_MOVE)
@@ -78,7 +78,7 @@
 (def *-link
   "Static Constant.
 
-  An int representing a `link` transfer action.
+  An int representing a \"link\" transfer action.
    This value is used to specify that data should be linked in a drag
    and drop operation.
 

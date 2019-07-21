@@ -8,7 +8,7 @@
   as well as utility methods which look up factories on the basis of language name, file extension
   and mime type.
 
-  The Bindings of key/value pairs, referred to as the `Global Scope`  maintained
+  The Bindings of key/value pairs, referred to as the \"Global Scope\"  maintained
   by the manager is available to all instances of ScriptEngine created
   by the ScriptEngineManager.  The values in the Bindings are
   generally exposed in all scripts."

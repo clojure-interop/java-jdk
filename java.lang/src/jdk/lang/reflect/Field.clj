@@ -62,7 +62,7 @@
    of the field.
 
    The modifiers are placed in canonical order as specified by
-   `The Java Language Specification`.  This is public,
+   \"The Java Language Specification\".  This is public,
    protected or private first, and then other
    modifiers in the following order: static, final,
    transient, volatile.
@@ -116,7 +116,7 @@
       private int java.io.FileDescriptor.fd
 
    The modifiers are placed in canonical order as specified by
-   `The Java Language Specification`.  This is public,
+   \"The Java Language Specification\".  This is public,
    protected or private first, and then other
    modifiers in the following order: static, final,
    transient, volatile.
@@ -243,7 +243,7 @@
    The difference between this method and AnnotatedElement.getAnnotation(Class)
    is that this method detects if its argument is a repeatable
    annotation type (JLS 9.6), and if so, attempts to find one or
-   more annotations of that type by `looking through` a container
+   more annotations of that type by \"looking through\" a container
    annotation.
 
    The caller of this method is free to modify the returned array; it will

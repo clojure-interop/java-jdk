@@ -26,11 +26,11 @@
    attribute-name is the name of the attribute.
 
     Usage Example:
-   Suppose we want to know if ZFS compression is enabled (assuming the `zfs`
+   Suppose we want to know if ZFS compression is enabled (assuming the \"zfs\"
    view is supported):
 
 
-      boolean compression = (Boolean)fs.getAttribute(`zfs:compression`);
+      boolean compression = (Boolean)fs.getAttribute(\"zfs:compression\");
 
   attribute - the attribute to read - `java.lang.String`
 

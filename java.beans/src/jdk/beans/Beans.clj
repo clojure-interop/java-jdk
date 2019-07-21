@@ -12,7 +12,7 @@
   "Instantiate a bean.
 
    The bean is created based on a name relative to a class-loader.
-   This name should be a dot-separated name such as `a.b.c`.
+   This name should be a dot-separated name such as \"a.b.c\".
 
    In Beans 1.0 the given name can indicate either a serialized object
    or a class.  Other mechanisms may be added in the future.  In
@@ -20,34 +20,34 @@
    name then as a class name.
 
    When using the beanName as a serialized object name we convert the
-   given beanName to a resource pathname and add a trailing `.ser` suffix.
+   given beanName to a resource pathname and add a trailing \".ser\" suffix.
    We then try to load a serialized object from that resource.
 
-   For example, given a beanName of `x.y`, Beans.instantiate would first
-   try to read a serialized object from the resource `x/y.ser` and if
-   that failed it would try to load the class `x.y` and create an
+   For example, given a beanName of \"x.y\", Beans.instantiate would first
+   try to read a serialized object from the resource \"x/y.ser\" and if
+   that failed it would try to load the class \"x.y\" and create an
    instance of that class.
 
    If the bean is a subtype of java.applet.Applet, then it is given
    some special initialization.  First, it is supplied with a default
    AppletStub and AppletContext.  Second, if it was instantiated from
-   a classname the applet's `init` method is called.  (If the bean was
+   a classname the applet's \"init\" method is called.  (If the bean was
    deserialized this step is skipped.)
 
    Note that for beans which are applets, it is the caller's responsiblity
-   to call `start` on the applet.  For correct behaviour, this should be done
+   to call \"start\" on the applet.  For correct behaviour, this should be done
    after the applet has been added into a visible AWT container.
 
    Note that applets created via beans.instantiate run in a slightly
    different environment than applets running inside browsers.  In
-   particular, bean applets have no access to `parameters`, so they may
+   particular, bean applets have no access to \"parameters\", so they may
    wish to provide property get/set methods to set parameter values.  We
    advise bean-applet developers to test their bean-applets against both
    the JDK appletviewer (for a reference browser environment) and the
    BDK BeanBox (for a reference bean container).
 
   cls - the class-loader from which we should create the bean. If this is null, then the system class-loader is used. - `java.lang.ClassLoader`
-  bean-name - the name of the bean within the class-loader. For example `sun.beanbox.foobah` - `java.lang.String`
+  bean-name - the name of the bean within the class-loader. For example \"sun.beanbox.foobah\" - `java.lang.String`
   bean-context - The BeanContext in which to nest the new bean - `java.beans.beancontext.BeanContext`
   initializer - The AppletInitializer for the new bean - `java.beans.AppletInitializer`
 
@@ -89,7 +89,7 @@
   bean - Bean from which we want to obtain a view. - `java.lang.Object`
   target-type - The type of view we'd like to get. - `java.lang.Class`
 
-  returns: `true` if the given bean supports the given targetType. - `boolean`"
+  returns: \"true\" if the given bean supports the given targetType. - `boolean`"
   (^Boolean [^java.lang.Object bean ^java.lang.Class target-type]
     (Beans/isInstanceOf bean target-type)))
 

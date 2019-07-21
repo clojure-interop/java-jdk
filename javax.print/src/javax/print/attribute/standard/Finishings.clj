@@ -3,7 +3,7 @@
   identifies whether the printer applies a finishing operation of some kind
   of binding to each copy of each printed document in the job. For multidoc
   print jobs (jobs with multiple documents), the
-  MultipleDocumentHandling attribute determines what constitutes a `copy`
+  MultipleDocumentHandling attribute determines what constitutes a \"copy\"
   for purposes of finishing.
 
   Standard Finishings values are:
@@ -174,7 +174,7 @@
 
 
   IPP Compatibility: Class Finishings encapsulates some of the
-  IPP enum values that can be included in an IPP `finishings` attribute, which
+  IPP enum values that can be included in an IPP \"finishings\" attribute, which
   is a set of enums. The category name returned by
   getName() is the IPP attribute name.  The enumeration's
   integer value is the IPP enum value.  The toString() method
@@ -352,7 +352,7 @@
   Finishings/STAPLE_DUAL_BOTTOM)
 
 (defn get-category
-  "Get the printing attribute class which is to be used as the `category`
+  "Get the printing attribute class which is to be used as the \"category\"
    for this printing attribute value.
 
    For class Finishings and any vendor-defined subclasses, the
@@ -368,7 +368,7 @@
    instance.
 
    For class Finishings and any vendor-defined subclasses, the
-   category name is `finishings`.
+   category name is \"finishings\".
 
   returns: Attribute category name. - `java.lang.String`"
   (^java.lang.String [^Finishings this]

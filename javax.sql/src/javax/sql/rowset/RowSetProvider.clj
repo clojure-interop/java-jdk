@@ -10,7 +10,7 @@
   RowSetFactory aFactory = RowSetProvider.newFactory();
   CachedRowSet crs = aFactory.createCachedRowSet();
   ...
-  RowSetFactory rsf = RowSetProvider.newFactory(`com.sun.rowset.RowSetFactoryImpl`, null);
+  RowSetFactory rsf = RowSetProvider.newFactory(\"com.sun.rowset.RowSetFactoryImpl\", null);
   WebRowSet wrs = rsf.createWebRowSet();
 
   Tracing of this class may be enabled by setting the System property

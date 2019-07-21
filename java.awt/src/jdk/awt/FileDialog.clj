@@ -117,7 +117,7 @@
    This method accepts either a full file path, or a file name with an
    extension if used together with the setDirectory method.
 
-   Specifying `` as the file is exactly equivalent to specifying
+   Specifying \"\" as the file is exactly equivalent to specifying
    null as the file.
 
   file - the file being set - `java.lang.String`"
@@ -159,7 +159,7 @@
    has selected a file. Until this point, getDirectory()
    will return the value passed into this method.
 
-   Specifying `` as the directory is exactly equivalent to
+   Specifying \"\" as the directory is exactly equivalent to
    specifying null as the directory.
 
   dir - the specified directory - `java.lang.String`"

@@ -65,7 +65,7 @@
    always return the same boolean value or may vary the result
    based on chosen criteria.
 
-   The input set will be empty if the processor supports `*` and the root elements have no annotations.  A Processor must gracefully handle an empty set of annotations.
+   The input set will be empty if the processor supports \"*\" and the root elements have no annotations.  A Processor must gracefully handle an empty set of annotations.
 
   annotations - the annotation types requested to be processed - `java.util.Set`
   round-env - environment for information about the current and prior round - `javax.annotation.processing.RoundEnvironment`

@@ -7,11 +7,11 @@
   to objects already deserialized are discarded.
 
   As of release 1.4, this exception has been retrofitted to conform to
-  the general purpose exception-chaining mechanism.  The `exception causing
-  the abort` that is provided at construction time and
+  the general purpose exception-chaining mechanism.  The \"exception causing
+  the abort\" that is provided at construction time and
   accessed via the public detail field is now known as the
   cause, and may be accessed via the Throwable.getCause()
-  method, as well as the aforementioned `legacy field.`"
+  method, as well as the aforementioned \"legacy field.\""
   (:refer-clojure :only [require comment defn ->])
   (:import [java.io WriteAbortedException]))
 
@@ -26,7 +26,7 @@
   (^WriteAbortedException [^java.lang.String s ^java.lang.Exception ex]
     (new WriteAbortedException s ex)))
 
-(defn -detail
+(defn detail
   "Instance Field.
 
   Exception that was caught while writing the ObjectStream.
@@ -36,8 +36,8 @@
    obtaining this information.
 
   type: java.lang.Exception"
-  [this]
-  (-> this .-detail))
+  (^java.lang.Exception [^WriteAbortedException this]
+    (-> this .-detail)))
 
 (defn get-message
   "Produce the message and include the message from the nested
