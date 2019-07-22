@@ -38,9 +38,9 @@ You can find clojars in README of packages.
 |:--|:--|:--|
 | constructor | new File() | (->file) |
 | instance method | getAnyValue() | (get-any-value) |
-| instance field | instanceField | -instance-field |
+| instance field | instanceField | (-instance-field) |
 | static method | staticMethod() | (*static-method) |
-| static field | ANY_STATIC_FIELD | *-any-static-field |
+| static field | ANY_STATIC_FIELD | (*-any-static-field) |
 | boolean field/method | isExists(), canUse() | (exists?), (can-use?) |
 
 ## Contributors
